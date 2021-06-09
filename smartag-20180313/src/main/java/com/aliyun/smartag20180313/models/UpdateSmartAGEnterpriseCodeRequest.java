@@ -16,9 +16,6 @@ public class UpdateSmartAGEnterpriseCodeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
     public static UpdateSmartAGEnterpriseCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSmartAGEnterpriseCodeRequest self = new UpdateSmartAGEnterpriseCodeRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class UpdateSmartAGEnterpriseCodeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public UpdateSmartAGEnterpriseCodeRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
 }

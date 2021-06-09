@@ -28,12 +28,6 @@ public class DowngradeSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    @NameInMap("DataPlan")
-    public Long dataPlan;
-
-    @NameInMap("UserCount")
-    public Integer userCount;
-
     public static DowngradeSmartAccessGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         DowngradeSmartAccessGatewayRequest self = new DowngradeSmartAccessGatewayRequest();
         return TeaModel.build(map, self);
@@ -101,22 +95,6 @@ public class DowngradeSmartAccessGatewayRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
-    }
-
-    public DowngradeSmartAccessGatewayRequest setDataPlan(Long dataPlan) {
-        this.dataPlan = dataPlan;
-        return this;
-    }
-    public Long getDataPlan() {
-        return this.dataPlan;
-    }
-
-    public DowngradeSmartAccessGatewayRequest setUserCount(Integer userCount) {
-        this.userCount = userCount;
-        return this;
-    }
-    public Integer getUserCount() {
-        return this.userCount;
     }
 
 }

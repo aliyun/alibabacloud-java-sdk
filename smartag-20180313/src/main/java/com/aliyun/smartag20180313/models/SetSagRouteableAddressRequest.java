@@ -19,9 +19,6 @@ public class SetSagRouteableAddressRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("SagId")
     public String sagId;
 
@@ -71,14 +68,6 @@ public class SetSagRouteableAddressRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public SetSagRouteableAddressRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
     public SetSagRouteableAddressRequest setSagId(String sagId) {

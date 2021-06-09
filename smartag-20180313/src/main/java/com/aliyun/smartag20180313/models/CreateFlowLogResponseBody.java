@@ -10,6 +10,9 @@ public class CreateFlowLogResponseBody extends TeaModel {
     @NameInMap("FlowLogId")
     public String flowLogId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateFlowLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowLogResponseBody self = new CreateFlowLogResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateFlowLogResponseBody extends TeaModel {
     }
     public String getFlowLogId() {
         return this.flowLogId;
+    }
+
+    public CreateFlowLogResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

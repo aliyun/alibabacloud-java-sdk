@@ -67,6 +67,9 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("ResellerUid")
+    public String resellerUid;
+
     @NameInMap("SecurityLockThreshold")
     public Integer securityLockThreshold;
 
@@ -88,6 +91,9 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("City")
     public String city;
 
+    @NameInMap("ResellerInstanceId")
+    public String resellerInstanceId;
+
     @NameInMap("SerialNumber")
     public String serialNumber;
 
@@ -105,6 +111,21 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
 
     @NameInMap("AclIds")
     public DescribeSmartAccessGatewayAttributeResponseBodyAclIds aclIds;
+
+    @NameInMap("ApplicationBandwidthPackageId")
+    public String applicationBandwidthPackageId;
+
+    @NameInMap("ApplicationBandwidthPackageName")
+    public String applicationBandwidthPackageName;
+
+    @NameInMap("AccelerateBandwidth")
+    public Long accelerateBandwidth;
+
+    @NameInMap("ApplicationBandwidthPackageBussinessStatus")
+    public String applicationBandwidthPackageBussinessStatus;
+
+    @NameInMap("ApplicationBandwidthPackageOperationLocks")
+    public DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks applicationBandwidthPackageOperationLocks;
 
     public static DescribeSmartAccessGatewayAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSmartAccessGatewayAttributeResponseBody self = new DescribeSmartAccessGatewayAttributeResponseBody();
@@ -279,6 +300,14 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
         return this.instanceType;
     }
 
+    public DescribeSmartAccessGatewayAttributeResponseBody setResellerUid(String resellerUid) {
+        this.resellerUid = resellerUid;
+        return this;
+    }
+    public String getResellerUid() {
+        return this.resellerUid;
+    }
+
     public DescribeSmartAccessGatewayAttributeResponseBody setSecurityLockThreshold(Integer securityLockThreshold) {
         this.securityLockThreshold = securityLockThreshold;
         return this;
@@ -335,6 +364,14 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
         return this.city;
     }
 
+    public DescribeSmartAccessGatewayAttributeResponseBody setResellerInstanceId(String resellerInstanceId) {
+        this.resellerInstanceId = resellerInstanceId;
+        return this;
+    }
+    public String getResellerInstanceId() {
+        return this.resellerInstanceId;
+    }
+
     public DescribeSmartAccessGatewayAttributeResponseBody setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -381,6 +418,46 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
     }
     public DescribeSmartAccessGatewayAttributeResponseBodyAclIds getAclIds() {
         return this.aclIds;
+    }
+
+    public DescribeSmartAccessGatewayAttributeResponseBody setApplicationBandwidthPackageId(String applicationBandwidthPackageId) {
+        this.applicationBandwidthPackageId = applicationBandwidthPackageId;
+        return this;
+    }
+    public String getApplicationBandwidthPackageId() {
+        return this.applicationBandwidthPackageId;
+    }
+
+    public DescribeSmartAccessGatewayAttributeResponseBody setApplicationBandwidthPackageName(String applicationBandwidthPackageName) {
+        this.applicationBandwidthPackageName = applicationBandwidthPackageName;
+        return this;
+    }
+    public String getApplicationBandwidthPackageName() {
+        return this.applicationBandwidthPackageName;
+    }
+
+    public DescribeSmartAccessGatewayAttributeResponseBody setAccelerateBandwidth(Long accelerateBandwidth) {
+        this.accelerateBandwidth = accelerateBandwidth;
+        return this;
+    }
+    public Long getAccelerateBandwidth() {
+        return this.accelerateBandwidth;
+    }
+
+    public DescribeSmartAccessGatewayAttributeResponseBody setApplicationBandwidthPackageBussinessStatus(String applicationBandwidthPackageBussinessStatus) {
+        this.applicationBandwidthPackageBussinessStatus = applicationBandwidthPackageBussinessStatus;
+        return this;
+    }
+    public String getApplicationBandwidthPackageBussinessStatus() {
+        return this.applicationBandwidthPackageBussinessStatus;
+    }
+
+    public DescribeSmartAccessGatewayAttributeResponseBody setApplicationBandwidthPackageOperationLocks(DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks applicationBandwidthPackageOperationLocks) {
+        this.applicationBandwidthPackageOperationLocks = applicationBandwidthPackageOperationLocks;
+        return this;
+    }
+    public DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks getApplicationBandwidthPackageOperationLocks() {
+        return this.applicationBandwidthPackageOperationLocks;
     }
 
     public static class DescribeSmartAccessGatewayAttributeResponseBodyQosIds extends TeaModel {
@@ -677,6 +754,36 @@ public class DescribeSmartAccessGatewayAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getAclId() {
             return this.aclId;
+        }
+
+    }
+
+    public static class DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks extends TeaModel {
+        @NameInMap("LockType")
+        public String lockType;
+
+        @NameInMap("LockReason")
+        public String lockReason;
+
+        public static DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks self = new DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks setLockType(String lockType) {
+            this.lockType = lockType;
+            return this;
+        }
+        public String getLockType() {
+            return this.lockType;
+        }
+
+        public DescribeSmartAccessGatewayAttributeResponseBodyApplicationBandwidthPackageOperationLocks setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
         }
 
     }

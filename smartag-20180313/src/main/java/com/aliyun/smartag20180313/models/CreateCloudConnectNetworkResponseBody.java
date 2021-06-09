@@ -25,6 +25,9 @@ public class CreateCloudConnectNetworkResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateCloudConnectNetworkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCloudConnectNetworkResponseBody self = new CreateCloudConnectNetworkResponseBody();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class CreateCloudConnectNetworkResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateCloudConnectNetworkResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

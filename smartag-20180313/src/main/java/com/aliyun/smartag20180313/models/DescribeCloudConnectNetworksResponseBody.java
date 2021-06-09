@@ -150,6 +150,9 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         public static DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork self = new DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork();
             return TeaModel.build(map, self);
@@ -249,6 +252,14 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeCloudConnectNetworksResponseBodyCloudConnectNetworksCloudConnectNetwork setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

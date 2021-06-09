@@ -13,9 +13,6 @@ public class DeleteEnterpriseCodeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
     public static DeleteEnterpriseCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEnterpriseCodeRequest self = new DeleteEnterpriseCodeRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class DeleteEnterpriseCodeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public DeleteEnterpriseCodeRequest setDryRun(Boolean dryRun) {
-        this.dryRun = dryRun;
-        return this;
-    }
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
 }
