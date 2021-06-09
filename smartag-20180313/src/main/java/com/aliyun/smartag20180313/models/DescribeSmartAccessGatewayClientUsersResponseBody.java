@@ -80,6 +80,9 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
         @NameInMap("UserMail")
         public String userMail;
 
+        @NameInMap("AccelerateBandwidth")
+        public Long accelerateBandwidth;
+
         public static DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser build(java.util.Map<String, ?> map) throws Exception {
             DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser self = new DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser();
             return TeaModel.build(map, self);
@@ -123,6 +126,14 @@ public class DescribeSmartAccessGatewayClientUsersResponseBody extends TeaModel 
         }
         public String getUserMail() {
             return this.userMail;
+        }
+
+        public DescribeSmartAccessGatewayClientUsersResponseBodyUsersUser setAccelerateBandwidth(Long accelerateBandwidth) {
+            this.accelerateBandwidth = accelerateBandwidth;
+            return this;
+        }
+        public Long getAccelerateBandwidth() {
+            return this.accelerateBandwidth;
         }
 
     }

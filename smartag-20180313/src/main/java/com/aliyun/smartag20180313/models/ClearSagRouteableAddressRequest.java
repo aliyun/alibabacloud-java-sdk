@@ -19,9 +19,6 @@ public class ClearSagRouteableAddressRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("SagId")
     public String sagId;
 
@@ -68,14 +65,6 @@ public class ClearSagRouteableAddressRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public ClearSagRouteableAddressRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
     public ClearSagRouteableAddressRequest setSagId(String sagId) {

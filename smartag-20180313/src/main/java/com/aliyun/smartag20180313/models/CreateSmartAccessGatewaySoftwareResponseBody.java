@@ -13,6 +13,9 @@ public class CreateSmartAccessGatewaySoftwareResponseBody extends TeaModel {
     @NameInMap("SmartAGId")
     public String smartAGId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateSmartAccessGatewaySoftwareResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSmartAccessGatewaySoftwareResponseBody self = new CreateSmartAccessGatewaySoftwareResponseBody();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class CreateSmartAccessGatewaySoftwareResponseBody extends TeaModel {
     }
     public String getSmartAGId() {
         return this.smartAGId;
+    }
+
+    public CreateSmartAccessGatewaySoftwareResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

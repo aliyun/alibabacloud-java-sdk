@@ -28,12 +28,6 @@ public class UpgradeSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    @NameInMap("DataPlan")
-    public Long dataPlan;
-
-    @NameInMap("UserCount")
-    public Integer userCount;
-
     public static UpgradeSmartAccessGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeSmartAccessGatewayRequest self = new UpgradeSmartAccessGatewayRequest();
         return TeaModel.build(map, self);
@@ -101,22 +95,6 @@ public class UpgradeSmartAccessGatewayRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
-    }
-
-    public UpgradeSmartAccessGatewayRequest setDataPlan(Long dataPlan) {
-        this.dataPlan = dataPlan;
-        return this;
-    }
-    public Long getDataPlan() {
-        return this.dataPlan;
-    }
-
-    public UpgradeSmartAccessGatewayRequest setUserCount(Integer userCount) {
-        this.userCount = userCount;
-        return this;
-    }
-    public Integer getUserCount() {
-        return this.userCount;
     }
 
 }

@@ -79,17 +79,11 @@ public class CreateSmartAccessGatewayRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
-    @NameInMap("UserCount")
-    public Integer userCount;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
-
-    @NameInMap("DataPlan")
-    public Long dataPlan;
-
     @NameInMap("AlreadyHaveSag")
     public Boolean alreadyHaveSag;
+
+    @NameInMap("CPEVersion")
+    public String CPEVersion;
 
     public static CreateSmartAccessGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSmartAccessGatewayRequest self = new CreateSmartAccessGatewayRequest();
@@ -296,36 +290,20 @@ public class CreateSmartAccessGatewayRequest extends TeaModel {
         return this.chargeType;
     }
 
-    public CreateSmartAccessGatewayRequest setUserCount(Integer userCount) {
-        this.userCount = userCount;
-        return this;
-    }
-    public Integer getUserCount() {
-        return this.userCount;
-    }
-
-    public CreateSmartAccessGatewayRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
-    public CreateSmartAccessGatewayRequest setDataPlan(Long dataPlan) {
-        this.dataPlan = dataPlan;
-        return this;
-    }
-    public Long getDataPlan() {
-        return this.dataPlan;
-    }
-
     public CreateSmartAccessGatewayRequest setAlreadyHaveSag(Boolean alreadyHaveSag) {
         this.alreadyHaveSag = alreadyHaveSag;
         return this;
     }
     public Boolean getAlreadyHaveSag() {
         return this.alreadyHaveSag;
+    }
+
+    public CreateSmartAccessGatewayRequest setCPEVersion(String CPEVersion) {
+        this.CPEVersion = CPEVersion;
+        return this;
+    }
+    public String getCPEVersion() {
+        return this.CPEVersion;
     }
 
 }

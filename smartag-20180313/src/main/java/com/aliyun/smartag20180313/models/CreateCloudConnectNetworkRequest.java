@@ -19,9 +19,6 @@ public class CreateCloudConnectNetworkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("IsDefault")
-    public Boolean isDefault;
-
     @NameInMap("Name")
     public String name;
 
@@ -77,14 +74,6 @@ public class CreateCloudConnectNetworkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CreateCloudConnectNetworkRequest setIsDefault(Boolean isDefault) {
-        this.isDefault = isDefault;
-        return this;
-    }
-    public Boolean getIsDefault() {
-        return this.isDefault;
     }
 
     public CreateCloudConnectNetworkRequest setName(String name) {

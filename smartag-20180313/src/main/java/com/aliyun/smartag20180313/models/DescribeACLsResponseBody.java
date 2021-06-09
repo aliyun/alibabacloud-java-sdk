@@ -74,6 +74,9 @@ public class DescribeACLsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         public static DescribeACLsResponseBodyAclsAcl build(java.util.Map<String, ?> map) throws Exception {
             DescribeACLsResponseBodyAclsAcl self = new DescribeACLsResponseBodyAclsAcl();
             return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class DescribeACLsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeACLsResponseBodyAclsAcl setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

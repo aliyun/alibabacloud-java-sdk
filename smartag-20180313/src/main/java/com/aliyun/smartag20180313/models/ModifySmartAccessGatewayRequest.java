@@ -16,9 +16,6 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("City")
-    public String city;
-
     @NameInMap("SmartAGId")
     public String smartAGId;
 
@@ -75,14 +72,6 @@ public class ModifySmartAccessGatewayRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifySmartAccessGatewayRequest setCity(String city) {
-        this.city = city;
-        return this;
-    }
-    public String getCity() {
-        return this.city;
     }
 
     public ModifySmartAccessGatewayRequest setSmartAGId(String smartAGId) {

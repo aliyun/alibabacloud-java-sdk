@@ -10,6 +10,9 @@ public class CreateQosResponseBody extends TeaModel {
     @NameInMap("QosId")
     public String qosId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateQosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateQosResponseBody self = new CreateQosResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateQosResponseBody extends TeaModel {
     }
     public String getQosId() {
         return this.qosId;
+    }
+
+    public CreateQosResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

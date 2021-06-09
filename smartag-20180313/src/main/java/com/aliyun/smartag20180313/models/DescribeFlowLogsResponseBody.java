@@ -107,6 +107,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("LogstoreName")
         public String logstoreName;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         public static DescribeFlowLogsResponseBodyFlowLogsFlowLogSetType build(java.util.Map<String, ?> map) throws Exception {
             DescribeFlowLogsResponseBodyFlowLogsFlowLogSetType self = new DescribeFlowLogsResponseBodyFlowLogsFlowLogSetType();
             return TeaModel.build(map, self);
@@ -222,6 +225,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
         public String getLogstoreName() {
             return this.logstoreName;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLogSetType setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

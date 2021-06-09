@@ -249,6 +249,9 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         @NameInMap("AssociatedCcnName")
         public String associatedCcnName;
 
+        @NameInMap("ResellerUid")
+        public String resellerUid;
+
         @NameInMap("DpiMonitorStatus")
         public String dpiMonitorStatus;
 
@@ -263,6 +266,9 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
 
         @NameInMap("EndTime")
         public Long endTime;
+
+        @NameInMap("ResellerInstanceId")
+        public String resellerInstanceId;
 
         @NameInMap("VpnStatus")
         public String vpnStatus;
@@ -284,6 +290,12 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
 
         @NameInMap("AccessPointId")
         public String accessPointId;
+
+        @NameInMap("ApplicationBandwidthPackageId")
+        public String applicationBandwidthPackageId;
+
+        @NameInMap("AccelerateBandwidth")
+        public Long accelerateBandwidth;
 
         public static DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway build(java.util.Map<String, ?> map) throws Exception {
             DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway self = new DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway();
@@ -474,6 +486,14 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
             return this.associatedCcnName;
         }
 
+        public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setResellerUid(String resellerUid) {
+            this.resellerUid = resellerUid;
+            return this;
+        }
+        public String getResellerUid() {
+            return this.resellerUid;
+        }
+
         public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setDpiMonitorStatus(String dpiMonitorStatus) {
             this.dpiMonitorStatus = dpiMonitorStatus;
             return this;
@@ -512,6 +532,14 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setResellerInstanceId(String resellerInstanceId) {
+            this.resellerInstanceId = resellerInstanceId;
+            return this;
+        }
+        public String getResellerInstanceId() {
+            return this.resellerInstanceId;
         }
 
         public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setVpnStatus(String vpnStatus) {
@@ -568,6 +596,22 @@ public class DescribeSmartAccessGatewaysResponseBody extends TeaModel {
         }
         public String getAccessPointId() {
             return this.accessPointId;
+        }
+
+        public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setApplicationBandwidthPackageId(String applicationBandwidthPackageId) {
+            this.applicationBandwidthPackageId = applicationBandwidthPackageId;
+            return this;
+        }
+        public String getApplicationBandwidthPackageId() {
+            return this.applicationBandwidthPackageId;
+        }
+
+        public DescribeSmartAccessGatewaysResponseBodySmartAccessGatewaysSmartAccessGateway setAccelerateBandwidth(Long accelerateBandwidth) {
+            this.accelerateBandwidth = accelerateBandwidth;
+            return this;
+        }
+        public Long getAccelerateBandwidth() {
+            return this.accelerateBandwidth;
         }
 
     }
