@@ -10,6 +10,12 @@ public class GetTraceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("StartTime")
+    public Long startTime;
+
+    @NameInMap("EndTime")
+    public Long endTime;
+
     public static GetTraceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTraceRequest self = new GetTraceRequest();
         return TeaModel.build(map, self);
@@ -29,6 +35,22 @@ public class GetTraceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetTraceRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public GetTraceRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
 }
