@@ -67,17 +67,8 @@ public class GetAiotStorageInfoResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Domain")
-        public String domain;
-
-        @NameInMap("Version")
-        public String version;
-
         @NameInMap("RegionId")
         public String regionId;
-
-        @NameInMap("Brokers")
-        public java.util.List<String> brokers;
 
         @NameInMap("RamArnRole")
         public String ramArnRole;
@@ -119,36 +110,12 @@ public class GetAiotStorageInfoResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetAiotStorageInfoResponseBodyAiotStorageInfoEventAlarmMq setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public GetAiotStorageInfoResponseBodyAiotStorageInfoEventAlarmMq setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
         public GetAiotStorageInfoResponseBodyAiotStorageInfoEventAlarmMq setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
-        }
-
-        public GetAiotStorageInfoResponseBodyAiotStorageInfoEventAlarmMq setBrokers(java.util.List<String> brokers) {
-            this.brokers = brokers;
-            return this;
-        }
-        public java.util.List<String> getBrokers() {
-            return this.brokers;
         }
 
         public GetAiotStorageInfoResponseBodyAiotStorageInfoEventAlarmMq setRamArnRole(String ramArnRole) {
@@ -176,6 +143,9 @@ public class GetAiotStorageInfoResponseBody extends TeaModel {
 
         @NameInMap("RamArnRole")
         public String ramArnRole;
+
+        @NameInMap("Proxy")
+        public String proxy;
 
         public static GetAiotStorageInfoResponseBodyAiotStorageInfoEventAlarmPictureStorage build(java.util.Map<String, ?> map) throws Exception {
             GetAiotStorageInfoResponseBodyAiotStorageInfoEventAlarmPictureStorage self = new GetAiotStorageInfoResponseBodyAiotStorageInfoEventAlarmPictureStorage();
@@ -220,6 +190,14 @@ public class GetAiotStorageInfoResponseBody extends TeaModel {
         }
         public String getRamArnRole() {
             return this.ramArnRole;
+        }
+
+        public GetAiotStorageInfoResponseBodyAiotStorageInfoEventAlarmPictureStorage setProxy(String proxy) {
+            this.proxy = proxy;
+            return this;
+        }
+        public String getProxy() {
+            return this.proxy;
         }
 
     }

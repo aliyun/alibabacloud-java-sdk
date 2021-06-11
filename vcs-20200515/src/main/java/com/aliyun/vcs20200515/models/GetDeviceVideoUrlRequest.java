@@ -22,6 +22,9 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
     @NameInMap("OutProtocol")
     public String outProtocol;
 
+    @NameInMap("StorageType")
+    public String storageType;
+
     public static GetDeviceVideoUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceVideoUrlRequest self = new GetDeviceVideoUrlRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
     }
     public String getOutProtocol() {
         return this.outProtocol;
+    }
+
+    public GetDeviceVideoUrlRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
 }

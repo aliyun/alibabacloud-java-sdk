@@ -90,6 +90,9 @@ public class DescribeDevicesResponseBody extends TeaModel {
         @NameInMap("CapturedPictureId")
         public String capturedPictureId;
 
+        @NameInMap("Password")
+        public String password;
+
         public static DescribeDevicesResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeDevicesResponseBodyDataRecords self = new DescribeDevicesResponseBodyDataRecords();
             return TeaModel.build(map, self);
@@ -189,6 +192,14 @@ public class DescribeDevicesResponseBody extends TeaModel {
         }
         public String getCapturedPictureId() {
             return this.capturedPictureId;
+        }
+
+        public DescribeDevicesResponseBodyDataRecords setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
         }
 
     }

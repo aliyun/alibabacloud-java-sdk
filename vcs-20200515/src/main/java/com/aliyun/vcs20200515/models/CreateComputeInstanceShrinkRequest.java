@@ -28,9 +28,6 @@ public class CreateComputeInstanceShrinkRequest extends TeaModel {
     @NameInMap("Devices")
     public String devicesShrink;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("Algorithms")
     public String algorithmsShrink;
 
@@ -140,14 +137,6 @@ public class CreateComputeInstanceShrinkRequest extends TeaModel {
     }
     public String getDevicesShrink() {
         return this.devicesShrink;
-    }
-
-    public CreateComputeInstanceShrinkRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public CreateComputeInstanceShrinkRequest setAlgorithmsShrink(String algorithmsShrink) {

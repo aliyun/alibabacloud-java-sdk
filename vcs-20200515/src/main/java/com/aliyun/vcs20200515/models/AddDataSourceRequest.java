@@ -16,8 +16,8 @@ public class AddDataSourceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("FileRetentionDays")
-    public Integer fileRetentionDays;
+    @NameInMap("Url")
+    public String url;
 
     public static AddDataSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddDataSourceRequest self = new AddDataSourceRequest();
@@ -56,12 +56,12 @@ public class AddDataSourceRequest extends TeaModel {
         return this.description;
     }
 
-    public AddDataSourceRequest setFileRetentionDays(Integer fileRetentionDays) {
-        this.fileRetentionDays = fileRetentionDays;
+    public AddDataSourceRequest setUrl(String url) {
+        this.url = url;
         return this;
     }
-    public Integer getFileRetentionDays() {
-        return this.fileRetentionDays;
+    public String getUrl() {
+        return this.url;
     }
 
 }

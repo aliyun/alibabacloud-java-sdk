@@ -20,6 +20,10 @@ public class ModifyDeviceRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    // 设备密码
+    @NameInMap("Password")
+    public String password;
+
     public static ModifyDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeviceRequest self = new ModifyDeviceRequest();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class ModifyDeviceRequest extends TeaModel {
     }
     public String getIp() {
         return this.ip;
+    }
+
+    public ModifyDeviceRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
     }
 
 }

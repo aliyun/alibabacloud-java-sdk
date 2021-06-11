@@ -10,6 +10,9 @@ public class GetPictureUrlRequest extends TeaModel {
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    @NameInMap("Protocol")
+    public String protocol;
+
     public static GetPictureUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPictureUrlRequest self = new GetPictureUrlRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetPictureUrlRequest extends TeaModel {
     }
     public String getExpireTime() {
         return this.expireTime;
+    }
+
+    public GetPictureUrlRequest setProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    public String getProtocol() {
+        return this.protocol;
     }
 
 }
