@@ -1,0 +1,35 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vcs20200515.models;
+
+import com.aliyun.tea.*;
+
+public class StartStreamsRequest extends TeaModel {
+    // 全局编号,支持多个,英文逗号分隔
+    @NameInMap("DeviceIdList")
+    public String deviceIdList;
+
+    @NameInMap("Description")
+    public String description;
+
+    public static StartStreamsRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartStreamsRequest self = new StartStreamsRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public StartStreamsRequest setDeviceIdList(String deviceIdList) {
+        this.deviceIdList = deviceIdList;
+        return this;
+    }
+    public String getDeviceIdList() {
+        return this.deviceIdList;
+    }
+
+    public StartStreamsRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+}

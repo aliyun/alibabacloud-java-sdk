@@ -44,17 +44,8 @@ public class SetAiotStorageInfoRequest extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Domain")
-        public String domain;
-
-        @NameInMap("Version")
-        public String version;
-
         @NameInMap("RegionId")
         public String regionId;
-
-        @NameInMap("Brokers")
-        public java.util.List<String> brokers;
 
         @NameInMap("RamArnRole")
         public String ramArnRole;
@@ -96,36 +87,12 @@ public class SetAiotStorageInfoRequest extends TeaModel {
             return this.instanceId;
         }
 
-        public SetAiotStorageInfoRequestEventAlarmMq setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public SetAiotStorageInfoRequestEventAlarmMq setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
         public SetAiotStorageInfoRequestEventAlarmMq setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
-        }
-
-        public SetAiotStorageInfoRequestEventAlarmMq setBrokers(java.util.List<String> brokers) {
-            this.brokers = brokers;
-            return this;
-        }
-        public java.util.List<String> getBrokers() {
-            return this.brokers;
         }
 
         public SetAiotStorageInfoRequestEventAlarmMq setRamArnRole(String ramArnRole) {
@@ -153,6 +120,9 @@ public class SetAiotStorageInfoRequest extends TeaModel {
 
         @NameInMap("RamArnRole")
         public String ramArnRole;
+
+        @NameInMap("Proxy")
+        public String proxy;
 
         public static SetAiotStorageInfoRequestEventAlarmPictureStorage build(java.util.Map<String, ?> map) throws Exception {
             SetAiotStorageInfoRequestEventAlarmPictureStorage self = new SetAiotStorageInfoRequestEventAlarmPictureStorage();
@@ -197,6 +167,14 @@ public class SetAiotStorageInfoRequest extends TeaModel {
         }
         public String getRamArnRole() {
             return this.ramArnRole;
+        }
+
+        public SetAiotStorageInfoRequestEventAlarmPictureStorage setProxy(String proxy) {
+            this.proxy = proxy;
+            return this;
+        }
+        public String getProxy() {
+            return this.proxy;
         }
 
     }

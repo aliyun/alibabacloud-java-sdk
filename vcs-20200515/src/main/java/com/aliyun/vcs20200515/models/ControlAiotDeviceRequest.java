@@ -34,8 +34,8 @@ public class ControlAiotDeviceRequest extends TeaModel {
     @NameInMap("AssociatedPort")
     public Long associatedPort;
 
-    @NameInMap("AssociatedDeviceID")
-    public String associatedDeviceID;
+    @NameInMap("AssociatedDeviceId")
+    public String associatedDeviceId;
 
     @NameInMap("SingleInterval")
     public Long singleInterval;
@@ -45,6 +45,15 @@ public class ControlAiotDeviceRequest extends TeaModel {
 
     @NameInMap("DoubleVerificationGroupEnabled")
     public String doubleVerificationGroupEnabled;
+
+    @NameInMap("IdentityNumber")
+    public String identityNumber;
+
+    @NameInMap("CheckEnabled")
+    public String checkEnabled;
+
+    @NameInMap("MiFareCard")
+    public ControlAiotDeviceRequestMiFareCard miFareCard;
 
     public static ControlAiotDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         ControlAiotDeviceRequest self = new ControlAiotDeviceRequest();
@@ -131,12 +140,12 @@ public class ControlAiotDeviceRequest extends TeaModel {
         return this.associatedPort;
     }
 
-    public ControlAiotDeviceRequest setAssociatedDeviceID(String associatedDeviceID) {
-        this.associatedDeviceID = associatedDeviceID;
+    public ControlAiotDeviceRequest setAssociatedDeviceId(String associatedDeviceId) {
+        this.associatedDeviceId = associatedDeviceId;
         return this;
     }
-    public String getAssociatedDeviceID() {
-        return this.associatedDeviceID;
+    public String getAssociatedDeviceId() {
+        return this.associatedDeviceId;
     }
 
     public ControlAiotDeviceRequest setSingleInterval(Long singleInterval) {
@@ -161,6 +170,115 @@ public class ControlAiotDeviceRequest extends TeaModel {
     }
     public String getDoubleVerificationGroupEnabled() {
         return this.doubleVerificationGroupEnabled;
+    }
+
+    public ControlAiotDeviceRequest setIdentityNumber(String identityNumber) {
+        this.identityNumber = identityNumber;
+        return this;
+    }
+    public String getIdentityNumber() {
+        return this.identityNumber;
+    }
+
+    public ControlAiotDeviceRequest setCheckEnabled(String checkEnabled) {
+        this.checkEnabled = checkEnabled;
+        return this;
+    }
+    public String getCheckEnabled() {
+        return this.checkEnabled;
+    }
+
+    public ControlAiotDeviceRequest setMiFareCard(ControlAiotDeviceRequestMiFareCard miFareCard) {
+        this.miFareCard = miFareCard;
+        return this;
+    }
+    public ControlAiotDeviceRequestMiFareCard getMiFareCard() {
+        return this.miFareCard;
+    }
+
+    public static class ControlAiotDeviceRequestMiFareCard extends TeaModel {
+        @NameInMap("Enabled")
+        public String enabled;
+
+        @NameInMap("KeyType")
+        public Long keyType;
+
+        @NameInMap("SecretKey")
+        public String secretKey;
+
+        @NameInMap("AreaCode")
+        public Long areaCode;
+
+        @NameInMap("AreaDeviate")
+        public Long areaDeviate;
+
+        @NameInMap("AreaLen")
+        public Long areaLen;
+
+        @NameInMap("LastChange")
+        public String lastChange;
+
+        public static ControlAiotDeviceRequestMiFareCard build(java.util.Map<String, ?> map) throws Exception {
+            ControlAiotDeviceRequestMiFareCard self = new ControlAiotDeviceRequestMiFareCard();
+            return TeaModel.build(map, self);
+        }
+
+        public ControlAiotDeviceRequestMiFareCard setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
+        }
+
+        public ControlAiotDeviceRequestMiFareCard setKeyType(Long keyType) {
+            this.keyType = keyType;
+            return this;
+        }
+        public Long getKeyType() {
+            return this.keyType;
+        }
+
+        public ControlAiotDeviceRequestMiFareCard setSecretKey(String secretKey) {
+            this.secretKey = secretKey;
+            return this;
+        }
+        public String getSecretKey() {
+            return this.secretKey;
+        }
+
+        public ControlAiotDeviceRequestMiFareCard setAreaCode(Long areaCode) {
+            this.areaCode = areaCode;
+            return this;
+        }
+        public Long getAreaCode() {
+            return this.areaCode;
+        }
+
+        public ControlAiotDeviceRequestMiFareCard setAreaDeviate(Long areaDeviate) {
+            this.areaDeviate = areaDeviate;
+            return this;
+        }
+        public Long getAreaDeviate() {
+            return this.areaDeviate;
+        }
+
+        public ControlAiotDeviceRequestMiFareCard setAreaLen(Long areaLen) {
+            this.areaLen = areaLen;
+            return this;
+        }
+        public Long getAreaLen() {
+            return this.areaLen;
+        }
+
+        public ControlAiotDeviceRequestMiFareCard setLastChange(String lastChange) {
+            this.lastChange = lastChange;
+            return this;
+        }
+        public String getLastChange() {
+            return this.lastChange;
+        }
+
     }
 
 }

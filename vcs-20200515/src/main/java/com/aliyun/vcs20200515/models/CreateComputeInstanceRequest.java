@@ -26,13 +26,10 @@ public class CreateComputeInstanceRequest extends TeaModel {
     public String projectId;
 
     @NameInMap("Devices")
-    public java.util.Map<String, ?> devices;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
+    public java.util.List<CreateComputeInstanceRequestDevices> devices;
 
     @NameInMap("Algorithms")
-    public java.util.Map<String, ?> algorithms;
+    public java.util.List<CreateComputeInstanceRequestAlgorithms> algorithms;
 
     @NameInMap("ScheduleDay")
     public String scheduleDay;
@@ -134,27 +131,19 @@ public class CreateComputeInstanceRequest extends TeaModel {
         return this.projectId;
     }
 
-    public CreateComputeInstanceRequest setDevices(java.util.Map<String, ?> devices) {
+    public CreateComputeInstanceRequest setDevices(java.util.List<CreateComputeInstanceRequestDevices> devices) {
         this.devices = devices;
         return this;
     }
-    public java.util.Map<String, ?> getDevices() {
+    public java.util.List<CreateComputeInstanceRequestDevices> getDevices() {
         return this.devices;
     }
 
-    public CreateComputeInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CreateComputeInstanceRequest setAlgorithms(java.util.Map<String, ?> algorithms) {
+    public CreateComputeInstanceRequest setAlgorithms(java.util.List<CreateComputeInstanceRequestAlgorithms> algorithms) {
         this.algorithms = algorithms;
         return this;
     }
-    public java.util.Map<String, ?> getAlgorithms() {
+    public java.util.List<CreateComputeInstanceRequestAlgorithms> getAlgorithms() {
         return this.algorithms;
     }
 
@@ -260,6 +249,110 @@ public class CreateComputeInstanceRequest extends TeaModel {
     }
     public String getIsFrameExtraction() {
         return this.isFrameExtraction;
+    }
+
+    public static class CreateComputeInstanceRequestDevices extends TeaModel {
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        @NameInMap("BitRate")
+        public String bitRate;
+
+        @NameInMap("CodingFormat")
+        public String codingFormat;
+
+        @NameInMap("ResolvingPower")
+        public String resolvingPower;
+
+        @NameInMap("StartStream")
+        public Boolean startStream;
+
+        public static CreateComputeInstanceRequestDevices build(java.util.Map<String, ?> map) throws Exception {
+            CreateComputeInstanceRequestDevices self = new CreateComputeInstanceRequestDevices();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateComputeInstanceRequestDevices setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public CreateComputeInstanceRequestDevices setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public CreateComputeInstanceRequestDevices setBitRate(String bitRate) {
+            this.bitRate = bitRate;
+            return this;
+        }
+        public String getBitRate() {
+            return this.bitRate;
+        }
+
+        public CreateComputeInstanceRequestDevices setCodingFormat(String codingFormat) {
+            this.codingFormat = codingFormat;
+            return this;
+        }
+        public String getCodingFormat() {
+            return this.codingFormat;
+        }
+
+        public CreateComputeInstanceRequestDevices setResolvingPower(String resolvingPower) {
+            this.resolvingPower = resolvingPower;
+            return this;
+        }
+        public String getResolvingPower() {
+            return this.resolvingPower;
+        }
+
+        public CreateComputeInstanceRequestDevices setStartStream(Boolean startStream) {
+            this.startStream = startStream;
+            return this;
+        }
+        public Boolean getStartStream() {
+            return this.startStream;
+        }
+
+    }
+
+    public static class CreateComputeInstanceRequestAlgorithms extends TeaModel {
+        @NameInMap("AlgorithmId")
+        public String algorithmId;
+
+        @NameInMap("AlgorithmName")
+        public String algorithmName;
+
+        public static CreateComputeInstanceRequestAlgorithms build(java.util.Map<String, ?> map) throws Exception {
+            CreateComputeInstanceRequestAlgorithms self = new CreateComputeInstanceRequestAlgorithms();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateComputeInstanceRequestAlgorithms setAlgorithmId(String algorithmId) {
+            this.algorithmId = algorithmId;
+            return this;
+        }
+        public String getAlgorithmId() {
+            return this.algorithmId;
+        }
+
+        public CreateComputeInstanceRequestAlgorithms setAlgorithmName(String algorithmName) {
+            this.algorithmName = algorithmName;
+            return this;
+        }
+        public String getAlgorithmName() {
+            return this.algorithmName;
+        }
+
     }
 
 }

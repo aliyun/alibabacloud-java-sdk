@@ -13,6 +13,9 @@ public class AddDataSourceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static AddDataSourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddDataSourceResponseBody self = new AddDataSourceResponseBody();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class AddDataSourceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public AddDataSourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AddDataSourceResponseBodyData extends TeaModel {

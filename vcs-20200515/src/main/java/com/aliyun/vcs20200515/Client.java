@@ -108,19 +108,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteRecordsWithOptions(request, runtime);
     }
 
-    public StartDeployResponse startDeployWithOptions(StartDeployRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("StartDeploy", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new StartDeployResponse());
-    }
-
-    public StartDeployResponse startDeploy(StartDeployRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.startDeployWithOptions(request, runtime);
-    }
-
     public GetInventoryResponse getInventoryWithOptions(GetInventoryRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -173,19 +160,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDeviceWithOptions(request, runtime);
     }
 
-    public VerifyTrainLabelResponse verifyTrainLabelWithOptions(VerifyTrainLabelRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("VerifyTrainLabel", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new VerifyTrainLabelResponse());
-    }
-
-    public VerifyTrainLabelResponse verifyTrainLabel(VerifyTrainLabelRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.verifyTrainLabelWithOptions(request, runtime);
-    }
-
     public UpdateMonitorResponse updateMonitorWithOptions(UpdateMonitorRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -210,19 +184,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPersonDetailResponse getPersonDetail(GetPersonDetailRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getPersonDetailWithOptions(request, runtime);
-    }
-
-    public DeleteSampleResponse deleteSampleWithOptions(DeleteSampleRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteSample", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteSampleResponse());
-    }
-
-    public DeleteSampleResponse deleteSample(DeleteSampleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteSampleWithOptions(request, runtime);
     }
 
     public ListCorpGroupMetricsResponse listCorpGroupMetricsWithOptions(ListCorpGroupMetricsRequest request, RuntimeOptions runtime) throws Exception {
@@ -262,6 +223,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAiotPersonTableItemResponse updateAiotPersonTableItem(UpdateAiotPersonTableItemRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateAiotPersonTableItemWithOptions(request, runtime);
+    }
+
+    public DeleteDataSourcesResponse deleteDataSourcesWithOptions(DeleteDataSourcesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteDataSources", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteDataSourcesResponse());
+    }
+
+    public DeleteDataSourcesResponse deleteDataSources(DeleteDataSourcesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteDataSourcesWithOptions(request, runtime);
     }
 
     public ControlAiotDeviceResponse controlAiotDeviceWithOptions(ControlAiotDeviceRequest request, RuntimeOptions runtime) throws Exception {
@@ -374,58 +348,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMonitorListWithOptions(request, runtime);
     }
 
-    public ListTrainLabelResponse listTrainLabelWithOptions(ListTrainLabelRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ListTrainLabel", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new ListTrainLabelResponse());
-    }
-
-    public ListTrainLabelResponse listTrainLabel(ListTrainLabelRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listTrainLabelWithOptions(request, runtime);
-    }
-
-    public UpdateTrainLabelResponse updateTrainLabelWithOptions(UpdateTrainLabelRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateTrainLabel", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateTrainLabelResponse());
-    }
-
-    public UpdateTrainLabelResponse updateTrainLabel(UpdateTrainLabelRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateTrainLabelWithOptions(request, runtime);
-    }
-
-    public DeleteTrainLabelResponse deleteTrainLabelWithOptions(DeleteTrainLabelRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteTrainLabel", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteTrainLabelResponse());
-    }
-
-    public DeleteTrainLabelResponse deleteTrainLabel(DeleteTrainLabelRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteTrainLabelWithOptions(request, runtime);
-    }
-
-    public StopDeployResponse stopDeployWithOptions(StopDeployRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("StopDeploy", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new StopDeployResponse());
-    }
-
-    public StopDeployResponse stopDeploy(StopDeployRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.stopDeployWithOptions(request, runtime);
-    }
-
     public StopMonitorResponse stopMonitorWithOptions(StopMonitorRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -460,6 +382,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetProfileListResponse getProfileList(GetProfileListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getProfileListWithOptions(request, runtime);
+    }
+
+    public DescribeAiotVehicleTablesResponse describeAiotVehicleTablesWithOptions(DescribeAiotVehicleTablesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeAiotVehicleTables", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeAiotVehicleTablesResponse());
+    }
+
+    public DescribeAiotVehicleTablesResponse describeAiotVehicleTables(DescribeAiotVehicleTablesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAiotVehicleTablesWithOptions(request, runtime);
     }
 
     public DeleteDataSourceResponse deleteDataSourceWithOptions(DeleteDataSourceRequest request, RuntimeOptions runtime) throws Exception {
@@ -566,19 +501,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDeviceWithOptions(request, runtime);
     }
 
-    public CreateMarkerResponse createMarkerWithOptions(CreateMarkerRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateMarker", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new CreateMarkerResponse());
-    }
-
-    public CreateMarkerResponse createMarker(CreateMarkerRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createMarkerWithOptions(request, runtime);
-    }
-
     public CreateCorpResponse createCorpWithOptions(CreateCorpRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -631,19 +553,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDeviceCaptureStrategyWithOptions(request, runtime);
     }
 
-    public StartTrainResponse startTrainWithOptions(StartTrainRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("StartTrain", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new StartTrainResponse());
-    }
-
-    public StartTrainResponse startTrain(StartTrainRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.startTrainWithOptions(request, runtime);
-    }
-
     public DeleteVideoSummaryTaskResponse deleteVideoSummaryTaskWithOptions(DeleteVideoSummaryTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -655,6 +564,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteVideoSummaryTaskResponse deleteVideoSummaryTask(DeleteVideoSummaryTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteVideoSummaryTaskWithOptions(request, runtime);
+    }
+
+    public UpdateAiotVehicleTableItemResponse updateAiotVehicleTableItemWithOptions(UpdateAiotVehicleTableItemRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAiotVehicleTableItemShrinkRequest request = new UpdateAiotVehicleTableItemShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.vehicleTableItem))) {
+            request.vehicleTableItemShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.vehicleTableItem), "VehicleTableItem", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateAiotVehicleTableItem", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateAiotVehicleTableItemResponse());
+    }
+
+    public UpdateAiotVehicleTableItemResponse updateAiotVehicleTableItem(UpdateAiotVehicleTableItemRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateAiotVehicleTableItemWithOptions(request, runtime);
     }
 
     public UnbindUserResponse unbindUserWithOptions(UnbindUserRequest request, RuntimeOptions runtime) throws Exception {
@@ -691,25 +619,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetAiotStorageInfoResponse setAiotStorageInfo(SetAiotStorageInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.setAiotStorageInfoWithOptions(request, runtime);
-    }
-
-    public BatchDeleteInstanceResponse batchDeleteInstanceWithOptions(BatchDeleteInstanceRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        BatchDeleteInstanceShrinkRequest request = new BatchDeleteInstanceShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceIds)) {
-            request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("BatchDeleteInstance", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new BatchDeleteInstanceResponse());
-    }
-
-    public BatchDeleteInstanceResponse batchDeleteInstance(BatchDeleteInstanceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.batchDeleteInstanceWithOptions(request, runtime);
     }
 
     public ListPersonsResponse listPersonsWithOptions(ListPersonsRequest request, RuntimeOptions runtime) throws Exception {
@@ -823,17 +732,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.reportDeviceCapacityWithOptions(request, runtime);
     }
 
-    public DeleteMarkerResponse deleteMarkerWithOptions(DeleteMarkerRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeDataSourcesResponse describeDataSourcesWithOptions(DescribeDataSourcesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteMarker", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteMarkerResponse());
+        return TeaModel.toModel(this.doRPCRequest("DescribeDataSources", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeDataSourcesResponse());
     }
 
-    public DeleteMarkerResponse deleteMarker(DeleteMarkerRequest request) throws Exception {
+    public DescribeDataSourcesResponse describeDataSources(DescribeDataSourcesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteMarkerWithOptions(request, runtime);
+        return this.describeDataSourcesWithOptions(request, runtime);
     }
 
     public ListPersonTraceDetailsResponse listPersonTraceDetailsWithOptions(ListPersonTraceDetailsRequest request, RuntimeOptions runtime) throws Exception {
@@ -875,6 +784,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteNVRDeviceWithOptions(request, runtime);
     }
 
+    public StopStreamsResponse stopStreamsWithOptions(StopStreamsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StopStreams", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new StopStreamsResponse());
+    }
+
+    public StopStreamsResponse stopStreams(StopStreamsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.stopStreamsWithOptions(request, runtime);
+    }
+
     public AddAiotPersonTableItemsResponse addAiotPersonTableItemsWithOptions(AddAiotPersonTableItemsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -901,19 +823,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addProfileCatalogWithOptions(request, runtime);
     }
 
-    public SampleListResponse sampleListWithOptions(SampleListRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("SampleList", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new SampleListResponse());
-    }
-
-    public SampleListResponse sampleList(SampleListRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.sampleListWithOptions(request, runtime);
-    }
-
     public RecognizeFaceQualityResponse recognizeFaceQualityWithOptions(RecognizeFaceQualityRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -927,45 +836,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recognizeFaceQualityWithOptions(request, runtime);
     }
 
-    public GetTrainAlgorithmResponse getTrainAlgorithmWithOptions(GetTrainAlgorithmRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetTrainAlgorithm", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetTrainAlgorithmResponse());
-    }
-
-    public GetTrainAlgorithmResponse getTrainAlgorithm(GetTrainAlgorithmRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getTrainAlgorithmWithOptions(request, runtime);
-    }
-
-    public DeleteTrainAlgorithmResponse deleteTrainAlgorithmWithOptions(DeleteTrainAlgorithmRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteTrainAlgorithm", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteTrainAlgorithmResponse());
-    }
-
-    public DeleteTrainAlgorithmResponse deleteTrainAlgorithm(DeleteTrainAlgorithmRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteTrainAlgorithmWithOptions(request, runtime);
-    }
-
-    public UpdateMarkerResponse updateMarkerWithOptions(UpdateMarkerRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateMarker", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateMarkerResponse());
-    }
-
-    public UpdateMarkerResponse updateMarker(UpdateMarkerRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateMarkerWithOptions(request, runtime);
-    }
-
     public ListCorpGroupsResponse listCorpGroupsWithOptions(ListCorpGroupsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -977,19 +847,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCorpGroupsResponse listCorpGroups(ListCorpGroupsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listCorpGroupsWithOptions(request, runtime);
-    }
-
-    public StopTrainResponse stopTrainWithOptions(StopTrainRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("StopTrain", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new StopTrainResponse());
-    }
-
-    public StopTrainResponse stopTrain(StopTrainRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.stopTrainWithOptions(request, runtime);
     }
 
     public DescribeDevicesResponse describeDevicesWithOptions(DescribeDevicesRequest request, RuntimeOptions runtime) throws Exception {
@@ -1145,19 +1002,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAiotDeviceWithOptions(request, runtime);
     }
 
-    public CreateTrainLabelResponse createTrainLabelWithOptions(CreateTrainLabelRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateTrainLabel", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new CreateTrainLabelResponse());
-    }
-
-    public CreateTrainLabelResponse createTrainLabel(CreateTrainLabelRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createTrainLabelWithOptions(request, runtime);
-    }
-
     public AddAiotDevicesResponse addAiotDevicesWithOptions(AddAiotDevicesRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddAiotDevicesShrinkRequest request = new AddAiotDevicesShrinkRequest();
@@ -1175,6 +1019,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddAiotDevicesResponse addAiotDevices(AddAiotDevicesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.addAiotDevicesWithOptions(request, runtime);
+    }
+
+    public UpdateDataSourceResponse updateDataSourceWithOptions(UpdateDataSourceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateDataSource", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateDataSourceResponse());
+    }
+
+    public UpdateDataSourceResponse updateDataSource(UpdateDataSourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateDataSourceWithOptions(request, runtime);
     }
 
     public UpdateProfileCatalogResponse updateProfileCatalogWithOptions(UpdateProfileCatalogRequest request, RuntimeOptions runtime) throws Exception {
@@ -1201,19 +1058,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPersonVisitCountResponse listPersonVisitCount(ListPersonVisitCountRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listPersonVisitCountWithOptions(request, runtime);
-    }
-
-    public UpdateSampleResponse updateSampleWithOptions(UpdateSampleRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateSample", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateSampleResponse());
-    }
-
-    public UpdateSampleResponse updateSample(UpdateSampleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateSampleWithOptions(request, runtime);
     }
 
     public CreateVideoSummaryTaskResponse createVideoSummaryTaskWithOptions(CreateVideoSummaryTaskRequest request, RuntimeOptions runtime) throws Exception {
@@ -1294,6 +1138,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCatalogListWithOptions(request, runtime);
     }
 
+    public DeleteAiotVehicleTableItemResponse deleteAiotVehicleTableItemWithOptions(DeleteAiotVehicleTableItemRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteAiotVehicleTableItem", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteAiotVehicleTableItemResponse());
+    }
+
+    public DeleteAiotVehicleTableItemResponse deleteAiotVehicleTableItem(DeleteAiotVehicleTableItemRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteAiotVehicleTableItemWithOptions(request, runtime);
+    }
+
     public ListNVRDeviceResponse listNVRDeviceWithOptions(ListNVRDeviceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1346,6 +1203,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDeviceWithOptions(request, runtime);
     }
 
+    public GetDataSourceStatsResponse getDataSourceStatsWithOptions(GetDataSourceStatsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDataSourceStats", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetDataSourceStatsResponse());
+    }
+
+    public GetDataSourceStatsResponse getDataSourceStats(GetDataSourceStatsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDataSourceStatsWithOptions(request, runtime);
+    }
+
     public DeleteCorpGroupResponse deleteCorpGroupWithOptions(DeleteCorpGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1357,19 +1227,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCorpGroupResponse deleteCorpGroup(DeleteCorpGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteCorpGroupWithOptions(request, runtime);
-    }
-
-    public UpdateTrainAlgorithmResponse updateTrainAlgorithmWithOptions(UpdateTrainAlgorithmRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateTrainAlgorithm", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateTrainAlgorithmResponse());
-    }
-
-    public UpdateTrainAlgorithmResponse updateTrainAlgorithm(UpdateTrainAlgorithmRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateTrainAlgorithmWithOptions(request, runtime);
     }
 
     public UpdateAiotDeviceResponse updateAiotDeviceWithOptions(UpdateAiotDeviceRequest tmpReq, RuntimeOptions runtime) throws Exception {
@@ -1468,19 +1325,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateUserResponse updateUser(UpdateUserRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateUserWithOptions(request, runtime);
-    }
-
-    public GetTrainAlgorithResponse getTrainAlgorithWithOptions(GetTrainAlgorithRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetTrainAlgorith", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetTrainAlgorithResponse());
-    }
-
-    public GetTrainAlgorithResponse getTrainAlgorith(GetTrainAlgorithRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getTrainAlgorithWithOptions(request, runtime);
     }
 
     public GetVideoSummaryTaskResultResponse getVideoSummaryTaskResultWithOptions(GetVideoSummaryTaskResultRequest request, RuntimeOptions runtime) throws Exception {
@@ -1600,17 +1444,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getFaceModelResultWithOptions(request, runtime);
     }
 
-    public RetryStartDeployResponse retryStartDeployWithOptions(RetryStartDeployRequest request, RuntimeOptions runtime) throws Exception {
+    public DescribeAiotVehicleTableItemsResponse describeAiotVehicleTableItemsWithOptions(DescribeAiotVehicleTableItemsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("RetryStartDeploy", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new RetryStartDeployResponse());
+        return TeaModel.toModel(this.doRPCRequest("DescribeAiotVehicleTableItems", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeAiotVehicleTableItemsResponse());
     }
 
-    public RetryStartDeployResponse retryStartDeploy(RetryStartDeployRequest request) throws Exception {
+    public DescribeAiotVehicleTableItemsResponse describeAiotVehicleTableItems(DescribeAiotVehicleTableItemsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.retryStartDeployWithOptions(request, runtime);
+        return this.describeAiotVehicleTableItemsWithOptions(request, runtime);
     }
 
     public SyncDeviceTimeResponse syncDeviceTimeWithOptions(SyncDeviceTimeRequest request, RuntimeOptions runtime) throws Exception {
@@ -1624,19 +1468,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SyncDeviceTimeResponse syncDeviceTime(SyncDeviceTimeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.syncDeviceTimeWithOptions(request, runtime);
-    }
-
-    public CreateSampleResponse createSampleWithOptions(CreateSampleRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateSample", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new CreateSampleResponse());
-    }
-
-    public CreateSampleResponse createSample(CreateSampleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createSampleWithOptions(request, runtime);
     }
 
     public AddMonitorResponse addMonitorWithOptions(AddMonitorRequest request, RuntimeOptions runtime) throws Exception {
@@ -1782,6 +1613,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateDeviceWithOptions(request, runtime);
     }
 
+    public StartStreamsResponse startStreamsWithOptions(StartStreamsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StartStreams", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new StartStreamsResponse());
+    }
+
+    public StartStreamsResponse startStreams(StartStreamsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startStreamsWithOptions(request, runtime);
+    }
+
     public DeleteChannelResponse deleteChannelWithOptions(DeleteChannelRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1803,32 +1647,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCityCodeResponse getCityCode() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getCityCodeWithOptions(runtime);
-    }
-
-    public GetTrainLabelResponse getTrainLabelWithOptions(GetTrainLabelRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetTrainLabel", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetTrainLabelResponse());
-    }
-
-    public GetTrainLabelResponse getTrainLabel(GetTrainLabelRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getTrainLabelWithOptions(request, runtime);
-    }
-
-    public ListMarkerResponse listMarkerWithOptions(ListMarkerRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ListMarker", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new ListMarkerResponse());
-    }
-
-    public ListMarkerResponse listMarker(ListMarkerRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listMarkerWithOptions(request, runtime);
     }
 
     public CreateVideoComposeTaskResponse createVideoComposeTaskWithOptions(CreateVideoComposeTaskRequest request, RuntimeOptions runtime) throws Exception {
@@ -1900,6 +1718,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAiotPersonTablesResponse describeAiotPersonTables(DescribeAiotPersonTablesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeAiotPersonTablesWithOptions(request, runtime);
+    }
+
+    public AddAiotVehicleTableItemsResponse addAiotVehicleTableItemsWithOptions(AddAiotVehicleTableItemsRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddAiotVehicleTableItemsShrinkRequest request = new AddAiotVehicleTableItemsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.vehicleTableItem))) {
+            request.vehicleTableItemShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.vehicleTableItem), "VehicleTableItem", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddAiotVehicleTableItems", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new AddAiotVehicleTableItemsResponse());
+    }
+
+    public AddAiotVehicleTableItemsResponse addAiotVehicleTableItems(AddAiotVehicleTableItemsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addAiotVehicleTableItemsWithOptions(request, runtime);
     }
 
     public DescribeAiotPersonTableItemsResponse describeAiotPersonTableItemsWithOptions(DescribeAiotPersonTableItemsRequest request, RuntimeOptions runtime) throws Exception {
