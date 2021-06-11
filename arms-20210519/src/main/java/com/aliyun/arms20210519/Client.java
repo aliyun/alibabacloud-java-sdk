@@ -185,6 +185,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listClusterFromGrafanaWithOptions(request, runtime);
     }
 
+    public InstallEventerResponse installEventerWithOptions(InstallEventerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("InstallEventer", "2021-05-19", "HTTPS", "POST", "AK", "json", req, runtime), new InstallEventerResponse());
+    }
+
+    public InstallEventerResponse installEventer(InstallEventerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.installEventerWithOptions(request, runtime);
+    }
+
     public ListDashboardsResponse listDashboardsWithOptions(ListDashboardsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
