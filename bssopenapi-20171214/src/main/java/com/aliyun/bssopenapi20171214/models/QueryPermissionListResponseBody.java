@@ -4,24 +4,32 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryPermissionListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public QueryPermissionListResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryPermissionListResponseBodyData data;
 
     public static QueryPermissionListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPermissionListResponseBody self = new QueryPermissionListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryPermissionListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QueryPermissionListResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class QueryPermissionListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryPermissionListResponseBody setData(QueryPermissionListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryPermissionListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QueryPermissionListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public QueryPermissionListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public QueryPermissionListResponseBody setData(QueryPermissionListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryPermissionListResponseBodyData getData() {
+        return this.data;
     }
 
     public static class QueryPermissionListResponseBodyDataPermissionList extends TeaModel {
@@ -126,9 +126,6 @@ public class QueryPermissionListResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
 
-        @NameInMap("PermissionList")
-        public java.util.List<QueryPermissionListResponseBodyDataPermissionList> permissionList;
-
         @NameInMap("State")
         public String state;
 
@@ -140,6 +137,9 @@ public class QueryPermissionListResponseBody extends TeaModel {
 
         @NameInMap("SetupTime")
         public String setupTime;
+
+        @NameInMap("PermissionList")
+        public java.util.List<QueryPermissionListResponseBodyDataPermissionList> permissionList;
 
         public static QueryPermissionListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryPermissionListResponseBodyData self = new QueryPermissionListResponseBodyData();
@@ -168,14 +168,6 @@ public class QueryPermissionListResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
-        }
-
-        public QueryPermissionListResponseBodyData setPermissionList(java.util.List<QueryPermissionListResponseBodyDataPermissionList> permissionList) {
-            this.permissionList = permissionList;
-            return this;
-        }
-        public java.util.List<QueryPermissionListResponseBodyDataPermissionList> getPermissionList() {
-            return this.permissionList;
         }
 
         public QueryPermissionListResponseBodyData setState(String state) {
@@ -208,6 +200,14 @@ public class QueryPermissionListResponseBody extends TeaModel {
         }
         public String getSetupTime() {
             return this.setupTime;
+        }
+
+        public QueryPermissionListResponseBodyData setPermissionList(java.util.List<QueryPermissionListResponseBodyDataPermissionList> permissionList) {
+            this.permissionList = permissionList;
+            return this;
+        }
+        public java.util.List<QueryPermissionListResponseBodyDataPermissionList> getPermissionList() {
+            return this.permissionList;
         }
 
     }

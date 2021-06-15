@@ -4,24 +4,32 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public QuerySavingsPlansDeductLogResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QuerySavingsPlansDeductLogResponseBodyData data;
 
     public static QuerySavingsPlansDeductLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySavingsPlansDeductLogResponseBody self = new QuerySavingsPlansDeductLogResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySavingsPlansDeductLogResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QuerySavingsPlansDeductLogResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QuerySavingsPlansDeductLogResponseBody setData(QuerySavingsPlansDeductLogResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QuerySavingsPlansDeductLogResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QuerySavingsPlansDeductLogResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public QuerySavingsPlansDeductLogResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public QuerySavingsPlansDeductLogResponseBody setData(QuerySavingsPlansDeductLogResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QuerySavingsPlansDeductLogResponseBodyData getData() {
+        return this.data;
     }
 
     public static class QuerySavingsPlansDeductLogResponseBodyDataItems extends TeaModel {
@@ -194,9 +194,6 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
     }
 
     public static class QuerySavingsPlansDeductLogResponseBodyData extends TeaModel {
-        @NameInMap("Items")
-        public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items;
-
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -206,17 +203,12 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        @NameInMap("Items")
+        public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items;
+
         public static QuerySavingsPlansDeductLogResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySavingsPlansDeductLogResponseBodyData self = new QuerySavingsPlansDeductLogResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QuerySavingsPlansDeductLogResponseBodyData setItems(java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> getItems() {
-            return this.items;
         }
 
         public QuerySavingsPlansDeductLogResponseBodyData setPageNum(Integer pageNum) {
@@ -241,6 +233,14 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public QuerySavingsPlansDeductLogResponseBodyData setItems(java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> getItems() {
+            return this.items;
         }
 
     }

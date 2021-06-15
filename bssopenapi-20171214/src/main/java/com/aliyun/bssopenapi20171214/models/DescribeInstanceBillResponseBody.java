@@ -4,24 +4,32 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceBillResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public DescribeInstanceBillResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public DescribeInstanceBillResponseBodyData data;
 
     public static DescribeInstanceBillResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceBillResponseBody self = new DescribeInstanceBillResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceBillResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeInstanceBillResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstanceBillResponseBody setData(DescribeInstanceBillResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeInstanceBillResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DescribeInstanceBillResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeInstanceBillResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeInstanceBillResponseBody setData(DescribeInstanceBillResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeInstanceBillResponseBodyData getData() {
+        return this.data;
     }
 
     public static class DescribeInstanceBillResponseBodyDataItems extends TeaModel {
@@ -119,17 +119,17 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         @NameInMap("PipCode")
         public String pipCode;
 
-        @NameInMap("PretaxAmount")
-        public Float pretaxAmount;
-
         @NameInMap("ServicePeriodUnit")
         public String servicePeriodUnit;
 
-        @NameInMap("ProductName")
-        public String productName;
+        @NameInMap("PretaxAmount")
+        public Float pretaxAmount;
 
         @NameInMap("CommodityCode")
         public String commodityCode;
+
+        @NameInMap("ProductName")
+        public String productName;
 
         @NameInMap("NickName")
         public String nickName;
@@ -331,14 +331,6 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             return this.pipCode;
         }
 
-        public DescribeInstanceBillResponseBodyDataItems setPretaxAmount(Float pretaxAmount) {
-            this.pretaxAmount = pretaxAmount;
-            return this;
-        }
-        public Float getPretaxAmount() {
-            return this.pretaxAmount;
-        }
-
         public DescribeInstanceBillResponseBodyDataItems setServicePeriodUnit(String servicePeriodUnit) {
             this.servicePeriodUnit = servicePeriodUnit;
             return this;
@@ -347,12 +339,12 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             return this.servicePeriodUnit;
         }
 
-        public DescribeInstanceBillResponseBodyDataItems setProductName(String productName) {
-            this.productName = productName;
+        public DescribeInstanceBillResponseBodyDataItems setPretaxAmount(Float pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
             return this;
         }
-        public String getProductName() {
-            return this.productName;
+        public Float getPretaxAmount() {
+            return this.pretaxAmount;
         }
 
         public DescribeInstanceBillResponseBodyDataItems setCommodityCode(String commodityCode) {
@@ -361,6 +353,14 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
         public String getCommodityCode() {
             return this.commodityCode;
+        }
+
+        public DescribeInstanceBillResponseBodyDataItems setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
         }
 
         public DescribeInstanceBillResponseBodyDataItems setNickName(String nickName) {
@@ -502,9 +502,6 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceBillResponseBodyData extends TeaModel {
-        @NameInMap("Items")
-        public java.util.List<DescribeInstanceBillResponseBodyDataItems> items;
-
         @NameInMap("NextToken")
         public String nextToken;
 
@@ -523,17 +520,12 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("Items")
+        public java.util.List<DescribeInstanceBillResponseBodyDataItems> items;
+
         public static DescribeInstanceBillResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceBillResponseBodyData self = new DescribeInstanceBillResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceBillResponseBodyData setItems(java.util.List<DescribeInstanceBillResponseBodyDataItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<DescribeInstanceBillResponseBodyDataItems> getItems() {
-            return this.items;
         }
 
         public DescribeInstanceBillResponseBodyData setNextToken(String nextToken) {
@@ -582,6 +574,14 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public DescribeInstanceBillResponseBodyData setItems(java.util.List<DescribeInstanceBillResponseBodyDataItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<DescribeInstanceBillResponseBodyDataItems> getItems() {
+            return this.items;
         }
 
     }
