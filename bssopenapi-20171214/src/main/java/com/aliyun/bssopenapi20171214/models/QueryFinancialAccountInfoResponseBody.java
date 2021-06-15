@@ -4,24 +4,32 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryFinancialAccountInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public QueryFinancialAccountInfoResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryFinancialAccountInfoResponseBodyData data;
 
     public static QueryFinancialAccountInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryFinancialAccountInfoResponseBody self = new QueryFinancialAccountInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryFinancialAccountInfoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QueryFinancialAccountInfoResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryFinancialAccountInfoResponseBody setData(QueryFinancialAccountInfoResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryFinancialAccountInfoResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QueryFinancialAccountInfoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public QueryFinancialAccountInfoResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public QueryFinancialAccountInfoResponseBody setData(QueryFinancialAccountInfoResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryFinancialAccountInfoResponseBodyData getData() {
+        return this.data;
     }
 
     public static class QueryFinancialAccountInfoResponseBodyData extends TeaModel {

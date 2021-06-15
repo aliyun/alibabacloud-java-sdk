@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceByTagResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,18 +16,23 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TagResource")
-    public java.util.List<QueryInstanceByTagResponseBodyTagResource> tagResource;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TagResource")
+    public java.util.List<QueryInstanceByTagResponseBodyTagResource> tagResource;
 
     public static QueryInstanceByTagResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryInstanceByTagResponseBody self = new QueryInstanceByTagResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryInstanceByTagResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QueryInstanceByTagResponseBody setMessage(String message) {
@@ -51,28 +59,20 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryInstanceByTagResponseBody setTagResource(java.util.List<QueryInstanceByTagResponseBodyTagResource> tagResource) {
-        this.tagResource = tagResource;
-        return this;
-    }
-    public java.util.List<QueryInstanceByTagResponseBodyTagResource> getTagResource() {
-        return this.tagResource;
-    }
-
-    public QueryInstanceByTagResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public QueryInstanceByTagResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public QueryInstanceByTagResponseBody setTagResource(java.util.List<QueryInstanceByTagResponseBodyTagResource> tagResource) {
+        this.tagResource = tagResource;
+        return this;
+    }
+    public java.util.List<QueryInstanceByTagResponseBodyTagResource> getTagResource() {
+        return this.tagResource;
     }
 
     public static class QueryInstanceByTagResponseBodyTagResourceTag extends TeaModel {
@@ -106,18 +106,26 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     }
 
     public static class QueryInstanceByTagResponseBodyTagResource extends TeaModel {
+        @NameInMap("ResourceId")
+        public String resourceId;
+
         @NameInMap("ResourceType")
         public String resourceType;
 
         @NameInMap("Tag")
         public java.util.List<QueryInstanceByTagResponseBodyTagResourceTag> tag;
 
-        @NameInMap("ResourceId")
-        public String resourceId;
-
         public static QueryInstanceByTagResponseBodyTagResource build(java.util.Map<String, ?> map) throws Exception {
             QueryInstanceByTagResponseBodyTagResource self = new QueryInstanceByTagResponseBodyTagResource();
             return TeaModel.build(map, self);
+        }
+
+        public QueryInstanceByTagResponseBodyTagResource setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
         }
 
         public QueryInstanceByTagResponseBodyTagResource setResourceType(String resourceType) {
@@ -134,14 +142,6 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
         public java.util.List<QueryInstanceByTagResponseBodyTagResourceTag> getTag() {
             return this.tag;
-        }
-
-        public QueryInstanceByTagResponseBodyTagResource setResourceId(String resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public String getResourceId() {
-            return this.resourceId;
         }
 
     }

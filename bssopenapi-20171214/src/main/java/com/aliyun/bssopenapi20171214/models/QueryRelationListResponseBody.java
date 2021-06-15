@@ -4,24 +4,32 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryRelationListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public QueryRelationListResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryRelationListResponseBodyData data;
 
     public static QueryRelationListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryRelationListResponseBody self = new QueryRelationListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryRelationListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QueryRelationListResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class QueryRelationListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryRelationListResponseBody setData(QueryRelationListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryRelationListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QueryRelationListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public QueryRelationListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public QueryRelationListResponseBody setData(QueryRelationListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryRelationListResponseBodyData getData() {
+        return this.data;
     }
 
     public static class QueryRelationListResponseBodyDataFinancialRelationInfoList extends TeaModel {

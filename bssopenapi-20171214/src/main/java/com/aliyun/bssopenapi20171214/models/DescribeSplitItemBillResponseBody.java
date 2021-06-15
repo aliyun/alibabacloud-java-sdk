@@ -4,24 +4,32 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeSplitItemBillResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public DescribeSplitItemBillResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public DescribeSplitItemBillResponseBodyData data;
 
     public static DescribeSplitItemBillResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSplitItemBillResponseBody self = new DescribeSplitItemBillResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSplitItemBillResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeSplitItemBillResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSplitItemBillResponseBody setData(DescribeSplitItemBillResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeSplitItemBillResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DescribeSplitItemBillResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeSplitItemBillResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeSplitItemBillResponseBody setData(DescribeSplitItemBillResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeSplitItemBillResponseBodyData getData() {
+        return this.data;
     }
 
     public static class DescribeSplitItemBillResponseBodyDataItems extends TeaModel {
@@ -101,11 +101,11 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
-        @NameInMap("BillingItem")
-        public String billingItem;
-
         @NameInMap("DeductedByCoupons")
         public Float deductedByCoupons;
+
+        @NameInMap("BillingItem")
+        public String billingItem;
 
         @NameInMap("Region")
         public String region;
@@ -125,17 +125,17 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("PipCode")
         public String pipCode;
 
-        @NameInMap("PretaxAmount")
-        public Float pretaxAmount;
-
         @NameInMap("ServicePeriodUnit")
         public String servicePeriodUnit;
 
-        @NameInMap("ProductName")
-        public String productName;
+        @NameInMap("PretaxAmount")
+        public Float pretaxAmount;
 
         @NameInMap("CommodityCode")
         public String commodityCode;
+
+        @NameInMap("ProductName")
+        public String productName;
 
         @NameInMap("SplitProductDetail")
         public String splitProductDetail;
@@ -304,20 +304,20 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.instanceSpec;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setBillingItem(String billingItem) {
-            this.billingItem = billingItem;
-            return this;
-        }
-        public String getBillingItem() {
-            return this.billingItem;
-        }
-
         public DescribeSplitItemBillResponseBodyDataItems setDeductedByCoupons(Float deductedByCoupons) {
             this.deductedByCoupons = deductedByCoupons;
             return this;
         }
         public Float getDeductedByCoupons() {
             return this.deductedByCoupons;
+        }
+
+        public DescribeSplitItemBillResponseBodyDataItems setBillingItem(String billingItem) {
+            this.billingItem = billingItem;
+            return this;
+        }
+        public String getBillingItem() {
+            return this.billingItem;
         }
 
         public DescribeSplitItemBillResponseBodyDataItems setRegion(String region) {
@@ -368,14 +368,6 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.pipCode;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setPretaxAmount(Float pretaxAmount) {
-            this.pretaxAmount = pretaxAmount;
-            return this;
-        }
-        public Float getPretaxAmount() {
-            return this.pretaxAmount;
-        }
-
         public DescribeSplitItemBillResponseBodyDataItems setServicePeriodUnit(String servicePeriodUnit) {
             this.servicePeriodUnit = servicePeriodUnit;
             return this;
@@ -384,12 +376,12 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.servicePeriodUnit;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setProductName(String productName) {
-            this.productName = productName;
+        public DescribeSplitItemBillResponseBodyDataItems setPretaxAmount(Float pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
             return this;
         }
-        public String getProductName() {
-            return this.productName;
+        public Float getPretaxAmount() {
+            return this.pretaxAmount;
         }
 
         public DescribeSplitItemBillResponseBodyDataItems setCommodityCode(String commodityCode) {
@@ -398,6 +390,14 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         }
         public String getCommodityCode() {
             return this.commodityCode;
+        }
+
+        public DescribeSplitItemBillResponseBodyDataItems setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
         }
 
         public DescribeSplitItemBillResponseBodyDataItems setSplitProductDetail(String splitProductDetail) {
@@ -579,9 +579,6 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
     }
 
     public static class DescribeSplitItemBillResponseBodyData extends TeaModel {
-        @NameInMap("Items")
-        public java.util.List<DescribeSplitItemBillResponseBodyDataItems> items;
-
         @NameInMap("NextToken")
         public String nextToken;
 
@@ -600,17 +597,12 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("Items")
+        public java.util.List<DescribeSplitItemBillResponseBodyDataItems> items;
+
         public static DescribeSplitItemBillResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeSplitItemBillResponseBodyData self = new DescribeSplitItemBillResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSplitItemBillResponseBodyData setItems(java.util.List<DescribeSplitItemBillResponseBodyDataItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<DescribeSplitItemBillResponseBodyDataItems> getItems() {
-            return this.items;
         }
 
         public DescribeSplitItemBillResponseBodyData setNextToken(String nextToken) {
@@ -659,6 +651,14 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public DescribeSplitItemBillResponseBodyData setItems(java.util.List<DescribeSplitItemBillResponseBodyDataItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<DescribeSplitItemBillResponseBodyDataItems> getItems() {
+            return this.items;
         }
 
     }
