@@ -177,6 +177,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.optimizeRightAngleWithOptions(request, runtime);
     }
 
+    public AddRelativePositionResponse addRelativePositionWithOptions(AddRelativePositionRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddRelativePosition", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new AddRelativePositionResponse());
+    }
+
+    public AddRelativePositionResponse addRelativePosition(AddRelativePositionRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addRelativePositionWithOptions(request, runtime);
+    }
+
     public DetailSceneResponse detailSceneWithOptions(DetailSceneRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
