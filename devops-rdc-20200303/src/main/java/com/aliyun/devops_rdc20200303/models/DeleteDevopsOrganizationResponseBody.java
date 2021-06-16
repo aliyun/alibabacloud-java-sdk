@@ -3,7 +3,7 @@ package com.aliyun.devops_rdc20200303.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateDevopsProjectResponseBody extends TeaModel {
+public class DeleteDevopsOrganizationResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -19,12 +19,12 @@ public class UpdateDevopsProjectResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    public static UpdateDevopsProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateDevopsProjectResponseBody self = new UpdateDevopsProjectResponseBody();
+    public static DeleteDevopsOrganizationResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteDevopsOrganizationResponseBody self = new DeleteDevopsOrganizationResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDevopsProjectResponseBody setErrorMessage(String errorMessage) {
+    public DeleteDevopsOrganizationResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -32,7 +32,7 @@ public class UpdateDevopsProjectResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public UpdateDevopsProjectResponseBody setRequestId(String requestId) {
+    public DeleteDevopsOrganizationResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -40,7 +40,7 @@ public class UpdateDevopsProjectResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateDevopsProjectResponseBody setObject(String object) {
+    public DeleteDevopsOrganizationResponseBody setObject(String object) {
         this.object = object;
         return this;
     }
@@ -48,7 +48,7 @@ public class UpdateDevopsProjectResponseBody extends TeaModel {
         return this.object;
     }
 
-    public UpdateDevopsProjectResponseBody setSuccess(Boolean success) {
+    public DeleteDevopsOrganizationResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -56,7 +56,7 @@ public class UpdateDevopsProjectResponseBody extends TeaModel {
         return this.success;
     }
 
-    public UpdateDevopsProjectResponseBody setErrorCode(String errorCode) {
+    public DeleteDevopsOrganizationResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }

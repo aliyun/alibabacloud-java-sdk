@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class UpdateCommonGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public UpdateCommonGroupResponseBodyObject object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public UpdateCommonGroupResponseBodyObject object;
+
     public static UpdateCommonGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateCommonGroupResponseBody self = new UpdateCommonGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateCommonGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateCommonGroupResponseBody setErrorMsg(String errorMsg) {
@@ -40,12 +32,20 @@ public class UpdateCommonGroupResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public UpdateCommonGroupResponseBody setObject(UpdateCommonGroupResponseBodyObject object) {
-        this.object = object;
+    public UpdateCommonGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public UpdateCommonGroupResponseBodyObject getObject() {
-        return this.object;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpdateCommonGroupResponseBody setSuccessful(Boolean successful) {
+        this.successful = successful;
+        return this;
+    }
+    public Boolean getSuccessful() {
+        return this.successful;
     }
 
     public UpdateCommonGroupResponseBody setErrorCode(String errorCode) {
@@ -56,12 +56,12 @@ public class UpdateCommonGroupResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public UpdateCommonGroupResponseBody setSuccessful(Boolean successful) {
-        this.successful = successful;
+    public UpdateCommonGroupResponseBody setObject(UpdateCommonGroupResponseBodyObject object) {
+        this.object = object;
         return this;
     }
-    public Boolean getSuccessful() {
-        return this.successful;
+    public UpdateCommonGroupResponseBodyObject getObject() {
+        return this.object;
     }
 
     public static class UpdateCommonGroupResponseBodyObject extends TeaModel {

@@ -7,17 +7,17 @@ public class GetPipelineLogResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Object")
-    public java.util.List<GetPipelineLogResponseBodyObject> object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public java.util.List<GetPipelineLogResponseBodyObject> object;
 
     public static GetPipelineLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPipelineLogResponseBody self = new GetPipelineLogResponseBody();
@@ -30,22 +30,6 @@ public class GetPipelineLogResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetPipelineLogResponseBody setObject(java.util.List<GetPipelineLogResponseBodyObject> object) {
-        this.object = object;
-        return this;
-    }
-    public java.util.List<GetPipelineLogResponseBodyObject> getObject() {
-        return this.object;
-    }
-
-    public GetPipelineLogResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public GetPipelineLogResponseBody setErrorMessage(String errorMessage) {
@@ -64,15 +48,31 @@ public class GetPipelineLogResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetPipelineLogResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetPipelineLogResponseBody setObject(java.util.List<GetPipelineLogResponseBodyObject> object) {
+        this.object = object;
+        return this;
+    }
+    public java.util.List<GetPipelineLogResponseBodyObject> getObject() {
+        return this.object;
+    }
+
     public static class GetPipelineLogResponseBodyObjectBuildProcessNodes extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("NodeName")
-        public String nodeName;
-
         @NameInMap("NodeIndex")
         public Integer nodeIndex;
+
+        @NameInMap("NodeName")
+        public String nodeName;
 
         public static GetPipelineLogResponseBodyObjectBuildProcessNodes build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineLogResponseBodyObjectBuildProcessNodes self = new GetPipelineLogResponseBodyObjectBuildProcessNodes();
@@ -87,14 +87,6 @@ public class GetPipelineLogResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetPipelineLogResponseBodyObjectBuildProcessNodes setNodeName(String nodeName) {
-            this.nodeName = nodeName;
-            return this;
-        }
-        public String getNodeName() {
-            return this.nodeName;
-        }
-
         public GetPipelineLogResponseBodyObjectBuildProcessNodes setNodeIndex(Integer nodeIndex) {
             this.nodeIndex = nodeIndex;
             return this;
@@ -103,17 +95,25 @@ public class GetPipelineLogResponseBody extends TeaModel {
             return this.nodeIndex;
         }
 
+        public GetPipelineLogResponseBodyObjectBuildProcessNodes setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
     }
 
     public static class GetPipelineLogResponseBodyObject extends TeaModel {
+        @NameInMap("ActionName")
+        public String actionName;
+
         @NameInMap("StartTime")
         public String startTime;
 
         @NameInMap("JobId")
         public Long jobId;
-
-        @NameInMap("ActionName")
-        public String actionName;
 
         @NameInMap("BuildProcessNodes")
         public java.util.List<GetPipelineLogResponseBodyObjectBuildProcessNodes> buildProcessNodes;
@@ -121,6 +121,14 @@ public class GetPipelineLogResponseBody extends TeaModel {
         public static GetPipelineLogResponseBodyObject build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineLogResponseBodyObject self = new GetPipelineLogResponseBodyObject();
             return TeaModel.build(map, self);
+        }
+
+        public GetPipelineLogResponseBodyObject setActionName(String actionName) {
+            this.actionName = actionName;
+            return this;
+        }
+        public String getActionName() {
+            return this.actionName;
         }
 
         public GetPipelineLogResponseBodyObject setStartTime(String startTime) {
@@ -137,14 +145,6 @@ public class GetPipelineLogResponseBody extends TeaModel {
         }
         public Long getJobId() {
             return this.jobId;
-        }
-
-        public GetPipelineLogResponseBodyObject setActionName(String actionName) {
-            this.actionName = actionName;
-            return this;
-        }
-        public String getActionName() {
-            return this.actionName;
         }
 
         public GetPipelineLogResponseBodyObject setBuildProcessNodes(java.util.List<GetPipelineLogResponseBodyObjectBuildProcessNodes> buildProcessNodes) {

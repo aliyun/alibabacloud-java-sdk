@@ -7,17 +7,17 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetPipelineInstHistoryResponseBodyData data;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Data")
+    public GetPipelineInstHistoryResponseBodyData data;
 
     public static GetPipelineInstHistoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPipelineInstHistoryResponseBody self = new GetPipelineInstHistoryResponseBody();
@@ -30,22 +30,6 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetPipelineInstHistoryResponseBody setData(GetPipelineInstHistoryResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetPipelineInstHistoryResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetPipelineInstHistoryResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public GetPipelineInstHistoryResponseBody setErrorMessage(String errorMessage) {
@@ -64,122 +48,20 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult extends TeaModel {
-        @NameInMap("EnginePipelineNumber")
-        public Integer enginePipelineNumber;
+    public GetPipelineInstHistoryResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
 
-        @NameInMap("MixFlowInstId")
-        public String mixFlowInstId;
-
-        @NameInMap("EnginePipelineName")
-        public String enginePipelineName;
-
-        @NameInMap("EnginePipelineId")
-        public Integer enginePipelineId;
-
-        @NameInMap("EnginePipelineInstId")
-        public Integer enginePipelineInstId;
-
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
-        @NameInMap("TriggerMode")
-        public String triggerMode;
-
-        @NameInMap("Sources")
-        public String sources;
-
-        @NameInMap("Caches")
-        public String caches;
-
-        @NameInMap("DateTime")
-        public String dateTime;
-
-        public static GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult build(java.util.Map<String, ?> map) throws Exception {
-            GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult self = new GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setEnginePipelineNumber(Integer enginePipelineNumber) {
-            this.enginePipelineNumber = enginePipelineNumber;
-            return this;
-        }
-        public Integer getEnginePipelineNumber() {
-            return this.enginePipelineNumber;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setMixFlowInstId(String mixFlowInstId) {
-            this.mixFlowInstId = mixFlowInstId;
-            return this;
-        }
-        public String getMixFlowInstId() {
-            return this.mixFlowInstId;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setEnginePipelineName(String enginePipelineName) {
-            this.enginePipelineName = enginePipelineName;
-            return this;
-        }
-        public String getEnginePipelineName() {
-            return this.enginePipelineName;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setEnginePipelineId(Integer enginePipelineId) {
-            this.enginePipelineId = enginePipelineId;
-            return this;
-        }
-        public Integer getEnginePipelineId() {
-            return this.enginePipelineId;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setEnginePipelineInstId(Integer enginePipelineInstId) {
-            this.enginePipelineInstId = enginePipelineInstId;
-            return this;
-        }
-        public Integer getEnginePipelineInstId() {
-            return this.enginePipelineInstId;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setTriggerMode(String triggerMode) {
-            this.triggerMode = triggerMode;
-            return this;
-        }
-        public String getTriggerMode() {
-            return this.triggerMode;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setSources(String sources) {
-            this.sources = sources;
-            return this;
-        }
-        public String getSources() {
-            return this.sources;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setCaches(String caches) {
-            this.caches = caches;
-            return this;
-        }
-        public String getCaches() {
-            return this.caches;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setDateTime(String dateTime) {
-            this.dateTime = dateTime;
-            return this;
-        }
-        public String getDateTime() {
-            return this.dateTime;
-        }
-
+    public GetPipelineInstHistoryResponseBody setData(GetPipelineInstHistoryResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetPipelineInstHistoryResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceGroups extends TeaModel {
@@ -333,15 +215,130 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
 
     }
 
+    public static class GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult extends TeaModel {
+        @NameInMap("EnginePipelineNumber")
+        public Integer enginePipelineNumber;
+
+        @NameInMap("MixFlowInstId")
+        public String mixFlowInstId;
+
+        @NameInMap("EnginePipelineName")
+        public String enginePipelineName;
+
+        @NameInMap("EnginePipelineId")
+        public Integer enginePipelineId;
+
+        @NameInMap("EnginePipelineInstId")
+        public Integer enginePipelineInstId;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
+        @NameInMap("TriggerMode")
+        public String triggerMode;
+
+        @NameInMap("Sources")
+        public String sources;
+
+        @NameInMap("Caches")
+        public String caches;
+
+        @NameInMap("DateTime")
+        public String dateTime;
+
+        public static GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult self = new GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setEnginePipelineNumber(Integer enginePipelineNumber) {
+            this.enginePipelineNumber = enginePipelineNumber;
+            return this;
+        }
+        public Integer getEnginePipelineNumber() {
+            return this.enginePipelineNumber;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setMixFlowInstId(String mixFlowInstId) {
+            this.mixFlowInstId = mixFlowInstId;
+            return this;
+        }
+        public String getMixFlowInstId() {
+            return this.mixFlowInstId;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setEnginePipelineName(String enginePipelineName) {
+            this.enginePipelineName = enginePipelineName;
+            return this;
+        }
+        public String getEnginePipelineName() {
+            return this.enginePipelineName;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setEnginePipelineId(Integer enginePipelineId) {
+            this.enginePipelineId = enginePipelineId;
+            return this;
+        }
+        public Integer getEnginePipelineId() {
+            return this.enginePipelineId;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setEnginePipelineInstId(Integer enginePipelineInstId) {
+            this.enginePipelineInstId = enginePipelineInstId;
+            return this;
+        }
+        public Integer getEnginePipelineInstId() {
+            return this.enginePipelineInstId;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setTriggerMode(String triggerMode) {
+            this.triggerMode = triggerMode;
+            return this;
+        }
+        public String getTriggerMode() {
+            return this.triggerMode;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setSources(String sources) {
+            this.sources = sources;
+            return this;
+        }
+        public String getSources() {
+            return this.sources;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setCaches(String caches) {
+            this.caches = caches;
+            return this;
+        }
+        public String getCaches() {
+            return this.caches;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult setDateTime(String dateTime) {
+            this.dateTime = dateTime;
+            return this;
+        }
+        public String getDateTime() {
+            return this.dateTime;
+        }
+
+    }
+
     public static class GetPipelineInstHistoryResponseBodyDataDataListFlowInstance extends TeaModel {
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Stages")
         public java.util.Map<String, ?> stages;
-
-        @NameInMap("Result")
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult result;
 
         @NameInMap("CreateTime")
         public Long createTime;
@@ -352,17 +349,14 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
         @NameInMap("RunningStatus")
         public String runningStatus;
 
-        @NameInMap("StageTopo")
-        public String stageTopo;
-
         @NameInMap("Creator")
         public String creator;
 
+        @NameInMap("StageTopo")
+        public String stageTopo;
+
         @NameInMap("Modifier")
         public String modifier;
-
-        @NameInMap("Groups")
-        public java.util.List<GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceGroups> groups;
 
         @NameInMap("AutoDrivenStatus")
         public Boolean autoDrivenStatus;
@@ -381,6 +375,12 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
 
         @NameInMap("SystemId")
         public String systemId;
+
+        @NameInMap("Groups")
+        public java.util.List<GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceGroups> groups;
+
+        @NameInMap("Result")
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult result;
 
         public static GetPipelineInstHistoryResponseBodyDataDataListFlowInstance build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineInstHistoryResponseBodyDataDataListFlowInstance self = new GetPipelineInstHistoryResponseBodyDataDataListFlowInstance();
@@ -401,14 +401,6 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getStages() {
             return this.stages;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setResult(GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult result) {
-            this.result = result;
-            return this;
-        }
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult getResult() {
-            return this.result;
         }
 
         public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setCreateTime(Long createTime) {
@@ -435,14 +427,6 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
             return this.runningStatus;
         }
 
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setStageTopo(String stageTopo) {
-            this.stageTopo = stageTopo;
-            return this;
-        }
-        public String getStageTopo() {
-            return this.stageTopo;
-        }
-
         public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setCreator(String creator) {
             this.creator = creator;
             return this;
@@ -451,20 +435,20 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
             return this.creator;
         }
 
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setStageTopo(String stageTopo) {
+            this.stageTopo = stageTopo;
+            return this;
+        }
+        public String getStageTopo() {
+            return this.stageTopo;
+        }
+
         public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setModifier(String modifier) {
             this.modifier = modifier;
             return this;
         }
         public String getModifier() {
             return this.modifier;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setGroups(java.util.List<GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceGroups> groups) {
-            this.groups = groups;
-            return this;
-        }
-        public java.util.List<GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceGroups> getGroups() {
-            return this.groups;
         }
 
         public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setAutoDrivenStatus(Boolean autoDrivenStatus) {
@@ -515,6 +499,22 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
             return this.systemId;
         }
 
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setGroups(java.util.List<GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceGroups> groups) {
+            this.groups = groups;
+            return this;
+        }
+        public java.util.List<GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceGroups> getGroups() {
+            return this.groups;
+        }
+
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance setResult(GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult result) {
+            this.result = result;
+            return this;
+        }
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstanceResult getResult() {
+            return this.result;
+        }
+
     }
 
     public static class GetPipelineInstHistoryResponseBodyDataDataList extends TeaModel {
@@ -527,14 +527,14 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
         @NameInMap("StatusName")
         public String statusName;
 
-        @NameInMap("Deletion")
-        public String deletion;
+        @NameInMap("TriggerMode")
+        public Integer triggerMode;
 
         @NameInMap("PipelineConfigId")
         public Integer pipelineConfigId;
 
-        @NameInMap("TriggerMode")
-        public Integer triggerMode;
+        @NameInMap("Deletion")
+        public String deletion;
 
         @NameInMap("Creator")
         public String creator;
@@ -544,9 +544,6 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
 
         @NameInMap("Modifier")
         public String modifier;
-
-        @NameInMap("FlowInstance")
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance flowInstance;
 
         @NameInMap("Packages")
         public String packages;
@@ -562,6 +559,9 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
 
         @NameInMap("ModifyTime")
         public Long modifyTime;
+
+        @NameInMap("FlowInstance")
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance flowInstance;
 
         public static GetPipelineInstHistoryResponseBodyDataDataList build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineInstHistoryResponseBodyDataDataList self = new GetPipelineInstHistoryResponseBodyDataDataList();
@@ -592,12 +592,12 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
             return this.statusName;
         }
 
-        public GetPipelineInstHistoryResponseBodyDataDataList setDeletion(String deletion) {
-            this.deletion = deletion;
+        public GetPipelineInstHistoryResponseBodyDataDataList setTriggerMode(Integer triggerMode) {
+            this.triggerMode = triggerMode;
             return this;
         }
-        public String getDeletion() {
-            return this.deletion;
+        public Integer getTriggerMode() {
+            return this.triggerMode;
         }
 
         public GetPipelineInstHistoryResponseBodyDataDataList setPipelineConfigId(Integer pipelineConfigId) {
@@ -608,12 +608,12 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
             return this.pipelineConfigId;
         }
 
-        public GetPipelineInstHistoryResponseBodyDataDataList setTriggerMode(Integer triggerMode) {
-            this.triggerMode = triggerMode;
+        public GetPipelineInstHistoryResponseBodyDataDataList setDeletion(String deletion) {
+            this.deletion = deletion;
             return this;
         }
-        public Integer getTriggerMode() {
-            return this.triggerMode;
+        public String getDeletion() {
+            return this.deletion;
         }
 
         public GetPipelineInstHistoryResponseBodyDataDataList setCreator(String creator) {
@@ -638,14 +638,6 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
         }
         public String getModifier() {
             return this.modifier;
-        }
-
-        public GetPipelineInstHistoryResponseBodyDataDataList setFlowInstance(GetPipelineInstHistoryResponseBodyDataDataListFlowInstance flowInstance) {
-            this.flowInstance = flowInstance;
-            return this;
-        }
-        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance getFlowInstance() {
-            return this.flowInstance;
         }
 
         public GetPipelineInstHistoryResponseBodyDataDataList setPackages(String packages) {
@@ -688,26 +680,26 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
+        public GetPipelineInstHistoryResponseBodyDataDataList setFlowInstance(GetPipelineInstHistoryResponseBodyDataDataListFlowInstance flowInstance) {
+            this.flowInstance = flowInstance;
+            return this;
+        }
+        public GetPipelineInstHistoryResponseBodyDataDataListFlowInstance getFlowInstance() {
+            return this.flowInstance;
+        }
+
     }
 
     public static class GetPipelineInstHistoryResponseBodyData extends TeaModel {
-        @NameInMap("DataList")
-        public java.util.List<GetPipelineInstHistoryResponseBodyDataDataList> dataList;
-
         @NameInMap("Total")
         public Integer total;
+
+        @NameInMap("DataList")
+        public java.util.List<GetPipelineInstHistoryResponseBodyDataDataList> dataList;
 
         public static GetPipelineInstHistoryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineInstHistoryResponseBodyData self = new GetPipelineInstHistoryResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetPipelineInstHistoryResponseBodyData setDataList(java.util.List<GetPipelineInstHistoryResponseBodyDataDataList> dataList) {
-            this.dataList = dataList;
-            return this;
-        }
-        public java.util.List<GetPipelineInstHistoryResponseBodyDataDataList> getDataList() {
-            return this.dataList;
         }
 
         public GetPipelineInstHistoryResponseBodyData setTotal(Integer total) {
@@ -716,6 +708,14 @@ public class GetPipelineInstHistoryResponseBody extends TeaModel {
         }
         public Integer getTotal() {
             return this.total;
+        }
+
+        public GetPipelineInstHistoryResponseBodyData setDataList(java.util.List<GetPipelineInstHistoryResponseBodyDataDataList> dataList) {
+            this.dataList = dataList;
+            return this;
+        }
+        public java.util.List<GetPipelineInstHistoryResponseBodyDataDataList> getDataList() {
+            return this.dataList;
         }
 
     }

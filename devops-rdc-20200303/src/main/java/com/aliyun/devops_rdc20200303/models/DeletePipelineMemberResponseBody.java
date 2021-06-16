@@ -7,14 +7,14 @@ public class DeletePipelineMemberResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("Object")
     public Boolean object;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -32,6 +32,14 @@ public class DeletePipelineMemberResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DeletePipelineMemberResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
     public DeletePipelineMemberResponseBody setObject(Boolean object) {
         this.object = object;
         return this;
@@ -46,14 +54,6 @@ public class DeletePipelineMemberResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public DeletePipelineMemberResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public DeletePipelineMemberResponseBody setSuccess(Boolean success) {

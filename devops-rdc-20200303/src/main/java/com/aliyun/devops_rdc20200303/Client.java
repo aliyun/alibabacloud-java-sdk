@@ -187,6 +187,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteCommonGroupWithOptions(request, runtime);
     }
 
+    public DeleteDevopsOrganizationResponse deleteDevopsOrganizationWithOptions(DeleteDevopsOrganizationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteDevopsOrganization", "2020-03-03", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteDevopsOrganizationResponse());
+    }
+
+    public DeleteDevopsOrganizationResponse deleteDevopsOrganization(DeleteDevopsOrganizationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteDevopsOrganizationWithOptions(request, runtime);
+    }
+
     public DeleteDevopsOrganizationMembersResponse deleteDevopsOrganizationMembersWithOptions(DeleteDevopsOrganizationMembersRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -601,6 +614,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCredentialsResponse listCredentials(ListCredentialsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listCredentialsWithOptions(request, runtime);
+    }
+
+    public ListDevopsProjectsResponse listDevopsProjectsWithOptions(ListDevopsProjectsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListDevopsProjects", "2020-03-03", "HTTPS", "POST", "AK", "json", req, runtime), new ListDevopsProjectsResponse());
+    }
+
+    public ListDevopsProjectsResponse listDevopsProjects(ListDevopsProjectsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDevopsProjectsWithOptions(request, runtime);
     }
 
     public ListDevopsProjectSprintsResponse listDevopsProjectSprintsWithOptions(ListDevopsProjectSprintsRequest request, RuntimeOptions runtime) throws Exception {

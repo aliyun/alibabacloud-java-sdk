@@ -4,48 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class GetPipelineInstanceInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Object")
-    public GetPipelineInstanceInfoResponseBodyObject object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public GetPipelineInstanceInfoResponseBodyObject object;
+
     public static GetPipelineInstanceInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPipelineInstanceInfoResponseBody self = new GetPipelineInstanceInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetPipelineInstanceInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetPipelineInstanceInfoResponseBody setObject(GetPipelineInstanceInfoResponseBodyObject object) {
-        this.object = object;
-        return this;
-    }
-    public GetPipelineInstanceInfoResponseBodyObject getObject() {
-        return this.object;
-    }
-
-    public GetPipelineInstanceInfoResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public GetPipelineInstanceInfoResponseBody setErrorMessage(String errorMessage) {
@@ -56,6 +32,14 @@ public class GetPipelineInstanceInfoResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public GetPipelineInstanceInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetPipelineInstanceInfoResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,7 +48,26 @@ public class GetPipelineInstanceInfoResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetPipelineInstanceInfoResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetPipelineInstanceInfoResponseBody setObject(GetPipelineInstanceInfoResponseBodyObject object) {
+        this.object = object;
+        return this;
+    }
+    public GetPipelineInstanceInfoResponseBodyObject getObject() {
+        return this.object;
+    }
+
     public static class GetPipelineInstanceInfoResponseBodyObject extends TeaModel {
+        @NameInMap("EmployeeId")
+        public String employeeId;
+
         @NameInMap("EndTime")
         public Long endTime;
 
@@ -74,21 +77,26 @@ public class GetPipelineInstanceInfoResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public Long startTime;
 
-        @NameInMap("PackageDownloadUrls")
-        public java.util.List<String> packageDownloadUrls;
-
-        @NameInMap("EmployeeId")
-        public String employeeId;
+        @NameInMap("Sources")
+        public String sources;
 
         @NameInMap("DockerImages")
         public java.util.List<String> dockerImages;
 
-        @NameInMap("Sources")
-        public String sources;
+        @NameInMap("PackageDownloadUrls")
+        public java.util.List<String> packageDownloadUrls;
 
         public static GetPipelineInstanceInfoResponseBodyObject build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineInstanceInfoResponseBodyObject self = new GetPipelineInstanceInfoResponseBodyObject();
             return TeaModel.build(map, self);
+        }
+
+        public GetPipelineInstanceInfoResponseBodyObject setEmployeeId(String employeeId) {
+            this.employeeId = employeeId;
+            return this;
+        }
+        public String getEmployeeId() {
+            return this.employeeId;
         }
 
         public GetPipelineInstanceInfoResponseBodyObject setEndTime(Long endTime) {
@@ -115,20 +123,12 @@ public class GetPipelineInstanceInfoResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public GetPipelineInstanceInfoResponseBodyObject setPackageDownloadUrls(java.util.List<String> packageDownloadUrls) {
-            this.packageDownloadUrls = packageDownloadUrls;
+        public GetPipelineInstanceInfoResponseBodyObject setSources(String sources) {
+            this.sources = sources;
             return this;
         }
-        public java.util.List<String> getPackageDownloadUrls() {
-            return this.packageDownloadUrls;
-        }
-
-        public GetPipelineInstanceInfoResponseBodyObject setEmployeeId(String employeeId) {
-            this.employeeId = employeeId;
-            return this;
-        }
-        public String getEmployeeId() {
-            return this.employeeId;
+        public String getSources() {
+            return this.sources;
         }
 
         public GetPipelineInstanceInfoResponseBodyObject setDockerImages(java.util.List<String> dockerImages) {
@@ -139,12 +139,12 @@ public class GetPipelineInstanceInfoResponseBody extends TeaModel {
             return this.dockerImages;
         }
 
-        public GetPipelineInstanceInfoResponseBodyObject setSources(String sources) {
-            this.sources = sources;
+        public GetPipelineInstanceInfoResponseBodyObject setPackageDownloadUrls(java.util.List<String> packageDownloadUrls) {
+            this.packageDownloadUrls = packageDownloadUrls;
             return this;
         }
-        public String getSources() {
-            return this.sources;
+        public java.util.List<String> getPackageDownloadUrls() {
+            return this.packageDownloadUrls;
         }
 
     }

@@ -7,17 +7,17 @@ public class GetPipelineInstanceBuildNumberStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Object")
-    public GetPipelineInstanceBuildNumberStatusResponseBodyObject object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public GetPipelineInstanceBuildNumberStatusResponseBodyObject object;
 
     public static GetPipelineInstanceBuildNumberStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPipelineInstanceBuildNumberStatusResponseBody self = new GetPipelineInstanceBuildNumberStatusResponseBody();
@@ -30,22 +30,6 @@ public class GetPipelineInstanceBuildNumberStatusResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetPipelineInstanceBuildNumberStatusResponseBody setObject(GetPipelineInstanceBuildNumberStatusResponseBodyObject object) {
-        this.object = object;
-        return this;
-    }
-    public GetPipelineInstanceBuildNumberStatusResponseBodyObject getObject() {
-        return this.object;
-    }
-
-    public GetPipelineInstanceBuildNumberStatusResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public GetPipelineInstanceBuildNumberStatusResponseBody setErrorMessage(String errorMessage) {
@@ -64,15 +48,31 @@ public class GetPipelineInstanceBuildNumberStatusResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetPipelineInstanceBuildNumberStatusResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetPipelineInstanceBuildNumberStatusResponseBody setObject(GetPipelineInstanceBuildNumberStatusResponseBodyObject object) {
+        this.object = object;
+        return this;
+    }
+    public GetPipelineInstanceBuildNumberStatusResponseBodyObject getObject() {
+        return this.object;
+    }
+
     public static class GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStagesComponents extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("JobId")
-        public Long jobId;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("JobId")
+        public Long jobId;
 
         public static GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStagesComponents build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStagesComponents self = new GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStagesComponents();
@@ -87,20 +87,20 @@ public class GetPipelineInstanceBuildNumberStatusResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStagesComponents setJobId(Long jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public Long getJobId() {
-            return this.jobId;
-        }
-
         public GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStagesComponents setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStagesComponents setJobId(Long jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public Long getJobId() {
+            return this.jobId;
         }
 
     }
@@ -150,11 +150,11 @@ public class GetPipelineInstanceBuildNumberStatusResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("Stages")
-        public java.util.List<GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStages> stages;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Stages")
+        public java.util.List<GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStages> stages;
 
         public static GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroups build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroups self = new GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroups();
@@ -169,20 +169,20 @@ public class GetPipelineInstanceBuildNumberStatusResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroups setStages(java.util.List<GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStages> stages) {
-            this.stages = stages;
-            return this;
-        }
-        public java.util.List<GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStages> getStages() {
-            return this.stages;
-        }
-
         public GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroups setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroups setStages(java.util.List<GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStages> stages) {
+            this.stages = stages;
+            return this;
+        }
+        public java.util.List<GetPipelineInstanceBuildNumberStatusResponseBodyObjectGroupsStages> getStages() {
+            return this.stages;
         }
 
     }

@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class ListCommonGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public java.util.List<ListCommonGroupResponseBodyObject> object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public java.util.List<ListCommonGroupResponseBodyObject> object;
+
     public static ListCommonGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCommonGroupResponseBody self = new ListCommonGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListCommonGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListCommonGroupResponseBody setErrorMsg(String errorMsg) {
@@ -40,12 +32,20 @@ public class ListCommonGroupResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public ListCommonGroupResponseBody setObject(java.util.List<ListCommonGroupResponseBodyObject> object) {
-        this.object = object;
+    public ListCommonGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<ListCommonGroupResponseBodyObject> getObject() {
-        return this.object;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListCommonGroupResponseBody setSuccessful(Boolean successful) {
+        this.successful = successful;
+        return this;
+    }
+    public Boolean getSuccessful() {
+        return this.successful;
     }
 
     public ListCommonGroupResponseBody setErrorCode(String errorCode) {
@@ -56,12 +56,12 @@ public class ListCommonGroupResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListCommonGroupResponseBody setSuccessful(Boolean successful) {
-        this.successful = successful;
+    public ListCommonGroupResponseBody setObject(java.util.List<ListCommonGroupResponseBodyObject> object) {
+        this.object = object;
         return this;
     }
-    public Boolean getSuccessful() {
-        return this.successful;
+    public java.util.List<ListCommonGroupResponseBodyObject> getObject() {
+        return this.object;
     }
 
     public static class ListCommonGroupResponseBodyObject extends TeaModel {

@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class GetDevopsOrganizationMembersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public java.util.List<GetDevopsOrganizationMembersResponseBodyObject> object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public java.util.List<GetDevopsOrganizationMembersResponseBodyObject> object;
+
     public static GetDevopsOrganizationMembersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDevopsOrganizationMembersResponseBody self = new GetDevopsOrganizationMembersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDevopsOrganizationMembersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDevopsOrganizationMembersResponseBody setErrorMsg(String errorMsg) {
@@ -40,12 +32,20 @@ public class GetDevopsOrganizationMembersResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public GetDevopsOrganizationMembersResponseBody setObject(java.util.List<GetDevopsOrganizationMembersResponseBodyObject> object) {
-        this.object = object;
+    public GetDevopsOrganizationMembersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<GetDevopsOrganizationMembersResponseBodyObject> getObject() {
-        return this.object;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetDevopsOrganizationMembersResponseBody setSuccessful(Boolean successful) {
+        this.successful = successful;
+        return this;
+    }
+    public Boolean getSuccessful() {
+        return this.successful;
     }
 
     public GetDevopsOrganizationMembersResponseBody setErrorCode(String errorCode) {
@@ -56,12 +56,12 @@ public class GetDevopsOrganizationMembersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetDevopsOrganizationMembersResponseBody setSuccessful(Boolean successful) {
-        this.successful = successful;
+    public GetDevopsOrganizationMembersResponseBody setObject(java.util.List<GetDevopsOrganizationMembersResponseBodyObject> object) {
+        this.object = object;
         return this;
     }
-    public Boolean getSuccessful() {
-        return this.successful;
+    public java.util.List<GetDevopsOrganizationMembersResponseBodyObject> getObject() {
+        return this.object;
     }
 
     public static class GetDevopsOrganizationMembersResponseBodyObject extends TeaModel {

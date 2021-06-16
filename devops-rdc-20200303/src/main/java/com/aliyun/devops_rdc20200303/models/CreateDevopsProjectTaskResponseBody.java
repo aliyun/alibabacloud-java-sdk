@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class CreateDevopsProjectTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public CreateDevopsProjectTaskResponseBodyObject object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public CreateDevopsProjectTaskResponseBodyObject object;
+
     public static CreateDevopsProjectTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDevopsProjectTaskResponseBody self = new CreateDevopsProjectTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDevopsProjectTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateDevopsProjectTaskResponseBody setErrorMsg(String errorMsg) {
@@ -40,12 +32,20 @@ public class CreateDevopsProjectTaskResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public CreateDevopsProjectTaskResponseBody setObject(CreateDevopsProjectTaskResponseBodyObject object) {
-        this.object = object;
+    public CreateDevopsProjectTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public CreateDevopsProjectTaskResponseBodyObject getObject() {
-        return this.object;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDevopsProjectTaskResponseBody setSuccessful(Boolean successful) {
+        this.successful = successful;
+        return this;
+    }
+    public Boolean getSuccessful() {
+        return this.successful;
     }
 
     public CreateDevopsProjectTaskResponseBody setErrorCode(String errorCode) {
@@ -56,12 +56,12 @@ public class CreateDevopsProjectTaskResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateDevopsProjectTaskResponseBody setSuccessful(Boolean successful) {
-        this.successful = successful;
+    public CreateDevopsProjectTaskResponseBody setObject(CreateDevopsProjectTaskResponseBodyObject object) {
+        this.object = object;
         return this;
     }
-    public Boolean getSuccessful() {
-        return this.successful;
+    public CreateDevopsProjectTaskResponseBodyObject getObject() {
+        return this.object;
     }
 
     public static class CreateDevopsProjectTaskResponseBodyObject extends TeaModel {
@@ -107,11 +107,11 @@ public class CreateDevopsProjectTaskResponseBody extends TeaModel {
         @NameInMap("Pos")
         public Integer pos;
 
-        @NameInMap("StartDate")
-        public String startDate;
-
         @NameInMap("StoryPoint")
         public String storyPoint;
+
+        @NameInMap("StartDate")
+        public String startDate;
 
         @NameInMap("CreatorId")
         public String creatorId;
@@ -257,20 +257,20 @@ public class CreateDevopsProjectTaskResponseBody extends TeaModel {
             return this.pos;
         }
 
-        public CreateDevopsProjectTaskResponseBodyObject setStartDate(String startDate) {
-            this.startDate = startDate;
-            return this;
-        }
-        public String getStartDate() {
-            return this.startDate;
-        }
-
         public CreateDevopsProjectTaskResponseBodyObject setStoryPoint(String storyPoint) {
             this.storyPoint = storyPoint;
             return this;
         }
         public String getStoryPoint() {
             return this.storyPoint;
+        }
+
+        public CreateDevopsProjectTaskResponseBodyObject setStartDate(String startDate) {
+            this.startDate = startDate;
+            return this;
+        }
+        public String getStartDate() {
+            return this.startDate;
         }
 
         public CreateDevopsProjectTaskResponseBodyObject setCreatorId(String creatorId) {

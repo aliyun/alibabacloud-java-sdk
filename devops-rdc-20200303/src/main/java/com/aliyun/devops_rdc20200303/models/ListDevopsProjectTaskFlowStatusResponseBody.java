@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class ListDevopsProjectTaskFlowStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public java.util.List<ListDevopsProjectTaskFlowStatusResponseBodyObject> object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public java.util.List<ListDevopsProjectTaskFlowStatusResponseBodyObject> object;
+
     public static ListDevopsProjectTaskFlowStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDevopsProjectTaskFlowStatusResponseBody self = new ListDevopsProjectTaskFlowStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDevopsProjectTaskFlowStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListDevopsProjectTaskFlowStatusResponseBody setErrorMsg(String errorMsg) {
@@ -40,12 +32,20 @@ public class ListDevopsProjectTaskFlowStatusResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public ListDevopsProjectTaskFlowStatusResponseBody setObject(java.util.List<ListDevopsProjectTaskFlowStatusResponseBodyObject> object) {
-        this.object = object;
+    public ListDevopsProjectTaskFlowStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<ListDevopsProjectTaskFlowStatusResponseBodyObject> getObject() {
-        return this.object;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListDevopsProjectTaskFlowStatusResponseBody setSuccessful(Boolean successful) {
+        this.successful = successful;
+        return this;
+    }
+    public Boolean getSuccessful() {
+        return this.successful;
     }
 
     public ListDevopsProjectTaskFlowStatusResponseBody setErrorCode(String errorCode) {
@@ -56,12 +56,12 @@ public class ListDevopsProjectTaskFlowStatusResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListDevopsProjectTaskFlowStatusResponseBody setSuccessful(Boolean successful) {
-        this.successful = successful;
+    public ListDevopsProjectTaskFlowStatusResponseBody setObject(java.util.List<ListDevopsProjectTaskFlowStatusResponseBodyObject> object) {
+        this.object = object;
         return this;
     }
-    public Boolean getSuccessful() {
-        return this.successful;
+    public java.util.List<ListDevopsProjectTaskFlowStatusResponseBodyObject> getObject() {
+        return this.object;
     }
 
     public static class ListDevopsProjectTaskFlowStatusResponseBodyObject extends TeaModel {
