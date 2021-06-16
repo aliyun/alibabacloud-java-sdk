@@ -10,7 +10,7 @@ public class ListSessionsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public String body;
+    public ListSessionsResponseBody body;
 
     public static ListSessionsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListSessionsResponse self = new ListSessionsResponse();
@@ -25,11 +25,11 @@ public class ListSessionsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListSessionsResponse setBody(String body) {
+    public ListSessionsResponse setBody(ListSessionsResponseBody body) {
         this.body = body;
         return this;
     }
-    public String getBody() {
+    public ListSessionsResponseBody getBody() {
         return this.body;
     }
 

@@ -10,7 +10,7 @@ public class UnRegisterInstanceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public String body;
+    public UnRegisterInstanceResponseBody body;
 
     public static UnRegisterInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         UnRegisterInstanceResponse self = new UnRegisterInstanceResponse();
@@ -25,11 +25,11 @@ public class UnRegisterInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public UnRegisterInstanceResponse setBody(String body) {
+    public UnRegisterInstanceResponse setBody(UnRegisterInstanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public String getBody() {
+    public UnRegisterInstanceResponseBody getBody() {
         return this.body;
     }
 

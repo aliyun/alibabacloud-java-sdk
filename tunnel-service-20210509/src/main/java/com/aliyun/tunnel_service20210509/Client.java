@@ -42,7 +42,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteSession", "2021-05-09", "HTTPS", "DELETE", "AK", "/v1/sessions/" + sessionId + "", "string", req, runtime), new DeleteSessionResponse());
+        return TeaModel.toModel(this.doROARequest("DeleteSession", "2021-05-09", "HTTPS", "DELETE", "AK", "/v1/sessions/" + sessionId + "", "json", req, runtime), new DeleteSessionResponse());
     }
 
     public GetInstanceResponse getInstance(String instanceId) throws Exception {
@@ -55,7 +55,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("GetInstance", "2021-05-09", "HTTPS", "GET", "AK", "/v1/instances/" + instanceId + "", "string", req, runtime), new GetInstanceResponse());
+        return TeaModel.toModel(this.doROARequest("GetInstance", "2021-05-09", "HTTPS", "GET", "AK", "/v1/instances/" + instanceId + "", "json", req, runtime), new GetInstanceResponse());
     }
 
     public HeartBeatResponse heartBeat(HeartBeatRequest request) throws Exception {
@@ -83,7 +83,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("HeartBeat", "2021-05-09", "HTTPS", "PUT", "AK", "/v1/sessions/", "string", req, runtime), new HeartBeatResponse());
+        return TeaModel.toModel(this.doROARequest("HeartBeat", "2021-05-09", "HTTPS", "PUT", "AK", "/v1/sessions/", "json", req, runtime), new HeartBeatResponse());
     }
 
     public UnRegisterInstanceResponse unRegisterInstance(String instanceId) throws Exception {
@@ -96,7 +96,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("UnRegisterInstance", "2021-05-09", "HTTPS", "PUT", "AK", "/v1/instances/" + instanceId + "", "string", req, runtime), new UnRegisterInstanceResponse());
+        return TeaModel.toModel(this.doROARequest("UnRegisterInstance", "2021-05-09", "HTTPS", "PUT", "AK", "/v1/instances/" + instanceId + "", "json", req, runtime), new UnRegisterInstanceResponse());
     }
 
     public CreateSessionResponse createSession(CreateSessionRequest request) throws Exception {
@@ -116,7 +116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("CreateSession", "2021-05-09", "HTTPS", "POST", "AK", "/v1/sessions/", "string", req, runtime), new CreateSessionResponse());
+        return TeaModel.toModel(this.doROARequest("CreateSession", "2021-05-09", "HTTPS", "POST", "AK", "/v1/sessions/", "json", req, runtime), new CreateSessionResponse());
     }
 
     public RegisterInstanceResponse registerInstance(RegisterInstanceRequest request) throws Exception {
@@ -156,7 +156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("RegisterInstance", "2021-05-09", "HTTPS", "POST", "AK", "/v1/instances/", "string", req, runtime), new RegisterInstanceResponse());
+        return TeaModel.toModel(this.doROARequest("RegisterInstance", "2021-05-09", "HTTPS", "POST", "AK", "/v1/instances/", "json", req, runtime), new RegisterInstanceResponse());
     }
 
     public GetSessionResponse getSession(String sessionId) throws Exception {
@@ -169,7 +169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("GetSession", "2021-05-09", "HTTPS", "GET", "AK", "/v1/sessions/" + sessionId + "", "string", req, runtime), new GetSessionResponse());
+        return TeaModel.toModel(this.doROARequest("GetSession", "2021-05-09", "HTTPS", "GET", "AK", "/v1/sessions/" + sessionId + "", "json", req, runtime), new GetSessionResponse());
     }
 
     public ListSessionsResponse listSessions(ListSessionsRequest request) throws Exception {
@@ -193,6 +193,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListSessions", "2021-05-09", "HTTPS", "GET", "AK", "/v1/sessions/", "string", req, runtime), new ListSessionsResponse());
+        return TeaModel.toModel(this.doROARequest("ListSessions", "2021-05-09", "HTTPS", "GET", "AK", "/v1/sessions/", "json", req, runtime), new ListSessionsResponse());
     }
 }

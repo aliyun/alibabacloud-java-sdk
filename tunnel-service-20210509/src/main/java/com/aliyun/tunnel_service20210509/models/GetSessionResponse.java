@@ -10,7 +10,7 @@ public class GetSessionResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public String body;
+    public GetSessionResponseBody body;
 
     public static GetSessionResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSessionResponse self = new GetSessionResponse();
@@ -25,11 +25,11 @@ public class GetSessionResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetSessionResponse setBody(String body) {
+    public GetSessionResponse setBody(GetSessionResponseBody body) {
         this.body = body;
         return this;
     }
-    public String getBody() {
+    public GetSessionResponseBody getBody() {
         return this.body;
     }
 

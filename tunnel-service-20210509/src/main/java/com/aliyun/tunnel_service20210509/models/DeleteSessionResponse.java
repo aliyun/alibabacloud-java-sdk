@@ -10,7 +10,7 @@ public class DeleteSessionResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public String body;
+    public DeleteSessionResponseBody body;
 
     public static DeleteSessionResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteSessionResponse self = new DeleteSessionResponse();
@@ -25,11 +25,11 @@ public class DeleteSessionResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteSessionResponse setBody(String body) {
+    public DeleteSessionResponse setBody(DeleteSessionResponseBody body) {
         this.body = body;
         return this;
     }
-    public String getBody() {
+    public DeleteSessionResponseBody getBody() {
         return this.body;
     }
 

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>tunnel_service20210509</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <packaging>jar</packaging>
   <name>tunnel_service20210509</name>
   <description>Alibaba Cloud Tunnel-Service (20210509) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.17</version>
+      <version>0.0.18</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.6</version>
+      <version>0.1.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
