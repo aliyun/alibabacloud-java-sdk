@@ -125,23 +125,15 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnCertificateListResponseBodyCertificateListModel extends TeaModel {
-        @NameInMap("CertList")
-        public DescribeCdnCertificateListResponseBodyCertificateListModelCertList certList;
-
         @NameInMap("Count")
         public Integer count;
+
+        @NameInMap("CertList")
+        public DescribeCdnCertificateListResponseBodyCertificateListModelCertList certList;
 
         public static DescribeCdnCertificateListResponseBodyCertificateListModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnCertificateListResponseBodyCertificateListModel self = new DescribeCdnCertificateListResponseBodyCertificateListModel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCdnCertificateListResponseBodyCertificateListModel setCertList(DescribeCdnCertificateListResponseBodyCertificateListModelCertList certList) {
-            this.certList = certList;
-            return this;
-        }
-        public DescribeCdnCertificateListResponseBodyCertificateListModelCertList getCertList() {
-            return this.certList;
         }
 
         public DescribeCdnCertificateListResponseBodyCertificateListModel setCount(Integer count) {
@@ -150,6 +142,14 @@ public class DescribeCdnCertificateListResponseBody extends TeaModel {
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public DescribeCdnCertificateListResponseBodyCertificateListModel setCertList(DescribeCdnCertificateListResponseBodyCertificateListModelCertList certList) {
+            this.certList = certList;
+            return this;
+        }
+        public DescribeCdnCertificateListResponseBodyCertificateListModelCertList getCertList() {
+            return this.certList;
         }
 
     }

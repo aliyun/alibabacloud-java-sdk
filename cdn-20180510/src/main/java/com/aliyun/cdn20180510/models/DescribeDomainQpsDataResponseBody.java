@@ -7,14 +7,14 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -35,6 +35,14 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDomainQpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDomainQpsDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -49,14 +57,6 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainQpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDomainQpsDataResponseBody setDataInterval(String dataInterval) {
@@ -82,11 +82,11 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
 
-        @NameInMap("HttpsValue")
-        public String httpsValue;
-
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
+
+        @NameInMap("HttpsValue")
+        public String httpsValue;
 
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
@@ -97,11 +97,11 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         @NameInMap("HttpsAccOverseasValue")
         public String httpsAccOverseasValue;
 
-        @NameInMap("HttpsAccValue")
-        public String httpsAccValue;
-
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
+
+        @NameInMap("HttpsAccValue")
+        public String httpsAccValue;
 
         @NameInMap("Value")
         public String value;
@@ -136,20 +136,20 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             return this.accDomesticValue;
         }
 
-        public DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule setHttpsValue(String httpsValue) {
-            this.httpsValue = httpsValue;
-            return this;
-        }
-        public String getHttpsValue() {
-            return this.httpsValue;
-        }
-
         public DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule setAccOverseasValue(String accOverseasValue) {
             this.accOverseasValue = accOverseasValue;
             return this;
         }
         public String getAccOverseasValue() {
             return this.accOverseasValue;
+        }
+
+        public DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule setHttpsValue(String httpsValue) {
+            this.httpsValue = httpsValue;
+            return this;
+        }
+        public String getHttpsValue() {
+            return this.httpsValue;
         }
 
         public DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule setHttpsOverseasValue(String httpsOverseasValue) {
@@ -176,20 +176,20 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             return this.httpsAccOverseasValue;
         }
 
-        public DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule setHttpsAccValue(String httpsAccValue) {
-            this.httpsAccValue = httpsAccValue;
-            return this;
-        }
-        public String getHttpsAccValue() {
-            return this.httpsAccValue;
-        }
-
         public DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule setHttpsDomesticValue(String httpsDomesticValue) {
             this.httpsDomesticValue = httpsDomesticValue;
             return this;
         }
         public String getHttpsDomesticValue() {
             return this.httpsDomesticValue;
+        }
+
+        public DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule setHttpsAccValue(String httpsAccValue) {
+            this.httpsAccValue = httpsAccValue;
+            return this;
+        }
+        public String getHttpsAccValue() {
+            return this.httpsAccValue;
         }
 
         public DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule setValue(String value) {

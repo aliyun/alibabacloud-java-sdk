@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
-    @NameInMap("CertInfos")
-    public DescribeCdnDomainByCertificateResponseBodyCertInfos certInfos;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("CertInfos")
+    public DescribeCdnDomainByCertificateResponseBodyCertInfos certInfos;
 
     public static DescribeCdnDomainByCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnDomainByCertificateResponseBody self = new DescribeCdnDomainByCertificateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnDomainByCertificateResponseBody setCertInfos(DescribeCdnDomainByCertificateResponseBodyCertInfos certInfos) {
-        this.certInfos = certInfos;
-        return this;
-    }
-    public DescribeCdnDomainByCertificateResponseBodyCertInfos getCertInfos() {
-        return this.certInfos;
     }
 
     public DescribeCdnDomainByCertificateResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeCdnDomainByCertificateResponseBody setCertInfos(DescribeCdnDomainByCertificateResponseBodyCertInfos certInfos) {
+        this.certInfos = certInfos;
+        return this;
+    }
+    public DescribeCdnDomainByCertificateResponseBodyCertInfos getCertInfos() {
+        return this.certInfos;
     }
 
     public static class DescribeCdnDomainByCertificateResponseBodyCertInfosCertInfo extends TeaModel {

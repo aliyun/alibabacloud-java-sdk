@@ -4,24 +4,48 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRefreshTasksResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("TotalCount")
     public Long totalCount;
 
     @NameInMap("Tasks")
     public DescribeRefreshTasksResponseBodyTasks tasks;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     public static DescribeRefreshTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRefreshTasksResponseBody self = new DescribeRefreshTasksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRefreshTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeRefreshTasksResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeRefreshTasksResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeRefreshTasksResponseBody setTotalCount(Long totalCount) {
@@ -38,30 +62,6 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
     }
     public DescribeRefreshTasksResponseBodyTasks getTasks() {
         return this.tasks;
-    }
-
-    public DescribeRefreshTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeRefreshTasksResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeRefreshTasksResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
     }
 
     public static class DescribeRefreshTasksResponseBodyTasksCDNTask extends TeaModel {

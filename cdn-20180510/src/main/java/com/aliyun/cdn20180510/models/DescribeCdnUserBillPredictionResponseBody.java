@@ -4,17 +4,17 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
-    @NameInMap("BillType")
-    public String billType;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("BillType")
+    public String billType;
 
     @NameInMap("BillPredictionData")
     public DescribeCdnUserBillPredictionResponseBodyBillPredictionData billPredictionData;
@@ -22,14 +22,6 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
     public static DescribeCdnUserBillPredictionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCdnUserBillPredictionResponseBody self = new DescribeCdnUserBillPredictionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCdnUserBillPredictionResponseBody setBillType(String billType) {
-        this.billType = billType;
-        return this;
-    }
-    public String getBillType() {
-        return this.billType;
     }
 
     public DescribeCdnUserBillPredictionResponseBody setEndTime(String endTime) {
@@ -40,6 +32,14 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeCdnUserBillPredictionResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeCdnUserBillPredictionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -48,12 +48,12 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCdnUserBillPredictionResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeCdnUserBillPredictionResponseBody setBillType(String billType) {
+        this.billType = billType;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getBillType() {
+        return this.billType;
     }
 
     public DescribeCdnUserBillPredictionResponseBody setBillPredictionData(DescribeCdnUserBillPredictionResponseBodyBillPredictionData billPredictionData) {

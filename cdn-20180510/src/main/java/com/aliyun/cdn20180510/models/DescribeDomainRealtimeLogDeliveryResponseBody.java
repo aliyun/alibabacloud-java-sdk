@@ -7,14 +7,14 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Logstore")
+    public String logstore;
+
     @NameInMap("Project")
     public String project;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Logstore")
-    public String logstore;
 
     @NameInMap("Region")
     public String region;
@@ -32,6 +32,14 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         return this.status;
     }
 
+    public DescribeDomainRealtimeLogDeliveryResponseBody setLogstore(String logstore) {
+        this.logstore = logstore;
+        return this;
+    }
+    public String getLogstore() {
+        return this.logstore;
+    }
+
     public DescribeDomainRealtimeLogDeliveryResponseBody setProject(String project) {
         this.project = project;
         return this;
@@ -46,14 +54,6 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeDomainRealtimeLogDeliveryResponseBody setLogstore(String logstore) {
-        this.logstore = logstore;
-        return this;
-    }
-    public String getLogstore() {
-        return this.logstore;
     }
 
     public DescribeDomainRealtimeLogDeliveryResponseBody setRegion(String region) {

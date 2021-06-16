@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainPathDataResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -16,29 +16,21 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("PathDataPerInterval")
-    public DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    @NameInMap("PathDataPerInterval")
+    public DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval;
+
     public static DescribeDomainPathDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainPathDataResponseBody self = new DescribeDomainPathDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainPathDataResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDomainPathDataResponseBody setEndTime(String endTime) {
@@ -47,6 +39,14 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDomainPathDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainPathDataResponseBody setPageSize(Integer pageSize) {
@@ -65,28 +65,20 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeDomainPathDataResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeDomainPathDataResponseBody setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainPathDataResponseBody setPathDataPerInterval(DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval) {
-        this.pathDataPerInterval = pathDataPerInterval;
-        return this;
-    }
-    public DescribeDomainPathDataResponseBodyPathDataPerInterval getPathDataPerInterval() {
-        return this.pathDataPerInterval;
-    }
-
-    public DescribeDomainPathDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDomainPathDataResponseBody setDataInterval(String dataInterval) {
@@ -97,7 +89,18 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeDomainPathDataResponseBody setPathDataPerInterval(DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval) {
+        this.pathDataPerInterval = pathDataPerInterval;
+        return this;
+    }
+    public DescribeDomainPathDataResponseBodyPathDataPerInterval getPathDataPerInterval() {
+        return this.pathDataPerInterval;
+    }
+
     public static class DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData extends TeaModel {
+        @NameInMap("Path")
+        public String path;
+
         @NameInMap("Time")
         public String time;
 
@@ -107,12 +110,17 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         @NameInMap("Traffic")
         public Integer traffic;
 
-        @NameInMap("Path")
-        public String path;
-
         public static DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData self = new DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
         public DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData setTime(String time) {
@@ -137,14 +145,6 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
         public Integer getTraffic() {
             return this.traffic;
-        }
-
-        public DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
         }
 
     }

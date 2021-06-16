@@ -7,14 +7,14 @@ public class DescribeDomainSrcTrafficDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -35,6 +35,14 @@ public class DescribeDomainSrcTrafficDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDomainSrcTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDomainSrcTrafficDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -49,14 +57,6 @@ public class DescribeDomainSrcTrafficDataResponseBody extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainSrcTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDomainSrcTrafficDataResponseBody setDataInterval(String dataInterval) {
@@ -79,11 +79,11 @@ public class DescribeDomainSrcTrafficDataResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("HttpsValue")
-        public String httpsValue;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("HttpsValue")
+        public String httpsValue;
 
         public static DescribeDomainSrcTrafficDataResponseBodySrcTrafficDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainSrcTrafficDataResponseBodySrcTrafficDataPerIntervalDataModule self = new DescribeDomainSrcTrafficDataResponseBodySrcTrafficDataPerIntervalDataModule();
@@ -98,20 +98,20 @@ public class DescribeDomainSrcTrafficDataResponseBody extends TeaModel {
             return this.value;
         }
 
-        public DescribeDomainSrcTrafficDataResponseBodySrcTrafficDataPerIntervalDataModule setHttpsValue(String httpsValue) {
-            this.httpsValue = httpsValue;
-            return this;
-        }
-        public String getHttpsValue() {
-            return this.httpsValue;
-        }
-
         public DescribeDomainSrcTrafficDataResponseBodySrcTrafficDataPerIntervalDataModule setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeDomainSrcTrafficDataResponseBodySrcTrafficDataPerIntervalDataModule setHttpsValue(String httpsValue) {
+            this.httpsValue = httpsValue;
+            return this;
+        }
+        public String getHttpsValue() {
+            return this.httpsValue;
         }
 
     }

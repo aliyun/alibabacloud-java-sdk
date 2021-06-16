@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
-    @NameInMap("AvgRTPerInterval")
-    public DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval avgRTPerInterval;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +16,15 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("AvgRTPerInterval")
+    public DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval avgRTPerInterval;
 
     public static DescribeDomainAverageResponseTimeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainAverageResponseTimeResponseBody self = new DescribeDomainAverageResponseTimeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainAverageResponseTimeResponseBody setAvgRTPerInterval(DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval avgRTPerInterval) {
-        this.avgRTPerInterval = avgRTPerInterval;
-        return this;
-    }
-    public DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval getAvgRTPerInterval() {
-        return this.avgRTPerInterval;
     }
 
     public DescribeDomainAverageResponseTimeResponseBody setEndTime(String endTime) {
@@ -41,6 +33,14 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDomainAverageResponseTimeResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainAverageResponseTimeResponseBody setRequestId(String requestId) {
@@ -59,20 +59,20 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainAverageResponseTimeResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDomainAverageResponseTimeResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDomainAverageResponseTimeResponseBody setAvgRTPerInterval(DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval avgRTPerInterval) {
+        this.avgRTPerInterval = avgRTPerInterval;
+        return this;
+    }
+    public DescribeDomainAverageResponseTimeResponseBodyAvgRTPerInterval getAvgRTPerInterval() {
+        return this.avgRTPerInterval;
     }
 
     public static class DescribeDomainAverageResponseTimeResponseBodyAvgRTPerIntervalDataModule extends TeaModel {

@@ -4,14 +4,14 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("TopReferList")
     public DescribeDomainTopReferVisitResponseBodyTopReferList topReferList;
@@ -19,6 +19,14 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
     public static DescribeDomainTopReferVisitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainTopReferVisitResponseBody self = new DescribeDomainTopReferVisitResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainTopReferVisitResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainTopReferVisitResponseBody setRequestId(String requestId) {
@@ -37,14 +45,6 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainTopReferVisitResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDomainTopReferVisitResponseBody setTopReferList(DescribeDomainTopReferVisitResponseBodyTopReferList topReferList) {
         this.topReferList = topReferList;
         return this;
@@ -54,6 +54,12 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopReferVisitResponseBodyTopReferListReferList extends TeaModel {
+        @NameInMap("Flow")
+        public String flow;
+
+        @NameInMap("FlowProportion")
+        public Float flowProportion;
+
         @NameInMap("VisitData")
         public String visitData;
 
@@ -63,15 +69,25 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
-        @NameInMap("Flow")
-        public String flow;
-
-        @NameInMap("FlowProportion")
-        public Float flowProportion;
-
         public static DescribeDomainTopReferVisitResponseBodyTopReferListReferList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainTopReferVisitResponseBodyTopReferListReferList self = new DescribeDomainTopReferVisitResponseBodyTopReferListReferList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainTopReferVisitResponseBodyTopReferListReferList setFlow(String flow) {
+            this.flow = flow;
+            return this;
+        }
+        public String getFlow() {
+            return this.flow;
+        }
+
+        public DescribeDomainTopReferVisitResponseBodyTopReferListReferList setFlowProportion(Float flowProportion) {
+            this.flowProportion = flowProportion;
+            return this;
+        }
+        public Float getFlowProportion() {
+            return this.flowProportion;
         }
 
         public DescribeDomainTopReferVisitResponseBodyTopReferListReferList setVisitData(String visitData) {
@@ -96,22 +112,6 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         }
         public Float getVisitProportion() {
             return this.visitProportion;
-        }
-
-        public DescribeDomainTopReferVisitResponseBodyTopReferListReferList setFlow(String flow) {
-            this.flow = flow;
-            return this;
-        }
-        public String getFlow() {
-            return this.flow;
-        }
-
-        public DescribeDomainTopReferVisitResponseBodyTopReferListReferList setFlowProportion(Float flowProportion) {
-            this.flowProportion = flowProportion;
-            return this;
-        }
-        public Float getFlowProportion() {
-            return this.flowProportion;
         }
 
     }

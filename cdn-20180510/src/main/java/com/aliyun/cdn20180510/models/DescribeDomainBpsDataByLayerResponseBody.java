@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("BpsDataInterval")
     public DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval;
@@ -18,20 +18,20 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainBpsDataByLayerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDomainBpsDataByLayerResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDomainBpsDataByLayerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDomainBpsDataByLayerResponseBody setBpsDataInterval(DescribeDomainBpsDataByLayerResponseBodyBpsDataInterval bpsDataInterval) {

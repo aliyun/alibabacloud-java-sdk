@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("HttpCodeDataInterval")
     public DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataInterval httpCodeDataInterval;
@@ -18,20 +18,20 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainHttpCodeDataByLayerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDomainHttpCodeDataByLayerResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDomainHttpCodeDataByLayerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDomainHttpCodeDataByLayerResponseBody setHttpCodeDataInterval(DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataInterval httpCodeDataInterval) {

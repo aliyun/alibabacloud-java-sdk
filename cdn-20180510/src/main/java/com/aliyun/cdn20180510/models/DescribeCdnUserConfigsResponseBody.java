@@ -32,18 +32,26 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserConfigsResponseBodyConfigs extends TeaModel {
+        @NameInMap("ArgValue")
+        public String argValue;
+
         @NameInMap("ArgName")
         public String argName;
 
         @NameInMap("FunctionName")
         public String functionName;
 
-        @NameInMap("ArgValue")
-        public String argValue;
-
         public static DescribeCdnUserConfigsResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
             DescribeCdnUserConfigsResponseBodyConfigs self = new DescribeCdnUserConfigsResponseBodyConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCdnUserConfigsResponseBodyConfigs setArgValue(String argValue) {
+            this.argValue = argValue;
+            return this;
+        }
+        public String getArgValue() {
+            return this.argValue;
         }
 
         public DescribeCdnUserConfigsResponseBodyConfigs setArgName(String argName) {
@@ -60,14 +68,6 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
         }
         public String getFunctionName() {
             return this.functionName;
-        }
-
-        public DescribeCdnUserConfigsResponseBodyConfigs setArgValue(String argValue) {
-            this.argValue = argValue;
-            return this;
-        }
-        public String getArgValue() {
-            return this.argValue;
         }
 
     }

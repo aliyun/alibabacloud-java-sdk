@@ -4,11 +4,14 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpInfoResponseBody extends TeaModel {
+    @NameInMap("CdnIp")
+    public String cdnIp;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ISP")
-    public String ISP;
+    @NameInMap("RegionEname")
+    public String regionEname;
 
     @NameInMap("Region")
     public String region;
@@ -16,15 +19,20 @@ public class DescribeIpInfoResponseBody extends TeaModel {
     @NameInMap("IspEname")
     public String ispEname;
 
-    @NameInMap("CdnIp")
-    public String cdnIp;
-
-    @NameInMap("RegionEname")
-    public String regionEname;
+    @NameInMap("ISP")
+    public String ISP;
 
     public static DescribeIpInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpInfoResponseBody self = new DescribeIpInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeIpInfoResponseBody setCdnIp(String cdnIp) {
+        this.cdnIp = cdnIp;
+        return this;
+    }
+    public String getCdnIp() {
+        return this.cdnIp;
     }
 
     public DescribeIpInfoResponseBody setRequestId(String requestId) {
@@ -35,12 +43,12 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeIpInfoResponseBody setISP(String ISP) {
-        this.ISP = ISP;
+    public DescribeIpInfoResponseBody setRegionEname(String regionEname) {
+        this.regionEname = regionEname;
         return this;
     }
-    public String getISP() {
-        return this.ISP;
+    public String getRegionEname() {
+        return this.regionEname;
     }
 
     public DescribeIpInfoResponseBody setRegion(String region) {
@@ -59,20 +67,12 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         return this.ispEname;
     }
 
-    public DescribeIpInfoResponseBody setCdnIp(String cdnIp) {
-        this.cdnIp = cdnIp;
+    public DescribeIpInfoResponseBody setISP(String ISP) {
+        this.ISP = ISP;
         return this;
     }
-    public String getCdnIp() {
-        return this.cdnIp;
-    }
-
-    public DescribeIpInfoResponseBody setRegionEname(String regionEname) {
-        this.regionEname = regionEname;
-        return this;
-    }
-    public String getRegionEname() {
-        return this.regionEname;
+    public String getISP() {
+        return this.ISP;
     }
 
 }

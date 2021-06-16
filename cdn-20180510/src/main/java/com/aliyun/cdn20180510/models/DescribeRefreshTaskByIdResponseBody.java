@@ -7,11 +7,11 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    @NameInMap("Tasks")
-    public java.util.List<DescribeRefreshTaskByIdResponseBodyTasks> tasks;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Tasks")
+    public java.util.List<DescribeRefreshTaskByIdResponseBodyTasks> tasks;
 
     public static DescribeRefreshTaskByIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRefreshTaskByIdResponseBody self = new DescribeRefreshTaskByIdResponseBody();
@@ -26,20 +26,20 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeRefreshTaskByIdResponseBody setTasks(java.util.List<DescribeRefreshTaskByIdResponseBodyTasks> tasks) {
-        this.tasks = tasks;
-        return this;
-    }
-    public java.util.List<DescribeRefreshTaskByIdResponseBodyTasks> getTasks() {
-        return this.tasks;
-    }
-
     public DescribeRefreshTaskByIdResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeRefreshTaskByIdResponseBody setTasks(java.util.List<DescribeRefreshTaskByIdResponseBodyTasks> tasks) {
+        this.tasks = tasks;
+        return this;
+    }
+    public java.util.List<DescribeRefreshTaskByIdResponseBodyTasks> getTasks() {
+        return this.tasks;
     }
 
     public static class DescribeRefreshTaskByIdResponseBodyTasks extends TeaModel {

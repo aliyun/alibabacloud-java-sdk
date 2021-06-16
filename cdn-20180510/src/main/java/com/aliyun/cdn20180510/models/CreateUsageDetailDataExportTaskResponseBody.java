@@ -4,29 +4,21 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static CreateUsageDetailDataExportTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateUsageDetailDataExportTaskResponseBody self = new CreateUsageDetailDataExportTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateUsageDetailDataExportTaskResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
     }
 
     public CreateUsageDetailDataExportTaskResponseBody setEndTime(String endTime) {
@@ -37,6 +29,14 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public CreateUsageDetailDataExportTaskResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public CreateUsageDetailDataExportTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -45,12 +45,12 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateUsageDetailDataExportTaskResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
+    public CreateUsageDetailDataExportTaskResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

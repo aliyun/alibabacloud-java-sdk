@@ -3,21 +3,21 @@ package com.aliyun.cdn20180510.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyCdnServiceResponse extends TeaModel {
+public class DescribeEsExecuteDataResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ModifyCdnServiceResponseBody body;
+    public DescribeEsExecuteDataResponseBody body;
 
-    public static ModifyCdnServiceResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyCdnServiceResponse self = new ModifyCdnServiceResponse();
+    public static DescribeEsExecuteDataResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeEsExecuteDataResponse self = new DescribeEsExecuteDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCdnServiceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeEsExecuteDataResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ModifyCdnServiceResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyCdnServiceResponse setBody(ModifyCdnServiceResponseBody body) {
+    public DescribeEsExecuteDataResponse setBody(DescribeEsExecuteDataResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyCdnServiceResponseBody getBody() {
+    public DescribeEsExecuteDataResponseBody getBody() {
         return this.body;
     }
 

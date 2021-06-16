@@ -7,11 +7,11 @@ public class DescribeDomainNamesOfVersionResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("Contents")
-    public java.util.List<DescribeDomainNamesOfVersionResponseBodyContents> contents;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Contents")
+    public java.util.List<DescribeDomainNamesOfVersionResponseBodyContents> contents;
 
     public static DescribeDomainNamesOfVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainNamesOfVersionResponseBody self = new DescribeDomainNamesOfVersionResponseBody();
@@ -26,20 +26,20 @@ public class DescribeDomainNamesOfVersionResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeDomainNamesOfVersionResponseBody setContents(java.util.List<DescribeDomainNamesOfVersionResponseBodyContents> contents) {
-        this.contents = contents;
-        return this;
-    }
-    public java.util.List<DescribeDomainNamesOfVersionResponseBodyContents> getContents() {
-        return this.contents;
-    }
-
     public DescribeDomainNamesOfVersionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDomainNamesOfVersionResponseBody setContents(java.util.List<DescribeDomainNamesOfVersionResponseBodyContents> contents) {
+        this.contents = contents;
+        return this;
+    }
+    public java.util.List<DescribeDomainNamesOfVersionResponseBodyContents> getContents() {
+        return this.contents;
     }
 
     public static class DescribeDomainNamesOfVersionResponseBodyContents extends TeaModel {

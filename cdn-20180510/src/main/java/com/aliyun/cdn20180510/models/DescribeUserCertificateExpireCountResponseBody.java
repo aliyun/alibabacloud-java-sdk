@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ExpireWithin30DaysCount")
     public Integer expireWithin30DaysCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ExpiredCount")
     public Integer expiredCount;
@@ -18,20 +18,20 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeUserCertificateExpireCountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeUserCertificateExpireCountResponseBody setExpireWithin30DaysCount(Integer expireWithin30DaysCount) {
         this.expireWithin30DaysCount = expireWithin30DaysCount;
         return this;
     }
     public Integer getExpireWithin30DaysCount() {
         return this.expireWithin30DaysCount;
+    }
+
+    public DescribeUserCertificateExpireCountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeUserCertificateExpireCountResponseBody setExpiredCount(Integer expiredCount) {

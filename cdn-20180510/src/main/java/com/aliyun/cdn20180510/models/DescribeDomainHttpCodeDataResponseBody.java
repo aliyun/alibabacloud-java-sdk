@@ -7,14 +7,14 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -35,6 +35,14 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDomainHttpCodeDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDomainHttpCodeDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -49,14 +57,6 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainHttpCodeDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDomainHttpCodeDataResponseBody setDataInterval(String dataInterval) {
@@ -136,23 +136,15 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData extends TeaModel {
-        @NameInMap("Value")
-        public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue value;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("Value")
+        public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue value;
 
         public static DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData self = new DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData setValue(DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue value) {
-            this.value = value;
-            return this;
-        }
-        public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue getValue() {
-            return this.value;
         }
 
         public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData setTimeStamp(String timeStamp) {
@@ -161,6 +153,14 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageData setValue(DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue value) {
+            this.value = value;
+            return this;
+        }
+        public DescribeDomainHttpCodeDataResponseBodyHttpCodeDataUsageDataValue getValue() {
+            return this.value;
         }
 
     }

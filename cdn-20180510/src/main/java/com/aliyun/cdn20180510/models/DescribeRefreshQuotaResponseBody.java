@@ -4,8 +4,8 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeRefreshQuotaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PreloadRemain")
+    public String preloadRemain;
 
     @NameInMap("BlockRemain")
     public String blockRemain;
@@ -13,47 +13,47 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
     @NameInMap("RegexRemain")
     public String regexRemain;
 
+    @NameInMap("UrlRemain")
+    public String urlRemain;
+
     @NameInMap("DirRemain")
     public String dirRemain;
 
     @NameInMap("UrlQuota")
     public String urlQuota;
 
-    @NameInMap("PreloadQuota")
-    public String preloadQuota;
+    @NameInMap("BlockQuota")
+    public String blockQuota;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("DirQuota")
+    public String dirQuota;
 
     @NameInMap("PreloadEdgeQuota")
     public String preloadEdgeQuota;
 
-    @NameInMap("UrlRemain")
-    public String urlRemain;
-
     @NameInMap("PreloadEdgeRemain")
     public String preloadEdgeRemain;
 
-    @NameInMap("PreloadRemain")
-    public String preloadRemain;
-
-    @NameInMap("BlockQuota")
-    public String blockQuota;
+    @NameInMap("PreloadQuota")
+    public String preloadQuota;
 
     @NameInMap("RegexQuota")
     public String regexQuota;
-
-    @NameInMap("DirQuota")
-    public String dirQuota;
 
     public static DescribeRefreshQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRefreshQuotaResponseBody self = new DescribeRefreshQuotaResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRefreshQuotaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeRefreshQuotaResponseBody setPreloadRemain(String preloadRemain) {
+        this.preloadRemain = preloadRemain;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getPreloadRemain() {
+        return this.preloadRemain;
     }
 
     public DescribeRefreshQuotaResponseBody setBlockRemain(String blockRemain) {
@@ -72,6 +72,14 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
         return this.regexRemain;
     }
 
+    public DescribeRefreshQuotaResponseBody setUrlRemain(String urlRemain) {
+        this.urlRemain = urlRemain;
+        return this;
+    }
+    public String getUrlRemain() {
+        return this.urlRemain;
+    }
+
     public DescribeRefreshQuotaResponseBody setDirRemain(String dirRemain) {
         this.dirRemain = dirRemain;
         return this;
@@ -88,12 +96,28 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
         return this.urlQuota;
     }
 
-    public DescribeRefreshQuotaResponseBody setPreloadQuota(String preloadQuota) {
-        this.preloadQuota = preloadQuota;
+    public DescribeRefreshQuotaResponseBody setBlockQuota(String blockQuota) {
+        this.blockQuota = blockQuota;
         return this;
     }
-    public String getPreloadQuota() {
-        return this.preloadQuota;
+    public String getBlockQuota() {
+        return this.blockQuota;
+    }
+
+    public DescribeRefreshQuotaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeRefreshQuotaResponseBody setDirQuota(String dirQuota) {
+        this.dirQuota = dirQuota;
+        return this;
+    }
+    public String getDirQuota() {
+        return this.dirQuota;
     }
 
     public DescribeRefreshQuotaResponseBody setPreloadEdgeQuota(String preloadEdgeQuota) {
@@ -104,14 +128,6 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
         return this.preloadEdgeQuota;
     }
 
-    public DescribeRefreshQuotaResponseBody setUrlRemain(String urlRemain) {
-        this.urlRemain = urlRemain;
-        return this;
-    }
-    public String getUrlRemain() {
-        return this.urlRemain;
-    }
-
     public DescribeRefreshQuotaResponseBody setPreloadEdgeRemain(String preloadEdgeRemain) {
         this.preloadEdgeRemain = preloadEdgeRemain;
         return this;
@@ -120,20 +136,12 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
         return this.preloadEdgeRemain;
     }
 
-    public DescribeRefreshQuotaResponseBody setPreloadRemain(String preloadRemain) {
-        this.preloadRemain = preloadRemain;
+    public DescribeRefreshQuotaResponseBody setPreloadQuota(String preloadQuota) {
+        this.preloadQuota = preloadQuota;
         return this;
     }
-    public String getPreloadRemain() {
-        return this.preloadRemain;
-    }
-
-    public DescribeRefreshQuotaResponseBody setBlockQuota(String blockQuota) {
-        this.blockQuota = blockQuota;
-        return this;
-    }
-    public String getBlockQuota() {
-        return this.blockQuota;
+    public String getPreloadQuota() {
+        return this.preloadQuota;
     }
 
     public DescribeRefreshQuotaResponseBody setRegexQuota(String regexQuota) {
@@ -142,14 +150,6 @@ public class DescribeRefreshQuotaResponseBody extends TeaModel {
     }
     public String getRegexQuota() {
         return this.regexQuota;
-    }
-
-    public DescribeRefreshQuotaResponseBody setDirQuota(String dirQuota) {
-        this.dirQuota = dirQuota;
-        return this;
-    }
-    public String getDirQuota() {
-        return this.dirQuota;
     }
 
 }

@@ -13,6 +13,12 @@ public class DescribeDomainRealTimeTrafficDataRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("IspNameEn")
+    public String ispNameEn;
+
+    @NameInMap("LocationNameEn")
+    public String locationNameEn;
+
     @NameInMap("EndTime")
     public String endTime;
 
@@ -43,6 +49,22 @@ public class DescribeDomainRealTimeTrafficDataRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeDomainRealTimeTrafficDataRequest setIspNameEn(String ispNameEn) {
+        this.ispNameEn = ispNameEn;
+        return this;
+    }
+    public String getIspNameEn() {
+        return this.ispNameEn;
+    }
+
+    public DescribeDomainRealTimeTrafficDataRequest setLocationNameEn(String locationNameEn) {
+        this.locationNameEn = locationNameEn;
+        return this;
+    }
+    public String getLocationNameEn() {
+        return this.locationNameEn;
     }
 
     public DescribeDomainRealTimeTrafficDataRequest setEndTime(String endTime) {

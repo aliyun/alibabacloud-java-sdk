@@ -7,23 +7,23 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Layer")
+    public String layer;
+
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
 
     @NameInMap("QpsDataInterval")
     public DescribeDomainQpsDataByLayerResponseBodyQpsDataInterval qpsDataInterval;
-
-    @NameInMap("Layer")
-    public String layer;
 
     public static DescribeDomainQpsDataByLayerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainQpsDataByLayerResponseBody self = new DescribeDomainQpsDataByLayerResponseBody();
@@ -38,6 +38,14 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDomainQpsDataByLayerResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDomainQpsDataByLayerResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -46,20 +54,20 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeDomainQpsDataByLayerResponseBody setLayer(String layer) {
+        this.layer = layer;
+        return this;
+    }
+    public String getLayer() {
+        return this.layer;
+    }
+
     public DescribeDomainQpsDataByLayerResponseBody setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainQpsDataByLayerResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDomainQpsDataByLayerResponseBody setDataInterval(String dataInterval) {
@@ -76,14 +84,6 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
     }
     public DescribeDomainQpsDataByLayerResponseBodyQpsDataInterval getQpsDataInterval() {
         return this.qpsDataInterval;
-    }
-
-    public DescribeDomainQpsDataByLayerResponseBody setLayer(String layer) {
-        this.layer = layer;
-        return this;
-    }
-    public String getLayer() {
-        return this.layer;
     }
 
     public static class DescribeDomainQpsDataByLayerResponseBodyQpsDataIntervalDataModule extends TeaModel {

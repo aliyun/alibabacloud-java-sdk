@@ -7,20 +7,20 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("RealTimeTrafficDataPerInterval")
-    public DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("RealTimeTrafficDataPerInterval")
+    public DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
 
     public static DescribeDomainRealTimeTrafficDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainRealTimeTrafficDataResponseBody self = new DescribeDomainRealTimeTrafficDataResponseBody();
@@ -33,6 +33,14 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDomainRealTimeTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainRealTimeTrafficDataResponseBody setRequestId(String requestId) {
@@ -51,28 +59,20 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainRealTimeTrafficDataResponseBody setRealTimeTrafficDataPerInterval(DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval) {
-        this.realTimeTrafficDataPerInterval = realTimeTrafficDataPerInterval;
-        return this;
-    }
-    public DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval getRealTimeTrafficDataPerInterval() {
-        return this.realTimeTrafficDataPerInterval;
-    }
-
-    public DescribeDomainRealTimeTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDomainRealTimeTrafficDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDomainRealTimeTrafficDataResponseBody setRealTimeTrafficDataPerInterval(DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval) {
+        this.realTimeTrafficDataPerInterval = realTimeTrafficDataPerInterval;
+        return this;
+    }
+    public DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval getRealTimeTrafficDataPerInterval() {
+        return this.realTimeTrafficDataPerInterval;
     }
 
     public static class DescribeDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerIntervalDataModule extends TeaModel {
