@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainFileSizeProportionDataResponseBody extends TeaModel {
-    @NameInMap("FileSizeProportionDataInterval")
-    public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataInterval fileSizeProportionDataInterval;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +16,15 @@ public class DescribeDomainFileSizeProportionDataResponseBody extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("FileSizeProportionDataInterval")
+    public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataInterval fileSizeProportionDataInterval;
 
     public static DescribeDomainFileSizeProportionDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainFileSizeProportionDataResponseBody self = new DescribeDomainFileSizeProportionDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainFileSizeProportionDataResponseBody setFileSizeProportionDataInterval(DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataInterval fileSizeProportionDataInterval) {
-        this.fileSizeProportionDataInterval = fileSizeProportionDataInterval;
-        return this;
-    }
-    public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataInterval getFileSizeProportionDataInterval() {
-        return this.fileSizeProportionDataInterval;
     }
 
     public DescribeDomainFileSizeProportionDataResponseBody setEndTime(String endTime) {
@@ -41,6 +33,14 @@ public class DescribeDomainFileSizeProportionDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDomainFileSizeProportionDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainFileSizeProportionDataResponseBody setRequestId(String requestId) {
@@ -59,20 +59,20 @@ public class DescribeDomainFileSizeProportionDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainFileSizeProportionDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDomainFileSizeProportionDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDomainFileSizeProportionDataResponseBody setFileSizeProportionDataInterval(DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataInterval fileSizeProportionDataInterval) {
+        this.fileSizeProportionDataInterval = fileSizeProportionDataInterval;
+        return this;
+    }
+    public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataInterval getFileSizeProportionDataInterval() {
+        return this.fileSizeProportionDataInterval;
     }
 
     public static class DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageDataValueFileSizeProportionData extends TeaModel {
@@ -125,23 +125,15 @@ public class DescribeDomainFileSizeProportionDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageData extends TeaModel {
-        @NameInMap("Value")
-        public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageDataValue value;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("Value")
+        public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageDataValue value;
 
         public static DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageData self = new DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageData setValue(DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageDataValue value) {
-            this.value = value;
-            return this;
-        }
-        public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageDataValue getValue() {
-            return this.value;
         }
 
         public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageData setTimeStamp(String timeStamp) {
@@ -150,6 +142,14 @@ public class DescribeDomainFileSizeProportionDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageData setValue(DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageDataValue value) {
+            this.value = value;
+            return this;
+        }
+        public DescribeDomainFileSizeProportionDataResponseBodyFileSizeProportionDataIntervalUsageDataValue getValue() {
+            return this.value;
         }
 
     }

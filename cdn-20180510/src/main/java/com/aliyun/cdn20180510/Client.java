@@ -162,6 +162,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createCdnCertificateSigningRequestWithOptions(request, runtime);
     }
 
+    public CreateCdnDeliverTaskResponse createCdnDeliverTaskWithOptions(CreateCdnDeliverTaskRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCdnDeliverTaskShrinkRequest request = new CreateCdnDeliverTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deliver)) {
+            request.deliverShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deliver, "Deliver", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.schedule)) {
+            request.scheduleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.schedule, "Schedule", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateCdnDeliverTask", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new CreateCdnDeliverTaskResponse());
+    }
+
+    public CreateCdnDeliverTaskResponse createCdnDeliverTask(CreateCdnDeliverTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createCdnDeliverTaskWithOptions(request, runtime);
+    }
+
+    public CreateCdnSubTaskResponse createCdnSubTaskWithOptions(CreateCdnSubTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateCdnSubTask", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new CreateCdnSubTaskResponse());
+    }
+
+    public CreateCdnSubTaskResponse createCdnSubTask(CreateCdnSubTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createCdnSubTaskWithOptions(request, runtime);
+    }
+
     public CreateIllegalUrlExportTaskResponse createIllegalUrlExportTaskWithOptions(CreateIllegalUrlExportTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -215,6 +251,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createUserUsageDataExportTaskWithOptions(request, runtime);
     }
 
+    public DeleteCdnDeliverTaskResponse deleteCdnDeliverTaskWithOptions(DeleteCdnDeliverTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteCdnDeliverTask", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteCdnDeliverTaskResponse());
+    }
+
+    public DeleteCdnDeliverTaskResponse deleteCdnDeliverTask(DeleteCdnDeliverTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteCdnDeliverTaskWithOptions(request, runtime);
+    }
+
     public DeleteCdnDomainResponse deleteCdnDomainWithOptions(DeleteCdnDomainRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -226,6 +275,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCdnDomainResponse deleteCdnDomain(DeleteCdnDomainRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteCdnDomainWithOptions(request, runtime);
+    }
+
+    public DeleteCdnSubTaskResponse deleteCdnSubTaskWithOptions(DeleteCdnSubTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteCdnSubTask", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteCdnSubTaskResponse());
+    }
+
+    public DeleteCdnSubTaskResponse deleteCdnSubTask(DeleteCdnSubTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteCdnSubTaskWithOptions(request, runtime);
     }
 
     public DeleteFCTriggerResponse deleteFCTriggerWithOptions(DeleteFCTriggerRequest request, RuntimeOptions runtime) throws Exception {
@@ -346,6 +408,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeCdnCertificateListWithOptions(request, runtime);
     }
 
+    public DescribeCdnDeliverListResponse describeCdnDeliverListWithOptions(DescribeCdnDeliverListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeCdnDeliverList", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeCdnDeliverListResponse());
+    }
+
+    public DescribeCdnDeliverListResponse describeCdnDeliverList(DescribeCdnDeliverListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeCdnDeliverListWithOptions(request, runtime);
+    }
+
     public DescribeCdnDomainByCertificateResponse describeCdnDomainByCertificateWithOptions(DescribeCdnDomainByCertificateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -437,6 +512,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeCdnRegionAndIspWithOptions(request, runtime);
     }
 
+    public DescribeCdnReportResponse describeCdnReportWithOptions(DescribeCdnReportRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeCdnReport", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeCdnReportResponse());
+    }
+
+    public DescribeCdnReportResponse describeCdnReport(DescribeCdnReportRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeCdnReportWithOptions(request, runtime);
+    }
+
+    public DescribeCdnReportListResponse describeCdnReportListWithOptions(DescribeCdnReportListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeCdnReportList", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeCdnReportListResponse());
+    }
+
+    public DescribeCdnReportListResponse describeCdnReportList(DescribeCdnReportListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeCdnReportListWithOptions(request, runtime);
+    }
+
     public DescribeCdnServiceResponse describeCdnServiceWithOptions(DescribeCdnServiceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -448,6 +549,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCdnServiceResponse describeCdnService(DescribeCdnServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeCdnServiceWithOptions(request, runtime);
+    }
+
+    public DescribeCdnSubListResponse describeCdnSubListWithOptions(DescribeCdnSubListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeCdnSubList", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeCdnSubListResponse());
+    }
+
+    public DescribeCdnSubListResponse describeCdnSubList(DescribeCdnSubListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeCdnSubListWithOptions(request, runtime);
     }
 
     public DescribeCdnUserBillHistoryResponse describeCdnUserBillHistoryWithOptions(DescribeCdnUserBillHistoryRequest request, RuntimeOptions runtime) throws Exception {
@@ -1189,6 +1303,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainUvDataWithOptions(request, runtime);
     }
 
+    public DescribeEsExceptionDataResponse describeEsExceptionDataWithOptions(DescribeEsExceptionDataRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeEsExceptionData", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeEsExceptionDataResponse());
+    }
+
+    public DescribeEsExceptionDataResponse describeEsExceptionData(DescribeEsExceptionDataRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeEsExceptionDataWithOptions(request, runtime);
+    }
+
+    public DescribeEsExecuteDataResponse describeEsExecuteDataWithOptions(DescribeEsExecuteDataRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeEsExecuteData", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeEsExecuteDataResponse());
+    }
+
+    public DescribeEsExecuteDataResponse describeEsExecuteData(DescribeEsExecuteDataRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeEsExecuteDataWithOptions(request, runtime);
+    }
+
     public DescribeFCTriggerResponse describeFCTriggerWithOptions(DescribeFCTriggerRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1573,19 +1713,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyCdnDomainSchdmByPropertyResponse modifyCdnDomainSchdmByProperty(ModifyCdnDomainSchdmByPropertyRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyCdnDomainSchdmByPropertyWithOptions(request, runtime);
-    }
-
-    public ModifyCdnServiceResponse modifyCdnServiceWithOptions(ModifyCdnServiceRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ModifyCdnService", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyCdnServiceResponse());
-    }
-
-    public ModifyCdnServiceResponse modifyCdnService(ModifyCdnServiceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.modifyCdnServiceWithOptions(request, runtime);
     }
 
     public ModifyDomainCustomLogConfigResponse modifyDomainCustomLogConfigWithOptions(ModifyDomainCustomLogConfigRequest request, RuntimeOptions runtime) throws Exception {
@@ -2070,6 +2197,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    public UpdateCdnDeliverTaskResponse updateCdnDeliverTaskWithOptions(UpdateCdnDeliverTaskRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCdnDeliverTaskShrinkRequest request = new UpdateCdnDeliverTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deliver)) {
+            request.deliverShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deliver, "Deliver", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.schedule)) {
+            request.scheduleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.schedule, "Schedule", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateCdnDeliverTask", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateCdnDeliverTaskResponse());
+    }
+
+    public UpdateCdnDeliverTaskResponse updateCdnDeliverTask(UpdateCdnDeliverTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateCdnDeliverTaskWithOptions(request, runtime);
+    }
+
+    public UpdateCdnSubTaskResponse updateCdnSubTaskWithOptions(UpdateCdnSubTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateCdnSubTask", "2018-05-10", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateCdnSubTaskResponse());
+    }
+
+    public UpdateCdnSubTaskResponse updateCdnSubTask(UpdateCdnSubTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateCdnSubTaskWithOptions(request, runtime);
     }
 
     public UpdateFCTriggerResponse updateFCTriggerWithOptions(UpdateFCTriggerRequest request, RuntimeOptions runtime) throws Exception {

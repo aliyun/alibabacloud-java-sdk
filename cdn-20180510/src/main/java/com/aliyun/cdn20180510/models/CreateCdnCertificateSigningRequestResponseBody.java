@@ -4,14 +4,14 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("PubMd5")
     public String pubMd5;
 
     @NameInMap("Csr")
     public String csr;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("CommonName")
     public String commonName;
@@ -19,6 +19,14 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
     public static CreateCdnCertificateSigningRequestResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCdnCertificateSigningRequestResponseBody self = new CreateCdnCertificateSigningRequestResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCdnCertificateSigningRequestResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateCdnCertificateSigningRequestResponseBody setPubMd5(String pubMd5) {
@@ -35,14 +43,6 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
     }
     public String getCsr() {
         return this.csr;
-    }
-
-    public CreateCdnCertificateSigningRequestResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateCdnCertificateSigningRequestResponseBody setCommonName(String commonName) {

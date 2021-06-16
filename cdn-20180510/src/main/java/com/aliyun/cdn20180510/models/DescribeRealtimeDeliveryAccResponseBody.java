@@ -32,11 +32,11 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
     }
 
     public static class DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData extends TeaModel {
-        @NameInMap("FailedNum")
-        public Integer failedNum;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("FailedNum")
+        public Integer failedNum;
 
         @NameInMap("SuccessNum")
         public Integer successNum;
@@ -46,20 +46,20 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData setFailedNum(Integer failedNum) {
-            this.failedNum = failedNum;
-            return this;
-        }
-        public Integer getFailedNum() {
-            return this.failedNum;
-        }
-
         public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData setFailedNum(Integer failedNum) {
+            this.failedNum = failedNum;
+            return this;
+        }
+        public Integer getFailedNum() {
+            return this.failedNum;
         }
 
         public DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData setSuccessNum(Integer successNum) {

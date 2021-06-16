@@ -4,6 +4,9 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
+    @NameInMap("PageIndex")
+    public Long pageIndex;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,12 +19,17 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     @NameInMap("ActivityLog")
     public java.util.List<DescribeDomainCcActivityLogResponseBodyActivityLog> activityLog;
 
-    @NameInMap("PageIndex")
-    public Long pageIndex;
-
     public static DescribeDomainCcActivityLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainCcActivityLogResponseBody self = new DescribeDomainCcActivityLogResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainCcActivityLogResponseBody setPageIndex(Long pageIndex) {
+        this.pageIndex = pageIndex;
+        return this;
+    }
+    public Long getPageIndex() {
+        return this.pageIndex;
     }
 
     public DescribeDomainCcActivityLogResponseBody setRequestId(String requestId) {
@@ -54,14 +62,6 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     }
     public java.util.List<DescribeDomainCcActivityLogResponseBodyActivityLog> getActivityLog() {
         return this.activityLog;
-    }
-
-    public DescribeDomainCcActivityLogResponseBody setPageIndex(Long pageIndex) {
-        this.pageIndex = pageIndex;
-        return this;
-    }
-    public Long getPageIndex() {
-        return this.pageIndex;
     }
 
     public static class DescribeDomainCcActivityLogResponseBodyActivityLog extends TeaModel {

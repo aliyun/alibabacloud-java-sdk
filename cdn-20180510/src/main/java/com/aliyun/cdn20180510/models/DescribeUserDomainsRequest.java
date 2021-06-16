@@ -40,12 +40,6 @@ public class DescribeUserDomainsRequest extends TeaModel {
     @NameInMap("ChangeEndTime")
     public String changeEndTime;
 
-    @NameInMap("FuncId")
-    public String funcId;
-
-    @NameInMap("FuncFilter")
-    public String funcFilter;
-
     @NameInMap("Coverage")
     public String coverage;
 
@@ -151,22 +145,6 @@ public class DescribeUserDomainsRequest extends TeaModel {
     }
     public String getChangeEndTime() {
         return this.changeEndTime;
-    }
-
-    public DescribeUserDomainsRequest setFuncId(String funcId) {
-        this.funcId = funcId;
-        return this;
-    }
-    public String getFuncId() {
-        return this.funcId;
-    }
-
-    public DescribeUserDomainsRequest setFuncFilter(String funcFilter) {
-        this.funcFilter = funcFilter;
-        return this;
-    }
-    public String getFuncFilter() {
-        return this.funcFilter;
     }
 
     public DescribeUserDomainsRequest setCoverage(String coverage) {

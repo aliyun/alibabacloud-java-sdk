@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class PushObjectCacheResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PushTaskId")
     public String pushTaskId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static PushObjectCacheResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PushObjectCacheResponseBody self = new PushObjectCacheResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public PushObjectCacheResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public PushObjectCacheResponseBody setPushTaskId(String pushTaskId) {
@@ -29,6 +21,14 @@ public class PushObjectCacheResponseBody extends TeaModel {
     }
     public String getPushTaskId() {
         return this.pushTaskId;
+    }
+
+    public PushObjectCacheResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
-    @NameInMap("UsageTotal")
-    public DescribeDomainsUsageByDayResponseBodyUsageTotal usageTotal;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,11 +16,11 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("UsageTotal")
+    public DescribeDomainsUsageByDayResponseBodyUsageTotal usageTotal;
 
     @NameInMap("UsageByDays")
     public DescribeDomainsUsageByDayResponseBodyUsageByDays usageByDays;
@@ -30,20 +30,20 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainsUsageByDayResponseBody setUsageTotal(DescribeDomainsUsageByDayResponseBodyUsageTotal usageTotal) {
-        this.usageTotal = usageTotal;
-        return this;
-    }
-    public DescribeDomainsUsageByDayResponseBodyUsageTotal getUsageTotal() {
-        return this.usageTotal;
-    }
-
     public DescribeDomainsUsageByDayResponseBody setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDomainsUsageByDayResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDomainsUsageByDayResponseBody setRequestId(String requestId) {
@@ -62,20 +62,20 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainsUsageByDayResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDomainsUsageByDayResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDomainsUsageByDayResponseBody setUsageTotal(DescribeDomainsUsageByDayResponseBodyUsageTotal usageTotal) {
+        this.usageTotal = usageTotal;
+        return this;
+    }
+    public DescribeDomainsUsageByDayResponseBodyUsageTotal getUsageTotal() {
+        return this.usageTotal;
     }
 
     public DescribeDomainsUsageByDayResponseBody setUsageByDays(DescribeDomainsUsageByDayResponseBodyUsageByDays usageByDays) {

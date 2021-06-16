@@ -77,11 +77,11 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
         @NameInMap("TaskName")
         public String taskName;
 
-        @NameInMap("TaskConfig")
-        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig;
-
         @NameInMap("TaskId")
         public String taskId;
+
+        @NameInMap("TaskConfig")
+        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig;
 
         public static DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem self = new DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem();
@@ -128,20 +128,20 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
             return this.taskName;
         }
 
-        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem setTaskConfig(DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig) {
-            this.taskConfig = taskConfig;
-            return this;
-        }
-        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig getTaskConfig() {
-            return this.taskConfig;
-        }
-
         public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItem setTaskConfig(DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig taskConfig) {
+            this.taskConfig = taskConfig;
+            return this;
+        }
+        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig getTaskConfig() {
+            return this.taskConfig;
         }
 
     }
@@ -166,9 +166,6 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage extends TeaModel {
-        @NameInMap("Data")
-        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageData data;
-
         @NameInMap("PageSize")
         public Integer pageSize;
 
@@ -178,17 +175,12 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        @NameInMap("Data")
+        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageData data;
+
         public static DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage self = new DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage setData(DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageData data) {
-            this.data = data;
-            return this;
-        }
-        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageData getData() {
-            return this.data;
         }
 
         public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage setPageSize(Integer pageSize) {
@@ -213,6 +205,14 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPage setData(DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageData data) {
+            this.data = data;
+            return this;
+        }
+        public DescribeUserUsageDataExportTaskResponseBodyUsageDataPerPageData getData() {
+            return this.data;
         }
 
     }

@@ -4,18 +4,26 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsBySourceResponseBody extends TeaModel {
+    @NameInMap("Sources")
+    public String sources;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainsList")
     public DescribeDomainsBySourceResponseBodyDomainsList domainsList;
 
-    @NameInMap("Sources")
-    public String sources;
-
     public static DescribeDomainsBySourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainsBySourceResponseBody self = new DescribeDomainsBySourceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainsBySourceResponseBody setSources(String sources) {
+        this.sources = sources;
+        return this;
+    }
+    public String getSources() {
+        return this.sources;
     }
 
     public DescribeDomainsBySourceResponseBody setRequestId(String requestId) {
@@ -34,33 +42,6 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         return this.domainsList;
     }
 
-    public DescribeDomainsBySourceResponseBody setSources(String sources) {
-        this.sources = sources;
-        return this;
-    }
-    public String getSources() {
-        return this.sources;
-    }
-
-    public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains extends TeaModel {
-        @NameInMap("domainNames")
-        public java.util.List<String> domainNames;
-
-        public static DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains self = new DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains setDomainNames(java.util.List<String> domainNames) {
-            this.domainNames = domainNames;
-            return this;
-        }
-        public java.util.List<String> getDomainNames() {
-            return this.domainNames;
-        }
-
-    }
-
     public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo extends TeaModel {
         @NameInMap("Status")
         public String status;
@@ -68,14 +49,14 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("DomainCname")
         public String domainCname;
 
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         public static DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo self = new DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo();
@@ -98,14 +79,6 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo setDomainCname(String domainCname) {
             this.domainCname = domainCname;
             return this;
@@ -120,6 +93,14 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
     }
@@ -143,27 +124,38 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsData extends TeaModel {
-        @NameInMap("Domains")
-        public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains domains;
+    public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains extends TeaModel {
+        @NameInMap("domainNames")
+        public java.util.List<String> domainNames;
 
+        public static DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains self = new DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains setDomainNames(java.util.List<String> domainNames) {
+            this.domainNames = domainNames;
+            return this;
+        }
+        public java.util.List<String> getDomainNames() {
+            return this.domainNames;
+        }
+
+    }
+
+    public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsData extends TeaModel {
         @NameInMap("Source")
         public String source;
 
         @NameInMap("DomainInfos")
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos domainInfos;
 
+        @NameInMap("Domains")
+        public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains domains;
+
         public static DescribeDomainsBySourceResponseBodyDomainsListDomainsData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainsBySourceResponseBodyDomainsListDomainsData self = new DescribeDomainsBySourceResponseBodyDomainsListDomainsData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainsBySourceResponseBodyDomainsListDomainsData setDomains(DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains domains) {
-            this.domains = domains;
-            return this;
-        }
-        public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains getDomains() {
-            return this.domains;
         }
 
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsData setSource(String source) {
@@ -180,6 +172,14 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         }
         public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfos getDomainInfos() {
             return this.domainInfos;
+        }
+
+        public DescribeDomainsBySourceResponseBodyDomainsListDomainsData setDomains(DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains domains) {
+            this.domains = domains;
+            return this;
+        }
+        public DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomains getDomains() {
+            return this.domains;
         }
 
     }

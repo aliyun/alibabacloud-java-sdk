@@ -73,23 +73,15 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserConfigsResponseBodyConfigsGreenManagerConfig extends TeaModel {
-        @NameInMap("Quota")
-        public String quota;
-
         @NameInMap("Ratio")
         public String ratio;
+
+        @NameInMap("Quota")
+        public String quota;
 
         public static DescribeUserConfigsResponseBodyConfigsGreenManagerConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserConfigsResponseBodyConfigsGreenManagerConfig self = new DescribeUserConfigsResponseBodyConfigsGreenManagerConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUserConfigsResponseBodyConfigsGreenManagerConfig setQuota(String quota) {
-            this.quota = quota;
-            return this;
-        }
-        public String getQuota() {
-            return this.quota;
         }
 
         public DescribeUserConfigsResponseBodyConfigsGreenManagerConfig setRatio(String ratio) {
@@ -98,6 +90,14 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         }
         public String getRatio() {
             return this.ratio;
+        }
+
+        public DescribeUserConfigsResponseBodyConfigsGreenManagerConfig setQuota(String quota) {
+            this.quota = quota;
+            return this;
+        }
+        public String getQuota() {
+            return this.quota;
         }
 
     }

@@ -3,16 +3,16 @@ package com.aliyun.cdn20180510.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyCdnServiceResponseBody extends TeaModel {
+public class UpdateCdnDeliverTaskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyCdnServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyCdnServiceResponseBody self = new ModifyCdnServiceResponseBody();
+    public static UpdateCdnDeliverTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateCdnDeliverTaskResponseBody self = new UpdateCdnDeliverTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCdnServiceResponseBody setRequestId(String requestId) {
+    public UpdateCdnDeliverTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

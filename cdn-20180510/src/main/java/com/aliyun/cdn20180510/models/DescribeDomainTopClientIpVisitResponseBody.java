@@ -32,37 +32,21 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainTopClientIpVisitResponseBodyClientIpList extends TeaModel {
-        @NameInMap("Acc")
-        public Long acc;
-
-        @NameInMap("Traffic")
-        public Long traffic;
-
         @NameInMap("Rank")
         public Integer rank;
 
         @NameInMap("ClientIp")
         public String clientIp;
 
+        @NameInMap("Acc")
+        public Long acc;
+
+        @NameInMap("Traffic")
+        public Long traffic;
+
         public static DescribeDomainTopClientIpVisitResponseBodyClientIpList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainTopClientIpVisitResponseBodyClientIpList self = new DescribeDomainTopClientIpVisitResponseBodyClientIpList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainTopClientIpVisitResponseBodyClientIpList setAcc(Long acc) {
-            this.acc = acc;
-            return this;
-        }
-        public Long getAcc() {
-            return this.acc;
-        }
-
-        public DescribeDomainTopClientIpVisitResponseBodyClientIpList setTraffic(Long traffic) {
-            this.traffic = traffic;
-            return this;
-        }
-        public Long getTraffic() {
-            return this.traffic;
         }
 
         public DescribeDomainTopClientIpVisitResponseBodyClientIpList setRank(Integer rank) {
@@ -79,6 +63,22 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
         }
         public String getClientIp() {
             return this.clientIp;
+        }
+
+        public DescribeDomainTopClientIpVisitResponseBodyClientIpList setAcc(Long acc) {
+            this.acc = acc;
+            return this;
+        }
+        public Long getAcc() {
+            return this.acc;
+        }
+
+        public DescribeDomainTopClientIpVisitResponseBodyClientIpList setTraffic(Long traffic) {
+            this.traffic = traffic;
+            return this;
+        }
+        public Long getTraffic() {
+            return this.traffic;
         }
 
     }

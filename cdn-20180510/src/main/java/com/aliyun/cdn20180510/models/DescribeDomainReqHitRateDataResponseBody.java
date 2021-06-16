@@ -7,20 +7,20 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ReqHitRateInterval")
-    public DescribeDomainReqHitRateDataResponseBodyReqHitRateInterval reqHitRateInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("ReqHitRateInterval")
+    public DescribeDomainReqHitRateDataResponseBodyReqHitRateInterval reqHitRateInterval;
 
     public static DescribeDomainReqHitRateDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainReqHitRateDataResponseBody self = new DescribeDomainReqHitRateDataResponseBody();
@@ -35,20 +35,20 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDomainReqHitRateDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDomainReqHitRateDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeDomainReqHitRateDataResponseBody setReqHitRateInterval(DescribeDomainReqHitRateDataResponseBodyReqHitRateInterval reqHitRateInterval) {
-        this.reqHitRateInterval = reqHitRateInterval;
-        return this;
-    }
-    public DescribeDomainReqHitRateDataResponseBodyReqHitRateInterval getReqHitRateInterval() {
-        return this.reqHitRateInterval;
     }
 
     public DescribeDomainReqHitRateDataResponseBody setDomainName(String domainName) {
@@ -59,14 +59,6 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDomainReqHitRateDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDomainReqHitRateDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
@@ -75,15 +67,23 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeDomainReqHitRateDataResponseBody setReqHitRateInterval(DescribeDomainReqHitRateDataResponseBodyReqHitRateInterval reqHitRateInterval) {
+        this.reqHitRateInterval = reqHitRateInterval;
+        return this;
+    }
+    public DescribeDomainReqHitRateDataResponseBodyReqHitRateInterval getReqHitRateInterval() {
+        return this.reqHitRateInterval;
+    }
+
     public static class DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("HttpsValue")
-        public String httpsValue;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("HttpsValue")
+        public String httpsValue;
 
         public static DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule self = new DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule();
@@ -98,20 +98,20 @@ public class DescribeDomainReqHitRateDataResponseBody extends TeaModel {
             return this.value;
         }
 
-        public DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule setHttpsValue(String httpsValue) {
-            this.httpsValue = httpsValue;
-            return this;
-        }
-        public String getHttpsValue() {
-            return this.httpsValue;
-        }
-
         public DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeDomainReqHitRateDataResponseBodyReqHitRateIntervalDataModule setHttpsValue(String httpsValue) {
+            this.httpsValue = httpsValue;
+            return this;
+        }
+        public String getHttpsValue() {
+            return this.httpsValue;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserVipsByDomainResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Vips")
     public DescribeUserVipsByDomainResponseBodyVips vips;
@@ -18,20 +18,20 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeUserVipsByDomainResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeUserVipsByDomainResponseBody setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public DescribeUserVipsByDomainResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeUserVipsByDomainResponseBody setVips(DescribeUserVipsByDomainResponseBodyVips vips) {

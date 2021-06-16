@@ -4,40 +4,24 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
-    public DescribeUserDomainsResponseBodyDomains domains;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
+    @NameInMap("Domains")
+    public DescribeUserDomainsResponseBodyDomains domains;
+
     public static DescribeUserDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserDomainsResponseBody self = new DescribeUserDomainsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUserDomainsResponseBody setDomains(DescribeUserDomainsResponseBodyDomains domains) {
-        this.domains = domains;
-        return this;
-    }
-    public DescribeUserDomainsResponseBodyDomains getDomains() {
-        return this.domains;
-    }
-
-    public DescribeUserDomainsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeUserDomainsResponseBody setRequestId(String requestId) {
@@ -48,6 +32,14 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeUserDomainsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeUserDomainsResponseBody setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -56,12 +48,20 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeUserDomainsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeUserDomainsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeUserDomainsResponseBody setDomains(DescribeUserDomainsResponseBodyDomains domains) {
+        this.domains = domains;
+        return this;
+    }
+    public DescribeUserDomainsResponseBodyDomains getDomains() {
+        return this.domains;
     }
 
     public static class DescribeUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
@@ -147,23 +147,11 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeUserDomainsResponseBodyDomainsPageData extends TeaModel {
-        @NameInMap("SslProtocol")
-        public String sslProtocol;
-
-        @NameInMap("Sandbox")
-        public String sandbox;
-
-        @NameInMap("Sources")
-        public DescribeUserDomainsResponseBodyDomainsPageDataSources sources;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
-        @NameInMap("DomainName")
-        public String domainName;
-
         @NameInMap("GmtCreated")
         public String gmtCreated;
+
+        @NameInMap("SslProtocol")
+        public String sslProtocol;
 
         @NameInMap("Description")
         public String description;
@@ -174,58 +162,30 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("Sandbox")
+        public String sandbox;
+
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         @NameInMap("Cname")
         public String cname;
 
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
         @NameInMap("CdnType")
         public String cdnType;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("Sources")
+        public DescribeUserDomainsResponseBodyDomainsPageDataSources sources;
 
         public static DescribeUserDomainsResponseBodyDomainsPageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserDomainsResponseBodyDomainsPageData self = new DescribeUserDomainsResponseBodyDomainsPageData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUserDomainsResponseBodyDomainsPageData setSslProtocol(String sslProtocol) {
-            this.sslProtocol = sslProtocol;
-            return this;
-        }
-        public String getSslProtocol() {
-            return this.sslProtocol;
-        }
-
-        public DescribeUserDomainsResponseBodyDomainsPageData setSandbox(String sandbox) {
-            this.sandbox = sandbox;
-            return this;
-        }
-        public String getSandbox() {
-            return this.sandbox;
-        }
-
-        public DescribeUserDomainsResponseBodyDomainsPageData setSources(DescribeUserDomainsResponseBodyDomainsPageDataSources sources) {
-            this.sources = sources;
-            return this;
-        }
-        public DescribeUserDomainsResponseBodyDomainsPageDataSources getSources() {
-            return this.sources;
-        }
-
-        public DescribeUserDomainsResponseBodyDomainsPageData setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public DescribeUserDomainsResponseBodyDomainsPageData setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
         public DescribeUserDomainsResponseBodyDomainsPageData setGmtCreated(String gmtCreated) {
@@ -234,6 +194,14 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         }
         public String getGmtCreated() {
             return this.gmtCreated;
+        }
+
+        public DescribeUserDomainsResponseBodyDomainsPageData setSslProtocol(String sslProtocol) {
+            this.sslProtocol = sslProtocol;
+            return this;
+        }
+        public String getSslProtocol() {
+            return this.sslProtocol;
         }
 
         public DescribeUserDomainsResponseBodyDomainsPageData setDescription(String description) {
@@ -260,6 +228,14 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public DescribeUserDomainsResponseBodyDomainsPageData setSandbox(String sandbox) {
+            this.sandbox = sandbox;
+            return this;
+        }
+        public String getSandbox() {
+            return this.sandbox;
+        }
+
         public DescribeUserDomainsResponseBodyDomainsPageData setDomainStatus(String domainStatus) {
             this.domainStatus = domainStatus;
             return this;
@@ -276,12 +252,36 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             return this.cname;
         }
 
+        public DescribeUserDomainsResponseBodyDomainsPageData setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
         public DescribeUserDomainsResponseBodyDomainsPageData setCdnType(String cdnType) {
             this.cdnType = cdnType;
             return this;
         }
         public String getCdnType() {
             return this.cdnType;
+        }
+
+        public DescribeUserDomainsResponseBodyDomainsPageData setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeUserDomainsResponseBodyDomainsPageData setSources(DescribeUserDomainsResponseBodyDomainsPageDataSources sources) {
+            this.sources = sources;
+            return this;
+        }
+        public DescribeUserDomainsResponseBodyDomainsPageDataSources getSources() {
+            return this.sources;
         }
 
     }

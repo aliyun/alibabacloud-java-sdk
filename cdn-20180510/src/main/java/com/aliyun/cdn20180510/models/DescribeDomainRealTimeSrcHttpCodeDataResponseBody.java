@@ -7,14 +7,14 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -35,6 +35,14 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
         return this.endTime;
     }
 
+    public DescribeDomainRealTimeSrcHttpCodeDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDomainRealTimeSrcHttpCodeDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -49,14 +57,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainRealTimeSrcHttpCodeDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDomainRealTimeSrcHttpCodeDataResponseBody setDataInterval(String dataInterval) {
@@ -136,23 +136,15 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
     }
 
     public static class DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData extends TeaModel {
-        @NameInMap("Value")
-        public DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValue value;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("Value")
+        public DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValue value;
 
         public static DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData self = new DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData setValue(DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValue value) {
-            this.value = value;
-            return this;
-        }
-        public DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValue getValue() {
-            return this.value;
         }
 
         public DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData setTimeStamp(String timeStamp) {
@@ -161,6 +153,14 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData setValue(DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValue value) {
+            this.value = value;
+            return this;
+        }
+        public DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValue getValue() {
+            return this.value;
         }
 
     }

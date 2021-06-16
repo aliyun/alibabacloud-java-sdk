@@ -32,26 +32,18 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     }
 
     public static class ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("Logstore")
         public String logstore;
 
         @NameInMap("Project")
         public String project;
 
+        @NameInMap("Region")
+        public String region;
+
         public static ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos build(java.util.Map<String, ?> map) throws Exception {
             ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos self = new ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos();
             return TeaModel.build(map, self);
-        }
-
-        public ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setLogstore(String logstore) {
@@ -68,6 +60,14 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
         }
         public String getProject() {
             return this.project;
+        }
+
+        public ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }

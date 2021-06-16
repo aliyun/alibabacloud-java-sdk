@@ -4,23 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class VerifyDomainOwnerResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Content")
     public String content;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static VerifyDomainOwnerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VerifyDomainOwnerResponseBody self = new VerifyDomainOwnerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public VerifyDomainOwnerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public VerifyDomainOwnerResponseBody setContent(String content) {
@@ -29,6 +21,14 @@ public class VerifyDomainOwnerResponseBody extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public VerifyDomainOwnerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
