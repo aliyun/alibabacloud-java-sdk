@@ -10,7 +10,7 @@ public class HeartBeatResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public String body;
+    public HeartBeatResponseBody body;
 
     public static HeartBeatResponse build(java.util.Map<String, ?> map) throws Exception {
         HeartBeatResponse self = new HeartBeatResponse();
@@ -25,11 +25,11 @@ public class HeartBeatResponse extends TeaModel {
         return this.headers;
     }
 
-    public HeartBeatResponse setBody(String body) {
+    public HeartBeatResponse setBody(HeartBeatResponseBody body) {
         this.body = body;
         return this;
     }
-    public String getBody() {
+    public HeartBeatResponseBody getBody() {
         return this.body;
     }
 
