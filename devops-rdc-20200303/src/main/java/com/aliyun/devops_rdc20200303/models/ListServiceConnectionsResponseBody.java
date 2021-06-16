@@ -7,17 +7,17 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Object")
-    public java.util.List<java.util.Map<String, ?>> object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public java.util.List<java.util.Map<String, ?>> object;
 
     public static ListServiceConnectionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListServiceConnectionsResponseBody self = new ListServiceConnectionsResponseBody();
@@ -30,22 +30,6 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListServiceConnectionsResponseBody setObject(java.util.List<java.util.Map<String, ?>> object) {
-        this.object = object;
-        return this;
-    }
-    public java.util.List<java.util.Map<String, ?>> getObject() {
-        return this.object;
-    }
-
-    public ListServiceConnectionsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public ListServiceConnectionsResponseBody setErrorMessage(String errorMessage) {
@@ -62,6 +46,22 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListServiceConnectionsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListServiceConnectionsResponseBody setObject(java.util.List<java.util.Map<String, ?>> object) {
+        this.object = object;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getObject() {
+        return this.object;
     }
 
 }

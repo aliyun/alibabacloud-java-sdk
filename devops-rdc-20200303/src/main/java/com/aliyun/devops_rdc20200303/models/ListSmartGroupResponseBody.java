@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class ListSmartGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public java.util.List<ListSmartGroupResponseBodyObject> object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public java.util.List<ListSmartGroupResponseBodyObject> object;
+
     public static ListSmartGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSmartGroupResponseBody self = new ListSmartGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSmartGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListSmartGroupResponseBody setErrorMsg(String errorMsg) {
@@ -40,12 +32,20 @@ public class ListSmartGroupResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public ListSmartGroupResponseBody setObject(java.util.List<ListSmartGroupResponseBodyObject> object) {
-        this.object = object;
+    public ListSmartGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<ListSmartGroupResponseBodyObject> getObject() {
-        return this.object;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListSmartGroupResponseBody setSuccessful(Boolean successful) {
+        this.successful = successful;
+        return this;
+    }
+    public Boolean getSuccessful() {
+        return this.successful;
     }
 
     public ListSmartGroupResponseBody setErrorCode(String errorCode) {
@@ -56,12 +56,12 @@ public class ListSmartGroupResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListSmartGroupResponseBody setSuccessful(Boolean successful) {
-        this.successful = successful;
+    public ListSmartGroupResponseBody setObject(java.util.List<ListSmartGroupResponseBodyObject> object) {
+        this.object = object;
         return this;
     }
-    public Boolean getSuccessful() {
-        return this.successful;
+    public java.util.List<ListSmartGroupResponseBodyObject> getObject() {
+        return this.object;
     }
 
     public static class ListSmartGroupResponseBodyObject extends TeaModel {

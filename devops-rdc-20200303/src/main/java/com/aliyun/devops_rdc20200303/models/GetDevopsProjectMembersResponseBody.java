@@ -7,17 +7,23 @@ public class GetDevopsProjectMembersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMsg")
-    public String errorMsg;
-
-    @NameInMap("Object")
-    public java.util.List<GetDevopsProjectMembersResponseBodyObject> object;
+    @NameInMap("NextPageToken")
+    public String nextPageToken;
 
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    @NameInMap("ErrorMsg")
+    public String errorMsg;
+
     @NameInMap("Successful")
     public Boolean successful;
+
+    @NameInMap("Total")
+    public Integer total;
+
+    @NameInMap("Object")
+    public java.util.List<GetDevopsProjectMembersResponseBodyObject> object;
 
     public static GetDevopsProjectMembersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDevopsProjectMembersResponseBody self = new GetDevopsProjectMembersResponseBody();
@@ -32,20 +38,12 @@ public class GetDevopsProjectMembersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetDevopsProjectMembersResponseBody setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
+    public GetDevopsProjectMembersResponseBody setNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
-    public String getErrorMsg() {
-        return this.errorMsg;
-    }
-
-    public GetDevopsProjectMembersResponseBody setObject(java.util.List<GetDevopsProjectMembersResponseBodyObject> object) {
-        this.object = object;
-        return this;
-    }
-    public java.util.List<GetDevopsProjectMembersResponseBodyObject> getObject() {
-        return this.object;
+    public String getNextPageToken() {
+        return this.nextPageToken;
     }
 
     public GetDevopsProjectMembersResponseBody setErrorCode(String errorCode) {
@@ -56,12 +54,36 @@ public class GetDevopsProjectMembersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public GetDevopsProjectMembersResponseBody setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+        return this;
+    }
+    public String getErrorMsg() {
+        return this.errorMsg;
+    }
+
     public GetDevopsProjectMembersResponseBody setSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     public Boolean getSuccessful() {
         return this.successful;
+    }
+
+    public GetDevopsProjectMembersResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
+    }
+
+    public GetDevopsProjectMembersResponseBody setObject(java.util.List<GetDevopsProjectMembersResponseBodyObject> object) {
+        this.object = object;
+        return this;
+    }
+    public java.util.List<GetDevopsProjectMembersResponseBodyObject> getObject() {
+        return this.object;
     }
 
     public static class GetDevopsProjectMembersResponseBodyObject extends TeaModel {

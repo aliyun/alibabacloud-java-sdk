@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class GetDevopsProjectSprintInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public GetDevopsProjectSprintInfoResponseBodyObject object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public GetDevopsProjectSprintInfoResponseBodyObject object;
+
     public static GetDevopsProjectSprintInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDevopsProjectSprintInfoResponseBody self = new GetDevopsProjectSprintInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDevopsProjectSprintInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDevopsProjectSprintInfoResponseBody setErrorMsg(String errorMsg) {
@@ -40,12 +32,20 @@ public class GetDevopsProjectSprintInfoResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public GetDevopsProjectSprintInfoResponseBody setObject(GetDevopsProjectSprintInfoResponseBodyObject object) {
-        this.object = object;
+    public GetDevopsProjectSprintInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public GetDevopsProjectSprintInfoResponseBodyObject getObject() {
-        return this.object;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetDevopsProjectSprintInfoResponseBody setSuccessful(Boolean successful) {
+        this.successful = successful;
+        return this;
+    }
+    public Boolean getSuccessful() {
+        return this.successful;
     }
 
     public GetDevopsProjectSprintInfoResponseBody setErrorCode(String errorCode) {
@@ -56,12 +56,12 @@ public class GetDevopsProjectSprintInfoResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetDevopsProjectSprintInfoResponseBody setSuccessful(Boolean successful) {
-        this.successful = successful;
+    public GetDevopsProjectSprintInfoResponseBody setObject(GetDevopsProjectSprintInfoResponseBodyObject object) {
+        this.object = object;
         return this;
     }
-    public Boolean getSuccessful() {
-        return this.successful;
+    public GetDevopsProjectSprintInfoResponseBodyObject getObject() {
+        return this.object;
     }
 
     public static class GetDevopsProjectSprintInfoResponseBodyObjectPlanToDo extends TeaModel {
@@ -109,23 +109,23 @@ public class GetDevopsProjectSprintInfoResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("StartDate")
-        public String startDate;
-
-        @NameInMap("CreatorId")
-        public String creatorId;
-
         @NameInMap("Accomplished")
         public String accomplished;
+
+        @NameInMap("ProjectId")
+        public String projectId;
 
         @NameInMap("IsDeleted")
         public Boolean isDeleted;
 
+        @NameInMap("StartDate")
+        public String startDate;
+
         @NameInMap("Updated")
         public String updated;
+
+        @NameInMap("CreatorId")
+        public String creatorId;
 
         @NameInMap("DueDate")
         public String dueDate;
@@ -136,11 +136,11 @@ public class GetDevopsProjectSprintInfoResponseBody extends TeaModel {
         @NameInMap("Created")
         public String created;
 
-        @NameInMap("PlanToDo")
-        public GetDevopsProjectSprintInfoResponseBodyObjectPlanToDo planToDo;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("PlanToDo")
+        public GetDevopsProjectSprintInfoResponseBodyObjectPlanToDo planToDo;
 
         public static GetDevopsProjectSprintInfoResponseBodyObject build(java.util.Map<String, ?> map) throws Exception {
             GetDevopsProjectSprintInfoResponseBodyObject self = new GetDevopsProjectSprintInfoResponseBodyObject();
@@ -155,36 +155,20 @@ public class GetDevopsProjectSprintInfoResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetDevopsProjectSprintInfoResponseBodyObject setProjectId(String projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public GetDevopsProjectSprintInfoResponseBodyObject setStartDate(String startDate) {
-            this.startDate = startDate;
-            return this;
-        }
-        public String getStartDate() {
-            return this.startDate;
-        }
-
-        public GetDevopsProjectSprintInfoResponseBodyObject setCreatorId(String creatorId) {
-            this.creatorId = creatorId;
-            return this;
-        }
-        public String getCreatorId() {
-            return this.creatorId;
-        }
-
         public GetDevopsProjectSprintInfoResponseBodyObject setAccomplished(String accomplished) {
             this.accomplished = accomplished;
             return this;
         }
         public String getAccomplished() {
             return this.accomplished;
+        }
+
+        public GetDevopsProjectSprintInfoResponseBodyObject setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
         }
 
         public GetDevopsProjectSprintInfoResponseBodyObject setIsDeleted(Boolean isDeleted) {
@@ -195,12 +179,28 @@ public class GetDevopsProjectSprintInfoResponseBody extends TeaModel {
             return this.isDeleted;
         }
 
+        public GetDevopsProjectSprintInfoResponseBodyObject setStartDate(String startDate) {
+            this.startDate = startDate;
+            return this;
+        }
+        public String getStartDate() {
+            return this.startDate;
+        }
+
         public GetDevopsProjectSprintInfoResponseBodyObject setUpdated(String updated) {
             this.updated = updated;
             return this;
         }
         public String getUpdated() {
             return this.updated;
+        }
+
+        public GetDevopsProjectSprintInfoResponseBodyObject setCreatorId(String creatorId) {
+            this.creatorId = creatorId;
+            return this;
+        }
+        public String getCreatorId() {
+            return this.creatorId;
         }
 
         public GetDevopsProjectSprintInfoResponseBodyObject setDueDate(String dueDate) {
@@ -227,20 +227,20 @@ public class GetDevopsProjectSprintInfoResponseBody extends TeaModel {
             return this.created;
         }
 
-        public GetDevopsProjectSprintInfoResponseBodyObject setPlanToDo(GetDevopsProjectSprintInfoResponseBodyObjectPlanToDo planToDo) {
-            this.planToDo = planToDo;
-            return this;
-        }
-        public GetDevopsProjectSprintInfoResponseBodyObjectPlanToDo getPlanToDo() {
-            return this.planToDo;
-        }
-
         public GetDevopsProjectSprintInfoResponseBodyObject setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public GetDevopsProjectSprintInfoResponseBodyObject setPlanToDo(GetDevopsProjectSprintInfoResponseBodyObjectPlanToDo planToDo) {
+            this.planToDo = planToDo;
+            return this;
+        }
+        public GetDevopsProjectSprintInfoResponseBodyObjectPlanToDo getPlanToDo() {
+            return this.planToDo;
         }
 
     }

@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class InsertProjectMembersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Object")
     public Boolean object;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Successful")
     public Boolean successful;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     public static InsertProjectMembersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InsertProjectMembersResponseBody self = new InsertProjectMembersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public InsertProjectMembersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public InsertProjectMembersResponseBody setErrorMsg(String errorMsg) {
@@ -40,6 +32,14 @@ public class InsertProjectMembersResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
+    public InsertProjectMembersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public InsertProjectMembersResponseBody setObject(Boolean object) {
         this.object = object;
         return this;
@@ -48,20 +48,20 @@ public class InsertProjectMembersResponseBody extends TeaModel {
         return this.object;
     }
 
-    public InsertProjectMembersResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public InsertProjectMembersResponseBody setSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
     }
     public Boolean getSuccessful() {
         return this.successful;
+    }
+
+    public InsertProjectMembersResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
 }

@@ -7,14 +7,14 @@ public class GetPipelineInstanceStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("Object")
     public String object;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -32,6 +32,14 @@ public class GetPipelineInstanceStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetPipelineInstanceStatusResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
     public GetPipelineInstanceStatusResponseBody setObject(String object) {
         this.object = object;
         return this;
@@ -46,14 +54,6 @@ public class GetPipelineInstanceStatusResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public GetPipelineInstanceStatusResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetPipelineInstanceStatusResponseBody setSuccess(Boolean success) {

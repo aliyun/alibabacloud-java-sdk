@@ -7,14 +7,14 @@ public class ListPipelinesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("Object")
     public java.util.Map<String, ?> object;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -32,6 +32,14 @@ public class ListPipelinesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListPipelinesResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
     public ListPipelinesResponseBody setObject(java.util.Map<String, ?> object) {
         this.object = object;
         return this;
@@ -46,14 +54,6 @@ public class ListPipelinesResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public ListPipelinesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public ListPipelinesResponseBody setSuccess(Boolean success) {

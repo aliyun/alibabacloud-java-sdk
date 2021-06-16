@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public GetDevopsProjectTaskInfoResponseBodyObject object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public GetDevopsProjectTaskInfoResponseBodyObject object;
+
     public static GetDevopsProjectTaskInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDevopsProjectTaskInfoResponseBody self = new GetDevopsProjectTaskInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDevopsProjectTaskInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDevopsProjectTaskInfoResponseBody setErrorMsg(String errorMsg) {
@@ -40,20 +32,12 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public GetDevopsProjectTaskInfoResponseBody setObject(GetDevopsProjectTaskInfoResponseBodyObject object) {
-        this.object = object;
+    public GetDevopsProjectTaskInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public GetDevopsProjectTaskInfoResponseBodyObject getObject() {
-        return this.object;
-    }
-
-    public GetDevopsProjectTaskInfoResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetDevopsProjectTaskInfoResponseBody setSuccessful(Boolean successful) {
@@ -64,6 +48,22 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
         return this.successful;
     }
 
+    public GetDevopsProjectTaskInfoResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetDevopsProjectTaskInfoResponseBody setObject(GetDevopsProjectTaskInfoResponseBodyObject object) {
+        this.object = object;
+        return this;
+    }
+    public GetDevopsProjectTaskInfoResponseBodyObject getObject() {
+        return this.object;
+    }
+
     public static class GetDevopsProjectTaskInfoResponseBodyObject extends TeaModel {
         @NameInMap("ExecutorId")
         public String executorId;
@@ -71,17 +71,17 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         public String projectId;
 
-        @NameInMap("StoryPoint")
-        public String storyPoint;
-
         @NameInMap("StartDate")
         public String startDate;
 
-        @NameInMap("IsTopInProject")
-        public Boolean isTopInProject;
+        @NameInMap("StoryPoint")
+        public String storyPoint;
 
         @NameInMap("Priority")
         public String priority;
+
+        @NameInMap("IsTopInProject")
+        public Boolean isTopInProject;
 
         @NameInMap("CreatorId")
         public String creatorId;
@@ -92,11 +92,11 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
         @NameInMap("TaskType")
         public String taskType;
 
-        @NameInMap("TasklistId")
-        public String tasklistId;
-
         @NameInMap("Visible")
         public String visible;
+
+        @NameInMap("TasklistId")
+        public String tasklistId;
 
         @NameInMap("IsDone")
         public Boolean isDone;
@@ -116,9 +116,6 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
         @NameInMap("Updated")
         public String updated;
 
-        @NameInMap("InvolveMembers")
-        public java.util.List<String> involveMembers;
-
         @NameInMap("DueDate")
         public String dueDate;
 
@@ -130,6 +127,9 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
 
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("InvolveMembers")
+        public java.util.List<String> involveMembers;
 
         public static GetDevopsProjectTaskInfoResponseBodyObject build(java.util.Map<String, ?> map) throws Exception {
             GetDevopsProjectTaskInfoResponseBodyObject self = new GetDevopsProjectTaskInfoResponseBodyObject();
@@ -152,14 +152,6 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        public GetDevopsProjectTaskInfoResponseBodyObject setStoryPoint(String storyPoint) {
-            this.storyPoint = storyPoint;
-            return this;
-        }
-        public String getStoryPoint() {
-            return this.storyPoint;
-        }
-
         public GetDevopsProjectTaskInfoResponseBodyObject setStartDate(String startDate) {
             this.startDate = startDate;
             return this;
@@ -168,12 +160,12 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
             return this.startDate;
         }
 
-        public GetDevopsProjectTaskInfoResponseBodyObject setIsTopInProject(Boolean isTopInProject) {
-            this.isTopInProject = isTopInProject;
+        public GetDevopsProjectTaskInfoResponseBodyObject setStoryPoint(String storyPoint) {
+            this.storyPoint = storyPoint;
             return this;
         }
-        public Boolean getIsTopInProject() {
-            return this.isTopInProject;
+        public String getStoryPoint() {
+            return this.storyPoint;
         }
 
         public GetDevopsProjectTaskInfoResponseBodyObject setPriority(String priority) {
@@ -182,6 +174,14 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
         }
         public String getPriority() {
             return this.priority;
+        }
+
+        public GetDevopsProjectTaskInfoResponseBodyObject setIsTopInProject(Boolean isTopInProject) {
+            this.isTopInProject = isTopInProject;
+            return this;
+        }
+        public Boolean getIsTopInProject() {
+            return this.isTopInProject;
         }
 
         public GetDevopsProjectTaskInfoResponseBodyObject setCreatorId(String creatorId) {
@@ -208,20 +208,20 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
             return this.taskType;
         }
 
-        public GetDevopsProjectTaskInfoResponseBodyObject setTasklistId(String tasklistId) {
-            this.tasklistId = tasklistId;
-            return this;
-        }
-        public String getTasklistId() {
-            return this.tasklistId;
-        }
-
         public GetDevopsProjectTaskInfoResponseBodyObject setVisible(String visible) {
             this.visible = visible;
             return this;
         }
         public String getVisible() {
             return this.visible;
+        }
+
+        public GetDevopsProjectTaskInfoResponseBodyObject setTasklistId(String tasklistId) {
+            this.tasklistId = tasklistId;
+            return this;
+        }
+        public String getTasklistId() {
+            return this.tasklistId;
         }
 
         public GetDevopsProjectTaskInfoResponseBodyObject setIsDone(Boolean isDone) {
@@ -272,14 +272,6 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
             return this.updated;
         }
 
-        public GetDevopsProjectTaskInfoResponseBodyObject setInvolveMembers(java.util.List<String> involveMembers) {
-            this.involveMembers = involveMembers;
-            return this;
-        }
-        public java.util.List<String> getInvolveMembers() {
-            return this.involveMembers;
-        }
-
         public GetDevopsProjectTaskInfoResponseBodyObject setDueDate(String dueDate) {
             this.dueDate = dueDate;
             return this;
@@ -310,6 +302,14 @@ public class GetDevopsProjectTaskInfoResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public GetDevopsProjectTaskInfoResponseBodyObject setInvolveMembers(java.util.List<String> involveMembers) {
+            this.involveMembers = involveMembers;
+            return this;
+        }
+        public java.util.List<String> getInvolveMembers() {
+            return this.involveMembers;
         }
 
     }

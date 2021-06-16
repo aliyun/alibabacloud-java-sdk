@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class GetDevopsProjectInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public GetDevopsProjectInfoResponseBodyObject object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public GetDevopsProjectInfoResponseBodyObject object;
+
     public static GetDevopsProjectInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDevopsProjectInfoResponseBody self = new GetDevopsProjectInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDevopsProjectInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDevopsProjectInfoResponseBody setErrorMsg(String errorMsg) {
@@ -40,12 +32,20 @@ public class GetDevopsProjectInfoResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public GetDevopsProjectInfoResponseBody setObject(GetDevopsProjectInfoResponseBodyObject object) {
-        this.object = object;
+    public GetDevopsProjectInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public GetDevopsProjectInfoResponseBodyObject getObject() {
-        return this.object;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetDevopsProjectInfoResponseBody setSuccessful(Boolean successful) {
+        this.successful = successful;
+        return this;
+    }
+    public Boolean getSuccessful() {
+        return this.successful;
     }
 
     public GetDevopsProjectInfoResponseBody setErrorCode(String errorCode) {
@@ -56,12 +56,12 @@ public class GetDevopsProjectInfoResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetDevopsProjectInfoResponseBody setSuccessful(Boolean successful) {
-        this.successful = successful;
+    public GetDevopsProjectInfoResponseBody setObject(GetDevopsProjectInfoResponseBodyObject object) {
+        this.object = object;
         return this;
     }
-    public Boolean getSuccessful() {
-        return this.successful;
+    public GetDevopsProjectInfoResponseBodyObject getObject() {
+        return this.object;
     }
 
     public static class GetDevopsProjectInfoResponseBodyObject extends TeaModel {
@@ -98,11 +98,11 @@ public class GetDevopsProjectInfoResponseBody extends TeaModel {
         @NameInMap("Updated")
         public String updated;
 
-        @NameInMap("IsArchived")
-        public Boolean isArchived;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("IsArchived")
+        public Boolean isArchived;
 
         @NameInMap("EndDate")
         public String endDate;
@@ -122,14 +122,14 @@ public class GetDevopsProjectInfoResponseBody extends TeaModel {
         @NameInMap("SourceId")
         public String sourceId;
 
-        @NameInMap("OrganizationId")
-        public String organizationId;
+        @NameInMap("DefaultCollectionId")
+        public String defaultCollectionId;
 
         @NameInMap("IsSuspended")
         public Boolean isSuspended;
 
-        @NameInMap("DefaultCollectionId")
-        public String defaultCollectionId;
+        @NameInMap("OrganizationId")
+        public String organizationId;
 
         @NameInMap("Visibility")
         public String visibility;
@@ -245,20 +245,20 @@ public class GetDevopsProjectInfoResponseBody extends TeaModel {
             return this.updated;
         }
 
-        public GetDevopsProjectInfoResponseBodyObject setIsArchived(Boolean isArchived) {
-            this.isArchived = isArchived;
-            return this;
-        }
-        public Boolean getIsArchived() {
-            return this.isArchived;
-        }
-
         public GetDevopsProjectInfoResponseBodyObject setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetDevopsProjectInfoResponseBodyObject setIsArchived(Boolean isArchived) {
+            this.isArchived = isArchived;
+            return this;
+        }
+        public Boolean getIsArchived() {
+            return this.isArchived;
         }
 
         public GetDevopsProjectInfoResponseBodyObject setEndDate(String endDate) {
@@ -309,12 +309,12 @@ public class GetDevopsProjectInfoResponseBody extends TeaModel {
             return this.sourceId;
         }
 
-        public GetDevopsProjectInfoResponseBodyObject setOrganizationId(String organizationId) {
-            this.organizationId = organizationId;
+        public GetDevopsProjectInfoResponseBodyObject setDefaultCollectionId(String defaultCollectionId) {
+            this.defaultCollectionId = defaultCollectionId;
             return this;
         }
-        public String getOrganizationId() {
-            return this.organizationId;
+        public String getDefaultCollectionId() {
+            return this.defaultCollectionId;
         }
 
         public GetDevopsProjectInfoResponseBodyObject setIsSuspended(Boolean isSuspended) {
@@ -325,12 +325,12 @@ public class GetDevopsProjectInfoResponseBody extends TeaModel {
             return this.isSuspended;
         }
 
-        public GetDevopsProjectInfoResponseBodyObject setDefaultCollectionId(String defaultCollectionId) {
-            this.defaultCollectionId = defaultCollectionId;
+        public GetDevopsProjectInfoResponseBodyObject setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
             return this;
         }
-        public String getDefaultCollectionId() {
-            return this.defaultCollectionId;
+        public String getOrganizationId() {
+            return this.organizationId;
         }
 
         public GetDevopsProjectInfoResponseBodyObject setVisibility(String visibility) {

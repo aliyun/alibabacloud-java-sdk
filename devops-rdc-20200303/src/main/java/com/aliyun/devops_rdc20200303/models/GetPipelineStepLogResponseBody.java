@@ -7,17 +7,17 @@ public class GetPipelineStepLogResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Object")
-    public GetPipelineStepLogResponseBodyObject object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public GetPipelineStepLogResponseBodyObject object;
 
     public static GetPipelineStepLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPipelineStepLogResponseBody self = new GetPipelineStepLogResponseBody();
@@ -30,22 +30,6 @@ public class GetPipelineStepLogResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetPipelineStepLogResponseBody setObject(GetPipelineStepLogResponseBodyObject object) {
-        this.object = object;
-        return this;
-    }
-    public GetPipelineStepLogResponseBodyObject getObject() {
-        return this.object;
-    }
-
-    public GetPipelineStepLogResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public GetPipelineStepLogResponseBody setErrorMessage(String errorMessage) {
@@ -64,27 +48,35 @@ public class GetPipelineStepLogResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetPipelineStepLogResponseBodyObject extends TeaModel {
-        @NameInMap("Logs")
-        public String logs;
+    public GetPipelineStepLogResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
 
+    public GetPipelineStepLogResponseBody setObject(GetPipelineStepLogResponseBodyObject object) {
+        this.object = object;
+        return this;
+    }
+    public GetPipelineStepLogResponseBodyObject getObject() {
+        return this.object;
+    }
+
+    public static class GetPipelineStepLogResponseBodyObject extends TeaModel {
         @NameInMap("Last")
         public Integer last;
 
         @NameInMap("More")
         public Boolean more;
 
+        @NameInMap("Logs")
+        public String logs;
+
         public static GetPipelineStepLogResponseBodyObject build(java.util.Map<String, ?> map) throws Exception {
             GetPipelineStepLogResponseBodyObject self = new GetPipelineStepLogResponseBodyObject();
             return TeaModel.build(map, self);
-        }
-
-        public GetPipelineStepLogResponseBodyObject setLogs(String logs) {
-            this.logs = logs;
-            return this;
-        }
-        public String getLogs() {
-            return this.logs;
         }
 
         public GetPipelineStepLogResponseBodyObject setLast(Integer last) {
@@ -101,6 +93,14 @@ public class GetPipelineStepLogResponseBody extends TeaModel {
         }
         public Boolean getMore() {
             return this.more;
+        }
+
+        public GetPipelineStepLogResponseBodyObject setLogs(String logs) {
+            this.logs = logs;
+            return this;
+        }
+        public String getLogs() {
+            return this.logs;
         }
 
     }

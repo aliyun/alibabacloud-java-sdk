@@ -4,32 +4,24 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class GetUserByAliyunUidResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public GetUserByAliyunUidResponseBodyObject object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public GetUserByAliyunUidResponseBodyObject object;
+
     public static GetUserByAliyunUidResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserByAliyunUidResponseBody self = new GetUserByAliyunUidResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetUserByAliyunUidResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetUserByAliyunUidResponseBody setErrorMsg(String errorMsg) {
@@ -40,12 +32,20 @@ public class GetUserByAliyunUidResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public GetUserByAliyunUidResponseBody setObject(GetUserByAliyunUidResponseBodyObject object) {
-        this.object = object;
+    public GetUserByAliyunUidResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public GetUserByAliyunUidResponseBodyObject getObject() {
-        return this.object;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetUserByAliyunUidResponseBody setSuccessful(Boolean successful) {
+        this.successful = successful;
+        return this;
+    }
+    public Boolean getSuccessful() {
+        return this.successful;
     }
 
     public GetUserByAliyunUidResponseBody setErrorCode(String errorCode) {
@@ -56,12 +56,12 @@ public class GetUserByAliyunUidResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetUserByAliyunUidResponseBody setSuccessful(Boolean successful) {
-        this.successful = successful;
+    public GetUserByAliyunUidResponseBody setObject(GetUserByAliyunUidResponseBodyObject object) {
+        this.object = object;
         return this;
     }
-    public Boolean getSuccessful() {
-        return this.successful;
+    public GetUserByAliyunUidResponseBodyObject getObject() {
+        return this.object;
     }
 
     public static class GetUserByAliyunUidResponseBodyObject extends TeaModel {

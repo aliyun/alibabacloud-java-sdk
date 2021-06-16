@@ -4,35 +4,27 @@ package com.aliyun.devops_rdc20200303.models;
 import com.aliyun.tea.*;
 
 public class GetTaskDetailActivityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
-    @NameInMap("Object")
-    public java.util.List<GetTaskDetailActivityResponseBodyObject> object;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Successful")
     public Boolean successful;
 
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Object")
+    public java.util.List<GetTaskDetailActivityResponseBodyObject> object;
+
     public static GetTaskDetailActivityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTaskDetailActivityResponseBody self = new GetTaskDetailActivityResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetTaskDetailActivityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetTaskDetailActivityResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -51,20 +43,12 @@ public class GetTaskDetailActivityResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public GetTaskDetailActivityResponseBody setObject(java.util.List<GetTaskDetailActivityResponseBodyObject> object) {
-        this.object = object;
+    public GetTaskDetailActivityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<GetTaskDetailActivityResponseBodyObject> getObject() {
-        return this.object;
-    }
-
-    public GetTaskDetailActivityResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetTaskDetailActivityResponseBody setSuccessful(Boolean successful) {
@@ -75,12 +59,28 @@ public class GetTaskDetailActivityResponseBody extends TeaModel {
         return this.successful;
     }
 
-    public static class GetTaskDetailActivityResponseBodyObject extends TeaModel {
-        @NameInMap("Action")
-        public String action;
+    public GetTaskDetailActivityResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
 
+    public GetTaskDetailActivityResponseBody setObject(java.util.List<GetTaskDetailActivityResponseBodyObject> object) {
+        this.object = object;
+        return this;
+    }
+    public java.util.List<GetTaskDetailActivityResponseBodyObject> getObject() {
+        return this.object;
+    }
+
+    public static class GetTaskDetailActivityResponseBodyObject extends TeaModel {
         @NameInMap("Updated")
         public String updated;
+
+        @NameInMap("Action")
+        public String action;
 
         @NameInMap("Title")
         public String title;
@@ -96,20 +96,20 @@ public class GetTaskDetailActivityResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetTaskDetailActivityResponseBodyObject setAction(String action) {
-            this.action = action;
-            return this;
-        }
-        public String getAction() {
-            return this.action;
-        }
-
         public GetTaskDetailActivityResponseBodyObject setUpdated(String updated) {
             this.updated = updated;
             return this;
         }
         public String getUpdated() {
             return this.updated;
+        }
+
+        public GetTaskDetailActivityResponseBodyObject setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
         }
 
         public GetTaskDetailActivityResponseBodyObject setTitle(String title) {
