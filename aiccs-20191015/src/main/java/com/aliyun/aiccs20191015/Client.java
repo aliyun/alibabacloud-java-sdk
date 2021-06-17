@@ -891,6 +891,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listOuterOrderedNumbersWithOptions(request, runtime);
     }
 
+    public QueryTaskResultResponse queryTaskResultWithOptions(QueryTaskResultRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryTaskResult", "2019-10-15", "HTTPS", "GET", "AK", "json", req, runtime), new QueryTaskResultResponse());
+    }
+
+    public QueryTaskResultResponse queryTaskResult(QueryTaskResultRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryTaskResultWithOptions(request, runtime);
+    }
+
     public GetAgentBasisStatusResponse getAgentBasisStatusWithOptions(GetAgentBasisStatusRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetAgentBasisStatusShrinkRequest request = new GetAgentBasisStatusShrinkRequest();
@@ -1819,6 +1833,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public JoinThirdCallResponse joinThirdCall(JoinThirdCallRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.joinThirdCallWithOptions(request, runtime);
+    }
+
+    public StartTaskByAppResponse startTaskByAppWithOptions(StartTaskByAppRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StartTaskByApp", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new StartTaskByAppResponse());
+    }
+
+    public StartTaskByAppResponse startTaskByApp(StartTaskByAppRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startTaskByAppWithOptions(request, runtime);
     }
 
     public CreateSkillGroupResponse createSkillGroupWithOptions(CreateSkillGroupRequest request, RuntimeOptions runtime) throws Exception {
