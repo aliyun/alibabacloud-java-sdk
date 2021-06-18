@@ -47,6 +47,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         @NameInMap("Kernel")
         public String kernel;
 
+        @NameInMap("Bind")
+        public Boolean bind;
+
         @NameInMap("OsName")
         public String osName;
 
@@ -61,6 +64,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
 
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
+
+        @NameInMap("AuthVersion")
+        public Integer authVersion;
 
         @NameInMap("InstanceName")
         public String instanceName;
@@ -79,6 +85,9 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
 
         @NameInMap("Os")
         public String os;
+
+        @NameInMap("AuthModifyTime")
+        public Long authModifyTime;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -158,6 +167,14 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             return this.kernel;
         }
 
+        public DescribeAssetDetailByUuidResponseBodyAssetDetail setBind(Boolean bind) {
+            this.bind = bind;
+            return this;
+        }
+        public Boolean getBind() {
+            return this.bind;
+        }
+
         public DescribeAssetDetailByUuidResponseBodyAssetDetail setOsName(String osName) {
             this.osName = osName;
             return this;
@@ -196,6 +213,14 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         }
         public String getVpcInstanceId() {
             return this.vpcInstanceId;
+        }
+
+        public DescribeAssetDetailByUuidResponseBodyAssetDetail setAuthVersion(Integer authVersion) {
+            this.authVersion = authVersion;
+            return this;
+        }
+        public Integer getAuthVersion() {
+            return this.authVersion;
         }
 
         public DescribeAssetDetailByUuidResponseBodyAssetDetail setInstanceName(String instanceName) {
@@ -244,6 +269,14 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         }
         public String getOs() {
             return this.os;
+        }
+
+        public DescribeAssetDetailByUuidResponseBodyAssetDetail setAuthModifyTime(Long authModifyTime) {
+            this.authModifyTime = authModifyTime;
+            return this;
+        }
+        public Long getAuthModifyTime() {
+            return this.authModifyTime;
         }
 
         public DescribeAssetDetailByUuidResponseBodyAssetDetail setInstanceId(String instanceId) {

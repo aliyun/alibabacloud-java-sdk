@@ -13,9 +13,6 @@ public class CreateRestoreJobRequest extends TeaModel {
     @NameInMap("Uuid")
     public String uuid;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("SnapshotId")
     public String snapshotId;
 
@@ -25,11 +22,14 @@ public class CreateRestoreJobRequest extends TeaModel {
     @NameInMap("Target")
     public String target;
 
+    @NameInMap("SourceType")
+    public String sourceType;
+
+    @NameInMap("VaultId")
+    public String vaultId;
+
     @NameInMap("SnapshotVersion")
     public String snapshotVersion;
-
-    @NameInMap("PolicyVersion")
-    public String policyVersion;
 
     @NameInMap("Includes")
     public String includes;
@@ -63,14 +63,6 @@ public class CreateRestoreJobRequest extends TeaModel {
         return this.uuid;
     }
 
-    public CreateRestoreJobRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public CreateRestoreJobRequest setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -95,20 +87,28 @@ public class CreateRestoreJobRequest extends TeaModel {
         return this.target;
     }
 
+    public CreateRestoreJobRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    public CreateRestoreJobRequest setVaultId(String vaultId) {
+        this.vaultId = vaultId;
+        return this;
+    }
+    public String getVaultId() {
+        return this.vaultId;
+    }
+
     public CreateRestoreJobRequest setSnapshotVersion(String snapshotVersion) {
         this.snapshotVersion = snapshotVersion;
         return this;
     }
     public String getSnapshotVersion() {
         return this.snapshotVersion;
-    }
-
-    public CreateRestoreJobRequest setPolicyVersion(String policyVersion) {
-        this.policyVersion = policyVersion;
-        return this;
-    }
-    public String getPolicyVersion() {
-        return this.policyVersion;
     }
 
     public CreateRestoreJobRequest setIncludes(String includes) {

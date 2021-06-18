@@ -35,6 +35,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("PolicyVersion")
+        public String policyVersion;
+
         @NameInMap("Policy")
         public String policy;
 
@@ -46,6 +49,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("UuidList")
         public java.util.List<String> uuidList;
@@ -61,6 +67,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeBackupPolicyResponseBodyBackupPolicyDetail setPolicyVersion(String policyVersion) {
+            this.policyVersion = policyVersion;
+            return this;
+        }
+        public String getPolicyVersion() {
+            return this.policyVersion;
         }
 
         public DescribeBackupPolicyResponseBodyBackupPolicyDetail setPolicy(String policy) {
@@ -93,6 +107,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeBackupPolicyResponseBodyBackupPolicyDetail setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeBackupPolicyResponseBodyBackupPolicyDetail setUuidList(java.util.List<String> uuidList) {

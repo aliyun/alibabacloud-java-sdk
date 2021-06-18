@@ -110,6 +110,9 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         @NameInMap("ServiceErrorCount")
         public Integer serviceErrorCount;
 
+        @NameInMap("PolicyRegionId")
+        public String policyRegionId;
+
         @NameInMap("ClientStatus")
         public String clientStatus;
 
@@ -122,11 +125,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
-        @NameInMap("UuidList")
-        public java.util.List<String> uuidList;
-
         @NameInMap("ClientErrorUuidList")
         public java.util.List<String> clientErrorUuidList;
+
+        @NameInMap("RemarkedUuidList")
+        public java.util.List<String> remarkedUuidList;
+
+        @NameInMap("UuidList")
+        public java.util.List<String> uuidList;
 
         @NameInMap("ServiceErrorUuidList")
         public java.util.List<String> serviceErrorUuidList;
@@ -179,6 +185,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             return this.serviceErrorCount;
         }
 
+        public DescribeBackupPoliciesResponseBodyPolicies setPolicyRegionId(String policyRegionId) {
+            this.policyRegionId = policyRegionId;
+            return this;
+        }
+        public String getPolicyRegionId() {
+            return this.policyRegionId;
+        }
+
         public DescribeBackupPoliciesResponseBodyPolicies setClientStatus(String clientStatus) {
             this.clientStatus = clientStatus;
             return this;
@@ -211,20 +225,28 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             return this.id;
         }
 
-        public DescribeBackupPoliciesResponseBodyPolicies setUuidList(java.util.List<String> uuidList) {
-            this.uuidList = uuidList;
-            return this;
-        }
-        public java.util.List<String> getUuidList() {
-            return this.uuidList;
-        }
-
         public DescribeBackupPoliciesResponseBodyPolicies setClientErrorUuidList(java.util.List<String> clientErrorUuidList) {
             this.clientErrorUuidList = clientErrorUuidList;
             return this;
         }
         public java.util.List<String> getClientErrorUuidList() {
             return this.clientErrorUuidList;
+        }
+
+        public DescribeBackupPoliciesResponseBodyPolicies setRemarkedUuidList(java.util.List<String> remarkedUuidList) {
+            this.remarkedUuidList = remarkedUuidList;
+            return this;
+        }
+        public java.util.List<String> getRemarkedUuidList() {
+            return this.remarkedUuidList;
+        }
+
+        public DescribeBackupPoliciesResponseBodyPolicies setUuidList(java.util.List<String> uuidList) {
+            this.uuidList = uuidList;
+            return this;
+        }
+        public java.util.List<String> getUuidList() {
+            return this.uuidList;
         }
 
         public DescribeBackupPoliciesResponseBodyPolicies setServiceErrorUuidList(java.util.List<String> serviceErrorUuidList) {

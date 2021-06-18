@@ -47,8 +47,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("GroupCount")
         public Integer groupCount;
 
+        @NameInMap("TencentInstanceCount")
+        public Integer tencentInstanceCount;
+
         @NameInMap("GeneralAssetCount")
         public Integer generalAssetCount;
+
+        @NameInMap("InstanceSyncTaskCount")
+        public Integer instanceSyncTaskCount;
 
         @NameInMap("UnprotectedInstanceCount")
         public Integer unprotectedInstanceCount;
@@ -59,14 +65,20 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("TestAssetCount")
         public Integer testAssetCount;
 
-        @NameInMap("InstanceCount")
-        public Integer instanceCount;
-
         @NameInMap("VpcCount")
         public Integer vpcCount;
 
+        @NameInMap("InstanceCount")
+        public Integer instanceCount;
+
+        @NameInMap("IdcInstanceCount")
+        public Integer idcInstanceCount;
+
         @NameInMap("NotRunningStatusCount")
         public Integer notRunningStatusCount;
+
+        @NameInMap("AliYunInstanceCount")
+        public Integer aliYunInstanceCount;
 
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
@@ -116,12 +128,28 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             return this.groupCount;
         }
 
+        public DescribeFieldStatisticsResponseBodyGroupedFields setTencentInstanceCount(Integer tencentInstanceCount) {
+            this.tencentInstanceCount = tencentInstanceCount;
+            return this;
+        }
+        public Integer getTencentInstanceCount() {
+            return this.tencentInstanceCount;
+        }
+
         public DescribeFieldStatisticsResponseBodyGroupedFields setGeneralAssetCount(Integer generalAssetCount) {
             this.generalAssetCount = generalAssetCount;
             return this;
         }
         public Integer getGeneralAssetCount() {
             return this.generalAssetCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setInstanceSyncTaskCount(Integer instanceSyncTaskCount) {
+            this.instanceSyncTaskCount = instanceSyncTaskCount;
+            return this;
+        }
+        public Integer getInstanceSyncTaskCount() {
+            return this.instanceSyncTaskCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setUnprotectedInstanceCount(Integer unprotectedInstanceCount) {
@@ -148,14 +176,6 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             return this.testAssetCount;
         }
 
-        public DescribeFieldStatisticsResponseBodyGroupedFields setInstanceCount(Integer instanceCount) {
-            this.instanceCount = instanceCount;
-            return this;
-        }
-        public Integer getInstanceCount() {
-            return this.instanceCount;
-        }
-
         public DescribeFieldStatisticsResponseBodyGroupedFields setVpcCount(Integer vpcCount) {
             this.vpcCount = vpcCount;
             return this;
@@ -164,12 +184,36 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             return this.vpcCount;
         }
 
+        public DescribeFieldStatisticsResponseBodyGroupedFields setInstanceCount(Integer instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Integer getInstanceCount() {
+            return this.instanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setIdcInstanceCount(Integer idcInstanceCount) {
+            this.idcInstanceCount = idcInstanceCount;
+            return this;
+        }
+        public Integer getIdcInstanceCount() {
+            return this.idcInstanceCount;
+        }
+
         public DescribeFieldStatisticsResponseBodyGroupedFields setNotRunningStatusCount(Integer notRunningStatusCount) {
             this.notRunningStatusCount = notRunningStatusCount;
             return this;
         }
         public Integer getNotRunningStatusCount() {
             return this.notRunningStatusCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setAliYunInstanceCount(Integer aliYunInstanceCount) {
+            this.aliYunInstanceCount = aliYunInstanceCount;
+            return this;
+        }
+        public Integer getAliYunInstanceCount() {
+            return this.aliYunInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setRiskInstanceCount(Integer riskInstanceCount) {

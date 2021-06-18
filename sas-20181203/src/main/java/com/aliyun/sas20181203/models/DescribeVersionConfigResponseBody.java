@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVersionConfigResponseBody extends TeaModel {
+    @NameInMap("MVAuthCount")
+    public Integer MVAuthCount;
+
     @NameInMap("SasLog")
     public Integer sasLog;
 
@@ -12,6 +15,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @NameInMap("HoneypotCapacity")
     public Long honeypotCapacity;
+
+    @NameInMap("MVUnusedAuthCount")
+    public Integer MVUnusedAuthCount;
 
     @NameInMap("WebLock")
     public Integer webLock;
@@ -34,6 +40,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("ReleaseTime")
     public Long releaseTime;
 
+    @NameInMap("HighestVersion")
+    public Integer highestVersion;
+
     @NameInMap("AssetLevel")
     public Integer assetLevel;
 
@@ -48,6 +57,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @NameInMap("VmCores")
     public Integer vmCores;
+
+    @NameInMap("AllowPartialBuy")
+    public Integer allowPartialBuy;
 
     @NameInMap("AppWhiteList")
     public Integer appWhiteList;
@@ -64,6 +76,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public static DescribeVersionConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVersionConfigResponseBody self = new DescribeVersionConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVersionConfigResponseBody setMVAuthCount(Integer MVAuthCount) {
+        this.MVAuthCount = MVAuthCount;
+        return this;
+    }
+    public Integer getMVAuthCount() {
+        return this.MVAuthCount;
     }
 
     public DescribeVersionConfigResponseBody setSasLog(Integer sasLog) {
@@ -88,6 +108,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Long getHoneypotCapacity() {
         return this.honeypotCapacity;
+    }
+
+    public DescribeVersionConfigResponseBody setMVUnusedAuthCount(Integer MVUnusedAuthCount) {
+        this.MVUnusedAuthCount = MVUnusedAuthCount;
+        return this;
+    }
+    public Integer getMVUnusedAuthCount() {
+        return this.MVUnusedAuthCount;
     }
 
     public DescribeVersionConfigResponseBody setWebLock(Integer webLock) {
@@ -146,6 +174,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return this.releaseTime;
     }
 
+    public DescribeVersionConfigResponseBody setHighestVersion(Integer highestVersion) {
+        this.highestVersion = highestVersion;
+        return this;
+    }
+    public Integer getHighestVersion() {
+        return this.highestVersion;
+    }
+
     public DescribeVersionConfigResponseBody setAssetLevel(Integer assetLevel) {
         this.assetLevel = assetLevel;
         return this;
@@ -184,6 +220,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Integer getVmCores() {
         return this.vmCores;
+    }
+
+    public DescribeVersionConfigResponseBody setAllowPartialBuy(Integer allowPartialBuy) {
+        this.allowPartialBuy = allowPartialBuy;
+        return this;
+    }
+    public Integer getAllowPartialBuy() {
+        return this.allowPartialBuy;
     }
 
     public DescribeVersionConfigResponseBody setAppWhiteList(Integer appWhiteList) {
