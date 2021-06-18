@@ -13,6 +13,9 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("MachineRemark")
+    public String machineRemark;
+
     @NameInMap("Status")
     public String status;
 
@@ -49,6 +52,14 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeBackupPoliciesRequest setMachineRemark(String machineRemark) {
+        this.machineRemark = machineRemark;
+        return this;
+    }
+    public String getMachineRemark() {
+        return this.machineRemark;
     }
 
     public DescribeBackupPoliciesRequest setStatus(String status) {

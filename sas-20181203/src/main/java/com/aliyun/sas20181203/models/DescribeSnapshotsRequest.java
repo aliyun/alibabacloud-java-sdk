@@ -34,6 +34,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("ApiVersion")
     public String apiVersion;
 
+    @NameInMap("IsAliYunEcs")
+    public String isAliYunEcs;
+
     public static DescribeSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsRequest self = new DescribeSnapshotsRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public String getApiVersion() {
         return this.apiVersion;
+    }
+
+    public DescribeSnapshotsRequest setIsAliYunEcs(String isAliYunEcs) {
+        this.isAliYunEcs = isAliYunEcs;
+        return this;
+    }
+    public String getIsAliYunEcs() {
+        return this.isAliYunEcs;
     }
 
 }

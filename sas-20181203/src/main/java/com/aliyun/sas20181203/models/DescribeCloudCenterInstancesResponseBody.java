@@ -112,6 +112,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("InternetIp")
         public String internetIp;
 
+        @NameInMap("Bind")
+        public Boolean bind;
+
         @NameInMap("OsName")
         public String osName;
 
@@ -126,6 +129,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         @NameInMap("Flag")
         public Integer flag;
+
+        @NameInMap("AuthVersion")
+        public Integer authVersion;
 
         @NameInMap("Region")
         public String region;
@@ -151,6 +157,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        @NameInMap("Cores")
+        public Integer cores;
+
         @NameInMap("VulStatus")
         public String vulStatus;
 
@@ -169,6 +178,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("Os")
         public String os;
 
+        @NameInMap("AuthModifyTime")
+        public Long authModifyTime;
+
+        @NameInMap("ExposedCount")
+        public Integer exposedCount;
+
         @NameInMap("SafeEventCount")
         public Integer safeEventCount;
 
@@ -180,6 +195,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         @NameInMap("IntranetIp")
         public String intranetIp;
+
+        @NameInMap("Vendor")
+        public Integer vendor;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -195,6 +213,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         @NameInMap("RegionName")
         public String regionName;
+
+        @NameInMap("VendorName")
+        public String vendorName;
 
         @NameInMap("ClusterName")
         public String clusterName;
@@ -227,6 +248,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public String getInternetIp() {
             return this.internetIp;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setBind(Boolean bind) {
+            this.bind = bind;
+            return this;
+        }
+        public Boolean getBind() {
+            return this.bind;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setOsName(String osName) {
@@ -267,6 +296,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public Integer getFlag() {
             return this.flag;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setAuthVersion(Integer authVersion) {
+            this.authVersion = authVersion;
+            return this;
+        }
+        public Integer getAuthVersion() {
+            return this.authVersion;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setRegion(String region) {
@@ -333,6 +370,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.riskStatus;
         }
 
+        public DescribeCloudCenterInstancesResponseBodyInstances setCores(Integer cores) {
+            this.cores = cores;
+            return this;
+        }
+        public Integer getCores() {
+            return this.cores;
+        }
+
         public DescribeCloudCenterInstancesResponseBodyInstances setVulStatus(String vulStatus) {
             this.vulStatus = vulStatus;
             return this;
@@ -381,6 +426,22 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.os;
         }
 
+        public DescribeCloudCenterInstancesResponseBodyInstances setAuthModifyTime(Long authModifyTime) {
+            this.authModifyTime = authModifyTime;
+            return this;
+        }
+        public Long getAuthModifyTime() {
+            return this.authModifyTime;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setExposedCount(Integer exposedCount) {
+            this.exposedCount = exposedCount;
+            return this;
+        }
+        public Integer getExposedCount() {
+            return this.exposedCount;
+        }
+
         public DescribeCloudCenterInstancesResponseBodyInstances setSafeEventCount(Integer safeEventCount) {
             this.safeEventCount = safeEventCount;
             return this;
@@ -411,6 +472,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public String getIntranetIp() {
             return this.intranetIp;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setVendor(Integer vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public Integer getVendor() {
+            return this.vendor;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setRegionId(String regionId) {
@@ -451,6 +520,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public String getRegionName() {
             return this.regionName;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setVendorName(String vendorName) {
+            this.vendorName = vendorName;
+            return this;
+        }
+        public String getVendorName() {
+            return this.vendorName;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setClusterName(String clusterName) {

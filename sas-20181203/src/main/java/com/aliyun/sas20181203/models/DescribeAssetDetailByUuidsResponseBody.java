@@ -65,6 +65,9 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         @NameInMap("Uuid")
         public String uuid;
 
+        @NameInMap("Flag")
+        public Integer flag;
+
         @NameInMap("RegionName")
         public String regionName;
 
@@ -165,6 +168,14 @@ public class DescribeAssetDetailByUuidsResponseBody extends TeaModel {
         }
         public String getUuid() {
             return this.uuid;
+        }
+
+        public DescribeAssetDetailByUuidsResponseBodyAssetList setFlag(Integer flag) {
+            this.flag = flag;
+            return this;
+        }
+        public Integer getFlag() {
+            return this.flag;
         }
 
         public DescribeAssetDetailByUuidsResponseBodyAssetList setRegionName(String regionName) {
