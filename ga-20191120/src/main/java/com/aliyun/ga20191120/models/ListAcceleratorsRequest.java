@@ -16,6 +16,9 @@ public class ListAcceleratorsRequest extends TeaModel {
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    @NameInMap("State")
+    public String state;
+
     public static ListAcceleratorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAcceleratorsRequest self = new ListAcceleratorsRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListAcceleratorsRequest extends TeaModel {
     }
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    public ListAcceleratorsRequest setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
     }
 
 }

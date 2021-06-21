@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ga20191120.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateEndpointGroupsResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateEndpointGroupsResponseBody body;
+
+    public static UpdateEndpointGroupsResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateEndpointGroupsResponse self = new UpdateEndpointGroupsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateEndpointGroupsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateEndpointGroupsResponse setBody(UpdateEndpointGroupsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateEndpointGroupsResponseBody getBody() {
+        return this.body;
+    }
+
+}

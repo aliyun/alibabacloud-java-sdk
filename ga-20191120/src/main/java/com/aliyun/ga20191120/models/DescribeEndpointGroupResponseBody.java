@@ -16,6 +16,12 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EndpointGroupIpList")
+    public java.util.List<String> endpointGroupIpList;
+
+    @NameInMap("EndpointGroupUnconfirmedIpList")
+    public java.util.List<String> endpointGroupUnconfirmedIpList;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -114,6 +120,22 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeEndpointGroupResponseBody setEndpointGroupIpList(java.util.List<String> endpointGroupIpList) {
+        this.endpointGroupIpList = endpointGroupIpList;
+        return this;
+    }
+    public java.util.List<String> getEndpointGroupIpList() {
+        return this.endpointGroupIpList;
+    }
+
+    public DescribeEndpointGroupResponseBody setEndpointGroupUnconfirmedIpList(java.util.List<String> endpointGroupUnconfirmedIpList) {
+        this.endpointGroupUnconfirmedIpList = endpointGroupUnconfirmedIpList;
+        return this;
+    }
+    public java.util.List<String> getEndpointGroupUnconfirmedIpList() {
+        return this.endpointGroupUnconfirmedIpList;
     }
 
     public DescribeEndpointGroupResponseBody setRequestId(String requestId) {

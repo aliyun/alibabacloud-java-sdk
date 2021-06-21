@@ -175,6 +175,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         @NameInMap("EndpointGroupIpList")
         public java.util.List<String> endpointGroupIpList;
 
+        @NameInMap("EndpointGroupUnconfirmedIpList")
+        public java.util.List<String> endpointGroupUnconfirmedIpList;
+
         @NameInMap("State")
         public String state;
 
@@ -245,6 +248,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
         public java.util.List<String> getEndpointGroupIpList() {
             return this.endpointGroupIpList;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroups setEndpointGroupUnconfirmedIpList(java.util.List<String> endpointGroupUnconfirmedIpList) {
+            this.endpointGroupUnconfirmedIpList = endpointGroupUnconfirmedIpList;
+            return this;
+        }
+        public java.util.List<String> getEndpointGroupUnconfirmedIpList() {
+            return this.endpointGroupUnconfirmedIpList;
         }
 
         public ListEndpointGroupsResponseBodyEndpointGroups setState(String state) {
