@@ -36,6 +36,10 @@ public class StartTaskByAppRequest extends TeaModel {
     @NameInMap("SiteType")
     public String siteType;
 
+    // requestId
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static StartTaskByAppRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTaskByAppRequest self = new StartTaskByAppRequest();
         return TeaModel.build(map, self);
@@ -103,6 +107,14 @@ public class StartTaskByAppRequest extends TeaModel {
     }
     public String getSiteType() {
         return this.siteType;
+    }
+
+    public StartTaskByAppRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
