@@ -25,9 +25,6 @@ public class ListTaskRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("BizType")
-    public String bizType;
-
     @NameInMap("TaskId")
     public Long taskId;
 
@@ -93,14 +90,6 @@ public class ListTaskRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public ListTaskRequest setBizType(String bizType) {
-        this.bizType = bizType;
-        return this;
-    }
-    public String getBizType() {
-        return this.bizType;
     }
 
     public ListTaskRequest setTaskId(Long taskId) {

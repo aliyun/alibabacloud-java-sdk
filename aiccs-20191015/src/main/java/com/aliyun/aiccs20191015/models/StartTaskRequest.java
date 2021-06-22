@@ -16,9 +16,6 @@ public class StartTaskRequest extends TeaModel {
     @NameInMap("TaskId")
     public Long taskId;
 
-    @NameInMap("FireTime")
-    public String fireTime;
-
     @NameInMap("StartNow")
     public Boolean startNow;
 
@@ -57,14 +54,6 @@ public class StartTaskRequest extends TeaModel {
     }
     public Long getTaskId() {
         return this.taskId;
-    }
-
-    public StartTaskRequest setFireTime(String fireTime) {
-        this.fireTime = fireTime;
-        return this;
-    }
-    public String getFireTime() {
-        return this.fireTime;
     }
 
     public StartTaskRequest setStartNow(Boolean startNow) {
