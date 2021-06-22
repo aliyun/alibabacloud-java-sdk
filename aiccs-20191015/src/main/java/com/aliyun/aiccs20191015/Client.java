@@ -165,6 +165,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAgentByIdWithOptions(request, runtime);
     }
 
+    public AddHotlineNumberResponse addHotlineNumberWithOptions(AddHotlineNumberRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddHotlineNumberShrinkRequest request = new AddHotlineNumberShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outboundRangeList)) {
+            request.outboundRangeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outboundRangeList, "OutboundRangeList", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddHotlineNumber", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new AddHotlineNumberResponse());
+    }
+
+    public AddHotlineNumberResponse addHotlineNumber(AddHotlineNumberRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addHotlineNumberWithOptions(request, runtime);
+    }
+
     public GetQualityRuleDetailResponse getQualityRuleDetailWithOptions(GetQualityRuleDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -202,6 +221,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetQualityProjectLogResponse getQualityProjectLog(GetQualityProjectLogRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getQualityProjectLogWithOptions(request, runtime);
+    }
+
+    public ResetHotlineNumberResponse resetHotlineNumberWithOptions(ResetHotlineNumberRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ResetHotlineNumberShrinkRequest request = new ResetHotlineNumberShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outboundRangeList)) {
+            request.outboundRangeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outboundRangeList, "OutboundRangeList", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ResetHotlineNumber", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new ResetHotlineNumberResponse());
+    }
+
+    public ResetHotlineNumberResponse resetHotlineNumber(ResetHotlineNumberRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.resetHotlineNumberWithOptions(request, runtime);
     }
 
     public ListHotlineRecordDetailResponse listHotlineRecordDetailWithOptions(ListHotlineRecordDetailRequest request, RuntimeOptions runtime) throws Exception {
@@ -256,6 +294,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartTaskResponse startTask(StartTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.startTaskWithOptions(request, runtime);
+    }
+
+    public QueryHotlineNumberResponse queryHotlineNumberWithOptions(QueryHotlineNumberRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryHotlineNumberShrinkRequest request = new QueryHotlineNumberShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.groupIds)) {
+            request.groupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.groupIds, "GroupIds", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryHotlineNumber", "2019-10-15", "HTTPS", "GET", "AK", "json", req, runtime), new QueryHotlineNumberResponse());
+    }
+
+    public QueryHotlineNumberResponse queryHotlineNumber(QueryHotlineNumberRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryHotlineNumberWithOptions(request, runtime);
     }
 
     public GetQualityProjectListResponse getQualityProjectListWithOptions(GetQualityProjectListRequest request, RuntimeOptions runtime) throws Exception {
@@ -1414,6 +1472,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveSkillGroupResponse removeSkillGroup(RemoveSkillGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.removeSkillGroupWithOptions(request, runtime);
+    }
+
+    public DeleteHotlineNumberResponse deleteHotlineNumberWithOptions(DeleteHotlineNumberRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteHotlineNumber", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteHotlineNumberResponse());
+    }
+
+    public DeleteHotlineNumberResponse deleteHotlineNumber(DeleteHotlineNumberRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteHotlineNumberWithOptions(request, runtime);
     }
 
     public StartCallV2Response startCallV2WithOptions(StartCallV2Request request, RuntimeOptions runtime) throws Exception {

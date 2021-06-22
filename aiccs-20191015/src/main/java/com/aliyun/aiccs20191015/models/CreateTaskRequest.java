@@ -52,12 +52,6 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("SeatCount")
     public String seatCount;
 
-    @NameInMap("Remark")
-    public String remark;
-
-    @NameInMap("BizType")
-    public String bizType;
-
     public static CreateTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskRequest self = new CreateTaskRequest();
         return TeaModel.build(map, self);
@@ -189,22 +183,6 @@ public class CreateTaskRequest extends TeaModel {
     }
     public String getSeatCount() {
         return this.seatCount;
-    }
-
-    public CreateTaskRequest setRemark(String remark) {
-        this.remark = remark;
-        return this;
-    }
-    public String getRemark() {
-        return this.remark;
-    }
-
-    public CreateTaskRequest setBizType(String bizType) {
-        this.bizType = bizType;
-        return this;
-    }
-    public String getBizType() {
-        return this.bizType;
     }
 
 }

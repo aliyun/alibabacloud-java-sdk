@@ -19,9 +19,6 @@ public class AttachTaskRequest extends TeaModel {
     @NameInMap("CallString")
     public String callString;
 
-    @NameInMap("CallStringType")
-    public String callStringType;
-
     public static AttachTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachTaskRequest self = new AttachTaskRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class AttachTaskRequest extends TeaModel {
     }
     public String getCallString() {
         return this.callString;
-    }
-
-    public AttachTaskRequest setCallStringType(String callStringType) {
-        this.callStringType = callStringType;
-        return this;
-    }
-    public String getCallStringType() {
-        return this.callStringType;
     }
 
 }
