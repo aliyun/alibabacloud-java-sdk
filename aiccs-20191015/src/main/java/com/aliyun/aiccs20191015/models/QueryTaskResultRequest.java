@@ -20,6 +20,10 @@ public class QueryTaskResultRequest extends TeaModel {
     @NameInMap("Param1")
     public String param1;
 
+    // requestId
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static QueryTaskResultRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskResultRequest self = new QueryTaskResultRequest();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class QueryTaskResultRequest extends TeaModel {
     }
     public String getParam1() {
         return this.param1;
+    }
+
+    public QueryTaskResultRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
