@@ -225,11 +225,14 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("InfoType")
         public String infoType;
+
+        @NameInMap("NameDisplay")
+        public String nameDisplay;
+
+        @NameInMap("Name")
+        public String name;
 
         public static DescribeSuspEventDetailResponseBodyDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeSuspEventDetailResponseBodyDetails self = new DescribeSuspEventDetailResponseBodyDetails();
@@ -252,20 +255,28 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
             return this.value;
         }
 
-        public DescribeSuspEventDetailResponseBodyDetails setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeSuspEventDetailResponseBodyDetails setInfoType(String infoType) {
             this.infoType = infoType;
             return this;
         }
         public String getInfoType() {
             return this.infoType;
+        }
+
+        public DescribeSuspEventDetailResponseBodyDetails setNameDisplay(String nameDisplay) {
+            this.nameDisplay = nameDisplay;
+            return this;
+        }
+        public String getNameDisplay() {
+            return this.nameDisplay;
+        }
+
+        public DescribeSuspEventDetailResponseBodyDetails setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
