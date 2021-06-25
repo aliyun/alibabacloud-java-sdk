@@ -86,11 +86,17 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
+        @NameInMap("BillAccountName")
+        public String billAccountName;
+
         @NameInMap("DeductedByCashCoupons")
         public Float deductedByCashCoupons;
 
         @NameInMap("SubscriptionType")
         public String subscriptionType;
+
+        @NameInMap("BizType")
+        public String bizType;
 
         @NameInMap("InstanceSpec")
         public String instanceSpec;
@@ -151,6 +157,9 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
 
         @NameInMap("UsageUnit")
         public String usageUnit;
+
+        @NameInMap("BillAccountID")
+        public String billAccountID;
 
         @NameInMap("PaymentAmount")
         public Float paymentAmount;
@@ -243,6 +252,14 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
             return this.currency;
         }
 
+        public DescribeInstanceBillResponseBodyDataItems setBillAccountName(String billAccountName) {
+            this.billAccountName = billAccountName;
+            return this;
+        }
+        public String getBillAccountName() {
+            return this.billAccountName;
+        }
+
         public DescribeInstanceBillResponseBodyDataItems setDeductedByCashCoupons(Float deductedByCashCoupons) {
             this.deductedByCashCoupons = deductedByCashCoupons;
             return this;
@@ -257,6 +274,14 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
         public String getSubscriptionType() {
             return this.subscriptionType;
+        }
+
+        public DescribeInstanceBillResponseBodyDataItems setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
         }
 
         public DescribeInstanceBillResponseBodyDataItems setInstanceSpec(String instanceSpec) {
@@ -417,6 +442,14 @@ public class DescribeInstanceBillResponseBody extends TeaModel {
         }
         public String getUsageUnit() {
             return this.usageUnit;
+        }
+
+        public DescribeInstanceBillResponseBodyDataItems setBillAccountID(String billAccountID) {
+            this.billAccountID = billAccountID;
+            return this;
+        }
+        public String getBillAccountID() {
+            return this.billAccountID;
         }
 
         public DescribeInstanceBillResponseBodyDataItems setPaymentAmount(Float paymentAmount) {
