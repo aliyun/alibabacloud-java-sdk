@@ -27,6 +27,12 @@ public class CreateScmAppConfigShrinkRequest extends TeaModel {
     @NameInMap("ContextUserUpdateRequest")
     public String contextUserUpdateRequestShrink;
 
+    @NameInMap("RepoType")
+    public String repoType;
+
+    @NameInMap("Namespace")
+    public String namespace;
+
     public static CreateScmAppConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScmAppConfigShrinkRequest self = new CreateScmAppConfigShrinkRequest();
         return TeaModel.build(map, self);
@@ -78,6 +84,22 @@ public class CreateScmAppConfigShrinkRequest extends TeaModel {
     }
     public String getContextUserUpdateRequestShrink() {
         return this.contextUserUpdateRequestShrink;
+    }
+
+    public CreateScmAppConfigShrinkRequest setRepoType(String repoType) {
+        this.repoType = repoType;
+        return this;
+    }
+    public String getRepoType() {
+        return this.repoType;
+    }
+
+    public CreateScmAppConfigShrinkRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
 }

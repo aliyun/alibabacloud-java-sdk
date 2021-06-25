@@ -28,6 +28,18 @@ public class GetScmAppConfigResponse extends TeaModel {
     @Validation(required = true)
     public String branch;
 
+    @NameInMap("RepoType")
+    @Validation(required = true)
+    public String repoType;
+
+    @NameInMap("Namespace")
+    @Validation(required = true)
+    public String namespace;
+
+    @NameInMap("GitUser")
+    @Validation(required = true)
+    public String gitUser;
+
     public static GetScmAppConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         GetScmAppConfigResponse self = new GetScmAppConfigResponse();
         return TeaModel.build(map, self);
@@ -79,6 +91,30 @@ public class GetScmAppConfigResponse extends TeaModel {
     }
     public String getBranch() {
         return this.branch;
+    }
+
+    public GetScmAppConfigResponse setRepoType(String repoType) {
+        this.repoType = repoType;
+        return this;
+    }
+    public String getRepoType() {
+        return this.repoType;
+    }
+
+    public GetScmAppConfigResponse setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public GetScmAppConfigResponse setGitUser(String gitUser) {
+        this.gitUser = gitUser;
+        return this;
+    }
+    public String getGitUser() {
+        return this.gitUser;
     }
 
 }

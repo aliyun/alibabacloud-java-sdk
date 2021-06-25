@@ -31,6 +31,12 @@ public class UpdateScmAppConfigRequest extends TeaModel {
     @NameInMap("ContextUserUpdateRequest")
     public java.util.Map<String, ?> contextUserUpdateRequest;
 
+    @NameInMap("RepoType")
+    public String repoType;
+
+    @NameInMap("Namespace")
+    public String namespace;
+
     public static UpdateScmAppConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateScmAppConfigRequest self = new UpdateScmAppConfigRequest();
         return TeaModel.build(map, self);
@@ -90,6 +96,22 @@ public class UpdateScmAppConfigRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getContextUserUpdateRequest() {
         return this.contextUserUpdateRequest;
+    }
+
+    public UpdateScmAppConfigRequest setRepoType(String repoType) {
+        this.repoType = repoType;
+        return this;
+    }
+    public String getRepoType() {
+        return this.repoType;
+    }
+
+    public UpdateScmAppConfigRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
 }
