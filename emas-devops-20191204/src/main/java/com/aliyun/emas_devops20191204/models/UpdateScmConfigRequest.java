@@ -30,10 +30,6 @@ public class UpdateScmConfigRequest extends TeaModel {
     @NameInMap("Identifier")
     public String identifier;
 
-    @NameInMap("AppKey")
-    @Validation(required = true)
-    public String appKey;
-
     public static UpdateScmConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateScmConfigRequest self = new UpdateScmConfigRequest();
         return TeaModel.build(map, self);
@@ -93,14 +89,6 @@ public class UpdateScmConfigRequest extends TeaModel {
     }
     public String getIdentifier() {
         return this.identifier;
-    }
-
-    public UpdateScmConfigRequest setAppKey(String appKey) {
-        this.appKey = appKey;
-        return this;
-    }
-    public String getAppKey() {
-        return this.appKey;
     }
 
 }

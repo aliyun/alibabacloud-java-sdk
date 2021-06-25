@@ -36,6 +36,10 @@ public class DescribePublishPlanDetailResponse extends TeaModel {
     @Validation(required = true)
     public Long createTime;
 
+    @NameInMap("VersionCode")
+    @Validation(required = true)
+    public Integer versionCode;
+
     @NameInMap("CreatorAccount")
     @Validation(required = true)
     public DescribePublishPlanDetailResponseCreatorAccount creatorAccount;
@@ -107,6 +111,14 @@ public class DescribePublishPlanDetailResponse extends TeaModel {
     }
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    public DescribePublishPlanDetailResponse setVersionCode(Integer versionCode) {
+        this.versionCode = versionCode;
+        return this;
+    }
+    public Integer getVersionCode() {
+        return this.versionCode;
     }
 
     public DescribePublishPlanDetailResponse setCreatorAccount(DescribePublishPlanDetailResponseCreatorAccount creatorAccount) {

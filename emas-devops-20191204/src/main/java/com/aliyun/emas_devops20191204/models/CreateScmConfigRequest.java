@@ -26,10 +26,6 @@ public class CreateScmConfigRequest extends TeaModel {
     @NameInMap("Identifier")
     public String identifier;
 
-    @NameInMap("AppKey")
-    @Validation(required = true)
-    public String appKey;
-
     public static CreateScmConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScmConfigRequest self = new CreateScmConfigRequest();
         return TeaModel.build(map, self);
@@ -81,14 +77,6 @@ public class CreateScmConfigRequest extends TeaModel {
     }
     public String getIdentifier() {
         return this.identifier;
-    }
-
-    public CreateScmConfigRequest setAppKey(String appKey) {
-        this.appKey = appKey;
-        return this;
-    }
-    public String getAppKey() {
-        return this.appKey;
     }
 
 }

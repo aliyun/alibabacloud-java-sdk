@@ -8,10 +8,6 @@ public class DeleteScmConfigRequest extends TeaModel {
     @Validation(required = true)
     public String bid;
 
-    @NameInMap("AppKey")
-    @Validation(required = true)
-    public String appKey;
-
     public static DeleteScmConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteScmConfigRequest self = new DeleteScmConfigRequest();
         return TeaModel.build(map, self);
@@ -23,14 +19,6 @@ public class DeleteScmConfigRequest extends TeaModel {
     }
     public String getBid() {
         return this.bid;
-    }
-
-    public DeleteScmConfigRequest setAppKey(String appKey) {
-        this.appKey = appKey;
-        return this;
-    }
-    public String getAppKey() {
-        return this.appKey;
     }
 
 }

@@ -20,6 +20,10 @@ public class ListPipelineDefinitionsResponse extends TeaModel {
     @Validation(required = true)
     public Integer total;
 
+    @NameInMap("Type")
+    @Validation(required = true)
+    public String type;
+
     @NameInMap("Items")
     @Validation(required = true)
     public java.util.List<ListPipelineDefinitionsResponseItems> items;
@@ -59,6 +63,14 @@ public class ListPipelineDefinitionsResponse extends TeaModel {
     }
     public Integer getTotal() {
         return this.total;
+    }
+
+    public ListPipelineDefinitionsResponse setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public ListPipelineDefinitionsResponse setItems(java.util.List<ListPipelineDefinitionsResponseItems> items) {
