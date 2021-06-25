@@ -977,6 +977,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.saveUserCreditWithOptions(request, runtime);
     }
 
+    public SetAllExpirationDayResponse setAllExpirationDayWithOptions(SetAllExpirationDayRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SetAllExpirationDay", "2017-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new SetAllExpirationDayResponse());
+    }
+
+    public SetAllExpirationDayResponse setAllExpirationDay(SetAllExpirationDayRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setAllExpirationDayWithOptions(request, runtime);
+    }
+
     public SetCreditLabelActionResponse setCreditLabelActionWithOptions(SetCreditLabelActionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

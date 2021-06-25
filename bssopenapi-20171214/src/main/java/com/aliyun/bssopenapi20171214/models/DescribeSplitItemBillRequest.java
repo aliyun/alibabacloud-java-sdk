@@ -34,6 +34,12 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     @NameInMap("SplitItemID")
     public String splitItemID;
 
+    @NameInMap("Granularity")
+    public String granularity;
+
+    @NameInMap("BillingDate")
+    public String billingDate;
+
     @NameInMap("TagFilter")
     public java.util.List<DescribeSplitItemBillRequestTagFilter> tagFilter;
 
@@ -120,6 +126,22 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     }
     public String getSplitItemID() {
         return this.splitItemID;
+    }
+
+    public DescribeSplitItemBillRequest setGranularity(String granularity) {
+        this.granularity = granularity;
+        return this;
+    }
+    public String getGranularity() {
+        return this.granularity;
+    }
+
+    public DescribeSplitItemBillRequest setBillingDate(String billingDate) {
+        this.billingDate = billingDate;
+        return this;
+    }
+    public String getBillingDate() {
+        return this.billingDate;
     }
 
     public DescribeSplitItemBillRequest setTagFilter(java.util.List<DescribeSplitItemBillRequestTagFilter> tagFilter) {
