@@ -16,6 +16,21 @@ public class CreateNetworkPackageRequest extends TeaModel {
     @Validation(required = true)
     public String officeSiteId;
 
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
+
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     public static CreateNetworkPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkPackageRequest self = new CreateNetworkPackageRequest();
         return TeaModel.build(map, self);
@@ -43,6 +58,46 @@ public class CreateNetworkPackageRequest extends TeaModel {
     }
     public String getOfficeSiteId() {
         return this.officeSiteId;
+    }
+
+    public CreateNetworkPackageRequest setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
+        return this;
+    }
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
+    public CreateNetworkPackageRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public CreateNetworkPackageRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    public CreateNetworkPackageRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public CreateNetworkPackageRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
 }

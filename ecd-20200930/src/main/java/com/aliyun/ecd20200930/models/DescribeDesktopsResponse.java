@@ -162,6 +162,10 @@ public class DescribeDesktopsResponse extends TeaModel {
         @Validation(required = true)
         public String officeSiteId;
 
+        @NameInMap("OfficeSiteName")
+        @Validation(required = true)
+        public String officeSiteName;
+
         @NameInMap("DirectoryType")
         @Validation(required = true)
         public String directoryType;
@@ -301,6 +305,14 @@ public class DescribeDesktopsResponse extends TeaModel {
         }
         public String getOfficeSiteId() {
             return this.officeSiteId;
+        }
+
+        public DescribeDesktopsResponseDesktops setOfficeSiteName(String officeSiteName) {
+            this.officeSiteName = officeSiteName;
+            return this;
+        }
+        public String getOfficeSiteName() {
+            return this.officeSiteName;
         }
 
         public DescribeDesktopsResponseDesktops setDirectoryType(String directoryType) {

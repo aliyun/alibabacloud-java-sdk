@@ -58,6 +58,10 @@ public class DescribeNASFileSystemsResponse extends TeaModel {
         @Validation(required = true)
         public String officeSiteId;
 
+        @NameInMap("OfficeSiteName")
+        @Validation(required = true)
+        public String officeSiteName;
+
         @NameInMap("Description")
         @Validation(required = true)
         public String description;
@@ -133,6 +137,14 @@ public class DescribeNASFileSystemsResponse extends TeaModel {
         }
         public String getOfficeSiteId() {
             return this.officeSiteId;
+        }
+
+        public DescribeNASFileSystemsResponseFileSystems setOfficeSiteName(String officeSiteName) {
+            this.officeSiteName = officeSiteName;
+            return this;
+        }
+        public String getOfficeSiteName() {
+            return this.officeSiteName;
         }
 
         public DescribeNASFileSystemsResponseFileSystems setDescription(String description) {

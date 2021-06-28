@@ -12,6 +12,10 @@ public class CreateNetworkPackageResponse extends TeaModel {
     @Validation(required = true)
     public String networkPackageId;
 
+    @NameInMap("OrderId")
+    @Validation(required = true)
+    public String orderId;
+
     public static CreateNetworkPackageResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkPackageResponse self = new CreateNetworkPackageResponse();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class CreateNetworkPackageResponse extends TeaModel {
     }
     public String getNetworkPackageId() {
         return this.networkPackageId;
+    }
+
+    public CreateNetworkPackageResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
 }

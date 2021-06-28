@@ -35,6 +35,12 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
     public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceRequest self = new DescribePriceRequest();
         return TeaModel.build(map, self);
@@ -118,6 +124,22 @@ public class DescribePriceRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public DescribePriceRequest setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
+        return this;
+    }
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
+    public DescribePriceRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
 }
