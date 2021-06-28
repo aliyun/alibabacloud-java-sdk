@@ -47,6 +47,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    @NameInMap("Html5Access")
+    public String html5Access;
+
     public static DescribeDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopsRequest self = new DescribeDesktopsRequest();
         return TeaModel.build(map, self);
@@ -162,6 +165,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public String getExpiredTime() {
         return this.expiredTime;
+    }
+
+    public DescribeDesktopsRequest setHtml5Access(String html5Access) {
+        this.html5Access = html5Access;
+        return this;
+    }
+    public String getHtml5Access() {
+        return this.html5Access;
     }
 
 }

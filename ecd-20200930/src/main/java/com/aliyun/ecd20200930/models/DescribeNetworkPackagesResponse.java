@@ -54,6 +54,10 @@ public class DescribeNetworkPackagesResponse extends TeaModel {
         @Validation(required = true)
         public String officeSiteId;
 
+        @NameInMap("OfficeSiteName")
+        @Validation(required = true)
+        public String officeSiteName;
+
         @NameInMap("Bandwidth")
         @Validation(required = true)
         public Integer bandwidth;
@@ -65,6 +69,14 @@ public class DescribeNetworkPackagesResponse extends TeaModel {
         @NameInMap("CreateTime")
         @Validation(required = true)
         public String createTime;
+
+        @NameInMap("ExpiredTime")
+        @Validation(required = true)
+        public String expiredTime;
+
+        @NameInMap("InternetChargeType")
+        @Validation(required = true)
+        public String internetChargeType;
 
         public static DescribeNetworkPackagesResponseNetworkPackages build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkPackagesResponseNetworkPackages self = new DescribeNetworkPackagesResponseNetworkPackages();
@@ -85,6 +97,14 @@ public class DescribeNetworkPackagesResponse extends TeaModel {
         }
         public String getOfficeSiteId() {
             return this.officeSiteId;
+        }
+
+        public DescribeNetworkPackagesResponseNetworkPackages setOfficeSiteName(String officeSiteName) {
+            this.officeSiteName = officeSiteName;
+            return this;
+        }
+        public String getOfficeSiteName() {
+            return this.officeSiteName;
         }
 
         public DescribeNetworkPackagesResponseNetworkPackages setBandwidth(Integer bandwidth) {
@@ -109,6 +129,22 @@ public class DescribeNetworkPackagesResponse extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeNetworkPackagesResponseNetworkPackages setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
+        }
+
+        public DescribeNetworkPackagesResponseNetworkPackages setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
         }
 
     }

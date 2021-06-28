@@ -11,6 +11,9 @@ public class DescribeDirectoriesRequest extends TeaModel {
     @NameInMap("DirectoryType")
     public String directoryType;
 
+    @NameInMap("DirectoryStatus")
+    public String directoryStatus;
+
     @NameInMap("DirectoryId")
     public java.util.List<String> directoryId;
 
@@ -39,6 +42,14 @@ public class DescribeDirectoriesRequest extends TeaModel {
     }
     public String getDirectoryType() {
         return this.directoryType;
+    }
+
+    public DescribeDirectoriesRequest setDirectoryStatus(String directoryStatus) {
+        this.directoryStatus = directoryStatus;
+        return this;
+    }
+    public String getDirectoryStatus() {
+        return this.directoryStatus;
     }
 
     public DescribeDirectoriesRequest setDirectoryId(java.util.List<String> directoryId) {

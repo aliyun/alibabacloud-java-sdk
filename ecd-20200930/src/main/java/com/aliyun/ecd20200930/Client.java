@@ -19,6 +19,16 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public CreateServiceLinkedRoleResponse createServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateServiceLinkedRole", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new CreateServiceLinkedRoleResponse());
+    }
+
+    public CreateServiceLinkedRoleResponse createServiceLinkedRole(CreateServiceLinkedRoleRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createServiceLinkedRoleWithOptions(request, runtime);
+    }
+
     public ModifyOfficeSiteCrossDesktopAccessResponse modifyOfficeSiteCrossDesktopAccessWithOptions(ModifyOfficeSiteCrossDesktopAccessRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ModifyOfficeSiteCrossDesktopAccess", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ModifyOfficeSiteCrossDesktopAccessResponse());
