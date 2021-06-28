@@ -327,6 +327,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDBTopologyWithOptions(request, runtime);
     }
 
+    public GetSQLReviewCheckResultStatusResponse getSQLReviewCheckResultStatusWithOptions(GetSQLReviewCheckResultStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetSQLReviewCheckResultStatus", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetSQLReviewCheckResultStatusResponse());
+    }
+
+    public GetSQLReviewCheckResultStatusResponse getSQLReviewCheckResultStatus(GetSQLReviewCheckResultStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getSQLReviewCheckResultStatusWithOptions(request, runtime);
+    }
+
     public SyncDatabaseMetaResponse syncDatabaseMetaWithOptions(SyncDatabaseMetaRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -494,6 +507,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetApprovalDetailResponse getApprovalDetail(GetApprovalDetailRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getApprovalDetailWithOptions(request, runtime);
+    }
+
+    public ListSQLReviewOriginSQLResponse listSQLReviewOriginSQLWithOptions(ListSQLReviewOriginSQLRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListSQLReviewOriginSQLShrinkRequest request = new ListSQLReviewOriginSQLShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.orderActionDetail))) {
+            request.orderActionDetailShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.orderActionDetail), "OrderActionDetail", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListSQLReviewOriginSQL", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new ListSQLReviewOriginSQLResponse());
+    }
+
+    public ListSQLReviewOriginSQLResponse listSQLReviewOriginSQL(ListSQLReviewOriginSQLRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listSQLReviewOriginSQLWithOptions(request, runtime);
     }
 
     public GetUserActiveTenantResponse getUserActiveTenantWithOptions(GetUserActiveTenantRequest request, RuntimeOptions runtime) throws Exception {
@@ -854,6 +886,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listOrdersWithOptions(request, runtime);
     }
 
+    public CreateSQLReviewOrderResponse createSQLReviewOrderWithOptions(CreateSQLReviewOrderRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateSQLReviewOrderShrinkRequest request = new CreateSQLReviewOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.relatedUserList)) {
+            request.relatedUserListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relatedUserList, "RelatedUserList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.param))) {
+            request.paramShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.param), "Param", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateSQLReviewOrder", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new CreateSQLReviewOrderResponse());
+    }
+
+    public CreateSQLReviewOrderResponse createSQLReviewOrder(CreateSQLReviewOrderRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createSQLReviewOrderWithOptions(request, runtime);
+    }
+
     public GetOrderBaseInfoResponse getOrderBaseInfoWithOptions(GetOrderBaseInfoRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -865,6 +920,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetOrderBaseInfoResponse getOrderBaseInfo(GetOrderBaseInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getOrderBaseInfoWithOptions(request, runtime);
+    }
+
+    public GetSQLReviewOptimizeDetailResponse getSQLReviewOptimizeDetailWithOptions(GetSQLReviewOptimizeDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetSQLReviewOptimizeDetail", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetSQLReviewOptimizeDetailResponse());
+    }
+
+    public GetSQLReviewOptimizeDetailResponse getSQLReviewOptimizeDetail(GetSQLReviewOptimizeDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getSQLReviewOptimizeDetailWithOptions(request, runtime);
     }
 
     public ListUserTenantsResponse listUserTenantsWithOptions(ListUserTenantsRequest request, RuntimeOptions runtime) throws Exception {
