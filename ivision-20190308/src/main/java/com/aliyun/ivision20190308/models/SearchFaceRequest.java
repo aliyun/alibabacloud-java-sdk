@@ -7,9 +7,6 @@ public class SearchFaceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("GroupId")
     public String groupId;
 
@@ -36,14 +33,6 @@ public class SearchFaceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public SearchFaceRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public SearchFaceRequest setGroupId(String groupId) {
