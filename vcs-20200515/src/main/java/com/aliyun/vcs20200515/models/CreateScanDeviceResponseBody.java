@@ -53,126 +53,49 @@ public class CreateScanDeviceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public static class CreateScanDeviceResponseBodyDataSubDeviceSipInfo extends TeaModel {
-        @NameInMap("SundayCaptureStrategy")
-        public String sundayCaptureStrategy;
+    public static class CreateScanDeviceResponseBodyDataSubDeviceInfo extends TeaModel {
+        @NameInMap("ChannelDeviceId")
+        public String channelDeviceId;
 
-        @NameInMap("ChannelGbId")
-        public String channelGbId;
-
-        @NameInMap("MondayCaptureStrategy")
-        public String mondayCaptureStrategy;
-
-        @NameInMap("FridayCaptureStrategy")
-        public String fridayCaptureStrategy;
-
-        @NameInMap("TuesdayCaptureStrategy")
-        public String tuesdayCaptureStrategy;
-
-        @NameInMap("WednesdayCaptureStrategy")
-        public String wednesdayCaptureStrategy;
-
-        @NameInMap("ThursdayCaptureStrategy")
-        public String thursdayCaptureStrategy;
-
-        @NameInMap("SaturdayCaptureStrategy")
-        public String saturdayCaptureStrategy;
-
-        public static CreateScanDeviceResponseBodyDataSubDeviceSipInfo build(java.util.Map<String, ?> map) throws Exception {
-            CreateScanDeviceResponseBodyDataSubDeviceSipInfo self = new CreateScanDeviceResponseBodyDataSubDeviceSipInfo();
+        public static CreateScanDeviceResponseBodyDataSubDeviceInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateScanDeviceResponseBodyDataSubDeviceInfo self = new CreateScanDeviceResponseBodyDataSubDeviceInfo();
             return TeaModel.build(map, self);
         }
 
-        public CreateScanDeviceResponseBodyDataSubDeviceSipInfo setSundayCaptureStrategy(String sundayCaptureStrategy) {
-            this.sundayCaptureStrategy = sundayCaptureStrategy;
+        public CreateScanDeviceResponseBodyDataSubDeviceInfo setChannelDeviceId(String channelDeviceId) {
+            this.channelDeviceId = channelDeviceId;
             return this;
         }
-        public String getSundayCaptureStrategy() {
-            return this.sundayCaptureStrategy;
-        }
-
-        public CreateScanDeviceResponseBodyDataSubDeviceSipInfo setChannelGbId(String channelGbId) {
-            this.channelGbId = channelGbId;
-            return this;
-        }
-        public String getChannelGbId() {
-            return this.channelGbId;
-        }
-
-        public CreateScanDeviceResponseBodyDataSubDeviceSipInfo setMondayCaptureStrategy(String mondayCaptureStrategy) {
-            this.mondayCaptureStrategy = mondayCaptureStrategy;
-            return this;
-        }
-        public String getMondayCaptureStrategy() {
-            return this.mondayCaptureStrategy;
-        }
-
-        public CreateScanDeviceResponseBodyDataSubDeviceSipInfo setFridayCaptureStrategy(String fridayCaptureStrategy) {
-            this.fridayCaptureStrategy = fridayCaptureStrategy;
-            return this;
-        }
-        public String getFridayCaptureStrategy() {
-            return this.fridayCaptureStrategy;
-        }
-
-        public CreateScanDeviceResponseBodyDataSubDeviceSipInfo setTuesdayCaptureStrategy(String tuesdayCaptureStrategy) {
-            this.tuesdayCaptureStrategy = tuesdayCaptureStrategy;
-            return this;
-        }
-        public String getTuesdayCaptureStrategy() {
-            return this.tuesdayCaptureStrategy;
-        }
-
-        public CreateScanDeviceResponseBodyDataSubDeviceSipInfo setWednesdayCaptureStrategy(String wednesdayCaptureStrategy) {
-            this.wednesdayCaptureStrategy = wednesdayCaptureStrategy;
-            return this;
-        }
-        public String getWednesdayCaptureStrategy() {
-            return this.wednesdayCaptureStrategy;
-        }
-
-        public CreateScanDeviceResponseBodyDataSubDeviceSipInfo setThursdayCaptureStrategy(String thursdayCaptureStrategy) {
-            this.thursdayCaptureStrategy = thursdayCaptureStrategy;
-            return this;
-        }
-        public String getThursdayCaptureStrategy() {
-            return this.thursdayCaptureStrategy;
-        }
-
-        public CreateScanDeviceResponseBodyDataSubDeviceSipInfo setSaturdayCaptureStrategy(String saturdayCaptureStrategy) {
-            this.saturdayCaptureStrategy = saturdayCaptureStrategy;
-            return this;
-        }
-        public String getSaturdayCaptureStrategy() {
-            return this.saturdayCaptureStrategy;
+        public String getChannelDeviceId() {
+            return this.channelDeviceId;
         }
 
     }
 
     public static class CreateScanDeviceResponseBodyData extends TeaModel {
-        @NameInMap("SipIp")
-        public String sipIp;
+        @NameInMap("ServerIp")
+        public String serverIp;
 
-        @NameInMap("SipReaml")
-        public String sipReaml;
+        @NameInMap("ServerRealm")
+        public String serverRealm;
+
+        @NameInMap("ServerPort")
+        public String serverPort;
 
         @NameInMap("SipDeviceGbId")
         public String sipDeviceGbId;
 
-        @NameInMap("SipPort")
-        public String sipPort;
+        @NameInMap("DeviceId")
+        public String deviceId;
 
-        @NameInMap("DeviceCode")
-        public String deviceCode;
+        @NameInMap("ServerId")
+        public String serverId;
 
-        @NameInMap("SipGbId")
-        public String sipGbId;
+        @NameInMap("Password")
+        public String password;
 
-        @NameInMap("SipPassword")
-        public String sipPassword;
-
-        @NameInMap("SubDeviceSipInfo")
-        public java.util.List<CreateScanDeviceResponseBodyDataSubDeviceSipInfo> subDeviceSipInfo;
+        @NameInMap("SubDeviceInfo")
+        public java.util.List<CreateScanDeviceResponseBodyDataSubDeviceInfo> subDeviceInfo;
 
         @NameInMap("DeviceSn")
         public String deviceSn;
@@ -185,20 +108,28 @@ public class CreateScanDeviceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateScanDeviceResponseBodyData setSipIp(String sipIp) {
-            this.sipIp = sipIp;
+        public CreateScanDeviceResponseBodyData setServerIp(String serverIp) {
+            this.serverIp = serverIp;
             return this;
         }
-        public String getSipIp() {
-            return this.sipIp;
+        public String getServerIp() {
+            return this.serverIp;
         }
 
-        public CreateScanDeviceResponseBodyData setSipReaml(String sipReaml) {
-            this.sipReaml = sipReaml;
+        public CreateScanDeviceResponseBodyData setServerRealm(String serverRealm) {
+            this.serverRealm = serverRealm;
             return this;
         }
-        public String getSipReaml() {
-            return this.sipReaml;
+        public String getServerRealm() {
+            return this.serverRealm;
+        }
+
+        public CreateScanDeviceResponseBodyData setServerPort(String serverPort) {
+            this.serverPort = serverPort;
+            return this;
+        }
+        public String getServerPort() {
+            return this.serverPort;
         }
 
         public CreateScanDeviceResponseBodyData setSipDeviceGbId(String sipDeviceGbId) {
@@ -209,44 +140,36 @@ public class CreateScanDeviceResponseBody extends TeaModel {
             return this.sipDeviceGbId;
         }
 
-        public CreateScanDeviceResponseBodyData setSipPort(String sipPort) {
-            this.sipPort = sipPort;
+        public CreateScanDeviceResponseBodyData setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
             return this;
         }
-        public String getSipPort() {
-            return this.sipPort;
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
-        public CreateScanDeviceResponseBodyData setDeviceCode(String deviceCode) {
-            this.deviceCode = deviceCode;
+        public CreateScanDeviceResponseBodyData setServerId(String serverId) {
+            this.serverId = serverId;
             return this;
         }
-        public String getDeviceCode() {
-            return this.deviceCode;
+        public String getServerId() {
+            return this.serverId;
         }
 
-        public CreateScanDeviceResponseBodyData setSipGbId(String sipGbId) {
-            this.sipGbId = sipGbId;
+        public CreateScanDeviceResponseBodyData setPassword(String password) {
+            this.password = password;
             return this;
         }
-        public String getSipGbId() {
-            return this.sipGbId;
+        public String getPassword() {
+            return this.password;
         }
 
-        public CreateScanDeviceResponseBodyData setSipPassword(String sipPassword) {
-            this.sipPassword = sipPassword;
+        public CreateScanDeviceResponseBodyData setSubDeviceInfo(java.util.List<CreateScanDeviceResponseBodyDataSubDeviceInfo> subDeviceInfo) {
+            this.subDeviceInfo = subDeviceInfo;
             return this;
         }
-        public String getSipPassword() {
-            return this.sipPassword;
-        }
-
-        public CreateScanDeviceResponseBodyData setSubDeviceSipInfo(java.util.List<CreateScanDeviceResponseBodyDataSubDeviceSipInfo> subDeviceSipInfo) {
-            this.subDeviceSipInfo = subDeviceSipInfo;
-            return this;
-        }
-        public java.util.List<CreateScanDeviceResponseBodyDataSubDeviceSipInfo> getSubDeviceSipInfo() {
-            return this.subDeviceSipInfo;
+        public java.util.List<CreateScanDeviceResponseBodyDataSubDeviceInfo> getSubDeviceInfo() {
+            return this.subDeviceInfo;
         }
 
         public CreateScanDeviceResponseBodyData setDeviceSn(String deviceSn) {

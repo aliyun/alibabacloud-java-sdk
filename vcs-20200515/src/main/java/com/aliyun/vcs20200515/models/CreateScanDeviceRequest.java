@@ -4,12 +4,6 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateScanDeviceRequest extends TeaModel {
-    @NameInMap("AccessPointVendor")
-    public String accessPointVendor;
-
-    @NameInMap("AccessProtocolType")
-    public String accessProtocolType;
-
     @NameInMap("AudioEnable")
     public String audioEnable;
 
@@ -49,8 +43,8 @@ public class CreateScanDeviceRequest extends TeaModel {
     @NameInMap("FrameRate")
     public String frameRate;
 
-    @NameInMap("GbId")
-    public String gbId;
+    @NameInMap("DeviceId")
+    public String deviceId;
 
     @NameInMap("GovLength")
     public String govLength;
@@ -85,25 +79,12 @@ public class CreateScanDeviceRequest extends TeaModel {
     @NameInMap("DeviceModel")
     public String deviceModel;
 
+    @NameInMap("InProtocol")
+    public String inProtocol;
+
     public static CreateScanDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScanDeviceRequest self = new CreateScanDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateScanDeviceRequest setAccessPointVendor(String accessPointVendor) {
-        this.accessPointVendor = accessPointVendor;
-        return this;
-    }
-    public String getAccessPointVendor() {
-        return this.accessPointVendor;
-    }
-
-    public CreateScanDeviceRequest setAccessProtocolType(String accessProtocolType) {
-        this.accessProtocolType = accessProtocolType;
-        return this;
-    }
-    public String getAccessProtocolType() {
-        return this.accessProtocolType;
     }
 
     public CreateScanDeviceRequest setAudioEnable(String audioEnable) {
@@ -210,12 +191,12 @@ public class CreateScanDeviceRequest extends TeaModel {
         return this.frameRate;
     }
 
-    public CreateScanDeviceRequest setGbId(String gbId) {
-        this.gbId = gbId;
+    public CreateScanDeviceRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
-    public String getGbId() {
-        return this.gbId;
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public CreateScanDeviceRequest setGovLength(String govLength) {
@@ -304,6 +285,14 @@ public class CreateScanDeviceRequest extends TeaModel {
     }
     public String getDeviceModel() {
         return this.deviceModel;
+    }
+
+    public CreateScanDeviceRequest setInProtocol(String inProtocol) {
+        this.inProtocol = inProtocol;
+        return this;
+    }
+    public String getInProtocol() {
+        return this.inProtocol;
     }
 
 }
