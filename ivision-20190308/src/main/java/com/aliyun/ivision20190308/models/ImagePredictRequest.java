@@ -7,9 +7,6 @@ public class ImagePredictRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("ModelId")
     public String modelId;
 
@@ -27,14 +24,6 @@ public class ImagePredictRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public ImagePredictRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public ImagePredictRequest setModelId(String modelId) {

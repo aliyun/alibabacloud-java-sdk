@@ -7,9 +7,6 @@ public class DescribeFaceGroupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
@@ -30,14 +27,6 @@ public class DescribeFaceGroupsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeFaceGroupsRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeFaceGroupsRequest setNextPageToken(String nextPageToken) {

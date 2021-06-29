@@ -7,9 +7,6 @@ public class StartStreamPredictRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("PredictId")
     public String predictId;
 
@@ -24,14 +21,6 @@ public class StartStreamPredictRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public StartStreamPredictRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public StartStreamPredictRequest setPredictId(String predictId) {

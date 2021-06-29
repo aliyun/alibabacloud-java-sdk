@@ -7,9 +7,6 @@ public class DeleteFaceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("GroupId")
     public String groupId;
 
@@ -24,14 +21,6 @@ public class DeleteFaceGroupRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DeleteFaceGroupRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DeleteFaceGroupRequest setGroupId(String groupId) {
