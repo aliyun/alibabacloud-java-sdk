@@ -22,6 +22,9 @@ public class DescribeDataSourcesRequest extends TeaModel {
     @NameInMap("DataSourceCategory")
     public String dataSourceCategory;
 
+    @NameInMap("DataSourceFilter")
+    public String dataSourceFilter;
+
     public static DescribeDataSourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataSourcesRequest self = new DescribeDataSourcesRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class DescribeDataSourcesRequest extends TeaModel {
     }
     public String getDataSourceCategory() {
         return this.dataSourceCategory;
+    }
+
+    public DescribeDataSourcesRequest setDataSourceFilter(String dataSourceFilter) {
+        this.dataSourceFilter = dataSourceFilter;
+        return this;
+    }
+    public String getDataSourceFilter() {
+        return this.dataSourceFilter;
     }
 
 }

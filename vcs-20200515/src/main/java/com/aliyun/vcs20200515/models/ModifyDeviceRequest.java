@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyDeviceRequest extends TeaModel {
     // 设备国标编码
-    @NameInMap("GbId")
-    public String gbId;
+    @NameInMap("DeviceId")
+    public String deviceId;
 
     // 设备名称
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("DeviceName")
+    public String deviceName;
 
     // 设备安装地址
-    @NameInMap("InstallAddress")
-    public String installAddress;
+    @NameInMap("DeviceAddress")
+    public String deviceAddress;
 
     // 设备IP
     @NameInMap("Ip")
@@ -24,33 +24,57 @@ public class ModifyDeviceRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("DeviceSite")
+    public String deviceSite;
+
+    @NameInMap("DeviceDirection")
+    public String deviceDirection;
+
+    @NameInMap("DeviceResolution")
+    public String deviceResolution;
+
+    @NameInMap("DeviceRate")
+    public String deviceRate;
+
+    @NameInMap("Vendor")
+    public String vendor;
+
+    @NameInMap("Latitude")
+    public String latitude;
+
+    @NameInMap("Longitude")
+    public String longitude;
+
+    @NameInMap("DeviceModel")
+    public String deviceModel;
+
     public static ModifyDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeviceRequest self = new ModifyDeviceRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDeviceRequest setGbId(String gbId) {
-        this.gbId = gbId;
+    public ModifyDeviceRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
-    public String getGbId() {
-        return this.gbId;
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
-    public ModifyDeviceRequest setName(String name) {
-        this.name = name;
+    public ModifyDeviceRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getDeviceName() {
+        return this.deviceName;
     }
 
-    public ModifyDeviceRequest setInstallAddress(String installAddress) {
-        this.installAddress = installAddress;
+    public ModifyDeviceRequest setDeviceAddress(String deviceAddress) {
+        this.deviceAddress = deviceAddress;
         return this;
     }
-    public String getInstallAddress() {
-        return this.installAddress;
+    public String getDeviceAddress() {
+        return this.deviceAddress;
     }
 
     public ModifyDeviceRequest setIp(String ip) {
@@ -67,6 +91,70 @@ public class ModifyDeviceRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public ModifyDeviceRequest setDeviceSite(String deviceSite) {
+        this.deviceSite = deviceSite;
+        return this;
+    }
+    public String getDeviceSite() {
+        return this.deviceSite;
+    }
+
+    public ModifyDeviceRequest setDeviceDirection(String deviceDirection) {
+        this.deviceDirection = deviceDirection;
+        return this;
+    }
+    public String getDeviceDirection() {
+        return this.deviceDirection;
+    }
+
+    public ModifyDeviceRequest setDeviceResolution(String deviceResolution) {
+        this.deviceResolution = deviceResolution;
+        return this;
+    }
+    public String getDeviceResolution() {
+        return this.deviceResolution;
+    }
+
+    public ModifyDeviceRequest setDeviceRate(String deviceRate) {
+        this.deviceRate = deviceRate;
+        return this;
+    }
+    public String getDeviceRate() {
+        return this.deviceRate;
+    }
+
+    public ModifyDeviceRequest setVendor(String vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    public String getVendor() {
+        return this.vendor;
+    }
+
+    public ModifyDeviceRequest setLatitude(String latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    public String getLatitude() {
+        return this.latitude;
+    }
+
+    public ModifyDeviceRequest setLongitude(String longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    public String getLongitude() {
+        return this.longitude;
+    }
+
+    public ModifyDeviceRequest setDeviceModel(String deviceModel) {
+        this.deviceModel = deviceModel;
+        return this;
+    }
+    public String getDeviceModel() {
+        return this.deviceModel;
     }
 
 }
