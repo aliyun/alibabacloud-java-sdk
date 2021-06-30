@@ -524,6 +524,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkDataConsistencyWithOptions(request, runtime);
     }
 
+    public QueryPromInstallStatusResponse queryPromInstallStatusWithOptions(QueryPromInstallStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryPromInstallStatus", "2021-05-19", "HTTPS", "POST", "AK", "json", req, runtime), new QueryPromInstallStatusResponse());
+    }
+
+    public QueryPromInstallStatusResponse queryPromInstallStatus(QueryPromInstallStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryPromInstallStatusWithOptions(request, runtime);
+    }
+
     public DescribeTraceLocationResponse describeTraceLocationWithOptions(DescribeTraceLocationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -925,6 +938,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAlertContactResponse updateAlertContact(UpdateAlertContactRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateAlertContactWithOptions(request, runtime);
+    }
+
+    public UninstallPromClusterResponse uninstallPromClusterWithOptions(UninstallPromClusterRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UninstallPromCluster", "2021-05-19", "HTTPS", "POST", "AK", "json", req, runtime), new UninstallPromClusterResponse());
+    }
+
+    public UninstallPromClusterResponse uninstallPromCluster(UninstallPromClusterRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.uninstallPromClusterWithOptions(request, runtime);
     }
 
     public CreateWebhookResponse createWebhookWithOptions(CreateWebhookRequest request, RuntimeOptions runtime) throws Exception {
