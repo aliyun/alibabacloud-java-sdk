@@ -4,20 +4,20 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogBackupFilesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
+    @NameInMap("TotalFileSize")
+    public Long totalFileSize;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    @NameInMap("TotalFileSize")
-    public Long totalFileSize;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("Items")
     public DescribeLogBackupFilesResponseBodyItems items;
@@ -27,20 +27,12 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeLogBackupFilesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLogBackupFilesResponseBody setTotalFileSize(Long totalFileSize) {
+        this.totalFileSize = totalFileSize;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeLogBackupFilesResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
+    public Long getTotalFileSize() {
+        return this.totalFileSize;
     }
 
     public DescribeLogBackupFilesResponseBody setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeLogBackupFilesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeLogBackupFilesResponseBody setPageRecordCount(Integer pageRecordCount) {
         this.pageRecordCount = pageRecordCount;
         return this;
@@ -59,12 +59,12 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
-    public DescribeLogBackupFilesResponseBody setTotalFileSize(Long totalFileSize) {
-        this.totalFileSize = totalFileSize;
+    public DescribeLogBackupFilesResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Long getTotalFileSize() {
-        return this.totalFileSize;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public DescribeLogBackupFilesResponseBody setItems(DescribeLogBackupFilesResponseBodyItems items) {
@@ -76,17 +76,8 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeLogBackupFilesResponseBodyItemsBinLogFile extends TeaModel {
-        @NameInMap("FileSize")
-        public Long fileSize;
-
         @NameInMap("LogBeginTime")
         public String logBeginTime;
-
-        @NameInMap("LogEndTime")
-        public String logEndTime;
-
-        @NameInMap("DownloadLink")
-        public String downloadLink;
 
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
@@ -94,17 +85,18 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
+        @NameInMap("DownloadLink")
+        public String downloadLink;
+
+        @NameInMap("LogEndTime")
+        public String logEndTime;
+
+        @NameInMap("FileSize")
+        public Long fileSize;
+
         public static DescribeLogBackupFilesResponseBodyItemsBinLogFile build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogBackupFilesResponseBodyItemsBinLogFile self = new DescribeLogBackupFilesResponseBodyItemsBinLogFile();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLogBackupFilesResponseBodyItemsBinLogFile setFileSize(Long fileSize) {
-            this.fileSize = fileSize;
-            return this;
-        }
-        public Long getFileSize() {
-            return this.fileSize;
         }
 
         public DescribeLogBackupFilesResponseBodyItemsBinLogFile setLogBeginTime(String logBeginTime) {
@@ -113,22 +105,6 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
         public String getLogBeginTime() {
             return this.logBeginTime;
-        }
-
-        public DescribeLogBackupFilesResponseBodyItemsBinLogFile setLogEndTime(String logEndTime) {
-            this.logEndTime = logEndTime;
-            return this;
-        }
-        public String getLogEndTime() {
-            return this.logEndTime;
-        }
-
-        public DescribeLogBackupFilesResponseBodyItemsBinLogFile setDownloadLink(String downloadLink) {
-            this.downloadLink = downloadLink;
-            return this;
-        }
-        public String getDownloadLink() {
-            return this.downloadLink;
         }
 
         public DescribeLogBackupFilesResponseBodyItemsBinLogFile setIntranetDownloadLink(String intranetDownloadLink) {
@@ -145,6 +121,30 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
         public String getLinkExpiredTime() {
             return this.linkExpiredTime;
+        }
+
+        public DescribeLogBackupFilesResponseBodyItemsBinLogFile setDownloadLink(String downloadLink) {
+            this.downloadLink = downloadLink;
+            return this;
+        }
+        public String getDownloadLink() {
+            return this.downloadLink;
+        }
+
+        public DescribeLogBackupFilesResponseBodyItemsBinLogFile setLogEndTime(String logEndTime) {
+            this.logEndTime = logEndTime;
+            return this;
+        }
+        public String getLogEndTime() {
+            return this.logEndTime;
+        }
+
+        public DescribeLogBackupFilesResponseBodyItemsBinLogFile setFileSize(Long fileSize) {
+            this.fileSize = fileSize;
+            return this;
+        }
+        public Long getFileSize() {
+            return this.fileSize;
         }
 
     }

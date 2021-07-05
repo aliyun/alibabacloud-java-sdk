@@ -13,9 +13,6 @@ public class DescribeResourceUsageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -49,14 +46,6 @@ public class DescribeResourceUsageRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeResourceUsageRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public DescribeResourceUsageRequest setDBInstanceId(String DBInstanceId) {

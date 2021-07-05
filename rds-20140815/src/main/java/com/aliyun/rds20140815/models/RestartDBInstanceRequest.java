@@ -22,15 +22,6 @@ public class RestartDBInstanceRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RestartMethod")
-    public String restartMethod;
-
-    @NameInMap("EffectiveTime")
-    public String effectiveTime;
-
-    @NameInMap("SwitchTime")
-    public String switchTime;
-
     public static RestartDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RestartDBInstanceRequest self = new RestartDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -82,30 +73,6 @@ public class RestartDBInstanceRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public RestartDBInstanceRequest setRestartMethod(String restartMethod) {
-        this.restartMethod = restartMethod;
-        return this;
-    }
-    public String getRestartMethod() {
-        return this.restartMethod;
-    }
-
-    public RestartDBInstanceRequest setEffectiveTime(String effectiveTime) {
-        this.effectiveTime = effectiveTime;
-        return this;
-    }
-    public String getEffectiveTime() {
-        return this.effectiveTime;
-    }
-
-    public RestartDBInstanceRequest setSwitchTime(String switchTime) {
-        this.switchTime = switchTime;
-        return this;
-    }
-    public String getSwitchTime() {
-        return this.switchTime;
     }
 
 }

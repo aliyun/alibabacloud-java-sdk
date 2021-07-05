@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -18,9 +12,6 @@ public class DescribeBackupsRequest extends TeaModel {
 
     @NameInMap("BackupId")
     public String backupId;
-
-    @NameInMap("BackupLocation")
-    public String backupLocation;
 
     @NameInMap("BackupStatus")
     public String backupStatus;
@@ -40,28 +31,9 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeBackupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupsRequest self = new DescribeBackupsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeBackupsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
     }
 
     public DescribeBackupsRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -86,14 +58,6 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public String getBackupId() {
         return this.backupId;
-    }
-
-    public DescribeBackupsRequest setBackupLocation(String backupLocation) {
-        this.backupLocation = backupLocation;
-        return this;
-    }
-    public String getBackupLocation() {
-        return this.backupLocation;
     }
 
     public DescribeBackupsRequest setBackupStatus(String backupStatus) {
@@ -142,14 +106,6 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
-    }
-
-    public DescribeBackupsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

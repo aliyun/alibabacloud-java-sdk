@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceEngineVersionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("TaskId")
     public String taskId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpgradeDBInstanceEngineVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceEngineVersionResponseBody self = new UpgradeDBInstanceEngineVersionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradeDBInstanceEngineVersionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpgradeDBInstanceEngineVersionResponseBody setTaskId(String taskId) {
@@ -29,6 +21,14 @@ public class UpgradeDBInstanceEngineVersionResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public UpgradeDBInstanceEngineVersionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

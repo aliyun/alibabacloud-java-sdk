@@ -7,14 +7,14 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("Items")
     public DescribeSQLLogReportListResponseBodyItems items;
@@ -30,14 +30,6 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeSQLLogReportListResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
     }
 
     public DescribeSQLLogReportListResponseBody setPageNumber(Integer pageNumber) {
@@ -56,6 +48,14 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
+    public DescribeSQLLogReportListResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
     public DescribeSQLLogReportListResponseBody setItems(DescribeSQLLogReportListResponseBodyItems items) {
         this.items = items;
         return this;
@@ -68,11 +68,11 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         @NameInMap("SQLText")
         public String SQLText;
 
-        @NameInMap("AvgLatency")
-        public Long avgLatency;
-
         @NameInMap("SQLExecuteTimes")
         public Long SQLExecuteTimes;
+
+        @NameInMap("AvgLatency")
+        public Long avgLatency;
 
         public static DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem self = new DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem();
@@ -87,20 +87,20 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
             return this.SQLText;
         }
 
-        public DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem setAvgLatency(Long avgLatency) {
-            this.avgLatency = avgLatency;
-            return this;
-        }
-        public Long getAvgLatency() {
-            return this.avgLatency;
-        }
-
         public DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem setSQLExecuteTimes(Long SQLExecuteTimes) {
             this.SQLExecuteTimes = SQLExecuteTimes;
             return this;
         }
         public Long getSQLExecuteTimes() {
             return this.SQLExecuteTimes;
+        }
+
+        public DescribeSQLLogReportListResponseBodyItemsItemLatencyTopNItemsLatencyTopNItem setAvgLatency(Long avgLatency) {
+            this.avgLatency = avgLatency;
+            return this;
+        }
+        public Long getAvgLatency() {
+            return this.avgLatency;
         }
 
     }
@@ -125,23 +125,15 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItemsQPSTopNItem extends TeaModel {
-        @NameInMap("SQLText")
-        public String SQLText;
-
         @NameInMap("SQLExecuteTimes")
         public Long SQLExecuteTimes;
+
+        @NameInMap("SQLText")
+        public String SQLText;
 
         public static DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItemsQPSTopNItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItemsQPSTopNItem self = new DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItemsQPSTopNItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItemsQPSTopNItem setSQLText(String SQLText) {
-            this.SQLText = SQLText;
-            return this;
-        }
-        public String getSQLText() {
-            return this.SQLText;
         }
 
         public DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItemsQPSTopNItem setSQLExecuteTimes(Long SQLExecuteTimes) {
@@ -150,6 +142,14 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
         }
         public Long getSQLExecuteTimes() {
             return this.SQLExecuteTimes;
+        }
+
+        public DescribeSQLLogReportListResponseBodyItemsItemQPSTopNItemsQPSTopNItem setSQLText(String SQLText) {
+            this.SQLText = SQLText;
+            return this;
+        }
+        public String getSQLText() {
+            return this.SQLText;
         }
 
     }

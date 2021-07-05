@@ -4,17 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("ReadDBInstanceId")
-    public String readDBInstanceId;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("DelayTime")
     public Integer delayTime;
+
+    @NameInMap("ReadDBInstanceId")
+    public String readDBInstanceId;
 
     @NameInMap("Items")
     public DescribeReadDBInstanceDelayResponseBodyItems items;
@@ -22,14 +22,6 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
     public static DescribeReadDBInstanceDelayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeReadDBInstanceDelayResponseBody self = new DescribeReadDBInstanceDelayResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeReadDBInstanceDelayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeReadDBInstanceDelayResponseBody setDBInstanceId(String DBInstanceId) {
@@ -40,12 +32,12 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeReadDBInstanceDelayResponseBody setReadDBInstanceId(String readDBInstanceId) {
-        this.readDBInstanceId = readDBInstanceId;
+    public DescribeReadDBInstanceDelayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getReadDBInstanceId() {
-        return this.readDBInstanceId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeReadDBInstanceDelayResponseBody setDelayTime(Integer delayTime) {
@@ -56,6 +48,14 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         return this.delayTime;
     }
 
+    public DescribeReadDBInstanceDelayResponseBody setReadDBInstanceId(String readDBInstanceId) {
+        this.readDBInstanceId = readDBInstanceId;
+        return this;
+    }
+    public String getReadDBInstanceId() {
+        return this.readDBInstanceId;
+    }
+
     public DescribeReadDBInstanceDelayResponseBody setItems(DescribeReadDBInstanceDelayResponseBodyItems items) {
         this.items = items;
         return this;
@@ -64,120 +64,34 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
         return this.items;
     }
 
-    public static class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames extends TeaModel {
-        @NameInMap("ReadDBInstanceName")
-        public java.util.List<String> readDBInstanceName;
-
-        public static DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames build(java.util.Map<String, ?> map) throws Exception {
-            DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames self = new DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames setReadDBInstanceName(java.util.List<String> readDBInstanceName) {
-            this.readDBInstanceName = readDBInstanceName;
-            return this;
-        }
-        public java.util.List<String> getReadDBInstanceName() {
-            return this.readDBInstanceName;
-        }
-
-    }
-
-    public static class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes extends TeaModel {
-        @NameInMap("ReadDelayTime")
-        public java.util.List<String> readDelayTime;
-
-        public static DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes self = new DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes setReadDelayTime(java.util.List<String> readDelayTime) {
-            this.readDelayTime = readDelayTime;
-            return this;
-        }
-        public java.util.List<String> getReadDelayTime() {
-            return this.readDelayTime;
-        }
-
-    }
-
     public static class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay extends TeaModel {
-        @NameInMap("ReplayLatency")
-        public String replayLatency;
-
-        @NameInMap("FlushLag")
-        public String flushLag;
+        @NameInMap("WriteLatency")
+        public String writeLatency;
 
         @NameInMap("FlushLatency")
         public String flushLatency;
 
-        @NameInMap("SendLatency")
-        public String sendLatency;
+        @NameInMap("ReadDBInstanceName")
+        public String readDBInstanceName;
 
         @NameInMap("WriteLag")
         public String writeLag;
 
+        @NameInMap("FlushLag")
+        public String flushLag;
+
+        @NameInMap("SendLatency")
+        public String sendLatency;
+
         @NameInMap("ReplayLag")
         public String replayLag;
 
-        @NameInMap("WriteLatency")
-        public String writeLatency;
-
-        @NameInMap("ReadDBInstanceName")
-        public String readDBInstanceName;
+        @NameInMap("ReplayLatency")
+        public String replayLatency;
 
         public static DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay build(java.util.Map<String, ?> map) throws Exception {
             DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay self = new DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setReplayLatency(String replayLatency) {
-            this.replayLatency = replayLatency;
-            return this;
-        }
-        public String getReplayLatency() {
-            return this.replayLatency;
-        }
-
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setFlushLag(String flushLag) {
-            this.flushLag = flushLag;
-            return this;
-        }
-        public String getFlushLag() {
-            return this.flushLag;
-        }
-
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setFlushLatency(String flushLatency) {
-            this.flushLatency = flushLatency;
-            return this;
-        }
-        public String getFlushLatency() {
-            return this.flushLatency;
-        }
-
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setSendLatency(String sendLatency) {
-            this.sendLatency = sendLatency;
-            return this;
-        }
-        public String getSendLatency() {
-            return this.sendLatency;
-        }
-
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setWriteLag(String writeLag) {
-            this.writeLag = writeLag;
-            return this;
-        }
-        public String getWriteLag() {
-            return this.writeLag;
-        }
-
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setReplayLag(String replayLag) {
-            this.replayLag = replayLag;
-            return this;
-        }
-        public String getReplayLag() {
-            return this.replayLag;
         }
 
         public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setWriteLatency(String writeLatency) {
@@ -188,12 +102,60 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             return this.writeLatency;
         }
 
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setFlushLatency(String flushLatency) {
+            this.flushLatency = flushLatency;
+            return this;
+        }
+        public String getFlushLatency() {
+            return this.flushLatency;
+        }
+
         public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setReadDBInstanceName(String readDBInstanceName) {
             this.readDBInstanceName = readDBInstanceName;
             return this;
         }
         public String getReadDBInstanceName() {
             return this.readDBInstanceName;
+        }
+
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setWriteLag(String writeLag) {
+            this.writeLag = writeLag;
+            return this;
+        }
+        public String getWriteLag() {
+            return this.writeLag;
+        }
+
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setFlushLag(String flushLag) {
+            this.flushLag = flushLag;
+            return this;
+        }
+        public String getFlushLag() {
+            return this.flushLag;
+        }
+
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setSendLatency(String sendLatency) {
+            this.sendLatency = sendLatency;
+            return this;
+        }
+        public String getSendLatency() {
+            return this.sendLatency;
+        }
+
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setReplayLag(String replayLag) {
+            this.replayLag = replayLag;
+            return this;
+        }
+        public String getReplayLag() {
+            return this.replayLag;
+        }
+
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelayReadonlyInstanceDelay setReplayLatency(String replayLatency) {
+            this.replayLatency = replayLatency;
+            return this;
+        }
+        public String getReplayLatency() {
+            return this.replayLatency;
         }
 
     }
@@ -217,18 +179,56 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes extends TeaModel {
+        @NameInMap("ReadDelayTime")
+        public java.util.List<String> readDelayTime;
+
+        public static DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes self = new DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes setReadDelayTime(java.util.List<String> readDelayTime) {
+            this.readDelayTime = readDelayTime;
+            return this;
+        }
+        public java.util.List<String> getReadDelayTime() {
+            return this.readDelayTime;
+        }
+
+    }
+
+    public static class DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames extends TeaModel {
+        @NameInMap("ReadDBInstanceName")
+        public java.util.List<String> readDBInstanceName;
+
+        public static DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames build(java.util.Map<String, ?> map) throws Exception {
+            DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames self = new DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames setReadDBInstanceName(java.util.List<String> readDBInstanceName) {
+            this.readDBInstanceName = readDBInstanceName;
+            return this;
+        }
+        public java.util.List<String> getReadDBInstanceName() {
+            return this.readDBInstanceName;
+        }
+
+    }
+
     public static class DescribeReadDBInstanceDelayResponseBodyItemsItems extends TeaModel {
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
-        @NameInMap("ReadDBInstanceNames")
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames readDBInstanceNames;
+        @NameInMap("ReadonlyInstanceDelay")
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay readonlyInstanceDelay;
 
         @NameInMap("ReadDelayTimes")
         public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes readDelayTimes;
 
-        @NameInMap("ReadonlyInstanceDelay")
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay readonlyInstanceDelay;
+        @NameInMap("ReadDBInstanceNames")
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames readDBInstanceNames;
 
         public static DescribeReadDBInstanceDelayResponseBodyItemsItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeReadDBInstanceDelayResponseBodyItemsItems self = new DescribeReadDBInstanceDelayResponseBodyItemsItems();
@@ -243,12 +243,12 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             return this.DBInstanceId;
         }
 
-        public DescribeReadDBInstanceDelayResponseBodyItemsItems setReadDBInstanceNames(DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames readDBInstanceNames) {
-            this.readDBInstanceNames = readDBInstanceNames;
+        public DescribeReadDBInstanceDelayResponseBodyItemsItems setReadonlyInstanceDelay(DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay readonlyInstanceDelay) {
+            this.readonlyInstanceDelay = readonlyInstanceDelay;
             return this;
         }
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames getReadDBInstanceNames() {
-            return this.readDBInstanceNames;
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay getReadonlyInstanceDelay() {
+            return this.readonlyInstanceDelay;
         }
 
         public DescribeReadDBInstanceDelayResponseBodyItemsItems setReadDelayTimes(DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDelayTimes readDelayTimes) {
@@ -259,12 +259,12 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
             return this.readDelayTimes;
         }
 
-        public DescribeReadDBInstanceDelayResponseBodyItemsItems setReadonlyInstanceDelay(DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay readonlyInstanceDelay) {
-            this.readonlyInstanceDelay = readonlyInstanceDelay;
+        public DescribeReadDBInstanceDelayResponseBodyItemsItems setReadDBInstanceNames(DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames readDBInstanceNames) {
+            this.readDBInstanceNames = readDBInstanceNames;
             return this;
         }
-        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadonlyInstanceDelay getReadonlyInstanceDelay() {
-            return this.readonlyInstanceDelay;
+        public DescribeReadDBInstanceDelayResponseBodyItemsItemsReadDBInstanceNames getReadDBInstanceNames() {
+            return this.readDBInstanceNames;
         }
 
     }

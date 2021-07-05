@@ -4,17 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventsResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("EventItems")
     public DescribeEventsResponseBodyEventItems eventItems;
@@ -22,6 +22,14 @@ public class DescribeEventsResponseBody extends TeaModel {
     public static DescribeEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventsResponseBody self = new DescribeEventsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEventsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeEventsResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class DescribeEventsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeEventsResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
     public DescribeEventsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeEventsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeEventsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeEventsResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public DescribeEventsResponseBody setEventItems(DescribeEventsResponseBodyEventItems eventItems) {
@@ -65,58 +65,45 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyEventItemsEventItems extends TeaModel {
-        @NameInMap("EventId")
-        public Integer eventId;
-
-        @NameInMap("EventType")
-        public String eventType;
-
         @NameInMap("EventName")
         public String eventName;
 
         @NameInMap("EventTime")
         public String eventTime;
 
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        @NameInMap("ResourceName")
-        public String resourceName;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("EventUserType")
         public String eventUserType;
-
-        @NameInMap("EventReason")
-        public String eventReason;
-
-        @NameInMap("EventPayload")
-        public String eventPayload;
 
         @NameInMap("EventRecordTime")
         public String eventRecordTime;
 
+        @NameInMap("CallerUid")
+        public Long callerUid;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("EventId")
+        public Integer eventId;
+
+        @NameInMap("EventType")
+        public String eventType;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("EventPayload")
+        public String eventPayload;
+
+        @NameInMap("EventReason")
+        public String eventReason;
+
+        @NameInMap("ResourceName")
+        public String resourceName;
+
         public static DescribeEventsResponseBodyEventItemsEventItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventsResponseBodyEventItemsEventItems self = new DescribeEventsResponseBodyEventItemsEventItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEventsResponseBodyEventItemsEventItems setEventId(Integer eventId) {
-            this.eventId = eventId;
-            return this;
-        }
-        public Integer getEventId() {
-            return this.eventId;
-        }
-
-        public DescribeEventsResponseBodyEventItemsEventItems setEventType(String eventType) {
-            this.eventType = eventType;
-            return this;
-        }
-        public String getEventType() {
-            return this.eventType;
         }
 
         public DescribeEventsResponseBodyEventItemsEventItems setEventName(String eventName) {
@@ -135,20 +122,28 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.eventTime;
         }
 
-        public DescribeEventsResponseBodyEventItemsEventItems setResourceType(String resourceType) {
-            this.resourceType = resourceType;
+        public DescribeEventsResponseBodyEventItemsEventItems setEventUserType(String eventUserType) {
+            this.eventUserType = eventUserType;
             return this;
         }
-        public String getResourceType() {
-            return this.resourceType;
+        public String getEventUserType() {
+            return this.eventUserType;
         }
 
-        public DescribeEventsResponseBodyEventItemsEventItems setResourceName(String resourceName) {
-            this.resourceName = resourceName;
+        public DescribeEventsResponseBodyEventItemsEventItems setEventRecordTime(String eventRecordTime) {
+            this.eventRecordTime = eventRecordTime;
             return this;
         }
-        public String getResourceName() {
-            return this.resourceName;
+        public String getEventRecordTime() {
+            return this.eventRecordTime;
+        }
+
+        public DescribeEventsResponseBodyEventItemsEventItems setCallerUid(Long callerUid) {
+            this.callerUid = callerUid;
+            return this;
+        }
+        public Long getCallerUid() {
+            return this.callerUid;
         }
 
         public DescribeEventsResponseBodyEventItemsEventItems setRegionId(String regionId) {
@@ -159,20 +154,28 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeEventsResponseBodyEventItemsEventItems setEventUserType(String eventUserType) {
-            this.eventUserType = eventUserType;
+        public DescribeEventsResponseBodyEventItemsEventItems setEventId(Integer eventId) {
+            this.eventId = eventId;
             return this;
         }
-        public String getEventUserType() {
-            return this.eventUserType;
+        public Integer getEventId() {
+            return this.eventId;
         }
 
-        public DescribeEventsResponseBodyEventItemsEventItems setEventReason(String eventReason) {
-            this.eventReason = eventReason;
+        public DescribeEventsResponseBodyEventItemsEventItems setEventType(String eventType) {
+            this.eventType = eventType;
             return this;
         }
-        public String getEventReason() {
-            return this.eventReason;
+        public String getEventType() {
+            return this.eventType;
+        }
+
+        public DescribeEventsResponseBodyEventItemsEventItems setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public DescribeEventsResponseBodyEventItemsEventItems setEventPayload(String eventPayload) {
@@ -183,12 +186,20 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.eventPayload;
         }
 
-        public DescribeEventsResponseBodyEventItemsEventItems setEventRecordTime(String eventRecordTime) {
-            this.eventRecordTime = eventRecordTime;
+        public DescribeEventsResponseBodyEventItemsEventItems setEventReason(String eventReason) {
+            this.eventReason = eventReason;
             return this;
         }
-        public String getEventRecordTime() {
-            return this.eventRecordTime;
+        public String getEventReason() {
+            return this.eventReason;
+        }
+
+        public DescribeEventsResponseBodyEventItemsEventItems setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
         }
 
     }

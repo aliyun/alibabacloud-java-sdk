@@ -4,20 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("PayType")
-    public String payType;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -37,31 +25,9 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     @NameInMap("SyncUserPrivilege")
     public String syncUserPrivilege;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     public static CopyDatabaseBetweenInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyDatabaseBetweenInstancesRequest self = new CopyDatabaseBetweenInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CopyDatabaseBetweenInstancesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CopyDatabaseBetweenInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
     }
 
     public CopyDatabaseBetweenInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -70,22 +36,6 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CopyDatabaseBetweenInstancesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public CopyDatabaseBetweenInstancesRequest setPayType(String payType) {
-        this.payType = payType;
-        return this;
-    }
-    public String getPayType() {
-        return this.payType;
     }
 
     public CopyDatabaseBetweenInstancesRequest setDBInstanceId(String DBInstanceId) {
@@ -134,22 +84,6 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     }
     public String getSyncUserPrivilege() {
         return this.syncUserPrivilege;
-    }
-
-    public CopyDatabaseBetweenInstancesRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public CopyDatabaseBetweenInstancesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
 }

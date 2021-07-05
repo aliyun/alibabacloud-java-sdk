@@ -31,6 +31,9 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static DescribeTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagsRequest self = new DescribeTagsRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class DescribeTagsRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribeTagsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

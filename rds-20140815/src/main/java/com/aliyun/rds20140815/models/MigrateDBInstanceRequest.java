@@ -28,38 +28,11 @@ public class MigrateDBInstanceRequest extends TeaModel {
     @NameInMap("TargetDedicatedHostIdForSlave")
     public String targetDedicatedHostIdForSlave;
 
-    @NameInMap("TargetDedicatedHostIdForLog")
-    public String targetDedicatedHostIdForLog;
-
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     @NameInMap("SpecifiedTime")
     public String specifiedTime;
-
-    @NameInMap("TargetDBInstanceClass")
-    public String targetDBInstanceClass;
-
-    @NameInMap("EngineVersion")
-    public String engineVersion;
-
-    @NameInMap("DBInstanceTransType")
-    public Integer DBInstanceTransType;
-
-    @NameInMap("Storage")
-    public Integer storage;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("ZoneIdSlave1")
-    public String zoneIdSlave1;
-
-    @NameInMap("ZoneIdSlave2")
-    public String zoneIdSlave2;
 
     @NameInMap("ZoneIdForLog")
     public String zoneIdForLog;
@@ -136,14 +109,6 @@ public class MigrateDBInstanceRequest extends TeaModel {
         return this.targetDedicatedHostIdForSlave;
     }
 
-    public MigrateDBInstanceRequest setTargetDedicatedHostIdForLog(String targetDedicatedHostIdForLog) {
-        this.targetDedicatedHostIdForLog = targetDedicatedHostIdForLog;
-        return this;
-    }
-    public String getTargetDedicatedHostIdForLog() {
-        return this.targetDedicatedHostIdForLog;
-    }
-
     public MigrateDBInstanceRequest setEffectiveTime(String effectiveTime) {
         this.effectiveTime = effectiveTime;
         return this;
@@ -158,70 +123,6 @@ public class MigrateDBInstanceRequest extends TeaModel {
     }
     public String getSpecifiedTime() {
         return this.specifiedTime;
-    }
-
-    public MigrateDBInstanceRequest setTargetDBInstanceClass(String targetDBInstanceClass) {
-        this.targetDBInstanceClass = targetDBInstanceClass;
-        return this;
-    }
-    public String getTargetDBInstanceClass() {
-        return this.targetDBInstanceClass;
-    }
-
-    public MigrateDBInstanceRequest setEngineVersion(String engineVersion) {
-        this.engineVersion = engineVersion;
-        return this;
-    }
-    public String getEngineVersion() {
-        return this.engineVersion;
-    }
-
-    public MigrateDBInstanceRequest setDBInstanceTransType(Integer DBInstanceTransType) {
-        this.DBInstanceTransType = DBInstanceTransType;
-        return this;
-    }
-    public Integer getDBInstanceTransType() {
-        return this.DBInstanceTransType;
-    }
-
-    public MigrateDBInstanceRequest setStorage(Integer storage) {
-        this.storage = storage;
-        return this;
-    }
-    public Integer getStorage() {
-        return this.storage;
-    }
-
-    public MigrateDBInstanceRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public MigrateDBInstanceRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public MigrateDBInstanceRequest setZoneIdSlave1(String zoneIdSlave1) {
-        this.zoneIdSlave1 = zoneIdSlave1;
-        return this;
-    }
-    public String getZoneIdSlave1() {
-        return this.zoneIdSlave1;
-    }
-
-    public MigrateDBInstanceRequest setZoneIdSlave2(String zoneIdSlave2) {
-        this.zoneIdSlave2 = zoneIdSlave2;
-        return this;
-    }
-    public String getZoneIdSlave2() {
-        return this.zoneIdSlave2;
     }
 
     public MigrateDBInstanceRequest setZoneIdForLog(String zoneIdForLog) {

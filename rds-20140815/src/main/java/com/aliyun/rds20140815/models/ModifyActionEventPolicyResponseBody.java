@@ -4,18 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyActionEventPolicyResponseBody extends TeaModel {
+    @NameInMap("EnableEventLog")
+    public String enableEventLog;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("EnableEventLog")
-    public String enableEventLog;
-
     public static ModifyActionEventPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyActionEventPolicyResponseBody self = new ModifyActionEventPolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyActionEventPolicyResponseBody setEnableEventLog(String enableEventLog) {
+        this.enableEventLog = enableEventLog;
+        return this;
+    }
+    public String getEnableEventLog() {
+        return this.enableEventLog;
     }
 
     public ModifyActionEventPolicyResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ModifyActionEventPolicyResponseBody setEnableEventLog(String enableEventLog) {
-        this.enableEventLog = enableEventLog;
-        return this;
-    }
-    public String getEnableEventLog() {
-        return this.enableEventLog;
     }
 
 }

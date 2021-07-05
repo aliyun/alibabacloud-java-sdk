@@ -4,23 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public Long orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RenewInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceResponseBody self = new RenewInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RenewInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RenewInstanceResponseBody setOrderId(Long orderId) {
@@ -29,6 +21,14 @@ public class RenewInstanceResponseBody extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public RenewInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

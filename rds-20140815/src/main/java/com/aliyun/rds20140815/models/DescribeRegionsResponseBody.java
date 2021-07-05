@@ -32,23 +32,21 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRDSRegion extends TeaModel {
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("RegionEndpoint")
+        public String regionEndpoint;
+
+        @NameInMap("LocalName")
+        public String localName;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         public static DescribeRegionsResponseBodyRegionsRDSRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRDSRegion self = new DescribeRegionsResponseBodyRegionsRDSRegion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionsRDSRegion setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeRegionsResponseBodyRegionsRDSRegion setZoneId(String zoneId) {
@@ -57,6 +55,30 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRDSRegion setRegionEndpoint(String regionEndpoint) {
+            this.regionEndpoint = regionEndpoint;
+            return this;
+        }
+        public String getRegionEndpoint() {
+            return this.regionEndpoint;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRDSRegion setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRDSRegion setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

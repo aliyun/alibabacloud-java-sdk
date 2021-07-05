@@ -10,11 +10,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
-    @NameInMap("EngineVersion")
-    public String engineVersion;
-
     @NameInMap("ParameterCount")
     public String parameterCount;
+
+    @NameInMap("EngineVersion")
+    public String engineVersion;
 
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
@@ -40,20 +40,20 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         return this.engine;
     }
 
-    public DescribeParameterTemplatesResponseBody setEngineVersion(String engineVersion) {
-        this.engineVersion = engineVersion;
-        return this;
-    }
-    public String getEngineVersion() {
-        return this.engineVersion;
-    }
-
     public DescribeParameterTemplatesResponseBody setParameterCount(String parameterCount) {
         this.parameterCount = parameterCount;
         return this;
     }
     public String getParameterCount() {
         return this.parameterCount;
+    }
+
+    public DescribeParameterTemplatesResponseBody setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     public DescribeParameterTemplatesResponseBody setParameters(DescribeParameterTemplatesResponseBodyParameters parameters) {
@@ -65,6 +65,9 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
+        @NameInMap("CheckingCode")
+        public String checkingCode;
+
         @NameInMap("ParameterName")
         public String parameterName;
 
@@ -77,15 +80,20 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         @NameInMap("ForceRestart")
         public String forceRestart;
 
-        @NameInMap("CheckingCode")
-        public String checkingCode;
-
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         public static DescribeParameterTemplatesResponseBodyParametersTemplateRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeParameterTemplatesResponseBodyParametersTemplateRecord self = new DescribeParameterTemplatesResponseBodyParametersTemplateRecord();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setCheckingCode(String checkingCode) {
+            this.checkingCode = checkingCode;
+            return this;
+        }
+        public String getCheckingCode() {
+            return this.checkingCode;
         }
 
         public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setParameterName(String parameterName) {
@@ -118,14 +126,6 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
         public String getForceRestart() {
             return this.forceRestart;
-        }
-
-        public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setCheckingCode(String checkingCode) {
-            this.checkingCode = checkingCode;
-            return this;
-        }
-        public String getCheckingCode() {
-            return this.checkingCode;
         }
 
         public DescribeParameterTemplatesResponseBodyParametersTemplateRecord setParameterDescription(String parameterDescription) {

@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
-    @NameInMap("Tag")
-    public java.util.List<DescribeDBInstancesRequestTag> tag;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -91,20 +88,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("InstanceLevel")
     public Integer instanceLevel;
 
-    @NameInMap("NeedVpcName")
-    public Boolean needVpcName;
+    @NameInMap("ConnectionString")
+    public String connectionString;
 
     public static DescribeDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesRequest self = new DescribeDBInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstancesRequest setTag(java.util.List<DescribeDBInstancesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeDBInstancesRequestTag> getTag() {
-        return this.tag;
     }
 
     public DescribeDBInstancesRequest setOwnerId(Long ownerId) {
@@ -331,42 +320,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
         return this.instanceLevel;
     }
 
-    public DescribeDBInstancesRequest setNeedVpcName(Boolean needVpcName) {
-        this.needVpcName = needVpcName;
+    public DescribeDBInstancesRequest setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
         return this;
     }
-    public Boolean getNeedVpcName() {
-        return this.needVpcName;
-    }
-
-    public static class DescribeDBInstancesRequestTag extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("value")
-        public String value;
-
-        public static DescribeDBInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBInstancesRequestTag self = new DescribeDBInstancesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstancesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeDBInstancesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getConnectionString() {
+        return this.connectionString;
     }
 
 }

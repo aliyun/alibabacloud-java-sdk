@@ -141,11 +141,11 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZonesResponseBodyAvailableZones extends TeaModel {
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("SupportedEngines")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> supportedEngines;
@@ -155,20 +155,20 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableZonesResponseBodyAvailableZones setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
         public DescribeAvailableZonesResponseBodyAvailableZones setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeAvailableZonesResponseBodyAvailableZones setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeAvailableZonesResponseBodyAvailableZones setSupportedEngines(java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> supportedEngines) {

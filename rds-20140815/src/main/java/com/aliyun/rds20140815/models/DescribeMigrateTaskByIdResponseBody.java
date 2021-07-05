@@ -4,95 +4,39 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
-
-    @NameInMap("DBName")
-    public String DBName;
-
-    @NameInMap("MigrateTaskId")
-    public String migrateTaskId;
-
-    @NameInMap("CreateTime")
-    public String createTime;
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("BackupMode")
-    public String backupMode;
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
 
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("IsDBReplaced")
-    public String isDBReplaced;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    @NameInMap("DBName")
+    public String DBName;
+
+    @NameInMap("BackupMode")
+    public String backupMode;
+
+    @NameInMap("MigrateTaskId")
+    public String migrateTaskId;
+
+    @NameInMap("IsDBReplaced")
+    public String isDBReplaced;
+
     public static DescribeMigrateTaskByIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMigrateTaskByIdResponseBody self = new DescribeMigrateTaskByIdResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMigrateTaskByIdResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeMigrateTaskByIdResponseBody setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
-    }
-
-    public DescribeMigrateTaskByIdResponseBody setDBName(String DBName) {
-        this.DBName = DBName;
-        return this;
-    }
-    public String getDBName() {
-        return this.DBName;
-    }
-
-    public DescribeMigrateTaskByIdResponseBody setMigrateTaskId(String migrateTaskId) {
-        this.migrateTaskId = migrateTaskId;
-        return this;
-    }
-    public String getMigrateTaskId() {
-        return this.migrateTaskId;
-    }
-
-    public DescribeMigrateTaskByIdResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public DescribeMigrateTaskByIdResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeMigrateTaskByIdResponseBody setBackupMode(String backupMode) {
-        this.backupMode = backupMode;
-        return this;
-    }
-    public String getBackupMode() {
-        return this.backupMode;
     }
 
     public DescribeMigrateTaskByIdResponseBody setStatus(String status) {
@@ -103,12 +47,28 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
         return this.status;
     }
 
-    public DescribeMigrateTaskByIdResponseBody setIsDBReplaced(String isDBReplaced) {
-        this.isDBReplaced = isDBReplaced;
+    public DescribeMigrateTaskByIdResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getIsDBReplaced() {
-        return this.isDBReplaced;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeMigrateTaskByIdResponseBody setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public DescribeMigrateTaskByIdResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeMigrateTaskByIdResponseBody setDescription(String description) {
@@ -117,6 +77,46 @@ public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeMigrateTaskByIdResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public DescribeMigrateTaskByIdResponseBody setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    public DescribeMigrateTaskByIdResponseBody setBackupMode(String backupMode) {
+        this.backupMode = backupMode;
+        return this;
+    }
+    public String getBackupMode() {
+        return this.backupMode;
+    }
+
+    public DescribeMigrateTaskByIdResponseBody setMigrateTaskId(String migrateTaskId) {
+        this.migrateTaskId = migrateTaskId;
+        return this;
+    }
+    public String getMigrateTaskId() {
+        return this.migrateTaskId;
+    }
+
+    public DescribeMigrateTaskByIdResponseBody setIsDBReplaced(String isDBReplaced) {
+        this.isDBReplaced = isDBReplaced;
+        return this;
+    }
+    public String getIsDBReplaced() {
+        return this.isDBReplaced;
     }
 
 }

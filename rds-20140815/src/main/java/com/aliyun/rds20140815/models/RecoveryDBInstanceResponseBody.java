@@ -4,11 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RecoveryDBInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("OrderId")
     public String orderId;
@@ -18,20 +18,20 @@ public class RecoveryDBInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RecoveryDBInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public RecoveryDBInstanceResponseBody setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public RecoveryDBInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public RecoveryDBInstanceResponseBody setOrderId(String orderId) {

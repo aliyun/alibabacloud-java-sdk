@@ -7,23 +7,23 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Engine")
-    public String engine;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("EngineVersion")
-    public String engineVersion;
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
 
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("Engine")
+    public String engine;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
+    @NameInMap("EngineVersion")
+    public String engineVersion;
 
     @NameInMap("Items")
     public DescribeModifyParameterLogResponseBodyItems items;
@@ -41,28 +41,12 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeModifyParameterLogResponseBody setEngine(String engine) {
-        this.engine = engine;
+    public DescribeModifyParameterLogResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
         return this;
     }
-    public String getEngine() {
-        return this.engine;
-    }
-
-    public DescribeModifyParameterLogResponseBody setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public DescribeModifyParameterLogResponseBody setEngineVersion(String engineVersion) {
-        this.engineVersion = engineVersion;
-        return this;
-    }
-    public String getEngineVersion() {
-        return this.engineVersion;
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
     }
 
     public DescribeModifyParameterLogResponseBody setTotalRecordCount(Integer totalRecordCount) {
@@ -73,6 +57,22 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
+    public DescribeModifyParameterLogResponseBody setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeModifyParameterLogResponseBody setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
     public DescribeModifyParameterLogResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -81,12 +81,12 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeModifyParameterLogResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
+    public DescribeModifyParameterLogResponseBody setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
         return this;
     }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     public DescribeModifyParameterLogResponseBody setItems(DescribeModifyParameterLogResponseBodyItems items) {
@@ -98,32 +98,32 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     }
 
     public static class DescribeModifyParameterLogResponseBodyItemsParameterChangeLog extends TeaModel {
-        @NameInMap("ModifyTime")
-        public String modifyTime;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("OldParameterValue")
         public String oldParameterValue;
 
-        @NameInMap("NewParameterValue")
-        public String newParameterValue;
-
         @NameInMap("ParameterName")
         public String parameterName;
 
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("NewParameterValue")
+        public String newParameterValue;
+
+        @NameInMap("ModifyTime")
+        public String modifyTime;
 
         public static DescribeModifyParameterLogResponseBodyItemsParameterChangeLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeModifyParameterLogResponseBodyItemsParameterChangeLog self = new DescribeModifyParameterLogResponseBodyItemsParameterChangeLog();
             return TeaModel.build(map, self);
         }
 
-        public DescribeModifyParameterLogResponseBodyItemsParameterChangeLog setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
+        public DescribeModifyParameterLogResponseBodyItemsParameterChangeLog setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getModifyTime() {
-            return this.modifyTime;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeModifyParameterLogResponseBodyItemsParameterChangeLog setOldParameterValue(String oldParameterValue) {
@@ -134,14 +134,6 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             return this.oldParameterValue;
         }
 
-        public DescribeModifyParameterLogResponseBodyItemsParameterChangeLog setNewParameterValue(String newParameterValue) {
-            this.newParameterValue = newParameterValue;
-            return this;
-        }
-        public String getNewParameterValue() {
-            return this.newParameterValue;
-        }
-
         public DescribeModifyParameterLogResponseBodyItemsParameterChangeLog setParameterName(String parameterName) {
             this.parameterName = parameterName;
             return this;
@@ -150,12 +142,20 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             return this.parameterName;
         }
 
-        public DescribeModifyParameterLogResponseBodyItemsParameterChangeLog setStatus(String status) {
-            this.status = status;
+        public DescribeModifyParameterLogResponseBodyItemsParameterChangeLog setNewParameterValue(String newParameterValue) {
+            this.newParameterValue = newParameterValue;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getNewParameterValue() {
+            return this.newParameterValue;
+        }
+
+        public DescribeModifyParameterLogResponseBodyItemsParameterChangeLog setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public String getModifyTime() {
+            return this.modifyTime;
         }
 
     }

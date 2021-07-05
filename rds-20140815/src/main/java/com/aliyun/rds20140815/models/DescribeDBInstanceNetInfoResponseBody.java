@@ -4,14 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
+    @NameInMap("SecurityIPMode")
+    public String securityIPMode;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
-
-    @NameInMap("SecurityIPMode")
-    public String securityIPMode;
 
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
@@ -19,6 +19,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     public static DescribeDBInstanceNetInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceNetInfoResponseBody self = new DescribeDBInstanceNetInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstanceNetInfoResponseBody setSecurityIPMode(String securityIPMode) {
+        this.securityIPMode = securityIPMode;
+        return this;
+    }
+    public String getSecurityIPMode() {
+        return this.securityIPMode;
     }
 
     public DescribeDBInstanceNetInfoResponseBody setRequestId(String requestId) {
@@ -37,14 +45,6 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         return this.instanceNetworkType;
     }
 
-    public DescribeDBInstanceNetInfoResponseBody setSecurityIPMode(String securityIPMode) {
-        this.securityIPMode = securityIPMode;
-        return this;
-    }
-    public String getSecurityIPMode() {
-        return this.securityIPMode;
-    }
-
     public DescribeDBInstanceNetInfoResponseBody setDBInstanceNetInfos(DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos DBInstanceNetInfos) {
         this.DBInstanceNetInfos = DBInstanceNetInfos;
         return this;
@@ -54,23 +54,15 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup extends TeaModel {
-        @NameInMap("SecurityIPGroupName")
-        public String securityIPGroupName;
-
         @NameInMap("SecurityIPs")
         public String securityIPs;
+
+        @NameInMap("SecurityIPGroupName")
+        public String securityIPGroupName;
 
         public static DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup self = new DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup setSecurityIPGroupName(String securityIPGroupName) {
-            this.securityIPGroupName = securityIPGroupName;
-            return this;
-        }
-        public String getSecurityIPGroupName() {
-            return this.securityIPGroupName;
         }
 
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup setSecurityIPs(String securityIPs) {
@@ -79,6 +71,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
         public String getSecurityIPs() {
             return this.securityIPs;
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroupsSecurityIPGroup setSecurityIPGroupName(String securityIPGroupName) {
+            this.securityIPGroupName = securityIPGroupName;
+            return this;
+        }
+        public String getSecurityIPGroupName() {
+            return this.securityIPGroupName;
         }
 
     }
@@ -103,37 +103,24 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight extends TeaModel {
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
-
-        @NameInMap("DBInstanceType")
-        public String DBInstanceType;
-
         @NameInMap("Availability")
         public String availability;
 
         @NameInMap("Weight")
         public String weight;
 
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("DBInstanceType")
+        public String DBInstanceType;
+
         public static DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight self = new DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
-        }
-
-        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight setDBInstanceType(String DBInstanceType) {
-            this.DBInstanceType = DBInstanceType;
-            return this;
-        }
-        public String getDBInstanceType() {
-            return this.DBInstanceType;
         }
 
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight setAvailability(String availability) {
@@ -150,6 +137,30 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
         public String getWeight() {
             return this.weight;
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeightsDBInstanceWeight setDBInstanceType(String DBInstanceType) {
+            this.DBInstanceType = DBInstanceType;
+            return this;
+        }
+        public String getDBInstanceType() {
+            return this.DBInstanceType;
         }
 
     }
@@ -174,17 +185,23 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo extends TeaModel {
-        @NameInMap("Upgradeable")
-        public String upgradeable;
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
-        @NameInMap("ExpiredTime")
-        public String expiredTime;
+        @NameInMap("ConnectionStringType")
+        public String connectionStringType;
 
         @NameInMap("ConnectionString")
         public String connectionString;
 
-        @NameInMap("IPAddress")
-        public String IPAddress;
+        @NameInMap("ExpiredTime")
+        public String expiredTime;
+
+        @NameInMap("Upgradeable")
+        public String upgradeable;
+
+        @NameInMap("MaxDelayTime")
+        public String maxDelayTime;
 
         @NameInMap("IPType")
         public String IPType;
@@ -195,17 +212,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("VPCId")
         public String VPCId;
 
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("ConnectionStringType")
-        public String connectionStringType;
-
-        @NameInMap("MaxDelayTime")
-        public String maxDelayTime;
-
         @NameInMap("DistributionType")
         public String distributionType;
+
+        @NameInMap("IPAddress")
+        public String IPAddress;
 
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
@@ -218,20 +229,20 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setUpgradeable(String upgradeable) {
-            this.upgradeable = upgradeable;
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
             return this;
         }
-        public String getUpgradeable() {
-            return this.upgradeable;
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
-        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setExpiredTime(String expiredTime) {
-            this.expiredTime = expiredTime;
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setConnectionStringType(String connectionStringType) {
+            this.connectionStringType = connectionStringType;
             return this;
         }
-        public String getExpiredTime() {
-            return this.expiredTime;
+        public String getConnectionStringType() {
+            return this.connectionStringType;
         }
 
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setConnectionString(String connectionString) {
@@ -242,12 +253,28 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             return this.connectionString;
         }
 
-        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setIPAddress(String IPAddress) {
-            this.IPAddress = IPAddress;
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
             return this;
         }
-        public String getIPAddress() {
-            return this.IPAddress;
+        public String getExpiredTime() {
+            return this.expiredTime;
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setUpgradeable(String upgradeable) {
+            this.upgradeable = upgradeable;
+            return this;
+        }
+        public String getUpgradeable() {
+            return this.upgradeable;
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setMaxDelayTime(String maxDelayTime) {
+            this.maxDelayTime = maxDelayTime;
+            return this;
+        }
+        public String getMaxDelayTime() {
+            return this.maxDelayTime;
         }
 
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setIPType(String IPType) {
@@ -274,36 +301,20 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             return this.VPCId;
         }
 
-        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setConnectionStringType(String connectionStringType) {
-            this.connectionStringType = connectionStringType;
-            return this;
-        }
-        public String getConnectionStringType() {
-            return this.connectionStringType;
-        }
-
-        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setMaxDelayTime(String maxDelayTime) {
-            this.maxDelayTime = maxDelayTime;
-            return this;
-        }
-        public String getMaxDelayTime() {
-            return this.maxDelayTime;
-        }
-
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setDistributionType(String distributionType) {
             this.distributionType = distributionType;
             return this;
         }
         public String getDistributionType() {
             return this.distributionType;
+        }
+
+        public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
+            return this;
+        }
+        public String getIPAddress() {
+            return this.IPAddress;
         }
 
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo setSecurityIPGroups(DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups) {

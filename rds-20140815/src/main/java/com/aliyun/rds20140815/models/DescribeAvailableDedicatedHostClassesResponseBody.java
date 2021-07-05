@@ -32,23 +32,15 @@ public class DescribeAvailableDedicatedHostClassesResponseBody extends TeaModel 
     }
 
     public static class DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses extends TeaModel {
-        @NameInMap("HostClassName")
-        public String hostClassName;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("HostClassName")
+        public String hostClassName;
 
         public static DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses self = new DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses setHostClassName(String hostClassName) {
-            this.hostClassName = hostClassName;
-            return this;
-        }
-        public String getHostClassName() {
-            return this.hostClassName;
         }
 
         public DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses setDescription(String description) {
@@ -57,6 +49,14 @@ public class DescribeAvailableDedicatedHostClassesResponseBody extends TeaModel 
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeAvailableDedicatedHostClassesResponseBodyHostClassesHostClasses setHostClassName(String hostClassName) {
+            this.hostClassName = hostClassName;
+            return this;
+        }
+        public String getHostClassName() {
+            return this.hostClassName;
         }
 
     }

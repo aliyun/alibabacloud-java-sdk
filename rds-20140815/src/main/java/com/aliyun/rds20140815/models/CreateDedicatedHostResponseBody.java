@@ -7,11 +7,11 @@ public class CreateDedicatedHostResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OrderId")
-    public Long orderId;
-
     @NameInMap("DedicateHostList")
     public CreateDedicatedHostResponseBodyDedicateHostList dedicateHostList;
+
+    @NameInMap("OrderId")
+    public Long orderId;
 
     public static CreateDedicatedHostResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDedicatedHostResponseBody self = new CreateDedicatedHostResponseBody();
@@ -26,20 +26,20 @@ public class CreateDedicatedHostResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDedicatedHostResponseBody setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
     public CreateDedicatedHostResponseBody setDedicateHostList(CreateDedicatedHostResponseBodyDedicateHostList dedicateHostList) {
         this.dedicateHostList = dedicateHostList;
         return this;
     }
     public CreateDedicatedHostResponseBodyDedicateHostList getDedicateHostList() {
         return this.dedicateHostList;
+    }
+
+    public CreateDedicatedHostResponseBody setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public static class CreateDedicatedHostResponseBodyDedicateHostListDedicateHostList extends TeaModel {

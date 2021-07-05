@@ -35,11 +35,11 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("DiagnosticTime")
         public String diagnosticTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("Score")
         public Integer score;
@@ -60,20 +60,20 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeDiagnosticReportListResponseBodyReportList setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
         public DescribeDiagnosticReportListResponseBodyReportList setDiagnosticTime(String diagnosticTime) {
             this.diagnosticTime = diagnosticTime;
             return this;
         }
         public String getDiagnosticTime() {
             return this.diagnosticTime;
+        }
+
+        public DescribeDiagnosticReportListResponseBodyReportList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public DescribeDiagnosticReportListResponseBodyReportList setScore(Integer score) {

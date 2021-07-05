@@ -19,9 +19,6 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("CommodityCode")
-    public String commodityCode;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -45,9 +42,6 @@ public class DescribeRenewalPriceRequest extends TeaModel {
 
     @NameInMap("OrderType")
     public String orderType;
-
-    @NameInMap("PromotionCode")
-    public String promotionCode;
 
     @NameInMap("BusinessInfo")
     public String businessInfo;
@@ -95,14 +89,6 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeRenewalPriceRequest setCommodityCode(String commodityCode) {
-        this.commodityCode = commodityCode;
-        return this;
-    }
-    public String getCommodityCode() {
-        return this.commodityCode;
     }
 
     public DescribeRenewalPriceRequest setDBInstanceId(String DBInstanceId) {
@@ -167,14 +153,6 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     }
     public String getOrderType() {
         return this.orderType;
-    }
-
-    public DescribeRenewalPriceRequest setPromotionCode(String promotionCode) {
-        this.promotionCode = promotionCode;
-        return this;
-    }
-    public String getPromotionCode() {
-        return this.promotionCode;
     }
 
     public DescribeRenewalPriceRequest setBusinessInfo(String businessInfo) {

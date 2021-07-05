@@ -7,6 +7,15 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("CompressType")
+    public String compressType;
+
+    @NameInMap("LocalLogRetentionSpace")
+    public String localLogRetentionSpace;
+
+    @NameInMap("LogBackupLocalRetentionNumber")
+    public Integer logBackupLocalRetentionNumber;
+
     @NameInMap("DBInstanceID")
     public String DBInstanceID;
 
@@ -16,17 +25,8 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     @NameInMap("LocalLogRetentionHours")
     public Integer localLogRetentionHours;
 
-    @NameInMap("LocalLogRetentionSpace")
-    public String localLogRetentionSpace;
-
     @NameInMap("HighSpaceUsageProtection")
     public String highSpaceUsageProtection;
-
-    @NameInMap("CompressType")
-    public String compressType;
-
-    @NameInMap("LogBackupLocalRetentionNumber")
-    public Integer logBackupLocalRetentionNumber;
 
     public static ModifyBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupPolicyResponseBody self = new ModifyBackupPolicyResponseBody();
@@ -39,6 +39,30 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyBackupPolicyResponseBody setCompressType(String compressType) {
+        this.compressType = compressType;
+        return this;
+    }
+    public String getCompressType() {
+        return this.compressType;
+    }
+
+    public ModifyBackupPolicyResponseBody setLocalLogRetentionSpace(String localLogRetentionSpace) {
+        this.localLogRetentionSpace = localLogRetentionSpace;
+        return this;
+    }
+    public String getLocalLogRetentionSpace() {
+        return this.localLogRetentionSpace;
+    }
+
+    public ModifyBackupPolicyResponseBody setLogBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
+        this.logBackupLocalRetentionNumber = logBackupLocalRetentionNumber;
+        return this;
+    }
+    public Integer getLogBackupLocalRetentionNumber() {
+        return this.logBackupLocalRetentionNumber;
     }
 
     public ModifyBackupPolicyResponseBody setDBInstanceID(String DBInstanceID) {
@@ -65,36 +89,12 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         return this.localLogRetentionHours;
     }
 
-    public ModifyBackupPolicyResponseBody setLocalLogRetentionSpace(String localLogRetentionSpace) {
-        this.localLogRetentionSpace = localLogRetentionSpace;
-        return this;
-    }
-    public String getLocalLogRetentionSpace() {
-        return this.localLogRetentionSpace;
-    }
-
     public ModifyBackupPolicyResponseBody setHighSpaceUsageProtection(String highSpaceUsageProtection) {
         this.highSpaceUsageProtection = highSpaceUsageProtection;
         return this;
     }
     public String getHighSpaceUsageProtection() {
         return this.highSpaceUsageProtection;
-    }
-
-    public ModifyBackupPolicyResponseBody setCompressType(String compressType) {
-        this.compressType = compressType;
-        return this;
-    }
-    public String getCompressType() {
-        return this.compressType;
-    }
-
-    public ModifyBackupPolicyResponseBody setLogBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
-        this.logBackupLocalRetentionNumber = logBackupLocalRetentionNumber;
-        return this;
-    }
-    public Integer getLogBackupLocalRetentionNumber() {
-        return this.logBackupLocalRetentionNumber;
     }
 
 }

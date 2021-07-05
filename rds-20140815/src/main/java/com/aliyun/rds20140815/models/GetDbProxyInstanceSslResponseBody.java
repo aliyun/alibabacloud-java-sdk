@@ -41,11 +41,11 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         @NameInMap("EndpointType")
         public String endpointType;
 
-        @NameInMap("CertCommonName")
-        public String certCommonName;
-
         @NameInMap("SslExpiredTime")
         public String sslExpiredTime;
+
+        @NameInMap("CertCommonName")
+        public String certCommonName;
 
         public static GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems build(java.util.Map<String, ?> map) throws Exception {
             GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems self = new GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems();
@@ -76,20 +76,20 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             return this.endpointType;
         }
 
-        public GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems setCertCommonName(String certCommonName) {
-            this.certCommonName = certCommonName;
-            return this;
-        }
-        public String getCertCommonName() {
-            return this.certCommonName;
-        }
-
         public GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems setSslExpiredTime(String sslExpiredTime) {
             this.sslExpiredTime = sslExpiredTime;
             return this;
         }
         public String getSslExpiredTime() {
             return this.sslExpiredTime;
+        }
+
+        public GetDbProxyInstanceSslResponseBodyDbProxyCertListItemsDbProxyCertListItems setCertCommonName(String certCommonName) {
+            this.certCommonName = certCommonName;
+            return this;
+        }
+        public String getCertCommonName() {
+            return this.certCommonName;
         }
 
     }

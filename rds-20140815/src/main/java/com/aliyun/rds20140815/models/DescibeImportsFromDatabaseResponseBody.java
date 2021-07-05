@@ -7,14 +7,14 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("Items")
     public DescibeImportsFromDatabaseResponseBodyItems items;
@@ -30,14 +30,6 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescibeImportsFromDatabaseResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
     }
 
     public DescibeImportsFromDatabaseResponseBody setPageNumber(Integer pageNumber) {
@@ -56,6 +48,14 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
+    public DescibeImportsFromDatabaseResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
     public DescibeImportsFromDatabaseResponseBody setItems(DescibeImportsFromDatabaseResponseBodyItems items) {
         this.items = items;
         return this;
@@ -65,24 +65,32 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
     }
 
     public static class DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB extends TeaModel {
+        @NameInMap("IncrementalImportingTime")
+        public String incrementalImportingTime;
+
         @NameInMap("ImportId")
         public Integer importId;
-
-        @NameInMap("ImportDataType")
-        public String importDataType;
 
         @NameInMap("ImportDataStatus")
         public String importDataStatus;
 
+        @NameInMap("ImportDataType")
+        public String importDataType;
+
         @NameInMap("ImportDataStatusDescription")
         public String importDataStatusDescription;
-
-        @NameInMap("IncrementalImportingTime")
-        public String incrementalImportingTime;
 
         public static DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB build(java.util.Map<String, ?> map) throws Exception {
             DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB self = new DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB();
             return TeaModel.build(map, self);
+        }
+
+        public DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB setIncrementalImportingTime(String incrementalImportingTime) {
+            this.incrementalImportingTime = incrementalImportingTime;
+            return this;
+        }
+        public String getIncrementalImportingTime() {
+            return this.incrementalImportingTime;
         }
 
         public DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB setImportId(Integer importId) {
@@ -93,14 +101,6 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             return this.importId;
         }
 
-        public DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB setImportDataType(String importDataType) {
-            this.importDataType = importDataType;
-            return this;
-        }
-        public String getImportDataType() {
-            return this.importDataType;
-        }
-
         public DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB setImportDataStatus(String importDataStatus) {
             this.importDataStatus = importDataStatus;
             return this;
@@ -109,20 +109,20 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             return this.importDataStatus;
         }
 
+        public DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB setImportDataType(String importDataType) {
+            this.importDataType = importDataType;
+            return this;
+        }
+        public String getImportDataType() {
+            return this.importDataType;
+        }
+
         public DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB setImportDataStatusDescription(String importDataStatusDescription) {
             this.importDataStatusDescription = importDataStatusDescription;
             return this;
         }
         public String getImportDataStatusDescription() {
             return this.importDataStatusDescription;
-        }
-
-        public DescibeImportsFromDatabaseResponseBodyItemsImportResultFromDB setIncrementalImportingTime(String incrementalImportingTime) {
-            this.incrementalImportingTime = incrementalImportingTime;
-            return this;
-        }
-        public String getIncrementalImportingTime() {
-            return this.incrementalImportingTime;
         }
 
     }

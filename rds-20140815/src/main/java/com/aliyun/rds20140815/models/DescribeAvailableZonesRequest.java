@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableZonesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -25,37 +19,21 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
-    @NameInMap("EvaluateResource")
-    public Boolean evaluateResource;
-
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
-
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     @NameInMap("DispenseMode")
     public String dispenseMode;
 
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
+    @NameInMap("Category")
+    public String category;
+
     public static DescribeAvailableZonesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableZonesRequest self = new DescribeAvailableZonesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAvailableZonesRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeAvailableZonesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
     }
 
     public DescribeAvailableZonesRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -98,22 +76,6 @@ public class DescribeAvailableZonesRequest extends TeaModel {
         return this.engineVersion;
     }
 
-    public DescribeAvailableZonesRequest setEvaluateResource(Boolean evaluateResource) {
-        this.evaluateResource = evaluateResource;
-        return this;
-    }
-    public Boolean getEvaluateResource() {
-        return this.evaluateResource;
-    }
-
-    public DescribeAvailableZonesRequest setInstanceChargeType(String instanceChargeType) {
-        this.instanceChargeType = instanceChargeType;
-        return this;
-    }
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
     public DescribeAvailableZonesRequest setCommodityCode(String commodityCode) {
         this.commodityCode = commodityCode;
         return this;
@@ -128,6 +90,22 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     }
     public String getDispenseMode() {
         return this.dispenseMode;
+    }
+
+    public DescribeAvailableZonesRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public DescribeAvailableZonesRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
 }

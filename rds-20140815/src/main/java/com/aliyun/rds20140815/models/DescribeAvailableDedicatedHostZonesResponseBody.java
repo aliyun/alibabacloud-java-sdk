@@ -32,23 +32,15 @@ public class DescribeAvailableDedicatedHostZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableDedicatedHostZonesResponseBodyZonesDedicatedHostZones extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeAvailableDedicatedHostZonesResponseBodyZonesDedicatedHostZones build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableDedicatedHostZonesResponseBodyZonesDedicatedHostZones self = new DescribeAvailableDedicatedHostZonesResponseBodyZonesDedicatedHostZones();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableDedicatedHostZonesResponseBodyZonesDedicatedHostZones setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeAvailableDedicatedHostZonesResponseBodyZonesDedicatedHostZones setDescription(String description) {
@@ -57,6 +49,14 @@ public class DescribeAvailableDedicatedHostZonesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeAvailableDedicatedHostZonesResponseBodyZonesDedicatedHostZones setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

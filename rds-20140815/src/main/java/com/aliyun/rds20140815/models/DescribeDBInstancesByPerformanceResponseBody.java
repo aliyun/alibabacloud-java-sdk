@@ -10,11 +10,11 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("Items")
     public DescribeDBInstancesByPerformanceResponseBodyItems items;
@@ -40,20 +40,20 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDBInstancesByPerformanceResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
     public DescribeDBInstancesByPerformanceResponseBody setPageRecordCount(Integer pageRecordCount) {
         this.pageRecordCount = pageRecordCount;
         return this;
     }
     public Integer getPageRecordCount() {
         return this.pageRecordCount;
+    }
+
+    public DescribeDBInstancesByPerformanceResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public DescribeDBInstancesByPerformanceResponseBody setItems(DescribeDBInstancesByPerformanceResponseBodyItems items) {
@@ -68,12 +68,6 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         @NameInMap("CPUUsage")
         public String CPUUsage;
 
-        @NameInMap("IOPSUsage")
-        public String IOPSUsage;
-
-        @NameInMap("DiskUsage")
-        public String diskUsage;
-
         @NameInMap("SessionUsage")
         public String sessionUsage;
 
@@ -82,6 +76,12 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
 
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
+
+        @NameInMap("IOPSUsage")
+        public String IOPSUsage;
+
+        @NameInMap("DiskUsage")
+        public String diskUsage;
 
         public static DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance self = new DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance();
@@ -94,22 +94,6 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
         public String getCPUUsage() {
             return this.CPUUsage;
-        }
-
-        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setIOPSUsage(String IOPSUsage) {
-            this.IOPSUsage = IOPSUsage;
-            return this;
-        }
-        public String getIOPSUsage() {
-            return this.IOPSUsage;
-        }
-
-        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setDiskUsage(String diskUsage) {
-            this.diskUsage = diskUsage;
-            return this;
-        }
-        public String getDiskUsage() {
-            return this.diskUsage;
         }
 
         public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setSessionUsage(String sessionUsage) {
@@ -134,6 +118,22 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
         public String getDBInstanceDescription() {
             return this.DBInstanceDescription;
+        }
+
+        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setIOPSUsage(String IOPSUsage) {
+            this.IOPSUsage = IOPSUsage;
+            return this;
+        }
+        public String getIOPSUsage() {
+            return this.IOPSUsage;
+        }
+
+        public DescribeDBInstancesByPerformanceResponseBodyItemsDBInstancePerformance setDiskUsage(String diskUsage) {
+            this.diskUsage = diskUsage;
+            return this;
+        }
+        public String getDiskUsage() {
+            return this.diskUsage;
         }
 
     }

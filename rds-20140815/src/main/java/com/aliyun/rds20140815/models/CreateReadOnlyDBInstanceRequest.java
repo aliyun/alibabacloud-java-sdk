@@ -82,6 +82,15 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     @NameInMap("InstructionSetArch")
     public String instructionSetArch;
 
+    @NameInMap("UsedTime")
+    public String usedTime;
+
+    @NameInMap("Period")
+    public String period;
+
+    @NameInMap("AutoRenew")
+    public String autoRenew;
+
     public static CreateReadOnlyDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateReadOnlyDBInstanceRequest self = new CreateReadOnlyDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -293,6 +302,30 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     }
     public String getInstructionSetArch() {
         return this.instructionSetArch;
+    }
+
+    public CreateReadOnlyDBInstanceRequest setUsedTime(String usedTime) {
+        this.usedTime = usedTime;
+        return this;
+    }
+    public String getUsedTime() {
+        return this.usedTime;
+    }
+
+    public CreateReadOnlyDBInstanceRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public CreateReadOnlyDBInstanceRequest setAutoRenew(String autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public String getAutoRenew() {
+        return this.autoRenew;
     }
 
 }

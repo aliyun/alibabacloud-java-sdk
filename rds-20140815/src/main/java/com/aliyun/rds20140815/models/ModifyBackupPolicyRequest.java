@@ -49,15 +49,6 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("HighSpaceUsageProtection")
     public String highSpaceUsageProtection;
 
-    @NameInMap("Duplication")
-    public String duplication;
-
-    @NameInMap("DuplicationContent")
-    public String duplicationContent;
-
-    @NameInMap("DuplicationLocation")
-    public String duplicationLocation;
-
     @NameInMap("LogBackupFrequency")
     public String logBackupFrequency;
 
@@ -71,7 +62,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String archiveBackupKeepPolicy;
 
     @NameInMap("ArchiveBackupKeepCount")
-    public String archiveBackupKeepCount;
+    public Integer archiveBackupKeepCount;
 
     @NameInMap("ReleasedKeepPolicy")
     public String releasedKeepPolicy;
@@ -84,6 +75,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
 
     @NameInMap("BackupInterval")
     public String backupInterval;
+
+    @NameInMap("BackupMethod")
+    public String backupMethod;
 
     public static ModifyBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupPolicyRequest self = new ModifyBackupPolicyRequest();
@@ -210,30 +204,6 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.highSpaceUsageProtection;
     }
 
-    public ModifyBackupPolicyRequest setDuplication(String duplication) {
-        this.duplication = duplication;
-        return this;
-    }
-    public String getDuplication() {
-        return this.duplication;
-    }
-
-    public ModifyBackupPolicyRequest setDuplicationContent(String duplicationContent) {
-        this.duplicationContent = duplicationContent;
-        return this;
-    }
-    public String getDuplicationContent() {
-        return this.duplicationContent;
-    }
-
-    public ModifyBackupPolicyRequest setDuplicationLocation(String duplicationLocation) {
-        this.duplicationLocation = duplicationLocation;
-        return this;
-    }
-    public String getDuplicationLocation() {
-        return this.duplicationLocation;
-    }
-
     public ModifyBackupPolicyRequest setLogBackupFrequency(String logBackupFrequency) {
         this.logBackupFrequency = logBackupFrequency;
         return this;
@@ -266,11 +236,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.archiveBackupKeepPolicy;
     }
 
-    public ModifyBackupPolicyRequest setArchiveBackupKeepCount(String archiveBackupKeepCount) {
+    public ModifyBackupPolicyRequest setArchiveBackupKeepCount(Integer archiveBackupKeepCount) {
         this.archiveBackupKeepCount = archiveBackupKeepCount;
         return this;
     }
-    public String getArchiveBackupKeepCount() {
+    public Integer getArchiveBackupKeepCount() {
         return this.archiveBackupKeepCount;
     }
 
@@ -304,6 +274,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public String getBackupInterval() {
         return this.backupInterval;
+    }
+
+    public ModifyBackupPolicyRequest setBackupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
+        return this;
+    }
+    public String getBackupMethod() {
+        return this.backupMethod;
     }
 
 }

@@ -7,11 +7,11 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HAConfig")
-    public String HAConfig;
-
     @NameInMap("ManualHATime")
     public String manualHATime;
+
+    @NameInMap("HAConfig")
+    public String HAConfig;
 
     public static DescribeHASwitchConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHASwitchConfigResponseBody self = new DescribeHASwitchConfigResponseBody();
@@ -26,20 +26,20 @@ public class DescribeHASwitchConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeHASwitchConfigResponseBody setHAConfig(String HAConfig) {
-        this.HAConfig = HAConfig;
-        return this;
-    }
-    public String getHAConfig() {
-        return this.HAConfig;
-    }
-
     public DescribeHASwitchConfigResponseBody setManualHATime(String manualHATime) {
         this.manualHATime = manualHATime;
         return this;
     }
     public String getManualHATime() {
         return this.manualHATime;
+    }
+
+    public DescribeHASwitchConfigResponseBody setHAConfig(String HAConfig) {
+        this.HAConfig = HAConfig;
+        return this;
+    }
+    public String getHAConfig() {
+        return this.HAConfig;
     }
 
 }

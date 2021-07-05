@@ -4,11 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("IpHostPairNum")
     public String ipHostPairNum;
@@ -21,20 +21,20 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
         return TeaModel.build(map, self);
     }
 
-    public DescribeDTCSecurityIpHostsForSQLServerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDTCSecurityIpHostsForSQLServerResponseBody setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDTCSecurityIpHostsForSQLServerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDTCSecurityIpHostsForSQLServerResponseBody setIpHostPairNum(String ipHostPairNum) {

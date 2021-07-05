@@ -13,9 +13,6 @@ public class DeleteDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -52,14 +49,6 @@ public class DeleteDBInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DeleteDBInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public DeleteDBInstanceRequest setDBInstanceId(String DBInstanceId) {

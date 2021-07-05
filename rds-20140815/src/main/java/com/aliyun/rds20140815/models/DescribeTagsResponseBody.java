@@ -51,11 +51,11 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyItemsTagInfos extends TeaModel {
-        @NameInMap("TagKey")
-        public String tagKey;
-
         @NameInMap("TagValue")
         public String tagValue;
+
+        @NameInMap("TagKey")
+        public String tagKey;
 
         @NameInMap("DBInstanceIds")
         public DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds;
@@ -65,20 +65,20 @@ public class DescribeTagsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeTagsResponseBodyItemsTagInfos setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
         public DescribeTagsResponseBodyItemsTagInfos setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+        public DescribeTagsResponseBodyItemsTagInfos setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
         }
 
         public DescribeTagsResponseBodyItemsTagInfos setDBInstanceIds(DescribeTagsResponseBodyItemsTagInfosDBInstanceIds DBInstanceIds) {

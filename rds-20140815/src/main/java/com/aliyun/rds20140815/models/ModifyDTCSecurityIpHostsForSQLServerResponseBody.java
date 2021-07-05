@@ -4,29 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("DTCSetResult")
-    public String DTCSetResult;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("DTCSetResult")
+    public String DTCSetResult;
+
     public static ModifyDTCSecurityIpHostsForSQLServerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDTCSecurityIpHostsForSQLServerResponseBody self = new ModifyDTCSecurityIpHostsForSQLServerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDTCSecurityIpHostsForSQLServerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ModifyDTCSecurityIpHostsForSQLServerResponseBody setDBInstanceId(String DBInstanceId) {
@@ -37,12 +29,12 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public ModifyDTCSecurityIpHostsForSQLServerResponseBody setDTCSetResult(String DTCSetResult) {
-        this.DTCSetResult = DTCSetResult;
+    public ModifyDTCSecurityIpHostsForSQLServerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getDTCSetResult() {
-        return this.DTCSetResult;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ModifyDTCSecurityIpHostsForSQLServerResponseBody setTaskId(String taskId) {
@@ -51,6 +43,14 @@ public class ModifyDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public ModifyDTCSecurityIpHostsForSQLServerResponseBody setDTCSetResult(String DTCSetResult) {
+        this.DTCSetResult = DTCSetResult;
+        return this;
+    }
+    public String getDTCSetResult() {
+        return this.DTCSetResult;
     }
 
 }

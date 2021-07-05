@@ -31,23 +31,11 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     @NameInMap("CrossBackupRegion")
     public String crossBackupRegion;
 
-    @NameInMap("StorageOwner")
-    public String storageOwner;
-
-    @NameInMap("StorageType")
-    public String storageType;
-
-    @NameInMap("Endpoint")
-    public String endpoint;
-
     @NameInMap("RetentType")
     public Integer retentType;
 
     @NameInMap("Retention")
     public Integer retention;
-
-    @NameInMap("RelService")
-    public String relService;
 
     public static ModifyInstanceCrossBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceCrossBackupPolicyRequest self = new ModifyInstanceCrossBackupPolicyRequest();
@@ -126,30 +114,6 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
         return this.crossBackupRegion;
     }
 
-    public ModifyInstanceCrossBackupPolicyRequest setStorageOwner(String storageOwner) {
-        this.storageOwner = storageOwner;
-        return this;
-    }
-    public String getStorageOwner() {
-        return this.storageOwner;
-    }
-
-    public ModifyInstanceCrossBackupPolicyRequest setStorageType(String storageType) {
-        this.storageType = storageType;
-        return this;
-    }
-    public String getStorageType() {
-        return this.storageType;
-    }
-
-    public ModifyInstanceCrossBackupPolicyRequest setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-        return this;
-    }
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
     public ModifyInstanceCrossBackupPolicyRequest setRetentType(Integer retentType) {
         this.retentType = retentType;
         return this;
@@ -164,14 +128,6 @@ public class ModifyInstanceCrossBackupPolicyRequest extends TeaModel {
     }
     public Integer getRetention() {
         return this.retention;
-    }
-
-    public ModifyInstanceCrossBackupPolicyRequest setRelService(String relService) {
-        this.relService = relService;
-        return this;
-    }
-    public String getRelService() {
-        return this.relService;
     }
 
 }

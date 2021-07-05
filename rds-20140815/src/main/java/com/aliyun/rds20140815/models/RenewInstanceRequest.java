@@ -25,9 +25,6 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("AutoPay")
     public String autoPay;
 
-    @NameInMap("BusinessInfo")
-    public String businessInfo;
-
     public static RenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceRequest self = new RenewInstanceRequest();
         return TeaModel.build(map, self);
@@ -87,14 +84,6 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public String getAutoPay() {
         return this.autoPay;
-    }
-
-    public RenewInstanceRequest setBusinessInfo(String businessInfo) {
-        this.businessInfo = businessInfo;
-        return this;
-    }
-    public String getBusinessInfo() {
-        return this.businessInfo;
     }
 
 }

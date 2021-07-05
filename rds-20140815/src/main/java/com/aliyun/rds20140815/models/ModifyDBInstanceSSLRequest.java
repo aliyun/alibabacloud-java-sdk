@@ -25,6 +25,33 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("SSLEnabled")
     public Integer SSLEnabled;
 
+    @NameInMap("CAType")
+    public String CAType;
+
+    @NameInMap("ServerCert")
+    public String serverCert;
+
+    @NameInMap("ServerKey")
+    public String serverKey;
+
+    @NameInMap("ClientCAEnabled")
+    public Integer clientCAEnabled;
+
+    @NameInMap("ClientCACert")
+    public String clientCACert;
+
+    @NameInMap("ClientCrlEnabled")
+    public Integer clientCrlEnabled;
+
+    @NameInMap("ClientCertRevocationList")
+    public String clientCertRevocationList;
+
+    @NameInMap("ACL")
+    public String ACL;
+
+    @NameInMap("ReplicationACL")
+    public String replicationACL;
+
     public static ModifyDBInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSSLRequest self = new ModifyDBInstanceSSLRequest();
         return TeaModel.build(map, self);
@@ -84,6 +111,78 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     }
     public Integer getSSLEnabled() {
         return this.SSLEnabled;
+    }
+
+    public ModifyDBInstanceSSLRequest setCAType(String CAType) {
+        this.CAType = CAType;
+        return this;
+    }
+    public String getCAType() {
+        return this.CAType;
+    }
+
+    public ModifyDBInstanceSSLRequest setServerCert(String serverCert) {
+        this.serverCert = serverCert;
+        return this;
+    }
+    public String getServerCert() {
+        return this.serverCert;
+    }
+
+    public ModifyDBInstanceSSLRequest setServerKey(String serverKey) {
+        this.serverKey = serverKey;
+        return this;
+    }
+    public String getServerKey() {
+        return this.serverKey;
+    }
+
+    public ModifyDBInstanceSSLRequest setClientCAEnabled(Integer clientCAEnabled) {
+        this.clientCAEnabled = clientCAEnabled;
+        return this;
+    }
+    public Integer getClientCAEnabled() {
+        return this.clientCAEnabled;
+    }
+
+    public ModifyDBInstanceSSLRequest setClientCACert(String clientCACert) {
+        this.clientCACert = clientCACert;
+        return this;
+    }
+    public String getClientCACert() {
+        return this.clientCACert;
+    }
+
+    public ModifyDBInstanceSSLRequest setClientCrlEnabled(Integer clientCrlEnabled) {
+        this.clientCrlEnabled = clientCrlEnabled;
+        return this;
+    }
+    public Integer getClientCrlEnabled() {
+        return this.clientCrlEnabled;
+    }
+
+    public ModifyDBInstanceSSLRequest setClientCertRevocationList(String clientCertRevocationList) {
+        this.clientCertRevocationList = clientCertRevocationList;
+        return this;
+    }
+    public String getClientCertRevocationList() {
+        return this.clientCertRevocationList;
+    }
+
+    public ModifyDBInstanceSSLRequest setACL(String ACL) {
+        this.ACL = ACL;
+        return this;
+    }
+    public String getACL() {
+        return this.ACL;
+    }
+
+    public ModifyDBInstanceSSLRequest setReplicationACL(String replicationACL) {
+        this.replicationACL = replicationACL;
+        return this;
+    }
+    public String getReplicationACL() {
+        return this.replicationACL;
     }
 
 }

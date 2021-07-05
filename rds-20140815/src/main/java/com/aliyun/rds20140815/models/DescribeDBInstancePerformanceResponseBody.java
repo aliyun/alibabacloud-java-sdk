@@ -4,8 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -13,11 +16,8 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("PerformanceKeys")
     public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
@@ -27,12 +27,20 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstancePerformanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBInstancePerformanceResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeDBInstancePerformanceResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDBInstancePerformanceResponseBody setDBInstanceId(String DBInstanceId) {
@@ -51,20 +59,12 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         return this.engine;
     }
 
-    public DescribeDBInstancePerformanceResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeDBInstancePerformanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeDBInstancePerformanceResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDBInstancePerformanceResponseBody setPerformanceKeys(DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys) {
@@ -76,23 +76,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Date")
         public String date;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue self = new DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue setDate(String date) {
@@ -101,6 +93,14 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
         public String getDate() {
             return this.date;
+        }
+
+        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -128,11 +128,11 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("Unit")
-        public String unit;
-
         @NameInMap("ValueFormat")
         public String valueFormat;
+
+        @NameInMap("Unit")
+        public String unit;
 
         @NameInMap("Values")
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValues values;
@@ -150,20 +150,20 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setUnit(String unit) {
-            this.unit = unit;
-            return this;
-        }
-        public String getUnit() {
-            return this.unit;
-        }
-
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setValueFormat(String valueFormat) {
             this.valueFormat = valueFormat;
             return this;
         }
         public String getValueFormat() {
             return this.valueFormat;
+        }
+
+        public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey setValues(DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyValues values) {

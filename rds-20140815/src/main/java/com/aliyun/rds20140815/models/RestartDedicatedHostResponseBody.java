@@ -4,26 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RestartDedicatedHostResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DedicatedHostId")
+    public String dedicatedHostId;
 
     @NameInMap("TaskId")
     public Integer taskId;
 
-    @NameInMap("DedicatedHostId")
-    public String dedicatedHostId;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RestartDedicatedHostResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RestartDedicatedHostResponseBody self = new RestartDedicatedHostResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RestartDedicatedHostResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RestartDedicatedHostResponseBody setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
     }
 
     public RestartDedicatedHostResponseBody setTaskId(Integer taskId) {
@@ -34,12 +34,12 @@ public class RestartDedicatedHostResponseBody extends TeaModel {
         return this.taskId;
     }
 
-    public RestartDedicatedHostResponseBody setDedicatedHostId(String dedicatedHostId) {
-        this.dedicatedHostId = dedicatedHostId;
+    public RestartDedicatedHostResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getDedicatedHostId() {
-        return this.dedicatedHostId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

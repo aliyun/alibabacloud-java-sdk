@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -70,9 +64,6 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("UsedTime")
     public String usedTime;
 
@@ -84,9 +75,6 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
-
-    @NameInMap("TunnelId")
-    public String tunnelId;
 
     @NameInMap("BusinessInfo")
     public String businessInfo;
@@ -136,25 +124,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("StorageUpperBound")
     public Integer storageUpperBound;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    @NameInMap("UserBackupId")
+    public String userBackupId;
+
     public static CreateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceRequest self = new CreateDBInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDBInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateDBInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
     }
 
     public CreateDBInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -317,14 +295,6 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.privateIpAddress;
     }
 
-    public CreateDBInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public CreateDBInstanceRequest setUsedTime(String usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -355,14 +325,6 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getDBInstanceStorageType() {
         return this.DBInstanceStorageType;
-    }
-
-    public CreateDBInstanceRequest setTunnelId(String tunnelId) {
-        this.tunnelId = tunnelId;
-        return this;
-    }
-    public String getTunnelId() {
-        return this.tunnelId;
     }
 
     public CreateDBInstanceRequest setBusinessInfo(String businessInfo) {
@@ -491,6 +453,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public Integer getStorageUpperBound() {
         return this.storageUpperBound;
+    }
+
+    public CreateDBInstanceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public CreateDBInstanceRequest setUserBackupId(String userBackupId) {
+        this.userBackupId = userBackupId;
+        return this;
+    }
+    public String getUserBackupId() {
+        return this.userBackupId;
     }
 
 }

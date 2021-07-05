@@ -31,9 +31,6 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
-    @NameInMap("Resource")
-    public String resource;
-
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
@@ -112,14 +109,6 @@ public class TransformDBInstancePayTypeRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
-    }
-
-    public TransformDBInstancePayTypeRequest setResource(String resource) {
-        this.resource = resource;
-        return this;
-    }
-    public String getResource() {
-        return this.resource;
     }
 
     public TransformDBInstancePayTypeRequest setBusinessInfo(String businessInfo) {

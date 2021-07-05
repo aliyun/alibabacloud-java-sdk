@@ -13,9 +13,6 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -52,14 +49,6 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ModifyDBInstanceDescriptionRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public ModifyDBInstanceDescriptionRequest setDBInstanceId(String DBInstanceId) {
