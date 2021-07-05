@@ -13,17 +13,11 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("SQLCollectorStatus")
     public String SQLCollectorStatus;
-
-    @NameInMap("StoragePeriod")
-    public Integer storagePeriod;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -60,14 +54,6 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySQLCollectorPolicyRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public ModifySQLCollectorPolicyRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
@@ -82,14 +68,6 @@ public class ModifySQLCollectorPolicyRequest extends TeaModel {
     }
     public String getSQLCollectorStatus() {
         return this.SQLCollectorStatus;
-    }
-
-    public ModifySQLCollectorPolicyRequest setStoragePeriod(Integer storagePeriod) {
-        this.storagePeriod = storagePeriod;
-        return this;
-    }
-    public Integer getStoragePeriod() {
-        return this.storagePeriod;
     }
 
     public ModifySQLCollectorPolicyRequest setOwnerAccount(String ownerAccount) {

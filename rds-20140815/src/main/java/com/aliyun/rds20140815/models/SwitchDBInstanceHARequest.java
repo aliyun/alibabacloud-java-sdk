@@ -19,9 +19,6 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
-    @NameInMap("Operation")
-    public String operation;
-
     @NameInMap("Force")
     public String force;
 
@@ -74,14 +71,6 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
-    }
-
-    public SwitchDBInstanceHARequest setOperation(String operation) {
-        this.operation = operation;
-        return this;
-    }
-    public String getOperation() {
-        return this.operation;
     }
 
     public SwitchDBInstanceHARequest setForce(String force) {

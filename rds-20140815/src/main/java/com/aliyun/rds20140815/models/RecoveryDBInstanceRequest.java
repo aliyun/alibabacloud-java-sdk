@@ -4,26 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RecoveryDBInstanceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
-
-    @NameInMap("DBInstanceDescription")
-    public String DBInstanceDescription;
 
     @NameInMap("PayType")
     public String payType;
@@ -55,17 +43,11 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("UsedTime")
     public String usedTime;
 
     @NameInMap("Period")
     public String period;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -75,36 +57,12 @@ public class RecoveryDBInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RecoveryDBInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public RecoveryDBInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
     public RecoveryDBInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public RecoveryDBInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public RecoveryDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {
@@ -121,14 +79,6 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     }
     public Integer getDBInstanceStorage() {
         return this.DBInstanceStorage;
-    }
-
-    public RecoveryDBInstanceRequest setDBInstanceDescription(String DBInstanceDescription) {
-        this.DBInstanceDescription = DBInstanceDescription;
-        return this;
-    }
-    public String getDBInstanceDescription() {
-        return this.DBInstanceDescription;
     }
 
     public RecoveryDBInstanceRequest setPayType(String payType) {
@@ -211,14 +161,6 @@ public class RecoveryDBInstanceRequest extends TeaModel {
         return this.privateIpAddress;
     }
 
-    public RecoveryDBInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public RecoveryDBInstanceRequest setUsedTime(String usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -233,14 +175,6 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
-    }
-
-    public RecoveryDBInstanceRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public RecoveryDBInstanceRequest setDBInstanceStorageType(String DBInstanceStorageType) {

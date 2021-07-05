@@ -4,8 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class TransformDBInstancePayTypeResponseBody extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ExpiredTime")
+    public String expiredTime;
 
     @NameInMap("OrderId")
     public Long orderId;
@@ -13,15 +19,17 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
-    @NameInMap("ExpiredTime")
-    public String expiredTime;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
     public static TransformDBInstancePayTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TransformDBInstancePayTypeResponseBody self = new TransformDBInstancePayTypeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public TransformDBInstancePayTypeResponseBody setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
     public TransformDBInstancePayTypeResponseBody setRequestId(String requestId) {
@@ -30,6 +38,14 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public TransformDBInstancePayTypeResponseBody setExpiredTime(String expiredTime) {
+        this.expiredTime = expiredTime;
+        return this;
+    }
+    public String getExpiredTime() {
+        return this.expiredTime;
     }
 
     public TransformDBInstancePayTypeResponseBody setOrderId(Long orderId) {
@@ -46,22 +62,6 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
-    }
-
-    public TransformDBInstancePayTypeResponseBody setExpiredTime(String expiredTime) {
-        this.expiredTime = expiredTime;
-        return this;
-    }
-    public String getExpiredTime() {
-        return this.expiredTime;
-    }
-
-    public TransformDBInstancePayTypeResponseBody setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
     }
 
 }

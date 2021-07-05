@@ -34,12 +34,6 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     @NameInMap("BackupSetId")
     public String backupSetId;
 
-    @NameInMap("BackupSetType")
-    public String backupSetType;
-
-    @NameInMap("BackupSetRegion")
-    public String backupSetRegion;
-
     @NameInMap("RestoreTime")
     public String restoreTime;
 
@@ -48,15 +42,6 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
 
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
-
-    @NameInMap("UserBakSetURL")
-    public String userBakSetURL;
-
-    @NameInMap("BakSetName")
-    public String bakSetName;
-
-    @NameInMap("HostType")
-    public String hostType;
 
     @NameInMap("BinlogName")
     public String binlogName;
@@ -152,22 +137,6 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
         return this.backupSetId;
     }
 
-    public CheckCreateDdrDBInstanceRequest setBackupSetType(String backupSetType) {
-        this.backupSetType = backupSetType;
-        return this;
-    }
-    public String getBackupSetType() {
-        return this.backupSetType;
-    }
-
-    public CheckCreateDdrDBInstanceRequest setBackupSetRegion(String backupSetRegion) {
-        this.backupSetRegion = backupSetRegion;
-        return this;
-    }
-    public String getBackupSetRegion() {
-        return this.backupSetRegion;
-    }
-
     public CheckCreateDdrDBInstanceRequest setRestoreTime(String restoreTime) {
         this.restoreTime = restoreTime;
         return this;
@@ -190,30 +159,6 @@ public class CheckCreateDdrDBInstanceRequest extends TeaModel {
     }
     public String getSourceDBInstanceName() {
         return this.sourceDBInstanceName;
-    }
-
-    public CheckCreateDdrDBInstanceRequest setUserBakSetURL(String userBakSetURL) {
-        this.userBakSetURL = userBakSetURL;
-        return this;
-    }
-    public String getUserBakSetURL() {
-        return this.userBakSetURL;
-    }
-
-    public CheckCreateDdrDBInstanceRequest setBakSetName(String bakSetName) {
-        this.bakSetName = bakSetName;
-        return this;
-    }
-    public String getBakSetName() {
-        return this.bakSetName;
-    }
-
-    public CheckCreateDdrDBInstanceRequest setHostType(String hostType) {
-        this.hostType = hostType;
-        return this;
-    }
-    public String getHostType() {
-        return this.hostType;
     }
 
     public CheckCreateDdrDBInstanceRequest setBinlogName(String binlogName) {

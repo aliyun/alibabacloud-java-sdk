@@ -92,6 +92,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesDatabase extends TeaModel {
+        @NameInMap("DBDescription")
+        public String DBDescription;
+
+        @NameInMap("DBStatus")
+        public String DBStatus;
+
         @NameInMap("DBName")
         public String DBName;
 
@@ -101,14 +107,8 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("Engine")
         public String engine;
 
-        @NameInMap("DBStatus")
-        public String DBStatus;
-
         @NameInMap("CharacterSetName")
         public String characterSetName;
-
-        @NameInMap("DBDescription")
-        public String DBDescription;
 
         @NameInMap("Accounts")
         public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts;
@@ -116,6 +116,22 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public static DescribeDatabasesResponseBodyDatabasesDatabase build(java.util.Map<String, ?> map) throws Exception {
             DescribeDatabasesResponseBodyDatabasesDatabase self = new DescribeDatabasesResponseBodyDatabasesDatabase();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setDBDescription(String DBDescription) {
+            this.DBDescription = DBDescription;
+            return this;
+        }
+        public String getDBDescription() {
+            return this.DBDescription;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setDBStatus(String DBStatus) {
+            this.DBStatus = DBStatus;
+            return this;
+        }
+        public String getDBStatus() {
+            return this.DBStatus;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabase setDBName(String DBName) {
@@ -142,28 +158,12 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             return this.engine;
         }
 
-        public DescribeDatabasesResponseBodyDatabasesDatabase setDBStatus(String DBStatus) {
-            this.DBStatus = DBStatus;
-            return this;
-        }
-        public String getDBStatus() {
-            return this.DBStatus;
-        }
-
         public DescribeDatabasesResponseBodyDatabasesDatabase setCharacterSetName(String characterSetName) {
             this.characterSetName = characterSetName;
             return this;
         }
         public String getCharacterSetName() {
             return this.characterSetName;
-        }
-
-        public DescribeDatabasesResponseBodyDatabasesDatabase setDBDescription(String DBDescription) {
-            this.DBDescription = DBDescription;
-            return this;
-        }
-        public String getDBDescription() {
-            return this.DBDescription;
         }
 
         public DescribeDatabasesResponseBodyDatabasesDatabase setAccounts(DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts) {

@@ -4,32 +4,24 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("OrderId")
-    public String orderId;
-
-    @NameInMap("ConnectionString")
-    public String connectionString;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Port")
     public String port;
 
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
+    @NameInMap("OrderId")
+    public String orderId;
+
     public static CreateReadOnlyDBInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateReadOnlyDBInstanceResponseBody self = new CreateReadOnlyDBInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateReadOnlyDBInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateReadOnlyDBInstanceResponseBody setDBInstanceId(String DBInstanceId) {
@@ -40,12 +32,20 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public CreateReadOnlyDBInstanceResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
+    public CreateReadOnlyDBInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateReadOnlyDBInstanceResponseBody setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
     }
 
     public CreateReadOnlyDBInstanceResponseBody setConnectionString(String connectionString) {
@@ -56,12 +56,12 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         return this.connectionString;
     }
 
-    public CreateReadOnlyDBInstanceResponseBody setPort(String port) {
-        this.port = port;
+    public CreateReadOnlyDBInstanceResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
-    public String getPort() {
-        return this.port;
+    public String getOrderId() {
+        return this.orderId;
     }
 
 }

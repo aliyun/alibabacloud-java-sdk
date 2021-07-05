@@ -4,26 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class MigrateSecurityIPModeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("SecurityIPMode")
+    public String securityIPMode;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("SecurityIPMode")
-    public String securityIPMode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static MigrateSecurityIPModeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MigrateSecurityIPModeResponseBody self = new MigrateSecurityIPModeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public MigrateSecurityIPModeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public MigrateSecurityIPModeResponseBody setSecurityIPMode(String securityIPMode) {
+        this.securityIPMode = securityIPMode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getSecurityIPMode() {
+        return this.securityIPMode;
     }
 
     public MigrateSecurityIPModeResponseBody setDBInstanceId(String DBInstanceId) {
@@ -34,12 +34,12 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public MigrateSecurityIPModeResponseBody setSecurityIPMode(String securityIPMode) {
-        this.securityIPMode = securityIPMode;
+    public MigrateSecurityIPModeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getSecurityIPMode() {
-        return this.securityIPMode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

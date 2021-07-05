@@ -10,11 +10,11 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("Items")
     public DescribeDBInstancesByExpireTimeResponseBodyItems items;
@@ -40,20 +40,20 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDBInstancesByExpireTimeResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
     public DescribeDBInstancesByExpireTimeResponseBody setPageRecordCount(Integer pageRecordCount) {
         this.pageRecordCount = pageRecordCount;
         return this;
     }
     public Integer getPageRecordCount() {
         return this.pageRecordCount;
+    }
+
+    public DescribeDBInstancesByExpireTimeResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public DescribeDBInstancesByExpireTimeResponseBody setItems(DescribeDBInstancesByExpireTimeResponseBodyItems items) {
@@ -65,43 +65,27 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime extends TeaModel {
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
-
-        @NameInMap("DBInstanceDescription")
-        public String DBInstanceDescription;
-
         @NameInMap("ExpireTime")
         public String expireTime;
-
-        @NameInMap("DBInstanceStatus")
-        public String DBInstanceStatus;
-
-        @NameInMap("LockMode")
-        public String lockMode;
 
         @NameInMap("PayType")
         public String payType;
 
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
+        @NameInMap("DBInstanceStatus")
+        public String DBInstanceStatus;
+
+        @NameInMap("DBInstanceDescription")
+        public String DBInstanceDescription;
+
+        @NameInMap("LockMode")
+        public String lockMode;
+
         public static DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime self = new DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
-        }
-
-        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setDBInstanceDescription(String DBInstanceDescription) {
-            this.DBInstanceDescription = DBInstanceDescription;
-            return this;
-        }
-        public String getDBInstanceDescription() {
-            return this.DBInstanceDescription;
         }
 
         public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setExpireTime(String expireTime) {
@@ -112,6 +96,22 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             return this.expireTime;
         }
 
+        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
         public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setDBInstanceStatus(String DBInstanceStatus) {
             this.DBInstanceStatus = DBInstanceStatus;
             return this;
@@ -120,20 +120,20 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             return this.DBInstanceStatus;
         }
 
+        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
+            return this;
+        }
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
+        }
+
         public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setLockMode(String lockMode) {
             this.lockMode = lockMode;
             return this;
         }
         public String getLockMode() {
             return this.lockMode;
-        }
-
-        public DescribeDBInstancesByExpireTimeResponseBodyItemsDBInstanceExpireTime setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
         }
 
     }

@@ -28,12 +28,6 @@ public class RestoreDdrTableRequest extends TeaModel {
     @NameInMap("BackupId")
     public String backupId;
 
-    @NameInMap("BackupSetType")
-    public String backupSetType;
-
-    @NameInMap("BackupSetRegion")
-    public String backupSetRegion;
-
     @NameInMap("RestoreTime")
     public String restoreTime;
 
@@ -42,12 +36,6 @@ public class RestoreDdrTableRequest extends TeaModel {
 
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
-
-    @NameInMap("UserBakSetURL")
-    public String userBakSetURL;
-
-    @NameInMap("BakSetName")
-    public String bakSetName;
 
     @NameInMap("TableMeta")
     public String tableMeta;
@@ -121,22 +109,6 @@ public class RestoreDdrTableRequest extends TeaModel {
         return this.backupId;
     }
 
-    public RestoreDdrTableRequest setBackupSetType(String backupSetType) {
-        this.backupSetType = backupSetType;
-        return this;
-    }
-    public String getBackupSetType() {
-        return this.backupSetType;
-    }
-
-    public RestoreDdrTableRequest setBackupSetRegion(String backupSetRegion) {
-        this.backupSetRegion = backupSetRegion;
-        return this;
-    }
-    public String getBackupSetRegion() {
-        return this.backupSetRegion;
-    }
-
     public RestoreDdrTableRequest setRestoreTime(String restoreTime) {
         this.restoreTime = restoreTime;
         return this;
@@ -159,22 +131,6 @@ public class RestoreDdrTableRequest extends TeaModel {
     }
     public String getSourceDBInstanceName() {
         return this.sourceDBInstanceName;
-    }
-
-    public RestoreDdrTableRequest setUserBakSetURL(String userBakSetURL) {
-        this.userBakSetURL = userBakSetURL;
-        return this;
-    }
-    public String getUserBakSetURL() {
-        return this.userBakSetURL;
-    }
-
-    public RestoreDdrTableRequest setBakSetName(String bakSetName) {
-        this.bakSetName = bakSetName;
-        return this;
-    }
-    public String getBakSetName() {
-        return this.bakSetName;
     }
 
     public RestoreDdrTableRequest setTableMeta(String tableMeta) {

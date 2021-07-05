@@ -10,11 +10,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("Items")
     public DescribeDBInstancesResponseBodyItems items;
@@ -40,20 +40,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDBInstancesResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
     public DescribeDBInstancesResponseBody setPageRecordCount(Integer pageRecordCount) {
         this.pageRecordCount = pageRecordCount;
         return this;
     }
     public Integer getPageRecordCount() {
         return this.pageRecordCount;
+    }
+
+    public DescribeDBInstancesResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public DescribeDBInstancesResponseBody setItems(DescribeDBInstancesResponseBodyItems items) {
@@ -103,35 +103,32 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstance extends TeaModel {
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
+        @NameInMap("VpcId")
+        public String vpcId;
 
-        @NameInMap("DBInstanceDescription")
-        public String DBInstanceDescription;
+        @NameInMap("DedicatedHostIdForLog")
+        public String dedicatedHostIdForLog;
+
+        @NameInMap("TempDBInstanceId")
+        public String tempDBInstanceId;
+
+        @NameInMap("DBInstanceStorageType")
+        public String DBInstanceStorageType;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("PayType")
         public String payType;
 
-        @NameInMap("DBInstanceType")
-        public String DBInstanceType;
+        @NameInMap("DedicatedHostNameForLog")
+        public String dedicatedHostNameForLog;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("MutriORsignle")
+        public Boolean mutriORsignle;
 
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("DestroyTime")
-        public String destroyTime;
-
-        @NameInMap("DBInstanceStatus")
-        public String DBInstanceStatus;
-
-        @NameInMap("Engine")
-        public String engine;
-
-        @NameInMap("DBInstanceNetType")
-        public String DBInstanceNetType;
+        @NameInMap("DedicatedHostGroupName")
+        public String dedicatedHostGroupName;
 
         @NameInMap("ConnectionMode")
         public String connectionMode;
@@ -139,92 +136,107 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("LockMode")
         public String lockMode;
 
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("DBInstanceStorageType")
-        public String DBInstanceStorageType;
-
-        @NameInMap("DBInstanceClass")
-        public String DBInstanceClass;
-
-        @NameInMap("InstanceNetworkType")
-        public String instanceNetworkType;
-
-        @NameInMap("VpcCloudInstanceId")
-        public String vpcCloudInstanceId;
-
-        @NameInMap("LockReason")
-        public String lockReason;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("MutriORsignle")
-        public Boolean mutriORsignle;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("EngineVersion")
         public String engineVersion;
 
-        @NameInMap("GuardDBInstanceId")
-        public String guardDBInstanceId;
-
-        @NameInMap("TempDBInstanceId")
-        public String tempDBInstanceId;
-
-        @NameInMap("MasterInstanceId")
-        public String masterInstanceId;
-
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("AutoUpgradeMinorVersion")
-        public String autoUpgradeMinorVersion;
+        @NameInMap("GeneralGroupName")
+        public String generalGroupName;
 
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
-        @NameInMap("DedicatedHostIdForMaster")
-        public String dedicatedHostIdForMaster;
+        @NameInMap("VpcName")
+        public String vpcName;
 
-        @NameInMap("DedicatedHostIdForSlave")
-        public String dedicatedHostIdForSlave;
-
-        @NameInMap("DedicatedHostIdForLog")
-        public String dedicatedHostIdForLog;
-
-        @NameInMap("DedicatedHostNameForMaster")
-        public String dedicatedHostNameForMaster;
-
-        @NameInMap("DedicatedHostNameForSlave")
-        public String dedicatedHostNameForSlave;
-
-        @NameInMap("DedicatedHostNameForLog")
-        public String dedicatedHostNameForLog;
-
-        @NameInMap("DedicatedHostZoneIdForMaster")
-        public String dedicatedHostZoneIdForMaster;
+        @NameInMap("VpcCloudInstanceId")
+        public String vpcCloudInstanceId;
 
         @NameInMap("DedicatedHostZoneIdForSlave")
         public String dedicatedHostZoneIdForSlave;
 
+        @NameInMap("DedicatedHostZoneIdForMaster")
+        public String dedicatedHostZoneIdForMaster;
+
+        @NameInMap("ConnectionString")
+        public String connectionString;
+
+        @NameInMap("Tips")
+        public String tips;
+
+        @NameInMap("InstanceNetworkType")
+        public String instanceNetworkType;
+
         @NameInMap("DedicatedHostZoneIdForLog")
         public String dedicatedHostZoneIdForLog;
 
-        @NameInMap("VpcName")
-        public String vpcName;
+        @NameInMap("MasterInstanceId")
+        public String masterInstanceId;
 
-        @NameInMap("DedicatedHostGroupName")
-        public String dedicatedHostGroupName;
+        @NameInMap("DedicatedHostNameForSlave")
+        public String dedicatedHostNameForSlave;
+
+        @NameInMap("DBInstanceDescription")
+        public String DBInstanceDescription;
+
+        @NameInMap("AutoUpgradeMinorVersion")
+        public String autoUpgradeMinorVersion;
+
+        @NameInMap("DBInstanceNetType")
+        public String DBInstanceNetType;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("DBInstanceType")
+        public String DBInstanceType;
+
+        @NameInMap("DestroyTime")
+        public String destroyTime;
+
+        @NameInMap("LockReason")
+        public String lockReason;
+
+        @NameInMap("DBInstanceStatus")
+        public String DBInstanceStatus;
+
+        @NameInMap("DedicatedHostNameForMaster")
+        public String dedicatedHostNameForMaster;
+
+        @NameInMap("GuardDBInstanceId")
+        public String guardDBInstanceId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("DedicatedHostIdForSlave")
+        public String dedicatedHostIdForSlave;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("TipsLevel")
+        public Integer tipsLevel;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
+        @NameInMap("DedicatedHostIdForMaster")
+        public String dedicatedHostIdForMaster;
+
+        @NameInMap("DBInstanceClass")
+        public String DBInstanceClass;
+
+        @NameInMap("Engine")
+        public String engine;
 
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;
@@ -234,20 +246,44 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
+        public String getVpcId() {
+            return this.vpcId;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceDescription(String DBInstanceDescription) {
-            this.DBInstanceDescription = DBInstanceDescription;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostIdForLog(String dedicatedHostIdForLog) {
+            this.dedicatedHostIdForLog = dedicatedHostIdForLog;
             return this;
         }
-        public String getDBInstanceDescription() {
-            return this.DBInstanceDescription;
+        public String getDedicatedHostIdForLog() {
+            return this.dedicatedHostIdForLog;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setTempDBInstanceId(String tempDBInstanceId) {
+            this.tempDBInstanceId = tempDBInstanceId;
+            return this;
+        }
+        public String getTempDBInstanceId() {
+            return this.tempDBInstanceId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceStorageType(String DBInstanceStorageType) {
+            this.DBInstanceStorageType = DBInstanceStorageType;
+            return this;
+        }
+        public String getDBInstanceStorageType() {
+            return this.DBInstanceStorageType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setPayType(String payType) {
@@ -258,60 +294,28 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.payType;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceType(String DBInstanceType) {
-            this.DBInstanceType = DBInstanceType;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostNameForLog(String dedicatedHostNameForLog) {
+            this.dedicatedHostNameForLog = dedicatedHostNameForLog;
             return this;
         }
-        public String getDBInstanceType() {
-            return this.DBInstanceType;
+        public String getDedicatedHostNameForLog() {
+            return this.dedicatedHostNameForLog;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setMutriORsignle(Boolean mutriORsignle) {
+            this.mutriORsignle = mutriORsignle;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public Boolean getMutriORsignle() {
+            return this.mutriORsignle;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostGroupName(String dedicatedHostGroupName) {
+            this.dedicatedHostGroupName = dedicatedHostGroupName;
             return this;
         }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDestroyTime(String destroyTime) {
-            this.destroyTime = destroyTime;
-            return this;
-        }
-        public String getDestroyTime() {
-            return this.destroyTime;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceStatus(String DBInstanceStatus) {
-            this.DBInstanceStatus = DBInstanceStatus;
-            return this;
-        }
-        public String getDBInstanceStatus() {
-            return this.DBInstanceStatus;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceNetType(String DBInstanceNetType) {
-            this.DBInstanceNetType = DBInstanceNetType;
-            return this;
-        }
-        public String getDBInstanceNetType() {
-            return this.DBInstanceNetType;
+        public String getDedicatedHostGroupName() {
+            return this.dedicatedHostGroupName;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setConnectionMode(String connectionMode) {
@@ -330,78 +334,6 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.lockMode;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceStorageType(String DBInstanceStorageType) {
-            this.DBInstanceStorageType = DBInstanceStorageType;
-            return this;
-        }
-        public String getDBInstanceStorageType() {
-            return this.DBInstanceStorageType;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceClass(String DBInstanceClass) {
-            this.DBInstanceClass = DBInstanceClass;
-            return this;
-        }
-        public String getDBInstanceClass() {
-            return this.DBInstanceClass;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setInstanceNetworkType(String instanceNetworkType) {
-            this.instanceNetworkType = instanceNetworkType;
-            return this;
-        }
-        public String getInstanceNetworkType() {
-            return this.instanceNetworkType;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setVpcCloudInstanceId(String vpcCloudInstanceId) {
-            this.vpcCloudInstanceId = vpcCloudInstanceId;
-            return this;
-        }
-        public String getVpcCloudInstanceId() {
-            return this.vpcCloudInstanceId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setLockReason(String lockReason) {
-            this.lockReason = lockReason;
-            return this;
-        }
-        public String getLockReason() {
-            return this.lockReason;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setMutriORsignle(Boolean mutriORsignle) {
-            this.mutriORsignle = mutriORsignle;
-            return this;
-        }
-        public Boolean getMutriORsignle() {
-            return this.mutriORsignle;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
         public DescribeDBInstancesResponseBodyItemsDBInstance setEngineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
@@ -410,60 +342,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.engineVersion;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setGuardDBInstanceId(String guardDBInstanceId) {
-            this.guardDBInstanceId = guardDBInstanceId;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setGeneralGroupName(String generalGroupName) {
+            this.generalGroupName = generalGroupName;
             return this;
         }
-        public String getGuardDBInstanceId() {
-            return this.guardDBInstanceId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setTempDBInstanceId(String tempDBInstanceId) {
-            this.tempDBInstanceId = tempDBInstanceId;
-            return this;
-        }
-        public String getTempDBInstanceId() {
-            return this.tempDBInstanceId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setMasterInstanceId(String masterInstanceId) {
-            this.masterInstanceId = masterInstanceId;
-            return this;
-        }
-        public String getMasterInstanceId() {
-            return this.masterInstanceId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setAutoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-            return this;
-        }
-        public String getAutoUpgradeMinorVersion() {
-            return this.autoUpgradeMinorVersion;
+        public String getGeneralGroupName() {
+            return this.generalGroupName;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostGroupId(String dedicatedHostGroupId) {
@@ -474,60 +358,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.dedicatedHostGroupId;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostIdForMaster(String dedicatedHostIdForMaster) {
-            this.dedicatedHostIdForMaster = dedicatedHostIdForMaster;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setVpcName(String vpcName) {
+            this.vpcName = vpcName;
             return this;
         }
-        public String getDedicatedHostIdForMaster() {
-            return this.dedicatedHostIdForMaster;
+        public String getVpcName() {
+            return this.vpcName;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostIdForSlave(String dedicatedHostIdForSlave) {
-            this.dedicatedHostIdForSlave = dedicatedHostIdForSlave;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setVpcCloudInstanceId(String vpcCloudInstanceId) {
+            this.vpcCloudInstanceId = vpcCloudInstanceId;
             return this;
         }
-        public String getDedicatedHostIdForSlave() {
-            return this.dedicatedHostIdForSlave;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostIdForLog(String dedicatedHostIdForLog) {
-            this.dedicatedHostIdForLog = dedicatedHostIdForLog;
-            return this;
-        }
-        public String getDedicatedHostIdForLog() {
-            return this.dedicatedHostIdForLog;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostNameForMaster(String dedicatedHostNameForMaster) {
-            this.dedicatedHostNameForMaster = dedicatedHostNameForMaster;
-            return this;
-        }
-        public String getDedicatedHostNameForMaster() {
-            return this.dedicatedHostNameForMaster;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostNameForSlave(String dedicatedHostNameForSlave) {
-            this.dedicatedHostNameForSlave = dedicatedHostNameForSlave;
-            return this;
-        }
-        public String getDedicatedHostNameForSlave() {
-            return this.dedicatedHostNameForSlave;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostNameForLog(String dedicatedHostNameForLog) {
-            this.dedicatedHostNameForLog = dedicatedHostNameForLog;
-            return this;
-        }
-        public String getDedicatedHostNameForLog() {
-            return this.dedicatedHostNameForLog;
-        }
-
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostZoneIdForMaster(String dedicatedHostZoneIdForMaster) {
-            this.dedicatedHostZoneIdForMaster = dedicatedHostZoneIdForMaster;
-            return this;
-        }
-        public String getDedicatedHostZoneIdForMaster() {
-            return this.dedicatedHostZoneIdForMaster;
+        public String getVpcCloudInstanceId() {
+            return this.vpcCloudInstanceId;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostZoneIdForSlave(String dedicatedHostZoneIdForSlave) {
@@ -538,6 +382,38 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.dedicatedHostZoneIdForSlave;
         }
 
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostZoneIdForMaster(String dedicatedHostZoneIdForMaster) {
+            this.dedicatedHostZoneIdForMaster = dedicatedHostZoneIdForMaster;
+            return this;
+        }
+        public String getDedicatedHostZoneIdForMaster() {
+            return this.dedicatedHostZoneIdForMaster;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setConnectionString(String connectionString) {
+            this.connectionString = connectionString;
+            return this;
+        }
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setTips(String tips) {
+            this.tips = tips;
+            return this;
+        }
+        public String getTips() {
+            return this.tips;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setInstanceNetworkType(String instanceNetworkType) {
+            this.instanceNetworkType = instanceNetworkType;
+            return this;
+        }
+        public String getInstanceNetworkType() {
+            return this.instanceNetworkType;
+        }
+
         public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostZoneIdForLog(String dedicatedHostZoneIdForLog) {
             this.dedicatedHostZoneIdForLog = dedicatedHostZoneIdForLog;
             return this;
@@ -546,20 +422,188 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.dedicatedHostZoneIdForLog;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setVpcName(String vpcName) {
-            this.vpcName = vpcName;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setMasterInstanceId(String masterInstanceId) {
+            this.masterInstanceId = masterInstanceId;
             return this;
         }
-        public String getVpcName() {
-            return this.vpcName;
+        public String getMasterInstanceId() {
+            return this.masterInstanceId;
         }
 
-        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostGroupName(String dedicatedHostGroupName) {
-            this.dedicatedHostGroupName = dedicatedHostGroupName;
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostNameForSlave(String dedicatedHostNameForSlave) {
+            this.dedicatedHostNameForSlave = dedicatedHostNameForSlave;
             return this;
         }
-        public String getDedicatedHostGroupName() {
-            return this.dedicatedHostGroupName;
+        public String getDedicatedHostNameForSlave() {
+            return this.dedicatedHostNameForSlave;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
+            return this;
+        }
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setAutoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
+            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+            return this;
+        }
+        public String getAutoUpgradeMinorVersion() {
+            return this.autoUpgradeMinorVersion;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceNetType(String DBInstanceNetType) {
+            this.DBInstanceNetType = DBInstanceNetType;
+            return this;
+        }
+        public String getDBInstanceNetType() {
+            return this.DBInstanceNetType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceType(String DBInstanceType) {
+            this.DBInstanceType = DBInstanceType;
+            return this;
+        }
+        public String getDBInstanceType() {
+            return this.DBInstanceType;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDestroyTime(String destroyTime) {
+            this.destroyTime = destroyTime;
+            return this;
+        }
+        public String getDestroyTime() {
+            return this.destroyTime;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceStatus(String DBInstanceStatus) {
+            this.DBInstanceStatus = DBInstanceStatus;
+            return this;
+        }
+        public String getDBInstanceStatus() {
+            return this.DBInstanceStatus;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostNameForMaster(String dedicatedHostNameForMaster) {
+            this.dedicatedHostNameForMaster = dedicatedHostNameForMaster;
+            return this;
+        }
+        public String getDedicatedHostNameForMaster() {
+            return this.dedicatedHostNameForMaster;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setGuardDBInstanceId(String guardDBInstanceId) {
+            this.guardDBInstanceId = guardDBInstanceId;
+            return this;
+        }
+        public String getGuardDBInstanceId() {
+            return this.guardDBInstanceId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostIdForSlave(String dedicatedHostIdForSlave) {
+            this.dedicatedHostIdForSlave = dedicatedHostIdForSlave;
+            return this;
+        }
+        public String getDedicatedHostIdForSlave() {
+            return this.dedicatedHostIdForSlave;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setTipsLevel(Integer tipsLevel) {
+            this.tipsLevel = tipsLevel;
+            return this;
+        }
+        public Integer getTipsLevel() {
+            return this.tipsLevel;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDedicatedHostIdForMaster(String dedicatedHostIdForMaster) {
+            this.dedicatedHostIdForMaster = dedicatedHostIdForMaster;
+            return this;
+        }
+        public String getDedicatedHostIdForMaster() {
+            return this.dedicatedHostIdForMaster;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setDBInstanceClass(String DBInstanceClass) {
+            this.DBInstanceClass = DBInstanceClass;
+            return this;
+        }
+        public String getDBInstanceClass() {
+            return this.DBInstanceClass;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setReadOnlyDBInstanceIds(DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds) {

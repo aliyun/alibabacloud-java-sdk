@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class GrantAccountPrivilegeRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -25,28 +19,9 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static GrantAccountPrivilegeRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantAccountPrivilegeRequest self = new GrantAccountPrivilegeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GrantAccountPrivilegeRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public GrantAccountPrivilegeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
     }
 
     public GrantAccountPrivilegeRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -87,14 +62,6 @@ public class GrantAccountPrivilegeRequest extends TeaModel {
     }
     public String getAccountPrivilege() {
         return this.accountPrivilege;
-    }
-
-    public GrantAccountPrivilegeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

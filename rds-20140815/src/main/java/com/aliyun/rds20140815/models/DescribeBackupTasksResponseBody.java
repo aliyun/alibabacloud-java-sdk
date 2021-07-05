@@ -32,8 +32,11 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupTasksResponseBodyItemsBackupJob extends TeaModel {
-        @NameInMap("BackupProgressStatus")
-        public String backupProgressStatus;
+        @NameInMap("Process")
+        public String process;
+
+        @NameInMap("BackupJobId")
+        public String backupJobId;
 
         @NameInMap("BackupStatus")
         public String backupStatus;
@@ -41,29 +44,34 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         @NameInMap("JobMode")
         public String jobMode;
 
-        @NameInMap("Process")
-        public String process;
-
-        @NameInMap("TaskAction")
-        public String taskAction;
-
-        @NameInMap("BackupJobId")
-        public String backupJobId;
+        @NameInMap("BackupProgressStatus")
+        public String backupProgressStatus;
 
         @NameInMap("BackupId")
         public String backupId;
+
+        @NameInMap("TaskAction")
+        public String taskAction;
 
         public static DescribeBackupTasksResponseBodyItemsBackupJob build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupTasksResponseBodyItemsBackupJob self = new DescribeBackupTasksResponseBodyItemsBackupJob();
             return TeaModel.build(map, self);
         }
 
-        public DescribeBackupTasksResponseBodyItemsBackupJob setBackupProgressStatus(String backupProgressStatus) {
-            this.backupProgressStatus = backupProgressStatus;
+        public DescribeBackupTasksResponseBodyItemsBackupJob setProcess(String process) {
+            this.process = process;
             return this;
         }
-        public String getBackupProgressStatus() {
-            return this.backupProgressStatus;
+        public String getProcess() {
+            return this.process;
+        }
+
+        public DescribeBackupTasksResponseBodyItemsBackupJob setBackupJobId(String backupJobId) {
+            this.backupJobId = backupJobId;
+            return this;
+        }
+        public String getBackupJobId() {
+            return this.backupJobId;
         }
 
         public DescribeBackupTasksResponseBodyItemsBackupJob setBackupStatus(String backupStatus) {
@@ -82,28 +90,12 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             return this.jobMode;
         }
 
-        public DescribeBackupTasksResponseBodyItemsBackupJob setProcess(String process) {
-            this.process = process;
+        public DescribeBackupTasksResponseBodyItemsBackupJob setBackupProgressStatus(String backupProgressStatus) {
+            this.backupProgressStatus = backupProgressStatus;
             return this;
         }
-        public String getProcess() {
-            return this.process;
-        }
-
-        public DescribeBackupTasksResponseBodyItemsBackupJob setTaskAction(String taskAction) {
-            this.taskAction = taskAction;
-            return this;
-        }
-        public String getTaskAction() {
-            return this.taskAction;
-        }
-
-        public DescribeBackupTasksResponseBodyItemsBackupJob setBackupJobId(String backupJobId) {
-            this.backupJobId = backupJobId;
-            return this;
-        }
-        public String getBackupJobId() {
-            return this.backupJobId;
+        public String getBackupProgressStatus() {
+            return this.backupProgressStatus;
         }
 
         public DescribeBackupTasksResponseBodyItemsBackupJob setBackupId(String backupId) {
@@ -112,6 +104,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
         public String getBackupId() {
             return this.backupId;
+        }
+
+        public DescribeBackupTasksResponseBodyItemsBackupJob setTaskAction(String taskAction) {
+            this.taskAction = taskAction;
+            return this;
+        }
+        public String getTaskAction() {
+            return this.taskAction;
         }
 
     }

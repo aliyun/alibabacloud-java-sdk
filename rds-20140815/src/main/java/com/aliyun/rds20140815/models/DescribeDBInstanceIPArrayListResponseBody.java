@@ -32,11 +32,11 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray extends TeaModel {
-        @NameInMap("DBInstanceIPArrayName")
-        public String DBInstanceIPArrayName;
-
         @NameInMap("DBInstanceIPArrayAttribute")
         public String DBInstanceIPArrayAttribute;
+
+        @NameInMap("DBInstanceIPArrayName")
+        public String DBInstanceIPArrayName;
 
         @NameInMap("SecurityIPType")
         public String securityIPType;
@@ -49,20 +49,20 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray setDBInstanceIPArrayName(String DBInstanceIPArrayName) {
-            this.DBInstanceIPArrayName = DBInstanceIPArrayName;
-            return this;
-        }
-        public String getDBInstanceIPArrayName() {
-            return this.DBInstanceIPArrayName;
-        }
-
         public DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray setDBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
             this.DBInstanceIPArrayAttribute = DBInstanceIPArrayAttribute;
             return this;
         }
         public String getDBInstanceIPArrayAttribute() {
             return this.DBInstanceIPArrayAttribute;
+        }
+
+        public DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray setDBInstanceIPArrayName(String DBInstanceIPArrayName) {
+            this.DBInstanceIPArrayName = DBInstanceIPArrayName;
+            return this;
+        }
+        public String getDBInstanceIPArrayName() {
+            return this.DBInstanceIPArrayName;
         }
 
         public DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray setSecurityIPType(String securityIPType) {

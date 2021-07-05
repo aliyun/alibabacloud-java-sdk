@@ -32,23 +32,15 @@ public class DescribeDedicatedHostImageCategoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostImageCategoriesResponseBodyImagesImages extends TeaModel {
-        @NameInMap("ImageName")
-        public String imageName;
-
         @NameInMap("ImageCode")
         public String imageCode;
+
+        @NameInMap("ImageName")
+        public String imageName;
 
         public static DescribeDedicatedHostImageCategoriesResponseBodyImagesImages build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostImageCategoriesResponseBodyImagesImages self = new DescribeDedicatedHostImageCategoriesResponseBodyImagesImages();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDedicatedHostImageCategoriesResponseBodyImagesImages setImageName(String imageName) {
-            this.imageName = imageName;
-            return this;
-        }
-        public String getImageName() {
-            return this.imageName;
         }
 
         public DescribeDedicatedHostImageCategoriesResponseBodyImagesImages setImageCode(String imageCode) {
@@ -57,6 +49,14 @@ public class DescribeDedicatedHostImageCategoriesResponseBody extends TeaModel {
         }
         public String getImageCode() {
             return this.imageCode;
+        }
+
+        public DescribeDedicatedHostImageCategoriesResponseBodyImagesImages setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
         }
 
     }

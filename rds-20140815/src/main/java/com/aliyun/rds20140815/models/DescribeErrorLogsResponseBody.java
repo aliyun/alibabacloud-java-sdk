@@ -7,11 +7,11 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
 
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -32,20 +32,20 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeErrorLogsResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
-    }
-
     public DescribeErrorLogsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeErrorLogsResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
     }
 
     public DescribeErrorLogsResponseBody setTotalRecordCount(Integer totalRecordCount) {

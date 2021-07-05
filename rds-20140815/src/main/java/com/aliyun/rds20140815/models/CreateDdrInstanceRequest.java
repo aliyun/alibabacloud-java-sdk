@@ -76,20 +76,11 @@ public class CreateDdrInstanceRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("TunnelId")
-    public String tunnelId;
-
     @NameInMap("RestoreType")
     public String restoreType;
 
     @NameInMap("BackupSetId")
     public String backupSetId;
-
-    @NameInMap("BackupSetType")
-    public String backupSetType;
-
-    @NameInMap("BackupSetRegion")
-    public String backupSetRegion;
 
     @NameInMap("RestoreTime")
     public String restoreTime;
@@ -99,15 +90,6 @@ public class CreateDdrInstanceRequest extends TeaModel {
 
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
-
-    @NameInMap("UserBakSetURL")
-    public String userBakSetURL;
-
-    @NameInMap("BakSetName")
-    public String bakSetName;
-
-    @NameInMap("HostType")
-    public String hostType;
 
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -318,14 +300,6 @@ public class CreateDdrInstanceRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateDdrInstanceRequest setTunnelId(String tunnelId) {
-        this.tunnelId = tunnelId;
-        return this;
-    }
-    public String getTunnelId() {
-        return this.tunnelId;
-    }
-
     public CreateDdrInstanceRequest setRestoreType(String restoreType) {
         this.restoreType = restoreType;
         return this;
@@ -340,22 +314,6 @@ public class CreateDdrInstanceRequest extends TeaModel {
     }
     public String getBackupSetId() {
         return this.backupSetId;
-    }
-
-    public CreateDdrInstanceRequest setBackupSetType(String backupSetType) {
-        this.backupSetType = backupSetType;
-        return this;
-    }
-    public String getBackupSetType() {
-        return this.backupSetType;
-    }
-
-    public CreateDdrInstanceRequest setBackupSetRegion(String backupSetRegion) {
-        this.backupSetRegion = backupSetRegion;
-        return this;
-    }
-    public String getBackupSetRegion() {
-        return this.backupSetRegion;
     }
 
     public CreateDdrInstanceRequest setRestoreTime(String restoreTime) {
@@ -380,30 +338,6 @@ public class CreateDdrInstanceRequest extends TeaModel {
     }
     public String getSourceDBInstanceName() {
         return this.sourceDBInstanceName;
-    }
-
-    public CreateDdrInstanceRequest setUserBakSetURL(String userBakSetURL) {
-        this.userBakSetURL = userBakSetURL;
-        return this;
-    }
-    public String getUserBakSetURL() {
-        return this.userBakSetURL;
-    }
-
-    public CreateDdrInstanceRequest setBakSetName(String bakSetName) {
-        this.bakSetName = bakSetName;
-        return this;
-    }
-    public String getBakSetName() {
-        return this.bakSetName;
-    }
-
-    public CreateDdrInstanceRequest setHostType(String hostType) {
-        this.hostType = hostType;
-        return this;
-    }
-    public String getHostType() {
-        return this.hostType;
     }
 
     public CreateDdrInstanceRequest setDBInstanceStorageType(String DBInstanceStorageType) {

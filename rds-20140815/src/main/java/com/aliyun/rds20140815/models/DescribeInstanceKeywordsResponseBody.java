@@ -4,11 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceKeywordsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Key")
     public String key;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Words")
     public DescribeInstanceKeywordsResponseBodyWords words;
@@ -18,20 +18,20 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceKeywordsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeInstanceKeywordsResponseBody setKey(String key) {
         this.key = key;
         return this;
     }
     public String getKey() {
         return this.key;
+    }
+
+    public DescribeInstanceKeywordsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeInstanceKeywordsResponseBody setWords(DescribeInstanceKeywordsResponseBodyWords words) {

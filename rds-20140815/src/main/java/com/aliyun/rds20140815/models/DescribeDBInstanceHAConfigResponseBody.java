@@ -4,17 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("SyncMode")
-    public String syncMode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("HAMode")
     public String HAMode;
+
+    @NameInMap("SyncMode")
+    public String syncMode;
 
     @NameInMap("HostInstanceInfos")
     public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfos hostInstanceInfos;
@@ -22,14 +22,6 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     public static DescribeDBInstanceHAConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceHAConfigResponseBody self = new DescribeDBInstanceHAConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstanceHAConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDBInstanceHAConfigResponseBody setDBInstanceId(String DBInstanceId) {
@@ -40,12 +32,12 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeDBInstanceHAConfigResponseBody setSyncMode(String syncMode) {
-        this.syncMode = syncMode;
+    public DescribeDBInstanceHAConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getSyncMode() {
-        return this.syncMode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDBInstanceHAConfigResponseBody setHAMode(String HAMode) {
@@ -54,6 +46,14 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     }
     public String getHAMode() {
         return this.HAMode;
+    }
+
+    public DescribeDBInstanceHAConfigResponseBody setSyncMode(String syncMode) {
+        this.syncMode = syncMode;
+        return this;
+    }
+    public String getSyncMode() {
+        return this.syncMode;
     }
 
     public DescribeDBInstanceHAConfigResponseBody setHostInstanceInfos(DescribeDBInstanceHAConfigResponseBodyHostInstanceInfos hostInstanceInfos) {
@@ -65,17 +65,8 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo extends TeaModel {
-        @NameInMap("NodeId")
-        public String nodeId;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("LogSyncTime")
         public String logSyncTime;
-
-        @NameInMap("DataSyncTime")
-        public String dataSyncTime;
 
         @NameInMap("NodeType")
         public String nodeType;
@@ -86,25 +77,18 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         @NameInMap("SyncStatus")
         public String syncStatus;
 
+        @NameInMap("DataSyncTime")
+        public String dataSyncTime;
+
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
         public static DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo self = new DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo setNodeId(String nodeId) {
-            this.nodeId = nodeId;
-            return this;
-        }
-        public String getNodeId() {
-            return this.nodeId;
-        }
-
-        public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo setLogSyncTime(String logSyncTime) {
@@ -113,14 +97,6 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
         public String getLogSyncTime() {
             return this.logSyncTime;
-        }
-
-        public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo setDataSyncTime(String dataSyncTime) {
-            this.dataSyncTime = dataSyncTime;
-            return this;
-        }
-        public String getDataSyncTime() {
-            return this.dataSyncTime;
         }
 
         public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo setNodeType(String nodeType) {
@@ -145,6 +121,30 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
         public String getSyncStatus() {
             return this.syncStatus;
+        }
+
+        public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo setDataSyncTime(String dataSyncTime) {
+            this.dataSyncTime = dataSyncTime;
+            return this;
+        }
+        public String getDataSyncTime() {
+            return this.dataSyncTime;
+        }
+
+        public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeDBInstanceHAConfigResponseBodyHostInstanceInfosNodeInfo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

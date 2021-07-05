@@ -4,17 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CloneDBInstanceRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -27,9 +18,6 @@ public class CloneDBInstanceRequest extends TeaModel {
 
     @NameInMap("DBInstanceStorage")
     public Integer DBInstanceStorage;
-
-    @NameInMap("DBInstanceDescription")
-    public String DBInstanceDescription;
 
     @NameInMap("DbNames")
     public String dbNames;
@@ -58,26 +46,14 @@ public class CloneDBInstanceRequest extends TeaModel {
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("UsedTime")
     public Integer usedTime;
 
     @NameInMap("Period")
     public String period;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("Category")
     public String category;
-
-    @NameInMap("ZoneIdSlave1")
-    public String zoneIdSlave1;
-
-    @NameInMap("ZoneIdSlave2")
-    public String zoneIdSlave2;
 
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -99,36 +75,12 @@ public class CloneDBInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CloneDBInstanceRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CloneDBInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
     public CloneDBInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CloneDBInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public CloneDBInstanceRequest setRegionId(String regionId) {
@@ -161,14 +113,6 @@ public class CloneDBInstanceRequest extends TeaModel {
     }
     public Integer getDBInstanceStorage() {
         return this.DBInstanceStorage;
-    }
-
-    public CloneDBInstanceRequest setDBInstanceDescription(String DBInstanceDescription) {
-        this.DBInstanceDescription = DBInstanceDescription;
-        return this;
-    }
-    public String getDBInstanceDescription() {
-        return this.DBInstanceDescription;
     }
 
     public CloneDBInstanceRequest setDbNames(String dbNames) {
@@ -243,14 +187,6 @@ public class CloneDBInstanceRequest extends TeaModel {
         return this.privateIpAddress;
     }
 
-    public CloneDBInstanceRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public CloneDBInstanceRequest setUsedTime(Integer usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -267,36 +203,12 @@ public class CloneDBInstanceRequest extends TeaModel {
         return this.period;
     }
 
-    public CloneDBInstanceRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public CloneDBInstanceRequest setCategory(String category) {
         this.category = category;
         return this;
     }
     public String getCategory() {
         return this.category;
-    }
-
-    public CloneDBInstanceRequest setZoneIdSlave1(String zoneIdSlave1) {
-        this.zoneIdSlave1 = zoneIdSlave1;
-        return this;
-    }
-    public String getZoneIdSlave1() {
-        return this.zoneIdSlave1;
-    }
-
-    public CloneDBInstanceRequest setZoneIdSlave2(String zoneIdSlave2) {
-        this.zoneIdSlave2 = zoneIdSlave2;
-        return this;
-    }
-    public String getZoneIdSlave2() {
-        return this.zoneIdSlave2;
     }
 
     public CloneDBInstanceRequest setDBInstanceStorageType(String DBInstanceStorageType) {

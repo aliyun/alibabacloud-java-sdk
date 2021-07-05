@@ -51,11 +51,29 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups extends TeaModel {
+        @NameInMap("DiskAllocateRation")
+        public Float diskAllocateRation;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("DedicatedHostCountGroupByHostType")
+        public java.util.Map<String, ?> dedicatedHostCountGroupByHostType;
+
+        @NameInMap("Text")
+        public String text;
+
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
-        @NameInMap("DedicatedHostGroupDesc")
-        public String dedicatedHostGroupDesc;
+        @NameInMap("DiskUtility")
+        public Float diskUtility;
+
+        @NameInMap("MemUsedAmount")
+        public Float memUsedAmount;
+
+        @NameInMap("MemAllocatedAmount")
+        public Float memAllocatedAmount;
 
         @NameInMap("CpuAllocationRatio")
         public Integer cpuAllocationRatio;
@@ -63,71 +81,53 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         @NameInMap("MemAllocationRatio")
         public Integer memAllocationRatio;
 
-        @NameInMap("DiskAllocationRatio")
-        public Integer diskAllocationRatio;
-
-        @NameInMap("AllocationPolicy")
-        public String allocationPolicy;
-
-        @NameInMap("HostReplacePolicy")
-        public String hostReplacePolicy;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("VPCId")
-        public String VPCId;
-
-        @NameInMap("HostNumber")
-        public Integer hostNumber;
-
-        @NameInMap("InstanceNumber")
-        public Integer instanceNumber;
-
-        @NameInMap("Engine")
-        public String engine;
-
-        @NameInMap("Text")
-        public String text;
-
-        @NameInMap("DedicatedHostCountGroupByHostType")
-        public java.util.Map<String, String> dedicatedHostCountGroupByHostType;
-
-        @NameInMap("BastionInstanceId")
-        public String bastionInstanceId;
-
-        @NameInMap("OpenPermission")
-        public String openPermission;
-
         @NameInMap("MemUtility")
         public Float memUtility;
-
-        @NameInMap("MemUsedAmount")
-        public Float memUsedAmount;
-
-        @NameInMap("DiskUtility")
-        public Float diskUtility;
-
-        @NameInMap("DiskUsedAmount")
-        public Float diskUsedAmount;
-
-        @NameInMap("CpuAllocateRation")
-        public Float cpuAllocateRation;
-
-        @NameInMap("CpuAllocatedAmount")
-        public Float cpuAllocatedAmount;
 
         @NameInMap("MemAllocateRation")
         public Float memAllocateRation;
 
-        @NameInMap("MemAllocatedAmount")
-        public Float memAllocatedAmount;
+        @NameInMap("CpuAllocatedAmount")
+        public Float cpuAllocatedAmount;
 
-        @NameInMap("DiskAllocateRation")
-        public Float diskAllocateRation;
+        @NameInMap("DedicatedHostGroupDesc")
+        public String dedicatedHostGroupDesc;
+
+        @NameInMap("CpuAllocateRation")
+        public Float cpuAllocateRation;
+
+        @NameInMap("InstanceNumber")
+        public Integer instanceNumber;
+
+        @NameInMap("OpenPermission")
+        public String openPermission;
+
+        @NameInMap("VPCId")
+        public String VPCId;
 
         @NameInMap("DiskAllocatedAmount")
         public Float diskAllocatedAmount;
+
+        @NameInMap("HostNumber")
+        public Integer hostNumber;
+
+        @NameInMap("DiskUsedAmount")
+        public Float diskUsedAmount;
+
+        @NameInMap("AllocationPolicy")
+        public String allocationPolicy;
+
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("DiskAllocationRatio")
+        public Integer diskAllocationRatio;
+
+        @NameInMap("BastionInstanceId")
+        public String bastionInstanceId;
+
+        @NameInMap("HostReplacePolicy")
+        public String hostReplacePolicy;
 
         @NameInMap("ZoneIDList")
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroupsZoneIDList zoneIDList;
@@ -135,6 +135,38 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public static DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups self = new DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDiskAllocateRation(Float diskAllocateRation) {
+            this.diskAllocateRation = diskAllocateRation;
+            return this;
+        }
+        public Float getDiskAllocateRation() {
+            return this.diskAllocateRation;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDedicatedHostCountGroupByHostType(java.util.Map<String, ?> dedicatedHostCountGroupByHostType) {
+            this.dedicatedHostCountGroupByHostType = dedicatedHostCountGroupByHostType;
+            return this;
+        }
+        public java.util.Map<String, ?> getDedicatedHostCountGroupByHostType() {
+            return this.dedicatedHostCountGroupByHostType;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
         }
 
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDedicatedHostGroupId(String dedicatedHostGroupId) {
@@ -145,12 +177,28 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             return this.dedicatedHostGroupId;
         }
 
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDedicatedHostGroupDesc(String dedicatedHostGroupDesc) {
-            this.dedicatedHostGroupDesc = dedicatedHostGroupDesc;
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDiskUtility(Float diskUtility) {
+            this.diskUtility = diskUtility;
             return this;
         }
-        public String getDedicatedHostGroupDesc() {
-            return this.dedicatedHostGroupDesc;
+        public Float getDiskUtility() {
+            return this.diskUtility;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setMemUsedAmount(Float memUsedAmount) {
+            this.memUsedAmount = memUsedAmount;
+            return this;
+        }
+        public Float getMemUsedAmount() {
+            return this.memUsedAmount;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setMemAllocatedAmount(Float memAllocatedAmount) {
+            this.memAllocatedAmount = memAllocatedAmount;
+            return this;
+        }
+        public Float getMemAllocatedAmount() {
+            return this.memAllocatedAmount;
         }
 
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setCpuAllocationRatio(Integer cpuAllocationRatio) {
@@ -169,148 +217,12 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             return this.memAllocationRatio;
         }
 
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDiskAllocationRatio(Integer diskAllocationRatio) {
-            this.diskAllocationRatio = diskAllocationRatio;
-            return this;
-        }
-        public Integer getDiskAllocationRatio() {
-            return this.diskAllocationRatio;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setAllocationPolicy(String allocationPolicy) {
-            this.allocationPolicy = allocationPolicy;
-            return this;
-        }
-        public String getAllocationPolicy() {
-            return this.allocationPolicy;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setHostReplacePolicy(String hostReplacePolicy) {
-            this.hostReplacePolicy = hostReplacePolicy;
-            return this;
-        }
-        public String getHostReplacePolicy() {
-            return this.hostReplacePolicy;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setVPCId(String VPCId) {
-            this.VPCId = VPCId;
-            return this;
-        }
-        public String getVPCId() {
-            return this.VPCId;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setHostNumber(Integer hostNumber) {
-            this.hostNumber = hostNumber;
-            return this;
-        }
-        public Integer getHostNumber() {
-            return this.hostNumber;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setInstanceNumber(Integer instanceNumber) {
-            this.instanceNumber = instanceNumber;
-            return this;
-        }
-        public Integer getInstanceNumber() {
-            return this.instanceNumber;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setText(String text) {
-            this.text = text;
-            return this;
-        }
-        public String getText() {
-            return this.text;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDedicatedHostCountGroupByHostType(java.util.Map<String, String> dedicatedHostCountGroupByHostType) {
-            this.dedicatedHostCountGroupByHostType = dedicatedHostCountGroupByHostType;
-            return this;
-        }
-        public java.util.Map<String, String> getDedicatedHostCountGroupByHostType() {
-            return this.dedicatedHostCountGroupByHostType;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setBastionInstanceId(String bastionInstanceId) {
-            this.bastionInstanceId = bastionInstanceId;
-            return this;
-        }
-        public String getBastionInstanceId() {
-            return this.bastionInstanceId;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setOpenPermission(String openPermission) {
-            this.openPermission = openPermission;
-            return this;
-        }
-        public String getOpenPermission() {
-            return this.openPermission;
-        }
-
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setMemUtility(Float memUtility) {
             this.memUtility = memUtility;
             return this;
         }
         public Float getMemUtility() {
             return this.memUtility;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setMemUsedAmount(Float memUsedAmount) {
-            this.memUsedAmount = memUsedAmount;
-            return this;
-        }
-        public Float getMemUsedAmount() {
-            return this.memUsedAmount;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDiskUtility(Float diskUtility) {
-            this.diskUtility = diskUtility;
-            return this;
-        }
-        public Float getDiskUtility() {
-            return this.diskUtility;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDiskUsedAmount(Float diskUsedAmount) {
-            this.diskUsedAmount = diskUsedAmount;
-            return this;
-        }
-        public Float getDiskUsedAmount() {
-            return this.diskUsedAmount;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setCpuAllocateRation(Float cpuAllocateRation) {
-            this.cpuAllocateRation = cpuAllocateRation;
-            return this;
-        }
-        public Float getCpuAllocateRation() {
-            return this.cpuAllocateRation;
-        }
-
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setCpuAllocatedAmount(Float cpuAllocatedAmount) {
-            this.cpuAllocatedAmount = cpuAllocatedAmount;
-            return this;
-        }
-        public Float getCpuAllocatedAmount() {
-            return this.cpuAllocatedAmount;
         }
 
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setMemAllocateRation(Float memAllocateRation) {
@@ -321,20 +233,52 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
             return this.memAllocateRation;
         }
 
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setMemAllocatedAmount(Float memAllocatedAmount) {
-            this.memAllocatedAmount = memAllocatedAmount;
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setCpuAllocatedAmount(Float cpuAllocatedAmount) {
+            this.cpuAllocatedAmount = cpuAllocatedAmount;
             return this;
         }
-        public Float getMemAllocatedAmount() {
-            return this.memAllocatedAmount;
+        public Float getCpuAllocatedAmount() {
+            return this.cpuAllocatedAmount;
         }
 
-        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDiskAllocateRation(Float diskAllocateRation) {
-            this.diskAllocateRation = diskAllocateRation;
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDedicatedHostGroupDesc(String dedicatedHostGroupDesc) {
+            this.dedicatedHostGroupDesc = dedicatedHostGroupDesc;
             return this;
         }
-        public Float getDiskAllocateRation() {
-            return this.diskAllocateRation;
+        public String getDedicatedHostGroupDesc() {
+            return this.dedicatedHostGroupDesc;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setCpuAllocateRation(Float cpuAllocateRation) {
+            this.cpuAllocateRation = cpuAllocateRation;
+            return this;
+        }
+        public Float getCpuAllocateRation() {
+            return this.cpuAllocateRation;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setInstanceNumber(Integer instanceNumber) {
+            this.instanceNumber = instanceNumber;
+            return this;
+        }
+        public Integer getInstanceNumber() {
+            return this.instanceNumber;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setOpenPermission(String openPermission) {
+            this.openPermission = openPermission;
+            return this;
+        }
+        public String getOpenPermission() {
+            return this.openPermission;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setVPCId(String VPCId) {
+            this.VPCId = VPCId;
+            return this;
+        }
+        public String getVPCId() {
+            return this.VPCId;
         }
 
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDiskAllocatedAmount(Float diskAllocatedAmount) {
@@ -343,6 +287,62 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         }
         public Float getDiskAllocatedAmount() {
             return this.diskAllocatedAmount;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setHostNumber(Integer hostNumber) {
+            this.hostNumber = hostNumber;
+            return this;
+        }
+        public Integer getHostNumber() {
+            return this.hostNumber;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDiskUsedAmount(Float diskUsedAmount) {
+            this.diskUsedAmount = diskUsedAmount;
+            return this;
+        }
+        public Float getDiskUsedAmount() {
+            return this.diskUsedAmount;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setAllocationPolicy(String allocationPolicy) {
+            this.allocationPolicy = allocationPolicy;
+            return this;
+        }
+        public String getAllocationPolicy() {
+            return this.allocationPolicy;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setDiskAllocationRatio(Integer diskAllocationRatio) {
+            this.diskAllocationRatio = diskAllocationRatio;
+            return this;
+        }
+        public Integer getDiskAllocationRatio() {
+            return this.diskAllocationRatio;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setBastionInstanceId(String bastionInstanceId) {
+            this.bastionInstanceId = bastionInstanceId;
+            return this;
+        }
+        public String getBastionInstanceId() {
+            return this.bastionInstanceId;
+        }
+
+        public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setHostReplacePolicy(String hostReplacePolicy) {
+            this.hostReplacePolicy = hostReplacePolicy;
+            return this;
+        }
+        public String getHostReplacePolicy() {
+            return this.hostReplacePolicy;
         }
 
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroups setZoneIDList(DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroupsZoneIDList zoneIDList) {

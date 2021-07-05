@@ -4,17 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("PerformanceKeys")
     public DescribeDBProxyPerformanceResponseBodyPerformanceKeys performanceKeys;
@@ -24,20 +24,12 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBProxyPerformanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBProxyPerformanceResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDBProxyPerformanceResponseBody setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeDBProxyPerformanceResponseBody setStartTime(String startTime) {
@@ -48,12 +40,20 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeDBProxyPerformanceResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeDBProxyPerformanceResponseBody setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeDBProxyPerformanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDBProxyPerformanceResponseBody setPerformanceKeys(DescribeDBProxyPerformanceResponseBodyPerformanceKeys performanceKeys) {
@@ -65,23 +65,15 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Date")
         public String date;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue self = new DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue setDate(String date) {
@@ -90,6 +82,14 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
         public String getDate() {
             return this.date;
+        }
+
+        public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValuesPerformanceValue setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -114,11 +114,11 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
         @NameInMap("ValueFormat")
         public String valueFormat;
+
+        @NameInMap("Key")
+        public String key;
 
         @NameInMap("Values")
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValues values;
@@ -128,20 +128,20 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey setValueFormat(String valueFormat) {
             this.valueFormat = valueFormat;
             return this;
         }
         public String getValueFormat() {
             return this.valueFormat;
+        }
+
+        public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey setValues(DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKeyValues values) {

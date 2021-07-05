@@ -10,6 +10,9 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
     public static ModifyDBInstanceNetworkTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceNetworkTypeResponseBody self = new ModifyDBInstanceNetworkTypeResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public ModifyDBInstanceNetworkTypeResponseBody setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
     }
 
 }

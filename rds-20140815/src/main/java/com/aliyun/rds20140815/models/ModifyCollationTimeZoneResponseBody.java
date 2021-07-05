@@ -4,32 +4,32 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyCollationTimeZoneResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Collation")
+    public String collation;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Timezone")
     public String timezone;
 
-    @NameInMap("Collation")
-    public String collation;
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static ModifyCollationTimeZoneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyCollationTimeZoneResponseBody self = new ModifyCollationTimeZoneResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCollationTimeZoneResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyCollationTimeZoneResponseBody setCollation(String collation) {
+        this.collation = collation;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCollation() {
+        return this.collation;
     }
 
     public ModifyCollationTimeZoneResponseBody setDBInstanceId(String DBInstanceId) {
@@ -40,12 +40,12 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public ModifyCollationTimeZoneResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
+    public ModifyCollationTimeZoneResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ModifyCollationTimeZoneResponseBody setTimezone(String timezone) {
@@ -56,12 +56,12 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         return this.timezone;
     }
 
-    public ModifyCollationTimeZoneResponseBody setCollation(String collation) {
-        this.collation = collation;
+    public ModifyCollationTimeZoneResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getCollation() {
-        return this.collation;
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

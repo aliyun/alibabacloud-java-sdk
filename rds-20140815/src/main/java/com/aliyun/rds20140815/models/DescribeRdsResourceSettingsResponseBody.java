@@ -32,76 +32,36 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting extends TeaModel {
-        @NameInMap("StartDate")
-        public String startDate;
-
-        @NameInMap("EndDate")
-        public String endDate;
-
-        @NameInMap("ResourceNiche")
-        public String resourceNiche;
+        @NameInMap("PoppedUpButtonType")
+        public String poppedUpButtonType;
 
         @NameInMap("NoticeBarContent")
         public String noticeBarContent;
 
-        @NameInMap("PoppedUpButtonText")
-        public String poppedUpButtonText;
-
-        @NameInMap("PoppedUpButtonType")
-        public String poppedUpButtonType;
-
-        @NameInMap("PoppedUpButtonUrl")
-        public String poppedUpButtonUrl;
+        @NameInMap("EndDate")
+        public String endDate;
 
         @NameInMap("PoppedUpContent")
         public String poppedUpContent;
 
+        @NameInMap("StartDate")
+        public String startDate;
+
+        @NameInMap("PoppedUpButtonText")
+        public String poppedUpButtonText;
+
         @NameInMap("IsTop")
         public String isTop;
+
+        @NameInMap("ResourceNiche")
+        public String resourceNiche;
+
+        @NameInMap("PoppedUpButtonUrl")
+        public String poppedUpButtonUrl;
 
         public static DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting build(java.util.Map<String, ?> map) throws Exception {
             DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting self = new DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setStartDate(String startDate) {
-            this.startDate = startDate;
-            return this;
-        }
-        public String getStartDate() {
-            return this.startDate;
-        }
-
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setEndDate(String endDate) {
-            this.endDate = endDate;
-            return this;
-        }
-        public String getEndDate() {
-            return this.endDate;
-        }
-
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setResourceNiche(String resourceNiche) {
-            this.resourceNiche = resourceNiche;
-            return this;
-        }
-        public String getResourceNiche() {
-            return this.resourceNiche;
-        }
-
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setNoticeBarContent(String noticeBarContent) {
-            this.noticeBarContent = noticeBarContent;
-            return this;
-        }
-        public String getNoticeBarContent() {
-            return this.noticeBarContent;
-        }
-
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonText(String poppedUpButtonText) {
-            this.poppedUpButtonText = poppedUpButtonText;
-            return this;
-        }
-        public String getPoppedUpButtonText() {
-            return this.poppedUpButtonText;
         }
 
         public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonType(String poppedUpButtonType) {
@@ -112,12 +72,20 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             return this.poppedUpButtonType;
         }
 
-        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonUrl(String poppedUpButtonUrl) {
-            this.poppedUpButtonUrl = poppedUpButtonUrl;
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setNoticeBarContent(String noticeBarContent) {
+            this.noticeBarContent = noticeBarContent;
             return this;
         }
-        public String getPoppedUpButtonUrl() {
-            return this.poppedUpButtonUrl;
+        public String getNoticeBarContent() {
+            return this.noticeBarContent;
+        }
+
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
         }
 
         public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpContent(String poppedUpContent) {
@@ -128,12 +96,44 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             return this.poppedUpContent;
         }
 
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setStartDate(String startDate) {
+            this.startDate = startDate;
+            return this;
+        }
+        public String getStartDate() {
+            return this.startDate;
+        }
+
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonText(String poppedUpButtonText) {
+            this.poppedUpButtonText = poppedUpButtonText;
+            return this;
+        }
+        public String getPoppedUpButtonText() {
+            return this.poppedUpButtonText;
+        }
+
         public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setIsTop(String isTop) {
             this.isTop = isTop;
             return this;
         }
         public String getIsTop() {
             return this.isTop;
+        }
+
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setResourceNiche(String resourceNiche) {
+            this.resourceNiche = resourceNiche;
+            return this;
+        }
+        public String getResourceNiche() {
+            return this.resourceNiche;
+        }
+
+        public DescribeRdsResourceSettingsResponseBodyRdsInstanceResourceSettingsRdsInstanceResourceSetting setPoppedUpButtonUrl(String poppedUpButtonUrl) {
+            this.poppedUpButtonUrl = poppedUpButtonUrl;
+            return this;
+        }
+        public String getPoppedUpButtonUrl() {
+            return this.poppedUpButtonUrl;
         }
 
     }

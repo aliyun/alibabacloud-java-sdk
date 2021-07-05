@@ -31,9 +31,6 @@ public class RestoreTableRequest extends TeaModel {
     @NameInMap("TableMeta")
     public String tableMeta;
 
-    @NameInMap("RestoreTableMode")
-    public String restoreTableMode;
-
     public static RestoreTableRequest build(java.util.Map<String, ?> map) throws Exception {
         RestoreTableRequest self = new RestoreTableRequest();
         return TeaModel.build(map, self);
@@ -109,14 +106,6 @@ public class RestoreTableRequest extends TeaModel {
     }
     public String getTableMeta() {
         return this.tableMeta;
-    }
-
-    public RestoreTableRequest setRestoreTableMode(String restoreTableMode) {
-        this.restoreTableMode = restoreTableMode;
-        return this;
-    }
-    public String getRestoreTableMode() {
-        return this.restoreTableMode;
     }
 
 }

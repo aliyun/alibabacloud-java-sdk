@@ -4,11 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("IpHostnameInfos")
     public String ipHostnameInfos;
@@ -18,20 +18,20 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstanceIpHostnameResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDBInstanceIpHostnameResponseBody setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDBInstanceIpHostnameResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDBInstanceIpHostnameResponseBody setIpHostnameInfos(String ipHostnameInfos) {

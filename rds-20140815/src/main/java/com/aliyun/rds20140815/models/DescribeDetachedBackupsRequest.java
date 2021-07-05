@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDetachedBackupsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -18,9 +12,6 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
 
     @NameInMap("BackupId")
     public String backupId;
-
-    @NameInMap("BackupLocation")
-    public String backupLocation;
 
     @NameInMap("BackupStatus")
     public String backupStatus;
@@ -40,31 +31,12 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("Region")
     public String region;
 
     public static DescribeDetachedBackupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDetachedBackupsRequest self = new DescribeDetachedBackupsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDetachedBackupsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeDetachedBackupsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
     }
 
     public DescribeDetachedBackupsRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -89,14 +61,6 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     }
     public String getBackupId() {
         return this.backupId;
-    }
-
-    public DescribeDetachedBackupsRequest setBackupLocation(String backupLocation) {
-        this.backupLocation = backupLocation;
-        return this;
-    }
-    public String getBackupLocation() {
-        return this.backupLocation;
     }
 
     public DescribeDetachedBackupsRequest setBackupStatus(String backupStatus) {
@@ -145,14 +109,6 @@ public class DescribeDetachedBackupsRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
-    }
-
-    public DescribeDetachedBackupsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     public DescribeDetachedBackupsRequest setRegion(String region) {

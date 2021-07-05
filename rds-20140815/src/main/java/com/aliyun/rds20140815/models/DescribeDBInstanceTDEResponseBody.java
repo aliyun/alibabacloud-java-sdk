@@ -4,11 +4,11 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDEResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("TDEStatus")
     public String TDEStatus;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Databases")
     public DescribeDBInstanceTDEResponseBodyDatabases databases;
@@ -18,20 +18,20 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBInstanceTDEResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDBInstanceTDEResponseBody setTDEStatus(String TDEStatus) {
         this.TDEStatus = TDEStatus;
         return this;
     }
     public String getTDEStatus() {
         return this.TDEStatus;
+    }
+
+    public DescribeDBInstanceTDEResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDBInstanceTDEResponseBody setDatabases(DescribeDBInstanceTDEResponseBodyDatabases databases) {

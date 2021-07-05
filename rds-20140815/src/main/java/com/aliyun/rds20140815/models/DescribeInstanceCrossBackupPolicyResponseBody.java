@@ -4,20 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("LogBackupEnabledTime")
+    public String logBackupEnabledTime;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
-
-    @NameInMap("DBInstanceDescription")
-    public String DBInstanceDescription;
+    @NameInMap("BackupEnabled")
+    public String backupEnabled;
 
     @NameInMap("DBInstanceStatus")
     public String DBInstanceStatus;
 
-    @NameInMap("Engine")
-    public String engine;
+    @NameInMap("LockMode")
+    public String lockMode;
 
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -25,23 +22,11 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("CrossBackupRegion")
-    public String crossBackupRegion;
-
-    @NameInMap("CrossBackupType")
-    public String crossBackupType;
-
-    @NameInMap("BackupEnabledTime")
-    public String backupEnabledTime;
-
-    @NameInMap("BackupEnabled")
-    public String backupEnabled;
-
     @NameInMap("LogBackupEnabled")
     public String logBackupEnabled;
 
-    @NameInMap("LogBackupEnabledTime")
-    public String logBackupEnabledTime;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RetentType")
     public Integer retentType;
@@ -49,36 +34,43 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
     @NameInMap("Retention")
     public Integer retention;
 
-    @NameInMap("LockMode")
-    public String lockMode;
+    @NameInMap("CrossBackupType")
+    public String crossBackupType;
+
+    @NameInMap("CrossBackupRegion")
+    public String crossBackupRegion;
+
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("Engine")
+    public String engine;
+
+    @NameInMap("BackupEnabledTime")
+    public String backupEnabledTime;
+
+    @NameInMap("DBInstanceDescription")
+    public String DBInstanceDescription;
 
     public static DescribeInstanceCrossBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceCrossBackupPolicyResponseBody self = new DescribeInstanceCrossBackupPolicyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceCrossBackupPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstanceCrossBackupPolicyResponseBody setLogBackupEnabledTime(String logBackupEnabledTime) {
+        this.logBackupEnabledTime = logBackupEnabledTime;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getLogBackupEnabledTime() {
+        return this.logBackupEnabledTime;
     }
 
-    public DescribeInstanceCrossBackupPolicyResponseBody setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public DescribeInstanceCrossBackupPolicyResponseBody setBackupEnabled(String backupEnabled) {
+        this.backupEnabled = backupEnabled;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
-    }
-
-    public DescribeInstanceCrossBackupPolicyResponseBody setDBInstanceDescription(String DBInstanceDescription) {
-        this.DBInstanceDescription = DBInstanceDescription;
-        return this;
-    }
-    public String getDBInstanceDescription() {
-        return this.DBInstanceDescription;
+    public String getBackupEnabled() {
+        return this.backupEnabled;
     }
 
     public DescribeInstanceCrossBackupPolicyResponseBody setDBInstanceStatus(String DBInstanceStatus) {
@@ -89,12 +81,12 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         return this.DBInstanceStatus;
     }
 
-    public DescribeInstanceCrossBackupPolicyResponseBody setEngine(String engine) {
-        this.engine = engine;
+    public DescribeInstanceCrossBackupPolicyResponseBody setLockMode(String lockMode) {
+        this.lockMode = lockMode;
         return this;
     }
-    public String getEngine() {
-        return this.engine;
+    public String getLockMode() {
+        return this.lockMode;
     }
 
     public DescribeInstanceCrossBackupPolicyResponseBody setEngineVersion(String engineVersion) {
@@ -113,38 +105,6 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeInstanceCrossBackupPolicyResponseBody setCrossBackupRegion(String crossBackupRegion) {
-        this.crossBackupRegion = crossBackupRegion;
-        return this;
-    }
-    public String getCrossBackupRegion() {
-        return this.crossBackupRegion;
-    }
-
-    public DescribeInstanceCrossBackupPolicyResponseBody setCrossBackupType(String crossBackupType) {
-        this.crossBackupType = crossBackupType;
-        return this;
-    }
-    public String getCrossBackupType() {
-        return this.crossBackupType;
-    }
-
-    public DescribeInstanceCrossBackupPolicyResponseBody setBackupEnabledTime(String backupEnabledTime) {
-        this.backupEnabledTime = backupEnabledTime;
-        return this;
-    }
-    public String getBackupEnabledTime() {
-        return this.backupEnabledTime;
-    }
-
-    public DescribeInstanceCrossBackupPolicyResponseBody setBackupEnabled(String backupEnabled) {
-        this.backupEnabled = backupEnabled;
-        return this;
-    }
-    public String getBackupEnabled() {
-        return this.backupEnabled;
-    }
-
     public DescribeInstanceCrossBackupPolicyResponseBody setLogBackupEnabled(String logBackupEnabled) {
         this.logBackupEnabled = logBackupEnabled;
         return this;
@@ -153,12 +113,12 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         return this.logBackupEnabled;
     }
 
-    public DescribeInstanceCrossBackupPolicyResponseBody setLogBackupEnabledTime(String logBackupEnabledTime) {
-        this.logBackupEnabledTime = logBackupEnabledTime;
+    public DescribeInstanceCrossBackupPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getLogBackupEnabledTime() {
-        return this.logBackupEnabledTime;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeInstanceCrossBackupPolicyResponseBody setRetentType(Integer retentType) {
@@ -177,12 +137,52 @@ public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
         return this.retention;
     }
 
-    public DescribeInstanceCrossBackupPolicyResponseBody setLockMode(String lockMode) {
-        this.lockMode = lockMode;
+    public DescribeInstanceCrossBackupPolicyResponseBody setCrossBackupType(String crossBackupType) {
+        this.crossBackupType = crossBackupType;
         return this;
     }
-    public String getLockMode() {
-        return this.lockMode;
+    public String getCrossBackupType() {
+        return this.crossBackupType;
+    }
+
+    public DescribeInstanceCrossBackupPolicyResponseBody setCrossBackupRegion(String crossBackupRegion) {
+        this.crossBackupRegion = crossBackupRegion;
+        return this;
+    }
+    public String getCrossBackupRegion() {
+        return this.crossBackupRegion;
+    }
+
+    public DescribeInstanceCrossBackupPolicyResponseBody setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeInstanceCrossBackupPolicyResponseBody setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public DescribeInstanceCrossBackupPolicyResponseBody setBackupEnabledTime(String backupEnabledTime) {
+        this.backupEnabledTime = backupEnabledTime;
+        return this;
+    }
+    public String getBackupEnabledTime() {
+        return this.backupEnabledTime;
+    }
+
+    public DescribeInstanceCrossBackupPolicyResponseBody setDBInstanceDescription(String DBInstanceDescription) {
+        this.DBInstanceDescription = DBInstanceDescription;
+        return this;
+    }
+    public String getDBInstanceDescription() {
+        return this.DBInstanceDescription;
     }
 
 }

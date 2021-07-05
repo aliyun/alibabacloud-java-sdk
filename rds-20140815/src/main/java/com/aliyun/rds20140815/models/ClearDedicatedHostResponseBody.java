@@ -4,26 +4,26 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ClearDedicatedHostResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("DedicatedHostId")
+    public String dedicatedHostId;
 
     @NameInMap("TaskId")
     public String taskId;
 
-    @NameInMap("DedicatedHostId")
-    public String dedicatedHostId;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ClearDedicatedHostResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ClearDedicatedHostResponseBody self = new ClearDedicatedHostResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ClearDedicatedHostResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ClearDedicatedHostResponseBody setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
     }
 
     public ClearDedicatedHostResponseBody setTaskId(String taskId) {
@@ -34,12 +34,12 @@ public class ClearDedicatedHostResponseBody extends TeaModel {
         return this.taskId;
     }
 
-    public ClearDedicatedHostResponseBody setDedicatedHostId(String dedicatedHostId) {
-        this.dedicatedHostId = dedicatedHostId;
+    public ClearDedicatedHostResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getDedicatedHostId() {
-        return this.dedicatedHostId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

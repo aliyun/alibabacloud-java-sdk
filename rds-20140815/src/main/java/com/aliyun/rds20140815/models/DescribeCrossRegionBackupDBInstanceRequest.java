@@ -25,12 +25,6 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Product")
-    public String product;
-
-    @NameInMap("NotEnabled")
-    public Integer notEnabled;
-
     public static DescribeCrossRegionBackupDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCrossRegionBackupDBInstanceRequest self = new DescribeCrossRegionBackupDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -90,22 +84,6 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
-    }
-
-    public DescribeCrossRegionBackupDBInstanceRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
-    }
-
-    public DescribeCrossRegionBackupDBInstanceRequest setNotEnabled(Integer notEnabled) {
-        this.notEnabled = notEnabled;
-        return this;
-    }
-    public Integer getNotEnabled() {
-        return this.notEnabled;
     }
 
 }

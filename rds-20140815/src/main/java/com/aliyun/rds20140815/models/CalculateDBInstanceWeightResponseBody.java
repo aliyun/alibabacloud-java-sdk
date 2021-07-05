@@ -32,37 +32,24 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
     }
 
     public static class CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight extends TeaModel {
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
-
-        @NameInMap("DBInstanceType")
-        public String DBInstanceType;
-
         @NameInMap("ReadonlyInstanceSQLDelayedTime")
         public String readonlyInstanceSQLDelayedTime;
 
         @NameInMap("Weight")
         public String weight;
 
+        @NameInMap("DBInstanceType")
+        public String DBInstanceType;
+
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
+        @NameInMap("Role")
+        public String role;
+
         public static CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight build(java.util.Map<String, ?> map) throws Exception {
             CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight self = new CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight();
             return TeaModel.build(map, self);
-        }
-
-        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
-        }
-
-        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setDBInstanceType(String DBInstanceType) {
-            this.DBInstanceType = DBInstanceType;
-            return this;
-        }
-        public String getDBInstanceType() {
-            return this.DBInstanceType;
         }
 
         public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setReadonlyInstanceSQLDelayedTime(String readonlyInstanceSQLDelayedTime) {
@@ -79,6 +66,30 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         }
         public String getWeight() {
             return this.weight;
+        }
+
+        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setDBInstanceType(String DBInstanceType) {
+            this.DBInstanceType = DBInstanceType;
+            return this;
+        }
+        public String getDBInstanceType() {
+            return this.DBInstanceType;
+        }
+
+        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public CalculateDBInstanceWeightResponseBodyItemsDBInstanceWeight setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
         }
 
     }

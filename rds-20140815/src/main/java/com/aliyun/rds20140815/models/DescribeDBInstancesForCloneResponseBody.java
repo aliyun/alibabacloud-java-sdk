@@ -10,11 +10,11 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("Items")
     public DescribeDBInstancesForCloneResponseBodyItems items;
@@ -40,20 +40,20 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDBInstancesForCloneResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
     public DescribeDBInstancesForCloneResponseBody setPageRecordCount(Integer pageRecordCount) {
         this.pageRecordCount = pageRecordCount;
         return this;
     }
     public Integer getPageRecordCount() {
         return this.pageRecordCount;
+    }
+
+    public DescribeDBInstancesForCloneResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public DescribeDBInstancesForCloneResponseBody setItems(DescribeDBInstancesForCloneResponseBodyItems items) {
@@ -103,38 +103,26 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesForCloneResponseBodyItemsDBInstance extends TeaModel {
-        @NameInMap("InsId")
-        public Integer insId;
+        @NameInMap("VpcId")
+        public String vpcId;
 
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
+        @NameInMap("ReplicateId")
+        public String replicateId;
 
-        @NameInMap("DBInstanceDescription")
-        public String DBInstanceDescription;
+        @NameInMap("TempDBInstanceId")
+        public String tempDBInstanceId;
+
+        @NameInMap("DBInstanceStorageType")
+        public String DBInstanceStorageType;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("PayType")
         public String payType;
 
-        @NameInMap("DBInstanceType")
-        public String DBInstanceType;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("DestroyTime")
-        public String destroyTime;
-
-        @NameInMap("DBInstanceStatus")
-        public String DBInstanceStatus;
-
-        @NameInMap("Engine")
-        public String engine;
-
-        @NameInMap("DBInstanceNetType")
-        public String DBInstanceNetType;
+        @NameInMap("MutriORsignle")
+        public Boolean mutriORsignle;
 
         @NameInMap("ConnectionMode")
         public String connectionMode;
@@ -142,56 +130,68 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
         @NameInMap("LockMode")
         public String lockMode;
 
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("DBInstanceStorageType")
-        public String DBInstanceStorageType;
-
-        @NameInMap("DBInstanceClass")
-        public String DBInstanceClass;
-
-        @NameInMap("InstanceNetworkType")
-        public String instanceNetworkType;
+        @NameInMap("EngineVersion")
+        public String engineVersion;
 
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
-        @NameInMap("LockReason")
-        public String lockReason;
+        @NameInMap("InsId")
+        public Integer insId;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("MutriORsignle")
-        public Boolean mutriORsignle;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("EngineVersion")
-        public String engineVersion;
-
-        @NameInMap("GuardDBInstanceId")
-        public String guardDBInstanceId;
-
-        @NameInMap("TempDBInstanceId")
-        public String tempDBInstanceId;
+        @NameInMap("InstanceNetworkType")
+        public String instanceNetworkType;
 
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("DBInstanceDescription")
+        public String DBInstanceDescription;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("DBInstanceNetType")
+        public String DBInstanceNetType;
+
+        @NameInMap("DBInstanceType")
+        public String DBInstanceType;
+
+        @NameInMap("DestroyTime")
+        public String destroyTime;
+
+        @NameInMap("LockReason")
+        public String lockReason;
+
+        @NameInMap("DBInstanceStatus")
+        public String DBInstanceStatus;
+
+        @NameInMap("GuardDBInstanceId")
+        public String guardDBInstanceId;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        @NameInMap("ReplicateId")
-        public String replicateId;
-
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("DBInstanceClass")
+        public String DBInstanceClass;
 
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;
@@ -201,28 +201,44 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setInsId(Integer insId) {
-            this.insId = insId;
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public Integer getInsId() {
-            return this.insId;
+        public String getVpcId() {
+            return this.vpcId;
         }
 
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setReplicateId(String replicateId) {
+            this.replicateId = replicateId;
             return this;
         }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
+        public String getReplicateId() {
+            return this.replicateId;
         }
 
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceDescription(String DBInstanceDescription) {
-            this.DBInstanceDescription = DBInstanceDescription;
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setTempDBInstanceId(String tempDBInstanceId) {
+            this.tempDBInstanceId = tempDBInstanceId;
             return this;
         }
-        public String getDBInstanceDescription() {
-            return this.DBInstanceDescription;
+        public String getTempDBInstanceId() {
+            return this.tempDBInstanceId;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceStorageType(String DBInstanceStorageType) {
+            this.DBInstanceStorageType = DBInstanceStorageType;
+            return this;
+        }
+        public String getDBInstanceStorageType() {
+            return this.DBInstanceStorageType;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setPayType(String payType) {
@@ -233,60 +249,12 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             return this.payType;
         }
 
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceType(String DBInstanceType) {
-            this.DBInstanceType = DBInstanceType;
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setMutriORsignle(Boolean mutriORsignle) {
+            this.mutriORsignle = mutriORsignle;
             return this;
         }
-        public String getDBInstanceType() {
-            return this.DBInstanceType;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDestroyTime(String destroyTime) {
-            this.destroyTime = destroyTime;
-            return this;
-        }
-        public String getDestroyTime() {
-            return this.destroyTime;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceStatus(String DBInstanceStatus) {
-            this.DBInstanceStatus = DBInstanceStatus;
-            return this;
-        }
-        public String getDBInstanceStatus() {
-            return this.DBInstanceStatus;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setEngine(String engine) {
-            this.engine = engine;
-            return this;
-        }
-        public String getEngine() {
-            return this.engine;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceNetType(String DBInstanceNetType) {
-            this.DBInstanceNetType = DBInstanceNetType;
-            return this;
-        }
-        public String getDBInstanceNetType() {
-            return this.DBInstanceNetType;
+        public Boolean getMutriORsignle() {
+            return this.mutriORsignle;
         }
 
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setConnectionMode(String connectionMode) {
@@ -305,36 +273,12 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             return this.lockMode;
         }
 
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setCategory(String category) {
-            this.category = category;
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
             return this;
         }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceStorageType(String DBInstanceStorageType) {
-            this.DBInstanceStorageType = DBInstanceStorageType;
-            return this;
-        }
-        public String getDBInstanceStorageType() {
-            return this.DBInstanceStorageType;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceClass(String DBInstanceClass) {
-            this.DBInstanceClass = DBInstanceClass;
-            return this;
-        }
-        public String getDBInstanceClass() {
-            return this.DBInstanceClass;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setInstanceNetworkType(String instanceNetworkType) {
-            this.instanceNetworkType = instanceNetworkType;
-            return this;
-        }
-        public String getInstanceNetworkType() {
-            return this.instanceNetworkType;
+        public String getEngineVersion() {
+            return this.engineVersion;
         }
 
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setVpcCloudInstanceId(String vpcCloudInstanceId) {
@@ -345,60 +289,20 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             return this.vpcCloudInstanceId;
         }
 
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setLockReason(String lockReason) {
-            this.lockReason = lockReason;
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setInsId(Integer insId) {
+            this.insId = insId;
             return this;
         }
-        public String getLockReason() {
-            return this.lockReason;
+        public Integer getInsId() {
+            return this.insId;
         }
 
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setZoneId(String zoneId) {
-            this.zoneId = zoneId;
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setInstanceNetworkType(String instanceNetworkType) {
+            this.instanceNetworkType = instanceNetworkType;
             return this;
         }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setMutriORsignle(Boolean mutriORsignle) {
-            this.mutriORsignle = mutriORsignle;
-            return this;
-        }
-        public Boolean getMutriORsignle() {
-            return this.mutriORsignle;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setEngineVersion(String engineVersion) {
-            this.engineVersion = engineVersion;
-            return this;
-        }
-        public String getEngineVersion() {
-            return this.engineVersion;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setGuardDBInstanceId(String guardDBInstanceId) {
-            this.guardDBInstanceId = guardDBInstanceId;
-            return this;
-        }
-        public String getGuardDBInstanceId() {
-            return this.guardDBInstanceId;
-        }
-
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setTempDBInstanceId(String tempDBInstanceId) {
-            this.tempDBInstanceId = tempDBInstanceId;
-            return this;
-        }
-        public String getTempDBInstanceId() {
-            return this.tempDBInstanceId;
+        public String getInstanceNetworkType() {
+            return this.instanceNetworkType;
         }
 
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setMasterInstanceId(String masterInstanceId) {
@@ -409,12 +313,76 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             return this.masterInstanceId;
         }
 
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceNetType(String DBInstanceNetType) {
+            this.DBInstanceNetType = DBInstanceNetType;
+            return this;
+        }
+        public String getDBInstanceNetType() {
+            return this.DBInstanceNetType;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceType(String DBInstanceType) {
+            this.DBInstanceType = DBInstanceType;
+            return this;
+        }
+        public String getDBInstanceType() {
+            return this.DBInstanceType;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDestroyTime(String destroyTime) {
+            this.destroyTime = destroyTime;
+            return this;
+        }
+        public String getDestroyTime() {
+            return this.destroyTime;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceStatus(String DBInstanceStatus) {
+            this.DBInstanceStatus = DBInstanceStatus;
+            return this;
+        }
+        public String getDBInstanceStatus() {
+            return this.DBInstanceStatus;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setGuardDBInstanceId(String guardDBInstanceId) {
+            this.guardDBInstanceId = guardDBInstanceId;
+            return this;
+        }
+        public String getGuardDBInstanceId() {
+            return this.guardDBInstanceId;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setVSwitchId(String vSwitchId) {
@@ -425,20 +393,52 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setReplicateId(String replicateId) {
-            this.replicateId = replicateId;
-            return this;
-        }
-        public String getReplicateId() {
-            return this.replicateId;
-        }
-
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setDBInstanceClass(String DBInstanceClass) {
+            this.DBInstanceClass = DBInstanceClass;
+            return this;
+        }
+        public String getDBInstanceClass() {
+            return this.DBInstanceClass;
         }
 
         public DescribeDBInstancesForCloneResponseBodyItemsDBInstance setReadOnlyDBInstanceIds(DescribeDBInstancesForCloneResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds) {

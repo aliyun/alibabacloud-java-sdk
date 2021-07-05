@@ -7,17 +7,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalEcsSnapshotSize")
+    public Long totalEcsSnapshotSize;
+
+    @NameInMap("PageRecordCount")
+    public String pageRecordCount;
+
     @NameInMap("TotalRecordCount")
     public String totalRecordCount;
 
     @NameInMap("PageNumber")
     public String pageNumber;
-
-    @NameInMap("PageRecordCount")
-    public String pageRecordCount;
-
-    @NameInMap("TotalEcsSnapshotSize")
-    public Long totalEcsSnapshotSize;
 
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
@@ -33,6 +33,22 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeBackupsResponseBody setTotalEcsSnapshotSize(Long totalEcsSnapshotSize) {
+        this.totalEcsSnapshotSize = totalEcsSnapshotSize;
+        return this;
+    }
+    public Long getTotalEcsSnapshotSize() {
+        return this.totalEcsSnapshotSize;
+    }
+
+    public DescribeBackupsResponseBody setPageRecordCount(String pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public String getPageRecordCount() {
+        return this.pageRecordCount;
     }
 
     public DescribeBackupsResponseBody setTotalRecordCount(String totalRecordCount) {
@@ -51,22 +67,6 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeBackupsResponseBody setPageRecordCount(String pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public String getPageRecordCount() {
-        return this.pageRecordCount;
-    }
-
-    public DescribeBackupsResponseBody setTotalEcsSnapshotSize(Long totalEcsSnapshotSize) {
-        this.totalEcsSnapshotSize = totalEcsSnapshotSize;
-        return this;
-    }
-    public Long getTotalEcsSnapshotSize() {
-        return this.totalEcsSnapshotSize;
-    }
-
     public DescribeBackupsResponseBody setItems(DescribeBackupsResponseBodyItems items) {
         this.items = items;
         return this;
@@ -76,205 +76,69 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
-        @NameInMap("BackupId")
-        public String backupId;
-
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
-
-        @NameInMap("BackupStatus")
-        public String backupStatus;
-
-        @NameInMap("BackupStartTime")
-        public String backupStartTime;
-
-        @NameInMap("BackupEndTime")
-        public String backupEndTime;
-
-        @NameInMap("BackupType")
-        public String backupType;
-
-        @NameInMap("BackupMode")
-        public String backupMode;
-
-        @NameInMap("BackupMethod")
-        public String backupMethod;
-
-        @NameInMap("BackupDownloadURL")
-        public String backupDownloadURL;
-
-        @NameInMap("BackupIntranetDownloadURL")
-        public String backupIntranetDownloadURL;
-
-        @NameInMap("BackupSize")
-        public Long backupSize;
-
-        @NameInMap("HostInstanceID")
-        public String hostInstanceID;
-
-        @NameInMap("StoreStatus")
-        public String storeStatus;
-
-        @NameInMap("MetaStatus")
-        public String metaStatus;
-
-        @NameInMap("ConsistentTime")
-        public Long consistentTime;
-
-        @NameInMap("BackupInitiator")
-        public String backupInitiator;
-
-        @NameInMap("CopyOnlyBackup")
-        public String copyOnlyBackup;
-
         @NameInMap("StorageClass")
         public String storageClass;
-
-        @NameInMap("IsAvail")
-        public Integer isAvail;
 
         @NameInMap("Encryption")
         public String encryption;
 
+        @NameInMap("BackupStatus")
+        public String backupStatus;
+
+        @NameInMap("StoreStatus")
+        public String storeStatus;
+
+        @NameInMap("ConsistentTime")
+        public Long consistentTime;
+
+        @NameInMap("BackupType")
+        public String backupType;
+
+        @NameInMap("CopyOnlyBackup")
+        public String copyOnlyBackup;
+
+        @NameInMap("BackupEndTime")
+        public String backupEndTime;
+
+        @NameInMap("MetaStatus")
+        public String metaStatus;
+
+        @NameInMap("BackupInitiator")
+        public String backupInitiator;
+
+        @NameInMap("BackupIntranetDownloadURL")
+        public String backupIntranetDownloadURL;
+
+        @NameInMap("BackupMethod")
+        public String backupMethod;
+
+        @NameInMap("BackupStartTime")
+        public String backupStartTime;
+
+        @NameInMap("BackupDownloadURL")
+        public String backupDownloadURL;
+
+        @NameInMap("IsAvail")
+        public Integer isAvail;
+
+        @NameInMap("BackupId")
+        public String backupId;
+
+        @NameInMap("HostInstanceID")
+        public String hostInstanceID;
+
+        @NameInMap("BackupSize")
+        public Long backupSize;
+
+        @NameInMap("BackupMode")
+        public String backupMode;
+
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
         public static DescribeBackupsResponseBodyItemsBackup build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseBodyItemsBackup self = new DescribeBackupsResponseBodyItemsBackup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupId(String backupId) {
-            this.backupId = backupId;
-            return this;
-        }
-        public String getBackupId() {
-            return this.backupId;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupStatus(String backupStatus) {
-            this.backupStatus = backupStatus;
-            return this;
-        }
-        public String getBackupStatus() {
-            return this.backupStatus;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupStartTime(String backupStartTime) {
-            this.backupStartTime = backupStartTime;
-            return this;
-        }
-        public String getBackupStartTime() {
-            return this.backupStartTime;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupEndTime(String backupEndTime) {
-            this.backupEndTime = backupEndTime;
-            return this;
-        }
-        public String getBackupEndTime() {
-            return this.backupEndTime;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupType(String backupType) {
-            this.backupType = backupType;
-            return this;
-        }
-        public String getBackupType() {
-            return this.backupType;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupMode(String backupMode) {
-            this.backupMode = backupMode;
-            return this;
-        }
-        public String getBackupMode() {
-            return this.backupMode;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupMethod(String backupMethod) {
-            this.backupMethod = backupMethod;
-            return this;
-        }
-        public String getBackupMethod() {
-            return this.backupMethod;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupDownloadURL(String backupDownloadURL) {
-            this.backupDownloadURL = backupDownloadURL;
-            return this;
-        }
-        public String getBackupDownloadURL() {
-            return this.backupDownloadURL;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupIntranetDownloadURL(String backupIntranetDownloadURL) {
-            this.backupIntranetDownloadURL = backupIntranetDownloadURL;
-            return this;
-        }
-        public String getBackupIntranetDownloadURL() {
-            return this.backupIntranetDownloadURL;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupSize(Long backupSize) {
-            this.backupSize = backupSize;
-            return this;
-        }
-        public Long getBackupSize() {
-            return this.backupSize;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setHostInstanceID(String hostInstanceID) {
-            this.hostInstanceID = hostInstanceID;
-            return this;
-        }
-        public String getHostInstanceID() {
-            return this.hostInstanceID;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setStoreStatus(String storeStatus) {
-            this.storeStatus = storeStatus;
-            return this;
-        }
-        public String getStoreStatus() {
-            return this.storeStatus;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setMetaStatus(String metaStatus) {
-            this.metaStatus = metaStatus;
-            return this;
-        }
-        public String getMetaStatus() {
-            return this.metaStatus;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setConsistentTime(Long consistentTime) {
-            this.consistentTime = consistentTime;
-            return this;
-        }
-        public Long getConsistentTime() {
-            return this.consistentTime;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setBackupInitiator(String backupInitiator) {
-            this.backupInitiator = backupInitiator;
-            return this;
-        }
-        public String getBackupInitiator() {
-            return this.backupInitiator;
-        }
-
-        public DescribeBackupsResponseBodyItemsBackup setCopyOnlyBackup(String copyOnlyBackup) {
-            this.copyOnlyBackup = copyOnlyBackup;
-            return this;
-        }
-        public String getCopyOnlyBackup() {
-            return this.copyOnlyBackup;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setStorageClass(String storageClass) {
@@ -285,6 +149,110 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.storageClass;
         }
 
+        public DescribeBackupsResponseBodyItemsBackup setEncryption(String encryption) {
+            this.encryption = encryption;
+            return this;
+        }
+        public String getEncryption() {
+            return this.encryption;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupStatus(String backupStatus) {
+            this.backupStatus = backupStatus;
+            return this;
+        }
+        public String getBackupStatus() {
+            return this.backupStatus;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setStoreStatus(String storeStatus) {
+            this.storeStatus = storeStatus;
+            return this;
+        }
+        public String getStoreStatus() {
+            return this.storeStatus;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setConsistentTime(Long consistentTime) {
+            this.consistentTime = consistentTime;
+            return this;
+        }
+        public Long getConsistentTime() {
+            return this.consistentTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupType(String backupType) {
+            this.backupType = backupType;
+            return this;
+        }
+        public String getBackupType() {
+            return this.backupType;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setCopyOnlyBackup(String copyOnlyBackup) {
+            this.copyOnlyBackup = copyOnlyBackup;
+            return this;
+        }
+        public String getCopyOnlyBackup() {
+            return this.copyOnlyBackup;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupEndTime(String backupEndTime) {
+            this.backupEndTime = backupEndTime;
+            return this;
+        }
+        public String getBackupEndTime() {
+            return this.backupEndTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setMetaStatus(String metaStatus) {
+            this.metaStatus = metaStatus;
+            return this;
+        }
+        public String getMetaStatus() {
+            return this.metaStatus;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupInitiator(String backupInitiator) {
+            this.backupInitiator = backupInitiator;
+            return this;
+        }
+        public String getBackupInitiator() {
+            return this.backupInitiator;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupIntranetDownloadURL(String backupIntranetDownloadURL) {
+            this.backupIntranetDownloadURL = backupIntranetDownloadURL;
+            return this;
+        }
+        public String getBackupIntranetDownloadURL() {
+            return this.backupIntranetDownloadURL;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupMethod(String backupMethod) {
+            this.backupMethod = backupMethod;
+            return this;
+        }
+        public String getBackupMethod() {
+            return this.backupMethod;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupStartTime(String backupStartTime) {
+            this.backupStartTime = backupStartTime;
+            return this;
+        }
+        public String getBackupStartTime() {
+            return this.backupStartTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupDownloadURL(String backupDownloadURL) {
+            this.backupDownloadURL = backupDownloadURL;
+            return this;
+        }
+        public String getBackupDownloadURL() {
+            return this.backupDownloadURL;
+        }
+
         public DescribeBackupsResponseBodyItemsBackup setIsAvail(Integer isAvail) {
             this.isAvail = isAvail;
             return this;
@@ -293,12 +261,44 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.isAvail;
         }
 
-        public DescribeBackupsResponseBodyItemsBackup setEncryption(String encryption) {
-            this.encryption = encryption;
+        public DescribeBackupsResponseBodyItemsBackup setBackupId(String backupId) {
+            this.backupId = backupId;
             return this;
         }
-        public String getEncryption() {
-            return this.encryption;
+        public String getBackupId() {
+            return this.backupId;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setHostInstanceID(String hostInstanceID) {
+            this.hostInstanceID = hostInstanceID;
+            return this;
+        }
+        public String getHostInstanceID() {
+            return this.hostInstanceID;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupSize(Long backupSize) {
+            this.backupSize = backupSize;
+            return this;
+        }
+        public Long getBackupSize() {
+            return this.backupSize;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupMode(String backupMode) {
+            this.backupMode = backupMode;
+            return this;
+        }
+        public String getBackupMode() {
+            return this.backupMode;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
         }
 
     }

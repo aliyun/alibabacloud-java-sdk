@@ -13,9 +13,6 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("Category")
-    public String category;
-
     public static CreateDiagnosticReportRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDiagnosticReportRequest self = new CreateDiagnosticReportRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public CreateDiagnosticReportRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
 }

@@ -34,6 +34,18 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     @NameInMap("ReadOnlyInstanceWeight")
     public String readOnlyInstanceWeight;
 
+    @NameInMap("DbEndpointOperator")
+    public String dbEndpointOperator;
+
+    @NameInMap("DbEndpointAliases")
+    public String dbEndpointAliases;
+
+    @NameInMap("DbEndpointType")
+    public String dbEndpointType;
+
+    @NameInMap("DbEndpointReadWriteMode")
+    public String dbEndpointReadWriteMode;
+
     public static ModifyDBProxyEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBProxyEndpointRequest self = new ModifyDBProxyEndpointRequest();
         return TeaModel.build(map, self);
@@ -117,6 +129,38 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     }
     public String getReadOnlyInstanceWeight() {
         return this.readOnlyInstanceWeight;
+    }
+
+    public ModifyDBProxyEndpointRequest setDbEndpointOperator(String dbEndpointOperator) {
+        this.dbEndpointOperator = dbEndpointOperator;
+        return this;
+    }
+    public String getDbEndpointOperator() {
+        return this.dbEndpointOperator;
+    }
+
+    public ModifyDBProxyEndpointRequest setDbEndpointAliases(String dbEndpointAliases) {
+        this.dbEndpointAliases = dbEndpointAliases;
+        return this;
+    }
+    public String getDbEndpointAliases() {
+        return this.dbEndpointAliases;
+    }
+
+    public ModifyDBProxyEndpointRequest setDbEndpointType(String dbEndpointType) {
+        this.dbEndpointType = dbEndpointType;
+        return this;
+    }
+    public String getDbEndpointType() {
+        return this.dbEndpointType;
+    }
+
+    public ModifyDBProxyEndpointRequest setDbEndpointReadWriteMode(String dbEndpointReadWriteMode) {
+        this.dbEndpointReadWriteMode = dbEndpointReadWriteMode;
+        return this;
+    }
+    public String getDbEndpointReadWriteMode() {
+        return this.dbEndpointReadWriteMode;
     }
 
 }

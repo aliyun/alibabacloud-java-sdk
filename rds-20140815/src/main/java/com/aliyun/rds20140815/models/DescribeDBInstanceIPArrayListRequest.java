@@ -4,12 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
@@ -25,22 +19,6 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     public static DescribeDBInstanceIPArrayListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceIPArrayListRequest self = new DescribeDBInstanceIPArrayListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstanceIPArrayListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeDBInstanceIPArrayListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
     }
 
     public DescribeDBInstanceIPArrayListRequest setResourceOwnerId(Long resourceOwnerId) {

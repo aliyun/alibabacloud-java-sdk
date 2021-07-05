@@ -4,14 +4,20 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("SystemAdminAccountStatus")
     public String systemAdminAccountStatus;
 
     @NameInMap("SystemAdminAccountFirstActivationTime")
     public String systemAdminAccountFirstActivationTime;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
@@ -19,14 +25,6 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static DescribeAccountsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountsResponseBody self = new DescribeAccountsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccountsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAccountsResponseBody setSystemAdminAccountStatus(String systemAdminAccountStatus) {
@@ -43,6 +41,30 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
     public String getSystemAdminAccountFirstActivationTime() {
         return this.systemAdminAccountFirstActivationTime;
+    }
+
+    public DescribeAccountsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAccountsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAccountsResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public DescribeAccountsResponseBody setAccounts(DescribeAccountsResponseBodyAccounts accounts) {
@@ -114,23 +136,23 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsDBInstanceAccount extends TeaModel {
-        @NameInMap("DBInstanceId")
-        public String DBInstanceId;
-
-        @NameInMap("AccountName")
-        public String accountName;
-
         @NameInMap("AccountStatus")
         public String accountStatus;
-
-        @NameInMap("AccountType")
-        public String accountType;
 
         @NameInMap("AccountDescription")
         public String accountDescription;
 
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
         @NameInMap("PrivExceeded")
         public String privExceeded;
+
+        @NameInMap("AccountType")
+        public String accountType;
+
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("DatabasePrivileges")
         public DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges databasePrivileges;
@@ -138,22 +160,6 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public static DescribeAccountsResponseBodyAccountsDBInstanceAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountsDBInstanceAccount self = new DescribeAccountsResponseBodyAccountsDBInstanceAccount();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setDBInstanceId(String DBInstanceId) {
-            this.DBInstanceId = DBInstanceId;
-            return this;
-        }
-        public String getDBInstanceId() {
-            return this.DBInstanceId;
-        }
-
-        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
         }
 
         public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountStatus(String accountStatus) {
@@ -164,14 +170,6 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountStatus;
         }
 
-        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountType(String accountType) {
-            this.accountType = accountType;
-            return this;
-        }
-        public String getAccountType() {
-            return this.accountType;
-        }
-
         public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountDescription(String accountDescription) {
             this.accountDescription = accountDescription;
             return this;
@@ -180,12 +178,36 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountDescription;
         }
 
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
         public DescribeAccountsResponseBodyAccountsDBInstanceAccount setPrivExceeded(String privExceeded) {
             this.privExceeded = privExceeded;
             return this;
         }
         public String getPrivExceeded() {
             return this.privExceeded;
+        }
+
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
+        public DescribeAccountsResponseBodyAccountsDBInstanceAccount setAccountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public DescribeAccountsResponseBodyAccountsDBInstanceAccount setDatabasePrivileges(DescribeAccountsResponseBodyAccountsDBInstanceAccountDatabasePrivileges databasePrivileges) {

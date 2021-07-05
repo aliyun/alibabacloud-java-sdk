@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -19,9 +16,6 @@ public class DescribeAccountsRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -31,14 +25,6 @@ public class DescribeAccountsRequest extends TeaModel {
     public static DescribeAccountsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountsRequest self = new DescribeAccountsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccountsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DescribeAccountsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -71,14 +57,6 @@ public class DescribeAccountsRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
-    }
-
-    public DescribeAccountsRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     public DescribeAccountsRequest setPageSize(Integer pageSize) {
