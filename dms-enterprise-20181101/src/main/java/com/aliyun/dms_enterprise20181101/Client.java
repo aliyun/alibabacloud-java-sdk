@@ -1016,6 +1016,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDataCorrectBackupFilesWithOptions(request, runtime);
     }
 
+    public ListDataCorrectPreCheckSQLResponse listDataCorrectPreCheckSQLWithOptions(ListDataCorrectPreCheckSQLRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListDataCorrectPreCheckSQL", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new ListDataCorrectPreCheckSQLResponse());
+    }
+
+    public ListDataCorrectPreCheckSQLResponse listDataCorrectPreCheckSQL(ListDataCorrectPreCheckSQLRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDataCorrectPreCheckSQLWithOptions(request, runtime);
+    }
+
     public RegisterInstanceResponse registerInstanceWithOptions(RegisterInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1088,6 +1101,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExecuteDataCorrectResponse executeDataCorrect(ExecuteDataCorrectRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.executeDataCorrectWithOptions(request, runtime);
+    }
+
+    public ListDataCorrectPreCheckDBResponse listDataCorrectPreCheckDBWithOptions(ListDataCorrectPreCheckDBRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListDataCorrectPreCheckDB", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new ListDataCorrectPreCheckDBResponse());
+    }
+
+    public ListDataCorrectPreCheckDBResponse listDataCorrectPreCheckDB(ListDataCorrectPreCheckDBRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDataCorrectPreCheckDBWithOptions(request, runtime);
     }
 
     public ListTablesResponse listTablesWithOptions(ListTablesRequest request, RuntimeOptions runtime) throws Exception {
