@@ -54,7 +54,7 @@ public class ScaleOutClusterRequest extends TeaModel {
 
     // Worker节点数据盘配置
     @NameInMap("worker_data_disks")
-    public java.util.List<DataDisk> workerDataDisks;
+    public java.util.List<ScaleOutClusterRequestWorkerDataDisks> workerDataDisks;
 
     // 在节点上安装云监控
     @NameInMap("cloud_monitor_flags")
@@ -188,11 +188,11 @@ public class ScaleOutClusterRequest extends TeaModel {
         return this.workerSystemDiskSize;
     }
 
-    public ScaleOutClusterRequest setWorkerDataDisks(java.util.List<DataDisk> workerDataDisks) {
+    public ScaleOutClusterRequest setWorkerDataDisks(java.util.List<ScaleOutClusterRequestWorkerDataDisks> workerDataDisks) {
         this.workerDataDisks = workerDataDisks;
         return this;
     }
-    public java.util.List<DataDisk> getWorkerDataDisks() {
+    public java.util.List<ScaleOutClusterRequestWorkerDataDisks> getWorkerDataDisks() {
         return this.workerDataDisks;
     }
 
@@ -258,6 +258,62 @@ public class ScaleOutClusterRequest extends TeaModel {
     }
     public Runtime getRuntime() {
         return this.runtime;
+    }
+
+    public static class ScaleOutClusterRequestWorkerDataDisks extends TeaModel {
+        // 数据盘类型,默认值：cloud_efficiency
+        @NameInMap("category")
+        public String category;
+
+        // 数据盘大小，单位为GiB。  取值范围：[40,32768]
+        @NameInMap("size")
+        public String size;
+
+        // 是否对数据盘加密
+        @NameInMap("encrypted")
+        public String encrypted;
+
+        // 自动快照策略ID，云盘会按照快照策略自动备份。
+        @NameInMap("auto_snapshot_policy_id")
+        public String autoSnapshotPolicyId;
+
+        public static ScaleOutClusterRequestWorkerDataDisks build(java.util.Map<String, ?> map) throws Exception {
+            ScaleOutClusterRequestWorkerDataDisks self = new ScaleOutClusterRequestWorkerDataDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public ScaleOutClusterRequestWorkerDataDisks setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ScaleOutClusterRequestWorkerDataDisks setSize(String size) {
+            this.size = size;
+            return this;
+        }
+        public String getSize() {
+            return this.size;
+        }
+
+        public ScaleOutClusterRequestWorkerDataDisks setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
+        public ScaleOutClusterRequestWorkerDataDisks setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
     }
 
 }
