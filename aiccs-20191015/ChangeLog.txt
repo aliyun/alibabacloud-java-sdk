@@ -1,3 +1,6 @@
+2021-07-06 Version: 1.3.5
+- Update.
+
 2021-06-22 Version: 1.3.4
 - New hotline number config.
 

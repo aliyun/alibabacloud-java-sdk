@@ -694,6 +694,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateOuterAccountWithOptions(request, runtime);
     }
 
+    public AiccsSmartCallResponse aiccsSmartCallWithOptions(AiccsSmartCallRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AiccsSmartCall", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new AiccsSmartCallResponse());
+    }
+
+    public AiccsSmartCallResponse aiccsSmartCall(AiccsSmartCallRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.aiccsSmartCallWithOptions(request, runtime);
+    }
+
     public GetHotlineWaitingNumberResponse getHotlineWaitingNumberWithOptions(GetHotlineWaitingNumberRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1158,6 +1171,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListChatRecordDetailResponse listChatRecordDetail(ListChatRecordDetailRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listChatRecordDetailWithOptions(request, runtime);
+    }
+
+    public AiccsSmartCallOperateResponse aiccsSmartCallOperateWithOptions(AiccsSmartCallOperateRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AiccsSmartCallOperate", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new AiccsSmartCallOperateResponse());
+    }
+
+    public AiccsSmartCallOperateResponse aiccsSmartCallOperate(AiccsSmartCallOperateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.aiccsSmartCallOperateWithOptions(request, runtime);
     }
 
     public AddSkillGroupResponse addSkillGroupWithOptions(AddSkillGroupRequest request, RuntimeOptions runtime) throws Exception {
