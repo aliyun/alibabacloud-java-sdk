@@ -4,14 +4,14 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DeleteSaslUserResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class DeleteSaslUserResponseBody extends TeaModel {
     public static DeleteSaslUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSaslUserResponseBody self = new DeleteSaslUserResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSaslUserResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public DeleteSaslUserResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class DeleteSaslUserResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteSaslUserResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public DeleteSaslUserResponseBody setSuccess(Boolean success) {

@@ -4,24 +4,32 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetMetaProductListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("MetaData")
-    public GetMetaProductListResponseBodyMetaData metaData;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("MetaData")
+    public GetMetaProductListResponseBodyMetaData metaData;
 
     public static GetMetaProductListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMetaProductListResponseBody self = new GetMetaProductListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMetaProductListResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetMetaProductListResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class GetMetaProductListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetMetaProductListResponseBody setMetaData(GetMetaProductListResponseBodyMetaData metaData) {
-        this.metaData = metaData;
-        return this;
-    }
-    public GetMetaProductListResponseBodyMetaData getMetaData() {
-        return this.metaData;
-    }
-
-    public GetMetaProductListResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetMetaProductListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetMetaProductListResponseBody setMetaData(GetMetaProductListResponseBodyMetaData metaData) {
+        this.metaData = metaData;
+        return this;
+    }
+    public GetMetaProductListResponseBodyMetaData getMetaData() {
+        return this.metaData;
     }
 
     public static class GetMetaProductListResponseBodyMetaDataProductsNormalSpecVO extends TeaModel {
@@ -273,18 +273,26 @@ public class GetMetaProductListResponseBody extends TeaModel {
     }
 
     public static class GetMetaProductListResponseBodyMetaData extends TeaModel {
+        @NameInMap("Names")
+        public java.util.Map<String, ?> names;
+
         @NameInMap("ProductsNormal")
         public GetMetaProductListResponseBodyMetaDataProductsNormal productsNormal;
 
         @NameInMap("ProductsProfessional")
         public GetMetaProductListResponseBodyMetaDataProductsProfessional productsProfessional;
 
-        @NameInMap("Names")
-        public java.util.Map<String, ?> names;
-
         public static GetMetaProductListResponseBodyMetaData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaProductListResponseBodyMetaData self = new GetMetaProductListResponseBodyMetaData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaProductListResponseBodyMetaData setNames(java.util.Map<String, ?> names) {
+            this.names = names;
+            return this;
+        }
+        public java.util.Map<String, ?> getNames() {
+            return this.names;
         }
 
         public GetMetaProductListResponseBodyMetaData setProductsNormal(GetMetaProductListResponseBodyMetaDataProductsNormal productsNormal) {
@@ -301,14 +309,6 @@ public class GetMetaProductListResponseBody extends TeaModel {
         }
         public GetMetaProductListResponseBodyMetaDataProductsProfessional getProductsProfessional() {
             return this.productsProfessional;
-        }
-
-        public GetMetaProductListResponseBodyMetaData setNames(java.util.Map<String, ?> names) {
-            this.names = names;
-            return this;
-        }
-        public java.util.Map<String, ?> getNames() {
-            return this.names;
         }
 
     }

@@ -4,8 +4,17 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetTopicListResponseBody extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Message")
     public String message;
@@ -13,24 +22,23 @@ public class GetTopicListResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
     @NameInMap("Total")
     public Integer total;
 
     @NameInMap("TopicList")
     public GetTopicListResponseBodyTopicList topicList;
 
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static GetTopicListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTopicListResponseBody self = new GetTopicListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTopicListResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public GetTopicListResponseBody setRequestId(String requestId) {
@@ -39,6 +47,22 @@ public class GetTopicListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetTopicListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetTopicListResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetTopicListResponseBody setMessage(String message) {
@@ -57,14 +81,6 @@ public class GetTopicListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public GetTopicListResponseBody setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
     public GetTopicListResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
@@ -79,22 +95,6 @@ public class GetTopicListResponseBody extends TeaModel {
     }
     public GetTopicListResponseBodyTopicList getTopicList() {
         return this.topicList;
-    }
-
-    public GetTopicListResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public GetTopicListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class GetTopicListResponseBodyTopicListTopicVOTagsTagVO extends TeaModel {
@@ -150,6 +150,9 @@ public class GetTopicListResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("PartitionNum")
+        public Integer partitionNum;
+
         @NameInMap("Remark")
         public String remark;
 
@@ -162,14 +165,20 @@ public class GetTopicListResponseBody extends TeaModel {
         @NameInMap("StatusName")
         public String statusName;
 
-        @NameInMap("Tags")
-        public GetTopicListResponseBodyTopicListTopicVOTags tags;
+        @NameInMap("CompactTopic")
+        public Boolean compactTopic;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("LocalTopic")
+        public Boolean localTopic;
+
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Tags")
+        public GetTopicListResponseBodyTopicListTopicVOTags tags;
 
         public static GetTopicListResponseBodyTopicListTopicVO build(java.util.Map<String, ?> map) throws Exception {
             GetTopicListResponseBodyTopicListTopicVO self = new GetTopicListResponseBodyTopicListTopicVO();
@@ -182,6 +191,14 @@ public class GetTopicListResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public GetTopicListResponseBodyTopicListTopicVO setPartitionNum(Integer partitionNum) {
+            this.partitionNum = partitionNum;
+            return this;
+        }
+        public Integer getPartitionNum() {
+            return this.partitionNum;
         }
 
         public GetTopicListResponseBodyTopicListTopicVO setRemark(String remark) {
@@ -216,12 +233,12 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.statusName;
         }
 
-        public GetTopicListResponseBodyTopicListTopicVO setTags(GetTopicListResponseBodyTopicListTopicVOTags tags) {
-            this.tags = tags;
+        public GetTopicListResponseBodyTopicListTopicVO setCompactTopic(Boolean compactTopic) {
+            this.compactTopic = compactTopic;
             return this;
         }
-        public GetTopicListResponseBodyTopicListTopicVOTags getTags() {
-            return this.tags;
+        public Boolean getCompactTopic() {
+            return this.compactTopic;
         }
 
         public GetTopicListResponseBodyTopicListTopicVO setInstanceId(String instanceId) {
@@ -232,12 +249,28 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public GetTopicListResponseBodyTopicListTopicVO setLocalTopic(Boolean localTopic) {
+            this.localTopic = localTopic;
+            return this;
+        }
+        public Boolean getLocalTopic() {
+            return this.localTopic;
+        }
+
         public GetTopicListResponseBodyTopicListTopicVO setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetTopicListResponseBodyTopicListTopicVO setTags(GetTopicListResponseBodyTopicListTopicVOTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public GetTopicListResponseBodyTopicListTopicVOTags getTags() {
+            return this.tags;
         }
 
     }

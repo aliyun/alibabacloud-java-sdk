@@ -4,14 +4,14 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class ModifyTopicRemarkResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class ModifyTopicRemarkResponseBody extends TeaModel {
     public static ModifyTopicRemarkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyTopicRemarkResponseBody self = new ModifyTopicRemarkResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyTopicRemarkResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ModifyTopicRemarkResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class ModifyTopicRemarkResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ModifyTopicRemarkResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public ModifyTopicRemarkResponseBody setSuccess(Boolean success) {

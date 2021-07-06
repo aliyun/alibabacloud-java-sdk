@@ -4,14 +4,14 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class CreateAclResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class CreateAclResponseBody extends TeaModel {
     public static CreateAclResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAclResponseBody self = new CreateAclResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAclResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public CreateAclResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class CreateAclResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateAclResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public CreateAclResponseBody setSuccess(Boolean success) {

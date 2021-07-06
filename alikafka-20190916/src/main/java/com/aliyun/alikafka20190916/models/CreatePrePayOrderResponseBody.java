@@ -4,24 +4,32 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class CreatePrePayOrderResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OrderId")
-    public String orderId;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("OrderId")
+    public String orderId;
 
     public static CreatePrePayOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreatePrePayOrderResponseBody self = new CreatePrePayOrderResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePrePayOrderResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public CreatePrePayOrderResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class CreatePrePayOrderResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreatePrePayOrderResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
-    }
-
-    public CreatePrePayOrderResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public CreatePrePayOrderResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public CreatePrePayOrderResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
 }

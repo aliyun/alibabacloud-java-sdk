@@ -4,24 +4,32 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InstanceList")
-    public GetInstanceListResponseBodyInstanceList instanceList;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("InstanceList")
+    public GetInstanceListResponseBodyInstanceList instanceList;
 
     public static GetInstanceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceListResponseBody self = new GetInstanceListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceListResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetInstanceListResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class GetInstanceListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetInstanceListResponseBody setInstanceList(GetInstanceListResponseBodyInstanceList instanceList) {
-        this.instanceList = instanceList;
-        return this;
-    }
-    public GetInstanceListResponseBodyInstanceList getInstanceList() {
-        return this.instanceList;
-    }
-
-    public GetInstanceListResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetInstanceListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetInstanceListResponseBody setInstanceList(GetInstanceListResponseBodyInstanceList instanceList) {
+        this.instanceList = instanceList;
+        return this;
+    }
+    public GetInstanceListResponseBodyInstanceList getInstanceList() {
+        return this.instanceList;
     }
 
     public static class GetInstanceListResponseBodyInstanceListInstanceVOTagsTagVO extends TeaModel {
@@ -136,44 +136,32 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
+        @NameInMap("SpecType")
+        public String specType;
 
         @NameInMap("DeployType")
         public Integer deployType;
 
-        @NameInMap("Tags")
-        public GetInstanceListResponseBodyInstanceListInstanceVOTags tags;
-
-        @NameInMap("DiskType")
-        public Integer diskType;
-
-        @NameInMap("SslEndPoint")
-        public String sslEndPoint;
-
-        @NameInMap("AllConfig")
-        public String allConfig;
-
-        @NameInMap("PaidType")
-        public Integer paidType;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("UpgradeServiceDetailInfo")
-        public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo;
-
-        @NameInMap("SpecType")
-        public String specType;
+        @NameInMap("CreateTime")
+        public Long createTime;
 
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        @NameInMap("DiskType")
+        public Integer diskType;
+
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
+        @NameInMap("SslEndPoint")
+        public String sslEndPoint;
+
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("AllConfig")
+        public String allConfig;
 
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;
@@ -202,8 +190,20 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("IoMax")
         public Integer ioMax;
 
+        @NameInMap("PaidType")
+        public Integer paidType;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("EndPoint")
         public String endPoint;
+
+        @NameInMap("Tags")
+        public GetInstanceListResponseBodyInstanceListInstanceVOTags tags;
+
+        @NameInMap("UpgradeServiceDetailInfo")
+        public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo;
 
         public static GetInstanceListResponseBodyInstanceListInstanceVO build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceListResponseBodyInstanceListInstanceVO self = new GetInstanceListResponseBodyInstanceListInstanceVO();
@@ -218,12 +218,12 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public GetInstanceListResponseBodyInstanceListInstanceVO setCreateTime(Long createTime) {
-            this.createTime = createTime;
+        public GetInstanceListResponseBodyInstanceListInstanceVO setSpecType(String specType) {
+            this.specType = specType;
             return this;
         }
-        public Long getCreateTime() {
-            return this.createTime;
+        public String getSpecType() {
+            return this.specType;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setDeployType(Integer deployType) {
@@ -234,68 +234,12 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.deployType;
         }
 
-        public GetInstanceListResponseBodyInstanceListInstanceVO setTags(GetInstanceListResponseBodyInstanceListInstanceVOTags tags) {
-            this.tags = tags;
+        public GetInstanceListResponseBodyInstanceListInstanceVO setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public GetInstanceListResponseBodyInstanceListInstanceVOTags getTags() {
-            return this.tags;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setDiskType(Integer diskType) {
-            this.diskType = diskType;
-            return this;
-        }
-        public Integer getDiskType() {
-            return this.diskType;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setSslEndPoint(String sslEndPoint) {
-            this.sslEndPoint = sslEndPoint;
-            return this;
-        }
-        public String getSslEndPoint() {
-            return this.sslEndPoint;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setAllConfig(String allConfig) {
-            this.allConfig = allConfig;
-            return this;
-        }
-        public String getAllConfig() {
-            return this.allConfig;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setPaidType(Integer paidType) {
-            this.paidType = paidType;
-            return this;
-        }
-        public Integer getPaidType() {
-            return this.paidType;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setUpgradeServiceDetailInfo(GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo) {
-            this.upgradeServiceDetailInfo = upgradeServiceDetailInfo;
-            return this;
-        }
-        public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo getUpgradeServiceDetailInfo() {
-            return this.upgradeServiceDetailInfo;
-        }
-
-        public GetInstanceListResponseBodyInstanceListInstanceVO setSpecType(String specType) {
-            this.specType = specType;
-            return this;
-        }
-        public String getSpecType() {
-            return this.specType;
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setDiskSize(Integer diskSize) {
@@ -306,6 +250,14 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.diskSize;
         }
 
+        public GetInstanceListResponseBodyInstanceListInstanceVO setDiskType(Integer diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public Integer getDiskType() {
+            return this.diskType;
+        }
+
         public GetInstanceListResponseBodyInstanceListInstanceVO setSecurityGroup(String securityGroup) {
             this.securityGroup = securityGroup;
             return this;
@@ -314,12 +266,28 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.securityGroup;
         }
 
+        public GetInstanceListResponseBodyInstanceListInstanceVO setSslEndPoint(String sslEndPoint) {
+            this.sslEndPoint = sslEndPoint;
+            return this;
+        }
+        public String getSslEndPoint() {
+            return this.sslEndPoint;
+        }
+
         public GetInstanceListResponseBodyInstanceListInstanceVO setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setAllConfig(String allConfig) {
+            this.allConfig = allConfig;
+            return this;
+        }
+        public String getAllConfig() {
+            return this.allConfig;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setServiceStatus(Integer serviceStatus) {
@@ -394,12 +362,44 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.ioMax;
         }
 
+        public GetInstanceListResponseBodyInstanceListInstanceVO setPaidType(Integer paidType) {
+            this.paidType = paidType;
+            return this;
+        }
+        public Integer getPaidType() {
+            return this.paidType;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public GetInstanceListResponseBodyInstanceListInstanceVO setEndPoint(String endPoint) {
             this.endPoint = endPoint;
             return this;
         }
         public String getEndPoint() {
             return this.endPoint;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setTags(GetInstanceListResponseBodyInstanceListInstanceVOTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public GetInstanceListResponseBodyInstanceListInstanceVOTags getTags() {
+            return this.tags;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setUpgradeServiceDetailInfo(GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo upgradeServiceDetailInfo) {
+            this.upgradeServiceDetailInfo = upgradeServiceDetailInfo;
+            return this;
+        }
+        public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo getUpgradeServiceDetailInfo() {
+            return this.upgradeServiceDetailInfo;
         }
 
     }

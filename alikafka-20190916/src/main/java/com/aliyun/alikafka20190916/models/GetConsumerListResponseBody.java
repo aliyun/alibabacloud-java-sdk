@@ -4,24 +4,32 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("ConsumerList")
     public GetConsumerListResponseBodyConsumerList consumerList;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     public static GetConsumerListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConsumerListResponseBody self = new GetConsumerListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetConsumerListResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetConsumerListResponseBody setMessage(String message) {
@@ -40,12 +48,12 @@ public class GetConsumerListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetConsumerListResponseBody setCode(Integer code) {
-        this.code = code;
+    public GetConsumerListResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GetConsumerListResponseBody setConsumerList(GetConsumerListResponseBodyConsumerList consumerList) {
@@ -54,14 +62,6 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
     public GetConsumerListResponseBodyConsumerList getConsumerList() {
         return this.consumerList;
-    }
-
-    public GetConsumerListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO extends TeaModel {
@@ -114,40 +114,24 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVO extends TeaModel {
-        @NameInMap("Remark")
-        public String remark;
-
-        @NameInMap("Tags")
-        public GetConsumerListResponseBodyConsumerListConsumerVOTags tags;
-
         @NameInMap("ConsumerId")
         public String consumerId;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("Remark")
+        public String remark;
+
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Tags")
+        public GetConsumerListResponseBodyConsumerListConsumerVOTags tags;
 
         public static GetConsumerListResponseBodyConsumerListConsumerVO build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerListResponseBodyConsumerListConsumerVO self = new GetConsumerListResponseBodyConsumerListConsumerVO();
             return TeaModel.build(map, self);
-        }
-
-        public GetConsumerListResponseBodyConsumerListConsumerVO setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
-        }
-
-        public GetConsumerListResponseBodyConsumerListConsumerVO setTags(GetConsumerListResponseBodyConsumerListConsumerVOTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public GetConsumerListResponseBodyConsumerListConsumerVOTags getTags() {
-            return this.tags;
         }
 
         public GetConsumerListResponseBodyConsumerListConsumerVO setConsumerId(String consumerId) {
@@ -166,12 +150,28 @@ public class GetConsumerListResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public GetConsumerListResponseBodyConsumerListConsumerVO setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
         public GetConsumerListResponseBodyConsumerListConsumerVO setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetConsumerListResponseBodyConsumerListConsumerVO setTags(GetConsumerListResponseBodyConsumerListConsumerVOTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public GetConsumerListResponseBodyConsumerListConsumerVOTags getTags() {
+            return this.tags;
         }
 
     }

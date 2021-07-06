@@ -4,14 +4,14 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class UpdateAllowedIpResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class UpdateAllowedIpResponseBody extends TeaModel {
     public static UpdateAllowedIpResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateAllowedIpResponseBody self = new UpdateAllowedIpResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAllowedIpResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public UpdateAllowedIpResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class UpdateAllowedIpResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateAllowedIpResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public UpdateAllowedIpResponseBody setSuccess(Boolean success) {
