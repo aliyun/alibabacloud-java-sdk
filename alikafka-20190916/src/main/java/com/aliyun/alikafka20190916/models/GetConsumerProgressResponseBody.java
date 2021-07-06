@@ -4,24 +4,32 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerProgressResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ConsumerProgress")
-    public GetConsumerProgressResponseBodyConsumerProgress consumerProgress;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ConsumerProgress")
+    public GetConsumerProgressResponseBodyConsumerProgress consumerProgress;
 
     public static GetConsumerProgressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConsumerProgressResponseBody self = new GetConsumerProgressResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetConsumerProgressResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetConsumerProgressResponseBody setMessage(String message) {
@@ -40,22 +48,6 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetConsumerProgressResponseBody setConsumerProgress(GetConsumerProgressResponseBodyConsumerProgress consumerProgress) {
-        this.consumerProgress = consumerProgress;
-        return this;
-    }
-    public GetConsumerProgressResponseBodyConsumerProgress getConsumerProgress() {
-        return this.consumerProgress;
-    }
-
-    public GetConsumerProgressResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetConsumerProgressResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,7 +56,18 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetConsumerProgressResponseBody setConsumerProgress(GetConsumerProgressResponseBodyConsumerProgress consumerProgress) {
+        this.consumerProgress = consumerProgress;
+        return this;
+    }
+    public GetConsumerProgressResponseBodyConsumerProgress getConsumerProgress() {
+        return this.consumerProgress;
+    }
+
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList extends TeaModel {
+        @NameInMap("Partition")
+        public Integer partition;
+
         @NameInMap("BrokerOffset")
         public Long brokerOffset;
 
@@ -74,12 +77,17 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
-        @NameInMap("Partition")
-        public Integer partition;
-
         public static GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList self = new GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList();
             return TeaModel.build(map, self);
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setPartition(Integer partition) {
+            this.partition = partition;
+            return this;
+        }
+        public Integer getPartition() {
+            return this.partition;
         }
 
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setBrokerOffset(Long brokerOffset) {
@@ -104,14 +112,6 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
         public Long getLastTimestamp() {
             return this.lastTimestamp;
-        }
-
-        public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList setPartition(Integer partition) {
-            this.partition = partition;
-            return this;
-        }
-        public Integer getPartition() {
-            return this.partition;
         }
 
     }
@@ -207,26 +207,18 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgress extends TeaModel {
-        @NameInMap("TopicList")
-        public GetConsumerProgressResponseBodyConsumerProgressTopicList topicList;
-
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
         @NameInMap("TotalDiff")
         public Long totalDiff;
 
+        @NameInMap("TopicList")
+        public GetConsumerProgressResponseBodyConsumerProgressTopicList topicList;
+
         public static GetConsumerProgressResponseBodyConsumerProgress build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerProgressResponseBodyConsumerProgress self = new GetConsumerProgressResponseBodyConsumerProgress();
             return TeaModel.build(map, self);
-        }
-
-        public GetConsumerProgressResponseBodyConsumerProgress setTopicList(GetConsumerProgressResponseBodyConsumerProgressTopicList topicList) {
-            this.topicList = topicList;
-            return this;
-        }
-        public GetConsumerProgressResponseBodyConsumerProgressTopicList getTopicList() {
-            return this.topicList;
         }
 
         public GetConsumerProgressResponseBodyConsumerProgress setLastTimestamp(Long lastTimestamp) {
@@ -243,6 +235,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
         public Long getTotalDiff() {
             return this.totalDiff;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgress setTopicList(GetConsumerProgressResponseBodyConsumerProgressTopicList topicList) {
+            this.topicList = topicList;
+            return this;
+        }
+        public GetConsumerProgressResponseBodyConsumerProgressTopicList getTopicList() {
+            return this.topicList;
         }
 
     }

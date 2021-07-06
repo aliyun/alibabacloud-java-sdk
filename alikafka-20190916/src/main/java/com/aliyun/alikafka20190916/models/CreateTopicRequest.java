@@ -16,8 +16,14 @@ public class CreateTopicRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("CompactTopic")
+    public Boolean compactTopic;
+
     @NameInMap("PartitionNum")
     public String partitionNum;
+
+    @NameInMap("LocalTopic")
+    public Boolean localTopic;
 
     public static CreateTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTopicRequest self = new CreateTopicRequest();
@@ -56,12 +62,28 @@ public class CreateTopicRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateTopicRequest setCompactTopic(Boolean compactTopic) {
+        this.compactTopic = compactTopic;
+        return this;
+    }
+    public Boolean getCompactTopic() {
+        return this.compactTopic;
+    }
+
     public CreateTopicRequest setPartitionNum(String partitionNum) {
         this.partitionNum = partitionNum;
         return this;
     }
     public String getPartitionNum() {
         return this.partitionNum;
+    }
+
+    public CreateTopicRequest setLocalTopic(Boolean localTopic) {
+        this.localTopic = localTopic;
+        return this;
+    }
+    public Boolean getLocalTopic() {
+        return this.localTopic;
     }
 
 }

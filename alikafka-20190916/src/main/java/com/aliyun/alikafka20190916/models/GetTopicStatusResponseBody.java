@@ -4,24 +4,32 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetTopicStatusResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TopicStatus")
-    public GetTopicStatusResponseBodyTopicStatus topicStatus;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TopicStatus")
+    public GetTopicStatusResponseBodyTopicStatus topicStatus;
 
     public static GetTopicStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTopicStatusResponseBody self = new GetTopicStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTopicStatusResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetTopicStatusResponseBody setMessage(String message) {
@@ -40,22 +48,6 @@ public class GetTopicStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTopicStatusResponseBody setTopicStatus(GetTopicStatusResponseBodyTopicStatus topicStatus) {
-        this.topicStatus = topicStatus;
-        return this;
-    }
-    public GetTopicStatusResponseBodyTopicStatus getTopicStatus() {
-        return this.topicStatus;
-    }
-
-    public GetTopicStatusResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetTopicStatusResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,15 +56,20 @@ public class GetTopicStatusResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetTopicStatusResponseBody setTopicStatus(GetTopicStatusResponseBodyTopicStatus topicStatus) {
+        this.topicStatus = topicStatus;
+        return this;
+    }
+    public GetTopicStatusResponseBodyTopicStatus getTopicStatus() {
+        return this.topicStatus;
+    }
+
     public static class GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable extends TeaModel {
-        @NameInMap("MinOffset")
-        public Long minOffset;
-
-        @NameInMap("Topic")
-        public String topic;
-
         @NameInMap("Partition")
         public Integer partition;
+
+        @NameInMap("MinOffset")
+        public Long minOffset;
 
         @NameInMap("LastUpdateTimestamp")
         public Long lastUpdateTimestamp;
@@ -80,25 +77,12 @@ public class GetTopicStatusResponseBody extends TeaModel {
         @NameInMap("MaxOffset")
         public Long maxOffset;
 
+        @NameInMap("Topic")
+        public String topic;
+
         public static GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable build(java.util.Map<String, ?> map) throws Exception {
             GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable self = new GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable();
             return TeaModel.build(map, self);
-        }
-
-        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setMinOffset(Long minOffset) {
-            this.minOffset = minOffset;
-            return this;
-        }
-        public Long getMinOffset() {
-            return this.minOffset;
-        }
-
-        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setPartition(Integer partition) {
@@ -107,6 +91,14 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
         public Integer getPartition() {
             return this.partition;
+        }
+
+        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setMinOffset(Long minOffset) {
+            this.minOffset = minOffset;
+            return this;
+        }
+        public Long getMinOffset() {
+            return this.minOffset;
         }
 
         public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setLastUpdateTimestamp(Long lastUpdateTimestamp) {
@@ -123,6 +115,14 @@ public class GetTopicStatusResponseBody extends TeaModel {
         }
         public Long getMaxOffset() {
             return this.maxOffset;
+        }
+
+        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
         }
 
     }
@@ -147,11 +147,11 @@ public class GetTopicStatusResponseBody extends TeaModel {
     }
 
     public static class GetTopicStatusResponseBodyTopicStatus extends TeaModel {
-        @NameInMap("LastTimeStamp")
-        public Long lastTimeStamp;
-
         @NameInMap("TotalCount")
         public Long totalCount;
+
+        @NameInMap("LastTimeStamp")
+        public Long lastTimeStamp;
 
         @NameInMap("OffsetTable")
         public GetTopicStatusResponseBodyTopicStatusOffsetTable offsetTable;
@@ -161,20 +161,20 @@ public class GetTopicStatusResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetTopicStatusResponseBodyTopicStatus setLastTimeStamp(Long lastTimeStamp) {
-            this.lastTimeStamp = lastTimeStamp;
-            return this;
-        }
-        public Long getLastTimeStamp() {
-            return this.lastTimeStamp;
-        }
-
         public GetTopicStatusResponseBodyTopicStatus setTotalCount(Long totalCount) {
             this.totalCount = totalCount;
             return this;
         }
         public Long getTotalCount() {
             return this.totalCount;
+        }
+
+        public GetTopicStatusResponseBodyTopicStatus setLastTimeStamp(Long lastTimeStamp) {
+            this.lastTimeStamp = lastTimeStamp;
+            return this;
+        }
+        public Long getLastTimeStamp() {
+            return this.lastTimeStamp;
         }
 
         public GetTopicStatusResponseBodyTopicStatus setOffsetTable(GetTopicStatusResponseBodyTopicStatusOffsetTable offsetTable) {
