@@ -454,6 +454,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("key_pair")
         public String keyPair;
 
+        // 节点公网IP网络计费类型
+        @NameInMap("internet_charge_type")
+        public String internetChargeType;
+
+        // 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
+        @NameInMap("internet_max_bandwidth_out")
+        public Long internetMaxBandwidthOut;
+
         public static DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup self = new DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup();
             return TeaModel.build(map, self);
@@ -681,6 +689,22 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public String getKeyPair() {
             return this.keyPair;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setInternetMaxBandwidthOut(Long internetMaxBandwidthOut) {
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+            return this;
+        }
+        public Long getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
         }
 
     }
