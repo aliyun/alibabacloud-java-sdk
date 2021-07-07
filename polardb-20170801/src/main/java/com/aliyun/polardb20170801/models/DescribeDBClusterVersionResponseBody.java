@@ -25,6 +25,18 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     @NameInMap("DBMinorVersion")
     public String DBMinorVersion;
 
+    @NameInMap("ProxyRevisionVersion")
+    public String proxyRevisionVersion;
+
+    @NameInMap("ProxyVersionStatus")
+    public String proxyVersionStatus;
+
+    @NameInMap("ProxyLatestVersion")
+    public String proxyLatestVersion;
+
+    @NameInMap("DBLatestVersion")
+    public String DBLatestVersion;
+
     public static DescribeDBClusterVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterVersionResponseBody self = new DescribeDBClusterVersionResponseBody();
         return TeaModel.build(map, self);
@@ -84,6 +96,38 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     }
     public String getDBMinorVersion() {
         return this.DBMinorVersion;
+    }
+
+    public DescribeDBClusterVersionResponseBody setProxyRevisionVersion(String proxyRevisionVersion) {
+        this.proxyRevisionVersion = proxyRevisionVersion;
+        return this;
+    }
+    public String getProxyRevisionVersion() {
+        return this.proxyRevisionVersion;
+    }
+
+    public DescribeDBClusterVersionResponseBody setProxyVersionStatus(String proxyVersionStatus) {
+        this.proxyVersionStatus = proxyVersionStatus;
+        return this;
+    }
+    public String getProxyVersionStatus() {
+        return this.proxyVersionStatus;
+    }
+
+    public DescribeDBClusterVersionResponseBody setProxyLatestVersion(String proxyLatestVersion) {
+        this.proxyLatestVersion = proxyLatestVersion;
+        return this;
+    }
+    public String getProxyLatestVersion() {
+        return this.proxyLatestVersion;
+    }
+
+    public DescribeDBClusterVersionResponseBody setDBLatestVersion(String DBLatestVersion) {
+        this.DBLatestVersion = DBLatestVersion;
+        return this;
+    }
+    public String getDBLatestVersion() {
+        return this.DBLatestVersion;
     }
 
 }

@@ -3,7 +3,10 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeBackupTasksRequest extends TeaModel {
+public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -19,18 +22,23 @@ public class DescribeBackupTasksRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("BackupJobId")
-    public String backupJobId;
+    @NameInMap("GDNDescription")
+    public String GDNDescription;
 
-    @NameInMap("BackupMode")
-    public String backupMode;
-
-    public static DescribeBackupTasksRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeBackupTasksRequest self = new DescribeBackupTasksRequest();
+    public static CreateGlobalDatabaseNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateGlobalDatabaseNetworkRequest self = new CreateGlobalDatabaseNetworkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupTasksRequest setOwnerId(Long ownerId) {
+    public CreateGlobalDatabaseNetworkRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public CreateGlobalDatabaseNetworkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -38,7 +46,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeBackupTasksRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CreateGlobalDatabaseNetworkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -46,7 +54,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeBackupTasksRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateGlobalDatabaseNetworkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -54,7 +62,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeBackupTasksRequest setOwnerAccount(String ownerAccount) {
+    public CreateGlobalDatabaseNetworkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -62,7 +70,7 @@ public class DescribeBackupTasksRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeBackupTasksRequest setDBClusterId(String DBClusterId) {
+    public CreateGlobalDatabaseNetworkRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -70,20 +78,12 @@ public class DescribeBackupTasksRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeBackupTasksRequest setBackupJobId(String backupJobId) {
-        this.backupJobId = backupJobId;
+    public CreateGlobalDatabaseNetworkRequest setGDNDescription(String GDNDescription) {
+        this.GDNDescription = GDNDescription;
         return this;
     }
-    public String getBackupJobId() {
-        return this.backupJobId;
-    }
-
-    public DescribeBackupTasksRequest setBackupMode(String backupMode) {
-        this.backupMode = backupMode;
-        return this;
-    }
-    public String getBackupMode() {
-        return this.backupMode;
+    public String getGDNDescription() {
+        return this.GDNDescription;
     }
 
 }

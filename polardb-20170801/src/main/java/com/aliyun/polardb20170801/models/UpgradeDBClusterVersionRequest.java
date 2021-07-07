@@ -28,6 +28,9 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     @NameInMap("FromTimeService")
     public Boolean fromTimeService;
 
+    @NameInMap("UpgradeType")
+    public String upgradeType;
+
     public static UpgradeDBClusterVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBClusterVersionRequest self = new UpgradeDBClusterVersionRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class UpgradeDBClusterVersionRequest extends TeaModel {
     }
     public Boolean getFromTimeService() {
         return this.fromTimeService;
+    }
+
+    public UpgradeDBClusterVersionRequest setUpgradeType(String upgradeType) {
+        this.upgradeType = upgradeType;
+        return this;
+    }
+    public String getUpgradeType() {
+        return this.upgradeType;
     }
 
 }

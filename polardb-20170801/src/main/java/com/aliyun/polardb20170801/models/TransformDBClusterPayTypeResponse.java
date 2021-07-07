@@ -3,21 +3,21 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSQLLogRecordsResponse extends TeaModel {
+public class TransformDBClusterPayTypeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeSQLLogRecordsResponseBody body;
+    public TransformDBClusterPayTypeResponseBody body;
 
-    public static DescribeSQLLogRecordsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSQLLogRecordsResponse self = new DescribeSQLLogRecordsResponse();
+    public static TransformDBClusterPayTypeResponse build(java.util.Map<String, ?> map) throws Exception {
+        TransformDBClusterPayTypeResponse self = new TransformDBClusterPayTypeResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLLogRecordsResponse setHeaders(java.util.Map<String, String> headers) {
+    public TransformDBClusterPayTypeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeSQLLogRecordsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeSQLLogRecordsResponse setBody(DescribeSQLLogRecordsResponseBody body) {
+    public TransformDBClusterPayTypeResponse setBody(TransformDBClusterPayTypeResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeSQLLogRecordsResponseBody getBody() {
+    public TransformDBClusterPayTypeResponseBody getBody() {
         return this.body;
     }
 

@@ -16,6 +16,9 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    @NameInMap("EncryptNewTables")
+    public String encryptNewTables;
+
     public static DescribeDBClusterTDEResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterTDEResponseBody self = new DescribeDBClusterTDEResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     }
     public String getEncryptionKey() {
         return this.encryptionKey;
+    }
+
+    public DescribeDBClusterTDEResponseBody setEncryptNewTables(String encryptNewTables) {
+        this.encryptNewTables = encryptNewTables;
+        return this;
+    }
+    public String getEncryptNewTables() {
+        return this.encryptNewTables;
     }
 
 }

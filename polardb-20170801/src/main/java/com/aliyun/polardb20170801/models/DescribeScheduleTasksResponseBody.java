@@ -13,6 +13,9 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeScheduleTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScheduleTasksResponseBody self = new DescribeScheduleTasksResponseBody();
         return TeaModel.build(map, self);
@@ -42,6 +45,14 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         return this.success;
     }
 
+    public DescribeScheduleTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeScheduleTasksResponseBodyDataTimerInfos extends TeaModel {
         @NameInMap("Status")
         public String status;
@@ -69,6 +80,12 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
 
         @NameInMap("OrderId")
         public String orderId;
+
+        @NameInMap("DbClusterStatus")
+        public String dbClusterStatus;
+
+        @NameInMap("DbClusterDescription")
+        public String dbClusterDescription;
 
         public static DescribeScheduleTasksResponseBodyDataTimerInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeScheduleTasksResponseBodyDataTimerInfos self = new DescribeScheduleTasksResponseBodyDataTimerInfos();
@@ -145,6 +162,22 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
         public String getOrderId() {
             return this.orderId;
+        }
+
+        public DescribeScheduleTasksResponseBodyDataTimerInfos setDbClusterStatus(String dbClusterStatus) {
+            this.dbClusterStatus = dbClusterStatus;
+            return this;
+        }
+        public String getDbClusterStatus() {
+            return this.dbClusterStatus;
+        }
+
+        public DescribeScheduleTasksResponseBodyDataTimerInfos setDbClusterDescription(String dbClusterDescription) {
+            this.dbClusterDescription = dbClusterDescription;
+            return this;
+        }
+        public String getDbClusterDescription() {
+            return this.dbClusterDescription;
         }
 
     }

@@ -3,7 +3,7 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSQLExplorerPolicyRequest extends TeaModel {
+public class DescribePolarSQLCollectorPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,15 +16,15 @@ public class DescribeSQLExplorerPolicyRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
 
-    public static DescribeSQLExplorerPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSQLExplorerPolicyRequest self = new DescribeSQLExplorerPolicyRequest();
+    public static DescribePolarSQLCollectorPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribePolarSQLCollectorPolicyRequest self = new DescribePolarSQLCollectorPolicyRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLExplorerPolicyRequest setOwnerId(Long ownerId) {
+    public DescribePolarSQLCollectorPolicyRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -32,7 +32,7 @@ public class DescribeSQLExplorerPolicyRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeSQLExplorerPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribePolarSQLCollectorPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -40,7 +40,7 @@ public class DescribeSQLExplorerPolicyRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeSQLExplorerPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribePolarSQLCollectorPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -48,7 +48,7 @@ public class DescribeSQLExplorerPolicyRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeSQLExplorerPolicyRequest setOwnerAccount(String ownerAccount) {
+    public DescribePolarSQLCollectorPolicyRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -56,12 +56,12 @@ public class DescribeSQLExplorerPolicyRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeSQLExplorerPolicyRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public DescribePolarSQLCollectorPolicyRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
 }

@@ -25,9 +25,6 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
-    @NameInMap("BackupRetentionPeriod")
-    public String backupRetentionPeriod;
-
     @NameInMap("DataLevel1BackupRetentionPeriod")
     public String dataLevel1BackupRetentionPeriod;
 
@@ -36,6 +33,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
 
     @NameInMap("BackupRetentionPolicyOnClusterDeletion")
     public String backupRetentionPolicyOnClusterDeletion;
+
+    @NameInMap("BackupFrequency")
+    public String backupFrequency;
 
     public static ModifyBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBackupPolicyRequest self = new ModifyBackupPolicyRequest();
@@ -98,14 +98,6 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.preferredBackupPeriod;
     }
 
-    public ModifyBackupPolicyRequest setBackupRetentionPeriod(String backupRetentionPeriod) {
-        this.backupRetentionPeriod = backupRetentionPeriod;
-        return this;
-    }
-    public String getBackupRetentionPeriod() {
-        return this.backupRetentionPeriod;
-    }
-
     public ModifyBackupPolicyRequest setDataLevel1BackupRetentionPeriod(String dataLevel1BackupRetentionPeriod) {
         this.dataLevel1BackupRetentionPeriod = dataLevel1BackupRetentionPeriod;
         return this;
@@ -128,6 +120,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public String getBackupRetentionPolicyOnClusterDeletion() {
         return this.backupRetentionPolicyOnClusterDeletion;
+    }
+
+    public ModifyBackupPolicyRequest setBackupFrequency(String backupFrequency) {
+        this.backupFrequency = backupFrequency;
+        return this;
+    }
+    public String getBackupFrequency() {
+        return this.backupFrequency;
     }
 
 }

@@ -25,6 +25,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("DataLevel2BackupRetentionPeriod")
     public String dataLevel2BackupRetentionPeriod;
 
+    @NameInMap("BackupFrequency")
+    public String backupFrequency;
+
     public static DescribeBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyResponseBody self = new DescribeBackupPolicyResponseBody();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public String getDataLevel2BackupRetentionPeriod() {
         return this.dataLevel2BackupRetentionPeriod;
+    }
+
+    public DescribeBackupPolicyResponseBody setBackupFrequency(String backupFrequency) {
+        this.backupFrequency = backupFrequency;
+        return this;
+    }
+    public String getBackupFrequency() {
+        return this.backupFrequency;
     }
 
 }
