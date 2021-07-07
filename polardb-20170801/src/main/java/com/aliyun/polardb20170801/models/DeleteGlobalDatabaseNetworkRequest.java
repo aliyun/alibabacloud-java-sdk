@@ -3,7 +3,7 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSQLExplorerVersionRequest extends TeaModel {
+public class DeleteGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -19,15 +19,15 @@ public class DescribeSQLExplorerVersionRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("GDNId")
+    public String GDNId;
 
-    public static DescribeSQLExplorerVersionRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSQLExplorerVersionRequest self = new DescribeSQLExplorerVersionRequest();
+    public static DeleteGlobalDatabaseNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteGlobalDatabaseNetworkRequest self = new DeleteGlobalDatabaseNetworkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLExplorerVersionRequest setSecurityToken(String securityToken) {
+    public DeleteGlobalDatabaseNetworkRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
@@ -35,7 +35,7 @@ public class DescribeSQLExplorerVersionRequest extends TeaModel {
         return this.securityToken;
     }
 
-    public DescribeSQLExplorerVersionRequest setOwnerId(Long ownerId) {
+    public DeleteGlobalDatabaseNetworkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -43,7 +43,7 @@ public class DescribeSQLExplorerVersionRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeSQLExplorerVersionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DeleteGlobalDatabaseNetworkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -51,7 +51,7 @@ public class DescribeSQLExplorerVersionRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeSQLExplorerVersionRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DeleteGlobalDatabaseNetworkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -59,7 +59,7 @@ public class DescribeSQLExplorerVersionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeSQLExplorerVersionRequest setOwnerAccount(String ownerAccount) {
+    public DeleteGlobalDatabaseNetworkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -67,12 +67,12 @@ public class DescribeSQLExplorerVersionRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeSQLExplorerVersionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public DeleteGlobalDatabaseNetworkRequest setGDNId(String GDNId) {
+        this.GDNId = GDNId;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getGDNId() {
+        return this.GDNId;
     }
 
 }

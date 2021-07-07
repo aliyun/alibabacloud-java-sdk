@@ -3,21 +3,21 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSQLLogTemplatesResponse extends TeaModel {
+public class DescribeParameterGroupsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeSQLLogTemplatesResponseBody body;
+    public DescribeParameterGroupsResponseBody body;
 
-    public static DescribeSQLLogTemplatesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSQLLogTemplatesResponse self = new DescribeSQLLogTemplatesResponse();
+    public static DescribeParameterGroupsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeParameterGroupsResponse self = new DescribeParameterGroupsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLLogTemplatesResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeParameterGroupsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeSQLLogTemplatesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeSQLLogTemplatesResponse setBody(DescribeSQLLogTemplatesResponseBody body) {
+    public DescribeParameterGroupsResponse setBody(DescribeParameterGroupsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeSQLLogTemplatesResponseBody getBody() {
+    public DescribeParameterGroupsResponseBody getBody() {
         return this.body;
     }
 

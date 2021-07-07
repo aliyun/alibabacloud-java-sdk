@@ -28,6 +28,9 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
+    @NameInMap("EncryptNewTables")
+    public String encryptNewTables;
+
     public static ModifyDBClusterTDERequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterTDERequest self = new ModifyDBClusterTDERequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     }
     public String getEncryptionKey() {
         return this.encryptionKey;
+    }
+
+    public ModifyDBClusterTDERequest setEncryptNewTables(String encryptNewTables) {
+        this.encryptNewTables = encryptNewTables;
+        return this;
+    }
+    public String getEncryptNewTables() {
+        return this.encryptNewTables;
     }
 
 }

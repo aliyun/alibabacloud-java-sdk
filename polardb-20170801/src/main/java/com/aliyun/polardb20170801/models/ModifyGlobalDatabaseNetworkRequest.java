@@ -3,7 +3,7 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSQLExplorerRetentionRequest extends TeaModel {
+public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -19,18 +19,18 @@ public class DescribeSQLExplorerRetentionRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("GDNId")
+    public String GDNId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("GDNDescription")
+    public String GDNDescription;
 
-    public static DescribeSQLExplorerRetentionRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSQLExplorerRetentionRequest self = new DescribeSQLExplorerRetentionRequest();
+    public static ModifyGlobalDatabaseNetworkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyGlobalDatabaseNetworkRequest self = new ModifyGlobalDatabaseNetworkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLExplorerRetentionRequest setSecurityToken(String securityToken) {
+    public ModifyGlobalDatabaseNetworkRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
@@ -38,7 +38,7 @@ public class DescribeSQLExplorerRetentionRequest extends TeaModel {
         return this.securityToken;
     }
 
-    public DescribeSQLExplorerRetentionRequest setOwnerId(Long ownerId) {
+    public ModifyGlobalDatabaseNetworkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -46,7 +46,7 @@ public class DescribeSQLExplorerRetentionRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeSQLExplorerRetentionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyGlobalDatabaseNetworkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -54,7 +54,7 @@ public class DescribeSQLExplorerRetentionRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeSQLExplorerRetentionRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyGlobalDatabaseNetworkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -62,7 +62,7 @@ public class DescribeSQLExplorerRetentionRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeSQLExplorerRetentionRequest setOwnerAccount(String ownerAccount) {
+    public ModifyGlobalDatabaseNetworkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -70,20 +70,20 @@ public class DescribeSQLExplorerRetentionRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeSQLExplorerRetentionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyGlobalDatabaseNetworkRequest setGDNId(String GDNId) {
+        this.GDNId = GDNId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getGDNId() {
+        return this.GDNId;
     }
 
-    public DescribeSQLExplorerRetentionRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public ModifyGlobalDatabaseNetworkRequest setGDNDescription(String GDNDescription) {
+        this.GDNDescription = GDNDescription;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getGDNDescription() {
+        return this.GDNDescription;
     }
 
 }

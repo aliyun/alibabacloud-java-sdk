@@ -3,19 +3,19 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSQLExplorerPolicyResponseBody extends TeaModel {
+public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SQLCollectorStatus")
     public String SQLCollectorStatus;
 
-    public static DescribeSQLExplorerPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSQLExplorerPolicyResponseBody self = new DescribeSQLExplorerPolicyResponseBody();
+    public static DescribePolarSQLCollectorPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribePolarSQLCollectorPolicyResponseBody self = new DescribePolarSQLCollectorPolicyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLExplorerPolicyResponseBody setRequestId(String requestId) {
+    public DescribePolarSQLCollectorPolicyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -23,7 +23,7 @@ public class DescribeSQLExplorerPolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSQLExplorerPolicyResponseBody setSQLCollectorStatus(String SQLCollectorStatus) {
+    public DescribePolarSQLCollectorPolicyResponseBody setSQLCollectorStatus(String SQLCollectorStatus) {
         this.SQLCollectorStatus = SQLCollectorStatus;
         return this;
     }

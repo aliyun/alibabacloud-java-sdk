@@ -7,6 +7,9 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SSLAutoRotate")
+    public String SSLAutoRotate;
+
     @NameInMap("Items")
     public java.util.List<DescribeDBClusterSSLResponseBodyItems> items;
 
@@ -21,6 +24,14 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDBClusterSSLResponseBody setSSLAutoRotate(String SSLAutoRotate) {
+        this.SSLAutoRotate = SSLAutoRotate;
+        return this;
+    }
+    public String getSSLAutoRotate() {
+        return this.SSLAutoRotate;
     }
 
     public DescribeDBClusterSSLResponseBody setItems(java.util.List<DescribeDBClusterSSLResponseBodyItems> items) {

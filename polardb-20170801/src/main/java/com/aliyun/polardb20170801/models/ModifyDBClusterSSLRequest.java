@@ -28,6 +28,9 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     @NameInMap("NetType")
     public String netType;
 
+    @NameInMap("SSLAutoRotate")
+    public String SSLAutoRotate;
+
     public static ModifyDBClusterSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterSSLRequest self = new ModifyDBClusterSSLRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     }
     public String getNetType() {
         return this.netType;
+    }
+
+    public ModifyDBClusterSSLRequest setSSLAutoRotate(String SSLAutoRotate) {
+        this.SSLAutoRotate = SSLAutoRotate;
+        return this;
+    }
+    public String getSSLAutoRotate() {
+        return this.SSLAutoRotate;
     }
 
 }

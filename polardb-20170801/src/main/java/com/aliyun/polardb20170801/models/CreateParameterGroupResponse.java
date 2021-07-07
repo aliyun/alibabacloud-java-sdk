@@ -3,21 +3,21 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSQLExplorerPolicyResponse extends TeaModel {
+public class CreateParameterGroupResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeSQLExplorerPolicyResponseBody body;
+    public CreateParameterGroupResponseBody body;
 
-    public static DescribeSQLExplorerPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSQLExplorerPolicyResponse self = new DescribeSQLExplorerPolicyResponse();
+    public static CreateParameterGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateParameterGroupResponse self = new CreateParameterGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSQLExplorerPolicyResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateParameterGroupResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeSQLExplorerPolicyResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeSQLExplorerPolicyResponse setBody(DescribeSQLExplorerPolicyResponseBody body) {
+    public CreateParameterGroupResponse setBody(CreateParameterGroupResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeSQLExplorerPolicyResponseBody getBody() {
+    public CreateParameterGroupResponseBody getBody() {
         return this.body;
     }
 

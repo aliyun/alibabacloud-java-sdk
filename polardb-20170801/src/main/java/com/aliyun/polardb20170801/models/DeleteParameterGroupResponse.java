@@ -3,21 +3,21 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSqlLogTrialStatusResponse extends TeaModel {
+public class DeleteParameterGroupResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeSqlLogTrialStatusResponseBody body;
+    public DeleteParameterGroupResponseBody body;
 
-    public static DescribeSqlLogTrialStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSqlLogTrialStatusResponse self = new DescribeSqlLogTrialStatusResponse();
+    public static DeleteParameterGroupResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteParameterGroupResponse self = new DeleteParameterGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSqlLogTrialStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteParameterGroupResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeSqlLogTrialStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeSqlLogTrialStatusResponse setBody(DescribeSqlLogTrialStatusResponseBody body) {
+    public DeleteParameterGroupResponse setBody(DeleteParameterGroupResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeSqlLogTrialStatusResponseBody getBody() {
+    public DeleteParameterGroupResponseBody getBody() {
         return this.body;
     }
 

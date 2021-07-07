@@ -16,11 +16,11 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ZoneId")
     public String zoneId;
-
-    @NameInMap("Engine")
-    public String engine;
 
     @NameInMap("DBType")
     public String DBType;
@@ -94,6 +94,9 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("DBMinorVersion")
     public String DBMinorVersion;
 
+    @NameInMap("ParameterGroupId")
+    public String parameterGroupId;
+
     public static CreateDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBClusterRequest self = new CreateDBClusterRequest();
         return TeaModel.build(map, self);
@@ -131,20 +134,20 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.ownerAccount;
     }
 
+    public CreateDBClusterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CreateDBClusterRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public CreateDBClusterRequest setEngine(String engine) {
-        this.engine = engine;
-        return this;
-    }
-    public String getEngine() {
-        return this.engine;
     }
 
     public CreateDBClusterRequest setDBType(String DBType) {
@@ -337,6 +340,14 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getDBMinorVersion() {
         return this.DBMinorVersion;
+    }
+
+    public CreateDBClusterRequest setParameterGroupId(String parameterGroupId) {
+        this.parameterGroupId = parameterGroupId;
+        return this;
+    }
+    public String getParameterGroupId() {
+        return this.parameterGroupId;
     }
 
 }

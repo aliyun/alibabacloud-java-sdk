@@ -91,6 +91,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    @NameInMap("SubCategory")
+    public String subCategory;
+
     public static DescribeDBClusterAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterAttributeResponseBody self = new DescribeDBClusterAttributeResponseBody();
         return TeaModel.build(map, self);
@@ -326,6 +329,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getExpireTime() {
         return this.expireTime;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setSubCategory(String subCategory) {
+        this.subCategory = subCategory;
+        return this;
+    }
+    public String getSubCategory() {
+        return this.subCategory;
     }
 
     public static class DescribeDBClusterAttributeResponseBodyDBNodes extends TeaModel {

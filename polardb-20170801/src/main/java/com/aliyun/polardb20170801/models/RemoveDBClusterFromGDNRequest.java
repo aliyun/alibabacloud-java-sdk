@@ -3,7 +3,7 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSqlLogTrialStatusRequest extends TeaModel {
+public class RemoveDBClusterFromGDNRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -19,15 +19,18 @@ public class DescribeSqlLogTrialStatusRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
 
-    public static DescribeSqlLogTrialStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSqlLogTrialStatusRequest self = new DescribeSqlLogTrialStatusRequest();
+    @NameInMap("GDNId")
+    public String GDNId;
+
+    public static RemoveDBClusterFromGDNRequest build(java.util.Map<String, ?> map) throws Exception {
+        RemoveDBClusterFromGDNRequest self = new RemoveDBClusterFromGDNRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSqlLogTrialStatusRequest setSecurityToken(String securityToken) {
+    public RemoveDBClusterFromGDNRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
@@ -35,7 +38,7 @@ public class DescribeSqlLogTrialStatusRequest extends TeaModel {
         return this.securityToken;
     }
 
-    public DescribeSqlLogTrialStatusRequest setOwnerId(Long ownerId) {
+    public RemoveDBClusterFromGDNRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -43,7 +46,7 @@ public class DescribeSqlLogTrialStatusRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeSqlLogTrialStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public RemoveDBClusterFromGDNRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -51,7 +54,7 @@ public class DescribeSqlLogTrialStatusRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeSqlLogTrialStatusRequest setResourceOwnerId(Long resourceOwnerId) {
+    public RemoveDBClusterFromGDNRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -59,7 +62,7 @@ public class DescribeSqlLogTrialStatusRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeSqlLogTrialStatusRequest setOwnerAccount(String ownerAccount) {
+    public RemoveDBClusterFromGDNRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -67,12 +70,20 @@ public class DescribeSqlLogTrialStatusRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeSqlLogTrialStatusRequest setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public RemoveDBClusterFromGDNRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
         return this;
     }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
+    public RemoveDBClusterFromGDNRequest setGDNId(String GDNId) {
+        this.GDNId = GDNId;
+        return this;
+    }
+    public String getGDNId() {
+        return this.GDNId;
     }
 
 }
