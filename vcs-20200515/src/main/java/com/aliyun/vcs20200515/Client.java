@@ -1041,6 +1041,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAiotDeviceWithOptions(request, runtime);
     }
 
+    public UpdateDevicesStorageResponse updateDevicesStorageWithOptions(UpdateDevicesStorageRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDevicesStorageShrinkRequest request = new UpdateDevicesStorageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.updateStorageRequests)) {
+            request.updateStorageRequestsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.updateStorageRequests, "UpdateStorageRequests", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateDevicesStorage", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateDevicesStorageResponse());
+    }
+
+    public UpdateDevicesStorageResponse updateDevicesStorage(UpdateDevicesStorageRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateDevicesStorageWithOptions(request, runtime);
+    }
+
     public AddAiotDevicesResponse addAiotDevicesWithOptions(AddAiotDevicesRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddAiotDevicesShrinkRequest request = new AddAiotDevicesShrinkRequest();

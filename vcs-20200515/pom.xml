@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>vcs20200515</artifactId>
-  <version>3.0.5</version>
+  <version>3.0.6</version>
   <packaging>jar</packaging>
   <name>vcs20200515</name>
   <description>Alibaba Cloud Visual Compute Service (20200515) SDK for Java
@@ -72,12 +72,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.18</version>
+      <version>0.0.19</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.8</version>
+      <version>0.1.9</version>
     </dependency>
   </dependencies>
   <build>
