@@ -7,14 +7,14 @@ public class SmartCallOperateResponseBody extends TeaModel {
     @NameInMap("Status")
     public Boolean status;
 
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     public static SmartCallOperateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SmartCallOperateResponseBody self = new SmartCallOperateResponseBody();
@@ -27,6 +27,14 @@ public class SmartCallOperateResponseBody extends TeaModel {
     }
     public Boolean getStatus() {
         return this.status;
+    }
+
+    public SmartCallOperateResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public SmartCallOperateResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class SmartCallOperateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public SmartCallOperateResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

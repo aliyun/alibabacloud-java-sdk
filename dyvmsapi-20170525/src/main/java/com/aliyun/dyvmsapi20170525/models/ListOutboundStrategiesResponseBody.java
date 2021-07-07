@@ -4,6 +4,9 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListOutboundStrategiesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class ListOutboundStrategiesResponseBody extends TeaModel {
     @NameInMap("OutboundStrategies")
     public java.util.List<ListOutboundStrategiesResponseBodyOutboundStrategies> outboundStrategies;
 
-    @NameInMap("Code")
-    public String code;
-
     public static ListOutboundStrategiesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOutboundStrategiesResponseBody self = new ListOutboundStrategiesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListOutboundStrategiesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ListOutboundStrategiesResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class ListOutboundStrategiesResponseBody extends TeaModel {
     }
     public java.util.List<ListOutboundStrategiesResponseBodyOutboundStrategies> getOutboundStrategies() {
         return this.outboundStrategies;
-    }
-
-    public ListOutboundStrategiesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class ListOutboundStrategiesResponseBodyOutboundStrategies extends TeaModel {

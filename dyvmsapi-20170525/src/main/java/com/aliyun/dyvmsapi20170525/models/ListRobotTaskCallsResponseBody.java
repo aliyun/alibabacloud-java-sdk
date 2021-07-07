@@ -4,20 +4,11 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListRobotTaskCallsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
+    @NameInMap("Data")
+    public String data;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public String pageSize;
-
-    @NameInMap("Data")
-    public String data;
 
     @NameInMap("PageNo")
     public String pageNo;
@@ -25,17 +16,26 @@ public class ListRobotTaskCallsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageSize")
+    public String pageSize;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
     public static ListRobotTaskCallsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRobotTaskCallsResponseBody self = new ListRobotTaskCallsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListRobotTaskCallsResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
+    public ListRobotTaskCallsResponseBody setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getTotalCount() {
-        return this.totalCount;
+    public String getData() {
+        return this.data;
     }
 
     public ListRobotTaskCallsResponseBody setRequestId(String requestId) {
@@ -44,6 +44,22 @@ public class ListRobotTaskCallsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListRobotTaskCallsResponseBody setPageNo(String pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public String getPageNo() {
+        return this.pageNo;
+    }
+
+    public ListRobotTaskCallsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ListRobotTaskCallsResponseBody setMessage(String message) {
@@ -62,28 +78,12 @@ public class ListRobotTaskCallsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListRobotTaskCallsResponseBody setData(String data) {
-        this.data = data;
+    public ListRobotTaskCallsResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public String getData() {
-        return this.data;
-    }
-
-    public ListRobotTaskCallsResponseBody setPageNo(String pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public String getPageNo() {
-        return this.pageNo;
-    }
-
-    public ListRobotTaskCallsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
 }

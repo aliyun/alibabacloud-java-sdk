@@ -4,21 +4,29 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class StopRobotTaskResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static StopRobotTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StopRobotTaskResponseBody self = new StopRobotTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public StopRobotTaskResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public StopRobotTaskResponseBody setMessage(String message) {
@@ -29,14 +37,6 @@ public class StopRobotTaskResponseBody extends TeaModel {
         return this.message;
     }
 
-    public StopRobotTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public StopRobotTaskResponseBody setData(String data) {
         this.data = data;
         return this;
@@ -45,12 +45,12 @@ public class StopRobotTaskResponseBody extends TeaModel {
         return this.data;
     }
 
-    public StopRobotTaskResponseBody setCode(String code) {
-        this.code = code;
+    public StopRobotTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

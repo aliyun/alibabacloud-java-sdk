@@ -4,8 +4,8 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListOrderedNumbersResponseBody extends TeaModel {
-    @NameInMap("Numbers")
-    public java.util.List<String> numbers;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class ListOrderedNumbersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Numbers")
+    public java.util.List<String> numbers;
 
     public static ListOrderedNumbersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOrderedNumbersResponseBody self = new ListOrderedNumbersResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListOrderedNumbersResponseBody setNumbers(java.util.List<String> numbers) {
-        this.numbers = numbers;
+    public ListOrderedNumbersResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.List<String> getNumbers() {
-        return this.numbers;
+    public String getCode() {
+        return this.code;
     }
 
     public ListOrderedNumbersResponseBody setMessage(String message) {
@@ -45,12 +45,12 @@ public class ListOrderedNumbersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListOrderedNumbersResponseBody setCode(String code) {
-        this.code = code;
+    public ListOrderedNumbersResponseBody setNumbers(java.util.List<String> numbers) {
+        this.numbers = numbers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.List<String> getNumbers() {
+        return this.numbers;
     }
 
 }

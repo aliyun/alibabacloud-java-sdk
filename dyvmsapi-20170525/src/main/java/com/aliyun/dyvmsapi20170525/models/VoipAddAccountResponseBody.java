@@ -4,21 +4,29 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class VoipAddAccountResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Module")
     public String module;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static VoipAddAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VoipAddAccountResponseBody self = new VoipAddAccountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public VoipAddAccountResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public VoipAddAccountResponseBody setMessage(String message) {
@@ -29,14 +37,6 @@ public class VoipAddAccountResponseBody extends TeaModel {
         return this.message;
     }
 
-    public VoipAddAccountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public VoipAddAccountResponseBody setModule(String module) {
         this.module = module;
         return this;
@@ -45,12 +45,12 @@ public class VoipAddAccountResponseBody extends TeaModel {
         return this.module;
     }
 
-    public VoipAddAccountResponseBody setCode(String code) {
-        this.code = code;
+    public VoipAddAccountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

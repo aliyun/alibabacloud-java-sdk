@@ -4,21 +4,29 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryVoipNumberBindInfosResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Module")
     public String module;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryVoipNumberBindInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryVoipNumberBindInfosResponseBody self = new QueryVoipNumberBindInfosResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryVoipNumberBindInfosResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QueryVoipNumberBindInfosResponseBody setMessage(String message) {
@@ -29,14 +37,6 @@ public class QueryVoipNumberBindInfosResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryVoipNumberBindInfosResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QueryVoipNumberBindInfosResponseBody setModule(String module) {
         this.module = module;
         return this;
@@ -45,12 +45,12 @@ public class QueryVoipNumberBindInfosResponseBody extends TeaModel {
         return this.module;
     }
 
-    public QueryVoipNumberBindInfosResponseBody setCode(String code) {
-        this.code = code;
+    public QueryVoipNumberBindInfosResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
