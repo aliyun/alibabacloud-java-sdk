@@ -76,6 +76,9 @@ public class SmartCallRequest extends TeaModel {
     @NameInMap("AsrBaseId")
     public String asrBaseId;
 
+    @NameInMap("StreamAsr")
+    public Integer streamAsr;
+
     public static SmartCallRequest build(java.util.Map<String, ?> map) throws Exception {
         SmartCallRequest self = new SmartCallRequest();
         return TeaModel.build(map, self);
@@ -271,6 +274,14 @@ public class SmartCallRequest extends TeaModel {
     }
     public String getAsrBaseId() {
         return this.asrBaseId;
+    }
+
+    public SmartCallRequest setStreamAsr(Integer streamAsr) {
+        this.streamAsr = streamAsr;
+        return this;
+    }
+    public Integer getStreamAsr() {
+        return this.streamAsr;
     }
 
 }

@@ -44,6 +44,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addRtcAccountWithOptions(request, runtime);
     }
 
+    public AddVirtualNumberRelationResponse addVirtualNumberRelationWithOptions(AddVirtualNumberRelationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddVirtualNumberRelation", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new AddVirtualNumberRelationResponse());
+    }
+
+    public AddVirtualNumberRelationResponse addVirtualNumberRelation(AddVirtualNumberRelationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addVirtualNumberRelationWithOptions(request, runtime);
+    }
+
     public BatchRobotSmartCallResponse batchRobotSmartCallWithOptions(BatchRobotSmartCallRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -122,6 +135,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.clickToDialWithOptions(request, runtime);
     }
 
+    public CloseSipAccountResponse closeSipAccountWithOptions(CloseSipAccountRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CloseSipAccount", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new CloseSipAccountResponse());
+    }
+
+    public CloseSipAccountResponse closeSipAccount(CloseSipAccountRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.closeSipAccountWithOptions(request, runtime);
+    }
+
+    public CreateCallTaskResponse createCallTaskWithOptions(CreateCallTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateCallTask", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new CreateCallTaskResponse());
+    }
+
+    public CreateCallTaskResponse createCallTask(CreateCallTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createCallTaskWithOptions(request, runtime);
+    }
+
     public CreateRobotTaskResponse createRobotTaskWithOptions(CreateRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -133,6 +172,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateRobotTaskResponse createRobotTask(CreateRobotTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createRobotTaskWithOptions(request, runtime);
+    }
+
+    public CreateSipAccountResponse createSipAccountWithOptions(CreateSipAccountRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateSipAccount", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new CreateSipAccountResponse());
+    }
+
+    public CreateSipAccountResponse createSipAccount(CreateSipAccountRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createSipAccountWithOptions(request, runtime);
     }
 
     public DeleteRobotTaskResponse deleteRobotTaskWithOptions(DeleteRobotTaskRequest request, RuntimeOptions runtime) throws Exception {
@@ -174,6 +226,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.doRtcNumberAuthWithOptions(request, runtime);
     }
 
+    public DoubleCallSeatResponse doubleCallSeatWithOptions(DoubleCallSeatRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DoubleCallSeat", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new DoubleCallSeatResponse());
+    }
+
+    public DoubleCallSeatResponse doubleCallSeat(DoubleCallSeatRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.doubleCallSeatWithOptions(request, runtime);
+    }
+
+    public ExecuteCallTaskResponse executeCallTaskWithOptions(ExecuteCallTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ExecuteCallTask", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new ExecuteCallTaskResponse());
+    }
+
+    public ExecuteCallTaskResponse executeCallTask(ExecuteCallTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.executeCallTaskWithOptions(request, runtime);
+    }
+
     public GetRtcTokenResponse getRtcTokenWithOptions(GetRtcTokenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -187,6 +265,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getRtcTokenWithOptions(request, runtime);
     }
 
+    public GetTokenResponse getTokenWithOptions(GetTokenRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetToken", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new GetTokenResponse());
+    }
+
+    public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getTokenWithOptions(request, runtime);
+    }
+
     public IvrCallResponse ivrCallWithOptions(IvrCallRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -198,6 +289,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public IvrCallResponse ivrCall(IvrCallRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.ivrCallWithOptions(request, runtime);
+    }
+
+    public ListCallTaskResponse listCallTaskWithOptions(ListCallTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListCallTask", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new ListCallTaskResponse());
+    }
+
+    public ListCallTaskResponse listCallTask(ListCallTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listCallTaskWithOptions(request, runtime);
+    }
+
+    public ListCallTaskDetailResponse listCallTaskDetailWithOptions(ListCallTaskDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListCallTaskDetail", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new ListCallTaskDetailResponse());
+    }
+
+    public ListCallTaskDetailResponse listCallTaskDetail(ListCallTaskDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listCallTaskDetailWithOptions(request, runtime);
     }
 
     public ListOrderedNumbersResponse listOrderedNumbersWithOptions(ListOrderedNumbersRequest request, RuntimeOptions runtime) throws Exception {
@@ -354,6 +471,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryRtcNumberAuthStatusResponse queryRtcNumberAuthStatus(QueryRtcNumberAuthStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryRtcNumberAuthStatusWithOptions(request, runtime);
+    }
+
+    public QueryVirtualNumberResponse queryVirtualNumberWithOptions(QueryVirtualNumberRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryVirtualNumber", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new QueryVirtualNumberResponse());
+    }
+
+    public QueryVirtualNumberResponse queryVirtualNumber(QueryVirtualNumberRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryVirtualNumberWithOptions(request, runtime);
+    }
+
+    public QueryVirtualNumberRelationResponse queryVirtualNumberRelationWithOptions(QueryVirtualNumberRelationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryVirtualNumberRelation", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new QueryVirtualNumberRelationResponse());
+    }
+
+    public QueryVirtualNumberRelationResponse queryVirtualNumberRelation(QueryVirtualNumberRelationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryVirtualNumberRelationWithOptions(request, runtime);
     }
 
     public QueryVoipNumberBindInfosResponse queryVoipNumberBindInfosWithOptions(QueryVoipNumberBindInfosRequest request, RuntimeOptions runtime) throws Exception {

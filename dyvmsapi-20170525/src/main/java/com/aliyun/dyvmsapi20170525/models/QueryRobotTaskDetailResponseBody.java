@@ -4,21 +4,29 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRobotTaskDetailResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryRobotTaskDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryRobotTaskDetailResponseBody self = new QueryRobotTaskDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryRobotTaskDetailResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QueryRobotTaskDetailResponseBody setMessage(String message) {
@@ -29,14 +37,6 @@ public class QueryRobotTaskDetailResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryRobotTaskDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QueryRobotTaskDetailResponseBody setData(String data) {
         this.data = data;
         return this;
@@ -45,12 +45,12 @@ public class QueryRobotTaskDetailResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryRobotTaskDetailResponseBody setCode(String code) {
-        this.code = code;
+    public QueryRobotTaskDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

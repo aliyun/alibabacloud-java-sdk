@@ -7,14 +7,14 @@ public class CancelCallResponseBody extends TeaModel {
     @NameInMap("Status")
     public Boolean status;
 
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     public static CancelCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CancelCallResponseBody self = new CancelCallResponseBody();
@@ -27,6 +27,14 @@ public class CancelCallResponseBody extends TeaModel {
     }
     public Boolean getStatus() {
         return this.status;
+    }
+
+    public CancelCallResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CancelCallResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class CancelCallResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CancelCallResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

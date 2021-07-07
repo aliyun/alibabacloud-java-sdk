@@ -4,8 +4,8 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class BatchRobotSmartCallResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class BatchRobotSmartCallResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static BatchRobotSmartCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchRobotSmartCallResponseBody self = new BatchRobotSmartCallResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BatchRobotSmartCallResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
+    public BatchRobotSmartCallResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public String getCode() {
+        return this.code;
     }
 
     public BatchRobotSmartCallResponseBody setMessage(String message) {
@@ -45,12 +45,12 @@ public class BatchRobotSmartCallResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchRobotSmartCallResponseBody setCode(String code) {
-        this.code = code;
+    public BatchRobotSmartCallResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }
