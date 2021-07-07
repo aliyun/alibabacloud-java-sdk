@@ -76,6 +76,16 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public QueryGuideItemGroupWithOutInventoryResponse queryGuideItemGroupWithOutInventoryWithOptions(QueryGuideItemGroupWithOutInventoryRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("QueryGuideItemGroupWithOutInventory", "HTTPS", "GET", "2018-01-16", "AK", TeaModel.buildMap(request), null, runtime), new QueryGuideItemGroupWithOutInventoryResponse());
+    }
+
+    public QueryGuideItemGroupWithOutInventoryResponse queryGuideItemGroupWithOutInventory(QueryGuideItemGroupWithOutInventoryRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryGuideItemGroupWithOutInventoryWithOptions(request, runtime);
+    }
+
     public QueryItemInSubBizsResponse queryItemInSubBizsWithOptions(QueryItemInSubBizsRequest tmp, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmp);
         QueryItemInSubBizsShrinkRequest request = new QueryItemInSubBizsShrinkRequest();
