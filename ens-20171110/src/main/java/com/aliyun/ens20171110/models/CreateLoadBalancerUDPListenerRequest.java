@@ -36,9 +36,9 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
-    // 健康检查使用的端口。取值：1-65535  不设置此参数时，表示使用后端服务端口（BackendServerPort）
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
+    // 负载均衡实例后端使用的端口，取值：1~65535
+    @NameInMap("BackendServerPort")
+    public Integer backendServerPort;
 
     public static CreateLoadBalancerUDPListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerUDPListenerRequest self = new CreateLoadBalancerUDPListenerRequest();
@@ -109,12 +109,12 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
         return this.healthCheckInterval;
     }
 
-    public CreateLoadBalancerUDPListenerRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
-        this.healthCheckConnectPort = healthCheckConnectPort;
+    public CreateLoadBalancerUDPListenerRequest setBackendServerPort(Integer backendServerPort) {
+        this.backendServerPort = backendServerPort;
         return this;
     }
-    public Integer getHealthCheckConnectPort() {
-        return this.healthCheckConnectPort;
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
 }
