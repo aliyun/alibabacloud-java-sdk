@@ -7,9 +7,6 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("product")
     public String product;
 
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -30,14 +27,6 @@ public class CreateImageRequest extends TeaModel {
     }
     public String getProduct() {
         return this.product;
-    }
-
-    public CreateImageRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public CreateImageRequest setInstanceId(String instanceId) {

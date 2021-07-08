@@ -4,15 +4,27 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateImageResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    // 镜像ID
+    @NameInMap("ImageId")
+    public String imageId;
 
     public static CreateImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateImageResponseBody self = new CreateImageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateImageResponseBody setCode(Integer code) {
@@ -23,12 +35,12 @@ public class CreateImageResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateImageResponseBody setImageId(String imageId) {
+        this.imageId = imageId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getImageId() {
+        return this.imageId;
     }
 
 }

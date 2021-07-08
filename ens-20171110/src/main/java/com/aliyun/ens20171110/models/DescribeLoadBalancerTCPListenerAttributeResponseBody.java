@@ -38,9 +38,6 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     @NameInMap("HealthCheckConnectTimeout")
     public Integer healthCheckConnectTimeout;
 
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
-
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
@@ -58,6 +55,9 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
 
     @NameInMap("HealthCheckType")
     public String healthCheckType;
+
+    @NameInMap("BackendServerPort")
+    public Integer backendServerPort;
 
     public static DescribeLoadBalancerTCPListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerTCPListenerAttributeResponseBody self = new DescribeLoadBalancerTCPListenerAttributeResponseBody();
@@ -152,14 +152,6 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
         return this.healthCheckConnectTimeout;
     }
 
-    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
-        this.healthCheckConnectPort = healthCheckConnectPort;
-        return this;
-    }
-    public Integer getHealthCheckConnectPort() {
-        return this.healthCheckConnectPort;
-    }
-
     public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckInterval(Integer healthCheckInterval) {
         this.healthCheckInterval = healthCheckInterval;
         return this;
@@ -206,6 +198,14 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     }
     public String getHealthCheckType() {
         return this.healthCheckType;
+    }
+
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setBackendServerPort(Integer backendServerPort) {
+        this.backendServerPort = backendServerPort;
+        return this;
+    }
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
 }

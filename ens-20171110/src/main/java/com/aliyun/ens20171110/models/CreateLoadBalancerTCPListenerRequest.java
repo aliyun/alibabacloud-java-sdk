@@ -40,10 +40,6 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     @NameInMap("HealthCheckConnectTimeout")
     public Integer healthCheckConnectTimeout;
 
-    // 健康检查使用的端口。  取值：1~65535。  不设置此参数时，表示使用后端服务端口（BackendServerPort）。
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
-
     // 健康检查的时间间隔。  取值：1~50（秒）。
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
@@ -63,6 +59,10 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     // 健康检查类型。  取值：tcp（默认值） | http。
     @NameInMap("HealthCheckType")
     public String healthCheckType;
+
+    // 负载均衡实例后端使用的端口，取值：1~65535
+    @NameInMap("BackendServerPort")
+    public Integer backendServerPort;
 
     public static CreateLoadBalancerTCPListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerTCPListenerRequest self = new CreateLoadBalancerTCPListenerRequest();
@@ -141,14 +141,6 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
         return this.healthCheckConnectTimeout;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
-        this.healthCheckConnectPort = healthCheckConnectPort;
-        return this;
-    }
-    public Integer getHealthCheckConnectPort() {
-        return this.healthCheckConnectPort;
-    }
-
     public CreateLoadBalancerTCPListenerRequest setHealthCheckInterval(Integer healthCheckInterval) {
         this.healthCheckInterval = healthCheckInterval;
         return this;
@@ -187,6 +179,14 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     }
     public String getHealthCheckType() {
         return this.healthCheckType;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setBackendServerPort(Integer backendServerPort) {
+        this.backendServerPort = backendServerPort;
+        return this;
+    }
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
 }

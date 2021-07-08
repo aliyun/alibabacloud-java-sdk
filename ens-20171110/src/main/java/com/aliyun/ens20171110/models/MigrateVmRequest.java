@@ -13,6 +13,9 @@ public class MigrateVmRequest extends TeaModel {
     @NameInMap("GroupUuid")
     public String groupUuid;
 
+    @NameInMap("Instances")
+    public String instances;
+
     public static MigrateVmRequest build(java.util.Map<String, ?> map) throws Exception {
         MigrateVmRequest self = new MigrateVmRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class MigrateVmRequest extends TeaModel {
     }
     public String getGroupUuid() {
         return this.groupUuid;
+    }
+
+    public MigrateVmRequest setInstances(String instances) {
+        this.instances = instances;
+        return this;
+    }
+    public String getInstances() {
+        return this.instances;
     }
 
 }

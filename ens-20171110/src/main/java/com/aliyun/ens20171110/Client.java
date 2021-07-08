@@ -85,6 +85,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.restartDeviceInstanceWithOptions(request, runtime);
     }
 
+    public DeleteEnsLoadBalancerInnerResponse deleteEnsLoadBalancerInnerWithOptions(DeleteEnsLoadBalancerInnerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteEnsLoadBalancerInner", "2017-11-10", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteEnsLoadBalancerInnerResponse());
+    }
+
+    public DeleteEnsLoadBalancerInnerResponse deleteEnsLoadBalancerInner(DeleteEnsLoadBalancerInnerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteEnsLoadBalancerInnerWithOptions(request, runtime);
+    }
+
     public ReleasePrePaidInstanceResponse releasePrePaidInstanceWithOptions(ReleasePrePaidInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1059,6 +1072,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.migrateVmWithOptions(request, runtime);
     }
 
+    public CreateLoadBalancerResponse createLoadBalancerWithOptions(CreateLoadBalancerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateLoadBalancer", "2017-11-10", "HTTPS", "POST", "AK", "json", req, runtime), new CreateLoadBalancerResponse());
+    }
+
+    public CreateLoadBalancerResponse createLoadBalancer(CreateLoadBalancerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createLoadBalancerWithOptions(request, runtime);
+    }
+
     public JoinVSwitchesToEpnInstanceResponse joinVSwitchesToEpnInstanceWithOptions(JoinVSwitchesToEpnInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1122,6 +1148,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeLoadBalancerHTTPListenerAttributeResponse describeLoadBalancerHTTPListenerAttribute(DescribeLoadBalancerHTTPListenerAttributeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeLoadBalancerHTTPListenerAttributeWithOptions(request, runtime);
+    }
+
+    public DeleteLoadBalancerResponse deleteLoadBalancerWithOptions(DeleteLoadBalancerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteLoadBalancer", "2017-11-10", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteLoadBalancerResponse());
+    }
+
+    public DeleteLoadBalancerResponse deleteLoadBalancer(DeleteLoadBalancerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteLoadBalancerWithOptions(request, runtime);
     }
 
     public DescribeImagesResponse describeImagesWithOptions(DescribeImagesRequest request, RuntimeOptions runtime) throws Exception {
