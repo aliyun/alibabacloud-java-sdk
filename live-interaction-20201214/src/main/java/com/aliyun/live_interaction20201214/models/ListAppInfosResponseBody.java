@@ -102,6 +102,10 @@ public class ListAppInfosResponseBody extends TeaModel {
         @NameInMap("ProdVersion")
         public String prodVersion;
 
+        // 实例Id
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         public static ListAppInfosResponseBodyResultAppInfos build(java.util.Map<String, ?> map) throws Exception {
             ListAppInfosResponseBodyResultAppInfos self = new ListAppInfosResponseBodyResultAppInfos();
             return TeaModel.build(map, self);
@@ -145,6 +149,14 @@ public class ListAppInfosResponseBody extends TeaModel {
         }
         public String getProdVersion() {
             return this.prodVersion;
+        }
+
+        public ListAppInfosResponseBodyResultAppInfos setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

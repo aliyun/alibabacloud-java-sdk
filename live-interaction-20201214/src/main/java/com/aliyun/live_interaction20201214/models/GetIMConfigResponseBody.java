@@ -117,6 +117,14 @@ public class GetIMConfigResponseBody extends TeaModel {
         @NameInMap("Apis")
         public java.util.Map<String, Boolean> apis;
 
+        // 已开通的回调方法Id列表
+        @NameInMap("Spis")
+        public java.util.Map<String, Boolean> spis;
+
+        // 已开通的事件输出列表
+        @NameInMap("Events")
+        public java.util.Map<String, Boolean> events;
+
         public static GetIMConfigResponseBodyResultImConfigCallbackConfig build(java.util.Map<String, ?> map) throws Exception {
             GetIMConfigResponseBodyResultImConfigCallbackConfig self = new GetIMConfigResponseBodyResultImConfigCallbackConfig();
             return TeaModel.build(map, self);
@@ -152,6 +160,22 @@ public class GetIMConfigResponseBody extends TeaModel {
         }
         public java.util.Map<String, Boolean> getApis() {
             return this.apis;
+        }
+
+        public GetIMConfigResponseBodyResultImConfigCallbackConfig setSpis(java.util.Map<String, Boolean> spis) {
+            this.spis = spis;
+            return this;
+        }
+        public java.util.Map<String, Boolean> getSpis() {
+            return this.spis;
+        }
+
+        public GetIMConfigResponseBodyResultImConfigCallbackConfig setEvents(java.util.Map<String, Boolean> events) {
+            this.events = events;
+            return this;
+        }
+        public java.util.Map<String, Boolean> getEvents() {
+            return this.events;
         }
 
     }

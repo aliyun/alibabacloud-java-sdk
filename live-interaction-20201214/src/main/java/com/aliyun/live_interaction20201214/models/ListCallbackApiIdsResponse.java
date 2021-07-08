@@ -3,21 +3,21 @@ package com.aliyun.live_interaction20201214.models;
 
 import com.aliyun.tea.*;
 
-public class RemoveUserExtensionByKeysResponse extends TeaModel {
+public class ListCallbackApiIdsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public RemoveUserExtensionByKeysResponseBody body;
+    public ListCallbackApiIdsResponseBody body;
 
-    public static RemoveUserExtensionByKeysResponse build(java.util.Map<String, ?> map) throws Exception {
-        RemoveUserExtensionByKeysResponse self = new RemoveUserExtensionByKeysResponse();
+    public static ListCallbackApiIdsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListCallbackApiIdsResponse self = new ListCallbackApiIdsResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveUserExtensionByKeysResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListCallbackApiIdsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class RemoveUserExtensionByKeysResponse extends TeaModel {
         return this.headers;
     }
 
-    public RemoveUserExtensionByKeysResponse setBody(RemoveUserExtensionByKeysResponseBody body) {
+    public ListCallbackApiIdsResponse setBody(ListCallbackApiIdsResponseBody body) {
         this.body = body;
         return this;
     }
-    public RemoveUserExtensionByKeysResponseBody getBody() {
+    public ListCallbackApiIdsResponseBody getBody() {
         return this.body;
     }
 

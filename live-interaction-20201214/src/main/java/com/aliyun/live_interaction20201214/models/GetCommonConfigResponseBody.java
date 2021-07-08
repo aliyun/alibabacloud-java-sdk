@@ -121,46 +121,6 @@ public class GetCommonConfigResponseBody extends TeaModel {
 
     }
 
-    public static class GetCommonConfigResponseBodyResultCommonConfigMediaConfig extends TeaModel {
-        // 域名
-        @NameInMap("Domain")
-        public String domain;
-
-        public static GetCommonConfigResponseBodyResultCommonConfigMediaConfig build(java.util.Map<String, ?> map) throws Exception {
-            GetCommonConfigResponseBodyResultCommonConfigMediaConfig self = new GetCommonConfigResponseBodyResultCommonConfigMediaConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public GetCommonConfigResponseBodyResultCommonConfigMediaConfig setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-    }
-
-    public static class GetCommonConfigResponseBodyResultCommonConfigConnectionConfig extends TeaModel {
-        // 域名
-        @NameInMap("Domain")
-        public String domain;
-
-        public static GetCommonConfigResponseBodyResultCommonConfigConnectionConfig build(java.util.Map<String, ?> map) throws Exception {
-            GetCommonConfigResponseBodyResultCommonConfigConnectionConfig self = new GetCommonConfigResponseBodyResultCommonConfigConnectionConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public GetCommonConfigResponseBodyResultCommonConfigConnectionConfig setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-    }
-
     public static class GetCommonConfigResponseBodyResultCommonConfig extends TeaModel {
         // 登录配置
         @NameInMap("LoginConfig")
@@ -169,14 +129,6 @@ public class GetCommonConfigResponseBody extends TeaModel {
         // app配置
         @NameInMap("AppConfigs")
         public java.util.List<GetCommonConfigResponseBodyResultCommonConfigAppConfigs> appConfigs;
-
-        // 多媒体配置
-        @NameInMap("MediaConfig")
-        public GetCommonConfigResponseBodyResultCommonConfigMediaConfig mediaConfig;
-
-        // 长连接配置
-        @NameInMap("ConnectionConfig")
-        public GetCommonConfigResponseBodyResultCommonConfigConnectionConfig connectionConfig;
 
         public static GetCommonConfigResponseBodyResultCommonConfig build(java.util.Map<String, ?> map) throws Exception {
             GetCommonConfigResponseBodyResultCommonConfig self = new GetCommonConfigResponseBodyResultCommonConfig();
@@ -197,22 +149,6 @@ public class GetCommonConfigResponseBody extends TeaModel {
         }
         public java.util.List<GetCommonConfigResponseBodyResultCommonConfigAppConfigs> getAppConfigs() {
             return this.appConfigs;
-        }
-
-        public GetCommonConfigResponseBodyResultCommonConfig setMediaConfig(GetCommonConfigResponseBodyResultCommonConfigMediaConfig mediaConfig) {
-            this.mediaConfig = mediaConfig;
-            return this;
-        }
-        public GetCommonConfigResponseBodyResultCommonConfigMediaConfig getMediaConfig() {
-            return this.mediaConfig;
-        }
-
-        public GetCommonConfigResponseBodyResultCommonConfig setConnectionConfig(GetCommonConfigResponseBodyResultCommonConfigConnectionConfig connectionConfig) {
-            this.connectionConfig = connectionConfig;
-            return this;
-        }
-        public GetCommonConfigResponseBodyResultCommonConfigConnectionConfig getConnectionConfig() {
-            return this.connectionConfig;
         }
 
     }
