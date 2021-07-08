@@ -1,0 +1,127 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.imp20210630.models;
+
+import com.aliyun.tea.*;
+
+public class PublishLiveResponseBody extends TeaModel {
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Result")
+    public PublishLiveResponseBodyResult result;
+
+    // 错误码
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    // 错误信息
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    public static PublishLiveResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        PublishLiveResponseBody self = new PublishLiveResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public PublishLiveResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public PublishLiveResponseBody setResult(PublishLiveResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public PublishLiveResponseBodyResult getResult() {
+        return this.result;
+    }
+
+    public PublishLiveResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public PublishLiveResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public static class PublishLiveResponseBodyResult extends TeaModel {
+        // 直播资源的唯一标识ID
+        @NameInMap("LiveId")
+        public String liveId;
+
+        // 主播ID
+        @NameInMap("AnchorId")
+        public String anchorId;
+
+        // 直播状态：Created-已创建未开播，Living-直播中，End-直播结束
+        @NameInMap("Status")
+        public String status;
+
+        // 直播推流地址
+        @NameInMap("PushUrl")
+        public String pushUrl;
+
+        // 直播拉流地址
+        @NameInMap("LiveUrl")
+        public String liveUrl;
+
+        public static PublishLiveResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            PublishLiveResponseBodyResult self = new PublishLiveResponseBodyResult();
+            return TeaModel.build(map, self);
+        }
+
+        public PublishLiveResponseBodyResult setLiveId(String liveId) {
+            this.liveId = liveId;
+            return this;
+        }
+        public String getLiveId() {
+            return this.liveId;
+        }
+
+        public PublishLiveResponseBodyResult setAnchorId(String anchorId) {
+            this.anchorId = anchorId;
+            return this;
+        }
+        public String getAnchorId() {
+            return this.anchorId;
+        }
+
+        public PublishLiveResponseBodyResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public PublishLiveResponseBodyResult setPushUrl(String pushUrl) {
+            this.pushUrl = pushUrl;
+            return this;
+        }
+        public String getPushUrl() {
+            return this.pushUrl;
+        }
+
+        public PublishLiveResponseBodyResult setLiveUrl(String liveUrl) {
+            this.liveUrl = liveUrl;
+            return this;
+        }
+        public String getLiveUrl() {
+            return this.liveUrl;
+        }
+
+    }
+
+}
