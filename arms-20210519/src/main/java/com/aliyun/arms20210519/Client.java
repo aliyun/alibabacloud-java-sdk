@@ -1005,6 +1005,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDispatchRuleWithOptions(request, runtime);
     }
 
+    public GetPrometheusRemoteActionTokenResponse getPrometheusRemoteActionTokenWithOptions(GetPrometheusRemoteActionTokenRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetPrometheusRemoteActionToken", "2021-05-19", "HTTPS", "POST", "AK", "json", req, runtime), new GetPrometheusRemoteActionTokenResponse());
+    }
+
+    public GetPrometheusRemoteActionTokenResponse getPrometheusRemoteActionToken(GetPrometheusRemoteActionTokenRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getPrometheusRemoteActionTokenWithOptions(request, runtime);
+    }
+
     public ListPrometheusAlertTemplatesResponse listPrometheusAlertTemplatesWithOptions(ListPrometheusAlertTemplatesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
