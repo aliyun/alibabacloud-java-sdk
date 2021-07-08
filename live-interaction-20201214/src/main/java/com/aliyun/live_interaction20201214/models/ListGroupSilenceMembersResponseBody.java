@@ -63,7 +63,7 @@ public class ListGroupSilenceMembersResponseBody extends TeaModel {
         @NameInMap("Whitelist")
         public java.util.List<String> whitelist;
 
-        // 禁言黑名单用户及对应禁言时长
+        // 禁言黑名单用户及对应禁言截止时间
         @NameInMap("Blacklist")
         public java.util.Map<String, Long> blacklist;
 

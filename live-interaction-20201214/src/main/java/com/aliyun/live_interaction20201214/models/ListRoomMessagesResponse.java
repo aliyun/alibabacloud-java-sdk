@@ -3,21 +3,21 @@ package com.aliyun.live_interaction20201214.models;
 
 import com.aliyun.tea.*;
 
-public class SetExtensionByKeysResponse extends TeaModel {
+public class ListRoomMessagesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public SetExtensionByKeysResponseBody body;
+    public ListRoomMessagesResponseBody body;
 
-    public static SetExtensionByKeysResponse build(java.util.Map<String, ?> map) throws Exception {
-        SetExtensionByKeysResponse self = new SetExtensionByKeysResponse();
+    public static ListRoomMessagesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListRoomMessagesResponse self = new ListRoomMessagesResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetExtensionByKeysResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListRoomMessagesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class SetExtensionByKeysResponse extends TeaModel {
         return this.headers;
     }
 
-    public SetExtensionByKeysResponse setBody(SetExtensionByKeysResponseBody body) {
+    public ListRoomMessagesResponse setBody(ListRoomMessagesResponseBody body) {
         this.body = body;
         return this;
     }
-    public SetExtensionByKeysResponseBody getBody() {
+    public ListRoomMessagesResponseBody getBody() {
         return this.body;
     }
 

@@ -49,6 +49,14 @@ public class UpdateCallbackConfigRequest extends TeaModel {
         @NameInMap("Apis")
         public java.util.Map<String, Boolean> apis;
 
+        // 回调列表
+        @NameInMap("Spis")
+        public java.util.Map<String, Boolean> spis;
+
+        // 事件输出列表
+        @NameInMap("Events")
+        public java.util.Map<String, Boolean> events;
+
         public static UpdateCallbackConfigRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             UpdateCallbackConfigRequestRequestParams self = new UpdateCallbackConfigRequestRequestParams();
             return TeaModel.build(map, self);
@@ -84,6 +92,22 @@ public class UpdateCallbackConfigRequest extends TeaModel {
         }
         public java.util.Map<String, Boolean> getApis() {
             return this.apis;
+        }
+
+        public UpdateCallbackConfigRequestRequestParams setSpis(java.util.Map<String, Boolean> spis) {
+            this.spis = spis;
+            return this;
+        }
+        public java.util.Map<String, Boolean> getSpis() {
+            return this.spis;
+        }
+
+        public UpdateCallbackConfigRequestRequestParams setEvents(java.util.Map<String, Boolean> events) {
+            this.events = events;
+            return this;
+        }
+        public java.util.Map<String, Boolean> getEvents() {
+            return this.events;
         }
 
     }
