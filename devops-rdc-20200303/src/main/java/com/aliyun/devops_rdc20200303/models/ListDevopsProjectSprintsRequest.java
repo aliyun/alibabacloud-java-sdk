@@ -10,6 +10,12 @@ public class ListDevopsProjectSprintsRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("PageToken")
+    public String pageToken;
+
     public static ListDevopsProjectSprintsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDevopsProjectSprintsRequest self = new ListDevopsProjectSprintsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +35,22 @@ public class ListDevopsProjectSprintsRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public ListDevopsProjectSprintsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListDevopsProjectSprintsRequest setPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    public String getPageToken() {
+        return this.pageToken;
     }
 
 }

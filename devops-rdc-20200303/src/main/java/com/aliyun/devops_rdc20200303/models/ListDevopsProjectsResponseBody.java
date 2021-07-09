@@ -108,7 +108,7 @@ public class ListDevopsProjectsResponseBody extends TeaModel {
         public Integer tasksCount;
 
         @NameInMap("RoleId")
-        public Integer roleId;
+        public String roleId;
 
         @NameInMap("Id")
         public String id;
@@ -230,11 +230,11 @@ public class ListDevopsProjectsResponseBody extends TeaModel {
             return this.tasksCount;
         }
 
-        public ListDevopsProjectsResponseBodyObjectResult setRoleId(Integer roleId) {
+        public ListDevopsProjectsResponseBodyObjectResult setRoleId(String roleId) {
             this.roleId = roleId;
             return this;
         }
-        public Integer getRoleId() {
+        public String getRoleId() {
             return this.roleId;
         }
 
