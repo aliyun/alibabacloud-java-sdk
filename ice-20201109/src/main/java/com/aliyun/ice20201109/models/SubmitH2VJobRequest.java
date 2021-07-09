@@ -29,6 +29,10 @@ public class SubmitH2VJobRequest extends TeaModel {
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    // 输出类型
+    @NameInMap("OutputMediaTarget")
+    public String outputMediaTarget;
+
     public static SubmitH2VJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitH2VJobRequest self = new SubmitH2VJobRequest();
         return TeaModel.build(map, self);
@@ -88,6 +92,14 @@ public class SubmitH2VJobRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public SubmitH2VJobRequest setOutputMediaTarget(String outputMediaTarget) {
+        this.outputMediaTarget = outputMediaTarget;
+        return this;
+    }
+    public String getOutputMediaTarget() {
+        return this.outputMediaTarget;
     }
 
 }

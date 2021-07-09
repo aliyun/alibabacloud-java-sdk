@@ -29,6 +29,10 @@ public class SubmitDelogoJobRequest extends TeaModel {
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    // 输出类型
+    @NameInMap("OutputMediaTarget")
+    public String outputMediaTarget;
+
     public static SubmitDelogoJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDelogoJobRequest self = new SubmitDelogoJobRequest();
         return TeaModel.build(map, self);
@@ -88,6 +92,14 @@ public class SubmitDelogoJobRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public SubmitDelogoJobRequest setOutputMediaTarget(String outputMediaTarget) {
+        this.outputMediaTarget = outputMediaTarget;
+        return this;
+    }
+    public String getOutputMediaTarget() {
+        return this.outputMediaTarget;
     }
 
 }

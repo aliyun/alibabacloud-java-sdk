@@ -29,6 +29,10 @@ public class SubmitMattingJobRequest extends TeaModel {
     @NameInMap("Overwrite")
     public String overwrite;
 
+    // 输出类型
+    @NameInMap("OutputMediaTarget")
+    public String outputMediaTarget;
+
     public static SubmitMattingJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitMattingJobRequest self = new SubmitMattingJobRequest();
         return TeaModel.build(map, self);
@@ -88,6 +92,14 @@ public class SubmitMattingJobRequest extends TeaModel {
     }
     public String getOverwrite() {
         return this.overwrite;
+    }
+
+    public SubmitMattingJobRequest setOutputMediaTarget(String outputMediaTarget) {
+        this.outputMediaTarget = outputMediaTarget;
+        return this;
+    }
+    public String getOutputMediaTarget() {
+        return this.outputMediaTarget;
     }
 
 }

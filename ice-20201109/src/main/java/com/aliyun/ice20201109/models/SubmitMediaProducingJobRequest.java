@@ -31,6 +31,9 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Source")
+    public String source;
+
     public static SubmitMediaProducingJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitMediaProducingJobRequest self = new SubmitMediaProducingJobRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public SubmitMediaProducingJobRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }
