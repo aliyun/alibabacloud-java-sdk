@@ -65,8 +65,21 @@ public class GetEditingProjectResponseBody extends TeaModel {
         @NameInMap("Duration")
         public Long duration;
 
+        // 云剪辑工程状态
         @NameInMap("Status")
         public String status;
+
+        // 云剪辑工程创建来源
+        @NameInMap("CreateSource")
+        public String createSource;
+
+        // 云剪辑工程模板类型
+        @NameInMap("TemplateType")
+        public String templateType;
+
+        // 云剪辑工程修改来源
+        @NameInMap("ModifiedSource")
+        public String modifiedSource;
 
         public static GetEditingProjectResponseBodyProject build(java.util.Map<String, ?> map) throws Exception {
             GetEditingProjectResponseBodyProject self = new GetEditingProjectResponseBodyProject();
@@ -143,6 +156,30 @@ public class GetEditingProjectResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetEditingProjectResponseBodyProject setCreateSource(String createSource) {
+            this.createSource = createSource;
+            return this;
+        }
+        public String getCreateSource() {
+            return this.createSource;
+        }
+
+        public GetEditingProjectResponseBodyProject setTemplateType(String templateType) {
+            this.templateType = templateType;
+            return this;
+        }
+        public String getTemplateType() {
+            return this.templateType;
+        }
+
+        public GetEditingProjectResponseBodyProject setModifiedSource(String modifiedSource) {
+            this.modifiedSource = modifiedSource;
+            return this;
+        }
+        public String getModifiedSource() {
+            return this.modifiedSource;
         }
 
     }

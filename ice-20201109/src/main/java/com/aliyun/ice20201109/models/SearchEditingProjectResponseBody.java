@@ -104,6 +104,26 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        // 云剪辑工程合成失败的错误码
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        // 云剪辑工程合成失败的消息
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        // 创建来源
+        @NameInMap("CreateSource")
+        public String createSource;
+
+        // 最后一次修改来源
+        @NameInMap("ModifiedSource")
+        public String modifiedSource;
+
+        // 模板类型
+        @NameInMap("TemplateType")
+        public String templateType;
+
         public static SearchEditingProjectResponseBodyProjectList build(java.util.Map<String, ?> map) throws Exception {
             SearchEditingProjectResponseBodyProjectList self = new SearchEditingProjectResponseBodyProjectList();
             return TeaModel.build(map, self);
@@ -179,6 +199,46 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public SearchEditingProjectResponseBodyProjectList setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public SearchEditingProjectResponseBodyProjectList setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public SearchEditingProjectResponseBodyProjectList setCreateSource(String createSource) {
+            this.createSource = createSource;
+            return this;
+        }
+        public String getCreateSource() {
+            return this.createSource;
+        }
+
+        public SearchEditingProjectResponseBodyProjectList setModifiedSource(String modifiedSource) {
+            this.modifiedSource = modifiedSource;
+            return this;
+        }
+        public String getModifiedSource() {
+            return this.modifiedSource;
+        }
+
+        public SearchEditingProjectResponseBodyProjectList setTemplateType(String templateType) {
+            this.templateType = templateType;
+            return this;
+        }
+        public String getTemplateType() {
+            return this.templateType;
         }
 
     }

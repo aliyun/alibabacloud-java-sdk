@@ -51,6 +51,9 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         @NameInMap("Status")
         public Long status;
 
+        @NameInMap("StatusName")
+        public String statusName;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -59,6 +62,15 @@ public class CreateEditingProjectResponseBody extends TeaModel {
 
         @NameInMap("Duration")
         public Float duration;
+
+        @NameInMap("CreateSource")
+        public String createSource;
+
+        @NameInMap("ModifiedSource")
+        public String modifiedSource;
+
+        @NameInMap("TemplateType")
+        public String templateType;
 
         public static CreateEditingProjectResponseBodyProject build(java.util.Map<String, ?> map) throws Exception {
             CreateEditingProjectResponseBodyProject self = new CreateEditingProjectResponseBodyProject();
@@ -113,6 +125,14 @@ public class CreateEditingProjectResponseBody extends TeaModel {
             return this.status;
         }
 
+        public CreateEditingProjectResponseBodyProject setStatusName(String statusName) {
+            this.statusName = statusName;
+            return this;
+        }
+        public String getStatusName() {
+            return this.statusName;
+        }
+
         public CreateEditingProjectResponseBodyProject setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -135,6 +155,30 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         }
         public Float getDuration() {
             return this.duration;
+        }
+
+        public CreateEditingProjectResponseBodyProject setCreateSource(String createSource) {
+            this.createSource = createSource;
+            return this;
+        }
+        public String getCreateSource() {
+            return this.createSource;
+        }
+
+        public CreateEditingProjectResponseBodyProject setModifiedSource(String modifiedSource) {
+            this.modifiedSource = modifiedSource;
+            return this;
+        }
+        public String getModifiedSource() {
+            return this.modifiedSource;
+        }
+
+        public CreateEditingProjectResponseBodyProject setTemplateType(String templateType) {
+            this.templateType = templateType;
+            return this;
+        }
+        public String getTemplateType() {
+            return this.templateType;
         }
 
     }

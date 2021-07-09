@@ -28,6 +28,14 @@ public class SearchEditingProjectRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    // 创建来源
+    @NameInMap("CreateSource")
+    public String createSource;
+
+    // 模板类型
+    @NameInMap("TemplateType")
+    public String templateType;
+
     public static SearchEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchEditingProjectRequest self = new SearchEditingProjectRequest();
         return TeaModel.build(map, self);
@@ -79,6 +87,22 @@ public class SearchEditingProjectRequest extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    public SearchEditingProjectRequest setCreateSource(String createSource) {
+        this.createSource = createSource;
+        return this;
+    }
+    public String getCreateSource() {
+        return this.createSource;
+    }
+
+    public SearchEditingProjectRequest setTemplateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public String getTemplateType() {
+        return this.templateType;
     }
 
 }
