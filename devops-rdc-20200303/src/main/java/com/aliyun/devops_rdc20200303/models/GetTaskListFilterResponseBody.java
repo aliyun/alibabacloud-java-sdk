@@ -571,9 +571,6 @@ public class GetTaskListFilterResponseBody extends TeaModel {
         @NameInMap("UntilDate")
         public String untilDate;
 
-        @NameInMap("Pos")
-        public Integer pos;
-
         @NameInMap("StoryPoint")
         public String storyPoint;
 
@@ -850,14 +847,6 @@ public class GetTaskListFilterResponseBody extends TeaModel {
         }
         public String getUntilDate() {
             return this.untilDate;
-        }
-
-        public GetTaskListFilterResponseBodyObjectResult setPos(Integer pos) {
-            this.pos = pos;
-            return this;
-        }
-        public Integer getPos() {
-            return this.pos;
         }
 
         public GetTaskListFilterResponseBodyObjectResult setStoryPoint(String storyPoint) {

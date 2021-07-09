@@ -19,6 +19,9 @@ public class ListDevopsProjectSprintsResponseBody extends TeaModel {
     @NameInMap("Object")
     public java.util.List<ListDevopsProjectSprintsResponseBodyObject> object;
 
+    @NameInMap("NextPageToken")
+    public String nextPageToken;
+
     public static ListDevopsProjectSprintsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDevopsProjectSprintsResponseBody self = new ListDevopsProjectSprintsResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListDevopsProjectSprintsResponseBody extends TeaModel {
     }
     public java.util.List<ListDevopsProjectSprintsResponseBodyObject> getObject() {
         return this.object;
+    }
+
+    public ListDevopsProjectSprintsResponseBody setNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    public String getNextPageToken() {
+        return this.nextPageToken;
     }
 
     public static class ListDevopsProjectSprintsResponseBodyObjectPlanToDo extends TeaModel {
