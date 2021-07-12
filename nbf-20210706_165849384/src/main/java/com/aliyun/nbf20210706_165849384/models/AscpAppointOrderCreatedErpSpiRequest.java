@@ -8,6 +8,10 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     @NameInMap("orderType")
     public Integer orderType;
 
+    // 供应商ID
+    @NameInMap("supplierId")
+    public Long supplierId;
+
     // 仓库编码（物理仓）
     @NameInMap("entityCode")
     public String entityCode;
@@ -23,10 +27,6 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     // 预约单号
     @NameInMap("appointOrderCode")
     public String appointOrderCode;
-
-    // 二级供应商ID
-    @NameInMap("realSupplierId")
-    public Long realSupplierId;
 
     // 仓库名称（逻辑仓）
     @NameInMap("relationName")
@@ -73,6 +73,14 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
         return this.orderType;
     }
 
+    public AscpAppointOrderCreatedErpSpiRequest setSupplierId(Long supplierId) {
+        this.supplierId = supplierId;
+        return this;
+    }
+    public Long getSupplierId() {
+        return this.supplierId;
+    }
+
     public AscpAppointOrderCreatedErpSpiRequest setEntityCode(String entityCode) {
         this.entityCode = entityCode;
         return this;
@@ -103,14 +111,6 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     }
     public String getAppointOrderCode() {
         return this.appointOrderCode;
-    }
-
-    public AscpAppointOrderCreatedErpSpiRequest setRealSupplierId(Long realSupplierId) {
-        this.realSupplierId = realSupplierId;
-        return this;
-    }
-    public Long getRealSupplierId() {
-        return this.realSupplierId;
     }
 
     public AscpAppointOrderCreatedErpSpiRequest setRelationName(String relationName) {

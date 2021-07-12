@@ -8,6 +8,10 @@ public class AscpAppointOrderCancelledErpSpiRequest extends TeaModel {
     @NameInMap("reason")
     public String reason;
 
+    // 供应商ID
+    @NameInMap("supplierId")
+    public Long supplierId;
+
     // 履行单号
     @NameInMap("fulfilmentOrderCode")
     public String fulfilmentOrderCode;
@@ -35,6 +39,14 @@ public class AscpAppointOrderCancelledErpSpiRequest extends TeaModel {
     }
     public String getReason() {
         return this.reason;
+    }
+
+    public AscpAppointOrderCancelledErpSpiRequest setSupplierId(Long supplierId) {
+        this.supplierId = supplierId;
+        return this;
+    }
+    public Long getSupplierId() {
+        return this.supplierId;
     }
 
     public AscpAppointOrderCancelledErpSpiRequest setFulfilmentOrderCode(String fulfilmentOrderCode) {

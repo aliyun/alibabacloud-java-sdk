@@ -8,13 +8,21 @@ public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
     @NameInMap("reason")
     public String reason;
 
-    // 预约波次
+    // 预约波次（新）
     @NameInMap("appointWave")
     public Integer appointWave;
 
     // 预约类型
     @NameInMap("appointType")
     public String appointType;
+
+    // 预约波次(旧)
+    @NameInMap("originalAppointWave")
+    public Integer originalAppointWave;
+
+    // 供应商ID
+    @NameInMap("supplierId")
+    public Long supplierId;
 
     // 履行单号
     @NameInMap("fulfilmentOrderCode")
@@ -24,7 +32,11 @@ public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
     @NameInMap("outOrderCode")
     public String outOrderCode;
 
-    // 预约日期
+    // 预约日期(旧)
+    @NameInMap("originalAppointDate")
+    public String originalAppointDate;
+
+    // 预约日期（新）
     @NameInMap("appointDate")
     public String appointDate;
 
@@ -65,6 +77,22 @@ public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
         return this.appointType;
     }
 
+    public AscpAppointOrderDoFinishedErpSpiRequest setOriginalAppointWave(Integer originalAppointWave) {
+        this.originalAppointWave = originalAppointWave;
+        return this;
+    }
+    public Integer getOriginalAppointWave() {
+        return this.originalAppointWave;
+    }
+
+    public AscpAppointOrderDoFinishedErpSpiRequest setSupplierId(Long supplierId) {
+        this.supplierId = supplierId;
+        return this;
+    }
+    public Long getSupplierId() {
+        return this.supplierId;
+    }
+
     public AscpAppointOrderDoFinishedErpSpiRequest setFulfilmentOrderCode(String fulfilmentOrderCode) {
         this.fulfilmentOrderCode = fulfilmentOrderCode;
         return this;
@@ -79,6 +107,14 @@ public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
     }
     public String getOutOrderCode() {
         return this.outOrderCode;
+    }
+
+    public AscpAppointOrderDoFinishedErpSpiRequest setOriginalAppointDate(String originalAppointDate) {
+        this.originalAppointDate = originalAppointDate;
+        return this;
+    }
+    public String getOriginalAppointDate() {
+        return this.originalAppointDate;
     }
 
     public AscpAppointOrderDoFinishedErpSpiRequest setAppointDate(String appointDate) {
