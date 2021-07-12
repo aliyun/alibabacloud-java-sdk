@@ -4,71 +4,39 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateStreamSnapshotResponseBody extends TeaModel {
-    @NameInMap("Format")
-    public String format;
+    @NameInMap("OssObject")
+    public String ossObject;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OssEndpoint")
-    public String ossEndpoint;
-
-    @NameInMap("OssBucket")
-    public String ossBucket;
-
-    @NameInMap("OssObject")
-    public String ossObject;
+    @NameInMap("Width")
+    public Long width;
 
     @NameInMap("Height")
     public Long height;
 
-    @NameInMap("Id")
-    public String id;
-
-    @NameInMap("Width")
-    public Long width;
+    @NameInMap("Url")
+    public String url;
 
     @NameInMap("Timestamp")
     public Long timestamp;
 
-    @NameInMap("Url")
-    public String url;
+    @NameInMap("OssBucket")
+    public String ossBucket;
+
+    @NameInMap("Format")
+    public String format;
+
+    @NameInMap("OssEndpoint")
+    public String ossEndpoint;
+
+    @NameInMap("Id")
+    public String id;
 
     public static CreateStreamSnapshotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateStreamSnapshotResponseBody self = new CreateStreamSnapshotResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateStreamSnapshotResponseBody setFormat(String format) {
-        this.format = format;
-        return this;
-    }
-    public String getFormat() {
-        return this.format;
-    }
-
-    public CreateStreamSnapshotResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateStreamSnapshotResponseBody setOssEndpoint(String ossEndpoint) {
-        this.ossEndpoint = ossEndpoint;
-        return this;
-    }
-    public String getOssEndpoint() {
-        return this.ossEndpoint;
-    }
-
-    public CreateStreamSnapshotResponseBody setOssBucket(String ossBucket) {
-        this.ossBucket = ossBucket;
-        return this;
-    }
-    public String getOssBucket() {
-        return this.ossBucket;
     }
 
     public CreateStreamSnapshotResponseBody setOssObject(String ossObject) {
@@ -79,20 +47,12 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         return this.ossObject;
     }
 
-    public CreateStreamSnapshotResponseBody setHeight(Long height) {
-        this.height = height;
+    public CreateStreamSnapshotResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getHeight() {
-        return this.height;
-    }
-
-    public CreateStreamSnapshotResponseBody setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateStreamSnapshotResponseBody setWidth(Long width) {
@@ -103,12 +63,12 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         return this.width;
     }
 
-    public CreateStreamSnapshotResponseBody setTimestamp(Long timestamp) {
-        this.timestamp = timestamp;
+    public CreateStreamSnapshotResponseBody setHeight(Long height) {
+        this.height = height;
         return this;
     }
-    public Long getTimestamp() {
-        return this.timestamp;
+    public Long getHeight() {
+        return this.height;
     }
 
     public CreateStreamSnapshotResponseBody setUrl(String url) {
@@ -117,6 +77,46 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public CreateStreamSnapshotResponseBody setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    public Long getTimestamp() {
+        return this.timestamp;
+    }
+
+    public CreateStreamSnapshotResponseBody setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public CreateStreamSnapshotResponseBody setFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    public String getFormat() {
+        return this.format;
+    }
+
+    public CreateStreamSnapshotResponseBody setOssEndpoint(String ossEndpoint) {
+        this.ossEndpoint = ossEndpoint;
+        return this;
+    }
+    public String getOssEndpoint() {
+        return this.ossEndpoint;
+    }
+
+    public CreateStreamSnapshotResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
 }

@@ -7,9 +7,6 @@ public class UnbindPurchasedDeviceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("DeviceId")
     public String deviceId;
 
@@ -24,14 +21,6 @@ public class UnbindPurchasedDeviceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public UnbindPurchasedDeviceRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public UnbindPurchasedDeviceRequest setDeviceId(String deviceId) {

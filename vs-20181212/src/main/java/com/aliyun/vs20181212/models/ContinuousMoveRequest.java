@@ -7,9 +7,6 @@ public class ContinuousMoveRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Id")
     public String id;
 
@@ -22,6 +19,9 @@ public class ContinuousMoveRequest extends TeaModel {
     @NameInMap("Zoom")
     public String zoom;
 
+    @NameInMap("SubProtocol")
+    public String subProtocol;
+
     public static ContinuousMoveRequest build(java.util.Map<String, ?> map) throws Exception {
         ContinuousMoveRequest self = new ContinuousMoveRequest();
         return TeaModel.build(map, self);
@@ -33,14 +33,6 @@ public class ContinuousMoveRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public ContinuousMoveRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public ContinuousMoveRequest setId(String id) {
@@ -73,6 +65,14 @@ public class ContinuousMoveRequest extends TeaModel {
     }
     public String getZoom() {
         return this.zoom;
+    }
+
+    public ContinuousMoveRequest setSubProtocol(String subProtocol) {
+        this.subProtocol = subProtocol;
+        return this;
+    }
+    public String getSubProtocol() {
+        return this.subProtocol;
     }
 
 }

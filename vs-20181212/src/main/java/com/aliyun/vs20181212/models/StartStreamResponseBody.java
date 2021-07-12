@@ -7,11 +7,11 @@ public class StartStreamResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Id")
-    public String id;
-
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Id")
+    public String id;
 
     public static StartStreamResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartStreamResponseBody self = new StartStreamResponseBody();
@@ -26,20 +26,20 @@ public class StartStreamResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public StartStreamResponseBody setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
-    }
-
     public StartStreamResponseBody setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public StartStreamResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
 }

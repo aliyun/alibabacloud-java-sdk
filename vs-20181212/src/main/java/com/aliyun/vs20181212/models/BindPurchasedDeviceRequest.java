@@ -7,9 +7,6 @@ public class BindPurchasedDeviceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Region")
     public String region;
 
@@ -30,14 +27,6 @@ public class BindPurchasedDeviceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public BindPurchasedDeviceRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public BindPurchasedDeviceRequest setRegion(String region) {

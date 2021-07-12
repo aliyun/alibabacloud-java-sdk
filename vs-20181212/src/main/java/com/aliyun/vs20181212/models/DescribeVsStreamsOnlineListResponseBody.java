@@ -4,9 +4,6 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
-    @NameInMap("TotalNum")
-    public Integer totalNum;
-
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -19,20 +16,15 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalNum")
+    public Integer totalNum;
+
     @NameInMap("OnlineInfo")
     public DescribeVsStreamsOnlineListResponseBodyOnlineInfo onlineInfo;
 
     public static DescribeVsStreamsOnlineListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsStreamsOnlineListResponseBody self = new DescribeVsStreamsOnlineListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsStreamsOnlineListResponseBody setTotalNum(Integer totalNum) {
-        this.totalNum = totalNum;
-        return this;
-    }
-    public Integer getTotalNum() {
-        return this.totalNum;
     }
 
     public DescribeVsStreamsOnlineListResponseBody setTotalPage(Integer totalPage) {
@@ -65,6 +57,14 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeVsStreamsOnlineListResponseBody setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+        return this;
+    }
+    public Integer getTotalNum() {
+        return this.totalNum;
     }
 
     public DescribeVsStreamsOnlineListResponseBody setOnlineInfo(DescribeVsStreamsOnlineListResponseBodyOnlineInfo onlineInfo) {

@@ -4,51 +4,27 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
-    @NameInMap("TopDomains")
-    public DescribeVsTopDomainsByFlowResponseBodyTopDomains topDomains;
+    @NameInMap("DomainOnlineCount")
+    public Long domainOnlineCount;
 
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("DomainOnlineCount")
-    public Long domainOnlineCount;
-
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("DomainCount")
     public Long domainCount;
 
+    @NameInMap("TopDomains")
+    public DescribeVsTopDomainsByFlowResponseBodyTopDomains topDomains;
+
     public static DescribeVsTopDomainsByFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsTopDomainsByFlowResponseBody self = new DescribeVsTopDomainsByFlowResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsTopDomainsByFlowResponseBody setTopDomains(DescribeVsTopDomainsByFlowResponseBodyTopDomains topDomains) {
-        this.topDomains = topDomains;
-        return this;
-    }
-    public DescribeVsTopDomainsByFlowResponseBodyTopDomains getTopDomains() {
-        return this.topDomains;
-    }
-
-    public DescribeVsTopDomainsByFlowResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeVsTopDomainsByFlowResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeVsTopDomainsByFlowResponseBody setDomainOnlineCount(Long domainOnlineCount) {
@@ -59,6 +35,14 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         return this.domainOnlineCount;
     }
 
+    public DescribeVsTopDomainsByFlowResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeVsTopDomainsByFlowResponseBody setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -67,12 +51,28 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         return this.startTime;
     }
 
+    public DescribeVsTopDomainsByFlowResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeVsTopDomainsByFlowResponseBody setDomainCount(Long domainCount) {
         this.domainCount = domainCount;
         return this;
     }
     public Long getDomainCount() {
         return this.domainCount;
+    }
+
+    public DescribeVsTopDomainsByFlowResponseBody setTopDomains(DescribeVsTopDomainsByFlowResponseBodyTopDomains topDomains) {
+        this.topDomains = topDomains;
+        return this;
+    }
+    public DescribeVsTopDomainsByFlowResponseBodyTopDomains getTopDomains() {
+        return this.topDomains;
     }
 
     public static class DescribeVsTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {

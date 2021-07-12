@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class SyncCatalogsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SyncCatalogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SyncCatalogsResponseBody self = new SyncCatalogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SyncCatalogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SyncCatalogsResponseBody setId(String id) {
@@ -29,6 +21,14 @@ public class SyncCatalogsResponseBody extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public SyncCatalogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

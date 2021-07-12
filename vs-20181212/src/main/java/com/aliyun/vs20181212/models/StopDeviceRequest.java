@@ -7,9 +7,6 @@ public class StopDeviceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Id")
     public String id;
 
@@ -27,14 +24,6 @@ public class StopDeviceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public StopDeviceRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public StopDeviceRequest setId(String id) {

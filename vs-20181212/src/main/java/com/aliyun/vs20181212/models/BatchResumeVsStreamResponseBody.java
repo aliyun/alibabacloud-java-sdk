@@ -54,14 +54,14 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         @NameInMap("Result")
         public String result;
 
-        @NameInMap("Channels")
-        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels;
-
         @NameInMap("Count")
         public Integer count;
 
         @NameInMap("Detail")
         public String detail;
+
+        @NameInMap("Channels")
+        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels;
 
         public static BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo build(java.util.Map<String, ?> map) throws Exception {
             BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo self = new BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo();
@@ -74,14 +74,6 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         }
         public String getResult() {
             return this.result;
-        }
-
-        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo setChannels(BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels) {
-            this.channels = channels;
-            return this;
-        }
-        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels getChannels() {
-            return this.channels;
         }
 
         public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo setCount(Integer count) {
@@ -98,6 +90,14 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         }
         public String getDetail() {
             return this.detail;
+        }
+
+        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfo setChannels(BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels) {
+            this.channels = channels;
+            return this;
+        }
+        public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels getChannels() {
+            return this.channels;
         }
 
     }

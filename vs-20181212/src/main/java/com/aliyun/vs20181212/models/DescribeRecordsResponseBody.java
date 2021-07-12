@@ -4,23 +4,23 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("NextStartTime")
+    public String nextStartTime;
+
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     @NameInMap("PageCount")
     public Long pageCount;
-
-    @NameInMap("NextStartTime")
-    public String nextStartTime;
 
     @NameInMap("Records")
     public java.util.List<DescribeRecordsResponseBodyRecords> records;
@@ -28,14 +28,6 @@ public class DescribeRecordsResponseBody extends TeaModel {
     public static DescribeRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordsResponseBody self = new DescribeRecordsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRecordsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeRecordsResponseBody setPageNum(Long pageNum) {
@@ -54,6 +46,14 @@ public class DescribeRecordsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeRecordsResponseBody setNextStartTime(String nextStartTime) {
+        this.nextStartTime = nextStartTime;
+        return this;
+    }
+    public String getNextStartTime() {
+        return this.nextStartTime;
+    }
+
     public DescribeRecordsResponseBody setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -62,20 +62,20 @@ public class DescribeRecordsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeRecordsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeRecordsResponseBody setPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
     }
     public Long getPageCount() {
         return this.pageCount;
-    }
-
-    public DescribeRecordsResponseBody setNextStartTime(String nextStartTime) {
-        this.nextStartTime = nextStartTime;
-        return this;
-    }
-    public String getNextStartTime() {
-        return this.nextStartTime;
     }
 
     public DescribeRecordsResponseBody setRecords(java.util.List<DescribeRecordsResponseBodyRecords> records) {
@@ -105,11 +105,11 @@ public class DescribeRecordsResponseBody extends TeaModel {
         @NameInMap("StreamId")
         public String streamId;
 
-        @NameInMap("EndTime")
-        public String endTime;
-
         @NameInMap("OssObject")
         public String ossObject;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -179,20 +179,20 @@ public class DescribeRecordsResponseBody extends TeaModel {
             return this.streamId;
         }
 
-        public DescribeRecordsResponseBodyRecords setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
         public DescribeRecordsResponseBodyRecords setOssObject(String ossObject) {
             this.ossObject = ossObject;
             return this;
         }
         public String getOssObject() {
             return this.ossObject;
+        }
+
+        public DescribeRecordsResponseBodyRecords setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public DescribeRecordsResponseBodyRecords setStartTime(String startTime) {

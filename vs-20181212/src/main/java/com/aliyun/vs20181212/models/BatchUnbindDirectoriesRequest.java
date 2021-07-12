@@ -7,9 +7,6 @@ public class BatchUnbindDirectoriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("DirectoryId")
     public String directoryId;
 
@@ -27,14 +24,6 @@ public class BatchUnbindDirectoriesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public BatchUnbindDirectoriesRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public BatchUnbindDirectoriesRequest setDirectoryId(String directoryId) {

@@ -4,12 +4,6 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeParentPlatformsResponseBody extends TeaModel {
-    @NameInMap("Platforms")
-    public java.util.List<DescribeParentPlatformsResponseBodyPlatforms> platforms;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -19,28 +13,18 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     @NameInMap("PageCount")
     public Long pageCount;
+
+    @NameInMap("Platforms")
+    public java.util.List<DescribeParentPlatformsResponseBodyPlatforms> platforms;
 
     public static DescribeParentPlatformsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParentPlatformsResponseBody self = new DescribeParentPlatformsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeParentPlatformsResponseBody setPlatforms(java.util.List<DescribeParentPlatformsResponseBodyPlatforms> platforms) {
-        this.platforms = platforms;
-        return this;
-    }
-    public java.util.List<DescribeParentPlatformsResponseBodyPlatforms> getPlatforms() {
-        return this.platforms;
-    }
-
-    public DescribeParentPlatformsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeParentPlatformsResponseBody setPageNum(Long pageNum) {
@@ -67,12 +51,28 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeParentPlatformsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeParentPlatformsResponseBody setPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
     }
     public Long getPageCount() {
         return this.pageCount;
+    }
+
+    public DescribeParentPlatformsResponseBody setPlatforms(java.util.List<DescribeParentPlatformsResponseBodyPlatforms> platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    public java.util.List<DescribeParentPlatformsResponseBodyPlatforms> getPlatforms() {
+        return this.platforms;
     }
 
     public static class DescribeParentPlatformsResponseBodyPlatforms extends TeaModel {
@@ -82,11 +82,11 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         @NameInMap("ClientPort")
         public Long clientPort;
 
-        @NameInMap("ClientGbId")
-        public String clientGbId;
-
         @NameInMap("Protocol")
         public String protocol;
+
+        @NameInMap("ClientGbId")
+        public String clientGbId;
 
         @NameInMap("Ip")
         public String ip;
@@ -94,11 +94,11 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         @NameInMap("Port")
         public Long port;
 
-        @NameInMap("ClientPassword")
-        public String clientPassword;
-
         @NameInMap("ClientUsername")
         public String clientUsername;
+
+        @NameInMap("ClientPassword")
+        public String clientPassword;
 
         @NameInMap("AutoStart")
         public Boolean autoStart;
@@ -145,20 +145,20 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             return this.clientPort;
         }
 
-        public DescribeParentPlatformsResponseBodyPlatforms setClientGbId(String clientGbId) {
-            this.clientGbId = clientGbId;
-            return this;
-        }
-        public String getClientGbId() {
-            return this.clientGbId;
-        }
-
         public DescribeParentPlatformsResponseBodyPlatforms setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
         public String getProtocol() {
             return this.protocol;
+        }
+
+        public DescribeParentPlatformsResponseBodyPlatforms setClientGbId(String clientGbId) {
+            this.clientGbId = clientGbId;
+            return this;
+        }
+        public String getClientGbId() {
+            return this.clientGbId;
         }
 
         public DescribeParentPlatformsResponseBodyPlatforms setIp(String ip) {
@@ -177,20 +177,20 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeParentPlatformsResponseBodyPlatforms setClientPassword(String clientPassword) {
-            this.clientPassword = clientPassword;
-            return this;
-        }
-        public String getClientPassword() {
-            return this.clientPassword;
-        }
-
         public DescribeParentPlatformsResponseBodyPlatforms setClientUsername(String clientUsername) {
             this.clientUsername = clientUsername;
             return this;
         }
         public String getClientUsername() {
             return this.clientUsername;
+        }
+
+        public DescribeParentPlatformsResponseBodyPlatforms setClientPassword(String clientPassword) {
+            this.clientPassword = clientPassword;
+            return this;
+        }
+        public String getClientPassword() {
+            return this.clientPassword;
         }
 
         public DescribeParentPlatformsResponseBodyPlatforms setAutoStart(Boolean autoStart) {

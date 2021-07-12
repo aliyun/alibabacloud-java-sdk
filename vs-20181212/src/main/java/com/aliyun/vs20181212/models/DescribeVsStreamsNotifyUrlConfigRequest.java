@@ -7,9 +7,6 @@ public class DescribeVsStreamsNotifyUrlConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("DomainName")
     public String domainName;
 
@@ -24,14 +21,6 @@ public class DescribeVsStreamsNotifyUrlConfigRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeVsStreamsNotifyUrlConfigRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeVsStreamsNotifyUrlConfigRequest setDomainName(String domainName) {

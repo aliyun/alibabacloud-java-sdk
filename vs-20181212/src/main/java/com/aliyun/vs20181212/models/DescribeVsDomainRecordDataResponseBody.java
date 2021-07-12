@@ -7,6 +7,9 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -15,9 +18,6 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
 
     @NameInMap("RecordDataPerInterval")
     public DescribeVsDomainRecordDataResponseBodyRecordDataPerInterval recordDataPerInterval;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     public static DescribeVsDomainRecordDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainRecordDataResponseBody self = new DescribeVsDomainRecordDataResponseBody();
@@ -30,6 +30,14 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeVsDomainRecordDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeVsDomainRecordDataResponseBody setRequestId(String requestId) {
@@ -56,32 +64,16 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
         return this.recordDataPerInterval;
     }
 
-    public DescribeVsDomainRecordDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public static class DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("RecordValue")
         public String recordValue;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule self = new DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule setRecordValue(String recordValue) {
@@ -90,6 +82,14 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
         }
         public String getRecordValue() {
             return this.recordValue;
+        }
+
+        public DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

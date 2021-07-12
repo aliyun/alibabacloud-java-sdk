@@ -4,17 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceGatewayResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Port")
-    public Long port;
-
     @NameInMap("Host")
     public String host;
 
     @NameInMap("Token")
     public String token;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Port")
+    public Long port;
 
     @NameInMap("Protocol")
     public String protocol;
@@ -22,22 +22,6 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
     public static DescribeDeviceGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeviceGatewayResponseBody self = new DescribeDeviceGatewayResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeviceGatewayResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDeviceGatewayResponseBody setPort(Long port) {
-        this.port = port;
-        return this;
-    }
-    public Long getPort() {
-        return this.port;
     }
 
     public DescribeDeviceGatewayResponseBody setHost(String host) {
@@ -54,6 +38,22 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
     }
     public String getToken() {
         return this.token;
+    }
+
+    public DescribeDeviceGatewayResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDeviceGatewayResponseBody setPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    public Long getPort() {
+        return this.port;
     }
 
     public DescribeDeviceGatewayResponseBody setProtocol(String protocol) {

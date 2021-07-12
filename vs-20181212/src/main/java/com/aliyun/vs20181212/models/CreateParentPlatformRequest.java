@@ -7,9 +7,6 @@ public class CreateParentPlatformRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Name")
     public String name;
 
@@ -51,14 +48,6 @@ public class CreateParentPlatformRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public CreateParentPlatformRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public CreateParentPlatformRequest setName(String name) {

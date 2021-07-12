@@ -7,9 +7,6 @@ public class BatchBindDirectoriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("DirectoryId")
     public String directoryId;
 
@@ -27,14 +24,6 @@ public class BatchBindDirectoriesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public BatchBindDirectoriesRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public BatchBindDirectoriesRequest setDirectoryId(String directoryId) {

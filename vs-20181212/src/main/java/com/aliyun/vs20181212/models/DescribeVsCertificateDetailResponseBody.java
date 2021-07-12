@@ -4,40 +4,24 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsCertificateDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("CertId")
-    public Long certId;
-
     @NameInMap("CertName")
     public String certName;
-
-    @NameInMap("Cert")
-    public String cert;
 
     @NameInMap("Key")
     public String key;
 
+    @NameInMap("Cert")
+    public String cert;
+
+    @NameInMap("CertId")
+    public Long certId;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeVsCertificateDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsCertificateDetailResponseBody self = new DescribeVsCertificateDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsCertificateDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeVsCertificateDetailResponseBody setCertId(Long certId) {
-        this.certId = certId;
-        return this;
-    }
-    public Long getCertId() {
-        return this.certId;
     }
 
     public DescribeVsCertificateDetailResponseBody setCertName(String certName) {
@@ -48,6 +32,14 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
         return this.certName;
     }
 
+    public DescribeVsCertificateDetailResponseBody setKey(String key) {
+        this.key = key;
+        return this;
+    }
+    public String getKey() {
+        return this.key;
+    }
+
     public DescribeVsCertificateDetailResponseBody setCert(String cert) {
         this.cert = cert;
         return this;
@@ -56,12 +48,20 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
         return this.cert;
     }
 
-    public DescribeVsCertificateDetailResponseBody setKey(String key) {
-        this.key = key;
+    public DescribeVsCertificateDetailResponseBody setCertId(Long certId) {
+        this.certId = certId;
         return this;
     }
-    public String getKey() {
-        return this.key;
+    public Long getCertId() {
+        return this.certId;
+    }
+
+    public DescribeVsCertificateDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

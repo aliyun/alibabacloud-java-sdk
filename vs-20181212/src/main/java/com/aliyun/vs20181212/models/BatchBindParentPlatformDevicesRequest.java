@@ -7,9 +7,6 @@ public class BatchBindParentPlatformDevicesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("ParentPlatformId")
     public String parentPlatformId;
 
@@ -27,14 +24,6 @@ public class BatchBindParentPlatformDevicesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public BatchBindParentPlatformDevicesRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public BatchBindParentPlatformDevicesRequest setParentPlatformId(String parentPlatformId) {

@@ -32,18 +32,26 @@ public class BatchBindParentPlatformDevicesResponseBody extends TeaModel {
     }
 
     public static class BatchBindParentPlatformDevicesResponseBodyResults extends TeaModel {
+        @NameInMap("Error")
+        public String error;
+
         @NameInMap("ParentPlatformId")
         public String parentPlatformId;
 
         @NameInMap("DeviceId")
         public String deviceId;
 
-        @NameInMap("Error")
-        public String error;
-
         public static BatchBindParentPlatformDevicesResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             BatchBindParentPlatformDevicesResponseBodyResults self = new BatchBindParentPlatformDevicesResponseBodyResults();
             return TeaModel.build(map, self);
+        }
+
+        public BatchBindParentPlatformDevicesResponseBodyResults setError(String error) {
+            this.error = error;
+            return this;
+        }
+        public String getError() {
+            return this.error;
         }
 
         public BatchBindParentPlatformDevicesResponseBodyResults setParentPlatformId(String parentPlatformId) {
@@ -60,14 +68,6 @@ public class BatchBindParentPlatformDevicesResponseBody extends TeaModel {
         }
         public String getDeviceId() {
             return this.deviceId;
-        }
-
-        public BatchBindParentPlatformDevicesResponseBodyResults setError(String error) {
-            this.error = error;
-            return this;
-        }
-        public String getError() {
-            return this.error;
         }
 
     }

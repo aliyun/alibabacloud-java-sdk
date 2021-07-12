@@ -7,17 +7,17 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("SnapshotDataPerInterval")
-    public DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerInterval snapshotDataPerInterval;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("SnapshotDataPerInterval")
+    public DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerInterval snapshotDataPerInterval;
 
     public static DescribeVsDomainSnapshotDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainSnapshotDataResponseBody self = new DescribeVsDomainSnapshotDataResponseBody();
@@ -32,20 +32,20 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeVsDomainSnapshotDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeVsDomainSnapshotDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeVsDomainSnapshotDataResponseBody setSnapshotDataPerInterval(DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerInterval snapshotDataPerInterval) {
-        this.snapshotDataPerInterval = snapshotDataPerInterval;
-        return this;
-    }
-    public DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerInterval getSnapshotDataPerInterval() {
-        return this.snapshotDataPerInterval;
     }
 
     public DescribeVsDomainSnapshotDataResponseBody setDomainName(String domainName) {
@@ -56,32 +56,24 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeVsDomainSnapshotDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeVsDomainSnapshotDataResponseBody setSnapshotDataPerInterval(DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerInterval snapshotDataPerInterval) {
+        this.snapshotDataPerInterval = snapshotDataPerInterval;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerInterval getSnapshotDataPerInterval() {
+        return this.snapshotDataPerInterval;
     }
 
     public static class DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("SnapshotValue")
         public String snapshotValue;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule self = new DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule setSnapshotValue(String snapshotValue) {
@@ -90,6 +82,14 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
         }
         public String getSnapshotValue() {
             return this.snapshotValue;
+        }
+
+        public DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

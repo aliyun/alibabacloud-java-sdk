@@ -7,9 +7,6 @@ public class StopAdjustRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Id")
     public String id;
 
@@ -18,6 +15,9 @@ public class StopAdjustRequest extends TeaModel {
 
     @NameInMap("Focus")
     public Boolean focus;
+
+    @NameInMap("SubProtocol")
+    public String subProtocol;
 
     public static StopAdjustRequest build(java.util.Map<String, ?> map) throws Exception {
         StopAdjustRequest self = new StopAdjustRequest();
@@ -30,14 +30,6 @@ public class StopAdjustRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public StopAdjustRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public StopAdjustRequest setId(String id) {
@@ -62,6 +54,14 @@ public class StopAdjustRequest extends TeaModel {
     }
     public Boolean getFocus() {
         return this.focus;
+    }
+
+    public StopAdjustRequest setSubProtocol(String subProtocol) {
+        this.subProtocol = subProtocol;
+        return this;
+    }
+    public String getSubProtocol() {
+        return this.subProtocol;
     }
 
 }

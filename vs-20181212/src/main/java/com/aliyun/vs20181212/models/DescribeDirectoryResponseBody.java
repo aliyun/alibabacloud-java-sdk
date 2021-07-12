@@ -7,23 +7,23 @@ public class DescribeDirectoryResponseBody extends TeaModel {
     @NameInMap("ParentId")
     public String parentId;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("CreatedTime")
-    public String createdTime;
-
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Id")
-    public String id;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("CreatedTime")
+    public String createdTime;
+
+    @NameInMap("Id")
+    public String id;
 
     public static DescribeDirectoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDirectoryResponseBody self = new DescribeDirectoryResponseBody();
@@ -38,22 +38,6 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         return this.parentId;
     }
 
-    public DescribeDirectoryResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public DescribeDirectoryResponseBody setCreatedTime(String createdTime) {
-        this.createdTime = createdTime;
-        return this;
-    }
-    public String getCreatedTime() {
-        return this.createdTime;
-    }
-
     public DescribeDirectoryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -62,12 +46,12 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDirectoryResponseBody setId(String id) {
-        this.id = id;
+    public DescribeDirectoryResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getId() {
-        return this.id;
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeDirectoryResponseBody setGroupId(String groupId) {
@@ -84,6 +68,22 @@ public class DescribeDirectoryResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeDirectoryResponseBody setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+        return this;
+    }
+    public String getCreatedTime() {
+        return this.createdTime;
+    }
+
+    public DescribeDirectoryResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
 }
