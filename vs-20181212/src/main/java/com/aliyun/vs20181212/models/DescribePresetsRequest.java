@@ -7,11 +7,11 @@ public class DescribePresetsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("SubProtocol")
+    public String subProtocol;
 
     public static DescribePresetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePresetsRequest self = new DescribePresetsRequest();
@@ -26,20 +26,20 @@ public class DescribePresetsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribePresetsRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
-    }
-
     public DescribePresetsRequest setId(String id) {
         this.id = id;
         return this;
     }
     public String getId() {
         return this.id;
+    }
+
+    public DescribePresetsRequest setSubProtocol(String subProtocol) {
+        this.subProtocol = subProtocol;
+        return this;
+    }
+    public String getSubProtocol() {
+        return this.subProtocol;
     }
 
 }

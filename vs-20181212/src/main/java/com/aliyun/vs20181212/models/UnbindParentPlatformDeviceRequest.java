@@ -7,9 +7,6 @@ public class UnbindParentPlatformDeviceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("ParentPlatformId")
     public String parentPlatformId;
 
@@ -27,14 +24,6 @@ public class UnbindParentPlatformDeviceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public UnbindParentPlatformDeviceRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public UnbindParentPlatformDeviceRequest setParentPlatformId(String parentPlatformId) {

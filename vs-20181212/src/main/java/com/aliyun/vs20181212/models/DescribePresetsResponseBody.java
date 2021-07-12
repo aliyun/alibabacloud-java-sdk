@@ -4,18 +4,26 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribePresetsResponseBody extends TeaModel {
+    @NameInMap("Id")
+    public String id;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Presets")
     public java.util.List<DescribePresetsResponseBodyPresets> presets;
 
-    @NameInMap("Id")
-    public String id;
-
     public static DescribePresetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePresetsResponseBody self = new DescribePresetsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePresetsResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
     }
 
     public DescribePresetsResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class DescribePresetsResponseBody extends TeaModel {
     }
     public java.util.List<DescribePresetsResponseBodyPresets> getPresets() {
         return this.presets;
-    }
-
-    public DescribePresetsResponseBody setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
     }
 
     public static class DescribePresetsResponseBodyPresets extends TeaModel {

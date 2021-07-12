@@ -7,9 +7,6 @@ public class UnbindTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -33,14 +30,6 @@ public class UnbindTemplateRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public UnbindTemplateRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public UnbindTemplateRequest setTemplateId(String templateId) {

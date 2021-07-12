@@ -73,23 +73,15 @@ public class BatchStopDevicesResponseBody extends TeaModel {
     }
 
     public static class BatchStopDevicesResponseBodyResults extends TeaModel {
-        @NameInMap("Streams")
-        public java.util.List<BatchStopDevicesResponseBodyResultsStreams> streams;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Streams")
+        public java.util.List<BatchStopDevicesResponseBodyResultsStreams> streams;
 
         public static BatchStopDevicesResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             BatchStopDevicesResponseBodyResults self = new BatchStopDevicesResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public BatchStopDevicesResponseBodyResults setStreams(java.util.List<BatchStopDevicesResponseBodyResultsStreams> streams) {
-            this.streams = streams;
-            return this;
-        }
-        public java.util.List<BatchStopDevicesResponseBodyResultsStreams> getStreams() {
-            return this.streams;
         }
 
         public BatchStopDevicesResponseBodyResults setId(String id) {
@@ -98,6 +90,14 @@ public class BatchStopDevicesResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public BatchStopDevicesResponseBodyResults setStreams(java.util.List<BatchStopDevicesResponseBodyResultsStreams> streams) {
+            this.streams = streams;
+            return this;
+        }
+        public java.util.List<BatchStopDevicesResponseBodyResultsStreams> getStreams() {
+            return this.streams;
         }
 
     }

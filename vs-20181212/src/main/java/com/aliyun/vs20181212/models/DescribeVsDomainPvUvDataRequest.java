@@ -7,9 +7,6 @@ public class DescribeVsDomainPvUvDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("DomainName")
     public String domainName;
 
@@ -30,14 +27,6 @@ public class DescribeVsDomainPvUvDataRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeVsDomainPvUvDataRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeVsDomainPvUvDataRequest setDomainName(String domainName) {

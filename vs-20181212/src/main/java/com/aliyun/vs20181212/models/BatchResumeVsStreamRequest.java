@@ -7,9 +7,6 @@ public class BatchResumeVsStreamRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("DomainName")
     public String domainName;
 
@@ -33,14 +30,6 @@ public class BatchResumeVsStreamRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public BatchResumeVsStreamRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public BatchResumeVsStreamRequest setDomainName(String domainName) {

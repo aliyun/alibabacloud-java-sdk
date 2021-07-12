@@ -4,9 +4,6 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDevicesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -15,6 +12,9 @@ public class DescribeDevicesResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("PageCount")
     public Long pageCount;
@@ -25,14 +25,6 @@ public class DescribeDevicesResponseBody extends TeaModel {
     public static DescribeDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDevicesResponseBody self = new DescribeDevicesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDevicesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDevicesResponseBody setPageNum(Long pageNum) {
@@ -59,6 +51,14 @@ public class DescribeDevicesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeDevicesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeDevicesResponseBody setPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
@@ -82,14 +82,14 @@ public class DescribeDevicesResponseBody extends TeaModel {
         @NameInMap("StreamNum")
         public Long streamNum;
 
+        @NameInMap("ChannelNum")
+        public Long channelNum;
+
         @NameInMap("OnlineNum")
         public Long onlineNum;
 
         @NameInMap("OfflineNum")
         public Long offlineNum;
-
-        @NameInMap("ChannelNum")
-        public Long channelNum;
 
         public static DescribeDevicesResponseBodyDevicesStats build(java.util.Map<String, ?> map) throws Exception {
             DescribeDevicesResponseBodyDevicesStats self = new DescribeDevicesResponseBodyDevicesStats();
@@ -112,6 +112,14 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.streamNum;
         }
 
+        public DescribeDevicesResponseBodyDevicesStats setChannelNum(Long channelNum) {
+            this.channelNum = channelNum;
+            return this;
+        }
+        public Long getChannelNum() {
+            return this.channelNum;
+        }
+
         public DescribeDevicesResponseBodyDevicesStats setOnlineNum(Long onlineNum) {
             this.onlineNum = onlineNum;
             return this;
@@ -126,14 +134,6 @@ public class DescribeDevicesResponseBody extends TeaModel {
         }
         public Long getOfflineNum() {
             return this.offlineNum;
-        }
-
-        public DescribeDevicesResponseBodyDevicesStats setChannelNum(Long channelNum) {
-            this.channelNum = channelNum;
-            return this;
-        }
-        public Long getChannelNum() {
-            return this.channelNum;
         }
 
     }
@@ -252,35 +252,32 @@ public class DescribeDevicesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("DirectoryId")
-        public String directoryId;
+        @NameInMap("ChannelSyncTime")
+        public String channelSyncTime;
 
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        @NameInMap("ChannelSyncTime")
-        public String channelSyncTime;
+        @NameInMap("DirectoryId")
+        public String directoryId;
 
         @NameInMap("RegisteredTime")
         public String registeredTime;
 
-        @NameInMap("Stats")
-        public DescribeDevicesResponseBodyDevicesStats stats;
-
         @NameInMap("Protocol")
         public String protocol;
-
-        @NameInMap("Url")
-        public String url;
 
         @NameInMap("Ip")
         public String ip;
 
-        @NameInMap("Vendor")
-        public String vendor;
+        @NameInMap("Url")
+        public String url;
 
         @NameInMap("AutoStart")
         public Boolean autoStart;
+
+        @NameInMap("Vendor")
+        public String vendor;
 
         @NameInMap("GbId")
         public String gbId;
@@ -294,14 +291,17 @@ public class DescribeDevicesResponseBody extends TeaModel {
         @NameInMap("Latitude")
         public String latitude;
 
-        @NameInMap("Directory")
-        public DescribeDevicesResponseBodyDevicesDirectory directory;
-
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Username")
         public String username;
+
+        @NameInMap("Stats")
+        public DescribeDevicesResponseBodyDevicesStats stats;
+
+        @NameInMap("Directory")
+        public DescribeDevicesResponseBodyDevicesDirectory directory;
 
         public static DescribeDevicesResponseBodyDevices build(java.util.Map<String, ?> map) throws Exception {
             DescribeDevicesResponseBodyDevices self = new DescribeDevicesResponseBodyDevices();
@@ -412,12 +412,12 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeDevicesResponseBodyDevices setDirectoryId(String directoryId) {
-            this.directoryId = directoryId;
+        public DescribeDevicesResponseBodyDevices setChannelSyncTime(String channelSyncTime) {
+            this.channelSyncTime = channelSyncTime;
             return this;
         }
-        public String getDirectoryId() {
-            return this.directoryId;
+        public String getChannelSyncTime() {
+            return this.channelSyncTime;
         }
 
         public DescribeDevicesResponseBodyDevices setCreatedTime(String createdTime) {
@@ -428,12 +428,12 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.createdTime;
         }
 
-        public DescribeDevicesResponseBodyDevices setChannelSyncTime(String channelSyncTime) {
-            this.channelSyncTime = channelSyncTime;
+        public DescribeDevicesResponseBodyDevices setDirectoryId(String directoryId) {
+            this.directoryId = directoryId;
             return this;
         }
-        public String getChannelSyncTime() {
-            return this.channelSyncTime;
+        public String getDirectoryId() {
+            return this.directoryId;
         }
 
         public DescribeDevicesResponseBodyDevices setRegisteredTime(String registeredTime) {
@@ -444,28 +444,12 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.registeredTime;
         }
 
-        public DescribeDevicesResponseBodyDevices setStats(DescribeDevicesResponseBodyDevicesStats stats) {
-            this.stats = stats;
-            return this;
-        }
-        public DescribeDevicesResponseBodyDevicesStats getStats() {
-            return this.stats;
-        }
-
         public DescribeDevicesResponseBodyDevices setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
         public String getProtocol() {
             return this.protocol;
-        }
-
-        public DescribeDevicesResponseBodyDevices setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public DescribeDevicesResponseBodyDevices setIp(String ip) {
@@ -476,12 +460,12 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.ip;
         }
 
-        public DescribeDevicesResponseBodyDevices setVendor(String vendor) {
-            this.vendor = vendor;
+        public DescribeDevicesResponseBodyDevices setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public String getVendor() {
-            return this.vendor;
+        public String getUrl() {
+            return this.url;
         }
 
         public DescribeDevicesResponseBodyDevices setAutoStart(Boolean autoStart) {
@@ -490,6 +474,14 @@ public class DescribeDevicesResponseBody extends TeaModel {
         }
         public Boolean getAutoStart() {
             return this.autoStart;
+        }
+
+        public DescribeDevicesResponseBodyDevices setVendor(String vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public String getVendor() {
+            return this.vendor;
         }
 
         public DescribeDevicesResponseBodyDevices setGbId(String gbId) {
@@ -524,14 +516,6 @@ public class DescribeDevicesResponseBody extends TeaModel {
             return this.latitude;
         }
 
-        public DescribeDevicesResponseBodyDevices setDirectory(DescribeDevicesResponseBodyDevicesDirectory directory) {
-            this.directory = directory;
-            return this;
-        }
-        public DescribeDevicesResponseBodyDevicesDirectory getDirectory() {
-            return this.directory;
-        }
-
         public DescribeDevicesResponseBodyDevices setId(String id) {
             this.id = id;
             return this;
@@ -546,6 +530,22 @@ public class DescribeDevicesResponseBody extends TeaModel {
         }
         public String getUsername() {
             return this.username;
+        }
+
+        public DescribeDevicesResponseBodyDevices setStats(DescribeDevicesResponseBodyDevicesStats stats) {
+            this.stats = stats;
+            return this;
+        }
+        public DescribeDevicesResponseBodyDevicesStats getStats() {
+            return this.stats;
+        }
+
+        public DescribeDevicesResponseBodyDevices setDirectory(DescribeDevicesResponseBodyDevicesDirectory directory) {
+            this.directory = directory;
+            return this;
+        }
+        public DescribeDevicesResponseBodyDevicesDirectory getDirectory() {
+            return this.directory;
         }
 
     }

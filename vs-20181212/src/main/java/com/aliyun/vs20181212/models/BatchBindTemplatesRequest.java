@@ -7,9 +7,6 @@ public class BatchBindTemplatesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -39,14 +36,6 @@ public class BatchBindTemplatesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public BatchBindTemplatesRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public BatchBindTemplatesRequest setTemplateId(String templateId) {

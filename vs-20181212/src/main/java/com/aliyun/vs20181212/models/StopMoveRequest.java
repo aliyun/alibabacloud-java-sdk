@@ -7,9 +7,6 @@ public class StopMoveRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Id")
     public String id;
 
@@ -22,6 +19,9 @@ public class StopMoveRequest extends TeaModel {
     @NameInMap("Zoom")
     public Boolean zoom;
 
+    @NameInMap("SubProtocol")
+    public String subProtocol;
+
     public static StopMoveRequest build(java.util.Map<String, ?> map) throws Exception {
         StopMoveRequest self = new StopMoveRequest();
         return TeaModel.build(map, self);
@@ -33,14 +33,6 @@ public class StopMoveRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public StopMoveRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public StopMoveRequest setId(String id) {
@@ -73,6 +65,14 @@ public class StopMoveRequest extends TeaModel {
     }
     public Boolean getZoom() {
         return this.zoom;
+    }
+
+    public StopMoveRequest setSubProtocol(String subProtocol) {
+        this.subProtocol = subProtocol;
+        return this;
+    }
+    public String getSubProtocol() {
+        return this.subProtocol;
     }
 
 }

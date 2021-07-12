@@ -7,9 +7,6 @@ public class BatchDeleteVsDomainConfigsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("DomainNames")
     public String domainNames;
 
@@ -27,14 +24,6 @@ public class BatchDeleteVsDomainConfigsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public BatchDeleteVsDomainConfigsRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public BatchDeleteVsDomainConfigsRequest setDomainNames(String domainNames) {

@@ -7,9 +7,6 @@ public class BatchSetVsDomainConfigsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("DomainNames")
     public String domainNames;
 
@@ -27,14 +24,6 @@ public class BatchSetVsDomainConfigsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public BatchSetVsDomainConfigsRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public BatchSetVsDomainConfigsRequest setDomainNames(String domainNames) {

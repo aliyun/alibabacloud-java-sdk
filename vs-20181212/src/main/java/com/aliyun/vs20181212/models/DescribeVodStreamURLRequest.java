@@ -7,9 +7,6 @@ public class DescribeVodStreamURLRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Url")
     public String url;
 
@@ -27,14 +24,6 @@ public class DescribeVodStreamURLRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeVodStreamURLRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeVodStreamURLRequest setUrl(String url) {

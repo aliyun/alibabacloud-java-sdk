@@ -7,9 +7,6 @@ public class CreateGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Name")
     public String name;
 
@@ -66,14 +63,6 @@ public class CreateGroupRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public CreateGroupRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public CreateGroupRequest setName(String name) {

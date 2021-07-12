@@ -7,14 +7,14 @@ public class DeletePresetRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Id")
     public String id;
 
     @NameInMap("PresetId")
     public String presetId;
+
+    @NameInMap("SubProtocol")
+    public String subProtocol;
 
     public static DeletePresetRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePresetRequest self = new DeletePresetRequest();
@@ -27,14 +27,6 @@ public class DeletePresetRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DeletePresetRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DeletePresetRequest setId(String id) {
@@ -51,6 +43,14 @@ public class DeletePresetRequest extends TeaModel {
     }
     public String getPresetId() {
         return this.presetId;
+    }
+
+    public DeletePresetRequest setSubProtocol(String subProtocol) {
+        this.subProtocol = subProtocol;
+        return this;
+    }
+    public String getSubProtocol() {
+        return this.subProtocol;
     }
 
 }

@@ -7,9 +7,6 @@ public class DescribeVsDomainTrafficDataRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("DomainName")
     public String domainName;
 
@@ -39,14 +36,6 @@ public class DescribeVsDomainTrafficDataRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeVsDomainTrafficDataRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeVsDomainTrafficDataRequest setDomainName(String domainName) {

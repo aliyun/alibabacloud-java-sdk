@@ -35,14 +35,14 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         @NameInMap("QueryTime")
         public String queryTime;
 
+        @NameInMap("BandWidth")
+        public String bandWidth;
+
         @NameInMap("StatName")
         public String statName;
 
         @NameInMap("PeakTime")
         public String peakTime;
-
-        @NameInMap("BandWidth")
-        public String bandWidth;
 
         @NameInMap("PublishStreamNum")
         public Integer publishStreamNum;
@@ -60,6 +60,14 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
             return this.queryTime;
         }
 
+        public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setBandWidth(String bandWidth) {
+            this.bandWidth = bandWidth;
+            return this;
+        }
+        public String getBandWidth() {
+            return this.bandWidth;
+        }
+
         public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setStatName(String statName) {
             this.statName = statName;
             return this;
@@ -74,14 +82,6 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         }
         public String getPeakTime() {
             return this.peakTime;
-        }
-
-        public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setBandWidth(String bandWidth) {
-            this.bandWidth = bandWidth;
-            return this;
-        }
-        public String getBandWidth() {
-            return this.bandWidth;
         }
 
         public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatasDescribeVsUpPeakPublishStreamData setPublishStreamNum(Integer publishStreamNum) {

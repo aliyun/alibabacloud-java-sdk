@@ -35,14 +35,14 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         @NameInMap("AuthType")
         public String authType;
 
-        @NameInMap("NotifyUrl")
-        public String notifyUrl;
-
         @NameInMap("AuthKey")
         public String authKey;
 
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("NotifyUrl")
+        public String notifyUrl;
 
         public static DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig self = new DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig();
@@ -55,14 +55,6 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
-        }
-
-        public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig setNotifyUrl(String notifyUrl) {
-            this.notifyUrl = notifyUrl;
-            return this;
-        }
-        public String getNotifyUrl() {
-            return this.notifyUrl;
         }
 
         public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig setAuthKey(String authKey) {
@@ -79,6 +71,14 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig setNotifyUrl(String notifyUrl) {
+            this.notifyUrl = notifyUrl;
+            return this;
+        }
+        public String getNotifyUrl() {
+            return this.notifyUrl;
         }
 
     }

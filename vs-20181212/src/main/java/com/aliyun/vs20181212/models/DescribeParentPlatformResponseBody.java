@@ -7,17 +7,14 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("ClientPort")
+    public Long clientPort;
+
     @NameInMap("ClientGbId")
     public String clientGbId;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("CreatedTime")
-    public String createdTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Protocol")
+    public String protocol;
 
     @NameInMap("Ip")
     public String ip;
@@ -25,11 +22,26 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     @NameInMap("Port")
     public Long port;
 
-    @NameInMap("ClientPort")
-    public Long clientPort;
+    @NameInMap("ClientPassword")
+    public String clientPassword;
+
+    @NameInMap("ClientUsername")
+    public String clientUsername;
+
+    @NameInMap("AutoStart")
+    public Boolean autoStart;
 
     @NameInMap("ClientAuth")
     public Boolean clientAuth;
+
+    @NameInMap("GbId")
+    public String gbId;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("ClientIp")
     public String clientIp;
@@ -37,23 +49,11 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("GbId")
-    public String gbId;
-
-    @NameInMap("ClientPassword")
-    public String clientPassword;
+    @NameInMap("CreatedTime")
+    public String createdTime;
 
     @NameInMap("Id")
     public String id;
-
-    @NameInMap("Protocol")
-    public String protocol;
-
-    @NameInMap("AutoStart")
-    public Boolean autoStart;
-
-    @NameInMap("ClientUsername")
-    public String clientUsername;
 
     public static DescribeParentPlatformResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParentPlatformResponseBody self = new DescribeParentPlatformResponseBody();
@@ -68,6 +68,14 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
         return this.status;
     }
 
+    public DescribeParentPlatformResponseBody setClientPort(Long clientPort) {
+        this.clientPort = clientPort;
+        return this;
+    }
+    public Long getClientPort() {
+        return this.clientPort;
+    }
+
     public DescribeParentPlatformResponseBody setClientGbId(String clientGbId) {
         this.clientGbId = clientGbId;
         return this;
@@ -76,28 +84,12 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
         return this.clientGbId;
     }
 
-    public DescribeParentPlatformResponseBody setDescription(String description) {
-        this.description = description;
+    public DescribeParentPlatformResponseBody setProtocol(String protocol) {
+        this.protocol = protocol;
         return this;
     }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public DescribeParentPlatformResponseBody setCreatedTime(String createdTime) {
-        this.createdTime = createdTime;
-        return this;
-    }
-    public String getCreatedTime() {
-        return this.createdTime;
-    }
-
-    public DescribeParentPlatformResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getProtocol() {
+        return this.protocol;
     }
 
     public DescribeParentPlatformResponseBody setIp(String ip) {
@@ -116,12 +108,28 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
         return this.port;
     }
 
-    public DescribeParentPlatformResponseBody setClientPort(Long clientPort) {
-        this.clientPort = clientPort;
+    public DescribeParentPlatformResponseBody setClientPassword(String clientPassword) {
+        this.clientPassword = clientPassword;
         return this;
     }
-    public Long getClientPort() {
-        return this.clientPort;
+    public String getClientPassword() {
+        return this.clientPassword;
+    }
+
+    public DescribeParentPlatformResponseBody setClientUsername(String clientUsername) {
+        this.clientUsername = clientUsername;
+        return this;
+    }
+    public String getClientUsername() {
+        return this.clientUsername;
+    }
+
+    public DescribeParentPlatformResponseBody setAutoStart(Boolean autoStart) {
+        this.autoStart = autoStart;
+        return this;
+    }
+    public Boolean getAutoStart() {
+        return this.autoStart;
     }
 
     public DescribeParentPlatformResponseBody setClientAuth(Boolean clientAuth) {
@@ -130,6 +138,30 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     }
     public Boolean getClientAuth() {
         return this.clientAuth;
+    }
+
+    public DescribeParentPlatformResponseBody setGbId(String gbId) {
+        this.gbId = gbId;
+        return this;
+    }
+    public String getGbId() {
+        return this.gbId;
+    }
+
+    public DescribeParentPlatformResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeParentPlatformResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeParentPlatformResponseBody setClientIp(String clientIp) {
@@ -148,20 +180,12 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
         return this.name;
     }
 
-    public DescribeParentPlatformResponseBody setGbId(String gbId) {
-        this.gbId = gbId;
+    public DescribeParentPlatformResponseBody setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
         return this;
     }
-    public String getGbId() {
-        return this.gbId;
-    }
-
-    public DescribeParentPlatformResponseBody setClientPassword(String clientPassword) {
-        this.clientPassword = clientPassword;
-        return this;
-    }
-    public String getClientPassword() {
-        return this.clientPassword;
+    public String getCreatedTime() {
+        return this.createdTime;
     }
 
     public DescribeParentPlatformResponseBody setId(String id) {
@@ -170,30 +194,6 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     }
     public String getId() {
         return this.id;
-    }
-
-    public DescribeParentPlatformResponseBody setProtocol(String protocol) {
-        this.protocol = protocol;
-        return this;
-    }
-    public String getProtocol() {
-        return this.protocol;
-    }
-
-    public DescribeParentPlatformResponseBody setAutoStart(Boolean autoStart) {
-        this.autoStart = autoStart;
-        return this;
-    }
-    public Boolean getAutoStart() {
-        return this.autoStart;
-    }
-
-    public DescribeParentPlatformResponseBody setClientUsername(String clientUsername) {
-        this.clientUsername = clientUsername;
-        return this;
-    }
-    public String getClientUsername() {
-        return this.clientUsername;
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplatesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -15,6 +12,9 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("PageCount")
     public Long pageCount;
@@ -25,14 +25,6 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public static DescribeTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTemplatesResponseBody self = new DescribeTemplatesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTemplatesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeTemplatesResponseBody setPageNum(Long pageNum) {
@@ -57,6 +49,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeTemplatesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeTemplatesResponseBody setPageCount(Long pageCount) {
@@ -178,17 +178,41 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @NameInMap("Trigger")
         public String trigger;
 
+        @NameInMap("OssFilePrefix")
+        public String ossFilePrefix;
+
         @NameInMap("HlsTs")
         public String hlsTs;
 
         @NameInMap("Mp4")
         public String mp4;
 
+        @NameInMap("JpgOnDemand")
+        public String jpgOnDemand;
+
+        @NameInMap("OssBucket")
+        public String ossBucket;
+
+        @NameInMap("JpgSequence")
+        public String jpgSequence;
+
         @NameInMap("JpgOverwrite")
         public String jpgOverwrite;
 
+        @NameInMap("FileFormat")
+        public String fileFormat;
+
         @NameInMap("Callback")
         public String callback;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Interval")
+        public Long interval;
 
         @NameInMap("Description")
         public String description;
@@ -202,11 +226,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @NameInMap("HlsM3u8")
         public String hlsM3u8;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Flv")
         public String flv;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("CreatedTime")
         public String createdTime;
@@ -214,35 +238,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
-        @NameInMap("OssFilePrefix")
-        public String ossFilePrefix;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("TransConfigs")
         public java.util.List<DescribeTemplatesResponseBodyTemplatesTransConfigs> transConfigs;
-
-        @NameInMap("JpgOnDemand")
-        public String jpgOnDemand;
-
-        @NameInMap("OssBucket")
-        public String ossBucket;
-
-        @NameInMap("JpgSequence")
-        public String jpgSequence;
-
-        @NameInMap("FileFormat")
-        public String fileFormat;
-
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Interval")
-        public Long interval;
-
-        @NameInMap("Id")
-        public String id;
 
         public static DescribeTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
             DescribeTemplatesResponseBodyTemplates self = new DescribeTemplatesResponseBodyTemplates();
@@ -265,6 +265,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.trigger;
         }
 
+        public DescribeTemplatesResponseBodyTemplates setOssFilePrefix(String ossFilePrefix) {
+            this.ossFilePrefix = ossFilePrefix;
+            return this;
+        }
+        public String getOssFilePrefix() {
+            return this.ossFilePrefix;
+        }
+
         public DescribeTemplatesResponseBodyTemplates setHlsTs(String hlsTs) {
             this.hlsTs = hlsTs;
             return this;
@@ -281,6 +289,30 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.mp4;
         }
 
+        public DescribeTemplatesResponseBodyTemplates setJpgOnDemand(String jpgOnDemand) {
+            this.jpgOnDemand = jpgOnDemand;
+            return this;
+        }
+        public String getJpgOnDemand() {
+            return this.jpgOnDemand;
+        }
+
+        public DescribeTemplatesResponseBodyTemplates setOssBucket(String ossBucket) {
+            this.ossBucket = ossBucket;
+            return this;
+        }
+        public String getOssBucket() {
+            return this.ossBucket;
+        }
+
+        public DescribeTemplatesResponseBodyTemplates setJpgSequence(String jpgSequence) {
+            this.jpgSequence = jpgSequence;
+            return this;
+        }
+        public String getJpgSequence() {
+            return this.jpgSequence;
+        }
+
         public DescribeTemplatesResponseBodyTemplates setJpgOverwrite(String jpgOverwrite) {
             this.jpgOverwrite = jpgOverwrite;
             return this;
@@ -289,12 +321,44 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.jpgOverwrite;
         }
 
+        public DescribeTemplatesResponseBodyTemplates setFileFormat(String fileFormat) {
+            this.fileFormat = fileFormat;
+            return this;
+        }
+        public String getFileFormat() {
+            return this.fileFormat;
+        }
+
         public DescribeTemplatesResponseBodyTemplates setCallback(String callback) {
             this.callback = callback;
             return this;
         }
         public String getCallback() {
             return this.callback;
+        }
+
+        public DescribeTemplatesResponseBodyTemplates setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeTemplatesResponseBodyTemplates setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeTemplatesResponseBodyTemplates setInterval(Long interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Long getInterval() {
+            return this.interval;
         }
 
         public DescribeTemplatesResponseBodyTemplates setDescription(String description) {
@@ -329,20 +393,20 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.hlsM3u8;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeTemplatesResponseBodyTemplates setFlv(String flv) {
             this.flv = flv;
             return this;
         }
         public String getFlv() {
             return this.flv;
+        }
+
+        public DescribeTemplatesResponseBodyTemplates setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeTemplatesResponseBodyTemplates setCreatedTime(String createdTime) {
@@ -361,12 +425,12 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.ossEndpoint;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setOssFilePrefix(String ossFilePrefix) {
-            this.ossFilePrefix = ossFilePrefix;
+        public DescribeTemplatesResponseBodyTemplates setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getOssFilePrefix() {
-            return this.ossFilePrefix;
+        public String getId() {
+            return this.id;
         }
 
         public DescribeTemplatesResponseBodyTemplates setTransConfigs(java.util.List<DescribeTemplatesResponseBodyTemplatesTransConfigs> transConfigs) {
@@ -375,70 +439,6 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeTemplatesResponseBodyTemplatesTransConfigs> getTransConfigs() {
             return this.transConfigs;
-        }
-
-        public DescribeTemplatesResponseBodyTemplates setJpgOnDemand(String jpgOnDemand) {
-            this.jpgOnDemand = jpgOnDemand;
-            return this;
-        }
-        public String getJpgOnDemand() {
-            return this.jpgOnDemand;
-        }
-
-        public DescribeTemplatesResponseBodyTemplates setOssBucket(String ossBucket) {
-            this.ossBucket = ossBucket;
-            return this;
-        }
-        public String getOssBucket() {
-            return this.ossBucket;
-        }
-
-        public DescribeTemplatesResponseBodyTemplates setJpgSequence(String jpgSequence) {
-            this.jpgSequence = jpgSequence;
-            return this;
-        }
-        public String getJpgSequence() {
-            return this.jpgSequence;
-        }
-
-        public DescribeTemplatesResponseBodyTemplates setFileFormat(String fileFormat) {
-            this.fileFormat = fileFormat;
-            return this;
-        }
-        public String getFileFormat() {
-            return this.fileFormat;
-        }
-
-        public DescribeTemplatesResponseBodyTemplates setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeTemplatesResponseBodyTemplates setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeTemplatesResponseBodyTemplates setInterval(Long interval) {
-            this.interval = interval;
-            return this;
-        }
-        public Long getInterval() {
-            return this.interval;
-        }
-
-        public DescribeTemplatesResponseBodyTemplates setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
         }
 
     }

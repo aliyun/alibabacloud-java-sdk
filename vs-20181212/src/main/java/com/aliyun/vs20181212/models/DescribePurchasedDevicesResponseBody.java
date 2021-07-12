@@ -4,9 +4,6 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedDevicesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -15,6 +12,9 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("PageCount")
     public Long pageCount;
@@ -25,14 +25,6 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
     public static DescribePurchasedDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePurchasedDevicesResponseBody self = new DescribePurchasedDevicesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePurchasedDevicesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribePurchasedDevicesResponseBody setPageNum(Long pageNum) {
@@ -57,6 +49,14 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribePurchasedDevicesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribePurchasedDevicesResponseBody setPageCount(Long pageCount) {
@@ -85,17 +85,17 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         @NameInMap("Vendor")
         public String vendor;
 
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("GroupId")
-        public String groupId;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("RegisterCode")
         public String registerCode;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
 
         @NameInMap("Region")
         public String region;
@@ -106,11 +106,11 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public String createdTime;
 
-        @NameInMap("OrderId")
-        public String orderId;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("OrderId")
+        public String orderId;
 
         public static DescribePurchasedDevicesResponseBodyDevices build(java.util.Map<String, ?> map) throws Exception {
             DescribePurchasedDevicesResponseBodyDevices self = new DescribePurchasedDevicesResponseBodyDevices();
@@ -141,20 +141,12 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             return this.vendor;
         }
 
-        public DescribePurchasedDevicesResponseBodyDevices setGroupName(String groupName) {
-            this.groupName = groupName;
+        public DescribePurchasedDevicesResponseBodyDevices setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribePurchasedDevicesResponseBodyDevices setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribePurchasedDevicesResponseBodyDevices setRegisterCode(String registerCode) {
@@ -165,12 +157,20 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             return this.registerCode;
         }
 
-        public DescribePurchasedDevicesResponseBodyDevices setDescription(String description) {
-            this.description = description;
+        public DescribePurchasedDevicesResponseBodyDevices setGroupId(String groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribePurchasedDevicesResponseBodyDevices setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
         }
 
         public DescribePurchasedDevicesResponseBodyDevices setRegion(String region) {
@@ -197,20 +197,20 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             return this.createdTime;
         }
 
-        public DescribePurchasedDevicesResponseBodyDevices setOrderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public String getOrderId() {
-            return this.orderId;
-        }
-
         public DescribePurchasedDevicesResponseBodyDevices setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribePurchasedDevicesResponseBodyDevices setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
         }
 
     }

@@ -7,9 +7,6 @@ public class DescribeVsTopDomainsByFlowRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -30,14 +27,6 @@ public class DescribeVsTopDomainsByFlowRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeVsTopDomainsByFlowRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeVsTopDomainsByFlowRequest setStartTime(String startTime) {

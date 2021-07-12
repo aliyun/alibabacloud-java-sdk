@@ -7,9 +7,6 @@ public class DescribeDirectoriesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("GroupId")
     public String groupId;
 
@@ -42,14 +39,6 @@ public class DescribeDirectoriesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeDirectoriesRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeDirectoriesRequest setGroupId(String groupId) {

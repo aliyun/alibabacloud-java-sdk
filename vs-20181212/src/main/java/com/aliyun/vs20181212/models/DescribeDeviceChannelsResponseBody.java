@@ -4,9 +4,6 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceChannelsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -15,6 +12,9 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("PageCount")
     public Long pageCount;
@@ -25,14 +25,6 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     public static DescribeDeviceChannelsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeviceChannelsResponseBody self = new DescribeDeviceChannelsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeviceChannelsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDeviceChannelsResponseBody setPageNum(Long pageNum) {
@@ -57,6 +49,14 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDeviceChannelsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeDeviceChannelsResponseBody setPageCount(Long pageCount) {

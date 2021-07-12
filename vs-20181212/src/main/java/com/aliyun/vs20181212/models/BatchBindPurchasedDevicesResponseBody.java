@@ -32,6 +32,9 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
     }
 
     public static class BatchBindPurchasedDevicesResponseBodyResults extends TeaModel {
+        @NameInMap("Error")
+        public String error;
+
         @NameInMap("GroupId")
         public String groupId;
 
@@ -41,12 +44,17 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
-        @NameInMap("Error")
-        public String error;
-
         public static BatchBindPurchasedDevicesResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             BatchBindPurchasedDevicesResponseBodyResults self = new BatchBindPurchasedDevicesResponseBodyResults();
             return TeaModel.build(map, self);
+        }
+
+        public BatchBindPurchasedDevicesResponseBodyResults setError(String error) {
+            this.error = error;
+            return this;
+        }
+        public String getError() {
+            return this.error;
         }
 
         public BatchBindPurchasedDevicesResponseBodyResults setGroupId(String groupId) {
@@ -71,14 +79,6 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
-        }
-
-        public BatchBindPurchasedDevicesResponseBodyResults setError(String error) {
-            this.error = error;
-            return this;
-        }
-        public String getError() {
-            return this.error;
         }
 
     }

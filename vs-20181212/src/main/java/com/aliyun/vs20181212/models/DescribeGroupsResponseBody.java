@@ -4,9 +4,6 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -15,6 +12,9 @@ public class DescribeGroupsResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("PageCount")
     public Long pageCount;
@@ -25,14 +25,6 @@ public class DescribeGroupsResponseBody extends TeaModel {
     public static DescribeGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupsResponseBody self = new DescribeGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGroupsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeGroupsResponseBody setPageNum(Long pageNum) {
@@ -57,6 +49,14 @@ public class DescribeGroupsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeGroupsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeGroupsResponseBody setPageCount(Long pageCount) {
@@ -134,42 +134,6 @@ public class DescribeGroupsResponseBody extends TeaModel {
         @NameInMap("LazyPull")
         public Boolean lazyPull;
 
-        @NameInMap("Callback")
-        public String callback;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("App")
-        public String app;
-
-        @NameInMap("Region")
-        public String region;
-
-        @NameInMap("Enabled")
-        public Boolean enabled;
-
-        @NameInMap("InProtocol")
-        public String inProtocol;
-
-        @NameInMap("OutProtocol")
-        public String outProtocol;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("PushDomain")
-        public String pushDomain;
-
-        @NameInMap("CreatedTime")
-        public String createdTime;
-
-        @NameInMap("CaptureVideo")
-        public Integer captureVideo;
-
-        @NameInMap("Stats")
-        public DescribeGroupsResponseBodyGroupsStats stats;
-
         @NameInMap("PlayDomain")
         public String playDomain;
 
@@ -179,8 +143,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         @NameInMap("CaptureInterval")
         public Integer captureInterval;
 
-        @NameInMap("GbTcpPorts")
-        public java.util.List<String> gbTcpPorts;
+        @NameInMap("Callback")
+        public String callback;
 
         @NameInMap("GbId")
         public String gbId;
@@ -191,8 +155,23 @@ public class DescribeGroupsResponseBody extends TeaModel {
         @NameInMap("CaptureImage")
         public Integer captureImage;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("App")
+        public String app;
+
         @NameInMap("AliasId")
         public String aliasId;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("InProtocol")
+        public String inProtocol;
 
         @NameInMap("CaptureOssPath")
         public String captureOssPath;
@@ -200,11 +179,32 @@ public class DescribeGroupsResponseBody extends TeaModel {
         @NameInMap("CaptureOssBucket")
         public String captureOssBucket;
 
-        @NameInMap("GbUdpPorts")
-        public java.util.List<String> gbUdpPorts;
+        @NameInMap("OutProtocol")
+        public String outProtocol;
+
+        @NameInMap("PushDomain")
+        public String pushDomain;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("CreatedTime")
+        public String createdTime;
+
+        @NameInMap("CaptureVideo")
+        public Integer captureVideo;
 
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("GbTcpPorts")
+        public java.util.List<String> gbTcpPorts;
+
+        @NameInMap("GbUdpPorts")
+        public java.util.List<String> gbUdpPorts;
+
+        @NameInMap("Stats")
+        public DescribeGroupsResponseBodyGroupsStats stats;
 
         public static DescribeGroupsResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeGroupsResponseBodyGroups self = new DescribeGroupsResponseBodyGroups();
@@ -225,102 +225,6 @@ public class DescribeGroupsResponseBody extends TeaModel {
         }
         public Boolean getLazyPull() {
             return this.lazyPull;
-        }
-
-        public DescribeGroupsResponseBodyGroups setCallback(String callback) {
-            this.callback = callback;
-            return this;
-        }
-        public String getCallback() {
-            return this.callback;
-        }
-
-        public DescribeGroupsResponseBodyGroups setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeGroupsResponseBodyGroups setApp(String app) {
-            this.app = app;
-            return this;
-        }
-        public String getApp() {
-            return this.app;
-        }
-
-        public DescribeGroupsResponseBodyGroups setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
-        public DescribeGroupsResponseBodyGroups setEnabled(Boolean enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public Boolean getEnabled() {
-            return this.enabled;
-        }
-
-        public DescribeGroupsResponseBodyGroups setInProtocol(String inProtocol) {
-            this.inProtocol = inProtocol;
-            return this;
-        }
-        public String getInProtocol() {
-            return this.inProtocol;
-        }
-
-        public DescribeGroupsResponseBodyGroups setOutProtocol(String outProtocol) {
-            this.outProtocol = outProtocol;
-            return this;
-        }
-        public String getOutProtocol() {
-            return this.outProtocol;
-        }
-
-        public DescribeGroupsResponseBodyGroups setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeGroupsResponseBodyGroups setPushDomain(String pushDomain) {
-            this.pushDomain = pushDomain;
-            return this;
-        }
-        public String getPushDomain() {
-            return this.pushDomain;
-        }
-
-        public DescribeGroupsResponseBodyGroups setCreatedTime(String createdTime) {
-            this.createdTime = createdTime;
-            return this;
-        }
-        public String getCreatedTime() {
-            return this.createdTime;
-        }
-
-        public DescribeGroupsResponseBodyGroups setCaptureVideo(Integer captureVideo) {
-            this.captureVideo = captureVideo;
-            return this;
-        }
-        public Integer getCaptureVideo() {
-            return this.captureVideo;
-        }
-
-        public DescribeGroupsResponseBodyGroups setStats(DescribeGroupsResponseBodyGroupsStats stats) {
-            this.stats = stats;
-            return this;
-        }
-        public DescribeGroupsResponseBodyGroupsStats getStats() {
-            return this.stats;
         }
 
         public DescribeGroupsResponseBodyGroups setPlayDomain(String playDomain) {
@@ -347,12 +251,12 @@ public class DescribeGroupsResponseBody extends TeaModel {
             return this.captureInterval;
         }
 
-        public DescribeGroupsResponseBodyGroups setGbTcpPorts(java.util.List<String> gbTcpPorts) {
-            this.gbTcpPorts = gbTcpPorts;
+        public DescribeGroupsResponseBodyGroups setCallback(String callback) {
+            this.callback = callback;
             return this;
         }
-        public java.util.List<String> getGbTcpPorts() {
-            return this.gbTcpPorts;
+        public String getCallback() {
+            return this.callback;
         }
 
         public DescribeGroupsResponseBodyGroups setGbId(String gbId) {
@@ -379,12 +283,52 @@ public class DescribeGroupsResponseBody extends TeaModel {
             return this.captureImage;
         }
 
+        public DescribeGroupsResponseBodyGroups setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeGroupsResponseBodyGroups setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeGroupsResponseBodyGroups setApp(String app) {
+            this.app = app;
+            return this;
+        }
+        public String getApp() {
+            return this.app;
+        }
+
         public DescribeGroupsResponseBodyGroups setAliasId(String aliasId) {
             this.aliasId = aliasId;
             return this;
         }
         public String getAliasId() {
             return this.aliasId;
+        }
+
+        public DescribeGroupsResponseBodyGroups setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeGroupsResponseBodyGroups setInProtocol(String inProtocol) {
+            this.inProtocol = inProtocol;
+            return this;
+        }
+        public String getInProtocol() {
+            return this.inProtocol;
         }
 
         public DescribeGroupsResponseBodyGroups setCaptureOssPath(String captureOssPath) {
@@ -403,12 +347,44 @@ public class DescribeGroupsResponseBody extends TeaModel {
             return this.captureOssBucket;
         }
 
-        public DescribeGroupsResponseBodyGroups setGbUdpPorts(java.util.List<String> gbUdpPorts) {
-            this.gbUdpPorts = gbUdpPorts;
+        public DescribeGroupsResponseBodyGroups setOutProtocol(String outProtocol) {
+            this.outProtocol = outProtocol;
             return this;
         }
-        public java.util.List<String> getGbUdpPorts() {
-            return this.gbUdpPorts;
+        public String getOutProtocol() {
+            return this.outProtocol;
+        }
+
+        public DescribeGroupsResponseBodyGroups setPushDomain(String pushDomain) {
+            this.pushDomain = pushDomain;
+            return this;
+        }
+        public String getPushDomain() {
+            return this.pushDomain;
+        }
+
+        public DescribeGroupsResponseBodyGroups setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeGroupsResponseBodyGroups setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public DescribeGroupsResponseBodyGroups setCaptureVideo(Integer captureVideo) {
+            this.captureVideo = captureVideo;
+            return this;
+        }
+        public Integer getCaptureVideo() {
+            return this.captureVideo;
         }
 
         public DescribeGroupsResponseBodyGroups setId(String id) {
@@ -417,6 +393,30 @@ public class DescribeGroupsResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeGroupsResponseBodyGroups setGbTcpPorts(java.util.List<String> gbTcpPorts) {
+            this.gbTcpPorts = gbTcpPorts;
+            return this;
+        }
+        public java.util.List<String> getGbTcpPorts() {
+            return this.gbTcpPorts;
+        }
+
+        public DescribeGroupsResponseBodyGroups setGbUdpPorts(java.util.List<String> gbUdpPorts) {
+            this.gbUdpPorts = gbUdpPorts;
+            return this;
+        }
+        public java.util.List<String> getGbUdpPorts() {
+            return this.gbUdpPorts;
+        }
+
+        public DescribeGroupsResponseBodyGroups setStats(DescribeGroupsResponseBodyGroupsStats stats) {
+            this.stats = stats;
+            return this;
+        }
+        public DescribeGroupsResponseBodyGroupsStats getStats() {
+            return this.stats;
         }
 
     }

@@ -7,9 +7,6 @@ public class DescribeVsCertificateDetailRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("CertName")
     public String certName;
 
@@ -24,14 +21,6 @@ public class DescribeVsCertificateDetailRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeVsCertificateDetailRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public DescribeVsCertificateDetailRequest setCertName(String certName) {

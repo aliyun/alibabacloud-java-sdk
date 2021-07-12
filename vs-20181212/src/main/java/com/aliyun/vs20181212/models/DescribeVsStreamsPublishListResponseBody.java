@@ -4,9 +4,6 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
-    @NameInMap("TotalNum")
-    public Integer totalNum;
-
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -19,20 +16,15 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalNum")
+    public Integer totalNum;
+
     @NameInMap("PublishInfo")
     public DescribeVsStreamsPublishListResponseBodyPublishInfo publishInfo;
 
     public static DescribeVsStreamsPublishListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsStreamsPublishListResponseBody self = new DescribeVsStreamsPublishListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsStreamsPublishListResponseBody setTotalNum(Integer totalNum) {
-        this.totalNum = totalNum;
-        return this;
-    }
-    public Integer getTotalNum() {
-        return this.totalNum;
     }
 
     public DescribeVsStreamsPublishListResponseBody setTotalPage(Integer totalPage) {
@@ -67,6 +59,14 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeVsStreamsPublishListResponseBody setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+        return this;
+    }
+    public Integer getTotalNum() {
+        return this.totalNum;
+    }
+
     public DescribeVsStreamsPublishListResponseBody setPublishInfo(DescribeVsStreamsPublishListResponseBodyPublishInfo publishInfo) {
         this.publishInfo = publishInfo;
         return this;
@@ -85,11 +85,11 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         @NameInMap("StreamName")
         public String streamName;
 
-        @NameInMap("StopTime")
-        public String stopTime;
-
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("StopTime")
+        public String stopTime;
 
         @NameInMap("TranscodeId")
         public String transcodeId;
@@ -97,11 +97,11 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         @NameInMap("PublishDomain")
         public String publishDomain;
 
-        @NameInMap("PublishTime")
-        public String publishTime;
-
         @NameInMap("AppName")
         public String appName;
+
+        @NameInMap("PublishTime")
+        public String publishTime;
 
         @NameInMap("PublishType")
         public String publishType;
@@ -144,20 +144,20 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
             return this.streamName;
         }
 
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setStopTime(String stopTime) {
-            this.stopTime = stopTime;
-            return this;
-        }
-        public String getStopTime() {
-            return this.stopTime;
-        }
-
         public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setDomainName(String domainName) {
             this.domainName = domainName;
             return this;
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setStopTime(String stopTime) {
+            this.stopTime = stopTime;
+            return this;
+        }
+        public String getStopTime() {
+            return this.stopTime;
         }
 
         public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setTranscodeId(String transcodeId) {
@@ -176,20 +176,20 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
             return this.publishDomain;
         }
 
-        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setPublishTime(String publishTime) {
-            this.publishTime = publishTime;
-            return this;
-        }
-        public String getPublishTime() {
-            return this.publishTime;
-        }
-
         public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setAppName(String appName) {
             this.appName = appName;
             return this;
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setPublishTime(String publishTime) {
+            this.publishTime = publishTime;
+            return this;
+        }
+        public String getPublishTime() {
+            return this.publishTime;
         }
 
         public DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo setPublishType(String publishType) {

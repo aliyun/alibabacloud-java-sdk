@@ -4,12 +4,6 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesResponseBody extends TeaModel {
-    @NameInMap("Directories")
-    public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageNum")
     public Long pageNum;
 
@@ -19,28 +13,18 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     @NameInMap("PageCount")
     public Long pageCount;
+
+    @NameInMap("Directories")
+    public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
 
     public static DescribeDirectoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDirectoriesResponseBody self = new DescribeDirectoriesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDirectoriesResponseBody setDirectories(java.util.List<DescribeDirectoriesResponseBodyDirectories> directories) {
-        this.directories = directories;
-        return this;
-    }
-    public java.util.List<DescribeDirectoriesResponseBodyDirectories> getDirectories() {
-        return this.directories;
-    }
-
-    public DescribeDirectoriesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDirectoriesResponseBody setPageNum(Long pageNum) {
@@ -67,12 +51,28 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeDirectoriesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeDirectoriesResponseBody setPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
     }
     public Long getPageCount() {
         return this.pageCount;
+    }
+
+    public DescribeDirectoriesResponseBody setDirectories(java.util.List<DescribeDirectoriesResponseBodyDirectories> directories) {
+        this.directories = directories;
+        return this;
+    }
+    public java.util.List<DescribeDirectoriesResponseBodyDirectories> getDirectories() {
+        return this.directories;
     }
 
     public static class DescribeDirectoriesResponseBodyDirectories extends TeaModel {

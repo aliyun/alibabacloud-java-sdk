@@ -7,9 +7,6 @@ public class CreateDirectoryRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     @NameInMap("Name")
     public String name;
 
@@ -33,14 +30,6 @@ public class CreateDirectoryRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public CreateDirectoryRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
     public CreateDirectoryRequest setName(String name) {

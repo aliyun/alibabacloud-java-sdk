@@ -4,23 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
-    @NameInMap("CertInfos")
-    public DescribeVsDomainCertificateInfoResponseBodyCertInfos certInfos;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("CertInfos")
+    public DescribeVsDomainCertificateInfoResponseBodyCertInfos certInfos;
 
     public static DescribeVsDomainCertificateInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVsDomainCertificateInfoResponseBody self = new DescribeVsDomainCertificateInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVsDomainCertificateInfoResponseBody setCertInfos(DescribeVsDomainCertificateInfoResponseBodyCertInfos certInfos) {
-        this.certInfos = certInfos;
-        return this;
-    }
-    public DescribeVsDomainCertificateInfoResponseBodyCertInfos getCertInfos() {
-        return this.certInfos;
     }
 
     public DescribeVsDomainCertificateInfoResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeVsDomainCertificateInfoResponseBody setCertInfos(DescribeVsDomainCertificateInfoResponseBodyCertInfos certInfos) {
+        this.certInfos = certInfos;
+        return this;
+    }
+    public DescribeVsDomainCertificateInfoResponseBodyCertInfos getCertInfos() {
+        return this.certInfos;
     }
 
     public static class DescribeVsDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
