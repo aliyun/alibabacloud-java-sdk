@@ -96,19 +96,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSagRouteListWithOptions(request, runtime);
     }
 
-    public DescribePolicyBasedRoutingsResponse describePolicyBasedRoutingsWithOptions(DescribePolicyBasedRoutingsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribePolicyBasedRoutings", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new DescribePolicyBasedRoutingsResponse());
-    }
-
-    public DescribePolicyBasedRoutingsResponse describePolicyBasedRoutings(DescribePolicyBasedRoutingsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describePolicyBasedRoutingsWithOptions(request, runtime);
-    }
-
     public ProbeAccessPointNetworkQualityResponse probeAccessPointNetworkQualityWithOptions(ProbeAccessPointNetworkQualityRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -315,19 +302,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateQosResponse createQos(CreateQosRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createQosWithOptions(request, runtime);
-    }
-
-    public ModifySagECRouteBackupResponse modifySagECRouteBackupWithOptions(ModifySagECRouteBackupRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ModifySagECRouteBackup", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new ModifySagECRouteBackupResponse());
-    }
-
-    public ModifySagECRouteBackupResponse modifySagECRouteBackup(ModifySagECRouteBackupRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.modifySagECRouteBackupWithOptions(request, runtime);
     }
 
     public DiscribeSmartAccessGatewayDiagnosisReportResponse discribeSmartAccessGatewayDiagnosisReportWithOptions(DiscribeSmartAccessGatewayDiagnosisReportRequest request, RuntimeOptions runtime) throws Exception {
@@ -863,19 +837,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.kickOutClientsWithOptions(request, runtime);
     }
 
-    public DescribeSagRouteableAddressResponse describeSagRouteableAddressWithOptions(DescribeSagRouteableAddressRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeSagRouteableAddress", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSagRouteableAddressResponse());
-    }
-
-    public DescribeSagRouteableAddressResponse describeSagRouteableAddress(DescribeSagRouteableAddressRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeSagRouteableAddressWithOptions(request, runtime);
-    }
-
     public ModifySagPortRoleResponse modifySagPortRoleWithOptions(ModifySagPortRoleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -939,19 +900,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSmartAGEnterpriseCodeResponse updateSmartAGEnterpriseCode(UpdateSmartAGEnterpriseCodeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateSmartAGEnterpriseCodeWithOptions(request, runtime);
-    }
-
-    public DescribePbrInterfacesResponse describePbrInterfacesWithOptions(DescribePbrInterfacesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribePbrInterfaces", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new DescribePbrInterfacesResponse());
-    }
-
-    public DescribePbrInterfacesResponse describePbrInterfaces(DescribePbrInterfacesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describePbrInterfacesWithOptions(request, runtime);
     }
 
     public AssociateACLResponse associateACLWithOptions(AssociateACLRequest request, RuntimeOptions runtime) throws Exception {
@@ -1604,19 +1552,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.grantSagInstanceToCcnWithOptions(request, runtime);
     }
 
-    public OrchestrateSagECRouteBackupResponse orchestrateSagECRouteBackupWithOptions(OrchestrateSagECRouteBackupRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("OrchestrateSagECRouteBackup", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new OrchestrateSagECRouteBackupResponse());
-    }
-
-    public OrchestrateSagECRouteBackupResponse orchestrateSagECRouteBackup(OrchestrateSagECRouteBackupRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.orchestrateSagECRouteBackupWithOptions(request, runtime);
-    }
-
     public ModifySmartAccessGatewayResponse modifySmartAccessGatewayWithOptions(ModifySmartAccessGatewayRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1643,19 +1578,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateSmartAccessGatewayVersionWithOptions(request, runtime);
     }
 
-    public ModifySagCidrResponse modifySagCidrWithOptions(ModifySagCidrRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ModifySagCidr", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new ModifySagCidrResponse());
-    }
-
-    public ModifySagCidrResponse modifySagCidr(ModifySagCidrRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.modifySagCidrWithOptions(request, runtime);
-    }
-
     public DescribeSagDropTopNResponse describeSagDropTopNWithOptions(DescribeSagDropTopNRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1680,19 +1602,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSagLanListResponse describeSagLanList(DescribeSagLanListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeSagLanListWithOptions(request, runtime);
-    }
-
-    public DescribePbrRulesResponse describePbrRulesWithOptions(DescribePbrRulesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribePbrRules", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new DescribePbrRulesResponse());
-    }
-
-    public DescribePbrRulesResponse describePbrRules(DescribePbrRulesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describePbrRulesWithOptions(request, runtime);
     }
 
     public DescribeACLAttributeResponse describeACLAttributeWithOptions(DescribeACLAttributeRequest request, RuntimeOptions runtime) throws Exception {
@@ -1888,19 +1797,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDnatEntryResponse deleteDnatEntry(DeleteDnatEntryRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteDnatEntryWithOptions(request, runtime);
-    }
-
-    public SetSagRouteableAddressResponse setSagRouteableAddressWithOptions(SetSagRouteableAddressRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("SetSagRouteableAddress", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new SetSagRouteableAddressResponse());
-    }
-
-    public SetSagRouteableAddressResponse setSagRouteableAddress(SetSagRouteableAddressRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.setSagRouteableAddressWithOptions(request, runtime);
     }
 
     public ModifyACLResponse modifyACLWithOptions(ModifyACLRequest request, RuntimeOptions runtime) throws Exception {
@@ -2187,19 +2083,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateQosPolicyResponse createQosPolicy(CreateQosPolicyRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createQosPolicyWithOptions(request, runtime);
-    }
-
-    public DescribeSagECRouteBackupAttributeResponse describeSagECRouteBackupAttributeWithOptions(DescribeSagECRouteBackupAttributeRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeSagECRouteBackupAttribute", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSagECRouteBackupAttributeResponse());
-    }
-
-    public DescribeSagECRouteBackupAttributeResponse describeSagECRouteBackupAttribute(DescribeSagECRouteBackupAttributeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeSagECRouteBackupAttributeWithOptions(request, runtime);
     }
 
     public DescribeFlowLogSagsResponse describeFlowLogSagsWithOptions(DescribeFlowLogSagsRequest request, RuntimeOptions runtime) throws Exception {
