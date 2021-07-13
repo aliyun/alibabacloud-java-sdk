@@ -725,6 +725,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("DescribeAddons", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/components/metadata", "json", req, runtime), new DescribeAddonsResponse());
     }
 
+    public CreateAutoscalingConfigResponse createAutoscalingConfig(String ClusterId, CreateAutoscalingConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAutoscalingConfigWithOptions(ClusterId, request, headers, runtime);
+    }
+
+    public CreateAutoscalingConfigResponse createAutoscalingConfigWithOptions(String ClusterId, CreateAutoscalingConfigRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.coolDownDuration)) {
+            body.put("cool_down_duration", request.coolDownDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unneededDuration)) {
+            body.put("unneeded_duration", request.unneededDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.utilizationThreshold)) {
+            body.put("utilization_threshold", request.utilizationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuUtilizationThreshold)) {
+            body.put("gpu_utilization_threshold", request.gpuUtilizationThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanInterval)) {
+            body.put("scan_interval", request.scanInterval);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("CreateAutoscalingConfig", "2015-12-15", "HTTPS", "POST", "AK", "/cluster/" + ClusterId + "/autoscale/config/", "none", req, runtime), new CreateAutoscalingConfigResponse());
+    }
+
     public CreateClusterResponse createCluster(CreateClusterRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
