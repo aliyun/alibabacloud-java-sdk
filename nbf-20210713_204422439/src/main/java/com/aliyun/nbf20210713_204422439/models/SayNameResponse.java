@@ -10,7 +10,7 @@ public class SayNameResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public java.io.InputStream body;
+    public String body;
 
     public static SayNameResponse build(java.util.Map<String, ?> map) throws Exception {
         SayNameResponse self = new SayNameResponse();
@@ -25,11 +25,11 @@ public class SayNameResponse extends TeaModel {
         return this.headers;
     }
 
-    public SayNameResponse setBody(java.io.InputStream body) {
+    public SayNameResponse setBody(String body) {
         this.body = body;
         return this;
     }
-    public java.io.InputStream getBody() {
+    public String getBody() {
         return this.body;
     }
 

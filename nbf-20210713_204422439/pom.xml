@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>nbf20210713_204422439</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>nbf20210713_204422439</name>
   <description>Alibaba Cloud NBF (20210713_204422439) SDK for Java
