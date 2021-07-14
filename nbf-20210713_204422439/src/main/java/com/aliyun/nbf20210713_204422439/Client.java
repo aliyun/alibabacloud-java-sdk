@@ -88,19 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        SayNameResponse res = new SayNameResponse();
-        java.util.Map<String, Object> tmp = com.aliyun.teautil.Common.assertAsMap(this.doRPCRequest("SayName", "2021-07-13_20-44-22-439", "HTTPS", "POST", "AK", "binary", req, runtime));
-        if (!com.aliyun.teautil.Common.isUnset(tmp.get("body"))) {
-            java.io.InputStream respBody = com.aliyun.teautil.Common.assertAsReadable(tmp.get("body"));
-            res.body = respBody;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmp.get("headers"))) {
-            java.util.Map<String, Object> respHeaders = com.aliyun.teautil.Common.assertAsMap(tmp.get("headers"));
-            res.headers = com.aliyun.teautil.Common.stringifyMapValue(respHeaders);
-        }
-
-        return res;
+        return TeaModel.toModel(this.doRPCRequest("SayName", "2021-07-13_20-44-22-439", "HTTPS", "POST", "AK", "string", req, runtime), new SayNameResponse());
     }
 
     public SayNameResponse sayName(SayNameRequest request) throws Exception {
