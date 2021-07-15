@@ -217,6 +217,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setEventCallbackWithOptions(request, runtime);
     }
 
+    public GetTemplateResponse getTemplateWithOptions(GetTemplateRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetTemplate", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime), new GetTemplateResponse());
+    }
+
+    public GetTemplateResponse getTemplate(GetTemplateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getTemplateWithOptions(request, runtime);
+    }
+
     public RegisterMediaInfoResponse registerMediaInfoWithOptions(RegisterMediaInfoRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

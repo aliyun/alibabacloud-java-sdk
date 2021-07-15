@@ -3,24 +3,20 @@ package com.aliyun.ice20201109.models;
 
 import com.aliyun.tea.*;
 
-public class ListTemplatesResponseBody extends TeaModel {
-    // 请求ID
+public class GetTemplateResponseBody extends TeaModel {
+    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    // 本次请求条件下的数据总量。
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Template")
+    public GetTemplateResponseBodyTemplate template;
 
-    @NameInMap("Templates")
-    public java.util.List<ListTemplatesResponseBodyTemplates> templates;
-
-    public static ListTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListTemplatesResponseBody self = new ListTemplatesResponseBody();
+    public static GetTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetTemplateResponseBody self = new GetTemplateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListTemplatesResponseBody setRequestId(String requestId) {
+    public GetTemplateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -28,23 +24,15 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTemplatesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public GetTemplateResponseBody setTemplate(GetTemplateResponseBodyTemplate template) {
+        this.template = template;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public GetTemplateResponseBodyTemplate getTemplate() {
+        return this.template;
     }
 
-    public ListTemplatesResponseBody setTemplates(java.util.List<ListTemplatesResponseBodyTemplates> templates) {
-        this.templates = templates;
-        return this;
-    }
-    public java.util.List<ListTemplatesResponseBodyTemplates> getTemplates() {
-        return this.templates;
-    }
-
-    public static class ListTemplatesResponseBodyTemplates extends TeaModel {
+    public static class GetTemplateResponseBodyTemplate extends TeaModel {
         // 模板ID
         @NameInMap("TemplateId")
         public String templateId;
@@ -93,12 +81,12 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("CoverURL")
         public String coverURL;
 
-        public static ListTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
-            ListTemplatesResponseBodyTemplates self = new ListTemplatesResponseBodyTemplates();
+        public static GetTemplateResponseBodyTemplate build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateResponseBodyTemplate self = new GetTemplateResponseBodyTemplate();
             return TeaModel.build(map, self);
         }
 
-        public ListTemplatesResponseBodyTemplates setTemplateId(String templateId) {
+        public GetTemplateResponseBodyTemplate setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
         }
@@ -106,7 +94,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public ListTemplatesResponseBodyTemplates setName(String name) {
+        public GetTemplateResponseBodyTemplate setName(String name) {
             this.name = name;
             return this;
         }
@@ -114,7 +102,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListTemplatesResponseBodyTemplates setType(String type) {
+        public GetTemplateResponseBodyTemplate setType(String type) {
             this.type = type;
             return this;
         }
@@ -122,7 +110,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.type;
         }
 
-        public ListTemplatesResponseBodyTemplates setConfig(String config) {
+        public GetTemplateResponseBodyTemplate setConfig(String config) {
             this.config = config;
             return this;
         }
@@ -130,7 +118,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.config;
         }
 
-        public ListTemplatesResponseBodyTemplates setPreviewMedia(String previewMedia) {
+        public GetTemplateResponseBodyTemplate setPreviewMedia(String previewMedia) {
             this.previewMedia = previewMedia;
             return this;
         }
@@ -138,7 +126,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.previewMedia;
         }
 
-        public ListTemplatesResponseBodyTemplates setStatus(String status) {
+        public GetTemplateResponseBodyTemplate setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -146,7 +134,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListTemplatesResponseBodyTemplates setCreateSource(String createSource) {
+        public GetTemplateResponseBodyTemplate setCreateSource(String createSource) {
             this.createSource = createSource;
             return this;
         }
@@ -154,7 +142,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.createSource;
         }
 
-        public ListTemplatesResponseBodyTemplates setModifiedSource(String modifiedSource) {
+        public GetTemplateResponseBodyTemplate setModifiedSource(String modifiedSource) {
             this.modifiedSource = modifiedSource;
             return this;
         }
@@ -162,7 +150,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.modifiedSource;
         }
 
-        public ListTemplatesResponseBodyTemplates setPreviewMediaStatus(String previewMediaStatus) {
+        public GetTemplateResponseBodyTemplate setPreviewMediaStatus(String previewMediaStatus) {
             this.previewMediaStatus = previewMediaStatus;
             return this;
         }
@@ -170,7 +158,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.previewMediaStatus;
         }
 
-        public ListTemplatesResponseBodyTemplates setCreationTime(String creationTime) {
+        public GetTemplateResponseBodyTemplate setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -178,7 +166,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public ListTemplatesResponseBodyTemplates setModifiedTime(String modifiedTime) {
+        public GetTemplateResponseBodyTemplate setModifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
@@ -186,7 +174,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.modifiedTime;
         }
 
-        public ListTemplatesResponseBodyTemplates setCoverURL(String coverURL) {
+        public GetTemplateResponseBodyTemplate setCoverURL(String coverURL) {
             this.coverURL = coverURL;
             return this;
         }

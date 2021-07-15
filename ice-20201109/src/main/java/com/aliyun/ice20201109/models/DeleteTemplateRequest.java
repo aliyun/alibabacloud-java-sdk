@@ -4,6 +4,7 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplateRequest extends TeaModel {
+    // 模板id，多个id用英文逗号隔开
     @NameInMap("TemplateIds")
     public String templateIds;
 

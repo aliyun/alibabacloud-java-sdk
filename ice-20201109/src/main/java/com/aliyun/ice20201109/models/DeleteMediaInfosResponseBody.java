@@ -10,7 +10,7 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
 
     // 出现获取错误的ID或inputUr
     @NameInMap("IgnoredList")
-    public String ignoredList;
+    public java.util.List<String> ignoredList;
 
     public static DeleteMediaInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMediaInfosResponseBody self = new DeleteMediaInfosResponseBody();
@@ -25,11 +25,11 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteMediaInfosResponseBody setIgnoredList(String ignoredList) {
+    public DeleteMediaInfosResponseBody setIgnoredList(java.util.List<String> ignoredList) {
         this.ignoredList = ignoredList;
         return this;
     }
-    public String getIgnoredList() {
+    public java.util.List<String> getIgnoredList() {
         return this.ignoredList;
     }
 

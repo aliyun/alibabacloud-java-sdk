@@ -4,21 +4,23 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
+    // 模板类型
     @NameInMap("Type")
     public String type;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
+    // 模板状态
     @NameInMap("Status")
     public String status;
 
+    // 创建来源
     @NameInMap("CreateSource")
     public String createSource;
 
+    // 搜索关键词，可以根据模板id和title搜索
     @NameInMap("Keyword")
     public String keyword;
 
+    // 排序参数，默认根据创建时间倒序
     @NameInMap("SortType")
     public String sortType;
 
@@ -33,14 +35,6 @@ public class ListTemplatesRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public ListTemplatesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
     }
 
     public ListTemplatesRequest setStatus(String status) {
