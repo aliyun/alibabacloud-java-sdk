@@ -98,6 +98,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         @NameInMap("Weight")
         public Integer weight;
 
+        // 服务器组id
+        @NameInMap("ServerGroupId")
+        public String serverGroupId;
+
         public static ListServerGroupServersResponseBodyServers build(java.util.Map<String, ?> map) throws Exception {
             ListServerGroupServersResponseBodyServers self = new ListServerGroupServersResponseBodyServers();
             return TeaModel.build(map, self);
@@ -157,6 +161,14 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         }
         public Integer getWeight() {
             return this.weight;
+        }
+
+        public ListServerGroupServersResponseBodyServers setServerGroupId(String serverGroupId) {
+            this.serverGroupId = serverGroupId;
+            return this;
+        }
+        public String getServerGroupId() {
+            return this.serverGroupId;
         }
 
     }

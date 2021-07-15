@@ -8,10 +8,6 @@ public class CreateAclRequest extends TeaModel {
     @NameInMap("AclName")
     public String aclName;
 
-    // 地址协议版本
-    @NameInMap("AddressIpVersion")
-    public String addressIpVersion;
-
     // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
@@ -35,14 +31,6 @@ public class CreateAclRequest extends TeaModel {
     }
     public String getAclName() {
         return this.aclName;
-    }
-
-    public CreateAclRequest setAddressIpVersion(String addressIpVersion) {
-        this.addressIpVersion = addressIpVersion;
-        return this;
-    }
-    public String getAddressIpVersion() {
-        return this.addressIpVersion;
     }
 
     public CreateAclRequest setClientToken(String clientToken) {
