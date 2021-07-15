@@ -4,44 +4,41 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddTemplateRequest extends TeaModel {
-    @NameInMap("TemplateId")
-    public String templateId;
-
+    // 模板名称
     @NameInMap("Name")
     public String name;
 
+    // 模板类型，取值范围：Timeline
     @NameInMap("Type")
     public String type;
 
+    // 参见Timeline模板Config文档
     @NameInMap("Config")
     public String config;
 
+    // 模板封面
     @NameInMap("CoverUrl")
     public String coverUrl;
 
+    // 预览视频媒资id
     @NameInMap("PreviewMedia")
     public String previewMedia;
 
+    // 模板状态
     @NameInMap("Status")
     public String status;
 
+    // 模板创建来源，默认OpenAPI
     @NameInMap("Source")
     public String source;
 
+    // 模板相关素材，模板编辑器使用
     @NameInMap("RelatedMediaids")
     public String relatedMediaids;
 
     public static AddTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTemplateRequest self = new AddTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddTemplateRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
     }
 
     public AddTemplateRequest setName(String name) {

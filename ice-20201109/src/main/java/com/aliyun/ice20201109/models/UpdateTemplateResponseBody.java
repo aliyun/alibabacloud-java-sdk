@@ -4,7 +4,7 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateResponseBody extends TeaModel {
-    // Id of the request
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

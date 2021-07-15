@@ -4,10 +4,11 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddTemplateResponseBody extends TeaModel {
-    // Id of the request
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
+    // 模板信息
     @NameInMap("Template")
     public AddTemplateResponseBodyTemplate template;
 
@@ -33,30 +34,39 @@ public class AddTemplateResponseBody extends TeaModel {
     }
 
     public static class AddTemplateResponseBodyTemplate extends TeaModel {
+        // 模板Id
         @NameInMap("TemplateId")
         public String templateId;
 
+        // 模板名称
         @NameInMap("Name")
         public String name;
 
+        // 模板类型
         @NameInMap("Type")
         public String type;
 
+        // 参见Timeline模板Config文档
         @NameInMap("Config")
         public String config;
 
+        // 模板封面
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        // 预览视频媒资id
         @NameInMap("PreviewMedia")
         public String previewMedia;
 
+        // 模板状态
         @NameInMap("Status")
         public String status;
 
+        // 模板创建来源
         @NameInMap("CreateSource")
         public String createSource;
 
+        // 模板修改来源
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
