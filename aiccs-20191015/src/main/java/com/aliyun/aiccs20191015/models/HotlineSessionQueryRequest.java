@@ -68,7 +68,7 @@ public class HotlineSessionQueryRequest extends TeaModel {
     public java.util.List<Integer> callTypeList;
 
     @NameInMap("GroupIdList")
-    public java.util.List<Integer> groupIdList;
+    public java.util.List<Long> groupIdList;
 
     @NameInMap("CallingNumberList")
     public java.util.List<String> callingNumberList;
@@ -258,11 +258,11 @@ public class HotlineSessionQueryRequest extends TeaModel {
         return this.callTypeList;
     }
 
-    public HotlineSessionQueryRequest setGroupIdList(java.util.List<Integer> groupIdList) {
+    public HotlineSessionQueryRequest setGroupIdList(java.util.List<Long> groupIdList) {
         this.groupIdList = groupIdList;
         return this;
     }
-    public java.util.List<Integer> getGroupIdList() {
+    public java.util.List<Long> getGroupIdList() {
         return this.groupIdList;
     }
 
