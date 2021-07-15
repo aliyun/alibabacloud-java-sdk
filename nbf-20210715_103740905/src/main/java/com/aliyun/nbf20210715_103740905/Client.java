@@ -43,4 +43,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.yxTestSingleApiWithOptions(request, runtime);
     }
+
+    public YxTestDynamicSpiResponse yxTestDynamicSpiWithOptions(YxTestDynamicSpiRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("YxTestDynamicSpi", "2021-07-15_10-37-40-905", "HTTPS", "POST", "AK", "int32", req, runtime), new YxTestDynamicSpiResponse());
+    }
+
+    public YxTestDynamicSpiResponse yxTestDynamicSpi(YxTestDynamicSpiRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.yxTestDynamicSpiWithOptions(request, runtime);
+    }
 }
