@@ -24,10 +24,6 @@ public class ListAclsRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // IP版本
-    @NameInMap("AddressIPVersion")
-    public String addressIPVersion;
-
     public static ListAclsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAclsRequest self = new ListAclsRequest();
         return TeaModel.build(map, self);
@@ -71,14 +67,6 @@ public class ListAclsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
-    }
-
-    public ListAclsRequest setAddressIPVersion(String addressIPVersion) {
-        this.addressIPVersion = addressIPVersion;
-        return this;
-    }
-    public String getAddressIPVersion() {
-        return this.addressIPVersion;
     }
 
 }

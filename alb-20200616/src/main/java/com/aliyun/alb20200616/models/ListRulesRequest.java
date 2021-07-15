@@ -20,6 +20,10 @@ public class ListRulesRequest extends TeaModel {
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
 
+    // 实例ID列表
+    @NameInMap("LoadBalancerIds")
+    public java.util.List<String> loadBalancerIds;
+
     public static ListRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRulesRequest self = new ListRulesRequest();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class ListRulesRequest extends TeaModel {
     }
     public java.util.List<String> getListenerIds() {
         return this.listenerIds;
+    }
+
+    public ListRulesRequest setLoadBalancerIds(java.util.List<String> loadBalancerIds) {
+        this.loadBalancerIds = loadBalancerIds;
+        return this;
+    }
+    public java.util.List<String> getLoadBalancerIds() {
+        return this.loadBalancerIds;
     }
 
 }

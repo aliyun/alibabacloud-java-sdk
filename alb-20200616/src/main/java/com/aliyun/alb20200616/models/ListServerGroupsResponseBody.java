@@ -277,6 +277,38 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class ListServerGroupsResponseBodyServerGroupsTags extends TeaModel {
+        // 标签键
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static ListServerGroupsResponseBodyServerGroupsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListServerGroupsResponseBodyServerGroupsTags self = new ListServerGroupsResponseBodyServerGroupsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServerGroupsResponseBodyServerGroupsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListServerGroupsResponseBodyServerGroupsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListServerGroupsResponseBodyServerGroups extends TeaModel {
         // 健康检查配置
         @NameInMap("HealthCheckConfig")
@@ -285,10 +317,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
         // 服务器组协议
         @NameInMap("Protocol")
         public String protocol;
-
-        // 关联的实例id
-        @NameInMap("RelatedLoadBalancerIds")
-        public java.util.List<String> relatedLoadBalancerIds;
 
         // 资源组id
         @NameInMap("ResourceGroupId")
@@ -318,6 +346,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        // 标签列表
+        @NameInMap("Tags")
+        public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags;
+
         public static ListServerGroupsResponseBodyServerGroups build(java.util.Map<String, ?> map) throws Exception {
             ListServerGroupsResponseBodyServerGroups self = new ListServerGroupsResponseBodyServerGroups();
             return TeaModel.build(map, self);
@@ -337,14 +369,6 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public String getProtocol() {
             return this.protocol;
-        }
-
-        public ListServerGroupsResponseBodyServerGroups setRelatedLoadBalancerIds(java.util.List<String> relatedLoadBalancerIds) {
-            this.relatedLoadBalancerIds = relatedLoadBalancerIds;
-            return this;
-        }
-        public java.util.List<String> getRelatedLoadBalancerIds() {
-            return this.relatedLoadBalancerIds;
         }
 
         public ListServerGroupsResponseBodyServerGroups setResourceGroupId(String resourceGroupId) {
@@ -401,6 +425,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setTags(java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> getTags() {
+            return this.tags;
         }
 
     }

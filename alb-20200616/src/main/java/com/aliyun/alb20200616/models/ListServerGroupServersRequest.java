@@ -19,6 +19,9 @@ public class ListServerGroupServersRequest extends TeaModel {
     @NameInMap("ServerIds")
     public java.util.List<String> serverIds;
 
+    @NameInMap("Tag")
+    public java.util.List<ListServerGroupServersRequestTag> tag;
+
     public static ListServerGroupServersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServerGroupServersRequest self = new ListServerGroupServersRequest();
         return TeaModel.build(map, self);
@@ -54,6 +57,46 @@ public class ListServerGroupServersRequest extends TeaModel {
     }
     public java.util.List<String> getServerIds() {
         return this.serverIds;
+    }
+
+    public ListServerGroupServersRequest setTag(java.util.List<ListServerGroupServersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListServerGroupServersRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListServerGroupServersRequestTag extends TeaModel {
+        // 标签键
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static ListServerGroupServersRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListServerGroupServersRequestTag self = new ListServerGroupServersRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServerGroupServersRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListServerGroupServersRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
