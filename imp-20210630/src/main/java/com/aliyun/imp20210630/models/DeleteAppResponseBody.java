@@ -8,14 +8,6 @@ public class DeleteAppResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 错误码
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    // 错误信息
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     public static DeleteAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteAppResponseBody self = new DeleteAppResponseBody();
         return TeaModel.build(map, self);
@@ -27,22 +19,6 @@ public class DeleteAppResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteAppResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public DeleteAppResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
 }

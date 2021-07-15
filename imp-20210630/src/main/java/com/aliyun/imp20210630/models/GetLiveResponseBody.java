@@ -11,14 +11,6 @@ public class GetLiveResponseBody extends TeaModel {
     @NameInMap("Result")
     public GetLiveResponseBodyResult result;
 
-    // 错误码
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    // 错误信息
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     public static GetLiveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLiveResponseBody self = new GetLiveResponseBody();
         return TeaModel.build(map, self);
@@ -38,22 +30,6 @@ public class GetLiveResponseBody extends TeaModel {
     }
     public GetLiveResponseBodyResult getResult() {
         return this.result;
-    }
-
-    public GetLiveResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetLiveResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public static class GetLiveResponseBodyResultPlayUrlInfoList extends TeaModel {

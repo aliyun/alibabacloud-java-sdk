@@ -8,14 +8,6 @@ public class UpdateAppTemplateConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 错误码
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    // 错误信息
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     public static UpdateAppTemplateConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppTemplateConfigResponseBody self = new UpdateAppTemplateConfigResponseBody();
         return TeaModel.build(map, self);
@@ -27,22 +19,6 @@ public class UpdateAppTemplateConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateAppTemplateConfigResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public UpdateAppTemplateConfigResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
 }

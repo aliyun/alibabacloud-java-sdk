@@ -12,12 +12,6 @@ public class CreateRoomResponseBody extends TeaModel {
     @NameInMap("Result")
     public CreateRoomResponseBodyResult result;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     public static CreateRoomResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRoomResponseBody self = new CreateRoomResponseBody();
         return TeaModel.build(map, self);
@@ -37,22 +31,6 @@ public class CreateRoomResponseBody extends TeaModel {
     }
     public CreateRoomResponseBodyResult getResult() {
         return this.result;
-    }
-
-    public CreateRoomResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateRoomResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public static class CreateRoomResponseBodyResult extends TeaModel {
