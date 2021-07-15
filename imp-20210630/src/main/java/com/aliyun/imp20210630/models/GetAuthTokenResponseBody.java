@@ -11,14 +11,6 @@ public class GetAuthTokenResponseBody extends TeaModel {
     @NameInMap("Result")
     public GetAuthTokenResponseBodyResult result;
 
-    // 错误码，请求异常时返回
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    // 错误码信息，请求异常时返回
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     public static GetAuthTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAuthTokenResponseBody self = new GetAuthTokenResponseBody();
         return TeaModel.build(map, self);
@@ -38,22 +30,6 @@ public class GetAuthTokenResponseBody extends TeaModel {
     }
     public GetAuthTokenResponseBodyResult getResult() {
         return this.result;
-    }
-
-    public GetAuthTokenResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetAuthTokenResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public static class GetAuthTokenResponseBodyResult extends TeaModel {

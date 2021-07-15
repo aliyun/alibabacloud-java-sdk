@@ -8,14 +8,6 @@ public class GetImpProductStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 错误码
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    // 错误信息
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     // 开通状态
     @NameInMap("Result")
     public Boolean result;
@@ -31,22 +23,6 @@ public class GetImpProductStatusResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetImpProductStatusResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetImpProductStatusResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetImpProductStatusResponseBody setResult(Boolean result) {

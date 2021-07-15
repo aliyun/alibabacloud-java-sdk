@@ -8,14 +8,6 @@ public class GetAppTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 错误码
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    // 错误信息
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     // 返回结果
     @NameInMap("Result")
     public GetAppTemplateResponseBodyResult result;
@@ -31,22 +23,6 @@ public class GetAppTemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetAppTemplateResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetAppTemplateResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetAppTemplateResponseBody setResult(GetAppTemplateResponseBodyResult result) {

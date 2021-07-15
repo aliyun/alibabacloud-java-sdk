@@ -11,14 +11,6 @@ public class CreateLiveResponseBody extends TeaModel {
     @NameInMap("Result")
     public CreateLiveResponseBodyResult result;
 
-    // 错误码，请求异常时返回。
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    // 错误信息，请求异常时返回。
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     public static CreateLiveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveResponseBody self = new CreateLiveResponseBody();
         return TeaModel.build(map, self);
@@ -38,22 +30,6 @@ public class CreateLiveResponseBody extends TeaModel {
     }
     public CreateLiveResponseBodyResult getResult() {
         return this.result;
-    }
-
-    public CreateLiveResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateLiveResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public static class CreateLiveResponseBodyResult extends TeaModel {

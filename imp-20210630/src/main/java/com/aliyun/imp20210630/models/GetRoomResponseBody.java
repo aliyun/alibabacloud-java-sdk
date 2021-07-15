@@ -12,12 +12,6 @@ public class GetRoomResponseBody extends TeaModel {
     @NameInMap("Result")
     public GetRoomResponseBodyResult result;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     public static GetRoomResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRoomResponseBody self = new GetRoomResponseBody();
         return TeaModel.build(map, self);
@@ -37,22 +31,6 @@ public class GetRoomResponseBody extends TeaModel {
     }
     public GetRoomResponseBodyResult getResult() {
         return this.result;
-    }
-
-    public GetRoomResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetRoomResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public static class GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList extends TeaModel {

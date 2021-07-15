@@ -8,12 +8,6 @@ public class UpdateRoomResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     public static UpdateRoomResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateRoomResponseBody self = new UpdateRoomResponseBody();
         return TeaModel.build(map, self);
@@ -25,22 +19,6 @@ public class UpdateRoomResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UpdateRoomResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public UpdateRoomResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
 }
