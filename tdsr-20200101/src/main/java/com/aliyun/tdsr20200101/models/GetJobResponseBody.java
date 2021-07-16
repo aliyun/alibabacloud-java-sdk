@@ -3,8 +3,8 @@ package com.aliyun.tdsr20200101.models;
 
 import com.aliyun.tea.*;
 
-public class GetUserOssStatusResponseBody extends TeaModel {
-    // Id of the request
+public class GetJobResponseBody extends TeaModel {
+    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
@@ -20,16 +20,16 @@ public class GetUserOssStatusResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // 是否启用oss
+    // 任务运行状态
     @NameInMap("Status")
-    public Boolean status;
+    public Long status;
 
-    public static GetUserOssStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetUserOssStatusResponseBody self = new GetUserOssStatusResponseBody();
+    public static GetJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetJobResponseBody self = new GetJobResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetUserOssStatusResponseBody setRequestId(String requestId) {
+    public GetJobResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -37,7 +37,7 @@ public class GetUserOssStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetUserOssStatusResponseBody setCode(Long code) {
+    public GetJobResponseBody setCode(Long code) {
         this.code = code;
         return this;
     }
@@ -45,7 +45,7 @@ public class GetUserOssStatusResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetUserOssStatusResponseBody setSuccess(Boolean success) {
+    public GetJobResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -53,7 +53,7 @@ public class GetUserOssStatusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetUserOssStatusResponseBody setMessage(String message) {
+    public GetJobResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -61,11 +61,11 @@ public class GetUserOssStatusResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetUserOssStatusResponseBody setStatus(Boolean status) {
+    public GetJobResponseBody setStatus(Long status) {
         this.status = status;
         return this;
     }
-    public Boolean getStatus() {
+    public Long getStatus() {
         return this.status;
     }
 
