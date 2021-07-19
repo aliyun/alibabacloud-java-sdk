@@ -28,6 +28,12 @@ public class CreateSecretParameterRequest extends TeaModel {
     @NameInMap("Constraints")
     public String constraints;
 
+    @NameInMap("Tags")
+    public String tags;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateSecretParameterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecretParameterRequest self = new CreateSecretParameterRequest();
         return TeaModel.build(map, self);
@@ -95,6 +101,22 @@ public class CreateSecretParameterRequest extends TeaModel {
     }
     public String getConstraints() {
         return this.constraints;
+    }
+
+    public CreateSecretParameterRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
+    }
+
+    public CreateSecretParameterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

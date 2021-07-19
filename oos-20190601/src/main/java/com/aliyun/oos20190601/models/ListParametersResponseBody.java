@@ -4,40 +4,24 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListParametersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("Parameters")
-    public java.util.List<ListParametersResponseBodyParameters> parameters;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("Parameters")
+    public java.util.List<ListParametersResponseBodyParameters> parameters;
 
     public static ListParametersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListParametersResponseBody self = new ListParametersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListParametersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListParametersResponseBody setParameters(java.util.List<ListParametersResponseBodyParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<ListParametersResponseBodyParameters> getParameters() {
-        return this.parameters;
     }
 
     public ListParametersResponseBody setNextToken(String nextToken) {
@@ -56,6 +40,14 @@ public class ListParametersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListParametersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public ListParametersResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -64,12 +56,17 @@ public class ListParametersResponseBody extends TeaModel {
         return this.maxResults;
     }
 
+    public ListParametersResponseBody setParameters(java.util.List<ListParametersResponseBodyParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<ListParametersResponseBodyParameters> getParameters() {
+        return this.parameters;
+    }
+
     public static class ListParametersResponseBodyParameters extends TeaModel {
         @NameInMap("Type")
         public String type;
-
-        @NameInMap("Description")
-        public String description;
 
         @NameInMap("UpdatedDate")
         public String updatedDate;
@@ -77,14 +74,23 @@ public class ListParametersResponseBody extends TeaModel {
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        @NameInMap("ParameterVersion")
-        public String parameterVersion;
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("CreatedDate")
         public String createdDate;
+
+        @NameInMap("ParameterVersion")
+        public String parameterVersion;
 
         @NameInMap("Name")
         public String name;
@@ -108,14 +114,6 @@ public class ListParametersResponseBody extends TeaModel {
             return this.type;
         }
 
-        public ListParametersResponseBodyParameters setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public ListParametersResponseBodyParameters setUpdatedDate(String updatedDate) {
             this.updatedDate = updatedDate;
             return this;
@@ -132,6 +130,22 @@ public class ListParametersResponseBody extends TeaModel {
             return this.updatedBy;
         }
 
+        public ListParametersResponseBodyParameters setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        public ListParametersResponseBodyParameters setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public ListParametersResponseBodyParameters setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
@@ -140,12 +154,12 @@ public class ListParametersResponseBody extends TeaModel {
             return this.createdBy;
         }
 
-        public ListParametersResponseBodyParameters setParameterVersion(String parameterVersion) {
-            this.parameterVersion = parameterVersion;
+        public ListParametersResponseBodyParameters setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public String getParameterVersion() {
-            return this.parameterVersion;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListParametersResponseBodyParameters setCreatedDate(String createdDate) {
@@ -154,6 +168,14 @@ public class ListParametersResponseBody extends TeaModel {
         }
         public String getCreatedDate() {
             return this.createdDate;
+        }
+
+        public ListParametersResponseBodyParameters setParameterVersion(String parameterVersion) {
+            this.parameterVersion = parameterVersion;
+            return this;
+        }
+        public String getParameterVersion() {
+            return this.parameterVersion;
         }
 
         public ListParametersResponseBodyParameters setName(String name) {

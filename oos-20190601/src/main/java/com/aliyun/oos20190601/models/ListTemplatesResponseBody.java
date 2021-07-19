@@ -63,11 +63,11 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
-        @NameInMap("Tags")
-        public java.util.Map<String, ?> tags;
-
         @NameInMap("TemplateType")
         public String templateType;
+
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
 
         @NameInMap("TemplateName")
         public String templateName;
@@ -81,11 +81,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("Popularity")
         public Integer popularity;
 
+        @NameInMap("TotalExecutionCount")
+        public Integer totalExecutionCount;
+
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("TotalExecutionCount")
-        public Integer totalExecutionCount;
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("CreatedBy")
         public String createdBy;
@@ -134,20 +137,20 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.updatedBy;
         }
 
-        public ListTemplatesResponseBodyTemplates setTags(java.util.Map<String, ?> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.Map<String, ?> getTags() {
-            return this.tags;
-        }
-
         public ListTemplatesResponseBodyTemplates setTemplateType(String templateType) {
             this.templateType = templateType;
             return this;
         }
         public String getTemplateType() {
             return this.templateType;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public ListTemplatesResponseBodyTemplates setTemplateName(String templateName) {
@@ -182,6 +185,14 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.popularity;
         }
 
+        public ListTemplatesResponseBodyTemplates setTotalExecutionCount(Integer totalExecutionCount) {
+            this.totalExecutionCount = totalExecutionCount;
+            return this;
+        }
+        public Integer getTotalExecutionCount() {
+            return this.totalExecutionCount;
+        }
+
         public ListTemplatesResponseBodyTemplates setDescription(String description) {
             this.description = description;
             return this;
@@ -190,12 +201,12 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListTemplatesResponseBodyTemplates setTotalExecutionCount(Integer totalExecutionCount) {
-            this.totalExecutionCount = totalExecutionCount;
+        public ListTemplatesResponseBodyTemplates setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public Integer getTotalExecutionCount() {
-            return this.totalExecutionCount;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListTemplatesResponseBodyTemplates setCreatedBy(String createdBy) {

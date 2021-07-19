@@ -35,26 +35,32 @@ public class CreateParameterResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("Constraints")
-        public String constraints;
-
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Constraints")
+        public String constraints;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        @NameInMap("ParameterVersion")
-        public Integer parameterVersion;
-
         @NameInMap("CreatedDate")
         public String createdDate;
+
+        @NameInMap("ParameterVersion")
+        public Integer parameterVersion;
 
         @NameInMap("Name")
         public String name;
@@ -78,22 +84,6 @@ public class CreateParameterResponseBody extends TeaModel {
             return this.type;
         }
 
-        public CreateParameterResponseBodyParameter setConstraints(String constraints) {
-            this.constraints = constraints;
-            return this;
-        }
-        public String getConstraints() {
-            return this.constraints;
-        }
-
-        public CreateParameterResponseBodyParameter setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public CreateParameterResponseBodyParameter setUpdatedDate(String updatedDate) {
             this.updatedDate = updatedDate;
             return this;
@@ -110,6 +100,38 @@ public class CreateParameterResponseBody extends TeaModel {
             return this.updatedBy;
         }
 
+        public CreateParameterResponseBodyParameter setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        public CreateParameterResponseBodyParameter setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateParameterResponseBodyParameter setConstraints(String constraints) {
+            this.constraints = constraints;
+            return this;
+        }
+        public String getConstraints() {
+            return this.constraints;
+        }
+
+        public CreateParameterResponseBodyParameter setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public CreateParameterResponseBodyParameter setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
@@ -118,20 +140,20 @@ public class CreateParameterResponseBody extends TeaModel {
             return this.createdBy;
         }
 
-        public CreateParameterResponseBodyParameter setParameterVersion(Integer parameterVersion) {
-            this.parameterVersion = parameterVersion;
-            return this;
-        }
-        public Integer getParameterVersion() {
-            return this.parameterVersion;
-        }
-
         public CreateParameterResponseBodyParameter setCreatedDate(String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
         public String getCreatedDate() {
             return this.createdDate;
+        }
+
+        public CreateParameterResponseBodyParameter setParameterVersion(Integer parameterVersion) {
+            this.parameterVersion = parameterVersion;
+            return this;
+        }
+        public Integer getParameterVersion() {
+            return this.parameterVersion;
         }
 
         public CreateParameterResponseBodyParameter setName(String name) {

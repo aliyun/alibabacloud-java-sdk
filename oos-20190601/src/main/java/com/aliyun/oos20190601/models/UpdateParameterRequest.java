@@ -16,6 +16,12 @@ public class UpdateParameterRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Tags")
+    public String tags;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static UpdateParameterRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateParameterRequest self = new UpdateParameterRequest();
         return TeaModel.build(map, self);
@@ -51,6 +57,22 @@ public class UpdateParameterRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateParameterRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
+    }
+
+    public UpdateParameterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

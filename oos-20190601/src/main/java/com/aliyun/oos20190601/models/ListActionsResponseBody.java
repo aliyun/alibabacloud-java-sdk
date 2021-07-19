@@ -10,11 +10,11 @@ public class ListActionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Actions")
-    public java.util.List<ListActionsResponseBodyActions> actions;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("Actions")
+    public java.util.List<ListActionsResponseBodyActions> actions;
 
     public static ListActionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListActionsResponseBody self = new ListActionsResponseBody();
@@ -37,14 +37,6 @@ public class ListActionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListActionsResponseBody setActions(java.util.List<ListActionsResponseBodyActions> actions) {
-        this.actions = actions;
-        return this;
-    }
-    public java.util.List<ListActionsResponseBodyActions> getActions() {
-        return this.actions;
-    }
-
     public ListActionsResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,7 +45,18 @@ public class ListActionsResponseBody extends TeaModel {
         return this.maxResults;
     }
 
+    public ListActionsResponseBody setActions(java.util.List<ListActionsResponseBodyActions> actions) {
+        this.actions = actions;
+        return this;
+    }
+    public java.util.List<ListActionsResponseBodyActions> getActions() {
+        return this.actions;
+    }
+
     public static class ListActionsResponseBodyActions extends TeaModel {
+        @NameInMap("Popularity")
+        public Integer popularity;
+
         @NameInMap("ActionType")
         public String actionType;
 
@@ -75,6 +78,14 @@ public class ListActionsResponseBody extends TeaModel {
         public static ListActionsResponseBodyActions build(java.util.Map<String, ?> map) throws Exception {
             ListActionsResponseBodyActions self = new ListActionsResponseBodyActions();
             return TeaModel.build(map, self);
+        }
+
+        public ListActionsResponseBodyActions setPopularity(Integer popularity) {
+            this.popularity = popularity;
+            return this;
+        }
+        public Integer getPopularity() {
+            return this.popularity;
         }
 
         public ListActionsResponseBodyActions setActionType(String actionType) {

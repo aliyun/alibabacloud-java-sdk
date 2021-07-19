@@ -49,6 +49,9 @@ public class ListTemplatesShrinkRequest extends TeaModel {
     @NameInMap("TemplateType")
     public String templateType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListTemplatesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesShrinkRequest self = new ListTemplatesShrinkRequest();
         return TeaModel.build(map, self);
@@ -172,6 +175,14 @@ public class ListTemplatesShrinkRequest extends TeaModel {
     }
     public String getTemplateType() {
         return this.templateType;
+    }
+
+    public ListTemplatesShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

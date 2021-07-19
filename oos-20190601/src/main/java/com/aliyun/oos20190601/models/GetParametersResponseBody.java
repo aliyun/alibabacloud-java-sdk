@@ -4,26 +4,18 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetParametersResponseBody extends TeaModel {
-    @NameInMap("Parameters")
-    public java.util.List<GetParametersResponseBodyParameters> parameters;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("InvalidParameters")
     public java.util.List<String> invalidParameters;
 
+    @NameInMap("Parameters")
+    public java.util.List<GetParametersResponseBodyParameters> parameters;
+
     public static GetParametersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetParametersResponseBody self = new GetParametersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetParametersResponseBody setParameters(java.util.List<GetParametersResponseBodyParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<GetParametersResponseBodyParameters> getParameters() {
-        return this.parameters;
     }
 
     public GetParametersResponseBody setRequestId(String requestId) {
@@ -42,6 +34,14 @@ public class GetParametersResponseBody extends TeaModel {
         return this.invalidParameters;
     }
 
+    public GetParametersResponseBody setParameters(java.util.List<GetParametersResponseBodyParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<GetParametersResponseBodyParameters> getParameters() {
+        return this.parameters;
+    }
+
     public static class GetParametersResponseBodyParameters extends TeaModel {
         @NameInMap("Type")
         public String type;
@@ -52,23 +52,29 @@ public class GetParametersResponseBody extends TeaModel {
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         @NameInMap("Value")
         public String value;
-
-        @NameInMap("Constraints")
-        public String constraints;
 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Constraints")
+        public String constraints;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        @NameInMap("ParameterVersion")
-        public Integer parameterVersion;
-
         @NameInMap("CreatedDate")
         public String createdDate;
+
+        @NameInMap("ParameterVersion")
+        public Integer parameterVersion;
 
         @NameInMap("Name")
         public String name;
@@ -108,20 +114,20 @@ public class GetParametersResponseBody extends TeaModel {
             return this.updatedBy;
         }
 
+        public GetParametersResponseBodyParameters setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
         public GetParametersResponseBodyParameters setValue(String value) {
             this.value = value;
             return this;
         }
         public String getValue() {
             return this.value;
-        }
-
-        public GetParametersResponseBodyParameters setConstraints(String constraints) {
-            this.constraints = constraints;
-            return this;
-        }
-        public String getConstraints() {
-            return this.constraints;
         }
 
         public GetParametersResponseBodyParameters setDescription(String description) {
@@ -132,6 +138,22 @@ public class GetParametersResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetParametersResponseBodyParameters setConstraints(String constraints) {
+            this.constraints = constraints;
+            return this;
+        }
+        public String getConstraints() {
+            return this.constraints;
+        }
+
+        public GetParametersResponseBodyParameters setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public GetParametersResponseBodyParameters setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
@@ -140,20 +162,20 @@ public class GetParametersResponseBody extends TeaModel {
             return this.createdBy;
         }
 
-        public GetParametersResponseBodyParameters setParameterVersion(Integer parameterVersion) {
-            this.parameterVersion = parameterVersion;
-            return this;
-        }
-        public Integer getParameterVersion() {
-            return this.parameterVersion;
-        }
-
         public GetParametersResponseBodyParameters setCreatedDate(String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
         public String getCreatedDate() {
             return this.createdDate;
+        }
+
+        public GetParametersResponseBodyParameters setParameterVersion(Integer parameterVersion) {
+            this.parameterVersion = parameterVersion;
+            return this;
+        }
+        public Integer getParameterVersion() {
+            return this.parameterVersion;
         }
 
         public GetParametersResponseBodyParameters setName(String name) {

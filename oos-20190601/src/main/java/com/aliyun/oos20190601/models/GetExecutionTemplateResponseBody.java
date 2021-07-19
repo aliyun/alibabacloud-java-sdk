@@ -4,11 +4,11 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetExecutionTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Content")
     public String content;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Template")
     public GetExecutionTemplateResponseBodyTemplate template;
@@ -18,20 +18,20 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetExecutionTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetExecutionTemplateResponseBody setContent(String content) {
         this.content = content;
         return this;
     }
     public String getContent() {
         return this.content;
+    }
+
+    public GetExecutionTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetExecutionTemplateResponseBody setTemplate(GetExecutionTemplateResponseBodyTemplate template) {

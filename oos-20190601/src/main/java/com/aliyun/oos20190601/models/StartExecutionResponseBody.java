@@ -4,23 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class StartExecutionResponseBody extends TeaModel {
-    @NameInMap("Execution")
-    public StartExecutionResponseBodyExecution execution;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Execution")
+    public StartExecutionResponseBodyExecution execution;
 
     public static StartExecutionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartExecutionResponseBody self = new StartExecutionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public StartExecutionResponseBody setExecution(StartExecutionResponseBodyExecution execution) {
-        this.execution = execution;
-        return this;
-    }
-    public StartExecutionResponseBodyExecution getExecution() {
-        return this.execution;
     }
 
     public StartExecutionResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class StartExecutionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public StartExecutionResponseBody setExecution(StartExecutionResponseBodyExecution execution) {
+        this.execution = execution;
+        return this;
+    }
+    public StartExecutionResponseBodyExecution getExecution() {
+        return this.execution;
     }
 
     public static class StartExecutionResponseBodyExecutionCurrentTasks extends TeaModel {
@@ -73,47 +73,44 @@ public class StartExecutionResponseBody extends TeaModel {
     }
 
     public static class StartExecutionResponseBodyExecution extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("Outputs")
         public String outputs;
 
-        @NameInMap("ExecutedBy")
-        public String executedBy;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("EndDate")
         public String endDate;
 
+        @NameInMap("ExecutedBy")
+        public String executedBy;
+
         @NameInMap("IsParent")
         public Boolean isParent;
-
-        @NameInMap("StartDate")
-        public String startDate;
 
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
-        @NameInMap("Mode")
-        public String mode;
+        @NameInMap("StartDate")
+        public String startDate;
 
         @NameInMap("SafetyCheck")
         public String safetyCheck;
 
+        @NameInMap("Mode")
+        public String mode;
+
         @NameInMap("TemplateName")
         public String templateName;
-
-        @NameInMap("TemplateVersion")
-        public String templateVersion;
 
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("TemplateVersion")
+        public String templateVersion;
+
         @NameInMap("ExecutionId")
         public String executionId;
-
-        @NameInMap("CurrentTasks")
-        public java.util.List<StartExecutionResponseBodyExecutionCurrentTasks> currentTasks;
 
         @NameInMap("Parameters")
         public String parameters;
@@ -126,6 +123,9 @@ public class StartExecutionResponseBody extends TeaModel {
 
         @NameInMap("UpdateDate")
         public String updateDate;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("ParentExecutionId")
         public String parentExecutionId;
@@ -142,17 +142,12 @@ public class StartExecutionResponseBody extends TeaModel {
         @NameInMap("LoopMode")
         public String loopMode;
 
+        @NameInMap("CurrentTasks")
+        public java.util.List<StartExecutionResponseBodyExecutionCurrentTasks> currentTasks;
+
         public static StartExecutionResponseBodyExecution build(java.util.Map<String, ?> map) throws Exception {
             StartExecutionResponseBodyExecution self = new StartExecutionResponseBodyExecution();
             return TeaModel.build(map, self);
-        }
-
-        public StartExecutionResponseBodyExecution setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public StartExecutionResponseBodyExecution setOutputs(String outputs) {
@@ -163,12 +158,12 @@ public class StartExecutionResponseBody extends TeaModel {
             return this.outputs;
         }
 
-        public StartExecutionResponseBodyExecution setExecutedBy(String executedBy) {
-            this.executedBy = executedBy;
+        public StartExecutionResponseBodyExecution setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getExecutedBy() {
-            return this.executedBy;
+        public String getStatus() {
+            return this.status;
         }
 
         public StartExecutionResponseBodyExecution setEndDate(String endDate) {
@@ -179,20 +174,20 @@ public class StartExecutionResponseBody extends TeaModel {
             return this.endDate;
         }
 
+        public StartExecutionResponseBodyExecution setExecutedBy(String executedBy) {
+            this.executedBy = executedBy;
+            return this;
+        }
+        public String getExecutedBy() {
+            return this.executedBy;
+        }
+
         public StartExecutionResponseBodyExecution setIsParent(Boolean isParent) {
             this.isParent = isParent;
             return this;
         }
         public Boolean getIsParent() {
             return this.isParent;
-        }
-
-        public StartExecutionResponseBodyExecution setStartDate(String startDate) {
-            this.startDate = startDate;
-            return this;
-        }
-        public String getStartDate() {
-            return this.startDate;
         }
 
         public StartExecutionResponseBodyExecution setTags(java.util.Map<String, ?> tags) {
@@ -203,12 +198,12 @@ public class StartExecutionResponseBody extends TeaModel {
             return this.tags;
         }
 
-        public StartExecutionResponseBodyExecution setMode(String mode) {
-            this.mode = mode;
+        public StartExecutionResponseBodyExecution setStartDate(String startDate) {
+            this.startDate = startDate;
             return this;
         }
-        public String getMode() {
-            return this.mode;
+        public String getStartDate() {
+            return this.startDate;
         }
 
         public StartExecutionResponseBodyExecution setSafetyCheck(String safetyCheck) {
@@ -219,20 +214,20 @@ public class StartExecutionResponseBody extends TeaModel {
             return this.safetyCheck;
         }
 
+        public StartExecutionResponseBodyExecution setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
         public StartExecutionResponseBodyExecution setTemplateName(String templateName) {
             this.templateName = templateName;
             return this;
         }
         public String getTemplateName() {
             return this.templateName;
-        }
-
-        public StartExecutionResponseBodyExecution setTemplateVersion(String templateVersion) {
-            this.templateVersion = templateVersion;
-            return this;
-        }
-        public String getTemplateVersion() {
-            return this.templateVersion;
         }
 
         public StartExecutionResponseBodyExecution setCreateDate(String createDate) {
@@ -243,20 +238,20 @@ public class StartExecutionResponseBody extends TeaModel {
             return this.createDate;
         }
 
+        public StartExecutionResponseBodyExecution setTemplateVersion(String templateVersion) {
+            this.templateVersion = templateVersion;
+            return this;
+        }
+        public String getTemplateVersion() {
+            return this.templateVersion;
+        }
+
         public StartExecutionResponseBodyExecution setExecutionId(String executionId) {
             this.executionId = executionId;
             return this;
         }
         public String getExecutionId() {
             return this.executionId;
-        }
-
-        public StartExecutionResponseBodyExecution setCurrentTasks(java.util.List<StartExecutionResponseBodyExecutionCurrentTasks> currentTasks) {
-            this.currentTasks = currentTasks;
-            return this;
-        }
-        public java.util.List<StartExecutionResponseBodyExecutionCurrentTasks> getCurrentTasks() {
-            return this.currentTasks;
         }
 
         public StartExecutionResponseBodyExecution setParameters(String parameters) {
@@ -289,6 +284,14 @@ public class StartExecutionResponseBody extends TeaModel {
         }
         public String getUpdateDate() {
             return this.updateDate;
+        }
+
+        public StartExecutionResponseBodyExecution setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public StartExecutionResponseBodyExecution setParentExecutionId(String parentExecutionId) {
@@ -329,6 +332,14 @@ public class StartExecutionResponseBody extends TeaModel {
         }
         public String getLoopMode() {
             return this.loopMode;
+        }
+
+        public StartExecutionResponseBodyExecution setCurrentTasks(java.util.List<StartExecutionResponseBodyExecutionCurrentTasks> currentTasks) {
+            this.currentTasks = currentTasks;
+            return this;
+        }
+        public java.util.List<StartExecutionResponseBodyExecutionCurrentTasks> getCurrentTasks() {
+            return this.currentTasks;
         }
 
     }

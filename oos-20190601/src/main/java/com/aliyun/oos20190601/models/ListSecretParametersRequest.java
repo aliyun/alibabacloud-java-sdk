@@ -28,6 +28,12 @@ public class ListSecretParametersRequest extends TeaModel {
     @NameInMap("Recursive")
     public Boolean recursive;
 
+    @NameInMap("Tags")
+    public java.util.Map<String, ?> tags;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListSecretParametersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSecretParametersRequest self = new ListSecretParametersRequest();
         return TeaModel.build(map, self);
@@ -95,6 +101,22 @@ public class ListSecretParametersRequest extends TeaModel {
     }
     public Boolean getRecursive() {
         return this.recursive;
+    }
+
+    public ListSecretParametersRequest setTags(java.util.Map<String, ?> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, ?> getTags() {
+        return this.tags;
+    }
+
+    public ListSecretParametersRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -56,17 +56,20 @@ public class UpdateTemplateResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("CreatedBy")
         public String createdBy;
 
         @NameInMap("CreatedDate")
         public String createdDate;
 
-        @NameInMap("HasTrigger")
-        public Boolean hasTrigger;
-
         @NameInMap("TemplateId")
         public String templateId;
+
+        @NameInMap("HasTrigger")
+        public Boolean hasTrigger;
 
         @NameInMap("ShareType")
         public String shareType;
@@ -140,6 +143,14 @@ public class UpdateTemplateResponseBody extends TeaModel {
             return this.description;
         }
 
+        public UpdateTemplateResponseBodyTemplate setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public UpdateTemplateResponseBodyTemplate setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
@@ -156,20 +167,20 @@ public class UpdateTemplateResponseBody extends TeaModel {
             return this.createdDate;
         }
 
-        public UpdateTemplateResponseBodyTemplate setHasTrigger(Boolean hasTrigger) {
-            this.hasTrigger = hasTrigger;
-            return this;
-        }
-        public Boolean getHasTrigger() {
-            return this.hasTrigger;
-        }
-
         public UpdateTemplateResponseBodyTemplate setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
         }
         public String getTemplateId() {
             return this.templateId;
+        }
+
+        public UpdateTemplateResponseBodyTemplate setHasTrigger(Boolean hasTrigger) {
+            this.hasTrigger = hasTrigger;
+            return this;
+        }
+        public Boolean getHasTrigger() {
+            return this.hasTrigger;
         }
 
         public UpdateTemplateResponseBodyTemplate setShareType(String shareType) {

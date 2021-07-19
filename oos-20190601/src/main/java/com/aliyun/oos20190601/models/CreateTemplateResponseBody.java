@@ -4,11 +4,11 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("TemplateType")
     public String templateType;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Template")
     public CreateTemplateResponseBodyTemplate template;
@@ -18,20 +18,20 @@ public class CreateTemplateResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateTemplateResponseBody setTemplateType(String templateType) {
         this.templateType = templateType;
         return this;
     }
     public String getTemplateType() {
         return this.templateType;
+    }
+
+    public CreateTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateTemplateResponseBody setTemplate(CreateTemplateResponseBodyTemplate template) {
@@ -67,17 +67,20 @@ public class CreateTemplateResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("CreatedBy")
         public String createdBy;
 
         @NameInMap("CreatedDate")
         public String createdDate;
 
-        @NameInMap("HasTrigger")
-        public Boolean hasTrigger;
-
         @NameInMap("TemplateId")
         public String templateId;
+
+        @NameInMap("HasTrigger")
+        public Boolean hasTrigger;
 
         @NameInMap("ShareType")
         public String shareType;
@@ -151,6 +154,14 @@ public class CreateTemplateResponseBody extends TeaModel {
             return this.description;
         }
 
+        public CreateTemplateResponseBodyTemplate setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public CreateTemplateResponseBodyTemplate setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
@@ -167,20 +178,20 @@ public class CreateTemplateResponseBody extends TeaModel {
             return this.createdDate;
         }
 
-        public CreateTemplateResponseBodyTemplate setHasTrigger(Boolean hasTrigger) {
-            this.hasTrigger = hasTrigger;
-            return this;
-        }
-        public Boolean getHasTrigger() {
-            return this.hasTrigger;
-        }
-
         public CreateTemplateResponseBodyTemplate setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
         }
         public String getTemplateId() {
             return this.templateId;
+        }
+
+        public CreateTemplateResponseBodyTemplate setHasTrigger(Boolean hasTrigger) {
+            this.hasTrigger = hasTrigger;
+            return this;
+        }
+        public Boolean getHasTrigger() {
+            return this.hasTrigger;
         }
 
         public CreateTemplateResponseBodyTemplate setShareType(String shareType) {
