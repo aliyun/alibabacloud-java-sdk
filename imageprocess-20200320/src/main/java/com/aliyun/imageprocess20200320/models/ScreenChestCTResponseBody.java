@@ -505,6 +505,206 @@ public class ScreenChestCTResponseBody extends TeaModel {
 
     }
 
+    public static class ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo extends TeaModel {
+        @NameInMap("MaxAreaIndex")
+        public Long maxAreaIndex;
+
+        @NameInMap("MaxArea")
+        public Float maxArea;
+
+        @NameInMap("MaxDiameter")
+        public Float maxDiameter;
+
+        @NameInMap("LabelValue")
+        public Long labelValue;
+
+        @NameInMap("Coordinates")
+        public java.util.List<java.util.List<Float>> coordinates;
+
+        @NameInMap("Area")
+        public java.util.List<Float> area;
+
+        public static ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo self = new ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo setMaxAreaIndex(Long maxAreaIndex) {
+            this.maxAreaIndex = maxAreaIndex;
+            return this;
+        }
+        public Long getMaxAreaIndex() {
+            return this.maxAreaIndex;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo setMaxArea(Float maxArea) {
+            this.maxArea = maxArea;
+            return this;
+        }
+        public Float getMaxArea() {
+            return this.maxArea;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo setMaxDiameter(Float maxDiameter) {
+            this.maxDiameter = maxDiameter;
+            return this;
+        }
+        public Float getMaxDiameter() {
+            return this.maxDiameter;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo setLabelValue(Long labelValue) {
+            this.labelValue = labelValue;
+            return this;
+        }
+        public Long getLabelValue() {
+            return this.labelValue;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo setCoordinates(java.util.List<java.util.List<Float>> coordinates) {
+            this.coordinates = coordinates;
+            return this;
+        }
+        public java.util.List<java.util.List<Float>> getCoordinates() {
+            return this.coordinates;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo setArea(java.util.List<Float> area) {
+            this.area = area;
+            return this;
+        }
+        public java.util.List<Float> getArea() {
+            return this.area;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo extends TeaModel {
+        @NameInMap("MaxAreaIndex")
+        public Long maxAreaIndex;
+
+        @NameInMap("MaxArea")
+        public Float maxArea;
+
+        @NameInMap("MaxDiameter")
+        public Float maxDiameter;
+
+        @NameInMap("LabelValue")
+        public Long labelValue;
+
+        @NameInMap("Coordinates")
+        public java.util.List<java.util.List<Float>> coordinates;
+
+        @NameInMap("Area")
+        public java.util.List<Float> area;
+
+        @NameInMap("NearestAortaArea")
+        public Float nearestAortaArea;
+
+        public static ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo self = new ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo setMaxAreaIndex(Long maxAreaIndex) {
+            this.maxAreaIndex = maxAreaIndex;
+            return this;
+        }
+        public Long getMaxAreaIndex() {
+            return this.maxAreaIndex;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo setMaxArea(Float maxArea) {
+            this.maxArea = maxArea;
+            return this;
+        }
+        public Float getMaxArea() {
+            return this.maxArea;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo setMaxDiameter(Float maxDiameter) {
+            this.maxDiameter = maxDiameter;
+            return this;
+        }
+        public Float getMaxDiameter() {
+            return this.maxDiameter;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo setLabelValue(Long labelValue) {
+            this.labelValue = labelValue;
+            return this;
+        }
+        public Long getLabelValue() {
+            return this.labelValue;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo setCoordinates(java.util.List<java.util.List<Float>> coordinates) {
+            this.coordinates = coordinates;
+            return this;
+        }
+        public java.util.List<java.util.List<Float>> getCoordinates() {
+            return this.coordinates;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo setArea(java.util.List<Float> area) {
+            this.area = area;
+            return this;
+        }
+        public java.util.List<Float> getArea() {
+            return this.area;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo setNearestAortaArea(Float nearestAortaArea) {
+            this.nearestAortaArea = nearestAortaArea;
+            return this;
+        }
+        public Float getNearestAortaArea() {
+            return this.nearestAortaArea;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataAnalyzeChestVessel extends TeaModel {
+        @NameInMap("AortaInfo")
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo aortaInfo;
+
+        @NameInMap("PulmonaryInfo")
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo pulmonaryInfo;
+
+        @NameInMap("ResultURL")
+        public String resultURL;
+
+        public static ScreenChestCTResponseBodyDataAnalyzeChestVessel build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataAnalyzeChestVessel self = new ScreenChestCTResponseBodyDataAnalyzeChestVessel();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVessel setAortaInfo(ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo aortaInfo) {
+            this.aortaInfo = aortaInfo;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselAortaInfo getAortaInfo() {
+            return this.aortaInfo;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVessel setPulmonaryInfo(ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo pulmonaryInfo) {
+            this.pulmonaryInfo = pulmonaryInfo;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataAnalyzeChestVesselPulmonaryInfo getPulmonaryInfo() {
+            return this.pulmonaryInfo;
+        }
+
+        public ScreenChestCTResponseBodyDataAnalyzeChestVessel setResultURL(String resultURL) {
+            this.resultURL = resultURL;
+            return this;
+        }
+        public String getResultURL() {
+            return this.resultURL;
+        }
+
+    }
+
     public static class ScreenChestCTResponseBodyData extends TeaModel {
         @NameInMap("LungNodule")
         public ScreenChestCTResponseBodyDataLungNodule lungNodule;
@@ -520,6 +720,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
 
         @NameInMap("ErrorMessage")
         public String errorMessage;
+
+        @NameInMap("AnalyzeChestVessel")
+        public ScreenChestCTResponseBodyDataAnalyzeChestVessel analyzeChestVessel;
 
         public static ScreenChestCTResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyData self = new ScreenChestCTResponseBodyData();
@@ -564,6 +767,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public ScreenChestCTResponseBodyData setAnalyzeChestVessel(ScreenChestCTResponseBodyDataAnalyzeChestVessel analyzeChestVessel) {
+            this.analyzeChestVessel = analyzeChestVessel;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataAnalyzeChestVessel getAnalyzeChestVessel() {
+            return this.analyzeChestVessel;
         }
 
     }
