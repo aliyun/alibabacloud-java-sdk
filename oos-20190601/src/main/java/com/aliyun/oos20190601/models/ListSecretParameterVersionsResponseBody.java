@@ -7,35 +7,35 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("ParameterVersions")
-    public java.util.List<ListSecretParameterVersionsResponseBodyParameterVersions> parameterVersions;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("CreatedBy")
-    public String createdBy;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("CreatedBy")
+    public String createdBy;
 
     @NameInMap("CreatedDate")
     public String createdDate;
 
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("ParameterVersions")
+    public java.util.List<ListSecretParameterVersionsResponseBodyParameterVersions> parameterVersions;
 
     public static ListSecretParameterVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSecretParameterVersionsResponseBody self = new ListSecretParameterVersionsResponseBody();
@@ -48,38 +48,6 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public ListSecretParameterVersionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListSecretParameterVersionsResponseBody setParameterVersions(java.util.List<ListSecretParameterVersionsResponseBodyParameterVersions> parameterVersions) {
-        this.parameterVersions = parameterVersions;
-        return this;
-    }
-    public java.util.List<ListSecretParameterVersionsResponseBodyParameterVersions> getParameterVersions() {
-        return this.parameterVersions;
-    }
-
-    public ListSecretParameterVersionsResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ListSecretParameterVersionsResponseBody setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-        return this;
-    }
-    public String getCreatedBy() {
-        return this.createdBy;
     }
 
     public ListSecretParameterVersionsResponseBody setNextToken(String nextToken) {
@@ -98,12 +66,28 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListSecretParameterVersionsResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public ListSecretParameterVersionsResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListSecretParameterVersionsResponseBody setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    public String getCreatedBy() {
+        return this.createdBy;
     }
 
     public ListSecretParameterVersionsResponseBody setCreatedDate(String createdDate) {
@@ -114,14 +98,6 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         return this.createdDate;
     }
 
-    public ListSecretParameterVersionsResponseBody setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
-    }
-
     public ListSecretParameterVersionsResponseBody setName(String name) {
         this.name = name;
         return this;
@@ -130,7 +106,34 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         return this.name;
     }
 
+    public ListSecretParameterVersionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListSecretParameterVersionsResponseBody setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
+    }
+
+    public ListSecretParameterVersionsResponseBody setParameterVersions(java.util.List<ListSecretParameterVersionsResponseBodyParameterVersions> parameterVersions) {
+        this.parameterVersions = parameterVersions;
+        return this;
+    }
+    public java.util.List<ListSecretParameterVersionsResponseBodyParameterVersions> getParameterVersions() {
+        return this.parameterVersions;
+    }
+
     public static class ListSecretParameterVersionsResponseBodyParameterVersions extends TeaModel {
+        @NameInMap("ParameterVersion")
+        public Integer parameterVersion;
+
         @NameInMap("Value")
         public String value;
 
@@ -140,12 +143,17 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
-        @NameInMap("ParameterVersion")
-        public Integer parameterVersion;
-
         public static ListSecretParameterVersionsResponseBodyParameterVersions build(java.util.Map<String, ?> map) throws Exception {
             ListSecretParameterVersionsResponseBodyParameterVersions self = new ListSecretParameterVersionsResponseBodyParameterVersions();
             return TeaModel.build(map, self);
+        }
+
+        public ListSecretParameterVersionsResponseBodyParameterVersions setParameterVersion(Integer parameterVersion) {
+            this.parameterVersion = parameterVersion;
+            return this;
+        }
+        public Integer getParameterVersion() {
+            return this.parameterVersion;
         }
 
         public ListSecretParameterVersionsResponseBodyParameterVersions setValue(String value) {
@@ -170,14 +178,6 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
         public String getUpdatedBy() {
             return this.updatedBy;
-        }
-
-        public ListSecretParameterVersionsResponseBodyParameterVersions setParameterVersion(Integer parameterVersion) {
-            this.parameterVersion = parameterVersion;
-            return this;
-        }
-        public Integer getParameterVersion() {
-            return this.parameterVersion;
         }
 
     }

@@ -4,48 +4,24 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ValidateTemplateContentResponseBody extends TeaModel {
-    @NameInMap("Parameters")
-    public String parameters;
-
-    @NameInMap("Tasks")
-    public java.util.List<ValidateTemplateContentResponseBodyTasks> tasks;
+    @NameInMap("Outputs")
+    public String outputs;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Outputs")
-    public String outputs;
+    @NameInMap("Parameters")
+    public String parameters;
 
     @NameInMap("RamRole")
     public String ramRole;
 
+    @NameInMap("Tasks")
+    public java.util.List<ValidateTemplateContentResponseBodyTasks> tasks;
+
     public static ValidateTemplateContentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ValidateTemplateContentResponseBody self = new ValidateTemplateContentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ValidateTemplateContentResponseBody setParameters(String parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public String getParameters() {
-        return this.parameters;
-    }
-
-    public ValidateTemplateContentResponseBody setTasks(java.util.List<ValidateTemplateContentResponseBodyTasks> tasks) {
-        this.tasks = tasks;
-        return this;
-    }
-    public java.util.List<ValidateTemplateContentResponseBodyTasks> getTasks() {
-        return this.tasks;
-    }
-
-    public ValidateTemplateContentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ValidateTemplateContentResponseBody setOutputs(String outputs) {
@@ -56,12 +32,36 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         return this.outputs;
     }
 
+    public ValidateTemplateContentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ValidateTemplateContentResponseBody setParameters(String parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public String getParameters() {
+        return this.parameters;
+    }
+
     public ValidateTemplateContentResponseBody setRamRole(String ramRole) {
         this.ramRole = ramRole;
         return this;
     }
     public String getRamRole() {
         return this.ramRole;
+    }
+
+    public ValidateTemplateContentResponseBody setTasks(java.util.List<ValidateTemplateContentResponseBodyTasks> tasks) {
+        this.tasks = tasks;
+        return this;
+    }
+    public java.util.List<ValidateTemplateContentResponseBodyTasks> getTasks() {
+        return this.tasks;
     }
 
     public static class ValidateTemplateContentResponseBodyTasks extends TeaModel {

@@ -4,11 +4,11 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Content")
     public String content;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Template")
     public GetTemplateResponseBodyTemplate template;
@@ -18,20 +18,20 @@ public class GetTemplateResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetTemplateResponseBody setContent(String content) {
         this.content = content;
         return this;
     }
     public String getContent() {
         return this.content;
+    }
+
+    public GetTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetTemplateResponseBody setTemplate(GetTemplateResponseBodyTemplate template) {
@@ -52,11 +52,11 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
-        @NameInMap("Tags")
-        public java.util.Map<String, ?> tags;
-
         @NameInMap("TemplateType")
         public String templateType;
+
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
 
         @NameInMap("TemplateName")
         public String templateName;
@@ -69,6 +69,9 @@ public class GetTemplateResponseBody extends TeaModel {
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("CreatedBy")
         public String createdBy;
@@ -117,20 +120,20 @@ public class GetTemplateResponseBody extends TeaModel {
             return this.updatedBy;
         }
 
-        public GetTemplateResponseBodyTemplate setTags(java.util.Map<String, ?> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.Map<String, ?> getTags() {
-            return this.tags;
-        }
-
         public GetTemplateResponseBodyTemplate setTemplateType(String templateType) {
             this.templateType = templateType;
             return this;
         }
         public String getTemplateType() {
             return this.templateType;
+        }
+
+        public GetTemplateResponseBodyTemplate setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public GetTemplateResponseBodyTemplate setTemplateName(String templateName) {
@@ -163,6 +166,14 @@ public class GetTemplateResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetTemplateResponseBodyTemplate setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetTemplateResponseBodyTemplate setCreatedBy(String createdBy) {

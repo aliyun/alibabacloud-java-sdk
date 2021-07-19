@@ -41,23 +41,29 @@ public class GetParameterResponseBody extends TeaModel {
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         @NameInMap("Value")
         public String value;
-
-        @NameInMap("Constraints")
-        public String constraints;
 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Constraints")
+        public String constraints;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        @NameInMap("ParameterVersion")
-        public Integer parameterVersion;
-
         @NameInMap("CreatedDate")
         public String createdDate;
+
+        @NameInMap("ParameterVersion")
+        public Integer parameterVersion;
 
         @NameInMap("Name")
         public String name;
@@ -97,20 +103,20 @@ public class GetParameterResponseBody extends TeaModel {
             return this.updatedBy;
         }
 
+        public GetParameterResponseBodyParameter setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
         public GetParameterResponseBodyParameter setValue(String value) {
             this.value = value;
             return this;
         }
         public String getValue() {
             return this.value;
-        }
-
-        public GetParameterResponseBodyParameter setConstraints(String constraints) {
-            this.constraints = constraints;
-            return this;
-        }
-        public String getConstraints() {
-            return this.constraints;
         }
 
         public GetParameterResponseBodyParameter setDescription(String description) {
@@ -121,6 +127,22 @@ public class GetParameterResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetParameterResponseBodyParameter setConstraints(String constraints) {
+            this.constraints = constraints;
+            return this;
+        }
+        public String getConstraints() {
+            return this.constraints;
+        }
+
+        public GetParameterResponseBodyParameter setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public GetParameterResponseBodyParameter setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
@@ -129,20 +151,20 @@ public class GetParameterResponseBody extends TeaModel {
             return this.createdBy;
         }
 
-        public GetParameterResponseBodyParameter setParameterVersion(Integer parameterVersion) {
-            this.parameterVersion = parameterVersion;
-            return this;
-        }
-        public Integer getParameterVersion() {
-            return this.parameterVersion;
-        }
-
         public GetParameterResponseBodyParameter setCreatedDate(String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
         public String getCreatedDate() {
             return this.createdDate;
+        }
+
+        public GetParameterResponseBodyParameter setParameterVersion(Integer parameterVersion) {
+            this.parameterVersion = parameterVersion;
+            return this;
+        }
+        public Integer getParameterVersion() {
+            return this.parameterVersion;
         }
 
         public GetParameterResponseBodyParameter setName(String name) {

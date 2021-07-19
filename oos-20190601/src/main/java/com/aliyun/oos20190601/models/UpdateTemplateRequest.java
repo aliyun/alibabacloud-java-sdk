@@ -19,6 +19,9 @@ public class UpdateTemplateRequest extends TeaModel {
     @NameInMap("VersionName")
     public String versionName;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static UpdateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateRequest self = new UpdateTemplateRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class UpdateTemplateRequest extends TeaModel {
     }
     public String getVersionName() {
         return this.versionName;
+    }
+
+    public UpdateTemplateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

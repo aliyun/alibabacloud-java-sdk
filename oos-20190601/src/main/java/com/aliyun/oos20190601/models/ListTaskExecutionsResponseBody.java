@@ -54,14 +54,14 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListTaskExecutionsResponseBodyTaskExecutions extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ChildExecutionId")
+        public String childExecutionId;
 
         @NameInMap("Outputs")
         public String outputs;
 
-        @NameInMap("ChildExecutionId")
-        public String childExecutionId;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("EndDate")
         public String endDate;
@@ -116,12 +116,12 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setStatus(String status) {
-            this.status = status;
+        public ListTaskExecutionsResponseBodyTaskExecutions setChildExecutionId(String childExecutionId) {
+            this.childExecutionId = childExecutionId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getChildExecutionId() {
+            return this.childExecutionId;
         }
 
         public ListTaskExecutionsResponseBodyTaskExecutions setOutputs(String outputs) {
@@ -132,12 +132,12 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             return this.outputs;
         }
 
-        public ListTaskExecutionsResponseBodyTaskExecutions setChildExecutionId(String childExecutionId) {
-            this.childExecutionId = childExecutionId;
+        public ListTaskExecutionsResponseBodyTaskExecutions setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getChildExecutionId() {
-            return this.childExecutionId;
+        public String getStatus() {
+            return this.status;
         }
 
         public ListTaskExecutionsResponseBodyTaskExecutions setEndDate(String endDate) {

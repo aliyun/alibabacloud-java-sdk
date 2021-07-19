@@ -35,11 +35,11 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
         @NameInMap("Service")
         public String service;
 
-        @NameInMap("Task")
-        public java.util.List<String> task;
-
         @NameInMap("API")
         public String API;
+
+        @NameInMap("Task")
+        public java.util.List<String> task;
 
         @NameInMap("Template")
         public java.util.List<String> template;
@@ -57,20 +57,20 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
             return this.service;
         }
 
-        public ListExecutionRiskyTasksResponseBodyRiskyTasks setTask(java.util.List<String> task) {
-            this.task = task;
-            return this;
-        }
-        public java.util.List<String> getTask() {
-            return this.task;
-        }
-
         public ListExecutionRiskyTasksResponseBodyRiskyTasks setAPI(String API) {
             this.API = API;
             return this;
         }
         public String getAPI() {
             return this.API;
+        }
+
+        public ListExecutionRiskyTasksResponseBodyRiskyTasks setTask(java.util.List<String> task) {
+            this.task = task;
+            return this;
+        }
+        public java.util.List<String> getTask() {
+            return this.task;
         }
 
         public ListExecutionRiskyTasksResponseBodyRiskyTasks setTemplate(java.util.List<String> template) {

@@ -4,9 +4,6 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListSecretParametersResponseBody extends TeaModel {
-    @NameInMap("Parameters")
-    public java.util.List<ListSecretParametersResponseBodyParameters> parameters;
-
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,17 +13,12 @@ public class ListSecretParametersResponseBody extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    @NameInMap("Parameters")
+    public java.util.List<ListSecretParametersResponseBodyParameters> parameters;
+
     public static ListSecretParametersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSecretParametersResponseBody self = new ListSecretParametersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSecretParametersResponseBody setParameters(java.util.List<ListSecretParametersResponseBodyParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<ListSecretParametersResponseBodyParameters> getParameters() {
-        return this.parameters;
     }
 
     public ListSecretParametersResponseBody setNextToken(String nextToken) {
@@ -53,12 +45,17 @@ public class ListSecretParametersResponseBody extends TeaModel {
         return this.maxResults;
     }
 
+    public ListSecretParametersResponseBody setParameters(java.util.List<ListSecretParametersResponseBodyParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<ListSecretParametersResponseBodyParameters> getParameters() {
+        return this.parameters;
+    }
+
     public static class ListSecretParametersResponseBodyParameters extends TeaModel {
         @NameInMap("Type")
         public String type;
-
-        @NameInMap("Description")
-        public String description;
 
         @NameInMap("UpdatedDate")
         public String updatedDate;
@@ -66,17 +63,26 @@ public class ListSecretParametersResponseBody extends TeaModel {
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
-        @NameInMap("CreatedBy")
-        public String createdBy;
-
         @NameInMap("KeyId")
         public String keyId;
 
-        @NameInMap("ParameterVersion")
-        public String parameterVersion;
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("CreatedBy")
+        public String createdBy;
 
         @NameInMap("CreatedDate")
         public String createdDate;
+
+        @NameInMap("ParameterVersion")
+        public String parameterVersion;
 
         @NameInMap("Name")
         public String name;
@@ -100,14 +106,6 @@ public class ListSecretParametersResponseBody extends TeaModel {
             return this.type;
         }
 
-        public ListSecretParametersResponseBodyParameters setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public ListSecretParametersResponseBodyParameters setUpdatedDate(String updatedDate) {
             this.updatedDate = updatedDate;
             return this;
@@ -124,14 +122,6 @@ public class ListSecretParametersResponseBody extends TeaModel {
             return this.updatedBy;
         }
 
-        public ListSecretParametersResponseBodyParameters setCreatedBy(String createdBy) {
-            this.createdBy = createdBy;
-            return this;
-        }
-        public String getCreatedBy() {
-            return this.createdBy;
-        }
-
         public ListSecretParametersResponseBodyParameters setKeyId(String keyId) {
             this.keyId = keyId;
             return this;
@@ -140,12 +130,36 @@ public class ListSecretParametersResponseBody extends TeaModel {
             return this.keyId;
         }
 
-        public ListSecretParametersResponseBodyParameters setParameterVersion(String parameterVersion) {
-            this.parameterVersion = parameterVersion;
+        public ListSecretParametersResponseBodyParameters setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
             return this;
         }
-        public String getParameterVersion() {
-            return this.parameterVersion;
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
+        public ListSecretParametersResponseBodyParameters setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListSecretParametersResponseBodyParameters setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ListSecretParametersResponseBodyParameters setCreatedBy(String createdBy) {
+            this.createdBy = createdBy;
+            return this;
+        }
+        public String getCreatedBy() {
+            return this.createdBy;
         }
 
         public ListSecretParametersResponseBodyParameters setCreatedDate(String createdDate) {
@@ -154,6 +168,14 @@ public class ListSecretParametersResponseBody extends TeaModel {
         }
         public String getCreatedDate() {
             return this.createdDate;
+        }
+
+        public ListSecretParametersResponseBodyParameters setParameterVersion(String parameterVersion) {
+            this.parameterVersion = parameterVersion;
+            return this;
+        }
+        public String getParameterVersion() {
+            return this.parameterVersion;
         }
 
         public ListSecretParametersResponseBodyParameters setName(String name) {

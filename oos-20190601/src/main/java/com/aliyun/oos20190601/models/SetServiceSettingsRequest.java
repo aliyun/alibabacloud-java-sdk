@@ -22,6 +22,9 @@ public class SetServiceSettingsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("RdcEnterpriseId")
+    public String rdcEnterpriseId;
+
     public static SetServiceSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
         SetServiceSettingsRequest self = new SetServiceSettingsRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class SetServiceSettingsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SetServiceSettingsRequest setRdcEnterpriseId(String rdcEnterpriseId) {
+        this.rdcEnterpriseId = rdcEnterpriseId;
+        return this;
+    }
+    public String getRdcEnterpriseId() {
+        return this.rdcEnterpriseId;
     }
 
 }

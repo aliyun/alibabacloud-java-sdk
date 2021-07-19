@@ -44,23 +44,29 @@ public class GetSecretParameterResponseBody extends TeaModel {
         @NameInMap("KeyId")
         public String keyId;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         @NameInMap("Value")
         public String value;
-
-        @NameInMap("Constraints")
-        public String constraints;
 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Constraints")
+        public String constraints;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        @NameInMap("ParameterVersion")
-        public Integer parameterVersion;
-
         @NameInMap("CreatedDate")
         public String createdDate;
+
+        @NameInMap("ParameterVersion")
+        public Integer parameterVersion;
 
         @NameInMap("Name")
         public String name;
@@ -108,20 +114,20 @@ public class GetSecretParameterResponseBody extends TeaModel {
             return this.keyId;
         }
 
+        public GetSecretParameterResponseBodyParameter setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
+        }
+
         public GetSecretParameterResponseBodyParameter setValue(String value) {
             this.value = value;
             return this;
         }
         public String getValue() {
             return this.value;
-        }
-
-        public GetSecretParameterResponseBodyParameter setConstraints(String constraints) {
-            this.constraints = constraints;
-            return this;
-        }
-        public String getConstraints() {
-            return this.constraints;
         }
 
         public GetSecretParameterResponseBodyParameter setDescription(String description) {
@@ -132,6 +138,22 @@ public class GetSecretParameterResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetSecretParameterResponseBodyParameter setConstraints(String constraints) {
+            this.constraints = constraints;
+            return this;
+        }
+        public String getConstraints() {
+            return this.constraints;
+        }
+
+        public GetSecretParameterResponseBodyParameter setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public GetSecretParameterResponseBodyParameter setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
@@ -140,20 +162,20 @@ public class GetSecretParameterResponseBody extends TeaModel {
             return this.createdBy;
         }
 
-        public GetSecretParameterResponseBodyParameter setParameterVersion(Integer parameterVersion) {
-            this.parameterVersion = parameterVersion;
-            return this;
-        }
-        public Integer getParameterVersion() {
-            return this.parameterVersion;
-        }
-
         public GetSecretParameterResponseBodyParameter setCreatedDate(String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
         public String getCreatedDate() {
             return this.createdDate;
+        }
+
+        public GetSecretParameterResponseBodyParameter setParameterVersion(Integer parameterVersion) {
+            this.parameterVersion = parameterVersion;
+            return this;
+        }
+        public Integer getParameterVersion() {
+            return this.parameterVersion;
         }
 
         public GetSecretParameterResponseBodyParameter setName(String name) {

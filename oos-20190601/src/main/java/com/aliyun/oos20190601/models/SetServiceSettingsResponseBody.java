@@ -38,14 +38,17 @@ public class SetServiceSettingsResponseBody extends TeaModel {
         @NameInMap("DeliveryOssKeyPrefix")
         public String deliveryOssKeyPrefix;
 
-        @NameInMap("DeliverySlsEnabled")
-        public Boolean deliverySlsEnabled;
-
         @NameInMap("DeliveryOssEnabled")
         public Boolean deliveryOssEnabled;
 
+        @NameInMap("DeliverySlsEnabled")
+        public Boolean deliverySlsEnabled;
+
         @NameInMap("DeliverySlsProjectName")
         public String deliverySlsProjectName;
+
+        @NameInMap("RdcEnterpriseId")
+        public String rdcEnterpriseId;
 
         public static SetServiceSettingsResponseBodyServiceSettings build(java.util.Map<String, ?> map) throws Exception {
             SetServiceSettingsResponseBodyServiceSettings self = new SetServiceSettingsResponseBodyServiceSettings();
@@ -68,14 +71,6 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             return this.deliveryOssKeyPrefix;
         }
 
-        public SetServiceSettingsResponseBodyServiceSettings setDeliverySlsEnabled(Boolean deliverySlsEnabled) {
-            this.deliverySlsEnabled = deliverySlsEnabled;
-            return this;
-        }
-        public Boolean getDeliverySlsEnabled() {
-            return this.deliverySlsEnabled;
-        }
-
         public SetServiceSettingsResponseBodyServiceSettings setDeliveryOssEnabled(Boolean deliveryOssEnabled) {
             this.deliveryOssEnabled = deliveryOssEnabled;
             return this;
@@ -84,12 +79,28 @@ public class SetServiceSettingsResponseBody extends TeaModel {
             return this.deliveryOssEnabled;
         }
 
+        public SetServiceSettingsResponseBodyServiceSettings setDeliverySlsEnabled(Boolean deliverySlsEnabled) {
+            this.deliverySlsEnabled = deliverySlsEnabled;
+            return this;
+        }
+        public Boolean getDeliverySlsEnabled() {
+            return this.deliverySlsEnabled;
+        }
+
         public SetServiceSettingsResponseBodyServiceSettings setDeliverySlsProjectName(String deliverySlsProjectName) {
             this.deliverySlsProjectName = deliverySlsProjectName;
             return this;
         }
         public String getDeliverySlsProjectName() {
             return this.deliverySlsProjectName;
+        }
+
+        public SetServiceSettingsResponseBodyServiceSettings setRdcEnterpriseId(String rdcEnterpriseId) {
+            this.rdcEnterpriseId = rdcEnterpriseId;
+            return this;
+        }
+        public String getRdcEnterpriseId() {
+            return this.rdcEnterpriseId;
         }
 
     }

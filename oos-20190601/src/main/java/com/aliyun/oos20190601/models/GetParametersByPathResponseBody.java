@@ -4,40 +4,24 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetParametersByPathResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("Parameters")
-    public java.util.List<GetParametersByPathResponseBodyParameters> parameters;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("Parameters")
+    public java.util.List<GetParametersByPathResponseBodyParameters> parameters;
 
     public static GetParametersByPathResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetParametersByPathResponseBody self = new GetParametersByPathResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetParametersByPathResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public GetParametersByPathResponseBody setParameters(java.util.List<GetParametersByPathResponseBodyParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<GetParametersByPathResponseBodyParameters> getParameters() {
-        return this.parameters;
     }
 
     public GetParametersByPathResponseBody setNextToken(String nextToken) {
@@ -56,12 +40,28 @@ public class GetParametersByPathResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetParametersByPathResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public GetParametersByPathResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public GetParametersByPathResponseBody setParameters(java.util.List<GetParametersByPathResponseBodyParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<GetParametersByPathResponseBodyParameters> getParameters() {
+        return this.parameters;
     }
 
     public static class GetParametersByPathResponseBodyParameters extends TeaModel {
@@ -77,20 +77,20 @@ public class GetParametersByPathResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("Constraints")
-        public String constraints;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("Constraints")
+        public String constraints;
 
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        @NameInMap("ParameterVersion")
-        public Integer parameterVersion;
-
         @NameInMap("CreatedDate")
         public String createdDate;
+
+        @NameInMap("ParameterVersion")
+        public Integer parameterVersion;
 
         @NameInMap("Name")
         public String name;
@@ -138,20 +138,20 @@ public class GetParametersByPathResponseBody extends TeaModel {
             return this.value;
         }
 
-        public GetParametersByPathResponseBodyParameters setConstraints(String constraints) {
-            this.constraints = constraints;
-            return this;
-        }
-        public String getConstraints() {
-            return this.constraints;
-        }
-
         public GetParametersByPathResponseBodyParameters setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetParametersByPathResponseBodyParameters setConstraints(String constraints) {
+            this.constraints = constraints;
+            return this;
+        }
+        public String getConstraints() {
+            return this.constraints;
         }
 
         public GetParametersByPathResponseBodyParameters setCreatedBy(String createdBy) {
@@ -162,20 +162,20 @@ public class GetParametersByPathResponseBody extends TeaModel {
             return this.createdBy;
         }
 
-        public GetParametersByPathResponseBodyParameters setParameterVersion(Integer parameterVersion) {
-            this.parameterVersion = parameterVersion;
-            return this;
-        }
-        public Integer getParameterVersion() {
-            return this.parameterVersion;
-        }
-
         public GetParametersByPathResponseBodyParameters setCreatedDate(String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
         public String getCreatedDate() {
             return this.createdDate;
+        }
+
+        public GetParametersByPathResponseBodyParameters setParameterVersion(Integer parameterVersion) {
+            this.parameterVersion = parameterVersion;
+            return this;
+        }
+        public Integer getParameterVersion() {
+            return this.parameterVersion;
         }
 
         public GetParametersByPathResponseBodyParameters setName(String name) {

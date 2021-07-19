@@ -10,11 +10,11 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ResourceExecutionStatus")
-    public java.util.List<ListResourceExecutionStatusResponseBodyResourceExecutionStatus> resourceExecutionStatus;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("ResourceExecutionStatus")
+    public java.util.List<ListResourceExecutionStatusResponseBodyResourceExecutionStatus> resourceExecutionStatus;
 
     public static ListResourceExecutionStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListResourceExecutionStatusResponseBody self = new ListResourceExecutionStatusResponseBody();
@@ -37,20 +37,20 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListResourceExecutionStatusResponseBody setResourceExecutionStatus(java.util.List<ListResourceExecutionStatusResponseBodyResourceExecutionStatus> resourceExecutionStatus) {
-        this.resourceExecutionStatus = resourceExecutionStatus;
-        return this;
-    }
-    public java.util.List<ListResourceExecutionStatusResponseBodyResourceExecutionStatus> getResourceExecutionStatus() {
-        return this.resourceExecutionStatus;
-    }
-
     public ListResourceExecutionStatusResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListResourceExecutionStatusResponseBody setResourceExecutionStatus(java.util.List<ListResourceExecutionStatusResponseBodyResourceExecutionStatus> resourceExecutionStatus) {
+        this.resourceExecutionStatus = resourceExecutionStatus;
+        return this;
+    }
+    public java.util.List<ListResourceExecutionStatusResponseBodyResourceExecutionStatus> getResourceExecutionStatus() {
+        return this.resourceExecutionStatus;
     }
 
     public static class ListResourceExecutionStatusResponseBodyResourceExecutionStatus extends TeaModel {

@@ -4,9 +4,6 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListExecutionsResponseBody extends TeaModel {
-    @NameInMap("Executions")
-    public java.util.List<ListExecutionsResponseBodyExecutions> executions;
-
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -16,17 +13,12 @@ public class ListExecutionsResponseBody extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    @NameInMap("Executions")
+    public java.util.List<ListExecutionsResponseBodyExecutions> executions;
+
     public static ListExecutionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListExecutionsResponseBody self = new ListExecutionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListExecutionsResponseBody setExecutions(java.util.List<ListExecutionsResponseBodyExecutions> executions) {
-        this.executions = executions;
-        return this;
-    }
-    public java.util.List<ListExecutionsResponseBodyExecutions> getExecutions() {
-        return this.executions;
     }
 
     public ListExecutionsResponseBody setNextToken(String nextToken) {
@@ -51,6 +43,14 @@ public class ListExecutionsResponseBody extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListExecutionsResponseBody setExecutions(java.util.List<ListExecutionsResponseBodyExecutions> executions) {
+        this.executions = executions;
+        return this;
+    }
+    public java.util.List<ListExecutionsResponseBodyExecutions> getExecutions() {
+        return this.executions;
     }
 
     public static class ListExecutionsResponseBodyExecutionsCurrentTasks extends TeaModel {
@@ -128,20 +128,17 @@ public class ListExecutionsResponseBody extends TeaModel {
         @NameInMap("CreateDate")
         public String createDate;
 
-        @NameInMap("CurrentTasks")
-        public java.util.List<ListExecutionsResponseBodyExecutionsCurrentTasks> currentTasks;
+        @NameInMap("UpdateDate")
+        public String updateDate;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("UpdateDate")
-        public String updateDate;
+        @NameInMap("LastTriggerTime")
+        public String lastTriggerTime;
 
         @NameInMap("ParentExecutionId")
         public String parentExecutionId;
-
-        @NameInMap("LastTriggerTime")
-        public String lastTriggerTime;
 
         @NameInMap("LastTriggerStatus")
         public String lastTriggerStatus;
@@ -152,11 +149,11 @@ public class ListExecutionsResponseBody extends TeaModel {
         @NameInMap("Outputs")
         public String outputs;
 
-        @NameInMap("EndDate")
-        public String endDate;
-
         @NameInMap("ExecutedBy")
         public String executedBy;
+
+        @NameInMap("EndDate")
+        public String endDate;
 
         @NameInMap("IsParent")
         public Boolean isParent;
@@ -173,6 +170,9 @@ public class ListExecutionsResponseBody extends TeaModel {
         @NameInMap("Counters")
         public java.util.Map<String, ?> counters;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Category")
         public String category;
 
@@ -184,6 +184,9 @@ public class ListExecutionsResponseBody extends TeaModel {
 
         @NameInMap("ResourceStatus")
         public String resourceStatus;
+
+        @NameInMap("CurrentTasks")
+        public java.util.List<ListExecutionsResponseBodyExecutionsCurrentTasks> currentTasks;
 
         public static ListExecutionsResponseBodyExecutions build(java.util.Map<String, ?> map) throws Exception {
             ListExecutionsResponseBodyExecutions self = new ListExecutionsResponseBodyExecutions();
@@ -278,12 +281,12 @@ public class ListExecutionsResponseBody extends TeaModel {
             return this.createDate;
         }
 
-        public ListExecutionsResponseBodyExecutions setCurrentTasks(java.util.List<ListExecutionsResponseBodyExecutionsCurrentTasks> currentTasks) {
-            this.currentTasks = currentTasks;
+        public ListExecutionsResponseBodyExecutions setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
             return this;
         }
-        public java.util.List<ListExecutionsResponseBodyExecutionsCurrentTasks> getCurrentTasks() {
-            return this.currentTasks;
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
         public ListExecutionsResponseBodyExecutions setDescription(String description) {
@@ -294,12 +297,12 @@ public class ListExecutionsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListExecutionsResponseBodyExecutions setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
+        public ListExecutionsResponseBodyExecutions setLastTriggerTime(String lastTriggerTime) {
+            this.lastTriggerTime = lastTriggerTime;
             return this;
         }
-        public String getUpdateDate() {
-            return this.updateDate;
+        public String getLastTriggerTime() {
+            return this.lastTriggerTime;
         }
 
         public ListExecutionsResponseBodyExecutions setParentExecutionId(String parentExecutionId) {
@@ -308,14 +311,6 @@ public class ListExecutionsResponseBody extends TeaModel {
         }
         public String getParentExecutionId() {
             return this.parentExecutionId;
-        }
-
-        public ListExecutionsResponseBodyExecutions setLastTriggerTime(String lastTriggerTime) {
-            this.lastTriggerTime = lastTriggerTime;
-            return this;
-        }
-        public String getLastTriggerTime() {
-            return this.lastTriggerTime;
         }
 
         public ListExecutionsResponseBodyExecutions setLastTriggerStatus(String lastTriggerStatus) {
@@ -342,20 +337,20 @@ public class ListExecutionsResponseBody extends TeaModel {
             return this.outputs;
         }
 
-        public ListExecutionsResponseBodyExecutions setEndDate(String endDate) {
-            this.endDate = endDate;
-            return this;
-        }
-        public String getEndDate() {
-            return this.endDate;
-        }
-
         public ListExecutionsResponseBodyExecutions setExecutedBy(String executedBy) {
             this.executedBy = executedBy;
             return this;
         }
         public String getExecutedBy() {
             return this.executedBy;
+        }
+
+        public ListExecutionsResponseBodyExecutions setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
         }
 
         public ListExecutionsResponseBodyExecutions setIsParent(Boolean isParent) {
@@ -398,6 +393,14 @@ public class ListExecutionsResponseBody extends TeaModel {
             return this.counters;
         }
 
+        public ListExecutionsResponseBodyExecutions setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListExecutionsResponseBodyExecutions setCategory(String category) {
             this.category = category;
             return this;
@@ -428,6 +431,14 @@ public class ListExecutionsResponseBody extends TeaModel {
         }
         public String getResourceStatus() {
             return this.resourceStatus;
+        }
+
+        public ListExecutionsResponseBodyExecutions setCurrentTasks(java.util.List<ListExecutionsResponseBodyExecutionsCurrentTasks> currentTasks) {
+            this.currentTasks = currentTasks;
+            return this;
+        }
+        public java.util.List<ListExecutionsResponseBodyExecutionsCurrentTasks> getCurrentTasks() {
+            return this.currentTasks;
         }
 
     }

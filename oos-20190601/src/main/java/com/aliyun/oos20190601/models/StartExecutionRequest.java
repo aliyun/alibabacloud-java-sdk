@@ -40,6 +40,9 @@ public class StartExecutionRequest extends TeaModel {
     @NameInMap("TemplateContent")
     public String templateContent;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static StartExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
         StartExecutionRequest self = new StartExecutionRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class StartExecutionRequest extends TeaModel {
     }
     public String getTemplateContent() {
         return this.templateContent;
+    }
+
+    public StartExecutionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

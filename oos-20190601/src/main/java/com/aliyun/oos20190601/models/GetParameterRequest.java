@@ -13,6 +13,9 @@ public class GetParameterRequest extends TeaModel {
     @NameInMap("ParameterVersion")
     public Integer parameterVersion;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static GetParameterRequest build(java.util.Map<String, ?> map) throws Exception {
         GetParameterRequest self = new GetParameterRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetParameterRequest extends TeaModel {
     }
     public Integer getParameterVersion() {
         return this.parameterVersion;
+    }
+
+    public GetParameterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

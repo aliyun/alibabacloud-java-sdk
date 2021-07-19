@@ -40,6 +40,9 @@ public class StartExecutionShrinkRequest extends TeaModel {
     @NameInMap("TemplateContent")
     public String templateContent;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static StartExecutionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         StartExecutionShrinkRequest self = new StartExecutionShrinkRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class StartExecutionShrinkRequest extends TeaModel {
     }
     public String getTemplateContent() {
         return this.templateContent;
+    }
+
+    public StartExecutionShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

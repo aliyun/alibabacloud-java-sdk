@@ -67,6 +67,9 @@ public class ListExecutionsRequest extends TeaModel {
     @NameInMap("ResourceTemplateName")
     public String resourceTemplateName;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListExecutionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExecutionsRequest self = new ListExecutionsRequest();
         return TeaModel.build(map, self);
@@ -238,6 +241,14 @@ public class ListExecutionsRequest extends TeaModel {
     }
     public String getResourceTemplateName() {
         return this.resourceTemplateName;
+    }
+
+    public ListExecutionsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

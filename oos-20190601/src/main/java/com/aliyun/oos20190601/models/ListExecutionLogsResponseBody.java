@@ -10,14 +10,14 @@ public class ListExecutionLogsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ExecutionLogs")
-    public java.util.List<ListExecutionLogsResponseBodyExecutionLogs> executionLogs;
+    @NameInMap("IsTruncated")
+    public Boolean isTruncated;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    @NameInMap("IsTruncated")
-    public Boolean isTruncated;
+    @NameInMap("ExecutionLogs")
+    public java.util.List<ListExecutionLogsResponseBodyExecutionLogs> executionLogs;
 
     public static ListExecutionLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListExecutionLogsResponseBody self = new ListExecutionLogsResponseBody();
@@ -40,12 +40,12 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListExecutionLogsResponseBody setExecutionLogs(java.util.List<ListExecutionLogsResponseBodyExecutionLogs> executionLogs) {
-        this.executionLogs = executionLogs;
+    public ListExecutionLogsResponseBody setIsTruncated(Boolean isTruncated) {
+        this.isTruncated = isTruncated;
         return this;
     }
-    public java.util.List<ListExecutionLogsResponseBodyExecutionLogs> getExecutionLogs() {
-        return this.executionLogs;
+    public Boolean getIsTruncated() {
+        return this.isTruncated;
     }
 
     public ListExecutionLogsResponseBody setMaxResults(Integer maxResults) {
@@ -56,12 +56,12 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         return this.maxResults;
     }
 
-    public ListExecutionLogsResponseBody setIsTruncated(Boolean isTruncated) {
-        this.isTruncated = isTruncated;
+    public ListExecutionLogsResponseBody setExecutionLogs(java.util.List<ListExecutionLogsResponseBodyExecutionLogs> executionLogs) {
+        this.executionLogs = executionLogs;
         return this;
     }
-    public Boolean getIsTruncated() {
-        return this.isTruncated;
+    public java.util.List<ListExecutionLogsResponseBodyExecutionLogs> getExecutionLogs() {
+        return this.executionLogs;
     }
 
     public static class ListExecutionLogsResponseBodyExecutionLogs extends TeaModel {

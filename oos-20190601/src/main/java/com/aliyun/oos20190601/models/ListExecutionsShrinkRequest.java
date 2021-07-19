@@ -67,6 +67,9 @@ public class ListExecutionsShrinkRequest extends TeaModel {
     @NameInMap("ResourceTemplateName")
     public String resourceTemplateName;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListExecutionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExecutionsShrinkRequest self = new ListExecutionsShrinkRequest();
         return TeaModel.build(map, self);
@@ -238,6 +241,14 @@ public class ListExecutionsShrinkRequest extends TeaModel {
     }
     public String getResourceTemplateName() {
         return this.resourceTemplateName;
+    }
+
+    public ListExecutionsShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
