@@ -7,9 +7,6 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
 
-    @NameInMap("ChannelId")
-    public String channelId;
-
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -27,12 +24,6 @@ public class CreateStackRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("ActivityId")
-    public String activityId;
-
-    @NameInMap("OrderSource")
-    public String orderSource;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -64,6 +55,9 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<CreateStackRequestTags> tags;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackRequest self = new CreateStackRequest();
         return TeaModel.build(map, self);
@@ -75,14 +69,6 @@ public class CreateStackRequest extends TeaModel {
     }
     public Boolean getDisableRollback() {
         return this.disableRollback;
-    }
-
-    public CreateStackRequest setChannelId(String channelId) {
-        this.channelId = channelId;
-        return this;
-    }
-    public String getChannelId() {
-        return this.channelId;
     }
 
     public CreateStackRequest setTemplateBody(String templateBody) {
@@ -131,22 +117,6 @@ public class CreateStackRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CreateStackRequest setActivityId(String activityId) {
-        this.activityId = activityId;
-        return this;
-    }
-    public String getActivityId() {
-        return this.activityId;
-    }
-
-    public CreateStackRequest setOrderSource(String orderSource) {
-        this.orderSource = orderSource;
-        return this;
-    }
-    public String getOrderSource() {
-        return this.orderSource;
     }
 
     public CreateStackRequest setClientToken(String clientToken) {
@@ -227,6 +197,14 @@ public class CreateStackRequest extends TeaModel {
     }
     public java.util.List<CreateStackRequestTags> getTags() {
         return this.tags;
+    }
+
+    public CreateStackRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class ContinueCreateStackRequestParameters extends TeaModel {

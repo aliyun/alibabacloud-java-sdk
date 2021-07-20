@@ -37,6 +37,9 @@ public class CreateStackGroupRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.List<CreateStackGroupRequestParameters> parameters;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackGroupRequest self = new CreateStackGroupRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class CreateStackGroupRequest extends TeaModel {
     }
     public java.util.List<CreateStackGroupRequestParameters> getParameters() {
         return this.parameters;
+    }
+
+    public CreateStackGroupRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class CreateStackGroupRequestParameters extends TeaModel {

@@ -7,9 +7,6 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
-    @NameInMap("ChannelId")
-    public String channelId;
-
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
 
@@ -43,17 +40,8 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("TemplateBody")
     public String templateBody;
 
-    @NameInMap("UpdateAllowPolicy")
-    public String updateAllowPolicy;
-
     @NameInMap("TimeoutInMinutes")
     public Long timeoutInMinutes;
-
-    @NameInMap("ActivityId")
-    public String activityId;
-
-    @NameInMap("OrderSource")
-    public String orderSource;
 
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
@@ -96,14 +84,6 @@ public class CreateChangeSetRequest extends TeaModel {
     }
     public String getStackId() {
         return this.stackId;
-    }
-
-    public CreateChangeSetRequest setChannelId(String channelId) {
-        this.channelId = channelId;
-        return this;
-    }
-    public String getChannelId() {
-        return this.channelId;
     }
 
     public CreateChangeSetRequest setStackPolicyURL(String stackPolicyURL) {
@@ -194,36 +174,12 @@ public class CreateChangeSetRequest extends TeaModel {
         return this.templateBody;
     }
 
-    public CreateChangeSetRequest setUpdateAllowPolicy(String updateAllowPolicy) {
-        this.updateAllowPolicy = updateAllowPolicy;
-        return this;
-    }
-    public String getUpdateAllowPolicy() {
-        return this.updateAllowPolicy;
-    }
-
     public CreateChangeSetRequest setTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
     public Long getTimeoutInMinutes() {
         return this.timeoutInMinutes;
-    }
-
-    public CreateChangeSetRequest setActivityId(String activityId) {
-        this.activityId = activityId;
-        return this;
-    }
-    public String getActivityId() {
-        return this.activityId;
-    }
-
-    public CreateChangeSetRequest setOrderSource(String orderSource) {
-        this.orderSource = orderSource;
-        return this;
-    }
-    public String getOrderSource() {
-        return this.orderSource;
     }
 
     public CreateChangeSetRequest setDisableRollback(Boolean disableRollback) {

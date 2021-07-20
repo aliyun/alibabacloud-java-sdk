@@ -73,6 +73,12 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("ResourceProgress")
+    public GetStackResponseBodyResourceProgress resourceProgress;
+
     public static GetStackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetStackResponseBody self = new GetStackResponseBody();
         return TeaModel.build(map, self);
@@ -262,6 +268,22 @@ public class GetStackResponseBody extends TeaModel {
         return this.stackId;
     }
 
+    public GetStackResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public GetStackResponseBody setResourceProgress(GetStackResponseBodyResourceProgress resourceProgress) {
+        this.resourceProgress = resourceProgress;
+        return this;
+    }
+    public GetStackResponseBodyResourceProgress getResourceProgress() {
+        return this.resourceProgress;
+    }
+
     public static class GetStackResponseBodyParameters extends TeaModel {
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -318,6 +340,132 @@ public class GetStackResponseBody extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class GetStackResponseBodyResourceProgressInProgressResourceDetails extends TeaModel {
+        @NameInMap("ResourceName")
+        public String resourceName;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("ProgressValue")
+        public Float progressValue;
+
+        @NameInMap("ProgressTargetValue")
+        public Float progressTargetValue;
+
+        public static GetStackResponseBodyResourceProgressInProgressResourceDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetStackResponseBodyResourceProgressInProgressResourceDetails self = new GetStackResponseBodyResourceProgressInProgressResourceDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackResponseBodyResourceProgressInProgressResourceDetails setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        public GetStackResponseBodyResourceProgressInProgressResourceDetails setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public GetStackResponseBodyResourceProgressInProgressResourceDetails setProgressValue(Float progressValue) {
+            this.progressValue = progressValue;
+            return this;
+        }
+        public Float getProgressValue() {
+            return this.progressValue;
+        }
+
+        public GetStackResponseBodyResourceProgressInProgressResourceDetails setProgressTargetValue(Float progressTargetValue) {
+            this.progressTargetValue = progressTargetValue;
+            return this;
+        }
+        public Float getProgressTargetValue() {
+            return this.progressTargetValue;
+        }
+
+    }
+
+    public static class GetStackResponseBodyResourceProgress extends TeaModel {
+        @NameInMap("TotalResourceCount")
+        public Integer totalResourceCount;
+
+        @NameInMap("SuccessResourceCount")
+        public Integer successResourceCount;
+
+        @NameInMap("FailedResourceCount")
+        public Integer failedResourceCount;
+
+        @NameInMap("InProgressResourceCount")
+        public Integer inProgressResourceCount;
+
+        @NameInMap("PendingResourceCount")
+        public Integer pendingResourceCount;
+
+        @NameInMap("InProgressResourceDetails")
+        public java.util.List<GetStackResponseBodyResourceProgressInProgressResourceDetails> inProgressResourceDetails;
+
+        public static GetStackResponseBodyResourceProgress build(java.util.Map<String, ?> map) throws Exception {
+            GetStackResponseBodyResourceProgress self = new GetStackResponseBodyResourceProgress();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackResponseBodyResourceProgress setTotalResourceCount(Integer totalResourceCount) {
+            this.totalResourceCount = totalResourceCount;
+            return this;
+        }
+        public Integer getTotalResourceCount() {
+            return this.totalResourceCount;
+        }
+
+        public GetStackResponseBodyResourceProgress setSuccessResourceCount(Integer successResourceCount) {
+            this.successResourceCount = successResourceCount;
+            return this;
+        }
+        public Integer getSuccessResourceCount() {
+            return this.successResourceCount;
+        }
+
+        public GetStackResponseBodyResourceProgress setFailedResourceCount(Integer failedResourceCount) {
+            this.failedResourceCount = failedResourceCount;
+            return this;
+        }
+        public Integer getFailedResourceCount() {
+            return this.failedResourceCount;
+        }
+
+        public GetStackResponseBodyResourceProgress setInProgressResourceCount(Integer inProgressResourceCount) {
+            this.inProgressResourceCount = inProgressResourceCount;
+            return this;
+        }
+        public Integer getInProgressResourceCount() {
+            return this.inProgressResourceCount;
+        }
+
+        public GetStackResponseBodyResourceProgress setPendingResourceCount(Integer pendingResourceCount) {
+            this.pendingResourceCount = pendingResourceCount;
+            return this;
+        }
+        public Integer getPendingResourceCount() {
+            return this.pendingResourceCount;
+        }
+
+        public GetStackResponseBodyResourceProgress setInProgressResourceDetails(java.util.List<GetStackResponseBodyResourceProgressInProgressResourceDetails> inProgressResourceDetails) {
+            this.inProgressResourceDetails = inProgressResourceDetails;
+            return this;
+        }
+        public java.util.List<GetStackResponseBodyResourceProgressInProgressResourceDetails> getInProgressResourceDetails() {
+            return this.inProgressResourceDetails;
         }
 
     }

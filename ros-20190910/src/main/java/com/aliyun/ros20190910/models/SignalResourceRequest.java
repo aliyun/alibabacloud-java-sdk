@@ -19,9 +19,6 @@ public class SignalResourceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("Data")
-    public String data;
-
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
@@ -68,14 +65,6 @@ public class SignalResourceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public SignalResourceRequest setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
     public SignalResourceRequest setLogicalResourceId(String logicalResourceId) {

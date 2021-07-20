@@ -83,6 +83,9 @@ public class ListStackGroupsResponseBody extends TeaModel {
         @NameInMap("StackGroupName")
         public String stackGroupName;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         public static ListStackGroupsResponseBodyStackGroups build(java.util.Map<String, ?> map) throws Exception {
             ListStackGroupsResponseBodyStackGroups self = new ListStackGroupsResponseBodyStackGroups();
             return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
         public String getStackGroupName() {
             return this.stackGroupName;
+        }
+
+        public ListStackGroupsResponseBodyStackGroups setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

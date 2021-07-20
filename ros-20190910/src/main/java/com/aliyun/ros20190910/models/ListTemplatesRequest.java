@@ -19,6 +19,9 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<ListTemplatesRequestTag> tag;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesRequest self = new ListTemplatesRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListTemplatesRequest extends TeaModel {
     }
     public java.util.List<ListTemplatesRequestTag> getTag() {
         return this.tag;
+    }
+
+    public ListTemplatesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class ListTemplatesRequestTag extends TeaModel {

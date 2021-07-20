@@ -22,9 +22,6 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
 
-    @NameInMap("UpdateAllowPolicy")
-    public String updateAllowPolicy;
-
     @NameInMap("StackPolicyDuringUpdateURL")
     public String stackPolicyDuringUpdateURL;
 
@@ -39,9 +36,6 @@ public class UpdateStackRequest extends TeaModel {
 
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
-
-    @NameInMap("EnableRecover")
-    public Boolean enableRecover;
 
     @NameInMap("TemplateURL")
     public String templateURL;
@@ -117,14 +111,6 @@ public class UpdateStackRequest extends TeaModel {
         return this.stackPolicyURL;
     }
 
-    public UpdateStackRequest setUpdateAllowPolicy(String updateAllowPolicy) {
-        this.updateAllowPolicy = updateAllowPolicy;
-        return this;
-    }
-    public String getUpdateAllowPolicy() {
-        return this.updateAllowPolicy;
-    }
-
     public UpdateStackRequest setStackPolicyDuringUpdateURL(String stackPolicyDuringUpdateURL) {
         this.stackPolicyDuringUpdateURL = stackPolicyDuringUpdateURL;
         return this;
@@ -163,14 +149,6 @@ public class UpdateStackRequest extends TeaModel {
     }
     public Boolean getDisableRollback() {
         return this.disableRollback;
-    }
-
-    public UpdateStackRequest setEnableRecover(Boolean enableRecover) {
-        this.enableRecover = enableRecover;
-        return this;
-    }
-    public Boolean getEnableRecover() {
-        return this.enableRecover;
     }
 
     public UpdateStackRequest setTemplateURL(String templateURL) {

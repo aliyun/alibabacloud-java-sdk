@@ -137,6 +137,9 @@ public class ListStacksResponseBody extends TeaModel {
         @NameInMap("StackType")
         public String stackType;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         public static ListStacksResponseBodyStacks build(java.util.Map<String, ?> map) throws Exception {
             ListStacksResponseBodyStacks self = new ListStacksResponseBodyStacks();
             return TeaModel.build(map, self);
@@ -252,6 +255,14 @@ public class ListStacksResponseBody extends TeaModel {
         }
         public String getStackType() {
             return this.stackType;
+        }
+
+        public ListStacksResponseBodyStacks setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }
