@@ -10,6 +10,9 @@ public class GetStackGroupRequest extends TeaModel {
     @NameInMap("StackGroupName")
     public String stackGroupName;
 
+    @NameInMap("StackGroupId")
+    public String stackGroupId;
+
     public static GetStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStackGroupRequest self = new GetStackGroupRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetStackGroupRequest extends TeaModel {
     }
     public String getStackGroupName() {
         return this.stackGroupName;
+    }
+
+    public GetStackGroupRequest setStackGroupId(String stackGroupId) {
+        this.stackGroupId = stackGroupId;
+        return this;
+    }
+    public String getStackGroupId() {
+        return this.stackGroupId;
     }
 
 }

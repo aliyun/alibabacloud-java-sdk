@@ -196,6 +196,9 @@ public class GetStackGroupResponseBody extends TeaModel {
         @NameInMap("StackGroupDriftDetectionDetail")
         public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         public static GetStackGroupResponseBodyStackGroup build(java.util.Map<String, ?> map) throws Exception {
             GetStackGroupResponseBodyStackGroup self = new GetStackGroupResponseBodyStackGroup();
             return TeaModel.build(map, self);
@@ -271,6 +274,14 @@ public class GetStackGroupResponseBody extends TeaModel {
         }
         public GetStackGroupResponseBodyStackGroupStackGroupDriftDetectionDetail getStackGroupDriftDetectionDetail() {
             return this.stackGroupDriftDetectionDetail;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

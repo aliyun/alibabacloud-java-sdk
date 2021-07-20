@@ -13,6 +13,12 @@ public class GetStackRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OutputOption")
+    public String outputOption;
+
+    @NameInMap("ShowResourceProgress")
+    public String showResourceProgress;
+
     public static GetStackRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStackRequest self = new GetStackRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class GetStackRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public GetStackRequest setOutputOption(String outputOption) {
+        this.outputOption = outputOption;
+        return this;
+    }
+    public String getOutputOption() {
+        return this.outputOption;
+    }
+
+    public GetStackRequest setShowResourceProgress(String showResourceProgress) {
+        this.showResourceProgress = showResourceProgress;
+        return this;
+    }
+    public String getShowResourceProgress() {
+        return this.showResourceProgress;
     }
 
 }

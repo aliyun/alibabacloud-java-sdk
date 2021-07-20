@@ -52,6 +52,9 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("ShareType")
     public String shareType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static GetTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateResponseBody self = new GetTemplateResponseBody();
         return TeaModel.build(map, self);
@@ -183,6 +186,14 @@ public class GetTemplateResponseBody extends TeaModel {
     }
     public String getShareType() {
         return this.shareType;
+    }
+
+    public GetTemplateResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class GetTemplateResponseBodyPermissions extends TeaModel {

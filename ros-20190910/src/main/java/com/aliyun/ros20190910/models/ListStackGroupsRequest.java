@@ -16,6 +16,9 @@ public class ListStackGroupsRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListStackGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStackGroupsRequest self = new ListStackGroupsRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListStackGroupsRequest extends TeaModel {
     }
     public Long getPageNumber() {
         return this.pageNumber;
+    }
+
+    public ListStackGroupsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

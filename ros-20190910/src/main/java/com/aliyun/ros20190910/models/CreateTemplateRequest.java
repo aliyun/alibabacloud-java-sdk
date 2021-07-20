@@ -16,6 +16,9 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateRequest self = new CreateTemplateRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateTemplateRequest extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public CreateTemplateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
