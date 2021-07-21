@@ -91,6 +91,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public ExtractFaceAttributeCROResponse extractFaceAttributeCROWithOptions(ExtractFaceAttributeCRORequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ExtractFaceAttributeCRO", "2020-10-27", "HTTPS", "POST", "AK", "json", req, runtime), new ExtractFaceAttributeCROResponse());
+    }
+
+    public ExtractFaceAttributeCROResponse extractFaceAttributeCRO(ExtractFaceAttributeCRORequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.extractFaceAttributeCROWithOptions(request, runtime);
+    }
+
     public ExtractFaceFeatureCROResponse extractFaceFeatureCROWithOptions(ExtractFaceFeatureCRORequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -103,18 +116,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExtractFaceFeatureCROResponse extractFaceFeatureCRO(ExtractFaceFeatureCRORequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.extractFaceFeatureCROWithOptions(request, runtime);
-    }
-
-    public ExtractFaceAttributeCROResponse extractFaceAttributeCROWithOptions(ExtractFaceAttributeCRORequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ExtractFaceAttributeCRO", "2020-10-27", "HTTPS", "POST", "AK", "json", req, runtime), new ExtractFaceAttributeCROResponse());
-    }
-
-    public ExtractFaceAttributeCROResponse extractFaceAttributeCRO(ExtractFaceAttributeCRORequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.extractFaceAttributeCROWithOptions(request, runtime);
     }
 }
