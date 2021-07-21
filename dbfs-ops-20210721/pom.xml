@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dbfs_ops20210721</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <packaging>jar</packaging>
   <name>dbfs_ops20210721</name>
   <description>Alibaba Cloud dbfs-ops (20210721) SDK for Java

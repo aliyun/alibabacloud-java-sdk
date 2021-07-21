@@ -4,7 +4,6 @@ package com.aliyun.dbfs_ops20210721.models;
 import com.aliyun.tea.*;
 
 public class OperateResourceResponseBody extends TeaModel {
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
