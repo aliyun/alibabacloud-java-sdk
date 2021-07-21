@@ -16,10 +16,6 @@ public class FoundationVersion extends TeaModel {
     @NameInMap("name")
     public String name;
 
-    // platforms
-    @NameInMap("platforms")
-    public FoundationVersionPlatforms platforms;
-
     // status
     @NameInMap("status")
     public String status;
@@ -31,6 +27,10 @@ public class FoundationVersion extends TeaModel {
     // version
     @NameInMap("version")
     public String version;
+
+    // platforms
+    @NameInMap("platforms")
+    public java.util.List<Platform> platforms;
 
     public static FoundationVersion build(java.util.Map<String, ?> map) throws Exception {
         FoundationVersion self = new FoundationVersion();
@@ -61,14 +61,6 @@ public class FoundationVersion extends TeaModel {
         return this.name;
     }
 
-    public FoundationVersion setPlatforms(FoundationVersionPlatforms platforms) {
-        this.platforms = platforms;
-        return this;
-    }
-    public FoundationVersionPlatforms getPlatforms() {
-        return this.platforms;
-    }
-
     public FoundationVersion setStatus(String status) {
         this.status = status;
         return this;
@@ -93,36 +85,12 @@ public class FoundationVersion extends TeaModel {
         return this.version;
     }
 
-    public static class FoundationVersionPlatforms extends TeaModel {
-        // architecture
-        @NameInMap("architecture")
-        public String architecture;
-
-        // os
-        @NameInMap("os")
-        public String os;
-
-        public static FoundationVersionPlatforms build(java.util.Map<String, ?> map) throws Exception {
-            FoundationVersionPlatforms self = new FoundationVersionPlatforms();
-            return TeaModel.build(map, self);
-        }
-
-        public FoundationVersionPlatforms setArchitecture(String architecture) {
-            this.architecture = architecture;
-            return this;
-        }
-        public String getArchitecture() {
-            return this.architecture;
-        }
-
-        public FoundationVersionPlatforms setOs(String os) {
-            this.os = os;
-            return this;
-        }
-        public String getOs() {
-            return this.os;
-        }
-
+    public FoundationVersion setPlatforms(java.util.List<Platform> platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    public java.util.List<Platform> getPlatforms() {
+        return this.platforms;
     }
 
 }

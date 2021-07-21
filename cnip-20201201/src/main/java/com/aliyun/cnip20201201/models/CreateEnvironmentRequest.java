@@ -22,6 +22,9 @@ public class CreateEnvironmentRequest extends TeaModel {
     @NameInMap("vendorType")
     public String vendorType;
 
+    @NameInMap("productVersionUID")
+    public String productVersionUID;
+
     public static CreateEnvironmentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEnvironmentRequest self = new CreateEnvironmentRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CreateEnvironmentRequest extends TeaModel {
     }
     public String getVendorType() {
         return this.vendorType;
+    }
+
+    public CreateEnvironmentRequest setProductVersionUID(String productVersionUID) {
+        this.productVersionUID = productVersionUID;
+        return this;
+    }
+    public String getProductVersionUID() {
+        return this.productVersionUID;
     }
 
     public static class CreateEnvironmentRequestPlatform extends TeaModel {

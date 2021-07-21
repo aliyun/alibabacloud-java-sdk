@@ -4,10 +4,10 @@ package com.aliyun.cnip20201201.models;
 import com.aliyun.tea.*;
 
 public class DeleteProductResponseBody extends TeaModel {
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("errMsg")
+    public String errMsg;
 
-    @NameInMap("Success")
+    @NameInMap("success")
     public Boolean success;
 
     @NameInMap("errCode")
@@ -18,12 +18,12 @@ public class DeleteProductResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteProductResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public DeleteProductResponseBody setErrMsg(String errMsg) {
+        this.errMsg = errMsg;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrMsg() {
+        return this.errMsg;
     }
 
     public DeleteProductResponseBody setSuccess(Boolean success) {

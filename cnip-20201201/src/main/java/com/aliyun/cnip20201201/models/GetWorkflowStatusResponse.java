@@ -3,21 +3,21 @@ package com.aliyun.cnip20201201.models;
 
 import com.aliyun.tea.*;
 
-public class ListEnvironmentPackagesResponse extends TeaModel {
+public class GetWorkflowStatusResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListEnvironmentPackagesResponseBody body;
+    public GetWorkflowStatusResponseBody body;
 
-    public static ListEnvironmentPackagesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListEnvironmentPackagesResponse self = new ListEnvironmentPackagesResponse();
+    public static GetWorkflowStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetWorkflowStatusResponse self = new GetWorkflowStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListEnvironmentPackagesResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetWorkflowStatusResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ListEnvironmentPackagesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListEnvironmentPackagesResponse setBody(ListEnvironmentPackagesResponseBody body) {
+    public GetWorkflowStatusResponse setBody(GetWorkflowStatusResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListEnvironmentPackagesResponseBody getBody() {
+    public GetWorkflowStatusResponseBody getBody() {
         return this.body;
     }
 

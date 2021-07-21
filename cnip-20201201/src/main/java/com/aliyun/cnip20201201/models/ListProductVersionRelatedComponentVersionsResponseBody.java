@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductVersionRelatedComponentVersionsResponseBody extends TeaModel {
     @NameInMap("data")
-    public java.util.List<ProductComponentRelationDetail> data;
+    public ListProductVersionRelatedComponentVersionsResponseBodyData data;
 
     @NameInMap("errCode")
     public String errCode;
@@ -21,11 +21,11 @@ public class ListProductVersionRelatedComponentVersionsResponseBody extends TeaM
         return TeaModel.build(map, self);
     }
 
-    public ListProductVersionRelatedComponentVersionsResponseBody setData(java.util.List<ProductComponentRelationDetail> data) {
+    public ListProductVersionRelatedComponentVersionsResponseBody setData(ListProductVersionRelatedComponentVersionsResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<ProductComponentRelationDetail> getData() {
+    public ListProductVersionRelatedComponentVersionsResponseBodyData getData() {
         return this.data;
     }
 
@@ -51,6 +51,25 @@ public class ListProductVersionRelatedComponentVersionsResponseBody extends TeaM
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class ListProductVersionRelatedComponentVersionsResponseBodyData extends TeaModel {
+        @NameInMap("list")
+        public java.util.List<ProductComponentRelationDetail> list;
+
+        public static ListProductVersionRelatedComponentVersionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListProductVersionRelatedComponentVersionsResponseBodyData self = new ListProductVersionRelatedComponentVersionsResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProductVersionRelatedComponentVersionsResponseBodyData setList(java.util.List<ProductComponentRelationDetail> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ProductComponentRelationDetail> getList() {
+            return this.list;
+        }
+
     }
 
 }

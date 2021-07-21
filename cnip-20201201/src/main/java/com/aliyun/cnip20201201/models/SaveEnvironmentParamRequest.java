@@ -28,6 +28,12 @@ public class SaveEnvironmentParamRequest extends TeaModel {
     @NameInMap("value")
     public String value;
 
+    @NameInMap("notes")
+    public String notes;
+
+    @NameInMap("ProductVersionUID")
+    public String productVersionUID;
+
     public static SaveEnvironmentParamRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveEnvironmentParamRequest self = new SaveEnvironmentParamRequest();
         return TeaModel.build(map, self);
@@ -95,6 +101,22 @@ public class SaveEnvironmentParamRequest extends TeaModel {
     }
     public String getValue() {
         return this.value;
+    }
+
+    public SaveEnvironmentParamRequest setNotes(String notes) {
+        this.notes = notes;
+        return this;
+    }
+    public String getNotes() {
+        return this.notes;
+    }
+
+    public SaveEnvironmentParamRequest setProductVersionUID(String productVersionUID) {
+        this.productVersionUID = productVersionUID;
+        return this;
+    }
+    public String getProductVersionUID() {
+        return this.productVersionUID;
     }
 
 }

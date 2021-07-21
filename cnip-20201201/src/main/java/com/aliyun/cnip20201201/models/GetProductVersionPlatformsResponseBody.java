@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProductVersionPlatformsResponseBody extends TeaModel {
     @NameInMap("data")
-    public GetProductVersionPlatformsResponseBodyData data;
+    public java.util.List<Platform> data;
 
     @NameInMap("errCode")
     public String errCode;
@@ -21,11 +21,11 @@ public class GetProductVersionPlatformsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetProductVersionPlatformsResponseBody setData(GetProductVersionPlatformsResponseBodyData data) {
+    public GetProductVersionPlatformsResponseBody setData(java.util.List<Platform> data) {
         this.data = data;
         return this;
     }
-    public GetProductVersionPlatformsResponseBodyData getData() {
+    public java.util.List<Platform> getData() {
         return this.data;
     }
 
@@ -51,55 +51,6 @@ public class GetProductVersionPlatformsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class GetProductVersionPlatformsResponseBodyDataList extends TeaModel {
-        @NameInMap("architecture")
-        public String architecture;
-
-        @NameInMap("os")
-        public String os;
-
-        public static GetProductVersionPlatformsResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
-            GetProductVersionPlatformsResponseBodyDataList self = new GetProductVersionPlatformsResponseBodyDataList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetProductVersionPlatformsResponseBodyDataList setArchitecture(String architecture) {
-            this.architecture = architecture;
-            return this;
-        }
-        public String getArchitecture() {
-            return this.architecture;
-        }
-
-        public GetProductVersionPlatformsResponseBodyDataList setOs(String os) {
-            this.os = os;
-            return this;
-        }
-        public String getOs() {
-            return this.os;
-        }
-
-    }
-
-    public static class GetProductVersionPlatformsResponseBodyData extends TeaModel {
-        @NameInMap("list")
-        public java.util.List<GetProductVersionPlatformsResponseBodyDataList> list;
-
-        public static GetProductVersionPlatformsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetProductVersionPlatformsResponseBodyData self = new GetProductVersionPlatformsResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetProductVersionPlatformsResponseBodyData setList(java.util.List<GetProductVersionPlatformsResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<GetProductVersionPlatformsResponseBodyDataList> getList() {
-            return this.list;
-        }
-
     }
 
 }
