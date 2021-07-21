@@ -46,6 +46,9 @@ public class DispatchGameSlotRequest extends TeaModel {
     @NameInMap("Tags")
     public String tags;
 
+    @NameInMap("UserLevel")
+    public Integer userLevel;
+
     public static DispatchGameSlotRequest build(java.util.Map<String, ?> map) throws Exception {
         DispatchGameSlotRequest self = new DispatchGameSlotRequest();
         return TeaModel.build(map, self);
@@ -153,6 +156,14 @@ public class DispatchGameSlotRequest extends TeaModel {
     }
     public String getTags() {
         return this.tags;
+    }
+
+    public DispatchGameSlotRequest setUserLevel(Integer userLevel) {
+        this.userLevel = userLevel;
+        return this;
+    }
+    public Integer getUserLevel() {
+        return this.userLevel;
     }
 
 }
