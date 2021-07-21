@@ -19,6 +19,36 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public SubmitInternalPurchaseOrdersResponse submitInternalPurchaseOrdersWithOptions(SubmitInternalPurchaseOrdersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SubmitInternalPurchaseOrders", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new SubmitInternalPurchaseOrdersResponse());
+    }
+
+    public SubmitInternalPurchaseOrdersResponse submitInternalPurchaseOrders(SubmitInternalPurchaseOrdersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitInternalPurchaseOrdersWithOptions(request, runtime);
+    }
+
+    public SubmitInternalPurchaseChargeDataResponse submitInternalPurchaseChargeDataWithOptions(SubmitInternalPurchaseChargeDataRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SubmitInternalPurchaseChargeData", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new SubmitInternalPurchaseChargeDataResponse());
+    }
+
+    public SubmitInternalPurchaseChargeDataResponse submitInternalPurchaseChargeData(SubmitInternalPurchaseChargeDataRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitInternalPurchaseChargeDataWithOptions(request, runtime);
+    }
+
+    public SubmitInternalPurchaseReadyFlagResponse submitInternalPurchaseReadyFlagWithOptions(SubmitInternalPurchaseReadyFlagRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SubmitInternalPurchaseReadyFlag", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new SubmitInternalPurchaseReadyFlagResponse());
+    }
+
+    public SubmitInternalPurchaseReadyFlagResponse submitInternalPurchaseReadyFlag(SubmitInternalPurchaseReadyFlagRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitInternalPurchaseReadyFlagWithOptions(request, runtime);
+    }
+
     public GetGameStockResponse getGameStockWithOptions(GetGameStockRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetGameStock", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new GetGameStockResponse());
