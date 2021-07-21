@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventCountResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("SystemEventCounts")
-    public DescribeSystemEventCountResponseBodySystemEventCounts systemEventCounts;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("SystemEventCounts")
+    public DescribeSystemEventCountResponseBodySystemEventCounts systemEventCounts;
 
     public static DescribeSystemEventCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSystemEventCountResponseBody self = new DescribeSystemEventCountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSystemEventCountResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeSystemEventCountResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSystemEventCountResponseBody setSystemEventCounts(DescribeSystemEventCountResponseBodySystemEventCounts systemEventCounts) {
-        this.systemEventCounts = systemEventCounts;
-        return this;
-    }
-    public DescribeSystemEventCountResponseBodySystemEventCounts getSystemEventCounts() {
-        return this.systemEventCounts;
-    }
-
-    public DescribeSystemEventCountResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeSystemEventCountResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public DescribeSystemEventCountResponseBody setSystemEventCounts(DescribeSystemEventCountResponseBodySystemEventCounts systemEventCounts) {
+        this.systemEventCounts = systemEventCounts;
+        return this;
+    }
+    public DescribeSystemEventCountResponseBodySystemEventCounts getSystemEventCounts() {
+        return this.systemEventCounts;
     }
 
     public static class DescribeSystemEventCountResponseBodySystemEventCountsSystemEventCount extends TeaModel {

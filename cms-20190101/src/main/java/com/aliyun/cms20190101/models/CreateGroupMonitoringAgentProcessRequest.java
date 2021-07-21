@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("GroupId")
     public String groupId;
 
@@ -22,6 +25,14 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
     public static CreateGroupMonitoringAgentProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupMonitoringAgentProcessRequest self = new CreateGroupMonitoringAgentProcessRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGroupMonitoringAgentProcessRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateGroupMonitoringAgentProcessRequest setGroupId(String groupId) {
@@ -68,11 +79,11 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("Function")
-        public String function;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Function")
+        public String function;
 
         public static CreateGroupMonitoringAgentProcessRequestMatchExpress build(java.util.Map<String, ?> map) throws Exception {
             CreateGroupMonitoringAgentProcessRequestMatchExpress self = new CreateGroupMonitoringAgentProcessRequestMatchExpress();
@@ -87,20 +98,20 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
             return this.value;
         }
 
-        public CreateGroupMonitoringAgentProcessRequestMatchExpress setFunction(String function) {
-            this.function = function;
-            return this;
-        }
-        public String getFunction() {
-            return this.function;
-        }
-
         public CreateGroupMonitoringAgentProcessRequestMatchExpress setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateGroupMonitoringAgentProcessRequestMatchExpress setFunction(String function) {
+            this.function = function;
+            return this;
+        }
+        public String getFunction() {
+            return this.function;
         }
 
     }
@@ -121,11 +132,11 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         @NameInMap("EscalationsLevel")
         public String escalationsLevel;
 
-        @NameInMap("NoEffectiveInterval")
-        public String noEffectiveInterval;
-
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
+
+        @NameInMap("NoEffectiveInterval")
+        public String noEffectiveInterval;
 
         @NameInMap("Threshold")
         public String threshold;
@@ -178,20 +189,20 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
             return this.escalationsLevel;
         }
 
-        public CreateGroupMonitoringAgentProcessRequestAlertConfig setNoEffectiveInterval(String noEffectiveInterval) {
-            this.noEffectiveInterval = noEffectiveInterval;
-            return this;
-        }
-        public String getNoEffectiveInterval() {
-            return this.noEffectiveInterval;
-        }
-
         public CreateGroupMonitoringAgentProcessRequestAlertConfig setEffectiveInterval(String effectiveInterval) {
             this.effectiveInterval = effectiveInterval;
             return this;
         }
         public String getEffectiveInterval() {
             return this.effectiveInterval;
+        }
+
+        public CreateGroupMonitoringAgentProcessRequestAlertConfig setNoEffectiveInterval(String noEffectiveInterval) {
+            this.noEffectiveInterval = noEffectiveInterval;
+            return this;
+        }
+        public String getNoEffectiveInterval() {
+            return this.noEffectiveInterval;
         }
 
         public CreateGroupMonitoringAgentProcessRequestAlertConfig setThreshold(String threshold) {

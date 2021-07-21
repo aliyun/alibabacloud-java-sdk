@@ -4,12 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomMetricRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("MetricList")
     public java.util.List<PutCustomMetricRequestMetricList> metricList;
 
     public static PutCustomMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         PutCustomMetricRequest self = new PutCustomMetricRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutCustomMetricRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public PutCustomMetricRequest setMetricList(java.util.List<PutCustomMetricRequestMetricList> metricList) {

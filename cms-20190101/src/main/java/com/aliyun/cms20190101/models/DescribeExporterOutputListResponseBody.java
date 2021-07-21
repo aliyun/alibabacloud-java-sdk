@@ -7,6 +7,12 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -19,12 +25,6 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     @NameInMap("Datapoints")
     public DescribeExporterOutputListResponseBodyDatapoints datapoints;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static DescribeExporterOutputListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeExporterOutputListResponseBody self = new DescribeExporterOutputListResponseBody();
         return TeaModel.build(map, self);
@@ -36,6 +36,22 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeExporterOutputListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeExporterOutputListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeExporterOutputListResponseBody setMessage(String message) {
@@ -70,26 +86,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         return this.datapoints;
     }
 
-    public DescribeExporterOutputListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DescribeExporterOutputListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson extends TeaModel {
-        @NameInMap("as")
-        public String as;
-
         @NameInMap("ak")
         public String ak;
 
@@ -102,17 +99,12 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
         @NameInMap("logstore")
         public String logstore;
 
+        @NameInMap("as")
+        public String as;
+
         public static DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson build(java.util.Map<String, ?> map) throws Exception {
             DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson self = new DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson setAs(String as) {
-            this.as = as;
-            return this;
-        }
-        public String getAs() {
-            return this.as;
         }
 
         public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson setAk(String ak) {
@@ -147,24 +139,40 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             return this.logstore;
         }
 
+        public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson setAs(String as) {
+            this.as = as;
+            return this;
+        }
+        public String getAs() {
+            return this.as;
+        }
+
     }
 
     public static class DescribeExporterOutputListResponseBodyDatapointsDatapoint extends TeaModel {
+        @NameInMap("DestType")
+        public String destType;
+
         @NameInMap("CreateTime")
         public Long createTime;
-
-        @NameInMap("ConfigJson")
-        public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson configJson;
 
         @NameInMap("DestName")
         public String destName;
 
-        @NameInMap("DestType")
-        public String destType;
+        @NameInMap("ConfigJson")
+        public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson configJson;
 
         public static DescribeExporterOutputListResponseBodyDatapointsDatapoint build(java.util.Map<String, ?> map) throws Exception {
             DescribeExporterOutputListResponseBodyDatapointsDatapoint self = new DescribeExporterOutputListResponseBodyDatapointsDatapoint();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeExporterOutputListResponseBodyDatapointsDatapoint setDestType(String destType) {
+            this.destType = destType;
+            return this;
+        }
+        public String getDestType() {
+            return this.destType;
         }
 
         public DescribeExporterOutputListResponseBodyDatapointsDatapoint setCreateTime(Long createTime) {
@@ -175,14 +183,6 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeExporterOutputListResponseBodyDatapointsDatapoint setConfigJson(DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson configJson) {
-            this.configJson = configJson;
-            return this;
-        }
-        public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson getConfigJson() {
-            return this.configJson;
-        }
-
         public DescribeExporterOutputListResponseBodyDatapointsDatapoint setDestName(String destName) {
             this.destName = destName;
             return this;
@@ -191,12 +191,12 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
             return this.destName;
         }
 
-        public DescribeExporterOutputListResponseBodyDatapointsDatapoint setDestType(String destType) {
-            this.destType = destType;
+        public DescribeExporterOutputListResponseBodyDatapointsDatapoint setConfigJson(DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson configJson) {
+            this.configJson = configJson;
             return this;
         }
-        public String getDestType() {
-            return this.destType;
+        public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson getConfigJson() {
+            return this.configJson;
         }
 
     }

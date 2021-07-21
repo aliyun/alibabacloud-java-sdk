@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateDynamicTagGroupRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("TagKey")
     public String tagKey;
 
@@ -28,6 +31,14 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public static CreateDynamicTagGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDynamicTagGroupRequest self = new CreateDynamicTagGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDynamicTagGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateDynamicTagGroupRequest setTagKey(String tagKey) {

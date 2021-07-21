@@ -7,26 +7,26 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("Total")
     public Integer total;
 
     @NameInMap("Resources")
     public DescribeMonitorGroupsResponseBodyResources resources;
-
-    @NameInMap("Code")
-    public Integer code;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static DescribeMonitorGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupsResponseBody self = new DescribeMonitorGroupsResponseBody();
@@ -41,6 +41,22 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeMonitorGroupsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeMonitorGroupsResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
     public DescribeMonitorGroupsResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -49,20 +65,20 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribeMonitorGroupsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public DescribeMonitorGroupsResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeMonitorGroupsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeMonitorGroupsResponseBody setTotal(Integer total) {
@@ -79,22 +95,6 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     }
     public DescribeMonitorGroupsResponseBodyResources getResources() {
         return this.resources;
-    }
-
-    public DescribeMonitorGroupsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public DescribeMonitorGroupsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class DescribeMonitorGroupsResponseBodyResourcesResourceContactGroupsContactGroup extends TeaModel {
@@ -207,29 +207,11 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("BindUrl")
-        public String bindUrl;
-
-        @NameInMap("ServiceId")
-        public String serviceId;
-
-        @NameInMap("ContactGroups")
-        public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups;
-
-        @NameInMap("Tags")
-        public DescribeMonitorGroupsResponseBodyResourcesResourceTags tags;
-
-        @NameInMap("GroupFounderTagKey")
-        public String groupFounderTagKey;
-
-        @NameInMap("TemplateIds")
-        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds templateIds;
-
-        @NameInMap("GmtModified")
-        public Long gmtModified;
-
         @NameInMap("GroupFounderTagValue")
         public String groupFounderTagValue;
+
+        @NameInMap("BindUrl")
+        public String bindUrl;
 
         @NameInMap("GroupName")
         public String groupName;
@@ -237,11 +219,29 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public Long groupId;
 
+        @NameInMap("ServiceId")
+        public String serviceId;
+
         @NameInMap("DynamicTagRuleId")
         public String dynamicTagRuleId;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
+
+        @NameInMap("GroupFounderTagKey")
+        public String groupFounderTagKey;
+
+        @NameInMap("GmtModified")
+        public Long gmtModified;
+
+        @NameInMap("ContactGroups")
+        public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups;
+
+        @NameInMap("Tags")
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTags tags;
+
+        @NameInMap("TemplateIds")
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds templateIds;
 
         public static DescribeMonitorGroupsResponseBodyResourcesResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitorGroupsResponseBodyResourcesResource self = new DescribeMonitorGroupsResponseBodyResourcesResource();
@@ -256,68 +256,20 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeMonitorGroupsResponseBodyResourcesResource setBindUrl(String bindUrl) {
-            this.bindUrl = bindUrl;
-            return this;
-        }
-        public String getBindUrl() {
-            return this.bindUrl;
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setServiceId(String serviceId) {
-            this.serviceId = serviceId;
-            return this;
-        }
-        public String getServiceId() {
-            return this.serviceId;
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setContactGroups(DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups) {
-            this.contactGroups = contactGroups;
-            return this;
-        }
-        public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups getContactGroups() {
-            return this.contactGroups;
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setTags(DescribeMonitorGroupsResponseBodyResourcesResourceTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeMonitorGroupsResponseBodyResourcesResourceTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupFounderTagKey(String groupFounderTagKey) {
-            this.groupFounderTagKey = groupFounderTagKey;
-            return this;
-        }
-        public String getGroupFounderTagKey() {
-            return this.groupFounderTagKey;
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setTemplateIds(DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds templateIds) {
-            this.templateIds = templateIds;
-            return this;
-        }
-        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds getTemplateIds() {
-            return this.templateIds;
-        }
-
-        public DescribeMonitorGroupsResponseBodyResourcesResource setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
         public DescribeMonitorGroupsResponseBodyResourcesResource setGroupFounderTagValue(String groupFounderTagValue) {
             this.groupFounderTagValue = groupFounderTagValue;
             return this;
         }
         public String getGroupFounderTagValue() {
             return this.groupFounderTagValue;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setBindUrl(String bindUrl) {
+            this.bindUrl = bindUrl;
+            return this;
+        }
+        public String getBindUrl() {
+            return this.bindUrl;
         }
 
         public DescribeMonitorGroupsResponseBodyResourcesResource setGroupName(String groupName) {
@@ -336,6 +288,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        public DescribeMonitorGroupsResponseBodyResourcesResource setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
         public DescribeMonitorGroupsResponseBodyResourcesResource setDynamicTagRuleId(String dynamicTagRuleId) {
             this.dynamicTagRuleId = dynamicTagRuleId;
             return this;
@@ -350,6 +310,46 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
         public Long getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setGroupFounderTagKey(String groupFounderTagKey) {
+            this.groupFounderTagKey = groupFounderTagKey;
+            return this;
+        }
+        public String getGroupFounderTagKey() {
+            return this.groupFounderTagKey;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public Long getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setContactGroups(DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups contactGroups) {
+            this.contactGroups = contactGroups;
+            return this;
+        }
+        public DescribeMonitorGroupsResponseBodyResourcesResourceContactGroups getContactGroups() {
+            return this.contactGroups;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setTags(DescribeMonitorGroupsResponseBodyResourcesResourceTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setTemplateIds(DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds templateIds) {
+            this.templateIds = templateIds;
+            return this;
+        }
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds getTemplateIds() {
+            return this.templateIds;
         }
 
     }

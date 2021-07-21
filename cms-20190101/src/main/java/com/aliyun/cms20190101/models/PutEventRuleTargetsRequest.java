@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutEventRuleTargetsRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RuleName")
     public String ruleName;
 
@@ -25,6 +28,14 @@ public class PutEventRuleTargetsRequest extends TeaModel {
     public static PutEventRuleTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
         PutEventRuleTargetsRequest self = new PutEventRuleTargetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutEventRuleTargetsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public PutEventRuleTargetsRequest setRuleName(String ruleName) {
@@ -131,11 +142,11 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         @NameInMap("ContactGroupName")
         public String contactGroupName;
 
-        @NameInMap("Level")
-        public String level;
-
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Level")
+        public String level;
 
         public static PutEventRuleTargetsRequestContactParameters build(java.util.Map<String, ?> map) throws Exception {
             PutEventRuleTargetsRequestContactParameters self = new PutEventRuleTargetsRequestContactParameters();
@@ -150,20 +161,20 @@ public class PutEventRuleTargetsRequest extends TeaModel {
             return this.contactGroupName;
         }
 
-        public PutEventRuleTargetsRequestContactParameters setLevel(String level) {
-            this.level = level;
-            return this;
-        }
-        public String getLevel() {
-            return this.level;
-        }
-
         public PutEventRuleTargetsRequestContactParameters setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public PutEventRuleTargetsRequestContactParameters setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
         }
 
     }
@@ -213,11 +224,11 @@ public class PutEventRuleTargetsRequest extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
-        @NameInMap("Method")
-        public String method;
-
         @NameInMap("Url")
         public String url;
+
+        @NameInMap("Method")
+        public String method;
 
         @NameInMap("Id")
         public String id;
@@ -235,20 +246,20 @@ public class PutEventRuleTargetsRequest extends TeaModel {
             return this.protocol;
         }
 
-        public PutEventRuleTargetsRequestWebhookParameters setMethod(String method) {
-            this.method = method;
-            return this;
-        }
-        public String getMethod() {
-            return this.method;
-        }
-
         public PutEventRuleTargetsRequestWebhookParameters setUrl(String url) {
             this.url = url;
             return this;
         }
         public String getUrl() {
             return this.url;
+        }
+
+        public PutEventRuleTargetsRequestWebhookParameters setMethod(String method) {
+            this.method = method;
+            return this;
+        }
+        public String getMethod() {
+            return this.method;
         }
 
         public PutEventRuleTargetsRequestWebhookParameters setId(String id) {

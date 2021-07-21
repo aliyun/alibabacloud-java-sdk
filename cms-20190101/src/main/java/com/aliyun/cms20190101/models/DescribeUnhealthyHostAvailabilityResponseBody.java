@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
     public static DescribeUnhealthyHostAvailabilityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUnhealthyHostAvailabilityResponseBody self = new DescribeUnhealthyHostAvailabilityResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeUnhealthyHostAvailabilityResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeUnhealthyHostAvailabilityResponseBody setMessage(String message) {
@@ -38,14 +46,6 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeUnhealthyHostAvailabilityResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DescribeUnhealthyHostAvailabilityResponseBody setSuccess(Boolean success) {
@@ -84,23 +84,15 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
     }
 
     public static class DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance extends TeaModel {
-        @NameInMap("InstanceList")
-        public DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstanceInstanceList instanceList;
-
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("InstanceList")
+        public DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstanceInstanceList instanceList;
 
         public static DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance self = new DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance setInstanceList(DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstanceInstanceList instanceList) {
-            this.instanceList = instanceList;
-            return this;
-        }
-        public DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstanceInstanceList getInstanceList() {
-            return this.instanceList;
         }
 
         public DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance setId(Long id) {
@@ -109,6 +101,14 @@ public class DescribeUnhealthyHostAvailabilityResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance setInstanceList(DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstanceInstanceList instanceList) {
+            this.instanceList = instanceList;
+            return this;
+        }
+        public DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstanceInstanceList getInstanceList() {
+            return this.instanceList;
         }
 
     }

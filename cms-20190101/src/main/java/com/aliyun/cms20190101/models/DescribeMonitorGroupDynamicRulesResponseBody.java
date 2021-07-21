@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Resource")
-    public DescribeMonitorGroupDynamicRulesResponseBodyResource resource;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Resource")
+    public DescribeMonitorGroupDynamicRulesResponseBodyResource resource;
 
     public static DescribeMonitorGroupDynamicRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupDynamicRulesResponseBody self = new DescribeMonitorGroupDynamicRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitorGroupDynamicRulesResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public DescribeMonitorGroupDynamicRulesResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMonitorGroupDynamicRulesResponseBody setResource(DescribeMonitorGroupDynamicRulesResponseBodyResource resource) {
-        this.resource = resource;
-        return this;
-    }
-    public DescribeMonitorGroupDynamicRulesResponseBodyResource getResource() {
-        return this.resource;
-    }
-
-    public DescribeMonitorGroupDynamicRulesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public DescribeMonitorGroupDynamicRulesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeMonitorGroupDynamicRulesResponseBody setResource(DescribeMonitorGroupDynamicRulesResponseBodyResource resource) {
+        this.resource = resource;
+        return this;
+    }
+    public DescribeMonitorGroupDynamicRulesResponseBodyResource getResource() {
+        return this.resource;
     }
 
     public static class DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter extends TeaModel {
@@ -125,18 +125,26 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeMonitorGroupDynamicRulesResponseBodyResourceResource extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         @NameInMap("FilterRelation")
         public String filterRelation;
 
         @NameInMap("Filters")
         public DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFilters filters;
 
-        @NameInMap("Category")
-        public String category;
-
         public static DescribeMonitorGroupDynamicRulesResponseBodyResourceResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitorGroupDynamicRulesResponseBodyResourceResource self = new DescribeMonitorGroupDynamicRulesResponseBodyResourceResource();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorGroupDynamicRulesResponseBodyResourceResource setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeMonitorGroupDynamicRulesResponseBodyResourceResource setFilterRelation(String filterRelation) {
@@ -153,14 +161,6 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
         }
         public DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFilters getFilters() {
             return this.filters;
-        }
-
-        public DescribeMonitorGroupDynamicRulesResponseBodyResourceResource setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
         }
 
     }

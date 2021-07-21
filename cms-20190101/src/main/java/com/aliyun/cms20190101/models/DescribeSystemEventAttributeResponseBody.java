@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventAttributeResponseBody extends TeaModel {
-    @NameInMap("SystemEvents")
-    public DescribeSystemEventAttributeResponseBodySystemEvents systemEvents;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,23 +13,23 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("SystemEvents")
+    public DescribeSystemEventAttributeResponseBodySystemEvents systemEvents;
 
     public static DescribeSystemEventAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSystemEventAttributeResponseBody self = new DescribeSystemEventAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSystemEventAttributeResponseBody setSystemEvents(DescribeSystemEventAttributeResponseBodySystemEvents systemEvents) {
-        this.systemEvents = systemEvents;
+    public DescribeSystemEventAttributeResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public DescribeSystemEventAttributeResponseBodySystemEvents getSystemEvents() {
-        return this.systemEvents;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeSystemEventAttributeResponseBody setMessage(String message) {
@@ -48,20 +48,20 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSystemEventAttributeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeSystemEventAttributeResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public DescribeSystemEventAttributeResponseBody setSystemEvents(DescribeSystemEventAttributeResponseBodySystemEvents systemEvents) {
+        this.systemEvents = systemEvents;
+        return this;
+    }
+    public DescribeSystemEventAttributeResponseBodySystemEvents getSystemEvents() {
+        return this.systemEvents;
     }
 
     public static class DescribeSystemEventAttributeResponseBodySystemEventsSystemEvent extends TeaModel {

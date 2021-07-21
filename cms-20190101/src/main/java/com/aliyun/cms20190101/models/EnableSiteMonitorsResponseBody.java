@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableSiteMonitorsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public EnableSiteMonitorsResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("Data")
+    public EnableSiteMonitorsResponseBodyData data;
 
     public static EnableSiteMonitorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableSiteMonitorsResponseBody self = new EnableSiteMonitorsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EnableSiteMonitorsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public EnableSiteMonitorsResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class EnableSiteMonitorsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public EnableSiteMonitorsResponseBody setData(EnableSiteMonitorsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public EnableSiteMonitorsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public EnableSiteMonitorsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public EnableSiteMonitorsResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public EnableSiteMonitorsResponseBody setData(EnableSiteMonitorsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public EnableSiteMonitorsResponseBodyData getData() {
+        return this.data;
     }
 
     public static class EnableSiteMonitorsResponseBodyData extends TeaModel {

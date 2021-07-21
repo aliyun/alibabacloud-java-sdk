@@ -4,12 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventRuleAttributeRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RuleName")
     public String ruleName;
 
     public static DescribeEventRuleAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventRuleAttributeRequest self = new DescribeEventRuleAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEventRuleAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeEventRuleAttributeRequest setRuleName(String ruleName) {

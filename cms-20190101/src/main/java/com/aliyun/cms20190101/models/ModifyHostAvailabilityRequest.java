@@ -10,6 +10,9 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
     @NameInMap("AlertConfig")
     public ModifyHostAvailabilityRequestAlertConfig alertConfig;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("GroupId")
     public Long groupId;
 
@@ -47,6 +50,14 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
     }
     public ModifyHostAvailabilityRequestAlertConfig getAlertConfig() {
         return this.alertConfig;
+    }
+
+    public ModifyHostAvailabilityRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyHostAvailabilityRequest setGroupId(Long groupId) {
@@ -119,6 +130,12 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         @NameInMap("HttpNegative")
         public Boolean httpNegative;
 
+        @NameInMap("HttpHeader")
+        public String httpHeader;
+
+        @NameInMap("Interval")
+        public Integer interval;
+
         public static ModifyHostAvailabilityRequestTaskOption build(java.util.Map<String, ?> map) throws Exception {
             ModifyHostAvailabilityRequestTaskOption self = new ModifyHostAvailabilityRequestTaskOption();
             return TeaModel.build(map, self);
@@ -178,6 +195,22 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         }
         public Boolean getHttpNegative() {
             return this.httpNegative;
+        }
+
+        public ModifyHostAvailabilityRequestTaskOption setHttpHeader(String httpHeader) {
+            this.httpHeader = httpHeader;
+            return this;
+        }
+        public String getHttpHeader() {
+            return this.httpHeader;
+        }
+
+        public ModifyHostAvailabilityRequestTaskOption setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
         }
 
     }
@@ -246,11 +279,11 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
     }
 
     public static class ModifyHostAvailabilityRequestAlertConfigEscalationList extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("MetricName")
         public String metricName;
+
+        @NameInMap("Value")
+        public String value;
 
         @NameInMap("Times")
         public Integer times;
@@ -266,20 +299,20 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ModifyHostAvailabilityRequestAlertConfigEscalationList setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
         public ModifyHostAvailabilityRequestAlertConfigEscalationList setMetricName(String metricName) {
             this.metricName = metricName;
             return this;
         }
         public String getMetricName() {
             return this.metricName;
+        }
+
+        public ModifyHostAvailabilityRequestAlertConfigEscalationList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
         public ModifyHostAvailabilityRequestAlertConfigEscalationList setTimes(Integer times) {

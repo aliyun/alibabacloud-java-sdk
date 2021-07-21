@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMetricRuleTemplateRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Name")
     public String name;
 
@@ -16,6 +19,14 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
     public static CreateMetricRuleTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMetricRuleTemplateRequest self = new CreateMetricRuleTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMetricRuleTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateMetricRuleTemplateRequest setName(String name) {
@@ -153,11 +164,11 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         @NameInMap("Threshold")
         public String threshold;
 
-        @NameInMap("ComparisonOperator")
-        public String comparisonOperator;
-
         @NameInMap("Statistics")
         public String statistics;
+
+        @NameInMap("ComparisonOperator")
+        public String comparisonOperator;
 
         public static CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical build(java.util.Map<String, ?> map) throws Exception {
             CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical self = new CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical();
@@ -180,20 +191,20 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
             return this.threshold;
         }
 
-        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setComparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = comparisonOperator;
-            return this;
-        }
-        public String getComparisonOperator() {
-            return this.comparisonOperator;
-        }
-
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setStatistics(String statistics) {
             this.statistics = statistics;
             return this;
         }
         public String getStatistics() {
             return this.statistics;
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplatesEscalationsCritical setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
         }
 
     }
@@ -256,11 +267,11 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
-        @NameInMap("RuleName")
-        public String ruleName;
-
         @NameInMap("Period")
         public Integer period;
+
+        @NameInMap("RuleName")
+        public String ruleName;
 
         @NameInMap("Selector")
         public String selector;
@@ -305,20 +316,20 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
             return this.namespace;
         }
 
-        public CreateMetricRuleTemplateRequestAlertTemplates setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
-        }
-
         public CreateMetricRuleTemplateRequestAlertTemplates setPeriod(Integer period) {
             this.period = period;
             return this;
         }
         public Integer getPeriod() {
             return this.period;
+        }
+
+        public CreateMetricRuleTemplateRequestAlertTemplates setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
         }
 
         public CreateMetricRuleTemplateRequestAlertTemplates setSelector(String selector) {

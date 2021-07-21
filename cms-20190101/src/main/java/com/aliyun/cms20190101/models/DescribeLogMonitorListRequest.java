@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogMonitorListRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -19,6 +22,14 @@ public class DescribeLogMonitorListRequest extends TeaModel {
     public static DescribeLogMonitorListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogMonitorListRequest self = new DescribeLogMonitorListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLogMonitorListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeLogMonitorListRequest setPageNumber(Integer pageNumber) {

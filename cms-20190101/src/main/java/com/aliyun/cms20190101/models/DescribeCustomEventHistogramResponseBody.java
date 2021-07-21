@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventHistogramResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Success")
+    public String success;
 
     @NameInMap("EventHistograms")
     public DescribeCustomEventHistogramResponseBodyEventHistograms eventHistograms;
 
-    @NameInMap("Success")
-    public String success;
-
     public static DescribeCustomEventHistogramResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventHistogramResponseBody self = new DescribeCustomEventHistogramResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCustomEventHistogramResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeCustomEventHistogramResponseBody setMessage(String message) {
@@ -40,12 +48,12 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCustomEventHistogramResponseBody setCode(String code) {
-        this.code = code;
+    public DescribeCustomEventHistogramResponseBody setSuccess(String success) {
+        this.success = success;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getSuccess() {
+        return this.success;
     }
 
     public DescribeCustomEventHistogramResponseBody setEventHistograms(DescribeCustomEventHistogramResponseBodyEventHistograms eventHistograms) {
@@ -54,14 +62,6 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
     }
     public DescribeCustomEventHistogramResponseBodyEventHistograms getEventHistograms() {
         return this.eventHistograms;
-    }
-
-    public DescribeCustomEventHistogramResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
     }
 
     public static class DescribeCustomEventHistogramResponseBodyEventHistogramsEventHistogram extends TeaModel {

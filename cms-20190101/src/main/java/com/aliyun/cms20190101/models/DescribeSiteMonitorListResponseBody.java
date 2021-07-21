@@ -4,26 +4,26 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorListResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("Success")
+    public String success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public String success;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("SiteMonitors")
     public DescribeSiteMonitorListResponseBodySiteMonitors siteMonitors;
@@ -31,14 +31,6 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
     public static DescribeSiteMonitorListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorListResponseBody self = new DescribeSiteMonitorListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSiteMonitorListResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeSiteMonitorListResponseBody setRequestId(String requestId) {
@@ -49,28 +41,12 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSiteMonitorListResponseBody setMessage(String message) {
-        this.message = message;
+    public DescribeSiteMonitorListResponseBody setSuccess(String success) {
+        this.success = success;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeSiteMonitorListResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeSiteMonitorListResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getSuccess() {
+        return this.success;
     }
 
     public DescribeSiteMonitorListResponseBody setCode(String code) {
@@ -81,12 +57,36 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeSiteMonitorListResponseBody setSuccess(String success) {
-        this.success = success;
+    public DescribeSiteMonitorListResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeSiteMonitorListResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSiteMonitorListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSiteMonitorListResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeSiteMonitorListResponseBody setSiteMonitors(DescribeSiteMonitorListResponseBodySiteMonitors siteMonitors) {
@@ -104,17 +104,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         @NameInMap("request_format")
         public String requestFormat;
 
-        @NameInMap("expect_value")
-        public String expectValue;
-
         @NameInMap("response_content")
         public String responseContent;
 
-        @NameInMap("time_out")
-        public Long timeOut;
-
         @NameInMap("failure_rate")
         public Float failureRate;
+
+        @NameInMap("time_out")
+        public Long timeOut;
 
         @NameInMap("header")
         public String header;
@@ -122,11 +119,11 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         @NameInMap("cookie")
         public String cookie;
 
-        @NameInMap("ping_num")
-        public Integer pingNum;
-
         @NameInMap("port")
         public Integer port;
+
+        @NameInMap("ping_num")
+        public Integer pingNum;
 
         @NameInMap("authentication")
         public Integer authentication;
@@ -142,9 +139,6 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
         @NameInMap("username")
         public String username;
-
-        @NameInMap("traceroute")
-        public Long traceroute;
 
         @NameInMap("response_format")
         public String responseFormat;
@@ -176,14 +170,6 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             return this.requestFormat;
         }
 
-        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setExpectValue(String expectValue) {
-            this.expectValue = expectValue;
-            return this;
-        }
-        public String getExpectValue() {
-            return this.expectValue;
-        }
-
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setResponseContent(String responseContent) {
             this.responseContent = responseContent;
             return this;
@@ -192,20 +178,20 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             return this.responseContent;
         }
 
-        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setTimeOut(Long timeOut) {
-            this.timeOut = timeOut;
-            return this;
-        }
-        public Long getTimeOut() {
-            return this.timeOut;
-        }
-
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setFailureRate(Float failureRate) {
             this.failureRate = failureRate;
             return this;
         }
         public Float getFailureRate() {
             return this.failureRate;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setTimeOut(Long timeOut) {
+            this.timeOut = timeOut;
+            return this;
+        }
+        public Long getTimeOut() {
+            return this.timeOut;
         }
 
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setHeader(String header) {
@@ -224,20 +210,20 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             return this.cookie;
         }
 
-        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setPingNum(Integer pingNum) {
-            this.pingNum = pingNum;
-            return this;
-        }
-        public Integer getPingNum() {
-            return this.pingNum;
-        }
-
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setPort(Integer port) {
             this.port = port;
             return this;
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setPingNum(Integer pingNum) {
+            this.pingNum = pingNum;
+            return this;
+        }
+        public Integer getPingNum() {
+            return this.pingNum;
         }
 
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setAuthentication(Integer authentication) {
@@ -280,14 +266,6 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             return this.username;
         }
 
-        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setTraceroute(Long traceroute) {
-            this.traceroute = traceroute;
-            return this;
-        }
-        public Long getTraceroute() {
-            return this.traceroute;
-        }
-
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson setResponseFormat(String responseFormat) {
             this.responseFormat = responseFormat;
             return this;
@@ -327,9 +305,6 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         @NameInMap("TaskState")
         public String taskState;
 
-        @NameInMap("OptionsJson")
-        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson optionsJson;
-
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -341,6 +316,9 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
         @NameInMap("TaskId")
         public String taskId;
+
+        @NameInMap("OptionsJson")
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson optionsJson;
 
         public static DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor build(java.util.Map<String, ?> map) throws Exception {
             DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor self = new DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor();
@@ -379,14 +357,6 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
             return this.taskState;
         }
 
-        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor setOptionsJson(DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson optionsJson) {
-            this.optionsJson = optionsJson;
-            return this;
-        }
-        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson getOptionsJson() {
-            return this.optionsJson;
-        }
-
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -417,6 +387,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor setOptionsJson(DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson optionsJson) {
+            this.optionsJson = optionsJson;
+            return this;
+        }
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitorOptionsJson getOptionsJson() {
+            return this.optionsJson;
         }
 
     }

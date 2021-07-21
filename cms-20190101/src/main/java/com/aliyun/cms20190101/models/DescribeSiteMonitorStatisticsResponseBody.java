@@ -4,17 +4,17 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public String success;
@@ -22,6 +22,14 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
     public static DescribeSiteMonitorStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorStatisticsResponseBody self = new DescribeSiteMonitorStatisticsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSiteMonitorStatisticsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeSiteMonitorStatisticsResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribeSiteMonitorStatisticsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeSiteMonitorStatisticsResponseBody setData(String data) {
         this.data = data;
         return this;
@@ -48,12 +48,12 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DescribeSiteMonitorStatisticsResponseBody setCode(String code) {
-        this.code = code;
+    public DescribeSiteMonitorStatisticsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeSiteMonitorStatisticsResponseBody setSuccess(String success) {

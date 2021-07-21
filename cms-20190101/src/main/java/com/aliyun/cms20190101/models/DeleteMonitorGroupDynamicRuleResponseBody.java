@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupDynamicRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class DeleteMonitorGroupDynamicRuleResponseBody extends TeaModel {
     public static DeleteMonitorGroupDynamicRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupDynamicRuleResponseBody self = new DeleteMonitorGroupDynamicRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMonitorGroupDynamicRuleResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public DeleteMonitorGroupDynamicRuleResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class DeleteMonitorGroupDynamicRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteMonitorGroupDynamicRuleResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public DeleteMonitorGroupDynamicRuleResponseBody setSuccess(Boolean success) {

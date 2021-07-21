@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMetricRuleTargetsRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RuleId")
     public String ruleId;
 
@@ -13,6 +16,14 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
     public static PutMetricRuleTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
         PutMetricRuleTargetsRequest self = new PutMetricRuleTargetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutMetricRuleTargetsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public PutMetricRuleTargetsRequest setRuleId(String ruleId) {
@@ -32,18 +43,26 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
     }
 
     public static class PutMetricRuleTargetsRequestTargets extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
         @NameInMap("Arn")
         public String arn;
 
         @NameInMap("Level")
         public String level;
 
-        @NameInMap("Id")
-        public String id;
-
         public static PutMetricRuleTargetsRequestTargets build(java.util.Map<String, ?> map) throws Exception {
             PutMetricRuleTargetsRequestTargets self = new PutMetricRuleTargetsRequestTargets();
             return TeaModel.build(map, self);
+        }
+
+        public PutMetricRuleTargetsRequestTargets setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public PutMetricRuleTargetsRequestTargets setArn(String arn) {
@@ -60,14 +79,6 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
         }
         public String getLevel() {
             return this.level;
-        }
-
-        public PutMetricRuleTargetsRequestTargets setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
         }
 
     }

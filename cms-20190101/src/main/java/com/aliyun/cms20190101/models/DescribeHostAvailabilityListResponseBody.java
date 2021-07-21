@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostAvailabilityListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,18 +16,23 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
-    @NameInMap("TaskList")
-    public DescribeHostAvailabilityListResponseBodyTaskList taskList;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TaskList")
+    public DescribeHostAvailabilityListResponseBodyTaskList taskList;
 
     public static DescribeHostAvailabilityListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHostAvailabilityListResponseBody self = new DescribeHostAvailabilityListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeHostAvailabilityListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeHostAvailabilityListResponseBody setMessage(String message) {
@@ -51,22 +59,6 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeHostAvailabilityListResponseBody setTaskList(DescribeHostAvailabilityListResponseBodyTaskList taskList) {
-        this.taskList = taskList;
-        return this;
-    }
-    public DescribeHostAvailabilityListResponseBodyTaskList getTaskList() {
-        return this.taskList;
-    }
-
-    public DescribeHostAvailabilityListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeHostAvailabilityListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,9 +67,39 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         return this.success;
     }
 
+    public DescribeHostAvailabilityListResponseBody setTaskList(DescribeHostAvailabilityListResponseBodyTaskList taskList) {
+        this.taskList = taskList;
+        return this;
+    }
+    public DescribeHostAvailabilityListResponseBodyTaskList getTaskList() {
+        return this.taskList;
+    }
+
+    public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances extends TeaModel {
+        @NameInMap("Instance")
+        public java.util.List<String> instance;
+
+        public static DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances self = new DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances setInstance(java.util.List<String> instance) {
+            this.instance = instance;
+            return this;
+        }
+        public java.util.List<String> getInstance() {
+            return this.instance;
+        }
+
+    }
+
     public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption extends TeaModel {
         @NameInMap("HttpMethod")
         public String httpMethod;
+
+        @NameInMap("Interval")
+        public Integer interval;
 
         @NameInMap("HttpURI")
         public String httpURI;
@@ -108,6 +130,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
         public String getHttpMethod() {
             return this.httpMethod;
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
         }
 
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption setHttpURI(String httpURI) {
@@ -167,11 +197,11 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         @NameInMap("MetricName")
         public String metricName;
 
-        @NameInMap("Times")
-        public String times;
-
         @NameInMap("Operator")
         public String operator;
+
+        @NameInMap("Times")
+        public String times;
 
         @NameInMap("Aggregate")
         public String aggregate;
@@ -197,20 +227,20 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             return this.metricName;
         }
 
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList setTimes(String times) {
-            this.times = times;
-            return this;
-        }
-        public String getTimes() {
-            return this.times;
-        }
-
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList setOperator(String operator) {
             this.operator = operator;
             return this;
         }
         public String getOperator() {
             return this.operator;
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList setTimes(String times) {
+            this.times = times;
+            return this;
+        }
+        public String getTimes() {
+            return this.times;
         }
 
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationListEscalationList setAggregate(String aggregate) {
@@ -252,14 +282,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public Integer startTime;
 
+        @NameInMap("WebHook")
+        public String webHook;
+
         @NameInMap("NotifyType")
         public Integer notifyType;
 
         @NameInMap("EscalationList")
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfigEscalationList escalationList;
-
-        @NameInMap("WebHook")
-        public String webHook;
 
         public static DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig self = new DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig();
@@ -290,6 +320,14 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             return this.startTime;
         }
 
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig setWebHook(String webHook) {
+            this.webHook = webHook;
+            return this;
+        }
+        public String getWebHook() {
+            return this.webHook;
+        }
+
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig setNotifyType(Integer notifyType) {
             this.notifyType = notifyType;
             return this;
@@ -306,33 +344,6 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             return this.escalationList;
         }
 
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig setWebHook(String webHook) {
-            this.webHook = webHook;
-            return this;
-        }
-        public String getWebHook() {
-            return this.webHook;
-        }
-
-    }
-
-    public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances extends TeaModel {
-        @NameInMap("Instance")
-        public java.util.List<String> instance;
-
-        public static DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances self = new DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances setInstance(java.util.List<String> instance) {
-            this.instance = instance;
-            return this;
-        }
-        public java.util.List<String> getInstance() {
-            return this.instance;
-        }
-
     }
 
     public static class DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig extends TeaModel {
@@ -345,26 +356,26 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public Long groupId;
 
-        @NameInMap("TaskOption")
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption taskOption;
-
         @NameInMap("TaskName")
         public String taskName;
 
         @NameInMap("Disabled")
         public Boolean disabled;
 
-        @NameInMap("AlertConfig")
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig alertConfig;
-
         @NameInMap("TaskScope")
         public String taskScope;
+
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Instances")
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances instances;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("TaskOption")
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption taskOption;
+
+        @NameInMap("AlertConfig")
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig alertConfig;
 
         public static DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig self = new DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig();
@@ -395,14 +406,6 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig setTaskOption(DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption taskOption) {
-            this.taskOption = taskOption;
-            return this;
-        }
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption getTaskOption() {
-            return this.taskOption;
-        }
-
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig setTaskName(String taskName) {
             this.taskName = taskName;
             return this;
@@ -419,20 +422,20 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             return this.disabled;
         }
 
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig setAlertConfig(DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig alertConfig) {
-            this.alertConfig = alertConfig;
-            return this;
-        }
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig getAlertConfig() {
-            return this.alertConfig;
-        }
-
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig setTaskScope(String taskScope) {
             this.taskScope = taskScope;
             return this;
         }
         public String getTaskScope() {
             return this.taskScope;
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig setInstances(DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigInstances instances) {
@@ -443,12 +446,20 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             return this.instances;
         }
 
-        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig setId(Long id) {
-            this.id = id;
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig setTaskOption(DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption taskOption) {
+            this.taskOption = taskOption;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigTaskOption getTaskOption() {
+            return this.taskOption;
+        }
+
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfig setAlertConfig(DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig alertConfig) {
+            this.alertConfig = alertConfig;
+            return this;
+        }
+        public DescribeHostAvailabilityListResponseBodyTaskListNodeTaskConfigAlertConfig getAlertConfig() {
+            return this.alertConfig;
         }
 
     }

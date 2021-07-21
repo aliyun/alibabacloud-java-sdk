@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleCountResponseBody extends TeaModel {
-    @NameInMap("MetricRuleCount")
-    public DescribeMetricRuleCountResponseBodyMetricRuleCount metricRuleCount;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,23 +13,23 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("MetricRuleCount")
+    public DescribeMetricRuleCountResponseBodyMetricRuleCount metricRuleCount;
 
     public static DescribeMetricRuleCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleCountResponseBody self = new DescribeMetricRuleCountResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMetricRuleCountResponseBody setMetricRuleCount(DescribeMetricRuleCountResponseBodyMetricRuleCount metricRuleCount) {
-        this.metricRuleCount = metricRuleCount;
+    public DescribeMetricRuleCountResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public DescribeMetricRuleCountResponseBodyMetricRuleCount getMetricRuleCount() {
-        return this.metricRuleCount;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeMetricRuleCountResponseBody setMessage(String message) {
@@ -48,20 +48,20 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetricRuleCountResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeMetricRuleCountResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeMetricRuleCountResponseBody setMetricRuleCount(DescribeMetricRuleCountResponseBodyMetricRuleCount metricRuleCount) {
+        this.metricRuleCount = metricRuleCount;
+        return this;
+    }
+    public DescribeMetricRuleCountResponseBodyMetricRuleCount getMetricRuleCount() {
+        return this.metricRuleCount;
     }
 
     public static class DescribeMetricRuleCountResponseBodyMetricRuleCount extends TeaModel {

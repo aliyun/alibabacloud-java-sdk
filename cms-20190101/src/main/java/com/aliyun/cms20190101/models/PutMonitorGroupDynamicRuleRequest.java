@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("GroupId")
     public Long groupId;
 
@@ -13,6 +16,14 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     public static PutMonitorGroupDynamicRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         PutMonitorGroupDynamicRuleRequest self = new PutMonitorGroupDynamicRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutMonitorGroupDynamicRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public PutMonitorGroupDynamicRuleRequest setGroupId(Long groupId) {
@@ -35,11 +46,11 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("Function")
-        public String function;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Function")
+        public String function;
 
         public static PutMonitorGroupDynamicRuleRequestGroupRulesFilters build(java.util.Map<String, ?> map) throws Exception {
             PutMonitorGroupDynamicRuleRequestGroupRulesFilters self = new PutMonitorGroupDynamicRuleRequestGroupRulesFilters();
@@ -54,20 +65,20 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
             return this.value;
         }
 
-        public PutMonitorGroupDynamicRuleRequestGroupRulesFilters setFunction(String function) {
-            this.function = function;
-            return this;
-        }
-        public String getFunction() {
-            return this.function;
-        }
-
         public PutMonitorGroupDynamicRuleRequestGroupRulesFilters setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public PutMonitorGroupDynamicRuleRequestGroupRulesFilters setFunction(String function) {
+            this.function = function;
+            return this;
+        }
+        public String getFunction() {
+            return this.function;
         }
 
     }

@@ -34,6 +34,9 @@ public class DescribeMetricTopRequest extends TeaModel {
     @NameInMap("Express")
     public String express;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeMetricTopRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricTopRequest self = new DescribeMetricTopRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class DescribeMetricTopRequest extends TeaModel {
     }
     public String getExpress() {
         return this.express;
+    }
+
+    public DescribeMetricTopRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertLogHistogramResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AlertLogHistogramList")
-    public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("AlertLogHistogramList")
+    public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList;
 
     public static DescribeAlertLogHistogramResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertLogHistogramResponseBody self = new DescribeAlertLogHistogramResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAlertLogHistogramResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeAlertLogHistogramResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAlertLogHistogramResponseBody setAlertLogHistogramList(java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList) {
-        this.alertLogHistogramList = alertLogHistogramList;
-        return this;
-    }
-    public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> getAlertLogHistogramList() {
-        return this.alertLogHistogramList;
-    }
-
-    public DescribeAlertLogHistogramResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeAlertLogHistogramResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeAlertLogHistogramResponseBody setAlertLogHistogramList(java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList) {
+        this.alertLogHistogramList = alertLogHistogramList;
+        return this;
+    }
+    public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> getAlertLogHistogramList() {
+        return this.alertLogHistogramList;
     }
 
     public static class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList extends TeaModel {

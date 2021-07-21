@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventCountRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Name")
     public String name;
 
@@ -25,6 +28,14 @@ public class DescribeCustomEventCountRequest extends TeaModel {
     public static DescribeCustomEventCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventCountRequest self = new DescribeCustomEventCountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCustomEventCountRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeCustomEventCountRequest setName(String name) {

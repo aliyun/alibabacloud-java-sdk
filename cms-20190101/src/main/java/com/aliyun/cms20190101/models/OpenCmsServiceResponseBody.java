@@ -4,23 +4,15 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class OpenCmsServiceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static OpenCmsServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OpenCmsServiceResponseBody self = new OpenCmsServiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public OpenCmsServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public OpenCmsServiceResponseBody setOrderId(String orderId) {
@@ -29,6 +21,14 @@ public class OpenCmsServiceResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public OpenCmsServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

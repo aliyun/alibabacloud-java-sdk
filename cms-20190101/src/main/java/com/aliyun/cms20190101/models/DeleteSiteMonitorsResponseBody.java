@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteSiteMonitorsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public DeleteSiteMonitorsResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("Data")
+    public DeleteSiteMonitorsResponseBodyData data;
 
     public static DeleteSiteMonitorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSiteMonitorsResponseBody self = new DeleteSiteMonitorsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSiteMonitorsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteSiteMonitorsResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteSiteMonitorsResponseBody setData(DeleteSiteMonitorsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DeleteSiteMonitorsResponseBodyData getData() {
-        return this.data;
-    }
-
-    public DeleteSiteMonitorsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DeleteSiteMonitorsResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public DeleteSiteMonitorsResponseBody setData(DeleteSiteMonitorsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteSiteMonitorsResponseBodyData getData() {
+        return this.data;
     }
 
     public static class DeleteSiteMonitorsResponseBodyData extends TeaModel {

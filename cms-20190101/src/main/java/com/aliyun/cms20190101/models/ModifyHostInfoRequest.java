@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyHostInfoRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,14 @@ public class ModifyHostInfoRequest extends TeaModel {
     public static ModifyHostInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHostInfoRequest self = new ModifyHostInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyHostInfoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyHostInfoRequest setInstanceId(String instanceId) {

@@ -4,27 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AllProductInitMetricRuleList")
-    public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList;
-
     @NameInMap("Datapoints")
     public String datapoints;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("AllProductInitMetricRuleList")
+    public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList;
+
     public static DescribeProductsOfActiveMetricRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeProductsOfActiveMetricRuleResponseBody self = new DescribeProductsOfActiveMetricRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeProductsOfActiveMetricRuleResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public DescribeProductsOfActiveMetricRuleResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeProductsOfActiveMetricRuleResponseBody setAllProductInitMetricRuleList(DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList) {
-        this.allProductInitMetricRuleList = allProductInitMetricRuleList;
-        return this;
-    }
-    public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList getAllProductInitMetricRuleList() {
-        return this.allProductInitMetricRuleList;
-    }
-
     public DescribeProductsOfActiveMetricRuleResponseBody setDatapoints(String datapoints) {
         this.datapoints = datapoints;
         return this;
@@ -59,20 +59,20 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
         return this.datapoints;
     }
 
-    public DescribeProductsOfActiveMetricRuleResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public DescribeProductsOfActiveMetricRuleResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeProductsOfActiveMetricRuleResponseBody setAllProductInitMetricRuleList(DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList allProductInitMetricRuleList) {
+        this.allProductInitMetricRuleList = allProductInitMetricRuleList;
+        return this;
+    }
+    public DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleList getAllProductInitMetricRuleList() {
+        return this.allProductInitMetricRuleList;
     }
 
     public static class DescribeProductsOfActiveMetricRuleResponseBodyAllProductInitMetricRuleListAllProductInitMetricRuleAlertInitConfigListAlertInitConfig extends TeaModel {

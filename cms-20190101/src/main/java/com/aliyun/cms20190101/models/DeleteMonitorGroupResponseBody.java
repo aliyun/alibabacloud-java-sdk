@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupResponseBody extends TeaModel {
-    @NameInMap("Group")
-    public DeleteMonitorGroupResponseBodyGroup group;
+    @NameInMap("Code")
+    public Integer code;
 
     @NameInMap("Message")
     public String message;
@@ -13,23 +13,23 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Group")
+    public DeleteMonitorGroupResponseBodyGroup group;
 
     public static DeleteMonitorGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupResponseBody self = new DeleteMonitorGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMonitorGroupResponseBody setGroup(DeleteMonitorGroupResponseBodyGroup group) {
-        this.group = group;
+    public DeleteMonitorGroupResponseBody setCode(Integer code) {
+        this.code = code;
         return this;
     }
-    public DeleteMonitorGroupResponseBodyGroup getGroup() {
-        return this.group;
+    public Integer getCode() {
+        return this.code;
     }
 
     public DeleteMonitorGroupResponseBody setMessage(String message) {
@@ -48,20 +48,20 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteMonitorGroupResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public DeleteMonitorGroupResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DeleteMonitorGroupResponseBody setGroup(DeleteMonitorGroupResponseBodyGroup group) {
+        this.group = group;
+        return this;
+    }
+    public DeleteMonitorGroupResponseBodyGroup getGroup() {
+        return this.group;
     }
 
     public static class DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup extends TeaModel {

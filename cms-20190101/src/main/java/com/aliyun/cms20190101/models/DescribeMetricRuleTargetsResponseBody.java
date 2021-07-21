@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Targets")
-    public DescribeMetricRuleTargetsResponseBodyTargets targets;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Targets")
+    public DescribeMetricRuleTargetsResponseBodyTargets targets;
 
     public static DescribeMetricRuleTargetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleTargetsResponseBody self = new DescribeMetricRuleTargetsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricRuleTargetsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeMetricRuleTargetsResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetricRuleTargetsResponseBody setTargets(DescribeMetricRuleTargetsResponseBodyTargets targets) {
-        this.targets = targets;
-        return this;
-    }
-    public DescribeMetricRuleTargetsResponseBodyTargets getTargets() {
-        return this.targets;
-    }
-
-    public DescribeMetricRuleTargetsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeMetricRuleTargetsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeMetricRuleTargetsResponseBody setTargets(DescribeMetricRuleTargetsResponseBodyTargets targets) {
+        this.targets = targets;
+        return this;
+    }
+    public DescribeMetricRuleTargetsResponseBodyTargets getTargets() {
+        return this.targets;
     }
 
     public static class DescribeMetricRuleTargetsResponseBodyTargetsTarget extends TeaModel {

@@ -7,6 +7,12 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -19,12 +25,6 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     @NameInMap("Datapoints")
     public DescribeExporterRuleListResponseBodyDatapoints datapoints;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static DescribeExporterRuleListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeExporterRuleListResponseBody self = new DescribeExporterRuleListResponseBody();
         return TeaModel.build(map, self);
@@ -36,6 +36,22 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeExporterRuleListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeExporterRuleListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeExporterRuleListResponseBody setMessage(String message) {
@@ -68,22 +84,6 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     }
     public DescribeExporterRuleListResponseBodyDatapoints getDatapoints() {
         return this.datapoints;
-    }
-
-    public DescribeExporterRuleListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DescribeExporterRuleListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class DescribeExporterRuleListResponseBodyDatapointsDatapointDstName extends TeaModel {
@@ -121,9 +121,6 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
 
-        @NameInMap("DstName")
-        public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName;
-
         @NameInMap("Dimension")
         public String dimension;
 
@@ -132,6 +129,9 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
 
         @NameInMap("RuleName")
         public String ruleName;
+
+        @NameInMap("DstName")
+        public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName;
 
         public static DescribeExporterRuleListResponseBodyDatapointsDatapoint build(java.util.Map<String, ?> map) throws Exception {
             DescribeExporterRuleListResponseBodyDatapointsDatapoint self = new DescribeExporterRuleListResponseBodyDatapointsDatapoint();
@@ -178,14 +178,6 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
             return this.enabled;
         }
 
-        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setDstName(DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName) {
-            this.dstName = dstName;
-            return this;
-        }
-        public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName getDstName() {
-            return this.dstName;
-        }
-
         public DescribeExporterRuleListResponseBodyDatapointsDatapoint setDimension(String dimension) {
             this.dimension = dimension;
             return this;
@@ -208,6 +200,14 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public DescribeExporterRuleListResponseBodyDatapointsDatapoint setDstName(DescribeExporterRuleListResponseBodyDatapointsDatapointDstName dstName) {
+            this.dstName = dstName;
+            return this;
+        }
+        public DescribeExporterRuleListResponseBodyDatapointsDatapointDstName getDstName() {
+            return this.dstName;
         }
 
     }

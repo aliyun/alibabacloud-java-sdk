@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventRuleTargetsRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RuleName")
     public String ruleName;
 
@@ -13,6 +16,14 @@ public class DeleteEventRuleTargetsRequest extends TeaModel {
     public static DeleteEventRuleTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEventRuleTargetsRequest self = new DeleteEventRuleTargetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteEventRuleTargetsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteEventRuleTargetsRequest setRuleName(String ruleName) {

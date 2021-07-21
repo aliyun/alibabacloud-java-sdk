@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class RemoveTagsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Tag")
-    public RemoveTagsResponseBodyTag tag;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Tag")
+    public RemoveTagsResponseBodyTag tag;
 
     public static RemoveTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveTagsResponseBody self = new RemoveTagsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveTagsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public RemoveTagsResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class RemoveTagsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RemoveTagsResponseBody setTag(RemoveTagsResponseBodyTag tag) {
-        this.tag = tag;
-        return this;
-    }
-    public RemoveTagsResponseBodyTag getTag() {
-        return this.tag;
-    }
-
-    public RemoveTagsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public RemoveTagsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public RemoveTagsResponseBody setTag(RemoveTagsResponseBodyTag tag) {
+        this.tag = tag;
+        return this;
+    }
+    public RemoveTagsResponseBodyTag getTag() {
+        return this.tag;
     }
 
     public static class RemoveTagsResponseBodyTag extends TeaModel {

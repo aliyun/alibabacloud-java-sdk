@@ -4,11 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyMonitorGroupRequest extends TeaModel {
-    @NameInMap("BindUrls")
-    public String bindUrls;
-
-    @NameInMap("ServiceId")
-    public Long serviceId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("GroupId")
     public String groupId;
@@ -24,20 +21,12 @@ public class ModifyMonitorGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyMonitorGroupRequest setBindUrls(String bindUrls) {
-        this.bindUrls = bindUrls;
+    public ModifyMonitorGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getBindUrls() {
-        return this.bindUrls;
-    }
-
-    public ModifyMonitorGroupRequest setServiceId(Long serviceId) {
-        this.serviceId = serviceId;
-        return this;
-    }
-    public Long getServiceId() {
-        return this.serviceId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyMonitorGroupRequest setGroupId(String groupId) {

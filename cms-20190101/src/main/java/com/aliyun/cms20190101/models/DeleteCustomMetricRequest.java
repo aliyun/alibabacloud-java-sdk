@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomMetricRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("GroupId")
     public String groupId;
 
@@ -19,6 +22,14 @@ public class DeleteCustomMetricRequest extends TeaModel {
     public static DeleteCustomMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCustomMetricRequest self = new DeleteCustomMetricRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteCustomMetricRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteCustomMetricRequest setGroupId(String groupId) {

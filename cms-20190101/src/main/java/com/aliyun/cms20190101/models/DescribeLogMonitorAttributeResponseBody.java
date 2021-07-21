@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("LogMonitor")
-    public DescribeLogMonitorAttributeResponseBodyLogMonitor logMonitor;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("LogMonitor")
+    public DescribeLogMonitorAttributeResponseBodyLogMonitor logMonitor;
 
     public static DescribeLogMonitorAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogMonitorAttributeResponseBody self = new DescribeLogMonitorAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLogMonitorAttributeResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeLogMonitorAttributeResponseBody setMessage(String message) {
@@ -40,6 +48,14 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeLogMonitorAttributeResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public DescribeLogMonitorAttributeResponseBody setLogMonitor(DescribeLogMonitorAttributeResponseBodyLogMonitor logMonitor) {
         this.logMonitor = logMonitor;
         return this;
@@ -48,20 +64,67 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         return this.logMonitor;
     }
 
-    public DescribeLogMonitorAttributeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
+    public static class DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates extends TeaModel {
+        @NameInMap("Max")
+        public String max;
 
-    public DescribeLogMonitorAttributeResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+        @NameInMap("Min")
+        public String min;
+
+        @NameInMap("Function")
+        public String function;
+
+        @NameInMap("Alias")
+        public String alias;
+
+        @NameInMap("FieldName")
+        public String fieldName;
+
+        public static DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates self = new DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setMax(String max) {
+            this.max = max;
+            return this;
+        }
+        public String getMax() {
+            return this.max;
+        }
+
+        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setMin(String min) {
+            this.min = min;
+            return this;
+        }
+        public String getMin() {
+            return this.min;
+        }
+
+        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setFunction(String function) {
+            this.function = function;
+            return this;
+        }
+        public String getFunction() {
+            return this.function;
+        }
+
+        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
+        }
+
+        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setFieldName(String fieldName) {
+            this.fieldName = fieldName;
+            return this;
+        }
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
     }
 
     public static class DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter extends TeaModel {
@@ -105,96 +168,18 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates extends TeaModel {
-        @NameInMap("Max")
-        public String max;
-
-        @NameInMap("FieldName")
-        public String fieldName;
-
-        @NameInMap("Min")
-        public String min;
-
-        @NameInMap("Function")
-        public String function;
-
-        @NameInMap("Alias")
-        public String alias;
-
-        public static DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates self = new DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setMax(String max) {
-            this.max = max;
-            return this;
-        }
-        public String getMax() {
-            return this.max;
-        }
-
-        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setFieldName(String fieldName) {
-            this.fieldName = fieldName;
-            return this;
-        }
-        public String getFieldName() {
-            return this.fieldName;
-        }
-
-        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setMin(String min) {
-            this.min = min;
-            return this;
-        }
-        public String getMin() {
-            return this.min;
-        }
-
-        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setFunction(String function) {
-            this.function = function;
-            return this;
-        }
-        public String getFunction() {
-            return this.function;
-        }
-
-        public DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates setAlias(String alias) {
-            this.alias = alias;
-            return this;
-        }
-        public String getAlias() {
-            return this.alias;
-        }
-
-    }
-
     public static class DescribeLogMonitorAttributeResponseBodyLogMonitor extends TeaModel {
         @NameInMap("ValueFilterRelation")
         public String valueFilterRelation;
 
-        @NameInMap("MetricName")
-        public String metricName;
-
-        @NameInMap("ValueFilter")
-        public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter> valueFilter;
-
-        @NameInMap("SlsRegionId")
-        public String slsRegionId;
-
         @NameInMap("SlsLogstore")
         public String slsLogstore;
 
-        @NameInMap("Aggregates")
-        public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates> aggregates;
-
-        @NameInMap("Tumblingwindows")
-        public java.util.List<String> tumblingwindows;
+        @NameInMap("MetricName")
+        public String metricName;
 
         @NameInMap("GroupId")
         public Long groupId;
-
-        @NameInMap("Groupbys")
-        public java.util.List<String> groupbys;
 
         @NameInMap("LogId")
         public Long logId;
@@ -202,11 +187,26 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("MetricExpress")
         public String metricExpress;
 
+        @NameInMap("SlsRegionId")
+        public String slsRegionId;
+
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         @NameInMap("SlsProject")
         public String slsProject;
+
+        @NameInMap("Aggregates")
+        public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates> aggregates;
+
+        @NameInMap("ValueFilter")
+        public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter> valueFilter;
+
+        @NameInMap("Tumblingwindows")
+        public java.util.List<String> tumblingwindows;
+
+        @NameInMap("Groupbys")
+        public java.util.List<String> groupbys;
 
         public static DescribeLogMonitorAttributeResponseBodyLogMonitor build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogMonitorAttributeResponseBodyLogMonitor self = new DescribeLogMonitorAttributeResponseBodyLogMonitor();
@@ -221,30 +221,6 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             return this.valueFilterRelation;
         }
 
-        public DescribeLogMonitorAttributeResponseBodyLogMonitor setMetricName(String metricName) {
-            this.metricName = metricName;
-            return this;
-        }
-        public String getMetricName() {
-            return this.metricName;
-        }
-
-        public DescribeLogMonitorAttributeResponseBodyLogMonitor setValueFilter(java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter> valueFilter) {
-            this.valueFilter = valueFilter;
-            return this;
-        }
-        public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter> getValueFilter() {
-            return this.valueFilter;
-        }
-
-        public DescribeLogMonitorAttributeResponseBodyLogMonitor setSlsRegionId(String slsRegionId) {
-            this.slsRegionId = slsRegionId;
-            return this;
-        }
-        public String getSlsRegionId() {
-            return this.slsRegionId;
-        }
-
         public DescribeLogMonitorAttributeResponseBodyLogMonitor setSlsLogstore(String slsLogstore) {
             this.slsLogstore = slsLogstore;
             return this;
@@ -253,20 +229,12 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             return this.slsLogstore;
         }
 
-        public DescribeLogMonitorAttributeResponseBodyLogMonitor setAggregates(java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates> aggregates) {
-            this.aggregates = aggregates;
+        public DescribeLogMonitorAttributeResponseBodyLogMonitor setMetricName(String metricName) {
+            this.metricName = metricName;
             return this;
         }
-        public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates> getAggregates() {
-            return this.aggregates;
-        }
-
-        public DescribeLogMonitorAttributeResponseBodyLogMonitor setTumblingwindows(java.util.List<String> tumblingwindows) {
-            this.tumblingwindows = tumblingwindows;
-            return this;
-        }
-        public java.util.List<String> getTumblingwindows() {
-            return this.tumblingwindows;
+        public String getMetricName() {
+            return this.metricName;
         }
 
         public DescribeLogMonitorAttributeResponseBodyLogMonitor setGroupId(Long groupId) {
@@ -275,14 +243,6 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         }
         public Long getGroupId() {
             return this.groupId;
-        }
-
-        public DescribeLogMonitorAttributeResponseBodyLogMonitor setGroupbys(java.util.List<String> groupbys) {
-            this.groupbys = groupbys;
-            return this;
-        }
-        public java.util.List<String> getGroupbys() {
-            return this.groupbys;
         }
 
         public DescribeLogMonitorAttributeResponseBodyLogMonitor setLogId(Long logId) {
@@ -301,6 +261,14 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
             return this.metricExpress;
         }
 
+        public DescribeLogMonitorAttributeResponseBodyLogMonitor setSlsRegionId(String slsRegionId) {
+            this.slsRegionId = slsRegionId;
+            return this;
+        }
+        public String getSlsRegionId() {
+            return this.slsRegionId;
+        }
+
         public DescribeLogMonitorAttributeResponseBodyLogMonitor setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -315,6 +283,38 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         }
         public String getSlsProject() {
             return this.slsProject;
+        }
+
+        public DescribeLogMonitorAttributeResponseBodyLogMonitor setAggregates(java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates> aggregates) {
+            this.aggregates = aggregates;
+            return this;
+        }
+        public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates> getAggregates() {
+            return this.aggregates;
+        }
+
+        public DescribeLogMonitorAttributeResponseBodyLogMonitor setValueFilter(java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter> valueFilter) {
+            this.valueFilter = valueFilter;
+            return this;
+        }
+        public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter> getValueFilter() {
+            return this.valueFilter;
+        }
+
+        public DescribeLogMonitorAttributeResponseBodyLogMonitor setTumblingwindows(java.util.List<String> tumblingwindows) {
+            this.tumblingwindows = tumblingwindows;
+            return this;
+        }
+        public java.util.List<String> getTumblingwindows() {
+            return this.tumblingwindows;
+        }
+
+        public DescribeLogMonitorAttributeResponseBodyLogMonitor setGroupbys(java.util.List<String> groupbys) {
+            this.groupbys = groupbys;
+            return this;
+        }
+        public java.util.List<String> getGroupbys() {
+            return this.groupbys;
         }
 
     }

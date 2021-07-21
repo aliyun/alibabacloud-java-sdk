@@ -10,11 +10,8 @@ public class DescribeMetricListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Period")
-    public String period;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Datapoints")
     public String datapoints;
@@ -22,8 +19,11 @@ public class DescribeMetricListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Period")
+    public String period;
 
     public static DescribeMetricListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricListResponseBody self = new DescribeMetricListResponseBody();
@@ -46,20 +46,12 @@ public class DescribeMetricListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetricListResponseBody setMessage(String message) {
-        this.message = message;
+    public DescribeMetricListResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeMetricListResponseBody setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DescribeMetricListResponseBody setDatapoints(String datapoints) {
@@ -78,12 +70,20 @@ public class DescribeMetricListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeMetricListResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeMetricListResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeMetricListResponseBody setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
     }
 
 }

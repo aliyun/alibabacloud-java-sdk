@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyMonitorGroupInstancesRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("GroupId")
     public Long groupId;
 
@@ -13,6 +16,14 @@ public class ModifyMonitorGroupInstancesRequest extends TeaModel {
     public static ModifyMonitorGroupInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyMonitorGroupInstancesRequest self = new ModifyMonitorGroupInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyMonitorGroupInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyMonitorGroupInstancesRequest setGroupId(Long groupId) {

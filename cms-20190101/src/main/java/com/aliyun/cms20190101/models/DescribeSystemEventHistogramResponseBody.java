@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSystemEventHistogramResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("SystemEventHistograms")
-    public DescribeSystemEventHistogramResponseBodySystemEventHistograms systemEventHistograms;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("SystemEventHistograms")
+    public DescribeSystemEventHistogramResponseBodySystemEventHistograms systemEventHistograms;
 
     public static DescribeSystemEventHistogramResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSystemEventHistogramResponseBody self = new DescribeSystemEventHistogramResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSystemEventHistogramResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeSystemEventHistogramResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class DescribeSystemEventHistogramResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSystemEventHistogramResponseBody setSystemEventHistograms(DescribeSystemEventHistogramResponseBodySystemEventHistograms systemEventHistograms) {
-        this.systemEventHistograms = systemEventHistograms;
-        return this;
-    }
-    public DescribeSystemEventHistogramResponseBodySystemEventHistograms getSystemEventHistograms() {
-        return this.systemEventHistograms;
-    }
-
-    public DescribeSystemEventHistogramResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeSystemEventHistogramResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public DescribeSystemEventHistogramResponseBody setSystemEventHistograms(DescribeSystemEventHistogramResponseBodySystemEventHistograms systemEventHistograms) {
+        this.systemEventHistograms = systemEventHistograms;
+        return this;
+    }
+    public DescribeSystemEventHistogramResponseBodySystemEventHistograms getSystemEventHistograms() {
+        return this.systemEventHistograms;
     }
 
     public static class DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram extends TeaModel {

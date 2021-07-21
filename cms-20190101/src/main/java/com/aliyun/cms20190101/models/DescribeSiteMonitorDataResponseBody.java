@@ -7,20 +7,20 @@ public class DescribeSiteMonitorDataResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public String data;
+    @NameInMap("Success")
+    public String success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public String success;
+    @NameInMap("Message")
+    public String message;
 
     public static DescribeSiteMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorDataResponseBody self = new DescribeSiteMonitorDataResponseBody();
@@ -35,6 +35,14 @@ public class DescribeSiteMonitorDataResponseBody extends TeaModel {
         return this.nextToken;
     }
 
+    public DescribeSiteMonitorDataResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
     public DescribeSiteMonitorDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -43,20 +51,12 @@ public class DescribeSiteMonitorDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSiteMonitorDataResponseBody setMessage(String message) {
-        this.message = message;
+    public DescribeSiteMonitorDataResponseBody setSuccess(String success) {
+        this.success = success;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeSiteMonitorDataResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
+    public String getSuccess() {
+        return this.success;
     }
 
     public DescribeSiteMonitorDataResponseBody setCode(String code) {
@@ -67,12 +67,12 @@ public class DescribeSiteMonitorDataResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeSiteMonitorDataResponseBody setSuccess(String success) {
-        this.success = success;
+    public DescribeSiteMonitorDataResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
     }
 
 }

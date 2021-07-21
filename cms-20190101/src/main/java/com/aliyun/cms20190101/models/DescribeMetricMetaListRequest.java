@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Namespace")
     public String namespace;
 
@@ -22,6 +25,14 @@ public class DescribeMetricMetaListRequest extends TeaModel {
     public static DescribeMetricMetaListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricMetaListRequest self = new DescribeMetricMetaListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricMetaListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeMetricMetaListRequest setNamespace(String namespace) {

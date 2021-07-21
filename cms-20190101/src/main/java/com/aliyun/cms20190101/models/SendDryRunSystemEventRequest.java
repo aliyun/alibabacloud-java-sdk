@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class SendDryRunSystemEventRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Product")
     public String product;
 
@@ -19,6 +22,14 @@ public class SendDryRunSystemEventRequest extends TeaModel {
     public static SendDryRunSystemEventRequest build(java.util.Map<String, ?> map) throws Exception {
         SendDryRunSystemEventRequest self = new SendDryRunSystemEventRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendDryRunSystemEventRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SendDryRunSystemEventRequest setProduct(String product) {

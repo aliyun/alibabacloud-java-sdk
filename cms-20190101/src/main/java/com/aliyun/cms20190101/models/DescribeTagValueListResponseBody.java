@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagValueListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class DescribeTagValueListResponseBody extends TeaModel {
     public static DescribeTagValueListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagValueListResponseBody self = new DescribeTagValueListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTagValueListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeTagValueListResponseBody setMessage(String message) {
@@ -38,14 +46,6 @@ public class DescribeTagValueListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeTagValueListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DescribeTagValueListResponseBody setSuccess(Boolean success) {

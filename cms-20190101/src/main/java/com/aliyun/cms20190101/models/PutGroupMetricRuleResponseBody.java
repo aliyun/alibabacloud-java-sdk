@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutGroupMetricRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
     public static PutGroupMetricRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutGroupMetricRuleResponseBody self = new PutGroupMetricRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PutGroupMetricRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public PutGroupMetricRuleResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public PutGroupMetricRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public PutGroupMetricRuleResponseBody setSuccess(Boolean success) {

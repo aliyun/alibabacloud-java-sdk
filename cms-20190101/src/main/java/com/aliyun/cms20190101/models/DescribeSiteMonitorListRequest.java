@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorListRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("TaskId")
     public String taskId;
 
@@ -22,6 +25,14 @@ public class DescribeSiteMonitorListRequest extends TeaModel {
     public static DescribeSiteMonitorListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorListRequest self = new DescribeSiteMonitorListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSiteMonitorListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSiteMonitorListRequest setTaskId(String taskId) {

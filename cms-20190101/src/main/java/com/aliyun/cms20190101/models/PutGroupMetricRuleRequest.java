@@ -28,6 +28,9 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     @NameInMap("Dimensions")
     public String dimensions;
 
+    @NameInMap("ExtraDimensionJson")
+    public String extraDimensionJson;
+
     @NameInMap("EffectiveInterval")
     public String effectiveInterval;
 
@@ -119,6 +122,14 @@ public class PutGroupMetricRuleRequest extends TeaModel {
     }
     public String getDimensions() {
         return this.dimensions;
+    }
+
+    public PutGroupMetricRuleRequest setExtraDimensionJson(String extraDimensionJson) {
+        this.extraDimensionJson = extraDimensionJson;
+        return this;
+    }
+    public String getExtraDimensionJson() {
+        return this.extraDimensionJson;
     }
 
     public PutGroupMetricRuleRequest setEffectiveInterval(String effectiveInterval) {

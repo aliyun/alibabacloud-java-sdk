@@ -7,6 +7,12 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -22,12 +28,6 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     @NameInMap("Resources")
     public DescribeProjectMetaResponseBodyResources resources;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static DescribeProjectMetaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeProjectMetaResponseBody self = new DescribeProjectMetaResponseBody();
         return TeaModel.build(map, self);
@@ -39,6 +39,22 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeProjectMetaResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeProjectMetaResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeProjectMetaResponseBody setMessage(String message) {
@@ -81,35 +97,27 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         return this.resources;
     }
 
-    public DescribeProjectMetaResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DescribeProjectMetaResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static class DescribeProjectMetaResponseBodyResourcesResource extends TeaModel {
+        @NameInMap("Namespace")
+        public String namespace;
+
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Labels")
         public String labels;
 
-        @NameInMap("Namespace")
-        public String namespace;
-
         public static DescribeProjectMetaResponseBodyResourcesResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeProjectMetaResponseBodyResourcesResource self = new DescribeProjectMetaResponseBodyResourcesResource();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeProjectMetaResponseBodyResourcesResource setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public DescribeProjectMetaResponseBodyResourcesResource setDescription(String description) {
@@ -126,14 +134,6 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
         }
         public String getLabels() {
             return this.labels;
-        }
-
-        public DescribeProjectMetaResponseBodyResourcesResource setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventAttributeRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Name")
     public String name;
 
@@ -31,6 +34,14 @@ public class DescribeCustomEventAttributeRequest extends TeaModel {
     public static DescribeCustomEventAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventAttributeRequest self = new DescribeCustomEventAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCustomEventAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeCustomEventAttributeRequest setName(String name) {

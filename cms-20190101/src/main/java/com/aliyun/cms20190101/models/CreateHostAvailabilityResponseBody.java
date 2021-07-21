@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateHostAvailabilityResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public Long taskId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,8 +13,8 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("TaskId")
+    public Long taskId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -24,12 +24,12 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateHostAvailabilityResponseBody setTaskId(Long taskId) {
-        this.taskId = taskId;
+    public CreateHostAvailabilityResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Long getTaskId() {
-        return this.taskId;
+    public String getCode() {
+        return this.code;
     }
 
     public CreateHostAvailabilityResponseBody setMessage(String message) {
@@ -48,12 +48,12 @@ public class CreateHostAvailabilityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateHostAvailabilityResponseBody setCode(String code) {
-        this.code = code;
+    public CreateHostAvailabilityResponseBody setTaskId(Long taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Long getTaskId() {
+        return this.taskId;
     }
 
     public CreateHostAvailabilityResponseBody setSuccess(Boolean success) {
