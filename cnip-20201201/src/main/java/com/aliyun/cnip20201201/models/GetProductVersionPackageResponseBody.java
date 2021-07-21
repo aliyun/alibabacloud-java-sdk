@@ -54,20 +54,31 @@ public class GetProductVersionPackageResponseBody extends TeaModel {
     }
 
     public static class GetProductVersionPackageResponseBodyData extends TeaModel {
-        @NameInMap("packageURL")
-        public String packageURL;
+        @NameInMap("packageUID")
+        public String packageUID;
+
+        @NameInMap("packageStatus")
+        public String packageStatus;
 
         public static GetProductVersionPackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetProductVersionPackageResponseBodyData self = new GetProductVersionPackageResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetProductVersionPackageResponseBodyData setPackageURL(String packageURL) {
-            this.packageURL = packageURL;
+        public GetProductVersionPackageResponseBodyData setPackageUID(String packageUID) {
+            this.packageUID = packageUID;
             return this;
         }
-        public String getPackageURL() {
-            return this.packageURL;
+        public String getPackageUID() {
+            return this.packageUID;
+        }
+
+        public GetProductVersionPackageResponseBodyData setPackageStatus(String packageStatus) {
+            this.packageStatus = packageStatus;
+            return this;
+        }
+        public String getPackageStatus() {
+            return this.packageStatus;
         }
 
     }

@@ -10,6 +10,12 @@ public class ListProductVersionsRequest extends TeaModel {
     @NameInMap("platforms")
     public java.util.List<ListProductVersionsRequestPlatforms> platforms;
 
+    @NameInMap("pageNum")
+    public String pageNum;
+
+    @NameInMap("pageSize")
+    public String pageSize;
+
     public static ListProductVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductVersionsRequest self = new ListProductVersionsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +35,22 @@ public class ListProductVersionsRequest extends TeaModel {
     }
     public java.util.List<ListProductVersionsRequestPlatforms> getPlatforms() {
         return this.platforms;
+    }
+
+    public ListProductVersionsRequest setPageNum(String pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public String getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListProductVersionsRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     public static class ListProductVersionsRequestPlatforms extends TeaModel {

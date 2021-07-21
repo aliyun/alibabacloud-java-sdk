@@ -16,6 +16,13 @@ public class ListEnvironmentParamsRequest extends TeaModel {
     @NameInMap("fuzzy")
     public String fuzzy;
 
+    // 组件和全局类型字段
+    @NameInMap("paramType")
+    public String paramType;
+
+    @NameInMap("productVersionUID")
+    public String productVersionUID;
+
     public static ListEnvironmentParamsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEnvironmentParamsRequest self = new ListEnvironmentParamsRequest();
         return TeaModel.build(map, self);
@@ -51,6 +58,22 @@ public class ListEnvironmentParamsRequest extends TeaModel {
     }
     public String getFuzzy() {
         return this.fuzzy;
+    }
+
+    public ListEnvironmentParamsRequest setParamType(String paramType) {
+        this.paramType = paramType;
+        return this;
+    }
+    public String getParamType() {
+        return this.paramType;
+    }
+
+    public ListEnvironmentParamsRequest setProductVersionUID(String productVersionUID) {
+        this.productVersionUID = productVersionUID;
+        return this;
+    }
+    public String getProductVersionUID() {
+        return this.productVersionUID;
     }
 
 }

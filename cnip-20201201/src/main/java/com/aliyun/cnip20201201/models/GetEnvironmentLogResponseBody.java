@@ -54,9 +54,15 @@ public class GetEnvironmentLogResponseBody extends TeaModel {
     }
 
     public static class GetEnvironmentLogResponseBodyData extends TeaModel {
+        // end 为true，代表日志停止更新
         @NameInMap("end")
         public Boolean end;
 
+        // deprecated。兼容历史日志数据
+        @NameInMap("oldMessage")
+        public String oldMessage;
+
+        // 日志数据
         @NameInMap("message")
         public String message;
 
@@ -71,6 +77,14 @@ public class GetEnvironmentLogResponseBody extends TeaModel {
         }
         public Boolean getEnd() {
             return this.end;
+        }
+
+        public GetEnvironmentLogResponseBodyData setOldMessage(String oldMessage) {
+            this.oldMessage = oldMessage;
+            return this;
+        }
+        public String getOldMessage() {
+            return this.oldMessage;
         }
 
         public GetEnvironmentLogResponseBodyData setMessage(String message) {

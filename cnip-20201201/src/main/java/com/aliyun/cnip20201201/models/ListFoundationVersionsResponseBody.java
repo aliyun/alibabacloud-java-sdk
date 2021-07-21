@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFoundationVersionsResponseBody extends TeaModel {
     @NameInMap("data")
-    public java.util.List<FoundationVersion> data;
+    public ListFoundationVersionsResponseBodyData data;
 
     @NameInMap("errCode")
     public String errCode;
@@ -21,11 +21,11 @@ public class ListFoundationVersionsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListFoundationVersionsResponseBody setData(java.util.List<FoundationVersion> data) {
+    public ListFoundationVersionsResponseBody setData(ListFoundationVersionsResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<FoundationVersion> getData() {
+    public ListFoundationVersionsResponseBodyData getData() {
         return this.data;
     }
 
@@ -51,6 +51,25 @@ public class ListFoundationVersionsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class ListFoundationVersionsResponseBodyData extends TeaModel {
+        @NameInMap("list")
+        public java.util.List<FoundationVersion> list;
+
+        public static ListFoundationVersionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListFoundationVersionsResponseBodyData self = new ListFoundationVersionsResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFoundationVersionsResponseBodyData setList(java.util.List<FoundationVersion> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<FoundationVersion> getList() {
+            return this.list;
+        }
+
     }
 
 }
