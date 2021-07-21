@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class InstallMonitoringAgentRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Force")
     public Boolean force;
 
@@ -13,6 +16,14 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     public static InstallMonitoringAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallMonitoringAgentRequest self = new InstallMonitoringAgentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InstallMonitoringAgentRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public InstallMonitoringAgentRequest setForce(Boolean force) {

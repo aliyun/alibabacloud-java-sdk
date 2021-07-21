@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactListRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,6 +25,14 @@ public class DescribeContactListRequest extends TeaModel {
     public static DescribeContactListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeContactListRequest self = new DescribeContactListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeContactListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeContactListRequest setPageSize(Integer pageSize) {

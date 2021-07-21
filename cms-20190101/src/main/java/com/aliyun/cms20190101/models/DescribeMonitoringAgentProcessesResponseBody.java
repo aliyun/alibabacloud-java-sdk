@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("NodeProcesses")
-    public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("NodeProcesses")
+    public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses;
 
     public static DescribeMonitoringAgentProcessesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentProcessesResponseBody self = new DescribeMonitoringAgentProcessesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitoringAgentProcessesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeMonitoringAgentProcessesResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMonitoringAgentProcessesResponseBody setNodeProcesses(DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses) {
-        this.nodeProcesses = nodeProcesses;
-        return this;
-    }
-    public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses getNodeProcesses() {
-        return this.nodeProcesses;
-    }
-
-    public DescribeMonitoringAgentProcessesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeMonitoringAgentProcessesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeMonitoringAgentProcessesResponseBody setNodeProcesses(DescribeMonitoringAgentProcessesResponseBodyNodeProcesses nodeProcesses) {
+        this.nodeProcesses = nodeProcesses;
+        return this;
+    }
+    public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses getNodeProcesses() {
+        return this.nodeProcesses;
     }
 
     public static class DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess extends TeaModel {

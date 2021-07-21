@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutLogMonitorResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("LogId")
     public String logId;
@@ -22,6 +22,14 @@ public class PutLogMonitorResponseBody extends TeaModel {
     public static PutLogMonitorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutLogMonitorResponseBody self = new PutLogMonitorResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PutLogMonitorResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public PutLogMonitorResponseBody setMessage(String message) {
@@ -38,14 +46,6 @@ public class PutLogMonitorResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public PutLogMonitorResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public PutLogMonitorResponseBody setLogId(String logId) {

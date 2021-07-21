@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertHistoryListRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RuleId")
     public String ruleId;
 
@@ -43,6 +46,14 @@ public class DescribeAlertHistoryListRequest extends TeaModel {
     public static DescribeAlertHistoryListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertHistoryListRequest self = new DescribeAlertHistoryListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAlertHistoryListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeAlertHistoryListRequest setRuleId(String ruleId) {

@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class AddTagsRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Tag")
     public java.util.List<AddTagsRequestTag> tag;
 
@@ -13,6 +16,14 @@ public class AddTagsRequest extends TeaModel {
     public static AddTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTagsRequest self = new AddTagsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddTagsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AddTagsRequest setTag(java.util.List<AddTagsRequestTag> tag) {

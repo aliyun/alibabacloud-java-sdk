@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Id")
     public String id;
 
@@ -19,6 +22,14 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
     public static ModifyGroupMonitoringAgentProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyGroupMonitoringAgentProcessRequest self = new ModifyGroupMonitoringAgentProcessRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyGroupMonitoringAgentProcessRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyGroupMonitoringAgentProcessRequest setId(String id) {
@@ -69,11 +80,11 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         @NameInMap("EscalationsLevel")
         public String escalationsLevel;
 
-        @NameInMap("NoEffectiveInterval")
-        public String noEffectiveInterval;
-
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
+
+        @NameInMap("NoEffectiveInterval")
+        public String noEffectiveInterval;
 
         @NameInMap("Threshold")
         public String threshold;
@@ -126,20 +137,20 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
             return this.escalationsLevel;
         }
 
-        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setNoEffectiveInterval(String noEffectiveInterval) {
-            this.noEffectiveInterval = noEffectiveInterval;
-            return this;
-        }
-        public String getNoEffectiveInterval() {
-            return this.noEffectiveInterval;
-        }
-
         public ModifyGroupMonitoringAgentProcessRequestAlertConfig setEffectiveInterval(String effectiveInterval) {
             this.effectiveInterval = effectiveInterval;
             return this;
         }
         public String getEffectiveInterval() {
             return this.effectiveInterval;
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setNoEffectiveInterval(String noEffectiveInterval) {
+            this.noEffectiveInterval = noEffectiveInterval;
+            return this;
+        }
+        public String getNoEffectiveInterval() {
+            return this.noEffectiveInterval;
         }
 
         public ModifyGroupMonitoringAgentProcessRequestAlertConfig setThreshold(String threshold) {

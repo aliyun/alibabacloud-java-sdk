@@ -7,6 +7,12 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -22,12 +28,6 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
     @NameInMap("LogMonitorList")
     public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorList> logMonitorList;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static DescribeLogMonitorListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogMonitorListResponseBody self = new DescribeLogMonitorListResponseBody();
         return TeaModel.build(map, self);
@@ -39,6 +39,22 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeLogMonitorListResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeLogMonitorListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeLogMonitorListResponseBody setMessage(String message) {
@@ -79,22 +95,6 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
     }
     public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorList> getLogMonitorList() {
         return this.logMonitorList;
-    }
-
-    public DescribeLogMonitorListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DescribeLogMonitorListResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class DescribeLogMonitorListResponseBodyLogMonitorListValueFilter extends TeaModel {
@@ -148,9 +148,6 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         @NameInMap("MetricName")
         public String metricName;
 
-        @NameInMap("ValueFilter")
-        public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> valueFilter;
-
         @NameInMap("GroupId")
         public Long groupId;
 
@@ -165,6 +162,9 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
 
         @NameInMap("SlsProject")
         public String slsProject;
+
+        @NameInMap("ValueFilter")
+        public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> valueFilter;
 
         public static DescribeLogMonitorListResponseBodyLogMonitorList build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogMonitorListResponseBodyLogMonitorList self = new DescribeLogMonitorListResponseBodyLogMonitorList();
@@ -193,14 +193,6 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
         public String getMetricName() {
             return this.metricName;
-        }
-
-        public DescribeLogMonitorListResponseBodyLogMonitorList setValueFilter(java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> valueFilter) {
-            this.valueFilter = valueFilter;
-            return this;
-        }
-        public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> getValueFilter() {
-            return this.valueFilter;
         }
 
         public DescribeLogMonitorListResponseBodyLogMonitorList setGroupId(Long groupId) {
@@ -241,6 +233,14 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
         }
         public String getSlsProject() {
             return this.slsProject;
+        }
+
+        public DescribeLogMonitorListResponseBodyLogMonitorList setValueFilter(java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> valueFilter) {
+            this.valueFilter = valueFilter;
+            return this;
+        }
+        public java.util.List<DescribeLogMonitorListResponseBodyLogMonitorListValueFilter> getValueFilter() {
+            return this.valueFilter;
         }
 
     }

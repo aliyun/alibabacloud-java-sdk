@@ -4,27 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateSiteMonitorResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public String success;
+
     @NameInMap("Data")
     public CreateSiteMonitorResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("CreateResultList")
     public CreateSiteMonitorResponseBodyCreateResultList createResultList;
 
-    @NameInMap("Success")
-    public String success;
-
     public static CreateSiteMonitorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSiteMonitorResponseBody self = new CreateSiteMonitorResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSiteMonitorResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateSiteMonitorResponseBody setMessage(String message) {
@@ -43,20 +51,20 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateSiteMonitorResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
     public CreateSiteMonitorResponseBody setData(CreateSiteMonitorResponseBodyData data) {
         this.data = data;
         return this;
     }
     public CreateSiteMonitorResponseBodyData getData() {
         return this.data;
-    }
-
-    public CreateSiteMonitorResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CreateSiteMonitorResponseBody setCreateResultList(CreateSiteMonitorResponseBodyCreateResultList createResultList) {
@@ -67,26 +75,18 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         return this.createResultList;
     }
 
-    public CreateSiteMonitorResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
     public static class CreateSiteMonitorResponseBodyDataAttachAlertResultContact extends TeaModel {
-        @NameInMap("RequestId")
-        public String requestId;
-
-        @NameInMap("Success")
-        public String success;
-
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Message")
         public String message;
+
+        @NameInMap("RequestId")
+        public String requestId;
+
+        @NameInMap("Success")
+        public String success;
 
         @NameInMap("RuleId")
         public String ruleId;
@@ -94,22 +94,6 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         public static CreateSiteMonitorResponseBodyDataAttachAlertResultContact build(java.util.Map<String, ?> map) throws Exception {
             CreateSiteMonitorResponseBodyDataAttachAlertResultContact self = new CreateSiteMonitorResponseBodyDataAttachAlertResultContact();
             return TeaModel.build(map, self);
-        }
-
-        public CreateSiteMonitorResponseBodyDataAttachAlertResultContact setRequestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-        public String getRequestId() {
-            return this.requestId;
-        }
-
-        public CreateSiteMonitorResponseBodyDataAttachAlertResultContact setSuccess(String success) {
-            this.success = success;
-            return this;
-        }
-        public String getSuccess() {
-            return this.success;
         }
 
         public CreateSiteMonitorResponseBodyDataAttachAlertResultContact setCode(String code) {
@@ -126,6 +110,22 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public CreateSiteMonitorResponseBodyDataAttachAlertResultContact setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        public CreateSiteMonitorResponseBodyDataAttachAlertResultContact setSuccess(String success) {
+            this.success = success;
+            return this;
+        }
+        public String getSuccess() {
+            return this.success;
         }
 
         public CreateSiteMonitorResponseBodyDataAttachAlertResultContact setRuleId(String ruleId) {
@@ -177,23 +177,15 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     }
 
     public static class CreateSiteMonitorResponseBodyCreateResultListCreateResultList extends TeaModel {
-        @NameInMap("TaskName")
-        public String taskName;
-
         @NameInMap("TaskId")
         public String taskId;
+
+        @NameInMap("TaskName")
+        public String taskName;
 
         public static CreateSiteMonitorResponseBodyCreateResultListCreateResultList build(java.util.Map<String, ?> map) throws Exception {
             CreateSiteMonitorResponseBodyCreateResultListCreateResultList self = new CreateSiteMonitorResponseBodyCreateResultListCreateResultList();
             return TeaModel.build(map, self);
-        }
-
-        public CreateSiteMonitorResponseBodyCreateResultListCreateResultList setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
         }
 
         public CreateSiteMonitorResponseBodyCreateResultListCreateResultList setTaskId(String taskId) {
@@ -202,6 +194,14 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public CreateSiteMonitorResponseBodyCreateResultListCreateResultList setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
         }
 
     }

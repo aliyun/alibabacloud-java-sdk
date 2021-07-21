@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupDynamicRuleRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("GroupId")
     public Long groupId;
 
@@ -13,6 +16,14 @@ public class DeleteMonitorGroupDynamicRuleRequest extends TeaModel {
     public static DeleteMonitorGroupDynamicRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupDynamicRuleRequest self = new DeleteMonitorGroupDynamicRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMonitorGroupDynamicRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteMonitorGroupDynamicRuleRequest setGroupId(Long groupId) {

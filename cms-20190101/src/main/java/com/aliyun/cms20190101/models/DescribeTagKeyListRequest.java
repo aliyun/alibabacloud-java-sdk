@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagKeyListRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -13,6 +16,14 @@ public class DescribeTagKeyListRequest extends TeaModel {
     public static DescribeTagKeyListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagKeyListRequest self = new DescribeTagKeyListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTagKeyListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeTagKeyListRequest setPageNumber(Integer pageNumber) {

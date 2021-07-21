@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,18 +16,23 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     @NameInMap("Total")
     public Long total;
 
-    @NameInMap("Templates")
-    public DescribeMetricRuleTemplateListResponseBodyTemplates templates;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Templates")
+    public DescribeMetricRuleTemplateListResponseBodyTemplates templates;
 
     public static DescribeMetricRuleTemplateListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleTemplateListResponseBody self = new DescribeMetricRuleTemplateListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricRuleTemplateListResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public DescribeMetricRuleTemplateListResponseBody setMessage(String message) {
@@ -51,28 +59,20 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeMetricRuleTemplateListResponseBody setTemplates(DescribeMetricRuleTemplateListResponseBodyTemplates templates) {
-        this.templates = templates;
-        return this;
-    }
-    public DescribeMetricRuleTemplateListResponseBodyTemplates getTemplates() {
-        return this.templates;
-    }
-
-    public DescribeMetricRuleTemplateListResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public DescribeMetricRuleTemplateListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeMetricRuleTemplateListResponseBody setTemplates(DescribeMetricRuleTemplateListResponseBodyTemplates templates) {
+        this.templates = templates;
+        return this;
+    }
+    public DescribeMetricRuleTemplateListResponseBodyTemplates getTemplates() {
+        return this.templates;
     }
 
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory extends TeaModel {
@@ -136,9 +136,6 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate extends TeaModel {
-        @NameInMap("ApplyHistories")
-        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories;
-
         @NameInMap("Description")
         public String description;
 
@@ -157,17 +154,12 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         public Long templateId;
 
+        @NameInMap("ApplyHistories")
+        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories;
+
         public static DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate build(java.util.Map<String, ?> map) throws Exception {
             DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate self = new DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setApplyHistories(DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories) {
-            this.applyHistories = applyHistories;
-            return this;
-        }
-        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories getApplyHistories() {
-            return this.applyHistories;
         }
 
         public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setDescription(String description) {
@@ -216,6 +208,14 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
         }
         public Long getTemplateId() {
             return this.templateId;
+        }
+
+        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate setApplyHistories(DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories) {
+            this.applyHistories = applyHistories;
+            return this;
+        }
+        public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories getApplyHistories() {
+            return this.applyHistories;
         }
 
     }

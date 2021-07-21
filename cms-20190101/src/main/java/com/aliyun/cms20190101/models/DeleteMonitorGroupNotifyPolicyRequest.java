@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupNotifyPolicyRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PolicyType")
     public String policyType;
 
@@ -13,6 +16,14 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends TeaModel {
     public static DeleteMonitorGroupNotifyPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupNotifyPolicyRequest self = new DeleteMonitorGroupNotifyPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMonitorGroupNotifyPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteMonitorGroupNotifyPolicyRequest setPolicyType(String policyType) {

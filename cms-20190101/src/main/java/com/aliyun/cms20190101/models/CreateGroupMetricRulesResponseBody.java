@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupMetricRulesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Resources")
-    public CreateGroupMetricRulesResponseBodyResources resources;
-
-    @NameInMap("Code")
-    public Integer code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Resources")
+    public CreateGroupMetricRulesResponseBodyResources resources;
 
     public static CreateGroupMetricRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupMetricRulesResponseBody self = new CreateGroupMetricRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGroupMetricRulesResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public CreateGroupMetricRulesResponseBody setMessage(String message) {
@@ -40,22 +48,6 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateGroupMetricRulesResponseBody setResources(CreateGroupMetricRulesResponseBodyResources resources) {
-        this.resources = resources;
-        return this;
-    }
-    public CreateGroupMetricRulesResponseBodyResources getResources() {
-        return this.resources;
-    }
-
-    public CreateGroupMetricRulesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public CreateGroupMetricRulesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,15 +56,23 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class CreateGroupMetricRulesResponseBodyResourcesAlertResult extends TeaModel {
-        @NameInMap("Success")
-        public Boolean success;
+    public CreateGroupMetricRulesResponseBody setResources(CreateGroupMetricRulesResponseBodyResources resources) {
+        this.resources = resources;
+        return this;
+    }
+    public CreateGroupMetricRulesResponseBodyResources getResources() {
+        return this.resources;
+    }
 
+    public static class CreateGroupMetricRulesResponseBodyResourcesAlertResult extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
         @NameInMap("Message")
         public String message;
+
+        @NameInMap("Success")
+        public Boolean success;
 
         @NameInMap("RuleName")
         public String ruleName;
@@ -83,14 +83,6 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         public static CreateGroupMetricRulesResponseBodyResourcesAlertResult build(java.util.Map<String, ?> map) throws Exception {
             CreateGroupMetricRulesResponseBodyResourcesAlertResult self = new CreateGroupMetricRulesResponseBodyResourcesAlertResult();
             return TeaModel.build(map, self);
-        }
-
-        public CreateGroupMetricRulesResponseBodyResourcesAlertResult setSuccess(Boolean success) {
-            this.success = success;
-            return this;
-        }
-        public Boolean getSuccess() {
-            return this.success;
         }
 
         public CreateGroupMetricRulesResponseBodyResourcesAlertResult setCode(Integer code) {
@@ -107,6 +99,14 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public CreateGroupMetricRulesResponseBodyResourcesAlertResult setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
         }
 
         public CreateGroupMetricRulesResponseBodyResourcesAlertResult setRuleName(String ruleName) {

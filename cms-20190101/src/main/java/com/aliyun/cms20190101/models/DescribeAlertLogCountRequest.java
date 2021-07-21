@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertLogCountRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -52,6 +55,14 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public static DescribeAlertLogCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertLogCountRequest self = new DescribeAlertLogCountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAlertLogCountRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeAlertLogCountRequest setStartTime(Long startTime) {

@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentHostsRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("KeyWord")
     public String keyWord;
 
@@ -34,6 +37,14 @@ public class DescribeMonitoringAgentHostsRequest extends TeaModel {
     public static DescribeMonitoringAgentHostsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentHostsRequest self = new DescribeMonitoringAgentHostsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitoringAgentHostsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeMonitoringAgentHostsRequest setKeyWord(String keyWord) {

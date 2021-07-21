@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitoringAgentProcessRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ProcessName")
     public String processName;
 
@@ -16,6 +19,14 @@ public class CreateMonitoringAgentProcessRequest extends TeaModel {
     public static CreateMonitoringAgentProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitoringAgentProcessRequest self = new CreateMonitoringAgentProcessRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMonitoringAgentProcessRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateMonitoringAgentProcessRequest setProcessName(String processName) {

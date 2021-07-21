@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
     @NameInMap("ResourceQuota")
     public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota resourceQuota;
 
-    @NameInMap("Code")
-    public String code;
-
     public static DescribeMonitorResourceQuotaAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorResourceQuotaAttributeResponseBody self = new DescribeMonitorResourceQuotaAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitorResourceQuotaAttributeResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeMonitorResourceQuotaAttributeResponseBody setMessage(String message) {
@@ -45,15 +53,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         return this.resourceQuota;
     }
 
-    public DescribeMonitorResourceQuotaAttributeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi extends TeaModel {
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe extends TeaModel {
         @NameInMap("QuotaLimit")
         public Integer quotaLimit;
 
@@ -63,12 +63,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         @NameInMap("QuotaUsed")
         public Integer quotaUsed;
 
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi();
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaLimit(Integer quotaLimit) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe setQuotaLimit(Integer quotaLimit) {
             this.quotaLimit = quotaLimit;
             return this;
         }
@@ -76,7 +76,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.quotaLimit;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaPackage(Integer quotaPackage) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe setQuotaPackage(Integer quotaPackage) {
             this.quotaPackage = quotaPackage;
             return this;
         }
@@ -84,7 +84,89 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.quotaPackage;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaUsed(Integer quotaUsed) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe setQuotaUsed(Integer quotaUsed) {
+            this.quotaUsed = quotaUsed;
+            return this;
+        }
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+    }
+
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe extends TeaModel {
+        @NameInMap("QuotaLimit")
+        public Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        public Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        public Integer quotaUsed;
+
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe setQuotaLimit(Integer quotaLimit) {
+            this.quotaLimit = quotaLimit;
+            return this;
+        }
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe setQuotaPackage(Integer quotaPackage) {
+            this.quotaPackage = quotaPackage;
+            return this;
+        }
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe setQuotaUsed(Integer quotaUsed) {
+            this.quotaUsed = quotaUsed;
+            return this;
+        }
+        public Integer getQuotaUsed() {
+            return this.quotaUsed;
+        }
+
+    }
+
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask extends TeaModel {
+        @NameInMap("QuotaLimit")
+        public Integer quotaLimit;
+
+        @NameInMap("QuotaPackage")
+        public Integer quotaPackage;
+
+        @NameInMap("QuotaUsed")
+        public Integer quotaUsed;
+
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask setQuotaLimit(Integer quotaLimit) {
+            this.quotaLimit = quotaLimit;
+            return this;
+        }
+        public Integer getQuotaLimit() {
+            return this.quotaLimit;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask setQuotaPackage(Integer quotaPackage) {
+            this.quotaPackage = quotaPackage;
+            return this;
+        }
+        public Integer getQuotaPackage() {
+            return this.quotaPackage;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask setQuotaUsed(Integer quotaUsed) {
             this.quotaUsed = quotaUsed;
             return this;
         }
@@ -176,7 +258,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
 
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask extends TeaModel {
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor extends TeaModel {
         @NameInMap("QuotaLimit")
         public Integer quotaLimit;
 
@@ -186,12 +268,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         @NameInMap("QuotaUsed")
         public Integer quotaUsed;
 
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask();
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask setQuotaLimit(Integer quotaLimit) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaLimit(Integer quotaLimit) {
             this.quotaLimit = quotaLimit;
             return this;
         }
@@ -199,7 +281,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.quotaLimit;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask setQuotaPackage(Integer quotaPackage) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaPackage(Integer quotaPackage) {
             this.quotaPackage = quotaPackage;
             return this;
         }
@@ -207,7 +289,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.quotaPackage;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask setQuotaUsed(Integer quotaUsed) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaUsed(Integer quotaUsed) {
             this.quotaUsed = quotaUsed;
             return this;
         }
@@ -217,7 +299,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
 
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone extends TeaModel {
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi extends TeaModel {
         @NameInMap("QuotaLimit")
         public Integer quotaLimit;
 
@@ -227,12 +309,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         @NameInMap("QuotaUsed")
         public Integer quotaUsed;
 
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone();
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaLimit(Integer quotaLimit) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaLimit(Integer quotaLimit) {
             this.quotaLimit = quotaLimit;
             return this;
         }
@@ -240,7 +322,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.quotaLimit;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaPackage(Integer quotaPackage) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaPackage(Integer quotaPackage) {
             this.quotaPackage = quotaPackage;
             return this;
         }
@@ -248,7 +330,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.quotaPackage;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaUsed(Integer quotaUsed) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi setQuotaUsed(Integer quotaUsed) {
             this.quotaUsed = quotaUsed;
             return this;
         }
@@ -299,7 +381,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
 
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor extends TeaModel {
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone extends TeaModel {
         @NameInMap("QuotaLimit")
         public Integer quotaLimit;
 
@@ -309,12 +391,12 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         @NameInMap("QuotaUsed")
         public Integer quotaUsed;
 
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor();
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaLimit(Integer quotaLimit) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaLimit(Integer quotaLimit) {
             this.quotaLimit = quotaLimit;
             return this;
         }
@@ -322,7 +404,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.quotaLimit;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaPackage(Integer quotaPackage) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaPackage(Integer quotaPackage) {
             this.quotaPackage = quotaPackage;
             return this;
         }
@@ -330,7 +412,7 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.quotaPackage;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor setQuotaUsed(Integer quotaUsed) {
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone setQuotaUsed(Integer quotaUsed) {
             this.quotaUsed = quotaUsed;
             return this;
         }
@@ -340,94 +422,54 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
 
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe extends TeaModel {
-        @NameInMap("QuotaLimit")
-        public Integer quotaLimit;
+    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota extends TeaModel {
+        @NameInMap("SuitInfo")
+        public String suitInfo;
 
-        @NameInMap("QuotaPackage")
-        public Integer quotaPackage;
+        @NameInMap("InstanceId")
+        public String instanceId;
 
-        @NameInMap("QuotaUsed")
-        public Integer quotaUsed;
-
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe();
+        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe setQuotaLimit(Integer quotaLimit) {
-            this.quotaLimit = quotaLimit;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota setSuitInfo(String suitInfo) {
+            this.suitInfo = suitInfo;
             return this;
         }
-        public Integer getQuotaLimit() {
-            return this.quotaLimit;
+        public String getSuitInfo() {
+            return this.suitInfo;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe setQuotaPackage(Integer quotaPackage) {
-            this.quotaPackage = quotaPackage;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public Integer getQuotaPackage() {
-            return this.quotaPackage;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe setQuotaUsed(Integer quotaUsed) {
-            this.quotaUsed = quotaUsed;
-            return this;
-        }
-        public Integer getQuotaUsed() {
-            return this.quotaUsed;
-        }
-
-    }
-
-    public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe extends TeaModel {
-        @NameInMap("QuotaLimit")
-        public Integer quotaLimit;
-
-        @NameInMap("QuotaPackage")
-        public Integer quotaPackage;
-
-        @NameInMap("QuotaUsed")
-        public Integer quotaUsed;
-
-        public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe setQuotaLimit(Integer quotaLimit) {
-            this.quotaLimit = quotaLimit;
-            return this;
-        }
-        public Integer getQuotaLimit() {
-            return this.quotaLimit;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe setQuotaPackage(Integer quotaPackage) {
-            this.quotaPackage = quotaPackage;
-            return this;
-        }
-        public Integer getQuotaPackage() {
-            return this.quotaPackage;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe setQuotaUsed(Integer quotaUsed) {
-            this.quotaUsed = quotaUsed;
-            return this;
-        }
-        public Integer getQuotaUsed() {
-            return this.quotaUsed;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }
 
     public static class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota extends TeaModel {
-        @NameInMap("Api")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi api;
+        @NameInMap("SuitInfo")
+        public String suitInfo;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("ExpireTime")
         public String expireTime;
+
+        @NameInMap("SiteMonitorEcsProbe")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe siteMonitorEcsProbe;
+
+        @NameInMap("SiteMonitorOperatorProbe")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe siteMonitorOperatorProbe;
+
+        @NameInMap("SiteMonitorTask")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask siteMonitorTask;
 
         @NameInMap("CustomMonitor")
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor customMonitor;
@@ -435,41 +477,40 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         @NameInMap("EventMonitor")
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor eventMonitor;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
+        @NameInMap("LogMonitor")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor logMonitor;
 
-        @NameInMap("SiteMonitorTask")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask siteMonitorTask;
-
-        @NameInMap("Phone")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone phone;
-
-        @NameInMap("SuitInfo")
-        public String suitInfo;
+        @NameInMap("Api")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi api;
 
         @NameInMap("SMS")
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS SMS;
 
-        @NameInMap("LogMonitor")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor logMonitor;
+        @NameInMap("Phone")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone phone;
 
-        @NameInMap("SiteMonitorOperatorProbe")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe siteMonitorOperatorProbe;
-
-        @NameInMap("SiteMonitorEcsProbe")
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe siteMonitorEcsProbe;
+        @NameInMap("EnterpriseQuota")
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota enterpriseQuota;
 
         public static DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota self = new DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setApi(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi api) {
-            this.api = api;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSuitInfo(String suitInfo) {
+            this.suitInfo = suitInfo;
             return this;
         }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi getApi() {
-            return this.api;
+        public String getSuitInfo() {
+            return this.suitInfo;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setExpireTime(String expireTime) {
@@ -478,6 +519,30 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSiteMonitorEcsProbe(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe siteMonitorEcsProbe) {
+            this.siteMonitorEcsProbe = siteMonitorEcsProbe;
+            return this;
+        }
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe getSiteMonitorEcsProbe() {
+            return this.siteMonitorEcsProbe;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSiteMonitorOperatorProbe(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe siteMonitorOperatorProbe) {
+            this.siteMonitorOperatorProbe = siteMonitorOperatorProbe;
+            return this;
+        }
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe getSiteMonitorOperatorProbe() {
+            return this.siteMonitorOperatorProbe;
+        }
+
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSiteMonitorTask(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask siteMonitorTask) {
+            this.siteMonitorTask = siteMonitorTask;
+            return this;
+        }
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask getSiteMonitorTask() {
+            return this.siteMonitorTask;
         }
 
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setCustomMonitor(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor customMonitor) {
@@ -496,36 +561,20 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.eventMonitor;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setLogMonitor(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor logMonitor) {
+            this.logMonitor = logMonitor;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor getLogMonitor() {
+            return this.logMonitor;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSiteMonitorTask(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask siteMonitorTask) {
-            this.siteMonitorTask = siteMonitorTask;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setApi(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi api) {
+            this.api = api;
             return this;
         }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask getSiteMonitorTask() {
-            return this.siteMonitorTask;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setPhone(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone phone) {
-            this.phone = phone;
-            return this;
-        }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone getPhone() {
-            return this.phone;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSuitInfo(String suitInfo) {
-            this.suitInfo = suitInfo;
-            return this;
-        }
-        public String getSuitInfo() {
-            return this.suitInfo;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi getApi() {
+            return this.api;
         }
 
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSMS(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSMS SMS) {
@@ -536,28 +585,20 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
             return this.SMS;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setLogMonitor(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor logMonitor) {
-            this.logMonitor = logMonitor;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setPhone(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone phone) {
+            this.phone = phone;
             return this;
         }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor getLogMonitor() {
-            return this.logMonitor;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaPhone getPhone() {
+            return this.phone;
         }
 
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSiteMonitorOperatorProbe(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe siteMonitorOperatorProbe) {
-            this.siteMonitorOperatorProbe = siteMonitorOperatorProbe;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setEnterpriseQuota(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota enterpriseQuota) {
+            this.enterpriseQuota = enterpriseQuota;
             return this;
         }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorOperatorProbe getSiteMonitorOperatorProbe() {
-            return this.siteMonitorOperatorProbe;
-        }
-
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota setSiteMonitorEcsProbe(DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe siteMonitorEcsProbe) {
-            this.siteMonitorEcsProbe = siteMonitorEcsProbe;
-            return this;
-        }
-        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorEcsProbe getSiteMonitorEcsProbe() {
-            return this.siteMonitorEcsProbe;
+        public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota getEnterpriseQuota() {
+            return this.enterpriseQuota;
         }
 
     }

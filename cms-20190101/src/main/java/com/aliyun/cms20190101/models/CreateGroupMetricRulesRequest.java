@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupMetricRulesRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("GroupId")
     public Long groupId;
 
@@ -13,6 +16,14 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
     public static CreateGroupMetricRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupMetricRulesRequest self = new CreateGroupMetricRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGroupMetricRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateGroupMetricRulesRequest setGroupId(Long groupId) {
@@ -239,11 +250,11 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
         @NameInMap("MetricName")
         public String metricName;
 
-        @NameInMap("NoEffectiveInterval")
-        public String noEffectiveInterval;
-
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
+
+        @NameInMap("NoEffectiveInterval")
+        public String noEffectiveInterval;
 
         @NameInMap("RuleId")
         public String ruleId;
@@ -296,20 +307,20 @@ public class CreateGroupMetricRulesRequest extends TeaModel {
             return this.metricName;
         }
 
-        public CreateGroupMetricRulesRequestGroupMetricRules setNoEffectiveInterval(String noEffectiveInterval) {
-            this.noEffectiveInterval = noEffectiveInterval;
-            return this;
-        }
-        public String getNoEffectiveInterval() {
-            return this.noEffectiveInterval;
-        }
-
         public CreateGroupMetricRulesRequestGroupMetricRules setEffectiveInterval(String effectiveInterval) {
             this.effectiveInterval = effectiveInterval;
             return this;
         }
         public String getEffectiveInterval() {
             return this.effectiveInterval;
+        }
+
+        public CreateGroupMetricRulesRequestGroupMetricRules setNoEffectiveInterval(String noEffectiveInterval) {
+            this.noEffectiveInterval = noEffectiveInterval;
+            return this;
+        }
+        public String getNoEffectiveInterval() {
+            return this.noEffectiveInterval;
         }
 
         public CreateGroupMetricRulesRequestGroupMetricRules setRuleId(String ruleId) {

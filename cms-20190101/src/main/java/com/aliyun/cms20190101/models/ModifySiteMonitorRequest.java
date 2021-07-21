@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifySiteMonitorRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Address")
     public String address;
 
@@ -25,9 +28,20 @@ public class ModifySiteMonitorRequest extends TeaModel {
     @NameInMap("AlertIds")
     public String alertIds;
 
+    @NameInMap("IntervalUnit")
+    public String intervalUnit;
+
     public static ModifySiteMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySiteMonitorRequest self = new ModifySiteMonitorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySiteMonitorRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifySiteMonitorRequest setAddress(String address) {
@@ -84,6 +98,14 @@ public class ModifySiteMonitorRequest extends TeaModel {
     }
     public String getAlertIds() {
         return this.alertIds;
+    }
+
+    public ModifySiteMonitorRequest setIntervalUnit(String intervalUnit) {
+        this.intervalUnit = intervalUnit;
+        return this;
+    }
+    public String getIntervalUnit() {
+        return this.intervalUnit;
     }
 
 }

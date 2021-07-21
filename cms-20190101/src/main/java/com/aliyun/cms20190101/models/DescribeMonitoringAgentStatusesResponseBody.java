@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("NodeStatusList")
-    public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("NodeStatusList")
+    public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList;
 
     public static DescribeMonitoringAgentStatusesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentStatusesResponseBody self = new DescribeMonitoringAgentStatusesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitoringAgentStatusesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeMonitoringAgentStatusesResponseBody setMessage(String message) {
@@ -40,22 +48,6 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMonitoringAgentStatusesResponseBody setNodeStatusList(DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList) {
-        this.nodeStatusList = nodeStatusList;
-        return this;
-    }
-    public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList getNodeStatusList() {
-        return this.nodeStatusList;
-    }
-
-    public DescribeMonitoringAgentStatusesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeMonitoringAgentStatusesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,15 +56,23 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public DescribeMonitoringAgentStatusesResponseBody setNodeStatusList(DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList) {
+        this.nodeStatusList = nodeStatusList;
+        return this;
+    }
+    public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList getNodeStatusList() {
+        return this.nodeStatusList;
+    }
+
     public static class DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("AutoInstall")
-        public Boolean autoInstall;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("AutoInstall")
+        public Boolean autoInstall;
 
         public static DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus self = new DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus();
@@ -87,20 +87,20 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setAutoInstall(Boolean autoInstall) {
-            this.autoInstall = autoInstall;
-            return this;
-        }
-        public Boolean getAutoInstall() {
-            return this.autoInstall;
-        }
-
         public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setAutoInstall(Boolean autoInstall) {
+            this.autoInstall = autoInstall;
+            return this;
+        }
+        public Boolean getAutoInstall() {
+            return this.autoInstall;
         }
 
     }

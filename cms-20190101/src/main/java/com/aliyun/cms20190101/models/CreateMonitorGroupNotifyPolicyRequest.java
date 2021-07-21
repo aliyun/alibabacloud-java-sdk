@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PolicyType")
     public String policyType;
 
@@ -19,6 +22,14 @@ public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
     public static CreateMonitorGroupNotifyPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorGroupNotifyPolicyRequest self = new CreateMonitorGroupNotifyPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMonitorGroupNotifyPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateMonitorGroupNotifyPolicyRequest setPolicyType(String policyType) {

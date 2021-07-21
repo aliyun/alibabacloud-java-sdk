@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventRuleAttributeResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     public static DescribeEventRuleAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventRuleAttributeResponseBody self = new DescribeEventRuleAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEventRuleAttributeResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeEventRuleAttributeResponseBody setMessage(String message) {
@@ -40,14 +48,6 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeEventRuleAttributeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeEventRuleAttributeResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -62,25 +62,6 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     }
     public DescribeEventRuleAttributeResponseBodyResult getResult() {
         return this.result;
-    }
-
-    public static class DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList extends TeaModel {
-        @NameInMap("StatusList")
-        public java.util.List<String> statusList;
-
-        public static DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList self = new DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList setStatusList(java.util.List<String> statusList) {
-            this.statusList = statusList;
-            return this;
-        }
-        public java.util.List<String> getStatusList() {
-            return this.statusList;
-        }
-
     }
 
     public static class DescribeEventRuleAttributeResponseBodyResultEventPatternLevelList extends TeaModel {
@@ -98,6 +79,25 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getLevelList() {
             return this.levelList;
+        }
+
+    }
+
+    public static class DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList extends TeaModel {
+        @NameInMap("StatusList")
+        public java.util.List<String> statusList;
+
+        public static DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList self = new DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList setStatusList(java.util.List<String> statusList) {
+            this.statusList = statusList;
+            return this;
+        }
+        public java.util.List<String> getStatusList() {
+            return this.statusList;
         }
 
     }
@@ -122,14 +122,14 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleAttributeResponseBodyResultEventPattern extends TeaModel {
-        @NameInMap("StatusList")
-        public DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList statusList;
-
         @NameInMap("Product")
         public String product;
 
         @NameInMap("LevelList")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternLevelList levelList;
+
+        @NameInMap("StatusList")
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList statusList;
 
         @NameInMap("NameList")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternNameList nameList;
@@ -137,14 +137,6 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         public static DescribeEventRuleAttributeResponseBodyResultEventPattern build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventRuleAttributeResponseBodyResultEventPattern self = new DescribeEventRuleAttributeResponseBodyResultEventPattern();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEventRuleAttributeResponseBodyResultEventPattern setStatusList(DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList statusList) {
-            this.statusList = statusList;
-            return this;
-        }
-        public DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList getStatusList() {
-            return this.statusList;
         }
 
         public DescribeEventRuleAttributeResponseBodyResultEventPattern setProduct(String product) {
@@ -161,6 +153,14 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
         public DescribeEventRuleAttributeResponseBodyResultEventPatternLevelList getLevelList() {
             return this.levelList;
+        }
+
+        public DescribeEventRuleAttributeResponseBodyResultEventPattern setStatusList(DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList statusList) {
+            this.statusList = statusList;
+            return this;
+        }
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList getStatusList() {
+            return this.statusList;
         }
 
         public DescribeEventRuleAttributeResponseBodyResultEventPattern setNameList(DescribeEventRuleAttributeResponseBodyResultEventPatternNameList nameList) {
@@ -180,14 +180,14 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Description")
         public String description;
 
         @NameInMap("State")
         public String state;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("EventPattern")
         public DescribeEventRuleAttributeResponseBodyResultEventPattern eventPattern;
@@ -213,6 +213,14 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        public DescribeEventRuleAttributeResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public DescribeEventRuleAttributeResponseBodyResult setDescription(String description) {
             this.description = description;
             return this;
@@ -227,14 +235,6 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeEventRuleAttributeResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeEventRuleAttributeResponseBodyResult setEventPattern(DescribeEventRuleAttributeResponseBodyResultEventPattern eventPattern) {

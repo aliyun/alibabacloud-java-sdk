@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DisableHostAvailabilityResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class DisableHostAvailabilityResponseBody extends TeaModel {
     public static DisableHostAvailabilityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DisableHostAvailabilityResponseBody self = new DisableHostAvailabilityResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DisableHostAvailabilityResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DisableHostAvailabilityResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class DisableHostAvailabilityResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DisableHostAvailabilityResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DisableHostAvailabilityResponseBody setSuccess(Boolean success) {

@@ -228,11 +228,11 @@ public class PutResourceMetricRulesRequest extends TeaModel {
         @NameInMap("MetricName")
         public String metricName;
 
-        @NameInMap("NoEffectiveInterval")
-        public String noEffectiveInterval;
-
         @NameInMap("EffectiveInterval")
         public String effectiveInterval;
+
+        @NameInMap("NoEffectiveInterval")
+        public String noEffectiveInterval;
 
         @NameInMap("RuleId")
         public String ruleId;
@@ -285,20 +285,20 @@ public class PutResourceMetricRulesRequest extends TeaModel {
             return this.metricName;
         }
 
-        public PutResourceMetricRulesRequestRules setNoEffectiveInterval(String noEffectiveInterval) {
-            this.noEffectiveInterval = noEffectiveInterval;
-            return this;
-        }
-        public String getNoEffectiveInterval() {
-            return this.noEffectiveInterval;
-        }
-
         public PutResourceMetricRulesRequestRules setEffectiveInterval(String effectiveInterval) {
             this.effectiveInterval = effectiveInterval;
             return this;
         }
         public String getEffectiveInterval() {
             return this.effectiveInterval;
+        }
+
+        public PutResourceMetricRulesRequestRules setNoEffectiveInterval(String noEffectiveInterval) {
+            this.noEffectiveInterval = noEffectiveInterval;
+            return this;
+        }
+        public String getNoEffectiveInterval() {
+            return this.noEffectiveInterval;
         }
 
         public PutResourceMetricRulesRequestRules setRuleId(String ruleId) {

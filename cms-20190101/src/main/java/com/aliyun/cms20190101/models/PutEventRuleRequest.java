@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutEventRuleRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RuleName")
     public String ruleName;
 
@@ -25,6 +28,14 @@ public class PutEventRuleRequest extends TeaModel {
     public static PutEventRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         PutEventRuleRequest self = new PutEventRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutEventRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public PutEventRuleRequest setRuleName(String ruleName) {

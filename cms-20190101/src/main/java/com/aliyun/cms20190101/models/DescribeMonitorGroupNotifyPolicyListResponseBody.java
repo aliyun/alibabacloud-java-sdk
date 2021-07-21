@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
-    @NameInMap("NotifyPolicyList")
-    public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -16,23 +16,23 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("NotifyPolicyList")
+    public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList;
 
     public static DescribeMonitorGroupNotifyPolicyListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupNotifyPolicyListResponseBody self = new DescribeMonitorGroupNotifyPolicyListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMonitorGroupNotifyPolicyListResponseBody setNotifyPolicyList(DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList) {
-        this.notifyPolicyList = notifyPolicyList;
+    public DescribeMonitorGroupNotifyPolicyListResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList getNotifyPolicyList() {
-        return this.notifyPolicyList;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeMonitorGroupNotifyPolicyListResponseBody setMessage(String message) {
@@ -59,20 +59,20 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeMonitorGroupNotifyPolicyListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeMonitorGroupNotifyPolicyListResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public DescribeMonitorGroupNotifyPolicyListResponseBody setNotifyPolicyList(DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList) {
+        this.notifyPolicyList = notifyPolicyList;
+        return this;
+    }
+    public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList getNotifyPolicyList() {
+        return this.notifyPolicyList;
     }
 
     public static class DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy extends TeaModel {

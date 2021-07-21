@@ -7,23 +7,23 @@ public class DescribeMonitoringAgentConfigResponseBody extends TeaModel {
     @NameInMap("EnableActiveAlert")
     public String enableActiveAlert;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("AutoInstall")
     public Boolean autoInstall;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("EnableInstallAgentNewECS")
     public Boolean enableInstallAgentNewECS;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
 
     public static DescribeMonitoringAgentConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentConfigResponseBody self = new DescribeMonitoringAgentConfigResponseBody();
@@ -38,12 +38,28 @@ public class DescribeMonitoringAgentConfigResponseBody extends TeaModel {
         return this.enableActiveAlert;
     }
 
+    public DescribeMonitoringAgentConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeMonitoringAgentConfigResponseBody setAutoInstall(Boolean autoInstall) {
         this.autoInstall = autoInstall;
         return this;
     }
     public Boolean getAutoInstall() {
         return this.autoInstall;
+    }
+
+    public DescribeMonitoringAgentConfigResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DescribeMonitoringAgentConfigResponseBody setEnableInstallAgentNewECS(Boolean enableInstallAgentNewECS) {
@@ -54,22 +70,6 @@ public class DescribeMonitoringAgentConfigResponseBody extends TeaModel {
         return this.enableInstallAgentNewECS;
     }
 
-    public DescribeMonitoringAgentConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeMonitoringAgentConfigResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public DescribeMonitoringAgentConfigResponseBody setCode(String code) {
         this.code = code;
         return this;
@@ -78,12 +78,12 @@ public class DescribeMonitoringAgentConfigResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeMonitoringAgentConfigResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeMonitoringAgentConfigResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
     }
 
 }

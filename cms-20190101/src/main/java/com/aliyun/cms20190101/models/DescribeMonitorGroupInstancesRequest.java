@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupInstancesRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -25,6 +28,14 @@ public class DescribeMonitorGroupInstancesRequest extends TeaModel {
     public static DescribeMonitorGroupInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupInstancesRequest self = new DescribeMonitorGroupInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitorGroupInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeMonitorGroupInstancesRequest setPageSize(Integer pageSize) {

@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Result")
+    public Integer result;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("Result")
-    public Integer result;
-
     public static DeleteMonitorGroupNotifyPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupNotifyPolicyResponseBody self = new DeleteMonitorGroupNotifyPolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMonitorGroupNotifyPolicyResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteMonitorGroupNotifyPolicyResponseBody setMessage(String message) {
@@ -40,12 +48,12 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteMonitorGroupNotifyPolicyResponseBody setCode(String code) {
-        this.code = code;
+    public DeleteMonitorGroupNotifyPolicyResponseBody setResult(Integer result) {
+        this.result = result;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Integer getResult() {
+        return this.result;
     }
 
     public DeleteMonitorGroupNotifyPolicyResponseBody setSuccess(String success) {
@@ -54,14 +62,6 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
-    }
-
-    public DeleteMonitorGroupNotifyPolicyResponseBody setResult(Integer result) {
-        this.result = result;
-        return this;
-    }
-    public Integer getResult() {
-        return this.result;
     }
 
 }

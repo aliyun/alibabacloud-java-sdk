@@ -566,6 +566,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAlertHistoryListWithOptions(request, runtime);
     }
 
+    public DescribeAlertingMetricRuleResourcesResponse describeAlertingMetricRuleResourcesWithOptions(DescribeAlertingMetricRuleResourcesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeAlertingMetricRuleResources", "2019-01-01", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeAlertingMetricRuleResourcesResponse());
+    }
+
+    public DescribeAlertingMetricRuleResourcesResponse describeAlertingMetricRuleResources(DescribeAlertingMetricRuleResourcesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAlertingMetricRuleResourcesWithOptions(request, runtime);
+    }
+
     public DescribeAlertLogCountResponse describeAlertLogCountWithOptions(DescribeAlertLogCountRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1036,24 +1050,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeMonitorGroupsWithOptions(request, runtime);
     }
 
-    public DescribeMonitoringAgentAccessKeyResponse describeMonitoringAgentAccessKeyWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public DescribeMonitoringAgentAccessKeyResponse describeMonitoringAgentAccessKeyWithOptions(DescribeMonitoringAgentAccessKeyRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
         return TeaModel.toModel(this.doRPCRequest("DescribeMonitoringAgentAccessKey", "2019-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMonitoringAgentAccessKeyResponse());
     }
 
-    public DescribeMonitoringAgentAccessKeyResponse describeMonitoringAgentAccessKey() throws Exception {
+    public DescribeMonitoringAgentAccessKeyResponse describeMonitoringAgentAccessKey(DescribeMonitoringAgentAccessKeyRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeMonitoringAgentAccessKeyWithOptions(runtime);
+        return this.describeMonitoringAgentAccessKeyWithOptions(request, runtime);
     }
 
-    public DescribeMonitoringAgentConfigResponse describeMonitoringAgentConfigWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public DescribeMonitoringAgentConfigResponse describeMonitoringAgentConfigWithOptions(DescribeMonitoringAgentConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
         return TeaModel.toModel(this.doRPCRequest("DescribeMonitoringAgentConfig", "2019-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMonitoringAgentConfigResponse());
     }
 
-    public DescribeMonitoringAgentConfigResponse describeMonitoringAgentConfig() throws Exception {
+    public DescribeMonitoringAgentConfigResponse describeMonitoringAgentConfig(DescribeMonitoringAgentConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeMonitoringAgentConfigWithOptions(runtime);
+        return this.describeMonitoringAgentConfigWithOptions(request, runtime);
     }
 
     public DescribeMonitoringAgentHostsResponse describeMonitoringAgentHostsWithOptions(DescribeMonitoringAgentHostsRequest request, RuntimeOptions runtime) throws Exception {
@@ -1095,14 +1115,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeMonitoringAgentStatusesWithOptions(request, runtime);
     }
 
-    public DescribeMonitoringConfigResponse describeMonitoringConfigWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public DescribeMonitoringConfigResponse describeMonitoringConfigWithOptions(DescribeMonitoringConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
         return TeaModel.toModel(this.doRPCRequest("DescribeMonitoringConfig", "2019-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeMonitoringConfigResponse());
     }
 
-    public DescribeMonitoringConfigResponse describeMonitoringConfig() throws Exception {
+    public DescribeMonitoringConfigResponse describeMonitoringConfig(DescribeMonitoringConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeMonitoringConfigWithOptions(runtime);
+        return this.describeMonitoringConfigWithOptions(request, runtime);
     }
 
     public DescribeMonitorResourceQuotaAttributeResponse describeMonitorResourceQuotaAttributeWithOptions(DescribeMonitorResourceQuotaAttributeRequest request, RuntimeOptions runtime) throws Exception {
@@ -1131,14 +1154,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeProductResourceTagKeyListWithOptions(request, runtime);
     }
 
-    public DescribeProductsOfActiveMetricRuleResponse describeProductsOfActiveMetricRuleWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public DescribeProductsOfActiveMetricRuleResponse describeProductsOfActiveMetricRuleWithOptions(DescribeProductsOfActiveMetricRuleRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
         return TeaModel.toModel(this.doRPCRequest("DescribeProductsOfActiveMetricRule", "2019-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeProductsOfActiveMetricRuleResponse());
     }
 
-    public DescribeProductsOfActiveMetricRuleResponse describeProductsOfActiveMetricRule() throws Exception {
+    public DescribeProductsOfActiveMetricRuleResponse describeProductsOfActiveMetricRule(DescribeProductsOfActiveMetricRuleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeProductsOfActiveMetricRuleWithOptions(runtime);
+        return this.describeProductsOfActiveMetricRuleWithOptions(request, runtime);
     }
 
     public DescribeProjectMetaResponse describeProjectMetaWithOptions(DescribeProjectMetaRequest request, RuntimeOptions runtime) throws Exception {
@@ -1193,14 +1219,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSiteMonitorListWithOptions(request, runtime);
     }
 
-    public DescribeSiteMonitorQuotaResponse describeSiteMonitorQuotaWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
+    public DescribeSiteMonitorQuotaResponse describeSiteMonitorQuotaWithOptions(DescribeSiteMonitorQuotaRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
         return TeaModel.toModel(this.doRPCRequest("DescribeSiteMonitorQuota", "2019-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSiteMonitorQuotaResponse());
     }
 
-    public DescribeSiteMonitorQuotaResponse describeSiteMonitorQuota() throws Exception {
+    public DescribeSiteMonitorQuotaResponse describeSiteMonitorQuota(DescribeSiteMonitorQuotaRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeSiteMonitorQuotaWithOptions(runtime);
+        return this.describeSiteMonitorQuotaWithOptions(request, runtime);
     }
 
     public DescribeSiteMonitorStatisticsResponse describeSiteMonitorStatisticsWithOptions(DescribeSiteMonitorStatisticsRequest request, RuntimeOptions runtime) throws Exception {

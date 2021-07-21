@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventCountResponseBody extends TeaModel {
-    @NameInMap("CustomEventCounts")
-    public DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,23 +13,23 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("CustomEventCounts")
+    public DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts;
 
     public static DescribeCustomEventCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventCountResponseBody self = new DescribeCustomEventCountResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCustomEventCountResponseBody setCustomEventCounts(DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts) {
-        this.customEventCounts = customEventCounts;
+    public DescribeCustomEventCountResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public DescribeCustomEventCountResponseBodyCustomEventCounts getCustomEventCounts() {
-        return this.customEventCounts;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeCustomEventCountResponseBody setMessage(String message) {
@@ -48,20 +48,20 @@ public class DescribeCustomEventCountResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCustomEventCountResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeCustomEventCountResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeCustomEventCountResponseBody setCustomEventCounts(DescribeCustomEventCountResponseBodyCustomEventCounts customEventCounts) {
+        this.customEventCounts = customEventCounts;
+        return this;
+    }
+    public DescribeCustomEventCountResponseBodyCustomEventCounts getCustomEventCounts() {
+        return this.customEventCounts;
     }
 
     public static class DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount extends TeaModel {

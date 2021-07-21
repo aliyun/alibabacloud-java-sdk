@@ -28,6 +28,9 @@ public class DescribeMetricDataRequest extends TeaModel {
     @NameInMap("Length")
     public String length;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeMetricDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricDataRequest self = new DescribeMetricDataRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class DescribeMetricDataRequest extends TeaModel {
     }
     public String getLength() {
         return this.length;
+    }
+
+    public DescribeMetricDataRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

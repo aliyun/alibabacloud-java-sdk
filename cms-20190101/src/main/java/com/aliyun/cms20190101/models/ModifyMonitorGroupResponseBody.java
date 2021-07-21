@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ModifyMonitorGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class ModifyMonitorGroupResponseBody extends TeaModel {
     public static ModifyMonitorGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyMonitorGroupResponseBody self = new ModifyMonitorGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyMonitorGroupResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public ModifyMonitorGroupResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class ModifyMonitorGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ModifyMonitorGroupResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public ModifyMonitorGroupResponseBody setSuccess(Boolean success) {

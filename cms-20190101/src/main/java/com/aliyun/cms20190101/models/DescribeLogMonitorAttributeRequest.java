@@ -4,12 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogMonitorAttributeRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("MetricName")
     public String metricName;
 
     public static DescribeLogMonitorAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogMonitorAttributeRequest self = new DescribeLogMonitorAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLogMonitorAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeLogMonitorAttributeRequest setMetricName(String metricName) {

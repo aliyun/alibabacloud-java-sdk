@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class UninstallMonitoringAgentResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class UninstallMonitoringAgentResponseBody extends TeaModel {
     public static UninstallMonitoringAgentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UninstallMonitoringAgentResponseBody self = new UninstallMonitoringAgentResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UninstallMonitoringAgentResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public UninstallMonitoringAgentResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class UninstallMonitoringAgentResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UninstallMonitoringAgentResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public UninstallMonitoringAgentResponseBody setSuccess(Boolean success) {

@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorAgentProcessResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Id")
-    public Long id;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Id")
+    public Long id;
 
     public static CreateMonitorAgentProcessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorAgentProcessResponseBody self = new CreateMonitorAgentProcessResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMonitorAgentProcessResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateMonitorAgentProcessResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class CreateMonitorAgentProcessResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateMonitorAgentProcessResponseBody setId(Long id) {
-        this.id = id;
-        return this;
-    }
-    public Long getId() {
-        return this.id;
-    }
-
-    public CreateMonitorAgentProcessResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public CreateMonitorAgentProcessResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public CreateMonitorAgentProcessResponseBody setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
 }

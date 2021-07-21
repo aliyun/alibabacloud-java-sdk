@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,26 +13,26 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Resources")
-    public DescribeMetricMetaListResponseBodyResources resources;
-
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Resources")
+    public DescribeMetricMetaListResponseBodyResources resources;
 
     public static DescribeMetricMetaListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricMetaListResponseBody self = new DescribeMetricMetaListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMetricMetaListResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
+    public DescribeMetricMetaListResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getTotalCount() {
-        return this.totalCount;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeMetricMetaListResponseBody setMessage(String message) {
@@ -51,20 +51,12 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetricMetaListResponseBody setResources(DescribeMetricMetaListResponseBodyResources resources) {
-        this.resources = resources;
+    public DescribeMetricMetaListResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public DescribeMetricMetaListResponseBodyResources getResources() {
-        return this.resources;
-    }
-
-    public DescribeMetricMetaListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeMetricMetaListResponseBody setSuccess(Boolean success) {
@@ -73,6 +65,14 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeMetricMetaListResponseBody setResources(DescribeMetricMetaListResponseBodyResources resources) {
+        this.resources = resources;
+        return this;
+    }
+    public DescribeMetricMetaListResponseBodyResources getResources() {
+        return this.resources;
     }
 
     public static class DescribeMetricMetaListResponseBodyResourcesResource extends TeaModel {

@@ -4,27 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
+    @NameInMap("AccessKey")
+    public String accessKey;
+
     @NameInMap("SecretKey")
     public String secretKey;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("AccessKey")
-    public String accessKey;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
 
     public static DescribeMonitoringAgentAccessKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentAccessKeyResponseBody self = new DescribeMonitoringAgentAccessKeyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitoringAgentAccessKeyResponseBody setAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+        return this;
+    }
+    public String getAccessKey() {
+        return this.accessKey;
     }
 
     public DescribeMonitoringAgentAccessKeyResponseBody setSecretKey(String secretKey) {
@@ -43,20 +51,12 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMonitoringAgentAccessKeyResponseBody setMessage(String message) {
-        this.message = message;
+    public DescribeMonitoringAgentAccessKeyResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DescribeMonitoringAgentAccessKeyResponseBody setAccessKey(String accessKey) {
-        this.accessKey = accessKey;
-        return this;
-    }
-    public String getAccessKey() {
-        return this.accessKey;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DescribeMonitoringAgentAccessKeyResponseBody setCode(Integer code) {
@@ -67,12 +67,12 @@ public class DescribeMonitoringAgentAccessKeyResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeMonitoringAgentAccessKeyResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeMonitoringAgentAccessKeyResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
     }
 
 }

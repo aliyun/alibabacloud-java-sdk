@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertHistoryListResponseBody extends TeaModel {
-    @NameInMap("AlarmHistoryList")
-    public DescribeAlertHistoryListResponseBodyAlarmHistoryList alarmHistoryList;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -16,23 +16,23 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
     @NameInMap("Total")
     public String total;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("AlarmHistoryList")
+    public DescribeAlertHistoryListResponseBodyAlarmHistoryList alarmHistoryList;
 
     public static DescribeAlertHistoryListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertHistoryListResponseBody self = new DescribeAlertHistoryListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAlertHistoryListResponseBody setAlarmHistoryList(DescribeAlertHistoryListResponseBodyAlarmHistoryList alarmHistoryList) {
-        this.alarmHistoryList = alarmHistoryList;
+    public DescribeAlertHistoryListResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public DescribeAlertHistoryListResponseBodyAlarmHistoryList getAlarmHistoryList() {
-        return this.alarmHistoryList;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeAlertHistoryListResponseBody setMessage(String message) {
@@ -59,20 +59,20 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeAlertHistoryListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeAlertHistoryListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeAlertHistoryListResponseBody setAlarmHistoryList(DescribeAlertHistoryListResponseBodyAlarmHistoryList alarmHistoryList) {
+        this.alarmHistoryList = alarmHistoryList;
+        return this;
+    }
+    public DescribeAlertHistoryListResponseBodyAlarmHistoryList getAlarmHistoryList() {
+        return this.alarmHistoryList;
     }
 
     public static class DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContacts extends TeaModel {
@@ -90,44 +90,6 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         }
         public java.util.List<String> getContact() {
             return this.contact;
-        }
-
-    }
-
-    public static class DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
-        public java.util.List<String> contactGroup;
-
-        public static DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups self = new DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups setContactGroup(java.util.List<String> contactGroup) {
-            this.contactGroup = contactGroup;
-            return this;
-        }
-        public java.util.List<String> getContactGroup() {
-            return this.contactGroup;
-        }
-
-    }
-
-    public static class DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses extends TeaModel {
-        @NameInMap("ContactSms")
-        public java.util.List<String> contactSms;
-
-        public static DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses self = new DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses setContactSms(java.util.List<String> contactSms) {
-            this.contactSms = contactSms;
-            return this;
-        }
-        public java.util.List<String> getContactSms() {
-            return this.contactSms;
         }
 
     }
@@ -170,6 +132,44 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses extends TeaModel {
+        @NameInMap("ContactSms")
+        public java.util.List<String> contactSms;
+
+        public static DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses self = new DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses setContactSms(java.util.List<String> contactSms) {
+            this.contactSms = contactSms;
+            return this;
+        }
+        public java.util.List<String> getContactSms() {
+            return this.contactSms;
+        }
+
+    }
+
+    public static class DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups extends TeaModel {
+        @NameInMap("ContactGroup")
+        public java.util.List<String> contactGroup;
+
+        public static DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups self = new DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups setContactGroup(java.util.List<String> contactGroup) {
+            this.contactGroup = contactGroup;
+            return this;
+        }
+        public java.util.List<String> getContactGroup() {
+            return this.contactGroup;
+        }
+
+    }
+
     public static class DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory extends TeaModel {
         @NameInMap("Status")
         public Integer status;
@@ -177,17 +177,11 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         @NameInMap("MetricName")
         public String metricName;
 
-        @NameInMap("Contacts")
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContacts contacts;
-
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
         @NameInMap("State")
         public String state;
-
-        @NameInMap("ContactGroups")
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups contactGroups;
 
         @NameInMap("Namespace")
         public String namespace;
@@ -195,11 +189,11 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         @NameInMap("Webhooks")
         public String webhooks;
 
-        @NameInMap("RuleId")
-        public String ruleId;
-
         @NameInMap("RuleName")
         public String ruleName;
+
+        @NameInMap("RuleId")
+        public String ruleId;
 
         @NameInMap("LastTime")
         public Long lastTime;
@@ -219,20 +213,26 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
-        @NameInMap("ContactSmses")
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses contactSmses;
-
         @NameInMap("Dimensions")
         public String dimensions;
-
-        @NameInMap("ContactALIIMs")
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactALIIMs contactALIIMs;
 
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("Contacts")
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContacts contacts;
+
+        @NameInMap("ContactALIIMs")
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactALIIMs contactALIIMs;
+
         @NameInMap("ContactMails")
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactMails contactMails;
+
+        @NameInMap("ContactSmses")
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses contactSmses;
+
+        @NameInMap("ContactGroups")
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups contactGroups;
 
         public static DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory self = new DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory();
@@ -255,14 +255,6 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             return this.metricName;
         }
 
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setContacts(DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContacts contacts) {
-            this.contacts = contacts;
-            return this;
-        }
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContacts getContacts() {
-            return this.contacts;
-        }
-
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setEvaluationCount(Integer evaluationCount) {
             this.evaluationCount = evaluationCount;
             return this;
@@ -277,14 +269,6 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setContactGroups(DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups contactGroups) {
-            this.contactGroups = contactGroups;
-            return this;
-        }
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups getContactGroups() {
-            return this.contactGroups;
         }
 
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setNamespace(String namespace) {
@@ -303,20 +287,20 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             return this.webhooks;
         }
 
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setRuleId(String ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public String getRuleId() {
-            return this.ruleId;
-        }
-
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
         }
 
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setLastTime(Long lastTime) {
@@ -367,28 +351,12 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setContactSmses(DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses contactSmses) {
-            this.contactSmses = contactSmses;
-            return this;
-        }
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses getContactSmses() {
-            return this.contactSmses;
-        }
-
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setDimensions(String dimensions) {
             this.dimensions = dimensions;
             return this;
         }
         public String getDimensions() {
             return this.dimensions;
-        }
-
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setContactALIIMs(DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactALIIMs contactALIIMs) {
-            this.contactALIIMs = contactALIIMs;
-            return this;
-        }
-        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactALIIMs getContactALIIMs() {
-            return this.contactALIIMs;
         }
 
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setLevel(String level) {
@@ -399,12 +367,44 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
             return this.level;
         }
 
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setContacts(DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContacts contacts) {
+            this.contacts = contacts;
+            return this;
+        }
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContacts getContacts() {
+            return this.contacts;
+        }
+
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setContactALIIMs(DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactALIIMs contactALIIMs) {
+            this.contactALIIMs = contactALIIMs;
+            return this;
+        }
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactALIIMs getContactALIIMs() {
+            return this.contactALIIMs;
+        }
+
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setContactMails(DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactMails contactMails) {
             this.contactMails = contactMails;
             return this;
         }
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactMails getContactMails() {
             return this.contactMails;
+        }
+
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setContactSmses(DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses contactSmses) {
+            this.contactSmses = contactSmses;
+            return this;
+        }
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses getContactSmses() {
+            return this.contactSmses;
+        }
+
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory setContactGroups(DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups contactGroups) {
+            this.contactGroups = contactGroups;
+            return this;
+        }
+        public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups getContactGroups() {
+            return this.contactGroups;
         }
 
     }

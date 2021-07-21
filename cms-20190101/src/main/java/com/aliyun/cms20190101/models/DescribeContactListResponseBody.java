@@ -4,27 +4,35 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Contacts")
-    public DescribeContactListResponseBodyContacts contacts;
-
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Contacts")
+    public DescribeContactListResponseBodyContacts contacts;
+
     public static DescribeContactListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeContactListResponseBody self = new DescribeContactListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeContactListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeContactListResponseBody setMessage(String message) {
@@ -43,28 +51,12 @@ public class DescribeContactListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeContactListResponseBody setContacts(DescribeContactListResponseBodyContacts contacts) {
-        this.contacts = contacts;
-        return this;
-    }
-    public DescribeContactListResponseBodyContacts getContacts() {
-        return this.contacts;
-    }
-
     public DescribeContactListResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }
     public Integer getTotal() {
         return this.total;
-    }
-
-    public DescribeContactListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DescribeContactListResponseBody setSuccess(Boolean success) {
@@ -75,56 +67,12 @@ public class DescribeContactListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class DescribeContactListResponseBodyContactsContactChannelsState extends TeaModel {
-        @NameInMap("DingWebHook")
-        public String dingWebHook;
-
-        @NameInMap("SMS")
-        public String SMS;
-
-        @NameInMap("Mail")
-        public String mail;
-
-        @NameInMap("AliIM")
-        public String aliIM;
-
-        public static DescribeContactListResponseBodyContactsContactChannelsState build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContactListResponseBodyContactsContactChannelsState self = new DescribeContactListResponseBodyContactsContactChannelsState();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeContactListResponseBodyContactsContactChannelsState setDingWebHook(String dingWebHook) {
-            this.dingWebHook = dingWebHook;
-            return this;
-        }
-        public String getDingWebHook() {
-            return this.dingWebHook;
-        }
-
-        public DescribeContactListResponseBodyContactsContactChannelsState setSMS(String SMS) {
-            this.SMS = SMS;
-            return this;
-        }
-        public String getSMS() {
-            return this.SMS;
-        }
-
-        public DescribeContactListResponseBodyContactsContactChannelsState setMail(String mail) {
-            this.mail = mail;
-            return this;
-        }
-        public String getMail() {
-            return this.mail;
-        }
-
-        public DescribeContactListResponseBodyContactsContactChannelsState setAliIM(String aliIM) {
-            this.aliIM = aliIM;
-            return this;
-        }
-        public String getAliIM() {
-            return this.aliIM;
-        }
-
+    public DescribeContactListResponseBody setContacts(DescribeContactListResponseBodyContacts contacts) {
+        this.contacts = contacts;
+        return this;
+    }
+    public DescribeContactListResponseBodyContacts getContacts() {
+        return this.contacts;
     }
 
     public static class DescribeContactListResponseBodyContactsContactContactGroups extends TeaModel {
@@ -147,37 +95,21 @@ public class DescribeContactListResponseBody extends TeaModel {
     }
 
     public static class DescribeContactListResponseBodyContactsContactChannels extends TeaModel {
-        @NameInMap("DingWebHook")
-        public String dingWebHook;
-
-        @NameInMap("SMS")
-        public String SMS;
-
         @NameInMap("Mail")
         public String mail;
 
         @NameInMap("AliIM")
         public String aliIM;
 
+        @NameInMap("DingWebHook")
+        public String dingWebHook;
+
+        @NameInMap("SMS")
+        public String SMS;
+
         public static DescribeContactListResponseBodyContactsContactChannels build(java.util.Map<String, ?> map) throws Exception {
             DescribeContactListResponseBodyContactsContactChannels self = new DescribeContactListResponseBodyContactsContactChannels();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeContactListResponseBodyContactsContactChannels setDingWebHook(String dingWebHook) {
-            this.dingWebHook = dingWebHook;
-            return this;
-        }
-        public String getDingWebHook() {
-            return this.dingWebHook;
-        }
-
-        public DescribeContactListResponseBodyContactsContactChannels setSMS(String SMS) {
-            this.SMS = SMS;
-            return this;
-        }
-        public String getSMS() {
-            return this.SMS;
         }
 
         public DescribeContactListResponseBodyContactsContactChannels setMail(String mail) {
@@ -196,14 +128,82 @@ public class DescribeContactListResponseBody extends TeaModel {
             return this.aliIM;
         }
 
+        public DescribeContactListResponseBodyContactsContactChannels setDingWebHook(String dingWebHook) {
+            this.dingWebHook = dingWebHook;
+            return this;
+        }
+        public String getDingWebHook() {
+            return this.dingWebHook;
+        }
+
+        public DescribeContactListResponseBodyContactsContactChannels setSMS(String SMS) {
+            this.SMS = SMS;
+            return this;
+        }
+        public String getSMS() {
+            return this.SMS;
+        }
+
+    }
+
+    public static class DescribeContactListResponseBodyContactsContactChannelsState extends TeaModel {
+        @NameInMap("Mail")
+        public String mail;
+
+        @NameInMap("AliIM")
+        public String aliIM;
+
+        @NameInMap("DingWebHook")
+        public String dingWebHook;
+
+        @NameInMap("SMS")
+        public String SMS;
+
+        public static DescribeContactListResponseBodyContactsContactChannelsState build(java.util.Map<String, ?> map) throws Exception {
+            DescribeContactListResponseBodyContactsContactChannelsState self = new DescribeContactListResponseBodyContactsContactChannelsState();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeContactListResponseBodyContactsContactChannelsState setMail(String mail) {
+            this.mail = mail;
+            return this;
+        }
+        public String getMail() {
+            return this.mail;
+        }
+
+        public DescribeContactListResponseBodyContactsContactChannelsState setAliIM(String aliIM) {
+            this.aliIM = aliIM;
+            return this;
+        }
+        public String getAliIM() {
+            return this.aliIM;
+        }
+
+        public DescribeContactListResponseBodyContactsContactChannelsState setDingWebHook(String dingWebHook) {
+            this.dingWebHook = dingWebHook;
+            return this;
+        }
+        public String getDingWebHook() {
+            return this.dingWebHook;
+        }
+
+        public DescribeContactListResponseBodyContactsContactChannelsState setSMS(String SMS) {
+            this.SMS = SMS;
+            return this;
+        }
+        public String getSMS() {
+            return this.SMS;
+        }
+
     }
 
     public static class DescribeContactListResponseBodyContactsContact extends TeaModel {
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        @NameInMap("ChannelsState")
-        public DescribeContactListResponseBodyContactsContactChannelsState channelsState;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("CreateTime")
         public Long createTime;
@@ -211,17 +211,17 @@ public class DescribeContactListResponseBody extends TeaModel {
         @NameInMap("Lang")
         public String lang;
 
+        @NameInMap("Desc")
+        public String desc;
+
         @NameInMap("ContactGroups")
         public DescribeContactListResponseBodyContactsContactContactGroups contactGroups;
 
         @NameInMap("Channels")
         public DescribeContactListResponseBodyContactsContactChannels channels;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Desc")
-        public String desc;
+        @NameInMap("ChannelsState")
+        public DescribeContactListResponseBodyContactsContactChannelsState channelsState;
 
         public static DescribeContactListResponseBodyContactsContact build(java.util.Map<String, ?> map) throws Exception {
             DescribeContactListResponseBodyContactsContact self = new DescribeContactListResponseBodyContactsContact();
@@ -236,12 +236,12 @@ public class DescribeContactListResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public DescribeContactListResponseBodyContactsContact setChannelsState(DescribeContactListResponseBodyContactsContactChannelsState channelsState) {
-            this.channelsState = channelsState;
+        public DescribeContactListResponseBodyContactsContact setName(String name) {
+            this.name = name;
             return this;
         }
-        public DescribeContactListResponseBodyContactsContactChannelsState getChannelsState() {
-            return this.channelsState;
+        public String getName() {
+            return this.name;
         }
 
         public DescribeContactListResponseBodyContactsContact setCreateTime(Long createTime) {
@@ -260,6 +260,14 @@ public class DescribeContactListResponseBody extends TeaModel {
             return this.lang;
         }
 
+        public DescribeContactListResponseBodyContactsContact setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
         public DescribeContactListResponseBodyContactsContact setContactGroups(DescribeContactListResponseBodyContactsContactContactGroups contactGroups) {
             this.contactGroups = contactGroups;
             return this;
@@ -276,20 +284,12 @@ public class DescribeContactListResponseBody extends TeaModel {
             return this.channels;
         }
 
-        public DescribeContactListResponseBodyContactsContact setName(String name) {
-            this.name = name;
+        public DescribeContactListResponseBodyContactsContact setChannelsState(DescribeContactListResponseBodyContactsContactChannelsState channelsState) {
+            this.channelsState = channelsState;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeContactListResponseBodyContactsContact setDesc(String desc) {
-            this.desc = desc;
-            return this;
-        }
-        public String getDesc() {
-            return this.desc;
+        public DescribeContactListResponseBodyContactsContactChannelsState getChannelsState() {
+            return this.channelsState;
         }
 
     }

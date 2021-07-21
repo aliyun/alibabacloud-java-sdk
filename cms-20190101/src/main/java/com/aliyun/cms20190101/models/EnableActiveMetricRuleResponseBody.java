@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class EnableActiveMetricRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class EnableActiveMetricRuleResponseBody extends TeaModel {
     public static EnableActiveMetricRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableActiveMetricRuleResponseBody self = new EnableActiveMetricRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EnableActiveMetricRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public EnableActiveMetricRuleResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class EnableActiveMetricRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public EnableActiveMetricRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public EnableActiveMetricRuleResponseBody setSuccess(Boolean success) {

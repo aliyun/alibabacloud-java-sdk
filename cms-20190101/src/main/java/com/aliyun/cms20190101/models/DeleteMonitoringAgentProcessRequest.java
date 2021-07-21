@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitoringAgentProcessRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,6 +19,14 @@ public class DeleteMonitoringAgentProcessRequest extends TeaModel {
     public static DeleteMonitoringAgentProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitoringAgentProcessRequest self = new DeleteMonitoringAgentProcessRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMonitoringAgentProcessRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteMonitoringAgentProcessRequest setInstanceId(String instanceId) {

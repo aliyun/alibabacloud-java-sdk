@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventHistogramRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Name")
     public String name;
 
@@ -28,6 +31,14 @@ public class DescribeCustomEventHistogramRequest extends TeaModel {
     public static DescribeCustomEventHistogramRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventHistogramRequest self = new DescribeCustomEventHistogramRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCustomEventHistogramRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeCustomEventHistogramRequest setName(String name) {

@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertLogHistogramRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -52,6 +55,14 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     public static DescribeAlertLogHistogramRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertLogHistogramRequest self = new DescribeAlertLogHistogramRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAlertLogHistogramRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeAlertLogHistogramRequest setStartTime(Long startTime) {

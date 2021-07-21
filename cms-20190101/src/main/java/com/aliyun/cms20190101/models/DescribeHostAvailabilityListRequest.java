@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostAvailabilityListRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Id")
     public Long id;
 
@@ -22,6 +25,14 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
     public static DescribeHostAvailabilityListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeHostAvailabilityListRequest self = new DescribeHostAvailabilityListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeHostAvailabilityListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeHostAvailabilityListRequest setId(Long id) {

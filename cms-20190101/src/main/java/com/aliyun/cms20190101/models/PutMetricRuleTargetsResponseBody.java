@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMetricRuleTargetsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("FailData")
-    public PutMetricRuleTargetsResponseBodyFailData failData;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("FailData")
+    public PutMetricRuleTargetsResponseBodyFailData failData;
 
     public static PutMetricRuleTargetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutMetricRuleTargetsResponseBody self = new PutMetricRuleTargetsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PutMetricRuleTargetsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public PutMetricRuleTargetsResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public PutMetricRuleTargetsResponseBody setFailData(PutMetricRuleTargetsResponseBodyFailData failData) {
-        this.failData = failData;
-        return this;
-    }
-    public PutMetricRuleTargetsResponseBodyFailData getFailData() {
-        return this.failData;
-    }
-
-    public PutMetricRuleTargetsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public PutMetricRuleTargetsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public PutMetricRuleTargetsResponseBody setFailData(PutMetricRuleTargetsResponseBodyFailData failData) {
+        this.failData = failData;
+        return this;
+    }
+    public PutMetricRuleTargetsResponseBodyFailData getFailData() {
+        return this.failData;
     }
 
     public static class PutMetricRuleTargetsResponseBodyFailDataTargetsTarget extends TeaModel {

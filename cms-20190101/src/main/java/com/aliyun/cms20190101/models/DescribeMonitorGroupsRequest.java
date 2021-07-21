@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupsRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SelectContactGroups")
     public Boolean selectContactGroups;
 
@@ -31,14 +34,14 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     @NameInMap("DynamicTagRuleId")
     public String dynamicTagRuleId;
 
+    @NameInMap("GroupFounderTagKey")
+    public String groupFounderTagKey;
+
+    @NameInMap("GroupFounderTagValue")
+    public String groupFounderTagValue;
+
     @NameInMap("GroupId")
     public String groupId;
-
-    @NameInMap("ServiceId")
-    public String serviceId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeMonitorGroupsRequestTag> tag;
@@ -46,6 +49,14 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public static DescribeMonitorGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupsRequest self = new DescribeMonitorGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitorGroupsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeMonitorGroupsRequest setSelectContactGroups(Boolean selectContactGroups) {
@@ -120,28 +131,28 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
         return this.dynamicTagRuleId;
     }
 
+    public DescribeMonitorGroupsRequest setGroupFounderTagKey(String groupFounderTagKey) {
+        this.groupFounderTagKey = groupFounderTagKey;
+        return this;
+    }
+    public String getGroupFounderTagKey() {
+        return this.groupFounderTagKey;
+    }
+
+    public DescribeMonitorGroupsRequest setGroupFounderTagValue(String groupFounderTagValue) {
+        this.groupFounderTagValue = groupFounderTagValue;
+        return this;
+    }
+    public String getGroupFounderTagValue() {
+        return this.groupFounderTagValue;
+    }
+
     public DescribeMonitorGroupsRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     public String getGroupId() {
         return this.groupId;
-    }
-
-    public DescribeMonitorGroupsRequest setServiceId(String serviceId) {
-        this.serviceId = serviceId;
-        return this;
-    }
-    public String getServiceId() {
-        return this.serviceId;
-    }
-
-    public DescribeMonitorGroupsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DescribeMonitorGroupsRequest setTag(java.util.List<DescribeMonitorGroupsRequestTag> tag) {

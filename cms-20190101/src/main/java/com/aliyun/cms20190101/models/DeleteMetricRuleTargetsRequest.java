@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetricRuleTargetsRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("RuleId")
     public String ruleId;
 
@@ -13,6 +16,14 @@ public class DeleteMetricRuleTargetsRequest extends TeaModel {
     public static DeleteMetricRuleTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMetricRuleTargetsRequest self = new DeleteMetricRuleTargetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMetricRuleTargetsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteMetricRuleTargetsRequest setRuleId(String ruleId) {

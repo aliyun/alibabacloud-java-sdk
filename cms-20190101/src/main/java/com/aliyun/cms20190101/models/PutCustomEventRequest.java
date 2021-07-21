@@ -4,12 +4,23 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomEventRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("EventInfo")
     public java.util.List<PutCustomEventRequestEventInfo> eventInfo;
 
     public static PutCustomEventRequest build(java.util.Map<String, ?> map) throws Exception {
         PutCustomEventRequest self = new PutCustomEventRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutCustomEventRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public PutCustomEventRequest setEventInfo(java.util.List<PutCustomEventRequestEventInfo> eventInfo) {
@@ -21,11 +32,11 @@ public class PutCustomEventRequest extends TeaModel {
     }
 
     public static class PutCustomEventRequestEventInfo extends TeaModel {
-        @NameInMap("Time")
-        public String time;
-
         @NameInMap("EventName")
         public String eventName;
+
+        @NameInMap("Time")
+        public String time;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -38,20 +49,20 @@ public class PutCustomEventRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public PutCustomEventRequestEventInfo setTime(String time) {
-            this.time = time;
-            return this;
-        }
-        public String getTime() {
-            return this.time;
-        }
-
         public PutCustomEventRequestEventInfo setEventName(String eventName) {
             this.eventName = eventName;
             return this;
         }
         public String getEventName() {
             return this.eventName;
+        }
+
+        public PutCustomEventRequestEventInfo setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
         public PutCustomEventRequestEventInfo setGroupId(String groupId) {

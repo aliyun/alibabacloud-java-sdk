@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMonitorGroupDynamicRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public Integer code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class PutMonitorGroupDynamicRuleResponseBody extends TeaModel {
     public static PutMonitorGroupDynamicRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutMonitorGroupDynamicRuleResponseBody self = new PutMonitorGroupDynamicRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PutMonitorGroupDynamicRuleResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public PutMonitorGroupDynamicRuleResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class PutMonitorGroupDynamicRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public PutMonitorGroupDynamicRuleResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public PutMonitorGroupDynamicRuleResponseBody setSuccess(Boolean success) {

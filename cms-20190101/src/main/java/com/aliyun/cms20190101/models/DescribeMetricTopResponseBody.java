@@ -4,24 +4,32 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricTopResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Period")
-    public String period;
-
     @NameInMap("Datapoints")
     public String datapoints;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Period")
+    public String period;
 
     public static DescribeMetricTopResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricTopResponseBody self = new DescribeMetricTopResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricTopResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeMetricTopResponseBody setMessage(String message) {
@@ -40,14 +48,6 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMetricTopResponseBody setPeriod(String period) {
-        this.period = period;
-        return this;
-    }
-    public String getPeriod() {
-        return this.period;
-    }
-
     public DescribeMetricTopResponseBody setDatapoints(String datapoints) {
         this.datapoints = datapoints;
         return this;
@@ -56,12 +56,12 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         return this.datapoints;
     }
 
-    public DescribeMetricTopResponseBody setCode(String code) {
-        this.code = code;
+    public DescribeMetricTopResponseBody setPeriod(String period) {
+        this.period = period;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getPeriod() {
+        return this.period;
     }
 
 }

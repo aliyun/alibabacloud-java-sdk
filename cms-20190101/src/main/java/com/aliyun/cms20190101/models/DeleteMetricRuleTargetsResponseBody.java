@@ -4,14 +4,14 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     public static DeleteMetricRuleTargetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMetricRuleTargetsResponseBody self = new DeleteMetricRuleTargetsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMetricRuleTargetsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteMetricRuleTargetsResponseBody setMessage(String message) {
@@ -38,14 +46,6 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteMetricRuleTargetsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DeleteMetricRuleTargetsResponseBody setSuccess(Boolean success) {

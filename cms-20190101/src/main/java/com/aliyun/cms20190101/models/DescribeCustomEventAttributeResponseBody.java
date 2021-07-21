@@ -4,8 +4,8 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventAttributeResponseBody extends TeaModel {
-    @NameInMap("CustomEvents")
-    public DescribeCustomEventAttributeResponseBodyCustomEvents customEvents;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,23 +13,23 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("CustomEvents")
+    public DescribeCustomEventAttributeResponseBodyCustomEvents customEvents;
 
     public static DescribeCustomEventAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventAttributeResponseBody self = new DescribeCustomEventAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCustomEventAttributeResponseBody setCustomEvents(DescribeCustomEventAttributeResponseBodyCustomEvents customEvents) {
-        this.customEvents = customEvents;
+    public DescribeCustomEventAttributeResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public DescribeCustomEventAttributeResponseBodyCustomEvents getCustomEvents() {
-        return this.customEvents;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeCustomEventAttributeResponseBody setMessage(String message) {
@@ -48,14 +48,6 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCustomEventAttributeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public DescribeCustomEventAttributeResponseBody setSuccess(String success) {
         this.success = success;
         return this;
@@ -64,15 +56,23 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
         return this.success;
     }
 
+    public DescribeCustomEventAttributeResponseBody setCustomEvents(DescribeCustomEventAttributeResponseBodyCustomEvents customEvents) {
+        this.customEvents = customEvents;
+        return this;
+    }
+    public DescribeCustomEventAttributeResponseBodyCustomEvents getCustomEvents() {
+        return this.customEvents;
+    }
+
     public static class DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent extends TeaModel {
         @NameInMap("Time")
         public String time;
 
-        @NameInMap("GroupId")
-        public String groupId;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("GroupId")
+        public String groupId;
 
         @NameInMap("Content")
         public String content;
@@ -93,20 +93,20 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
             return this.time;
         }
 
-        public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
         public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
         }
 
         public DescribeCustomEventAttributeResponseBodyCustomEventsCustomEvent setContent(String content) {
