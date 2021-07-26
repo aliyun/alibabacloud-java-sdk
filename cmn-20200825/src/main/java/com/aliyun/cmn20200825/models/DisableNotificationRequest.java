@@ -78,6 +78,10 @@ public class DisableNotificationRequest extends TeaModel {
         @NameInMap("DedicatedLineId")
         public String dedicatedLineId;
 
+        // 端口集ID
+        @NameInMap("PortCollectionId")
+        public String portCollectionId;
+
         public static DisableNotificationRequestList build(java.util.Map<String, ?> map) throws Exception {
             DisableNotificationRequestList self = new DisableNotificationRequestList();
             return TeaModel.build(map, self);
@@ -121,6 +125,14 @@ public class DisableNotificationRequest extends TeaModel {
         }
         public String getDedicatedLineId() {
             return this.dedicatedLineId;
+        }
+
+        public DisableNotificationRequestList setPortCollectionId(String portCollectionId) {
+            this.portCollectionId = portCollectionId;
+            return this;
+        }
+        public String getPortCollectionId() {
+            return this.portCollectionId;
         }
 
     }

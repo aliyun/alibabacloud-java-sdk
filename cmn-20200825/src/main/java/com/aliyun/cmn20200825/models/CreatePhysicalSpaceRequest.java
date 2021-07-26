@@ -32,6 +32,18 @@ public class CreatePhysicalSpaceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 物理空间模型
+    @NameInMap("SpaceType")
+    public String spaceType;
+
+    // 物理空间缩写
+    @NameInMap("SpaceAbbreviation")
+    public String spaceAbbreviation;
+
+    // 负责人
+    @NameInMap("Owner")
+    public String owner;
+
     public static CreatePhysicalSpaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePhysicalSpaceRequest self = new CreatePhysicalSpaceRequest();
         return TeaModel.build(map, self);
@@ -91,6 +103,30 @@ public class CreatePhysicalSpaceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreatePhysicalSpaceRequest setSpaceType(String spaceType) {
+        this.spaceType = spaceType;
+        return this;
+    }
+    public String getSpaceType() {
+        return this.spaceType;
+    }
+
+    public CreatePhysicalSpaceRequest setSpaceAbbreviation(String spaceAbbreviation) {
+        this.spaceAbbreviation = spaceAbbreviation;
+        return this;
+    }
+    public String getSpaceAbbreviation() {
+        return this.spaceAbbreviation;
+    }
+
+    public CreatePhysicalSpaceRequest setOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    public String getOwner() {
+        return this.owner;
     }
 
 }

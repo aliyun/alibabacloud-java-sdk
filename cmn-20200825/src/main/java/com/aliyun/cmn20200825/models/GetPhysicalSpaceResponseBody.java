@@ -58,6 +58,18 @@ public class GetPhysicalSpaceResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        // 模型
+        @NameInMap("SpaceType")
+        public String spaceType;
+
+        // 缩写
+        @NameInMap("SpaceAbbreviation")
+        public String spaceAbbreviation;
+
+        // 负责人
+        @NameInMap("Owner")
+        public String owner;
+
         public static GetPhysicalSpaceResponseBodyPhysicalSpace build(java.util.Map<String, ?> map) throws Exception {
             GetPhysicalSpaceResponseBodyPhysicalSpace self = new GetPhysicalSpaceResponseBodyPhysicalSpace();
             return TeaModel.build(map, self);
@@ -109,6 +121,30 @@ public class GetPhysicalSpaceResponseBody extends TeaModel {
         }
         public String getAddress() {
             return this.address;
+        }
+
+        public GetPhysicalSpaceResponseBodyPhysicalSpace setSpaceType(String spaceType) {
+            this.spaceType = spaceType;
+            return this;
+        }
+        public String getSpaceType() {
+            return this.spaceType;
+        }
+
+        public GetPhysicalSpaceResponseBodyPhysicalSpace setSpaceAbbreviation(String spaceAbbreviation) {
+            this.spaceAbbreviation = spaceAbbreviation;
+            return this;
+        }
+        public String getSpaceAbbreviation() {
+            return this.spaceAbbreviation;
+        }
+
+        public GetPhysicalSpaceResponseBodyPhysicalSpace setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
         }
 
     }

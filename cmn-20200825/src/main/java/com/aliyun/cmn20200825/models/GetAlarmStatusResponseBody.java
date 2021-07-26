@@ -481,6 +481,150 @@ public class GetAlarmStatusResponseBody extends TeaModel {
 
     }
 
+    public static class GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice extends TeaModel {
+        // 设备名
+        @NameInMap("HostName")
+        public String hostName;
+
+        // IP
+        @NameInMap("Ip")
+        public String ip;
+
+        // 安全域
+        @NameInMap("SecurityDomain")
+        public String securityDomain;
+
+        public static GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice build(java.util.Map<String, ?> map) throws Exception {
+            GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice self = new GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice setSecurityDomain(String securityDomain) {
+            this.securityDomain = securityDomain;
+            return this;
+        }
+        public String getSecurityDomain() {
+            return this.securityDomain;
+        }
+
+    }
+
+    public static class GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList extends TeaModel {
+        // 端口名
+        @NameInMap("PortName")
+        public String portName;
+
+        // 设备ID
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        // 设备详情
+        @NameInMap("ResourceDevice")
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice resourceDevice;
+
+        public static GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList build(java.util.Map<String, ?> map) throws Exception {
+            GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList self = new GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList setPortName(String portName) {
+            this.portName = portName;
+            return this;
+        }
+        public String getPortName() {
+            return this.portName;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList setResourceDevice(GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice resourceDevice) {
+            this.resourceDevice = resourceDevice;
+            return this;
+        }
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortListResourceDevice getResourceDevice() {
+            return this.resourceDevice;
+        }
+
+    }
+
+    public static class GetAlarmStatusResponseBodyAlarmStatusPortCollection extends TeaModel {
+        // 端口集名称
+        @NameInMap("PortCollectionName")
+        public String portCollectionName;
+
+        // 端口集ID
+        @NameInMap("PortCollectionId")
+        public String portCollectionId;
+
+        // 端口集描述
+        @NameInMap("PortCollectionDescription")
+        public String portCollectionDescription;
+
+        // 端口列表
+        @NameInMap("PortList")
+        public java.util.List<GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList> portList;
+
+        public static GetAlarmStatusResponseBodyAlarmStatusPortCollection build(java.util.Map<String, ?> map) throws Exception {
+            GetAlarmStatusResponseBodyAlarmStatusPortCollection self = new GetAlarmStatusResponseBodyAlarmStatusPortCollection();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollection setPortCollectionName(String portCollectionName) {
+            this.portCollectionName = portCollectionName;
+            return this;
+        }
+        public String getPortCollectionName() {
+            return this.portCollectionName;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollection setPortCollectionId(String portCollectionId) {
+            this.portCollectionId = portCollectionId;
+            return this;
+        }
+        public String getPortCollectionId() {
+            return this.portCollectionId;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollection setPortCollectionDescription(String portCollectionDescription) {
+            this.portCollectionDescription = portCollectionDescription;
+            return this;
+        }
+        public String getPortCollectionDescription() {
+            return this.portCollectionDescription;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollection setPortList(java.util.List<GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList> portList) {
+            this.portList = portList;
+            return this;
+        }
+        public java.util.List<GetAlarmStatusResponseBodyAlarmStatusPortCollectionPortList> getPortList() {
+            return this.portList;
+        }
+
+    }
+
     public static class GetAlarmStatusResponseBodyAlarmStatus extends TeaModel {
         // 设备ID
         @NameInMap("DeviceId")
@@ -553,6 +697,13 @@ public class GetAlarmStatusResponseBody extends TeaModel {
         // 专线详情
         @NameInMap("DedicatedLine")
         public GetAlarmStatusResponseBodyAlarmStatusDedicatedLine dedicatedLine;
+
+        // 端口集ID
+        @NameInMap("PortCollectionId")
+        public String portCollectionId;
+
+        @NameInMap("PortCollection")
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollection portCollection;
 
         public static GetAlarmStatusResponseBodyAlarmStatus build(java.util.Map<String, ?> map) throws Exception {
             GetAlarmStatusResponseBodyAlarmStatus self = new GetAlarmStatusResponseBodyAlarmStatus();
@@ -701,6 +852,22 @@ public class GetAlarmStatusResponseBody extends TeaModel {
         }
         public GetAlarmStatusResponseBodyAlarmStatusDedicatedLine getDedicatedLine() {
             return this.dedicatedLine;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatus setPortCollectionId(String portCollectionId) {
+            this.portCollectionId = portCollectionId;
+            return this;
+        }
+        public String getPortCollectionId() {
+            return this.portCollectionId;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatus setPortCollection(GetAlarmStatusResponseBodyAlarmStatusPortCollection portCollection) {
+            this.portCollection = portCollection;
+            return this;
+        }
+        public GetAlarmStatusResponseBodyAlarmStatusPortCollection getPortCollection() {
+            return this.portCollection;
         }
 
     }

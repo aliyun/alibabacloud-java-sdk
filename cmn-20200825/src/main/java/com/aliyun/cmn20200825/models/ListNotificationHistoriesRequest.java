@@ -36,6 +36,10 @@ public class ListNotificationHistoriesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 端口集ID
+    @NameInMap("PortCollectionId")
+    public String portCollectionId;
+
     public static ListNotificationHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNotificationHistoriesRequest self = new ListNotificationHistoriesRequest();
         return TeaModel.build(map, self);
@@ -103,6 +107,14 @@ public class ListNotificationHistoriesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListNotificationHistoriesRequest setPortCollectionId(String portCollectionId) {
+        this.portCollectionId = portCollectionId;
+        return this;
+    }
+    public String getPortCollectionId() {
+        return this.portCollectionId;
     }
 
 }

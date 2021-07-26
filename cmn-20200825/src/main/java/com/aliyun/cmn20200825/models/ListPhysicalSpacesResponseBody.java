@@ -94,6 +94,22 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        // 缩写
+        @NameInMap("SpaceAbbreviation")
+        public String spaceAbbreviation;
+
+        // 模型
+        @NameInMap("SpaceType")
+        public String spaceType;
+
+        // 负责人
+        @NameInMap("Owner")
+        public String owner;
+
+        // 实例
+        @NameInMap("Instance")
+        public String instance;
+
         public static ListPhysicalSpacesResponseBodyPhysicalSpaces build(java.util.Map<String, ?> map) throws Exception {
             ListPhysicalSpacesResponseBodyPhysicalSpaces self = new ListPhysicalSpacesResponseBodyPhysicalSpaces();
             return TeaModel.build(map, self);
@@ -145,6 +161,38 @@ public class ListPhysicalSpacesResponseBody extends TeaModel {
         }
         public String getAddress() {
             return this.address;
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setSpaceAbbreviation(String spaceAbbreviation) {
+            this.spaceAbbreviation = spaceAbbreviation;
+            return this;
+        }
+        public String getSpaceAbbreviation() {
+            return this.spaceAbbreviation;
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setSpaceType(String spaceType) {
+            this.spaceType = spaceType;
+            return this;
+        }
+        public String getSpaceType() {
+            return this.spaceType;
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public ListPhysicalSpacesResponseBodyPhysicalSpaces setInstance(String instance) {
+            this.instance = instance;
+            return this;
+        }
+        public String getInstance() {
+            return this.instance;
         }
 
     }

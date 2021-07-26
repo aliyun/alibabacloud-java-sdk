@@ -40,6 +40,10 @@ public class ListAlarmStatusRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 专线名称
+    @NameInMap("DedicatedLineName")
+    public String dedicatedLineName;
+
     public static ListAlarmStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmStatusRequest self = new ListAlarmStatusRequest();
         return TeaModel.build(map, self);
@@ -115,6 +119,14 @@ public class ListAlarmStatusRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListAlarmStatusRequest setDedicatedLineName(String dedicatedLineName) {
+        this.dedicatedLineName = dedicatedLineName;
+        return this;
+    }
+    public String getDedicatedLineName() {
+        return this.dedicatedLineName;
     }
 
 }
