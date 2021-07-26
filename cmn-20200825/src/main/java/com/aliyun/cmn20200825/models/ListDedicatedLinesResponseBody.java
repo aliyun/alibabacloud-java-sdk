@@ -70,6 +70,10 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
 
+        // 关联物理空间ID
+        @NameInMap("PhysicalSpaceId")
+        public String physicalSpaceId;
+
         public static ListDedicatedLinesResponseBodyDedicatedLines build(java.util.Map<String, ?> map) throws Exception {
             ListDedicatedLinesResponseBodyDedicatedLines self = new ListDedicatedLinesResponseBodyDedicatedLines();
             return TeaModel.build(map, self);
@@ -145,6 +149,14 @@ public class ListDedicatedLinesResponseBody extends TeaModel {
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public ListDedicatedLinesResponseBodyDedicatedLines setPhysicalSpaceId(String physicalSpaceId) {
+            this.physicalSpaceId = physicalSpaceId;
+            return this;
+        }
+        public String getPhysicalSpaceId() {
+            return this.physicalSpaceId;
         }
 
     }

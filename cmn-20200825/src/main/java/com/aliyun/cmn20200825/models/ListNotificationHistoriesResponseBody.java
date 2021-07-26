@@ -114,6 +114,10 @@ public class ListNotificationHistoriesResponseBody extends TeaModel {
         @NameInMap("AggregateDataId")
         public String aggregateDataId;
 
+        // 端口集ID
+        @NameInMap("PortCollectionId")
+        public String portCollectionId;
+
         public static ListNotificationHistoriesResponseBodyNotificationHistories build(java.util.Map<String, ?> map) throws Exception {
             ListNotificationHistoriesResponseBodyNotificationHistories self = new ListNotificationHistoriesResponseBodyNotificationHistories();
             return TeaModel.build(map, self);
@@ -205,6 +209,14 @@ public class ListNotificationHistoriesResponseBody extends TeaModel {
         }
         public String getAggregateDataId() {
             return this.aggregateDataId;
+        }
+
+        public ListNotificationHistoriesResponseBodyNotificationHistories setPortCollectionId(String portCollectionId) {
+            this.portCollectionId = portCollectionId;
+            return this;
+        }
+        public String getPortCollectionId() {
+            return this.portCollectionId;
         }
 
     }

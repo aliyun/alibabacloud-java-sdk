@@ -194,6 +194,14 @@ public class ListInspectionTasksResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        // 设备回显
+        @NameInMap("DeviceDisplay")
+        public String deviceDisplay;
+
+        // 角色
+        @NameInMap("Role")
+        public String role;
+
         public static ListInspectionTasksResponseBodyInspectionTasks build(java.util.Map<String, ?> map) throws Exception {
             ListInspectionTasksResponseBodyInspectionTasks self = new ListInspectionTasksResponseBodyInspectionTasks();
             return TeaModel.build(map, self);
@@ -333,6 +341,22 @@ public class ListInspectionTasksResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public ListInspectionTasksResponseBodyInspectionTasks setDeviceDisplay(String deviceDisplay) {
+            this.deviceDisplay = deviceDisplay;
+            return this;
+        }
+        public String getDeviceDisplay() {
+            return this.deviceDisplay;
+        }
+
+        public ListInspectionTasksResponseBodyInspectionTasks setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
         }
 
     }

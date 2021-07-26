@@ -197,4 +197,72 @@ public class Task extends TeaModel {
 
     }
 
+    public static class ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic extends TeaModel {
+        // 巡检项
+        @NameInMap("InspectionItem")
+        public String inspectionItem;
+
+        // 厂商
+        @NameInMap("Vendor")
+        public String vendor;
+
+        // 型号
+        @NameInMap("Model")
+        public String model;
+
+        // 高危数量
+        @NameInMap("CriticalNumber")
+        public Long criticalNumber;
+
+        // 中危数量
+        @NameInMap("WarningNumber")
+        public Long warningNumber;
+
+        public static ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic build(java.util.Map<String, ?> map) throws Exception {
+            ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic self = new ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setInspectionItem(String inspectionItem) {
+            this.inspectionItem = inspectionItem;
+            return this;
+        }
+        public String getInspectionItem() {
+            return this.inspectionItem;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setVendor(String vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public String getVendor() {
+            return this.vendor;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setCriticalNumber(Long criticalNumber) {
+            this.criticalNumber = criticalNumber;
+            return this;
+        }
+        public Long getCriticalNumber() {
+            return this.criticalNumber;
+        }
+
+        public ListInspectionTaskReportsResponseBodyInspectionTaskAlarmStatistic setWarningNumber(Long warningNumber) {
+            this.warningNumber = warningNumber;
+            return this;
+        }
+        public Long getWarningNumber() {
+            return this.warningNumber;
+        }
+
+    }
+
 }

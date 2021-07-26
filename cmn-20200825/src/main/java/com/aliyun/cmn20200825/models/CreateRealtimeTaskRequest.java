@@ -16,6 +16,10 @@ public class CreateRealtimeTaskRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // token
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     public static CreateRealtimeTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRealtimeTaskRequest self = new CreateRealtimeTaskRequest();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class CreateRealtimeTaskRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateRealtimeTaskRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
 }

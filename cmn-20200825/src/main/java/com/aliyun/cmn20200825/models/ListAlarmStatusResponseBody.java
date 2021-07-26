@@ -24,6 +24,10 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     @NameInMap("AlarmStatus")
     public java.util.List<ListAlarmStatusResponseBodyAlarmStatus> alarmStatus;
 
+    // 告警状态统计
+    @NameInMap("Statistics")
+    public java.util.List<ListAlarmStatusResponseBodyStatistics> statistics;
+
     public static ListAlarmStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmStatusResponseBody self = new ListAlarmStatusResponseBody();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class ListAlarmStatusResponseBody extends TeaModel {
     }
     public java.util.List<ListAlarmStatusResponseBodyAlarmStatus> getAlarmStatus() {
         return this.alarmStatus;
+    }
+
+    public ListAlarmStatusResponseBody setStatistics(java.util.List<ListAlarmStatusResponseBodyStatistics> statistics) {
+        this.statistics = statistics;
+        return this;
+    }
+    public java.util.List<ListAlarmStatusResponseBodyStatistics> getStatistics() {
+        return this.statistics;
     }
 
     public static class ListAlarmStatusResponseBodyAlarmStatusResourceDevice extends TeaModel {
@@ -193,6 +205,26 @@ public class ListAlarmStatusResponseBody extends TeaModel {
 
     }
 
+    public static class ListAlarmStatusResponseBodyAlarmStatusPortCollection extends TeaModel {
+        // 端口集名称
+        @NameInMap("PortCollectionName")
+        public String portCollectionName;
+
+        public static ListAlarmStatusResponseBodyAlarmStatusPortCollection build(java.util.Map<String, ?> map) throws Exception {
+            ListAlarmStatusResponseBodyAlarmStatusPortCollection self = new ListAlarmStatusResponseBodyAlarmStatusPortCollection();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusPortCollection setPortCollectionName(String portCollectionName) {
+            this.portCollectionName = portCollectionName;
+            return this;
+        }
+        public String getPortCollectionName() {
+            return this.portCollectionName;
+        }
+
+    }
+
     public static class ListAlarmStatusResponseBodyAlarmStatus extends TeaModel {
         // 设备ID
         @NameInMap("DeviceId")
@@ -265,6 +297,14 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         // 专线
         @NameInMap("DedicatedLine")
         public ListAlarmStatusResponseBodyAlarmStatusDedicatedLine dedicatedLine;
+
+        // 端口集ID
+        @NameInMap("PortCollectionId")
+        public String portCollectionId;
+
+        // 端口集
+        @NameInMap("PortCollection")
+        public ListAlarmStatusResponseBodyAlarmStatusPortCollection portCollection;
 
         public static ListAlarmStatusResponseBodyAlarmStatus build(java.util.Map<String, ?> map) throws Exception {
             ListAlarmStatusResponseBodyAlarmStatus self = new ListAlarmStatusResponseBodyAlarmStatus();
@@ -413,6 +453,54 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         }
         public ListAlarmStatusResponseBodyAlarmStatusDedicatedLine getDedicatedLine() {
             return this.dedicatedLine;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setPortCollectionId(String portCollectionId) {
+            this.portCollectionId = portCollectionId;
+            return this;
+        }
+        public String getPortCollectionId() {
+            return this.portCollectionId;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setPortCollection(ListAlarmStatusResponseBodyAlarmStatusPortCollection portCollection) {
+            this.portCollection = portCollection;
+            return this;
+        }
+        public ListAlarmStatusResponseBodyAlarmStatusPortCollection getPortCollection() {
+            return this.portCollection;
+        }
+
+    }
+
+    public static class ListAlarmStatusResponseBodyStatistics extends TeaModel {
+        // 数量
+        @NameInMap("Count")
+        public Long count;
+
+        // 告警状态
+        @NameInMap("Status")
+        public String status;
+
+        public static ListAlarmStatusResponseBodyStatistics build(java.util.Map<String, ?> map) throws Exception {
+            ListAlarmStatusResponseBodyStatistics self = new ListAlarmStatusResponseBodyStatistics();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAlarmStatusResponseBodyStatistics setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
+        public ListAlarmStatusResponseBodyStatistics setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

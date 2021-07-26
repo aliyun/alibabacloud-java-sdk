@@ -21,8 +21,8 @@ public class ListInspectionTasksRequest extends TeaModel {
     public String hostName;
 
     // 设备IP
-    @NameInMap("Ip")
-    public String ip;
+    @NameInMap("IP")
+    public String IP;
 
     // 巡检状态
     @NameInMap("TaskStatus")
@@ -31,6 +31,22 @@ public class ListInspectionTasksRequest extends TeaModel {
     // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
+
+    // 物理空间
+    @NameInMap("Space")
+    public String space;
+
+    // 角色
+    @NameInMap("Role")
+    public String role;
+
+    // 厂商
+    @NameInMap("Vendor")
+    public String vendor;
+
+    // 型号
+    @NameInMap("Model")
+    public String model;
 
     public static ListInspectionTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInspectionTasksRequest self = new ListInspectionTasksRequest();
@@ -69,12 +85,12 @@ public class ListInspectionTasksRequest extends TeaModel {
         return this.hostName;
     }
 
-    public ListInspectionTasksRequest setIp(String ip) {
-        this.ip = ip;
+    public ListInspectionTasksRequest setIP(String IP) {
+        this.IP = IP;
         return this;
     }
-    public String getIp() {
-        return this.ip;
+    public String getIP() {
+        return this.IP;
     }
 
     public ListInspectionTasksRequest setTaskStatus(String taskStatus) {
@@ -91,6 +107,38 @@ public class ListInspectionTasksRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListInspectionTasksRequest setSpace(String space) {
+        this.space = space;
+        return this;
+    }
+    public String getSpace() {
+        return this.space;
+    }
+
+    public ListInspectionTasksRequest setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
+    }
+
+    public ListInspectionTasksRequest setVendor(String vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    public String getVendor() {
+        return this.vendor;
+    }
+
+    public ListInspectionTasksRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
     }
 
 }
