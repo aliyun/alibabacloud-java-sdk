@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>reid_cloud20201027</artifactId>
-  <version>2.0.2</version>
+  <version>2.0.5</version>
   <packaging>jar</packaging>
   <name>reid_cloud20201027</name>
   <description>Alibaba Cloud reid_cloud (20201027) SDK for Java

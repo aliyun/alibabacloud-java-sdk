@@ -91,6 +91,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public ListIpcStoreInfoResponse listIpcStoreInfoWithOptions(ListIpcStoreInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListIpcStoreInfo", "2020-10-27", "HTTPS", "POST", "AK", "json", req, runtime), new ListIpcStoreInfoResponse());
+    }
+
+    public ListIpcStoreInfoResponse listIpcStoreInfo(ListIpcStoreInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listIpcStoreInfoWithOptions(request, runtime);
+    }
+
     public ExtractFaceAttributeCROResponse extractFaceAttributeCROWithOptions(ExtractFaceAttributeCRORequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -102,6 +115,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExtractFaceAttributeCROResponse extractFaceAttributeCRO(ExtractFaceAttributeCRORequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.extractFaceAttributeCROWithOptions(request, runtime);
+    }
+
+    public GetAllStoreDataByTypeResponse getAllStoreDataByTypeWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("GetAllStoreDataByType", "2020-10-27", "HTTPS", "POST", "AK", "json", req, runtime), new GetAllStoreDataByTypeResponse());
+    }
+
+    public GetAllStoreDataByTypeResponse getAllStoreDataByType() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAllStoreDataByTypeWithOptions(runtime);
     }
 
     public ExtractFaceFeatureCROResponse extractFaceFeatureCROWithOptions(ExtractFaceFeatureCRORequest request, RuntimeOptions runtime) throws Exception {
@@ -116,5 +139,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExtractFaceFeatureCROResponse extractFaceFeatureCRO(ExtractFaceFeatureCRORequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.extractFaceFeatureCROWithOptions(request, runtime);
+    }
+
+    public GetEmapIpcDataListByStoreIdResponse getEmapIpcDataListByStoreIdWithOptions(GetEmapIpcDataListByStoreIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetEmapIpcDataListByStoreId", "2020-10-27", "HTTPS", "POST", "AK", "json", req, runtime), new GetEmapIpcDataListByStoreIdResponse());
+    }
+
+    public GetEmapIpcDataListByStoreIdResponse getEmapIpcDataListByStoreId(GetEmapIpcDataListByStoreIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getEmapIpcDataListByStoreIdWithOptions(request, runtime);
     }
 }
