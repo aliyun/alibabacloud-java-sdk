@@ -7,6 +7,7 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -1118,6 +1119,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBInstanceSSLWithOptions(request, runtime);
     }
 
+    public DescribeDBInstanceStatusResponse describeDBInstanceStatusWithOptions(DescribeDBInstanceStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeDBInstanceStatus", "2014-08-15", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeDBInstanceStatusResponse());
+    }
+
+    public DescribeDBInstanceStatusResponse describeDBInstanceStatus(DescribeDBInstanceStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDBInstanceStatusWithOptions(request, runtime);
+    }
+
     public DescribeDBInstanceTDEResponse describeDBInstanceTDEWithOptions(DescribeDBInstanceTDERequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1558,6 +1573,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeReadDBInstanceDelayResponse describeReadDBInstanceDelay(DescribeReadDBInstanceDelayRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeReadDBInstanceDelayWithOptions(request, runtime);
+    }
+
+    public DescribeRegionInfosResponse describeRegionInfosWithOptions(DescribeRegionInfosRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeRegionInfos", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeRegionInfosResponse());
+    }
+
+    public DescribeRegionInfosResponse describeRegionInfos(DescribeRegionInfosRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeRegionInfosWithOptions(request, runtime);
     }
 
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, RuntimeOptions runtime) throws Exception {
