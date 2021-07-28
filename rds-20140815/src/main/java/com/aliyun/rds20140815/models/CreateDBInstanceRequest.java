@@ -130,6 +130,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("UserBackupId")
     public String userBackupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateDBInstanceRequestTag> tag;
+
     public static CreateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceRequest self = new CreateDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -469,6 +472,44 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getUserBackupId() {
         return this.userBackupId;
+    }
+
+    public CreateDBInstanceRequest setTag(java.util.List<CreateDBInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDBInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateDBInstanceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDBInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBInstanceRequestTag self = new CreateDBInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDBInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -7,6 +7,9 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     @NameInMap("DryRunResult")
     public Boolean dryRunResult;
 
+    @NameInMap("TagResult")
+    public Boolean tagResult;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,6 +39,14 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     }
     public Boolean getDryRunResult() {
         return this.dryRunResult;
+    }
+
+    public CreateDBInstanceResponseBody setTagResult(Boolean tagResult) {
+        this.tagResult = tagResult;
+        return this;
+    }
+    public Boolean getTagResult() {
+        return this.tagResult;
     }
 
     public CreateDBInstanceResponseBody setRequestId(String requestId) {

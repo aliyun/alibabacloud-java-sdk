@@ -75,6 +75,66 @@ public class DescribeBackupsResponseBody extends TeaModel {
         return this.items;
     }
 
+    public static class DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB extends TeaModel {
+        @NameInMap("IntranetDownloadLink")
+        public String intranetDownloadLink;
+
+        @NameInMap("DataBase")
+        public String dataBase;
+
+        @NameInMap("DownloadLink")
+        public String downloadLink;
+
+        public static DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB self = new DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB setIntranetDownloadLink(String intranetDownloadLink) {
+            this.intranetDownloadLink = intranetDownloadLink;
+            return this;
+        }
+        public String getIntranetDownloadLink() {
+            return this.intranetDownloadLink;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB setDataBase(String dataBase) {
+            this.dataBase = dataBase;
+            return this;
+        }
+        public String getDataBase() {
+            return this.dataBase;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB setDownloadLink(String downloadLink) {
+            this.downloadLink = downloadLink;
+            return this;
+        }
+        public String getDownloadLink() {
+            return this.downloadLink;
+        }
+
+    }
+
+    public static class DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB extends TeaModel {
+        @NameInMap("BackupDownloadLinkByDB")
+        public java.util.List<DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB> backupDownloadLinkByDB;
+
+        public static DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB self = new DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB setBackupDownloadLinkByDB(java.util.List<DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB> backupDownloadLinkByDB) {
+            this.backupDownloadLinkByDB = backupDownloadLinkByDB;
+            return this;
+        }
+        public java.util.List<DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDBBackupDownloadLinkByDB> getBackupDownloadLinkByDB() {
+            return this.backupDownloadLinkByDB;
+        }
+
+    }
+
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
         @NameInMap("StorageClass")
         public String storageClass;
@@ -135,6 +195,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
+
+        @NameInMap("BackupDownloadLinkByDB")
+        public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB backupDownloadLinkByDB;
 
         public static DescribeBackupsResponseBodyItemsBackup build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseBodyItemsBackup self = new DescribeBackupsResponseBodyItemsBackup();
@@ -299,6 +362,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getDBInstanceId() {
             return this.DBInstanceId;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupDownloadLinkByDB(DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB backupDownloadLinkByDB) {
+            this.backupDownloadLinkByDB = backupDownloadLinkByDB;
+            return this;
+        }
+        public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB getBackupDownloadLinkByDB() {
+            return this.backupDownloadLinkByDB;
         }
 
     }
