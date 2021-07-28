@@ -7,11 +7,11 @@ public class CreateEaiAllResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ClientInstanceId")
-    public String clientInstanceId;
-
     @NameInMap("ElasticAcceleratedInstanceId")
     public String elasticAcceleratedInstanceId;
+
+    @NameInMap("ClientInstanceId")
+    public String clientInstanceId;
 
     public static CreateEaiAllResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateEaiAllResponseBody self = new CreateEaiAllResponseBody();
@@ -26,20 +26,20 @@ public class CreateEaiAllResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateEaiAllResponseBody setClientInstanceId(String clientInstanceId) {
-        this.clientInstanceId = clientInstanceId;
-        return this;
-    }
-    public String getClientInstanceId() {
-        return this.clientInstanceId;
-    }
-
     public CreateEaiAllResponseBody setElasticAcceleratedInstanceId(String elasticAcceleratedInstanceId) {
         this.elasticAcceleratedInstanceId = elasticAcceleratedInstanceId;
         return this;
     }
     public String getElasticAcceleratedInstanceId() {
         return this.elasticAcceleratedInstanceId;
+    }
+
+    public CreateEaiAllResponseBody setClientInstanceId(String clientInstanceId) {
+        this.clientInstanceId = clientInstanceId;
+        return this;
+    }
+    public String getClientInstanceId() {
+        return this.clientInstanceId;
     }
 
 }
