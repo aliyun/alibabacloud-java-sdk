@@ -3,21 +3,21 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteClusterNodesResponse extends TeaModel {
+public class CreateTriggerResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteClusterNodesResponseBody body;
+    public CreateTriggerResponseBody body;
 
-    public static DeleteClusterNodesResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteClusterNodesResponse self = new DeleteClusterNodesResponse();
+    public static CreateTriggerResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateTriggerResponse self = new CreateTriggerResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteClusterNodesResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateTriggerResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DeleteClusterNodesResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteClusterNodesResponse setBody(DeleteClusterNodesResponseBody body) {
+    public CreateTriggerResponse setBody(CreateTriggerResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteClusterNodesResponseBody getBody() {
+    public CreateTriggerResponseBody getBody() {
         return this.body;
     }
 

@@ -8,6 +8,10 @@ public class DeleteClusterNodepoolResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteClusterNodepoolResponseBody body;
+
     public static DeleteClusterNodepoolResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteClusterNodepoolResponse self = new DeleteClusterNodepoolResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class DeleteClusterNodepoolResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DeleteClusterNodepoolResponse setBody(DeleteClusterNodepoolResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteClusterNodepoolResponseBody getBody() {
+        return this.body;
     }
 
 }
