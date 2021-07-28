@@ -135,6 +135,14 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("os_type")
     public String osType;
 
+    // 等保安全加固
+    @NameInMap("soc_enabled")
+    public Boolean socEnabled;
+
+    // CIS安全加固
+    @NameInMap("cis_enabled")
+    public Boolean cisEnabled;
+
     // CPU策略
     @NameInMap("cpu_policy")
     public String cpuPolicy;
@@ -227,6 +235,10 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("worker_system_disk_snapshot_policy_id")
     public String workerSystemDiskSnapshotPolicyId;
 
+    // 集群Worker节点磁盘性能，只对ESSD类型磁盘生效
+    @NameInMap("worker_system_disk_performance_level")
+    public String workerSystemDiskPerformanceLevel;
+
     // 集群Worker节点数据盘配置
     @NameInMap("worker_data_disks")
     public java.util.List<DataDisk> workerDataDisks;
@@ -278,6 +290,22 @@ public class CreateClusterRequest extends TeaModel {
     // 面向场景时的集群类型。  Default：非边缘场景集群。 Edge：边缘场景集群。
     @NameInMap("profile")
     public String profile;
+
+    // ASK 集群开启日志服务
+    @NameInMap("logging_type")
+    public String loggingType;
+
+    // 控制平面日志
+    @NameInMap("controlplane_log_ttl")
+    public String controlplaneLogTtl;
+
+    // 使用已有log project时，需要指定log project
+    @NameInMap("controlplane_log_project")
+    public String controlplaneLogProject;
+
+    // 需要采集日志的组件
+    @NameInMap("controlplane_log_components")
+    public java.util.List<String> controlplaneLogComponents;
 
     // 集群删除保护
     @NameInMap("deletion_protection")
@@ -560,6 +588,22 @@ public class CreateClusterRequest extends TeaModel {
         return this.osType;
     }
 
+    public CreateClusterRequest setSocEnabled(Boolean socEnabled) {
+        this.socEnabled = socEnabled;
+        return this;
+    }
+    public Boolean getSocEnabled() {
+        return this.socEnabled;
+    }
+
+    public CreateClusterRequest setCisEnabled(Boolean cisEnabled) {
+        this.cisEnabled = cisEnabled;
+        return this;
+    }
+    public Boolean getCisEnabled() {
+        return this.cisEnabled;
+    }
+
     public CreateClusterRequest setCpuPolicy(String cpuPolicy) {
         this.cpuPolicy = cpuPolicy;
         return this;
@@ -744,6 +788,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.workerSystemDiskSnapshotPolicyId;
     }
 
+    public CreateClusterRequest setWorkerSystemDiskPerformanceLevel(String workerSystemDiskPerformanceLevel) {
+        this.workerSystemDiskPerformanceLevel = workerSystemDiskPerformanceLevel;
+        return this;
+    }
+    public String getWorkerSystemDiskPerformanceLevel() {
+        return this.workerSystemDiskPerformanceLevel;
+    }
+
     public CreateClusterRequest setWorkerDataDisks(java.util.List<DataDisk> workerDataDisks) {
         this.workerDataDisks = workerDataDisks;
         return this;
@@ -846,6 +898,38 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getProfile() {
         return this.profile;
+    }
+
+    public CreateClusterRequest setLoggingType(String loggingType) {
+        this.loggingType = loggingType;
+        return this;
+    }
+    public String getLoggingType() {
+        return this.loggingType;
+    }
+
+    public CreateClusterRequest setControlplaneLogTtl(String controlplaneLogTtl) {
+        this.controlplaneLogTtl = controlplaneLogTtl;
+        return this;
+    }
+    public String getControlplaneLogTtl() {
+        return this.controlplaneLogTtl;
+    }
+
+    public CreateClusterRequest setControlplaneLogProject(String controlplaneLogProject) {
+        this.controlplaneLogProject = controlplaneLogProject;
+        return this;
+    }
+    public String getControlplaneLogProject() {
+        return this.controlplaneLogProject;
+    }
+
+    public CreateClusterRequest setControlplaneLogComponents(java.util.List<String> controlplaneLogComponents) {
+        this.controlplaneLogComponents = controlplaneLogComponents;
+        return this;
+    }
+    public java.util.List<String> getControlplaneLogComponents() {
+        return this.controlplaneLogComponents;
     }
 
     public CreateClusterRequest setDeletionProtection(Boolean deletionProtection) {
