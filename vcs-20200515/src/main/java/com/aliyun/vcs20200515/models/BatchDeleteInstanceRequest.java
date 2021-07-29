@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteInstanceRequest extends TeaModel {
     @NameInMap("InstanceIds")
-    public java.util.Map<String, ?> instanceIds;
+    public java.util.List<String> instanceIds;
 
     @NameInMap("ProjectId")
     public String projectId;
@@ -15,11 +15,11 @@ public class BatchDeleteInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BatchDeleteInstanceRequest setInstanceIds(java.util.Map<String, ?> instanceIds) {
+    public BatchDeleteInstanceRequest setInstanceIds(java.util.List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
-    public java.util.Map<String, ?> getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
