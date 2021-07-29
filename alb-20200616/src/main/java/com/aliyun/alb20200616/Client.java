@@ -13,24 +13,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(Config config) throws Exception {
         super(config);
-        this._endpointRule = "central";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-beijing", "alb.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "alb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "alb.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "alb.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "alb.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "alb.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "alb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "alb.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "alb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("us-east-1", "alb.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "alb.eu-central-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "alb.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "alb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "alb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "alb.cn-wulanchabu.aliyuncs.com")
-        );
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("alb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
