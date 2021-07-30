@@ -4,23 +4,15 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryTagsResponseBody extends TeaModel {
-    @NameInMap("TagInfos")
-    public QueryTagsResponseBodyTagInfos tagInfos;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TagInfos")
+    public QueryTagsResponseBodyTagInfos tagInfos;
 
     public static QueryTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTagsResponseBody self = new QueryTagsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTagsResponseBody setTagInfos(QueryTagsResponseBodyTagInfos tagInfos) {
-        this.tagInfos = tagInfos;
-        return this;
-    }
-    public QueryTagsResponseBodyTagInfos getTagInfos() {
-        return this.tagInfos;
     }
 
     public QueryTagsResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class QueryTagsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QueryTagsResponseBody setTagInfos(QueryTagsResponseBodyTagInfos tagInfos) {
+        this.tagInfos = tagInfos;
+        return this;
+    }
+    public QueryTagsResponseBodyTagInfos getTagInfos() {
+        return this.tagInfos;
     }
 
     public static class QueryTagsResponseBodyTagInfosTagInfo extends TeaModel {

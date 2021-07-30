@@ -139,6 +139,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelPushWithOptions(request, runtime);
     }
 
+    public CheckCertificateResponse checkCertificateWithOptions(CheckCertificateRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CheckCertificate", "2016-08-01", "HTTPS", "POST", "AK", "json", req, runtime), new CheckCertificateResponse());
+    }
+
+    public CheckCertificateResponse checkCertificate(CheckCertificateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.checkCertificateWithOptions(request, runtime);
+    }
+
     public CheckDeviceResponse checkDeviceWithOptions(CheckDeviceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
