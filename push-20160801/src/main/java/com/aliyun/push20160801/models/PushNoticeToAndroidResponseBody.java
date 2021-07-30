@@ -4,23 +4,15 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class PushNoticeToAndroidResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MessageId")
     public String messageId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static PushNoticeToAndroidResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PushNoticeToAndroidResponseBody self = new PushNoticeToAndroidResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public PushNoticeToAndroidResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public PushNoticeToAndroidResponseBody setMessageId(String messageId) {
@@ -29,6 +21,14 @@ public class PushNoticeToAndroidResponseBody extends TeaModel {
     }
     public String getMessageId() {
         return this.messageId;
+    }
+
+    public PushNoticeToAndroidResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

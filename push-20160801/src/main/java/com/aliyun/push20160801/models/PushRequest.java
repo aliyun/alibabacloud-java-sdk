@@ -151,6 +151,18 @@ public class PushRequest extends TeaModel {
     @NameInMap("iOSNotificationCollapseId")
     public String iOSNotificationCollapseId;
 
+    @NameInMap("AndroidRenderStyle")
+    public Integer androidRenderStyle;
+
+    @NameInMap("AndroidBigTitle")
+    public String androidBigTitle;
+
+    @NameInMap("AndroidBigBody")
+    public String androidBigBody;
+
+    @NameInMap("AndroidXiaomiBigPictureUrl")
+    public String androidXiaomiBigPictureUrl;
+
     public static PushRequest build(java.util.Map<String, ?> map) throws Exception {
         PushRequest self = new PushRequest();
         return TeaModel.build(map, self);
@@ -548,24 +560,59 @@ public class PushRequest extends TeaModel {
         return this.iOSNotificationCollapseId;
     }
 
+    public PushRequest setAndroidRenderStyle(Integer androidRenderStyle) {
+        this.androidRenderStyle = androidRenderStyle;
+        return this;
+    }
+    public Integer getAndroidRenderStyle() {
+        return this.androidRenderStyle;
+    }
+
+    public PushRequest setAndroidBigTitle(String androidBigTitle) {
+        this.androidBigTitle = androidBigTitle;
+        return this;
+    }
+    public String getAndroidBigTitle() {
+        return this.androidBigTitle;
+    }
+
+    public PushRequest setAndroidBigBody(String androidBigBody) {
+        this.androidBigBody = androidBigBody;
+        return this;
+    }
+    public String getAndroidBigBody() {
+        return this.androidBigBody;
+    }
+
+    public PushRequest setAndroidXiaomiBigPictureUrl(String androidXiaomiBigPictureUrl) {
+        this.androidXiaomiBigPictureUrl = androidXiaomiBigPictureUrl;
+        return this;
+    }
+    public String getAndroidXiaomiBigPictureUrl() {
+        return this.androidXiaomiBigPictureUrl;
+    }
+
     public static class MassPushRequestPushTask extends TeaModel {
         @NameInMap("JobKey")
         public String jobKey;
 
+        @NameInMap("iOSSilentNotification")
+        public Boolean iOSSilentNotification;
+
         @NameInMap("iOSNotificationCollapseId")
         public String iOSNotificationCollapseId;
 
-        @NameInMap("iOSSilentNotification")
-        public Boolean iOSSilentNotification;
+        @NameInMap("AndroidRenderStyle")
+        public String androidRenderStyle;
 
         @NameInMap("StoreOffline")
         public Boolean storeOffline;
 
-        @NameInMap("iOSNotificationCategory")
-        public String iOSNotificationCategory;
-
         @NameInMap("iOSSubtitle")
         public String iOSSubtitle;
+
+        @NameInMap("iOSNotificationCategory")
+        public String iOSNotificationCategory;
 
         @NameInMap("AndroidNotificationChannel")
         public String androidNotificationChannel;
@@ -600,6 +647,9 @@ public class PushRequest extends TeaModel {
         @NameInMap("AndroidNotifyType")
         public String androidNotifyType;
 
+        @NameInMap("AndroidBigBody")
+        public String androidBigBody;
+
         @NameInMap("iOSMutableContent")
         public Boolean iOSMutableContent;
 
@@ -608,6 +658,9 @@ public class PushRequest extends TeaModel {
 
         @NameInMap("AndroidOpenUrl")
         public String androidOpenUrl;
+
+        @NameInMap("AndroidBigTitle")
+        public String androidBigTitle;
 
         @NameInMap("AndroidNotificationNotifyId")
         public Integer androidNotificationNotifyId;
@@ -618,11 +671,11 @@ public class PushRequest extends TeaModel {
         @NameInMap("AndroidNotificationVivoChannel")
         public String androidNotificationVivoChannel;
 
-        @NameInMap("AndroidOpenType")
-        public String androidOpenType;
-
         @NameInMap("DeviceType")
         public String deviceType;
+
+        @NameInMap("AndroidOpenType")
+        public String androidOpenType;
 
         @NameInMap("AndroidPopupActivity")
         public String androidPopupActivity;
@@ -651,6 +704,9 @@ public class PushRequest extends TeaModel {
         @NameInMap("AndroidNotificationBarPriority")
         public Integer androidNotificationBarPriority;
 
+        @NameInMap("AndroidXiaomiBigPictureUrl")
+        public String androidXiaomiBigPictureUrl;
+
         @NameInMap("TargetValue")
         public String targetValue;
 
@@ -663,11 +719,11 @@ public class PushRequest extends TeaModel {
         @NameInMap("PushType")
         public String pushType;
 
-        @NameInMap("iOSBadge")
-        public Integer iOSBadge;
-
         @NameInMap("SendSpeed")
         public Integer sendSpeed;
+
+        @NameInMap("iOSBadge")
+        public Integer iOSBadge;
 
         @NameInMap("Title")
         public String title;
@@ -691,6 +747,14 @@ public class PushRequest extends TeaModel {
             return this.jobKey;
         }
 
+        public MassPushRequestPushTask setIOSSilentNotification(Boolean iOSSilentNotification) {
+            this.iOSSilentNotification = iOSSilentNotification;
+            return this;
+        }
+        public Boolean getIOSSilentNotification() {
+            return this.iOSSilentNotification;
+        }
+
         public MassPushRequestPushTask setIOSNotificationCollapseId(String iOSNotificationCollapseId) {
             this.iOSNotificationCollapseId = iOSNotificationCollapseId;
             return this;
@@ -699,12 +763,12 @@ public class PushRequest extends TeaModel {
             return this.iOSNotificationCollapseId;
         }
 
-        public MassPushRequestPushTask setIOSSilentNotification(Boolean iOSSilentNotification) {
-            this.iOSSilentNotification = iOSSilentNotification;
+        public MassPushRequestPushTask setAndroidRenderStyle(String androidRenderStyle) {
+            this.androidRenderStyle = androidRenderStyle;
             return this;
         }
-        public Boolean getIOSSilentNotification() {
-            return this.iOSSilentNotification;
+        public String getAndroidRenderStyle() {
+            return this.androidRenderStyle;
         }
 
         public MassPushRequestPushTask setStoreOffline(Boolean storeOffline) {
@@ -715,20 +779,20 @@ public class PushRequest extends TeaModel {
             return this.storeOffline;
         }
 
-        public MassPushRequestPushTask setIOSNotificationCategory(String iOSNotificationCategory) {
-            this.iOSNotificationCategory = iOSNotificationCategory;
-            return this;
-        }
-        public String getIOSNotificationCategory() {
-            return this.iOSNotificationCategory;
-        }
-
         public MassPushRequestPushTask setIOSSubtitle(String iOSSubtitle) {
             this.iOSSubtitle = iOSSubtitle;
             return this;
         }
         public String getIOSSubtitle() {
             return this.iOSSubtitle;
+        }
+
+        public MassPushRequestPushTask setIOSNotificationCategory(String iOSNotificationCategory) {
+            this.iOSNotificationCategory = iOSNotificationCategory;
+            return this;
+        }
+        public String getIOSNotificationCategory() {
+            return this.iOSNotificationCategory;
         }
 
         public MassPushRequestPushTask setAndroidNotificationChannel(String androidNotificationChannel) {
@@ -819,6 +883,14 @@ public class PushRequest extends TeaModel {
             return this.androidNotifyType;
         }
 
+        public MassPushRequestPushTask setAndroidBigBody(String androidBigBody) {
+            this.androidBigBody = androidBigBody;
+            return this;
+        }
+        public String getAndroidBigBody() {
+            return this.androidBigBody;
+        }
+
         public MassPushRequestPushTask setIOSMutableContent(Boolean iOSMutableContent) {
             this.iOSMutableContent = iOSMutableContent;
             return this;
@@ -841,6 +913,14 @@ public class PushRequest extends TeaModel {
         }
         public String getAndroidOpenUrl() {
             return this.androidOpenUrl;
+        }
+
+        public MassPushRequestPushTask setAndroidBigTitle(String androidBigTitle) {
+            this.androidBigTitle = androidBigTitle;
+            return this;
+        }
+        public String getAndroidBigTitle() {
+            return this.androidBigTitle;
         }
 
         public MassPushRequestPushTask setAndroidNotificationNotifyId(Integer androidNotificationNotifyId) {
@@ -867,20 +947,20 @@ public class PushRequest extends TeaModel {
             return this.androidNotificationVivoChannel;
         }
 
-        public MassPushRequestPushTask setAndroidOpenType(String androidOpenType) {
-            this.androidOpenType = androidOpenType;
-            return this;
-        }
-        public String getAndroidOpenType() {
-            return this.androidOpenType;
-        }
-
         public MassPushRequestPushTask setDeviceType(String deviceType) {
             this.deviceType = deviceType;
             return this;
         }
         public String getDeviceType() {
             return this.deviceType;
+        }
+
+        public MassPushRequestPushTask setAndroidOpenType(String androidOpenType) {
+            this.androidOpenType = androidOpenType;
+            return this;
+        }
+        public String getAndroidOpenType() {
+            return this.androidOpenType;
         }
 
         public MassPushRequestPushTask setAndroidPopupActivity(String androidPopupActivity) {
@@ -955,6 +1035,14 @@ public class PushRequest extends TeaModel {
             return this.androidNotificationBarPriority;
         }
 
+        public MassPushRequestPushTask setAndroidXiaomiBigPictureUrl(String androidXiaomiBigPictureUrl) {
+            this.androidXiaomiBigPictureUrl = androidXiaomiBigPictureUrl;
+            return this;
+        }
+        public String getAndroidXiaomiBigPictureUrl() {
+            return this.androidXiaomiBigPictureUrl;
+        }
+
         public MassPushRequestPushTask setTargetValue(String targetValue) {
             this.targetValue = targetValue;
             return this;
@@ -987,20 +1075,20 @@ public class PushRequest extends TeaModel {
             return this.pushType;
         }
 
-        public MassPushRequestPushTask setIOSBadge(Integer iOSBadge) {
-            this.iOSBadge = iOSBadge;
-            return this;
-        }
-        public Integer getIOSBadge() {
-            return this.iOSBadge;
-        }
-
         public MassPushRequestPushTask setSendSpeed(Integer sendSpeed) {
             this.sendSpeed = sendSpeed;
             return this;
         }
         public Integer getSendSpeed() {
             return this.sendSpeed;
+        }
+
+        public MassPushRequestPushTask setIOSBadge(Integer iOSBadge) {
+            this.iOSBadge = iOSBadge;
+            return this;
+        }
+        public Integer getIOSBadge() {
+            return this.iOSBadge;
         }
 
         public MassPushRequestPushTask setTitle(String title) {

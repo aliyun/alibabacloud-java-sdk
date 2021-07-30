@@ -4,23 +4,15 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class CompleteContinuouslyPushResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MessageId")
     public String messageId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CompleteContinuouslyPushResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CompleteContinuouslyPushResponseBody self = new CompleteContinuouslyPushResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CompleteContinuouslyPushResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CompleteContinuouslyPushResponseBody setMessageId(String messageId) {
@@ -29,6 +21,14 @@ public class CompleteContinuouslyPushResponseBody extends TeaModel {
     }
     public String getMessageId() {
         return this.messageId;
+    }
+
+    public CompleteContinuouslyPushResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

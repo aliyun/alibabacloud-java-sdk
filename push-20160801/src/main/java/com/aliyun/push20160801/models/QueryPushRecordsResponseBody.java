@@ -4,9 +4,6 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryPushRecordsResponseBody extends TeaModel {
-    @NameInMap("PushInfos")
-    public QueryPushRecordsResponseBodyPushInfos pushInfos;
-
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,17 +19,12 @@ public class QueryPushRecordsResponseBody extends TeaModel {
     @NameInMap("Page")
     public Integer page;
 
+    @NameInMap("PushInfos")
+    public QueryPushRecordsResponseBodyPushInfos pushInfos;
+
     public static QueryPushRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPushRecordsResponseBody self = new QueryPushRecordsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryPushRecordsResponseBody setPushInfos(QueryPushRecordsResponseBodyPushInfos pushInfos) {
-        this.pushInfos = pushInfos;
-        return this;
-    }
-    public QueryPushRecordsResponseBodyPushInfos getPushInfos() {
-        return this.pushInfos;
     }
 
     public QueryPushRecordsResponseBody setNextToken(String nextToken) {
@@ -73,6 +65,14 @@ public class QueryPushRecordsResponseBody extends TeaModel {
     }
     public Integer getPage() {
         return this.page;
+    }
+
+    public QueryPushRecordsResponseBody setPushInfos(QueryPushRecordsResponseBodyPushInfos pushInfos) {
+        this.pushInfos = pushInfos;
+        return this;
+    }
+    public QueryPushRecordsResponseBodyPushInfos getPushInfos() {
+        return this.pushInfos;
     }
 
     public static class QueryPushRecordsResponseBodyPushInfosPushInfo extends TeaModel {
