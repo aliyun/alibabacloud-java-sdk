@@ -8,11 +8,8 @@ public class TaggingImageAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("ImageType")
-    public Integer imageType;
-
-    @NameInMap("Async")
-    public Boolean async;
+    @NameInMap("Mode")
+    public String mode;
 
     public static TaggingImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         TaggingImageAdvanceRequest self = new TaggingImageAdvanceRequest();
@@ -27,20 +24,12 @@ public class TaggingImageAdvanceRequest extends TeaModel {
         return this.imageURLObject;
     }
 
-    public TaggingImageAdvanceRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
+    public TaggingImageAdvanceRequest setMode(String mode) {
+        this.mode = mode;
         return this;
     }
-    public Integer getImageType() {
-        return this.imageType;
-    }
-
-    public TaggingImageAdvanceRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
+    public String getMode() {
+        return this.mode;
     }
 
 }
