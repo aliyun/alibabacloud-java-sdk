@@ -13,8 +13,8 @@ public class SubmitTraceAbResponseBody extends TeaModel {
     public String message;
 
     // 请求Id
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("RequestID")
+    public String requestID;
 
     // 状态码
     @NameInMap("StatusCode")
@@ -41,12 +41,12 @@ public class SubmitTraceAbResponseBody extends TeaModel {
         return this.message;
     }
 
-    public SubmitTraceAbResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubmitTraceAbResponseBody setRequestID(String requestID) {
+        this.requestID = requestID;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getRequestID() {
+        return this.requestID;
     }
 
     public SubmitTraceAbResponseBody setStatusCode(Long statusCode) {

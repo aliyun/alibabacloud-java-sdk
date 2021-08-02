@@ -13,8 +13,8 @@ public class QueryImageCopyrightResponseBody extends TeaModel {
     public String message;
 
     // 请求id
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("RequestID")
+    public String requestID;
 
     // 状态码
     @NameInMap("StatusCode")
@@ -41,12 +41,12 @@ public class QueryImageCopyrightResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryImageCopyrightResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryImageCopyrightResponseBody setRequestID(String requestID) {
+        this.requestID = requestID;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getRequestID() {
+        return this.requestID;
     }
 
     public QueryImageCopyrightResponseBody setStatusCode(Long statusCode) {
@@ -59,11 +59,11 @@ public class QueryImageCopyrightResponseBody extends TeaModel {
 
     public static class QueryImageCopyrightResponseBodyData extends TeaModel {
         // 创建时间
-        @NameInMap("Gmt_create")
+        @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         // 最后修改时间
-        @NameInMap("Gmt_modified")
+        @NameInMap("GmtModified")
         public Long gmtModified;
 
         // 水印图片输入oss地址
@@ -71,7 +71,7 @@ public class QueryImageCopyrightResponseBody extends TeaModel {
         public String input;
 
         // 任务id
-        @NameInMap("Job_id")
+        @NameInMap("JobId")
         public String jobId;
 
         // 水印强度
@@ -83,7 +83,7 @@ public class QueryImageCopyrightResponseBody extends TeaModel {
         public String message;
 
         // 水印信息id
-        @NameInMap("Message_id")
+        @NameInMap("MessageId")
         public Long messageId;
 
         // 加完水印后的输出oss地址
@@ -95,11 +95,11 @@ public class QueryImageCopyrightResponseBody extends TeaModel {
         public String status;
 
         // 用户自定义数据
-        @NameInMap("User_data")
+        @NameInMap("UserData")
         public String userData;
 
         // uid
-        @NameInMap("User_id")
+        @NameInMap("UserId")
         public Long userId;
 
         public static QueryImageCopyrightResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

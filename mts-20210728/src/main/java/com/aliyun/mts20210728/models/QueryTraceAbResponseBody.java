@@ -13,8 +13,8 @@ public class QueryTraceAbResponseBody extends TeaModel {
     public String message;
 
     // 请求id
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("RequestID")
+    public String requestID;
 
     // 状态码
     @NameInMap("StatusCode")
@@ -41,12 +41,12 @@ public class QueryTraceAbResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryTraceAbResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryTraceAbResponseBody setRequestID(String requestID) {
+        this.requestID = requestID;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getRequestID() {
+        return this.requestID;
     }
 
     public QueryTraceAbResponseBody setStatusCode(Long statusCode) {
@@ -63,11 +63,11 @@ public class QueryTraceAbResponseBody extends TeaModel {
         public String callback;
 
         // 创建时间
-        @NameInMap("Gmt_create")
+        @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         // 最后修改时间
-        @NameInMap("Gmt_modified")
+        @NameInMap("GmtModified")
         public Long gmtModified;
 
         // 输入oss地址
@@ -75,7 +75,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
         public String input;
 
         // 任务id
-        @NameInMap("Job_id")
+        @NameInMap("JobId")
         public String jobId;
 
         // 水印强度
@@ -83,7 +83,7 @@ public class QueryTraceAbResponseBody extends TeaModel {
         public Long level;
 
         // 媒体id
-        @NameInMap("Media_id")
+        @NameInMap("MediaId")
         public String mediaId;
 
         // 输出地址
@@ -95,11 +95,11 @@ public class QueryTraceAbResponseBody extends TeaModel {
         public String status;
 
         // 用户数据
-        @NameInMap("User_data")
+        @NameInMap("UserData")
         public String userData;
 
         // uid
-        @NameInMap("User_id")
+        @NameInMap("UserId")
         public Long userId;
 
         public static QueryTraceAbResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
