@@ -13,8 +13,8 @@ public class SubmitImageCopyrightResponseBody extends TeaModel {
     public String message;
 
     // 请求id
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("RequestID")
+    public String requestID;
 
     // 状态码
     @NameInMap("StatusCode")
@@ -41,12 +41,12 @@ public class SubmitImageCopyrightResponseBody extends TeaModel {
         return this.message;
     }
 
-    public SubmitImageCopyrightResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubmitImageCopyrightResponseBody setRequestID(String requestID) {
+        this.requestID = requestID;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getRequestID() {
+        return this.requestID;
     }
 
     public SubmitImageCopyrightResponseBody setStatusCode(Long statusCode) {

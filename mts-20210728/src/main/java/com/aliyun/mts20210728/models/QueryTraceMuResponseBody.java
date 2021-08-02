@@ -13,8 +13,8 @@ public class QueryTraceMuResponseBody extends TeaModel {
     public String message;
 
     // 请求id
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("RequestID")
+    public String requestID;
 
     // 状态码
     @NameInMap("StatusCode")
@@ -41,12 +41,12 @@ public class QueryTraceMuResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryTraceMuResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryTraceMuResponseBody setRequestID(String requestID) {
+        this.requestID = requestID;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getRequestID() {
+        return this.requestID;
     }
 
     public QueryTraceMuResponseBody setStatusCode(Long statusCode) {
@@ -59,19 +59,19 @@ public class QueryTraceMuResponseBody extends TeaModel {
 
     public static class QueryTraceMuResponseBodyData extends TeaModel {
         // 创建时间
-        @NameInMap("Gmt_create")
+        @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         // 最后修改时间
-        @NameInMap("Gmt_modified")
+        @NameInMap("GmtModified")
         public Long gmtModified;
 
         // 任务id
-        @NameInMap("Job_id")
+        @NameInMap("JobId")
         public String jobId;
 
         // 媒体id
-        @NameInMap("Media_id")
+        @NameInMap("MediaId")
         public String mediaId;
 
         // 输出oss地址
@@ -87,15 +87,15 @@ public class QueryTraceMuResponseBody extends TeaModel {
         public String trace;
 
         // 溯源水印信息id
-        @NameInMap("Trace_id")
+        @NameInMap("TraceId")
         public Long traceId;
 
         // 用户自定义数据
-        @NameInMap("User_data")
+        @NameInMap("UserData")
         public String userData;
 
         // uid
-        @NameInMap("User_id")
+        @NameInMap("UserId")
         public Long userId;
 
         public static QueryTraceMuResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

@@ -4,8 +4,8 @@ package com.aliyun.mts20210728.models;
 import com.aliyun.tea.*;
 
 public class QueryCopyrightResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("RequestID")
+    public String requestID;
 
     @NameInMap("Data")
     public java.util.List<QueryCopyrightResponseBodyData> data;
@@ -19,12 +19,12 @@ public class QueryCopyrightResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryCopyrightResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryCopyrightResponseBody setRequestID(String requestID) {
+        this.requestID = requestID;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getRequestID() {
+        return this.requestID;
     }
 
     public QueryCopyrightResponseBody setData(java.util.List<QueryCopyrightResponseBodyData> data) {
@@ -49,11 +49,11 @@ public class QueryCopyrightResponseBody extends TeaModel {
         public String callback;
 
         // 创建时间
-        @NameInMap("Gmt_create")
+        @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         // 修改时间
-        @NameInMap("Gmt_modified")
+        @NameInMap("GmtModified")
         public Long gmtModified;
 
         // 水印视频输入
@@ -61,7 +61,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
         public String input;
 
         // 任务id
-        @NameInMap("Job_id")
+        @NameInMap("JobId")
         public String jobId;
 
         // 水印强度
@@ -73,7 +73,7 @@ public class QueryCopyrightResponseBody extends TeaModel {
         public String message;
 
         // 水印信息id
-        @NameInMap("Message_id")
+        @NameInMap("MessageId")
         public Long messageId;
 
         // 水印视频输出
@@ -85,11 +85,11 @@ public class QueryCopyrightResponseBody extends TeaModel {
         public String status;
 
         // 用户数据
-        @NameInMap("User_data")
+        @NameInMap("UserData")
         public String userData;
 
         // 用户ID
-        @NameInMap("User_id")
+        @NameInMap("UserId")
         public Long userId;
 
         public static QueryCopyrightResponseBodyData build(java.util.Map<String, ?> map) throws Exception {

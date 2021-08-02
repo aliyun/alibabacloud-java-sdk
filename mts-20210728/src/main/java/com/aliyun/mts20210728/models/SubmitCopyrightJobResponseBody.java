@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitCopyrightJobResponseBody extends TeaModel {
     // 请求Id
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("RequestID")
+    public String requestID;
 
     // 返回信息
     @NameInMap("Message")
@@ -25,12 +25,12 @@ public class SubmitCopyrightJobResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SubmitCopyrightJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubmitCopyrightJobResponseBody setRequestID(String requestID) {
+        this.requestID = requestID;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getRequestID() {
+        return this.requestID;
     }
 
     public SubmitCopyrightJobResponseBody setMessage(String message) {
