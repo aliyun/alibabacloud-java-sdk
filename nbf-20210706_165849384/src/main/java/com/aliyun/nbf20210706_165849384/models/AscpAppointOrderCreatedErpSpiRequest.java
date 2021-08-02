@@ -60,6 +60,10 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     @NameInMap("memberId")
     public Long memberId;
 
+    // 供应商ID，路由专用
+    @NameInMap("routeSupplierId")
+    public Long routeSupplierId;
+
     public static AscpAppointOrderCreatedErpSpiRequest build(java.util.Map<String, ?> map) throws Exception {
         AscpAppointOrderCreatedErpSpiRequest self = new AscpAppointOrderCreatedErpSpiRequest();
         return TeaModel.build(map, self);
@@ -175,6 +179,14 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     }
     public Long getMemberId() {
         return this.memberId;
+    }
+
+    public AscpAppointOrderCreatedErpSpiRequest setRouteSupplierId(Long routeSupplierId) {
+        this.routeSupplierId = routeSupplierId;
+        return this;
+    }
+    public Long getRouteSupplierId() {
+        return this.routeSupplierId;
     }
 
     public static class AscpAppointOrderCreatedErpSpiRequestItems extends TeaModel {
