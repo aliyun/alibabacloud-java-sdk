@@ -7,9 +7,6 @@ public class GetAsyncJobResultRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
-    @NameInMap("Async")
-    public String async;
-
     public static GetAsyncJobResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAsyncJobResultRequest self = new GetAsyncJobResultRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class GetAsyncJobResultRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
-    }
-
-    public GetAsyncJobResultRequest setAsync(String async) {
-        this.async = async;
-        return this;
-    }
-    public String getAsync() {
-        return this.async;
     }
 
 }

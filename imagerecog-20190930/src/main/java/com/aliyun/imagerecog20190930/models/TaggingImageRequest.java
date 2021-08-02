@@ -4,26 +4,15 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class TaggingImageRequest extends TeaModel {
-    @NameInMap("ImageType")
-    public Integer imageType;
-
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("Async")
-    public Boolean async;
+    @NameInMap("Mode")
+    public String mode;
 
     public static TaggingImageRequest build(java.util.Map<String, ?> map) throws Exception {
         TaggingImageRequest self = new TaggingImageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TaggingImageRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
-        return this;
-    }
-    public Integer getImageType() {
-        return this.imageType;
     }
 
     public TaggingImageRequest setImageURL(String imageURL) {
@@ -34,12 +23,12 @@ public class TaggingImageRequest extends TeaModel {
         return this.imageURL;
     }
 
-    public TaggingImageRequest setAsync(Boolean async) {
-        this.async = async;
+    public TaggingImageRequest setMode(String mode) {
+        this.mode = mode;
         return this;
     }
-    public Boolean getAsync() {
-        return this.async;
+    public String getMode() {
+        return this.mode;
     }
 
 }
