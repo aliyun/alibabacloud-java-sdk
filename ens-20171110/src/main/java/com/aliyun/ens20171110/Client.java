@@ -85,19 +85,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.restartDeviceInstanceWithOptions(request, runtime);
     }
 
-    public DeleteEnsLoadBalancerInnerResponse deleteEnsLoadBalancerInnerWithOptions(DeleteEnsLoadBalancerInnerRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteEnsLoadBalancerInner", "2017-11-10", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteEnsLoadBalancerInnerResponse());
-    }
-
-    public DeleteEnsLoadBalancerInnerResponse deleteEnsLoadBalancerInner(DeleteEnsLoadBalancerInnerRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteEnsLoadBalancerInnerWithOptions(request, runtime);
-    }
-
     public ReleasePrePaidInstanceResponse releasePrePaidInstanceWithOptions(ReleasePrePaidInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -510,6 +497,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateLoadBalancerHTTPSListenerResponse createLoadBalancerHTTPSListener(CreateLoadBalancerHTTPSListenerRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createLoadBalancerHTTPSListenerWithOptions(request, runtime);
+    }
+
+    public AddDeviceInternetPortResponse addDeviceInternetPortWithOptions(AddDeviceInternetPortRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddDeviceInternetPort", "2017-11-10", "HTTPS", "GET", "AK", "json", req, runtime), new AddDeviceInternetPortResponse());
+    }
+
+    public AddDeviceInternetPortResponse addDeviceInternetPort(AddDeviceInternetPortRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addDeviceInternetPortWithOptions(request, runtime);
     }
 
     public ModifyVSwitchAttributeResponse modifyVSwitchAttributeWithOptions(ModifyVSwitchAttributeRequest request, RuntimeOptions runtime) throws Exception {
@@ -1072,17 +1073,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.migrateVmWithOptions(request, runtime);
     }
 
-    public CreateLoadBalancerResponse createLoadBalancerWithOptions(CreateLoadBalancerRequest request, RuntimeOptions runtime) throws Exception {
+    public DeleteDeviceInternetPortResponse deleteDeviceInternetPortWithOptions(DeleteDeviceInternetPortRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+            new TeaPair("query", query)
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateLoadBalancer", "2017-11-10", "HTTPS", "POST", "AK", "json", req, runtime), new CreateLoadBalancerResponse());
+        return TeaModel.toModel(this.doRPCRequest("DeleteDeviceInternetPort", "2017-11-10", "HTTPS", "GET", "AK", "json", req, runtime), new DeleteDeviceInternetPortResponse());
     }
 
-    public CreateLoadBalancerResponse createLoadBalancer(CreateLoadBalancerRequest request) throws Exception {
+    public DeleteDeviceInternetPortResponse deleteDeviceInternetPort(DeleteDeviceInternetPortRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.createLoadBalancerWithOptions(request, runtime);
+        return this.deleteDeviceInternetPortWithOptions(request, runtime);
     }
 
     public JoinVSwitchesToEpnInstanceResponse joinVSwitchesToEpnInstanceWithOptions(JoinVSwitchesToEpnInstanceRequest request, RuntimeOptions runtime) throws Exception {
@@ -1148,19 +1150,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeLoadBalancerHTTPListenerAttributeResponse describeLoadBalancerHTTPListenerAttribute(DescribeLoadBalancerHTTPListenerAttributeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeLoadBalancerHTTPListenerAttributeWithOptions(request, runtime);
-    }
-
-    public DeleteLoadBalancerResponse deleteLoadBalancerWithOptions(DeleteLoadBalancerRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteLoadBalancer", "2017-11-10", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteLoadBalancerResponse());
-    }
-
-    public DeleteLoadBalancerResponse deleteLoadBalancer(DeleteLoadBalancerRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteLoadBalancerWithOptions(request, runtime);
     }
 
     public DescribeImagesResponse describeImagesWithOptions(DescribeImagesRequest request, RuntimeOptions runtime) throws Exception {
@@ -1552,6 +1541,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDataDistResultResponse describeDataDistResult(DescribeDataDistResultRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeDataDistResultWithOptions(request, runtime);
+    }
+
+    public GetDeviceInternetPortResponse getDeviceInternetPortWithOptions(GetDeviceInternetPortRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDeviceInternetPort", "2017-11-10", "HTTPS", "GET", "AK", "json", req, runtime), new GetDeviceInternetPortResponse());
+    }
+
+    public GetDeviceInternetPortResponse getDeviceInternetPort(GetDeviceInternetPortRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDeviceInternetPortWithOptions(request, runtime);
     }
 
     public ReleasePostPaidInstanceResponse releasePostPaidInstanceWithOptions(ReleasePostPaidInstanceRequest request, RuntimeOptions runtime) throws Exception {

@@ -13,11 +13,20 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     @NameInMap("Timeout")
     public Long timeout;
 
-    @NameInMap("AppId")
-    public String appId;
+    @NameInMap("ServiceId")
+    public String serviceId;
 
     @NameInMap("ResourceSelector")
     public String resourceSelector;
+
+    @NameInMap("ResourceSpec")
+    public String resourceSpec;
+
+    @NameInMap("IpType")
+    public Integer ipType;
+
+    @NameInMap("AppId")
+    public String appId;
 
     public static RescaleDeviceServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         RescaleDeviceServiceRequest self = new RescaleDeviceServiceRequest();
@@ -48,12 +57,12 @@ public class RescaleDeviceServiceRequest extends TeaModel {
         return this.timeout;
     }
 
-    public RescaleDeviceServiceRequest setAppId(String appId) {
-        this.appId = appId;
+    public RescaleDeviceServiceRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
+    public String getServiceId() {
+        return this.serviceId;
     }
 
     public RescaleDeviceServiceRequest setResourceSelector(String resourceSelector) {
@@ -62,6 +71,30 @@ public class RescaleDeviceServiceRequest extends TeaModel {
     }
     public String getResourceSelector() {
         return this.resourceSelector;
+    }
+
+    public RescaleDeviceServiceRequest setResourceSpec(String resourceSpec) {
+        this.resourceSpec = resourceSpec;
+        return this;
+    }
+    public String getResourceSpec() {
+        return this.resourceSpec;
+    }
+
+    public RescaleDeviceServiceRequest setIpType(Integer ipType) {
+        this.ipType = ipType;
+        return this;
+    }
+    public Integer getIpType() {
+        return this.ipType;
+    }
+
+    public RescaleDeviceServiceRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
 }
