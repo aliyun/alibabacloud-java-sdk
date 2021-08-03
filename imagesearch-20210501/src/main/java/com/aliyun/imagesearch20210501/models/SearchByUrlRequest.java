@@ -28,6 +28,9 @@ public class SearchByUrlRequest extends TeaModel {
     @NameInMap("RelationId")
     public Long relationId;
 
+    @NameInMap("Pid")
+    public String pid;
+
     public static SearchByUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchByUrlRequest self = new SearchByUrlRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class SearchByUrlRequest extends TeaModel {
     }
     public Long getRelationId() {
         return this.relationId;
+    }
+
+    public SearchByUrlRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
     }
 
 }
