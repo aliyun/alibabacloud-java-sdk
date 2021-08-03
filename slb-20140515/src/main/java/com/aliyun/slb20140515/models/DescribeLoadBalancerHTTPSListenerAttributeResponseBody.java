@@ -55,6 +55,9 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     @NameInMap("XForwardedFor_proto")
     public String XForwardedFor_proto;
 
+    @NameInMap("HealthCheckMethod")
+    public String healthCheckMethod;
+
     @NameInMap("TLSCipherPolicy")
     public String TLSCipherPolicy;
 
@@ -275,6 +278,14 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     }
     public String getXForwardedFor_proto() {
         return this.XForwardedFor_proto;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckMethod(String healthCheckMethod) {
+        this.healthCheckMethod = healthCheckMethod;
+        return this;
+    }
+    public String getHealthCheckMethod() {
+        return this.healthCheckMethod;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setTLSCipherPolicy(String TLSCipherPolicy) {

@@ -103,6 +103,9 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     @NameInMap("StickySession")
     public String stickySession;
 
+    @NameInMap("HealthCheckMethod")
+    public String healthCheckMethod;
+
     @NameInMap("HealthCheck")
     public String healthCheck;
 
@@ -376,6 +379,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     }
     public String getStickySession() {
         return this.stickySession;
+    }
+
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBody setHealthCheckMethod(String healthCheckMethod) {
+        this.healthCheckMethod = healthCheckMethod;
+        return this;
+    }
+    public String getHealthCheckMethod() {
+        return this.healthCheckMethod;
     }
 
     public DescribeLoadBalancerHTTPListenerAttributeResponseBody setHealthCheck(String healthCheck) {
