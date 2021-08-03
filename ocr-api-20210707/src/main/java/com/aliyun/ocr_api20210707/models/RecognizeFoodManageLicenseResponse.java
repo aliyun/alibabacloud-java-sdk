@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ocr_api20210707.models;
+
+import com.aliyun.tea.*;
+
+public class RecognizeFoodManageLicenseResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RecognizeFoodManageLicenseResponseBody body;
+
+    public static RecognizeFoodManageLicenseResponse build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeFoodManageLicenseResponse self = new RecognizeFoodManageLicenseResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public RecognizeFoodManageLicenseResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RecognizeFoodManageLicenseResponse setBody(RecognizeFoodManageLicenseResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RecognizeFoodManageLicenseResponseBody getBody() {
+        return this.body;
+    }
+
+}
