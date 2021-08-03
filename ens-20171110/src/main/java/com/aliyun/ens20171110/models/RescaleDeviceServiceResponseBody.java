@@ -8,6 +8,9 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("DeviceIds")
+    public java.util.List<String> deviceIds;
+
     @NameInMap("ResourceDetailInfos")
     public java.util.List<RescaleDeviceServiceResponseBodyResourceDetailInfos> resourceDetailInfos;
 
@@ -22,6 +25,14 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RescaleDeviceServiceResponseBody setDeviceIds(java.util.List<String> deviceIds) {
+        this.deviceIds = deviceIds;
+        return this;
+    }
+    public java.util.List<String> getDeviceIds() {
+        return this.deviceIds;
     }
 
     public RescaleDeviceServiceResponseBody setResourceDetailInfos(java.util.List<RescaleDeviceServiceResponseBodyResourceDetailInfos> resourceDetailInfos) {

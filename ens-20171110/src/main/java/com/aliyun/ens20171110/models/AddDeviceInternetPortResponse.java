@@ -3,21 +3,21 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class CreateLoadBalancerResponse extends TeaModel {
+public class AddDeviceInternetPortResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public CreateLoadBalancerResponseBody body;
+    public AddDeviceInternetPortResponseBody body;
 
-    public static CreateLoadBalancerResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateLoadBalancerResponse self = new CreateLoadBalancerResponse();
+    public static AddDeviceInternetPortResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddDeviceInternetPortResponse self = new AddDeviceInternetPortResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateLoadBalancerResponse setHeaders(java.util.Map<String, String> headers) {
+    public AddDeviceInternetPortResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class CreateLoadBalancerResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateLoadBalancerResponse setBody(CreateLoadBalancerResponseBody body) {
+    public AddDeviceInternetPortResponse setBody(AddDeviceInternetPortResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateLoadBalancerResponseBody getBody() {
+    public AddDeviceInternetPortResponseBody getBody() {
         return this.body;
     }
 
