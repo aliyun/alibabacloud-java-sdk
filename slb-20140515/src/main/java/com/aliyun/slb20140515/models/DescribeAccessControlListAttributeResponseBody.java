@@ -13,11 +13,11 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AclName")
-    public String aclName;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("AclName")
+    public String aclName;
 
     @NameInMap("AclEntrys")
     public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
@@ -54,20 +54,20 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAccessControlListAttributeResponseBody setAclName(String aclName) {
-        this.aclName = aclName;
-        return this;
-    }
-    public String getAclName() {
-        return this.aclName;
-    }
-
     public DescribeAccessControlListAttributeResponseBody setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeAccessControlListAttributeResponseBody setAclName(String aclName) {
+        this.aclName = aclName;
+        return this;
+    }
+    public String getAclName() {
+        return this.aclName;
     }
 
     public DescribeAccessControlListAttributeResponseBody setAclEntrys(DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys) {

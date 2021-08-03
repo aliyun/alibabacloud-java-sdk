@@ -100,11 +100,11 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup extends TeaModel {
-        @NameInMap("MasterSlaveServerGroupName")
-        public String masterSlaveServerGroupName;
-
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
+
+        @NameInMap("MasterSlaveServerGroupName")
+        public String masterSlaveServerGroupName;
 
         @NameInMap("AssociatedObjects")
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects associatedObjects;
@@ -114,20 +114,20 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setMasterSlaveServerGroupName(String masterSlaveServerGroupName) {
-            this.masterSlaveServerGroupName = masterSlaveServerGroupName;
-            return this;
-        }
-        public String getMasterSlaveServerGroupName() {
-            return this.masterSlaveServerGroupName;
-        }
-
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.masterSlaveServerGroupId = masterSlaveServerGroupId;
             return this;
         }
         public String getMasterSlaveServerGroupId() {
             return this.masterSlaveServerGroupId;
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setMasterSlaveServerGroupName(String masterSlaveServerGroupName) {
+            this.masterSlaveServerGroupName = masterSlaveServerGroupName;
+            return this;
+        }
+        public String getMasterSlaveServerGroupName() {
+            return this.masterSlaveServerGroupName;
         }
 
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setAssociatedObjects(DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects associatedObjects) {

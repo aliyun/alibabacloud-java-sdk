@@ -46,6 +46,9 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     @NameInMap("HealthCheck")
     public String healthCheck;
 
+    @NameInMap("HealthCheckMethod")
+    public String healthCheckMethod;
+
     @NameInMap("HealthCheckDomain")
     public String healthCheckDomain;
 
@@ -236,6 +239,14 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     }
     public String getHealthCheck() {
         return this.healthCheck;
+    }
+
+    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckMethod(String healthCheckMethod) {
+        this.healthCheckMethod = healthCheckMethod;
+        return this;
+    }
+    public String getHealthCheckMethod() {
+        return this.healthCheckMethod;
     }
 
     public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckDomain(String healthCheckDomain) {
