@@ -29,6 +29,9 @@ public class SearchByPicAdvanceRequest extends TeaModel {
     @NameInMap("RelationId")
     public Long relationId;
 
+    @NameInMap("Pid")
+    public String pid;
+
     public static SearchByPicAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchByPicAdvanceRequest self = new SearchByPicAdvanceRequest();
         return TeaModel.build(map, self);
@@ -96,6 +99,14 @@ public class SearchByPicAdvanceRequest extends TeaModel {
     }
     public Long getRelationId() {
         return this.relationId;
+    }
+
+    public SearchByPicAdvanceRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
     }
 
 }

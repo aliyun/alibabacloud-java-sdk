@@ -75,6 +75,47 @@ public class SearchByPicResponseBody extends TeaModel {
         return this.picInfo;
     }
 
+    public static class SearchByPicResponseBodyDataAuctionsResultMaxCommission extends TeaModel {
+        @NameInMap("MaxCommissionRate")
+        public String maxCommissionRate;
+
+        @NameInMap("MaxCommissionClickUrl")
+        public String maxCommissionClickUrl;
+
+        @NameInMap("MaxCommissionCouponShareUrl")
+        public String maxCommissionCouponShareUrl;
+
+        public static SearchByPicResponseBodyDataAuctionsResultMaxCommission build(java.util.Map<String, ?> map) throws Exception {
+            SearchByPicResponseBodyDataAuctionsResultMaxCommission self = new SearchByPicResponseBodyDataAuctionsResultMaxCommission();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResultMaxCommission setMaxCommissionRate(String maxCommissionRate) {
+            this.maxCommissionRate = maxCommissionRate;
+            return this;
+        }
+        public String getMaxCommissionRate() {
+            return this.maxCommissionRate;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResultMaxCommission setMaxCommissionClickUrl(String maxCommissionClickUrl) {
+            this.maxCommissionClickUrl = maxCommissionClickUrl;
+            return this;
+        }
+        public String getMaxCommissionClickUrl() {
+            return this.maxCommissionClickUrl;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResultMaxCommission setMaxCommissionCouponShareUrl(String maxCommissionCouponShareUrl) {
+            this.maxCommissionCouponShareUrl = maxCommissionCouponShareUrl;
+            return this;
+        }
+        public String getMaxCommissionCouponShareUrl() {
+            return this.maxCommissionCouponShareUrl;
+        }
+
+    }
+
     public static class SearchByPicResponseBodyDataAuctionsResult extends TeaModel {
         @NameInMap("ItemId")
         public String itemId;
@@ -82,14 +123,29 @@ public class SearchByPicResponseBody extends TeaModel {
         @NameInMap("ItemName")
         public String itemName;
 
+        @NameInMap("Title")
+        public String title;
+
         @NameInMap("Pic")
         public String pic;
+
+        @NameInMap("PicUrl")
+        public String picUrl;
 
         @NameInMap("Price")
         public String price;
 
+        @NameInMap("ReservePrice")
+        public String reservePrice;
+
         @NameInMap("PromotionPrice")
         public String promotionPrice;
+
+        @NameInMap("ZkFinalPrice")
+        public String zkFinalPrice;
+
+        @NameInMap("PriceAfterCoupon")
+        public String priceAfterCoupon;
 
         @NameInMap("UserType")
         public Integer userType;
@@ -100,11 +156,17 @@ public class SearchByPicResponseBody extends TeaModel {
         @NameInMap("SellerNickName")
         public String sellerNickName;
 
+        @NameInMap("Nick")
+        public String nick;
+
         @NameInMap("SellerId")
         public String sellerId;
 
         @NameInMap("MonthSellCount")
         public Integer monthSellCount;
+
+        @NameInMap("Volume")
+        public Integer volume;
 
         @NameInMap("LevelOneCategoryName")
         public String levelOneCategoryName;
@@ -112,8 +174,14 @@ public class SearchByPicResponseBody extends TeaModel {
         @NameInMap("CategoryName")
         public String categoryName;
 
+        @NameInMap("CouponActivityId")
+        public String couponActivityId;
+
         @NameInMap("CouponTotalCount")
         public String couponTotalCount;
+
+        @NameInMap("CouponSendCount")
+        public String couponSendCount;
 
         @NameInMap("CouponRemainCount")
         public Integer couponRemainCount;
@@ -133,6 +201,15 @@ public class SearchByPicResponseBody extends TeaModel {
         @NameInMap("CouponSaleTextInfo")
         public String couponSaleTextInfo;
 
+        @NameInMap("CouponInfo")
+        public String couponInfo;
+
+        @NameInMap("TkMktRate")
+        public Integer tkMktRate;
+
+        @NameInMap("TkRate")
+        public Integer tkRate;
+
         @NameInMap("CommissionRate")
         public String commissionRate;
 
@@ -141,6 +218,21 @@ public class SearchByPicResponseBody extends TeaModel {
 
         @NameInMap("ClickUrl")
         public String clickUrl;
+
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("ShortUrl")
+        public String shortUrl;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("ShopTitle")
+        public String shopTitle;
+
+        @NameInMap("MaxCommission")
+        public SearchByPicResponseBodyDataAuctionsResultMaxCommission maxCommission;
 
         public static SearchByPicResponseBodyDataAuctionsResult build(java.util.Map<String, ?> map) throws Exception {
             SearchByPicResponseBodyDataAuctionsResult self = new SearchByPicResponseBodyDataAuctionsResult();
@@ -163,12 +255,28 @@ public class SearchByPicResponseBody extends TeaModel {
             return this.itemName;
         }
 
+        public SearchByPicResponseBodyDataAuctionsResult setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
         public SearchByPicResponseBodyDataAuctionsResult setPic(String pic) {
             this.pic = pic;
             return this;
         }
         public String getPic() {
             return this.pic;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setPicUrl(String picUrl) {
+            this.picUrl = picUrl;
+            return this;
+        }
+        public String getPicUrl() {
+            return this.picUrl;
         }
 
         public SearchByPicResponseBodyDataAuctionsResult setPrice(String price) {
@@ -179,12 +287,36 @@ public class SearchByPicResponseBody extends TeaModel {
             return this.price;
         }
 
+        public SearchByPicResponseBodyDataAuctionsResult setReservePrice(String reservePrice) {
+            this.reservePrice = reservePrice;
+            return this;
+        }
+        public String getReservePrice() {
+            return this.reservePrice;
+        }
+
         public SearchByPicResponseBodyDataAuctionsResult setPromotionPrice(String promotionPrice) {
             this.promotionPrice = promotionPrice;
             return this;
         }
         public String getPromotionPrice() {
             return this.promotionPrice;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setZkFinalPrice(String zkFinalPrice) {
+            this.zkFinalPrice = zkFinalPrice;
+            return this;
+        }
+        public String getZkFinalPrice() {
+            return this.zkFinalPrice;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setPriceAfterCoupon(String priceAfterCoupon) {
+            this.priceAfterCoupon = priceAfterCoupon;
+            return this;
+        }
+        public String getPriceAfterCoupon() {
+            return this.priceAfterCoupon;
         }
 
         public SearchByPicResponseBodyDataAuctionsResult setUserType(Integer userType) {
@@ -211,6 +343,14 @@ public class SearchByPicResponseBody extends TeaModel {
             return this.sellerNickName;
         }
 
+        public SearchByPicResponseBodyDataAuctionsResult setNick(String nick) {
+            this.nick = nick;
+            return this;
+        }
+        public String getNick() {
+            return this.nick;
+        }
+
         public SearchByPicResponseBodyDataAuctionsResult setSellerId(String sellerId) {
             this.sellerId = sellerId;
             return this;
@@ -225,6 +365,14 @@ public class SearchByPicResponseBody extends TeaModel {
         }
         public Integer getMonthSellCount() {
             return this.monthSellCount;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
         }
 
         public SearchByPicResponseBodyDataAuctionsResult setLevelOneCategoryName(String levelOneCategoryName) {
@@ -243,12 +391,28 @@ public class SearchByPicResponseBody extends TeaModel {
             return this.categoryName;
         }
 
+        public SearchByPicResponseBodyDataAuctionsResult setCouponActivityId(String couponActivityId) {
+            this.couponActivityId = couponActivityId;
+            return this;
+        }
+        public String getCouponActivityId() {
+            return this.couponActivityId;
+        }
+
         public SearchByPicResponseBodyDataAuctionsResult setCouponTotalCount(String couponTotalCount) {
             this.couponTotalCount = couponTotalCount;
             return this;
         }
         public String getCouponTotalCount() {
             return this.couponTotalCount;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setCouponSendCount(String couponSendCount) {
+            this.couponSendCount = couponSendCount;
+            return this;
+        }
+        public String getCouponSendCount() {
+            return this.couponSendCount;
         }
 
         public SearchByPicResponseBodyDataAuctionsResult setCouponRemainCount(Integer couponRemainCount) {
@@ -299,6 +463,30 @@ public class SearchByPicResponseBody extends TeaModel {
             return this.couponSaleTextInfo;
         }
 
+        public SearchByPicResponseBodyDataAuctionsResult setCouponInfo(String couponInfo) {
+            this.couponInfo = couponInfo;
+            return this;
+        }
+        public String getCouponInfo() {
+            return this.couponInfo;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setTkMktRate(Integer tkMktRate) {
+            this.tkMktRate = tkMktRate;
+            return this;
+        }
+        public Integer getTkMktRate() {
+            return this.tkMktRate;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setTkRate(Integer tkRate) {
+            this.tkRate = tkRate;
+            return this;
+        }
+        public Integer getTkRate() {
+            return this.tkRate;
+        }
+
         public SearchByPicResponseBodyDataAuctionsResult setCommissionRate(String commissionRate) {
             this.commissionRate = commissionRate;
             return this;
@@ -321,6 +509,46 @@ public class SearchByPicResponseBody extends TeaModel {
         }
         public String getClickUrl() {
             return this.clickUrl;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setShortUrl(String shortUrl) {
+            this.shortUrl = shortUrl;
+            return this;
+        }
+        public String getShortUrl() {
+            return this.shortUrl;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setShopTitle(String shopTitle) {
+            this.shopTitle = shopTitle;
+            return this;
+        }
+        public String getShopTitle() {
+            return this.shopTitle;
+        }
+
+        public SearchByPicResponseBodyDataAuctionsResult setMaxCommission(SearchByPicResponseBodyDataAuctionsResultMaxCommission maxCommission) {
+            this.maxCommission = maxCommission;
+            return this;
+        }
+        public SearchByPicResponseBodyDataAuctionsResultMaxCommission getMaxCommission() {
+            return this.maxCommission;
         }
 
     }
