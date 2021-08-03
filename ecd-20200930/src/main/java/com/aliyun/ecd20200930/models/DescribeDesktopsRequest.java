@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("GroupId")
@@ -35,20 +34,17 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
-    @NameInMap("DesktopId")
-    public java.util.List<String> desktopId;
-
-    @NameInMap("EndUserId")
-    public java.util.List<String> endUserId;
-
     @NameInMap("ChargeType")
     public String chargeType;
 
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
-    @NameInMap("Html5Access")
-    public String html5Access;
+    @NameInMap("DesktopId")
+    public java.util.List<String> desktopId;
+
+    @NameInMap("EndUserId")
+    public java.util.List<String> endUserId;
 
     public static DescribeDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopsRequest self = new DescribeDesktopsRequest();
@@ -135,22 +131,6 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.policyGroupId;
     }
 
-    public DescribeDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
-        this.desktopId = desktopId;
-        return this;
-    }
-    public java.util.List<String> getDesktopId() {
-        return this.desktopId;
-    }
-
-    public DescribeDesktopsRequest setEndUserId(java.util.List<String> endUserId) {
-        this.endUserId = endUserId;
-        return this;
-    }
-    public java.util.List<String> getEndUserId() {
-        return this.endUserId;
-    }
-
     public DescribeDesktopsRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
@@ -167,12 +147,20 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.expiredTime;
     }
 
-    public DescribeDesktopsRequest setHtml5Access(String html5Access) {
-        this.html5Access = html5Access;
+    public DescribeDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
+        this.desktopId = desktopId;
         return this;
     }
-    public String getHtml5Access() {
-        return this.html5Access;
+    public java.util.List<String> getDesktopId() {
+        return this.desktopId;
+    }
+
+    public DescribeDesktopsRequest setEndUserId(java.util.List<String> endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public java.util.List<String> getEndUserId() {
+        return this.endUserId;
     }
 
 }

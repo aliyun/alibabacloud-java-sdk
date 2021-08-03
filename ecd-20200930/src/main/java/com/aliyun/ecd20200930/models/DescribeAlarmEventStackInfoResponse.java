@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmEventStackInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("StackInfo")
+    @NameInMap("body")
     @Validation(required = true)
-    public String stackInfo;
+    public DescribeAlarmEventStackInfoResponseBody body;
 
     public static DescribeAlarmEventStackInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlarmEventStackInfoResponse self = new DescribeAlarmEventStackInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAlarmEventStackInfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeAlarmEventStackInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeAlarmEventStackInfoResponse setStackInfo(String stackInfo) {
-        this.stackInfo = stackInfo;
+    public DescribeAlarmEventStackInfoResponse setBody(DescribeAlarmEventStackInfoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getStackInfo() {
-        return this.stackInfo;
+    public DescribeAlarmEventStackInfoResponseBody getBody() {
+        return this.body;
     }
 
 }

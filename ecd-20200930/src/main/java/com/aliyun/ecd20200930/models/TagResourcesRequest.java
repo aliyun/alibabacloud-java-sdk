@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
-    @Validation(required = true)
     public java.util.List<TagResourcesRequestTag> tag;
 
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {

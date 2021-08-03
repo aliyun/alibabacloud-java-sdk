@@ -5,31 +5,25 @@ import com.aliyun.tea.*;
 
 public class OperateVulsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
-    @NameInMap("VulName")
-    @Validation(required = true)
-    public java.util.List<String> vulName;
-
-    @NameInMap("DesktopId")
-    @Validation(required = true)
-    public java.util.List<String> desktopId;
-
     @NameInMap("OperateType")
-    @Validation(required = true)
     public String operateType;
 
     @NameInMap("Reason")
     public String reason;
 
     @NameInMap("Precondition")
-    @Validation(required = true)
     public Integer precondition;
+
+    @NameInMap("VulName")
+    public java.util.List<String> vulName;
+
+    @NameInMap("DesktopId")
+    public java.util.List<String> desktopId;
 
     public static OperateVulsRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateVulsRequest self = new OperateVulsRequest();
@@ -50,22 +44,6 @@ public class OperateVulsRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public OperateVulsRequest setVulName(java.util.List<String> vulName) {
-        this.vulName = vulName;
-        return this;
-    }
-    public java.util.List<String> getVulName() {
-        return this.vulName;
-    }
-
-    public OperateVulsRequest setDesktopId(java.util.List<String> desktopId) {
-        this.desktopId = desktopId;
-        return this;
-    }
-    public java.util.List<String> getDesktopId() {
-        return this.desktopId;
     }
 
     public OperateVulsRequest setOperateType(String operateType) {
@@ -90,6 +68,22 @@ public class OperateVulsRequest extends TeaModel {
     }
     public Integer getPrecondition() {
         return this.precondition;
+    }
+
+    public OperateVulsRequest setVulName(java.util.List<String> vulName) {
+        this.vulName = vulName;
+        return this;
+    }
+    public java.util.List<String> getVulName() {
+        return this.vulName;
+    }
+
+    public OperateVulsRequest setDesktopId(java.util.List<String> desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public java.util.List<String> getDesktopId() {
+        return this.desktopId;
     }
 
 }

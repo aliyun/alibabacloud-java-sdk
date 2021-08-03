@@ -4,21 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class StopInvocationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public StopInvocationResponseBody body;
 
     public static StopInvocationResponse build(java.util.Map<String, ?> map) throws Exception {
         StopInvocationResponse self = new StopInvocationResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopInvocationResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StopInvocationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public StopInvocationResponse setBody(StopInvocationResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public StopInvocationResponseBody getBody() {
+        return this.body;
     }
 
 }

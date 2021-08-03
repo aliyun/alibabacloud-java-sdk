@@ -4,45 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CreateTime")
+    @NameInMap("body")
     @Validation(required = true)
-    public String createTime;
-
-    @NameInMap("TaskStatus")
-    @Validation(required = true)
-    public String taskStatus;
+    public DescribeScanTaskProgressResponseBody body;
 
     public static DescribeScanTaskProgressResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeScanTaskProgressResponse self = new DescribeScanTaskProgressResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeScanTaskProgressResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeScanTaskProgressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeScanTaskProgressResponse setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public DescribeScanTaskProgressResponse setBody(DescribeScanTaskProgressResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public DescribeScanTaskProgressResponse setTaskStatus(String taskStatus) {
-        this.taskStatus = taskStatus;
-        return this;
-    }
-    public String getTaskStatus() {
-        return this.taskStatus;
+    public DescribeScanTaskProgressResponseBody getBody() {
+        return this.body;
     }
 
 }

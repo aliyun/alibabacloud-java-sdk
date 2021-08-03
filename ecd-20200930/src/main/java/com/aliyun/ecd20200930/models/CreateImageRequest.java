@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DesktopId")
-    @Validation(required = true)
     public String desktopId;
 
     @NameInMap("ImageName")
@@ -17,6 +15,15 @@ public class CreateImageRequest extends TeaModel {
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("SnapshotId")
+    public String snapshotId;
+
+    @NameInMap("ImageResourceType")
+    public String imageResourceType;
+
+    @NameInMap("SnapshotIds")
+    public java.util.List<String> snapshotIds;
 
     public static CreateImageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageRequest self = new CreateImageRequest();
@@ -53,6 +60,30 @@ public class CreateImageRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateImageRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
+    public CreateImageRequest setImageResourceType(String imageResourceType) {
+        this.imageResourceType = imageResourceType;
+        return this;
+    }
+    public String getImageResourceType() {
+        return this.imageResourceType;
+    }
+
+    public CreateImageRequest setSnapshotIds(java.util.List<String> snapshotIds) {
+        this.snapshotIds = snapshotIds;
+        return this;
+    }
+    public java.util.List<String> getSnapshotIds() {
+        return this.snapshotIds;
     }
 
 }

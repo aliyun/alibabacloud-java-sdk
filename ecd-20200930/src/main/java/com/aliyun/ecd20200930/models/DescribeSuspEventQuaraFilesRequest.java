@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventQuaraFilesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Status")
     public String status;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("CurrentPage")

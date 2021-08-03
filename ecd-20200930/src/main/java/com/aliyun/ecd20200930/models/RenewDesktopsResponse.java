@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RenewDesktopsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OrderId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String orderId;
+    public RenewDesktopsResponseBody body;
 
     public static RenewDesktopsResponse build(java.util.Map<String, ?> map) throws Exception {
         RenewDesktopsResponse self = new RenewDesktopsResponse();
         return TeaModel.build(map, self);
     }
 
-    public RenewDesktopsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RenewDesktopsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RenewDesktopsResponse setOrderId(String orderId) {
-        this.orderId = orderId;
+    public RenewDesktopsResponse setBody(RenewDesktopsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public RenewDesktopsResponseBody getBody() {
+        return this.body;
     }
 
 }

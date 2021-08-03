@@ -4,53 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Zones")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeZonesResponseZones> zones;
+    public DescribeZonesResponseBody body;
 
     public static DescribeZonesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeZonesResponse self = new DescribeZonesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeZonesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeZonesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeZonesResponse setZones(java.util.List<DescribeZonesResponseZones> zones) {
-        this.zones = zones;
+    public DescribeZonesResponse setBody(DescribeZonesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeZonesResponseZones> getZones() {
-        return this.zones;
-    }
-
-    public static class DescribeZonesResponseZones extends TeaModel {
-        @NameInMap("ZoneId")
-        @Validation(required = true)
-        public String zoneId;
-
-        public static DescribeZonesResponseZones build(java.util.Map<String, ?> map) throws Exception {
-            DescribeZonesResponseZones self = new DescribeZonesResponseZones();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseZones setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
+    public DescribeZonesResponseBody getBody() {
+        return this.body;
     }
 
 }

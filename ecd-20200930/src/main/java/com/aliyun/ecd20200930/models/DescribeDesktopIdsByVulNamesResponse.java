@@ -4,65 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopIdsByVulNamesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DesktopItems")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeDesktopIdsByVulNamesResponseDesktopItems> desktopItems;
+    public DescribeDesktopIdsByVulNamesResponseBody body;
 
     public static DescribeDesktopIdsByVulNamesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopIdsByVulNamesResponse self = new DescribeDesktopIdsByVulNamesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDesktopIdsByVulNamesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDesktopIdsByVulNamesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDesktopIdsByVulNamesResponse setDesktopItems(java.util.List<DescribeDesktopIdsByVulNamesResponseDesktopItems> desktopItems) {
-        this.desktopItems = desktopItems;
+    public DescribeDesktopIdsByVulNamesResponse setBody(DescribeDesktopIdsByVulNamesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeDesktopIdsByVulNamesResponseDesktopItems> getDesktopItems() {
-        return this.desktopItems;
-    }
-
-    public static class DescribeDesktopIdsByVulNamesResponseDesktopItems extends TeaModel {
-        @NameInMap("DesktopId")
-        @Validation(required = true)
-        public String desktopId;
-
-        @NameInMap("DesktopName")
-        @Validation(required = true)
-        public String desktopName;
-
-        public static DescribeDesktopIdsByVulNamesResponseDesktopItems build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDesktopIdsByVulNamesResponseDesktopItems self = new DescribeDesktopIdsByVulNamesResponseDesktopItems();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDesktopIdsByVulNamesResponseDesktopItems setDesktopId(String desktopId) {
-            this.desktopId = desktopId;
-            return this;
-        }
-        public String getDesktopId() {
-            return this.desktopId;
-        }
-
-        public DescribeDesktopIdsByVulNamesResponseDesktopItems setDesktopName(String desktopName) {
-            this.desktopName = desktopName;
-            return this;
-        }
-        public String getDesktopName() {
-            return this.desktopName;
-        }
-
+    public DescribeDesktopIdsByVulNamesResponseBody getBody() {
+        return this.body;
     }
 
 }

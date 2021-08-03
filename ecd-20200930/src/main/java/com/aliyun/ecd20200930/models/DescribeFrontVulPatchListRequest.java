@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeFrontVulPatchListRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("VulInfo")
-    public java.util.List<DescribeFrontVulPatchListRequestVulInfo> vulInfo;
 
     @NameInMap("OperateType")
     public String operateType;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
+
+    @NameInMap("VulInfo")
+    public java.util.List<DescribeFrontVulPatchListRequestVulInfo> vulInfo;
 
     public static DescribeFrontVulPatchListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFrontVulPatchListRequest self = new DescribeFrontVulPatchListRequest();
@@ -29,14 +27,6 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DescribeFrontVulPatchListRequest setVulInfo(java.util.List<DescribeFrontVulPatchListRequestVulInfo> vulInfo) {
-        this.vulInfo = vulInfo;
-        return this;
-    }
-    public java.util.List<DescribeFrontVulPatchListRequestVulInfo> getVulInfo() {
-        return this.vulInfo;
     }
 
     public DescribeFrontVulPatchListRequest setOperateType(String operateType) {
@@ -55,27 +45,27 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
         return this.type;
     }
 
-    public static class DescribeFrontVulPatchListRequestVulInfo extends TeaModel {
-        @NameInMap("Name")
-        public String name;
+    public DescribeFrontVulPatchListRequest setVulInfo(java.util.List<DescribeFrontVulPatchListRequestVulInfo> vulInfo) {
+        this.vulInfo = vulInfo;
+        return this;
+    }
+    public java.util.List<DescribeFrontVulPatchListRequestVulInfo> getVulInfo() {
+        return this.vulInfo;
+    }
 
+    public static class DescribeFrontVulPatchListRequestVulInfo extends TeaModel {
         @NameInMap("DesktopId")
         public String desktopId;
 
         @NameInMap("Tag")
         public String tag;
 
+        @NameInMap("Name")
+        public String name;
+
         public static DescribeFrontVulPatchListRequestVulInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeFrontVulPatchListRequestVulInfo self = new DescribeFrontVulPatchListRequestVulInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFrontVulPatchListRequestVulInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeFrontVulPatchListRequestVulInfo setDesktopId(String desktopId) {
@@ -92,6 +82,14 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public DescribeFrontVulPatchListRequestVulInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

@@ -4,89 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulDetailsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Cves")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeVulDetailsResponseCves> cves;
+    public DescribeVulDetailsResponseBody body;
 
     public static DescribeVulDetailsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeVulDetailsResponse self = new DescribeVulDetailsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVulDetailsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeVulDetailsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeVulDetailsResponse setCves(java.util.List<DescribeVulDetailsResponseCves> cves) {
-        this.cves = cves;
+    public DescribeVulDetailsResponse setBody(DescribeVulDetailsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeVulDetailsResponseCves> getCves() {
-        return this.cves;
-    }
-
-    public static class DescribeVulDetailsResponseCves extends TeaModel {
-        @NameInMap("CveId")
-        @Validation(required = true)
-        public String cveId;
-
-        @NameInMap("Title")
-        @Validation(required = true)
-        public String title;
-
-        @NameInMap("CvssScore")
-        @Validation(required = true)
-        public String cvssScore;
-
-        @NameInMap("Summary")
-        @Validation(required = true)
-        public String summary;
-
-        public static DescribeVulDetailsResponseCves build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVulDetailsResponseCves self = new DescribeVulDetailsResponseCves();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeVulDetailsResponseCves setCveId(String cveId) {
-            this.cveId = cveId;
-            return this;
-        }
-        public String getCveId() {
-            return this.cveId;
-        }
-
-        public DescribeVulDetailsResponseCves setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public DescribeVulDetailsResponseCves setCvssScore(String cvssScore) {
-            this.cvssScore = cvssScore;
-            return this;
-        }
-        public String getCvssScore() {
-            return this.cvssScore;
-        }
-
-        public DescribeVulDetailsResponseCves setSummary(String summary) {
-            this.summary = summary;
-            return this;
-        }
-        public String getSummary() {
-            return this.summary;
-        }
-
+    public DescribeVulDetailsResponseBody getBody() {
+        return this.body;
     }
 
 }

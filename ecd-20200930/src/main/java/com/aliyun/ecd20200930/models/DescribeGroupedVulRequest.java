@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupedVulRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("Necessity")

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateSimpleOfficeSiteRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("CidrBlock")
-    @Validation(required = true)
     public String cidrBlock;
 
     @NameInMap("CenId")

@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetOfficeSiteSsoStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SsoStatus")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean ssoStatus;
+    public GetOfficeSiteSsoStatusResponseBody body;
 
     public static GetOfficeSiteSsoStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         GetOfficeSiteSsoStatusResponse self = new GetOfficeSiteSsoStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetOfficeSiteSsoStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetOfficeSiteSsoStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetOfficeSiteSsoStatusResponse setSsoStatus(Boolean ssoStatus) {
-        this.ssoStatus = ssoStatus;
+    public GetOfficeSiteSsoStatusResponse setBody(GetOfficeSiteSsoStatusResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSsoStatus() {
-        return this.ssoStatus;
+    public GetOfficeSiteSsoStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

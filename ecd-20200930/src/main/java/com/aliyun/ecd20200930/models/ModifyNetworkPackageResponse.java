@@ -4,21 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkPackageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifyNetworkPackageResponseBody body;
 
     public static ModifyNetworkPackageResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkPackageResponse self = new ModifyNetworkPackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyNetworkPackageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyNetworkPackageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyNetworkPackageResponse setBody(ModifyNetworkPackageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyNetworkPackageResponseBody getBody() {
+        return this.body;
     }
 
 }

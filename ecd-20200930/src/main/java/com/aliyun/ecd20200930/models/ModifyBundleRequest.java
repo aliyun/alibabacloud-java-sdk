@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyBundleRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BundleId")
-    @Validation(required = true)
     public String bundleId;
 
     @NameInMap("ImageId")

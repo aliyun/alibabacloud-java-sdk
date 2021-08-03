@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DesktopTypeId")
@@ -13,6 +12,15 @@ public class DescribeDesktopTypesRequest extends TeaModel {
 
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
+
+    @NameInMap("CpuCount")
+    public Integer cpuCount;
+
+    @NameInMap("MemorySize")
+    public Integer memorySize;
+
+    @NameInMap("GpuCount")
+    public Float gpuCount;
 
     public static DescribeDesktopTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopTypesRequest self = new DescribeDesktopTypesRequest();
@@ -41,6 +49,30 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     }
     public String getInstanceTypeFamily() {
         return this.instanceTypeFamily;
+    }
+
+    public DescribeDesktopTypesRequest setCpuCount(Integer cpuCount) {
+        this.cpuCount = cpuCount;
+        return this;
+    }
+    public Integer getCpuCount() {
+        return this.cpuCount;
+    }
+
+    public DescribeDesktopTypesRequest setMemorySize(Integer memorySize) {
+        this.memorySize = memorySize;
+        return this;
+    }
+    public Integer getMemorySize() {
+        return this.memorySize;
+    }
+
+    public DescribeDesktopTypesRequest setGpuCount(Float gpuCount) {
+        this.gpuCount = gpuCount;
+        return this;
+    }
+    public Float getGpuCount() {
+        return this.gpuCount;
     }
 
 }

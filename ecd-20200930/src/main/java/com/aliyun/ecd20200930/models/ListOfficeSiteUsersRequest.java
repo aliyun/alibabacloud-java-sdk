@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListOfficeSiteUsersRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Filter")
     public String filter;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("NextToken")

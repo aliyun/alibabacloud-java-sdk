@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteNASFileSystemsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public java.util.List<String> fileSystemId;
 
     public static DeleteNASFileSystemsRequest build(java.util.Map<String, ?> map) throws Exception {

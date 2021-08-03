@@ -5,24 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
-
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
-
-    @NameInMap("Tag")
-    public java.util.List<ListTagResourcesRequestTag> tag;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
+
+    @NameInMap("Tag")
+    public java.util.List<ListTagResourcesRequestTag> tag;
 
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
@@ -45,22 +43,6 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
-    }
-
-    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<ListTagResourcesRequestTag> getTag() {
-        return this.tag;
-    }
-
     public ListTagResourcesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -75,6 +57,22 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
+    }
+
+    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListTagResourcesRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

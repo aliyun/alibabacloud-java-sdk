@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateADConnectorOfficeSiteResponse extends TeaModel {
-    @NameInMap("OfficeSiteId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String officeSiteId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public CreateADConnectorOfficeSiteResponseBody body;
 
     public static CreateADConnectorOfficeSiteResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateADConnectorOfficeSiteResponse self = new CreateADConnectorOfficeSiteResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateADConnectorOfficeSiteResponse setOfficeSiteId(String officeSiteId) {
-        this.officeSiteId = officeSiteId;
+    public CreateADConnectorOfficeSiteResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getOfficeSiteId() {
-        return this.officeSiteId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateADConnectorOfficeSiteResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateADConnectorOfficeSiteResponse setBody(CreateADConnectorOfficeSiteResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public CreateADConnectorOfficeSiteResponseBody getBody() {
+        return this.body;
     }
 
 }

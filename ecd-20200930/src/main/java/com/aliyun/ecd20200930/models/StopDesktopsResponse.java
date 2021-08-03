@@ -4,21 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class StopDesktopsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public StopDesktopsResponseBody body;
 
     public static StopDesktopsResponse build(java.util.Map<String, ?> map) throws Exception {
         StopDesktopsResponse self = new StopDesktopsResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopDesktopsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StopDesktopsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public StopDesktopsResponse setBody(StopDesktopsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public StopDesktopsResponseBody getBody() {
+        return this.body;
     }
 
 }

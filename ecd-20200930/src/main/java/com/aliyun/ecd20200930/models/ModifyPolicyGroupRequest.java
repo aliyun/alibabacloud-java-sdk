@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PolicyGroupId")
-    @Validation(required = true)
     public String policyGroupId;
 
     @NameInMap("Name")
@@ -27,6 +25,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("VisualQuality")
     public String visualQuality;
 
+    @NameInMap("Html5Access")
+    public String html5Access;
+
+    @NameInMap("Html5FileTransfer")
+    public String html5FileTransfer;
+
     @NameInMap("Watermark")
     public String watermark;
 
@@ -42,6 +46,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("PreemptLogin")
     public String preemptLogin;
 
+    @NameInMap("DomainList")
+    public String domainList;
+
     @NameInMap("PreemptLoginUser")
     public java.util.List<String> preemptLoginUser;
 
@@ -50,6 +57,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
 
     @NameInMap("RevokeSecurityPolicyRule")
     public java.util.List<ModifyPolicyGroupRequestRevokeSecurityPolicyRule> revokeSecurityPolicyRule;
+
+    @NameInMap("AuthorizeAccessPolicyRule")
+    public java.util.List<ModifyPolicyGroupRequestAuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
+
+    @NameInMap("RevokeAccessPolicyRule")
+    public java.util.List<ModifyPolicyGroupRequestRevokeAccessPolicyRule> revokeAccessPolicyRule;
 
     public static ModifyPolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPolicyGroupRequest self = new ModifyPolicyGroupRequest();
@@ -112,6 +125,22 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         return this.visualQuality;
     }
 
+    public ModifyPolicyGroupRequest setHtml5Access(String html5Access) {
+        this.html5Access = html5Access;
+        return this;
+    }
+    public String getHtml5Access() {
+        return this.html5Access;
+    }
+
+    public ModifyPolicyGroupRequest setHtml5FileTransfer(String html5FileTransfer) {
+        this.html5FileTransfer = html5FileTransfer;
+        return this;
+    }
+    public String getHtml5FileTransfer() {
+        return this.html5FileTransfer;
+    }
+
     public ModifyPolicyGroupRequest setWatermark(String watermark) {
         this.watermark = watermark;
         return this;
@@ -152,6 +181,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         return this.preemptLogin;
     }
 
+    public ModifyPolicyGroupRequest setDomainList(String domainList) {
+        this.domainList = domainList;
+        return this;
+    }
+    public String getDomainList() {
+        return this.domainList;
+    }
+
     public ModifyPolicyGroupRequest setPreemptLoginUser(java.util.List<String> preemptLoginUser) {
         this.preemptLoginUser = preemptLoginUser;
         return this;
@@ -176,27 +213,43 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         return this.revokeSecurityPolicyRule;
     }
 
+    public ModifyPolicyGroupRequest setAuthorizeAccessPolicyRule(java.util.List<ModifyPolicyGroupRequestAuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
+        this.authorizeAccessPolicyRule = authorizeAccessPolicyRule;
+        return this;
+    }
+    public java.util.List<ModifyPolicyGroupRequestAuthorizeAccessPolicyRule> getAuthorizeAccessPolicyRule() {
+        return this.authorizeAccessPolicyRule;
+    }
+
+    public ModifyPolicyGroupRequest setRevokeAccessPolicyRule(java.util.List<ModifyPolicyGroupRequestRevokeAccessPolicyRule> revokeAccessPolicyRule) {
+        this.revokeAccessPolicyRule = revokeAccessPolicyRule;
+        return this;
+    }
+    public java.util.List<ModifyPolicyGroupRequestRevokeAccessPolicyRule> getRevokeAccessPolicyRule() {
+        return this.revokeAccessPolicyRule;
+    }
+
     public static class ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("IpProtocol")
-        public String ipProtocol;
+        @NameInMap("Policy")
+        public String policy;
 
         @NameInMap("PortRange")
         public String portRange;
 
-        @NameInMap("CidrIp")
-        public String cidrIp;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("Policy")
-        public String policy;
+        @NameInMap("IpProtocol")
+        public String ipProtocol;
 
         @NameInMap("Priority")
         public String priority;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("CidrIp")
+        public String cidrIp;
 
         public static ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule build(java.util.Map<String, ?> map) throws Exception {
             ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule self = new ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule();
@@ -211,12 +264,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
             return this.type;
         }
 
-        public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setIpProtocol(String ipProtocol) {
-            this.ipProtocol = ipProtocol;
+        public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setPolicy(String policy) {
+            this.policy = policy;
             return this;
         }
-        public String getIpProtocol() {
-            return this.ipProtocol;
+        public String getPolicy() {
+            return this.policy;
         }
 
         public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setPortRange(String portRange) {
@@ -227,20 +280,20 @@ public class ModifyPolicyGroupRequest extends TeaModel {
             return this.portRange;
         }
 
-        public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setCidrIp(String cidrIp) {
-            this.cidrIp = cidrIp;
+        public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getCidrIp() {
-            return this.cidrIp;
+        public String getDescription() {
+            return this.description;
         }
 
-        public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setPolicy(String policy) {
-            this.policy = policy;
+        public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setIpProtocol(String ipProtocol) {
+            this.ipProtocol = ipProtocol;
             return this;
         }
-        public String getPolicy() {
-            return this.policy;
+        public String getIpProtocol() {
+            return this.ipProtocol;
         }
 
         public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setPriority(String priority) {
@@ -251,12 +304,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
             return this.priority;
         }
 
-        public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setDescription(String description) {
-            this.description = description;
+        public ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule setCidrIp(String cidrIp) {
+            this.cidrIp = cidrIp;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getCidrIp() {
+            return this.cidrIp;
         }
 
     }
@@ -265,23 +318,23 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("IpProtocol")
-        public String ipProtocol;
+        @NameInMap("Policy")
+        public String policy;
 
         @NameInMap("PortRange")
         public String portRange;
 
-        @NameInMap("CidrIp")
-        public String cidrIp;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("Policy")
-        public String policy;
+        @NameInMap("IpProtocol")
+        public String ipProtocol;
 
         @NameInMap("Priority")
         public String priority;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("CidrIp")
+        public String cidrIp;
 
         public static ModifyPolicyGroupRequestRevokeSecurityPolicyRule build(java.util.Map<String, ?> map) throws Exception {
             ModifyPolicyGroupRequestRevokeSecurityPolicyRule self = new ModifyPolicyGroupRequestRevokeSecurityPolicyRule();
@@ -296,12 +349,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
             return this.type;
         }
 
-        public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setIpProtocol(String ipProtocol) {
-            this.ipProtocol = ipProtocol;
+        public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setPolicy(String policy) {
+            this.policy = policy;
             return this;
         }
-        public String getIpProtocol() {
-            return this.ipProtocol;
+        public String getPolicy() {
+            return this.policy;
         }
 
         public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setPortRange(String portRange) {
@@ -312,20 +365,20 @@ public class ModifyPolicyGroupRequest extends TeaModel {
             return this.portRange;
         }
 
-        public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setCidrIp(String cidrIp) {
-            this.cidrIp = cidrIp;
+        public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getCidrIp() {
-            return this.cidrIp;
+        public String getDescription() {
+            return this.description;
         }
 
-        public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setPolicy(String policy) {
-            this.policy = policy;
+        public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setIpProtocol(String ipProtocol) {
+            this.ipProtocol = ipProtocol;
             return this;
         }
-        public String getPolicy() {
-            return this.policy;
+        public String getIpProtocol() {
+            return this.ipProtocol;
         }
 
         public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setPriority(String priority) {
@@ -336,12 +389,72 @@ public class ModifyPolicyGroupRequest extends TeaModel {
             return this.priority;
         }
 
-        public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setDescription(String description) {
+        public ModifyPolicyGroupRequestRevokeSecurityPolicyRule setCidrIp(String cidrIp) {
+            this.cidrIp = cidrIp;
+            return this;
+        }
+        public String getCidrIp() {
+            return this.cidrIp;
+        }
+
+    }
+
+    public static class ModifyPolicyGroupRequestAuthorizeAccessPolicyRule extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("CidrIp")
+        public String cidrIp;
+
+        public static ModifyPolicyGroupRequestAuthorizeAccessPolicyRule build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyGroupRequestAuthorizeAccessPolicyRule self = new ModifyPolicyGroupRequestAuthorizeAccessPolicyRule();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyGroupRequestAuthorizeAccessPolicyRule setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ModifyPolicyGroupRequestAuthorizeAccessPolicyRule setCidrIp(String cidrIp) {
+            this.cidrIp = cidrIp;
+            return this;
+        }
+        public String getCidrIp() {
+            return this.cidrIp;
+        }
+
+    }
+
+    public static class ModifyPolicyGroupRequestRevokeAccessPolicyRule extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("CidrIp")
+        public String cidrIp;
+
+        public static ModifyPolicyGroupRequestRevokeAccessPolicyRule build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyGroupRequestRevokeAccessPolicyRule self = new ModifyPolicyGroupRequestRevokeAccessPolicyRule();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyGroupRequestRevokeAccessPolicyRule setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ModifyPolicyGroupRequestRevokeAccessPolicyRule setCidrIp(String cidrIp) {
+            this.cidrIp = cidrIp;
+            return this;
+        }
+        public String getCidrIp() {
+            return this.cidrIp;
         }
 
     }

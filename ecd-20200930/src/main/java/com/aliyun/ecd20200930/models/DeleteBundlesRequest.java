@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteBundlesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BundleId")
-    @Validation(required = true)
     public java.util.List<String> bundleId;
 
     public static DeleteBundlesRequest build(java.util.Map<String, ?> map) throws Exception {

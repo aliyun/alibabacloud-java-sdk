@@ -5,22 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopIdsByVulNamesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("Necessity")
     public String necessity;
 
     @NameInMap("VulName")
-    @Validation(required = true)
     public java.util.List<String> vulName;
 
     public static DescribeDesktopIdsByVulNamesRequest build(java.util.Map<String, ?> map) throws Exception {

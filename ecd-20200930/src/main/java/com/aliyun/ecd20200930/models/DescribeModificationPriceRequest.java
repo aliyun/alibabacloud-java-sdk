@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeModificationPriceRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("InstanceType")

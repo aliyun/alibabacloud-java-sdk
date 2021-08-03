@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("Dealed")

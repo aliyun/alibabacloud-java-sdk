@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PolicyGroupId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String policyGroupId;
+    public CreatePolicyGroupResponseBody body;
 
     public static CreatePolicyGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         CreatePolicyGroupResponse self = new CreatePolicyGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreatePolicyGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreatePolicyGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreatePolicyGroupResponse setPolicyGroupId(String policyGroupId) {
-        this.policyGroupId = policyGroupId;
+    public CreatePolicyGroupResponse setBody(CreatePolicyGroupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getPolicyGroupId() {
-        return this.policyGroupId;
+    public CreatePolicyGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

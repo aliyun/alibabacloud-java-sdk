@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventOperationStatusRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public Long taskId;
 
     @NameInMap("SecurityEventId")
-    @Validation(required = true)
     public java.util.List<String> securityEventId;
 
     public static DescribeSecurityEventOperationStatusRequest build(java.util.Map<String, ?> map) throws Exception {

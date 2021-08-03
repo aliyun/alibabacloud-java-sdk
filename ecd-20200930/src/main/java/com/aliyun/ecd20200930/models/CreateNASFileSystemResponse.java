@@ -4,69 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateNASFileSystemResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OfficeSiteId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String officeSiteId;
-
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
-    public String fileSystemId;
-
-    @NameInMap("FileSystemName")
-    @Validation(required = true)
-    public String fileSystemName;
-
-    @NameInMap("MountTargetDomain")
-    @Validation(required = true)
-    public String mountTargetDomain;
+    public CreateNASFileSystemResponseBody body;
 
     public static CreateNASFileSystemResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateNASFileSystemResponse self = new CreateNASFileSystemResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateNASFileSystemResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateNASFileSystemResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateNASFileSystemResponse setOfficeSiteId(String officeSiteId) {
-        this.officeSiteId = officeSiteId;
+    public CreateNASFileSystemResponse setBody(CreateNASFileSystemResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOfficeSiteId() {
-        return this.officeSiteId;
-    }
-
-    public CreateNASFileSystemResponse setFileSystemId(String fileSystemId) {
-        this.fileSystemId = fileSystemId;
-        return this;
-    }
-    public String getFileSystemId() {
-        return this.fileSystemId;
-    }
-
-    public CreateNASFileSystemResponse setFileSystemName(String fileSystemName) {
-        this.fileSystemName = fileSystemName;
-        return this;
-    }
-    public String getFileSystemName() {
-        return this.fileSystemName;
-    }
-
-    public CreateNASFileSystemResponse setMountTargetDomain(String mountTargetDomain) {
-        this.mountTargetDomain = mountTargetDomain;
-        return this;
-    }
-    public String getMountTargetDomain() {
-        return this.mountTargetDomain;
+    public CreateNASFileSystemResponseBody getBody() {
+        return this.body;
     }
 
 }
