@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateNASFileSystemRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("Name")

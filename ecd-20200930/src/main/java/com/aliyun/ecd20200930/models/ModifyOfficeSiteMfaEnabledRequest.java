@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteMfaEnabledRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("MfaEnabled")
-    @Validation(required = true)
     public Boolean mfaEnabled;
 
     public static ModifyOfficeSiteMfaEnabledRequest build(java.util.Map<String, ?> map) throws Exception {

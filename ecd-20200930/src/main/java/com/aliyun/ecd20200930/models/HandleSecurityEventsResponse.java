@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class HandleSecurityEventsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TaskId")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long taskId;
+    public HandleSecurityEventsResponseBody body;
 
     public static HandleSecurityEventsResponse build(java.util.Map<String, ?> map) throws Exception {
         HandleSecurityEventsResponse self = new HandleSecurityEventsResponse();
         return TeaModel.build(map, self);
     }
 
-    public HandleSecurityEventsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public HandleSecurityEventsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public HandleSecurityEventsResponse setTaskId(Long taskId) {
-        this.taskId = taskId;
+    public HandleSecurityEventsResponse setBody(HandleSecurityEventsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getTaskId() {
-        return this.taskId;
+    public HandleSecurityEventsResponseBody getBody() {
+        return this.body;
     }
 
 }

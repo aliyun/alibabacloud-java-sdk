@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("DomainName")
@@ -21,20 +19,20 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     @NameInMap("DomainPassword")
     public String domainPassword;
 
-    @NameInMap("DnsAddress")
-    public java.util.List<String> dnsAddress;
-
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
-
-    @NameInMap("SubDomainDnsAddress")
-    public java.util.List<String> subDomainDnsAddress;
 
     @NameInMap("SubDomainName")
     public String subDomainName;
 
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
+
+    @NameInMap("DnsAddress")
+    public java.util.List<String> dnsAddress;
+
+    @NameInMap("SubDomainDnsAddress")
+    public java.util.List<String> subDomainDnsAddress;
 
     public static ModifyADConnectorOfficeSiteRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyADConnectorOfficeSiteRequest self = new ModifyADConnectorOfficeSiteRequest();
@@ -81,28 +79,12 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
         return this.domainPassword;
     }
 
-    public ModifyADConnectorOfficeSiteRequest setDnsAddress(java.util.List<String> dnsAddress) {
-        this.dnsAddress = dnsAddress;
-        return this;
-    }
-    public java.util.List<String> getDnsAddress() {
-        return this.dnsAddress;
-    }
-
     public ModifyADConnectorOfficeSiteRequest setOfficeSiteName(String officeSiteName) {
         this.officeSiteName = officeSiteName;
         return this;
     }
     public String getOfficeSiteName() {
         return this.officeSiteName;
-    }
-
-    public ModifyADConnectorOfficeSiteRequest setSubDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
-        this.subDomainDnsAddress = subDomainDnsAddress;
-        return this;
-    }
-    public java.util.List<String> getSubDomainDnsAddress() {
-        return this.subDomainDnsAddress;
     }
 
     public ModifyADConnectorOfficeSiteRequest setSubDomainName(String subDomainName) {
@@ -119,6 +101,22 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     }
     public Boolean getMfaEnabled() {
         return this.mfaEnabled;
+    }
+
+    public ModifyADConnectorOfficeSiteRequest setDnsAddress(java.util.List<String> dnsAddress) {
+        this.dnsAddress = dnsAddress;
+        return this;
+    }
+    public java.util.List<String> getDnsAddress() {
+        return this.dnsAddress;
+    }
+
+    public ModifyADConnectorOfficeSiteRequest setSubDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
+        this.subDomainDnsAddress = subDomainDnsAddress;
+        return this;
+    }
+    public java.util.List<String> getSubDomainDnsAddress() {
+        return this.subDomainDnsAddress;
     }
 
 }

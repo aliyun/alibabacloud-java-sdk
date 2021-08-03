@@ -4,77 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RebuildDesktopsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RebuildResults")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<RebuildDesktopsResponseRebuildResults> rebuildResults;
+    public RebuildDesktopsResponseBody body;
 
     public static RebuildDesktopsResponse build(java.util.Map<String, ?> map) throws Exception {
         RebuildDesktopsResponse self = new RebuildDesktopsResponse();
         return TeaModel.build(map, self);
     }
 
-    public RebuildDesktopsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RebuildDesktopsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RebuildDesktopsResponse setRebuildResults(java.util.List<RebuildDesktopsResponseRebuildResults> rebuildResults) {
-        this.rebuildResults = rebuildResults;
+    public RebuildDesktopsResponse setBody(RebuildDesktopsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<RebuildDesktopsResponseRebuildResults> getRebuildResults() {
-        return this.rebuildResults;
-    }
-
-    public static class RebuildDesktopsResponseRebuildResults extends TeaModel {
-        @NameInMap("DesktopId")
-        @Validation(required = true)
-        public String desktopId;
-
-        @NameInMap("Code")
-        @Validation(required = true)
-        public String code;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        public static RebuildDesktopsResponseRebuildResults build(java.util.Map<String, ?> map) throws Exception {
-            RebuildDesktopsResponseRebuildResults self = new RebuildDesktopsResponseRebuildResults();
-            return TeaModel.build(map, self);
-        }
-
-        public RebuildDesktopsResponseRebuildResults setDesktopId(String desktopId) {
-            this.desktopId = desktopId;
-            return this;
-        }
-        public String getDesktopId() {
-            return this.desktopId;
-        }
-
-        public RebuildDesktopsResponseRebuildResults setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public RebuildDesktopsResponseRebuildResults setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
+    public RebuildDesktopsResponseBody getBody() {
+        return this.body;
     }
 
 }

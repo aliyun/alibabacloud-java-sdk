@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetDesktopUsersResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("EndUserIds")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<String> endUserIds;
+    public GetDesktopUsersResponseBody body;
 
     public static GetDesktopUsersResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDesktopUsersResponse self = new GetDesktopUsersResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDesktopUsersResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetDesktopUsersResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetDesktopUsersResponse setEndUserIds(java.util.List<String> endUserIds) {
-        this.endUserIds = endUserIds;
+    public GetDesktopUsersResponse setBody(GetDesktopUsersResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<String> getEndUserIds() {
-        return this.endUserIds;
+    public GetDesktopUsersResponseBody getBody() {
+        return this.body;
     }
 
 }

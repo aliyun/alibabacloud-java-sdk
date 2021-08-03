@@ -5,22 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DesktopId")
-    @Validation(required = true)
     public String desktopId;
 
     @NameInMap("SnapshotName")
-    @Validation(required = true)
     public String snapshotName;
 
     @NameInMap("Description")
     public String description;
 
     @NameInMap("SourceDiskType")
-    @Validation(required = true)
     public String sourceDiskType;
 
     public static CreateSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RollbackSuspEventQuaraFileRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("QuaraFieldId")
-    @Validation(required = true)
     public Integer quaraFieldId;
 
     @NameInMap("DesktopId")

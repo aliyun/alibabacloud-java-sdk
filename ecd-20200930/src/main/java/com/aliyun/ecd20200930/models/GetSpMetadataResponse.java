@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetSpMetadataResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SpMetadata")
+    @NameInMap("body")
     @Validation(required = true)
-    public String spMetadata;
+    public GetSpMetadataResponseBody body;
 
     public static GetSpMetadataResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSpMetadataResponse self = new GetSpMetadataResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSpMetadataResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetSpMetadataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetSpMetadataResponse setSpMetadata(String spMetadata) {
-        this.spMetadata = spMetadata;
+    public GetSpMetadataResponse setBody(GetSpMetadataResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getSpMetadata() {
-        return this.spMetadata;
+    public GetSpMetadataResponseBody getBody() {
+        return this.body;
     }
 
 }

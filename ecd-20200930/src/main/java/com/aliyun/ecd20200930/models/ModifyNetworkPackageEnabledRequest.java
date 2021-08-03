@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkPackageEnabledRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkPackageId")
-    @Validation(required = true)
     public String networkPackageId;
 
     @NameInMap("Enabled")

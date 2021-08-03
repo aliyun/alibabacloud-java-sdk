@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkPackageRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Bandwidth")
-    @Validation(required = true)
     public Integer bandwidth;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("InternetChargeType")

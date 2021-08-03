@@ -5,28 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateADConnectorDirectoryRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("DomainUserName")
-    @Validation(required = true)
     public String domainUserName;
 
     @NameInMap("DomainPassword")
-    @Validation(required = true)
     public String domainPassword;
-
-    @NameInMap("DnsAddress")
-    @Validation(required = true)
-    public java.util.List<String> dnsAddress;
-
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
-    public java.util.List<String> vSwitchId;
 
     @NameInMap("DirectoryName")
     public String directoryName;
@@ -37,14 +25,20 @@ public class CreateADConnectorDirectoryRequest extends TeaModel {
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
-    @NameInMap("SubDomainDnsAddress")
-    public java.util.List<String> subDomainDnsAddress;
-
     @NameInMap("SubDomainName")
     public String subDomainName;
 
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
+
+    @NameInMap("DnsAddress")
+    public java.util.List<String> dnsAddress;
+
+    @NameInMap("VSwitchId")
+    public java.util.List<String> vSwitchId;
+
+    @NameInMap("SubDomainDnsAddress")
+    public java.util.List<String> subDomainDnsAddress;
 
     public static CreateADConnectorDirectoryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateADConnectorDirectoryRequest self = new CreateADConnectorDirectoryRequest();
@@ -83,22 +77,6 @@ public class CreateADConnectorDirectoryRequest extends TeaModel {
         return this.domainPassword;
     }
 
-    public CreateADConnectorDirectoryRequest setDnsAddress(java.util.List<String> dnsAddress) {
-        this.dnsAddress = dnsAddress;
-        return this;
-    }
-    public java.util.List<String> getDnsAddress() {
-        return this.dnsAddress;
-    }
-
-    public CreateADConnectorDirectoryRequest setVSwitchId(java.util.List<String> vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public java.util.List<String> getVSwitchId() {
-        return this.vSwitchId;
-    }
-
     public CreateADConnectorDirectoryRequest setDirectoryName(String directoryName) {
         this.directoryName = directoryName;
         return this;
@@ -123,14 +101,6 @@ public class CreateADConnectorDirectoryRequest extends TeaModel {
         return this.desktopAccessType;
     }
 
-    public CreateADConnectorDirectoryRequest setSubDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
-        this.subDomainDnsAddress = subDomainDnsAddress;
-        return this;
-    }
-    public java.util.List<String> getSubDomainDnsAddress() {
-        return this.subDomainDnsAddress;
-    }
-
     public CreateADConnectorDirectoryRequest setSubDomainName(String subDomainName) {
         this.subDomainName = subDomainName;
         return this;
@@ -145,6 +115,30 @@ public class CreateADConnectorDirectoryRequest extends TeaModel {
     }
     public Boolean getMfaEnabled() {
         return this.mfaEnabled;
+    }
+
+    public CreateADConnectorDirectoryRequest setDnsAddress(java.util.List<String> dnsAddress) {
+        this.dnsAddress = dnsAddress;
+        return this;
+    }
+    public java.util.List<String> getDnsAddress() {
+        return this.dnsAddress;
+    }
+
+    public CreateADConnectorDirectoryRequest setVSwitchId(java.util.List<String> vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public java.util.List<String> getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public CreateADConnectorDirectoryRequest setSubDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
+        this.subDomainDnsAddress = subDomainDnsAddress;
+        return this;
+    }
+    public java.util.List<String> getSubDomainDnsAddress() {
+        return this.subDomainDnsAddress;
     }
 
 }

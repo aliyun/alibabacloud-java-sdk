@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopNameRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NewDesktopName")
-    @Validation(required = true)
     public String newDesktopName;
 
     @NameInMap("DesktopId")
-    @Validation(required = true)
     public String desktopId;
 
     public static ModifyDesktopNameRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class HandleSecurityEventsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
-    @NameInMap("SecurityEvent")
-    public java.util.List<HandleSecurityEventsRequestSecurityEvent> securityEvent;
-
     @NameInMap("OperationCode")
-    @Validation(required = true)
     public String operationCode;
 
     @NameInMap("OperationParams")
     public String operationParams;
+
+    @NameInMap("SecurityEvent")
+    public java.util.List<HandleSecurityEventsRequestSecurityEvent> securityEvent;
 
     public static HandleSecurityEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         HandleSecurityEventsRequest self = new HandleSecurityEventsRequest();
@@ -29,14 +27,6 @@ public class HandleSecurityEventsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public HandleSecurityEventsRequest setSecurityEvent(java.util.List<HandleSecurityEventsRequestSecurityEvent> securityEvent) {
-        this.securityEvent = securityEvent;
-        return this;
-    }
-    public java.util.List<HandleSecurityEventsRequestSecurityEvent> getSecurityEvent() {
-        return this.securityEvent;
     }
 
     public HandleSecurityEventsRequest setOperationCode(String operationCode) {
@@ -53,6 +43,14 @@ public class HandleSecurityEventsRequest extends TeaModel {
     }
     public String getOperationParams() {
         return this.operationParams;
+    }
+
+    public HandleSecurityEventsRequest setSecurityEvent(java.util.List<HandleSecurityEventsRequestSecurityEvent> securityEvent) {
+        this.securityEvent = securityEvent;
+        return this;
+    }
+    public java.util.List<HandleSecurityEventsRequestSecurityEvent> getSecurityEvent() {
+        return this.securityEvent;
     }
 
     public static class HandleSecurityEventsRequestSecurityEvent extends TeaModel {

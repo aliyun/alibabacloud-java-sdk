@@ -5,20 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListOfficeSiteOverviewRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ForceRefresh")
     public Boolean forceRefresh;
-
-    @NameInMap("OfficeSiteId")
-    public java.util.List<String> officeSiteId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("OfficeSiteId")
+    public java.util.List<String> officeSiteId;
 
     public static ListOfficeSiteOverviewRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOfficeSiteOverviewRequest self = new ListOfficeSiteOverviewRequest();
@@ -41,14 +40,6 @@ public class ListOfficeSiteOverviewRequest extends TeaModel {
         return this.forceRefresh;
     }
 
-    public ListOfficeSiteOverviewRequest setOfficeSiteId(java.util.List<String> officeSiteId) {
-        this.officeSiteId = officeSiteId;
-        return this;
-    }
-    public java.util.List<String> getOfficeSiteId() {
-        return this.officeSiteId;
-    }
-
     public ListOfficeSiteOverviewRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -63,6 +54,14 @@ public class ListOfficeSiteOverviewRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListOfficeSiteOverviewRequest setOfficeSiteId(java.util.List<String> officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public java.util.List<String> getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
 }

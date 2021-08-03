@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyDesktopSpecResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OrderId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String orderId;
+    public ModifyDesktopSpecResponseBody body;
 
     public static ModifyDesktopSpecResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyDesktopSpecResponse self = new ModifyDesktopSpecResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDesktopSpecResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyDesktopSpecResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ModifyDesktopSpecResponse setOrderId(String orderId) {
-        this.orderId = orderId;
+    public ModifyDesktopSpecResponse setBody(ModifyDesktopSpecResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public ModifyDesktopSpecResponseBody getBody() {
+        return this.body;
     }
 
 }

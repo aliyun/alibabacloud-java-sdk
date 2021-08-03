@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeAlarmEventStackInfoRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DesktopId")
-    @Validation(required = true)
     public String desktopId;
 
     @NameInMap("EventName")
-    @Validation(required = true)
     public String eventName;
 
     @NameInMap("UniqueInfo")
-    @Validation(required = true)
     public String uniqueInfo;
 
     @NameInMap("Lang")

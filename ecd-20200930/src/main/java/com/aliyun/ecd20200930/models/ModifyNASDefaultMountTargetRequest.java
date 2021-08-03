@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyNASDefaultMountTargetRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("MountTargetDomain")
-    @Validation(required = true)
     public String mountTargetDomain;
 
     public static ModifyNASDefaultMountTargetRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,97 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFrontVulPatchListResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("FrontPatchList")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeFrontVulPatchListResponseFrontPatchList> frontPatchList;
+    public DescribeFrontVulPatchListResponseBody body;
 
     public static DescribeFrontVulPatchListResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeFrontVulPatchListResponse self = new DescribeFrontVulPatchListResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeFrontVulPatchListResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeFrontVulPatchListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeFrontVulPatchListResponse setFrontPatchList(java.util.List<DescribeFrontVulPatchListResponseFrontPatchList> frontPatchList) {
-        this.frontPatchList = frontPatchList;
+    public DescribeFrontVulPatchListResponse setBody(DescribeFrontVulPatchListResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeFrontVulPatchListResponseFrontPatchList> getFrontPatchList() {
-        return this.frontPatchList;
-    }
-
-    public static class DescribeFrontVulPatchListResponseFrontPatchListPatchList extends TeaModel {
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("AliasName")
-        @Validation(required = true)
-        public String aliasName;
-
-        public static DescribeFrontVulPatchListResponseFrontPatchListPatchList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeFrontVulPatchListResponseFrontPatchListPatchList self = new DescribeFrontVulPatchListResponseFrontPatchListPatchList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeFrontVulPatchListResponseFrontPatchListPatchList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeFrontVulPatchListResponseFrontPatchListPatchList setAliasName(String aliasName) {
-            this.aliasName = aliasName;
-            return this;
-        }
-        public String getAliasName() {
-            return this.aliasName;
-        }
-
-    }
-
-    public static class DescribeFrontVulPatchListResponseFrontPatchList extends TeaModel {
-        @NameInMap("DesktopId")
-        @Validation(required = true)
-        public String desktopId;
-
-        @NameInMap("PatchList")
-        @Validation(required = true)
-        public java.util.List<DescribeFrontVulPatchListResponseFrontPatchListPatchList> patchList;
-
-        public static DescribeFrontVulPatchListResponseFrontPatchList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeFrontVulPatchListResponseFrontPatchList self = new DescribeFrontVulPatchListResponseFrontPatchList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeFrontVulPatchListResponseFrontPatchList setDesktopId(String desktopId) {
-            this.desktopId = desktopId;
-            return this;
-        }
-        public String getDesktopId() {
-            return this.desktopId;
-        }
-
-        public DescribeFrontVulPatchListResponseFrontPatchList setPatchList(java.util.List<DescribeFrontVulPatchListResponseFrontPatchListPatchList> patchList) {
-            this.patchList = patchList;
-            return this;
-        }
-        public java.util.List<DescribeFrontVulPatchListResponseFrontPatchListPatchList> getPatchList() {
-            return this.patchList;
-        }
-
+    public DescribeFrontVulPatchListResponseBody getBody() {
+        return this.body;
     }
 
 }

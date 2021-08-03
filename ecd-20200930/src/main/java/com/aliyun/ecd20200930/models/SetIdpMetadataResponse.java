@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class SetIdpMetadataResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IdpEntityId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String idpEntityId;
+    public SetIdpMetadataResponseBody body;
 
     public static SetIdpMetadataResponse build(java.util.Map<String, ?> map) throws Exception {
         SetIdpMetadataResponse self = new SetIdpMetadataResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetIdpMetadataResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetIdpMetadataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetIdpMetadataResponse setIdpEntityId(String idpEntityId) {
-        this.idpEntityId = idpEntityId;
+    public SetIdpMetadataResponse setBody(SetIdpMetadataResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getIdpEntityId() {
-        return this.idpEntityId;
+    public SetIdpMetadataResponseBody getBody() {
+        return this.body;
     }
 
 }

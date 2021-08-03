@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeDirectoriesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DirectoryType")
@@ -14,14 +13,14 @@ public class DescribeDirectoriesRequest extends TeaModel {
     @NameInMap("DirectoryStatus")
     public String directoryStatus;
 
-    @NameInMap("DirectoryId")
-    public java.util.List<String> directoryId;
-
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("DirectoryId")
+    public java.util.List<String> directoryId;
 
     public static DescribeDirectoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDirectoriesRequest self = new DescribeDirectoriesRequest();
@@ -52,14 +51,6 @@ public class DescribeDirectoriesRequest extends TeaModel {
         return this.directoryStatus;
     }
 
-    public DescribeDirectoriesRequest setDirectoryId(java.util.List<String> directoryId) {
-        this.directoryId = directoryId;
-        return this;
-    }
-    public java.util.List<String> getDirectoryId() {
-        return this.directoryId;
-    }
-
     public DescribeDirectoriesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -74,6 +65,14 @@ public class DescribeDirectoriesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeDirectoriesRequest setDirectoryId(java.util.List<String> directoryId) {
+        this.directoryId = directoryId;
+        return this;
+    }
+    public java.util.List<String> getDirectoryId() {
+        return this.directoryId;
     }
 
 }

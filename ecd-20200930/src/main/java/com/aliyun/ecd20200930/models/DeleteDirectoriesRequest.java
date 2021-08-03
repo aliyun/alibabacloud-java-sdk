@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteDirectoriesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DirectoryId")
-    @Validation(required = true)
     public java.util.List<String> directoryId;
 
     public static DeleteDirectoriesRequest build(java.util.Map<String, ?> map) throws Exception {

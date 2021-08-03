@@ -4,45 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkPackageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("NetworkPackageId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String networkPackageId;
-
-    @NameInMap("OrderId")
-    @Validation(required = true)
-    public String orderId;
+    public CreateNetworkPackageResponseBody body;
 
     public static CreateNetworkPackageResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkPackageResponse self = new CreateNetworkPackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateNetworkPackageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateNetworkPackageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateNetworkPackageResponse setNetworkPackageId(String networkPackageId) {
-        this.networkPackageId = networkPackageId;
+    public CreateNetworkPackageResponse setBody(CreateNetworkPackageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getNetworkPackageId() {
-        return this.networkPackageId;
-    }
-
-    public CreateNetworkPackageResponse setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
+    public CreateNetworkPackageResponseBody getBody() {
+        return this.body;
     }
 
 }

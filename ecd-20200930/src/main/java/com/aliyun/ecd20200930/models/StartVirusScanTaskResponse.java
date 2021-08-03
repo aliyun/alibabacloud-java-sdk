@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class StartVirusScanTaskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ScanTaskId")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long scanTaskId;
+    public StartVirusScanTaskResponseBody body;
 
     public static StartVirusScanTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         StartVirusScanTaskResponse self = new StartVirusScanTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartVirusScanTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartVirusScanTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StartVirusScanTaskResponse setScanTaskId(Long scanTaskId) {
-        this.scanTaskId = scanTaskId;
+    public StartVirusScanTaskResponse setBody(StartVirusScanTaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getScanTaskId() {
-        return this.scanTaskId;
+    public StartVirusScanTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

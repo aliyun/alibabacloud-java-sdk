@@ -4,57 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeVulOverviewResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AsapCount")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer asapCount;
-
-    @NameInMap("LaterCount")
-    @Validation(required = true)
-    public Integer laterCount;
-
-    @NameInMap("NntfCount")
-    @Validation(required = true)
-    public Integer nntfCount;
+    public DescribeVulOverviewResponseBody body;
 
     public static DescribeVulOverviewResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeVulOverviewResponse self = new DescribeVulOverviewResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVulOverviewResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeVulOverviewResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeVulOverviewResponse setAsapCount(Integer asapCount) {
-        this.asapCount = asapCount;
+    public DescribeVulOverviewResponse setBody(DescribeVulOverviewResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getAsapCount() {
-        return this.asapCount;
-    }
-
-    public DescribeVulOverviewResponse setLaterCount(Integer laterCount) {
-        this.laterCount = laterCount;
-        return this;
-    }
-    public Integer getLaterCount() {
-        return this.laterCount;
-    }
-
-    public DescribeVulOverviewResponse setNntfCount(Integer nntfCount) {
-        this.nntfCount = nntfCount;
-        return this;
-    }
-    public Integer getNntfCount() {
-        return this.nntfCount;
+    public DescribeVulOverviewResponseBody getBody() {
+        return this.body;
     }
 
 }

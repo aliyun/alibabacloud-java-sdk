@@ -5,20 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeNASFileSystemsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
-
-    @NameInMap("FileSystemId")
-    public java.util.List<String> fileSystemId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("FileSystemId")
+    public java.util.List<String> fileSystemId;
 
     public static DescribeNASFileSystemsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNASFileSystemsRequest self = new DescribeNASFileSystemsRequest();
@@ -41,14 +40,6 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
         return this.officeSiteId;
     }
 
-    public DescribeNASFileSystemsRequest setFileSystemId(java.util.List<String> fileSystemId) {
-        this.fileSystemId = fileSystemId;
-        return this;
-    }
-    public java.util.List<String> getFileSystemId() {
-        return this.fileSystemId;
-    }
-
     public DescribeNASFileSystemsRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -63,6 +54,14 @@ public class DescribeNASFileSystemsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeNASFileSystemsRequest setFileSystemId(java.util.List<String> fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
+    public java.util.List<String> getFileSystemId() {
+        return this.fileSystemId;
     }
 
 }

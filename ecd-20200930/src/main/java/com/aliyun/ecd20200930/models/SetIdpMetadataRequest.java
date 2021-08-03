@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class SetIdpMetadataRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DirectoryId")
@@ -15,7 +14,6 @@ public class SetIdpMetadataRequest extends TeaModel {
     public String officeSiteId;
 
     @NameInMap("IdpMetadata")
-    @Validation(required = true)
     public String idpMetadata;
 
     public static SetIdpMetadataRequest build(java.util.Map<String, ?> map) throws Exception {

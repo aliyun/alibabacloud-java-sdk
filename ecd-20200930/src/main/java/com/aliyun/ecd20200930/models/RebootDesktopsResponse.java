@@ -4,21 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RebootDesktopsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RebootDesktopsResponseBody body;
 
     public static RebootDesktopsResponse build(java.util.Map<String, ?> map) throws Exception {
         RebootDesktopsResponse self = new RebootDesktopsResponse();
         return TeaModel.build(map, self);
     }
 
-    public RebootDesktopsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RebootDesktopsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RebootDesktopsResponse setBody(RebootDesktopsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RebootDesktopsResponseBody getBody() {
+        return this.body;
     }
 
 }

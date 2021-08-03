@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class StopDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
+    @NameInMap("StoppedMode")
+    public String stoppedMode;
+
     @NameInMap("DesktopId")
-    @Validation(required = true)
     public java.util.List<String> desktopId;
 
     public static StopDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +24,14 @@ public class StopDesktopsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public StopDesktopsRequest setStoppedMode(String stoppedMode) {
+        this.stoppedMode = stoppedMode;
+        return this;
+    }
+    public String getStoppedMode() {
+        return this.stoppedMode;
     }
 
     public StopDesktopsRequest setDesktopId(java.util.List<String> desktopId) {

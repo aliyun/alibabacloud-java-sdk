@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ResetSnapshotRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SnapshotId")
-    @Validation(required = true)
     public String snapshotId;
 
     public static ResetSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {

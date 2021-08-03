@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class AttachCenRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("CenId")
-    @Validation(required = true)
     public String cenId;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     public static AttachCenRequest build(java.util.Map<String, ?> map) throws Exception {

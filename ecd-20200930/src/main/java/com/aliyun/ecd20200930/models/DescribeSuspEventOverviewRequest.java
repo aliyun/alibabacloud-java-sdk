@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeSuspEventOverviewRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static DescribeSuspEventOverviewRequest build(java.util.Map<String, ?> map) throws Exception {

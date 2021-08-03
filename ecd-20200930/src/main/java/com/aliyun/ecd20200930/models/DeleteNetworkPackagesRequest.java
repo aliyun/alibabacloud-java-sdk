@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteNetworkPackagesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkPackageId")
-    @Validation(required = true)
     public java.util.List<String> networkPackageId;
 
     public static DeleteNetworkPackagesRequest build(java.util.Map<String, ?> map) throws Exception {

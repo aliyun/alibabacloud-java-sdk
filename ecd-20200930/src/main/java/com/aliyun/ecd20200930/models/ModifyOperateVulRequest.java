@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyOperateVulRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
-    @NameInMap("VulInfo")
-    public java.util.List<ModifyOperateVulRequestVulInfo> vulInfo;
-
     @NameInMap("OperateType")
-    @Validation(required = true)
     public String operateType;
 
     @NameInMap("Reason")
     public String reason;
+
+    @NameInMap("VulInfo")
+    public java.util.List<ModifyOperateVulRequestVulInfo> vulInfo;
 
     public static ModifyOperateVulRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyOperateVulRequest self = new ModifyOperateVulRequest();
@@ -43,14 +40,6 @@ public class ModifyOperateVulRequest extends TeaModel {
         return this.type;
     }
 
-    public ModifyOperateVulRequest setVulInfo(java.util.List<ModifyOperateVulRequestVulInfo> vulInfo) {
-        this.vulInfo = vulInfo;
-        return this;
-    }
-    public java.util.List<ModifyOperateVulRequestVulInfo> getVulInfo() {
-        return this.vulInfo;
-    }
-
     public ModifyOperateVulRequest setOperateType(String operateType) {
         this.operateType = operateType;
         return this;
@@ -67,27 +56,27 @@ public class ModifyOperateVulRequest extends TeaModel {
         return this.reason;
     }
 
-    public static class ModifyOperateVulRequestVulInfo extends TeaModel {
-        @NameInMap("Name")
-        public String name;
+    public ModifyOperateVulRequest setVulInfo(java.util.List<ModifyOperateVulRequestVulInfo> vulInfo) {
+        this.vulInfo = vulInfo;
+        return this;
+    }
+    public java.util.List<ModifyOperateVulRequestVulInfo> getVulInfo() {
+        return this.vulInfo;
+    }
 
+    public static class ModifyOperateVulRequestVulInfo extends TeaModel {
         @NameInMap("DesktopId")
         public String desktopId;
 
         @NameInMap("Tag")
         public String tag;
 
+        @NameInMap("Name")
+        public String name;
+
         public static ModifyOperateVulRequestVulInfo build(java.util.Map<String, ?> map) throws Exception {
             ModifyOperateVulRequestVulInfo self = new ModifyOperateVulRequestVulInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyOperateVulRequestVulInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ModifyOperateVulRequestVulInfo setDesktopId(String desktopId) {
@@ -104,6 +93,14 @@ public class ModifyOperateVulRequest extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public ModifyOperateVulRequestVulInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

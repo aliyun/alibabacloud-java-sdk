@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ResetNASDefaultMountTargetRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     public static ResetNASDefaultMountTargetRequest build(java.util.Map<String, ?> map) throws Exception {

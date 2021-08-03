@@ -4,21 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ResetNASDefaultMountTargetResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ResetNASDefaultMountTargetResponseBody body;
 
     public static ResetNASDefaultMountTargetResponse build(java.util.Map<String, ?> map) throws Exception {
         ResetNASDefaultMountTargetResponse self = new ResetNASDefaultMountTargetResponse();
         return TeaModel.build(map, self);
     }
 
-    public ResetNASDefaultMountTargetResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ResetNASDefaultMountTargetResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ResetNASDefaultMountTargetResponse setBody(ResetNASDefaultMountTargetResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ResetNASDefaultMountTargetResponseBody getBody() {
+        return this.body;
     }
 
 }

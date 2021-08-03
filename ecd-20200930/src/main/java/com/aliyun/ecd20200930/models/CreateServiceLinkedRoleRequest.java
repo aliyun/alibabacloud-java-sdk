@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static CreateServiceLinkedRoleRequest build(java.util.Map<String, ?> map) throws Exception {

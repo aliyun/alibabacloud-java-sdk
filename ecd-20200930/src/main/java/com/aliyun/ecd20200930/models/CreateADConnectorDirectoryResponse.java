@@ -4,77 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateADConnectorDirectoryResponse extends TeaModel {
-    @NameInMap("DirectoryId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String directoryId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("TrustPassword")
-    @Validation(required = true)
-    public String trustPassword;
-
-    @NameInMap("AdConnectors")
-    @Validation(required = true)
-    public java.util.List<CreateADConnectorDirectoryResponseAdConnectors> adConnectors;
+    public CreateADConnectorDirectoryResponseBody body;
 
     public static CreateADConnectorDirectoryResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateADConnectorDirectoryResponse self = new CreateADConnectorDirectoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateADConnectorDirectoryResponse setDirectoryId(String directoryId) {
-        this.directoryId = directoryId;
+    public CreateADConnectorDirectoryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getDirectoryId() {
-        return this.directoryId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateADConnectorDirectoryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateADConnectorDirectoryResponse setBody(CreateADConnectorDirectoryResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateADConnectorDirectoryResponse setTrustPassword(String trustPassword) {
-        this.trustPassword = trustPassword;
-        return this;
-    }
-    public String getTrustPassword() {
-        return this.trustPassword;
-    }
-
-    public CreateADConnectorDirectoryResponse setAdConnectors(java.util.List<CreateADConnectorDirectoryResponseAdConnectors> adConnectors) {
-        this.adConnectors = adConnectors;
-        return this;
-    }
-    public java.util.List<CreateADConnectorDirectoryResponseAdConnectors> getAdConnectors() {
-        return this.adConnectors;
-    }
-
-    public static class CreateADConnectorDirectoryResponseAdConnectors extends TeaModel {
-        @NameInMap("Address")
-        @Validation(required = true)
-        public String address;
-
-        public static CreateADConnectorDirectoryResponseAdConnectors build(java.util.Map<String, ?> map) throws Exception {
-            CreateADConnectorDirectoryResponseAdConnectors self = new CreateADConnectorDirectoryResponseAdConnectors();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateADConnectorDirectoryResponseAdConnectors setAddress(String address) {
-            this.address = address;
-            return this;
-        }
-        public String getAddress() {
-            return this.address;
-        }
-
+    public CreateADConnectorDirectoryResponseBody getBody() {
+        return this.body;
     }
 
 }

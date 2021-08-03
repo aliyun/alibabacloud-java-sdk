@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDesktopUsersRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DesktopId")
-    @Validation(required = true)
     public String desktopId;
 
     public static GetDesktopUsersRequest build(java.util.Map<String, ?> map) throws Exception {

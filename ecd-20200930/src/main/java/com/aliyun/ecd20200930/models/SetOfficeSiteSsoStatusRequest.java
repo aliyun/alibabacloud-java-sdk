@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class SetOfficeSiteSsoStatusRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("EnableSso")
-    @Validation(required = true)
     public Boolean enableSso;
 
     public static SetOfficeSiteSsoStatusRequest build(java.util.Map<String, ?> map) throws Exception {

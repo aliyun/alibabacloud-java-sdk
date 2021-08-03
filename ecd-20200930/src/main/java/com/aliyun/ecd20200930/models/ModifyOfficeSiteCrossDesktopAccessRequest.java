@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteCrossDesktopAccessRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OfficeSiteId")
-    @Validation(required = true)
     public String officeSiteId;
 
     @NameInMap("EnableCrossDesktopAccess")
-    @Validation(required = true)
     public Boolean enableCrossDesktopAccess;
 
     public static ModifyOfficeSiteCrossDesktopAccessRequest build(java.util.Map<String, ?> map) throws Exception {

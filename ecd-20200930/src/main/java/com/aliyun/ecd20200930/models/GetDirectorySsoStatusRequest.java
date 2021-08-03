@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDirectorySsoStatusRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DirectoryId")
-    @Validation(required = true)
     public String directoryId;
 
     public static GetDirectorySsoStatusRequest build(java.util.Map<String, ?> map) throws Exception {
