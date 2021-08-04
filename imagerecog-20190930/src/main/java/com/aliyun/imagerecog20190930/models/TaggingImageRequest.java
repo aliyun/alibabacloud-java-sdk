@@ -7,9 +7,6 @@ public class TaggingImageRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("Mode")
-    public String mode;
-
     public static TaggingImageRequest build(java.util.Map<String, ?> map) throws Exception {
         TaggingImageRequest self = new TaggingImageRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class TaggingImageRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
-    }
-
-    public TaggingImageRequest setMode(String mode) {
-        this.mode = mode;
-        return this;
-    }
-    public String getMode() {
-        return this.mode;
     }
 
 }
