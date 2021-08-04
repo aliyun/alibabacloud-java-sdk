@@ -153,19 +153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        PrimitiveOutputStringResponse res = new PrimitiveOutputStringResponse();
-        java.util.Map<String, Object> tmp = com.aliyun.teautil.Common.assertAsMap(this.doROARequest("PrimitiveOutputString", "2021-08-03_11-25-46-244", "HTTPS", "POST", "AK", "/verification/PrimitiveOutputString", "binary", req, runtime));
-        if (!com.aliyun.teautil.Common.isUnset(tmp.get("body"))) {
-            java.io.InputStream respBody = com.aliyun.teautil.Common.assertAsReadable(tmp.get("body"));
-            res.body = respBody;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmp.get("headers"))) {
-            java.util.Map<String, Object> respHeaders = com.aliyun.teautil.Common.assertAsMap(tmp.get("headers"));
-            res.headers = com.aliyun.teautil.Common.stringifyMapValue(respHeaders);
-        }
-
-        return res;
+        return TeaModel.toModel(this.doROARequest("PrimitiveOutputString", "2021-08-03_11-25-46-244", "HTTPS", "POST", "AK", "/verification/PrimitiveOutputString", "string", req, runtime), new PrimitiveOutputStringResponse());
     }
 
     public MultiComplexResponse multiComplex(MultiComplexRequest request) throws Exception {

@@ -10,7 +10,7 @@ public class PrimitiveOutputStringResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public java.io.InputStream body;
+    public String body;
 
     public static PrimitiveOutputStringResponse build(java.util.Map<String, ?> map) throws Exception {
         PrimitiveOutputStringResponse self = new PrimitiveOutputStringResponse();
@@ -25,11 +25,11 @@ public class PrimitiveOutputStringResponse extends TeaModel {
         return this.headers;
     }
 
-    public PrimitiveOutputStringResponse setBody(java.io.InputStream body) {
+    public PrimitiveOutputStringResponse setBody(String body) {
         this.body = body;
         return this;
     }
-    public java.io.InputStream getBody() {
+    public String getBody() {
         return this.body;
     }
 

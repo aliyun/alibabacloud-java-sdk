@@ -93,7 +93,7 @@ public class SingleComplexRequest extends TeaModel {
 
     public static class SingleComplexRequestInput extends TeaModel {
         @NameInMap("stringValue")
-        public java.io.InputStream stringValue;
+        public String stringValue;
 
         @NameInMap("intValue")
         public Integer intValue;
@@ -115,11 +115,11 @@ public class SingleComplexRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SingleComplexRequestInput setStringValue(java.io.InputStream stringValue) {
+        public SingleComplexRequestInput setStringValue(String stringValue) {
             this.stringValue = stringValue;
             return this;
         }
-        public java.io.InputStream getStringValue() {
+        public String getStringValue() {
             return this.stringValue;
         }
 
