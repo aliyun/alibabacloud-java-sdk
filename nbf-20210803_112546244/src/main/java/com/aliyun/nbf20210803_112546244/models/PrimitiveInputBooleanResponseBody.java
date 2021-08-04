@@ -23,13 +23,13 @@ public class PrimitiveInputBooleanResponseBody extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("errorCode")
-    public java.io.InputStream errorCode;
+    public String errorCode;
 
     @NameInMap("bizException")
     public Boolean bizException;
 
     @NameInMap("errorMsg")
-    public java.io.InputStream errorMsg;
+    public String errorMsg;
 
     public static PrimitiveInputBooleanResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PrimitiveInputBooleanResponseBody self = new PrimitiveInputBooleanResponseBody();
@@ -84,11 +84,11 @@ public class PrimitiveInputBooleanResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public PrimitiveInputBooleanResponseBody setErrorCode(java.io.InputStream errorCode) {
+    public PrimitiveInputBooleanResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
-    public java.io.InputStream getErrorCode() {
+    public String getErrorCode() {
         return this.errorCode;
     }
 
@@ -100,11 +100,11 @@ public class PrimitiveInputBooleanResponseBody extends TeaModel {
         return this.bizException;
     }
 
-    public PrimitiveInputBooleanResponseBody setErrorMsg(java.io.InputStream errorMsg) {
+    public PrimitiveInputBooleanResponseBody setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
         return this;
     }
-    public java.io.InputStream getErrorMsg() {
+    public String getErrorMsg() {
         return this.errorMsg;
     }
 
