@@ -19,6 +19,9 @@ public class ImageDuplicationRequest extends TeaModel {
     @NameInMap("ImageWidth")
     public Long imageWidth;
 
+    @NameInMap("OutputImageNum")
+    public Long outputImageNum;
+
     public static ImageDuplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageDuplicationRequest self = new ImageDuplicationRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ImageDuplicationRequest extends TeaModel {
     }
     public Long getImageWidth() {
         return this.imageWidth;
+    }
+
+    public ImageDuplicationRequest setOutputImageNum(Long outputImageNum) {
+        this.outputImageNum = outputImageNum;
+        return this;
+    }
+    public Long getOutputImageNum() {
+        return this.outputImageNum;
     }
 
 }
