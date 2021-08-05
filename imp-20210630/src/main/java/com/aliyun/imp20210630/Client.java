@@ -32,6 +32,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public VerifyDomainOwnerResponse verifyDomainOwnerWithOptions(VerifyDomainOwnerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("VerifyDomainOwner", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new VerifyDomainOwnerResponse());
+    }
+
+    public VerifyDomainOwnerResponse verifyDomainOwner(VerifyDomainOwnerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.verifyDomainOwnerWithOptions(request, runtime);
+    }
+
     public CreateLiveResponse createLiveWithOptions(CreateLiveRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -269,6 +282,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetLiveDomainStatusResponse getLiveDomainStatus(GetLiveDomainStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getLiveDomainStatusWithOptions(request, runtime);
+    }
+
+    public SendCustomMessageToAllResponse sendCustomMessageToAllWithOptions(SendCustomMessageToAllRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SendCustomMessageToAll", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new SendCustomMessageToAllResponse());
+    }
+
+    public SendCustomMessageToAllResponse sendCustomMessageToAll(SendCustomMessageToAllRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendCustomMessageToAllWithOptions(request, runtime);
+    }
+
+    public GetDomainOwnerVerifyContentResponse getDomainOwnerVerifyContentWithOptions(GetDomainOwnerVerifyContentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDomainOwnerVerifyContent", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new GetDomainOwnerVerifyContentResponse());
+    }
+
+    public GetDomainOwnerVerifyContentResponse getDomainOwnerVerifyContent(GetDomainOwnerVerifyContentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDomainOwnerVerifyContentWithOptions(request, runtime);
+    }
+
+    public SendCustomMessageToUsersResponse sendCustomMessageToUsersWithOptions(SendCustomMessageToUsersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SendCustomMessageToUsers", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new SendCustomMessageToUsersResponse());
+    }
+
+    public SendCustomMessageToUsersResponse sendCustomMessageToUsers(SendCustomMessageToUsersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendCustomMessageToUsersWithOptions(request, runtime);
     }
 
     public GetAuthTokenResponse getAuthTokenWithOptions(GetAuthTokenRequest request, RuntimeOptions runtime) throws Exception {
