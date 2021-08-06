@@ -426,6 +426,10 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         @NameInMap("OutputMessages")
         public java.util.List<RecognizeMessageForTestResponseBodyDataOutputMessages> outputMessages;
 
+        // 扩展的输出
+        @NameInMap("extOutput")
+        public java.util.Map<String, ?> extOutput;
+
         public static RecognizeMessageForTestResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RecognizeMessageForTestResponseBodyData self = new RecognizeMessageForTestResponseBodyData();
             return TeaModel.build(map, self);
@@ -453,6 +457,14 @@ public class RecognizeMessageForTestResponseBody extends TeaModel {
         }
         public java.util.List<RecognizeMessageForTestResponseBodyDataOutputMessages> getOutputMessages() {
             return this.outputMessages;
+        }
+
+        public RecognizeMessageForTestResponseBodyData setExtOutput(java.util.Map<String, ?> extOutput) {
+            this.extOutput = extOutput;
+            return this;
+        }
+        public java.util.Map<String, ?> getExtOutput() {
+            return this.extOutput;
         }
 
     }
