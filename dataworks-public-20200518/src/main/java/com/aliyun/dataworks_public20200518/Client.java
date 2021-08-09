@@ -54,6 +54,246 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public ListProjectIdsResponse listProjectIds(ListProjectIdsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListProjectIds", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListProjectIdsResponse());
+    }
+
+    public ListProjectIdsResponse listProjectIdsSimply(ListProjectIdsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listProjectIds(request, runtime);
+    }
+
+    public TerminateDISyncInstanceResponse terminateDISyncInstance(TerminateDISyncInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("TerminateDISyncInstance", "HTTPS", "POST", "2020-05-18", "AK,PrivateKey,APP", null, TeaModel.buildMap(request), runtime), new TerminateDISyncInstanceResponse());
+    }
+
+    public TerminateDISyncInstanceResponse terminateDISyncInstanceSimply(TerminateDISyncInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.terminateDISyncInstance(request, runtime);
+    }
+
+    public DeleteDISyncTaskResponse deleteDISyncTask(DeleteDISyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DeleteDISyncTask", "HTTPS", "POST", "2020-05-18", "AK,PrivateKey,APP", null, TeaModel.buildMap(request), runtime), new DeleteDISyncTaskResponse());
+    }
+
+    public DeleteDISyncTaskResponse deleteDISyncTaskSimply(DeleteDISyncTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDISyncTask(request, runtime);
+    }
+
+    public DeployDISyncTaskResponse deployDISyncTask(DeployDISyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DeployDISyncTask", "HTTPS", "POST", "2020-05-18", "AK,PrivateKey,APP", null, TeaModel.buildMap(request), runtime), new DeployDISyncTaskResponse());
+    }
+
+    public DeployDISyncTaskResponse deployDISyncTaskSimply(DeployDISyncTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deployDISyncTask(request, runtime);
+    }
+
+    public StartDISyncInstanceResponse startDISyncInstance(StartDISyncInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("StartDISyncInstance", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new StartDISyncInstanceResponse());
+    }
+
+    public StartDISyncInstanceResponse startDISyncInstanceSimply(StartDISyncInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startDISyncInstance(request, runtime);
+    }
+
+    public GetDISyncInstanceInfoResponse getDISyncInstanceInfo(GetDISyncInstanceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetDISyncInstanceInfo", "HTTPS", "POST", "2020-05-18", "AK,PrivateKey,APP", null, TeaModel.buildMap(request), runtime), new GetDISyncInstanceInfoResponse());
+    }
+
+    public GetDISyncInstanceInfoResponse getDISyncInstanceInfoSimply(GetDISyncInstanceInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDISyncInstanceInfo(request, runtime);
+    }
+
+    public StopDISyncInstanceResponse stopDISyncInstance(StopDISyncInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("StopDISyncInstance", "HTTPS", "POST", "2020-05-18", "AK,PrivateKey,APP", null, TeaModel.buildMap(request), runtime), new StopDISyncInstanceResponse());
+    }
+
+    public StopDISyncInstanceResponse stopDISyncInstanceSimply(StopDISyncInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopDISyncInstance(request, runtime);
+    }
+
+    public GetDISyncTaskResponse getDISyncTask(GetDISyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetDISyncTask", "HTTPS", "POST", "2020-05-18", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new GetDISyncTaskResponse());
+    }
+
+    public GetDISyncTaskResponse getDISyncTaskSimply(GetDISyncTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDISyncTask(request, runtime);
+    }
+
+    public CheckMetaTableTaskResponse checkMetaTableTask(CheckMetaTableTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CheckMetaTableTask", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CheckMetaTableTaskResponse());
+    }
+
+    public CheckMetaTableTaskResponse checkMetaTableTaskSimply(CheckMetaTableTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkMetaTableTask(request, runtime);
+    }
+
+    public CheckEngineMetaPartitionResponse checkEngineMetaPartition(CheckEngineMetaPartitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CheckEngineMetaPartition", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CheckEngineMetaPartitionResponse());
+    }
+
+    public CheckEngineMetaPartitionResponse checkEngineMetaPartitionSimply(CheckEngineMetaPartitionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkEngineMetaPartition(request, runtime);
+    }
+
+    public CheckEngineMetaTableResponse checkEngineMetaTable(CheckEngineMetaTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CheckEngineMetaTable", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CheckEngineMetaTableResponse());
+    }
+
+    public CheckEngineMetaTableResponse checkEngineMetaTableSimply(CheckEngineMetaTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkEngineMetaTable(request, runtime);
+    }
+
+    public ImportDataSourcesResponse importDataSources(ImportDataSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ImportDataSources", "HTTPS", "POST", "2020-05-18", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new ImportDataSourcesResponse());
+    }
+
+    public ImportDataSourcesResponse importDataSourcesSimply(ImportDataSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importDataSources(request, runtime);
+    }
+
+    public ExportDataSourcesResponse exportDataSources(ExportDataSourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ExportDataSources", "HTTPS", "GET", "2020-05-18", "AK,APP,PrivateKey", TeaModel.buildMap(request), null, runtime), new ExportDataSourcesResponse());
+    }
+
+    public ExportDataSourcesResponse exportDataSourcesSimply(ExportDataSourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportDataSources(request, runtime);
+    }
+
+    public GetDataSourceMetaResponse getDataSourceMeta(GetDataSourceMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetDataSourceMeta", "HTTPS", "POST", "2020-05-18", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new GetDataSourceMetaResponse());
+    }
+
+    public GetDataSourceMetaResponse getDataSourceMetaSimply(GetDataSourceMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataSourceMeta(request, runtime);
+    }
+
+    public SetDataSourceShareResponse setDataSourceShare(SetDataSourceShareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SetDataSourceShare", "HTTPS", "POST", "2020-05-18", "AK,PrivateKey,APP", null, TeaModel.buildMap(request), runtime), new SetDataSourceShareResponse());
+    }
+
+    public SetDataSourceShareResponse setDataSourceShareSimply(SetDataSourceShareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setDataSourceShare(request, runtime);
+    }
+
+    public ListDIProjectConfigResponse listDIProjectConfig(ListDIProjectConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListDIProjectConfig", "HTTPS", "POST", "2020-05-18", "AK,PrivateKey,APP", null, TeaModel.buildMap(request), runtime), new ListDIProjectConfigResponse());
+    }
+
+    public ListDIProjectConfigResponse listDIProjectConfigSimply(ListDIProjectConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDIProjectConfig(request, runtime);
+    }
+
+    public ExportConnectionsResponse exportConnections(ExportConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ExportConnections", "HTTPS", "GET", "2020-05-18", "AK,APP,PrivateKey", TeaModel.buildMap(request), null, runtime), new ExportConnectionsResponse());
+    }
+
+    public ExportConnectionsResponse exportConnectionsSimply(ExportConnectionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportConnections(request, runtime);
+    }
+
+    public ListRefDISyncTasksResponse listRefDISyncTasks(ListRefDISyncTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListRefDISyncTasks", "HTTPS", "POST", "2020-05-18", "AK,PrivateKey,APP", null, TeaModel.buildMap(request), runtime), new ListRefDISyncTasksResponse());
+    }
+
+    public ListRefDISyncTasksResponse listRefDISyncTasksSimply(ListRefDISyncTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRefDISyncTasks(request, runtime);
+    }
+
+    public SetConnectionShareResponse setConnectionShare(SetConnectionShareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SetConnectionShare", "HTTPS", "POST", "2020-05-18", "AK,PrivateKey,APP", null, TeaModel.buildMap(request), runtime), new SetConnectionShareResponse());
+    }
+
+    public SetConnectionShareResponse setConnectionShareSimply(SetConnectionShareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setConnectionShare(request, runtime);
+    }
+
+    public ImportConnectionsResponse importConnections(ImportConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ImportConnections", "HTTPS", "POST", "2020-05-18", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new ImportConnectionsResponse());
+    }
+
+    public ImportConnectionsResponse importConnectionsSimply(ImportConnectionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importConnections(request, runtime);
+    }
+
+    public GetConnectionMetaResponse getConnectionMeta(GetConnectionMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetConnectionMeta", "HTTPS", "POST", "2020-05-18", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new GetConnectionMetaResponse());
+    }
+
+    public GetConnectionMetaResponse getConnectionMetaSimply(GetConnectionMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getConnectionMeta(request, runtime);
+    }
+
+    public UpdateDIProjectConfigResponse updateDIProjectConfig(UpdateDIProjectConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("UpdateDIProjectConfig", "HTTPS", "POST", "2020-05-18", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new UpdateDIProjectConfigResponse());
+    }
+
+    public UpdateDIProjectConfigResponse updateDIProjectConfigSimply(UpdateDIProjectConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDIProjectConfig(request, runtime);
+    }
+
+    public CreateDISyncTaskResponse createDISyncTask(CreateDISyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateDISyncTask", "HTTPS", "POST", "2020-05-18", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new CreateDISyncTaskResponse());
+    }
+
+    public CreateDISyncTaskResponse createDISyncTaskSimply(CreateDISyncTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDISyncTask(request, runtime);
+    }
+
+    public UpdateDISyncTaskResponse updateDISyncTask(UpdateDISyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("UpdateDISyncTask", "HTTPS", "POST", "2020-05-18", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new UpdateDISyncTaskResponse());
+    }
+
+    public UpdateDISyncTaskResponse updateDISyncTaskSimply(UpdateDISyncTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDISyncTask(request, runtime);
+    }
+
     public TestNetworkConnectionResponse testNetworkConnection(TestNetworkConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("TestNetworkConnection", "HTTPS", "POST", "2020-05-18", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new TestNetworkConnectionResponse());

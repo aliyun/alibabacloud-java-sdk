@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20200518.models;
 
 import com.aliyun.tea.*;
 
-public class ListDataSourcesResponse extends TeaModel {
+public class ExportConnectionsResponse extends TeaModel {
     @NameInMap("HttpStatusCode")
     @Validation(required = true)
     public Integer httpStatusCode;
@@ -18,14 +18,14 @@ public class ListDataSourcesResponse extends TeaModel {
 
     @NameInMap("Data")
     @Validation(required = true)
-    public ListDataSourcesResponseData data;
+    public ExportConnectionsResponseData data;
 
-    public static ListDataSourcesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListDataSourcesResponse self = new ListDataSourcesResponse();
+    public static ExportConnectionsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ExportConnectionsResponse self = new ExportConnectionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListDataSourcesResponse setHttpStatusCode(Integer httpStatusCode) {
+    public ExportConnectionsResponse setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -33,7 +33,7 @@ public class ListDataSourcesResponse extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public ListDataSourcesResponse setSuccess(Boolean success) {
+    public ExportConnectionsResponse setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -41,7 +41,7 @@ public class ListDataSourcesResponse extends TeaModel {
         return this.success;
     }
 
-    public ListDataSourcesResponse setRequestId(String requestId) {
+    public ExportConnectionsResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -49,15 +49,15 @@ public class ListDataSourcesResponse extends TeaModel {
         return this.requestId;
     }
 
-    public ListDataSourcesResponse setData(ListDataSourcesResponseData data) {
+    public ExportConnectionsResponse setData(ExportConnectionsResponseData data) {
         this.data = data;
         return this;
     }
-    public ListDataSourcesResponseData getData() {
+    public ExportConnectionsResponseData getData() {
         return this.data;
     }
 
-    public static class ListDataSourcesResponseDataDataSources extends TeaModel {
+    public static class ExportConnectionsResponseDataDataSources extends TeaModel {
         @NameInMap("Shared")
         @Validation(required = true)
         public Boolean shared;
@@ -130,12 +130,12 @@ public class ListDataSourcesResponse extends TeaModel {
         @Validation(required = true)
         public String content;
 
-        public static ListDataSourcesResponseDataDataSources build(java.util.Map<String, ?> map) throws Exception {
-            ListDataSourcesResponseDataDataSources self = new ListDataSourcesResponseDataDataSources();
+        public static ExportConnectionsResponseDataDataSources build(java.util.Map<String, ?> map) throws Exception {
+            ExportConnectionsResponseDataDataSources self = new ExportConnectionsResponseDataDataSources();
             return TeaModel.build(map, self);
         }
 
-        public ListDataSourcesResponseDataDataSources setShared(Boolean shared) {
+        public ExportConnectionsResponseDataDataSources setShared(Boolean shared) {
             this.shared = shared;
             return this;
         }
@@ -143,7 +143,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.shared;
         }
 
-        public ListDataSourcesResponseDataDataSources setGmtModified(String gmtModified) {
+        public ExportConnectionsResponseDataDataSources setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
@@ -151,7 +151,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListDataSourcesResponseDataDataSources setConnectStatus(Integer connectStatus) {
+        public ExportConnectionsResponseDataDataSources setConnectStatus(Integer connectStatus) {
             this.connectStatus = connectStatus;
             return this;
         }
@@ -159,7 +159,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.connectStatus;
         }
 
-        public ListDataSourcesResponseDataDataSources setBindingCalcEngineId(Integer bindingCalcEngineId) {
+        public ExportConnectionsResponseDataDataSources setBindingCalcEngineId(Integer bindingCalcEngineId) {
             this.bindingCalcEngineId = bindingCalcEngineId;
             return this;
         }
@@ -167,7 +167,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.bindingCalcEngineId;
         }
 
-        public ListDataSourcesResponseDataDataSources setDescription(String description) {
+        public ExportConnectionsResponseDataDataSources setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -175,7 +175,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.description;
         }
 
-        public ListDataSourcesResponseDataDataSources setDataSourceType(String dataSourceType) {
+        public ExportConnectionsResponseDataDataSources setDataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
             return this;
         }
@@ -183,7 +183,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.dataSourceType;
         }
 
-        public ListDataSourcesResponseDataDataSources setGmtCreate(String gmtCreate) {
+        public ExportConnectionsResponseDataDataSources setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -191,7 +191,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListDataSourcesResponseDataDataSources setDefaultEngine(Boolean defaultEngine) {
+        public ExportConnectionsResponseDataDataSources setDefaultEngine(Boolean defaultEngine) {
             this.defaultEngine = defaultEngine;
             return this;
         }
@@ -199,7 +199,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.defaultEngine;
         }
 
-        public ListDataSourcesResponseDataDataSources setOperator(String operator) {
+        public ExportConnectionsResponseDataDataSources setOperator(String operator) {
             this.operator = operator;
             return this;
         }
@@ -207,7 +207,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.operator;
         }
 
-        public ListDataSourcesResponseDataDataSources setSequence(Integer sequence) {
+        public ExportConnectionsResponseDataDataSources setSequence(Integer sequence) {
             this.sequence = sequence;
             return this;
         }
@@ -215,7 +215,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.sequence;
         }
 
-        public ListDataSourcesResponseDataDataSources setEnvType(Integer envType) {
+        public ExportConnectionsResponseDataDataSources setEnvType(Integer envType) {
             this.envType = envType;
             return this;
         }
@@ -223,7 +223,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.envType;
         }
 
-        public ListDataSourcesResponseDataDataSources setTenantId(Long tenantId) {
+        public ExportConnectionsResponseDataDataSources setTenantId(Long tenantId) {
             this.tenantId = tenantId;
             return this;
         }
@@ -231,7 +231,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.tenantId;
         }
 
-        public ListDataSourcesResponseDataDataSources setName(String name) {
+        public ExportConnectionsResponseDataDataSources setName(String name) {
             this.name = name;
             return this;
         }
@@ -239,7 +239,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.name;
         }
 
-        public ListDataSourcesResponseDataDataSources setSubType(String subType) {
+        public ExportConnectionsResponseDataDataSources setSubType(String subType) {
             this.subType = subType;
             return this;
         }
@@ -247,7 +247,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.subType;
         }
 
-        public ListDataSourcesResponseDataDataSources setId(Integer id) {
+        public ExportConnectionsResponseDataDataSources setId(Integer id) {
             this.id = id;
             return this;
         }
@@ -255,7 +255,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.id;
         }
 
-        public ListDataSourcesResponseDataDataSources setProjectId(Integer projectId) {
+        public ExportConnectionsResponseDataDataSources setProjectId(Integer projectId) {
             this.projectId = projectId;
             return this;
         }
@@ -263,7 +263,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.projectId;
         }
 
-        public ListDataSourcesResponseDataDataSources setStatus(Integer status) {
+        public ExportConnectionsResponseDataDataSources setStatus(Integer status) {
             this.status = status;
             return this;
         }
@@ -271,7 +271,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.status;
         }
 
-        public ListDataSourcesResponseDataDataSources setContent(String content) {
+        public ExportConnectionsResponseDataDataSources setContent(String content) {
             this.content = content;
             return this;
         }
@@ -281,7 +281,7 @@ public class ListDataSourcesResponse extends TeaModel {
 
     }
 
-    public static class ListDataSourcesResponseData extends TeaModel {
+    public static class ExportConnectionsResponseData extends TeaModel {
         @NameInMap("PageNumber")
         @Validation(required = true)
         public Integer pageNumber;
@@ -296,14 +296,14 @@ public class ListDataSourcesResponse extends TeaModel {
 
         @NameInMap("DataSources")
         @Validation(required = true)
-        public java.util.List<ListDataSourcesResponseDataDataSources> dataSources;
+        public java.util.List<ExportConnectionsResponseDataDataSources> dataSources;
 
-        public static ListDataSourcesResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ListDataSourcesResponseData self = new ListDataSourcesResponseData();
+        public static ExportConnectionsResponseData build(java.util.Map<String, ?> map) throws Exception {
+            ExportConnectionsResponseData self = new ExportConnectionsResponseData();
             return TeaModel.build(map, self);
         }
 
-        public ListDataSourcesResponseData setPageNumber(Integer pageNumber) {
+        public ExportConnectionsResponseData setPageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
@@ -311,7 +311,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.pageNumber;
         }
 
-        public ListDataSourcesResponseData setPageSize(Integer pageSize) {
+        public ExportConnectionsResponseData setPageSize(Integer pageSize) {
             this.pageSize = pageSize;
             return this;
         }
@@ -319,7 +319,7 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.pageSize;
         }
 
-        public ListDataSourcesResponseData setTotalCount(Integer totalCount) {
+        public ExportConnectionsResponseData setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
@@ -327,11 +327,11 @@ public class ListDataSourcesResponse extends TeaModel {
             return this.totalCount;
         }
 
-        public ListDataSourcesResponseData setDataSources(java.util.List<ListDataSourcesResponseDataDataSources> dataSources) {
+        public ExportConnectionsResponseData setDataSources(java.util.List<ExportConnectionsResponseDataDataSources> dataSources) {
             this.dataSources = dataSources;
             return this;
         }
-        public java.util.List<ListDataSourcesResponseDataDataSources> getDataSources() {
+        public java.util.List<ExportConnectionsResponseDataDataSources> getDataSources() {
             return this.dataSources;
         }
 

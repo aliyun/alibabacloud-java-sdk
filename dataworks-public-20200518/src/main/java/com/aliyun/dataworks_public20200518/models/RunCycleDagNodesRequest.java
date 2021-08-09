@@ -20,10 +20,6 @@ public class RunCycleDagNodesRequest extends TeaModel {
     @Validation(required = true)
     public Long rootNodeId;
 
-    @NameInMap("IncludeNodeIds")
-    @Validation(required = true)
-    public String includeNodeIds;
-
     @NameInMap("ExcludeNodeIds")
     public String excludeNodeIds;
 
@@ -43,6 +39,10 @@ public class RunCycleDagNodesRequest extends TeaModel {
 
     @NameInMap("NodeParams")
     public String nodeParams;
+
+    @NameInMap("IncludeNodeIds")
+    @Validation(required = true)
+    public String includeNodeIds;
 
     public static RunCycleDagNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCycleDagNodesRequest self = new RunCycleDagNodesRequest();
@@ -79,14 +79,6 @@ public class RunCycleDagNodesRequest extends TeaModel {
     }
     public Long getRootNodeId() {
         return this.rootNodeId;
-    }
-
-    public RunCycleDagNodesRequest setIncludeNodeIds(String includeNodeIds) {
-        this.includeNodeIds = includeNodeIds;
-        return this;
-    }
-    public String getIncludeNodeIds() {
-        return this.includeNodeIds;
     }
 
     public RunCycleDagNodesRequest setExcludeNodeIds(String excludeNodeIds) {
@@ -135,6 +127,14 @@ public class RunCycleDagNodesRequest extends TeaModel {
     }
     public String getNodeParams() {
         return this.nodeParams;
+    }
+
+    public RunCycleDagNodesRequest setIncludeNodeIds(String includeNodeIds) {
+        this.includeNodeIds = includeNodeIds;
+        return this;
+    }
+    public String getIncludeNodeIds() {
+        return this.includeNodeIds;
     }
 
 }

@@ -454,6 +454,10 @@ public class GetFileResponse extends TeaModel {
         @Validation(required = true)
         public Long resourceGroupId;
 
+        @NameInMap("SchedulerType")
+        @Validation(required = true)
+        public String schedulerType;
+
         @NameInMap("InputList")
         @Validation(required = true)
         public java.util.List<GetFileResponseDataNodeConfigurationInputList> inputList;
@@ -561,6 +565,14 @@ public class GetFileResponse extends TeaModel {
         }
         public Long getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public GetFileResponseDataNodeConfiguration setSchedulerType(String schedulerType) {
+            this.schedulerType = schedulerType;
+            return this;
+        }
+        public String getSchedulerType() {
+            return this.schedulerType;
         }
 
         public GetFileResponseDataNodeConfiguration setInputList(java.util.List<GetFileResponseDataNodeConfigurationInputList> inputList) {

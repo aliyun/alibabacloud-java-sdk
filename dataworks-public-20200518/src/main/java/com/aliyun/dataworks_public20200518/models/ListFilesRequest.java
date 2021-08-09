@@ -31,6 +31,9 @@ public class ListFilesRequest extends TeaModel {
     @NameInMap("Owner")
     public String owner;
 
+    @NameInMap("NodeId")
+    public Long nodeId;
+
     public static ListFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFilesRequest self = new ListFilesRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class ListFilesRequest extends TeaModel {
     }
     public String getOwner() {
         return this.owner;
+    }
+
+    public ListFilesRequest setNodeId(Long nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public Long getNodeId() {
+        return this.nodeId;
     }
 
 }

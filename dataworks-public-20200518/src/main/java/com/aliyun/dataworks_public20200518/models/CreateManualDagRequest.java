@@ -26,6 +26,12 @@ public class CreateManualDagRequest extends TeaModel {
     @NameInMap("DagParameters")
     public String dagParameters;
 
+    @NameInMap("IncludeNodeIds")
+    public String includeNodeIds;
+
+    @NameInMap("ExcludeNodeIds")
+    public String excludeNodeIds;
+
     public static CreateManualDagRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateManualDagRequest self = new CreateManualDagRequest();
         return TeaModel.build(map, self);
@@ -77,6 +83,22 @@ public class CreateManualDagRequest extends TeaModel {
     }
     public String getDagParameters() {
         return this.dagParameters;
+    }
+
+    public CreateManualDagRequest setIncludeNodeIds(String includeNodeIds) {
+        this.includeNodeIds = includeNodeIds;
+        return this;
+    }
+    public String getIncludeNodeIds() {
+        return this.includeNodeIds;
+    }
+
+    public CreateManualDagRequest setExcludeNodeIds(String excludeNodeIds) {
+        this.excludeNodeIds = excludeNodeIds;
+        return this;
+    }
+    public String getExcludeNodeIds() {
+        return this.excludeNodeIds;
     }
 
 }
