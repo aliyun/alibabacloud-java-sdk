@@ -382,6 +382,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSpareIpsWithOptions(request, runtime);
     }
 
+    public DissociateAdditionalCertificatesFromListenerResponse dissociateAdditionalCertificatesFromListenerWithOptions(DissociateAdditionalCertificatesFromListenerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DissociateAdditionalCertificatesFromListener", "2019-11-20", "HTTPS", "POST", "AK", "json", req, runtime), new DissociateAdditionalCertificatesFromListenerResponse());
+    }
+
+    public DissociateAdditionalCertificatesFromListenerResponse dissociateAdditionalCertificatesFromListener(DissociateAdditionalCertificatesFromListenerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.dissociateAdditionalCertificatesFromListenerWithOptions(request, runtime);
+    }
+
     public ListEndpointGroupsResponse listEndpointGroupsWithOptions(ListEndpointGroupsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -486,6 +499,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteListenerWithOptions(request, runtime);
     }
 
+    public AssociateAdditionalCertificatesWithListenerResponse associateAdditionalCertificatesWithListenerWithOptions(AssociateAdditionalCertificatesWithListenerRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AssociateAdditionalCertificatesWithListener", "2019-11-20", "HTTPS", "POST", "AK", "json", req, runtime), new AssociateAdditionalCertificatesWithListenerResponse());
+    }
+
+    public AssociateAdditionalCertificatesWithListenerResponse associateAdditionalCertificatesWithListener(AssociateAdditionalCertificatesWithListenerRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.associateAdditionalCertificatesWithListenerWithOptions(request, runtime);
+    }
+
     public AttachLogStoreToEndpointGroupResponse attachLogStoreToEndpointGroupWithOptions(AttachLogStoreToEndpointGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -497,6 +523,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AttachLogStoreToEndpointGroupResponse attachLogStoreToEndpointGroup(AttachLogStoreToEndpointGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.attachLogStoreToEndpointGroupWithOptions(request, runtime);
+    }
+
+    public UpdateCrossBorderPackageComplianceStatusResponse updateCrossBorderPackageComplianceStatusWithOptions(UpdateCrossBorderPackageComplianceStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateCrossBorderPackageComplianceStatus", "2019-11-20", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateCrossBorderPackageComplianceStatusResponse());
+    }
+
+    public UpdateCrossBorderPackageComplianceStatusResponse updateCrossBorderPackageComplianceStatus(UpdateCrossBorderPackageComplianceStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateCrossBorderPackageComplianceStatusWithOptions(request, runtime);
     }
 
     public UpdateBandwidthPackageResponse updateBandwidthPackageWithOptions(UpdateBandwidthPackageRequest request, RuntimeOptions runtime) throws Exception {
@@ -616,6 +655,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.dissociateAclsFromListenerWithOptions(request, runtime);
     }
 
+    public ListCrossBorderPackageForComplianceResponse listCrossBorderPackageForComplianceWithOptions(ListCrossBorderPackageForComplianceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListCrossBorderPackageForCompliance", "2019-11-20", "HTTPS", "POST", "AK", "json", req, runtime), new ListCrossBorderPackageForComplianceResponse());
+    }
+
+    public ListCrossBorderPackageForComplianceResponse listCrossBorderPackageForCompliance(ListCrossBorderPackageForComplianceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listCrossBorderPackageForComplianceWithOptions(request, runtime);
+    }
+
     public ListAccelerateAreasResponse listAccelerateAreasWithOptions(ListAccelerateAreasRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -627,6 +679,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAccelerateAreasResponse listAccelerateAreas(ListAccelerateAreasRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listAccelerateAreasWithOptions(request, runtime);
+    }
+
+    public ListListenerCertificatesResponse listListenerCertificatesWithOptions(ListListenerCertificatesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListListenerCertificates", "2019-11-20", "HTTPS", "POST", "AK", "json", req, runtime), new ListListenerCertificatesResponse());
+    }
+
+    public ListListenerCertificatesResponse listListenerCertificates(ListListenerCertificatesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listListenerCertificatesWithOptions(request, runtime);
     }
 
     public UpdateIpSetResponse updateIpSetWithOptions(UpdateIpSetRequest request, RuntimeOptions runtime) throws Exception {
