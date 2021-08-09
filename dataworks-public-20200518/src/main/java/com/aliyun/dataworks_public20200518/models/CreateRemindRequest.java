@@ -45,6 +45,7 @@ public class CreateRemindRequest extends TeaModel {
     public String alertUnit;
 
     @NameInMap("AlertMethods")
+    @Validation(required = true)
     public String alertMethods;
 
     @NameInMap("AlertTargets")

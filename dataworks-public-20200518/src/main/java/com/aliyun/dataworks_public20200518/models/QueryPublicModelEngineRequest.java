@@ -8,10 +8,6 @@ public class QueryPublicModelEngineRequest extends TeaModel {
     @Validation(required = true)
     public String text;
 
-    @NameInMap("TenantId")
-    @Validation(required = true)
-    public String tenantId;
-
     @NameInMap("ProjectId")
     @Validation(required = true)
     public String projectId;
@@ -27,14 +23,6 @@ public class QueryPublicModelEngineRequest extends TeaModel {
     }
     public String getText() {
         return this.text;
-    }
-
-    public QueryPublicModelEngineRequest setTenantId(String tenantId) {
-        this.tenantId = tenantId;
-        return this;
-    }
-    public String getTenantId() {
-        return this.tenantId;
     }
 
     public QueryPublicModelEngineRequest setProjectId(String projectId) {

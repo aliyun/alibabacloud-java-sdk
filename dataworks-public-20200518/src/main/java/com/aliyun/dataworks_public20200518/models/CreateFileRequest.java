@@ -79,6 +79,9 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("AutoParsing")
     public Boolean autoParsing;
 
+    @NameInMap("SchedulerType")
+    public String schedulerType;
+
     public static CreateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileRequest self = new CreateFileRequest();
         return TeaModel.build(map, self);
@@ -274,6 +277,14 @@ public class CreateFileRequest extends TeaModel {
     }
     public Boolean getAutoParsing() {
         return this.autoParsing;
+    }
+
+    public CreateFileRequest setSchedulerType(String schedulerType) {
+        this.schedulerType = schedulerType;
+        return this;
+    }
+    public String getSchedulerType() {
+        return this.schedulerType;
     }
 
 }

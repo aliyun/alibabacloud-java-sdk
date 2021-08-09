@@ -182,6 +182,10 @@ public class GetMetaTableBasicInfoResponse extends TeaModel {
         @Validation(required = true)
         public Boolean isView;
 
+        @NameInMap("ColumnCount")
+        @Validation(required = true)
+        public Integer columnCount;
+
         public static GetMetaTableBasicInfoResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableBasicInfoResponseData self = new GetMetaTableBasicInfoResponseData();
             return TeaModel.build(map, self);
@@ -385,6 +389,14 @@ public class GetMetaTableBasicInfoResponse extends TeaModel {
         }
         public Boolean getIsView() {
             return this.isView;
+        }
+
+        public GetMetaTableBasicInfoResponseData setColumnCount(Integer columnCount) {
+            this.columnCount = columnCount;
+            return this;
+        }
+        public Integer getColumnCount() {
+            return this.columnCount;
         }
 
     }
