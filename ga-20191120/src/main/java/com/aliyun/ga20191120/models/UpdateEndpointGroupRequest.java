@@ -49,6 +49,9 @@ public class UpdateEndpointGroupRequest extends TeaModel {
     @NameInMap("PortOverrides")
     public java.util.List<UpdateEndpointGroupRequestPortOverrides> portOverrides;
 
+    @NameInMap("HealthCheckEnabled")
+    public Boolean healthCheckEnabled;
+
     public static UpdateEndpointGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEndpointGroupRequest self = new UpdateEndpointGroupRequest();
         return TeaModel.build(map, self);
@@ -172,6 +175,14 @@ public class UpdateEndpointGroupRequest extends TeaModel {
     }
     public java.util.List<UpdateEndpointGroupRequestPortOverrides> getPortOverrides() {
         return this.portOverrides;
+    }
+
+    public UpdateEndpointGroupRequest setHealthCheckEnabled(Boolean healthCheckEnabled) {
+        this.healthCheckEnabled = healthCheckEnabled;
+        return this;
+    }
+    public Boolean getHealthCheckEnabled() {
+        return this.healthCheckEnabled;
     }
 
     public static class UpdateEndpointGroupRequestEndpointConfigurations extends TeaModel {

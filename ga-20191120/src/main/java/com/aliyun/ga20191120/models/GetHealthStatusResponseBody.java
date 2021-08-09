@@ -70,6 +70,9 @@ public class GetHealthStatusResponseBody extends TeaModel {
         @NameInMap("Port")
         public Long port;
 
+        @NameInMap("Type")
+        public String type;
+
         public static GetHealthStatusResponseBodyEndpointGroupsEndpoints build(java.util.Map<String, ?> map) throws Exception {
             GetHealthStatusResponseBodyEndpointGroupsEndpoints self = new GetHealthStatusResponseBodyEndpointGroupsEndpoints();
             return TeaModel.build(map, self);
@@ -113,6 +116,14 @@ public class GetHealthStatusResponseBody extends TeaModel {
         }
         public Long getPort() {
             return this.port;
+        }
+
+        public GetHealthStatusResponseBodyEndpointGroupsEndpoints setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

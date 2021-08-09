@@ -83,6 +83,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         @NameInMap("ProbePort")
         public Integer probePort;
 
+        @NameInMap("EndpointId")
+        public String endpointId;
+
         public static ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations build(java.util.Map<String, ?> map) throws Exception {
             ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations self = new ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations();
             return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
         public Integer getProbePort() {
             return this.probePort;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setEndpointId(String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+        }
+        public String getEndpointId() {
+            return this.endpointId;
         }
 
     }
@@ -228,6 +239,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
         @NameInMap("HealthCheckPort")
         public Integer healthCheckPort;
+
+        @NameInMap("HealthCheckEnabled")
+        public Boolean healthCheckEnabled;
 
         public static ListEndpointGroupsResponseBodyEndpointGroups build(java.util.Map<String, ?> map) throws Exception {
             ListEndpointGroupsResponseBodyEndpointGroups self = new ListEndpointGroupsResponseBodyEndpointGroups();
@@ -392,6 +406,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
         public Integer getHealthCheckPort() {
             return this.healthCheckPort;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroups setHealthCheckEnabled(Boolean healthCheckEnabled) {
+            this.healthCheckEnabled = healthCheckEnabled;
+            return this;
+        }
+        public Boolean getHealthCheckEnabled() {
+            return this.healthCheckEnabled;
         }
 
     }

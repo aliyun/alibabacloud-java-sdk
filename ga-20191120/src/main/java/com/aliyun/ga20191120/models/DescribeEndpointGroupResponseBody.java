@@ -85,6 +85,9 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     @NameInMap("EnableAccessLog")
     public Boolean enableAccessLog;
 
+    @NameInMap("HealthCheckEnabled")
+    public Boolean healthCheckEnabled;
+
     public static DescribeEndpointGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEndpointGroupResponseBody self = new DescribeEndpointGroupResponseBody();
         return TeaModel.build(map, self);
@@ -304,6 +307,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     }
     public Boolean getEnableAccessLog() {
         return this.enableAccessLog;
+    }
+
+    public DescribeEndpointGroupResponseBody setHealthCheckEnabled(Boolean healthCheckEnabled) {
+        this.healthCheckEnabled = healthCheckEnabled;
+        return this;
+    }
+    public Boolean getHealthCheckEnabled() {
+        return this.healthCheckEnabled;
     }
 
     public static class DescribeEndpointGroupResponseBodyEndpointConfigurations extends TeaModel {
