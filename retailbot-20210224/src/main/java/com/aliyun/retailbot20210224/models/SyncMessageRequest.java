@@ -44,6 +44,26 @@ public class SyncMessageRequest extends TeaModel {
     @NameInMap("MessageId")
     public String messageId;
 
+    // 消息发送时间戳
+    @NameInMap("SendTime")
+    public Long sendTime;
+
+    // 消息来源
+    @NameInMap("Source")
+    public String source;
+
+    // 消息类型
+    @NameInMap("ContentType")
+    public String contentType;
+
+    // 对话sessionId
+    @NameInMap("SessionId")
+    public String sessionId;
+
+    // 对话chatId
+    @NameInMap("ChatId")
+    public String chatId;
+
     public static SyncMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         SyncMessageRequest self = new SyncMessageRequest();
         return TeaModel.build(map, self);
@@ -127,6 +147,46 @@ public class SyncMessageRequest extends TeaModel {
     }
     public String getMessageId() {
         return this.messageId;
+    }
+
+    public SyncMessageRequest setSendTime(Long sendTime) {
+        this.sendTime = sendTime;
+        return this;
+    }
+    public Long getSendTime() {
+        return this.sendTime;
+    }
+
+    public SyncMessageRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
+    public SyncMessageRequest setContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    public String getContentType() {
+        return this.contentType;
+    }
+
+    public SyncMessageRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    public SyncMessageRequest setChatId(String chatId) {
+        this.chatId = chatId;
+        return this;
+    }
+    public String getChatId() {
+        return this.chatId;
     }
 
 }
