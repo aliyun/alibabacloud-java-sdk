@@ -32,51 +32,21 @@ public class TaggingAdImageResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class TaggingAdImageResponseBodyDataTags extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("Confidence")
-        public Float confidence;
-
-        public static TaggingAdImageResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
-            TaggingAdImageResponseBodyDataTags self = new TaggingAdImageResponseBodyDataTags();
-            return TeaModel.build(map, self);
-        }
-
-        public TaggingAdImageResponseBodyDataTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-        public TaggingAdImageResponseBodyDataTags setConfidence(Float confidence) {
-            this.confidence = confidence;
-            return this;
-        }
-        public Float getConfidence() {
-            return this.confidence;
-        }
-
-    }
-
     public static class TaggingAdImageResponseBodyData extends TeaModel {
-        @NameInMap("Tags")
-        public java.util.List<TaggingAdImageResponseBodyDataTags> tags;
+        @NameInMap("TagInfo")
+        public java.util.Map<String, ?> tagInfo;
 
         public static TaggingAdImageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TaggingAdImageResponseBodyData self = new TaggingAdImageResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public TaggingAdImageResponseBodyData setTags(java.util.List<TaggingAdImageResponseBodyDataTags> tags) {
-            this.tags = tags;
+        public TaggingAdImageResponseBodyData setTagInfo(java.util.Map<String, ?> tagInfo) {
+            this.tagInfo = tagInfo;
             return this;
         }
-        public java.util.List<TaggingAdImageResponseBodyDataTags> getTags() {
-            return this.tags;
+        public java.util.Map<String, ?> getTagInfo() {
+            return this.tagInfo;
         }
 
     }
