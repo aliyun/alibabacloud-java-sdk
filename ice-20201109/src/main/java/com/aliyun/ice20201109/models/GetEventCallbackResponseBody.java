@@ -11,6 +11,9 @@ public class GetEventCallbackResponseBody extends TeaModel {
     @NameInMap("CallbackQueueName")
     public String callbackQueueName;
 
+    @NameInMap("EventTypeList")
+    public String eventTypeList;
+
     public static GetEventCallbackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEventCallbackResponseBody self = new GetEventCallbackResponseBody();
         return TeaModel.build(map, self);
@@ -30,6 +33,14 @@ public class GetEventCallbackResponseBody extends TeaModel {
     }
     public String getCallbackQueueName() {
         return this.callbackQueueName;
+    }
+
+    public GetEventCallbackResponseBody setEventTypeList(String eventTypeList) {
+        this.eventTypeList = eventTypeList;
+        return this;
+    }
+    public String getEventTypeList() {
+        return this.eventTypeList;
     }
 
 }

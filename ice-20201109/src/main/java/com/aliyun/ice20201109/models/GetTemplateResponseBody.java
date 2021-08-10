@@ -81,6 +81,10 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("CoverURL")
         public String coverURL;
 
+        // 提交合成任务的ClipsParam参数
+        @NameInMap("ClipsParam")
+        public String clipsParam;
+
         public static GetTemplateResponseBodyTemplate build(java.util.Map<String, ?> map) throws Exception {
             GetTemplateResponseBodyTemplate self = new GetTemplateResponseBodyTemplate();
             return TeaModel.build(map, self);
@@ -180,6 +184,14 @@ public class GetTemplateResponseBody extends TeaModel {
         }
         public String getCoverURL() {
             return this.coverURL;
+        }
+
+        public GetTemplateResponseBodyTemplate setClipsParam(String clipsParam) {
+            this.clipsParam = clipsParam;
+            return this;
+        }
+        public String getClipsParam() {
+            return this.clipsParam;
         }
 
     }
