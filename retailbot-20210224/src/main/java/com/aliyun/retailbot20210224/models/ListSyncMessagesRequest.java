@@ -74,6 +74,14 @@ public class ListSyncMessagesRequest extends TeaModel {
         @NameInMap("ContentType")
         public String contentType;
 
+        // 对话sessionId
+        @NameInMap("SessionId")
+        public String sessionId;
+
+        // 对话chatId
+        @NameInMap("ChatId")
+        public String chatId;
+
         public static ListSyncMessagesRequestMessageDTOList build(java.util.Map<String, ?> map) throws Exception {
             ListSyncMessagesRequestMessageDTOList self = new ListSyncMessagesRequestMessageDTOList();
             return TeaModel.build(map, self);
@@ -181,6 +189,22 @@ public class ListSyncMessagesRequest extends TeaModel {
         }
         public String getContentType() {
             return this.contentType;
+        }
+
+        public ListSyncMessagesRequestMessageDTOList setSessionId(String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        public ListSyncMessagesRequestMessageDTOList setChatId(String chatId) {
+            this.chatId = chatId;
+            return this;
+        }
+        public String getChatId() {
+            return this.chatId;
         }
 
     }
