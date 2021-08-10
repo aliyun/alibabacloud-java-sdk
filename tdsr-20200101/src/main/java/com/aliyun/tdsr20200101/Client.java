@@ -593,6 +593,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOriginLayoutDataWithOptions(request, runtime);
     }
 
+    public GetHotspotSceneDataResponse getHotspotSceneDataWithOptions(GetHotspotSceneDataRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetHotspotSceneData", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetHotspotSceneDataResponse());
+    }
+
+    public GetHotspotSceneDataResponse getHotspotSceneData(GetHotspotSceneDataRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getHotspotSceneDataWithOptions(request, runtime);
+    }
+
     public ScenePublishResponse scenePublishWithOptions(ScenePublishRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -669,6 +682,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPolicyResponse getPolicy(GetPolicyRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getPolicyWithOptions(request, runtime);
+    }
+
+    public GetScenePreviewInfoResponse getScenePreviewInfoWithOptions(GetScenePreviewInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetScenePreviewInfo", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetScenePreviewInfoResponse());
+    }
+
+    public GetScenePreviewInfoResponse getScenePreviewInfo(GetScenePreviewInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getScenePreviewInfoWithOptions(request, runtime);
     }
 
     public AddSubSceneResponse addSubSceneWithOptions(AddSubSceneRequest request, RuntimeOptions runtime) throws Exception {
