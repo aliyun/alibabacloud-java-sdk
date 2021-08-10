@@ -93,6 +93,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("CoverURL")
         public String coverURL;
 
+        // ClipsParam
+        @NameInMap("ClipsParam")
+        public String clipsParam;
+
         public static ListTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
             ListTemplatesResponseBodyTemplates self = new ListTemplatesResponseBodyTemplates();
             return TeaModel.build(map, self);
@@ -192,6 +196,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
         public String getCoverURL() {
             return this.coverURL;
+        }
+
+        public ListTemplatesResponseBodyTemplates setClipsParam(String clipsParam) {
+            this.clipsParam = clipsParam;
+            return this;
+        }
+        public String getClipsParam() {
+            return this.clipsParam;
         }
 
     }
