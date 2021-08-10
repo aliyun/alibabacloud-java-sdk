@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>imagerecog20190930</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>imagerecog20190930</name>
   <description>Aliyun IMAGERECOG SDK for Java
@@ -75,7 +75,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>oss-client</artifactId>
-      <version>3.0.2</version>
+      <version>3.0.3</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>
@@ -107,7 +107,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>oss-util</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
