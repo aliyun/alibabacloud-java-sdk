@@ -7,6 +7,9 @@ public class UpdateAccountRequest extends TeaModel {
     @NameInMap("NewDisplayName")
     public String newDisplayName;
 
+    @NameInMap("NewAccountType")
+    public String newAccountType;
+
     @NameInMap("AccountId")
     public String accountId;
 
@@ -21,6 +24,14 @@ public class UpdateAccountRequest extends TeaModel {
     }
     public String getNewDisplayName() {
         return this.newDisplayName;
+    }
+
+    public UpdateAccountRequest setNewAccountType(String newAccountType) {
+        this.newAccountType = newAccountType;
+        return this;
+    }
+    public String getNewAccountType() {
+        return this.newAccountType;
     }
 
     public UpdateAccountRequest setAccountId(String accountId) {

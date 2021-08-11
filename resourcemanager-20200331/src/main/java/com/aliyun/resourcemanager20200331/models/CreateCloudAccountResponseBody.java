@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudAccountResponseBody extends TeaModel {
-    @NameInMap("Account")
-    public CreateCloudAccountResponseBodyAccount account;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Account")
+    public CreateCloudAccountResponseBodyAccount account;
 
     public static CreateCloudAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCloudAccountResponseBody self = new CreateCloudAccountResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateCloudAccountResponseBody setAccount(CreateCloudAccountResponseBodyAccount account) {
-        this.account = account;
-        return this;
-    }
-    public CreateCloudAccountResponseBodyAccount getAccount() {
-        return this.account;
     }
 
     public CreateCloudAccountResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class CreateCloudAccountResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateCloudAccountResponseBody setAccount(CreateCloudAccountResponseBodyAccount account) {
+        this.account = account;
+        return this;
+    }
+    public CreateCloudAccountResponseBodyAccount getAccount() {
+        return this.account;
     }
 
     public static class CreateCloudAccountResponseBodyAccount extends TeaModel {

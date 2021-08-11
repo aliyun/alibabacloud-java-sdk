@@ -35,17 +35,17 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("RootFolderId")
         public String rootFolderId;
 
-        @NameInMap("ResourceDirectoryId")
-        public String resourceDirectoryId;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("MasterAccountId")
         public String masterAccountId;
 
         @NameInMap("MasterAccountName")
         public String masterAccountName;
+
+        @NameInMap("ResourceDirectoryId")
+        public String resourceDirectoryId;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         public static InitResourceDirectoryResponseBodyResourceDirectory build(java.util.Map<String, ?> map) throws Exception {
             InitResourceDirectoryResponseBodyResourceDirectory self = new InitResourceDirectoryResponseBodyResourceDirectory();
@@ -58,22 +58,6 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         }
         public String getRootFolderId() {
             return this.rootFolderId;
-        }
-
-        public InitResourceDirectoryResponseBodyResourceDirectory setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
-            return this;
-        }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
-        }
-
-        public InitResourceDirectoryResponseBodyResourceDirectory setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         public InitResourceDirectoryResponseBodyResourceDirectory setMasterAccountId(String masterAccountId) {
@@ -90,6 +74,22 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         }
         public String getMasterAccountName() {
             return this.masterAccountName;
+        }
+
+        public InitResourceDirectoryResponseBodyResourceDirectory setResourceDirectoryId(String resourceDirectoryId) {
+            this.resourceDirectoryId = resourceDirectoryId;
+            return this;
+        }
+        public String getResourceDirectoryId() {
+            return this.resourceDirectoryId;
+        }
+
+        public InitResourceDirectoryResponseBodyResourceDirectory setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
     }
