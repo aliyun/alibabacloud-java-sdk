@@ -149,6 +149,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getRoomWithOptions(request, runtime);
     }
 
+    public SendCommentResponse sendCommentWithOptions(SendCommentRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SendCommentShrinkRequest request = new SendCommentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extension)) {
+            request.extensionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extension, "Extension", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SendComment", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new SendCommentResponse());
+    }
+
+    public SendCommentResponse sendComment(SendCommentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendCommentWithOptions(request, runtime);
+    }
+
     public CreateAppTemplateResponse createAppTemplateWithOptions(CreateAppTemplateRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateAppTemplateShrinkRequest request = new CreateAppTemplateShrinkRequest();
@@ -179,6 +198,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConferenceResponse getConference(GetConferenceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getConferenceWithOptions(request, runtime);
+    }
+
+    public BanCommentResponse banCommentWithOptions(BanCommentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BanComment", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new BanCommentResponse());
+    }
+
+    public BanCommentResponse banComment(BanCommentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.banCommentWithOptions(request, runtime);
     }
 
     public RejectLinkMicResponse rejectLinkMicWithOptions(RejectLinkMicRequest request, RuntimeOptions runtime) throws Exception {
@@ -220,6 +252,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addMemberWithOptions(request, runtime);
     }
 
+    public CancelBanAllCommentResponse cancelBanAllCommentWithOptions(CancelBanAllCommentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CancelBanAllComment", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new CancelBanAllCommentResponse());
+    }
+
+    public CancelBanAllCommentResponse cancelBanAllComment(CancelBanAllCommentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.cancelBanAllCommentWithOptions(request, runtime);
+    }
+
     public ListRoomsResponse listRoomsWithOptions(ListRoomsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -257,6 +302,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListConferenceUsersResponse listConferenceUsers(ListConferenceUsersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listConferenceUsersWithOptions(request, runtime);
+    }
+
+    public CancelBanCommentResponse cancelBanCommentWithOptions(CancelBanCommentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CancelBanComment", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new CancelBanCommentResponse());
+    }
+
+    public CancelBanCommentResponse cancelBanComment(CancelBanCommentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.cancelBanCommentWithOptions(request, runtime);
     }
 
     public ListAppTemplatesResponse listAppTemplatesWithOptions(ListAppTemplatesRequest request, RuntimeOptions runtime) throws Exception {
@@ -464,6 +522,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendCustomMessageToUsersResponse sendCustomMessageToUsers(SendCustomMessageToUsersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.sendCustomMessageToUsersWithOptions(request, runtime);
+    }
+
+    public BanAllCommentResponse banAllCommentWithOptions(BanAllCommentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BanAllComment", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new BanAllCommentResponse());
+    }
+
+    public BanAllCommentResponse banAllComment(BanAllCommentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.banAllCommentWithOptions(request, runtime);
     }
 
     public GetAuthTokenResponse getAuthTokenWithOptions(GetAuthTokenRequest request, RuntimeOptions runtime) throws Exception {
