@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
-    @NameInMap("Account")
-    public ResendPromoteResourceAccountEmailResponseBodyAccount account;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Account")
+    public ResendPromoteResourceAccountEmailResponseBodyAccount account;
 
     public static ResendPromoteResourceAccountEmailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResendPromoteResourceAccountEmailResponseBody self = new ResendPromoteResourceAccountEmailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ResendPromoteResourceAccountEmailResponseBody setAccount(ResendPromoteResourceAccountEmailResponseBodyAccount account) {
-        this.account = account;
-        return this;
-    }
-    public ResendPromoteResourceAccountEmailResponseBodyAccount getAccount() {
-        return this.account;
     }
 
     public ResendPromoteResourceAccountEmailResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ResendPromoteResourceAccountEmailResponseBody setAccount(ResendPromoteResourceAccountEmailResponseBodyAccount account) {
+        this.account = account;
+        return this;
+    }
+    public ResendPromoteResourceAccountEmailResponseBodyAccount getAccount() {
+        return this.account;
     }
 
     public static class ResendPromoteResourceAccountEmailResponseBodyAccount extends TeaModel {

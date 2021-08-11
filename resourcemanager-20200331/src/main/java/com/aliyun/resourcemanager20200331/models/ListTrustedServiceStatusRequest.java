@@ -10,6 +10,9 @@ public class ListTrustedServiceStatusRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("AdminAccountId")
+    public String adminAccountId;
+
     public static ListTrustedServiceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTrustedServiceStatusRequest self = new ListTrustedServiceStatusRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListTrustedServiceStatusRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTrustedServiceStatusRequest setAdminAccountId(String adminAccountId) {
+        this.adminAccountId = adminAccountId;
+        return this;
+    }
+    public String getAdminAccountId() {
+        return this.adminAccountId;
     }
 
 }

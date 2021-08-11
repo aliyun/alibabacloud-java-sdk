@@ -13,6 +13,9 @@ public class UpdateRoleRequest extends TeaModel {
     @NameInMap("NewMaxSessionDuration")
     public Long newMaxSessionDuration;
 
+    @NameInMap("NewDescription")
+    public String newDescription;
+
     public static UpdateRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRoleRequest self = new UpdateRoleRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class UpdateRoleRequest extends TeaModel {
     }
     public Long getNewMaxSessionDuration() {
         return this.newMaxSessionDuration;
+    }
+
+    public UpdateRoleRequest setNewDescription(String newDescription) {
+        this.newDescription = newDescription;
+        return this;
+    }
+    public String getNewDescription() {
+        return this.newDescription;
     }
 
 }
