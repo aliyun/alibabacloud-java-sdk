@@ -24,6 +24,14 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    // 水印起始时间(单位是秒)，不填写默认为0
+    @NameInMap("StartTime")
+    public Long startTime;
+
+    // 水印结束时间(单位是秒)，不填默认为60000
+    @NameInMap("TotalTime")
+    public Long totalTime;
+
     // 输出的视频，oss三元组
     @NameInMap("Output")
     public String output;
@@ -75,6 +83,22 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public SubmitCopyrightJobRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public SubmitCopyrightJobRequest setTotalTime(Long totalTime) {
+        this.totalTime = totalTime;
+        return this;
+    }
+    public Long getTotalTime() {
+        return this.totalTime;
     }
 
     public SubmitCopyrightJobRequest setOutput(String output) {
