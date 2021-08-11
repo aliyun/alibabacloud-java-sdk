@@ -11,10 +11,13 @@ public class QueryInferenceServerResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Functions")
-    public QueryInferenceServerResponseBodyFunctions functions;
+    public java.util.List<QueryInferenceServerResponseBodyFunctions> functions;
 
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("TotalSize")
+    public Long totalSize;
 
     public static QueryInferenceServerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryInferenceServerResponseBody self = new QueryInferenceServerResponseBody();
@@ -37,11 +40,11 @@ public class QueryInferenceServerResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryInferenceServerResponseBody setFunctions(QueryInferenceServerResponseBodyFunctions functions) {
+    public QueryInferenceServerResponseBody setFunctions(java.util.List<QueryInferenceServerResponseBodyFunctions> functions) {
         this.functions = functions;
         return this;
     }
-    public QueryInferenceServerResponseBodyFunctions getFunctions() {
+    public java.util.List<QueryInferenceServerResponseBodyFunctions> getFunctions() {
         return this.functions;
     }
 
@@ -53,7 +56,15 @@ public class QueryInferenceServerResponseBody extends TeaModel {
         return this.code;
     }
 
-    public static class QueryInferenceServerResponseBodyFunctionsFunctions extends TeaModel {
+    public QueryInferenceServerResponseBody setTotalSize(Long totalSize) {
+        this.totalSize = totalSize;
+        return this;
+    }
+    public Long getTotalSize() {
+        return this.totalSize;
+    }
+
+    public static class QueryInferenceServerResponseBodyFunctions extends TeaModel {
         @NameInMap("FunctionName")
         public String functionName;
 
@@ -75,12 +86,12 @@ public class QueryInferenceServerResponseBody extends TeaModel {
         @NameInMap("TestId")
         public String testId;
 
-        public static QueryInferenceServerResponseBodyFunctionsFunctions build(java.util.Map<String, ?> map) throws Exception {
-            QueryInferenceServerResponseBodyFunctionsFunctions self = new QueryInferenceServerResponseBodyFunctionsFunctions();
+        public static QueryInferenceServerResponseBodyFunctions build(java.util.Map<String, ?> map) throws Exception {
+            QueryInferenceServerResponseBodyFunctions self = new QueryInferenceServerResponseBodyFunctions();
             return TeaModel.build(map, self);
         }
 
-        public QueryInferenceServerResponseBodyFunctionsFunctions setFunctionName(String functionName) {
+        public QueryInferenceServerResponseBodyFunctions setFunctionName(String functionName) {
             this.functionName = functionName;
             return this;
         }
@@ -88,7 +99,7 @@ public class QueryInferenceServerResponseBody extends TeaModel {
             return this.functionName;
         }
 
-        public QueryInferenceServerResponseBodyFunctionsFunctions setCreateTime(Long createTime) {
+        public QueryInferenceServerResponseBodyFunctions setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -96,7 +107,7 @@ public class QueryInferenceServerResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public QueryInferenceServerResponseBodyFunctionsFunctions setUserId(Long userId) {
+        public QueryInferenceServerResponseBodyFunctions setUserId(Long userId) {
             this.userId = userId;
             return this;
         }
@@ -104,7 +115,7 @@ public class QueryInferenceServerResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public QueryInferenceServerResponseBodyFunctionsFunctions setModelType(String modelType) {
+        public QueryInferenceServerResponseBodyFunctions setModelType(String modelType) {
             this.modelType = modelType;
             return this;
         }
@@ -112,7 +123,7 @@ public class QueryInferenceServerResponseBody extends TeaModel {
             return this.modelType;
         }
 
-        public QueryInferenceServerResponseBodyFunctionsFunctions setModelPath(String modelPath) {
+        public QueryInferenceServerResponseBodyFunctions setModelPath(String modelPath) {
             this.modelPath = modelPath;
             return this;
         }
@@ -120,7 +131,7 @@ public class QueryInferenceServerResponseBody extends TeaModel {
             return this.modelPath;
         }
 
-        public QueryInferenceServerResponseBodyFunctionsFunctions setPipelineId(String pipelineId) {
+        public QueryInferenceServerResponseBodyFunctions setPipelineId(String pipelineId) {
             this.pipelineId = pipelineId;
             return this;
         }
@@ -128,31 +139,12 @@ public class QueryInferenceServerResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public QueryInferenceServerResponseBodyFunctionsFunctions setTestId(String testId) {
+        public QueryInferenceServerResponseBodyFunctions setTestId(String testId) {
             this.testId = testId;
             return this;
         }
         public String getTestId() {
             return this.testId;
-        }
-
-    }
-
-    public static class QueryInferenceServerResponseBodyFunctions extends TeaModel {
-        @NameInMap("Functions")
-        public java.util.List<QueryInferenceServerResponseBodyFunctionsFunctions> functions;
-
-        public static QueryInferenceServerResponseBodyFunctions build(java.util.Map<String, ?> map) throws Exception {
-            QueryInferenceServerResponseBodyFunctions self = new QueryInferenceServerResponseBodyFunctions();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryInferenceServerResponseBodyFunctions setFunctions(java.util.List<QueryInferenceServerResponseBodyFunctionsFunctions> functions) {
-            this.functions = functions;
-            return this;
-        }
-        public java.util.List<QueryInferenceServerResponseBodyFunctionsFunctions> getFunctions() {
-            return this.functions;
         }
 
     }

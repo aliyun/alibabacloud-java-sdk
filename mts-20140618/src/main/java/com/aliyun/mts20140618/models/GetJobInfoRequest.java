@@ -3,16 +3,16 @@ package com.aliyun.mts20140618.models;
 
 import com.aliyun.tea.*;
 
-public class QueryInferenceJobRequest extends TeaModel {
-    @NameInMap("JobId")
+public class GetJobInfoRequest extends TeaModel {
+    @NameInMap("jobId")
     public String jobId;
 
-    public static QueryInferenceJobRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryInferenceJobRequest self = new QueryInferenceJobRequest();
+    public static GetJobInfoRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetJobInfoRequest self = new GetJobInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryInferenceJobRequest setJobId(String jobId) {
+    public GetJobInfoRequest setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }

@@ -7,6 +7,7 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -1531,6 +1532,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.submitFpDBDeleteJobWithOptions(request, runtime);
     }
 
+    public GetJobInfoResponse getJobInfoWithOptions(GetJobInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetJobInfo", "2014-06-18", "HTTPS", "GET", "AK", "json", req, runtime), new GetJobInfoResponse());
+    }
+
+    public GetJobInfoResponse getJobInfo(GetJobInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getJobInfoWithOptions(request, runtime);
+    }
+
     public AddMediaTagResponse addMediaTagWithOptions(AddMediaTagRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1750,6 +1765,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddCoverPipelineResponse addCoverPipeline(AddCoverPipelineRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.addCoverPipelineWithOptions(request, runtime);
+    }
+
+    public SubmitURLUploadJobResponse submitURLUploadJobWithOptions(SubmitURLUploadJobRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitURLUploadJobShrinkRequest request = new SubmitURLUploadJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.targetStorage))) {
+            request.targetStorageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.targetStorage), "TargetStorage", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitURLUploadJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitURLUploadJobResponse());
+    }
+
+    public SubmitURLUploadJobResponse submitURLUploadJob(SubmitURLUploadJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitURLUploadJobWithOptions(request, runtime);
     }
 
     public QueryMediaListByURLResponse queryMediaListByURLWithOptions(QueryMediaListByURLRequest request, RuntimeOptions runtime) throws Exception {
