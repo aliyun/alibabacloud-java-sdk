@@ -16,6 +16,9 @@ public class ListInferenceJobResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("TotalSize")
+    public Long totalSize;
+
     public static ListInferenceJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInferenceJobResponseBody self = new ListInferenceJobResponseBody();
         return TeaModel.build(map, self);
@@ -53,6 +56,14 @@ public class ListInferenceJobResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListInferenceJobResponseBody setTotalSize(Long totalSize) {
+        this.totalSize = totalSize;
+        return this;
+    }
+    public Long getTotalSize() {
+        return this.totalSize;
+    }
+
     public static class ListInferenceJobResponseBodyJobs extends TeaModel {
         @NameInMap("Status")
         public String status;
@@ -71,6 +82,9 @@ public class ListInferenceJobResponseBody extends TeaModel {
 
         @NameInMap("JobTime")
         public Long jobTime;
+
+        @NameInMap("JobParams")
+        public String jobParams;
 
         public static ListInferenceJobResponseBodyJobs build(java.util.Map<String, ?> map) throws Exception {
             ListInferenceJobResponseBodyJobs self = new ListInferenceJobResponseBodyJobs();
@@ -123,6 +137,14 @@ public class ListInferenceJobResponseBody extends TeaModel {
         }
         public Long getJobTime() {
             return this.jobTime;
+        }
+
+        public ListInferenceJobResponseBodyJobs setJobParams(String jobParams) {
+            this.jobParams = jobParams;
+            return this;
+        }
+        public String getJobParams() {
+            return this.jobParams;
         }
 
     }

@@ -28,6 +28,15 @@ public class SubmitEditingJobsRequest extends TeaModel {
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    @NameInMap("EditingJobURL")
+    public String editingJobURL;
+
+    @NameInMap("EditingJobOssFileRoleArn")
+    public String editingJobOssFileRoleArn;
+
+    @NameInMap("EditingJobOssFileUid")
+    public Long editingJobOssFileUid;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -98,6 +107,30 @@ public class SubmitEditingJobsRequest extends TeaModel {
     }
     public String getPipelineId() {
         return this.pipelineId;
+    }
+
+    public SubmitEditingJobsRequest setEditingJobURL(String editingJobURL) {
+        this.editingJobURL = editingJobURL;
+        return this;
+    }
+    public String getEditingJobURL() {
+        return this.editingJobURL;
+    }
+
+    public SubmitEditingJobsRequest setEditingJobOssFileRoleArn(String editingJobOssFileRoleArn) {
+        this.editingJobOssFileRoleArn = editingJobOssFileRoleArn;
+        return this;
+    }
+    public String getEditingJobOssFileRoleArn() {
+        return this.editingJobOssFileRoleArn;
+    }
+
+    public SubmitEditingJobsRequest setEditingJobOssFileUid(Long editingJobOssFileUid) {
+        this.editingJobOssFileUid = editingJobOssFileUid;
+        return this;
+    }
+    public Long getEditingJobOssFileUid() {
+        return this.editingJobOssFileUid;
     }
 
     public SubmitEditingJobsRequest setOwnerAccount(String ownerAccount) {

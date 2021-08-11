@@ -4,9 +4,6 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class CreateInferenceServerRequest extends TeaModel {
-    @NameInMap("UserId")
-    public Long userId;
-
     @NameInMap("TestId")
     public String testId;
 
@@ -28,14 +25,6 @@ public class CreateInferenceServerRequest extends TeaModel {
     public static CreateInferenceServerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInferenceServerRequest self = new CreateInferenceServerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateInferenceServerRequest setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-    public Long getUserId() {
-        return this.userId;
     }
 
     public CreateInferenceServerRequest setTestId(String testId) {

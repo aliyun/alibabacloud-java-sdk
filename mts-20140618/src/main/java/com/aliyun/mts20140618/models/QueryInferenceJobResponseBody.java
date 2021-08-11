@@ -72,6 +72,9 @@ public class QueryInferenceJobResponseBody extends TeaModel {
         @NameInMap("JobTime")
         public Long jobTime;
 
+        @NameInMap("JobParams")
+        public String jobParams;
+
         public static QueryInferenceJobResponseBodyJob build(java.util.Map<String, ?> map) throws Exception {
             QueryInferenceJobResponseBodyJob self = new QueryInferenceJobResponseBodyJob();
             return TeaModel.build(map, self);
@@ -123,6 +126,14 @@ public class QueryInferenceJobResponseBody extends TeaModel {
         }
         public Long getJobTime() {
             return this.jobTime;
+        }
+
+        public QueryInferenceJobResponseBodyJob setJobParams(String jobParams) {
+            this.jobParams = jobParams;
+            return this;
+        }
+        public String getJobParams() {
+            return this.jobParams;
         }
 
     }

@@ -1,3 +1,7 @@
+2021-08-11 Version: 3.3.23
+- SubmitURLUploadJob.
+- GetJobInfo.
+
 2021-05-18 Version: 3.3.16-inner
 - PAIAPI.
 
