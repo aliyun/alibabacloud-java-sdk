@@ -345,6 +345,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Message", request.message);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalTime)) {
+            body.put("TotalTime", request.totalTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.output)) {
             body.put("Output", request.output);
         }
