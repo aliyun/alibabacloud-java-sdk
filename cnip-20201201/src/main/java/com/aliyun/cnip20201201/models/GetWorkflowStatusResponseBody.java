@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkflowStatusResponseBody extends TeaModel {
     @NameInMap("data")
-    public java.util.List<GetWorkflowStatusResponseBodyData> data;
+    public GetWorkflowStatusResponseBodyData data;
 
     @NameInMap("errCode")
     public String errCode;
@@ -21,11 +21,11 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetWorkflowStatusResponseBody setData(java.util.List<GetWorkflowStatusResponseBodyData> data) {
+    public GetWorkflowStatusResponseBody setData(GetWorkflowStatusResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<GetWorkflowStatusResponseBodyData> getData() {
+    public GetWorkflowStatusResponseBodyData getData() {
         return this.data;
     }
 
@@ -53,7 +53,7 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetWorkflowStatusResponseBodyDataWorkflowTasks extends TeaModel {
+    public static class GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks extends TeaModel {
         // task name
         @NameInMap("name")
         public String name;
@@ -62,12 +62,12 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
-        public static GetWorkflowStatusResponseBodyDataWorkflowTasks build(java.util.Map<String, ?> map) throws Exception {
-            GetWorkflowStatusResponseBodyDataWorkflowTasks self = new GetWorkflowStatusResponseBodyDataWorkflowTasks();
+        public static GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks self = new GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks();
             return TeaModel.build(map, self);
         }
 
-        public GetWorkflowStatusResponseBodyDataWorkflowTasks setName(String name) {
+        public GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks setName(String name) {
             this.name = name;
             return this;
         }
@@ -75,7 +75,7 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetWorkflowStatusResponseBodyDataWorkflowTasks setStatus(String status) {
+        public GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -85,7 +85,7 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
 
     }
 
-    public static class GetWorkflowStatusResponseBodyData extends TeaModel {
+    public static class GetWorkflowStatusResponseBodyDataStepStatus extends TeaModel {
         // step name
         @NameInMap("name")
         public String name;
@@ -95,19 +95,49 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
         public String status;
 
         @NameInMap("workflowTasks")
-        public java.util.List<GetWorkflowStatusResponseBodyDataWorkflowTasks> workflowTasks;
+        public java.util.List<GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks> workflowTasks;
 
-        public static GetWorkflowStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetWorkflowStatusResponseBodyData self = new GetWorkflowStatusResponseBodyData();
+        public static GetWorkflowStatusResponseBodyDataStepStatus build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkflowStatusResponseBodyDataStepStatus self = new GetWorkflowStatusResponseBodyDataStepStatus();
             return TeaModel.build(map, self);
         }
 
-        public GetWorkflowStatusResponseBodyData setName(String name) {
+        public GetWorkflowStatusResponseBodyDataStepStatus setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetWorkflowStatusResponseBodyDataStepStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetWorkflowStatusResponseBodyDataStepStatus setWorkflowTasks(java.util.List<GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks> workflowTasks) {
+            this.workflowTasks = workflowTasks;
+            return this;
+        }
+        public java.util.List<GetWorkflowStatusResponseBodyDataStepStatusWorkflowTasks> getWorkflowTasks() {
+            return this.workflowTasks;
+        }
+
+    }
+
+    public static class GetWorkflowStatusResponseBodyData extends TeaModel {
+        @NameInMap("status")
+        public String status;
+
+        @NameInMap("stepStatus")
+        public GetWorkflowStatusResponseBodyDataStepStatus stepStatus;
+
+        public static GetWorkflowStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetWorkflowStatusResponseBodyData self = new GetWorkflowStatusResponseBodyData();
+            return TeaModel.build(map, self);
         }
 
         public GetWorkflowStatusResponseBodyData setStatus(String status) {
@@ -118,12 +148,12 @@ public class GetWorkflowStatusResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetWorkflowStatusResponseBodyData setWorkflowTasks(java.util.List<GetWorkflowStatusResponseBodyDataWorkflowTasks> workflowTasks) {
-            this.workflowTasks = workflowTasks;
+        public GetWorkflowStatusResponseBodyData setStepStatus(GetWorkflowStatusResponseBodyDataStepStatus stepStatus) {
+            this.stepStatus = stepStatus;
             return this;
         }
-        public java.util.List<GetWorkflowStatusResponseBodyDataWorkflowTasks> getWorkflowTasks() {
-            return this.workflowTasks;
+        public GetWorkflowStatusResponseBodyDataStepStatus getStepStatus() {
+            return this.stepStatus;
         }
 
     }

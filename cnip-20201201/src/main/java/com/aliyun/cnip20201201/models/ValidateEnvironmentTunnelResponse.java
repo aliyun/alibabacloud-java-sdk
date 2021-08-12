@@ -3,21 +3,21 @@ package com.aliyun.cnip20201201.models;
 
 import com.aliyun.tea.*;
 
-public class AddEnvChangeResponse extends TeaModel {
+public class ValidateEnvironmentTunnelResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public AddEnvChangeResponseBody body;
+    public ValidateEnvironmentTunnelResponseBody body;
 
-    public static AddEnvChangeResponse build(java.util.Map<String, ?> map) throws Exception {
-        AddEnvChangeResponse self = new AddEnvChangeResponse();
+    public static ValidateEnvironmentTunnelResponse build(java.util.Map<String, ?> map) throws Exception {
+        ValidateEnvironmentTunnelResponse self = new ValidateEnvironmentTunnelResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddEnvChangeResponse setHeaders(java.util.Map<String, String> headers) {
+    public ValidateEnvironmentTunnelResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class AddEnvChangeResponse extends TeaModel {
         return this.headers;
     }
 
-    public AddEnvChangeResponse setBody(AddEnvChangeResponseBody body) {
+    public ValidateEnvironmentTunnelResponse setBody(ValidateEnvironmentTunnelResponseBody body) {
         this.body = body;
         return this;
     }
-    public AddEnvChangeResponseBody getBody() {
+    public ValidateEnvironmentTunnelResponseBody getBody() {
         return this.body;
     }
 

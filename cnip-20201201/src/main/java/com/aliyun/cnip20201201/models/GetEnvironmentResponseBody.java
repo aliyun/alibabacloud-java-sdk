@@ -94,7 +94,7 @@ public class GetEnvironmentResponseBody extends TeaModel {
         public String description;
 
         @NameInMap("instanceList")
-        public String instanceList;
+        public java.util.List<InstanceInfo> instanceList;
 
         @NameInMap("location")
         public String location;
@@ -152,11 +152,11 @@ public class GetEnvironmentResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetEnvironmentResponseBodyData setInstanceList(String instanceList) {
+        public GetEnvironmentResponseBodyData setInstanceList(java.util.List<InstanceInfo> instanceList) {
             this.instanceList = instanceList;
             return this;
         }
-        public String getInstanceList() {
+        public java.util.List<InstanceInfo> getInstanceList() {
             return this.instanceList;
         }
 

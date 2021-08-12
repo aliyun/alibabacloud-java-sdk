@@ -10,6 +10,9 @@ public class GetProductVersionPackageRequest extends TeaModel {
     @NameInMap("packageType")
     public String packageType;
 
+    @NameInMap("packageContentType")
+    public String packageContentType;
+
     @NameInMap("oldProductVersionUID")
     public String oldProductVersionUID;
 
@@ -32,6 +35,14 @@ public class GetProductVersionPackageRequest extends TeaModel {
     }
     public String getPackageType() {
         return this.packageType;
+    }
+
+    public GetProductVersionPackageRequest setPackageContentType(String packageContentType) {
+        this.packageContentType = packageContentType;
+        return this;
+    }
+    public String getPackageContentType() {
+        return this.packageContentType;
     }
 
     public GetProductVersionPackageRequest setOldProductVersionUID(String oldProductVersionUID) {

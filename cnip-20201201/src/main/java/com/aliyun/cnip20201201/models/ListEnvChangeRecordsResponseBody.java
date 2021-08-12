@@ -7,6 +7,12 @@ public class ListEnvChangeRecordsResponseBody extends TeaModel {
     @NameInMap("data")
     public ListEnvChangeRecordsResponseBodyData data;
 
+    @NameInMap("errCode")
+    public String errCode;
+
+    @NameInMap("errMsg")
+    public String errMsg;
+
     public static ListEnvChangeRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListEnvChangeRecordsResponseBody self = new ListEnvChangeRecordsResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +24,22 @@ public class ListEnvChangeRecordsResponseBody extends TeaModel {
     }
     public ListEnvChangeRecordsResponseBodyData getData() {
         return this.data;
+    }
+
+    public ListEnvChangeRecordsResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public ListEnvChangeRecordsResponseBody setErrMsg(String errMsg) {
+        this.errMsg = errMsg;
+        return this;
+    }
+    public String getErrMsg() {
+        return this.errMsg;
     }
 
     public static class ListEnvChangeRecordsResponseBodyDataList extends TeaModel {

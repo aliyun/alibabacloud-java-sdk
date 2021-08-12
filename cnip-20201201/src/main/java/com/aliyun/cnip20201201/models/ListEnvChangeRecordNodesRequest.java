@@ -3,19 +3,19 @@ package com.aliyun.cnip20201201.models;
 
 import com.aliyun.tea.*;
 
-public class ListEnvChangeNodeRequest extends TeaModel {
+public class ListEnvChangeRecordNodesRequest extends TeaModel {
     @NameInMap("pageNum")
     public String pageNum;
 
     @NameInMap("pageSize")
     public String pageSize;
 
-    public static ListEnvChangeNodeRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListEnvChangeNodeRequest self = new ListEnvChangeNodeRequest();
+    public static ListEnvChangeRecordNodesRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListEnvChangeRecordNodesRequest self = new ListEnvChangeRecordNodesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListEnvChangeNodeRequest setPageNum(String pageNum) {
+    public ListEnvChangeRecordNodesRequest setPageNum(String pageNum) {
         this.pageNum = pageNum;
         return this;
     }
@@ -23,7 +23,7 @@ public class ListEnvChangeNodeRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public ListEnvChangeNodeRequest setPageSize(String pageSize) {
+    public ListEnvChangeRecordNodesRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }

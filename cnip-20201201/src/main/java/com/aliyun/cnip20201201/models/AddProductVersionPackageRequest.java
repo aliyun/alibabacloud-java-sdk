@@ -12,6 +12,10 @@ public class AddProductVersionPackageRequest extends TeaModel {
     @NameInMap("packageType")
     public String packageType;
 
+    // ENUM:["all","base"."application"]
+    @NameInMap("packageContentType")
+    public String packageContentType;
+
     public static AddProductVersionPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         AddProductVersionPackageRequest self = new AddProductVersionPackageRequest();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class AddProductVersionPackageRequest extends TeaModel {
     }
     public String getPackageType() {
         return this.packageType;
+    }
+
+    public AddProductVersionPackageRequest setPackageContentType(String packageContentType) {
+        this.packageContentType = packageContentType;
+        return this;
+    }
+    public String getPackageContentType() {
+        return this.packageContentType;
     }
 
 }
