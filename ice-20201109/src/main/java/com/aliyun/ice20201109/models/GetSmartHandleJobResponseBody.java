@@ -117,6 +117,36 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetSmartHandleJobResponseBodySmartJobInfoOutputConfig extends TeaModel {
+        @NameInMap("Bucket")
+        public String bucket;
+
+        @NameInMap("Object")
+        public String object;
+
+        public static GetSmartHandleJobResponseBodySmartJobInfoOutputConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetSmartHandleJobResponseBodySmartJobInfoOutputConfig self = new GetSmartHandleJobResponseBodySmartJobInfoOutputConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+    }
+
     public static class GetSmartHandleJobResponseBodySmartJobInfo extends TeaModel {
         @NameInMap("Title")
         public String title;
@@ -133,8 +163,8 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         @NameInMap("InputConfig")
         public GetSmartHandleJobResponseBodySmartJobInfoInputConfig inputConfig;
 
-        @NameInMap("outputConfig")
-        public String outputConfig;
+        @NameInMap("OutputConfig")
+        public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig outputConfig;
 
         @NameInMap("CreateTime")
         public String createTime;
@@ -190,11 +220,11 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             return this.inputConfig;
         }
 
-        public GetSmartHandleJobResponseBodySmartJobInfo setOutputConfig(String outputConfig) {
+        public GetSmartHandleJobResponseBodySmartJobInfo setOutputConfig(GetSmartHandleJobResponseBodySmartJobInfoOutputConfig outputConfig) {
             this.outputConfig = outputConfig;
             return this;
         }
-        public String getOutputConfig() {
+        public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig getOutputConfig() {
             return this.outputConfig;
         }
 
