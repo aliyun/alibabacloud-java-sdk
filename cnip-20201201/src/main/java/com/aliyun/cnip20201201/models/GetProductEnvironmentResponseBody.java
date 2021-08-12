@@ -102,6 +102,18 @@ public class GetProductEnvironmentResponseBody extends TeaModel {
         @NameInMap("platform")
         public Platform platform;
 
+        @NameInMap("platformStatus")
+        public String platformStatus;
+
+        @NameInMap("location")
+        public String location;
+
+        @NameInMap("oldProductVersion")
+        public String oldProductVersion;
+
+        @NameInMap("oldProductVersionUID")
+        public String oldProductVersionUID;
+
         public static GetProductEnvironmentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetProductEnvironmentResponseBodyData self = new GetProductEnvironmentResponseBodyData();
             return TeaModel.build(map, self);
@@ -233,6 +245,38 @@ public class GetProductEnvironmentResponseBody extends TeaModel {
         }
         public Platform getPlatform() {
             return this.platform;
+        }
+
+        public GetProductEnvironmentResponseBodyData setPlatformStatus(String platformStatus) {
+            this.platformStatus = platformStatus;
+            return this;
+        }
+        public String getPlatformStatus() {
+            return this.platformStatus;
+        }
+
+        public GetProductEnvironmentResponseBodyData setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public GetProductEnvironmentResponseBodyData setOldProductVersion(String oldProductVersion) {
+            this.oldProductVersion = oldProductVersion;
+            return this;
+        }
+        public String getOldProductVersion() {
+            return this.oldProductVersion;
+        }
+
+        public GetProductEnvironmentResponseBodyData setOldProductVersionUID(String oldProductVersionUID) {
+            this.oldProductVersionUID = oldProductVersionUID;
+            return this;
+        }
+        public String getOldProductVersionUID() {
+            return this.oldProductVersionUID;
         }
 
     }

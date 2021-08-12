@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cnip20201201</artifactId>
-  <version>1.8.1</version>
+  <version>1.0.0-alpha</version>
   <packaging>jar</packaging>
   <name>cnip20201201</name>
   <description>Alibaba Cloud cnip (20201201) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.12</version>
+      <version>0.2.13</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

@@ -4,20 +4,21 @@ package com.aliyun.cnip20201201.models;
 import com.aliyun.tea.*;
 
 public class GetWorkflowStatusRequest extends TeaModel {
-    @NameInMap("xUID")
-    public String xUID;
+    // ENUM:["CreateCluster","DeleteCluster","Pack","Deploy"]
+    @NameInMap("workflowType")
+    public String workflowType;
 
     public static GetWorkflowStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetWorkflowStatusRequest self = new GetWorkflowStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetWorkflowStatusRequest setXUID(String xUID) {
-        this.xUID = xUID;
+    public GetWorkflowStatusRequest setWorkflowType(String workflowType) {
+        this.workflowType = workflowType;
         return this;
     }
-    public String getXUID() {
-        return this.xUID;
+    public String getWorkflowType() {
+        return this.workflowType;
     }
 
 }

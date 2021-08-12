@@ -3,21 +3,21 @@ package com.aliyun.cnip20201201.models;
 
 import com.aliyun.tea.*;
 
-public class ListEnvChangeNodeResponse extends TeaModel {
+public class ListEnvChangeRecordParamsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListEnvChangeNodeResponseBody body;
+    public ListEnvChangeRecordParamsResponseBody body;
 
-    public static ListEnvChangeNodeResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListEnvChangeNodeResponse self = new ListEnvChangeNodeResponse();
+    public static ListEnvChangeRecordParamsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListEnvChangeRecordParamsResponse self = new ListEnvChangeRecordParamsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListEnvChangeNodeResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListEnvChangeRecordParamsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ListEnvChangeNodeResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListEnvChangeNodeResponse setBody(ListEnvChangeNodeResponseBody body) {
+    public ListEnvChangeRecordParamsResponse setBody(ListEnvChangeRecordParamsResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListEnvChangeNodeResponseBody getBody() {
+    public ListEnvChangeRecordParamsResponseBody getBody() {
         return this.body;
     }
 

@@ -10,6 +10,9 @@ public class UpdateProductComponentResponseBody extends TeaModel {
     @NameInMap("success")
     public Boolean success;
 
+    @NameInMap("errCode")
+    public String errCode;
+
     public static UpdateProductComponentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateProductComponentResponseBody self = new UpdateProductComponentResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UpdateProductComponentResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UpdateProductComponentResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
     }
 
 }

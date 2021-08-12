@@ -22,20 +22,20 @@ public class AddEnvironmentNodesRequest extends TeaModel {
     public java.util.List<String> workerPrivateIPs;
 
     // etcd数据盘
-    @NameInMap("diskAnnotationKeyEtcd")
-    public String diskAnnotationKeyEtcd;
+    @NameInMap("etcdDisk")
+    public String etcdDisk;
 
     // k8s管控数据盘
-    @NameInMap("diskAnnotationKeyTridentSystem")
-    public String diskAnnotationKeyTridentSystem;
+    @NameInMap("tridentSystemDisk")
+    public String tridentSystemDisk;
 
     // k8s管控数据盘大小
-    @NameInMap("diskAnnotationKeyTridentSystemSize")
-    public Integer diskAnnotationKeyTridentSystemSize;
+    @NameInMap("tridentSystemSizeDisk")
+    public Integer tridentSystemSizeDisk;
 
     // 保留业务分区
-    @NameInMap("diskAnnotationKeyApplication")
-    public String diskAnnotationKeyApplication;
+    @NameInMap("applicationDisk")
+    public String applicationDisk;
 
     public static AddEnvironmentNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         AddEnvironmentNodesRequest self = new AddEnvironmentNodesRequest();
@@ -82,36 +82,36 @@ public class AddEnvironmentNodesRequest extends TeaModel {
         return this.workerPrivateIPs;
     }
 
-    public AddEnvironmentNodesRequest setDiskAnnotationKeyEtcd(String diskAnnotationKeyEtcd) {
-        this.diskAnnotationKeyEtcd = diskAnnotationKeyEtcd;
+    public AddEnvironmentNodesRequest setEtcdDisk(String etcdDisk) {
+        this.etcdDisk = etcdDisk;
         return this;
     }
-    public String getDiskAnnotationKeyEtcd() {
-        return this.diskAnnotationKeyEtcd;
+    public String getEtcdDisk() {
+        return this.etcdDisk;
     }
 
-    public AddEnvironmentNodesRequest setDiskAnnotationKeyTridentSystem(String diskAnnotationKeyTridentSystem) {
-        this.diskAnnotationKeyTridentSystem = diskAnnotationKeyTridentSystem;
+    public AddEnvironmentNodesRequest setTridentSystemDisk(String tridentSystemDisk) {
+        this.tridentSystemDisk = tridentSystemDisk;
         return this;
     }
-    public String getDiskAnnotationKeyTridentSystem() {
-        return this.diskAnnotationKeyTridentSystem;
+    public String getTridentSystemDisk() {
+        return this.tridentSystemDisk;
     }
 
-    public AddEnvironmentNodesRequest setDiskAnnotationKeyTridentSystemSize(Integer diskAnnotationKeyTridentSystemSize) {
-        this.diskAnnotationKeyTridentSystemSize = diskAnnotationKeyTridentSystemSize;
+    public AddEnvironmentNodesRequest setTridentSystemSizeDisk(Integer tridentSystemSizeDisk) {
+        this.tridentSystemSizeDisk = tridentSystemSizeDisk;
         return this;
     }
-    public Integer getDiskAnnotationKeyTridentSystemSize() {
-        return this.diskAnnotationKeyTridentSystemSize;
+    public Integer getTridentSystemSizeDisk() {
+        return this.tridentSystemSizeDisk;
     }
 
-    public AddEnvironmentNodesRequest setDiskAnnotationKeyApplication(String diskAnnotationKeyApplication) {
-        this.diskAnnotationKeyApplication = diskAnnotationKeyApplication;
+    public AddEnvironmentNodesRequest setApplicationDisk(String applicationDisk) {
+        this.applicationDisk = applicationDisk;
         return this;
     }
-    public String getDiskAnnotationKeyApplication() {
-        return this.diskAnnotationKeyApplication;
+    public String getApplicationDisk() {
+        return this.applicationDisk;
     }
 
     public static class AddEnvironmentNodesRequestTaints extends TeaModel {

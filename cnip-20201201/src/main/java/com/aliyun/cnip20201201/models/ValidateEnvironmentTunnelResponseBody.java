@@ -3,22 +3,25 @@ package com.aliyun.cnip20201201.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateEnvChangeResponseBody extends TeaModel {
+public class ValidateEnvironmentTunnelResponseBody extends TeaModel {
+    // 错误码
     @NameInMap("errCode")
     public String errCode;
 
+    // 错误信息
     @NameInMap("errMsg")
     public String errMsg;
 
+    // 是否成功
     @NameInMap("success")
     public Boolean success;
 
-    public static UpdateEnvChangeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateEnvChangeResponseBody self = new UpdateEnvChangeResponseBody();
+    public static ValidateEnvironmentTunnelResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ValidateEnvironmentTunnelResponseBody self = new ValidateEnvironmentTunnelResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateEnvChangeResponseBody setErrCode(String errCode) {
+    public ValidateEnvironmentTunnelResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -26,7 +29,7 @@ public class UpdateEnvChangeResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public UpdateEnvChangeResponseBody setErrMsg(String errMsg) {
+    public ValidateEnvironmentTunnelResponseBody setErrMsg(String errMsg) {
         this.errMsg = errMsg;
         return this;
     }
@@ -34,7 +37,7 @@ public class UpdateEnvChangeResponseBody extends TeaModel {
         return this.errMsg;
     }
 
-    public UpdateEnvChangeResponseBody setSuccess(Boolean success) {
+    public ValidateEnvironmentTunnelResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

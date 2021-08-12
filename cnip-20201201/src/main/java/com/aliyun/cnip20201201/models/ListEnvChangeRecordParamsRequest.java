@@ -3,7 +3,7 @@ package com.aliyun.cnip20201201.models;
 
 import com.aliyun.tea.*;
 
-public class ListEnvChangeParamsRequest extends TeaModel {
+public class ListEnvChangeRecordParamsRequest extends TeaModel {
     @NameInMap("pageNum")
     public String pageNum;
 
@@ -14,12 +14,12 @@ public class ListEnvChangeParamsRequest extends TeaModel {
     @NameInMap("paramType")
     public String paramType;
 
-    public static ListEnvChangeParamsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListEnvChangeParamsRequest self = new ListEnvChangeParamsRequest();
+    public static ListEnvChangeRecordParamsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListEnvChangeRecordParamsRequest self = new ListEnvChangeRecordParamsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListEnvChangeParamsRequest setPageNum(String pageNum) {
+    public ListEnvChangeRecordParamsRequest setPageNum(String pageNum) {
         this.pageNum = pageNum;
         return this;
     }
@@ -27,7 +27,7 @@ public class ListEnvChangeParamsRequest extends TeaModel {
         return this.pageNum;
     }
 
-    public ListEnvChangeParamsRequest setPageSize(String pageSize) {
+    public ListEnvChangeRecordParamsRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -35,7 +35,7 @@ public class ListEnvChangeParamsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListEnvChangeParamsRequest setParamType(String paramType) {
+    public ListEnvChangeRecordParamsRequest setParamType(String paramType) {
         this.paramType = paramType;
         return this;
     }
