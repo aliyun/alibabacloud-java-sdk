@@ -77,6 +77,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AttachAlbServerGroupsResponse attachAlbServerGroupsWithOptions(AttachAlbServerGroupsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AttachAlbServerGroups", "2014-08-28", "HTTPS", "POST", "AK", "json", req, runtime), new AttachAlbServerGroupsResponse());
+    }
+
+    public AttachAlbServerGroupsResponse attachAlbServerGroups(AttachAlbServerGroupsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.attachAlbServerGroupsWithOptions(request, runtime);
+    }
+
     public AttachDBInstancesResponse attachDBInstancesWithOptions(AttachDBInstancesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -512,6 +525,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeScheduledTasksWithOptions(request, runtime);
     }
 
+    public DetachAlbServerGroupsResponse detachAlbServerGroupsWithOptions(DetachAlbServerGroupsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DetachAlbServerGroups", "2014-08-28", "HTTPS", "POST", "AK", "json", req, runtime), new DetachAlbServerGroupsResponse());
+    }
+
+    public DetachAlbServerGroupsResponse detachAlbServerGroups(DetachAlbServerGroupsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.detachAlbServerGroupsWithOptions(request, runtime);
+    }
+
     public DetachDBInstancesResponse detachDBInstancesWithOptions(DetachDBInstancesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -841,6 +867,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResumeProcessesResponse resumeProcesses(ResumeProcessesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.resumeProcessesWithOptions(request, runtime);
+    }
+
+    public ScaleWithAdjustmentResponse scaleWithAdjustmentWithOptions(ScaleWithAdjustmentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ScaleWithAdjustment", "2014-08-28", "HTTPS", "POST", "AK", "json", req, runtime), new ScaleWithAdjustmentResponse());
+    }
+
+    public ScaleWithAdjustmentResponse scaleWithAdjustment(ScaleWithAdjustmentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.scaleWithAdjustmentWithOptions(request, runtime);
     }
 
     public SetGroupDeletionProtectionResponse setGroupDeletionProtectionWithOptions(SetGroupDeletionProtectionRequest request, RuntimeOptions runtime) throws Exception {

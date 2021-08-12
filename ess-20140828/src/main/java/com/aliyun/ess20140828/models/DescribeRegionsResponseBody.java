@@ -32,17 +32,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        @NameInMap("LocalName")
-        public String localName;
-
-        @NameInMap("VpcUnavailable")
-        public Boolean vpcUnavailable;
-
         @NameInMap("ClassicUnavailable")
         public Boolean classicUnavailable;
 
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
+
+        @NameInMap("LocalName")
+        public String localName;
+
+        @NameInMap("VpcUnavailable")
+        public Boolean vpcUnavailable;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -50,22 +50,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public static DescribeRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegion self = new DescribeRegionsResponseBodyRegionsRegion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegion setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegion setVpcUnavailable(Boolean vpcUnavailable) {
-            this.vpcUnavailable = vpcUnavailable;
-            return this;
-        }
-        public Boolean getVpcUnavailable() {
-            return this.vpcUnavailable;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setClassicUnavailable(Boolean classicUnavailable) {
@@ -82,6 +66,22 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getRegionEndpoint() {
             return this.regionEndpoint;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setVpcUnavailable(Boolean vpcUnavailable) {
+            this.vpcUnavailable = vpcUnavailable;
+            return this;
+        }
+        public Boolean getVpcUnavailable() {
+            return this.vpcUnavailable;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {

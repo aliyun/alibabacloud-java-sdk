@@ -82,9 +82,6 @@ public class CreateScalingGroupRequest extends TeaModel {
     @NameInMap("GroupDeletionProtection")
     public Boolean groupDeletionProtection;
 
-    @NameInMap("ScaleOutAmountCheck")
-    public Boolean scaleOutAmountCheck;
-
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
@@ -99,6 +96,9 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     @NameInMap("LaunchTemplateOverride")
     public java.util.List<CreateScalingGroupRequestLaunchTemplateOverride> launchTemplateOverride;
+
+    @NameInMap("AlbServerGroup")
+    public java.util.List<CreateScalingGroupRequestAlbServerGroup> albServerGroup;
 
     public static CreateScalingGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScalingGroupRequest self = new CreateScalingGroupRequest();
@@ -313,14 +313,6 @@ public class CreateScalingGroupRequest extends TeaModel {
         return this.groupDeletionProtection;
     }
 
-    public CreateScalingGroupRequest setScaleOutAmountCheck(Boolean scaleOutAmountCheck) {
-        this.scaleOutAmountCheck = scaleOutAmountCheck;
-        return this;
-    }
-    public Boolean getScaleOutAmountCheck() {
-        return this.scaleOutAmountCheck;
-    }
-
     public CreateScalingGroupRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
         this.vSwitchIds = vSwitchIds;
         return this;
@@ -359,6 +351,14 @@ public class CreateScalingGroupRequest extends TeaModel {
     }
     public java.util.List<CreateScalingGroupRequestLaunchTemplateOverride> getLaunchTemplateOverride() {
         return this.launchTemplateOverride;
+    }
+
+    public CreateScalingGroupRequest setAlbServerGroup(java.util.List<CreateScalingGroupRequestAlbServerGroup> albServerGroup) {
+        this.albServerGroup = albServerGroup;
+        return this;
+    }
+    public java.util.List<CreateScalingGroupRequestAlbServerGroup> getAlbServerGroup() {
+        return this.albServerGroup;
     }
 
     public static class CreateScalingGroupRequestLifecycleHook extends TeaModel {
@@ -562,6 +562,47 @@ public class CreateScalingGroupRequest extends TeaModel {
         }
         public Integer getWeightedCapacity() {
             return this.weightedCapacity;
+        }
+
+    }
+
+    public static class CreateScalingGroupRequestAlbServerGroup extends TeaModel {
+        @NameInMap("AlbServerGroupId")
+        public String albServerGroupId;
+
+        @NameInMap("Weight")
+        public Integer weight;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        public static CreateScalingGroupRequestAlbServerGroup build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingGroupRequestAlbServerGroup self = new CreateScalingGroupRequestAlbServerGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingGroupRequestAlbServerGroup setAlbServerGroupId(String albServerGroupId) {
+            this.albServerGroupId = albServerGroupId;
+            return this;
+        }
+        public String getAlbServerGroupId() {
+            return this.albServerGroupId;
+        }
+
+        public CreateScalingGroupRequestAlbServerGroup setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+        public CreateScalingGroupRequestAlbServerGroup setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
         }
 
     }

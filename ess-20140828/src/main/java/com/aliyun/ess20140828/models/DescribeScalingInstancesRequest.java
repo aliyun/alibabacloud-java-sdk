@@ -40,6 +40,9 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("ScalingActivityId")
+    public String scalingActivityId;
+
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
@@ -142,6 +145,14 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribeScalingInstancesRequest setScalingActivityId(String scalingActivityId) {
+        this.scalingActivityId = scalingActivityId;
+        return this;
+    }
+    public String getScalingActivityId() {
+        return this.scalingActivityId;
     }
 
     public DescribeScalingInstancesRequest setInstanceId(java.util.List<String> instanceId) {

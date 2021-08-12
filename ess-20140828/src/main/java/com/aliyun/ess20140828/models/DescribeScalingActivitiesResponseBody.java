@@ -4,17 +4,17 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingActivitiesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("ScalingActivities")
     public DescribeScalingActivitiesResponseBodyScalingActivities scalingActivities;
@@ -22,14 +22,6 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
     public static DescribeScalingActivitiesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScalingActivitiesResponseBody self = new DescribeScalingActivitiesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScalingActivitiesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeScalingActivitiesResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeScalingActivitiesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeScalingActivitiesResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeScalingActivitiesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeScalingActivitiesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeScalingActivitiesResponseBody setScalingActivities(DescribeScalingActivitiesResponseBodyScalingActivities scalingActivities) {
@@ -68,20 +68,20 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @NameInMap("Progress")
         public Integer progress;
 
-        @NameInMap("AttachedCapacity")
-        public String attachedCapacity;
-
         @NameInMap("ScalingInstanceNumber")
         public Integer scalingInstanceNumber;
+
+        @NameInMap("AttachedCapacity")
+        public String attachedCapacity;
 
         @NameInMap("TotalCapacity")
         public String totalCapacity;
 
-        @NameInMap("AutoCreatedCapacity")
-        public String autoCreatedCapacity;
-
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
+
+        @NameInMap("AutoCreatedCapacity")
+        public String autoCreatedCapacity;
 
         @NameInMap("EndTime")
         public String endTime;
@@ -117,20 +117,20 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeScalingActivitiesResponseBodyScalingActivitiesScalingActivity setAttachedCapacity(String attachedCapacity) {
-            this.attachedCapacity = attachedCapacity;
-            return this;
-        }
-        public String getAttachedCapacity() {
-            return this.attachedCapacity;
-        }
-
         public DescribeScalingActivitiesResponseBodyScalingActivitiesScalingActivity setScalingInstanceNumber(Integer scalingInstanceNumber) {
             this.scalingInstanceNumber = scalingInstanceNumber;
             return this;
         }
         public Integer getScalingInstanceNumber() {
             return this.scalingInstanceNumber;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesScalingActivity setAttachedCapacity(String attachedCapacity) {
+            this.attachedCapacity = attachedCapacity;
+            return this;
+        }
+        public String getAttachedCapacity() {
+            return this.attachedCapacity;
         }
 
         public DescribeScalingActivitiesResponseBodyScalingActivitiesScalingActivity setTotalCapacity(String totalCapacity) {
@@ -141,20 +141,20 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             return this.totalCapacity;
         }
 
-        public DescribeScalingActivitiesResponseBodyScalingActivitiesScalingActivity setAutoCreatedCapacity(String autoCreatedCapacity) {
-            this.autoCreatedCapacity = autoCreatedCapacity;
-            return this;
-        }
-        public String getAutoCreatedCapacity() {
-            return this.autoCreatedCapacity;
-        }
-
         public DescribeScalingActivitiesResponseBodyScalingActivitiesScalingActivity setScalingGroupId(String scalingGroupId) {
             this.scalingGroupId = scalingGroupId;
             return this;
         }
         public String getScalingGroupId() {
             return this.scalingGroupId;
+        }
+
+        public DescribeScalingActivitiesResponseBodyScalingActivitiesScalingActivity setAutoCreatedCapacity(String autoCreatedCapacity) {
+            this.autoCreatedCapacity = autoCreatedCapacity;
+            return this;
+        }
+        public String getAutoCreatedCapacity() {
+            return this.autoCreatedCapacity;
         }
 
         public DescribeScalingActivitiesResponseBodyScalingActivitiesScalingActivity setEndTime(String endTime) {

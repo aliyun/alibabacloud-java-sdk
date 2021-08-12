@@ -67,8 +67,8 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("GroupDeletionProtection")
     public Boolean groupDeletionProtection;
 
-    @NameInMap("ScaleOutAmountCheck")
-    public Boolean scaleOutAmountCheck;
+    @NameInMap("MultiAZPolicy")
+    public String multiAZPolicy;
 
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
@@ -249,12 +249,12 @@ public class ModifyScalingGroupRequest extends TeaModel {
         return this.groupDeletionProtection;
     }
 
-    public ModifyScalingGroupRequest setScaleOutAmountCheck(Boolean scaleOutAmountCheck) {
-        this.scaleOutAmountCheck = scaleOutAmountCheck;
+    public ModifyScalingGroupRequest setMultiAZPolicy(String multiAZPolicy) {
+        this.multiAZPolicy = multiAZPolicy;
         return this;
     }
-    public Boolean getScaleOutAmountCheck() {
-        return this.scaleOutAmountCheck;
+    public String getMultiAZPolicy() {
+        return this.multiAZPolicy;
     }
 
     public ModifyScalingGroupRequest setVSwitchIds(java.util.List<String> vSwitchIds) {

@@ -148,6 +148,12 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    @NameInMap("InstancePatternInfo")
+    public java.util.List<CreateScalingConfigurationRequestInstancePatternInfo> instancePatternInfo;
+
+    @NameInMap("SystemDiskCategory")
+    public java.util.List<String> systemDiskCategory;
+
     public static CreateScalingConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScalingConfigurationRequest self = new CreateScalingConfigurationRequest();
         return TeaModel.build(map, self);
@@ -537,6 +543,22 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         return this.securityGroupIds;
     }
 
+    public CreateScalingConfigurationRequest setInstancePatternInfo(java.util.List<CreateScalingConfigurationRequestInstancePatternInfo> instancePatternInfo) {
+        this.instancePatternInfo = instancePatternInfo;
+        return this;
+    }
+    public java.util.List<CreateScalingConfigurationRequestInstancePatternInfo> getInstancePatternInfo() {
+        return this.instancePatternInfo;
+    }
+
+    public CreateScalingConfigurationRequest setSystemDiskCategory(java.util.List<String> systemDiskCategory) {
+        this.systemDiskCategory = systemDiskCategory;
+        return this;
+    }
+    public java.util.List<String> getSystemDiskCategory() {
+        return this.systemDiskCategory;
+    }
+
     public static class CreateScalingConfigurationRequestSystemDisk extends TeaModel {
         @NameInMap("Category")
         public String category;
@@ -672,8 +694,17 @@ public class CreateScalingConfigurationRequest extends TeaModel {
     }
 
     public static class CreateScalingConfigurationRequestDataDisk extends TeaModel {
+        @NameInMap("Categorys")
+        public java.util.List<String> categorys;
+
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
+
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
+        @NameInMap("Encrypted")
+        public String encrypted;
 
         @NameInMap("Description")
         public String description;
@@ -690,24 +721,26 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         @NameInMap("DiskName")
         public String diskName;
 
-        @NameInMap("AutoSnapshotPolicyId")
-        public String autoSnapshotPolicyId;
-
         @NameInMap("Category")
         public String category;
-
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
 
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
-        @NameInMap("Encrypted")
-        public String encrypted;
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
 
         public static CreateScalingConfigurationRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             CreateScalingConfigurationRequestDataDisk self = new CreateScalingConfigurationRequestDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public CreateScalingConfigurationRequestDataDisk setCategorys(java.util.List<String> categorys) {
+            this.categorys = categorys;
+            return this;
+        }
+        public java.util.List<String> getCategorys() {
+            return this.categorys;
         }
 
         public CreateScalingConfigurationRequestDataDisk setPerformanceLevel(String performanceLevel) {
@@ -716,6 +749,22 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         }
         public String getPerformanceLevel() {
             return this.performanceLevel;
+        }
+
+        public CreateScalingConfigurationRequestDataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        public CreateScalingConfigurationRequestDataDisk setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
         }
 
         public CreateScalingConfigurationRequestDataDisk setDescription(String description) {
@@ -758,28 +807,12 @@ public class CreateScalingConfigurationRequest extends TeaModel {
             return this.diskName;
         }
 
-        public CreateScalingConfigurationRequestDataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
-            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
-            return this;
-        }
-        public String getAutoSnapshotPolicyId() {
-            return this.autoSnapshotPolicyId;
-        }
-
         public CreateScalingConfigurationRequestDataDisk setCategory(String category) {
             this.category = category;
             return this;
         }
         public String getCategory() {
             return this.category;
-        }
-
-        public CreateScalingConfigurationRequestDataDisk setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
         }
 
         public CreateScalingConfigurationRequestDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
@@ -790,12 +823,12 @@ public class CreateScalingConfigurationRequest extends TeaModel {
             return this.deleteWithInstance;
         }
 
-        public CreateScalingConfigurationRequestDataDisk setEncrypted(String encrypted) {
-            this.encrypted = encrypted;
+        public CreateScalingConfigurationRequestDataDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
             return this;
         }
-        public String getEncrypted() {
-            return this.encrypted;
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
         }
 
     }
@@ -826,6 +859,58 @@ public class CreateScalingConfigurationRequest extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+    }
+
+    public static class CreateScalingConfigurationRequestInstancePatternInfo extends TeaModel {
+        @NameInMap("Cores")
+        public Integer cores;
+
+        @NameInMap("InstanceFamilyLevel")
+        public String instanceFamilyLevel;
+
+        @NameInMap("MaxPrice")
+        public Float maxPrice;
+
+        @NameInMap("Memory")
+        public Float memory;
+
+        public static CreateScalingConfigurationRequestInstancePatternInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingConfigurationRequestInstancePatternInfo self = new CreateScalingConfigurationRequestInstancePatternInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfo setCores(Integer cores) {
+            this.cores = cores;
+            return this;
+        }
+        public Integer getCores() {
+            return this.cores;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfo setInstanceFamilyLevel(String instanceFamilyLevel) {
+            this.instanceFamilyLevel = instanceFamilyLevel;
+            return this;
+        }
+        public String getInstanceFamilyLevel() {
+            return this.instanceFamilyLevel;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfo setMaxPrice(Float maxPrice) {
+            this.maxPrice = maxPrice;
+            return this;
+        }
+        public Float getMaxPrice() {
+            return this.maxPrice;
+        }
+
+        public CreateScalingConfigurationRequestInstancePatternInfo setMemory(Float memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Float getMemory() {
+            return this.memory;
         }
 
     }

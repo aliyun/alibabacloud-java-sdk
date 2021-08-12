@@ -136,6 +136,12 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    @NameInMap("InstancePatternInfo")
+    public java.util.List<ModifyScalingConfigurationShrinkRequestInstancePatternInfo> instancePatternInfo;
+
+    @NameInMap("SystemDiskCategory")
+    public java.util.List<String> systemDiskCategory;
+
     public static ModifyScalingConfigurationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyScalingConfigurationShrinkRequest self = new ModifyScalingConfigurationShrinkRequest();
         return TeaModel.build(map, self);
@@ -493,6 +499,22 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         return this.securityGroupIds;
     }
 
+    public ModifyScalingConfigurationShrinkRequest setInstancePatternInfo(java.util.List<ModifyScalingConfigurationShrinkRequestInstancePatternInfo> instancePatternInfo) {
+        this.instancePatternInfo = instancePatternInfo;
+        return this;
+    }
+    public java.util.List<ModifyScalingConfigurationShrinkRequestInstancePatternInfo> getInstancePatternInfo() {
+        return this.instancePatternInfo;
+    }
+
+    public ModifyScalingConfigurationShrinkRequest setSystemDiskCategory(java.util.List<String> systemDiskCategory) {
+        this.systemDiskCategory = systemDiskCategory;
+        return this;
+    }
+    public java.util.List<String> getSystemDiskCategory() {
+        return this.systemDiskCategory;
+    }
+
     public static class ModifyScalingConfigurationShrinkRequestSystemDisk extends TeaModel {
         @NameInMap("Category")
         public String category;
@@ -598,8 +620,17 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class ModifyScalingConfigurationShrinkRequestDataDisk extends TeaModel {
+        @NameInMap("Categorys")
+        public java.util.List<String> categorys;
+
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
+
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
+        @NameInMap("Encrypted")
+        public String encrypted;
 
         @NameInMap("Description")
         public String description;
@@ -616,24 +647,26 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         @NameInMap("DiskName")
         public String diskName;
 
-        @NameInMap("AutoSnapshotPolicyId")
-        public String autoSnapshotPolicyId;
-
         @NameInMap("Category")
         public String category;
-
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
 
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
-        @NameInMap("Encrypted")
-        public String encrypted;
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
 
         public static ModifyScalingConfigurationShrinkRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             ModifyScalingConfigurationShrinkRequestDataDisk self = new ModifyScalingConfigurationShrinkRequestDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingConfigurationShrinkRequestDataDisk setCategorys(java.util.List<String> categorys) {
+            this.categorys = categorys;
+            return this;
+        }
+        public java.util.List<String> getCategorys() {
+            return this.categorys;
         }
 
         public ModifyScalingConfigurationShrinkRequestDataDisk setPerformanceLevel(String performanceLevel) {
@@ -642,6 +675,22 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         }
         public String getPerformanceLevel() {
             return this.performanceLevel;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestDataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestDataDisk setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
         }
 
         public ModifyScalingConfigurationShrinkRequestDataDisk setDescription(String description) {
@@ -684,28 +733,12 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
             return this.diskName;
         }
 
-        public ModifyScalingConfigurationShrinkRequestDataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
-            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
-            return this;
-        }
-        public String getAutoSnapshotPolicyId() {
-            return this.autoSnapshotPolicyId;
-        }
-
         public ModifyScalingConfigurationShrinkRequestDataDisk setCategory(String category) {
             this.category = category;
             return this;
         }
         public String getCategory() {
             return this.category;
-        }
-
-        public ModifyScalingConfigurationShrinkRequestDataDisk setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
         }
 
         public ModifyScalingConfigurationShrinkRequestDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
@@ -716,12 +749,12 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
             return this.deleteWithInstance;
         }
 
-        public ModifyScalingConfigurationShrinkRequestDataDisk setEncrypted(String encrypted) {
-            this.encrypted = encrypted;
+        public ModifyScalingConfigurationShrinkRequestDataDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
             return this;
         }
-        public String getEncrypted() {
-            return this.encrypted;
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
         }
 
     }
@@ -782,6 +815,58 @@ public class ModifyScalingConfigurationShrinkRequest extends TeaModel {
         }
         public Integer getWeightedCapacity() {
             return this.weightedCapacity;
+        }
+
+    }
+
+    public static class ModifyScalingConfigurationShrinkRequestInstancePatternInfo extends TeaModel {
+        @NameInMap("Cores")
+        public Integer cores;
+
+        @NameInMap("InstanceFamilyLevel")
+        public String instanceFamilyLevel;
+
+        @NameInMap("MaxPrice")
+        public Float maxPrice;
+
+        @NameInMap("Memory")
+        public Float memory;
+
+        public static ModifyScalingConfigurationShrinkRequestInstancePatternInfo build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingConfigurationShrinkRequestInstancePatternInfo self = new ModifyScalingConfigurationShrinkRequestInstancePatternInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingConfigurationShrinkRequestInstancePatternInfo setCores(Integer cores) {
+            this.cores = cores;
+            return this;
+        }
+        public Integer getCores() {
+            return this.cores;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestInstancePatternInfo setInstanceFamilyLevel(String instanceFamilyLevel) {
+            this.instanceFamilyLevel = instanceFamilyLevel;
+            return this;
+        }
+        public String getInstanceFamilyLevel() {
+            return this.instanceFamilyLevel;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestInstancePatternInfo setMaxPrice(Float maxPrice) {
+            this.maxPrice = maxPrice;
+            return this;
+        }
+        public Float getMaxPrice() {
+            return this.maxPrice;
+        }
+
+        public ModifyScalingConfigurationShrinkRequestInstancePatternInfo setMemory(Float memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Float getMemory() {
+            return this.memory;
         }
 
     }

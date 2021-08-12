@@ -54,11 +54,11 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         @NameInMap("NotificationArn")
         public String notificationArn;
 
-        @NameInMap("NotificationTypes")
-        public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModelNotificationTypes notificationTypes;
-
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
+
+        @NameInMap("NotificationTypes")
+        public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModelNotificationTypes notificationTypes;
 
         public static DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModel self = new DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModel();
@@ -73,20 +73,20 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             return this.notificationArn;
         }
 
-        public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModel setNotificationTypes(DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModelNotificationTypes notificationTypes) {
-            this.notificationTypes = notificationTypes;
-            return this;
-        }
-        public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModelNotificationTypes getNotificationTypes() {
-            return this.notificationTypes;
-        }
-
         public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModel setScalingGroupId(String scalingGroupId) {
             this.scalingGroupId = scalingGroupId;
             return this;
         }
         public String getScalingGroupId() {
             return this.scalingGroupId;
+        }
+
+        public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModel setNotificationTypes(DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModelNotificationTypes notificationTypes) {
+            this.notificationTypes = notificationTypes;
+            return this;
+        }
+        public DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModelsNotificationConfigurationModelNotificationTypes getNotificationTypes() {
+            return this.notificationTypes;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class ModifyAlarmResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ModifyAlarmResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyAlarmResponseBody self = new ModifyAlarmResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyAlarmResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ModifyAlarmResponseBody setAlarmTaskId(String alarmTaskId) {
@@ -29,6 +21,14 @@ public class ModifyAlarmResponseBody extends TeaModel {
     }
     public String getAlarmTaskId() {
         return this.alarmTaskId;
+    }
+
+    public ModifyAlarmResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
