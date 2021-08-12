@@ -12,7 +12,7 @@ public class ListSnapshotBlocksResponseBody extends TeaModel {
     @NameInMap("Blocks")
     public java.util.List<ListSnapshotBlocksResponseBodyBlocks> blocks;
 
-    // BlockToken 过期时间戳
+    // BlockToken 过期 UTC 时间戳, 单位微秒
     @NameInMap("ExpiryTime")
     public Long expiryTime;
 

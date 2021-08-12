@@ -32,6 +32,10 @@ public class GetSnapshotInfoResponseBody extends TeaModel {
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
+    // 快照格式。"FORMAT_VHD", "FORMAT_RAW", "FORMAT_INVALID"
+    @NameInMap("Format")
+    public String format;
+
     public static GetSnapshotInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSnapshotInfoResponseBody self = new GetSnapshotInfoResponseBody();
         return TeaModel.build(map, self);
@@ -91,6 +95,14 @@ public class GetSnapshotInfoResponseBody extends TeaModel {
     }
     public Boolean getEncrypted() {
         return this.encrypted;
+    }
+
+    public GetSnapshotInfoResponseBody setFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    public String getFormat() {
+        return this.format;
     }
 
 }
