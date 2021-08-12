@@ -16,18 +16,6 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     @NameInMap("entityCode")
     public String entityCode;
 
-    // 仓库编码（逻辑仓）
-    @NameInMap("relationCode")
-    public String relationCode;
-
-    // 待预约单据编号
-    @NameInMap("outOrderCode")
-    public String outOrderCode;
-
-    // 预约单号
-    @NameInMap("appointOrderCode")
-    public String appointOrderCode;
-
     // 仓库名称（逻辑仓）
     @NameInMap("relationName")
     public String relationName;
@@ -40,9 +28,13 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     @NameInMap("entityName")
     public String entityName;
 
-    // 库位类型
-    @NameInMap("warehouseType")
-    public String warehouseType;
+    // 仓库编码（逻辑仓）
+    @NameInMap("relationCode")
+    public String relationCode;
+
+    // 待预约单据编号
+    @NameInMap("outOrderCode")
+    public String outOrderCode;
 
     // 出入库方式
     @NameInMap("inboundType")
@@ -51,6 +43,10 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     // 明细列表
     @NameInMap("items")
     public java.util.List<AscpAppointOrderCreatedErpSpiRequestItems> items;
+
+    // 预约单号
+    @NameInMap("appointOrderCode")
+    public String appointOrderCode;
 
     // 关联业务单号
     @NameInMap("outBusinessOrderCode")
@@ -93,30 +89,6 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
         return this.entityCode;
     }
 
-    public AscpAppointOrderCreatedErpSpiRequest setRelationCode(String relationCode) {
-        this.relationCode = relationCode;
-        return this;
-    }
-    public String getRelationCode() {
-        return this.relationCode;
-    }
-
-    public AscpAppointOrderCreatedErpSpiRequest setOutOrderCode(String outOrderCode) {
-        this.outOrderCode = outOrderCode;
-        return this;
-    }
-    public String getOutOrderCode() {
-        return this.outOrderCode;
-    }
-
-    public AscpAppointOrderCreatedErpSpiRequest setAppointOrderCode(String appointOrderCode) {
-        this.appointOrderCode = appointOrderCode;
-        return this;
-    }
-    public String getAppointOrderCode() {
-        return this.appointOrderCode;
-    }
-
     public AscpAppointOrderCreatedErpSpiRequest setRelationName(String relationName) {
         this.relationName = relationName;
         return this;
@@ -141,12 +113,20 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
         return this.entityName;
     }
 
-    public AscpAppointOrderCreatedErpSpiRequest setWarehouseType(String warehouseType) {
-        this.warehouseType = warehouseType;
+    public AscpAppointOrderCreatedErpSpiRequest setRelationCode(String relationCode) {
+        this.relationCode = relationCode;
         return this;
     }
-    public String getWarehouseType() {
-        return this.warehouseType;
+    public String getRelationCode() {
+        return this.relationCode;
+    }
+
+    public AscpAppointOrderCreatedErpSpiRequest setOutOrderCode(String outOrderCode) {
+        this.outOrderCode = outOrderCode;
+        return this;
+    }
+    public String getOutOrderCode() {
+        return this.outOrderCode;
     }
 
     public AscpAppointOrderCreatedErpSpiRequest setInboundType(String inboundType) {
@@ -163,6 +143,14 @@ public class AscpAppointOrderCreatedErpSpiRequest extends TeaModel {
     }
     public java.util.List<AscpAppointOrderCreatedErpSpiRequestItems> getItems() {
         return this.items;
+    }
+
+    public AscpAppointOrderCreatedErpSpiRequest setAppointOrderCode(String appointOrderCode) {
+        this.appointOrderCode = appointOrderCode;
+        return this;
+    }
+    public String getAppointOrderCode() {
+        return this.appointOrderCode;
     }
 
     public AscpAppointOrderCreatedErpSpiRequest setOutBusinessOrderCode(String outBusinessOrderCode) {
