@@ -4,8 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpcsRequest extends TeaModel {
-    @NameInMap("CorpIdList")
-    public String corpIdList;
+    @NameInMap("PageNum")
+    public Long pageNum;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("ParentDeviceType")
+    public String parentDeviceType;
 
     @NameInMap("DeviceIdList")
     public String deviceIdList;
@@ -13,29 +19,39 @@ public class DescribeIpcsRequest extends TeaModel {
     @NameInMap("NvrIdList")
     public String nvrIdList;
 
+    @NameInMap("CorpIdList")
+    public String corpIdList;
+
     @NameInMap("DeviceFilter")
     public String deviceFilter;
-
-    @NameInMap("ParentDeviceType")
-    public String parentDeviceType;
-
-    @NameInMap("PageNum")
-    public String pageNum;
-
-    @NameInMap("PageSize")
-    public String pageSize;
 
     public static DescribeIpcsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpcsRequest self = new DescribeIpcsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeIpcsRequest setCorpIdList(String corpIdList) {
-        this.corpIdList = corpIdList;
+    public DescribeIpcsRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getCorpIdList() {
-        return this.corpIdList;
+    public Long getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeIpcsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeIpcsRequest setParentDeviceType(String parentDeviceType) {
+        this.parentDeviceType = parentDeviceType;
+        return this;
+    }
+    public String getParentDeviceType() {
+        return this.parentDeviceType;
     }
 
     public DescribeIpcsRequest setDeviceIdList(String deviceIdList) {
@@ -54,36 +70,20 @@ public class DescribeIpcsRequest extends TeaModel {
         return this.nvrIdList;
     }
 
+    public DescribeIpcsRequest setCorpIdList(String corpIdList) {
+        this.corpIdList = corpIdList;
+        return this;
+    }
+    public String getCorpIdList() {
+        return this.corpIdList;
+    }
+
     public DescribeIpcsRequest setDeviceFilter(String deviceFilter) {
         this.deviceFilter = deviceFilter;
         return this;
     }
     public String getDeviceFilter() {
         return this.deviceFilter;
-    }
-
-    public DescribeIpcsRequest setParentDeviceType(String parentDeviceType) {
-        this.parentDeviceType = parentDeviceType;
-        return this;
-    }
-    public String getParentDeviceType() {
-        return this.parentDeviceType;
-    }
-
-    public DescribeIpcsRequest setPageNum(String pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public String getPageNum() {
-        return this.pageNum;
-    }
-
-    public DescribeIpcsRequest setPageSize(String pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public String getPageSize() {
-        return this.pageSize;
     }
 
 }

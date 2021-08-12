@@ -4,25 +4,28 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class VerifyDeviceRequest extends TeaModel {
-    // 城市编码
-    @NameInMap("CityCode")
-    public String cityCode;
+    // 设备安装地址
+    @NameInMap("DeviceAddress")
+    public String deviceAddress;
 
     // OSS路径
     @NameInMap("FilePath")
     public String filePath;
+
+    @NameInMap("NvrExisted")
+    public Long nvrExisted;
 
     public static VerifyDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         VerifyDeviceRequest self = new VerifyDeviceRequest();
         return TeaModel.build(map, self);
     }
 
-    public VerifyDeviceRequest setCityCode(String cityCode) {
-        this.cityCode = cityCode;
+    public VerifyDeviceRequest setDeviceAddress(String deviceAddress) {
+        this.deviceAddress = deviceAddress;
         return this;
     }
-    public String getCityCode() {
-        return this.cityCode;
+    public String getDeviceAddress() {
+        return this.deviceAddress;
     }
 
     public VerifyDeviceRequest setFilePath(String filePath) {
@@ -31,6 +34,14 @@ public class VerifyDeviceRequest extends TeaModel {
     }
     public String getFilePath() {
         return this.filePath;
+    }
+
+    public VerifyDeviceRequest setNvrExisted(Long nvrExisted) {
+        this.nvrExisted = nvrExisted;
+        return this;
+    }
+    public Long getNvrExisted() {
+        return this.nvrExisted;
     }
 
 }
