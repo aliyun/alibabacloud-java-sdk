@@ -104,18 +104,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("entityCode", request.entityCode);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.relationCode)) {
-            body.put("relationCode", request.relationCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outOrderCode)) {
-            body.put("outOrderCode", request.outOrderCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.appointOrderCode)) {
-            body.put("appointOrderCode", request.appointOrderCode);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.relationName)) {
             body.put("relationName", request.relationName);
         }
@@ -128,8 +116,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("entityName", request.entityName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.warehouseType)) {
-            body.put("warehouseType", request.warehouseType);
+        if (!com.aliyun.teautil.Common.isUnset(request.relationCode)) {
+            body.put("relationCode", request.relationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderCode)) {
+            body.put("outOrderCode", request.outOrderCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inboundType)) {
@@ -138,6 +130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.items)) {
             body.put("items", request.items);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appointOrderCode)) {
+            body.put("appointOrderCode", request.appointOrderCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outBusinessOrderCode)) {
@@ -170,16 +166,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
-            body.put("reason", request.reason);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.appointWave)) {
             body.put("appointWave", request.appointWave);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.appointType)) {
             body.put("appointType", request.appointType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warehouseAddress)) {
+            body.put("warehouseAddress", request.warehouseAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("reason", request.reason);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.originalAppointWave)) {
@@ -196,6 +196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.outOrderCode)) {
             body.put("outOrderCode", request.outOrderCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.warehouseType)) {
+            body.put("warehouseType", request.warehouseType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.originalAppointDate)) {

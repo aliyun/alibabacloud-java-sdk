@@ -4,10 +4,6 @@ package com.aliyun.nbf20210706_165849384.models;
 import com.aliyun.tea.*;
 
 public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
-    // 改约原因
-    @NameInMap("reason")
-    public String reason;
-
     // 预约波次（新）
     @NameInMap("appointWave")
     public Integer appointWave;
@@ -15,6 +11,14 @@ public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
     // 预约类型
     @NameInMap("appointType")
     public String appointType;
+
+    // 库位地址
+    @NameInMap("warehouseAddress")
+    public String warehouseAddress;
+
+    // 改约原因
+    @NameInMap("reason")
+    public String reason;
 
     // 预约波次(旧)
     @NameInMap("originalAppointWave")
@@ -31,6 +35,10 @@ public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
     // 待预约单据编号
     @NameInMap("outOrderCode")
     public String outOrderCode;
+
+    // 库位类型
+    @NameInMap("warehouseType")
+    public String warehouseType;
 
     // 预约日期(旧)
     @NameInMap("originalAppointDate")
@@ -57,14 +65,6 @@ public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AscpAppointOrderDoFinishedErpSpiRequest setReason(String reason) {
-        this.reason = reason;
-        return this;
-    }
-    public String getReason() {
-        return this.reason;
-    }
-
     public AscpAppointOrderDoFinishedErpSpiRequest setAppointWave(Integer appointWave) {
         this.appointWave = appointWave;
         return this;
@@ -79,6 +79,22 @@ public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
     }
     public String getAppointType() {
         return this.appointType;
+    }
+
+    public AscpAppointOrderDoFinishedErpSpiRequest setWarehouseAddress(String warehouseAddress) {
+        this.warehouseAddress = warehouseAddress;
+        return this;
+    }
+    public String getWarehouseAddress() {
+        return this.warehouseAddress;
+    }
+
+    public AscpAppointOrderDoFinishedErpSpiRequest setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
     }
 
     public AscpAppointOrderDoFinishedErpSpiRequest setOriginalAppointWave(Integer originalAppointWave) {
@@ -111,6 +127,14 @@ public class AscpAppointOrderDoFinishedErpSpiRequest extends TeaModel {
     }
     public String getOutOrderCode() {
         return this.outOrderCode;
+    }
+
+    public AscpAppointOrderDoFinishedErpSpiRequest setWarehouseType(String warehouseType) {
+        this.warehouseType = warehouseType;
+        return this;
+    }
+    public String getWarehouseType() {
+        return this.warehouseType;
     }
 
     public AscpAppointOrderDoFinishedErpSpiRequest setOriginalAppointDate(String originalAppointDate) {
