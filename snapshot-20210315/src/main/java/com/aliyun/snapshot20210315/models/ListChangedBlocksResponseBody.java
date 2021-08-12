@@ -12,7 +12,7 @@ public class ListChangedBlocksResponseBody extends TeaModel {
     @NameInMap("ChangedBlocks")
     public java.util.List<ListChangedBlocksResponseBodyChangedBlocks> changedBlocks;
 
-    // 差异数据块 token 过期时间戳
+    // 差异数据块 token 过期 UTC 时间戳， 单位微秒
     @NameInMap("ExpiryTime")
     public Long expiryTime;
 
