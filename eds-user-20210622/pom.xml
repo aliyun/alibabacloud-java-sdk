@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>eds_user20210622</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>eds_user20210622</name>
   <description>Alibaba Cloud eds-user (20210622) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.12</version>
+      <version>0.2.13</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.18</version>
+      <version>0.1.0</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
