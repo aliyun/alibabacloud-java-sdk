@@ -93,8 +93,8 @@ public class DescribeIpcsResponseBody extends TeaModel {
         @NameInMap("StreamAction")
         public String streamAction;
 
-        @NameInMap("DeviceVendor")
-        public String deviceVendor;
+        @NameInMap("Vendor")
+        public String vendor;
 
         @NameInMap("ServerId")
         public String serverId;
@@ -108,8 +108,14 @@ public class DescribeIpcsResponseBody extends TeaModel {
         @NameInMap("ServerIp")
         public String serverIp;
 
+        @NameInMap("ServerRealm")
+        public String serverRealm;
+
         @NameInMap("DeviceSite")
         public String deviceSite;
+
+        @NameInMap("DeviceDirection")
+        public String deviceDirection;
 
         @NameInMap("DeviceResolution")
         public String deviceResolution;
@@ -126,17 +132,44 @@ public class DescribeIpcsResponseBody extends TeaModel {
         @NameInMap("DatasourceType")
         public String datasourceType;
 
-        @NameInMap("ProjectName")
-        public String projectName;
-
         @NameInMap("RegionName")
         public String regionName;
 
         @NameInMap("Vap")
         public String vap;
 
-        @NameInMap("CameraType")
-        public String cameraType;
+        @NameInMap("DeviceSubType")
+        public String deviceSubType;
+
+        @NameInMap("FrameRate")
+        public String frameRate;
+
+        @NameInMap("GovLength")
+        public String govLength;
+
+        @NameInMap("EncodeFormat")
+        public String encodeFormat;
+
+        @NameInMap("AudioEnable")
+        public String audioEnable;
+
+        @NameInMap("OSDTimeEnable")
+        public String OSDTimeEnable;
+
+        @NameInMap("OSDTimeType")
+        public String OSDTimeType;
+
+        @NameInMap("OSDTimeX")
+        public String OSDTimeX;
+
+        @NameInMap("OSDTimeY")
+        public String OSDTimeY;
+
+        @NameInMap("DeviceSn")
+        public String deviceSn;
+
+        @NameInMap("DeviceIp")
+        public String deviceIp;
 
         public static DescribeIpcsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeIpcsResponseBodyDataRecords self = new DescribeIpcsResponseBodyDataRecords();
@@ -247,12 +280,12 @@ public class DescribeIpcsResponseBody extends TeaModel {
             return this.streamAction;
         }
 
-        public DescribeIpcsResponseBodyDataRecords setDeviceVendor(String deviceVendor) {
-            this.deviceVendor = deviceVendor;
+        public DescribeIpcsResponseBodyDataRecords setVendor(String vendor) {
+            this.vendor = vendor;
             return this;
         }
-        public String getDeviceVendor() {
-            return this.deviceVendor;
+        public String getVendor() {
+            return this.vendor;
         }
 
         public DescribeIpcsResponseBodyDataRecords setServerId(String serverId) {
@@ -287,12 +320,28 @@ public class DescribeIpcsResponseBody extends TeaModel {
             return this.serverIp;
         }
 
+        public DescribeIpcsResponseBodyDataRecords setServerRealm(String serverRealm) {
+            this.serverRealm = serverRealm;
+            return this;
+        }
+        public String getServerRealm() {
+            return this.serverRealm;
+        }
+
         public DescribeIpcsResponseBodyDataRecords setDeviceSite(String deviceSite) {
             this.deviceSite = deviceSite;
             return this;
         }
         public String getDeviceSite() {
             return this.deviceSite;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setDeviceDirection(String deviceDirection) {
+            this.deviceDirection = deviceDirection;
+            return this;
+        }
+        public String getDeviceDirection() {
+            return this.deviceDirection;
         }
 
         public DescribeIpcsResponseBodyDataRecords setDeviceResolution(String deviceResolution) {
@@ -335,14 +384,6 @@ public class DescribeIpcsResponseBody extends TeaModel {
             return this.datasourceType;
         }
 
-        public DescribeIpcsResponseBodyDataRecords setProjectName(String projectName) {
-            this.projectName = projectName;
-            return this;
-        }
-        public String getProjectName() {
-            return this.projectName;
-        }
-
         public DescribeIpcsResponseBodyDataRecords setRegionName(String regionName) {
             this.regionName = regionName;
             return this;
@@ -359,12 +400,92 @@ public class DescribeIpcsResponseBody extends TeaModel {
             return this.vap;
         }
 
-        public DescribeIpcsResponseBodyDataRecords setCameraType(String cameraType) {
-            this.cameraType = cameraType;
+        public DescribeIpcsResponseBodyDataRecords setDeviceSubType(String deviceSubType) {
+            this.deviceSubType = deviceSubType;
             return this;
         }
-        public String getCameraType() {
-            return this.cameraType;
+        public String getDeviceSubType() {
+            return this.deviceSubType;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setFrameRate(String frameRate) {
+            this.frameRate = frameRate;
+            return this;
+        }
+        public String getFrameRate() {
+            return this.frameRate;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setGovLength(String govLength) {
+            this.govLength = govLength;
+            return this;
+        }
+        public String getGovLength() {
+            return this.govLength;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setEncodeFormat(String encodeFormat) {
+            this.encodeFormat = encodeFormat;
+            return this;
+        }
+        public String getEncodeFormat() {
+            return this.encodeFormat;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setAudioEnable(String audioEnable) {
+            this.audioEnable = audioEnable;
+            return this;
+        }
+        public String getAudioEnable() {
+            return this.audioEnable;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setOSDTimeEnable(String OSDTimeEnable) {
+            this.OSDTimeEnable = OSDTimeEnable;
+            return this;
+        }
+        public String getOSDTimeEnable() {
+            return this.OSDTimeEnable;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setOSDTimeType(String OSDTimeType) {
+            this.OSDTimeType = OSDTimeType;
+            return this;
+        }
+        public String getOSDTimeType() {
+            return this.OSDTimeType;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setOSDTimeX(String OSDTimeX) {
+            this.OSDTimeX = OSDTimeX;
+            return this;
+        }
+        public String getOSDTimeX() {
+            return this.OSDTimeX;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setOSDTimeY(String OSDTimeY) {
+            this.OSDTimeY = OSDTimeY;
+            return this;
+        }
+        public String getOSDTimeY() {
+            return this.OSDTimeY;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setDeviceSn(String deviceSn) {
+            this.deviceSn = deviceSn;
+            return this;
+        }
+        public String getDeviceSn() {
+            return this.deviceSn;
+        }
+
+        public DescribeIpcsResponseBodyDataRecords setDeviceIp(String deviceIp) {
+            this.deviceIp = deviceIp;
+            return this;
+        }
+        public String getDeviceIp() {
+            return this.deviceIp;
         }
 
     }

@@ -60,6 +60,9 @@ public class DeleteDevicesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Code")
+        public String code;
+
         public static DeleteDevicesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteDevicesResponseBodyData self = new DeleteDevicesResponseBodyData();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class DeleteDevicesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DeleteDevicesResponseBodyData setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
     }

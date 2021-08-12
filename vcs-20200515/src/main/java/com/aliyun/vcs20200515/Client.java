@@ -1063,6 +1063,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateCorpWithOptions(request, runtime);
     }
 
+    public DescribeNvrsResponse describeNvrsWithOptions(DescribeNvrsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeNvrs", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeNvrsResponse());
+    }
+
+    public DescribeNvrsResponse describeNvrs(DescribeNvrsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeNvrsWithOptions(request, runtime);
+    }
+
     public CreateCorpGroupResponse createCorpGroupWithOptions(CreateCorpGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1174,6 +1187,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDataSourceResponse updateDataSource(UpdateDataSourceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateDataSourceWithOptions(request, runtime);
+    }
+
+    public DescribeChannelsResponse describeChannelsWithOptions(DescribeChannelsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeChannels", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeChannelsResponse());
+    }
+
+    public DescribeChannelsResponse describeChannels(DescribeChannelsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeChannelsWithOptions(request, runtime);
     }
 
     public UpdateProfileCatalogResponse updateProfileCatalogWithOptions(UpdateProfileCatalogRequest request, RuntimeOptions runtime) throws Exception {
@@ -1970,6 +1996,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetBodyOptionsResponse getBodyOptions(GetBodyOptionsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getBodyOptionsWithOptions(request, runtime);
+    }
+
+    public SetStreamModeResponse setStreamModeWithOptions(SetStreamModeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SetStreamMode", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new SetStreamModeResponse());
+    }
+
+    public SetStreamModeResponse setStreamMode(SetStreamModeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setStreamModeWithOptions(request, runtime);
     }
 
     public BindCorpGroupResponse bindCorpGroupWithOptions(BindCorpGroupRequest request, RuntimeOptions runtime) throws Exception {

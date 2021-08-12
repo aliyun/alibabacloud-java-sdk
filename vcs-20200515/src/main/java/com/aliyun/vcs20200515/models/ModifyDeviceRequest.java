@@ -16,19 +16,17 @@ public class ModifyDeviceRequest extends TeaModel {
     @NameInMap("DeviceAddress")
     public String deviceAddress;
 
-    // 设备IP
-    @NameInMap("Ip")
-    public String ip;
+    @NameInMap("Longitude")
+    public String longitude;
 
-    // 设备密码
-    @NameInMap("Password")
-    public String password;
-
-    @NameInMap("DeviceSite")
-    public String deviceSite;
+    @NameInMap("Latitude")
+    public String latitude;
 
     @NameInMap("DeviceDirection")
     public String deviceDirection;
+
+    @NameInMap("DeviceSite")
+    public String deviceSite;
 
     @NameInMap("DeviceResolution")
     public String deviceResolution;
@@ -36,17 +34,44 @@ public class ModifyDeviceRequest extends TeaModel {
     @NameInMap("DeviceRate")
     public String deviceRate;
 
+    @NameInMap("FrameRate")
+    public String frameRate;
+
+    @NameInMap("GovLength")
+    public String govLength;
+
+    @NameInMap("EncodeFormat")
+    public String encodeFormat;
+
+    @NameInMap("AudioEnable")
+    public String audioEnable;
+
+    @NameInMap("OSDTimeEnable")
+    public String OSDTimeEnable;
+
+    @NameInMap("OSDTimeType")
+    public String OSDTimeType;
+
+    @NameInMap("OSDTimeX")
+    public String OSDTimeX;
+
+    @NameInMap("OSDTimeY")
+    public String OSDTimeY;
+
     @NameInMap("Vendor")
     public String vendor;
 
-    @NameInMap("Latitude")
-    public String latitude;
-
-    @NameInMap("Longitude")
-    public String longitude;
-
     @NameInMap("DeviceModel")
     public String deviceModel;
+
+    @NameInMap("DeviceSubType")
+    public String deviceSubType;
+
+    @NameInMap("DeviceIp")
+    public String deviceIp;
+
+    @NameInMap("Password")
+    public String password;
 
     public static ModifyDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeviceRequest self = new ModifyDeviceRequest();
@@ -77,28 +102,20 @@ public class ModifyDeviceRequest extends TeaModel {
         return this.deviceAddress;
     }
 
-    public ModifyDeviceRequest setIp(String ip) {
-        this.ip = ip;
+    public ModifyDeviceRequest setLongitude(String longitude) {
+        this.longitude = longitude;
         return this;
     }
-    public String getIp() {
-        return this.ip;
+    public String getLongitude() {
+        return this.longitude;
     }
 
-    public ModifyDeviceRequest setPassword(String password) {
-        this.password = password;
+    public ModifyDeviceRequest setLatitude(String latitude) {
+        this.latitude = latitude;
         return this;
     }
-    public String getPassword() {
-        return this.password;
-    }
-
-    public ModifyDeviceRequest setDeviceSite(String deviceSite) {
-        this.deviceSite = deviceSite;
-        return this;
-    }
-    public String getDeviceSite() {
-        return this.deviceSite;
+    public String getLatitude() {
+        return this.latitude;
     }
 
     public ModifyDeviceRequest setDeviceDirection(String deviceDirection) {
@@ -107,6 +124,14 @@ public class ModifyDeviceRequest extends TeaModel {
     }
     public String getDeviceDirection() {
         return this.deviceDirection;
+    }
+
+    public ModifyDeviceRequest setDeviceSite(String deviceSite) {
+        this.deviceSite = deviceSite;
+        return this;
+    }
+    public String getDeviceSite() {
+        return this.deviceSite;
     }
 
     public ModifyDeviceRequest setDeviceResolution(String deviceResolution) {
@@ -125,6 +150,70 @@ public class ModifyDeviceRequest extends TeaModel {
         return this.deviceRate;
     }
 
+    public ModifyDeviceRequest setFrameRate(String frameRate) {
+        this.frameRate = frameRate;
+        return this;
+    }
+    public String getFrameRate() {
+        return this.frameRate;
+    }
+
+    public ModifyDeviceRequest setGovLength(String govLength) {
+        this.govLength = govLength;
+        return this;
+    }
+    public String getGovLength() {
+        return this.govLength;
+    }
+
+    public ModifyDeviceRequest setEncodeFormat(String encodeFormat) {
+        this.encodeFormat = encodeFormat;
+        return this;
+    }
+    public String getEncodeFormat() {
+        return this.encodeFormat;
+    }
+
+    public ModifyDeviceRequest setAudioEnable(String audioEnable) {
+        this.audioEnable = audioEnable;
+        return this;
+    }
+    public String getAudioEnable() {
+        return this.audioEnable;
+    }
+
+    public ModifyDeviceRequest setOSDTimeEnable(String OSDTimeEnable) {
+        this.OSDTimeEnable = OSDTimeEnable;
+        return this;
+    }
+    public String getOSDTimeEnable() {
+        return this.OSDTimeEnable;
+    }
+
+    public ModifyDeviceRequest setOSDTimeType(String OSDTimeType) {
+        this.OSDTimeType = OSDTimeType;
+        return this;
+    }
+    public String getOSDTimeType() {
+        return this.OSDTimeType;
+    }
+
+    public ModifyDeviceRequest setOSDTimeX(String OSDTimeX) {
+        this.OSDTimeX = OSDTimeX;
+        return this;
+    }
+    public String getOSDTimeX() {
+        return this.OSDTimeX;
+    }
+
+    public ModifyDeviceRequest setOSDTimeY(String OSDTimeY) {
+        this.OSDTimeY = OSDTimeY;
+        return this;
+    }
+    public String getOSDTimeY() {
+        return this.OSDTimeY;
+    }
+
     public ModifyDeviceRequest setVendor(String vendor) {
         this.vendor = vendor;
         return this;
@@ -133,28 +222,36 @@ public class ModifyDeviceRequest extends TeaModel {
         return this.vendor;
     }
 
-    public ModifyDeviceRequest setLatitude(String latitude) {
-        this.latitude = latitude;
-        return this;
-    }
-    public String getLatitude() {
-        return this.latitude;
-    }
-
-    public ModifyDeviceRequest setLongitude(String longitude) {
-        this.longitude = longitude;
-        return this;
-    }
-    public String getLongitude() {
-        return this.longitude;
-    }
-
     public ModifyDeviceRequest setDeviceModel(String deviceModel) {
         this.deviceModel = deviceModel;
         return this;
     }
     public String getDeviceModel() {
         return this.deviceModel;
+    }
+
+    public ModifyDeviceRequest setDeviceSubType(String deviceSubType) {
+        this.deviceSubType = deviceSubType;
+        return this;
+    }
+    public String getDeviceSubType() {
+        return this.deviceSubType;
+    }
+
+    public ModifyDeviceRequest setDeviceIp(String deviceIp) {
+        this.deviceIp = deviceIp;
+        return this;
+    }
+    public String getDeviceIp() {
+        return this.deviceIp;
+    }
+
+    public ModifyDeviceRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
     }
 
 }
