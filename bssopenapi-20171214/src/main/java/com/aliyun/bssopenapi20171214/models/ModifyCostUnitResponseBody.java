@@ -7,9 +7,6 @@ public class ModifyCostUnitResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public java.util.List<ModifyCostUnitResponseBodyData> data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class ModifyCostUnitResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public java.util.List<ModifyCostUnitResponseBodyData> data;
 
     public static ModifyCostUnitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyCostUnitResponseBody self = new ModifyCostUnitResponseBody();
@@ -30,14 +30,6 @@ public class ModifyCostUnitResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public ModifyCostUnitResponseBody setData(java.util.List<ModifyCostUnitResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ModifyCostUnitResponseBodyData> getData() {
-        return this.data;
     }
 
     public ModifyCostUnitResponseBody setMessage(String message) {
@@ -64,15 +56,23 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ModifyCostUnitResponseBody setData(java.util.List<ModifyCostUnitResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ModifyCostUnitResponseBodyData> getData() {
+        return this.data;
+    }
+
     public static class ModifyCostUnitResponseBodyData extends TeaModel {
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
-        @NameInMap("OwnerUid")
-        public Long ownerUid;
-
         @NameInMap("UnitId")
         public Long unitId;
+
+        @NameInMap("OwnerUid")
+        public Long ownerUid;
 
         public static ModifyCostUnitResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ModifyCostUnitResponseBodyData self = new ModifyCostUnitResponseBodyData();
@@ -87,20 +87,20 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             return this.isSuccess;
         }
 
-        public ModifyCostUnitResponseBodyData setOwnerUid(Long ownerUid) {
-            this.ownerUid = ownerUid;
-            return this;
-        }
-        public Long getOwnerUid() {
-            return this.ownerUid;
-        }
-
         public ModifyCostUnitResponseBodyData setUnitId(Long unitId) {
             this.unitId = unitId;
             return this;
         }
         public Long getUnitId() {
             return this.unitId;
+        }
+
+        public ModifyCostUnitResponseBodyData setOwnerUid(Long ownerUid) {
+            this.ownerUid = ownerUid;
+            return this;
+        }
+        public Long getOwnerUid() {
+            return this.ownerUid;
         }
 
     }

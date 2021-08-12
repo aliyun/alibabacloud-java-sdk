@@ -7,9 +7,6 @@ public class ApplyInvoiceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public ApplyInvoiceResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class ApplyInvoiceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public ApplyInvoiceResponseBodyData data;
 
     public static ApplyInvoiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ApplyInvoiceResponseBody self = new ApplyInvoiceResponseBody();
@@ -30,14 +30,6 @@ public class ApplyInvoiceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public ApplyInvoiceResponseBody setData(ApplyInvoiceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ApplyInvoiceResponseBodyData getData() {
-        return this.data;
     }
 
     public ApplyInvoiceResponseBody setMessage(String message) {
@@ -62,6 +54,14 @@ public class ApplyInvoiceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ApplyInvoiceResponseBody setData(ApplyInvoiceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ApplyInvoiceResponseBodyData getData() {
+        return this.data;
     }
 
     public static class ApplyInvoiceResponseBodyData extends TeaModel {

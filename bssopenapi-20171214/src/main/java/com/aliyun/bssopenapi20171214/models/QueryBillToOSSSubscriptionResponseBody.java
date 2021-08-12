@@ -7,9 +7,6 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public QueryBillToOSSSubscriptionResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryBillToOSSSubscriptionResponseBodyData data;
 
     public static QueryBillToOSSSubscriptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryBillToOSSSubscriptionResponseBody self = new QueryBillToOSSSubscriptionResponseBody();
@@ -30,14 +30,6 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public QueryBillToOSSSubscriptionResponseBody setData(QueryBillToOSSSubscriptionResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryBillToOSSSubscriptionResponseBodyData getData() {
-        return this.data;
     }
 
     public QueryBillToOSSSubscriptionResponseBody setMessage(String message) {
@@ -64,21 +56,29 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         return this.success;
     }
 
+    public QueryBillToOSSSubscriptionResponseBody setData(QueryBillToOSSSubscriptionResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryBillToOSSSubscriptionResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class QueryBillToOSSSubscriptionResponseBodyDataItemsItem extends TeaModel {
         @NameInMap("BucketOwnerId")
         public Long bucketOwnerId;
 
+        @NameInMap("SubscribeType")
+        public String subscribeType;
+
         @NameInMap("SubscribeBucket")
         public String subscribeBucket;
-
-        @NameInMap("SubscribeLanguage")
-        public String subscribeLanguage;
 
         @NameInMap("SubscribeTime")
         public String subscribeTime;
 
-        @NameInMap("SubscribeType")
-        public String subscribeType;
+        @NameInMap("SubscribeLanguage")
+        public String subscribeLanguage;
 
         public static QueryBillToOSSSubscriptionResponseBodyDataItemsItem build(java.util.Map<String, ?> map) throws Exception {
             QueryBillToOSSSubscriptionResponseBodyDataItemsItem self = new QueryBillToOSSSubscriptionResponseBodyDataItemsItem();
@@ -93,20 +93,20 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             return this.bucketOwnerId;
         }
 
+        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeType(String subscribeType) {
+            this.subscribeType = subscribeType;
+            return this;
+        }
+        public String getSubscribeType() {
+            return this.subscribeType;
+        }
+
         public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeBucket(String subscribeBucket) {
             this.subscribeBucket = subscribeBucket;
             return this;
         }
         public String getSubscribeBucket() {
             return this.subscribeBucket;
-        }
-
-        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeLanguage(String subscribeLanguage) {
-            this.subscribeLanguage = subscribeLanguage;
-            return this;
-        }
-        public String getSubscribeLanguage() {
-            return this.subscribeLanguage;
         }
 
         public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeTime(String subscribeTime) {
@@ -117,12 +117,12 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             return this.subscribeTime;
         }
 
-        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeType(String subscribeType) {
-            this.subscribeType = subscribeType;
+        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeLanguage(String subscribeLanguage) {
+            this.subscribeLanguage = subscribeLanguage;
             return this;
         }
-        public String getSubscribeType() {
-            return this.subscribeType;
+        public String getSubscribeLanguage() {
+            return this.subscribeLanguage;
         }
 
     }
@@ -147,11 +147,11 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     }
 
     public static class QueryBillToOSSSubscriptionResponseBodyData extends TeaModel {
-        @NameInMap("AccountID")
-        public String accountID;
-
         @NameInMap("AccountName")
         public String accountName;
+
+        @NameInMap("AccountID")
+        public String accountID;
 
         @NameInMap("Items")
         public QueryBillToOSSSubscriptionResponseBodyDataItems items;
@@ -161,20 +161,20 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryBillToOSSSubscriptionResponseBodyData setAccountID(String accountID) {
-            this.accountID = accountID;
-            return this;
-        }
-        public String getAccountID() {
-            return this.accountID;
-        }
-
         public QueryBillToOSSSubscriptionResponseBodyData setAccountName(String accountName) {
             this.accountName = accountName;
             return this;
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public QueryBillToOSSSubscriptionResponseBodyData setAccountID(String accountID) {
+            this.accountID = accountID;
+            return this;
+        }
+        public String getAccountID() {
+            return this.accountID;
         }
 
         public QueryBillToOSSSubscriptionResponseBodyData setItems(QueryBillToOSSSubscriptionResponseBodyDataItems items) {

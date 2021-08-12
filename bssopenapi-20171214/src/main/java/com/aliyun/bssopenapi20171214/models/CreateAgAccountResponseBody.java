@@ -4,9 +4,6 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateAgAccountResponseBody extends TeaModel {
-    @NameInMap("AgRelationDto")
-    public CreateAgAccountResponseBodyAgRelationDto agRelationDto;
-
     @NameInMap("Code")
     public String code;
 
@@ -19,17 +16,12 @@ public class CreateAgAccountResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("AgRelationDto")
+    public CreateAgAccountResponseBodyAgRelationDto agRelationDto;
+
     public static CreateAgAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAgAccountResponseBody self = new CreateAgAccountResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAgAccountResponseBody setAgRelationDto(CreateAgAccountResponseBodyAgRelationDto agRelationDto) {
-        this.agRelationDto = agRelationDto;
-        return this;
-    }
-    public CreateAgAccountResponseBodyAgRelationDto getAgRelationDto() {
-        return this.agRelationDto;
     }
 
     public CreateAgAccountResponseBody setCode(String code) {
@@ -64,9 +56,17 @@ public class CreateAgAccountResponseBody extends TeaModel {
         return this.success;
     }
 
+    public CreateAgAccountResponseBody setAgRelationDto(CreateAgAccountResponseBodyAgRelationDto agRelationDto) {
+        this.agRelationDto = agRelationDto;
+        return this;
+    }
+    public CreateAgAccountResponseBodyAgRelationDto getAgRelationDto() {
+        return this.agRelationDto;
+    }
+
     public static class CreateAgAccountResponseBodyAgRelationDto extends TeaModel {
-        @NameInMap("Mpk")
-        public String mpk;
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("Pk")
         public String pk;
@@ -74,20 +74,20 @@ public class CreateAgAccountResponseBody extends TeaModel {
         @NameInMap("RamAdminRoleName")
         public String ramAdminRoleName;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("Mpk")
+        public String mpk;
 
         public static CreateAgAccountResponseBodyAgRelationDto build(java.util.Map<String, ?> map) throws Exception {
             CreateAgAccountResponseBodyAgRelationDto self = new CreateAgAccountResponseBodyAgRelationDto();
             return TeaModel.build(map, self);
         }
 
-        public CreateAgAccountResponseBodyAgRelationDto setMpk(String mpk) {
-            this.mpk = mpk;
+        public CreateAgAccountResponseBodyAgRelationDto setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getMpk() {
-            return this.mpk;
+        public String getType() {
+            return this.type;
         }
 
         public CreateAgAccountResponseBodyAgRelationDto setPk(String pk) {
@@ -106,12 +106,12 @@ public class CreateAgAccountResponseBody extends TeaModel {
             return this.ramAdminRoleName;
         }
 
-        public CreateAgAccountResponseBodyAgRelationDto setType(String type) {
-            this.type = type;
+        public CreateAgAccountResponseBodyAgRelationDto setMpk(String mpk) {
+            this.mpk = mpk;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getMpk() {
+            return this.mpk;
         }
 
     }

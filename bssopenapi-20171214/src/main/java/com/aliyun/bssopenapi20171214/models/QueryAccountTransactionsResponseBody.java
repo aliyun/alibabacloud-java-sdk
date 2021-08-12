@@ -7,9 +7,6 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public QueryAccountTransactionsResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryAccountTransactionsResponseBodyData data;
 
     public static QueryAccountTransactionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAccountTransactionsResponseBody self = new QueryAccountTransactionsResponseBody();
@@ -30,14 +30,6 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public QueryAccountTransactionsResponseBody setData(QueryAccountTransactionsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryAccountTransactionsResponseBodyData getData() {
-        return this.data;
     }
 
     public QueryAccountTransactionsResponseBody setMessage(String message) {
@@ -64,18 +56,20 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public QueryAccountTransactionsResponseBody setData(QueryAccountTransactionsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryAccountTransactionsResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList extends TeaModel {
-        @NameInMap("Amount")
-        public String amount;
-
-        @NameInMap("Balance")
-        public String balance;
-
         @NameInMap("BillingCycle")
         public String billingCycle;
 
-        @NameInMap("FundType")
-        public String fundType;
+        @NameInMap("TransactionChannel")
+        public String transactionChannel;
 
         @NameInMap("RecordID")
         public String recordID;
@@ -83,20 +77,11 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         @NameInMap("Remarks")
         public String remarks;
 
+        @NameInMap("Amount")
+        public String amount;
+
         @NameInMap("TransactionAccount")
         public String transactionAccount;
-
-        @NameInMap("TransactionChannel")
-        public String transactionChannel;
-
-        @NameInMap("TransactionChannelSN")
-        public String transactionChannelSN;
-
-        @NameInMap("TransactionFlow")
-        public String transactionFlow;
-
-        @NameInMap("TransactionNumber")
-        public String transactionNumber;
 
         @NameInMap("TransactionTime")
         public String transactionTime;
@@ -104,25 +89,24 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         @NameInMap("TransactionType")
         public String transactionType;
 
+        @NameInMap("TransactionFlow")
+        public String transactionFlow;
+
+        @NameInMap("FundType")
+        public String fundType;
+
+        @NameInMap("TransactionChannelSN")
+        public String transactionChannelSN;
+
+        @NameInMap("TransactionNumber")
+        public String transactionNumber;
+
+        @NameInMap("Balance")
+        public String balance;
+
         public static QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList build(java.util.Map<String, ?> map) throws Exception {
             QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList self = new QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList();
             return TeaModel.build(map, self);
-        }
-
-        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setAmount(String amount) {
-            this.amount = amount;
-            return this;
-        }
-        public String getAmount() {
-            return this.amount;
-        }
-
-        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setBalance(String balance) {
-            this.balance = balance;
-            return this;
-        }
-        public String getBalance() {
-            return this.balance;
         }
 
         public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setBillingCycle(String billingCycle) {
@@ -133,12 +117,12 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             return this.billingCycle;
         }
 
-        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setFundType(String fundType) {
-            this.fundType = fundType;
+        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionChannel(String transactionChannel) {
+            this.transactionChannel = transactionChannel;
             return this;
         }
-        public String getFundType() {
-            return this.fundType;
+        public String getTransactionChannel() {
+            return this.transactionChannel;
         }
 
         public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setRecordID(String recordID) {
@@ -157,44 +141,20 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
             return this.remarks;
         }
 
+        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setAmount(String amount) {
+            this.amount = amount;
+            return this;
+        }
+        public String getAmount() {
+            return this.amount;
+        }
+
         public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionAccount(String transactionAccount) {
             this.transactionAccount = transactionAccount;
             return this;
         }
         public String getTransactionAccount() {
             return this.transactionAccount;
-        }
-
-        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionChannel(String transactionChannel) {
-            this.transactionChannel = transactionChannel;
-            return this;
-        }
-        public String getTransactionChannel() {
-            return this.transactionChannel;
-        }
-
-        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionChannelSN(String transactionChannelSN) {
-            this.transactionChannelSN = transactionChannelSN;
-            return this;
-        }
-        public String getTransactionChannelSN() {
-            return this.transactionChannelSN;
-        }
-
-        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionFlow(String transactionFlow) {
-            this.transactionFlow = transactionFlow;
-            return this;
-        }
-        public String getTransactionFlow() {
-            return this.transactionFlow;
-        }
-
-        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionNumber(String transactionNumber) {
-            this.transactionNumber = transactionNumber;
-            return this;
-        }
-        public String getTransactionNumber() {
-            return this.transactionNumber;
         }
 
         public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionTime(String transactionTime) {
@@ -211,6 +171,46 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         }
         public String getTransactionType() {
             return this.transactionType;
+        }
+
+        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionFlow(String transactionFlow) {
+            this.transactionFlow = transactionFlow;
+            return this;
+        }
+        public String getTransactionFlow() {
+            return this.transactionFlow;
+        }
+
+        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setFundType(String fundType) {
+            this.fundType = fundType;
+            return this;
+        }
+        public String getFundType() {
+            return this.fundType;
+        }
+
+        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionChannelSN(String transactionChannelSN) {
+            this.transactionChannelSN = transactionChannelSN;
+            return this;
+        }
+        public String getTransactionChannelSN() {
+            return this.transactionChannelSN;
+        }
+
+        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setTransactionNumber(String transactionNumber) {
+            this.transactionNumber = transactionNumber;
+            return this;
+        }
+        public String getTransactionNumber() {
+            return this.transactionNumber;
+        }
+
+        public QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList setBalance(String balance) {
+            this.balance = balance;
+            return this;
+        }
+        public String getBalance() {
+            return this.balance;
         }
 
     }
@@ -235,12 +235,6 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
     }
 
     public static class QueryAccountTransactionsResponseBodyData extends TeaModel {
-        @NameInMap("AccountName")
-        public String accountName;
-
-        @NameInMap("AccountTransactionsList")
-        public QueryAccountTransactionsResponseBodyDataAccountTransactionsList accountTransactionsList;
-
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -250,25 +244,15 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        @NameInMap("AccountName")
+        public String accountName;
+
+        @NameInMap("AccountTransactionsList")
+        public QueryAccountTransactionsResponseBodyDataAccountTransactionsList accountTransactionsList;
+
         public static QueryAccountTransactionsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAccountTransactionsResponseBodyData self = new QueryAccountTransactionsResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryAccountTransactionsResponseBodyData setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
-        }
-
-        public QueryAccountTransactionsResponseBodyData setAccountTransactionsList(QueryAccountTransactionsResponseBodyDataAccountTransactionsList accountTransactionsList) {
-            this.accountTransactionsList = accountTransactionsList;
-            return this;
-        }
-        public QueryAccountTransactionsResponseBodyDataAccountTransactionsList getAccountTransactionsList() {
-            return this.accountTransactionsList;
         }
 
         public QueryAccountTransactionsResponseBodyData setPageNum(Integer pageNum) {
@@ -293,6 +277,22 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public QueryAccountTransactionsResponseBodyData setAccountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
+        public String getAccountName() {
+            return this.accountName;
+        }
+
+        public QueryAccountTransactionsResponseBodyData setAccountTransactionsList(QueryAccountTransactionsResponseBodyDataAccountTransactionsList accountTransactionsList) {
+            this.accountTransactionsList = accountTransactionsList;
+            return this;
+        }
+        public QueryAccountTransactionsResponseBodyDataAccountTransactionsList getAccountTransactionsList() {
+            return this.accountTransactionsList;
         }
 
     }

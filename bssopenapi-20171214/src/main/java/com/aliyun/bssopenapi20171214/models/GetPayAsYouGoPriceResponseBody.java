@@ -7,9 +7,6 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public GetPayAsYouGoPriceResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public GetPayAsYouGoPriceResponseBodyData data;
 
     public static GetPayAsYouGoPriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPayAsYouGoPriceResponseBody self = new GetPayAsYouGoPriceResponseBody();
@@ -30,14 +30,6 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public GetPayAsYouGoPriceResponseBody setData(GetPayAsYouGoPriceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetPayAsYouGoPriceResponseBodyData getData() {
-        return this.data;
     }
 
     public GetPayAsYouGoPriceResponseBody setMessage(String message) {
@@ -64,6 +56,14 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetPayAsYouGoPriceResponseBody setData(GetPayAsYouGoPriceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetPayAsYouGoPriceResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail extends TeaModel {
         @NameInMap("CostAfterDiscount")
         public Float costAfterDiscount;
@@ -71,14 +71,14 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
-        @NameInMap("ModuleCode")
-        public String moduleCode;
+        @NameInMap("UnitPrice")
+        public Float unitPrice;
 
         @NameInMap("OriginalCost")
         public Float originalCost;
 
-        @NameInMap("UnitPrice")
-        public Float unitPrice;
+        @NameInMap("ModuleCode")
+        public String moduleCode;
 
         public static GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail build(java.util.Map<String, ?> map) throws Exception {
             GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail self = new GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail();
@@ -101,12 +101,12 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             return this.invoiceDiscount;
         }
 
-        public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setModuleCode(String moduleCode) {
-            this.moduleCode = moduleCode;
+        public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setUnitPrice(Float unitPrice) {
+            this.unitPrice = unitPrice;
             return this;
         }
-        public String getModuleCode() {
-            return this.moduleCode;
+        public Float getUnitPrice() {
+            return this.unitPrice;
         }
 
         public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setOriginalCost(Float originalCost) {
@@ -117,12 +117,12 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
             return this.originalCost;
         }
 
-        public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setUnitPrice(Float unitPrice) {
-            this.unitPrice = unitPrice;
+        public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setModuleCode(String moduleCode) {
+            this.moduleCode = moduleCode;
             return this;
         }
-        public Float getUnitPrice() {
-            return this.unitPrice;
+        public String getModuleCode() {
+            return this.moduleCode;
         }
 
     }

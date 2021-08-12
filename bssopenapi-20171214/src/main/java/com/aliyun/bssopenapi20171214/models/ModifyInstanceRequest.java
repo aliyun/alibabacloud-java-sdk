@@ -98,23 +98,15 @@ public class ModifyInstanceRequest extends TeaModel {
     }
 
     public static class ModifyInstanceRequestParameter extends TeaModel {
-        @NameInMap("Code")
-        public String code;
-
         @NameInMap("Value")
         public String value;
+
+        @NameInMap("Code")
+        public String code;
 
         public static ModifyInstanceRequestParameter build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceRequestParameter self = new ModifyInstanceRequestParameter();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyInstanceRequestParameter setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
         }
 
         public ModifyInstanceRequestParameter setValue(String value) {
@@ -123,6 +115,14 @@ public class ModifyInstanceRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+        public ModifyInstanceRequestParameter setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
     }

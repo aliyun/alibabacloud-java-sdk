@@ -7,9 +7,6 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public QueryMonthlyInstanceConsumptionResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryMonthlyInstanceConsumptionResponseBodyData data;
 
     public static QueryMonthlyInstanceConsumptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMonthlyInstanceConsumptionResponseBody self = new QueryMonthlyInstanceConsumptionResponseBody();
@@ -30,14 +30,6 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public QueryMonthlyInstanceConsumptionResponseBody setData(QueryMonthlyInstanceConsumptionResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryMonthlyInstanceConsumptionResponseBodyData getData() {
-        return this.data;
     }
 
     public QueryMonthlyInstanceConsumptionResponseBody setMessage(String message) {
@@ -64,39 +56,41 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem extends TeaModel {
-        @NameInMap("AfterTaxAmount")
-        public Float afterTaxAmount;
+    public QueryMonthlyInstanceConsumptionResponseBody setData(QueryMonthlyInstanceConsumptionResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryMonthlyInstanceConsumptionResponseBodyData getData() {
+        return this.data;
+    }
 
-        @NameInMap("Currency")
-        public String currency;
+    public static class QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem extends TeaModel {
+        @NameInMap("PretaxAmount")
+        public Float pretaxAmount;
 
         @NameInMap("DiscountAmount")
         public Float discountAmount;
 
+        @NameInMap("PayerAccount")
+        public String payerAccount;
+
+        @NameInMap("Tag")
+        public String tag;
+
         @NameInMap("InstanceID")
         public String instanceID;
 
-        @NameInMap("OwnerID")
-        public String ownerID;
+        @NameInMap("Currency")
+        public String currency;
 
-        @NameInMap("PayerAccount")
-        public String payerAccount;
+        @NameInMap("SubscriptionType")
+        public String subscriptionType;
 
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        @NameInMap("PretaxAmount")
-        public Float pretaxAmount;
-
-        @NameInMap("PretaxAmountLocal")
-        public Float pretaxAmountLocal;
-
-        @NameInMap("PretaxGrossAmount")
-        public Float pretaxGrossAmount;
-
-        @NameInMap("ProductCode")
-        public String productCode;
+        @NameInMap("OwnerID")
+        public String ownerID;
 
         @NameInMap("ProductType")
         public String productType;
@@ -104,77 +98,27 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("AfterTaxAmount")
+        public Float afterTaxAmount;
+
+        @NameInMap("PretaxGrossAmount")
+        public Float pretaxGrossAmount;
+
         @NameInMap("ResourceGroup")
         public String resourceGroup;
-
-        @NameInMap("SubscriptionType")
-        public String subscriptionType;
-
-        @NameInMap("Tag")
-        public String tag;
 
         @NameInMap("Tax")
         public Float tax;
 
+        @NameInMap("PretaxAmountLocal")
+        public Float pretaxAmountLocal;
+
+        @NameInMap("ProductCode")
+        public String productCode;
+
         public static QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem build(java.util.Map<String, ?> map) throws Exception {
             QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem self = new QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setAfterTaxAmount(Float afterTaxAmount) {
-            this.afterTaxAmount = afterTaxAmount;
-            return this;
-        }
-        public Float getAfterTaxAmount() {
-            return this.afterTaxAmount;
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setCurrency(String currency) {
-            this.currency = currency;
-            return this;
-        }
-        public String getCurrency() {
-            return this.currency;
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setDiscountAmount(Float discountAmount) {
-            this.discountAmount = discountAmount;
-            return this;
-        }
-        public Float getDiscountAmount() {
-            return this.discountAmount;
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setInstanceID(String instanceID) {
-            this.instanceID = instanceID;
-            return this;
-        }
-        public String getInstanceID() {
-            return this.instanceID;
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setOwnerID(String ownerID) {
-            this.ownerID = ownerID;
-            return this;
-        }
-        public String getOwnerID() {
-            return this.ownerID;
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setPayerAccount(String payerAccount) {
-            this.payerAccount = payerAccount;
-            return this;
-        }
-        public String getPayerAccount() {
-            return this.payerAccount;
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setPaymentCurrency(String paymentCurrency) {
-            this.paymentCurrency = paymentCurrency;
-            return this;
-        }
-        public String getPaymentCurrency() {
-            return this.paymentCurrency;
         }
 
         public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setPretaxAmount(Float pretaxAmount) {
@@ -185,28 +129,68 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
             return this.pretaxAmount;
         }
 
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setPretaxAmountLocal(Float pretaxAmountLocal) {
-            this.pretaxAmountLocal = pretaxAmountLocal;
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setDiscountAmount(Float discountAmount) {
+            this.discountAmount = discountAmount;
             return this;
         }
-        public Float getPretaxAmountLocal() {
-            return this.pretaxAmountLocal;
+        public Float getDiscountAmount() {
+            return this.discountAmount;
         }
 
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
-            this.pretaxGrossAmount = pretaxGrossAmount;
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setPayerAccount(String payerAccount) {
+            this.payerAccount = payerAccount;
             return this;
         }
-        public Float getPretaxGrossAmount() {
-            return this.pretaxGrossAmount;
+        public String getPayerAccount() {
+            return this.payerAccount;
         }
 
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setProductCode(String productCode) {
-            this.productCode = productCode;
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setTag(String tag) {
+            this.tag = tag;
             return this;
         }
-        public String getProductCode() {
-            return this.productCode;
+        public String getTag() {
+            return this.tag;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setInstanceID(String instanceID) {
+            this.instanceID = instanceID;
+            return this;
+        }
+        public String getInstanceID() {
+            return this.instanceID;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setSubscriptionType(String subscriptionType) {
+            this.subscriptionType = subscriptionType;
+            return this;
+        }
+        public String getSubscriptionType() {
+            return this.subscriptionType;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setPaymentCurrency(String paymentCurrency) {
+            this.paymentCurrency = paymentCurrency;
+            return this;
+        }
+        public String getPaymentCurrency() {
+            return this.paymentCurrency;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setOwnerID(String ownerID) {
+            this.ownerID = ownerID;
+            return this;
+        }
+        public String getOwnerID() {
+            return this.ownerID;
         }
 
         public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setProductType(String productType) {
@@ -225,6 +209,22 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
             return this.region;
         }
 
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setAfterTaxAmount(Float afterTaxAmount) {
+            this.afterTaxAmount = afterTaxAmount;
+            return this;
+        }
+        public Float getAfterTaxAmount() {
+            return this.afterTaxAmount;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
+            this.pretaxGrossAmount = pretaxGrossAmount;
+            return this;
+        }
+        public Float getPretaxGrossAmount() {
+            return this.pretaxGrossAmount;
+        }
+
         public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setResourceGroup(String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
@@ -233,28 +233,28 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
             return this.resourceGroup;
         }
 
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setSubscriptionType(String subscriptionType) {
-            this.subscriptionType = subscriptionType;
-            return this;
-        }
-        public String getSubscriptionType() {
-            return this.subscriptionType;
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
         public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setTax(Float tax) {
             this.tax = tax;
             return this;
         }
         public Float getTax() {
             return this.tax;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setPretaxAmountLocal(Float pretaxAmountLocal) {
+            this.pretaxAmountLocal = pretaxAmountLocal;
+            return this;
+        }
+        public Float getPretaxAmountLocal() {
+            return this.pretaxAmountLocal;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItemsItem setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
         }
 
     }
@@ -279,14 +279,11 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
     }
 
     public static class QueryMonthlyInstanceConsumptionResponseBodyData extends TeaModel {
-        @NameInMap("BillingCycle")
-        public String billingCycle;
-
-        @NameInMap("Items")
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItems items;
-
         @NameInMap("PageNum")
         public Integer pageNum;
+
+        @NameInMap("BillingCycle")
+        public String billingCycle;
 
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -294,25 +291,12 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        @NameInMap("Items")
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItems items;
+
         public static QueryMonthlyInstanceConsumptionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryMonthlyInstanceConsumptionResponseBodyData self = new QueryMonthlyInstanceConsumptionResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyData setBillingCycle(String billingCycle) {
-            this.billingCycle = billingCycle;
-            return this;
-        }
-        public String getBillingCycle() {
-            return this.billingCycle;
-        }
-
-        public QueryMonthlyInstanceConsumptionResponseBodyData setItems(QueryMonthlyInstanceConsumptionResponseBodyDataItems items) {
-            this.items = items;
-            return this;
-        }
-        public QueryMonthlyInstanceConsumptionResponseBodyDataItems getItems() {
-            return this.items;
         }
 
         public QueryMonthlyInstanceConsumptionResponseBodyData setPageNum(Integer pageNum) {
@@ -321,6 +305,14 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
         }
         public Integer getPageNum() {
             return this.pageNum;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyData setBillingCycle(String billingCycle) {
+            this.billingCycle = billingCycle;
+            return this;
+        }
+        public String getBillingCycle() {
+            return this.billingCycle;
         }
 
         public QueryMonthlyInstanceConsumptionResponseBodyData setPageSize(Integer pageSize) {
@@ -337,6 +329,14 @@ public class QueryMonthlyInstanceConsumptionResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public QueryMonthlyInstanceConsumptionResponseBodyData setItems(QueryMonthlyInstanceConsumptionResponseBodyDataItems items) {
+            this.items = items;
+            return this;
+        }
+        public QueryMonthlyInstanceConsumptionResponseBodyDataItems getItems() {
+            return this.items;
         }
 
     }

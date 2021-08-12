@@ -28,6 +28,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Logistics")
+    public String logistics;
+
     @NameInMap("Parameter")
     public java.util.List<CreateInstanceRequestParameter> parameter;
 
@@ -100,6 +103,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateInstanceRequest setLogistics(String logistics) {
+        this.logistics = logistics;
+        return this;
+    }
+    public String getLogistics() {
+        return this.logistics;
+    }
+
     public CreateInstanceRequest setParameter(java.util.List<CreateInstanceRequestParameter> parameter) {
         this.parameter = parameter;
         return this;
@@ -109,23 +120,15 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestParameter extends TeaModel {
-        @NameInMap("Code")
-        public String code;
-
         @NameInMap("Value")
         public String value;
+
+        @NameInMap("Code")
+        public String code;
 
         public static CreateInstanceRequestParameter build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceRequestParameter self = new CreateInstanceRequestParameter();
             return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceRequestParameter setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
         }
 
         public CreateInstanceRequestParameter setValue(String value) {
@@ -134,6 +137,14 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+        public CreateInstanceRequestParameter setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
         }
 
     }

@@ -7,11 +7,11 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public Boolean data;
-
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("Data")
+    public Boolean data;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,20 +32,20 @@ public class SetResellerUserAlarmThresholdResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SetResellerUserAlarmThresholdResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
-    }
-
     public SetResellerUserAlarmThresholdResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public SetResellerUserAlarmThresholdResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
     public SetResellerUserAlarmThresholdResponseBody setRequestId(String requestId) {

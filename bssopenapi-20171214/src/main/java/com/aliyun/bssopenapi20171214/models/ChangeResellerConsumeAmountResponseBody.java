@@ -7,11 +7,11 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public String data;
-
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("Data")
+    public String data;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,20 +32,20 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ChangeResellerConsumeAmountResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
     public ChangeResellerConsumeAmountResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ChangeResellerConsumeAmountResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public ChangeResellerConsumeAmountResponseBody setRequestId(String requestId) {

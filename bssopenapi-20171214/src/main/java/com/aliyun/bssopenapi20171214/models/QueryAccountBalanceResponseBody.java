@@ -7,9 +7,6 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public QueryAccountBalanceResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryAccountBalanceResponseBodyData data;
 
     public static QueryAccountBalanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAccountBalanceResponseBody self = new QueryAccountBalanceResponseBody();
@@ -30,14 +30,6 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public QueryAccountBalanceResponseBody setData(QueryAccountBalanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryAccountBalanceResponseBodyData getData() {
-        return this.data;
     }
 
     public QueryAccountBalanceResponseBody setMessage(String message) {
@@ -64,21 +56,29 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public QueryAccountBalanceResponseBody setData(QueryAccountBalanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryAccountBalanceResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class QueryAccountBalanceResponseBodyData extends TeaModel {
         @NameInMap("AvailableAmount")
         public String availableAmount;
 
-        @NameInMap("AvailableCashAmount")
-        public String availableCashAmount;
-
         @NameInMap("CreditAmount")
         public String creditAmount;
+
+        @NameInMap("MybankCreditAmount")
+        public String mybankCreditAmount;
 
         @NameInMap("Currency")
         public String currency;
 
-        @NameInMap("MybankCreditAmount")
-        public String mybankCreditAmount;
+        @NameInMap("AvailableCashAmount")
+        public String availableCashAmount;
 
         public static QueryAccountBalanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAccountBalanceResponseBodyData self = new QueryAccountBalanceResponseBodyData();
@@ -93,20 +93,20 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             return this.availableAmount;
         }
 
-        public QueryAccountBalanceResponseBodyData setAvailableCashAmount(String availableCashAmount) {
-            this.availableCashAmount = availableCashAmount;
-            return this;
-        }
-        public String getAvailableCashAmount() {
-            return this.availableCashAmount;
-        }
-
         public QueryAccountBalanceResponseBodyData setCreditAmount(String creditAmount) {
             this.creditAmount = creditAmount;
             return this;
         }
         public String getCreditAmount() {
             return this.creditAmount;
+        }
+
+        public QueryAccountBalanceResponseBodyData setMybankCreditAmount(String mybankCreditAmount) {
+            this.mybankCreditAmount = mybankCreditAmount;
+            return this;
+        }
+        public String getMybankCreditAmount() {
+            return this.mybankCreditAmount;
         }
 
         public QueryAccountBalanceResponseBodyData setCurrency(String currency) {
@@ -117,12 +117,12 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public QueryAccountBalanceResponseBodyData setMybankCreditAmount(String mybankCreditAmount) {
-            this.mybankCreditAmount = mybankCreditAmount;
+        public QueryAccountBalanceResponseBodyData setAvailableCashAmount(String availableCashAmount) {
+            this.availableCashAmount = availableCashAmount;
             return this;
         }
-        public String getMybankCreditAmount() {
-            return this.mybankCreditAmount;
+        public String getAvailableCashAmount() {
+            return this.availableCashAmount;
         }
 
     }

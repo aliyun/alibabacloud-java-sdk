@@ -7,9 +7,6 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public GetResourcePackagePriceResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public GetResourcePackagePriceResponseBodyData data;
 
     public static GetResourcePackagePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResourcePackagePriceResponseBody self = new GetResourcePackagePriceResponseBody();
@@ -30,14 +30,6 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public GetResourcePackagePriceResponseBody setData(GetResourcePackagePriceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetResourcePackagePriceResponseBodyData getData() {
-        return this.data;
     }
 
     public GetResourcePackagePriceResponseBody setMessage(String message) {
@@ -64,24 +56,24 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetResourcePackagePriceResponseBodyDataPromotionsPromotion extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
+    public GetResourcePackagePriceResponseBody setData(GetResourcePackagePriceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetResourcePackagePriceResponseBodyData getData() {
+        return this.data;
+    }
 
+    public static class GetResourcePackagePriceResponseBodyDataPromotionsPromotion extends TeaModel {
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Id")
+        public Long id;
 
         public static GetResourcePackagePriceResponseBodyDataPromotionsPromotion build(java.util.Map<String, ?> map) throws Exception {
             GetResourcePackagePriceResponseBodyDataPromotionsPromotion self = new GetResourcePackagePriceResponseBodyDataPromotionsPromotion();
             return TeaModel.build(map, self);
-        }
-
-        public GetResourcePackagePriceResponseBodyDataPromotionsPromotion setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
         }
 
         public GetResourcePackagePriceResponseBodyDataPromotionsPromotion setName(String name) {
@@ -90,6 +82,14 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetResourcePackagePriceResponseBodyDataPromotionsPromotion setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
     }
@@ -114,40 +114,24 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     }
 
     public static class GetResourcePackagePriceResponseBodyData extends TeaModel {
-        @NameInMap("Currency")
-        public String currency;
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
 
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        @NameInMap("OriginalPrice")
-        public Float originalPrice;
-
-        @NameInMap("Promotions")
-        public GetResourcePackagePriceResponseBodyDataPromotions promotions;
+        @NameInMap("Currency")
+        public String currency;
 
         @NameInMap("TradePrice")
         public Float tradePrice;
 
+        @NameInMap("Promotions")
+        public GetResourcePackagePriceResponseBodyDataPromotions promotions;
+
         public static GetResourcePackagePriceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetResourcePackagePriceResponseBodyData self = new GetResourcePackagePriceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetResourcePackagePriceResponseBodyData setCurrency(String currency) {
-            this.currency = currency;
-            return this;
-        }
-        public String getCurrency() {
-            return this.currency;
-        }
-
-        public GetResourcePackagePriceResponseBodyData setDiscountPrice(Float discountPrice) {
-            this.discountPrice = discountPrice;
-            return this;
-        }
-        public Float getDiscountPrice() {
-            return this.discountPrice;
         }
 
         public GetResourcePackagePriceResponseBodyData setOriginalPrice(Float originalPrice) {
@@ -158,12 +142,20 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             return this.originalPrice;
         }
 
-        public GetResourcePackagePriceResponseBodyData setPromotions(GetResourcePackagePriceResponseBodyDataPromotions promotions) {
-            this.promotions = promotions;
+        public GetResourcePackagePriceResponseBodyData setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
             return this;
         }
-        public GetResourcePackagePriceResponseBodyDataPromotions getPromotions() {
-            return this.promotions;
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public GetResourcePackagePriceResponseBodyData setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
         }
 
         public GetResourcePackagePriceResponseBodyData setTradePrice(Float tradePrice) {
@@ -172,6 +164,14 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
         public Float getTradePrice() {
             return this.tradePrice;
+        }
+
+        public GetResourcePackagePriceResponseBodyData setPromotions(GetResourcePackagePriceResponseBodyDataPromotions promotions) {
+            this.promotions = promotions;
+            return this;
+        }
+        public GetResourcePackagePriceResponseBodyDataPromotions getPromotions() {
+            return this.promotions;
         }
 
     }

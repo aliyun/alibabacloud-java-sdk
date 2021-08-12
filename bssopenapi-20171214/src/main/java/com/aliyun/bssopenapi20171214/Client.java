@@ -270,6 +270,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceBillWithOptions(request, runtime);
     }
 
+    public DescribePricingModuleResponse describePricingModuleWithOptions(DescribePricingModuleRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribePricingModule", "2017-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DescribePricingModuleResponse());
+    }
+
+    public DescribePricingModuleResponse describePricingModule(DescribePricingModuleRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describePricingModuleWithOptions(request, runtime);
+    }
+
     public DescribeResourceCoverageDetailResponse describeResourceCoverageDetailWithOptions(DescribeResourceCoverageDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -333,6 +346,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeResourceUsageTotalResponse describeResourceUsageTotal(DescribeResourceUsageTotalRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeResourceUsageTotalWithOptions(request, runtime);
+    }
+
+    public DescribeSavingsPlansCoverageDetailResponse describeSavingsPlansCoverageDetailWithOptions(DescribeSavingsPlansCoverageDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeSavingsPlansCoverageDetail", "2017-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSavingsPlansCoverageDetailResponse());
+    }
+
+    public DescribeSavingsPlansCoverageDetailResponse describeSavingsPlansCoverageDetail(DescribeSavingsPlansCoverageDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSavingsPlansCoverageDetailWithOptions(request, runtime);
+    }
+
+    public DescribeSavingsPlansCoverageTotalResponse describeSavingsPlansCoverageTotalWithOptions(DescribeSavingsPlansCoverageTotalRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeSavingsPlansCoverageTotal", "2017-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSavingsPlansCoverageTotalResponse());
+    }
+
+    public DescribeSavingsPlansCoverageTotalResponse describeSavingsPlansCoverageTotal(DescribeSavingsPlansCoverageTotalRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSavingsPlansCoverageTotalWithOptions(request, runtime);
+    }
+
+    public DescribeSavingsPlansUsageDetailResponse describeSavingsPlansUsageDetailWithOptions(DescribeSavingsPlansUsageDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeSavingsPlansUsageDetail", "2017-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSavingsPlansUsageDetailResponse());
+    }
+
+    public DescribeSavingsPlansUsageDetailResponse describeSavingsPlansUsageDetail(DescribeSavingsPlansUsageDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSavingsPlansUsageDetailWithOptions(request, runtime);
+    }
+
+    public DescribeSavingsPlansUsageTotalResponse describeSavingsPlansUsageTotalWithOptions(DescribeSavingsPlansUsageTotalRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeSavingsPlansUsageTotal", "2017-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSavingsPlansUsageTotalResponse());
+    }
+
+    public DescribeSavingsPlansUsageTotalResponse describeSavingsPlansUsageTotal(DescribeSavingsPlansUsageTotalRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSavingsPlansUsageTotalWithOptions(request, runtime);
     }
 
     public DescribeSplitItemBillResponse describeSplitItemBillWithOptions(DescribeSplitItemBillRequest request, RuntimeOptions runtime) throws Exception {
@@ -832,6 +897,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryResellerAvailableQuotaResponse queryResellerAvailableQuota(QueryResellerAvailableQuotaRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryResellerAvailableQuotaWithOptions(request, runtime);
+    }
+
+    public QueryResourcePackageInstancesResponse queryResourcePackageInstancesWithOptions(QueryResourcePackageInstancesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryResourcePackageInstances", "2017-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new QueryResourcePackageInstancesResponse());
+    }
+
+    public QueryResourcePackageInstancesResponse queryResourcePackageInstances(QueryResourcePackageInstancesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryResourcePackageInstancesWithOptions(request, runtime);
     }
 
     public QueryRIUtilizationDetailResponse queryRIUtilizationDetailWithOptions(QueryRIUtilizationDetailRequest request, RuntimeOptions runtime) throws Exception {
