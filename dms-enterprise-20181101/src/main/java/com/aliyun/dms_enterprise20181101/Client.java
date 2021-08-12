@@ -191,6 +191,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDatabasesWithOptions(request, runtime);
     }
 
+    public CreateProxyAccessResponse createProxyAccessWithOptions(CreateProxyAccessRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateProxyAccess", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new CreateProxyAccessResponse());
+    }
+
+    public CreateProxyAccessResponse createProxyAccess(CreateProxyAccessRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createProxyAccessWithOptions(request, runtime);
+    }
+
     public ListUserPermissionsResponse listUserPermissionsWithOptions(ListUserPermissionsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -215,6 +228,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWorkFlowTemplatesResponse listWorkFlowTemplates(ListWorkFlowTemplatesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listWorkFlowTemplatesWithOptions(request, runtime);
+    }
+
+    public GetProxyResponse getProxyWithOptions(GetProxyRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetProxy", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetProxyResponse());
+    }
+
+    public GetProxyResponse getProxy(GetProxyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getProxyWithOptions(request, runtime);
     }
 
     public GetDataExportOrderDetailResponse getDataExportOrderDetailWithOptions(GetDataExportOrderDetailRequest request, RuntimeOptions runtime) throws Exception {
@@ -280,6 +306,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetStructSyncJobDetailResponse getStructSyncJobDetail(GetStructSyncJobDetailRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getStructSyncJobDetailWithOptions(request, runtime);
+    }
+
+    public CreateProxyResponse createProxyWithOptions(CreateProxyRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateProxy", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new CreateProxyResponse());
+    }
+
+    public CreateProxyResponse createProxy(CreateProxyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createProxyWithOptions(request, runtime);
     }
 
     public CreateUploadOSSFileJobResponse createUploadOSSFileJobWithOptions(CreateUploadOSSFileJobRequest tmpReq, RuntimeOptions runtime) throws Exception {
@@ -655,6 +694,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDataCronClearOrderWithOptions(request, runtime);
     }
 
+    public ListProxyAccessesResponse listProxyAccessesWithOptions(ListProxyAccessesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListProxyAccesses", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new ListProxyAccessesResponse());
+    }
+
+    public ListProxyAccessesResponse listProxyAccesses(ListProxyAccessesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listProxyAccessesWithOptions(request, runtime);
+    }
+
     public CreatePublishGroupTaskResponse createPublishGroupTaskWithOptions(CreatePublishGroupTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -679,6 +731,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDatabaseResponse getDatabase(GetDatabaseRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getDatabaseWithOptions(request, runtime);
+    }
+
+    public InspectProxyAccessSecretResponse inspectProxyAccessSecretWithOptions(InspectProxyAccessSecretRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("InspectProxyAccessSecret", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new InspectProxyAccessSecretResponse());
+    }
+
+    public InspectProxyAccessSecretResponse inspectProxyAccessSecret(InspectProxyAccessSecretRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.inspectProxyAccessSecretWithOptions(request, runtime);
     }
 
     public GetOwnerApplyOrderDetailResponse getOwnerApplyOrderDetailWithOptions(GetOwnerApplyOrderDetailRequest request, RuntimeOptions runtime) throws Exception {
@@ -785,6 +850,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.approveOrderWithOptions(request, runtime);
     }
 
+    public DeleteProxyAccessResponse deleteProxyAccessWithOptions(DeleteProxyAccessRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteProxyAccess", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteProxyAccessResponse());
+    }
+
+    public DeleteProxyAccessResponse deleteProxyAccess(DeleteProxyAccessRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteProxyAccessWithOptions(request, runtime);
+    }
+
     public GetDataCorrectTaskDetailResponse getDataCorrectTaskDetailWithOptions(GetDataCorrectTaskDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -809,6 +887,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateUploadFileJobResponse createUploadFileJob(CreateUploadFileJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createUploadFileJobWithOptions(request, runtime);
+    }
+
+    public DeleteProxyResponse deleteProxyWithOptions(DeleteProxyRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteProxy", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteProxyResponse());
+    }
+
+    public DeleteProxyResponse deleteProxy(DeleteProxyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteProxyWithOptions(request, runtime);
     }
 
     public ListLogicDatabasesResponse listLogicDatabasesWithOptions(ListLogicDatabasesRequest request, RuntimeOptions runtime) throws Exception {
@@ -1140,6 +1231,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWorkFlowNodesResponse listWorkFlowNodes(ListWorkFlowNodesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listWorkFlowNodesWithOptions(request, runtime);
+    }
+
+    public ListProxiesResponse listProxiesWithOptions(ListProxiesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListProxies", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new ListProxiesResponse());
+    }
+
+    public ListProxiesResponse listProxies(ListProxiesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listProxiesWithOptions(request, runtime);
     }
 
     public GetStructSyncOrderDetailResponse getStructSyncOrderDetailWithOptions(GetStructSyncOrderDetailRequest request, RuntimeOptions runtime) throws Exception {
