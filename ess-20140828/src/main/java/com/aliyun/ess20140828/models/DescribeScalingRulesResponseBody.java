@@ -4,24 +4,48 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingRulesResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     @NameInMap("ScalingRules")
     public DescribeScalingRulesResponseBodyScalingRules scalingRules;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     public static DescribeScalingRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScalingRulesResponseBody self = new DescribeScalingRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeScalingRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeScalingRulesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeScalingRulesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeScalingRulesResponseBody setTotalCount(Integer totalCount) {
@@ -38,30 +62,6 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
     }
     public DescribeScalingRulesResponseBodyScalingRules getScalingRules() {
         return this.scalingRules;
-    }
-
-    public DescribeScalingRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeScalingRulesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeScalingRulesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public static class DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarmDimensionsDimension extends TeaModel {
@@ -129,9 +129,6 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @NameInMap("AlarmTaskName")
         public String alarmTaskName;
 
-        @NameInMap("Dimensions")
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarmDimensions dimensions;
-
         @NameInMap("MetricType")
         public String metricType;
 
@@ -140,6 +137,9 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
 
         @NameInMap("Statistics")
         public String statistics;
+
+        @NameInMap("Dimensions")
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarmDimensions dimensions;
 
         public static DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarm build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarm self = new DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarm();
@@ -186,14 +186,6 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             return this.alarmTaskName;
         }
 
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarm setDimensions(DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarmDimensions dimensions) {
-            this.dimensions = dimensions;
-            return this;
-        }
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarmDimensions getDimensions() {
-            return this.dimensions;
-        }
-
         public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarm setMetricType(String metricType) {
             this.metricType = metricType;
             return this;
@@ -216,6 +208,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
         public String getStatistics() {
             return this.statistics;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarm setDimensions(DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarmDimensions dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarmsAlarmDimensions getDimensions() {
+            return this.dimensions;
         }
 
     }
@@ -303,11 +303,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @NameInMap("MetricName")
         public String metricName;
 
+        @NameInMap("AdjustmentType")
+        public String adjustmentType;
+
         @NameInMap("InitialMaxSize")
         public Integer initialMaxSize;
 
-        @NameInMap("Alarms")
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarms alarms;
+        @NameInMap("EstimatedInstanceWarmup")
+        public Integer estimatedInstanceWarmup;
 
         @NameInMap("ScaleOutEvaluationCount")
         public Integer scaleOutEvaluationCount;
@@ -315,11 +318,17 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @NameInMap("PredictiveScalingMode")
         public String predictiveScalingMode;
 
-        @NameInMap("MinSize")
-        public Integer minSize;
+        @NameInMap("MinAdjustmentMagnitude")
+        public Integer minAdjustmentMagnitude;
+
+        @NameInMap("ScalingRuleAri")
+        public String scalingRuleAri;
 
         @NameInMap("PredictiveTaskBufferTime")
         public Integer predictiveTaskBufferTime;
+
+        @NameInMap("MinSize")
+        public Integer minSize;
 
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
@@ -327,14 +336,23 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @NameInMap("PredictiveValueBehavior")
         public String predictiveValueBehavior;
 
+        @NameInMap("TargetValue")
+        public Float targetValue;
+
         @NameInMap("Cooldown")
         public Integer cooldown;
+
+        @NameInMap("MaxSize")
+        public Integer maxSize;
+
+        @NameInMap("PredictiveValueBuffer")
+        public Integer predictiveValueBuffer;
 
         @NameInMap("ScalingRuleType")
         public String scalingRuleType;
 
-        @NameInMap("PredictiveValueBuffer")
-        public Integer predictiveValueBuffer;
+        @NameInMap("AdjustmentValue")
+        public Integer adjustmentValue;
 
         @NameInMap("ScaleInEvaluationCount")
         public Integer scaleInEvaluationCount;
@@ -345,32 +363,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @NameInMap("ScalingRuleName")
         public String scalingRuleName;
 
-        @NameInMap("AdjustmentType")
-        public String adjustmentType;
+        @NameInMap("ScalingRuleId")
+        public String scalingRuleId;
 
-        @NameInMap("EstimatedInstanceWarmup")
-        public Integer estimatedInstanceWarmup;
-
-        @NameInMap("MinAdjustmentMagnitude")
-        public Integer minAdjustmentMagnitude;
-
-        @NameInMap("ScalingRuleAri")
-        public String scalingRuleAri;
+        @NameInMap("Alarms")
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarms alarms;
 
         @NameInMap("StepAdjustments")
         public DescribeScalingRulesResponseBodyScalingRulesScalingRuleStepAdjustments stepAdjustments;
-
-        @NameInMap("TargetValue")
-        public Float targetValue;
-
-        @NameInMap("MaxSize")
-        public Integer maxSize;
-
-        @NameInMap("AdjustmentValue")
-        public Integer adjustmentValue;
-
-        @NameInMap("ScalingRuleId")
-        public String scalingRuleId;
 
         public static DescribeScalingRulesResponseBodyScalingRulesScalingRule build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingRulesResponseBodyScalingRulesScalingRule self = new DescribeScalingRulesResponseBodyScalingRulesScalingRule();
@@ -385,6 +385,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             return this.metricName;
         }
 
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setAdjustmentType(String adjustmentType) {
+            this.adjustmentType = adjustmentType;
+            return this;
+        }
+        public String getAdjustmentType() {
+            return this.adjustmentType;
+        }
+
         public DescribeScalingRulesResponseBodyScalingRulesScalingRule setInitialMaxSize(Integer initialMaxSize) {
             this.initialMaxSize = initialMaxSize;
             return this;
@@ -393,12 +401,12 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             return this.initialMaxSize;
         }
 
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setAlarms(DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarms alarms) {
-            this.alarms = alarms;
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setEstimatedInstanceWarmup(Integer estimatedInstanceWarmup) {
+            this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarms getAlarms() {
-            return this.alarms;
+        public Integer getEstimatedInstanceWarmup() {
+            return this.estimatedInstanceWarmup;
         }
 
         public DescribeScalingRulesResponseBodyScalingRulesScalingRule setScaleOutEvaluationCount(Integer scaleOutEvaluationCount) {
@@ -417,12 +425,20 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             return this.predictiveScalingMode;
         }
 
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setMinSize(Integer minSize) {
-            this.minSize = minSize;
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setMinAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
+            this.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
-        public Integer getMinSize() {
-            return this.minSize;
+        public Integer getMinAdjustmentMagnitude() {
+            return this.minAdjustmentMagnitude;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setScalingRuleAri(String scalingRuleAri) {
+            this.scalingRuleAri = scalingRuleAri;
+            return this;
+        }
+        public String getScalingRuleAri() {
+            return this.scalingRuleAri;
         }
 
         public DescribeScalingRulesResponseBodyScalingRulesScalingRule setPredictiveTaskBufferTime(Integer predictiveTaskBufferTime) {
@@ -431,6 +447,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
         public Integer getPredictiveTaskBufferTime() {
             return this.predictiveTaskBufferTime;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setMinSize(Integer minSize) {
+            this.minSize = minSize;
+            return this;
+        }
+        public Integer getMinSize() {
+            return this.minSize;
         }
 
         public DescribeScalingRulesResponseBodyScalingRulesScalingRule setScalingGroupId(String scalingGroupId) {
@@ -449,12 +473,36 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             return this.predictiveValueBehavior;
         }
 
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setTargetValue(Float targetValue) {
+            this.targetValue = targetValue;
+            return this;
+        }
+        public Float getTargetValue() {
+            return this.targetValue;
+        }
+
         public DescribeScalingRulesResponseBodyScalingRulesScalingRule setCooldown(Integer cooldown) {
             this.cooldown = cooldown;
             return this;
         }
         public Integer getCooldown() {
             return this.cooldown;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setMaxSize(Integer maxSize) {
+            this.maxSize = maxSize;
+            return this;
+        }
+        public Integer getMaxSize() {
+            return this.maxSize;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setPredictiveValueBuffer(Integer predictiveValueBuffer) {
+            this.predictiveValueBuffer = predictiveValueBuffer;
+            return this;
+        }
+        public Integer getPredictiveValueBuffer() {
+            return this.predictiveValueBuffer;
         }
 
         public DescribeScalingRulesResponseBodyScalingRulesScalingRule setScalingRuleType(String scalingRuleType) {
@@ -465,12 +513,12 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             return this.scalingRuleType;
         }
 
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setPredictiveValueBuffer(Integer predictiveValueBuffer) {
-            this.predictiveValueBuffer = predictiveValueBuffer;
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setAdjustmentValue(Integer adjustmentValue) {
+            this.adjustmentValue = adjustmentValue;
             return this;
         }
-        public Integer getPredictiveValueBuffer() {
-            return this.predictiveValueBuffer;
+        public Integer getAdjustmentValue() {
+            return this.adjustmentValue;
         }
 
         public DescribeScalingRulesResponseBodyScalingRulesScalingRule setScaleInEvaluationCount(Integer scaleInEvaluationCount) {
@@ -497,36 +545,20 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             return this.scalingRuleName;
         }
 
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setAdjustmentType(String adjustmentType) {
-            this.adjustmentType = adjustmentType;
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setScalingRuleId(String scalingRuleId) {
+            this.scalingRuleId = scalingRuleId;
             return this;
         }
-        public String getAdjustmentType() {
-            return this.adjustmentType;
+        public String getScalingRuleId() {
+            return this.scalingRuleId;
         }
 
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setEstimatedInstanceWarmup(Integer estimatedInstanceWarmup) {
-            this.estimatedInstanceWarmup = estimatedInstanceWarmup;
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setAlarms(DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarms alarms) {
+            this.alarms = alarms;
             return this;
         }
-        public Integer getEstimatedInstanceWarmup() {
-            return this.estimatedInstanceWarmup;
-        }
-
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setMinAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
-            this.minAdjustmentMagnitude = minAdjustmentMagnitude;
-            return this;
-        }
-        public Integer getMinAdjustmentMagnitude() {
-            return this.minAdjustmentMagnitude;
-        }
-
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setScalingRuleAri(String scalingRuleAri) {
-            this.scalingRuleAri = scalingRuleAri;
-            return this;
-        }
-        public String getScalingRuleAri() {
-            return this.scalingRuleAri;
+        public DescribeScalingRulesResponseBodyScalingRulesScalingRuleAlarms getAlarms() {
+            return this.alarms;
         }
 
         public DescribeScalingRulesResponseBodyScalingRulesScalingRule setStepAdjustments(DescribeScalingRulesResponseBodyScalingRulesScalingRuleStepAdjustments stepAdjustments) {
@@ -535,38 +567,6 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
         public DescribeScalingRulesResponseBodyScalingRulesScalingRuleStepAdjustments getStepAdjustments() {
             return this.stepAdjustments;
-        }
-
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setTargetValue(Float targetValue) {
-            this.targetValue = targetValue;
-            return this;
-        }
-        public Float getTargetValue() {
-            return this.targetValue;
-        }
-
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setMaxSize(Integer maxSize) {
-            this.maxSize = maxSize;
-            return this;
-        }
-        public Integer getMaxSize() {
-            return this.maxSize;
-        }
-
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setAdjustmentValue(Integer adjustmentValue) {
-            this.adjustmentValue = adjustmentValue;
-            return this;
-        }
-        public Integer getAdjustmentValue() {
-            return this.adjustmentValue;
-        }
-
-        public DescribeScalingRulesResponseBodyScalingRulesScalingRule setScalingRuleId(String scalingRuleId) {
-            this.scalingRuleId = scalingRuleId;
-            return this;
-        }
-        public String getScalingRuleId() {
-            return this.scalingRuleId;
         }
 
     }

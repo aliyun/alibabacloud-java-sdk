@@ -4,17 +4,17 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeScheduledTasksResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("ScheduledTasks")
     public DescribeScheduledTasksResponseBodyScheduledTasks scheduledTasks;
@@ -22,14 +22,6 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
     public static DescribeScheduledTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScheduledTasksResponseBody self = new DescribeScheduledTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScheduledTasksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeScheduledTasksResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeScheduledTasksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeScheduledTasksResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeScheduledTasksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeScheduledTasksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeScheduledTasksResponseBody setScheduledTasks(DescribeScheduledTasksResponseBodyScheduledTasks scheduledTasks) {
@@ -71,11 +71,11 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         @NameInMap("RecurrenceValue")
         public String recurrenceValue;
 
-        @NameInMap("MaxValue")
-        public Integer maxValue;
-
         @NameInMap("RecurrenceType")
         public String recurrenceType;
+
+        @NameInMap("MaxValue")
+        public Integer maxValue;
 
         @NameInMap("ScheduledTaskName")
         public String scheduledTaskName;
@@ -83,11 +83,11 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         @NameInMap("RecurrenceEndTime")
         public String recurrenceEndTime;
 
-        @NameInMap("ScheduledTaskId")
-        public String scheduledTaskId;
-
         @NameInMap("DesiredCapacity")
         public Integer desiredCapacity;
+
+        @NameInMap("ScheduledTaskId")
+        public String scheduledTaskId;
 
         @NameInMap("MinValue")
         public Integer minValue;
@@ -128,20 +128,20 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             return this.recurrenceValue;
         }
 
-        public DescribeScheduledTasksResponseBodyScheduledTasksScheduledTask setMaxValue(Integer maxValue) {
-            this.maxValue = maxValue;
-            return this;
-        }
-        public Integer getMaxValue() {
-            return this.maxValue;
-        }
-
         public DescribeScheduledTasksResponseBodyScheduledTasksScheduledTask setRecurrenceType(String recurrenceType) {
             this.recurrenceType = recurrenceType;
             return this;
         }
         public String getRecurrenceType() {
             return this.recurrenceType;
+        }
+
+        public DescribeScheduledTasksResponseBodyScheduledTasksScheduledTask setMaxValue(Integer maxValue) {
+            this.maxValue = maxValue;
+            return this;
+        }
+        public Integer getMaxValue() {
+            return this.maxValue;
         }
 
         public DescribeScheduledTasksResponseBodyScheduledTasksScheduledTask setScheduledTaskName(String scheduledTaskName) {
@@ -160,20 +160,20 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             return this.recurrenceEndTime;
         }
 
-        public DescribeScheduledTasksResponseBodyScheduledTasksScheduledTask setScheduledTaskId(String scheduledTaskId) {
-            this.scheduledTaskId = scheduledTaskId;
-            return this;
-        }
-        public String getScheduledTaskId() {
-            return this.scheduledTaskId;
-        }
-
         public DescribeScheduledTasksResponseBodyScheduledTasksScheduledTask setDesiredCapacity(Integer desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
             return this;
         }
         public Integer getDesiredCapacity() {
             return this.desiredCapacity;
+        }
+
+        public DescribeScheduledTasksResponseBodyScheduledTasksScheduledTask setScheduledTaskId(String scheduledTaskId) {
+            this.scheduledTaskId = scheduledTaskId;
+            return this;
+        }
+        public String getScheduledTaskId() {
+            return this.scheduledTaskId;
         }
 
         public DescribeScheduledTasksResponseBodyScheduledTasksScheduledTask setMinValue(Integer minValue) {

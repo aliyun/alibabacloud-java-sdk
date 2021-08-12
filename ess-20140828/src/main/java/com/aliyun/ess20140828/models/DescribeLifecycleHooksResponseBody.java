@@ -4,17 +4,17 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeLifecycleHooksResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("LifecycleHooks")
     public DescribeLifecycleHooksResponseBodyLifecycleHooks lifecycleHooks;
@@ -22,14 +22,6 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
     public static DescribeLifecycleHooksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLifecycleHooksResponseBody self = new DescribeLifecycleHooksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLifecycleHooksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeLifecycleHooksResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeLifecycleHooksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeLifecycleHooksResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeLifecycleHooksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeLifecycleHooksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeLifecycleHooksResponseBody setLifecycleHooks(DescribeLifecycleHooksResponseBodyLifecycleHooks lifecycleHooks) {

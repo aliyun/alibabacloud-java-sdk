@@ -19,6 +19,9 @@ public class DetachLoadBalancersRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("LoadBalancer")
     public java.util.List<String> loadBalancer;
 
@@ -65,6 +68,14 @@ public class DetachLoadBalancersRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public DetachLoadBalancersRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public DetachLoadBalancersRequest setLoadBalancer(java.util.List<String> loadBalancer) {

@@ -4,14 +4,14 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeLifecycleActionsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -22,14 +22,6 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
     public static DescribeLifecycleActionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLifecycleActionsResponseBody self = new DescribeLifecycleActionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLifecycleActionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeLifecycleActionsResponseBody setNextToken(String nextToken) {
@@ -46,6 +38,14 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeLifecycleActionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeLifecycleActionsResponseBody setMaxResults(Integer maxResults) {
@@ -87,9 +87,6 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         @NameInMap("LifecycleHookId")
         public String lifecycleHookId;
 
-        @NameInMap("InstanceIds")
-        public DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleActionInstanceIds instanceIds;
-
         @NameInMap("LifecycleActionToken")
         public String lifecycleActionToken;
 
@@ -98,6 +95,9 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
 
         @NameInMap("LifecycleActionResult")
         public String lifecycleActionResult;
+
+        @NameInMap("InstanceIds")
+        public DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleActionInstanceIds instanceIds;
 
         public static DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleAction build(java.util.Map<String, ?> map) throws Exception {
             DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleAction self = new DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleAction();
@@ -110,14 +110,6 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
         public String getLifecycleHookId() {
             return this.lifecycleHookId;
-        }
-
-        public DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleAction setInstanceIds(DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleActionInstanceIds instanceIds) {
-            this.instanceIds = instanceIds;
-            return this;
-        }
-        public DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleActionInstanceIds getInstanceIds() {
-            return this.instanceIds;
         }
 
         public DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleAction setLifecycleActionToken(String lifecycleActionToken) {
@@ -142,6 +134,14 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
         public String getLifecycleActionResult() {
             return this.lifecycleActionResult;
+        }
+
+        public DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleAction setInstanceIds(DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleActionInstanceIds instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
+        public DescribeLifecycleActionsResponseBodyLifecycleActionsLifecycleActionInstanceIds getInstanceIds() {
+            return this.instanceIds;
         }
 
     }

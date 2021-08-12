@@ -4,9 +4,6 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeAlarmsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("AlarmList")
     public DescribeAlarmsResponseBodyAlarmList alarmList;
 
     public static DescribeAlarmsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlarmsResponseBody self = new DescribeAlarmsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAlarmsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeAlarmsResponseBody setPageSize(Integer pageSize) {
@@ -56,31 +48,20 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeAlarmsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeAlarmsResponseBody setAlarmList(DescribeAlarmsResponseBodyAlarmList alarmList) {
         this.alarmList = alarmList;
         return this;
     }
     public DescribeAlarmsResponseBodyAlarmList getAlarmList() {
         return this.alarmList;
-    }
-
-    public static class DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions extends TeaModel {
-        @NameInMap("AlarmAction")
-        public java.util.List<String> alarmAction;
-
-        public static DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions self = new DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions setAlarmAction(java.util.List<String> alarmAction) {
-            this.alarmAction = alarmAction;
-            return this;
-        }
-        public java.util.List<String> getAlarmAction() {
-            return this.alarmAction;
-        }
-
     }
 
     public static class DescribeAlarmsResponseBodyAlarmListAlarmDimensionsDimension extends TeaModel {
@@ -132,6 +113,25 @@ public class DescribeAlarmsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions extends TeaModel {
+        @NameInMap("AlarmAction")
+        public java.util.List<String> alarmAction;
+
+        public static DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions self = new DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions setAlarmAction(java.util.List<String> alarmAction) {
+            this.alarmAction = alarmAction;
+            return this;
+        }
+        public java.util.List<String> getAlarmAction() {
+            return this.alarmAction;
+        }
+
+    }
+
     public static class DescribeAlarmsResponseBodyAlarmListAlarm extends TeaModel {
         @NameInMap("AlarmTaskId")
         public String alarmTaskId;
@@ -145,14 +145,11 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
-        @NameInMap("AlarmActions")
-        public DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions alarmActions;
+        @NameInMap("Period")
+        public Integer period;
 
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
-
-        @NameInMap("Period")
-        public Integer period;
 
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
@@ -162,9 +159,6 @@ public class DescribeAlarmsResponseBody extends TeaModel {
 
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("Dimensions")
-        public DescribeAlarmsResponseBodyAlarmListAlarmDimensions dimensions;
 
         @NameInMap("MetricType")
         public String metricType;
@@ -180,6 +174,12 @@ public class DescribeAlarmsResponseBody extends TeaModel {
 
         @NameInMap("Statistics")
         public String statistics;
+
+        @NameInMap("Dimensions")
+        public DescribeAlarmsResponseBodyAlarmListAlarmDimensions dimensions;
+
+        @NameInMap("AlarmActions")
+        public DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions alarmActions;
 
         public static DescribeAlarmsResponseBodyAlarmListAlarm build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlarmsResponseBodyAlarmListAlarm self = new DescribeAlarmsResponseBodyAlarmListAlarm();
@@ -218,12 +218,12 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             return this.state;
         }
 
-        public DescribeAlarmsResponseBodyAlarmListAlarm setAlarmActions(DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions alarmActions) {
-            this.alarmActions = alarmActions;
+        public DescribeAlarmsResponseBodyAlarmListAlarm setPeriod(Integer period) {
+            this.period = period;
             return this;
         }
-        public DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions getAlarmActions() {
-            return this.alarmActions;
+        public Integer getPeriod() {
+            return this.period;
         }
 
         public DescribeAlarmsResponseBodyAlarmListAlarm setScalingGroupId(String scalingGroupId) {
@@ -232,14 +232,6 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
         public String getScalingGroupId() {
             return this.scalingGroupId;
-        }
-
-        public DescribeAlarmsResponseBodyAlarmListAlarm setPeriod(Integer period) {
-            this.period = period;
-            return this;
-        }
-        public Integer getPeriod() {
-            return this.period;
         }
 
         public DescribeAlarmsResponseBodyAlarmListAlarm setComparisonOperator(String comparisonOperator) {
@@ -264,14 +256,6 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribeAlarmsResponseBodyAlarmListAlarm setDimensions(DescribeAlarmsResponseBodyAlarmListAlarmDimensions dimensions) {
-            this.dimensions = dimensions;
-            return this;
-        }
-        public DescribeAlarmsResponseBodyAlarmListAlarmDimensions getDimensions() {
-            return this.dimensions;
         }
 
         public DescribeAlarmsResponseBodyAlarmListAlarm setMetricType(String metricType) {
@@ -312,6 +296,22 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
         public String getStatistics() {
             return this.statistics;
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListAlarm setDimensions(DescribeAlarmsResponseBodyAlarmListAlarmDimensions dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+        public DescribeAlarmsResponseBodyAlarmListAlarmDimensions getDimensions() {
+            return this.dimensions;
+        }
+
+        public DescribeAlarmsResponseBodyAlarmListAlarm setAlarmActions(DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions alarmActions) {
+            this.alarmActions = alarmActions;
+            return this;
+        }
+        public DescribeAlarmsResponseBodyAlarmListAlarmAlarmActions getAlarmActions() {
+            return this.alarmActions;
         }
 
     }

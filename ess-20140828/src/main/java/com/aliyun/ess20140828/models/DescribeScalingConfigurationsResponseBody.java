@@ -4,17 +4,17 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingConfigurationsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("ScalingConfigurations")
     public DescribeScalingConfigurationsResponseBodyScalingConfigurations scalingConfigurations;
@@ -22,14 +22,6 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
     public static DescribeScalingConfigurationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScalingConfigurationsResponseBody self = new DescribeScalingConfigurationsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScalingConfigurationsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeScalingConfigurationsResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeScalingConfigurationsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeScalingConfigurationsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeScalingConfigurationsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeScalingConfigurationsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeScalingConfigurationsResponseBody setScalingConfigurations(DescribeScalingConfigurationsResponseBodyScalingConfigurations scalingConfigurations) {
@@ -94,51 +94,21 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDiskCategories extends TeaModel {
+        @NameInMap("Category")
+        public java.util.List<String> category;
 
-        @NameInMap("Value")
-        public String value;
-
-        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag();
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDiskCategories build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDiskCategories self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDiskCategories();
             return TeaModel.build(map, self);
         }
 
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag setKey(String key) {
-            this.key = key;
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDiskCategories setCategory(java.util.List<String> category) {
+            this.category = category;
             return this;
         }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags extends TeaModel {
-        @NameInMap("Tag")
-        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag> tag;
-
-        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags setTag(java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag> getTag() {
-            return this.tag;
+        public java.util.List<String> getCategory() {
+            return this.category;
         }
 
     }
@@ -176,6 +146,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
         @NameInMap("Encrypted")
         public String encrypted;
+
+        @NameInMap("Categories")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDiskCategories categories;
 
         public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDisk self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDisk();
@@ -270,6 +243,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.encrypted;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDisk setCategories(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDiskCategories categories) {
+            this.categories = categories;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisksDataDiskCategories getCategories() {
+            return this.categories;
+        }
+
     }
 
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisks extends TeaModel {
@@ -291,24 +272,65 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimitSpotPriceModel extends TeaModel {
-        @NameInMap("PriceLimit")
-        public Float priceLimit;
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
 
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag> tag;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags setTag(java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimitSpotPriceModel extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("PriceLimit")
+        public Float priceLimit;
 
         public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimitSpotPriceModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimitSpotPriceModel self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimitSpotPriceModel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimitSpotPriceModel setPriceLimit(Float priceLimit) {
-            this.priceLimit = priceLimit;
-            return this;
-        }
-        public Float getPriceLimit() {
-            return this.priceLimit;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimitSpotPriceModel setInstanceType(String instanceType) {
@@ -317,6 +339,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimitSpotPriceModel setPriceLimit(Float priceLimit) {
+            this.priceLimit = priceLimit;
+            return this;
+        }
+        public Float getPriceLimit() {
+            return this.priceLimit;
         }
 
     }
@@ -340,6 +370,96 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo extends TeaModel {
+        @NameInMap("MaxPrice")
+        public Float maxPrice;
+
+        @NameInMap("Cores")
+        public Integer cores;
+
+        @NameInMap("Memory")
+        public Float memory;
+
+        @NameInMap("InstanceFamilyLevel")
+        public String instanceFamilyLevel;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo setMaxPrice(Float maxPrice) {
+            this.maxPrice = maxPrice;
+            return this;
+        }
+        public Float getMaxPrice() {
+            return this.maxPrice;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo setCores(Integer cores) {
+            this.cores = cores;
+            return this;
+        }
+        public Integer getCores() {
+            return this.cores;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo setMemory(Float memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Float getMemory() {
+            return this.memory;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo setInstanceFamilyLevel(String instanceFamilyLevel) {
+            this.instanceFamilyLevel = instanceFamilyLevel;
+            return this;
+        }
+        public String getInstanceFamilyLevel() {
+            return this.instanceFamilyLevel;
+        }
+
+    }
+
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfos extends TeaModel {
+        @NameInMap("InstancePatternInfo")
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo> instancePatternInfo;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfos self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfos setInstancePatternInfo(java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo> instancePatternInfo) {
+            this.instancePatternInfo = instancePatternInfo;
+            return this;
+        }
+        public java.util.List<DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfosInstancePatternInfo> getInstancePatternInfo() {
+            return this.instancePatternInfo;
+        }
+
+    }
+
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSystemDiskCategories extends TeaModel {
+        @NameInMap("SystemDiskCategory")
+        public java.util.List<String> systemDiskCategory;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSystemDiskCategories build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSystemDiskCategories self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSystemDiskCategories();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSystemDiskCategories setSystemDiskCategory(java.util.List<String> systemDiskCategory) {
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+        public java.util.List<String> getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+    }
+
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationWeightedCapacities extends TeaModel {
         @NameInMap("WeightedCapacity")
         public java.util.List<String> weightedCapacity;
@@ -355,6 +475,25 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public java.util.List<String> getWeightedCapacity() {
             return this.weightedCapacity;
+        }
+
+    }
+
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes extends TeaModel {
+        @NameInMap("InstanceType")
+        public java.util.List<String> instanceType;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes setInstanceType(java.util.List<String> instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public java.util.List<String> getInstanceType() {
+            return this.instanceType;
         }
 
     }
@@ -397,101 +536,19 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes extends TeaModel {
-        @NameInMap("InstanceType")
-        public java.util.List<String> instanceType;
-
-        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes setInstanceType(java.util.List<String> instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public java.util.List<String> getInstanceType() {
-            return this.instanceType;
-        }
-
-    }
-
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration extends TeaModel {
         @NameInMap("PrivatePoolOptions")
         @Validation(required = true)
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationPrivatePoolOptions privatePoolOptions;
+
+        @NameInMap("DeploymentSetId")
+        public String deploymentSetId;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("ScalingConfigurationName")
         public String scalingConfigurationName;
-
-        @NameInMap("Tags")
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags tags;
-
-        @NameInMap("DataDisks")
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisks dataDisks;
-
-        @NameInMap("SystemDiskAutoSnapshotPolicyId")
-        public String systemDiskAutoSnapshotPolicyId;
-
-        @NameInMap("SpotStrategy")
-        public String spotStrategy;
-
-        @NameInMap("Affinity")
-        public String affinity;
-
-        @NameInMap("SpotDuration")
-        public Integer spotDuration;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("UserData")
-        public String userData;
-
-        @NameInMap("SpotPriceLimit")
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimit spotPriceLimit;
-
-        @NameInMap("ImageId")
-        public String imageId;
-
-        @NameInMap("LoadBalancerWeight")
-        public Integer loadBalancerWeight;
-
-        @NameInMap("HostName")
-        public String hostName;
-
-        @NameInMap("SystemDiskName")
-        public String systemDiskName;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("SystemDiskPerformanceLevel")
-        public String systemDiskPerformanceLevel;
-
-        @NameInMap("ImageName")
-        public String imageName;
-
-        @NameInMap("InternetChargeType")
-        public String internetChargeType;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("ScalingConfigurationId")
-        public String scalingConfigurationId;
-
-        @NameInMap("CreditSpecification")
-        public String creditSpecification;
-
-        @NameInMap("SpotInterruptionBehavior")
-        public String spotInterruptionBehavior;
-
-        @NameInMap("DeploymentSetId")
-        public String deploymentSetId;
 
         @NameInMap("SystemDiskDescription")
         public String systemDiskDescription;
@@ -502,8 +559,17 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        @NameInMap("SystemDiskAutoSnapshotPolicyId")
+        public String systemDiskAutoSnapshotPolicyId;
+
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
+
+        @NameInMap("Affinity")
+        public String affinity;
 
         @NameInMap("Tenancy")
         public String tenancy;
@@ -514,11 +580,20 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("Ipv6AddressCount")
         public Integer ipv6AddressCount;
 
+        @NameInMap("SpotDuration")
+        public Integer spotDuration;
+
         @NameInMap("LifecycleState")
         public String lifecycleState;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
         @NameInMap("SecurityEnhancementStrategy")
         public String securityEnhancementStrategy;
+
+        @NameInMap("UserData")
+        public String userData;
 
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
@@ -535,14 +610,23 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Integer memory;
 
+        @NameInMap("ImageId")
+        public String imageId;
+
         @NameInMap("ImageFamily")
         public String imageFamily;
+
+        @NameInMap("LoadBalancerWeight")
+        public Integer loadBalancerWeight;
 
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
-        @NameInMap("WeightedCapacities")
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationWeightedCapacities weightedCapacities;
+        @NameInMap("HostName")
+        public String hostName;
+
+        @NameInMap("SystemDiskName")
+        public String systemDiskName;
 
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
@@ -550,11 +634,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("InternetMaxBandwidthIn")
         public Integer internetMaxBandwidthIn;
 
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("InstanceDescription")
         public String instanceDescription;
-
-        @NameInMap("SecurityGroupIds")
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSecurityGroupIds securityGroupIds;
 
         @NameInMap("IoOptimized")
         public String ioOptimized;
@@ -562,17 +646,59 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
+        @NameInMap("SystemDiskPerformanceLevel")
+        public String systemDiskPerformanceLevel;
+
         @NameInMap("Cpu")
         public Integer cpu;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        @NameInMap("SchedulerOptions")
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSchedulerOptions schedulerOptions;
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        @NameInMap("InternetChargeType")
+        public String internetChargeType;
+
+        @NameInMap("ImageName")
+        public String imageName;
+
+        @NameInMap("ScalingConfigurationId")
+        public String scalingConfigurationId;
+
+        @NameInMap("CreditSpecification")
+        public String creditSpecification;
+
+        @NameInMap("SpotInterruptionBehavior")
+        public String spotInterruptionBehavior;
+
+        @NameInMap("DataDisks")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisks dataDisks;
+
+        @NameInMap("Tags")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags tags;
+
+        @NameInMap("SpotPriceLimit")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimit spotPriceLimit;
+
+        @NameInMap("InstancePatternInfos")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfos instancePatternInfos;
+
+        @NameInMap("SystemDiskCategories")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSystemDiskCategories systemDiskCategories;
+
+        @NameInMap("WeightedCapacities")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationWeightedCapacities weightedCapacities;
 
         @NameInMap("InstanceTypes")
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes instanceTypes;
+
+        @NameInMap("SecurityGroupIds")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSecurityGroupIds securityGroupIds;
+
+        @NameInMap("SchedulerOptions")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSchedulerOptions schedulerOptions;
 
         public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration();
@@ -585,6 +711,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationPrivatePoolOptions getPrivatePoolOptions() {
             return this.privatePoolOptions;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setDeploymentSetId(String deploymentSetId) {
+            this.deploymentSetId = deploymentSetId;
+            return this;
+        }
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setCreationTime(String creationTime) {
@@ -601,182 +735,6 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getScalingConfigurationName() {
             return this.scalingConfigurationName;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setTags(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setDataDisks(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisks dataDisks) {
-            this.dataDisks = dataDisks;
-            return this;
-        }
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisks getDataDisks() {
-            return this.dataDisks;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSystemDiskAutoSnapshotPolicyId(String systemDiskAutoSnapshotPolicyId) {
-            this.systemDiskAutoSnapshotPolicyId = systemDiskAutoSnapshotPolicyId;
-            return this;
-        }
-        public String getSystemDiskAutoSnapshotPolicyId() {
-            return this.systemDiskAutoSnapshotPolicyId;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setAffinity(String affinity) {
-            this.affinity = affinity;
-            return this;
-        }
-        public String getAffinity() {
-            return this.affinity;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSpotDuration(Integer spotDuration) {
-            this.spotDuration = spotDuration;
-            return this;
-        }
-        public Integer getSpotDuration() {
-            return this.spotDuration;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setUserData(String userData) {
-            this.userData = userData;
-            return this;
-        }
-        public String getUserData() {
-            return this.userData;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSpotPriceLimit(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimit spotPriceLimit) {
-            this.spotPriceLimit = spotPriceLimit;
-            return this;
-        }
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimit getSpotPriceLimit() {
-            return this.spotPriceLimit;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setImageId(String imageId) {
-            this.imageId = imageId;
-            return this;
-        }
-        public String getImageId() {
-            return this.imageId;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setLoadBalancerWeight(Integer loadBalancerWeight) {
-            this.loadBalancerWeight = loadBalancerWeight;
-            return this;
-        }
-        public Integer getLoadBalancerWeight() {
-            return this.loadBalancerWeight;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setHostName(String hostName) {
-            this.hostName = hostName;
-            return this;
-        }
-        public String getHostName() {
-            return this.hostName;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSystemDiskName(String systemDiskName) {
-            this.systemDiskName = systemDiskName;
-            return this;
-        }
-        public String getSystemDiskName() {
-            return this.systemDiskName;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
-            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
-            return this;
-        }
-        public String getSystemDiskPerformanceLevel() {
-            return this.systemDiskPerformanceLevel;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setImageName(String imageName) {
-            this.imageName = imageName;
-            return this;
-        }
-        public String getImageName() {
-            return this.imageName;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setScalingConfigurationId(String scalingConfigurationId) {
-            this.scalingConfigurationId = scalingConfigurationId;
-            return this;
-        }
-        public String getScalingConfigurationId() {
-            return this.scalingConfigurationId;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setCreditSpecification(String creditSpecification) {
-            this.creditSpecification = creditSpecification;
-            return this;
-        }
-        public String getCreditSpecification() {
-            return this.creditSpecification;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSpotInterruptionBehavior(String spotInterruptionBehavior) {
-            this.spotInterruptionBehavior = spotInterruptionBehavior;
-            return this;
-        }
-        public String getSpotInterruptionBehavior() {
-            return this.spotInterruptionBehavior;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setDeploymentSetId(String deploymentSetId) {
-            this.deploymentSetId = deploymentSetId;
-            return this;
-        }
-        public String getDeploymentSetId() {
-            return this.deploymentSetId;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSystemDiskDescription(String systemDiskDescription) {
@@ -803,12 +761,36 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.securityGroupId;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSystemDiskAutoSnapshotPolicyId(String systemDiskAutoSnapshotPolicyId) {
+            this.systemDiskAutoSnapshotPolicyId = systemDiskAutoSnapshotPolicyId;
+            return this;
+        }
+        public String getSystemDiskAutoSnapshotPolicyId() {
+            return this.systemDiskAutoSnapshotPolicyId;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setScalingGroupId(String scalingGroupId) {
             this.scalingGroupId = scalingGroupId;
             return this;
         }
         public String getScalingGroupId() {
             return this.scalingGroupId;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setAffinity(String affinity) {
+            this.affinity = affinity;
+            return this;
+        }
+        public String getAffinity() {
+            return this.affinity;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setTenancy(String tenancy) {
@@ -835,6 +817,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.ipv6AddressCount;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSpotDuration(Integer spotDuration) {
+            this.spotDuration = spotDuration;
+            return this;
+        }
+        public Integer getSpotDuration() {
+            return this.spotDuration;
+        }
+
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setLifecycleState(String lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
@@ -843,12 +833,28 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.lifecycleState;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
             this.securityEnhancementStrategy = securityEnhancementStrategy;
             return this;
         }
         public String getSecurityEnhancementStrategy() {
             return this.securityEnhancementStrategy;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setDedicatedHostId(String dedicatedHostId) {
@@ -891,12 +897,28 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.memory;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setImageFamily(String imageFamily) {
             this.imageFamily = imageFamily;
             return this;
         }
         public String getImageFamily() {
             return this.imageFamily;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setLoadBalancerWeight(Integer loadBalancerWeight) {
+            this.loadBalancerWeight = loadBalancerWeight;
+            return this;
+        }
+        public Integer getLoadBalancerWeight() {
+            return this.loadBalancerWeight;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSystemDiskCategory(String systemDiskCategory) {
@@ -907,12 +929,20 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.systemDiskCategory;
         }
 
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setWeightedCapacities(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationWeightedCapacities weightedCapacities) {
-            this.weightedCapacities = weightedCapacities;
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setHostName(String hostName) {
+            this.hostName = hostName;
             return this;
         }
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationWeightedCapacities getWeightedCapacities() {
-            return this.weightedCapacities;
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSystemDiskName(String systemDiskName) {
+            this.systemDiskName = systemDiskName;
+            return this;
+        }
+        public String getSystemDiskName() {
+            return this.systemDiskName;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
@@ -931,20 +961,20 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.internetMaxBandwidthIn;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInstanceDescription(String instanceDescription) {
             this.instanceDescription = instanceDescription;
             return this;
         }
         public String getInstanceDescription() {
             return this.instanceDescription;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSecurityGroupIds(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSecurityGroupIds securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
-            return this;
-        }
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSecurityGroupIds getSecurityGroupIds() {
-            return this.securityGroupIds;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setIoOptimized(String ioOptimized) {
@@ -963,6 +993,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.ramRoleName;
         }
 
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+            return this;
+        }
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
@@ -979,12 +1017,100 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSchedulerOptions(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSchedulerOptions schedulerOptions) {
-            this.schedulerOptions = schedulerOptions;
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setZoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSchedulerOptions getSchedulerOptions() {
-            return this.schedulerOptions;
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setScalingConfigurationId(String scalingConfigurationId) {
+            this.scalingConfigurationId = scalingConfigurationId;
+            return this;
+        }
+        public String getScalingConfigurationId() {
+            return this.scalingConfigurationId;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setCreditSpecification(String creditSpecification) {
+            this.creditSpecification = creditSpecification;
+            return this;
+        }
+        public String getCreditSpecification() {
+            return this.creditSpecification;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSpotInterruptionBehavior(String spotInterruptionBehavior) {
+            this.spotInterruptionBehavior = spotInterruptionBehavior;
+            return this;
+        }
+        public String getSpotInterruptionBehavior() {
+            return this.spotInterruptionBehavior;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setDataDisks(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisks dataDisks) {
+            this.dataDisks = dataDisks;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationDataDisks getDataDisks() {
+            return this.dataDisks;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setTags(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSpotPriceLimit(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimit spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSpotPriceLimit getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInstancePatternInfos(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfos instancePatternInfos) {
+            this.instancePatternInfos = instancePatternInfos;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstancePatternInfos getInstancePatternInfos() {
+            return this.instancePatternInfos;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSystemDiskCategories(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSystemDiskCategories systemDiskCategories) {
+            this.systemDiskCategories = systemDiskCategories;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSystemDiskCategories getSystemDiskCategories() {
+            return this.systemDiskCategories;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setWeightedCapacities(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationWeightedCapacities weightedCapacities) {
+            this.weightedCapacities = weightedCapacities;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationWeightedCapacities getWeightedCapacities() {
+            return this.weightedCapacities;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setInstanceTypes(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes instanceTypes) {
@@ -993,6 +1119,22 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationInstanceTypes getInstanceTypes() {
             return this.instanceTypes;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSecurityGroupIds(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSecurityGroupIds securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSecurityGroupIds getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfiguration setSchedulerOptions(DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSchedulerOptions schedulerOptions) {
+            this.schedulerOptions = schedulerOptions;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsScalingConfigurationSchedulerOptions getSchedulerOptions() {
+            return this.schedulerOptions;
         }
 
     }

@@ -3,19 +3,19 @@ package com.aliyun.ess20140828.models;
 
 import com.aliyun.tea.*;
 
-public class AttachInstancesResponseBody extends TeaModel {
+public class ScaleWithAdjustmentResponseBody extends TeaModel {
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    public static AttachInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AttachInstancesResponseBody self = new AttachInstancesResponseBody();
+    public static ScaleWithAdjustmentResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ScaleWithAdjustmentResponseBody self = new ScaleWithAdjustmentResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AttachInstancesResponseBody setScalingActivityId(String scalingActivityId) {
+    public ScaleWithAdjustmentResponseBody setScalingActivityId(String scalingActivityId) {
         this.scalingActivityId = scalingActivityId;
         return this;
     }
@@ -23,7 +23,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         return this.scalingActivityId;
     }
 
-    public AttachInstancesResponseBody setRequestId(String requestId) {
+    public ScaleWithAdjustmentResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

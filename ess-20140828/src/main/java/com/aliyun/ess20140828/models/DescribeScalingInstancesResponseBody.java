@@ -4,9 +4,6 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingInstancesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,23 +13,18 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("ScalingInstances")
-    public DescribeScalingInstancesResponseBodyScalingInstances scalingInstances;
-
     @NameInMap("TotalSpotCount")
     public Integer totalSpotCount;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("ScalingInstances")
+    public DescribeScalingInstancesResponseBodyScalingInstances scalingInstances;
 
     public static DescribeScalingInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScalingInstancesResponseBody self = new DescribeScalingInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScalingInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeScalingInstancesResponseBody setRequestId(String requestId) {
@@ -59,20 +51,28 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeScalingInstancesResponseBody setScalingInstances(DescribeScalingInstancesResponseBodyScalingInstances scalingInstances) {
-        this.scalingInstances = scalingInstances;
-        return this;
-    }
-    public DescribeScalingInstancesResponseBodyScalingInstances getScalingInstances() {
-        return this.scalingInstances;
-    }
-
     public DescribeScalingInstancesResponseBody setTotalSpotCount(Integer totalSpotCount) {
         this.totalSpotCount = totalSpotCount;
         return this;
     }
     public Integer getTotalSpotCount() {
         return this.totalSpotCount;
+    }
+
+    public DescribeScalingInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeScalingInstancesResponseBody setScalingInstances(DescribeScalingInstancesResponseBodyScalingInstances scalingInstances) {
+        this.scalingInstances = scalingInstances;
+        return this;
+    }
+    public DescribeScalingInstancesResponseBodyScalingInstances getScalingInstances() {
+        return this.scalingInstances;
     }
 
     public static class DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance extends TeaModel {
@@ -88,14 +88,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
         @NameInMap("LaunchTemplateVersion")
         public String launchTemplateVersion;
 
         @NameInMap("HealthStatus")
         public String healthStatus;
-
-        @NameInMap("SpotStrategy")
-        public String spotStrategy;
 
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
@@ -109,6 +109,9 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         @NameInMap("CreationType")
         public String creationType;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         @NameInMap("ScalingConfigurationId")
         public String scalingConfigurationId;
 
@@ -120,6 +123,9 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
 
         @NameInMap("CreatedTime")
         public String createdTime;
+
+        @NameInMap("ScalingActivityId")
+        public String scalingActivityId;
 
         public static DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance self = new DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance();
@@ -158,6 +164,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
         public DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance setLaunchTemplateVersion(String launchTemplateVersion) {
             this.launchTemplateVersion = launchTemplateVersion;
             return this;
@@ -172,14 +186,6 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         }
         public String getHealthStatus() {
             return this.healthStatus;
-        }
-
-        public DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
         }
 
         public DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance setScalingGroupId(String scalingGroupId) {
@@ -214,6 +220,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
             return this.creationType;
         }
 
+        public DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance setScalingConfigurationId(String scalingConfigurationId) {
             this.scalingConfigurationId = scalingConfigurationId;
             return this;
@@ -244,6 +258,14 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
         }
         public String getCreatedTime() {
             return this.createdTime;
+        }
+
+        public DescribeScalingInstancesResponseBodyScalingInstancesScalingInstance setScalingActivityId(String scalingActivityId) {
+            this.scalingActivityId = scalingActivityId;
+            return this;
+        }
+        public String getScalingActivityId() {
+            return this.scalingActivityId;
         }
 
     }
