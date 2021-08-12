@@ -7,9 +7,6 @@ public class ConvertChargeTypeResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public ConvertChargeTypeResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class ConvertChargeTypeResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public ConvertChargeTypeResponseBodyData data;
 
     public static ConvertChargeTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConvertChargeTypeResponseBody self = new ConvertChargeTypeResponseBody();
@@ -30,14 +30,6 @@ public class ConvertChargeTypeResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public ConvertChargeTypeResponseBody setData(ConvertChargeTypeResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ConvertChargeTypeResponseBodyData getData() {
-        return this.data;
     }
 
     public ConvertChargeTypeResponseBody setMessage(String message) {
@@ -62,6 +54,14 @@ public class ConvertChargeTypeResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ConvertChargeTypeResponseBody setData(ConvertChargeTypeResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ConvertChargeTypeResponseBodyData getData() {
+        return this.data;
     }
 
     public static class ConvertChargeTypeResponseBodyData extends TeaModel {

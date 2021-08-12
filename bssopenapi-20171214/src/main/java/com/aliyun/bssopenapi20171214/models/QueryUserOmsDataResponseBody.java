@@ -7,9 +7,6 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public QueryUserOmsDataResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryUserOmsDataResponseBodyData data;
 
     public static QueryUserOmsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryUserOmsDataResponseBody self = new QueryUserOmsDataResponseBody();
@@ -30,14 +30,6 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public QueryUserOmsDataResponseBody setData(QueryUserOmsDataResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryUserOmsDataResponseBodyData getData() {
-        return this.data;
     }
 
     public QueryUserOmsDataResponseBody setMessage(String message) {
@@ -64,12 +56,20 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class QueryUserOmsDataResponseBodyData extends TeaModel {
-        @NameInMap("HostId")
-        public String hostId;
+    public QueryUserOmsDataResponseBody setData(QueryUserOmsDataResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryUserOmsDataResponseBodyData getData() {
+        return this.data;
+    }
 
+    public static class QueryUserOmsDataResponseBodyData extends TeaModel {
         @NameInMap("Marker")
         public String marker;
+
+        @NameInMap("HostId")
+        public String hostId;
 
         @NameInMap("OmsData")
         public java.util.List<java.util.Map<String, ?>> omsData;
@@ -79,20 +79,20 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryUserOmsDataResponseBodyData setHostId(String hostId) {
-            this.hostId = hostId;
-            return this;
-        }
-        public String getHostId() {
-            return this.hostId;
-        }
-
         public QueryUserOmsDataResponseBodyData setMarker(String marker) {
             this.marker = marker;
             return this;
         }
         public String getMarker() {
             return this.marker;
+        }
+
+        public QueryUserOmsDataResponseBodyData setHostId(String hostId) {
+            this.hostId = hostId;
+            return this;
+        }
+        public String getHostId() {
+            return this.hostId;
         }
 
         public QueryUserOmsDataResponseBodyData setOmsData(java.util.List<java.util.Map<String, ?>> omsData) {

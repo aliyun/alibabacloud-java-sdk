@@ -7,9 +7,6 @@ public class EnableBillGenerationResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public EnableBillGenerationResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class EnableBillGenerationResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public EnableBillGenerationResponseBodyData data;
 
     public static EnableBillGenerationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableBillGenerationResponseBody self = new EnableBillGenerationResponseBody();
@@ -30,14 +30,6 @@ public class EnableBillGenerationResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public EnableBillGenerationResponseBody setData(EnableBillGenerationResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public EnableBillGenerationResponseBodyData getData() {
-        return this.data;
     }
 
     public EnableBillGenerationResponseBody setMessage(String message) {
@@ -62,6 +54,14 @@ public class EnableBillGenerationResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public EnableBillGenerationResponseBody setData(EnableBillGenerationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public EnableBillGenerationResponseBodyData getData() {
+        return this.data;
     }
 
     public static class EnableBillGenerationResponseBodyData extends TeaModel {

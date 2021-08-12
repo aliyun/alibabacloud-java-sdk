@@ -7,11 +7,11 @@ public class SetResellerUserQuotaResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public Boolean data;
-
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("Data")
+    public Boolean data;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,20 +32,20 @@ public class SetResellerUserQuotaResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SetResellerUserQuotaResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
-    }
-
     public SetResellerUserQuotaResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public SetResellerUserQuotaResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
     public SetResellerUserQuotaResponseBody setRequestId(String requestId) {

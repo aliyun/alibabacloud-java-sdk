@@ -7,9 +7,6 @@ public class GetCustomerListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public GetCustomerListResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class GetCustomerListResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public GetCustomerListResponseBodyData data;
 
     public static GetCustomerListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCustomerListResponseBody self = new GetCustomerListResponseBody();
@@ -30,14 +30,6 @@ public class GetCustomerListResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public GetCustomerListResponseBody setData(GetCustomerListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetCustomerListResponseBodyData getData() {
-        return this.data;
     }
 
     public GetCustomerListResponseBody setMessage(String message) {
@@ -62,6 +54,14 @@ public class GetCustomerListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetCustomerListResponseBody setData(GetCustomerListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetCustomerListResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetCustomerListResponseBodyData extends TeaModel {

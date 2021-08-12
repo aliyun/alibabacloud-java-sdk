@@ -7,9 +7,6 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public QueryAvailableInstancesResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryAvailableInstancesResponseBodyData data;
 
     public static QueryAvailableInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAvailableInstancesResponseBody self = new QueryAvailableInstancesResponseBody();
@@ -30,14 +30,6 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public QueryAvailableInstancesResponseBody setData(QueryAvailableInstancesResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryAvailableInstancesResponseBodyData getData() {
-        return this.data;
     }
 
     public QueryAvailableInstancesResponseBody setMessage(String message) {
@@ -64,24 +56,53 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class QueryAvailableInstancesResponseBodyDataInstanceList extends TeaModel {
-        @NameInMap("CreateTime")
-        public String createTime;
+    public QueryAvailableInstancesResponseBody setData(QueryAvailableInstancesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryAvailableInstancesResponseBodyData getData() {
+        return this.data;
+    }
 
-        @NameInMap("EndTime")
-        public String endTime;
+    public static class QueryAvailableInstancesResponseBodyDataInstanceList extends TeaModel {
+        @NameInMap("SubStatus")
+        public String subStatus;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("ExpectedReleaseTime")
         public String expectedReleaseTime;
 
+        @NameInMap("RenewStatus")
+        public String renewStatus;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("SellerId")
+        public Long sellerId;
+
         @NameInMap("InstanceID")
         public String instanceID;
+
+        @NameInMap("Seller")
+        public String seller;
+
+        @NameInMap("StopTime")
+        public String stopTime;
+
+        @NameInMap("RenewalDurationUnit")
+        public String renewalDurationUnit;
+
+        @NameInMap("SubscriptionType")
+        public String subscriptionType;
 
         @NameInMap("OwnerId")
         public Long ownerId;
 
-        @NameInMap("ProductCode")
-        public String productCode;
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("ProductType")
         public String productType;
@@ -92,52 +113,31 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
-        @NameInMap("RenewStatus")
-        public String renewStatus;
-
         @NameInMap("RenewalDuration")
         public Integer renewalDuration;
 
-        @NameInMap("RenewalDurationUnit")
-        public String renewalDurationUnit;
-
-        @NameInMap("Seller")
-        public String seller;
-
-        @NameInMap("SellerId")
-        public Long sellerId;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("StopTime")
-        public String stopTime;
-
-        @NameInMap("SubStatus")
-        public String subStatus;
-
-        @NameInMap("SubscriptionType")
-        public String subscriptionType;
+        @NameInMap("ProductCode")
+        public String productCode;
 
         public static QueryAvailableInstancesResponseBodyDataInstanceList build(java.util.Map<String, ?> map) throws Exception {
             QueryAvailableInstancesResponseBodyDataInstanceList self = new QueryAvailableInstancesResponseBodyDataInstanceList();
             return TeaModel.build(map, self);
         }
 
-        public QueryAvailableInstancesResponseBodyDataInstanceList setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public QueryAvailableInstancesResponseBodyDataInstanceList setSubStatus(String subStatus) {
+            this.subStatus = subStatus;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getSubStatus() {
+            return this.subStatus;
         }
 
-        public QueryAvailableInstancesResponseBodyDataInstanceList setEndTime(String endTime) {
-            this.endTime = endTime;
+        public QueryAvailableInstancesResponseBodyDataInstanceList setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getEndTime() {
-            return this.endTime;
+        public String getStatus() {
+            return this.status;
         }
 
         public QueryAvailableInstancesResponseBodyDataInstanceList setExpectedReleaseTime(String expectedReleaseTime) {
@@ -148,12 +148,68 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             return this.expectedReleaseTime;
         }
 
+        public QueryAvailableInstancesResponseBodyDataInstanceList setRenewStatus(String renewStatus) {
+            this.renewStatus = renewStatus;
+            return this;
+        }
+        public String getRenewStatus() {
+            return this.renewStatus;
+        }
+
+        public QueryAvailableInstancesResponseBodyDataInstanceList setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryAvailableInstancesResponseBodyDataInstanceList setSellerId(Long sellerId) {
+            this.sellerId = sellerId;
+            return this;
+        }
+        public Long getSellerId() {
+            return this.sellerId;
+        }
+
         public QueryAvailableInstancesResponseBodyDataInstanceList setInstanceID(String instanceID) {
             this.instanceID = instanceID;
             return this;
         }
         public String getInstanceID() {
             return this.instanceID;
+        }
+
+        public QueryAvailableInstancesResponseBodyDataInstanceList setSeller(String seller) {
+            this.seller = seller;
+            return this;
+        }
+        public String getSeller() {
+            return this.seller;
+        }
+
+        public QueryAvailableInstancesResponseBodyDataInstanceList setStopTime(String stopTime) {
+            this.stopTime = stopTime;
+            return this;
+        }
+        public String getStopTime() {
+            return this.stopTime;
+        }
+
+        public QueryAvailableInstancesResponseBodyDataInstanceList setRenewalDurationUnit(String renewalDurationUnit) {
+            this.renewalDurationUnit = renewalDurationUnit;
+            return this;
+        }
+        public String getRenewalDurationUnit() {
+            return this.renewalDurationUnit;
+        }
+
+        public QueryAvailableInstancesResponseBodyDataInstanceList setSubscriptionType(String subscriptionType) {
+            this.subscriptionType = subscriptionType;
+            return this;
+        }
+        public String getSubscriptionType() {
+            return this.subscriptionType;
         }
 
         public QueryAvailableInstancesResponseBodyDataInstanceList setOwnerId(Long ownerId) {
@@ -164,12 +220,12 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public QueryAvailableInstancesResponseBodyDataInstanceList setProductCode(String productCode) {
-            this.productCode = productCode;
+        public QueryAvailableInstancesResponseBodyDataInstanceList setEndTime(String endTime) {
+            this.endTime = endTime;
             return this;
         }
-        public String getProductCode() {
-            return this.productCode;
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public QueryAvailableInstancesResponseBodyDataInstanceList setProductType(String productType) {
@@ -196,14 +252,6 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             return this.releaseTime;
         }
 
-        public QueryAvailableInstancesResponseBodyDataInstanceList setRenewStatus(String renewStatus) {
-            this.renewStatus = renewStatus;
-            return this;
-        }
-        public String getRenewStatus() {
-            return this.renewStatus;
-        }
-
         public QueryAvailableInstancesResponseBodyDataInstanceList setRenewalDuration(Integer renewalDuration) {
             this.renewalDuration = renewalDuration;
             return this;
@@ -212,68 +260,17 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             return this.renewalDuration;
         }
 
-        public QueryAvailableInstancesResponseBodyDataInstanceList setRenewalDurationUnit(String renewalDurationUnit) {
-            this.renewalDurationUnit = renewalDurationUnit;
+        public QueryAvailableInstancesResponseBodyDataInstanceList setProductCode(String productCode) {
+            this.productCode = productCode;
             return this;
         }
-        public String getRenewalDurationUnit() {
-            return this.renewalDurationUnit;
-        }
-
-        public QueryAvailableInstancesResponseBodyDataInstanceList setSeller(String seller) {
-            this.seller = seller;
-            return this;
-        }
-        public String getSeller() {
-            return this.seller;
-        }
-
-        public QueryAvailableInstancesResponseBodyDataInstanceList setSellerId(Long sellerId) {
-            this.sellerId = sellerId;
-            return this;
-        }
-        public Long getSellerId() {
-            return this.sellerId;
-        }
-
-        public QueryAvailableInstancesResponseBodyDataInstanceList setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public QueryAvailableInstancesResponseBodyDataInstanceList setStopTime(String stopTime) {
-            this.stopTime = stopTime;
-            return this;
-        }
-        public String getStopTime() {
-            return this.stopTime;
-        }
-
-        public QueryAvailableInstancesResponseBodyDataInstanceList setSubStatus(String subStatus) {
-            this.subStatus = subStatus;
-            return this;
-        }
-        public String getSubStatus() {
-            return this.subStatus;
-        }
-
-        public QueryAvailableInstancesResponseBodyDataInstanceList setSubscriptionType(String subscriptionType) {
-            this.subscriptionType = subscriptionType;
-            return this;
-        }
-        public String getSubscriptionType() {
-            return this.subscriptionType;
+        public String getProductCode() {
+            return this.productCode;
         }
 
     }
 
     public static class QueryAvailableInstancesResponseBodyData extends TeaModel {
-        @NameInMap("InstanceList")
-        public java.util.List<QueryAvailableInstancesResponseBodyDataInstanceList> instanceList;
-
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -283,17 +280,12 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        @NameInMap("InstanceList")
+        public java.util.List<QueryAvailableInstancesResponseBodyDataInstanceList> instanceList;
+
         public static QueryAvailableInstancesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAvailableInstancesResponseBodyData self = new QueryAvailableInstancesResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryAvailableInstancesResponseBodyData setInstanceList(java.util.List<QueryAvailableInstancesResponseBodyDataInstanceList> instanceList) {
-            this.instanceList = instanceList;
-            return this;
-        }
-        public java.util.List<QueryAvailableInstancesResponseBodyDataInstanceList> getInstanceList() {
-            return this.instanceList;
         }
 
         public QueryAvailableInstancesResponseBodyData setPageNum(Integer pageNum) {
@@ -318,6 +310,14 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public QueryAvailableInstancesResponseBodyData setInstanceList(java.util.List<QueryAvailableInstancesResponseBodyDataInstanceList> instanceList) {
+            this.instanceList = instanceList;
+            return this;
+        }
+        public java.util.List<QueryAvailableInstancesResponseBodyDataInstanceList> getInstanceList() {
+            return this.instanceList;
         }
 
     }

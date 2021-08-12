@@ -7,9 +7,6 @@ public class CreateInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public CreateInstanceResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public CreateInstanceResponseBodyData data;
 
     public static CreateInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceResponseBody self = new CreateInstanceResponseBody();
@@ -30,14 +30,6 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public CreateInstanceResponseBody setData(CreateInstanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateInstanceResponseBodyData getData() {
-        return this.data;
     }
 
     public CreateInstanceResponseBody setMessage(String message) {
@@ -64,24 +56,24 @@ public class CreateInstanceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class CreateInstanceResponseBodyData extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
+    public CreateInstanceResponseBody setData(CreateInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateInstanceResponseBodyData getData() {
+        return this.data;
+    }
 
+    public static class CreateInstanceResponseBodyData extends TeaModel {
         @NameInMap("OrderId")
         public String orderId;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         public static CreateInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceResponseBodyData self = new CreateInstanceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public CreateInstanceResponseBodyData setOrderId(String orderId) {
@@ -90,6 +82,14 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
         public String getOrderId() {
             return this.orderId;
+        }
+
+        public CreateInstanceResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

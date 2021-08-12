@@ -16,6 +16,9 @@ public class SubscribeBillToOSSRequest extends TeaModel {
     @NameInMap("BucketOwnerId")
     public Long bucketOwnerId;
 
+    @NameInMap("BeginBillingCycle")
+    public String beginBillingCycle;
+
     public static SubscribeBillToOSSRequest build(java.util.Map<String, ?> map) throws Exception {
         SubscribeBillToOSSRequest self = new SubscribeBillToOSSRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SubscribeBillToOSSRequest extends TeaModel {
     }
     public Long getBucketOwnerId() {
         return this.bucketOwnerId;
+    }
+
+    public SubscribeBillToOSSRequest setBeginBillingCycle(String beginBillingCycle) {
+        this.beginBillingCycle = beginBillingCycle;
+        return this;
+    }
+    public String getBeginBillingCycle() {
+        return this.beginBillingCycle;
     }
 
 }

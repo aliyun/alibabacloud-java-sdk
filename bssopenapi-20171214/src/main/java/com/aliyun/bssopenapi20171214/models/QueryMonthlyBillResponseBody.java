@@ -7,9 +7,6 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public QueryMonthlyBillResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryMonthlyBillResponseBodyData data;
 
     public static QueryMonthlyBillResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMonthlyBillResponseBody self = new QueryMonthlyBillResponseBody();
@@ -30,14 +30,6 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public QueryMonthlyBillResponseBody setData(QueryMonthlyBillResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryMonthlyBillResponseBodyData getData() {
-        return this.data;
     }
 
     public QueryMonthlyBillResponseBody setMessage(String message) {
@@ -64,9 +56,23 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
         return this.success;
     }
 
+    public QueryMonthlyBillResponseBody setData(QueryMonthlyBillResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryMonthlyBillResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class QueryMonthlyBillResponseBodyDataItemsItem extends TeaModel {
-        @NameInMap("AfterTaxAmount")
-        public Float afterTaxAmount;
+        @NameInMap("PretaxAmount")
+        public Float pretaxAmount;
+
+        @NameInMap("SolutionCode")
+        public String solutionCode;
+
+        @NameInMap("Item")
+        public String item;
 
         @NameInMap("Currency")
         public String currency;
@@ -74,65 +80,75 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
         @NameInMap("DeductedByCashCoupons")
         public Float deductedByCashCoupons;
 
-        @NameInMap("DeductedByCoupons")
-        public Float deductedByCoupons;
-
-        @NameInMap("DeductedByPrepaidCard")
-        public Float deductedByPrepaidCard;
-
-        @NameInMap("InvoiceDiscount")
-        public Float invoiceDiscount;
-
-        @NameInMap("Item")
-        public String item;
-
-        @NameInMap("OutstandingAmount")
-        public Float outstandingAmount;
-
-        @NameInMap("PaymentAmount")
-        public Float paymentAmount;
+        @NameInMap("SubscriptionType")
+        public String subscriptionType;
 
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
-        @NameInMap("PretaxAmount")
-        public Float pretaxAmount;
+        @NameInMap("DeductedByPrepaidCard")
+        public Float deductedByPrepaidCard;
 
-        @NameInMap("PretaxAmountLocal")
-        public Float pretaxAmountLocal;
+        @NameInMap("DeductedByCoupons")
+        public Float deductedByCoupons;
 
-        @NameInMap("PretaxGrossAmount")
-        public Float pretaxGrossAmount;
+        @NameInMap("PaymentAmount")
+        public Float paymentAmount;
 
-        @NameInMap("ProductCode")
-        public String productCode;
+        @NameInMap("InvoiceDiscount")
+        public Float invoiceDiscount;
 
         @NameInMap("ProductType")
         public String productType;
 
-        @NameInMap("SolutionCode")
-        public String solutionCode;
+        @NameInMap("OutstandingAmount")
+        public Float outstandingAmount;
+
+        @NameInMap("AfterTaxAmount")
+        public Float afterTaxAmount;
+
+        @NameInMap("PretaxGrossAmount")
+        public Float pretaxGrossAmount;
 
         @NameInMap("SolutionName")
         public String solutionName;
 
-        @NameInMap("SubscriptionType")
-        public String subscriptionType;
-
         @NameInMap("Tax")
         public Float tax;
+
+        @NameInMap("PretaxAmountLocal")
+        public Float pretaxAmountLocal;
+
+        @NameInMap("ProductCode")
+        public String productCode;
 
         public static QueryMonthlyBillResponseBodyDataItemsItem build(java.util.Map<String, ?> map) throws Exception {
             QueryMonthlyBillResponseBodyDataItemsItem self = new QueryMonthlyBillResponseBodyDataItemsItem();
             return TeaModel.build(map, self);
         }
 
-        public QueryMonthlyBillResponseBodyDataItemsItem setAfterTaxAmount(Float afterTaxAmount) {
-            this.afterTaxAmount = afterTaxAmount;
+        public QueryMonthlyBillResponseBodyDataItemsItem setPretaxAmount(Float pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
             return this;
         }
-        public Float getAfterTaxAmount() {
-            return this.afterTaxAmount;
+        public Float getPretaxAmount() {
+            return this.pretaxAmount;
+        }
+
+        public QueryMonthlyBillResponseBodyDataItemsItem setSolutionCode(String solutionCode) {
+            this.solutionCode = solutionCode;
+            return this;
+        }
+        public String getSolutionCode() {
+            return this.solutionCode;
+        }
+
+        public QueryMonthlyBillResponseBodyDataItemsItem setItem(String item) {
+            this.item = item;
+            return this;
+        }
+        public String getItem() {
+            return this.item;
         }
 
         public QueryMonthlyBillResponseBodyDataItemsItem setCurrency(String currency) {
@@ -151,52 +167,12 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
             return this.deductedByCashCoupons;
         }
 
-        public QueryMonthlyBillResponseBodyDataItemsItem setDeductedByCoupons(Float deductedByCoupons) {
-            this.deductedByCoupons = deductedByCoupons;
+        public QueryMonthlyBillResponseBodyDataItemsItem setSubscriptionType(String subscriptionType) {
+            this.subscriptionType = subscriptionType;
             return this;
         }
-        public Float getDeductedByCoupons() {
-            return this.deductedByCoupons;
-        }
-
-        public QueryMonthlyBillResponseBodyDataItemsItem setDeductedByPrepaidCard(Float deductedByPrepaidCard) {
-            this.deductedByPrepaidCard = deductedByPrepaidCard;
-            return this;
-        }
-        public Float getDeductedByPrepaidCard() {
-            return this.deductedByPrepaidCard;
-        }
-
-        public QueryMonthlyBillResponseBodyDataItemsItem setInvoiceDiscount(Float invoiceDiscount) {
-            this.invoiceDiscount = invoiceDiscount;
-            return this;
-        }
-        public Float getInvoiceDiscount() {
-            return this.invoiceDiscount;
-        }
-
-        public QueryMonthlyBillResponseBodyDataItemsItem setItem(String item) {
-            this.item = item;
-            return this;
-        }
-        public String getItem() {
-            return this.item;
-        }
-
-        public QueryMonthlyBillResponseBodyDataItemsItem setOutstandingAmount(Float outstandingAmount) {
-            this.outstandingAmount = outstandingAmount;
-            return this;
-        }
-        public Float getOutstandingAmount() {
-            return this.outstandingAmount;
-        }
-
-        public QueryMonthlyBillResponseBodyDataItemsItem setPaymentAmount(Float paymentAmount) {
-            this.paymentAmount = paymentAmount;
-            return this;
-        }
-        public Float getPaymentAmount() {
-            return this.paymentAmount;
+        public String getSubscriptionType() {
+            return this.subscriptionType;
         }
 
         public QueryMonthlyBillResponseBodyDataItemsItem setPaymentCurrency(String paymentCurrency) {
@@ -207,36 +183,36 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
             return this.paymentCurrency;
         }
 
-        public QueryMonthlyBillResponseBodyDataItemsItem setPretaxAmount(Float pretaxAmount) {
-            this.pretaxAmount = pretaxAmount;
+        public QueryMonthlyBillResponseBodyDataItemsItem setDeductedByPrepaidCard(Float deductedByPrepaidCard) {
+            this.deductedByPrepaidCard = deductedByPrepaidCard;
             return this;
         }
-        public Float getPretaxAmount() {
-            return this.pretaxAmount;
+        public Float getDeductedByPrepaidCard() {
+            return this.deductedByPrepaidCard;
         }
 
-        public QueryMonthlyBillResponseBodyDataItemsItem setPretaxAmountLocal(Float pretaxAmountLocal) {
-            this.pretaxAmountLocal = pretaxAmountLocal;
+        public QueryMonthlyBillResponseBodyDataItemsItem setDeductedByCoupons(Float deductedByCoupons) {
+            this.deductedByCoupons = deductedByCoupons;
             return this;
         }
-        public Float getPretaxAmountLocal() {
-            return this.pretaxAmountLocal;
+        public Float getDeductedByCoupons() {
+            return this.deductedByCoupons;
         }
 
-        public QueryMonthlyBillResponseBodyDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
-            this.pretaxGrossAmount = pretaxGrossAmount;
+        public QueryMonthlyBillResponseBodyDataItemsItem setPaymentAmount(Float paymentAmount) {
+            this.paymentAmount = paymentAmount;
             return this;
         }
-        public Float getPretaxGrossAmount() {
-            return this.pretaxGrossAmount;
+        public Float getPaymentAmount() {
+            return this.paymentAmount;
         }
 
-        public QueryMonthlyBillResponseBodyDataItemsItem setProductCode(String productCode) {
-            this.productCode = productCode;
+        public QueryMonthlyBillResponseBodyDataItemsItem setInvoiceDiscount(Float invoiceDiscount) {
+            this.invoiceDiscount = invoiceDiscount;
             return this;
         }
-        public String getProductCode() {
-            return this.productCode;
+        public Float getInvoiceDiscount() {
+            return this.invoiceDiscount;
         }
 
         public QueryMonthlyBillResponseBodyDataItemsItem setProductType(String productType) {
@@ -247,12 +223,28 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
             return this.productType;
         }
 
-        public QueryMonthlyBillResponseBodyDataItemsItem setSolutionCode(String solutionCode) {
-            this.solutionCode = solutionCode;
+        public QueryMonthlyBillResponseBodyDataItemsItem setOutstandingAmount(Float outstandingAmount) {
+            this.outstandingAmount = outstandingAmount;
             return this;
         }
-        public String getSolutionCode() {
-            return this.solutionCode;
+        public Float getOutstandingAmount() {
+            return this.outstandingAmount;
+        }
+
+        public QueryMonthlyBillResponseBodyDataItemsItem setAfterTaxAmount(Float afterTaxAmount) {
+            this.afterTaxAmount = afterTaxAmount;
+            return this;
+        }
+        public Float getAfterTaxAmount() {
+            return this.afterTaxAmount;
+        }
+
+        public QueryMonthlyBillResponseBodyDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
+            this.pretaxGrossAmount = pretaxGrossAmount;
+            return this;
+        }
+        public Float getPretaxGrossAmount() {
+            return this.pretaxGrossAmount;
         }
 
         public QueryMonthlyBillResponseBodyDataItemsItem setSolutionName(String solutionName) {
@@ -263,20 +255,28 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
             return this.solutionName;
         }
 
-        public QueryMonthlyBillResponseBodyDataItemsItem setSubscriptionType(String subscriptionType) {
-            this.subscriptionType = subscriptionType;
-            return this;
-        }
-        public String getSubscriptionType() {
-            return this.subscriptionType;
-        }
-
         public QueryMonthlyBillResponseBodyDataItemsItem setTax(Float tax) {
             this.tax = tax;
             return this;
         }
         public Float getTax() {
             return this.tax;
+        }
+
+        public QueryMonthlyBillResponseBodyDataItemsItem setPretaxAmountLocal(Float pretaxAmountLocal) {
+            this.pretaxAmountLocal = pretaxAmountLocal;
+            return this;
+        }
+        public Float getPretaxAmountLocal() {
+            return this.pretaxAmountLocal;
+        }
+
+        public QueryMonthlyBillResponseBodyDataItemsItem setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
         }
 
     }
@@ -301,48 +301,24 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
     }
 
     public static class QueryMonthlyBillResponseBodyData extends TeaModel {
-        @NameInMap("BillingCycle")
-        public String billingCycle;
-
-        @NameInMap("Items")
-        public QueryMonthlyBillResponseBodyDataItems items;
-
-        @NameInMap("NewInvoiceAmount")
-        public Float newInvoiceAmount;
-
         @NameInMap("OutstandingAmount")
         public Float outstandingAmount;
+
+        @NameInMap("BillingCycle")
+        public String billingCycle;
 
         @NameInMap("TotalOutstandingAmount")
         public Float totalOutstandingAmount;
 
+        @NameInMap("NewInvoiceAmount")
+        public Float newInvoiceAmount;
+
+        @NameInMap("Items")
+        public QueryMonthlyBillResponseBodyDataItems items;
+
         public static QueryMonthlyBillResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryMonthlyBillResponseBodyData self = new QueryMonthlyBillResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMonthlyBillResponseBodyData setBillingCycle(String billingCycle) {
-            this.billingCycle = billingCycle;
-            return this;
-        }
-        public String getBillingCycle() {
-            return this.billingCycle;
-        }
-
-        public QueryMonthlyBillResponseBodyData setItems(QueryMonthlyBillResponseBodyDataItems items) {
-            this.items = items;
-            return this;
-        }
-        public QueryMonthlyBillResponseBodyDataItems getItems() {
-            return this.items;
-        }
-
-        public QueryMonthlyBillResponseBodyData setNewInvoiceAmount(Float newInvoiceAmount) {
-            this.newInvoiceAmount = newInvoiceAmount;
-            return this;
-        }
-        public Float getNewInvoiceAmount() {
-            return this.newInvoiceAmount;
         }
 
         public QueryMonthlyBillResponseBodyData setOutstandingAmount(Float outstandingAmount) {
@@ -353,12 +329,36 @@ public class QueryMonthlyBillResponseBody extends TeaModel {
             return this.outstandingAmount;
         }
 
+        public QueryMonthlyBillResponseBodyData setBillingCycle(String billingCycle) {
+            this.billingCycle = billingCycle;
+            return this;
+        }
+        public String getBillingCycle() {
+            return this.billingCycle;
+        }
+
         public QueryMonthlyBillResponseBodyData setTotalOutstandingAmount(Float totalOutstandingAmount) {
             this.totalOutstandingAmount = totalOutstandingAmount;
             return this;
         }
         public Float getTotalOutstandingAmount() {
             return this.totalOutstandingAmount;
+        }
+
+        public QueryMonthlyBillResponseBodyData setNewInvoiceAmount(Float newInvoiceAmount) {
+            this.newInvoiceAmount = newInvoiceAmount;
+            return this;
+        }
+        public Float getNewInvoiceAmount() {
+            return this.newInvoiceAmount;
+        }
+
+        public QueryMonthlyBillResponseBodyData setItems(QueryMonthlyBillResponseBodyDataItems items) {
+            this.items = items;
+            return this;
+        }
+        public QueryMonthlyBillResponseBodyDataItems getItems() {
+            return this.items;
         }
 
     }

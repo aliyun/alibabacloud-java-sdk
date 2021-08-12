@@ -131,37 +131,21 @@ public class GetSubscriptionPriceRequest extends TeaModel {
     }
 
     public static class GetSubscriptionPriceRequestModuleList extends TeaModel {
-        @NameInMap("Config")
-        public String config;
+        @NameInMap("ModuleStatus")
+        public Integer moduleStatus;
 
         @NameInMap("ModuleCode")
         public String moduleCode;
 
-        @NameInMap("ModuleStatus")
-        public Integer moduleStatus;
-
         @NameInMap("Tag")
         public String tag;
+
+        @NameInMap("Config")
+        public String config;
 
         public static GetSubscriptionPriceRequestModuleList build(java.util.Map<String, ?> map) throws Exception {
             GetSubscriptionPriceRequestModuleList self = new GetSubscriptionPriceRequestModuleList();
             return TeaModel.build(map, self);
-        }
-
-        public GetSubscriptionPriceRequestModuleList setConfig(String config) {
-            this.config = config;
-            return this;
-        }
-        public String getConfig() {
-            return this.config;
-        }
-
-        public GetSubscriptionPriceRequestModuleList setModuleCode(String moduleCode) {
-            this.moduleCode = moduleCode;
-            return this;
-        }
-        public String getModuleCode() {
-            return this.moduleCode;
         }
 
         public GetSubscriptionPriceRequestModuleList setModuleStatus(Integer moduleStatus) {
@@ -172,12 +156,28 @@ public class GetSubscriptionPriceRequest extends TeaModel {
             return this.moduleStatus;
         }
 
+        public GetSubscriptionPriceRequestModuleList setModuleCode(String moduleCode) {
+            this.moduleCode = moduleCode;
+            return this;
+        }
+        public String getModuleCode() {
+            return this.moduleCode;
+        }
+
         public GetSubscriptionPriceRequestModuleList setTag(String tag) {
             this.tag = tag;
             return this;
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public GetSubscriptionPriceRequestModuleList setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
     }

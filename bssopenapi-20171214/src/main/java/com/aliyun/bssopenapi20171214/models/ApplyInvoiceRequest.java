@@ -28,6 +28,9 @@ public class ApplyInvoiceRequest extends TeaModel {
     @NameInMap("InvoiceByAmount")
     public Boolean invoiceByAmount;
 
+    @NameInMap("UserRemark")
+    public String userRemark;
+
     @NameInMap("SelectedIds")
     public java.util.List<Integer> selectedIds;
 
@@ -98,6 +101,14 @@ public class ApplyInvoiceRequest extends TeaModel {
     }
     public Boolean getInvoiceByAmount() {
         return this.invoiceByAmount;
+    }
+
+    public ApplyInvoiceRequest setUserRemark(String userRemark) {
+        this.userRemark = userRemark;
+        return this;
+    }
+    public String getUserRemark() {
+        return this.userRemark;
     }
 
     public ApplyInvoiceRequest setSelectedIds(java.util.List<Integer> selectedIds) {

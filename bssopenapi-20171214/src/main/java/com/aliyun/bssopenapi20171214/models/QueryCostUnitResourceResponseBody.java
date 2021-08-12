@@ -7,9 +7,6 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public QueryCostUnitResourceResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public QueryCostUnitResourceResponseBodyData data;
 
     public static QueryCostUnitResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCostUnitResourceResponseBody self = new QueryCostUnitResourceResponseBody();
@@ -30,14 +30,6 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public QueryCostUnitResourceResponseBody setData(QueryCostUnitResourceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryCostUnitResourceResponseBodyData getData() {
-        return this.data;
     }
 
     public QueryCostUnitResourceResponseBody setMessage(String message) {
@@ -64,30 +56,181 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class QueryCostUnitResourceResponseBodyDataCostUnit extends TeaModel {
-        @NameInMap("OwnerUid")
-        public Long ownerUid;
+    public QueryCostUnitResourceResponseBody setData(QueryCostUnitResourceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryCostUnitResourceResponseBodyData getData() {
+        return this.data;
+    }
 
+    public static class QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList extends TeaModel {
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
+        @NameInMap("ResourceUserName")
+        public String resourceUserName;
+
+        @NameInMap("CommodityName")
+        public String commodityName;
+
+        @NameInMap("ResourceUserId")
+        public Long resourceUserId;
+
+        @NameInMap("ApportionName")
+        public String apportionName;
+
+        @NameInMap("ApportionCode")
+        public String apportionCode;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("ResourceNick")
+        public String resourceNick;
+
+        @NameInMap("ResourceTag")
+        public String resourceTag;
+
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceGroup")
+        public String resourceGroup;
+
+        @NameInMap("RelatedResources")
+        public String relatedResources;
+
+        @NameInMap("ResourceStatus")
+        public String resourceStatus;
+
+        public static QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList build(java.util.Map<String, ?> map) throws Exception {
+            QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList self = new QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
+            return this;
+        }
+        public String getCommodityCode() {
+            return this.commodityCode;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceUserName(String resourceUserName) {
+            this.resourceUserName = resourceUserName;
+            return this;
+        }
+        public String getResourceUserName() {
+            return this.resourceUserName;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setCommodityName(String commodityName) {
+            this.commodityName = commodityName;
+            return this;
+        }
+        public String getCommodityName() {
+            return this.commodityName;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceUserId(Long resourceUserId) {
+            this.resourceUserId = resourceUserId;
+            return this;
+        }
+        public Long getResourceUserId() {
+            return this.resourceUserId;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setApportionName(String apportionName) {
+            this.apportionName = apportionName;
+            return this;
+        }
+        public String getApportionName() {
+            return this.apportionName;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setApportionCode(String apportionCode) {
+            this.apportionCode = apportionCode;
+            return this;
+        }
+        public String getApportionCode() {
+            return this.apportionCode;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceNick(String resourceNick) {
+            this.resourceNick = resourceNick;
+            return this;
+        }
+        public String getResourceNick() {
+            return this.resourceNick;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceTag(String resourceTag) {
+            this.resourceTag = resourceTag;
+            return this;
+        }
+        public String getResourceTag() {
+            return this.resourceTag;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceGroup(String resourceGroup) {
+            this.resourceGroup = resourceGroup;
+            return this;
+        }
+        public String getResourceGroup() {
+            return this.resourceGroup;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setRelatedResources(String relatedResources) {
+            this.relatedResources = relatedResources;
+            return this;
+        }
+        public String getRelatedResources() {
+            return this.relatedResources;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceStatus(String resourceStatus) {
+            this.resourceStatus = resourceStatus;
+            return this;
+        }
+        public String getResourceStatus() {
+            return this.resourceStatus;
+        }
+
+    }
+
+    public static class QueryCostUnitResourceResponseBodyDataCostUnit extends TeaModel {
         @NameInMap("ParentUnitId")
         public Long parentUnitId;
-
-        @NameInMap("UnitId")
-        public Long unitId;
 
         @NameInMap("UnitName")
         public String unitName;
 
+        @NameInMap("UnitId")
+        public Long unitId;
+
+        @NameInMap("OwnerUid")
+        public Long ownerUid;
+
         public static QueryCostUnitResourceResponseBodyDataCostUnit build(java.util.Map<String, ?> map) throws Exception {
             QueryCostUnitResourceResponseBodyDataCostUnit self = new QueryCostUnitResourceResponseBodyDataCostUnit();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCostUnitResourceResponseBodyDataCostUnit setOwnerUid(Long ownerUid) {
-            this.ownerUid = ownerUid;
-            return this;
-        }
-        public Long getOwnerUid() {
-            return this.ownerUid;
         }
 
         public QueryCostUnitResourceResponseBodyDataCostUnit setParentUnitId(Long parentUnitId) {
@@ -98,14 +241,6 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             return this.parentUnitId;
         }
 
-        public QueryCostUnitResourceResponseBodyDataCostUnit setUnitId(Long unitId) {
-            this.unitId = unitId;
-            return this;
-        }
-        public Long getUnitId() {
-            return this.unitId;
-        }
-
         public QueryCostUnitResourceResponseBodyDataCostUnit setUnitName(String unitName) {
             this.unitName = unitName;
             return this;
@@ -114,26 +249,42 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             return this.unitName;
         }
 
+        public QueryCostUnitResourceResponseBodyDataCostUnit setUnitId(Long unitId) {
+            this.unitId = unitId;
+            return this;
+        }
+        public Long getUnitId() {
+            return this.unitId;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataCostUnit setOwnerUid(Long ownerUid) {
+            this.ownerUid = ownerUid;
+            return this;
+        }
+        public Long getOwnerUid() {
+            return this.ownerUid;
+        }
+
     }
 
     public static class QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo extends TeaModel {
+        @NameInMap("TotalResourceCount")
+        public Long totalResourceCount;
+
         @NameInMap("ResourceCount")
         public Long resourceCount;
 
-        @NameInMap("ResourceGroupCount")
-        public Long resourceGroupCount;
+        @NameInMap("TotalUserCount")
+        public Long totalUserCount;
 
         @NameInMap("SubUnitCount")
         public Long subUnitCount;
 
-        @NameInMap("TotalResourceCount")
-        public Long totalResourceCount;
+        @NameInMap("ResourceGroupCount")
+        public Long resourceGroupCount;
 
         @NameInMap("TotalResourceGroupCount")
         public Long totalResourceGroupCount;
-
-        @NameInMap("TotalUserCount")
-        public Long totalUserCount;
 
         @NameInMap("UserCount")
         public Long userCount;
@@ -141,30 +292,6 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         public static QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo self = new QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setResourceCount(Long resourceCount) {
-            this.resourceCount = resourceCount;
-            return this;
-        }
-        public Long getResourceCount() {
-            return this.resourceCount;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setResourceGroupCount(Long resourceGroupCount) {
-            this.resourceGroupCount = resourceGroupCount;
-            return this;
-        }
-        public Long getResourceGroupCount() {
-            return this.resourceGroupCount;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setSubUnitCount(Long subUnitCount) {
-            this.subUnitCount = subUnitCount;
-            return this;
-        }
-        public Long getSubUnitCount() {
-            return this.subUnitCount;
         }
 
         public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setTotalResourceCount(Long totalResourceCount) {
@@ -175,12 +302,12 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             return this.totalResourceCount;
         }
 
-        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setTotalResourceGroupCount(Long totalResourceGroupCount) {
-            this.totalResourceGroupCount = totalResourceGroupCount;
+        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setResourceCount(Long resourceCount) {
+            this.resourceCount = resourceCount;
             return this;
         }
-        public Long getTotalResourceGroupCount() {
-            return this.totalResourceGroupCount;
+        public Long getResourceCount() {
+            return this.resourceCount;
         }
 
         public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setTotalUserCount(Long totalUserCount) {
@@ -189,6 +316,30 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
         public Long getTotalUserCount() {
             return this.totalUserCount;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setSubUnitCount(Long subUnitCount) {
+            this.subUnitCount = subUnitCount;
+            return this;
+        }
+        public Long getSubUnitCount() {
+            return this.subUnitCount;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setResourceGroupCount(Long resourceGroupCount) {
+            this.resourceGroupCount = resourceGroupCount;
+            return this;
+        }
+        public Long getResourceGroupCount() {
+            return this.resourceGroupCount;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setTotalResourceGroupCount(Long totalResourceGroupCount) {
+            this.totalResourceGroupCount = totalResourceGroupCount;
+            return this;
+        }
+        public Long getTotalResourceGroupCount() {
+            return this.totalResourceGroupCount;
         }
 
         public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo setUserCount(Long userCount) {
@@ -201,195 +352,28 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
 
     }
 
-    public static class QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList extends TeaModel {
-        @NameInMap("ApportionCode")
-        public String apportionCode;
-
-        @NameInMap("ApportionName")
-        public String apportionName;
-
-        @NameInMap("CommodityCode")
-        public String commodityCode;
-
-        @NameInMap("CommodityName")
-        public String commodityName;
-
-        @NameInMap("RelatedResources")
-        public String relatedResources;
-
-        @NameInMap("ResourceGroup")
-        public String resourceGroup;
-
-        @NameInMap("ResourceId")
-        public String resourceId;
-
-        @NameInMap("ResourceNick")
-        public String resourceNick;
-
-        @NameInMap("ResourceStatus")
-        public String resourceStatus;
-
-        @NameInMap("ResourceTag")
-        public String resourceTag;
-
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        @NameInMap("ResourceUserId")
-        public Long resourceUserId;
-
-        @NameInMap("ResourceUserName")
-        public String resourceUserName;
-
-        public static QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList build(java.util.Map<String, ?> map) throws Exception {
-            QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList self = new QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setApportionCode(String apportionCode) {
-            this.apportionCode = apportionCode;
-            return this;
-        }
-        public String getApportionCode() {
-            return this.apportionCode;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setApportionName(String apportionName) {
-            this.apportionName = apportionName;
-            return this;
-        }
-        public String getApportionName() {
-            return this.apportionName;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setCommodityCode(String commodityCode) {
-            this.commodityCode = commodityCode;
-            return this;
-        }
-        public String getCommodityCode() {
-            return this.commodityCode;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setCommodityName(String commodityName) {
-            this.commodityName = commodityName;
-            return this;
-        }
-        public String getCommodityName() {
-            return this.commodityName;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setRelatedResources(String relatedResources) {
-            this.relatedResources = relatedResources;
-            return this;
-        }
-        public String getRelatedResources() {
-            return this.relatedResources;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceGroup(String resourceGroup) {
-            this.resourceGroup = resourceGroup;
-            return this;
-        }
-        public String getResourceGroup() {
-            return this.resourceGroup;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceId(String resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public String getResourceId() {
-            return this.resourceId;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceNick(String resourceNick) {
-            this.resourceNick = resourceNick;
-            return this;
-        }
-        public String getResourceNick() {
-            return this.resourceNick;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceStatus(String resourceStatus) {
-            this.resourceStatus = resourceStatus;
-            return this;
-        }
-        public String getResourceStatus() {
-            return this.resourceStatus;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceTag(String resourceTag) {
-            this.resourceTag = resourceTag;
-            return this;
-        }
-        public String getResourceTag() {
-            return this.resourceTag;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceUserId(Long resourceUserId) {
-            this.resourceUserId = resourceUserId;
-            return this;
-        }
-        public Long getResourceUserId() {
-            return this.resourceUserId;
-        }
-
-        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceUserName(String resourceUserName) {
-            this.resourceUserName = resourceUserName;
-            return this;
-        }
-        public String getResourceUserName() {
-            return this.resourceUserName;
-        }
-
-    }
-
     public static class QueryCostUnitResourceResponseBodyData extends TeaModel {
-        @NameInMap("CostUnit")
-        public QueryCostUnitResourceResponseBodyDataCostUnit costUnit;
-
-        @NameInMap("CostUnitStatisInfo")
-        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo costUnitStatisInfo;
-
         @NameInMap("PageNum")
         public Integer pageNum;
 
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
         @NameInMap("ResourceInstanceDtoList")
         public java.util.List<QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList> resourceInstanceDtoList;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("CostUnit")
+        public QueryCostUnitResourceResponseBodyDataCostUnit costUnit;
+
+        @NameInMap("CostUnitStatisInfo")
+        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo costUnitStatisInfo;
 
         public static QueryCostUnitResourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryCostUnitResourceResponseBodyData self = new QueryCostUnitResourceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCostUnitResourceResponseBodyData setCostUnit(QueryCostUnitResourceResponseBodyDataCostUnit costUnit) {
-            this.costUnit = costUnit;
-            return this;
-        }
-        public QueryCostUnitResourceResponseBodyDataCostUnit getCostUnit() {
-            return this.costUnit;
-        }
-
-        public QueryCostUnitResourceResponseBodyData setCostUnitStatisInfo(QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo costUnitStatisInfo) {
-            this.costUnitStatisInfo = costUnitStatisInfo;
-            return this;
-        }
-        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo getCostUnitStatisInfo() {
-            return this.costUnitStatisInfo;
         }
 
         public QueryCostUnitResourceResponseBodyData setPageNum(Integer pageNum) {
@@ -408,6 +392,14 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             return this.pageSize;
         }
 
+        public QueryCostUnitResourceResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
         public QueryCostUnitResourceResponseBodyData setResourceInstanceDtoList(java.util.List<QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList> resourceInstanceDtoList) {
             this.resourceInstanceDtoList = resourceInstanceDtoList;
             return this;
@@ -416,12 +408,20 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             return this.resourceInstanceDtoList;
         }
 
-        public QueryCostUnitResourceResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public QueryCostUnitResourceResponseBodyData setCostUnit(QueryCostUnitResourceResponseBodyDataCostUnit costUnit) {
+            this.costUnit = costUnit;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public QueryCostUnitResourceResponseBodyDataCostUnit getCostUnit() {
+            return this.costUnit;
+        }
+
+        public QueryCostUnitResourceResponseBodyData setCostUnitStatisInfo(QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo costUnitStatisInfo) {
+            this.costUnitStatisInfo = costUnitStatisInfo;
+            return this;
+        }
+        public QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo getCostUnitStatisInfo() {
+            return this.costUnitStatisInfo;
         }
 
     }

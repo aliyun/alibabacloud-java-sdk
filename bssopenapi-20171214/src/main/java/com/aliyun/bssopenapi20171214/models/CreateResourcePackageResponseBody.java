@@ -7,20 +7,20 @@ public class CreateResourcePackageResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public CreateResourcePackageResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("OrderId")
-    public Long orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("OrderId")
+    public Long orderId;
+
+    @NameInMap("Data")
+    public CreateResourcePackageResponseBodyData data;
 
     public static CreateResourcePackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateResourcePackageResponseBody self = new CreateResourcePackageResponseBody();
@@ -35,28 +35,12 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateResourcePackageResponseBody setData(CreateResourcePackageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateResourcePackageResponseBodyData getData() {
-        return this.data;
-    }
-
     public CreateResourcePackageResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
-    }
-
-    public CreateResourcePackageResponseBody setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
     }
 
     public CreateResourcePackageResponseBody setRequestId(String requestId) {
@@ -75,24 +59,32 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class CreateResourcePackageResponseBodyData extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
+    public CreateResourcePackageResponseBody setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
 
+    public CreateResourcePackageResponseBody setData(CreateResourcePackageResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateResourcePackageResponseBodyData getData() {
+        return this.data;
+    }
+
+    public static class CreateResourcePackageResponseBodyData extends TeaModel {
         @NameInMap("OrderId")
         public Long orderId;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         public static CreateResourcePackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateResourcePackageResponseBodyData self = new CreateResourcePackageResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public CreateResourcePackageResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public CreateResourcePackageResponseBodyData setOrderId(Long orderId) {
@@ -101,6 +93,14 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
         public Long getOrderId() {
             return this.orderId;
+        }
+
+        public CreateResourcePackageResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

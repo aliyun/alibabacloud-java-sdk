@@ -7,9 +7,6 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public AllocateCostUnitResourceResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -18,6 +15,9 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public AllocateCostUnitResourceResponseBodyData data;
 
     public static AllocateCostUnitResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AllocateCostUnitResourceResponseBody self = new AllocateCostUnitResourceResponseBody();
@@ -30,14 +30,6 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public AllocateCostUnitResourceResponseBody setData(AllocateCostUnitResourceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public AllocateCostUnitResourceResponseBodyData getData() {
-        return this.data;
     }
 
     public AllocateCostUnitResourceResponseBody setMessage(String message) {
@@ -64,19 +56,35 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public AllocateCostUnitResourceResponseBody setData(AllocateCostUnitResourceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public AllocateCostUnitResourceResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class AllocateCostUnitResourceResponseBodyData extends TeaModel {
+        @NameInMap("ToUnitUserId")
+        public Long toUnitUserId;
+
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
         @NameInMap("ToUnitId")
         public Long toUnitId;
 
-        @NameInMap("ToUnitUserId")
-        public Long toUnitUserId;
-
         public static AllocateCostUnitResourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             AllocateCostUnitResourceResponseBodyData self = new AllocateCostUnitResourceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public AllocateCostUnitResourceResponseBodyData setToUnitUserId(Long toUnitUserId) {
+            this.toUnitUserId = toUnitUserId;
+            return this;
+        }
+        public Long getToUnitUserId() {
+            return this.toUnitUserId;
         }
 
         public AllocateCostUnitResourceResponseBodyData setIsSuccess(Boolean isSuccess) {
@@ -93,14 +101,6 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
         public Long getToUnitId() {
             return this.toUnitId;
-        }
-
-        public AllocateCostUnitResourceResponseBodyData setToUnitUserId(Long toUnitUserId) {
-            this.toUnitUserId = toUnitUserId;
-            return this;
-        }
-        public Long getToUnitUserId() {
-            return this.toUnitUserId;
         }
 
     }

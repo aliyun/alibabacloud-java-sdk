@@ -31,6 +31,9 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     @NameInMap("IncludeShare")
     public Boolean includeShare;
 
+    @NameInMap("ProdCode")
+    public String prodCode;
+
     public static QueryDPUtilizationDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDPUtilizationDetailRequest self = new QueryDPUtilizationDetailRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class QueryDPUtilizationDetailRequest extends TeaModel {
     }
     public Boolean getIncludeShare() {
         return this.includeShare;
+    }
+
+    public QueryDPUtilizationDetailRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
     }
 
 }

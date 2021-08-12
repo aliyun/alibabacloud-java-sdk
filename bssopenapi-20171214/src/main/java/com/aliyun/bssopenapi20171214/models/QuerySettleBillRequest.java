@@ -37,6 +37,9 @@ public class QuerySettleBillRequest extends TeaModel {
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
+    @NameInMap("RecordID")
+    public String recordID;
+
     public static QuerySettleBillRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySettleBillRequest self = new QuerySettleBillRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class QuerySettleBillRequest extends TeaModel {
     }
     public Long getBillOwnerId() {
         return this.billOwnerId;
+    }
+
+    public QuerySettleBillRequest setRecordID(String recordID) {
+        this.recordID = recordID;
+        return this;
+    }
+    public String getRecordID() {
+        return this.recordID;
     }
 
 }
