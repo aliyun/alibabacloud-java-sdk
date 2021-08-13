@@ -20,10 +20,6 @@ public class RecognizeEduPaperCutRequest extends TeaModel {
     @NameInMap("Subject")
     public String subject;
 
-    // 是否输出原图坐标信息(如果图片被做过旋转，图片校正等处理)
-    @NameInMap("OutputOricoord")
-    public Boolean outputOricoord;
-
     public static RecognizeEduPaperCutRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeEduPaperCutRequest self = new RecognizeEduPaperCutRequest();
         return TeaModel.build(map, self);
@@ -59,14 +55,6 @@ public class RecognizeEduPaperCutRequest extends TeaModel {
     }
     public String getSubject() {
         return this.subject;
-    }
-
-    public RecognizeEduPaperCutRequest setOutputOricoord(Boolean outputOricoord) {
-        this.outputOricoord = outputOricoord;
-        return this;
-    }
-    public Boolean getOutputOricoord() {
-        return this.outputOricoord;
     }
 
 }

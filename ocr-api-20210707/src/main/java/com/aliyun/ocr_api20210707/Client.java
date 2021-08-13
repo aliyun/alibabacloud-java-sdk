@@ -480,20 +480,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recognizeRussianWithOptions(request, runtime);
     }
 
-    public RecognizeHouseCertificationResponse recognizeHouseCertificationWithOptions(RecognizeHouseCertificationRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("RecognizeHouseCertification", "2021-07-07", "HTTPS", "GET", "AK", "json", req, runtime), new RecognizeHouseCertificationResponse());
-    }
-
-    public RecognizeHouseCertificationResponse recognizeHouseCertification(RecognizeHouseCertificationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.recognizeHouseCertificationWithOptions(request, runtime);
-    }
-
     public RecognizeBasicResponse recognizeBasicWithOptions(RecognizeBasicRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
