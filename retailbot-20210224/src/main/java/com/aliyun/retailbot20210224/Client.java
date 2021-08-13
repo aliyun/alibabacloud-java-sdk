@@ -55,6 +55,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateRobotWithOptions(request, runtime);
     }
 
+    public UploadKnowledgeResultResponse uploadKnowledgeResultWithOptions(UploadKnowledgeResultRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UploadKnowledgeResultShrinkRequest request = new UploadKnowledgeResultShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.digDatas)) {
+            request.digDatasShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.digDatas, "DigDatas", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UploadKnowledgeResult", "2021-02-24", "HTTPS", "POST", "AK", "json", req, runtime), new UploadKnowledgeResultResponse());
+    }
+
+    public UploadKnowledgeResultResponse uploadKnowledgeResult(UploadKnowledgeResultRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.uploadKnowledgeResultWithOptions(request, runtime);
+    }
+
     public InstallPackageResponse installPackageWithOptions(InstallPackageRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         InstallPackageShrinkRequest request = new InstallPackageShrinkRequest();
@@ -146,6 +165,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.releaseServiceTestWithOptions(request, runtime);
     }
 
+    public QueryByTaskIdResponse queryByTaskIdWithOptions(QueryByTaskIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryByTaskId", "2021-02-24", "HTTPS", "POST", "AK", "json", req, runtime), new QueryByTaskIdResponse());
+    }
+
+    public QueryByTaskIdResponse queryByTaskId(QueryByTaskIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryByTaskIdWithOptions(request, runtime);
+    }
+
+    public DeleteTaskResponse deleteTaskWithOptions(DeleteTaskRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteTaskShrinkRequest request = new DeleteTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.digDeleteParam))) {
+            request.digDeleteParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.digDeleteParam), "DigDeleteParam", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteTask", "2021-02-24", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteTaskResponse());
+    }
+
+    public DeleteTaskResponse deleteTask(DeleteTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteTaskWithOptions(request, runtime);
+    }
+
     public VerifyOrderResponse verifyOrderWithOptions(VerifyOrderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -215,6 +266,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ProcessMessageResponse processMessage(ProcessMessageRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.processMessageWithOptions(request, runtime);
+    }
+
+    public QueryTaskListResponse queryTaskListWithOptions(QueryTaskListRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryTaskListShrinkRequest request = new QueryTaskListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.digTaskPageQuery))) {
+            request.digTaskPageQueryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.digTaskPageQuery), "DigTaskPageQuery", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.pageData))) {
+            request.pageDataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.pageData), "PageData", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryTaskList", "2021-02-24", "HTTPS", "POST", "AK", "json", req, runtime), new QueryTaskListResponse());
+    }
+
+    public QueryTaskListResponse queryTaskList(QueryTaskListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryTaskListWithOptions(request, runtime);
     }
 
     public UninstallPackageResponse uninstallPackageWithOptions(UninstallPackageRequest tmpReq, RuntimeOptions runtime) throws Exception {
@@ -482,6 +556,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeMessageResponse recognizeMessage(RecognizeMessageRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.recognizeMessageWithOptions(request, runtime);
+    }
+
+    public CreateTaskResponse createTaskWithOptions(CreateTaskRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateTaskShrinkRequest request = new CreateTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.digTaskInfoParam))) {
+            request.digTaskInfoParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.digTaskInfoParam), "DigTaskInfoParam", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateTask", "2021-02-24", "HTTPS", "POST", "AK", "json", req, runtime), new CreateTaskResponse());
+    }
+
+    public CreateTaskResponse createTask(CreateTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createTaskWithOptions(request, runtime);
     }
 
     public ListPackageKnowledgesResponse listPackageKnowledgesWithOptions(ListPackageKnowledgesRequest request, RuntimeOptions runtime) throws Exception {
