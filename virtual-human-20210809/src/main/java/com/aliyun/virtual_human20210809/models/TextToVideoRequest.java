@@ -16,8 +16,8 @@ public class TextToVideoRequest extends TeaModel {
     @NameInMap("CommandType")
     public String commandType;
 
-    @NameInMap("SeneType")
-    public String seneType;
+    @NameInMap("SceneType")
+    public String sceneType;
 
     @NameInMap("BeginText")
     public String beginText;
@@ -74,12 +74,12 @@ public class TextToVideoRequest extends TeaModel {
         return this.commandType;
     }
 
-    public TextToVideoRequest setSeneType(String seneType) {
-        this.seneType = seneType;
+    public TextToVideoRequest setSceneType(String sceneType) {
+        this.sceneType = sceneType;
         return this;
     }
-    public String getSeneType() {
-        return this.seneType;
+    public String getSceneType() {
+        return this.sceneType;
     }
 
     public TextToVideoRequest setBeginText(String beginText) {
