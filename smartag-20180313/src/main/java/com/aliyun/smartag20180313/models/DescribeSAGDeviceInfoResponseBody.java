@@ -31,6 +31,9 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     @NameInMap("LastConnectedControllerTime")
     public String lastConnectedControllerTime;
 
+    @NameInMap("ResettableStatus")
+    public String resettableStatus;
+
     public static DescribeSAGDeviceInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSAGDeviceInfoResponseBody self = new DescribeSAGDeviceInfoResponseBody();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class DescribeSAGDeviceInfoResponseBody extends TeaModel {
     }
     public String getLastConnectedControllerTime() {
         return this.lastConnectedControllerTime;
+    }
+
+    public DescribeSAGDeviceInfoResponseBody setResettableStatus(String resettableStatus) {
+        this.resettableStatus = resettableStatus;
+        return this;
+    }
+    public String getResettableStatus() {
+        return this.resettableStatus;
     }
 
 }

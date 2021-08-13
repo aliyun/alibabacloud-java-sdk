@@ -447,19 +447,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteQosWithOptions(request, runtime);
     }
 
-    public AddSagCidrResponse addSagCidrWithOptions(AddSagCidrRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("AddSagCidr", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new AddSagCidrResponse());
-    }
-
-    public AddSagCidrResponse addSagCidr(AddSagCidrRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.addSagCidrWithOptions(request, runtime);
-    }
-
     public DeleteSagStaticRouteResponse deleteSagStaticRouteWithOptions(DeleteSagStaticRouteRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -692,19 +679,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddDnatEntryResponse addDnatEntry(AddDnatEntryRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.addDnatEntryWithOptions(request, runtime);
-    }
-
-    public DeleteSagCidrResponse deleteSagCidrWithOptions(DeleteSagCidrRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteSagCidr", "2018-03-13", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteSagCidrResponse());
-    }
-
-    public DeleteSagCidrResponse deleteSagCidr(DeleteSagCidrRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteSagCidrWithOptions(request, runtime);
     }
 
     public DescribeSagRouteProtocolOspfResponse describeSagRouteProtocolOspfWithOptions(DescribeSagRouteProtocolOspfRequest request, RuntimeOptions runtime) throws Exception {
