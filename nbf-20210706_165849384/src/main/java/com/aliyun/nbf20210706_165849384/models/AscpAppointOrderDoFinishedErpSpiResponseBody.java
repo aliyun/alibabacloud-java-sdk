@@ -4,10 +4,6 @@ package com.aliyun.nbf20210706_165849384.models;
 import com.aliyun.tea.*;
 
 public class AscpAppointOrderDoFinishedErpSpiResponseBody extends TeaModel {
-    // 错误描述，失败情况下返回
-    @NameInMap("errroMsg")
-    public String errroMsg;
-
     // 请求是否成功
     @NameInMap("success")
     public Boolean success;
@@ -16,17 +12,13 @@ public class AscpAppointOrderDoFinishedErpSpiResponseBody extends TeaModel {
     @NameInMap("errorCode")
     public String errorCode;
 
+    // 错误描述，失败情况下返回
+    @NameInMap("errorMsg")
+    public String errorMsg;
+
     public static AscpAppointOrderDoFinishedErpSpiResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AscpAppointOrderDoFinishedErpSpiResponseBody self = new AscpAppointOrderDoFinishedErpSpiResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AscpAppointOrderDoFinishedErpSpiResponseBody setErrroMsg(String errroMsg) {
-        this.errroMsg = errroMsg;
-        return this;
-    }
-    public String getErrroMsg() {
-        return this.errroMsg;
     }
 
     public AscpAppointOrderDoFinishedErpSpiResponseBody setSuccess(Boolean success) {
@@ -43,6 +35,14 @@ public class AscpAppointOrderDoFinishedErpSpiResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
+    }
+
+    public AscpAppointOrderDoFinishedErpSpiResponseBody setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+        return this;
+    }
+    public String getErrorMsg() {
+        return this.errorMsg;
     }
 
 }
