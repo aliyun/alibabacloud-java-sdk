@@ -19,6 +19,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("ParentEventTypes")
     public String parentEventTypes;
 
+    @NameInMap("EventNames")
+    public String eventNames;
+
     @NameInMap("Remark")
     public String remark;
 
@@ -110,6 +113,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public String getParentEventTypes() {
         return this.parentEventTypes;
+    }
+
+    public DescribeSuspEventsRequest setEventNames(String eventNames) {
+        this.eventNames = eventNames;
+        return this;
+    }
+    public String getEventNames() {
+        return this.eventNames;
     }
 
     public DescribeSuspEventsRequest setRemark(String remark) {

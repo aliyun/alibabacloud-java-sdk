@@ -3,19 +3,19 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class GetBackupStorageCountRequest extends TeaModel {
+public class StartDiscoverDatabaseTaskRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static GetBackupStorageCountRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetBackupStorageCountRequest self = new GetBackupStorageCountRequest();
+    public static StartDiscoverDatabaseTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartDiscoverDatabaseTaskRequest self = new StartDiscoverDatabaseTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetBackupStorageCountRequest setSourceIp(String sourceIp) {
+    public StartDiscoverDatabaseTaskRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
     }
@@ -23,7 +23,7 @@ public class GetBackupStorageCountRequest extends TeaModel {
         return this.sourceIp;
     }
 
-    public GetBackupStorageCountRequest setResourceOwnerId(Long resourceOwnerId) {
+    public StartDiscoverDatabaseTaskRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }

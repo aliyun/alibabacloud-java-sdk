@@ -82,14 +82,8 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("NameDisplay")
         public String nameDisplay;
-
-        @NameInMap("InfoType")
-        public String infoType;
 
         @NameInMap("ValueDisplay")
         public String valueDisplay;
@@ -115,28 +109,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             return this.value;
         }
 
-        public DescribeSuspEventsResponseBodySuspEventsDetails setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeSuspEventsResponseBodySuspEventsDetails setNameDisplay(String nameDisplay) {
             this.nameDisplay = nameDisplay;
             return this;
         }
         public String getNameDisplay() {
             return this.nameDisplay;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEventsDetails setInfoType(String infoType) {
-            this.infoType = infoType;
-            return this;
-        }
-        public String getInfoType() {
-            return this.infoType;
         }
 
         public DescribeSuspEventsResponseBodySuspEventsDetails setValueDisplay(String valueDisplay) {

@@ -35,11 +35,17 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         @NameInMap("Overflow")
         public Integer overflow;
 
+        @NameInMap("UniUsageStorageByte")
+        public Long uniUsageStorageByte;
+
         @NameInMap("BuyStorageByte")
         public Long buyStorageByte;
 
         @NameInMap("UsageStorageByte")
         public Long usageStorageByte;
+
+        @NameInMap("EcsUsageStorageByte")
+        public Long ecsUsageStorageByte;
 
         public static GetBackupStorageCountResponseBodyBackupStorageCount build(java.util.Map<String, ?> map) throws Exception {
             GetBackupStorageCountResponseBodyBackupStorageCount self = new GetBackupStorageCountResponseBodyBackupStorageCount();
@@ -52,6 +58,14 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         }
         public Integer getOverflow() {
             return this.overflow;
+        }
+
+        public GetBackupStorageCountResponseBodyBackupStorageCount setUniUsageStorageByte(Long uniUsageStorageByte) {
+            this.uniUsageStorageByte = uniUsageStorageByte;
+            return this;
+        }
+        public Long getUniUsageStorageByte() {
+            return this.uniUsageStorageByte;
         }
 
         public GetBackupStorageCountResponseBodyBackupStorageCount setBuyStorageByte(Long buyStorageByte) {
@@ -68,6 +82,14 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
         }
         public Long getUsageStorageByte() {
             return this.usageStorageByte;
+        }
+
+        public GetBackupStorageCountResponseBodyBackupStorageCount setEcsUsageStorageByte(Long ecsUsageStorageByte) {
+            this.ecsUsageStorageByte = ecsUsageStorageByte;
+            return this;
+        }
+        public Long getEcsUsageStorageByte() {
+            return this.ecsUsageStorageByte;
         }
 
     }

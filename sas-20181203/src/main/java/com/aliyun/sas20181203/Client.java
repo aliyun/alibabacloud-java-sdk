@@ -237,6 +237,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSimilarSecurityEventsQueryTaskWithOptions(request, runtime);
     }
 
+    public CreateUniBackupPolicyResponse createUniBackupPolicyWithOptions(CreateUniBackupPolicyRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateUniBackupPolicyShrinkRequest request = new CreateUniBackupPolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.fullPlan)) {
+            request.fullPlanShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fullPlan, "FullPlan", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.incPlan)) {
+            request.incPlanShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.incPlan, "IncPlan", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateUniBackupPolicy", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new CreateUniBackupPolicyResponse());
+    }
+
+    public CreateUniBackupPolicyResponse createUniBackupPolicy(CreateUniBackupPolicyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createUniBackupPolicyWithOptions(request, runtime);
+    }
+
+    public CreateUniRestorePlanResponse createUniRestorePlanWithOptions(CreateUniRestorePlanRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateUniRestorePlan", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new CreateUniRestorePlanResponse());
+    }
+
+    public CreateUniRestorePlanResponse createUniRestorePlan(CreateUniRestorePlanRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createUniRestorePlanWithOptions(request, runtime);
+    }
+
     public DeleteAssetResponse deleteAssetWithOptions(DeleteAssetRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -326,6 +362,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteTagWithUuidResponse deleteTagWithUuid(DeleteTagWithUuidRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteTagWithUuidWithOptions(request, runtime);
+    }
+
+    public DeleteUniBackupPolicyResponse deleteUniBackupPolicyWithOptions(DeleteUniBackupPolicyRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteUniBackupPolicy", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteUniBackupPolicyResponse());
+    }
+
+    public DeleteUniBackupPolicyResponse deleteUniBackupPolicy(DeleteUniBackupPolicyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteUniBackupPolicyWithOptions(request, runtime);
     }
 
     public DeleteVpcHoneyPotResponse deleteVpcHoneyPotWithOptions(DeleteVpcHoneyPotRequest request, RuntimeOptions runtime) throws Exception {
@@ -479,6 +528,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAssetDetailByUuidsResponse describeAssetDetailByUuids(DescribeAssetDetailByUuidsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeAssetDetailByUuidsWithOptions(request, runtime);
+    }
+
+    public DescribeAssetSummaryResponse describeAssetSummaryWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("DescribeAssetSummary", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeAssetSummaryResponse());
+    }
+
+    public DescribeAssetSummaryResponse describeAssetSummary() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAssetSummaryWithOptions(runtime);
     }
 
     public DescribeAutoDelConfigResponse describeAutoDelConfigWithOptions(RuntimeOptions runtime) throws Exception {
@@ -850,6 +909,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeExposedInstanceListResponse describeExposedInstanceList(DescribeExposedInstanceListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeExposedInstanceListWithOptions(request, runtime);
+    }
+
+    public DescribeExposedRiskNumResponse describeExposedRiskNumWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("DescribeExposedRiskNum", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeExposedRiskNumResponse());
+    }
+
+    public DescribeExposedRiskNumResponse describeExposedRiskNum() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeExposedRiskNumWithOptions(runtime);
     }
 
     public DescribeExposedStatisticsResponse describeExposedStatisticsWithOptions(RuntimeOptions runtime) throws Exception {
@@ -1318,6 +1387,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRestoreJobsWithOptions(request, runtime);
     }
 
+    public DescribeRestorePlansResponse describeRestorePlansWithOptions(DescribeRestorePlansRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeRestorePlans", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeRestorePlansResponse());
+    }
+
+    public DescribeRestorePlansResponse describeRestorePlans(DescribeRestorePlansRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeRestorePlansWithOptions(request, runtime);
+    }
+
     public DescribeRiskCheckItemResultResponse describeRiskCheckItemResultWithOptions(DescribeRiskCheckItemResultRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1653,6 +1735,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSuspEventsWithOptions(request, runtime);
     }
 
+    public DescribeUniBackupDatabaseResponse describeUniBackupDatabaseWithOptions(DescribeUniBackupDatabaseRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeUniBackupDatabase", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUniBackupDatabaseResponse());
+    }
+
+    public DescribeUniBackupDatabaseResponse describeUniBackupDatabase(DescribeUniBackupDatabaseRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeUniBackupDatabaseWithOptions(request, runtime);
+    }
+
+    public DescribeUniBackupPoliciesResponse describeUniBackupPoliciesWithOptions(DescribeUniBackupPoliciesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeUniBackupPolicies", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUniBackupPoliciesResponse());
+    }
+
+    public DescribeUniBackupPoliciesResponse describeUniBackupPolicies(DescribeUniBackupPoliciesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeUniBackupPoliciesWithOptions(request, runtime);
+    }
+
+    public DescribeUniBackupPolicyDetailResponse describeUniBackupPolicyDetailWithOptions(DescribeUniBackupPolicyDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeUniBackupPolicyDetail", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUniBackupPolicyDetailResponse());
+    }
+
+    public DescribeUniBackupPolicyDetailResponse describeUniBackupPolicyDetail(DescribeUniBackupPolicyDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeUniBackupPolicyDetailWithOptions(request, runtime);
+    }
+
+    public DescribeUniBackupStatisticsResponse describeUniBackupStatisticsWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("DescribeUniBackupStatistics", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUniBackupStatisticsResponse());
+    }
+
+    public DescribeUniBackupStatisticsResponse describeUniBackupStatistics() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeUniBackupStatisticsWithOptions(runtime);
+    }
+
+    public DescribeUniRecoverableListResponse describeUniRecoverableListWithOptions(DescribeUniRecoverableListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeUniRecoverableList", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUniRecoverableListResponse());
+    }
+
+    public DescribeUniRecoverableListResponse describeUniRecoverableList(DescribeUniRecoverableListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeUniRecoverableListWithOptions(request, runtime);
+    }
+
+    public DescribeUniSupportRegionResponse describeUniSupportRegionWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("DescribeUniSupportRegion", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUniSupportRegionResponse());
+    }
+
+    public DescribeUniSupportRegionResponse describeUniSupportRegion() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeUniSupportRegionWithOptions(runtime);
+    }
+
     public DescribeUserBackupMachinesResponse describeUserBackupMachinesWithOptions(DescribeUserBackupMachinesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1881,17 +2035,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.fixCheckWarningsWithOptions(request, runtime);
     }
 
-    public GetBackupStorageCountResponse getBackupStorageCountWithOptions(GetBackupStorageCountRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
+    public GetBackupStorageCountResponse getBackupStorageCountWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
         return TeaModel.toModel(this.doRPCRequest("GetBackupStorageCount", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new GetBackupStorageCountResponse());
     }
 
-    public GetBackupStorageCountResponse getBackupStorageCount(GetBackupStorageCountRequest request) throws Exception {
+    public GetBackupStorageCountResponse getBackupStorageCount() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.getBackupStorageCountWithOptions(request, runtime);
+        return this.getBackupStorageCountWithOptions(runtime);
     }
 
     public GetIncIOCsResponse getIncIOCsWithOptions(GetIncIOCsRequest request, RuntimeOptions runtime) throws Exception {
@@ -2022,6 +2173,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InstallBackupClientResponse installBackupClient(InstallBackupClientRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.installBackupClientWithOptions(request, runtime);
+    }
+
+    public InstallUniBackupAgentResponse installUniBackupAgentWithOptions(InstallUniBackupAgentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("InstallUniBackupAgent", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new InstallUniBackupAgentResponse());
+    }
+
+    public InstallUniBackupAgentResponse installUniBackupAgent(InstallUniBackupAgentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.installUniBackupAgentWithOptions(request, runtime);
     }
 
     public ModifyAntiBruteForceRuleResponse modifyAntiBruteForceRuleWithOptions(ModifyAntiBruteForceRuleRequest request, RuntimeOptions runtime) throws Exception {
@@ -2303,6 +2467,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyTagWithUuidWithOptions(request, runtime);
     }
 
+    public ModifyUniBackupPolicyResponse modifyUniBackupPolicyWithOptions(ModifyUniBackupPolicyRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyUniBackupPolicyShrinkRequest request = new ModifyUniBackupPolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.fullPlan)) {
+            request.fullPlanShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fullPlan, "FullPlan", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.incPlan)) {
+            request.incPlanShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.incPlan, "IncPlan", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ModifyUniBackupPolicy", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyUniBackupPolicyResponse());
+    }
+
+    public ModifyUniBackupPolicyResponse modifyUniBackupPolicy(ModifyUniBackupPolicyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyUniBackupPolicyWithOptions(request, runtime);
+    }
+
     public ModifyVpcHoneyPotResponse modifyVpcHoneyPotWithOptions(ModifyVpcHoneyPotRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2459,6 +2646,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.pauseClientWithOptions(request, runtime);
     }
 
+    public QueryDiscoverDatabaseResponse queryDiscoverDatabaseWithOptions(QueryDiscoverDatabaseRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryDiscoverDatabase", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new QueryDiscoverDatabaseResponse());
+    }
+
+    public QueryDiscoverDatabaseResponse queryDiscoverDatabase(QueryDiscoverDatabaseRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryDiscoverDatabaseWithOptions(request, runtime);
+    }
+
+    public QueryPreCheckDatabaseResponse queryPreCheckDatabaseWithOptions(QueryPreCheckDatabaseRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryPreCheckDatabase", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new QueryPreCheckDatabaseResponse());
+    }
+
+    public QueryPreCheckDatabaseResponse queryPreCheckDatabase(QueryPreCheckDatabaseRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryPreCheckDatabaseWithOptions(request, runtime);
+    }
+
     public RefreshContainerAssetsResponse refreshContainerAssetsWithOptions(RefreshContainerAssetsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2511,6 +2724,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startBaselineSecurityCheckWithOptions(request, runtime);
     }
 
+    public StartDiscoverDatabaseTaskResponse startDiscoverDatabaseTaskWithOptions(StartDiscoverDatabaseTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StartDiscoverDatabaseTask", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new StartDiscoverDatabaseTaskResponse());
+    }
+
+    public StartDiscoverDatabaseTaskResponse startDiscoverDatabaseTask(StartDiscoverDatabaseTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startDiscoverDatabaseTaskWithOptions(request, runtime);
+    }
+
     public StartImageVulScanResponse startImageVulScanWithOptions(StartImageVulScanRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2522,6 +2748,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartImageVulScanResponse startImageVulScan(StartImageVulScanRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.startImageVulScanWithOptions(request, runtime);
+    }
+
+    public StartPreCheckDatabaseResponse startPreCheckDatabaseWithOptions(StartPreCheckDatabaseRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StartPreCheckDatabase", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new StartPreCheckDatabaseResponse());
+    }
+
+    public StartPreCheckDatabaseResponse startPreCheckDatabase(StartPreCheckDatabaseRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startPreCheckDatabaseWithOptions(request, runtime);
     }
 
     public StartVirusScanTaskResponse startVirusScanTaskWithOptions(StartVirusScanTaskRequest request, RuntimeOptions runtime) throws Exception {
@@ -2561,6 +2800,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UninstallBackupClientResponse uninstallBackupClient(UninstallBackupClientRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.uninstallBackupClientWithOptions(request, runtime);
+    }
+
+    public UninstallUniBackupAgentResponse uninstallUniBackupAgentWithOptions(UninstallUniBackupAgentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UninstallUniBackupAgent", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new UninstallUniBackupAgentResponse());
+    }
+
+    public UninstallUniBackupAgentResponse uninstallUniBackupAgent(UninstallUniBackupAgentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.uninstallUniBackupAgentWithOptions(request, runtime);
     }
 
     public ValidateHcWarningsResponse validateHcWarningsWithOptions(ValidateHcWarningsRequest request, RuntimeOptions runtime) throws Exception {

@@ -36,7 +36,7 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
         public Integer currentPage;
 
         @NameInMap("ContentResource")
-        public String contentResource;
+        public java.util.Map<String, ?> contentResource;
 
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -63,11 +63,11 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public DescribeRiskCheckItemResultResponseBodyPageContentResource setContentResource(String contentResource) {
+        public DescribeRiskCheckItemResultResponseBodyPageContentResource setContentResource(java.util.Map<String, ?> contentResource) {
             this.contentResource = contentResource;
             return this;
         }
-        public String getContentResource() {
+        public java.util.Map<String, ?> getContentResource() {
             return this.contentResource;
         }
 
