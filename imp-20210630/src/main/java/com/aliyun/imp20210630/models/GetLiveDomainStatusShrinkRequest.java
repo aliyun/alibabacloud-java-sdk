@@ -12,6 +12,10 @@ public class GetLiveDomainStatusShrinkRequest extends TeaModel {
     @NameInMap("LiveDomainList")
     public String liveDomainListShrink;
 
+    // 直播域名类型，推流域名: push, 拉流域名: pull, 回放域名: palyback
+    @NameInMap("LiveDomainType")
+    public String liveDomainType;
+
     public static GetLiveDomainStatusShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLiveDomainStatusShrinkRequest self = new GetLiveDomainStatusShrinkRequest();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class GetLiveDomainStatusShrinkRequest extends TeaModel {
     }
     public String getLiveDomainListShrink() {
         return this.liveDomainListShrink;
+    }
+
+    public GetLiveDomainStatusShrinkRequest setLiveDomainType(String liveDomainType) {
+        this.liveDomainType = liveDomainType;
+        return this;
+    }
+    public String getLiveDomainType() {
+        return this.liveDomainType;
     }
 
 }

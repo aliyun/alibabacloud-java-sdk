@@ -3,7 +3,7 @@ package com.aliyun.imp20210630.models;
 
 import com.aliyun.tea.*;
 
-public class ListRoomLivesRequest extends TeaModel {
+public class ListRoomLivesShrinkRequest extends TeaModel {
     // 应用唯一标识，可以包含小写字母、数字，长度为6个字符。
     @NameInMap("AppId")
     public String appId;
@@ -26,14 +26,14 @@ public class ListRoomLivesRequest extends TeaModel {
 
     // 房间ID列表，可指定多个房间id，过滤优先级高于RoomId。
     @NameInMap("RoomIdList")
-    public java.util.List<String> roomIdList;
+    public String roomIdListShrink;
 
-    public static ListRoomLivesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListRoomLivesRequest self = new ListRoomLivesRequest();
+    public static ListRoomLivesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListRoomLivesShrinkRequest self = new ListRoomLivesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListRoomLivesRequest setAppId(String appId) {
+    public ListRoomLivesShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -41,7 +41,7 @@ public class ListRoomLivesRequest extends TeaModel {
         return this.appId;
     }
 
-    public ListRoomLivesRequest setRoomId(String roomId) {
+    public ListRoomLivesShrinkRequest setRoomId(String roomId) {
         this.roomId = roomId;
         return this;
     }
@@ -49,7 +49,7 @@ public class ListRoomLivesRequest extends TeaModel {
         return this.roomId;
     }
 
-    public ListRoomLivesRequest setStatus(Integer status) {
+    public ListRoomLivesShrinkRequest setStatus(Integer status) {
         this.status = status;
         return this;
     }
@@ -57,7 +57,7 @@ public class ListRoomLivesRequest extends TeaModel {
         return this.status;
     }
 
-    public ListRoomLivesRequest setQueryTimestamp(Long queryTimestamp) {
+    public ListRoomLivesShrinkRequest setQueryTimestamp(Long queryTimestamp) {
         this.queryTimestamp = queryTimestamp;
         return this;
     }
@@ -65,7 +65,7 @@ public class ListRoomLivesRequest extends TeaModel {
         return this.queryTimestamp;
     }
 
-    public ListRoomLivesRequest setSize(Integer size) {
+    public ListRoomLivesShrinkRequest setSize(Integer size) {
         this.size = size;
         return this;
     }
@@ -73,12 +73,12 @@ public class ListRoomLivesRequest extends TeaModel {
         return this.size;
     }
 
-    public ListRoomLivesRequest setRoomIdList(java.util.List<String> roomIdList) {
-        this.roomIdList = roomIdList;
+    public ListRoomLivesShrinkRequest setRoomIdListShrink(String roomIdListShrink) {
+        this.roomIdListShrink = roomIdListShrink;
         return this;
     }
-    public java.util.List<String> getRoomIdList() {
-        return this.roomIdList;
+    public String getRoomIdListShrink() {
+        return this.roomIdListShrink;
     }
 
 }

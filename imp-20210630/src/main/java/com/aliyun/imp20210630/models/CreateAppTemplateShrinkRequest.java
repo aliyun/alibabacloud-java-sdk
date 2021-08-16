@@ -8,6 +8,10 @@ public class CreateAppTemplateShrinkRequest extends TeaModel {
     @NameInMap("AppTemplateName")
     public String appTemplateName;
 
+    // 应用模板场景，电商business，课堂classroom
+    @NameInMap("Sence")
+    public String sence;
+
     // 组件列表
     @NameInMap("ComponentList")
     public String componentListShrink;
@@ -23,6 +27,14 @@ public class CreateAppTemplateShrinkRequest extends TeaModel {
     }
     public String getAppTemplateName() {
         return this.appTemplateName;
+    }
+
+    public CreateAppTemplateShrinkRequest setSence(String sence) {
+        this.sence = sence;
+        return this;
+    }
+    public String getSence() {
+        return this.sence;
     }
 
     public CreateAppTemplateShrinkRequest setComponentListShrink(String componentListShrink) {

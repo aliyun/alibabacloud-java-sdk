@@ -97,8 +97,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listApplyLinkMicUsersWithOptions(request, runtime);
     }
 
-    public ListRoomLivesResponse listRoomLivesWithOptions(ListRoomLivesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListRoomLivesResponse listRoomLivesWithOptions(ListRoomLivesRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListRoomLivesShrinkRequest request = new ListRoomLivesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.roomIdList)) {
+            request.roomIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.roomIdList, "RoomIdList", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
