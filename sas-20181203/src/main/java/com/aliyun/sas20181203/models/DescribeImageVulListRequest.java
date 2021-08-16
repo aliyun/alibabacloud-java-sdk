@@ -61,15 +61,6 @@ public class DescribeImageVulListRequest extends TeaModel {
     @NameInMap("Digest")
     public String digest;
 
-    @NameInMap("ContainerFieldName")
-    public String containerFieldName;
-
-    @NameInMap("ContainerFieldValue")
-    public String containerFieldValue;
-
-    @NameInMap("TargetType")
-    public String targetType;
-
     public static DescribeImageVulListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageVulListRequest self = new DescribeImageVulListRequest();
         return TeaModel.build(map, self);
@@ -225,30 +216,6 @@ public class DescribeImageVulListRequest extends TeaModel {
     }
     public String getDigest() {
         return this.digest;
-    }
-
-    public DescribeImageVulListRequest setContainerFieldName(String containerFieldName) {
-        this.containerFieldName = containerFieldName;
-        return this;
-    }
-    public String getContainerFieldName() {
-        return this.containerFieldName;
-    }
-
-    public DescribeImageVulListRequest setContainerFieldValue(String containerFieldValue) {
-        this.containerFieldValue = containerFieldValue;
-        return this;
-    }
-    public String getContainerFieldValue() {
-        return this.containerFieldValue;
-    }
-
-    public DescribeImageVulListRequest setTargetType(String targetType) {
-        this.targetType = targetType;
-        return this;
-    }
-    public String getTargetType() {
-        return this.targetType;
     }
 
 }

@@ -49,9 +49,6 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     @NameInMap("OperateErrorCode")
     public String operateErrorCode;
 
-    @NameInMap("SasId")
-    public String sasId;
-
     @NameInMap("Level")
     public String level;
 
@@ -186,14 +183,6 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         return this.operateErrorCode;
     }
 
-    public DescribeSuspEventDetailResponseBody setSasId(String sasId) {
-        this.sasId = sasId;
-        return this;
-    }
-    public String getSasId() {
-        return this.sasId;
-    }
-
     public DescribeSuspEventDetailResponseBody setLevel(String level) {
         this.level = level;
         return this;
@@ -225,14 +214,8 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        @NameInMap("InfoType")
-        public String infoType;
-
         @NameInMap("NameDisplay")
         public String nameDisplay;
-
-        @NameInMap("Name")
-        public String name;
 
         public static DescribeSuspEventDetailResponseBodyDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeSuspEventDetailResponseBodyDetails self = new DescribeSuspEventDetailResponseBodyDetails();
@@ -255,28 +238,12 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
             return this.value;
         }
 
-        public DescribeSuspEventDetailResponseBodyDetails setInfoType(String infoType) {
-            this.infoType = infoType;
-            return this;
-        }
-        public String getInfoType() {
-            return this.infoType;
-        }
-
         public DescribeSuspEventDetailResponseBodyDetails setNameDisplay(String nameDisplay) {
             this.nameDisplay = nameDisplay;
             return this;
         }
         public String getNameDisplay() {
             return this.nameDisplay;
-        }
-
-        public DescribeSuspEventDetailResponseBodyDetails setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }
