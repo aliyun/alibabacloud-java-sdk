@@ -153,6 +153,14 @@ public class GetLiveResponseBody extends TeaModel {
         @NameInMap("PlayUrlInfoList")
         public java.util.List<GetLiveResponseBodyResultPlayUrlInfoList> playUrlInfoList;
 
+        // 封面图片
+        @NameInMap("CoverUrl")
+        public String coverUrl;
+
+        // 用户自定义数据存储
+        @NameInMap("UserDefineField")
+        public String userDefineField;
+
         public static GetLiveResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetLiveResponseBodyResult self = new GetLiveResponseBodyResult();
             return TeaModel.build(map, self);
@@ -284,6 +292,22 @@ public class GetLiveResponseBody extends TeaModel {
         }
         public java.util.List<GetLiveResponseBodyResultPlayUrlInfoList> getPlayUrlInfoList() {
             return this.playUrlInfoList;
+        }
+
+        public GetLiveResponseBodyResult setCoverUrl(String coverUrl) {
+            this.coverUrl = coverUrl;
+            return this;
+        }
+        public String getCoverUrl() {
+            return this.coverUrl;
+        }
+
+        public GetLiveResponseBodyResult setUserDefineField(String userDefineField) {
+            this.userDefineField = userDefineField;
+            return this;
+        }
+        public String getUserDefineField() {
+            return this.userDefineField;
         }
 
     }
