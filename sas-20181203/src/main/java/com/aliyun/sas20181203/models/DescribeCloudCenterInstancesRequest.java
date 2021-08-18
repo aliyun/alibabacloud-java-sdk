@@ -16,9 +16,6 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     @NameInMap("LogicalExp")
     public String logicalExp;
 
-    @NameInMap("NoPage")
-    public Boolean noPage;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -63,14 +60,6 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     }
     public String getLogicalExp() {
         return this.logicalExp;
-    }
-
-    public DescribeCloudCenterInstancesRequest setNoPage(Boolean noPage) {
-        this.noPage = noPage;
-        return this;
-    }
-    public Boolean getNoPage() {
-        return this.noPage;
     }
 
     public DescribeCloudCenterInstancesRequest setPageSize(Integer pageSize) {

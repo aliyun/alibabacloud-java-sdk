@@ -1465,19 +1465,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRiskListCheckResultWithOptions(request, runtime);
     }
 
-    public DescribeSasAssetStatisticsColumnResponse describeSasAssetStatisticsColumnWithOptions(DescribeSasAssetStatisticsColumnRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeSasAssetStatisticsColumn", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSasAssetStatisticsColumnResponse());
-    }
-
-    public DescribeSasAssetStatisticsColumnResponse describeSasAssetStatisticsColumn(DescribeSasAssetStatisticsColumnRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeSasAssetStatisticsColumnWithOptions(request, runtime);
-    }
-
     public DescribeScanTaskProgressResponse describeScanTaskProgressWithOptions(DescribeScanTaskProgressRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2670,6 +2657,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryPreCheckDatabaseResponse queryPreCheckDatabase(QueryPreCheckDatabaseRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryPreCheckDatabaseWithOptions(request, runtime);
+    }
+
+    public RefreshAssetsResponse refreshAssetsWithOptions(RefreshAssetsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RefreshAssets", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new RefreshAssetsResponse());
+    }
+
+    public RefreshAssetsResponse refreshAssets(RefreshAssetsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.refreshAssetsWithOptions(request, runtime);
     }
 
     public RefreshContainerAssetsResponse refreshContainerAssetsWithOptions(RefreshContainerAssetsRequest request, RuntimeOptions runtime) throws Exception {

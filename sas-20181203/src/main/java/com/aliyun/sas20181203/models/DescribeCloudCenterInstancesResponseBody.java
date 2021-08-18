@@ -109,8 +109,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("CpuInfo")
+        public String cpuInfo;
+
         @NameInMap("InternetIp")
         public String internetIp;
+
+        @NameInMap("Kernel")
+        public String kernel;
 
         @NameInMap("Bind")
         public Boolean bind;
@@ -124,8 +130,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("ClientStatus")
         public String clientStatus;
 
+        @NameInMap("Mem")
+        public Integer mem;
+
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
+
+        @NameInMap("TagId")
+        public String tagId;
 
         @NameInMap("Flag")
         public Integer flag;
@@ -151,6 +163,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        @NameInMap("GroupTrace")
+        public String groupTrace;
+
         @NameInMap("ClusterId")
         public String clusterId;
 
@@ -166,6 +181,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
+        @NameInMap("MacListString")
+        public String macListString;
+
         @NameInMap("Importance")
         public Integer importance;
 
@@ -180,9 +198,6 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         @NameInMap("AuthModifyTime")
         public Long authModifyTime;
-
-        @NameInMap("ExposedCount")
-        public Integer exposedCount;
 
         @NameInMap("SafeEventCount")
         public Integer safeEventCount;
@@ -205,9 +220,6 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("Uuid")
         public String uuid;
 
-        @NameInMap("AutoSnapshotsLevel")
-        public Integer autoSnapshotsLevel;
-
         @NameInMap("GroupId")
         public String groupId;
 
@@ -216,6 +228,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         @NameInMap("VendorName")
         public String vendorName;
+
+        @NameInMap("AuthVersionName")
+        public String authVersionName;
 
         @NameInMap("ClusterName")
         public String clusterName;
@@ -226,8 +241,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("RiskCount")
         public String riskCount;
 
-        @NameInMap("ClientVersion")
-        public String clientVersion;
+        @NameInMap("IpListString")
+        public String ipListString;
 
         public static DescribeCloudCenterInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudCenterInstancesResponseBodyInstances self = new DescribeCloudCenterInstancesResponseBodyInstances();
@@ -242,12 +257,28 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
+        public DescribeCloudCenterInstancesResponseBodyInstances setCpuInfo(String cpuInfo) {
+            this.cpuInfo = cpuInfo;
+            return this;
+        }
+        public String getCpuInfo() {
+            return this.cpuInfo;
+        }
+
         public DescribeCloudCenterInstancesResponseBodyInstances setInternetIp(String internetIp) {
             this.internetIp = internetIp;
             return this;
         }
         public String getInternetIp() {
             return this.internetIp;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setKernel(String kernel) {
+            this.kernel = kernel;
+            return this;
+        }
+        public String getKernel() {
+            return this.kernel;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setBind(Boolean bind) {
@@ -282,12 +313,28 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.clientStatus;
         }
 
+        public DescribeCloudCenterInstancesResponseBodyInstances setMem(Integer mem) {
+            this.mem = mem;
+            return this;
+        }
+        public Integer getMem() {
+            return this.mem;
+        }
+
         public DescribeCloudCenterInstancesResponseBodyInstances setVpcInstanceId(String vpcInstanceId) {
             this.vpcInstanceId = vpcInstanceId;
             return this;
         }
         public String getVpcInstanceId() {
             return this.vpcInstanceId;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setTagId(String tagId) {
+            this.tagId = tagId;
+            return this;
+        }
+        public String getTagId() {
+            return this.tagId;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setFlag(Integer flag) {
@@ -354,6 +401,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.createdTime;
         }
 
+        public DescribeCloudCenterInstancesResponseBodyInstances setGroupTrace(String groupTrace) {
+            this.groupTrace = groupTrace;
+            return this;
+        }
+        public String getGroupTrace() {
+            return this.groupTrace;
+        }
+
         public DescribeCloudCenterInstancesResponseBodyInstances setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
@@ -394,6 +449,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.alarmStatus;
         }
 
+        public DescribeCloudCenterInstancesResponseBodyInstances setMacListString(String macListString) {
+            this.macListString = macListString;
+            return this;
+        }
+        public String getMacListString() {
+            return this.macListString;
+        }
+
         public DescribeCloudCenterInstancesResponseBodyInstances setImportance(Integer importance) {
             this.importance = importance;
             return this;
@@ -432,14 +495,6 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public Long getAuthModifyTime() {
             return this.authModifyTime;
-        }
-
-        public DescribeCloudCenterInstancesResponseBodyInstances setExposedCount(Integer exposedCount) {
-            this.exposedCount = exposedCount;
-            return this;
-        }
-        public Integer getExposedCount() {
-            return this.exposedCount;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setSafeEventCount(Integer safeEventCount) {
@@ -498,14 +553,6 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.uuid;
         }
 
-        public DescribeCloudCenterInstancesResponseBodyInstances setAutoSnapshotsLevel(Integer autoSnapshotsLevel) {
-            this.autoSnapshotsLevel = autoSnapshotsLevel;
-            return this;
-        }
-        public Integer getAutoSnapshotsLevel() {
-            return this.autoSnapshotsLevel;
-        }
-
         public DescribeCloudCenterInstancesResponseBodyInstances setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
@@ -528,6 +575,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public String getVendorName() {
             return this.vendorName;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setAuthVersionName(String authVersionName) {
+            this.authVersionName = authVersionName;
+            return this;
+        }
+        public String getAuthVersionName() {
+            return this.authVersionName;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setClusterName(String clusterName) {
@@ -554,12 +609,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             return this.riskCount;
         }
 
-        public DescribeCloudCenterInstancesResponseBodyInstances setClientVersion(String clientVersion) {
-            this.clientVersion = clientVersion;
+        public DescribeCloudCenterInstancesResponseBodyInstances setIpListString(String ipListString) {
+            this.ipListString = ipListString;
             return this;
         }
-        public String getClientVersion() {
-            return this.clientVersion;
+        public String getIpListString() {
+            return this.ipListString;
         }
 
     }
