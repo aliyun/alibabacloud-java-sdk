@@ -74,8 +74,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("MatchDetail")
         public String matchDetail;
 
+        @NameInMap("ImageName")
+        public String imageName;
+
         @NameInMap("Path")
         public String path;
+
+        @NameInMap("ContainerName")
+        public String containerName;
 
         @NameInMap("Name")
         public String name;
@@ -112,12 +118,28 @@ public class DescribeVulListResponseBody extends TeaModel {
             return this.matchDetail;
         }
 
+        public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
         public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setPath(String path) {
             this.path = path;
             return this;
         }
         public String getPath() {
             return this.path;
+        }
+
+        public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setContainerName(String containerName) {
+            this.containerName = containerName;
+            return this;
+        }
+        public String getContainerName() {
+            return this.containerName;
         }
 
         public DescribeVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setName(String name) {
