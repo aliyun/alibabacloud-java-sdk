@@ -116,8 +116,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listRoomLivesWithOptions(request, runtime);
     }
 
-    public UpdateRoomResponse updateRoomWithOptions(UpdateRoomRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateRoomResponse updateRoomWithOptions(UpdateRoomRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateRoomShrinkRequest request = new UpdateRoomShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extension)) {
+            request.extensionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extension, "Extension", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
