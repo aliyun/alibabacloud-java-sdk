@@ -10,15 +10,6 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetRealPersonVerificationResultResponseBodyData data;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static GetRealPersonVerificationResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRealPersonVerificationResultResponseBody self = new GetRealPersonVerificationResultResponseBody();
         return TeaModel.build(map, self);
@@ -38,30 +29,6 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
     }
     public GetRealPersonVerificationResultResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetRealPersonVerificationResultResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetRealPersonVerificationResultResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetRealPersonVerificationResultResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class GetRealPersonVerificationResultResponseBodyData extends TeaModel {
