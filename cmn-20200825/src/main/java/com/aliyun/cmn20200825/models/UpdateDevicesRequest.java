@@ -20,6 +20,10 @@ public class UpdateDevicesRequest extends TeaModel {
     @NameInMap("LoginPassword")
     public String loginPassword;
 
+    // enable密码
+    @NameInMap("EnablePassword")
+    public String enablePassword;
+
     // SNMP 版本号
     @NameInMap("SnmpAccountVersion")
     public String snmpAccountVersion;
@@ -60,6 +64,26 @@ public class UpdateDevicesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 物理空间id
+    @NameInMap("PhysicalSpaceId")
+    public String physicalSpaceId;
+
+    // 物理空间名称
+    @NameInMap("PhysicalSpaceName")
+    public String physicalSpaceName;
+
+    // 服务状态
+    @NameInMap("ServiceStatus")
+    public String serviceStatus;
+
+    // 厂商
+    @NameInMap("Vendor")
+    public String vendor;
+
+    // 型号
+    @NameInMap("Model")
+    public String model;
+
     public static UpdateDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDevicesRequest self = new UpdateDevicesRequest();
         return TeaModel.build(map, self);
@@ -95,6 +119,14 @@ public class UpdateDevicesRequest extends TeaModel {
     }
     public String getLoginPassword() {
         return this.loginPassword;
+    }
+
+    public UpdateDevicesRequest setEnablePassword(String enablePassword) {
+        this.enablePassword = enablePassword;
+        return this;
+    }
+    public String getEnablePassword() {
+        return this.enablePassword;
     }
 
     public UpdateDevicesRequest setSnmpAccountVersion(String snmpAccountVersion) {
@@ -175,6 +207,46 @@ public class UpdateDevicesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateDevicesRequest setPhysicalSpaceId(String physicalSpaceId) {
+        this.physicalSpaceId = physicalSpaceId;
+        return this;
+    }
+    public String getPhysicalSpaceId() {
+        return this.physicalSpaceId;
+    }
+
+    public UpdateDevicesRequest setPhysicalSpaceName(String physicalSpaceName) {
+        this.physicalSpaceName = physicalSpaceName;
+        return this;
+    }
+    public String getPhysicalSpaceName() {
+        return this.physicalSpaceName;
+    }
+
+    public UpdateDevicesRequest setServiceStatus(String serviceStatus) {
+        this.serviceStatus = serviceStatus;
+        return this;
+    }
+    public String getServiceStatus() {
+        return this.serviceStatus;
+    }
+
+    public UpdateDevicesRequest setVendor(String vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    public String getVendor() {
+        return this.vendor;
+    }
+
+    public UpdateDevicesRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
     }
 
 }

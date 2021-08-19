@@ -44,6 +44,10 @@ public class ListAlarmStatusRequest extends TeaModel {
     @NameInMap("DedicatedLineName")
     public String dedicatedLineName;
 
+    // 设备所属地域
+    @NameInMap("Region")
+    public String region;
+
     public static ListAlarmStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmStatusRequest self = new ListAlarmStatusRequest();
         return TeaModel.build(map, self);
@@ -127,6 +131,14 @@ public class ListAlarmStatusRequest extends TeaModel {
     }
     public String getDedicatedLineName() {
         return this.dedicatedLineName;
+    }
+
+    public ListAlarmStatusRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
 }

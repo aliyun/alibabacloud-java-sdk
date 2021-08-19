@@ -48,6 +48,10 @@ public class ListMonitorDataRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 应用ID
+    @NameInMap("AppId")
+    public String appId;
+
     public static ListMonitorDataRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMonitorDataRequest self = new ListMonitorDataRequest();
         return TeaModel.build(map, self);
@@ -139,6 +143,14 @@ public class ListMonitorDataRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListMonitorDataRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
 }

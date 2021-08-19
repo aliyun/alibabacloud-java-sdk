@@ -426,6 +426,10 @@ public class GetAlarmStatusResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        // 对端IP
+        @NameInMap("DedicatedLineGateway")
+        public String dedicatedLineGateway;
+
         public static GetAlarmStatusResponseBodyAlarmStatusDedicatedLine build(java.util.Map<String, ?> map) throws Exception {
             GetAlarmStatusResponseBodyAlarmStatusDedicatedLine self = new GetAlarmStatusResponseBodyAlarmStatusDedicatedLine();
             return TeaModel.build(map, self);
@@ -477,6 +481,14 @@ public class GetAlarmStatusResponseBody extends TeaModel {
         }
         public String getIp() {
             return this.ip;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusDedicatedLine setDedicatedLineGateway(String dedicatedLineGateway) {
+            this.dedicatedLineGateway = dedicatedLineGateway;
+            return this;
+        }
+        public String getDedicatedLineGateway() {
+            return this.dedicatedLineGateway;
         }
 
     }
@@ -625,6 +637,74 @@ public class GetAlarmStatusResponseBody extends TeaModel {
 
     }
 
+    public static class GetAlarmStatusResponseBodyAlarmStatusResourceApp extends TeaModel {
+        // 监控域名
+        @NameInMap("Domain")
+        public String domain;
+
+        // 应用ID
+        @NameInMap("AppId")
+        public String appId;
+
+        // 端口
+        @NameInMap("Port")
+        public String port;
+
+        // 资源类型
+        @NameInMap("Type")
+        public String type;
+
+        // 所属探针
+        @NameInMap("SecurityDomain")
+        public String securityDomain;
+
+        public static GetAlarmStatusResponseBodyAlarmStatusResourceApp build(java.util.Map<String, ?> map) throws Exception {
+            GetAlarmStatusResponseBodyAlarmStatusResourceApp self = new GetAlarmStatusResponseBodyAlarmStatusResourceApp();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusResourceApp setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusResourceApp setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusResourceApp setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusResourceApp setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatusResourceApp setSecurityDomain(String securityDomain) {
+            this.securityDomain = securityDomain;
+            return this;
+        }
+        public String getSecurityDomain() {
+            return this.securityDomain;
+        }
+
+    }
+
     public static class GetAlarmStatusResponseBodyAlarmStatus extends TeaModel {
         // 设备ID
         @NameInMap("DeviceId")
@@ -704,6 +784,18 @@ public class GetAlarmStatusResponseBody extends TeaModel {
 
         @NameInMap("PortCollection")
         public GetAlarmStatusResponseBodyAlarmStatusPortCollection portCollection;
+
+        // 采集探针IP
+        @NameInMap("AgentIp")
+        public String agentIp;
+
+        // 应用ID
+        @NameInMap("AppId")
+        public String appId;
+
+        // 应用
+        @NameInMap("ResourceApp")
+        public GetAlarmStatusResponseBodyAlarmStatusResourceApp resourceApp;
 
         public static GetAlarmStatusResponseBodyAlarmStatus build(java.util.Map<String, ?> map) throws Exception {
             GetAlarmStatusResponseBodyAlarmStatus self = new GetAlarmStatusResponseBodyAlarmStatus();
@@ -868,6 +960,30 @@ public class GetAlarmStatusResponseBody extends TeaModel {
         }
         public GetAlarmStatusResponseBodyAlarmStatusPortCollection getPortCollection() {
             return this.portCollection;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatus setAgentIp(String agentIp) {
+            this.agentIp = agentIp;
+            return this;
+        }
+        public String getAgentIp() {
+            return this.agentIp;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatus setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public GetAlarmStatusResponseBodyAlarmStatus setResourceApp(GetAlarmStatusResponseBodyAlarmStatusResourceApp resourceApp) {
+            this.resourceApp = resourceApp;
+            return this;
+        }
+        public GetAlarmStatusResponseBodyAlarmStatusResourceApp getResourceApp() {
+            return this.resourceApp;
         }
 
     }

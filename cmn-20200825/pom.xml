@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cmn20200825</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>cmn20200825</name>
   <description>Alibaba Cloud cmn (20200825) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.12</version>
+      <version>0.2.13</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
