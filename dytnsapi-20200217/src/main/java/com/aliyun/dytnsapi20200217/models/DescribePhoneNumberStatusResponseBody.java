@@ -4,8 +4,8 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberStatusResponseBody extends TeaModel {
-    @NameInMap("PhoneStatus")
-    public DescribePhoneNumberStatusResponseBodyPhoneStatus phoneStatus;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class DescribePhoneNumberStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("PhoneStatus")
+    public DescribePhoneNumberStatusResponseBodyPhoneStatus phoneStatus;
 
     public static DescribePhoneNumberStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePhoneNumberStatusResponseBody self = new DescribePhoneNumberStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribePhoneNumberStatusResponseBody setPhoneStatus(DescribePhoneNumberStatusResponseBodyPhoneStatus phoneStatus) {
-        this.phoneStatus = phoneStatus;
+    public DescribePhoneNumberStatusResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public DescribePhoneNumberStatusResponseBodyPhoneStatus getPhoneStatus() {
-        return this.phoneStatus;
+    public String getCode() {
+        return this.code;
     }
 
     public DescribePhoneNumberStatusResponseBody setMessage(String message) {
@@ -45,12 +45,12 @@ public class DescribePhoneNumberStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribePhoneNumberStatusResponseBody setCode(String code) {
-        this.code = code;
+    public DescribePhoneNumberStatusResponseBody setPhoneStatus(DescribePhoneNumberStatusResponseBodyPhoneStatus phoneStatus) {
+        this.phoneStatus = phoneStatus;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public DescribePhoneNumberStatusResponseBodyPhoneStatus getPhoneStatus() {
+        return this.phoneStatus;
     }
 
     public static class DescribePhoneNumberStatusResponseBodyPhoneStatus extends TeaModel {

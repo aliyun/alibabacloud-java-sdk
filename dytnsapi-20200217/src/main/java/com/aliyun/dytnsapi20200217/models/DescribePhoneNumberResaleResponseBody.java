@@ -4,6 +4,9 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberResaleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class DescribePhoneNumberResaleResponseBody extends TeaModel {
     @NameInMap("TwiceTelVerify")
     public DescribePhoneNumberResaleResponseBodyTwiceTelVerify twiceTelVerify;
 
-    @NameInMap("Code")
-    public String code;
-
     public static DescribePhoneNumberResaleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePhoneNumberResaleResponseBody self = new DescribePhoneNumberResaleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePhoneNumberResaleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribePhoneNumberResaleResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class DescribePhoneNumberResaleResponseBody extends TeaModel {
     }
     public DescribePhoneNumberResaleResponseBodyTwiceTelVerify getTwiceTelVerify() {
         return this.twiceTelVerify;
-    }
-
-    public DescribePhoneNumberResaleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class DescribePhoneNumberResaleResponseBodyTwiceTelVerify extends TeaModel {

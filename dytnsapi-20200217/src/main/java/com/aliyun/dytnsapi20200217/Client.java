@@ -31,6 +31,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public DescribePhoneNumberAttributeResponse describePhoneNumberAttributeWithOptions(DescribePhoneNumberAttributeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribePhoneNumberAttribute", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime), new DescribePhoneNumberAttributeResponse());
+    }
+
+    public DescribePhoneNumberAttributeResponse describePhoneNumberAttribute(DescribePhoneNumberAttributeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describePhoneNumberAttributeWithOptions(request, runtime);
+    }
+
     public DescribePhoneNumberResaleResponse describePhoneNumberResaleWithOptions(DescribePhoneNumberResaleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

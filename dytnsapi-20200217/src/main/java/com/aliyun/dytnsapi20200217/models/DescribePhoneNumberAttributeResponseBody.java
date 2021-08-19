@@ -3,7 +3,7 @@ package com.aliyun.dytnsapi20200217.models;
 
 import com.aliyun.tea.*;
 
-public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
+public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -14,14 +14,14 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("PhoneNumberAttribute")
-    public QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute phoneNumberAttribute;
+    public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute phoneNumberAttribute;
 
-    public static QueryPhoneNumberAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        QueryPhoneNumberAttributeResponseBody self = new QueryPhoneNumberAttributeResponseBody();
+    public static DescribePhoneNumberAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribePhoneNumberAttributeResponseBody self = new DescribePhoneNumberAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryPhoneNumberAttributeResponseBody setCode(String code) {
+    public DescribePhoneNumberAttributeResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -29,7 +29,7 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryPhoneNumberAttributeResponseBody setMessage(String message) {
+    public DescribePhoneNumberAttributeResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -37,7 +37,7 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryPhoneNumberAttributeResponseBody setRequestId(String requestId) {
+    public DescribePhoneNumberAttributeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -45,15 +45,15 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryPhoneNumberAttributeResponseBody setPhoneNumberAttribute(QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute phoneNumberAttribute) {
+    public DescribePhoneNumberAttributeResponseBody setPhoneNumberAttribute(DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute phoneNumberAttribute) {
         this.phoneNumberAttribute = phoneNumberAttribute;
         return this;
     }
-    public QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute getPhoneNumberAttribute() {
+    public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute getPhoneNumberAttribute() {
         return this.phoneNumberAttribute;
     }
 
-    public static class QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute extends TeaModel {
+    public static class DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute extends TeaModel {
         @NameInMap("BasicCarrier")
         public String basicCarrier;
 
@@ -72,12 +72,12 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
         @NameInMap("Province")
         public String province;
 
-        public static QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute build(java.util.Map<String, ?> map) throws Exception {
-            QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute self = new QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute();
+        public static DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute self = new DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute();
             return TeaModel.build(map, self);
         }
 
-        public QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute setBasicCarrier(String basicCarrier) {
+        public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setBasicCarrier(String basicCarrier) {
             this.basicCarrier = basicCarrier;
             return this;
         }
@@ -85,7 +85,7 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
             return this.basicCarrier;
         }
 
-        public QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute setCarrier(String carrier) {
+        public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setCarrier(String carrier) {
             this.carrier = carrier;
             return this;
         }
@@ -93,7 +93,7 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
             return this.carrier;
         }
 
-        public QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute setIsNumberPortability(Boolean isNumberPortability) {
+        public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setIsNumberPortability(Boolean isNumberPortability) {
             this.isNumberPortability = isNumberPortability;
             return this;
         }
@@ -101,7 +101,7 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
             return this.isNumberPortability;
         }
 
-        public QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute setNumberSegment(Long numberSegment) {
+        public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setNumberSegment(Long numberSegment) {
             this.numberSegment = numberSegment;
             return this;
         }
@@ -109,7 +109,7 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
             return this.numberSegment;
         }
 
-        public QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute setCity(String city) {
+        public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setCity(String city) {
             this.city = city;
             return this;
         }
@@ -117,7 +117,7 @@ public class QueryPhoneNumberAttributeResponseBody extends TeaModel {
             return this.city;
         }
 
-        public QueryPhoneNumberAttributeResponseBodyPhoneNumberAttribute setProvince(String province) {
+        public DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute setProvince(String province) {
             this.province = province;
             return this;
         }
