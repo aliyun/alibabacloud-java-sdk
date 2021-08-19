@@ -10,15 +10,6 @@ public class GenRealPersonVerificationTokenResponseBody extends TeaModel {
     @NameInMap("Data")
     public GenRealPersonVerificationTokenResponseBodyData data;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
-
     public static GenRealPersonVerificationTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenRealPersonVerificationTokenResponseBody self = new GenRealPersonVerificationTokenResponseBody();
         return TeaModel.build(map, self);
@@ -38,30 +29,6 @@ public class GenRealPersonVerificationTokenResponseBody extends TeaModel {
     }
     public GenRealPersonVerificationTokenResponseBodyData getData() {
         return this.data;
-    }
-
-    public GenRealPersonVerificationTokenResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GenRealPersonVerificationTokenResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GenRealPersonVerificationTokenResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class GenRealPersonVerificationTokenResponseBodyData extends TeaModel {
