@@ -56,6 +56,10 @@ public class UpdateDeviceRequest extends TeaModel {
     @NameInMap("LoginPassword")
     public String loginPassword;
 
+    // enable密码
+    @NameInMap("EnablePassword")
+    public String enablePassword;
+
     // SNMP 版本号
     @NameInMap("SnmpAccountVersion")
     public String snmpAccountVersion;
@@ -207,6 +211,14 @@ public class UpdateDeviceRequest extends TeaModel {
     }
     public String getLoginPassword() {
         return this.loginPassword;
+    }
+
+    public UpdateDeviceRequest setEnablePassword(String enablePassword) {
+        this.enablePassword = enablePassword;
+        return this;
+    }
+    public String getEnablePassword() {
+        return this.enablePassword;
     }
 
     public UpdateDeviceRequest setSnmpAccountVersion(String snmpAccountVersion) {

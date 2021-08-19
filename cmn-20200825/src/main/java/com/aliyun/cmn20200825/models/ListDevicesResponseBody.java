@@ -134,6 +134,10 @@ public class ListDevicesResponseBody extends TeaModel {
         @NameInMap("LoginPassword")
         public String loginPassword;
 
+        // enable密码
+        @NameInMap("EnablePassword")
+        public String enablePassword;
+
         // SNMP版本号
         @NameInMap("SnmpAccountVersion")
         public String snmpAccountVersion;
@@ -305,6 +309,14 @@ public class ListDevicesResponseBody extends TeaModel {
         }
         public String getLoginPassword() {
             return this.loginPassword;
+        }
+
+        public ListDevicesResponseBodyDevices setEnablePassword(String enablePassword) {
+            this.enablePassword = enablePassword;
+            return this;
+        }
+        public String getEnablePassword() {
+            return this.enablePassword;
         }
 
         public ListDevicesResponseBodyDevices setSnmpAccountVersion(String snmpAccountVersion) {

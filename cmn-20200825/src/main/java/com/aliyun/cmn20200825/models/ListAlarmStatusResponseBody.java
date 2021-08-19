@@ -225,6 +225,74 @@ public class ListAlarmStatusResponseBody extends TeaModel {
 
     }
 
+    public static class ListAlarmStatusResponseBodyAlarmStatusResourceApp extends TeaModel {
+        // 监控域名
+        @NameInMap("Domain")
+        public String domain;
+
+        // 应用ID
+        @NameInMap("AppId")
+        public String appId;
+
+        // 端口
+        @NameInMap("Port")
+        public String port;
+
+        // 资源类型
+        @NameInMap("Type")
+        public String type;
+
+        // 所属探针
+        @NameInMap("SecurityDomain")
+        public String securityDomain;
+
+        public static ListAlarmStatusResponseBodyAlarmStatusResourceApp build(java.util.Map<String, ?> map) throws Exception {
+            ListAlarmStatusResponseBodyAlarmStatusResourceApp self = new ListAlarmStatusResponseBodyAlarmStatusResourceApp();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusResourceApp setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusResourceApp setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusResourceApp setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusResourceApp setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatusResourceApp setSecurityDomain(String securityDomain) {
+            this.securityDomain = securityDomain;
+            return this;
+        }
+        public String getSecurityDomain() {
+            return this.securityDomain;
+        }
+
+    }
+
     public static class ListAlarmStatusResponseBodyAlarmStatus extends TeaModel {
         // 设备ID
         @NameInMap("DeviceId")
@@ -305,6 +373,18 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         // 端口集
         @NameInMap("PortCollection")
         public ListAlarmStatusResponseBodyAlarmStatusPortCollection portCollection;
+
+        // 采集探针IP
+        @NameInMap("AgentIp")
+        public String agentIp;
+
+        // 应用ID
+        @NameInMap("AppId")
+        public String appId;
+
+        // 应用资源
+        @NameInMap("ResourceApp")
+        public ListAlarmStatusResponseBodyAlarmStatusResourceApp resourceApp;
 
         public static ListAlarmStatusResponseBodyAlarmStatus build(java.util.Map<String, ?> map) throws Exception {
             ListAlarmStatusResponseBodyAlarmStatus self = new ListAlarmStatusResponseBodyAlarmStatus();
@@ -469,6 +549,30 @@ public class ListAlarmStatusResponseBody extends TeaModel {
         }
         public ListAlarmStatusResponseBodyAlarmStatusPortCollection getPortCollection() {
             return this.portCollection;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setAgentIp(String agentIp) {
+            this.agentIp = agentIp;
+            return this;
+        }
+        public String getAgentIp() {
+            return this.agentIp;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public ListAlarmStatusResponseBodyAlarmStatus setResourceApp(ListAlarmStatusResponseBodyAlarmStatusResourceApp resourceApp) {
+            this.resourceApp = resourceApp;
+            return this;
+        }
+        public ListAlarmStatusResponseBodyAlarmStatusResourceApp getResourceApp() {
+            return this.resourceApp;
         }
 
     }

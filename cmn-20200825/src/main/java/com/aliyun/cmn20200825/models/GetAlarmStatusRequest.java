@@ -32,6 +32,10 @@ public class GetAlarmStatusRequest extends TeaModel {
     @NameInMap("PortCollectionId")
     public String portCollectionId;
 
+    // 应用ID
+    @NameInMap("AppId")
+    public String appId;
+
     public static GetAlarmStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAlarmStatusRequest self = new GetAlarmStatusRequest();
         return TeaModel.build(map, self);
@@ -91,6 +95,14 @@ public class GetAlarmStatusRequest extends TeaModel {
     }
     public String getPortCollectionId() {
         return this.portCollectionId;
+    }
+
+    public GetAlarmStatusRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
 }

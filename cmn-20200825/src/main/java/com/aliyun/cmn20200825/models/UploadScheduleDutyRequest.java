@@ -40,7 +40,7 @@ public class UploadScheduleDutyRequest extends TeaModel {
 
         // 值班人员姓名
         @NameInMap("WorkerName")
-        public String workerName;
+        public java.util.List<String> workerName;
 
         public static UploadScheduleDutyRequestScheduleDutyWorker build(java.util.Map<String, ?> map) throws Exception {
             UploadScheduleDutyRequestScheduleDutyWorker self = new UploadScheduleDutyRequestScheduleDutyWorker();
@@ -55,11 +55,11 @@ public class UploadScheduleDutyRequest extends TeaModel {
             return this.workType;
         }
 
-        public UploadScheduleDutyRequestScheduleDutyWorker setWorkerName(String workerName) {
+        public UploadScheduleDutyRequestScheduleDutyWorker setWorkerName(java.util.List<String> workerName) {
             this.workerName = workerName;
             return this;
         }
-        public String getWorkerName() {
+        public java.util.List<String> getWorkerName() {
             return this.workerName;
         }
 
