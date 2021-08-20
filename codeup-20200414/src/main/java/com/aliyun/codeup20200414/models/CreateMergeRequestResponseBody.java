@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class CreateMergeRequestResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class CreateMergeRequestResponseBody extends TeaModel {
     public static CreateMergeRequestResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateMergeRequestResponseBody self = new CreateMergeRequestResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMergeRequestResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateMergeRequestResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class CreateMergeRequestResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public CreateMergeRequestResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public CreateMergeRequestResponseBody setSuccess(Boolean success) {
@@ -68,11 +68,11 @@ public class CreateMergeRequestResponseBody extends TeaModel {
         @NameInMap("ExternUserId")
         public String externUserId;
 
-        @NameInMap("AvatarUrl")
-        public String avatarUrl;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
 
         @NameInMap("Id")
         public String id;
@@ -90,20 +90,20 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             return this.externUserId;
         }
 
-        public CreateMergeRequestResponseBodyResultAssigneeList setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-            return this;
-        }
-        public String getAvatarUrl() {
-            return this.avatarUrl;
-        }
-
         public CreateMergeRequestResponseBodyResultAssigneeList setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateMergeRequestResponseBodyResultAssigneeList setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
         }
 
         public CreateMergeRequestResponseBodyResultAssigneeList setId(String id) {
@@ -120,11 +120,11 @@ public class CreateMergeRequestResponseBody extends TeaModel {
         @NameInMap("ExternUserId")
         public String externUserId;
 
-        @NameInMap("AvatarUrl")
-        public String avatarUrl;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
 
         @NameInMap("Id")
         public Long id;
@@ -142,20 +142,20 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             return this.externUserId;
         }
 
-        public CreateMergeRequestResponseBodyResultAuthor setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-            return this;
-        }
-        public String getAvatarUrl() {
-            return this.avatarUrl;
-        }
-
         public CreateMergeRequestResponseBodyResultAuthor setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateMergeRequestResponseBodyResultAuthor setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
         }
 
         public CreateMergeRequestResponseBodyResultAuthor setId(Long id) {
@@ -168,141 +168,15 @@ public class CreateMergeRequestResponseBody extends TeaModel {
 
     }
 
-    public static class CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers extends TeaModel {
-        @NameInMap("ExternUserId")
-        public String externUserId;
-
-        @NameInMap("AvatarUrl")
-        public String avatarUrl;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public Long id;
-
-        public static CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers build(java.util.Map<String, ?> map) throws Exception {
-            CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers self = new CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers setExternUserId(String externUserId) {
-            this.externUserId = externUserId;
-            return this;
-        }
-        public String getExternUserId() {
-            return this.externUserId;
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-            return this;
-        }
-        public String getAvatarUrl() {
-            return this.avatarUrl;
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-    }
-
-    public static class CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults extends TeaModel {
-        @NameInMap("SatisfiedItems")
-        public java.util.List<String> satisfiedItems;
-
-        @NameInMap("CheckStatus")
-        public String checkStatus;
-
-        @NameInMap("CheckType")
-        public String checkType;
-
-        @NameInMap("UnsatisfiedItems")
-        public java.util.List<String> unsatisfiedItems;
-
-        @NameInMap("ExtraUsers")
-        public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers> extraUsers;
-
-        @NameInMap("CheckName")
-        public String checkName;
-
-        public static CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults build(java.util.Map<String, ?> map) throws Exception {
-            CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults self = new CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setSatisfiedItems(java.util.List<String> satisfiedItems) {
-            this.satisfiedItems = satisfiedItems;
-            return this;
-        }
-        public java.util.List<String> getSatisfiedItems() {
-            return this.satisfiedItems;
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setCheckStatus(String checkStatus) {
-            this.checkStatus = checkStatus;
-            return this;
-        }
-        public String getCheckStatus() {
-            return this.checkStatus;
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setCheckType(String checkType) {
-            this.checkType = checkType;
-            return this;
-        }
-        public String getCheckType() {
-            return this.checkType;
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setUnsatisfiedItems(java.util.List<String> unsatisfiedItems) {
-            this.unsatisfiedItems = unsatisfiedItems;
-            return this;
-        }
-        public java.util.List<String> getUnsatisfiedItems() {
-            return this.unsatisfiedItems;
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setExtraUsers(java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers> extraUsers) {
-            this.extraUsers = extraUsers;
-            return this;
-        }
-        public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers> getExtraUsers() {
-            return this.extraUsers;
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setCheckName(String checkName) {
-            this.checkName = checkName;
-            return this;
-        }
-        public String getCheckName() {
-            return this.checkName;
-        }
-
-    }
-
     public static class CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers extends TeaModel {
         @NameInMap("ExternUserId")
         public String externUserId;
 
-        @NameInMap("AvatarUrl")
-        public String avatarUrl;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
 
         @NameInMap("Id")
         public Long id;
@@ -320,20 +194,20 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             return this.externUserId;
         }
 
-        public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-            return this;
-        }
-        public String getAvatarUrl() {
-            return this.avatarUrl;
-        }
-
         public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
         }
 
         public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers setId(Long id) {
@@ -347,35 +221,27 @@ public class CreateMergeRequestResponseBody extends TeaModel {
     }
 
     public static class CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults extends TeaModel {
-        @NameInMap("SatisfiedItems")
-        public java.util.List<String> satisfiedItems;
-
         @NameInMap("CheckStatus")
         public String checkStatus;
 
         @NameInMap("CheckType")
         public String checkType;
 
-        @NameInMap("UnsatisfiedItems")
-        public java.util.List<String> unsatisfiedItems;
+        @NameInMap("CheckName")
+        public String checkName;
 
         @NameInMap("ExtraUsers")
         public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers> extraUsers;
 
-        @NameInMap("CheckName")
-        public String checkName;
+        @NameInMap("UnsatisfiedItems")
+        public java.util.List<String> unsatisfiedItems;
+
+        @NameInMap("SatisfiedItems")
+        public java.util.List<String> satisfiedItems;
 
         public static CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults build(java.util.Map<String, ?> map) throws Exception {
             CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults self = new CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults();
             return TeaModel.build(map, self);
-        }
-
-        public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults setSatisfiedItems(java.util.List<String> satisfiedItems) {
-            this.satisfiedItems = satisfiedItems;
-            return this;
-        }
-        public java.util.List<String> getSatisfiedItems() {
-            return this.satisfiedItems;
         }
 
         public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults setCheckStatus(String checkStatus) {
@@ -394,12 +260,12 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             return this.checkType;
         }
 
-        public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults setUnsatisfiedItems(java.util.List<String> unsatisfiedItems) {
-            this.unsatisfiedItems = unsatisfiedItems;
+        public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults setCheckName(String checkName) {
+            this.checkName = checkName;
             return this;
         }
-        public java.util.List<String> getUnsatisfiedItems() {
-            return this.unsatisfiedItems;
+        public String getCheckName() {
+            return this.checkName;
         }
 
         public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults setExtraUsers(java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResultsExtraUsers> extraUsers) {
@@ -410,12 +276,146 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             return this.extraUsers;
         }
 
-        public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults setCheckName(String checkName) {
+        public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults setUnsatisfiedItems(java.util.List<String> unsatisfiedItems) {
+            this.unsatisfiedItems = unsatisfiedItems;
+            return this;
+        }
+        public java.util.List<String> getUnsatisfiedItems() {
+            return this.unsatisfiedItems;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults setSatisfiedItems(java.util.List<String> satisfiedItems) {
+            this.satisfiedItems = satisfiedItems;
+            return this;
+        }
+        public java.util.List<String> getSatisfiedItems() {
+            return this.satisfiedItems;
+        }
+
+    }
+
+    public static class CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers extends TeaModel {
+        @NameInMap("ExternUserId")
+        public String externUserId;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
+
+        @NameInMap("Id")
+        public Long id;
+
+        public static CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers build(java.util.Map<String, ?> map) throws Exception {
+            CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers self = new CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers setExternUserId(String externUserId) {
+            this.externUserId = externUserId;
+            return this;
+        }
+        public String getExternUserId() {
+            return this.externUserId;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+    }
+
+    public static class CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults extends TeaModel {
+        @NameInMap("CheckStatus")
+        public String checkStatus;
+
+        @NameInMap("CheckType")
+        public String checkType;
+
+        @NameInMap("CheckName")
+        public String checkName;
+
+        @NameInMap("ExtraUsers")
+        public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers> extraUsers;
+
+        @NameInMap("UnsatisfiedItems")
+        public java.util.List<String> unsatisfiedItems;
+
+        @NameInMap("SatisfiedItems")
+        public java.util.List<String> satisfiedItems;
+
+        public static CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults build(java.util.Map<String, ?> map) throws Exception {
+            CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults self = new CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setCheckStatus(String checkStatus) {
+            this.checkStatus = checkStatus;
+            return this;
+        }
+        public String getCheckStatus() {
+            return this.checkStatus;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setCheckType(String checkType) {
+            this.checkType = checkType;
+            return this;
+        }
+        public String getCheckType() {
+            return this.checkType;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setCheckName(String checkName) {
             this.checkName = checkName;
             return this;
         }
         public String getCheckName() {
             return this.checkName;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setExtraUsers(java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers> extraUsers) {
+            this.extraUsers = extraUsers;
+            return this;
+        }
+        public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResultsExtraUsers> getExtraUsers() {
+            return this.extraUsers;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setUnsatisfiedItems(java.util.List<String> unsatisfiedItems) {
+            this.unsatisfiedItems = unsatisfiedItems;
+            return this;
+        }
+        public java.util.List<String> getUnsatisfiedItems() {
+            return this.unsatisfiedItems;
+        }
+
+        public CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults setSatisfiedItems(java.util.List<String> satisfiedItems) {
+            this.satisfiedItems = satisfiedItems;
+            return this;
+        }
+        public java.util.List<String> getSatisfiedItems() {
+            return this.satisfiedItems;
         }
 
     }
@@ -424,11 +424,11 @@ public class CreateMergeRequestResponseBody extends TeaModel {
         @NameInMap("TotalCheckResult")
         public String totalCheckResult;
 
-        @NameInMap("UnsatisfiedCheckResults")
-        public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults> unsatisfiedCheckResults;
-
         @NameInMap("SatisfiedCheckResults")
         public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults> satisfiedCheckResults;
+
+        @NameInMap("UnsatisfiedCheckResults")
+        public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults> unsatisfiedCheckResults;
 
         public static CreateMergeRequestResponseBodyResultApproveCheckResult build(java.util.Map<String, ?> map) throws Exception {
             CreateMergeRequestResponseBodyResultApproveCheckResult self = new CreateMergeRequestResponseBodyResultApproveCheckResult();
@@ -443,14 +443,6 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             return this.totalCheckResult;
         }
 
-        public CreateMergeRequestResponseBodyResultApproveCheckResult setUnsatisfiedCheckResults(java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults> unsatisfiedCheckResults) {
-            this.unsatisfiedCheckResults = unsatisfiedCheckResults;
-            return this;
-        }
-        public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults> getUnsatisfiedCheckResults() {
-            return this.unsatisfiedCheckResults;
-        }
-
         public CreateMergeRequestResponseBodyResultApproveCheckResult setSatisfiedCheckResults(java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultSatisfiedCheckResults> satisfiedCheckResults) {
             this.satisfiedCheckResults = satisfiedCheckResults;
             return this;
@@ -459,32 +451,31 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             return this.satisfiedCheckResults;
         }
 
+        public CreateMergeRequestResponseBodyResultApproveCheckResult setUnsatisfiedCheckResults(java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults> unsatisfiedCheckResults) {
+            this.unsatisfiedCheckResults = unsatisfiedCheckResults;
+            return this;
+        }
+        public java.util.List<CreateMergeRequestResponseBodyResultApproveCheckResultUnsatisfiedCheckResults> getUnsatisfiedCheckResults() {
+            return this.unsatisfiedCheckResults;
+        }
+
     }
 
     public static class CreateMergeRequestResponseBodyResult extends TeaModel {
-        @NameInMap("State")
-        public String state;
-
         @NameInMap("BehindCommitCount")
         public Integer behindCommitCount;
+
+        @NameInMap("State")
+        public String state;
 
         @NameInMap("ProjectId")
         public Long projectId;
 
-        @NameInMap("AssigneeList")
-        public java.util.List<CreateMergeRequestResponseBodyResultAssigneeList> assigneeList;
-
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("Author")
-        public CreateMergeRequestResponseBodyResultAuthor author;
-
         @NameInMap("AcceptedRevision")
         public String acceptedRevision;
-
-        @NameInMap("ApproveCheckResult")
-        public CreateMergeRequestResponseBodyResultApproveCheckResult approveCheckResult;
 
         @NameInMap("SourceBranch")
         public String sourceBranch;
@@ -525,17 +516,18 @@ public class CreateMergeRequestResponseBody extends TeaModel {
         @NameInMap("MergeStatus")
         public String mergeStatus;
 
+        @NameInMap("AssigneeList")
+        public java.util.List<CreateMergeRequestResponseBodyResultAssigneeList> assigneeList;
+
+        @NameInMap("Author")
+        public CreateMergeRequestResponseBodyResultAuthor author;
+
+        @NameInMap("ApproveCheckResult")
+        public CreateMergeRequestResponseBodyResultApproveCheckResult approveCheckResult;
+
         public static CreateMergeRequestResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateMergeRequestResponseBodyResult self = new CreateMergeRequestResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public CreateMergeRequestResponseBodyResult setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public CreateMergeRequestResponseBodyResult setBehindCommitCount(Integer behindCommitCount) {
@@ -546,20 +538,20 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             return this.behindCommitCount;
         }
 
+        public CreateMergeRequestResponseBodyResult setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
         public CreateMergeRequestResponseBodyResult setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
         public Long getProjectId() {
             return this.projectId;
-        }
-
-        public CreateMergeRequestResponseBodyResult setAssigneeList(java.util.List<CreateMergeRequestResponseBodyResultAssigneeList> assigneeList) {
-            this.assigneeList = assigneeList;
-            return this;
-        }
-        public java.util.List<CreateMergeRequestResponseBodyResultAssigneeList> getAssigneeList() {
-            return this.assigneeList;
         }
 
         public CreateMergeRequestResponseBodyResult setCreatedAt(String createdAt) {
@@ -570,28 +562,12 @@ public class CreateMergeRequestResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public CreateMergeRequestResponseBodyResult setAuthor(CreateMergeRequestResponseBodyResultAuthor author) {
-            this.author = author;
-            return this;
-        }
-        public CreateMergeRequestResponseBodyResultAuthor getAuthor() {
-            return this.author;
-        }
-
         public CreateMergeRequestResponseBodyResult setAcceptedRevision(String acceptedRevision) {
             this.acceptedRevision = acceptedRevision;
             return this;
         }
         public String getAcceptedRevision() {
             return this.acceptedRevision;
-        }
-
-        public CreateMergeRequestResponseBodyResult setApproveCheckResult(CreateMergeRequestResponseBodyResultApproveCheckResult approveCheckResult) {
-            this.approveCheckResult = approveCheckResult;
-            return this;
-        }
-        public CreateMergeRequestResponseBodyResultApproveCheckResult getApproveCheckResult() {
-            return this.approveCheckResult;
         }
 
         public CreateMergeRequestResponseBodyResult setSourceBranch(String sourceBranch) {
@@ -696,6 +672,30 @@ public class CreateMergeRequestResponseBody extends TeaModel {
         }
         public String getMergeStatus() {
             return this.mergeStatus;
+        }
+
+        public CreateMergeRequestResponseBodyResult setAssigneeList(java.util.List<CreateMergeRequestResponseBodyResultAssigneeList> assigneeList) {
+            this.assigneeList = assigneeList;
+            return this;
+        }
+        public java.util.List<CreateMergeRequestResponseBodyResultAssigneeList> getAssigneeList() {
+            return this.assigneeList;
+        }
+
+        public CreateMergeRequestResponseBodyResult setAuthor(CreateMergeRequestResponseBodyResultAuthor author) {
+            this.author = author;
+            return this;
+        }
+        public CreateMergeRequestResponseBodyResultAuthor getAuthor() {
+            return this.author;
+        }
+
+        public CreateMergeRequestResponseBodyResult setApproveCheckResult(CreateMergeRequestResponseBodyResultApproveCheckResult approveCheckResult) {
+            this.approveCheckResult = approveCheckResult;
+            return this;
+        }
+        public CreateMergeRequestResponseBodyResultApproveCheckResult getApproveCheckResult() {
+            return this.approveCheckResult;
         }
 
     }

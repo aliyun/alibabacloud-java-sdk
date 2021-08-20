@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class AddGroupMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class AddGroupMemberResponseBody extends TeaModel {
     public static AddGroupMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddGroupMemberResponseBody self = new AddGroupMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddGroupMemberResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public AddGroupMemberResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class AddGroupMemberResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public AddGroupMemberResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public AddGroupMemberResponseBody setSuccess(Boolean success) {

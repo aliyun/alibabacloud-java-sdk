@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class CreateTagResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class CreateTagResponseBody extends TeaModel {
     public static CreateTagResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTagResponseBody self = new CreateTagResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTagResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateTagResponseBody setRequestId(String requestId) {
@@ -40,14 +48,6 @@ public class CreateTagResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public CreateTagResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public CreateTagResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,39 +64,12 @@ public class CreateTagResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class CreateTagResponseBodyResultRelease extends TeaModel {
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("TagName")
-        public String tagName;
-
-        public static CreateTagResponseBodyResultRelease build(java.util.Map<String, ?> map) throws Exception {
-            CreateTagResponseBodyResultRelease self = new CreateTagResponseBodyResultRelease();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateTagResponseBodyResultRelease setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public CreateTagResponseBodyResultRelease setTagName(String tagName) {
-            this.tagName = tagName;
-            return this;
-        }
-        public String getTagName() {
-            return this.tagName;
-        }
-
-    }
-
     public static class CreateTagResponseBodyResultCommitInfo extends TeaModel {
         @NameInMap("ShortId")
         public String shortId;
+
+        @NameInMap("AuthorName")
+        public String authorName;
 
         @NameInMap("CreatedAt")
         public String createdAt;
@@ -106,12 +79,6 @@ public class CreateTagResponseBody extends TeaModel {
 
         @NameInMap("AuthoredDate")
         public String authoredDate;
-
-        @NameInMap("ParentIds")
-        public java.util.List<String> parentIds;
-
-        @NameInMap("AuthorName")
-        public String authorName;
 
         @NameInMap("CommitterName")
         public String committerName;
@@ -131,6 +98,9 @@ public class CreateTagResponseBody extends TeaModel {
         @NameInMap("CommittedDate")
         public String committedDate;
 
+        @NameInMap("ParentIds")
+        public java.util.List<String> parentIds;
+
         public static CreateTagResponseBodyResultCommitInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateTagResponseBodyResultCommitInfo self = new CreateTagResponseBodyResultCommitInfo();
             return TeaModel.build(map, self);
@@ -142,6 +112,14 @@ public class CreateTagResponseBody extends TeaModel {
         }
         public String getShortId() {
             return this.shortId;
+        }
+
+        public CreateTagResponseBodyResultCommitInfo setAuthorName(String authorName) {
+            this.authorName = authorName;
+            return this;
+        }
+        public String getAuthorName() {
+            return this.authorName;
         }
 
         public CreateTagResponseBodyResultCommitInfo setCreatedAt(String createdAt) {
@@ -166,22 +144,6 @@ public class CreateTagResponseBody extends TeaModel {
         }
         public String getAuthoredDate() {
             return this.authoredDate;
-        }
-
-        public CreateTagResponseBodyResultCommitInfo setParentIds(java.util.List<String> parentIds) {
-            this.parentIds = parentIds;
-            return this;
-        }
-        public java.util.List<String> getParentIds() {
-            return this.parentIds;
-        }
-
-        public CreateTagResponseBodyResultCommitInfo setAuthorName(String authorName) {
-            this.authorName = authorName;
-            return this;
-        }
-        public String getAuthorName() {
-            return this.authorName;
         }
 
         public CreateTagResponseBodyResultCommitInfo setCommitterName(String committerName) {
@@ -232,11 +194,49 @@ public class CreateTagResponseBody extends TeaModel {
             return this.committedDate;
         }
 
+        public CreateTagResponseBodyResultCommitInfo setParentIds(java.util.List<String> parentIds) {
+            this.parentIds = parentIds;
+            return this;
+        }
+        public java.util.List<String> getParentIds() {
+            return this.parentIds;
+        }
+
+    }
+
+    public static class CreateTagResponseBodyResultRelease extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static CreateTagResponseBodyResultRelease build(java.util.Map<String, ?> map) throws Exception {
+            CreateTagResponseBodyResultRelease self = new CreateTagResponseBodyResultRelease();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTagResponseBodyResultRelease setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateTagResponseBodyResultRelease setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
     }
 
     public static class CreateTagResponseBodyResult extends TeaModel {
-        @NameInMap("Release")
-        public CreateTagResponseBodyResultRelease release;
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Message")
         public String message;
@@ -244,20 +244,20 @@ public class CreateTagResponseBody extends TeaModel {
         @NameInMap("CommitInfo")
         public CreateTagResponseBodyResultCommitInfo commitInfo;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Release")
+        public CreateTagResponseBodyResultRelease release;
 
         public static CreateTagResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateTagResponseBodyResult self = new CreateTagResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public CreateTagResponseBodyResult setRelease(CreateTagResponseBodyResultRelease release) {
-            this.release = release;
+        public CreateTagResponseBodyResult setName(String name) {
+            this.name = name;
             return this;
         }
-        public CreateTagResponseBodyResultRelease getRelease() {
-            return this.release;
+        public String getName() {
+            return this.name;
         }
 
         public CreateTagResponseBodyResult setMessage(String message) {
@@ -276,12 +276,12 @@ public class CreateTagResponseBody extends TeaModel {
             return this.commitInfo;
         }
 
-        public CreateTagResponseBodyResult setName(String name) {
-            this.name = name;
+        public CreateTagResponseBodyResult setRelease(CreateTagResponseBodyResultRelease release) {
+            this.release = release;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public CreateTagResponseBodyResultRelease getRelease() {
+            return this.release;
         }
 
     }

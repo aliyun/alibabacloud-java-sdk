@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryWebhookResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
     public static DeleteRepositoryWebhookResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryWebhookResponseBody self = new DeleteRepositoryWebhookResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepositoryWebhookResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public DeleteRepositoryWebhookResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public DeleteRepositoryWebhookResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public DeleteRepositoryWebhookResponseBody setSuccess(Boolean success) {
@@ -74,32 +74,32 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("TagPushEvents")
-        public Boolean tagPushEvents;
-
         @NameInMap("Url")
         public String url;
+
+        @NameInMap("TagPushEvents")
+        public Boolean tagPushEvents;
 
         @NameInMap("LastTestResult")
         public String lastTestResult;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("MergeRequestsEvents")
         public Boolean mergeRequestsEvents;
 
-        @NameInMap("SecretToken")
-        public String secretToken;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("NoteEvents")
         public Boolean noteEvents;
 
-        @NameInMap("EnableSslVerification")
-        public Boolean enableSslVerification;
+        @NameInMap("SecretToken")
+        public String secretToken;
 
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("EnableSslVerification")
+        public Boolean enableSslVerification;
 
         public static DeleteRepositoryWebhookResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DeleteRepositoryWebhookResponseBodyResult self = new DeleteRepositoryWebhookResponseBodyResult();
@@ -130,20 +130,20 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public DeleteRepositoryWebhookResponseBodyResult setTagPushEvents(Boolean tagPushEvents) {
-            this.tagPushEvents = tagPushEvents;
-            return this;
-        }
-        public Boolean getTagPushEvents() {
-            return this.tagPushEvents;
-        }
-
         public DeleteRepositoryWebhookResponseBodyResult setUrl(String url) {
             this.url = url;
             return this;
         }
         public String getUrl() {
             return this.url;
+        }
+
+        public DeleteRepositoryWebhookResponseBodyResult setTagPushEvents(Boolean tagPushEvents) {
+            this.tagPushEvents = tagPushEvents;
+            return this;
+        }
+        public Boolean getTagPushEvents() {
+            return this.tagPushEvents;
         }
 
         public DeleteRepositoryWebhookResponseBodyResult setLastTestResult(String lastTestResult) {
@@ -154,14 +154,6 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
             return this.lastTestResult;
         }
 
-        public DeleteRepositoryWebhookResponseBodyResult setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public DeleteRepositoryWebhookResponseBodyResult setMergeRequestsEvents(Boolean mergeRequestsEvents) {
             this.mergeRequestsEvents = mergeRequestsEvents;
             return this;
@@ -170,12 +162,12 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
             return this.mergeRequestsEvents;
         }
 
-        public DeleteRepositoryWebhookResponseBodyResult setSecretToken(String secretToken) {
-            this.secretToken = secretToken;
+        public DeleteRepositoryWebhookResponseBodyResult setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getSecretToken() {
-            return this.secretToken;
+        public String getDescription() {
+            return this.description;
         }
 
         public DeleteRepositoryWebhookResponseBodyResult setNoteEvents(Boolean noteEvents) {
@@ -186,12 +178,12 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
             return this.noteEvents;
         }
 
-        public DeleteRepositoryWebhookResponseBodyResult setEnableSslVerification(Boolean enableSslVerification) {
-            this.enableSslVerification = enableSslVerification;
+        public DeleteRepositoryWebhookResponseBodyResult setSecretToken(String secretToken) {
+            this.secretToken = secretToken;
             return this;
         }
-        public Boolean getEnableSslVerification() {
-            return this.enableSslVerification;
+        public String getSecretToken() {
+            return this.secretToken;
         }
 
         public DeleteRepositoryWebhookResponseBodyResult setId(Long id) {
@@ -200,6 +192,14 @@ public class DeleteRepositoryWebhookResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DeleteRepositoryWebhookResponseBodyResult setEnableSslVerification(Boolean enableSslVerification) {
+            this.enableSslVerification = enableSslVerification;
+            return this;
+        }
+        public Boolean getEnableSslVerification() {
+            return this.enableSslVerification;
         }
 
     }

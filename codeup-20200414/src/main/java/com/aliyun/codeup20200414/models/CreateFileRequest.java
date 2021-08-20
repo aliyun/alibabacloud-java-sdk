@@ -13,9 +13,6 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("SubUserId")
     public String subUserId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static CreateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileRequest self = new CreateFileRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class CreateFileRequest extends TeaModel {
     }
     public String getSubUserId() {
         return this.subUserId;
-    }
-
-    public CreateFileRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class CreateBranchResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class CreateBranchResponseBody extends TeaModel {
     public static CreateBranchResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateBranchResponseBody self = new CreateBranchResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateBranchResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateBranchResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class CreateBranchResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public CreateBranchResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public CreateBranchResponseBody setSuccess(Boolean success) {
@@ -68,6 +68,9 @@ public class CreateBranchResponseBody extends TeaModel {
         @NameInMap("ShortId")
         public String shortId;
 
+        @NameInMap("AuthorName")
+        public String authorName;
+
         @NameInMap("AuthorDate")
         public String authorDate;
 
@@ -76,12 +79,6 @@ public class CreateBranchResponseBody extends TeaModel {
 
         @NameInMap("Message")
         public String message;
-
-        @NameInMap("ParentIds")
-        public java.util.List<String> parentIds;
-
-        @NameInMap("AuthorName")
-        public String authorName;
 
         @NameInMap("CommitterName")
         public String committerName;
@@ -101,6 +98,9 @@ public class CreateBranchResponseBody extends TeaModel {
         @NameInMap("CommittedDate")
         public String committedDate;
 
+        @NameInMap("ParentIds")
+        public java.util.List<String> parentIds;
+
         public static CreateBranchResponseBodyResultCommitInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateBranchResponseBodyResultCommitInfo self = new CreateBranchResponseBodyResultCommitInfo();
             return TeaModel.build(map, self);
@@ -112,6 +112,14 @@ public class CreateBranchResponseBody extends TeaModel {
         }
         public String getShortId() {
             return this.shortId;
+        }
+
+        public CreateBranchResponseBodyResultCommitInfo setAuthorName(String authorName) {
+            this.authorName = authorName;
+            return this;
+        }
+        public String getAuthorName() {
+            return this.authorName;
         }
 
         public CreateBranchResponseBodyResultCommitInfo setAuthorDate(String authorDate) {
@@ -136,22 +144,6 @@ public class CreateBranchResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
-        }
-
-        public CreateBranchResponseBodyResultCommitInfo setParentIds(java.util.List<String> parentIds) {
-            this.parentIds = parentIds;
-            return this;
-        }
-        public java.util.List<String> getParentIds() {
-            return this.parentIds;
-        }
-
-        public CreateBranchResponseBodyResultCommitInfo setAuthorName(String authorName) {
-            this.authorName = authorName;
-            return this;
-        }
-        public String getAuthorName() {
-            return this.authorName;
         }
 
         public CreateBranchResponseBodyResultCommitInfo setCommitterName(String committerName) {
@@ -202,17 +194,25 @@ public class CreateBranchResponseBody extends TeaModel {
             return this.committedDate;
         }
 
+        public CreateBranchResponseBodyResultCommitInfo setParentIds(java.util.List<String> parentIds) {
+            this.parentIds = parentIds;
+            return this;
+        }
+        public java.util.List<String> getParentIds() {
+            return this.parentIds;
+        }
+
     }
 
     public static class CreateBranchResponseBodyResult extends TeaModel {
         @NameInMap("ProtectedBranch")
         public Boolean protectedBranch;
 
-        @NameInMap("CommitInfo")
-        public CreateBranchResponseBodyResultCommitInfo commitInfo;
-
         @NameInMap("BranchName")
         public String branchName;
+
+        @NameInMap("CommitInfo")
+        public CreateBranchResponseBodyResultCommitInfo commitInfo;
 
         public static CreateBranchResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateBranchResponseBodyResult self = new CreateBranchResponseBodyResult();
@@ -227,20 +227,20 @@ public class CreateBranchResponseBody extends TeaModel {
             return this.protectedBranch;
         }
 
-        public CreateBranchResponseBodyResult setCommitInfo(CreateBranchResponseBodyResultCommitInfo commitInfo) {
-            this.commitInfo = commitInfo;
-            return this;
-        }
-        public CreateBranchResponseBodyResultCommitInfo getCommitInfo() {
-            return this.commitInfo;
-        }
-
         public CreateBranchResponseBodyResult setBranchName(String branchName) {
             this.branchName = branchName;
             return this;
         }
         public String getBranchName() {
             return this.branchName;
+        }
+
+        public CreateBranchResponseBodyResult setCommitInfo(CreateBranchResponseBodyResultCommitInfo commitInfo) {
+            this.commitInfo = commitInfo;
+            return this;
+        }
+        public CreateBranchResponseBodyResultCommitInfo getCommitInfo() {
+            return this.commitInfo;
         }
 
     }

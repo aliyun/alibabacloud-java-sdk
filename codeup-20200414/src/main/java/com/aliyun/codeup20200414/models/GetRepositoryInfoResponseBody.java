@@ -4,17 +4,17 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetRepositoryInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
 
     @NameInMap("Result")
     public GetRepositoryInfoResponseBodyResult result;
@@ -22,22 +22,6 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
     public static GetRepositoryInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRepositoryInfoResponseBody self = new GetRepositoryInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetRepositoryInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetRepositoryInfoResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
     public GetRepositoryInfoResponseBody setErrorMessage(String errorMessage) {
@@ -48,12 +32,28 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public GetRepositoryInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetRepositoryInfoResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetRepositoryInfoResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public GetRepositoryInfoResponseBody setResult(GetRepositoryInfoResponseBodyResult result) {
@@ -262,38 +262,11 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
     }
 
     public static class GetRepositoryInfoResponseBodyResult extends TeaModel {
-        @NameInMap("DefaultBranch")
-        public String defaultBranch;
-
-        @NameInMap("ImportUrl")
-        public String importUrl;
-
-        @NameInMap("CreatedAt")
-        public String createdAt;
-
-        @NameInMap("WebUrl")
-        public String webUrl;
-
-        @NameInMap("TagList")
-        public java.util.List<String> tagList;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Public")
-        public Boolean _public;
-
-        @NameInMap("PathWithNamespace")
-        public String pathWithNamespace;
-
-        @NameInMap("VisibilityLevel")
-        public String visibilityLevel;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("LastActivityAt")
         public String lastActivityAt;
+
+        @NameInMap("DefaultBranch")
+        public String defaultBranch;
 
         @NameInMap("AvatarUrl")
         public String avatarUrl;
@@ -301,8 +274,11 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
         @NameInMap("Archive")
         public Boolean archive;
 
-        @NameInMap("Namespace")
-        public GetRepositoryInfoResponseBodyResultNamespace namespace;
+        @NameInMap("ImportUrl")
+        public String importUrl;
+
+        @NameInMap("CreatedAt")
+        public String createdAt;
 
         @NameInMap("DemoProjectStatus")
         public Boolean demoProjectStatus;
@@ -316,14 +292,26 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
         @NameInMap("HttpUrlToRepo")
         public String httpUrlToRepo;
 
-        @NameInMap("Permissions")
-        public GetRepositoryInfoResponseBodyResultPermissions permissions;
+        @NameInMap("WebUrl")
+        public String webUrl;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("NameWithNamespace")
         public String nameWithNamespace;
 
+        @NameInMap("Public")
+        public Boolean _public;
+
+        @NameInMap("PathWithNamespace")
+        public String pathWithNamespace;
+
         @NameInMap("Path")
         public String path;
+
+        @NameInMap("VisibilityLevel")
+        public String visibilityLevel;
 
         @NameInMap("AccessLevel")
         public Integer accessLevel;
@@ -334,92 +322,24 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
         @NameInMap("SshUrlToRepo")
         public String sshUrlToRepo;
 
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("TagList")
+        public java.util.List<String> tagList;
+
+        @NameInMap("Namespace")
+        public GetRepositoryInfoResponseBodyResultNamespace namespace;
+
+        @NameInMap("Permissions")
+        public GetRepositoryInfoResponseBodyResultPermissions permissions;
 
         public static GetRepositoryInfoResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetRepositoryInfoResponseBodyResult self = new GetRepositoryInfoResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetRepositoryInfoResponseBodyResult setDefaultBranch(String defaultBranch) {
-            this.defaultBranch = defaultBranch;
-            return this;
-        }
-        public String getDefaultBranch() {
-            return this.defaultBranch;
-        }
-
-        public GetRepositoryInfoResponseBodyResult setImportUrl(String importUrl) {
-            this.importUrl = importUrl;
-            return this;
-        }
-        public String getImportUrl() {
-            return this.importUrl;
-        }
-
-        public GetRepositoryInfoResponseBodyResult setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public GetRepositoryInfoResponseBodyResult setWebUrl(String webUrl) {
-            this.webUrl = webUrl;
-            return this;
-        }
-        public String getWebUrl() {
-            return this.webUrl;
-        }
-
-        public GetRepositoryInfoResponseBodyResult setTagList(java.util.List<String> tagList) {
-            this.tagList = tagList;
-            return this;
-        }
-        public java.util.List<String> getTagList() {
-            return this.tagList;
-        }
-
-        public GetRepositoryInfoResponseBodyResult setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public GetRepositoryInfoResponseBodyResult set_public(Boolean _public) {
-            this._public = _public;
-            return this;
-        }
-        public Boolean get_public() {
-            return this._public;
-        }
-
-        public GetRepositoryInfoResponseBodyResult setPathWithNamespace(String pathWithNamespace) {
-            this.pathWithNamespace = pathWithNamespace;
-            return this;
-        }
-        public String getPathWithNamespace() {
-            return this.pathWithNamespace;
-        }
-
-        public GetRepositoryInfoResponseBodyResult setVisibilityLevel(String visibilityLevel) {
-            this.visibilityLevel = visibilityLevel;
-            return this;
-        }
-        public String getVisibilityLevel() {
-            return this.visibilityLevel;
-        }
-
-        public GetRepositoryInfoResponseBodyResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public GetRepositoryInfoResponseBodyResult setLastActivityAt(String lastActivityAt) {
@@ -428,6 +348,14 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
         }
         public String getLastActivityAt() {
             return this.lastActivityAt;
+        }
+
+        public GetRepositoryInfoResponseBodyResult setDefaultBranch(String defaultBranch) {
+            this.defaultBranch = defaultBranch;
+            return this;
+        }
+        public String getDefaultBranch() {
+            return this.defaultBranch;
         }
 
         public GetRepositoryInfoResponseBodyResult setAvatarUrl(String avatarUrl) {
@@ -446,12 +374,20 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
             return this.archive;
         }
 
-        public GetRepositoryInfoResponseBodyResult setNamespace(GetRepositoryInfoResponseBodyResultNamespace namespace) {
-            this.namespace = namespace;
+        public GetRepositoryInfoResponseBodyResult setImportUrl(String importUrl) {
+            this.importUrl = importUrl;
             return this;
         }
-        public GetRepositoryInfoResponseBodyResultNamespace getNamespace() {
-            return this.namespace;
+        public String getImportUrl() {
+            return this.importUrl;
+        }
+
+        public GetRepositoryInfoResponseBodyResult setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
         public GetRepositoryInfoResponseBodyResult setDemoProjectStatus(Boolean demoProjectStatus) {
@@ -486,12 +422,20 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
             return this.httpUrlToRepo;
         }
 
-        public GetRepositoryInfoResponseBodyResult setPermissions(GetRepositoryInfoResponseBodyResultPermissions permissions) {
-            this.permissions = permissions;
+        public GetRepositoryInfoResponseBodyResult setWebUrl(String webUrl) {
+            this.webUrl = webUrl;
             return this;
         }
-        public GetRepositoryInfoResponseBodyResultPermissions getPermissions() {
-            return this.permissions;
+        public String getWebUrl() {
+            return this.webUrl;
+        }
+
+        public GetRepositoryInfoResponseBodyResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public GetRepositoryInfoResponseBodyResult setNameWithNamespace(String nameWithNamespace) {
@@ -502,12 +446,36 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
             return this.nameWithNamespace;
         }
 
+        public GetRepositoryInfoResponseBodyResult set_public(Boolean _public) {
+            this._public = _public;
+            return this;
+        }
+        public Boolean get_public() {
+            return this._public;
+        }
+
+        public GetRepositoryInfoResponseBodyResult setPathWithNamespace(String pathWithNamespace) {
+            this.pathWithNamespace = pathWithNamespace;
+            return this;
+        }
+        public String getPathWithNamespace() {
+            return this.pathWithNamespace;
+        }
+
         public GetRepositoryInfoResponseBodyResult setPath(String path) {
             this.path = path;
             return this;
         }
         public String getPath() {
             return this.path;
+        }
+
+        public GetRepositoryInfoResponseBodyResult setVisibilityLevel(String visibilityLevel) {
+            this.visibilityLevel = visibilityLevel;
+            return this;
+        }
+        public String getVisibilityLevel() {
+            return this.visibilityLevel;
         }
 
         public GetRepositoryInfoResponseBodyResult setAccessLevel(Integer accessLevel) {
@@ -534,12 +502,44 @@ public class GetRepositoryInfoResponseBody extends TeaModel {
             return this.sshUrlToRepo;
         }
 
+        public GetRepositoryInfoResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public GetRepositoryInfoResponseBodyResult setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetRepositoryInfoResponseBodyResult setTagList(java.util.List<String> tagList) {
+            this.tagList = tagList;
+            return this;
+        }
+        public java.util.List<String> getTagList() {
+            return this.tagList;
+        }
+
+        public GetRepositoryInfoResponseBodyResult setNamespace(GetRepositoryInfoResponseBodyResultNamespace namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public GetRepositoryInfoResponseBodyResultNamespace getNamespace() {
+            return this.namespace;
+        }
+
+        public GetRepositoryInfoResponseBodyResult setPermissions(GetRepositoryInfoResponseBodyResultPermissions permissions) {
+            this.permissions = permissions;
+            return this;
+        }
+        public GetRepositoryInfoResponseBodyResultPermissions getPermissions() {
+            return this.permissions;
         }
 
     }

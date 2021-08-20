@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryTreeResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class ListRepositoryTreeResponseBody extends TeaModel {
     public static ListRepositoryTreeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryTreeResponseBody self = new ListRepositoryTreeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRepositoryTreeResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListRepositoryTreeResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class ListRepositoryTreeResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public ListRepositoryTreeResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public ListRepositoryTreeResponseBody setSuccess(Boolean success) {

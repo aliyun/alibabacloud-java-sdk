@@ -13,9 +13,6 @@ public class AddRepositoryMemberRequest extends TeaModel {
     @NameInMap("SubUserId")
     public String subUserId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static AddRepositoryMemberRequest build(java.util.Map<String, ?> map) throws Exception {
         AddRepositoryMemberRequest self = new AddRepositoryMemberRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class AddRepositoryMemberRequest extends TeaModel {
     }
     public String getSubUserId() {
         return this.subUserId;
-    }
-
-    public AddRepositoryMemberRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

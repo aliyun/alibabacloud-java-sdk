@@ -4,20 +4,20 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Long total;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("Result")
     public java.util.List<ListRepositoryMemberResponseBodyResult> result;
@@ -25,6 +25,14 @@ public class ListRepositoryMemberResponseBody extends TeaModel {
     public static ListRepositoryMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryMemberResponseBody self = new ListRepositoryMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRepositoryMemberResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListRepositoryMemberResponseBody setRequestId(String requestId) {
@@ -43,28 +51,20 @@ public class ListRepositoryMemberResponseBody extends TeaModel {
         return this.total;
     }
 
-    public ListRepositoryMemberResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListRepositoryMemberResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListRepositoryMemberResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListRepositoryMemberResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListRepositoryMemberResponseBody setResult(java.util.List<ListRepositoryMemberResponseBodyResult> result) {
@@ -91,8 +91,14 @@ public class ListRepositoryMemberResponseBody extends TeaModel {
         @NameInMap("AccessLevel")
         public Integer accessLevel;
 
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("Username")
+        public String username;
 
         public static ListRepositoryMemberResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListRepositoryMemberResponseBodyResult self = new ListRepositoryMemberResponseBodyResult();
@@ -139,12 +145,28 @@ public class ListRepositoryMemberResponseBody extends TeaModel {
             return this.accessLevel;
         }
 
+        public ListRepositoryMemberResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public ListRepositoryMemberResponseBodyResult setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListRepositoryMemberResponseBodyResult setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+        public String getUsername() {
+            return this.username;
         }
 
     }

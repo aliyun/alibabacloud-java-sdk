@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class AddWebhookResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class AddWebhookResponseBody extends TeaModel {
     public static AddWebhookResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddWebhookResponseBody self = new AddWebhookResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddWebhookResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public AddWebhookResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class AddWebhookResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public AddWebhookResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public AddWebhookResponseBody setSuccess(Boolean success) {
@@ -77,29 +77,29 @@ public class AddWebhookResponseBody extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("TagPushEvents")
-        public Boolean tagPushEvents;
+        @NameInMap("Url")
+        public String url;
 
         @NameInMap("IssuesEvents")
         public Boolean issuesEvents;
 
-        @NameInMap("Url")
-        public String url;
+        @NameInMap("TagPushEvents")
+        public Boolean tagPushEvents;
 
         @NameInMap("LastTestResult")
         public String lastTestResult;
 
-        @NameInMap("MergeRequestsEvents")
-        public Boolean mergeRequestsEvents;
-
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("NoteEvents")
-        public Boolean noteEvents;
+        @NameInMap("MergeRequestsEvents")
+        public Boolean mergeRequestsEvents;
 
         @NameInMap("SecretToken")
         public String secretToken;
+
+        @NameInMap("NoteEvents")
+        public Boolean noteEvents;
 
         @NameInMap("Id")
         public Long id;
@@ -144,12 +144,12 @@ public class AddWebhookResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public AddWebhookResponseBodyResult setTagPushEvents(Boolean tagPushEvents) {
-            this.tagPushEvents = tagPushEvents;
+        public AddWebhookResponseBodyResult setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public Boolean getTagPushEvents() {
-            return this.tagPushEvents;
+        public String getUrl() {
+            return this.url;
         }
 
         public AddWebhookResponseBodyResult setIssuesEvents(Boolean issuesEvents) {
@@ -160,12 +160,12 @@ public class AddWebhookResponseBody extends TeaModel {
             return this.issuesEvents;
         }
 
-        public AddWebhookResponseBodyResult setUrl(String url) {
-            this.url = url;
+        public AddWebhookResponseBodyResult setTagPushEvents(Boolean tagPushEvents) {
+            this.tagPushEvents = tagPushEvents;
             return this;
         }
-        public String getUrl() {
-            return this.url;
+        public Boolean getTagPushEvents() {
+            return this.tagPushEvents;
         }
 
         public AddWebhookResponseBodyResult setLastTestResult(String lastTestResult) {
@@ -176,14 +176,6 @@ public class AddWebhookResponseBody extends TeaModel {
             return this.lastTestResult;
         }
 
-        public AddWebhookResponseBodyResult setMergeRequestsEvents(Boolean mergeRequestsEvents) {
-            this.mergeRequestsEvents = mergeRequestsEvents;
-            return this;
-        }
-        public Boolean getMergeRequestsEvents() {
-            return this.mergeRequestsEvents;
-        }
-
         public AddWebhookResponseBodyResult setDescription(String description) {
             this.description = description;
             return this;
@@ -192,12 +184,12 @@ public class AddWebhookResponseBody extends TeaModel {
             return this.description;
         }
 
-        public AddWebhookResponseBodyResult setNoteEvents(Boolean noteEvents) {
-            this.noteEvents = noteEvents;
+        public AddWebhookResponseBodyResult setMergeRequestsEvents(Boolean mergeRequestsEvents) {
+            this.mergeRequestsEvents = mergeRequestsEvents;
             return this;
         }
-        public Boolean getNoteEvents() {
-            return this.noteEvents;
+        public Boolean getMergeRequestsEvents() {
+            return this.mergeRequestsEvents;
         }
 
         public AddWebhookResponseBodyResult setSecretToken(String secretToken) {
@@ -206,6 +198,14 @@ public class AddWebhookResponseBody extends TeaModel {
         }
         public String getSecretToken() {
             return this.secretToken;
+        }
+
+        public AddWebhookResponseBodyResult setNoteEvents(Boolean noteEvents) {
+            this.noteEvents = noteEvents;
+            return this;
+        }
+        public Boolean getNoteEvents() {
+            return this.noteEvents;
         }
 
         public AddWebhookResponseBodyResult setId(Long id) {

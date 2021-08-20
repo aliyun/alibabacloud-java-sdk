@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetBranchInfoResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class GetBranchInfoResponseBody extends TeaModel {
     public static GetBranchInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBranchInfoResponseBody self = new GetBranchInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetBranchInfoResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetBranchInfoResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public GetBranchInfoResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetBranchInfoResponseBody setSuccess(Boolean success) {
@@ -68,6 +68,9 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("ShortId")
         public String shortId;
 
+        @NameInMap("AuthorName")
+        public String authorName;
+
         @NameInMap("AuthorDate")
         public String authorDate;
 
@@ -76,12 +79,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
 
         @NameInMap("Message")
         public String message;
-
-        @NameInMap("ParentIds")
-        public java.util.List<String> parentIds;
-
-        @NameInMap("AuthorName")
-        public String authorName;
 
         @NameInMap("CommitterName")
         public String committerName;
@@ -101,6 +98,9 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("CommittedDate")
         public String committedDate;
 
+        @NameInMap("ParentIds")
+        public java.util.List<String> parentIds;
+
         public static GetBranchInfoResponseBodyResultCommitInfo build(java.util.Map<String, ?> map) throws Exception {
             GetBranchInfoResponseBodyResultCommitInfo self = new GetBranchInfoResponseBodyResultCommitInfo();
             return TeaModel.build(map, self);
@@ -112,6 +112,14 @@ public class GetBranchInfoResponseBody extends TeaModel {
         }
         public String getShortId() {
             return this.shortId;
+        }
+
+        public GetBranchInfoResponseBodyResultCommitInfo setAuthorName(String authorName) {
+            this.authorName = authorName;
+            return this;
+        }
+        public String getAuthorName() {
+            return this.authorName;
         }
 
         public GetBranchInfoResponseBodyResultCommitInfo setAuthorDate(String authorDate) {
@@ -136,22 +144,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
-        }
-
-        public GetBranchInfoResponseBodyResultCommitInfo setParentIds(java.util.List<String> parentIds) {
-            this.parentIds = parentIds;
-            return this;
-        }
-        public java.util.List<String> getParentIds() {
-            return this.parentIds;
-        }
-
-        public GetBranchInfoResponseBodyResultCommitInfo setAuthorName(String authorName) {
-            this.authorName = authorName;
-            return this;
-        }
-        public String getAuthorName() {
-            return this.authorName;
         }
 
         public GetBranchInfoResponseBodyResultCommitInfo setCommitterName(String committerName) {
@@ -202,17 +194,25 @@ public class GetBranchInfoResponseBody extends TeaModel {
             return this.committedDate;
         }
 
+        public GetBranchInfoResponseBodyResultCommitInfo setParentIds(java.util.List<String> parentIds) {
+            this.parentIds = parentIds;
+            return this;
+        }
+        public java.util.List<String> getParentIds() {
+            return this.parentIds;
+        }
+
     }
 
     public static class GetBranchInfoResponseBodyResult extends TeaModel {
         @NameInMap("ProtectedBranch")
         public Boolean protectedBranch;
 
-        @NameInMap("CommitInfo")
-        public GetBranchInfoResponseBodyResultCommitInfo commitInfo;
-
         @NameInMap("BranchName")
         public String branchName;
+
+        @NameInMap("CommitInfo")
+        public GetBranchInfoResponseBodyResultCommitInfo commitInfo;
 
         public static GetBranchInfoResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetBranchInfoResponseBodyResult self = new GetBranchInfoResponseBodyResult();
@@ -227,20 +227,20 @@ public class GetBranchInfoResponseBody extends TeaModel {
             return this.protectedBranch;
         }
 
-        public GetBranchInfoResponseBodyResult setCommitInfo(GetBranchInfoResponseBodyResultCommitInfo commitInfo) {
-            this.commitInfo = commitInfo;
-            return this;
-        }
-        public GetBranchInfoResponseBodyResultCommitInfo getCommitInfo() {
-            return this.commitInfo;
-        }
-
         public GetBranchInfoResponseBodyResult setBranchName(String branchName) {
             this.branchName = branchName;
             return this;
         }
         public String getBranchName() {
             return this.branchName;
+        }
+
+        public GetBranchInfoResponseBodyResult setCommitInfo(GetBranchInfoResponseBodyResultCommitInfo commitInfo) {
+            this.commitInfo = commitInfo;
+            return this;
+        }
+        public GetBranchInfoResponseBodyResultCommitInfo getCommitInfo() {
+            return this.commitInfo;
         }
 
     }
