@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetProjectMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class GetProjectMemberResponseBody extends TeaModel {
     public static GetProjectMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetProjectMemberResponseBody self = new GetProjectMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetProjectMemberResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetProjectMemberResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public GetProjectMemberResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetProjectMemberResponseBody setSuccess(Boolean success) {
@@ -65,17 +65,17 @@ public class GetProjectMemberResponseBody extends TeaModel {
     }
 
     public static class GetProjectMemberResponseBodyResult extends TeaModel {
-        @NameInMap("ExternUserId")
-        public String externUserId;
-
-        @NameInMap("AvatarUrl")
-        public String avatarUrl;
-
         @NameInMap("AccessLevel")
         public Integer accessLevel;
 
+        @NameInMap("ExternUserId")
+        public String externUserId;
+
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("AvatarUrl")
+        public String avatarUrl;
 
         @NameInMap("Id")
         public Long id;
@@ -83,22 +83,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
         public static GetProjectMemberResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetProjectMemberResponseBodyResult self = new GetProjectMemberResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetProjectMemberResponseBodyResult setExternUserId(String externUserId) {
-            this.externUserId = externUserId;
-            return this;
-        }
-        public String getExternUserId() {
-            return this.externUserId;
-        }
-
-        public GetProjectMemberResponseBodyResult setAvatarUrl(String avatarUrl) {
-            this.avatarUrl = avatarUrl;
-            return this;
-        }
-        public String getAvatarUrl() {
-            return this.avatarUrl;
         }
 
         public GetProjectMemberResponseBodyResult setAccessLevel(Integer accessLevel) {
@@ -109,12 +93,28 @@ public class GetProjectMemberResponseBody extends TeaModel {
             return this.accessLevel;
         }
 
+        public GetProjectMemberResponseBodyResult setExternUserId(String externUserId) {
+            this.externUserId = externUserId;
+            return this;
+        }
+        public String getExternUserId() {
+            return this.externUserId;
+        }
+
         public GetProjectMemberResponseBodyResult setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetProjectMemberResponseBodyResult setAvatarUrl(String avatarUrl) {
+            this.avatarUrl = avatarUrl;
+            return this;
+        }
+        public String getAvatarUrl() {
+            return this.avatarUrl;
         }
 
         public GetProjectMemberResponseBodyResult setId(Long id) {

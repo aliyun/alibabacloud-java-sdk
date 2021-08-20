@@ -7,6 +7,9 @@ public class GetUserInfoRequest extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
+    @NameInMap("OrganizationId")
+    public String organizationId;
+
     public static GetUserInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserInfoRequest self = new GetUserInfoRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetUserInfoRequest extends TeaModel {
     }
     public String getAccessToken() {
         return this.accessToken;
+    }
+
+    public GetUserInfoRequest setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    public String getOrganizationId() {
+        return this.organizationId;
     }
 
 }

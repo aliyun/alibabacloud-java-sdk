@@ -4,20 +4,20 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Long total;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("Result")
     public java.util.List<ListGroupsResponseBodyResult> result;
@@ -25,6 +25,14 @@ public class ListGroupsResponseBody extends TeaModel {
     public static ListGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsResponseBody self = new ListGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListGroupsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListGroupsResponseBody setRequestId(String requestId) {
@@ -43,28 +51,20 @@ public class ListGroupsResponseBody extends TeaModel {
         return this.total;
     }
 
-    public ListGroupsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListGroupsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListGroupsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListGroupsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListGroupsResponseBody setResult(java.util.List<ListGroupsResponseBodyResult> result) {
@@ -85,11 +85,11 @@ public class ListGroupsResponseBody extends TeaModel {
         @NameInMap("OwnerId")
         public Long ownerId;
 
-        @NameInMap("ParentId")
-        public Long parentId;
-
         @NameInMap("WebUrl")
         public String webUrl;
+
+        @NameInMap("ParentId")
+        public Long parentId;
 
         @NameInMap("Description")
         public String description;
@@ -100,11 +100,11 @@ public class ListGroupsResponseBody extends TeaModel {
         @NameInMap("PathWithNamespace")
         public String pathWithNamespace;
 
-        @NameInMap("Path")
-        public String path;
-
         @NameInMap("VisibilityLevel")
         public String visibilityLevel;
+
+        @NameInMap("Path")
+        public String path;
 
         @NameInMap("AccessLevel")
         public Integer accessLevel;
@@ -147,20 +147,20 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public ListGroupsResponseBodyResult setParentId(Long parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public Long getParentId() {
-            return this.parentId;
-        }
-
         public ListGroupsResponseBodyResult setWebUrl(String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
         public String getWebUrl() {
             return this.webUrl;
+        }
+
+        public ListGroupsResponseBodyResult setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
         }
 
         public ListGroupsResponseBodyResult setDescription(String description) {
@@ -187,20 +187,20 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.pathWithNamespace;
         }
 
-        public ListGroupsResponseBodyResult setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
         public ListGroupsResponseBodyResult setVisibilityLevel(String visibilityLevel) {
             this.visibilityLevel = visibilityLevel;
             return this;
         }
         public String getVisibilityLevel() {
             return this.visibilityLevel;
+        }
+
+        public ListGroupsResponseBodyResult setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
         public ListGroupsResponseBodyResult setAccessLevel(Integer accessLevel) {

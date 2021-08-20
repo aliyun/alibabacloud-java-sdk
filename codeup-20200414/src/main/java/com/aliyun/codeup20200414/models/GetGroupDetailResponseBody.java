@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetGroupDetailResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class GetGroupDetailResponseBody extends TeaModel {
     public static GetGroupDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetGroupDetailResponseBody self = new GetGroupDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetGroupDetailResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetGroupDetailResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class GetGroupDetailResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public GetGroupDetailResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetGroupDetailResponseBody setSuccess(Boolean success) {
@@ -74,11 +74,11 @@ public class GetGroupDetailResponseBody extends TeaModel {
         @NameInMap("OwnerId")
         public Long ownerId;
 
-        @NameInMap("ParentId")
-        public Long parentId;
-
         @NameInMap("WebUrl")
         public String webUrl;
+
+        @NameInMap("ParentId")
+        public Long parentId;
 
         @NameInMap("Description")
         public String description;
@@ -89,11 +89,11 @@ public class GetGroupDetailResponseBody extends TeaModel {
         @NameInMap("PathWithNamespace")
         public String pathWithNamespace;
 
-        @NameInMap("VisibilityLevel")
-        public String visibilityLevel;
-
         @NameInMap("Path")
         public String path;
+
+        @NameInMap("VisibilityLevel")
+        public String visibilityLevel;
 
         @NameInMap("Name")
         public String name;
@@ -130,20 +130,20 @@ public class GetGroupDetailResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public GetGroupDetailResponseBodyResult setParentId(Long parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public Long getParentId() {
-            return this.parentId;
-        }
-
         public GetGroupDetailResponseBodyResult setWebUrl(String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
         public String getWebUrl() {
             return this.webUrl;
+        }
+
+        public GetGroupDetailResponseBodyResult setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
         }
 
         public GetGroupDetailResponseBodyResult setDescription(String description) {
@@ -170,20 +170,20 @@ public class GetGroupDetailResponseBody extends TeaModel {
             return this.pathWithNamespace;
         }
 
-        public GetGroupDetailResponseBodyResult setVisibilityLevel(String visibilityLevel) {
-            this.visibilityLevel = visibilityLevel;
-            return this;
-        }
-        public String getVisibilityLevel() {
-            return this.visibilityLevel;
-        }
-
         public GetGroupDetailResponseBodyResult setPath(String path) {
             this.path = path;
             return this;
         }
         public String getPath() {
             return this.path;
+        }
+
+        public GetGroupDetailResponseBodyResult setVisibilityLevel(String visibilityLevel) {
+            this.visibilityLevel = visibilityLevel;
+            return this;
+        }
+        public String getVisibilityLevel() {
+            return this.visibilityLevel;
         }
 
         public GetGroupDetailResponseBodyResult setName(String name) {

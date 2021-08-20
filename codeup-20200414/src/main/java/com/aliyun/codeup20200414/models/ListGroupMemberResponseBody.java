@@ -4,20 +4,20 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListGroupMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Long total;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("Result")
     public java.util.List<ListGroupMemberResponseBodyResult> result;
@@ -25,6 +25,14 @@ public class ListGroupMemberResponseBody extends TeaModel {
     public static ListGroupMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListGroupMemberResponseBody self = new ListGroupMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListGroupMemberResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListGroupMemberResponseBody setRequestId(String requestId) {
@@ -43,28 +51,20 @@ public class ListGroupMemberResponseBody extends TeaModel {
         return this.total;
     }
 
-    public ListGroupMemberResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListGroupMemberResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListGroupMemberResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListGroupMemberResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListGroupMemberResponseBody setResult(java.util.List<ListGroupMemberResponseBodyResult> result) {

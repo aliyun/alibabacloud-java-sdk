@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepositoryMemberResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
     public static DeleteRepositoryMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepositoryMemberResponseBody self = new DeleteRepositoryMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepositoryMemberResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public DeleteRepositoryMemberResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public DeleteRepositoryMemberResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public DeleteRepositoryMemberResponseBody setSuccess(Boolean success) {

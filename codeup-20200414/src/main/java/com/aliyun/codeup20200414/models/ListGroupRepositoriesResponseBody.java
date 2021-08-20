@@ -4,20 +4,20 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListGroupRepositoriesResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Long total;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("Result")
     public java.util.List<ListGroupRepositoriesResponseBodyResult> result;
@@ -25,6 +25,14 @@ public class ListGroupRepositoriesResponseBody extends TeaModel {
     public static ListGroupRepositoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListGroupRepositoriesResponseBody self = new ListGroupRepositoriesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListGroupRepositoriesResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListGroupRepositoriesResponseBody setRequestId(String requestId) {
@@ -43,28 +51,20 @@ public class ListGroupRepositoriesResponseBody extends TeaModel {
         return this.total;
     }
 
-    public ListGroupRepositoriesResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListGroupRepositoriesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListGroupRepositoriesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListGroupRepositoriesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListGroupRepositoriesResponseBody setResult(java.util.List<ListGroupRepositoriesResponseBodyResult> result) {
@@ -88,11 +88,11 @@ public class ListGroupRepositoriesResponseBody extends TeaModel {
         @NameInMap("Archive")
         public Boolean archive;
 
-        @NameInMap("CreatedAt")
-        public String createdAt;
-
         @NameInMap("SshCloneUrl")
         public String sshCloneUrl;
+
+        @NameInMap("CreatedAt")
+        public String createdAt;
 
         @NameInMap("CreatorId")
         public Long creatorId;
@@ -161,20 +161,20 @@ public class ListGroupRepositoriesResponseBody extends TeaModel {
             return this.archive;
         }
 
-        public ListGroupRepositoriesResponseBodyResult setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
         public ListGroupRepositoriesResponseBodyResult setSshCloneUrl(String sshCloneUrl) {
             this.sshCloneUrl = sshCloneUrl;
             return this;
         }
         public String getSshCloneUrl() {
             return this.sshCloneUrl;
+        }
+
+        public ListGroupRepositoriesResponseBodyResult setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+            return this;
+        }
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
         public ListGroupRepositoriesResponseBodyResult setCreatorId(Long creatorId) {

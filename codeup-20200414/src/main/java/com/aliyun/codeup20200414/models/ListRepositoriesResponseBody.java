@@ -7,17 +7,17 @@ public class ListRepositoriesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Total")
-    public Long total;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("Total")
+    public Long total;
+
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
 
     @NameInMap("Result")
     public java.util.List<ListRepositoriesResponseBodyResult> result;
@@ -35,22 +35,6 @@ public class ListRepositoriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRepositoriesResponseBody setTotal(Long total) {
-        this.total = total;
-        return this;
-    }
-    public Long getTotal() {
-        return this.total;
-    }
-
-    public ListRepositoriesResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
     public ListRepositoriesResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -59,12 +43,28 @@ public class ListRepositoriesResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public ListRepositoriesResponseBody setTotal(Long total) {
+        this.total = total;
+        return this;
+    }
+    public Long getTotal() {
+        return this.total;
+    }
+
     public ListRepositoriesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListRepositoriesResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public ListRepositoriesResponseBody setResult(java.util.List<ListRepositoriesResponseBodyResult> result) {
@@ -94,11 +94,11 @@ public class ListRepositoriesResponseBody extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("DemoProjectStatus")
-        public Boolean demoProjectStatus;
-
         @NameInMap("Star")
         public Boolean star;
+
+        @NameInMap("DemoProjectStatus")
+        public Boolean demoProjectStatus;
 
         @NameInMap("ImportStatus")
         public String importStatus;
@@ -186,20 +186,20 @@ public class ListRepositoriesResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public ListRepositoriesResponseBodyResult setDemoProjectStatus(Boolean demoProjectStatus) {
-            this.demoProjectStatus = demoProjectStatus;
-            return this;
-        }
-        public Boolean getDemoProjectStatus() {
-            return this.demoProjectStatus;
-        }
-
         public ListRepositoriesResponseBodyResult setStar(Boolean star) {
             this.star = star;
             return this;
         }
         public Boolean getStar() {
             return this.star;
+        }
+
+        public ListRepositoriesResponseBodyResult setDemoProjectStatus(Boolean demoProjectStatus) {
+            this.demoProjectStatus = demoProjectStatus;
+            return this;
+        }
+        public Boolean getDemoProjectStatus() {
+            return this.demoProjectStatus;
         }
 
         public ListRepositoriesResponseBodyResult setImportStatus(String importStatus) {

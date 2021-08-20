@@ -4,20 +4,20 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryWebhookResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Long total;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("Result")
     public java.util.List<ListRepositoryWebhookResponseBodyResult> result;
@@ -25,6 +25,14 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
     public static ListRepositoryWebhookResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryWebhookResponseBody self = new ListRepositoryWebhookResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRepositoryWebhookResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListRepositoryWebhookResponseBody setRequestId(String requestId) {
@@ -43,28 +51,20 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
         return this.total;
     }
 
-    public ListRepositoryWebhookResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListRepositoryWebhookResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
     public ListRepositoryWebhookResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListRepositoryWebhookResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public ListRepositoryWebhookResponseBody setResult(java.util.List<ListRepositoryWebhookResponseBodyResult> result) {
@@ -85,32 +85,32 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
 
-        @NameInMap("TagPushEvents")
-        public Boolean tagPushEvents;
-
         @NameInMap("Url")
         public String url;
+
+        @NameInMap("TagPushEvents")
+        public Boolean tagPushEvents;
 
         @NameInMap("LastTestResult")
         public String lastTestResult;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("MergeRequestsEvents")
         public Boolean mergeRequestsEvents;
 
-        @NameInMap("SecretToken")
-        public String secretToken;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("NoteEvents")
         public Boolean noteEvents;
 
-        @NameInMap("EnableSslVerification")
-        public Boolean enableSslVerification;
+        @NameInMap("SecretToken")
+        public String secretToken;
 
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("EnableSslVerification")
+        public Boolean enableSslVerification;
 
         public static ListRepositoryWebhookResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListRepositoryWebhookResponseBodyResult self = new ListRepositoryWebhookResponseBodyResult();
@@ -141,20 +141,20 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
             return this.createdAt;
         }
 
-        public ListRepositoryWebhookResponseBodyResult setTagPushEvents(Boolean tagPushEvents) {
-            this.tagPushEvents = tagPushEvents;
-            return this;
-        }
-        public Boolean getTagPushEvents() {
-            return this.tagPushEvents;
-        }
-
         public ListRepositoryWebhookResponseBodyResult setUrl(String url) {
             this.url = url;
             return this;
         }
         public String getUrl() {
             return this.url;
+        }
+
+        public ListRepositoryWebhookResponseBodyResult setTagPushEvents(Boolean tagPushEvents) {
+            this.tagPushEvents = tagPushEvents;
+            return this;
+        }
+        public Boolean getTagPushEvents() {
+            return this.tagPushEvents;
         }
 
         public ListRepositoryWebhookResponseBodyResult setLastTestResult(String lastTestResult) {
@@ -165,14 +165,6 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
             return this.lastTestResult;
         }
 
-        public ListRepositoryWebhookResponseBodyResult setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public ListRepositoryWebhookResponseBodyResult setMergeRequestsEvents(Boolean mergeRequestsEvents) {
             this.mergeRequestsEvents = mergeRequestsEvents;
             return this;
@@ -181,12 +173,12 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
             return this.mergeRequestsEvents;
         }
 
-        public ListRepositoryWebhookResponseBodyResult setSecretToken(String secretToken) {
-            this.secretToken = secretToken;
+        public ListRepositoryWebhookResponseBodyResult setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getSecretToken() {
-            return this.secretToken;
+        public String getDescription() {
+            return this.description;
         }
 
         public ListRepositoryWebhookResponseBodyResult setNoteEvents(Boolean noteEvents) {
@@ -197,12 +189,12 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
             return this.noteEvents;
         }
 
-        public ListRepositoryWebhookResponseBodyResult setEnableSslVerification(Boolean enableSslVerification) {
-            this.enableSslVerification = enableSslVerification;
+        public ListRepositoryWebhookResponseBodyResult setSecretToken(String secretToken) {
+            this.secretToken = secretToken;
             return this;
         }
-        public Boolean getEnableSslVerification() {
-            return this.enableSslVerification;
+        public String getSecretToken() {
+            return this.secretToken;
         }
 
         public ListRepositoryWebhookResponseBodyResult setId(Long id) {
@@ -211,6 +203,14 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListRepositoryWebhookResponseBodyResult setEnableSslVerification(Boolean enableSslVerification) {
+            this.enableSslVerification = enableSslVerification;
+            return this;
+        }
+        public Boolean getEnableSslVerification() {
+            return this.enableSslVerification;
         }
 
     }

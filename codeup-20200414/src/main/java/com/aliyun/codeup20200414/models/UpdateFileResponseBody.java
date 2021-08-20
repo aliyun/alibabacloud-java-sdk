@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class UpdateFileResponseBody extends TeaModel {
     public static UpdateFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateFileResponseBody self = new UpdateFileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateFileResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public UpdateFileResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class UpdateFileResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public UpdateFileResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public UpdateFileResponseBody setSuccess(Boolean success) {

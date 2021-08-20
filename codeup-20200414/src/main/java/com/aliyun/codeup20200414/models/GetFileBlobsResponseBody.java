@@ -4,14 +4,14 @@ package com.aliyun.codeup20200414.models;
 import com.aliyun.tea.*;
 
 public class GetFileBlobsResponseBody extends TeaModel {
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class GetFileBlobsResponseBody extends TeaModel {
     public static GetFileBlobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetFileBlobsResponseBody self = new GetFileBlobsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetFileBlobsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetFileBlobsResponseBody setRequestId(String requestId) {
@@ -38,14 +46,6 @@ public class GetFileBlobsResponseBody extends TeaModel {
     }
     public String getErrorCode() {
         return this.errorCode;
-    }
-
-    public GetFileBlobsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetFileBlobsResponseBody setSuccess(Boolean success) {
