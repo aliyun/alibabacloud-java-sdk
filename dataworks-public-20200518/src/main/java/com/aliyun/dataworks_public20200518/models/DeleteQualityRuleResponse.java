@@ -4,81 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteQualityRuleResponse extends TeaModel {
-    @NameInMap("ErrorCode")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String errorCode;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean data;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("HttpStatusCode")
-    @Validation(required = true)
-    public Integer httpStatusCode;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public DeleteQualityRuleResponseBody body;
 
     public static DeleteQualityRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteQualityRuleResponse self = new DeleteQualityRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteQualityRuleResponse setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public DeleteQualityRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteQualityRuleResponse setData(Boolean data) {
-        this.data = data;
+    public DeleteQualityRuleResponse setBody(DeleteQualityRuleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getData() {
-        return this.data;
-    }
-
-    public DeleteQualityRuleResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public DeleteQualityRuleResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteQualityRuleResponse setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public DeleteQualityRuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public DeleteQualityRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

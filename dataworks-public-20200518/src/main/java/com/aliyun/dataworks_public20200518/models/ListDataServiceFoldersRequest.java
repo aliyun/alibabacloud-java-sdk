@@ -11,11 +11,9 @@ public class ListDataServiceFoldersRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("TenantId")
-    @Validation(required = true)
     public Long tenantId;
 
     @NameInMap("GroupId")

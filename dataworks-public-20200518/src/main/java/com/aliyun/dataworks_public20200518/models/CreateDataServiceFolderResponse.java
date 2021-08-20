@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDataServiceFolderResponse extends TeaModel {
-    @NameInMap("FolderId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Long folderId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public CreateDataServiceFolderResponseBody body;
 
     public static CreateDataServiceFolderResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDataServiceFolderResponse self = new CreateDataServiceFolderResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDataServiceFolderResponse setFolderId(Long folderId) {
-        this.folderId = folderId;
+    public CreateDataServiceFolderResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public Long getFolderId() {
-        return this.folderId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateDataServiceFolderResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateDataServiceFolderResponse setBody(CreateDataServiceFolderResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public CreateDataServiceFolderResponseBody getBody() {
+        return this.body;
     }
 
 }

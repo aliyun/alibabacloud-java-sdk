@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class TopTenElapsedTimeInstanceRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     public static TopTenElapsedTimeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

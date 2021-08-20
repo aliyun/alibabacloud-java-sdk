@@ -17,7 +17,6 @@ public class UpdateDataSourceRequest extends TeaModel {
     public String status;
 
     @NameInMap("DataSourceId")
-    @Validation(required = true)
     public Long dataSourceId;
 
     public static UpdateDataSourceRequest build(java.util.Map<String, ?> map) throws Exception {

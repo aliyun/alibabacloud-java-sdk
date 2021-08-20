@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTopicsRequest extends TeaModel {
     @NameInMap("BeginTime")
-    @Validation(required = true)
     public String beginTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("TopicTypes")
@@ -28,11 +26,9 @@ public class ListTopicsRequest extends TeaModel {
     public String owner;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static ListTopicsRequest build(java.util.Map<String, ?> map) throws Exception {
