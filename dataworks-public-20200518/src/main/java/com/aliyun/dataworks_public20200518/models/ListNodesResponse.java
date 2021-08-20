@@ -154,6 +154,10 @@ public class ListNodesResponse extends TeaModel {
         @Validation(required = true)
         public Long relatedFlowId;
 
+        @NameInMap("BusinessId")
+        @Validation(required = true)
+        public Long businessId;
+
         public static ListNodesResponseDataNodes build(java.util.Map<String, ?> map) throws Exception {
             ListNodesResponseDataNodes self = new ListNodesResponseDataNodes();
             return TeaModel.build(map, self);
@@ -301,6 +305,14 @@ public class ListNodesResponse extends TeaModel {
         }
         public Long getRelatedFlowId() {
             return this.relatedFlowId;
+        }
+
+        public ListNodesResponseDataNodes setBusinessId(Long businessId) {
+            this.businessId = businessId;
+            return this;
+        }
+        public Long getBusinessId() {
+            return this.businessId;
         }
 
     }

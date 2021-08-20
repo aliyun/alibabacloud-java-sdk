@@ -186,6 +186,10 @@ public class ListInstancesResponse extends TeaModel {
         @Validation(required = true)
         public Integer taskRerunTime;
 
+        @NameInMap("BusinessId")
+        @Validation(required = true)
+        public Long businessId;
+
         public static ListInstancesResponseDataInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseDataInstances self = new ListInstancesResponseDataInstances();
             return TeaModel.build(map, self);
@@ -397,6 +401,14 @@ public class ListInstancesResponse extends TeaModel {
         }
         public Integer getTaskRerunTime() {
             return this.taskRerunTime;
+        }
+
+        public ListInstancesResponseDataInstances setBusinessId(Long businessId) {
+            this.businessId = businessId;
+            return this;
+        }
+        public Long getBusinessId() {
+            return this.businessId;
         }
 
     }
