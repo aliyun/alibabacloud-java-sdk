@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListDIProjectConfigRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("DestinationType")
-    @Validation(required = true)
     public String destinationType;
 
     @NameInMap("SourceType")

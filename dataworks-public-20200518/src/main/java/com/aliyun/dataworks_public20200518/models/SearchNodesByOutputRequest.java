@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SearchNodesByOutputRequest extends TeaModel {
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("Outputs")
-    @Validation(required = true)
     public String outputs;
 
     public static SearchNodesByOutputRequest build(java.util.Map<String, ?> map) throws Exception {

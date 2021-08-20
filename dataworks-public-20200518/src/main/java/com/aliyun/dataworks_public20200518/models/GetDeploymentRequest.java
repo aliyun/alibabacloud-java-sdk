@@ -11,7 +11,6 @@ public class GetDeploymentRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("DeploymentId")
-    @Validation(required = true)
     public Long deploymentId;
 
     public static GetDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {

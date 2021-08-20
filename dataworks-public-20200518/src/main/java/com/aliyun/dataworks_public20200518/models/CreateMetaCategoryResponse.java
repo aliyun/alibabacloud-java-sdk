@@ -4,101 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateMetaCategoryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ErrorCode")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("HttpStatusCode")
-    @Validation(required = true)
-    public Integer httpStatusCode;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public CreateMetaCategoryResponseData data;
+    public CreateMetaCategoryResponseBody body;
 
     public static CreateMetaCategoryResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateMetaCategoryResponse self = new CreateMetaCategoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateMetaCategoryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateMetaCategoryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateMetaCategoryResponse setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public CreateMetaCategoryResponse setBody(CreateMetaCategoryResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateMetaCategoryResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateMetaCategoryResponse setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public CreateMetaCategoryResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateMetaCategoryResponse setData(CreateMetaCategoryResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateMetaCategoryResponseData getData() {
-        return this.data;
-    }
-
-    public static class CreateMetaCategoryResponseData extends TeaModel {
-        @NameInMap("CategoryId")
-        @Validation(required = true)
-        public Long categoryId;
-
-        public static CreateMetaCategoryResponseData build(java.util.Map<String, ?> map) throws Exception {
-            CreateMetaCategoryResponseData self = new CreateMetaCategoryResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateMetaCategoryResponseData setCategoryId(Long categoryId) {
-            this.categoryId = categoryId;
-            return this;
-        }
-        public Long getCategoryId() {
-            return this.categoryId;
-        }
-
+    public CreateMetaCategoryResponseBody getBody() {
+        return this.body;
     }
 
 }

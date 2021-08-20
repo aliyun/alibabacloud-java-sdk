@@ -4,89 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableAddColumnResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TaskInfo")
+    @NameInMap("body")
     @Validation(required = true)
-    public UpdateTableAddColumnResponseTaskInfo taskInfo;
+    public UpdateTableAddColumnResponseBody body;
 
     public static UpdateTableAddColumnResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableAddColumnResponse self = new UpdateTableAddColumnResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateTableAddColumnResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateTableAddColumnResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateTableAddColumnResponse setTaskInfo(UpdateTableAddColumnResponseTaskInfo taskInfo) {
-        this.taskInfo = taskInfo;
+    public UpdateTableAddColumnResponse setBody(UpdateTableAddColumnResponseBody body) {
+        this.body = body;
         return this;
     }
-    public UpdateTableAddColumnResponseTaskInfo getTaskInfo() {
-        return this.taskInfo;
-    }
-
-    public static class UpdateTableAddColumnResponseTaskInfo extends TeaModel {
-        @NameInMap("TaskId")
-        @Validation(required = true)
-        public String taskId;
-
-        @NameInMap("Content")
-        @Validation(required = true)
-        public String content;
-
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("NextTaskId")
-        @Validation(required = true)
-        public String nextTaskId;
-
-        public static UpdateTableAddColumnResponseTaskInfo build(java.util.Map<String, ?> map) throws Exception {
-            UpdateTableAddColumnResponseTaskInfo self = new UpdateTableAddColumnResponseTaskInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateTableAddColumnResponseTaskInfo setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        public UpdateTableAddColumnResponseTaskInfo setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public UpdateTableAddColumnResponseTaskInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public UpdateTableAddColumnResponseTaskInfo setNextTaskId(String nextTaskId) {
-            this.nextTaskId = nextTaskId;
-            return this;
-        }
-        public String getNextTaskId() {
-            return this.nextTaskId;
-        }
-
+    public UpdateTableAddColumnResponseBody getBody() {
+        return this.body;
     }
 
 }

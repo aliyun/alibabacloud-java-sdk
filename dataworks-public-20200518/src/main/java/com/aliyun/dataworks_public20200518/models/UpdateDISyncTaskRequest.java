@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateDISyncTaskRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public String taskType;
 
     @NameInMap("TaskContent")
@@ -19,7 +17,6 @@ public class UpdateDISyncTaskRequest extends TeaModel {
     public String taskParam;
 
     @NameInMap("FileId")
-    @Validation(required = true)
     public Long fileId;
 
     public static UpdateDISyncTaskRequest build(java.util.Map<String, ?> map) throws Exception {

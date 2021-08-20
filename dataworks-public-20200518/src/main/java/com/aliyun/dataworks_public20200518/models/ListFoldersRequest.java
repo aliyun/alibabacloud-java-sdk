@@ -11,15 +11,12 @@ public class ListFoldersRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("ParentFolderPath")
-    @Validation(required = true)
     public String parentFolderPath;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static ListFoldersRequest build(java.util.Map<String, ?> map) throws Exception {

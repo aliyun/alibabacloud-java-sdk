@@ -5,27 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListQualityResultsByEntityRequest extends TeaModel {
     @NameInMap("EntityId")
-    @Validation(required = true)
     public Integer entityId;
 
     @NameInMap("StartDate")
-    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
-    @Validation(required = true)
     public String endDate;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("ProjectName")
-    @Validation(required = true)
     public String projectName;
 
     public static ListQualityResultsByEntityRequest build(java.util.Map<String, ?> map) throws Exception {

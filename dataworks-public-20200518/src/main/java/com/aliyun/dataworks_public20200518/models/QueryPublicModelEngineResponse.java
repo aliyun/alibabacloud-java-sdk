@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class QueryPublicModelEngineResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ReturnValue")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<java.util.Map<String, ?>> returnValue;
+    public QueryPublicModelEngineResponseBody body;
 
     public static QueryPublicModelEngineResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryPublicModelEngineResponse self = new QueryPublicModelEngineResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryPublicModelEngineResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryPublicModelEngineResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public QueryPublicModelEngineResponse setReturnValue(java.util.List<java.util.Map<String, ?>> returnValue) {
-        this.returnValue = returnValue;
+    public QueryPublicModelEngineResponse setBody(QueryPublicModelEngineResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getReturnValue() {
-        return this.returnValue;
+    public QueryPublicModelEngineResponseBody getBody() {
+        return this.body;
     }
 
 }

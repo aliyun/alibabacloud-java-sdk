@@ -4,89 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDISyncInstanceInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public GetDISyncInstanceInfoResponseData data;
+    public GetDISyncInstanceInfoResponseBody body;
 
     public static GetDISyncInstanceInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDISyncInstanceInfoResponse self = new GetDISyncInstanceInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDISyncInstanceInfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetDISyncInstanceInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetDISyncInstanceInfoResponse setSuccess(Boolean success) {
-        this.success = success;
+    public GetDISyncInstanceInfoResponse setBody(GetDISyncInstanceInfoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetDISyncInstanceInfoResponse setData(GetDISyncInstanceInfoResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public GetDISyncInstanceInfoResponseData getData() {
-        return this.data;
-    }
-
-    public static class GetDISyncInstanceInfoResponseData extends TeaModel {
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        public static GetDISyncInstanceInfoResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GetDISyncInstanceInfoResponseData self = new GetDISyncInstanceInfoResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetDISyncInstanceInfoResponseData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetDISyncInstanceInfoResponseData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetDISyncInstanceInfoResponseData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
+    public GetDISyncInstanceInfoResponseBody getBody() {
+        return this.body;
     }
 
 }

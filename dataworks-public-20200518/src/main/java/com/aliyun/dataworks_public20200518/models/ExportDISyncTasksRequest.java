@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ExportDISyncTasksRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public String taskType;
 
     @NameInMap("TaskParam")
-    @Validation(required = true)
     public String taskParam;
 
     public static ExportDISyncTasksRequest build(java.util.Map<String, ?> map) throws Exception {

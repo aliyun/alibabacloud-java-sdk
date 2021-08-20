@@ -11,7 +11,6 @@ public class DeleteFileRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("FileId")
-    @Validation(required = true)
     public Long fileId;
 
     public static DeleteFileRequest build(java.util.Map<String, ?> map) throws Exception {

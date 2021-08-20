@@ -11,7 +11,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Integer workspaceId;
 
     @NameInMap("OrderType")
-    @Validation(required = true)
     public Integer orderType;
 
     @NameInMap("MaxComputeProjectName")
@@ -27,7 +26,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Long endTime;
 
     @NameInMap("EngineType")
-    @Validation(required = true)
     public String engineType;
 
     @NameInMap("PageNum")
@@ -37,7 +35,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("QueryType")
-    @Validation(required = true)
     public Integer queryType;
 
     public static ListPermissionApplyOrdersRequest build(java.util.Map<String, ?> map) throws Exception {
