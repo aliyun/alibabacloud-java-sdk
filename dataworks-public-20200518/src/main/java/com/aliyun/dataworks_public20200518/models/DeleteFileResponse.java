@@ -24,6 +24,10 @@ public class DeleteFileResponse extends TeaModel {
     @Validation(required = true)
     public Integer httpStatusCode;
 
+    @NameInMap("DeploymentId")
+    @Validation(required = true)
+    public Long deploymentId;
+
     public static DeleteFileResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteFileResponse self = new DeleteFileResponse();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class DeleteFileResponse extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public DeleteFileResponse setDeploymentId(Long deploymentId) {
+        this.deploymentId = deploymentId;
+        return this;
+    }
+    public Long getDeploymentId() {
+        return this.deploymentId;
     }
 
 }

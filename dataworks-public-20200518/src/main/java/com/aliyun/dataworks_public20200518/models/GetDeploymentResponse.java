@@ -118,6 +118,10 @@ public class GetDeploymentResponse extends TeaModel {
         @Validation(required = true)
         public String errorMessage;
 
+        @NameInMap("CheckingStatus")
+        @Validation(required = true)
+        public Integer checkingStatus;
+
         public static GetDeploymentResponseDataDeployment build(java.util.Map<String, ?> map) throws Exception {
             GetDeploymentResponseDataDeployment self = new GetDeploymentResponseDataDeployment();
             return TeaModel.build(map, self);
@@ -193,6 +197,14 @@ public class GetDeploymentResponse extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public GetDeploymentResponseDataDeployment setCheckingStatus(Integer checkingStatus) {
+            this.checkingStatus = checkingStatus;
+            return this;
+        }
+        public Integer getCheckingStatus() {
+            return this.checkingStatus;
         }
 
     }

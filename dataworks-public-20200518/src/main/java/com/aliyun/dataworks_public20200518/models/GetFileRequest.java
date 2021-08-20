@@ -13,6 +13,9 @@ public class GetFileRequest extends TeaModel {
     @NameInMap("FileId")
     public Long fileId;
 
+    @NameInMap("NodeId")
+    public Long nodeId;
+
     public static GetFileRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFileRequest self = new GetFileRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetFileRequest extends TeaModel {
     }
     public Long getFileId() {
         return this.fileId;
+    }
+
+    public GetFileRequest setNodeId(Long nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public Long getNodeId() {
+        return this.nodeId;
     }
 
 }
