@@ -76,6 +76,16 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public ModifyOrderDeliveryAddressResponse modifyOrderDeliveryAddressWithOptions(ModifyOrderDeliveryAddressRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyOrderDeliveryAddress", "HTTPS", "POST", "2018-01-16", "AK,APP,PrivateKey,BearerToken", null, TeaModel.buildMap(request), runtime), new ModifyOrderDeliveryAddressResponse());
+    }
+
+    public ModifyOrderDeliveryAddressResponse modifyOrderDeliveryAddress(ModifyOrderDeliveryAddressRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyOrderDeliveryAddressWithOptions(request, runtime);
+    }
+
     public QueryGuideItemGroupWithOutInventoryResponse queryGuideItemGroupWithOutInventoryWithOptions(QueryGuideItemGroupWithOutInventoryRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("QueryGuideItemGroupWithOutInventory", "HTTPS", "GET", "2018-01-16", "AK", TeaModel.buildMap(request), null, runtime), new QueryGuideItemGroupWithOutInventoryResponse());
