@@ -4,26 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListOfficeConversionTaskResponseBody extends TeaModel {
-    @NameInMap("Tasks")
-    public java.util.List<ListOfficeConversionTaskResponseBodyTasks> tasks;
+    @NameInMap("NextMarker")
+    public String nextMarker;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("NextMarker")
-    public String nextMarker;
+    @NameInMap("Tasks")
+    public java.util.List<ListOfficeConversionTaskResponseBodyTasks> tasks;
 
     public static ListOfficeConversionTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOfficeConversionTaskResponseBody self = new ListOfficeConversionTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListOfficeConversionTaskResponseBody setTasks(java.util.List<ListOfficeConversionTaskResponseBodyTasks> tasks) {
-        this.tasks = tasks;
+    public ListOfficeConversionTaskResponseBody setNextMarker(String nextMarker) {
+        this.nextMarker = nextMarker;
         return this;
     }
-    public java.util.List<ListOfficeConversionTaskResponseBodyTasks> getTasks() {
-        return this.tasks;
+    public String getNextMarker() {
+        return this.nextMarker;
     }
 
     public ListOfficeConversionTaskResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class ListOfficeConversionTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListOfficeConversionTaskResponseBody setNextMarker(String nextMarker) {
-        this.nextMarker = nextMarker;
+    public ListOfficeConversionTaskResponseBody setTasks(java.util.List<ListOfficeConversionTaskResponseBodyTasks> tasks) {
+        this.tasks = tasks;
         return this;
     }
-    public String getNextMarker() {
-        return this.nextMarker;
+    public java.util.List<ListOfficeConversionTaskResponseBodyTasks> getTasks() {
+        return this.tasks;
     }
 
     public static class ListOfficeConversionTaskResponseBodyTasks extends TeaModel {
@@ -64,14 +64,14 @@ public class ListOfficeConversionTaskResponseBody extends TeaModel {
         @NameInMap("NotifyEndpoint")
         public String notifyEndpoint;
 
-        @NameInMap("TgtUri")
-        public String tgtUri;
+        @NameInMap("SrcUri")
+        public String srcUri;
 
         @NameInMap("TgtType")
         public String tgtType;
 
-        @NameInMap("SrcUri")
-        public String srcUri;
+        @NameInMap("TgtUri")
+        public String tgtUri;
 
         @NameInMap("ImageSpec")
         public String imageSpec;
@@ -143,12 +143,12 @@ public class ListOfficeConversionTaskResponseBody extends TeaModel {
             return this.notifyEndpoint;
         }
 
-        public ListOfficeConversionTaskResponseBodyTasks setTgtUri(String tgtUri) {
-            this.tgtUri = tgtUri;
+        public ListOfficeConversionTaskResponseBodyTasks setSrcUri(String srcUri) {
+            this.srcUri = srcUri;
             return this;
         }
-        public String getTgtUri() {
-            return this.tgtUri;
+        public String getSrcUri() {
+            return this.srcUri;
         }
 
         public ListOfficeConversionTaskResponseBodyTasks setTgtType(String tgtType) {
@@ -159,12 +159,12 @@ public class ListOfficeConversionTaskResponseBody extends TeaModel {
             return this.tgtType;
         }
 
-        public ListOfficeConversionTaskResponseBodyTasks setSrcUri(String srcUri) {
-            this.srcUri = srcUri;
+        public ListOfficeConversionTaskResponseBodyTasks setTgtUri(String tgtUri) {
+            this.tgtUri = tgtUri;
             return this;
         }
-        public String getSrcUri() {
-            return this.srcUri;
+        public String getTgtUri() {
+            return this.tgtUri;
         }
 
         public ListOfficeConversionTaskResponseBodyTasks setImageSpec(String imageSpec) {

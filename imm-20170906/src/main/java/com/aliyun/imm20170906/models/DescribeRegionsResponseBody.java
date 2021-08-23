@@ -32,23 +32,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        @NameInMap("ProjectTypes")
-        public java.util.List<String> projectTypes;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ProjectTypes")
+        public java.util.List<String> projectTypes;
 
         public static DescribeRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegion self = new DescribeRegionsResponseBodyRegionsRegion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegion setProjectTypes(java.util.List<String> projectTypes) {
-            this.projectTypes = projectTypes;
-            return this;
-        }
-        public java.util.List<String> getProjectTypes() {
-            return this.projectTypes;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {
@@ -57,6 +49,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setProjectTypes(java.util.List<String> projectTypes) {
+            this.projectTypes = projectTypes;
+            return this;
+        }
+        public java.util.List<String> getProjectTypes() {
+            return this.projectTypes;
         }
 
     }

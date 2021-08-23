@@ -7,38 +7,14 @@ public class GetOfficeConversionTaskResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("FailDetail")
-    public GetOfficeConversionTaskResponseBodyFailDetail failDetail;
-
-    @NameInMap("TgtType")
-    public String tgtType;
-
-    @NameInMap("TaskId")
-    public String taskId;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Percent")
     public Integer percent;
 
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    @NameInMap("ExternalID")
-    public String externalID;
-
-    @NameInMap("ImageSpec")
-    public String imageSpec;
-
-    @NameInMap("NotifyEndpoint")
-    public String notifyEndpoint;
-
-    @NameInMap("TgtUri")
-    public String tgtUri;
-
     @NameInMap("FinishTime")
     public String finishTime;
+
+    @NameInMap("CreateTime")
+    public String createTime;
 
     @NameInMap("PageCount")
     public Integer pageCount;
@@ -46,8 +22,32 @@ public class GetOfficeConversionTaskResponseBody extends TeaModel {
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("NotifyEndpoint")
+    public String notifyEndpoint;
+
     @NameInMap("SrcUri")
     public String srcUri;
+
+    @NameInMap("TgtType")
+    public String tgtType;
+
+    @NameInMap("TgtUri")
+    public String tgtUri;
+
+    @NameInMap("ImageSpec")
+    public String imageSpec;
+
+    @NameInMap("ExternalID")
+    public String externalID;
+
+    @NameInMap("TaskId")
+    public String taskId;
+
+    @NameInMap("FailDetail")
+    public GetOfficeConversionTaskResponseBodyFailDetail failDetail;
 
     public static GetOfficeConversionTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetOfficeConversionTaskResponseBody self = new GetOfficeConversionTaskResponseBody();
@@ -62,38 +62,6 @@ public class GetOfficeConversionTaskResponseBody extends TeaModel {
         return this.status;
     }
 
-    public GetOfficeConversionTaskResponseBody setFailDetail(GetOfficeConversionTaskResponseBodyFailDetail failDetail) {
-        this.failDetail = failDetail;
-        return this;
-    }
-    public GetOfficeConversionTaskResponseBodyFailDetail getFailDetail() {
-        return this.failDetail;
-    }
-
-    public GetOfficeConversionTaskResponseBody setTgtType(String tgtType) {
-        this.tgtType = tgtType;
-        return this;
-    }
-    public String getTgtType() {
-        return this.tgtType;
-    }
-
-    public GetOfficeConversionTaskResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public GetOfficeConversionTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetOfficeConversionTaskResponseBody setPercent(Integer percent) {
         this.percent = percent;
         return this;
@@ -102,52 +70,20 @@ public class GetOfficeConversionTaskResponseBody extends TeaModel {
         return this.percent;
     }
 
-    public GetOfficeConversionTaskResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public GetOfficeConversionTaskResponseBody setExternalID(String externalID) {
-        this.externalID = externalID;
-        return this;
-    }
-    public String getExternalID() {
-        return this.externalID;
-    }
-
-    public GetOfficeConversionTaskResponseBody setImageSpec(String imageSpec) {
-        this.imageSpec = imageSpec;
-        return this;
-    }
-    public String getImageSpec() {
-        return this.imageSpec;
-    }
-
-    public GetOfficeConversionTaskResponseBody setNotifyEndpoint(String notifyEndpoint) {
-        this.notifyEndpoint = notifyEndpoint;
-        return this;
-    }
-    public String getNotifyEndpoint() {
-        return this.notifyEndpoint;
-    }
-
-    public GetOfficeConversionTaskResponseBody setTgtUri(String tgtUri) {
-        this.tgtUri = tgtUri;
-        return this;
-    }
-    public String getTgtUri() {
-        return this.tgtUri;
-    }
-
     public GetOfficeConversionTaskResponseBody setFinishTime(String finishTime) {
         this.finishTime = finishTime;
         return this;
     }
     public String getFinishTime() {
         return this.finishTime;
+    }
+
+    public GetOfficeConversionTaskResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public GetOfficeConversionTaskResponseBody setPageCount(Integer pageCount) {
@@ -166,12 +102,76 @@ public class GetOfficeConversionTaskResponseBody extends TeaModel {
         return this.notifyTopicName;
     }
 
+    public GetOfficeConversionTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetOfficeConversionTaskResponseBody setNotifyEndpoint(String notifyEndpoint) {
+        this.notifyEndpoint = notifyEndpoint;
+        return this;
+    }
+    public String getNotifyEndpoint() {
+        return this.notifyEndpoint;
+    }
+
     public GetOfficeConversionTaskResponseBody setSrcUri(String srcUri) {
         this.srcUri = srcUri;
         return this;
     }
     public String getSrcUri() {
         return this.srcUri;
+    }
+
+    public GetOfficeConversionTaskResponseBody setTgtType(String tgtType) {
+        this.tgtType = tgtType;
+        return this;
+    }
+    public String getTgtType() {
+        return this.tgtType;
+    }
+
+    public GetOfficeConversionTaskResponseBody setTgtUri(String tgtUri) {
+        this.tgtUri = tgtUri;
+        return this;
+    }
+    public String getTgtUri() {
+        return this.tgtUri;
+    }
+
+    public GetOfficeConversionTaskResponseBody setImageSpec(String imageSpec) {
+        this.imageSpec = imageSpec;
+        return this;
+    }
+    public String getImageSpec() {
+        return this.imageSpec;
+    }
+
+    public GetOfficeConversionTaskResponseBody setExternalID(String externalID) {
+        this.externalID = externalID;
+        return this;
+    }
+    public String getExternalID() {
+        return this.externalID;
+    }
+
+    public GetOfficeConversionTaskResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public GetOfficeConversionTaskResponseBody setFailDetail(GetOfficeConversionTaskResponseBodyFailDetail failDetail) {
+        this.failDetail = failDetail;
+        return this;
+    }
+    public GetOfficeConversionTaskResponseBodyFailDetail getFailDetail() {
+        return this.failDetail;
     }
 
     public static class GetOfficeConversionTaskResponseBodyFailDetail extends TeaModel {

@@ -4,14 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListVideoFramesResponseBody extends TeaModel {
-    @NameInMap("Frames")
-    public java.util.List<ListVideoFramesResponseBodyFrames> frames;
+    @NameInMap("VideoUri")
+    public String videoUri;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("VideoUri")
-    public String videoUri;
 
     @NameInMap("NextMarker")
     public String nextMarker;
@@ -19,25 +16,12 @@ public class ListVideoFramesResponseBody extends TeaModel {
     @NameInMap("SetId")
     public String setId;
 
+    @NameInMap("Frames")
+    public java.util.List<ListVideoFramesResponseBodyFrames> frames;
+
     public static ListVideoFramesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVideoFramesResponseBody self = new ListVideoFramesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListVideoFramesResponseBody setFrames(java.util.List<ListVideoFramesResponseBodyFrames> frames) {
-        this.frames = frames;
-        return this;
-    }
-    public java.util.List<ListVideoFramesResponseBodyFrames> getFrames() {
-        return this.frames;
-    }
-
-    public ListVideoFramesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListVideoFramesResponseBody setVideoUri(String videoUri) {
@@ -46,6 +30,14 @@ public class ListVideoFramesResponseBody extends TeaModel {
     }
     public String getVideoUri() {
         return this.videoUri;
+    }
+
+    public ListVideoFramesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListVideoFramesResponseBody setNextMarker(String nextMarker) {
@@ -64,338 +56,12 @@ public class ListVideoFramesResponseBody extends TeaModel {
         return this.setId;
     }
 
-    public static class ListVideoFramesResponseBodyFramesTags extends TeaModel {
-        @NameInMap("TagConfidence")
-        public Float tagConfidence;
-
-        @NameInMap("TagName")
-        public String tagName;
-
-        @NameInMap("TagLevel")
-        public Integer tagLevel;
-
-        @NameInMap("ParentTagName")
-        public String parentTagName;
-
-        public static ListVideoFramesResponseBodyFramesTags build(java.util.Map<String, ?> map) throws Exception {
-            ListVideoFramesResponseBodyFramesTags self = new ListVideoFramesResponseBodyFramesTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListVideoFramesResponseBodyFramesTags setTagConfidence(Float tagConfidence) {
-            this.tagConfidence = tagConfidence;
-            return this;
-        }
-        public Float getTagConfidence() {
-            return this.tagConfidence;
-        }
-
-        public ListVideoFramesResponseBodyFramesTags setTagName(String tagName) {
-            this.tagName = tagName;
-            return this;
-        }
-        public String getTagName() {
-            return this.tagName;
-        }
-
-        public ListVideoFramesResponseBodyFramesTags setTagLevel(Integer tagLevel) {
-            this.tagLevel = tagLevel;
-            return this;
-        }
-        public Integer getTagLevel() {
-            return this.tagLevel;
-        }
-
-        public ListVideoFramesResponseBodyFramesTags setParentTagName(String parentTagName) {
-            this.parentTagName = parentTagName;
-            return this;
-        }
-        public String getParentTagName() {
-            return this.parentTagName;
-        }
-
+    public ListVideoFramesResponseBody setFrames(java.util.List<ListVideoFramesResponseBodyFrames> frames) {
+        this.frames = frames;
+        return this;
     }
-
-    public static class ListVideoFramesResponseBodyFramesOCROCRBoundary extends TeaModel {
-        @NameInMap("Top")
-        public Integer top;
-
-        @NameInMap("Width")
-        public Integer width;
-
-        @NameInMap("Height")
-        public Integer height;
-
-        @NameInMap("Left")
-        public Integer left;
-
-        public static ListVideoFramesResponseBodyFramesOCROCRBoundary build(java.util.Map<String, ?> map) throws Exception {
-            ListVideoFramesResponseBodyFramesOCROCRBoundary self = new ListVideoFramesResponseBodyFramesOCROCRBoundary();
-            return TeaModel.build(map, self);
-        }
-
-        public ListVideoFramesResponseBodyFramesOCROCRBoundary setTop(Integer top) {
-            this.top = top;
-            return this;
-        }
-        public Integer getTop() {
-            return this.top;
-        }
-
-        public ListVideoFramesResponseBodyFramesOCROCRBoundary setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
-        public ListVideoFramesResponseBodyFramesOCROCRBoundary setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
-        public ListVideoFramesResponseBodyFramesOCROCRBoundary setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
-        }
-
-    }
-
-    public static class ListVideoFramesResponseBodyFramesOCR extends TeaModel {
-        @NameInMap("OCRConfidence")
-        public Float OCRConfidence;
-
-        @NameInMap("OCRContents")
-        public String OCRContents;
-
-        @NameInMap("OCRBoundary")
-        public ListVideoFramesResponseBodyFramesOCROCRBoundary OCRBoundary;
-
-        public static ListVideoFramesResponseBodyFramesOCR build(java.util.Map<String, ?> map) throws Exception {
-            ListVideoFramesResponseBodyFramesOCR self = new ListVideoFramesResponseBodyFramesOCR();
-            return TeaModel.build(map, self);
-        }
-
-        public ListVideoFramesResponseBodyFramesOCR setOCRConfidence(Float OCRConfidence) {
-            this.OCRConfidence = OCRConfidence;
-            return this;
-        }
-        public Float getOCRConfidence() {
-            return this.OCRConfidence;
-        }
-
-        public ListVideoFramesResponseBodyFramesOCR setOCRContents(String OCRContents) {
-            this.OCRContents = OCRContents;
-            return this;
-        }
-        public String getOCRContents() {
-            return this.OCRContents;
-        }
-
-        public ListVideoFramesResponseBodyFramesOCR setOCRBoundary(ListVideoFramesResponseBodyFramesOCROCRBoundary OCRBoundary) {
-            this.OCRBoundary = OCRBoundary;
-            return this;
-        }
-        public ListVideoFramesResponseBodyFramesOCROCRBoundary getOCRBoundary() {
-            return this.OCRBoundary;
-        }
-
-    }
-
-    public static class ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary extends TeaModel {
-        @NameInMap("Top")
-        public Integer top;
-
-        @NameInMap("Width")
-        public Integer width;
-
-        @NameInMap("Height")
-        public Integer height;
-
-        @NameInMap("Left")
-        public Integer left;
-
-        public static ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
-            ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary self = new ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary();
-            return TeaModel.build(map, self);
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary setTop(Integer top) {
-            this.top = top;
-            return this;
-        }
-        public Integer getTop() {
-            return this.top;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
-        }
-
-    }
-
-    public static class ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose extends TeaModel {
-        @NameInMap("Pitch")
-        public Float pitch;
-
-        @NameInMap("Roll")
-        public Float roll;
-
-        @NameInMap("Yaw")
-        public Float yaw;
-
-        public static ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose build(java.util.Map<String, ?> map) throws Exception {
-            ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose self = new ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose();
-            return TeaModel.build(map, self);
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose setPitch(Float pitch) {
-            this.pitch = pitch;
-            return this;
-        }
-        public Float getPitch() {
-            return this.pitch;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose setRoll(Float roll) {
-            this.roll = roll;
-            return this;
-        }
-        public Float getRoll() {
-            return this.roll;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose setYaw(Float yaw) {
-            this.yaw = yaw;
-            return this;
-        }
-        public Float getYaw() {
-            return this.yaw;
-        }
-
-    }
-
-    public static class ListVideoFramesResponseBodyFramesFacesFaceAttributes extends TeaModel {
-        @NameInMap("GlassesConfidence")
-        public Float glassesConfidence;
-
-        @NameInMap("Glasses")
-        public String glasses;
-
-        @NameInMap("Mask")
-        public String mask;
-
-        @NameInMap("BeardConfidence")
-        public Float beardConfidence;
-
-        @NameInMap("MaskConfidence")
-        public Float maskConfidence;
-
-        @NameInMap("FaceBoundary")
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary faceBoundary;
-
-        @NameInMap("HeadPose")
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose headPose;
-
-        @NameInMap("Beard")
-        public String beard;
-
-        public static ListVideoFramesResponseBodyFramesFacesFaceAttributes build(java.util.Map<String, ?> map) throws Exception {
-            ListVideoFramesResponseBodyFramesFacesFaceAttributes self = new ListVideoFramesResponseBodyFramesFacesFaceAttributes();
-            return TeaModel.build(map, self);
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setGlassesConfidence(Float glassesConfidence) {
-            this.glassesConfidence = glassesConfidence;
-            return this;
-        }
-        public Float getGlassesConfidence() {
-            return this.glassesConfidence;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setGlasses(String glasses) {
-            this.glasses = glasses;
-            return this;
-        }
-        public String getGlasses() {
-            return this.glasses;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setMask(String mask) {
-            this.mask = mask;
-            return this;
-        }
-        public String getMask() {
-            return this.mask;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setBeardConfidence(Float beardConfidence) {
-            this.beardConfidence = beardConfidence;
-            return this;
-        }
-        public Float getBeardConfidence() {
-            return this.beardConfidence;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setMaskConfidence(Float maskConfidence) {
-            this.maskConfidence = maskConfidence;
-            return this;
-        }
-        public Float getMaskConfidence() {
-            return this.maskConfidence;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setFaceBoundary(ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary faceBoundary) {
-            this.faceBoundary = faceBoundary;
-            return this;
-        }
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary getFaceBoundary() {
-            return this.faceBoundary;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setHeadPose(ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose headPose) {
-            this.headPose = headPose;
-            return this;
-        }
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose getHeadPose() {
-            return this.headPose;
-        }
-
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setBeard(String beard) {
-            this.beard = beard;
-            return this;
-        }
-        public String getBeard() {
-            return this.beard;
-        }
-
+    public java.util.List<ListVideoFramesResponseBodyFrames> getFrames() {
+        return this.frames;
     }
 
     public static class ListVideoFramesResponseBodyFramesFacesEmotionDetails extends TeaModel {
@@ -483,7 +149,205 @@ public class ListVideoFramesResponseBody extends TeaModel {
 
     }
 
+    public static class ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
+        @NameInMap("Top")
+        public Integer top;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        @NameInMap("Height")
+        public Integer height;
+
+        public static ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
+            ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary self = new ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary setTop(Integer top) {
+            this.top = top;
+            return this;
+        }
+        public Integer getTop() {
+            return this.top;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+    }
+
+    public static class ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose extends TeaModel {
+        @NameInMap("Pitch")
+        public Float pitch;
+
+        @NameInMap("Roll")
+        public Float roll;
+
+        @NameInMap("Yaw")
+        public Float yaw;
+
+        public static ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose build(java.util.Map<String, ?> map) throws Exception {
+            ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose self = new ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose setPitch(Float pitch) {
+            this.pitch = pitch;
+            return this;
+        }
+        public Float getPitch() {
+            return this.pitch;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose setRoll(Float roll) {
+            this.roll = roll;
+            return this;
+        }
+        public Float getRoll() {
+            return this.roll;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose setYaw(Float yaw) {
+            this.yaw = yaw;
+            return this;
+        }
+        public Float getYaw() {
+            return this.yaw;
+        }
+
+    }
+
+    public static class ListVideoFramesResponseBodyFramesFacesFaceAttributes extends TeaModel {
+        @NameInMap("GlassesConfidence")
+        public Float glassesConfidence;
+
+        @NameInMap("Glasses")
+        public String glasses;
+
+        @NameInMap("Mask")
+        public String mask;
+
+        @NameInMap("BeardConfidence")
+        public Float beardConfidence;
+
+        @NameInMap("MaskConfidence")
+        public Float maskConfidence;
+
+        @NameInMap("Beard")
+        public String beard;
+
+        @NameInMap("FaceBoundary")
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary faceBoundary;
+
+        @NameInMap("HeadPose")
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose headPose;
+
+        public static ListVideoFramesResponseBodyFramesFacesFaceAttributes build(java.util.Map<String, ?> map) throws Exception {
+            ListVideoFramesResponseBodyFramesFacesFaceAttributes self = new ListVideoFramesResponseBodyFramesFacesFaceAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setGlassesConfidence(Float glassesConfidence) {
+            this.glassesConfidence = glassesConfidence;
+            return this;
+        }
+        public Float getGlassesConfidence() {
+            return this.glassesConfidence;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setGlasses(String glasses) {
+            this.glasses = glasses;
+            return this;
+        }
+        public String getGlasses() {
+            return this.glasses;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setMask(String mask) {
+            this.mask = mask;
+            return this;
+        }
+        public String getMask() {
+            return this.mask;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setBeardConfidence(Float beardConfidence) {
+            this.beardConfidence = beardConfidence;
+            return this;
+        }
+        public Float getBeardConfidence() {
+            return this.beardConfidence;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setMaskConfidence(Float maskConfidence) {
+            this.maskConfidence = maskConfidence;
+            return this;
+        }
+        public Float getMaskConfidence() {
+            return this.maskConfidence;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setBeard(String beard) {
+            this.beard = beard;
+            return this;
+        }
+        public String getBeard() {
+            return this.beard;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setFaceBoundary(ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary faceBoundary) {
+            this.faceBoundary = faceBoundary;
+            return this;
+        }
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesFaceBoundary getFaceBoundary() {
+            return this.faceBoundary;
+        }
+
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes setHeadPose(ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose headPose) {
+            this.headPose = headPose;
+            return this;
+        }
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributesHeadPose getHeadPose() {
+            return this.headPose;
+        }
+
+    }
+
     public static class ListVideoFramesResponseBodyFramesFaces extends TeaModel {
+        @NameInMap("EmotionConfidence")
+        public Float emotionConfidence;
+
+        @NameInMap("Attractive")
+        public Float attractive;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
         @NameInMap("Gender")
         public String gender;
 
@@ -492,9 +356,6 @@ public class ListVideoFramesResponseBody extends TeaModel {
 
         @NameInMap("GenderConfidence")
         public Float genderConfidence;
-
-        @NameInMap("FaceAttributes")
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes faceAttributes;
 
         @NameInMap("FaceQuality")
         public Float faceQuality;
@@ -508,21 +369,39 @@ public class ListVideoFramesResponseBody extends TeaModel {
         @NameInMap("FaceConfidence")
         public Float faceConfidence;
 
-        @NameInMap("EmotionConfidence")
-        public Float emotionConfidence;
-
-        @NameInMap("Attractive")
-        public Float attractive;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
         @NameInMap("EmotionDetails")
         public ListVideoFramesResponseBodyFramesFacesEmotionDetails emotionDetails;
+
+        @NameInMap("FaceAttributes")
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes faceAttributes;
 
         public static ListVideoFramesResponseBodyFramesFaces build(java.util.Map<String, ?> map) throws Exception {
             ListVideoFramesResponseBodyFramesFaces self = new ListVideoFramesResponseBodyFramesFaces();
             return TeaModel.build(map, self);
+        }
+
+        public ListVideoFramesResponseBodyFramesFaces setEmotionConfidence(Float emotionConfidence) {
+            this.emotionConfidence = emotionConfidence;
+            return this;
+        }
+        public Float getEmotionConfidence() {
+            return this.emotionConfidence;
+        }
+
+        public ListVideoFramesResponseBodyFramesFaces setAttractive(Float attractive) {
+            this.attractive = attractive;
+            return this;
+        }
+        public Float getAttractive() {
+            return this.attractive;
+        }
+
+        public ListVideoFramesResponseBodyFramesFaces setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
         }
 
         public ListVideoFramesResponseBodyFramesFaces setGender(String gender) {
@@ -547,14 +426,6 @@ public class ListVideoFramesResponseBody extends TeaModel {
         }
         public Float getGenderConfidence() {
             return this.genderConfidence;
-        }
-
-        public ListVideoFramesResponseBodyFramesFaces setFaceAttributes(ListVideoFramesResponseBodyFramesFacesFaceAttributes faceAttributes) {
-            this.faceAttributes = faceAttributes;
-            return this;
-        }
-        public ListVideoFramesResponseBodyFramesFacesFaceAttributes getFaceAttributes() {
-            return this.faceAttributes;
         }
 
         public ListVideoFramesResponseBodyFramesFaces setFaceQuality(Float faceQuality) {
@@ -589,36 +460,165 @@ public class ListVideoFramesResponseBody extends TeaModel {
             return this.faceConfidence;
         }
 
-        public ListVideoFramesResponseBodyFramesFaces setEmotionConfidence(Float emotionConfidence) {
-            this.emotionConfidence = emotionConfidence;
-            return this;
-        }
-        public Float getEmotionConfidence() {
-            return this.emotionConfidence;
-        }
-
-        public ListVideoFramesResponseBodyFramesFaces setAttractive(Float attractive) {
-            this.attractive = attractive;
-            return this;
-        }
-        public Float getAttractive() {
-            return this.attractive;
-        }
-
-        public ListVideoFramesResponseBodyFramesFaces setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
         public ListVideoFramesResponseBodyFramesFaces setEmotionDetails(ListVideoFramesResponseBodyFramesFacesEmotionDetails emotionDetails) {
             this.emotionDetails = emotionDetails;
             return this;
         }
         public ListVideoFramesResponseBodyFramesFacesEmotionDetails getEmotionDetails() {
             return this.emotionDetails;
+        }
+
+        public ListVideoFramesResponseBodyFramesFaces setFaceAttributes(ListVideoFramesResponseBodyFramesFacesFaceAttributes faceAttributes) {
+            this.faceAttributes = faceAttributes;
+            return this;
+        }
+        public ListVideoFramesResponseBodyFramesFacesFaceAttributes getFaceAttributes() {
+            return this.faceAttributes;
+        }
+
+    }
+
+    public static class ListVideoFramesResponseBodyFramesTags extends TeaModel {
+        @NameInMap("TagLevel")
+        public Integer tagLevel;
+
+        @NameInMap("ParentTagName")
+        public String parentTagName;
+
+        @NameInMap("TagConfidence")
+        public Float tagConfidence;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static ListVideoFramesResponseBodyFramesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListVideoFramesResponseBodyFramesTags self = new ListVideoFramesResponseBodyFramesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVideoFramesResponseBodyFramesTags setTagLevel(Integer tagLevel) {
+            this.tagLevel = tagLevel;
+            return this;
+        }
+        public Integer getTagLevel() {
+            return this.tagLevel;
+        }
+
+        public ListVideoFramesResponseBodyFramesTags setParentTagName(String parentTagName) {
+            this.parentTagName = parentTagName;
+            return this;
+        }
+        public String getParentTagName() {
+            return this.parentTagName;
+        }
+
+        public ListVideoFramesResponseBodyFramesTags setTagConfidence(Float tagConfidence) {
+            this.tagConfidence = tagConfidence;
+            return this;
+        }
+        public Float getTagConfidence() {
+            return this.tagConfidence;
+        }
+
+        public ListVideoFramesResponseBodyFramesTags setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+    }
+
+    public static class ListVideoFramesResponseBodyFramesOCROCRBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
+        @NameInMap("Top")
+        public Integer top;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        @NameInMap("Height")
+        public Integer height;
+
+        public static ListVideoFramesResponseBodyFramesOCROCRBoundary build(java.util.Map<String, ?> map) throws Exception {
+            ListVideoFramesResponseBodyFramesOCROCRBoundary self = new ListVideoFramesResponseBodyFramesOCROCRBoundary();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVideoFramesResponseBodyFramesOCROCRBoundary setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
+        }
+
+        public ListVideoFramesResponseBodyFramesOCROCRBoundary setTop(Integer top) {
+            this.top = top;
+            return this;
+        }
+        public Integer getTop() {
+            return this.top;
+        }
+
+        public ListVideoFramesResponseBodyFramesOCROCRBoundary setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public ListVideoFramesResponseBodyFramesOCROCRBoundary setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+    }
+
+    public static class ListVideoFramesResponseBodyFramesOCR extends TeaModel {
+        @NameInMap("OCRConfidence")
+        public Float OCRConfidence;
+
+        @NameInMap("OCRContents")
+        public String OCRContents;
+
+        @NameInMap("OCRBoundary")
+        public ListVideoFramesResponseBodyFramesOCROCRBoundary OCRBoundary;
+
+        public static ListVideoFramesResponseBodyFramesOCR build(java.util.Map<String, ?> map) throws Exception {
+            ListVideoFramesResponseBodyFramesOCR self = new ListVideoFramesResponseBodyFramesOCR();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVideoFramesResponseBodyFramesOCR setOCRConfidence(Float OCRConfidence) {
+            this.OCRConfidence = OCRConfidence;
+            return this;
+        }
+        public Float getOCRConfidence() {
+            return this.OCRConfidence;
+        }
+
+        public ListVideoFramesResponseBodyFramesOCR setOCRContents(String OCRContents) {
+            this.OCRContents = OCRContents;
+            return this;
+        }
+        public String getOCRContents() {
+            return this.OCRContents;
+        }
+
+        public ListVideoFramesResponseBodyFramesOCR setOCRBoundary(ListVideoFramesResponseBodyFramesOCROCRBoundary OCRBoundary) {
+            this.OCRBoundary = OCRBoundary;
+            return this;
+        }
+        public ListVideoFramesResponseBodyFramesOCROCRBoundary getOCRBoundary() {
+            return this.OCRBoundary;
         }
 
     }
@@ -639,9 +639,6 @@ public class ListVideoFramesResponseBody extends TeaModel {
         @NameInMap("FacesFailReason")
         public String facesFailReason;
 
-        @NameInMap("Tags")
-        public java.util.List<ListVideoFramesResponseBodyFramesTags> tags;
-
         @NameInMap("FacesModifyTime")
         public String facesModifyTime;
 
@@ -650,9 +647,6 @@ public class ListVideoFramesResponseBody extends TeaModel {
 
         @NameInMap("OCRModifyTime")
         public String OCRModifyTime;
-
-        @NameInMap("OCR")
-        public java.util.List<ListVideoFramesResponseBodyFramesOCR> OCR;
 
         @NameInMap("FacesStatus")
         public String facesStatus;
@@ -666,17 +660,14 @@ public class ListVideoFramesResponseBody extends TeaModel {
         @NameInMap("SourceUri")
         public String sourceUri;
 
-        @NameInMap("FileSize")
-        public Integer fileSize;
-
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        @NameInMap("FileSize")
+        public Integer fileSize;
+
         @NameInMap("SourcePosition")
         public String sourcePosition;
-
-        @NameInMap("Faces")
-        public java.util.List<ListVideoFramesResponseBodyFramesFaces> faces;
 
         @NameInMap("OCRFailReason")
         public String OCRFailReason;
@@ -716,6 +707,15 @@ public class ListVideoFramesResponseBody extends TeaModel {
 
         @NameInMap("RemarksB")
         public String remarksB;
+
+        @NameInMap("Faces")
+        public java.util.List<ListVideoFramesResponseBodyFramesFaces> faces;
+
+        @NameInMap("Tags")
+        public java.util.List<ListVideoFramesResponseBodyFramesTags> tags;
+
+        @NameInMap("OCR")
+        public java.util.List<ListVideoFramesResponseBodyFramesOCR> OCR;
 
         public static ListVideoFramesResponseBodyFrames build(java.util.Map<String, ?> map) throws Exception {
             ListVideoFramesResponseBodyFrames self = new ListVideoFramesResponseBodyFrames();
@@ -762,14 +762,6 @@ public class ListVideoFramesResponseBody extends TeaModel {
             return this.facesFailReason;
         }
 
-        public ListVideoFramesResponseBodyFrames setTags(java.util.List<ListVideoFramesResponseBodyFramesTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListVideoFramesResponseBodyFramesTags> getTags() {
-            return this.tags;
-        }
-
         public ListVideoFramesResponseBodyFrames setFacesModifyTime(String facesModifyTime) {
             this.facesModifyTime = facesModifyTime;
             return this;
@@ -792,14 +784,6 @@ public class ListVideoFramesResponseBody extends TeaModel {
         }
         public String getOCRModifyTime() {
             return this.OCRModifyTime;
-        }
-
-        public ListVideoFramesResponseBodyFrames setOCR(java.util.List<ListVideoFramesResponseBodyFramesOCR> OCR) {
-            this.OCR = OCR;
-            return this;
-        }
-        public java.util.List<ListVideoFramesResponseBodyFramesOCR> getOCR() {
-            return this.OCR;
         }
 
         public ListVideoFramesResponseBodyFrames setFacesStatus(String facesStatus) {
@@ -834,14 +818,6 @@ public class ListVideoFramesResponseBody extends TeaModel {
             return this.sourceUri;
         }
 
-        public ListVideoFramesResponseBodyFrames setFileSize(Integer fileSize) {
-            this.fileSize = fileSize;
-            return this;
-        }
-        public Integer getFileSize() {
-            return this.fileSize;
-        }
-
         public ListVideoFramesResponseBodyFrames setModifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
             return this;
@@ -850,20 +826,20 @@ public class ListVideoFramesResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
+        public ListVideoFramesResponseBodyFrames setFileSize(Integer fileSize) {
+            this.fileSize = fileSize;
+            return this;
+        }
+        public Integer getFileSize() {
+            return this.fileSize;
+        }
+
         public ListVideoFramesResponseBodyFrames setSourcePosition(String sourcePosition) {
             this.sourcePosition = sourcePosition;
             return this;
         }
         public String getSourcePosition() {
             return this.sourcePosition;
-        }
-
-        public ListVideoFramesResponseBodyFrames setFaces(java.util.List<ListVideoFramesResponseBodyFramesFaces> faces) {
-            this.faces = faces;
-            return this;
-        }
-        public java.util.List<ListVideoFramesResponseBodyFramesFaces> getFaces() {
-            return this.faces;
         }
 
         public ListVideoFramesResponseBodyFrames setOCRFailReason(String OCRFailReason) {
@@ -968,6 +944,30 @@ public class ListVideoFramesResponseBody extends TeaModel {
         }
         public String getRemarksB() {
             return this.remarksB;
+        }
+
+        public ListVideoFramesResponseBodyFrames setFaces(java.util.List<ListVideoFramesResponseBodyFramesFaces> faces) {
+            this.faces = faces;
+            return this;
+        }
+        public java.util.List<ListVideoFramesResponseBodyFramesFaces> getFaces() {
+            return this.faces;
+        }
+
+        public ListVideoFramesResponseBodyFrames setTags(java.util.List<ListVideoFramesResponseBodyFramesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListVideoFramesResponseBodyFramesTags> getTags() {
+            return this.tags;
+        }
+
+        public ListVideoFramesResponseBodyFrames setOCR(java.util.List<ListVideoFramesResponseBodyFramesOCR> OCR) {
+            this.OCR = OCR;
+            return this;
+        }
+        public java.util.List<ListVideoFramesResponseBodyFramesOCR> getOCR() {
+            return this.OCR;
         }
 
     }

@@ -4,18 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListSetsResponseBody extends TeaModel {
+    @NameInMap("NextMarker")
+    public String nextMarker;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Sets")
     public java.util.List<ListSetsResponseBodySets> sets;
 
-    @NameInMap("NextMarker")
-    public String nextMarker;
-
     public static ListSetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSetsResponseBody self = new ListSetsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSetsResponseBody setNextMarker(String nextMarker) {
+        this.nextMarker = nextMarker;
+        return this;
+    }
+    public String getNextMarker() {
+        return this.nextMarker;
     }
 
     public ListSetsResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class ListSetsResponseBody extends TeaModel {
     }
     public java.util.List<ListSetsResponseBodySets> getSets() {
         return this.sets;
-    }
-
-    public ListSetsResponseBody setNextMarker(String nextMarker) {
-        this.nextMarker = nextMarker;
-        return this;
-    }
-    public String getNextMarker() {
-        return this.nextMarker;
     }
 
     public static class ListSetsResponseBodySets extends TeaModel {

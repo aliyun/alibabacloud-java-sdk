@@ -37,9 +37,6 @@ public class IndexImageRequest extends TeaModel {
     @NameInMap("ExternalId")
     public String externalId;
 
-    @NameInMap("RealUid")
-    public String realUid;
-
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
 
@@ -143,14 +140,6 @@ public class IndexImageRequest extends TeaModel {
     }
     public String getExternalId() {
         return this.externalId;
-    }
-
-    public IndexImageRequest setRealUid(String realUid) {
-        this.realUid = realUid;
-        return this;
-    }
-    public String getRealUid() {
-        return this.realUid;
     }
 
     public IndexImageRequest setNotifyEndpoint(String notifyEndpoint) {

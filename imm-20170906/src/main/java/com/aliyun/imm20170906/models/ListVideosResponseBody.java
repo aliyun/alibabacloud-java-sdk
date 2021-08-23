@@ -54,37 +54,21 @@ public class ListVideosResponseBody extends TeaModel {
     }
 
     public static class ListVideosResponseBodyVideosVideoTags extends TeaModel {
-        @NameInMap("TagName")
-        public String tagName;
-
-        @NameInMap("TagConfidence")
-        public Float tagConfidence;
-
         @NameInMap("TagLevel")
         public Integer tagLevel;
 
         @NameInMap("ParentTagName")
         public String parentTagName;
 
+        @NameInMap("TagName")
+        public String tagName;
+
+        @NameInMap("TagConfidence")
+        public Float tagConfidence;
+
         public static ListVideosResponseBodyVideosVideoTags build(java.util.Map<String, ?> map) throws Exception {
             ListVideosResponseBodyVideosVideoTags self = new ListVideosResponseBodyVideosVideoTags();
             return TeaModel.build(map, self);
-        }
-
-        public ListVideosResponseBodyVideosVideoTags setTagName(String tagName) {
-            this.tagName = tagName;
-            return this;
-        }
-        public String getTagName() {
-            return this.tagName;
-        }
-
-        public ListVideosResponseBodyVideosVideoTags setTagConfidence(Float tagConfidence) {
-            this.tagConfidence = tagConfidence;
-            return this;
-        }
-        public Float getTagConfidence() {
-            return this.tagConfidence;
         }
 
         public ListVideosResponseBodyVideosVideoTags setTagLevel(Integer tagLevel) {
@@ -101,6 +85,22 @@ public class ListVideosResponseBody extends TeaModel {
         }
         public String getParentTagName() {
             return this.parentTagName;
+        }
+
+        public ListVideosResponseBodyVideosVideoTags setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public ListVideosResponseBodyVideosVideoTags setTagConfidence(Float tagConfidence) {
+            this.tagConfidence = tagConfidence;
+            return this;
+        }
+        public Float getTagConfidence() {
+            return this.tagConfidence;
         }
 
     }
@@ -121,9 +121,6 @@ public class ListVideosResponseBody extends TeaModel {
         @NameInMap("VideoDuration")
         public Float videoDuration;
 
-        @NameInMap("VideoTags")
-        public java.util.List<ListVideosResponseBodyVideosVideoTags> videoTags;
-
         @NameInMap("ProcessModifyTime")
         public String processModifyTime;
 
@@ -139,11 +136,11 @@ public class ListVideosResponseBody extends TeaModel {
         @NameInMap("SourceUri")
         public String sourceUri;
 
-        @NameInMap("FileSize")
-        public Integer fileSize;
-
         @NameInMap("ModifyTime")
         public String modifyTime;
+
+        @NameInMap("FileSize")
+        public Integer fileSize;
 
         @NameInMap("SourcePosition")
         public String sourcePosition;
@@ -151,11 +148,11 @@ public class ListVideosResponseBody extends TeaModel {
         @NameInMap("VideoWidth")
         public Integer videoWidth;
 
-        @NameInMap("VideoFormat")
-        public String videoFormat;
-
         @NameInMap("VideoHeight")
         public Integer videoHeight;
+
+        @NameInMap("VideoFormat")
+        public String videoFormat;
 
         @NameInMap("RemarksD")
         public String remarksD;
@@ -163,11 +160,11 @@ public class ListVideosResponseBody extends TeaModel {
         @NameInMap("VideoUri")
         public String videoUri;
 
-        @NameInMap("ProcessFailReason")
-        public String processFailReason;
-
         @NameInMap("VideoTagsModifyTime")
         public String videoTagsModifyTime;
+
+        @NameInMap("ProcessFailReason")
+        public String processFailReason;
 
         @NameInMap("RemarksA")
         public String remarksA;
@@ -177,6 +174,9 @@ public class ListVideosResponseBody extends TeaModel {
 
         @NameInMap("RemarksB")
         public String remarksB;
+
+        @NameInMap("VideoTags")
+        public java.util.List<ListVideosResponseBodyVideosVideoTags> videoTags;
 
         public static ListVideosResponseBodyVideos build(java.util.Map<String, ?> map) throws Exception {
             ListVideosResponseBodyVideos self = new ListVideosResponseBodyVideos();
@@ -223,14 +223,6 @@ public class ListVideosResponseBody extends TeaModel {
             return this.videoDuration;
         }
 
-        public ListVideosResponseBodyVideos setVideoTags(java.util.List<ListVideosResponseBodyVideosVideoTags> videoTags) {
-            this.videoTags = videoTags;
-            return this;
-        }
-        public java.util.List<ListVideosResponseBodyVideosVideoTags> getVideoTags() {
-            return this.videoTags;
-        }
-
         public ListVideosResponseBodyVideos setProcessModifyTime(String processModifyTime) {
             this.processModifyTime = processModifyTime;
             return this;
@@ -271,20 +263,20 @@ public class ListVideosResponseBody extends TeaModel {
             return this.sourceUri;
         }
 
-        public ListVideosResponseBodyVideos setFileSize(Integer fileSize) {
-            this.fileSize = fileSize;
-            return this;
-        }
-        public Integer getFileSize() {
-            return this.fileSize;
-        }
-
         public ListVideosResponseBodyVideos setModifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
             return this;
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public ListVideosResponseBodyVideos setFileSize(Integer fileSize) {
+            this.fileSize = fileSize;
+            return this;
+        }
+        public Integer getFileSize() {
+            return this.fileSize;
         }
 
         public ListVideosResponseBodyVideos setSourcePosition(String sourcePosition) {
@@ -303,20 +295,20 @@ public class ListVideosResponseBody extends TeaModel {
             return this.videoWidth;
         }
 
-        public ListVideosResponseBodyVideos setVideoFormat(String videoFormat) {
-            this.videoFormat = videoFormat;
-            return this;
-        }
-        public String getVideoFormat() {
-            return this.videoFormat;
-        }
-
         public ListVideosResponseBodyVideos setVideoHeight(Integer videoHeight) {
             this.videoHeight = videoHeight;
             return this;
         }
         public Integer getVideoHeight() {
             return this.videoHeight;
+        }
+
+        public ListVideosResponseBodyVideos setVideoFormat(String videoFormat) {
+            this.videoFormat = videoFormat;
+            return this;
+        }
+        public String getVideoFormat() {
+            return this.videoFormat;
         }
 
         public ListVideosResponseBodyVideos setRemarksD(String remarksD) {
@@ -335,20 +327,20 @@ public class ListVideosResponseBody extends TeaModel {
             return this.videoUri;
         }
 
-        public ListVideosResponseBodyVideos setProcessFailReason(String processFailReason) {
-            this.processFailReason = processFailReason;
-            return this;
-        }
-        public String getProcessFailReason() {
-            return this.processFailReason;
-        }
-
         public ListVideosResponseBodyVideos setVideoTagsModifyTime(String videoTagsModifyTime) {
             this.videoTagsModifyTime = videoTagsModifyTime;
             return this;
         }
         public String getVideoTagsModifyTime() {
             return this.videoTagsModifyTime;
+        }
+
+        public ListVideosResponseBodyVideos setProcessFailReason(String processFailReason) {
+            this.processFailReason = processFailReason;
+            return this;
+        }
+        public String getProcessFailReason() {
+            return this.processFailReason;
         }
 
         public ListVideosResponseBodyVideos setRemarksA(String remarksA) {
@@ -373,6 +365,14 @@ public class ListVideosResponseBody extends TeaModel {
         }
         public String getRemarksB() {
             return this.remarksB;
+        }
+
+        public ListVideosResponseBodyVideos setVideoTags(java.util.List<ListVideosResponseBodyVideosVideoTags> videoTags) {
+            this.videoTags = videoTags;
+            return this;
+        }
+        public java.util.List<ListVideosResponseBodyVideosVideoTags> getVideoTags() {
+            return this.videoTags;
         }
 
     }

@@ -65,6 +65,9 @@ public class CompareImageFacesResponseBody extends TeaModel {
     }
 
     public static class CompareImageFacesResponseBodyFaceAFaceAttributesFaceBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
         @NameInMap("Top")
         public Integer top;
 
@@ -74,12 +77,17 @@ public class CompareImageFacesResponseBody extends TeaModel {
         @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("Left")
-        public Integer left;
-
         public static CompareImageFacesResponseBodyFaceAFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
             CompareImageFacesResponseBodyFaceAFaceAttributesFaceBoundary self = new CompareImageFacesResponseBodyFaceAFaceAttributesFaceBoundary();
             return TeaModel.build(map, self);
+        }
+
+        public CompareImageFacesResponseBodyFaceAFaceAttributesFaceBoundary setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
         }
 
         public CompareImageFacesResponseBodyFaceAFaceAttributesFaceBoundary setTop(Integer top) {
@@ -104,14 +112,6 @@ public class CompareImageFacesResponseBody extends TeaModel {
         }
         public Integer getHeight() {
             return this.height;
-        }
-
-        public CompareImageFacesResponseBodyFaceAFaceAttributesFaceBoundary setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
         }
 
     }
@@ -166,6 +166,9 @@ public class CompareImageFacesResponseBody extends TeaModel {
     }
 
     public static class CompareImageFacesResponseBodyFaceBFaceAttributesFaceBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
         @NameInMap("Top")
         public Integer top;
 
@@ -175,12 +178,17 @@ public class CompareImageFacesResponseBody extends TeaModel {
         @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("Left")
-        public Integer left;
-
         public static CompareImageFacesResponseBodyFaceBFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
             CompareImageFacesResponseBodyFaceBFaceAttributesFaceBoundary self = new CompareImageFacesResponseBodyFaceBFaceAttributesFaceBoundary();
             return TeaModel.build(map, self);
+        }
+
+        public CompareImageFacesResponseBodyFaceBFaceAttributesFaceBoundary setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
         }
 
         public CompareImageFacesResponseBodyFaceBFaceAttributesFaceBoundary setTop(Integer top) {
@@ -205,14 +213,6 @@ public class CompareImageFacesResponseBody extends TeaModel {
         }
         public Integer getHeight() {
             return this.height;
-        }
-
-        public CompareImageFacesResponseBodyFaceBFaceAttributesFaceBoundary setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
         }
 
     }

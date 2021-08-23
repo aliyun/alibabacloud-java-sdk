@@ -4,9 +4,6 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class UpdateSetResponseBody extends TeaModel {
-    @NameInMap("ModifyTime")
-    public String modifyTime;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,20 +13,15 @@ public class UpdateSetResponseBody extends TeaModel {
     @NameInMap("SetName")
     public String setName;
 
+    @NameInMap("ModifyTime")
+    public String modifyTime;
+
     @NameInMap("SetId")
     public String setId;
 
     public static UpdateSetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateSetResponseBody self = new UpdateSetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateSetResponseBody setModifyTime(String modifyTime) {
-        this.modifyTime = modifyTime;
-        return this;
-    }
-    public String getModifyTime() {
-        return this.modifyTime;
     }
 
     public UpdateSetResponseBody setRequestId(String requestId) {
@@ -54,6 +46,14 @@ public class UpdateSetResponseBody extends TeaModel {
     }
     public String getSetName() {
         return this.setName;
+    }
+
+    public UpdateSetResponseBody setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
+        return this;
+    }
+    public String getModifyTime() {
+        return this.modifyTime;
     }
 
     public UpdateSetResponseBody setSetId(String setId) {

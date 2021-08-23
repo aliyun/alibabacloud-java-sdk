@@ -7,11 +7,11 @@ public class DecodeBlindWatermarkResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Content")
-    public String content;
-
     @NameInMap("TargetUri")
     public String targetUri;
+
+    @NameInMap("Content")
+    public String content;
 
     public static DecodeBlindWatermarkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DecodeBlindWatermarkResponseBody self = new DecodeBlindWatermarkResponseBody();
@@ -26,20 +26,20 @@ public class DecodeBlindWatermarkResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DecodeBlindWatermarkResponseBody setContent(String content) {
-        this.content = content;
-        return this;
-    }
-    public String getContent() {
-        return this.content;
-    }
-
     public DecodeBlindWatermarkResponseBody setTargetUri(String targetUri) {
         this.targetUri = targetUri;
         return this;
     }
     public String getTargetUri() {
         return this.targetUri;
+    }
+
+    public DecodeBlindWatermarkResponseBody setContent(String content) {
+        this.content = content;
+        return this;
+    }
+    public String getContent() {
+        return this.content;
     }
 
 }

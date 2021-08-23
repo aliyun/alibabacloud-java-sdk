@@ -4,11 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class DetectImageTagsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ImageUri")
     public String imageUri;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Tags")
     public java.util.List<DetectImageTagsResponseBodyTags> tags;
@@ -18,20 +18,20 @@ public class DetectImageTagsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetectImageTagsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DetectImageTagsResponseBody setImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     public String getImageUri() {
         return this.imageUri;
+    }
+
+    public DetectImageTagsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DetectImageTagsResponseBody setTags(java.util.List<DetectImageTagsResponseBodyTags> tags) {

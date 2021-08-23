@@ -4,11 +4,14 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class RefreshWebofficeTokenResponseBody extends TeaModel {
-    @NameInMap("RefreshToken")
-    public String refreshToken;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("AccessTokenExpiredTime")
+    public String accessTokenExpiredTime;
+
+    @NameInMap("RefreshToken")
+    public String refreshToken;
 
     @NameInMap("AccessToken")
     public String accessToken;
@@ -16,20 +19,9 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
     @NameInMap("RefreshTokenExpiredTime")
     public String refreshTokenExpiredTime;
 
-    @NameInMap("AccessTokenExpiredTime")
-    public String accessTokenExpiredTime;
-
     public static RefreshWebofficeTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RefreshWebofficeTokenResponseBody self = new RefreshWebofficeTokenResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RefreshWebofficeTokenResponseBody setRefreshToken(String refreshToken) {
-        this.refreshToken = refreshToken;
-        return this;
-    }
-    public String getRefreshToken() {
-        return this.refreshToken;
     }
 
     public RefreshWebofficeTokenResponseBody setRequestId(String requestId) {
@@ -38,6 +30,22 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RefreshWebofficeTokenResponseBody setAccessTokenExpiredTime(String accessTokenExpiredTime) {
+        this.accessTokenExpiredTime = accessTokenExpiredTime;
+        return this;
+    }
+    public String getAccessTokenExpiredTime() {
+        return this.accessTokenExpiredTime;
+    }
+
+    public RefreshWebofficeTokenResponseBody setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+        return this;
+    }
+    public String getRefreshToken() {
+        return this.refreshToken;
     }
 
     public RefreshWebofficeTokenResponseBody setAccessToken(String accessToken) {
@@ -54,14 +62,6 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
     }
     public String getRefreshTokenExpiredTime() {
         return this.refreshTokenExpiredTime;
-    }
-
-    public RefreshWebofficeTokenResponseBody setAccessTokenExpiredTime(String accessTokenExpiredTime) {
-        this.accessTokenExpiredTime = accessTokenExpiredTime;
-        return this;
-    }
-    public String getAccessTokenExpiredTime() {
-        return this.accessTokenExpiredTime;
     }
 
 }

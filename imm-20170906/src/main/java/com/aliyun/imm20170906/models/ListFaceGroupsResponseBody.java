@@ -95,26 +95,27 @@ public class ListFaceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace extends TeaModel {
-        @NameInMap("ImageUri")
-        public String imageUri;
-
         @NameInMap("FaceId")
         public String faceId;
+
+        @NameInMap("ImageUri")
+        public String imageUri;
 
         @NameInMap("FaceBoundary")
         public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFaceFaceBoundary faceBoundary;
 
+        @NameInMap("ExternalId")
+        public String externalId;
+
+        @NameInMap("ImageHeight")
+        public Long imageHeight;
+
+        @NameInMap("ImageWidth")
+        public Long imageWidth;
+
         public static ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace build(java.util.Map<String, ?> map) throws Exception {
             ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace self = new ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace();
             return TeaModel.build(map, self);
-        }
-
-        public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace setImageUri(String imageUri) {
-            this.imageUri = imageUri;
-            return this;
-        }
-        public String getImageUri() {
-            return this.imageUri;
         }
 
         public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace setFaceId(String faceId) {
@@ -125,12 +126,44 @@ public class ListFaceGroupsResponseBody extends TeaModel {
             return this.faceId;
         }
 
+        public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace setImageUri(String imageUri) {
+            this.imageUri = imageUri;
+            return this;
+        }
+        public String getImageUri() {
+            return this.imageUri;
+        }
+
         public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace setFaceBoundary(ListFaceGroupsResponseBodyFaceGroupsGroupCoverFaceFaceBoundary faceBoundary) {
             this.faceBoundary = faceBoundary;
             return this;
         }
         public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFaceFaceBoundary getFaceBoundary() {
             return this.faceBoundary;
+        }
+
+        public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace setExternalId(String externalId) {
+            this.externalId = externalId;
+            return this;
+        }
+        public String getExternalId() {
+            return this.externalId;
+        }
+
+        public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace setImageHeight(Long imageHeight) {
+            this.imageHeight = imageHeight;
+            return this;
+        }
+        public Long getImageHeight() {
+            return this.imageHeight;
+        }
+
+        public ListFaceGroupsResponseBodyFaceGroupsGroupCoverFace setImageWidth(Long imageWidth) {
+            this.imageWidth = imageWidth;
+            return this;
+        }
+        public Long getImageWidth() {
+            return this.imageWidth;
         }
 
     }

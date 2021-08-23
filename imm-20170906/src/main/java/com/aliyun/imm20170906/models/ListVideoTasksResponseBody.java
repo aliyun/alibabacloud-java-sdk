@@ -4,26 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListVideoTasksResponseBody extends TeaModel {
-    @NameInMap("Tasks")
-    public java.util.List<ListVideoTasksResponseBodyTasks> tasks;
+    @NameInMap("NextMarker")
+    public String nextMarker;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("NextMarker")
-    public String nextMarker;
+    @NameInMap("Tasks")
+    public java.util.List<ListVideoTasksResponseBodyTasks> tasks;
 
     public static ListVideoTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVideoTasksResponseBody self = new ListVideoTasksResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListVideoTasksResponseBody setTasks(java.util.List<ListVideoTasksResponseBodyTasks> tasks) {
-        this.tasks = tasks;
+    public ListVideoTasksResponseBody setNextMarker(String nextMarker) {
+        this.nextMarker = nextMarker;
         return this;
     }
-    public java.util.List<ListVideoTasksResponseBodyTasks> getTasks() {
-        return this.tasks;
+    public String getNextMarker() {
+        return this.nextMarker;
     }
 
     public ListVideoTasksResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class ListVideoTasksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListVideoTasksResponseBody setNextMarker(String nextMarker) {
-        this.nextMarker = nextMarker;
+    public ListVideoTasksResponseBody setTasks(java.util.List<ListVideoTasksResponseBodyTasks> tasks) {
+        this.tasks = tasks;
         return this;
     }
-    public String getNextMarker() {
-        return this.nextMarker;
+    public java.util.List<ListVideoTasksResponseBodyTasks> getTasks() {
+        return this.tasks;
     }
 
     public static class ListVideoTasksResponseBodyTasks extends TeaModel {

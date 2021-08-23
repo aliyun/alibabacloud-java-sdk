@@ -31,7 +31,10 @@ public class FindSimilarFacesResponseBody extends TeaModel {
         return this.faces;
     }
 
-    public static class FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary extends TeaModel {
+    public static class FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
         @NameInMap("Top")
         public Integer top;
 
@@ -41,83 +44,17 @@ public class FindSimilarFacesResponseBody extends TeaModel {
         @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("Left")
-        public Integer left;
-
-        public static FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
-            FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary self = new FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary();
+        public static FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
+            FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary self = new FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary();
             return TeaModel.build(map, self);
         }
 
-        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary setTop(Integer top) {
-            this.top = top;
-            return this;
-        }
-        public Integer getTop() {
-            return this.top;
-        }
-
-        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
-        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
-        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary setLeft(Integer left) {
+        public FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary setLeft(Integer left) {
             this.left = left;
             return this;
         }
         public Integer getLeft() {
             return this.left;
-        }
-
-    }
-
-    public static class FindSimilarFacesResponseBodyFacesFaceAttributes extends TeaModel {
-        @NameInMap("FaceBoundary")
-        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary faceBoundary;
-
-        public static FindSimilarFacesResponseBodyFacesFaceAttributes build(java.util.Map<String, ?> map) throws Exception {
-            FindSimilarFacesResponseBodyFacesFaceAttributes self = new FindSimilarFacesResponseBodyFacesFaceAttributes();
-            return TeaModel.build(map, self);
-        }
-
-        public FindSimilarFacesResponseBodyFacesFaceAttributes setFaceBoundary(FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary faceBoundary) {
-            this.faceBoundary = faceBoundary;
-            return this;
-        }
-        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary getFaceBoundary() {
-            return this.faceBoundary;
-        }
-
-    }
-
-    public static class FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary extends TeaModel {
-        @NameInMap("Top")
-        public Integer top;
-
-        @NameInMap("Width")
-        public Integer width;
-
-        @NameInMap("Height")
-        public Integer height;
-
-        @NameInMap("Left")
-        public Integer left;
-
-        public static FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
-            FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary self = new FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary();
-            return TeaModel.build(map, self);
         }
 
         public FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary setTop(Integer top) {
@@ -144,14 +81,6 @@ public class FindSimilarFacesResponseBody extends TeaModel {
             return this.height;
         }
 
-        public FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributesFaceBoundary setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
-        }
-
     }
 
     public static class FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributes extends TeaModel {
@@ -174,24 +103,40 @@ public class FindSimilarFacesResponseBody extends TeaModel {
     }
 
     public static class FindSimilarFacesResponseBodyFacesSimilarFaces extends TeaModel {
+        @NameInMap("ExternalId")
+        public String externalId;
+
+        @NameInMap("Similarity")
+        public Float similarity;
+
         @NameInMap("FaceId")
         public String faceId;
 
         @NameInMap("ImageUri")
         public String imageUri;
 
-        @NameInMap("ExternalId")
-        public String externalId;
-
         @NameInMap("FaceAttributes")
         public FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributes faceAttributes;
-
-        @NameInMap("Similarity")
-        public Float similarity;
 
         public static FindSimilarFacesResponseBodyFacesSimilarFaces build(java.util.Map<String, ?> map) throws Exception {
             FindSimilarFacesResponseBodyFacesSimilarFaces self = new FindSimilarFacesResponseBodyFacesSimilarFaces();
             return TeaModel.build(map, self);
+        }
+
+        public FindSimilarFacesResponseBodyFacesSimilarFaces setExternalId(String externalId) {
+            this.externalId = externalId;
+            return this;
+        }
+        public String getExternalId() {
+            return this.externalId;
+        }
+
+        public FindSimilarFacesResponseBodyFacesSimilarFaces setSimilarity(Float similarity) {
+            this.similarity = similarity;
+            return this;
+        }
+        public Float getSimilarity() {
+            return this.similarity;
         }
 
         public FindSimilarFacesResponseBodyFacesSimilarFaces setFaceId(String faceId) {
@@ -210,14 +155,6 @@ public class FindSimilarFacesResponseBody extends TeaModel {
             return this.imageUri;
         }
 
-        public FindSimilarFacesResponseBodyFacesSimilarFaces setExternalId(String externalId) {
-            this.externalId = externalId;
-            return this;
-        }
-        public String getExternalId() {
-            return this.externalId;
-        }
-
         public FindSimilarFacesResponseBodyFacesSimilarFaces setFaceAttributes(FindSimilarFacesResponseBodyFacesSimilarFacesFaceAttributes faceAttributes) {
             this.faceAttributes = faceAttributes;
             return this;
@@ -226,38 +163,117 @@ public class FindSimilarFacesResponseBody extends TeaModel {
             return this.faceAttributes;
         }
 
-        public FindSimilarFacesResponseBodyFacesSimilarFaces setSimilarity(Float similarity) {
-            this.similarity = similarity;
+    }
+
+    public static class FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
+        @NameInMap("Top")
+        public Integer top;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        @NameInMap("Height")
+        public Integer height;
+
+        public static FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
+            FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary self = new FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary();
+            return TeaModel.build(map, self);
+        }
+
+        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary setLeft(Integer left) {
+            this.left = left;
             return this;
         }
-        public Float getSimilarity() {
-            return this.similarity;
+        public Integer getLeft() {
+            return this.left;
+        }
+
+        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary setTop(Integer top) {
+            this.top = top;
+            return this;
+        }
+        public Integer getTop() {
+            return this.top;
+        }
+
+        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+    }
+
+    public static class FindSimilarFacesResponseBodyFacesFaceAttributes extends TeaModel {
+        @NameInMap("FaceBoundary")
+        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary faceBoundary;
+
+        public static FindSimilarFacesResponseBodyFacesFaceAttributes build(java.util.Map<String, ?> map) throws Exception {
+            FindSimilarFacesResponseBodyFacesFaceAttributes self = new FindSimilarFacesResponseBodyFacesFaceAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public FindSimilarFacesResponseBodyFacesFaceAttributes setFaceBoundary(FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary faceBoundary) {
+            this.faceBoundary = faceBoundary;
+            return this;
+        }
+        public FindSimilarFacesResponseBodyFacesFaceAttributesFaceBoundary getFaceBoundary() {
+            return this.faceBoundary;
         }
 
     }
 
     public static class FindSimilarFacesResponseBodyFaces extends TeaModel {
+        @NameInMap("ExternalId")
+        public String externalId;
+
+        @NameInMap("Similarity")
+        public Float similarity;
+
         @NameInMap("FaceId")
         public String faceId;
 
         @NameInMap("ImageUri")
         public String imageUri;
 
-        @NameInMap("ExternalId")
-        public String externalId;
+        @NameInMap("SimilarFaces")
+        public java.util.List<FindSimilarFacesResponseBodyFacesSimilarFaces> similarFaces;
 
         @NameInMap("FaceAttributes")
         public FindSimilarFacesResponseBodyFacesFaceAttributes faceAttributes;
 
-        @NameInMap("Similarity")
-        public Float similarity;
-
-        @NameInMap("SimilarFaces")
-        public java.util.List<FindSimilarFacesResponseBodyFacesSimilarFaces> similarFaces;
-
         public static FindSimilarFacesResponseBodyFaces build(java.util.Map<String, ?> map) throws Exception {
             FindSimilarFacesResponseBodyFaces self = new FindSimilarFacesResponseBodyFaces();
             return TeaModel.build(map, self);
+        }
+
+        public FindSimilarFacesResponseBodyFaces setExternalId(String externalId) {
+            this.externalId = externalId;
+            return this;
+        }
+        public String getExternalId() {
+            return this.externalId;
+        }
+
+        public FindSimilarFacesResponseBodyFaces setSimilarity(Float similarity) {
+            this.similarity = similarity;
+            return this;
+        }
+        public Float getSimilarity() {
+            return this.similarity;
         }
 
         public FindSimilarFacesResponseBodyFaces setFaceId(String faceId) {
@@ -276,12 +292,12 @@ public class FindSimilarFacesResponseBody extends TeaModel {
             return this.imageUri;
         }
 
-        public FindSimilarFacesResponseBodyFaces setExternalId(String externalId) {
-            this.externalId = externalId;
+        public FindSimilarFacesResponseBodyFaces setSimilarFaces(java.util.List<FindSimilarFacesResponseBodyFacesSimilarFaces> similarFaces) {
+            this.similarFaces = similarFaces;
             return this;
         }
-        public String getExternalId() {
-            return this.externalId;
+        public java.util.List<FindSimilarFacesResponseBodyFacesSimilarFaces> getSimilarFaces() {
+            return this.similarFaces;
         }
 
         public FindSimilarFacesResponseBodyFaces setFaceAttributes(FindSimilarFacesResponseBodyFacesFaceAttributes faceAttributes) {
@@ -290,22 +306,6 @@ public class FindSimilarFacesResponseBody extends TeaModel {
         }
         public FindSimilarFacesResponseBodyFacesFaceAttributes getFaceAttributes() {
             return this.faceAttributes;
-        }
-
-        public FindSimilarFacesResponseBodyFaces setSimilarity(Float similarity) {
-            this.similarity = similarity;
-            return this;
-        }
-        public Float getSimilarity() {
-            return this.similarity;
-        }
-
-        public FindSimilarFacesResponseBodyFaces setSimilarFaces(java.util.List<FindSimilarFacesResponseBodyFacesSimilarFaces> similarFaces) {
-            this.similarFaces = similarFaces;
-            return this;
-        }
-        public java.util.List<FindSimilarFacesResponseBodyFacesSimilarFaces> getSimilarFaces() {
-            return this.similarFaces;
         }
 
     }

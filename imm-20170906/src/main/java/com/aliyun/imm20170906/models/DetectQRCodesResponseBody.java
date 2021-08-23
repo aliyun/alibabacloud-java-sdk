@@ -4,11 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class DetectQRCodesResponseBody extends TeaModel {
-    @NameInMap("SuccessDetails")
-    public java.util.List<DetectQRCodesResponseBodySuccessDetails> successDetails;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SuccessDetails")
+    public java.util.List<DetectQRCodesResponseBodySuccessDetails> successDetails;
 
     @NameInMap("FailDetails")
     public java.util.List<DetectQRCodesResponseBodyFailDetails> failDetails;
@@ -18,20 +18,20 @@ public class DetectQRCodesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetectQRCodesResponseBody setSuccessDetails(java.util.List<DetectQRCodesResponseBodySuccessDetails> successDetails) {
-        this.successDetails = successDetails;
-        return this;
-    }
-    public java.util.List<DetectQRCodesResponseBodySuccessDetails> getSuccessDetails() {
-        return this.successDetails;
-    }
-
     public DetectQRCodesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DetectQRCodesResponseBody setSuccessDetails(java.util.List<DetectQRCodesResponseBodySuccessDetails> successDetails) {
+        this.successDetails = successDetails;
+        return this;
+    }
+    public java.util.List<DetectQRCodesResponseBodySuccessDetails> getSuccessDetails() {
+        return this.successDetails;
     }
 
     public DetectQRCodesResponseBody setFailDetails(java.util.List<DetectQRCodesResponseBodyFailDetails> failDetails) {
@@ -43,6 +43,9 @@ public class DetectQRCodesResponseBody extends TeaModel {
     }
 
     public static class DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle extends TeaModel {
+        @NameInMap("Left")
+        public String left;
+
         @NameInMap("Top")
         public String top;
 
@@ -52,12 +55,17 @@ public class DetectQRCodesResponseBody extends TeaModel {
         @NameInMap("Height")
         public String height;
 
-        @NameInMap("Left")
-        public String left;
-
         public static DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle build(java.util.Map<String, ?> map) throws Exception {
             DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle self = new DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle();
             return TeaModel.build(map, self);
+        }
+
+        public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle setLeft(String left) {
+            this.left = left;
+            return this;
+        }
+        public String getLeft() {
+            return this.left;
         }
 
         public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle setTop(String top) {
@@ -84,34 +92,18 @@ public class DetectQRCodesResponseBody extends TeaModel {
             return this.height;
         }
 
-        public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle setLeft(String left) {
-            this.left = left;
-            return this;
-        }
-        public String getLeft() {
-            return this.left;
-        }
-
     }
 
     public static class DetectQRCodesResponseBodySuccessDetailsQRCodes extends TeaModel {
-        @NameInMap("QRCodesRectangle")
-        public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle QRCodesRectangle;
-
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("QRCodesRectangle")
+        public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle QRCodesRectangle;
 
         public static DetectQRCodesResponseBodySuccessDetailsQRCodes build(java.util.Map<String, ?> map) throws Exception {
             DetectQRCodesResponseBodySuccessDetailsQRCodes self = new DetectQRCodesResponseBodySuccessDetailsQRCodes();
             return TeaModel.build(map, self);
-        }
-
-        public DetectQRCodesResponseBodySuccessDetailsQRCodes setQRCodesRectangle(DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle QRCodesRectangle) {
-            this.QRCodesRectangle = QRCodesRectangle;
-            return this;
-        }
-        public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle getQRCodesRectangle() {
-            return this.QRCodesRectangle;
         }
 
         public DetectQRCodesResponseBodySuccessDetailsQRCodes setContent(String content) {
@@ -120,6 +112,14 @@ public class DetectQRCodesResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public DetectQRCodesResponseBodySuccessDetailsQRCodes setQRCodesRectangle(DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle QRCodesRectangle) {
+            this.QRCodesRectangle = QRCodesRectangle;
+            return this;
+        }
+        public DetectQRCodesResponseBodySuccessDetailsQRCodesQRCodesRectangle getQRCodesRectangle() {
+            return this.QRCodesRectangle;
         }
 
     }

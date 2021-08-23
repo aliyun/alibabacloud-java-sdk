@@ -25,6 +25,9 @@ public class CreateVideoCompressTaskRequest extends TeaModel {
     @NameInMap("TargetContainer")
     public String targetContainer;
 
+    @NameInMap("TargetSegment")
+    public String targetSegment;
+
     public static CreateVideoCompressTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVideoCompressTaskRequest self = new CreateVideoCompressTaskRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class CreateVideoCompressTaskRequest extends TeaModel {
     }
     public String getTargetContainer() {
         return this.targetContainer;
+    }
+
+    public CreateVideoCompressTaskRequest setTargetSegment(String targetSegment) {
+        this.targetSegment = targetSegment;
+        return this;
+    }
+    public String getTargetSegment() {
+        return this.targetSegment;
     }
 
 }

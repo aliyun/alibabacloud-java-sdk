@@ -4,11 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListSetTagsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("SetId")
     public String setId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Tags")
     public java.util.List<ListSetTagsResponseBodyTags> tags;
@@ -18,20 +18,20 @@ public class ListSetTagsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListSetTagsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListSetTagsResponseBody setSetId(String setId) {
         this.setId = setId;
         return this;
     }
     public String getSetId() {
         return this.setId;
+    }
+
+    public ListSetTagsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListSetTagsResponseBody setTags(java.util.List<ListSetTagsResponseBodyTags> tags) {
@@ -43,18 +43,26 @@ public class ListSetTagsResponseBody extends TeaModel {
     }
 
     public static class ListSetTagsResponseBodyTags extends TeaModel {
+        @NameInMap("TagLevel")
+        public Integer tagLevel;
+
         @NameInMap("TagName")
         public String tagName;
 
         @NameInMap("TagCount")
         public Integer tagCount;
 
-        @NameInMap("TagLevel")
-        public Integer tagLevel;
-
         public static ListSetTagsResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
             ListSetTagsResponseBodyTags self = new ListSetTagsResponseBodyTags();
             return TeaModel.build(map, self);
+        }
+
+        public ListSetTagsResponseBodyTags setTagLevel(Integer tagLevel) {
+            this.tagLevel = tagLevel;
+            return this;
+        }
+        public Integer getTagLevel() {
+            return this.tagLevel;
         }
 
         public ListSetTagsResponseBodyTags setTagName(String tagName) {
@@ -71,14 +79,6 @@ public class ListSetTagsResponseBody extends TeaModel {
         }
         public Integer getTagCount() {
             return this.tagCount;
-        }
-
-        public ListSetTagsResponseBodyTags setTagLevel(Integer tagLevel) {
-            this.tagLevel = tagLevel;
-            return this;
-        }
-        public Integer getTagLevel() {
-            return this.tagLevel;
         }
 
     }

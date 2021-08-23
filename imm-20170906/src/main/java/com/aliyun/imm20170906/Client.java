@@ -7,6 +7,7 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -149,19 +150,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSetResponse createSet(CreateSetRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createSetWithOptions(request, runtime);
-    }
-
-    public CreateStreamAnalyseTaskResponse createStreamAnalyseTaskWithOptions(CreateStreamAnalyseTaskRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateStreamAnalyseTask", "2017-09-06", "HTTPS", "POST", "AK", "json", req, runtime), new CreateStreamAnalyseTaskResponse());
-    }
-
-    public CreateStreamAnalyseTaskResponse createStreamAnalyseTask(CreateStreamAnalyseTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createStreamAnalyseTaskWithOptions(request, runtime);
     }
 
     public CreateVideoAbstractTaskResponse createVideoAbstractTaskWithOptions(CreateVideoAbstractTaskRequest request, RuntimeOptions runtime) throws Exception {
@@ -876,8 +864,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateFaceGroupWithOptions(request, runtime);
     }
 
-    public UpdateImageResponse updateImageWithOptions(UpdateImageRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateImageResponse updateImageWithOptions(UpdateImageRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateImageShrinkRequest request = new UpdateImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.faces)) {
+            request.facesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.faces, "Faces", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));

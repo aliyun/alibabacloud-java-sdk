@@ -40,6 +40,9 @@ public class UpdateFaceGroupRequest extends TeaModel {
     @NameInMap("ExternalId")
     public String externalId;
 
+    @NameInMap("ResetItems")
+    public String resetItems;
+
     public static UpdateFaceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFaceGroupRequest self = new UpdateFaceGroupRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class UpdateFaceGroupRequest extends TeaModel {
     }
     public String getExternalId() {
         return this.externalId;
+    }
+
+    public UpdateFaceGroupRequest setResetItems(String resetItems) {
+        this.resetItems = resetItems;
+        return this;
+    }
+    public String getResetItems() {
+        return this.resetItems;
     }
 
 }
