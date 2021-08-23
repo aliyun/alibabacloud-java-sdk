@@ -13,9 +13,6 @@ public class AssociateRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
-    @NameInMap("BusinessScope")
-    public String businessScope;
-
     @NameInMap("RecommendNum")
     public Integer recommendNum;
 
@@ -49,14 +46,6 @@ public class AssociateRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
-    }
-
-    public AssociateRequest setBusinessScope(String businessScope) {
-        this.businessScope = businessScope;
-        return this;
-    }
-    public String getBusinessScope() {
-        return this.businessScope;
     }
 
     public AssociateRequest setRecommendNum(Integer recommendNum) {

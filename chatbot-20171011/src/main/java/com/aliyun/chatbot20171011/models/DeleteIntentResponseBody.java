@@ -8,7 +8,7 @@ public class DeleteIntentResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("IntentId")
-    public String intentId;
+    public Long intentId;
 
     public static DeleteIntentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteIntentResponseBody self = new DeleteIntentResponseBody();
@@ -23,11 +23,11 @@ public class DeleteIntentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteIntentResponseBody setIntentId(String intentId) {
+    public DeleteIntentResponseBody setIntentId(Long intentId) {
         this.intentId = intentId;
         return this;
     }
-    public String getIntentId() {
+    public Long getIntentId() {
         return this.intentId;
     }
 

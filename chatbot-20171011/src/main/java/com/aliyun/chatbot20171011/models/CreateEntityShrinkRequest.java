@@ -1,0 +1,67 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.chatbot20171011.models;
+
+import com.aliyun.tea.*;
+
+public class CreateEntityShrinkRequest extends TeaModel {
+    @NameInMap("DialogId")
+    public Long dialogId;
+
+    @NameInMap("EntityName")
+    public String entityName;
+
+    @NameInMap("EntityType")
+    public String entityType;
+
+    @NameInMap("Regex")
+    public String regex;
+
+    @NameInMap("Members")
+    public String membersShrink;
+
+    public static CreateEntityShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateEntityShrinkRequest self = new CreateEntityShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateEntityShrinkRequest setDialogId(Long dialogId) {
+        this.dialogId = dialogId;
+        return this;
+    }
+    public Long getDialogId() {
+        return this.dialogId;
+    }
+
+    public CreateEntityShrinkRequest setEntityName(String entityName) {
+        this.entityName = entityName;
+        return this;
+    }
+    public String getEntityName() {
+        return this.entityName;
+    }
+
+    public CreateEntityShrinkRequest setEntityType(String entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    public String getEntityType() {
+        return this.entityType;
+    }
+
+    public CreateEntityShrinkRequest setRegex(String regex) {
+        this.regex = regex;
+        return this;
+    }
+    public String getRegex() {
+        return this.regex;
+    }
+
+    public CreateEntityShrinkRequest setMembersShrink(String membersShrink) {
+        this.membersShrink = membersShrink;
+        return this;
+    }
+    public String getMembersShrink() {
+        return this.membersShrink;
+    }
+
+}

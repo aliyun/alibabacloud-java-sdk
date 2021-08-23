@@ -10,6 +10,12 @@ public class CreateCategoryRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("KnowledgeType")
+    public Integer knowledgeType;
+
+    @NameInMap("BizCode")
+    public String bizCode;
+
     public static CreateCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCategoryRequest self = new CreateCategoryRequest();
         return TeaModel.build(map, self);
@@ -29,6 +35,22 @@ public class CreateCategoryRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateCategoryRequest setKnowledgeType(Integer knowledgeType) {
+        this.knowledgeType = knowledgeType;
+        return this;
+    }
+    public Integer getKnowledgeType() {
+        return this.knowledgeType;
+    }
+
+    public CreateCategoryRequest setBizCode(String bizCode) {
+        this.bizCode = bizCode;
+        return this;
+    }
+    public String getBizCode() {
+        return this.bizCode;
     }
 
 }

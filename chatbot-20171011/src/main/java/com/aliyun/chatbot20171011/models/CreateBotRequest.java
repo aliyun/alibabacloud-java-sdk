@@ -7,9 +7,6 @@ public class CreateBotRequest extends TeaModel {
     @NameInMap("LanguageCode")
     public String languageCode;
 
-    @NameInMap("TimeZone")
-    public String timeZone;
-
     @NameInMap("Name")
     public String name;
 
@@ -33,14 +30,6 @@ public class CreateBotRequest extends TeaModel {
     }
     public String getLanguageCode() {
         return this.languageCode;
-    }
-
-    public CreateBotRequest setTimeZone(String timeZone) {
-        this.timeZone = timeZone;
-        return this;
-    }
-    public String getTimeZone() {
-        return this.timeZone;
     }
 
     public CreateBotRequest setName(String name) {

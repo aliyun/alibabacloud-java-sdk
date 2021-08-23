@@ -8,7 +8,7 @@ public class UpdateIntentResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("IntentId")
-    public String intentId;
+    public Long intentId;
 
     public static UpdateIntentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateIntentResponseBody self = new UpdateIntentResponseBody();
@@ -23,11 +23,11 @@ public class UpdateIntentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateIntentResponseBody setIntentId(String intentId) {
+    public UpdateIntentResponseBody setIntentId(Long intentId) {
         this.intentId = intentId;
         return this;
     }
-    public String getIntentId() {
+    public Long getIntentId() {
         return this.intentId;
     }
 

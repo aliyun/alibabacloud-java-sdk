@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.chatbot20171011.models;
+
+import com.aliyun.tea.*;
+
+public class RemoveEntityMemberShrinkRequest extends TeaModel {
+    @NameInMap("EntityId")
+    public Long entityId;
+
+    @NameInMap("RemoveType")
+    public String removeType;
+
+    @NameInMap("Member")
+    public String memberShrink;
+
+    public static RemoveEntityMemberShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RemoveEntityMemberShrinkRequest self = new RemoveEntityMemberShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public RemoveEntityMemberShrinkRequest setEntityId(Long entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public Long getEntityId() {
+        return this.entityId;
+    }
+
+    public RemoveEntityMemberShrinkRequest setRemoveType(String removeType) {
+        this.removeType = removeType;
+        return this;
+    }
+    public String getRemoveType() {
+        return this.removeType;
+    }
+
+    public RemoveEntityMemberShrinkRequest setMemberShrink(String memberShrink) {
+        this.memberShrink = memberShrink;
+        return this;
+    }
+    public String getMemberShrink() {
+        return this.memberShrink;
+    }
+
+}

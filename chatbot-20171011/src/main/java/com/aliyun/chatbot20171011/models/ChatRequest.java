@@ -34,20 +34,8 @@ public class ChatRequest extends TeaModel {
     @NameInMap("IntentName")
     public String intentName;
 
-    @NameInMap("DefaultPerspective")
-    public String defaultPerspective;
-
-    @NameInMap("BusinessScope")
-    public String businessScope;
-
     @NameInMap("VendorParam")
     public String vendorParam;
-
-    @NameInMap("Emotion")
-    public Boolean emotion;
-
-    @NameInMap("SandBox")
-    public Boolean sandBox;
 
     @NameInMap("Perspective")
     public java.util.List<String> perspective;
@@ -137,44 +125,12 @@ public class ChatRequest extends TeaModel {
         return this.intentName;
     }
 
-    public ChatRequest setDefaultPerspective(String defaultPerspective) {
-        this.defaultPerspective = defaultPerspective;
-        return this;
-    }
-    public String getDefaultPerspective() {
-        return this.defaultPerspective;
-    }
-
-    public ChatRequest setBusinessScope(String businessScope) {
-        this.businessScope = businessScope;
-        return this;
-    }
-    public String getBusinessScope() {
-        return this.businessScope;
-    }
-
     public ChatRequest setVendorParam(String vendorParam) {
         this.vendorParam = vendorParam;
         return this;
     }
     public String getVendorParam() {
         return this.vendorParam;
-    }
-
-    public ChatRequest setEmotion(Boolean emotion) {
-        this.emotion = emotion;
-        return this;
-    }
-    public Boolean getEmotion() {
-        return this.emotion;
-    }
-
-    public ChatRequest setSandBox(Boolean sandBox) {
-        this.sandBox = sandBox;
-        return this;
-    }
-    public Boolean getSandBox() {
-        return this.sandBox;
     }
 
     public ChatRequest setPerspective(java.util.List<String> perspective) {

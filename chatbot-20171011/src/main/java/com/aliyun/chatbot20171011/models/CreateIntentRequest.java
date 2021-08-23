@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIntentRequest extends TeaModel {
     @NameInMap("IntentDefinition")
-    public String intentDefinition;
+    public IntentCreateDTO intentDefinition;
 
     @NameInMap("DialogId")
     public Long dialogId;
@@ -15,11 +15,11 @@ public class CreateIntentRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateIntentRequest setIntentDefinition(String intentDefinition) {
+    public CreateIntentRequest setIntentDefinition(IntentCreateDTO intentDefinition) {
         this.intentDefinition = intentDefinition;
         return this;
     }
-    public String getIntentDefinition() {
+    public IntentCreateDTO getIntentDefinition() {
         return this.intentDefinition;
     }
 

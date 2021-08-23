@@ -48,7 +48,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         public String perspectiveId;
 
         @NameInMap("SelfDefine")
-        public String selfDefine;
+        public Boolean selfDefine;
 
         @NameInMap("Name")
         public String name;
@@ -104,11 +104,11 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             return this.perspectiveId;
         }
 
-        public QueryPerspectivesResponseBodyPerspectives setSelfDefine(String selfDefine) {
+        public QueryPerspectivesResponseBodyPerspectives setSelfDefine(Boolean selfDefine) {
             this.selfDefine = selfDefine;
             return this;
         }
-        public String getSelfDefine() {
+        public Boolean getSelfDefine() {
             return this.selfDefine;
         }
 
