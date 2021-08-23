@@ -4,20 +4,24 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetHotspotTagResponseBody extends TeaModel {
+    // 请求ID，与入参requestId对应
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ObjectString")
-    public String objectString;
+    // 返回码
+    @NameInMap("Code")
+    public Long code;
+
+    // 是否请求成功
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 错误消息
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("Data")
     public String data;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static GetHotspotTagResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHotspotTagResponseBody self = new GetHotspotTagResponseBody();
@@ -32,28 +36,12 @@ public class GetHotspotTagResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetHotspotTagResponseBody setObjectString(String objectString) {
-        this.objectString = objectString;
+    public GetHotspotTagResponseBody setCode(Long code) {
+        this.code = code;
         return this;
     }
-    public String getObjectString() {
-        return this.objectString;
-    }
-
-    public GetHotspotTagResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public GetHotspotTagResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
+    public Long getCode() {
+        return this.code;
     }
 
     public GetHotspotTagResponseBody setSuccess(Boolean success) {
@@ -62,6 +50,22 @@ public class GetHotspotTagResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetHotspotTagResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetHotspotTagResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }

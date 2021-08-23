@@ -13,6 +13,12 @@ public class GetHotspotTagRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    @NameInMap("Enabled")
+    public Boolean enabled;
+
+    @NameInMap("Domain")
+    public String domain;
+
     public static GetHotspotTagRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotspotTagRequest self = new GetHotspotTagRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class GetHotspotTagRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public GetHotspotTagRequest setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
+    }
+
+    public GetHotspotTagRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
     }
 
 }
