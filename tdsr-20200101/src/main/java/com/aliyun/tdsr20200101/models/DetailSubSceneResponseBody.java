@@ -52,6 +52,10 @@ public class DetailSubSceneResponseBody extends TeaModel {
     @NameInMap("GmtModified")
     public Long gmtModified;
 
+    // 切图路径
+    @NameInMap("CubemapPath")
+    public String cubemapPath;
+
     public static DetailSubSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetailSubSceneResponseBody self = new DetailSubSceneResponseBody();
         return TeaModel.build(map, self);
@@ -151,6 +155,14 @@ public class DetailSubSceneResponseBody extends TeaModel {
     }
     public Long getGmtModified() {
         return this.gmtModified;
+    }
+
+    public DetailSubSceneResponseBody setCubemapPath(String cubemapPath) {
+        this.cubemapPath = cubemapPath;
+        return this;
+    }
+    public String getCubemapPath() {
+        return this.cubemapPath;
     }
 
 }

@@ -150,6 +150,14 @@ public class ListSubSceneResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        // 资源名称
+        @NameInMap("ResourceName")
+        public String resourceName;
+
+        // 切图的路径
+        @NameInMap("CubemapPath")
+        public String cubemapPath;
+
         public static ListSubSceneResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
             ListSubSceneResponseBodyList self = new ListSubSceneResponseBodyList();
             return TeaModel.build(map, self);
@@ -217,6 +225,22 @@ public class ListSubSceneResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public ListSubSceneResponseBodyList setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        public ListSubSceneResponseBodyList setCubemapPath(String cubemapPath) {
+            this.cubemapPath = cubemapPath;
+            return this;
+        }
+        public String getCubemapPath() {
+            return this.cubemapPath;
         }
 
     }
