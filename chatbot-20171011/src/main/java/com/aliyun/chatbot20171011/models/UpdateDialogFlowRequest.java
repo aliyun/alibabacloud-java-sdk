@@ -8,7 +8,7 @@ public class UpdateDialogFlowRequest extends TeaModel {
     public Long dialogId;
 
     @NameInMap("ModuleDefinition")
-    public String moduleDefinition;
+    public UpdateDialogFlowRequestModuleDefinition moduleDefinition;
 
     public static UpdateDialogFlowRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDialogFlowRequest self = new UpdateDialogFlowRequest();
@@ -23,12 +23,42 @@ public class UpdateDialogFlowRequest extends TeaModel {
         return this.dialogId;
     }
 
-    public UpdateDialogFlowRequest setModuleDefinition(String moduleDefinition) {
+    public UpdateDialogFlowRequest setModuleDefinition(UpdateDialogFlowRequestModuleDefinition moduleDefinition) {
         this.moduleDefinition = moduleDefinition;
         return this;
     }
-    public String getModuleDefinition() {
+    public UpdateDialogFlowRequestModuleDefinition getModuleDefinition() {
         return this.moduleDefinition;
+    }
+
+    public static class UpdateDialogFlowRequestModuleDefinition extends TeaModel {
+        @NameInMap("GlobalVars")
+        public java.util.Map<String, ?> globalVars;
+
+        @NameInMap("ModuleDefinition")
+        public PaasProcessData moduleDefinition;
+
+        public static UpdateDialogFlowRequestModuleDefinition build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDialogFlowRequestModuleDefinition self = new UpdateDialogFlowRequestModuleDefinition();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDialogFlowRequestModuleDefinition setGlobalVars(java.util.Map<String, ?> globalVars) {
+            this.globalVars = globalVars;
+            return this;
+        }
+        public java.util.Map<String, ?> getGlobalVars() {
+            return this.globalVars;
+        }
+
+        public UpdateDialogFlowRequestModuleDefinition setModuleDefinition(PaasProcessData moduleDefinition) {
+            this.moduleDefinition = moduleDefinition;
+            return this;
+        }
+        public PaasProcessData getModuleDefinition() {
+            return this.moduleDefinition;
+        }
+
     }
 
 }

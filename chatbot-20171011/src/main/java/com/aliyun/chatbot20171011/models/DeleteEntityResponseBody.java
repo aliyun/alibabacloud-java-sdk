@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEntityResponseBody extends TeaModel {
     @NameInMap("EntityId")
-    public String entityId;
+    public Long entityId;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class DeleteEntityResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteEntityResponseBody setEntityId(String entityId) {
+    public DeleteEntityResponseBody setEntityId(Long entityId) {
         this.entityId = entityId;
         return this;
     }
-    public String getEntityId() {
+    public Long getEntityId() {
         return this.entityId;
     }
 

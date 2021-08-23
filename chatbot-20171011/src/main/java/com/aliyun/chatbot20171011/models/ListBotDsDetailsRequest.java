@@ -4,12 +4,6 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class ListBotDsDetailsRequest extends TeaModel {
-    @NameInMap("CubeId")
-    public String cubeId;
-
-    @NameInMap("Measures")
-    public String measures;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -19,34 +13,12 @@ public class ListBotDsDetailsRequest extends TeaModel {
     @NameInMap("RobotInstanceId")
     public String robotInstanceId;
 
-    @NameInMap("Dimensions")
-    public String dimensions;
-
-    @NameInMap("Orders")
-    public String orders;
-
     @NameInMap("Limit")
     public Integer limit;
 
     public static ListBotDsDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBotDsDetailsRequest self = new ListBotDsDetailsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListBotDsDetailsRequest setCubeId(String cubeId) {
-        this.cubeId = cubeId;
-        return this;
-    }
-    public String getCubeId() {
-        return this.cubeId;
-    }
-
-    public ListBotDsDetailsRequest setMeasures(String measures) {
-        this.measures = measures;
-        return this;
-    }
-    public String getMeasures() {
-        return this.measures;
     }
 
     public ListBotDsDetailsRequest setStartTime(String startTime) {
@@ -71,22 +43,6 @@ public class ListBotDsDetailsRequest extends TeaModel {
     }
     public String getRobotInstanceId() {
         return this.robotInstanceId;
-    }
-
-    public ListBotDsDetailsRequest setDimensions(String dimensions) {
-        this.dimensions = dimensions;
-        return this;
-    }
-    public String getDimensions() {
-        return this.dimensions;
-    }
-
-    public ListBotDsDetailsRequest setOrders(String orders) {
-        this.orders = orders;
-        return this;
-    }
-    public String getOrders() {
-        return this.orders;
     }
 
     public ListBotDsDetailsRequest setLimit(Integer limit) {

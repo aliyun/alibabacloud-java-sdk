@@ -8,7 +8,7 @@ public class CreateDialogResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("DialogId")
-    public String dialogId;
+    public Long dialogId;
 
     public static CreateDialogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDialogResponseBody self = new CreateDialogResponseBody();
@@ -23,11 +23,11 @@ public class CreateDialogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDialogResponseBody setDialogId(String dialogId) {
+    public CreateDialogResponseBody setDialogId(Long dialogId) {
         this.dialogId = dialogId;
         return this;
     }
-    public String getDialogId() {
+    public Long getDialogId() {
         return this.dialogId;
     }
 

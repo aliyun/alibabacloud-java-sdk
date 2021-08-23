@@ -4,9 +4,6 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class ListBotColdKnowledgesRequest extends TeaModel {
-    @NameInMap("CubeId")
-    public String cubeId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -16,26 +13,12 @@ public class ListBotColdKnowledgesRequest extends TeaModel {
     @NameInMap("RobotInstanceId")
     public String robotInstanceId;
 
-    @NameInMap("Dimensions")
-    public String dimensions;
-
-    @NameInMap("Filters")
-    public String filters;
-
     @NameInMap("Limit")
     public Integer limit;
 
     public static ListBotColdKnowledgesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBotColdKnowledgesRequest self = new ListBotColdKnowledgesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListBotColdKnowledgesRequest setCubeId(String cubeId) {
-        this.cubeId = cubeId;
-        return this;
-    }
-    public String getCubeId() {
-        return this.cubeId;
     }
 
     public ListBotColdKnowledgesRequest setStartTime(String startTime) {
@@ -60,22 +43,6 @@ public class ListBotColdKnowledgesRequest extends TeaModel {
     }
     public String getRobotInstanceId() {
         return this.robotInstanceId;
-    }
-
-    public ListBotColdKnowledgesRequest setDimensions(String dimensions) {
-        this.dimensions = dimensions;
-        return this;
-    }
-    public String getDimensions() {
-        return this.dimensions;
-    }
-
-    public ListBotColdKnowledgesRequest setFilters(String filters) {
-        this.filters = filters;
-        return this;
-    }
-    public String getFilters() {
-        return this.filters;
     }
 
     public ListBotColdKnowledgesRequest setLimit(Integer limit) {

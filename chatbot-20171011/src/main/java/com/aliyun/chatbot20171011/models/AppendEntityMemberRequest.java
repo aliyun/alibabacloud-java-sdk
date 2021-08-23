@@ -11,7 +11,7 @@ public class AppendEntityMemberRequest extends TeaModel {
     public String applyType;
 
     @NameInMap("Member")
-    public String member;
+    public AppendEntityMemberRequestMember member;
 
     public static AppendEntityMemberRequest build(java.util.Map<String, ?> map) throws Exception {
         AppendEntityMemberRequest self = new AppendEntityMemberRequest();
@@ -34,12 +34,42 @@ public class AppendEntityMemberRequest extends TeaModel {
         return this.applyType;
     }
 
-    public AppendEntityMemberRequest setMember(String member) {
+    public AppendEntityMemberRequest setMember(AppendEntityMemberRequestMember member) {
         this.member = member;
         return this;
     }
-    public String getMember() {
+    public AppendEntityMemberRequestMember getMember() {
         return this.member;
+    }
+
+    public static class AppendEntityMemberRequestMember extends TeaModel {
+        @NameInMap("MemberName")
+        public String memberName;
+
+        @NameInMap("Synonyms")
+        public java.util.List<String> synonyms;
+
+        public static AppendEntityMemberRequestMember build(java.util.Map<String, ?> map) throws Exception {
+            AppendEntityMemberRequestMember self = new AppendEntityMemberRequestMember();
+            return TeaModel.build(map, self);
+        }
+
+        public AppendEntityMemberRequestMember setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
+        }
+
+        public AppendEntityMemberRequestMember setSynonyms(java.util.List<String> synonyms) {
+            this.synonyms = synonyms;
+            return this;
+        }
+        public java.util.List<String> getSynonyms() {
+            return this.synonyms;
+        }
+
     }
 
 }

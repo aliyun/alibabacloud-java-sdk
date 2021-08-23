@@ -4,12 +4,6 @@ package com.aliyun.chatbot20171011.models;
 import com.aliyun.tea.*;
 
 public class GetBotKnowledgeStatDataRequest extends TeaModel {
-    @NameInMap("CubeId")
-    public String cubeId;
-
-    @NameInMap("Measures")
-    public String measures;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -22,22 +16,6 @@ public class GetBotKnowledgeStatDataRequest extends TeaModel {
     public static GetBotKnowledgeStatDataRequest build(java.util.Map<String, ?> map) throws Exception {
         GetBotKnowledgeStatDataRequest self = new GetBotKnowledgeStatDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetBotKnowledgeStatDataRequest setCubeId(String cubeId) {
-        this.cubeId = cubeId;
-        return this;
-    }
-    public String getCubeId() {
-        return this.cubeId;
-    }
-
-    public GetBotKnowledgeStatDataRequest setMeasures(String measures) {
-        this.measures = measures;
-        return this;
-    }
-    public String getMeasures() {
-        return this.measures;
     }
 
     public GetBotKnowledgeStatDataRequest setStartTime(String startTime) {

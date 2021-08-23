@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AppendEntityMemberResponseBody extends TeaModel {
     @NameInMap("EntityId")
-    public String entityId;
+    public Long entityId;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class AppendEntityMemberResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AppendEntityMemberResponseBody setEntityId(String entityId) {
+    public AppendEntityMemberResponseBody setEntityId(Long entityId) {
         this.entityId = entityId;
         return this;
     }
-    public String getEntityId() {
+    public Long getEntityId() {
         return this.entityId;
     }
 

@@ -17,7 +17,7 @@ public class CreateEntityRequest extends TeaModel {
     public String regex;
 
     @NameInMap("Members")
-    public String members;
+    public java.util.List<CreateEntityRequestMembers> members;
 
     public static CreateEntityRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEntityRequest self = new CreateEntityRequest();
@@ -56,12 +56,42 @@ public class CreateEntityRequest extends TeaModel {
         return this.regex;
     }
 
-    public CreateEntityRequest setMembers(String members) {
+    public CreateEntityRequest setMembers(java.util.List<CreateEntityRequestMembers> members) {
         this.members = members;
         return this;
     }
-    public String getMembers() {
+    public java.util.List<CreateEntityRequestMembers> getMembers() {
         return this.members;
+    }
+
+    public static class CreateEntityRequestMembers extends TeaModel {
+        @NameInMap("MemberName")
+        public String memberName;
+
+        @NameInMap("Synonyms")
+        public java.util.List<String> synonyms;
+
+        public static CreateEntityRequestMembers build(java.util.Map<String, ?> map) throws Exception {
+            CreateEntityRequestMembers self = new CreateEntityRequestMembers();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEntityRequestMembers setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
+        }
+
+        public CreateEntityRequestMembers setSynonyms(java.util.List<String> synonyms) {
+            this.synonyms = synonyms;
+            return this;
+        }
+        public java.util.List<String> getSynonyms() {
+            return this.synonyms;
+        }
+
     }
 
 }
