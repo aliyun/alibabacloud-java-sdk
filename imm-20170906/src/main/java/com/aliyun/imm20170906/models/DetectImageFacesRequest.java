@@ -10,9 +10,6 @@ public class DetectImageFacesRequest extends TeaModel {
     @NameInMap("ImageUri")
     public String imageUri;
 
-    @NameInMap("RealUid")
-    public String realUid;
-
     public static DetectImageFacesRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectImageFacesRequest self = new DetectImageFacesRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DetectImageFacesRequest extends TeaModel {
     }
     public String getImageUri() {
         return this.imageUri;
-    }
-
-    public DetectImageFacesRequest setRealUid(String realUid) {
-        this.realUid = realUid;
-        return this;
-    }
-    public String getRealUid() {
-        return this.realUid;
     }
 
 }

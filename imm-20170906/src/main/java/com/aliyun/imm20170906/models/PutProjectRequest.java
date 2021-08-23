@@ -10,15 +10,6 @@ public class PutProjectRequest extends TeaModel {
     @NameInMap("ServiceRole")
     public String serviceRole;
 
-    @NameInMap("CU")
-    public Integer CU;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("BillingType")
-    public String billingType;
-
     public static PutProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         PutProjectRequest self = new PutProjectRequest();
         return TeaModel.build(map, self);
@@ -38,30 +29,6 @@ public class PutProjectRequest extends TeaModel {
     }
     public String getServiceRole() {
         return this.serviceRole;
-    }
-
-    public PutProjectRequest setCU(Integer CU) {
-        this.CU = CU;
-        return this;
-    }
-    public Integer getCU() {
-        return this.CU;
-    }
-
-    public PutProjectRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public PutProjectRequest setBillingType(String billingType) {
-        this.billingType = billingType;
-        return this;
-    }
-    public String getBillingType() {
-        return this.billingType;
     }
 
 }

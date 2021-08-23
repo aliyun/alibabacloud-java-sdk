@@ -28,9 +28,6 @@ public class EncodeBlindWatermarkRequest extends TeaModel {
     @NameInMap("Model")
     public String model;
 
-    @NameInMap("WatermarkType")
-    public String watermarkType;
-
     public static EncodeBlindWatermarkRequest build(java.util.Map<String, ?> map) throws Exception {
         EncodeBlindWatermarkRequest self = new EncodeBlindWatermarkRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class EncodeBlindWatermarkRequest extends TeaModel {
     }
     public String getModel() {
         return this.model;
-    }
-
-    public EncodeBlindWatermarkRequest setWatermarkType(String watermarkType) {
-        this.watermarkType = watermarkType;
-        return this;
-    }
-    public String getWatermarkType() {
-        return this.watermarkType;
     }
 
 }

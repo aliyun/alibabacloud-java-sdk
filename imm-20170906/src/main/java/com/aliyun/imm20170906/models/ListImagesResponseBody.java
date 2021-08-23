@@ -7,14 +7,14 @@ public class ListImagesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Images")
-    public java.util.List<ListImagesResponseBodyImages> images;
-
     @NameInMap("NextMarker")
     public String nextMarker;
 
     @NameInMap("SetId")
     public String setId;
+
+    @NameInMap("Images")
+    public java.util.List<ListImagesResponseBodyImages> images;
 
     public static ListImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListImagesResponseBody self = new ListImagesResponseBody();
@@ -27,14 +27,6 @@ public class ListImagesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListImagesResponseBody setImages(java.util.List<ListImagesResponseBodyImages> images) {
-        this.images = images;
-        return this;
-    }
-    public java.util.List<ListImagesResponseBodyImages> getImages() {
-        return this.images;
     }
 
     public ListImagesResponseBody setNextMarker(String nextMarker) {
@@ -53,59 +45,18 @@ public class ListImagesResponseBody extends TeaModel {
         return this.setId;
     }
 
-    public static class ListImagesResponseBodyImagesTags extends TeaModel {
-        @NameInMap("TagConfidence")
-        public Float tagConfidence;
-
-        @NameInMap("TagName")
-        public String tagName;
-
-        @NameInMap("TagLevel")
-        public Integer tagLevel;
-
-        @NameInMap("ParentTagName")
-        public String parentTagName;
-
-        public static ListImagesResponseBodyImagesTags build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyImagesTags self = new ListImagesResponseBodyImagesTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListImagesResponseBodyImagesTags setTagConfidence(Float tagConfidence) {
-            this.tagConfidence = tagConfidence;
-            return this;
-        }
-        public Float getTagConfidence() {
-            return this.tagConfidence;
-        }
-
-        public ListImagesResponseBodyImagesTags setTagName(String tagName) {
-            this.tagName = tagName;
-            return this;
-        }
-        public String getTagName() {
-            return this.tagName;
-        }
-
-        public ListImagesResponseBodyImagesTags setTagLevel(Integer tagLevel) {
-            this.tagLevel = tagLevel;
-            return this;
-        }
-        public Integer getTagLevel() {
-            return this.tagLevel;
-        }
-
-        public ListImagesResponseBodyImagesTags setParentTagName(String parentTagName) {
-            this.parentTagName = parentTagName;
-            return this;
-        }
-        public String getParentTagName() {
-            return this.parentTagName;
-        }
-
+    public ListImagesResponseBody setImages(java.util.List<ListImagesResponseBodyImages> images) {
+        this.images = images;
+        return this;
+    }
+    public java.util.List<ListImagesResponseBodyImages> getImages() {
+        return this.images;
     }
 
-    public static class ListImagesResponseBodyImagesOCROCRBoundary extends TeaModel {
+    public static class ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
         @NameInMap("Top")
         public Integer top;
 
@@ -115,39 +66,12 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("Left")
-        public Integer left;
-
-        public static ListImagesResponseBodyImagesOCROCRBoundary build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyImagesOCROCRBoundary self = new ListImagesResponseBodyImagesOCROCRBoundary();
+        public static ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary self = new ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary();
             return TeaModel.build(map, self);
         }
 
-        public ListImagesResponseBodyImagesOCROCRBoundary setTop(Integer top) {
-            this.top = top;
-            return this;
-        }
-        public Integer getTop() {
-            return this.top;
-        }
-
-        public ListImagesResponseBodyImagesOCROCRBoundary setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
-        public ListImagesResponseBodyImagesOCROCRBoundary setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
-        public ListImagesResponseBodyImagesOCROCRBoundary setLeft(Integer left) {
+        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary setLeft(Integer left) {
             this.left = left;
             return this;
         }
@@ -155,142 +79,7 @@ public class ListImagesResponseBody extends TeaModel {
             return this.left;
         }
 
-    }
-
-    public static class ListImagesResponseBodyImagesOCR extends TeaModel {
-        @NameInMap("OCRConfidence")
-        public Float OCRConfidence;
-
-        @NameInMap("OCRContents")
-        public String OCRContents;
-
-        @NameInMap("OCRBoundary")
-        public ListImagesResponseBodyImagesOCROCRBoundary OCRBoundary;
-
-        public static ListImagesResponseBodyImagesOCR build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyImagesOCR self = new ListImagesResponseBodyImagesOCR();
-            return TeaModel.build(map, self);
-        }
-
-        public ListImagesResponseBodyImagesOCR setOCRConfidence(Float OCRConfidence) {
-            this.OCRConfidence = OCRConfidence;
-            return this;
-        }
-        public Float getOCRConfidence() {
-            return this.OCRConfidence;
-        }
-
-        public ListImagesResponseBodyImagesOCR setOCRContents(String OCRContents) {
-            this.OCRContents = OCRContents;
-            return this;
-        }
-        public String getOCRContents() {
-            return this.OCRContents;
-        }
-
-        public ListImagesResponseBodyImagesOCR setOCRBoundary(ListImagesResponseBodyImagesOCROCRBoundary OCRBoundary) {
-            this.OCRBoundary = OCRBoundary;
-            return this;
-        }
-        public ListImagesResponseBodyImagesOCROCRBoundary getOCRBoundary() {
-            return this.OCRBoundary;
-        }
-
-    }
-
-    public static class ListImagesResponseBodyImagesAddress extends TeaModel {
-        @NameInMap("Township")
-        public String township;
-
-        @NameInMap("District")
-        public String district;
-
-        @NameInMap("AddressLine")
-        public String addressLine;
-
-        @NameInMap("Country")
-        public String country;
-
-        @NameInMap("City")
-        public String city;
-
-        @NameInMap("Province")
-        public String province;
-
-        public static ListImagesResponseBodyImagesAddress build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyImagesAddress self = new ListImagesResponseBodyImagesAddress();
-            return TeaModel.build(map, self);
-        }
-
-        public ListImagesResponseBodyImagesAddress setTownship(String township) {
-            this.township = township;
-            return this;
-        }
-        public String getTownship() {
-            return this.township;
-        }
-
-        public ListImagesResponseBodyImagesAddress setDistrict(String district) {
-            this.district = district;
-            return this;
-        }
-        public String getDistrict() {
-            return this.district;
-        }
-
-        public ListImagesResponseBodyImagesAddress setAddressLine(String addressLine) {
-            this.addressLine = addressLine;
-            return this;
-        }
-        public String getAddressLine() {
-            return this.addressLine;
-        }
-
-        public ListImagesResponseBodyImagesAddress setCountry(String country) {
-            this.country = country;
-            return this;
-        }
-        public String getCountry() {
-            return this.country;
-        }
-
-        public ListImagesResponseBodyImagesAddress setCity(String city) {
-            this.city = city;
-            return this;
-        }
-        public String getCity() {
-            return this.city;
-        }
-
-        public ListImagesResponseBodyImagesAddress setProvince(String province) {
-            this.province = province;
-            return this;
-        }
-        public String getProvince() {
-            return this.province;
-        }
-
-    }
-
-    public static class ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary extends TeaModel {
-        @NameInMap("Top")
-        public Integer top;
-
-        @NameInMap("Width")
-        public Integer width;
-
-        @NameInMap("Height")
-        public Integer height;
-
-        @NameInMap("Left")
-        public Integer left;
-
-        public static ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary self = new ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary();
-            return TeaModel.build(map, self);
-        }
-
-        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary setTop(Integer top) {
+        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary setTop(Integer top) {
             this.top = top;
             return this;
         }
@@ -298,7 +87,7 @@ public class ListImagesResponseBody extends TeaModel {
             return this.top;
         }
 
-        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary setWidth(Integer width) {
+        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary setWidth(Integer width) {
             this.width = width;
             return this;
         }
@@ -306,7 +95,7 @@ public class ListImagesResponseBody extends TeaModel {
             return this.width;
         }
 
-        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary setHeight(Integer height) {
+        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary setHeight(Integer height) {
             this.height = height;
             return this;
         }
@@ -314,149 +103,45 @@ public class ListImagesResponseBody extends TeaModel {
             return this.height;
         }
 
-        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
-        }
-
     }
 
-    public static class ListImagesResponseBodyImagesFacesFaceAttributesHeadPose extends TeaModel {
-        @NameInMap("Pitch")
-        public Float pitch;
+    public static class ListImagesResponseBodyImagesCroppingSuggestion extends TeaModel {
+        @NameInMap("Score")
+        public Float score;
 
-        @NameInMap("Roll")
-        public Float roll;
+        @NameInMap("AspectRatio")
+        public String aspectRatio;
 
-        @NameInMap("Yaw")
-        public Float yaw;
+        @NameInMap("CroppingBoundary")
+        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary croppingBoundary;
 
-        public static ListImagesResponseBodyImagesFacesFaceAttributesHeadPose build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyImagesFacesFaceAttributesHeadPose self = new ListImagesResponseBodyImagesFacesFaceAttributesHeadPose();
+        public static ListImagesResponseBodyImagesCroppingSuggestion build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyImagesCroppingSuggestion self = new ListImagesResponseBodyImagesCroppingSuggestion();
             return TeaModel.build(map, self);
         }
 
-        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose setPitch(Float pitch) {
-            this.pitch = pitch;
+        public ListImagesResponseBodyImagesCroppingSuggestion setScore(Float score) {
+            this.score = score;
             return this;
         }
-        public Float getPitch() {
-            return this.pitch;
+        public Float getScore() {
+            return this.score;
         }
 
-        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose setRoll(Float roll) {
-            this.roll = roll;
+        public ListImagesResponseBodyImagesCroppingSuggestion setAspectRatio(String aspectRatio) {
+            this.aspectRatio = aspectRatio;
             return this;
         }
-        public Float getRoll() {
-            return this.roll;
+        public String getAspectRatio() {
+            return this.aspectRatio;
         }
 
-        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose setYaw(Float yaw) {
-            this.yaw = yaw;
+        public ListImagesResponseBodyImagesCroppingSuggestion setCroppingBoundary(ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary croppingBoundary) {
+            this.croppingBoundary = croppingBoundary;
             return this;
         }
-        public Float getYaw() {
-            return this.yaw;
-        }
-
-    }
-
-    public static class ListImagesResponseBodyImagesFacesFaceAttributes extends TeaModel {
-        @NameInMap("GlassesConfidence")
-        public Float glassesConfidence;
-
-        @NameInMap("Glasses")
-        public String glasses;
-
-        @NameInMap("Mask")
-        public String mask;
-
-        @NameInMap("BeardConfidence")
-        public Float beardConfidence;
-
-        @NameInMap("MaskConfidence")
-        public Float maskConfidence;
-
-        @NameInMap("FaceBoundary")
-        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary faceBoundary;
-
-        @NameInMap("HeadPose")
-        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose headPose;
-
-        @NameInMap("Beard")
-        public String beard;
-
-        public static ListImagesResponseBodyImagesFacesFaceAttributes build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyImagesFacesFaceAttributes self = new ListImagesResponseBodyImagesFacesFaceAttributes();
-            return TeaModel.build(map, self);
-        }
-
-        public ListImagesResponseBodyImagesFacesFaceAttributes setGlassesConfidence(Float glassesConfidence) {
-            this.glassesConfidence = glassesConfidence;
-            return this;
-        }
-        public Float getGlassesConfidence() {
-            return this.glassesConfidence;
-        }
-
-        public ListImagesResponseBodyImagesFacesFaceAttributes setGlasses(String glasses) {
-            this.glasses = glasses;
-            return this;
-        }
-        public String getGlasses() {
-            return this.glasses;
-        }
-
-        public ListImagesResponseBodyImagesFacesFaceAttributes setMask(String mask) {
-            this.mask = mask;
-            return this;
-        }
-        public String getMask() {
-            return this.mask;
-        }
-
-        public ListImagesResponseBodyImagesFacesFaceAttributes setBeardConfidence(Float beardConfidence) {
-            this.beardConfidence = beardConfidence;
-            return this;
-        }
-        public Float getBeardConfidence() {
-            return this.beardConfidence;
-        }
-
-        public ListImagesResponseBodyImagesFacesFaceAttributes setMaskConfidence(Float maskConfidence) {
-            this.maskConfidence = maskConfidence;
-            return this;
-        }
-        public Float getMaskConfidence() {
-            return this.maskConfidence;
-        }
-
-        public ListImagesResponseBodyImagesFacesFaceAttributes setFaceBoundary(ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary faceBoundary) {
-            this.faceBoundary = faceBoundary;
-            return this;
-        }
-        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary getFaceBoundary() {
-            return this.faceBoundary;
-        }
-
-        public ListImagesResponseBodyImagesFacesFaceAttributes setHeadPose(ListImagesResponseBodyImagesFacesFaceAttributesHeadPose headPose) {
-            this.headPose = headPose;
-            return this;
-        }
-        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose getHeadPose() {
-            return this.headPose;
-        }
-
-        public ListImagesResponseBodyImagesFacesFaceAttributes setBeard(String beard) {
-            this.beard = beard;
-            return this;
-        }
-        public String getBeard() {
-            return this.beard;
+        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary getCroppingBoundary() {
+            return this.croppingBoundary;
         }
 
     }
@@ -546,7 +231,205 @@ public class ListImagesResponseBody extends TeaModel {
 
     }
 
+    public static class ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
+        @NameInMap("Top")
+        public Integer top;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        @NameInMap("Height")
+        public Integer height;
+
+        public static ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary self = new ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary();
+            return TeaModel.build(map, self);
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary setTop(Integer top) {
+            this.top = top;
+            return this;
+        }
+        public Integer getTop() {
+            return this.top;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+    }
+
+    public static class ListImagesResponseBodyImagesFacesFaceAttributesHeadPose extends TeaModel {
+        @NameInMap("Pitch")
+        public Float pitch;
+
+        @NameInMap("Roll")
+        public Float roll;
+
+        @NameInMap("Yaw")
+        public Float yaw;
+
+        public static ListImagesResponseBodyImagesFacesFaceAttributesHeadPose build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyImagesFacesFaceAttributesHeadPose self = new ListImagesResponseBodyImagesFacesFaceAttributesHeadPose();
+            return TeaModel.build(map, self);
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose setPitch(Float pitch) {
+            this.pitch = pitch;
+            return this;
+        }
+        public Float getPitch() {
+            return this.pitch;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose setRoll(Float roll) {
+            this.roll = roll;
+            return this;
+        }
+        public Float getRoll() {
+            return this.roll;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose setYaw(Float yaw) {
+            this.yaw = yaw;
+            return this;
+        }
+        public Float getYaw() {
+            return this.yaw;
+        }
+
+    }
+
+    public static class ListImagesResponseBodyImagesFacesFaceAttributes extends TeaModel {
+        @NameInMap("GlassesConfidence")
+        public Float glassesConfidence;
+
+        @NameInMap("Glasses")
+        public String glasses;
+
+        @NameInMap("Mask")
+        public String mask;
+
+        @NameInMap("BeardConfidence")
+        public Float beardConfidence;
+
+        @NameInMap("MaskConfidence")
+        public Float maskConfidence;
+
+        @NameInMap("Beard")
+        public String beard;
+
+        @NameInMap("FaceBoundary")
+        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary faceBoundary;
+
+        @NameInMap("HeadPose")
+        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose headPose;
+
+        public static ListImagesResponseBodyImagesFacesFaceAttributes build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyImagesFacesFaceAttributes self = new ListImagesResponseBodyImagesFacesFaceAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributes setGlassesConfidence(Float glassesConfidence) {
+            this.glassesConfidence = glassesConfidence;
+            return this;
+        }
+        public Float getGlassesConfidence() {
+            return this.glassesConfidence;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributes setGlasses(String glasses) {
+            this.glasses = glasses;
+            return this;
+        }
+        public String getGlasses() {
+            return this.glasses;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributes setMask(String mask) {
+            this.mask = mask;
+            return this;
+        }
+        public String getMask() {
+            return this.mask;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributes setBeardConfidence(Float beardConfidence) {
+            this.beardConfidence = beardConfidence;
+            return this;
+        }
+        public Float getBeardConfidence() {
+            return this.beardConfidence;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributes setMaskConfidence(Float maskConfidence) {
+            this.maskConfidence = maskConfidence;
+            return this;
+        }
+        public Float getMaskConfidence() {
+            return this.maskConfidence;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributes setBeard(String beard) {
+            this.beard = beard;
+            return this;
+        }
+        public String getBeard() {
+            return this.beard;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributes setFaceBoundary(ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary faceBoundary) {
+            this.faceBoundary = faceBoundary;
+            return this;
+        }
+        public ListImagesResponseBodyImagesFacesFaceAttributesFaceBoundary getFaceBoundary() {
+            return this.faceBoundary;
+        }
+
+        public ListImagesResponseBodyImagesFacesFaceAttributes setHeadPose(ListImagesResponseBodyImagesFacesFaceAttributesHeadPose headPose) {
+            this.headPose = headPose;
+            return this;
+        }
+        public ListImagesResponseBodyImagesFacesFaceAttributesHeadPose getHeadPose() {
+            return this.headPose;
+        }
+
+    }
+
     public static class ListImagesResponseBodyImagesFaces extends TeaModel {
+        @NameInMap("EmotionConfidence")
+        public Float emotionConfidence;
+
+        @NameInMap("Attractive")
+        public Float attractive;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
         @NameInMap("Gender")
         public String gender;
 
@@ -555,9 +438,6 @@ public class ListImagesResponseBody extends TeaModel {
 
         @NameInMap("GenderConfidence")
         public Float genderConfidence;
-
-        @NameInMap("FaceAttributes")
-        public ListImagesResponseBodyImagesFacesFaceAttributes faceAttributes;
 
         @NameInMap("FaceQuality")
         public Float faceQuality;
@@ -571,21 +451,39 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("FaceConfidence")
         public Float faceConfidence;
 
-        @NameInMap("EmotionConfidence")
-        public Float emotionConfidence;
-
-        @NameInMap("Attractive")
-        public Float attractive;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
         @NameInMap("EmotionDetails")
         public ListImagesResponseBodyImagesFacesEmotionDetails emotionDetails;
+
+        @NameInMap("FaceAttributes")
+        public ListImagesResponseBodyImagesFacesFaceAttributes faceAttributes;
 
         public static ListImagesResponseBodyImagesFaces build(java.util.Map<String, ?> map) throws Exception {
             ListImagesResponseBodyImagesFaces self = new ListImagesResponseBodyImagesFaces();
             return TeaModel.build(map, self);
+        }
+
+        public ListImagesResponseBodyImagesFaces setEmotionConfidence(Float emotionConfidence) {
+            this.emotionConfidence = emotionConfidence;
+            return this;
+        }
+        public Float getEmotionConfidence() {
+            return this.emotionConfidence;
+        }
+
+        public ListImagesResponseBodyImagesFaces setAttractive(Float attractive) {
+            this.attractive = attractive;
+            return this;
+        }
+        public Float getAttractive() {
+            return this.attractive;
+        }
+
+        public ListImagesResponseBodyImagesFaces setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
         }
 
         public ListImagesResponseBodyImagesFaces setGender(String gender) {
@@ -610,14 +508,6 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public Float getGenderConfidence() {
             return this.genderConfidence;
-        }
-
-        public ListImagesResponseBodyImagesFaces setFaceAttributes(ListImagesResponseBodyImagesFacesFaceAttributes faceAttributes) {
-            this.faceAttributes = faceAttributes;
-            return this;
-        }
-        public ListImagesResponseBodyImagesFacesFaceAttributes getFaceAttributes() {
-            return this.faceAttributes;
         }
 
         public ListImagesResponseBodyImagesFaces setFaceQuality(Float faceQuality) {
@@ -652,36 +542,165 @@ public class ListImagesResponseBody extends TeaModel {
             return this.faceConfidence;
         }
 
-        public ListImagesResponseBodyImagesFaces setEmotionConfidence(Float emotionConfidence) {
-            this.emotionConfidence = emotionConfidence;
-            return this;
-        }
-        public Float getEmotionConfidence() {
-            return this.emotionConfidence;
-        }
-
-        public ListImagesResponseBodyImagesFaces setAttractive(Float attractive) {
-            this.attractive = attractive;
-            return this;
-        }
-        public Float getAttractive() {
-            return this.attractive;
-        }
-
-        public ListImagesResponseBodyImagesFaces setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
         public ListImagesResponseBodyImagesFaces setEmotionDetails(ListImagesResponseBodyImagesFacesEmotionDetails emotionDetails) {
             this.emotionDetails = emotionDetails;
             return this;
         }
         public ListImagesResponseBodyImagesFacesEmotionDetails getEmotionDetails() {
             return this.emotionDetails;
+        }
+
+        public ListImagesResponseBodyImagesFaces setFaceAttributes(ListImagesResponseBodyImagesFacesFaceAttributes faceAttributes) {
+            this.faceAttributes = faceAttributes;
+            return this;
+        }
+        public ListImagesResponseBodyImagesFacesFaceAttributes getFaceAttributes() {
+            return this.faceAttributes;
+        }
+
+    }
+
+    public static class ListImagesResponseBodyImagesTags extends TeaModel {
+        @NameInMap("TagLevel")
+        public Integer tagLevel;
+
+        @NameInMap("ParentTagName")
+        public String parentTagName;
+
+        @NameInMap("TagConfidence")
+        public Float tagConfidence;
+
+        @NameInMap("TagName")
+        public String tagName;
+
+        public static ListImagesResponseBodyImagesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyImagesTags self = new ListImagesResponseBodyImagesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListImagesResponseBodyImagesTags setTagLevel(Integer tagLevel) {
+            this.tagLevel = tagLevel;
+            return this;
+        }
+        public Integer getTagLevel() {
+            return this.tagLevel;
+        }
+
+        public ListImagesResponseBodyImagesTags setParentTagName(String parentTagName) {
+            this.parentTagName = parentTagName;
+            return this;
+        }
+        public String getParentTagName() {
+            return this.parentTagName;
+        }
+
+        public ListImagesResponseBodyImagesTags setTagConfidence(Float tagConfidence) {
+            this.tagConfidence = tagConfidence;
+            return this;
+        }
+        public Float getTagConfidence() {
+            return this.tagConfidence;
+        }
+
+        public ListImagesResponseBodyImagesTags setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
+    }
+
+    public static class ListImagesResponseBodyImagesOCROCRBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
+        @NameInMap("Top")
+        public Integer top;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        @NameInMap("Height")
+        public Integer height;
+
+        public static ListImagesResponseBodyImagesOCROCRBoundary build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyImagesOCROCRBoundary self = new ListImagesResponseBodyImagesOCROCRBoundary();
+            return TeaModel.build(map, self);
+        }
+
+        public ListImagesResponseBodyImagesOCROCRBoundary setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
+        }
+
+        public ListImagesResponseBodyImagesOCROCRBoundary setTop(Integer top) {
+            this.top = top;
+            return this;
+        }
+        public Integer getTop() {
+            return this.top;
+        }
+
+        public ListImagesResponseBodyImagesOCROCRBoundary setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public ListImagesResponseBodyImagesOCROCRBoundary setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+    }
+
+    public static class ListImagesResponseBodyImagesOCR extends TeaModel {
+        @NameInMap("OCRConfidence")
+        public Float OCRConfidence;
+
+        @NameInMap("OCRContents")
+        public String OCRContents;
+
+        @NameInMap("OCRBoundary")
+        public ListImagesResponseBodyImagesOCROCRBoundary OCRBoundary;
+
+        public static ListImagesResponseBodyImagesOCR build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyImagesOCR self = new ListImagesResponseBodyImagesOCR();
+            return TeaModel.build(map, self);
+        }
+
+        public ListImagesResponseBodyImagesOCR setOCRConfidence(Float OCRConfidence) {
+            this.OCRConfidence = OCRConfidence;
+            return this;
+        }
+        public Float getOCRConfidence() {
+            return this.OCRConfidence;
+        }
+
+        public ListImagesResponseBodyImagesOCR setOCRContents(String OCRContents) {
+            this.OCRContents = OCRContents;
+            return this;
+        }
+        public String getOCRContents() {
+            return this.OCRContents;
+        }
+
+        public ListImagesResponseBodyImagesOCR setOCRBoundary(ListImagesResponseBodyImagesOCROCRBoundary OCRBoundary) {
+            this.OCRBoundary = OCRBoundary;
+            return this;
+        }
+        public ListImagesResponseBodyImagesOCROCRBoundary getOCRBoundary() {
+            return this.OCRBoundary;
         }
 
     }
@@ -804,95 +823,76 @@ public class ListImagesResponseBody extends TeaModel {
 
     }
 
-    public static class ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary extends TeaModel {
-        @NameInMap("Top")
-        public Integer top;
+    public static class ListImagesResponseBodyImagesAddress extends TeaModel {
+        @NameInMap("Township")
+        public String township;
 
-        @NameInMap("Width")
-        public Integer width;
+        @NameInMap("District")
+        public String district;
 
-        @NameInMap("Height")
-        public Integer height;
+        @NameInMap("AddressLine")
+        public String addressLine;
 
-        @NameInMap("Left")
-        public Integer left;
+        @NameInMap("Country")
+        public String country;
 
-        public static ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary self = new ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary();
+        @NameInMap("City")
+        public String city;
+
+        @NameInMap("Province")
+        public String province;
+
+        public static ListImagesResponseBodyImagesAddress build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyImagesAddress self = new ListImagesResponseBodyImagesAddress();
             return TeaModel.build(map, self);
         }
 
-        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary setTop(Integer top) {
-            this.top = top;
+        public ListImagesResponseBodyImagesAddress setTownship(String township) {
+            this.township = township;
             return this;
         }
-        public Integer getTop() {
-            return this.top;
+        public String getTownship() {
+            return this.township;
         }
 
-        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary setWidth(Integer width) {
-            this.width = width;
+        public ListImagesResponseBodyImagesAddress setDistrict(String district) {
+            this.district = district;
             return this;
         }
-        public Integer getWidth() {
-            return this.width;
+        public String getDistrict() {
+            return this.district;
         }
 
-        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary setHeight(Integer height) {
-            this.height = height;
+        public ListImagesResponseBodyImagesAddress setAddressLine(String addressLine) {
+            this.addressLine = addressLine;
             return this;
         }
-        public Integer getHeight() {
-            return this.height;
+        public String getAddressLine() {
+            return this.addressLine;
         }
 
-        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary setLeft(Integer left) {
-            this.left = left;
+        public ListImagesResponseBodyImagesAddress setCountry(String country) {
+            this.country = country;
             return this;
         }
-        public Integer getLeft() {
-            return this.left;
+        public String getCountry() {
+            return this.country;
         }
 
-    }
-
-    public static class ListImagesResponseBodyImagesCroppingSuggestion extends TeaModel {
-        @NameInMap("Score")
-        public Float score;
-
-        @NameInMap("CroppingBoundary")
-        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary croppingBoundary;
-
-        @NameInMap("AspectRatio")
-        public String aspectRatio;
-
-        public static ListImagesResponseBodyImagesCroppingSuggestion build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyImagesCroppingSuggestion self = new ListImagesResponseBodyImagesCroppingSuggestion();
-            return TeaModel.build(map, self);
-        }
-
-        public ListImagesResponseBodyImagesCroppingSuggestion setScore(Float score) {
-            this.score = score;
+        public ListImagesResponseBodyImagesAddress setCity(String city) {
+            this.city = city;
             return this;
         }
-        public Float getScore() {
-            return this.score;
+        public String getCity() {
+            return this.city;
         }
 
-        public ListImagesResponseBodyImagesCroppingSuggestion setCroppingBoundary(ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary croppingBoundary) {
-            this.croppingBoundary = croppingBoundary;
+        public ListImagesResponseBodyImagesAddress setProvince(String province) {
+            this.province = province;
             return this;
         }
-        public ListImagesResponseBodyImagesCroppingSuggestionCroppingBoundary getCroppingBoundary() {
-            return this.croppingBoundary;
-        }
-
-        public ListImagesResponseBodyImagesCroppingSuggestion setAspectRatio(String aspectRatio) {
-            this.aspectRatio = aspectRatio;
-            return this;
-        }
-        public String getAspectRatio() {
-            return this.aspectRatio;
+        public String getProvince() {
+            return this.province;
         }
 
     }
@@ -919,9 +919,6 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("FacesFailReason")
         public String facesFailReason;
 
-        @NameInMap("Tags")
-        public java.util.List<ListImagesResponseBodyImagesTags> tags;
-
         @NameInMap("FacesModifyTime")
         public String facesModifyTime;
 
@@ -934,23 +931,17 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("AddressModifyTime")
         public String addressModifyTime;
 
-        @NameInMap("OCR")
-        public java.util.List<ListImagesResponseBodyImagesOCR> OCR;
-
         @NameInMap("ImageQualityFailReason")
         public String imageQualityFailReason;
 
         @NameInMap("FacesStatus")
         public String facesStatus;
 
-        @NameInMap("ImageHeight")
-        public Integer imageHeight;
-
         @NameInMap("RemarksArrayA")
         public String remarksArrayA;
 
-        @NameInMap("Address")
-        public ListImagesResponseBodyImagesAddress address;
+        @NameInMap("ImageHeight")
+        public Integer imageHeight;
 
         @NameInMap("ExternalId")
         public String externalId;
@@ -958,17 +949,14 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("SourceUri")
         public String sourceUri;
 
-        @NameInMap("ModifyTime")
-        public String modifyTime;
-
         @NameInMap("FileSize")
         public Integer fileSize;
 
+        @NameInMap("ModifyTime")
+        public String modifyTime;
+
         @NameInMap("SourcePosition")
         public String sourcePosition;
-
-        @NameInMap("Faces")
-        public java.util.List<ListImagesResponseBodyImagesFaces> faces;
 
         @NameInMap("ImageQualityStatus")
         public String imageQualityStatus;
@@ -978,9 +966,6 @@ public class ListImagesResponseBody extends TeaModel {
 
         @NameInMap("AddressFailReason")
         public String addressFailReason;
-
-        @NameInMap("ImageQuality")
-        public ListImagesResponseBodyImagesImageQuality imageQuality;
 
         @NameInMap("CroppingSuggestionModifyTime")
         public String croppingSuggestionModifyTime;
@@ -993,9 +978,6 @@ public class ListImagesResponseBody extends TeaModel {
 
         @NameInMap("RemarksArrayB")
         public String remarksArrayB;
-
-        @NameInMap("CroppingSuggestion")
-        public java.util.List<ListImagesResponseBodyImagesCroppingSuggestion> croppingSuggestion;
 
         @NameInMap("Orientation")
         public String orientation;
@@ -1032,6 +1014,24 @@ public class ListImagesResponseBody extends TeaModel {
 
         @NameInMap("RemarksB")
         public String remarksB;
+
+        @NameInMap("CroppingSuggestion")
+        public java.util.List<ListImagesResponseBodyImagesCroppingSuggestion> croppingSuggestion;
+
+        @NameInMap("Faces")
+        public java.util.List<ListImagesResponseBodyImagesFaces> faces;
+
+        @NameInMap("Tags")
+        public java.util.List<ListImagesResponseBodyImagesTags> tags;
+
+        @NameInMap("OCR")
+        public java.util.List<ListImagesResponseBodyImagesOCR> OCR;
+
+        @NameInMap("ImageQuality")
+        public ListImagesResponseBodyImagesImageQuality imageQuality;
+
+        @NameInMap("Address")
+        public ListImagesResponseBodyImagesAddress address;
 
         public static ListImagesResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             ListImagesResponseBodyImages self = new ListImagesResponseBodyImages();
@@ -1094,14 +1094,6 @@ public class ListImagesResponseBody extends TeaModel {
             return this.facesFailReason;
         }
 
-        public ListImagesResponseBodyImages setTags(java.util.List<ListImagesResponseBodyImagesTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<ListImagesResponseBodyImagesTags> getTags() {
-            return this.tags;
-        }
-
         public ListImagesResponseBodyImages setFacesModifyTime(String facesModifyTime) {
             this.facesModifyTime = facesModifyTime;
             return this;
@@ -1134,14 +1126,6 @@ public class ListImagesResponseBody extends TeaModel {
             return this.addressModifyTime;
         }
 
-        public ListImagesResponseBodyImages setOCR(java.util.List<ListImagesResponseBodyImagesOCR> OCR) {
-            this.OCR = OCR;
-            return this;
-        }
-        public java.util.List<ListImagesResponseBodyImagesOCR> getOCR() {
-            return this.OCR;
-        }
-
         public ListImagesResponseBodyImages setImageQualityFailReason(String imageQualityFailReason) {
             this.imageQualityFailReason = imageQualityFailReason;
             return this;
@@ -1158,14 +1142,6 @@ public class ListImagesResponseBody extends TeaModel {
             return this.facesStatus;
         }
 
-        public ListImagesResponseBodyImages setImageHeight(Integer imageHeight) {
-            this.imageHeight = imageHeight;
-            return this;
-        }
-        public Integer getImageHeight() {
-            return this.imageHeight;
-        }
-
         public ListImagesResponseBodyImages setRemarksArrayA(String remarksArrayA) {
             this.remarksArrayA = remarksArrayA;
             return this;
@@ -1174,12 +1150,12 @@ public class ListImagesResponseBody extends TeaModel {
             return this.remarksArrayA;
         }
 
-        public ListImagesResponseBodyImages setAddress(ListImagesResponseBodyImagesAddress address) {
-            this.address = address;
+        public ListImagesResponseBodyImages setImageHeight(Integer imageHeight) {
+            this.imageHeight = imageHeight;
             return this;
         }
-        public ListImagesResponseBodyImagesAddress getAddress() {
-            return this.address;
+        public Integer getImageHeight() {
+            return this.imageHeight;
         }
 
         public ListImagesResponseBodyImages setExternalId(String externalId) {
@@ -1198,14 +1174,6 @@ public class ListImagesResponseBody extends TeaModel {
             return this.sourceUri;
         }
 
-        public ListImagesResponseBodyImages setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public String getModifyTime() {
-            return this.modifyTime;
-        }
-
         public ListImagesResponseBodyImages setFileSize(Integer fileSize) {
             this.fileSize = fileSize;
             return this;
@@ -1214,20 +1182,20 @@ public class ListImagesResponseBody extends TeaModel {
             return this.fileSize;
         }
 
+        public ListImagesResponseBodyImages setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public String getModifyTime() {
+            return this.modifyTime;
+        }
+
         public ListImagesResponseBodyImages setSourcePosition(String sourcePosition) {
             this.sourcePosition = sourcePosition;
             return this;
         }
         public String getSourcePosition() {
             return this.sourcePosition;
-        }
-
-        public ListImagesResponseBodyImages setFaces(java.util.List<ListImagesResponseBodyImagesFaces> faces) {
-            this.faces = faces;
-            return this;
-        }
-        public java.util.List<ListImagesResponseBodyImagesFaces> getFaces() {
-            return this.faces;
         }
 
         public ListImagesResponseBodyImages setImageQualityStatus(String imageQualityStatus) {
@@ -1252,14 +1220,6 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public String getAddressFailReason() {
             return this.addressFailReason;
-        }
-
-        public ListImagesResponseBodyImages setImageQuality(ListImagesResponseBodyImagesImageQuality imageQuality) {
-            this.imageQuality = imageQuality;
-            return this;
-        }
-        public ListImagesResponseBodyImagesImageQuality getImageQuality() {
-            return this.imageQuality;
         }
 
         public ListImagesResponseBodyImages setCroppingSuggestionModifyTime(String croppingSuggestionModifyTime) {
@@ -1292,14 +1252,6 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public String getRemarksArrayB() {
             return this.remarksArrayB;
-        }
-
-        public ListImagesResponseBodyImages setCroppingSuggestion(java.util.List<ListImagesResponseBodyImagesCroppingSuggestion> croppingSuggestion) {
-            this.croppingSuggestion = croppingSuggestion;
-            return this;
-        }
-        public java.util.List<ListImagesResponseBodyImagesCroppingSuggestion> getCroppingSuggestion() {
-            return this.croppingSuggestion;
         }
 
         public ListImagesResponseBodyImages setOrientation(String orientation) {
@@ -1396,6 +1348,54 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public String getRemarksB() {
             return this.remarksB;
+        }
+
+        public ListImagesResponseBodyImages setCroppingSuggestion(java.util.List<ListImagesResponseBodyImagesCroppingSuggestion> croppingSuggestion) {
+            this.croppingSuggestion = croppingSuggestion;
+            return this;
+        }
+        public java.util.List<ListImagesResponseBodyImagesCroppingSuggestion> getCroppingSuggestion() {
+            return this.croppingSuggestion;
+        }
+
+        public ListImagesResponseBodyImages setFaces(java.util.List<ListImagesResponseBodyImagesFaces> faces) {
+            this.faces = faces;
+            return this;
+        }
+        public java.util.List<ListImagesResponseBodyImagesFaces> getFaces() {
+            return this.faces;
+        }
+
+        public ListImagesResponseBodyImages setTags(java.util.List<ListImagesResponseBodyImagesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListImagesResponseBodyImagesTags> getTags() {
+            return this.tags;
+        }
+
+        public ListImagesResponseBodyImages setOCR(java.util.List<ListImagesResponseBodyImagesOCR> OCR) {
+            this.OCR = OCR;
+            return this;
+        }
+        public java.util.List<ListImagesResponseBodyImagesOCR> getOCR() {
+            return this.OCR;
+        }
+
+        public ListImagesResponseBodyImages setImageQuality(ListImagesResponseBodyImagesImageQuality imageQuality) {
+            this.imageQuality = imageQuality;
+            return this;
+        }
+        public ListImagesResponseBodyImagesImageQuality getImageQuality() {
+            return this.imageQuality;
+        }
+
+        public ListImagesResponseBodyImages setAddress(ListImagesResponseBodyImagesAddress address) {
+            this.address = address;
+            return this;
+        }
+        public ListImagesResponseBodyImagesAddress getAddress() {
+            return this.address;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetOfficeEditURLResponseBody extends TeaModel {
-    @NameInMap("RefreshToken")
-    public String refreshToken;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("AccessTokenExpiredTime")
+    public String accessTokenExpiredTime;
 
     @NameInMap("EditURL")
     public String editURL;
@@ -16,23 +16,15 @@ public class GetOfficeEditURLResponseBody extends TeaModel {
     @NameInMap("AccessToken")
     public String accessToken;
 
+    @NameInMap("RefreshToken")
+    public String refreshToken;
+
     @NameInMap("RefreshTokenExpiredTime")
     public String refreshTokenExpiredTime;
-
-    @NameInMap("AccessTokenExpiredTime")
-    public String accessTokenExpiredTime;
 
     public static GetOfficeEditURLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetOfficeEditURLResponseBody self = new GetOfficeEditURLResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetOfficeEditURLResponseBody setRefreshToken(String refreshToken) {
-        this.refreshToken = refreshToken;
-        return this;
-    }
-    public String getRefreshToken() {
-        return this.refreshToken;
     }
 
     public GetOfficeEditURLResponseBody setRequestId(String requestId) {
@@ -41,6 +33,14 @@ public class GetOfficeEditURLResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetOfficeEditURLResponseBody setAccessTokenExpiredTime(String accessTokenExpiredTime) {
+        this.accessTokenExpiredTime = accessTokenExpiredTime;
+        return this;
+    }
+    public String getAccessTokenExpiredTime() {
+        return this.accessTokenExpiredTime;
     }
 
     public GetOfficeEditURLResponseBody setEditURL(String editURL) {
@@ -59,20 +59,20 @@ public class GetOfficeEditURLResponseBody extends TeaModel {
         return this.accessToken;
     }
 
+    public GetOfficeEditURLResponseBody setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+        return this;
+    }
+    public String getRefreshToken() {
+        return this.refreshToken;
+    }
+
     public GetOfficeEditURLResponseBody setRefreshTokenExpiredTime(String refreshTokenExpiredTime) {
         this.refreshTokenExpiredTime = refreshTokenExpiredTime;
         return this;
     }
     public String getRefreshTokenExpiredTime() {
         return this.refreshTokenExpiredTime;
-    }
-
-    public GetOfficeEditURLResponseBody setAccessTokenExpiredTime(String accessTokenExpiredTime) {
-        this.accessTokenExpiredTime = accessTokenExpiredTime;
-        return this;
-    }
-    public String getAccessTokenExpiredTime() {
-        return this.accessTokenExpiredTime;
     }
 
 }

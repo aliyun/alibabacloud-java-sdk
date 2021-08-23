@@ -4,11 +4,14 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class RefreshOfficePreviewTokenResponseBody extends TeaModel {
-    @NameInMap("RefreshToken")
-    public String refreshToken;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("AccessTokenExpiredTime")
+    public String accessTokenExpiredTime;
+
+    @NameInMap("RefreshToken")
+    public String refreshToken;
 
     @NameInMap("AccessToken")
     public String accessToken;
@@ -16,20 +19,9 @@ public class RefreshOfficePreviewTokenResponseBody extends TeaModel {
     @NameInMap("RefreshTokenExpiredTime")
     public String refreshTokenExpiredTime;
 
-    @NameInMap("AccessTokenExpiredTime")
-    public String accessTokenExpiredTime;
-
     public static RefreshOfficePreviewTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RefreshOfficePreviewTokenResponseBody self = new RefreshOfficePreviewTokenResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RefreshOfficePreviewTokenResponseBody setRefreshToken(String refreshToken) {
-        this.refreshToken = refreshToken;
-        return this;
-    }
-    public String getRefreshToken() {
-        return this.refreshToken;
     }
 
     public RefreshOfficePreviewTokenResponseBody setRequestId(String requestId) {
@@ -38,6 +30,22 @@ public class RefreshOfficePreviewTokenResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RefreshOfficePreviewTokenResponseBody setAccessTokenExpiredTime(String accessTokenExpiredTime) {
+        this.accessTokenExpiredTime = accessTokenExpiredTime;
+        return this;
+    }
+    public String getAccessTokenExpiredTime() {
+        return this.accessTokenExpiredTime;
+    }
+
+    public RefreshOfficePreviewTokenResponseBody setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+        return this;
+    }
+    public String getRefreshToken() {
+        return this.refreshToken;
     }
 
     public RefreshOfficePreviewTokenResponseBody setAccessToken(String accessToken) {
@@ -54,14 +62,6 @@ public class RefreshOfficePreviewTokenResponseBody extends TeaModel {
     }
     public String getRefreshTokenExpiredTime() {
         return this.refreshTokenExpiredTime;
-    }
-
-    public RefreshOfficePreviewTokenResponseBody setAccessTokenExpiredTime(String accessTokenExpiredTime) {
-        this.accessTokenExpiredTime = accessTokenExpiredTime;
-        return this;
-    }
-    public String getAccessTokenExpiredTime() {
-        return this.accessTokenExpiredTime;
     }
 
 }

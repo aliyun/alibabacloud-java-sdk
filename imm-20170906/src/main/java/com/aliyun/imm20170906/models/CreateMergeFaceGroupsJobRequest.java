@@ -22,6 +22,9 @@ public class CreateMergeFaceGroupsJobRequest extends TeaModel {
     @NameInMap("GroupIdTo")
     public String groupIdTo;
 
+    @NameInMap("CustomMessage")
+    public String customMessage;
+
     public static CreateMergeFaceGroupsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMergeFaceGroupsJobRequest self = new CreateMergeFaceGroupsJobRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CreateMergeFaceGroupsJobRequest extends TeaModel {
     }
     public String getGroupIdTo() {
         return this.groupIdTo;
+    }
+
+    public CreateMergeFaceGroupsJobRequest setCustomMessage(String customMessage) {
+        this.customMessage = customMessage;
+        return this;
+    }
+    public String getCustomMessage() {
+        return this.customMessage;
     }
 
 }

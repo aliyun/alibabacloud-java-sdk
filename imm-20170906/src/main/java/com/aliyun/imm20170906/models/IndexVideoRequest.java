@@ -19,21 +19,6 @@ public class IndexVideoRequest extends TeaModel {
     @NameInMap("RemarksB")
     public String remarksB;
 
-    @NameInMap("GrabType")
-    public String grabType;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("SaveType")
-    public Boolean saveType;
-
-    @NameInMap("Interval")
-    public String interval;
-
     @NameInMap("TgtUri")
     public String tgtUri;
 
@@ -95,46 +80,6 @@ public class IndexVideoRequest extends TeaModel {
     }
     public String getRemarksB() {
         return this.remarksB;
-    }
-
-    public IndexVideoRequest setGrabType(String grabType) {
-        this.grabType = grabType;
-        return this;
-    }
-    public String getGrabType() {
-        return this.grabType;
-    }
-
-    public IndexVideoRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public IndexVideoRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public IndexVideoRequest setSaveType(Boolean saveType) {
-        this.saveType = saveType;
-        return this;
-    }
-    public Boolean getSaveType() {
-        return this.saveType;
-    }
-
-    public IndexVideoRequest setInterval(String interval) {
-        this.interval = interval;
-        return this;
-    }
-    public String getInterval() {
-        return this.interval;
     }
 
     public IndexVideoRequest setTgtUri(String tgtUri) {

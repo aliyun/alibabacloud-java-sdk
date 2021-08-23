@@ -4,11 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ImageUri")
     public String imageUri;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("CroppingSuggestions")
     public java.util.List<GetImageCroppingSuggestionsResponseBodyCroppingSuggestions> croppingSuggestions;
@@ -18,20 +18,20 @@ public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetImageCroppingSuggestionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetImageCroppingSuggestionsResponseBody setImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     public String getImageUri() {
         return this.imageUri;
+    }
+
+    public GetImageCroppingSuggestionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetImageCroppingSuggestionsResponseBody setCroppingSuggestions(java.util.List<GetImageCroppingSuggestionsResponseBodyCroppingSuggestions> croppingSuggestions) {
@@ -43,6 +43,9 @@ public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
     }
 
     public static class GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
         @NameInMap("Top")
         public Integer top;
 
@@ -52,12 +55,17 @@ public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
         @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("Left")
-        public Integer left;
-
         public static GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary build(java.util.Map<String, ?> map) throws Exception {
             GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary self = new GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary();
             return TeaModel.build(map, self);
+        }
+
+        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
         }
 
         public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary setTop(Integer top) {
@@ -84,25 +92,17 @@ public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
             return this.height;
         }
 
-        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
-        }
-
     }
 
     public static class GetImageCroppingSuggestionsResponseBodyCroppingSuggestions extends TeaModel {
         @NameInMap("Score")
         public Float score;
 
-        @NameInMap("CroppingBoundary")
-        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary croppingBoundary;
-
         @NameInMap("AspectRatio")
         public String aspectRatio;
+
+        @NameInMap("CroppingBoundary")
+        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary croppingBoundary;
 
         public static GetImageCroppingSuggestionsResponseBodyCroppingSuggestions build(java.util.Map<String, ?> map) throws Exception {
             GetImageCroppingSuggestionsResponseBodyCroppingSuggestions self = new GetImageCroppingSuggestionsResponseBodyCroppingSuggestions();
@@ -117,20 +117,20 @@ public class GetImageCroppingSuggestionsResponseBody extends TeaModel {
             return this.score;
         }
 
-        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestions setCroppingBoundary(GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary croppingBoundary) {
-            this.croppingBoundary = croppingBoundary;
-            return this;
-        }
-        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary getCroppingBoundary() {
-            return this.croppingBoundary;
-        }
-
         public GetImageCroppingSuggestionsResponseBodyCroppingSuggestions setAspectRatio(String aspectRatio) {
             this.aspectRatio = aspectRatio;
             return this;
         }
         public String getAspectRatio() {
             return this.aspectRatio;
+        }
+
+        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestions setCroppingBoundary(GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary croppingBoundary) {
+            this.croppingBoundary = croppingBoundary;
+            return this;
+        }
+        public GetImageCroppingSuggestionsResponseBodyCroppingSuggestionsCroppingBoundary getCroppingBoundary() {
+            return this.croppingBoundary;
         }
 
     }

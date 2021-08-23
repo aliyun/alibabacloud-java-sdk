@@ -3,7 +3,7 @@ package com.aliyun.imm20170906.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateImageRequest extends TeaModel {
+public class UpdateImageShrinkRequest extends TeaModel {
     @NameInMap("Project")
     public String project;
 
@@ -44,14 +44,14 @@ public class UpdateImageRequest extends TeaModel {
     public String remarksArrayB;
 
     @NameInMap("Faces")
-    public java.util.List<UpdateImageRequestFaces> faces;
+    public String facesShrink;
 
-    public static UpdateImageRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateImageRequest self = new UpdateImageRequest();
+    public static UpdateImageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateImageShrinkRequest self = new UpdateImageShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateImageRequest setProject(String project) {
+    public UpdateImageShrinkRequest setProject(String project) {
         this.project = project;
         return this;
     }
@@ -59,7 +59,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.project;
     }
 
-    public UpdateImageRequest setSetId(String setId) {
+    public UpdateImageShrinkRequest setSetId(String setId) {
         this.setId = setId;
         return this;
     }
@@ -67,7 +67,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.setId;
     }
 
-    public UpdateImageRequest setImageUri(String imageUri) {
+    public UpdateImageShrinkRequest setImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
@@ -75,7 +75,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.imageUri;
     }
 
-    public UpdateImageRequest setRemarksA(String remarksA) {
+    public UpdateImageShrinkRequest setRemarksA(String remarksA) {
         this.remarksA = remarksA;
         return this;
     }
@@ -83,7 +83,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.remarksA;
     }
 
-    public UpdateImageRequest setRemarksB(String remarksB) {
+    public UpdateImageShrinkRequest setRemarksB(String remarksB) {
         this.remarksB = remarksB;
         return this;
     }
@@ -91,7 +91,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.remarksB;
     }
 
-    public UpdateImageRequest setSourceType(String sourceType) {
+    public UpdateImageShrinkRequest setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
@@ -99,7 +99,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.sourceType;
     }
 
-    public UpdateImageRequest setSourceUri(String sourceUri) {
+    public UpdateImageShrinkRequest setSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
@@ -107,7 +107,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.sourceUri;
     }
 
-    public UpdateImageRequest setSourcePosition(String sourcePosition) {
+    public UpdateImageShrinkRequest setSourcePosition(String sourcePosition) {
         this.sourcePosition = sourcePosition;
         return this;
     }
@@ -115,7 +115,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.sourcePosition;
     }
 
-    public UpdateImageRequest setRemarksC(String remarksC) {
+    public UpdateImageShrinkRequest setRemarksC(String remarksC) {
         this.remarksC = remarksC;
         return this;
     }
@@ -123,7 +123,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.remarksC;
     }
 
-    public UpdateImageRequest setRemarksD(String remarksD) {
+    public UpdateImageShrinkRequest setRemarksD(String remarksD) {
         this.remarksD = remarksD;
         return this;
     }
@@ -131,7 +131,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.remarksD;
     }
 
-    public UpdateImageRequest setExternalId(String externalId) {
+    public UpdateImageShrinkRequest setExternalId(String externalId) {
         this.externalId = externalId;
         return this;
     }
@@ -139,7 +139,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.externalId;
     }
 
-    public UpdateImageRequest setRemarksArrayA(String remarksArrayA) {
+    public UpdateImageShrinkRequest setRemarksArrayA(String remarksArrayA) {
         this.remarksArrayA = remarksArrayA;
         return this;
     }
@@ -147,7 +147,7 @@ public class UpdateImageRequest extends TeaModel {
         return this.remarksArrayA;
     }
 
-    public UpdateImageRequest setRemarksArrayB(String remarksArrayB) {
+    public UpdateImageShrinkRequest setRemarksArrayB(String remarksArrayB) {
         this.remarksArrayB = remarksArrayB;
         return this;
     }
@@ -155,42 +155,12 @@ public class UpdateImageRequest extends TeaModel {
         return this.remarksArrayB;
     }
 
-    public UpdateImageRequest setFaces(java.util.List<UpdateImageRequestFaces> faces) {
-        this.faces = faces;
+    public UpdateImageShrinkRequest setFacesShrink(String facesShrink) {
+        this.facesShrink = facesShrink;
         return this;
     }
-    public java.util.List<UpdateImageRequestFaces> getFaces() {
-        return this.faces;
-    }
-
-    public static class UpdateImageRequestFaces extends TeaModel {
-        @NameInMap("FaceId")
-        public String faceId;
-
-        @NameInMap("GroupId")
-        public String groupId;
-
-        public static UpdateImageRequestFaces build(java.util.Map<String, ?> map) throws Exception {
-            UpdateImageRequestFaces self = new UpdateImageRequestFaces();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateImageRequestFaces setFaceId(String faceId) {
-            this.faceId = faceId;
-            return this;
-        }
-        public String getFaceId() {
-            return this.faceId;
-        }
-
-        public UpdateImageRequestFaces setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
-        }
-
+    public String getFacesShrink() {
+        return this.facesShrink;
     }
 
 }

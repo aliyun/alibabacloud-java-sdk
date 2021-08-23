@@ -4,14 +4,8 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetSetResponseBody extends TeaModel {
-    @NameInMap("ModifyTime")
-    public String modifyTime;
-
     @NameInMap("VideoCount")
     public Integer videoCount;
-
-    @NameInMap("ImageCount")
-    public Integer imageCount;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,29 +13,27 @@ public class GetSetResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
-    @NameInMap("SetName")
-    public String setName;
+    @NameInMap("VideoLength")
+    public Integer videoLength;
 
     @NameInMap("SetId")
     public String setId;
 
-    @NameInMap("VideoLength")
-    public Integer videoLength;
+    @NameInMap("ImageCount")
+    public Integer imageCount;
 
     @NameInMap("FaceCount")
     public Integer faceCount;
 
+    @NameInMap("SetName")
+    public String setName;
+
+    @NameInMap("ModifyTime")
+    public String modifyTime;
+
     public static GetSetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSetResponseBody self = new GetSetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSetResponseBody setModifyTime(String modifyTime) {
-        this.modifyTime = modifyTime;
-        return this;
-    }
-    public String getModifyTime() {
-        return this.modifyTime;
     }
 
     public GetSetResponseBody setVideoCount(Integer videoCount) {
@@ -50,14 +42,6 @@ public class GetSetResponseBody extends TeaModel {
     }
     public Integer getVideoCount() {
         return this.videoCount;
-    }
-
-    public GetSetResponseBody setImageCount(Integer imageCount) {
-        this.imageCount = imageCount;
-        return this;
-    }
-    public Integer getImageCount() {
-        return this.imageCount;
     }
 
     public GetSetResponseBody setRequestId(String requestId) {
@@ -76,12 +60,12 @@ public class GetSetResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public GetSetResponseBody setSetName(String setName) {
-        this.setName = setName;
+    public GetSetResponseBody setVideoLength(Integer videoLength) {
+        this.videoLength = videoLength;
         return this;
     }
-    public String getSetName() {
-        return this.setName;
+    public Integer getVideoLength() {
+        return this.videoLength;
     }
 
     public GetSetResponseBody setSetId(String setId) {
@@ -92,12 +76,12 @@ public class GetSetResponseBody extends TeaModel {
         return this.setId;
     }
 
-    public GetSetResponseBody setVideoLength(Integer videoLength) {
-        this.videoLength = videoLength;
+    public GetSetResponseBody setImageCount(Integer imageCount) {
+        this.imageCount = imageCount;
         return this;
     }
-    public Integer getVideoLength() {
-        return this.videoLength;
+    public Integer getImageCount() {
+        return this.imageCount;
     }
 
     public GetSetResponseBody setFaceCount(Integer faceCount) {
@@ -106,6 +90,22 @@ public class GetSetResponseBody extends TeaModel {
     }
     public Integer getFaceCount() {
         return this.faceCount;
+    }
+
+    public GetSetResponseBody setSetName(String setName) {
+        this.setName = setName;
+        return this;
+    }
+    public String getSetName() {
+        return this.setName;
+    }
+
+    public GetSetResponseBody setModifyTime(String modifyTime) {
+        this.modifyTime = modifyTime;
+        return this;
+    }
+    public String getModifyTime() {
+        return this.modifyTime;
     }
 
 }

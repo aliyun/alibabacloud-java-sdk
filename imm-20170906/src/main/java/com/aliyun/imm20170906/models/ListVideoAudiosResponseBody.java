@@ -4,14 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class ListVideoAudiosResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Audios")
-    public java.util.List<ListVideoAudiosResponseBodyAudios> audios;
-
     @NameInMap("VideoUri")
     public String videoUri;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("NextMarker")
     public String nextMarker;
@@ -19,25 +16,12 @@ public class ListVideoAudiosResponseBody extends TeaModel {
     @NameInMap("SetId")
     public String setId;
 
+    @NameInMap("Audios")
+    public java.util.List<ListVideoAudiosResponseBodyAudios> audios;
+
     public static ListVideoAudiosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVideoAudiosResponseBody self = new ListVideoAudiosResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListVideoAudiosResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListVideoAudiosResponseBody setAudios(java.util.List<ListVideoAudiosResponseBodyAudios> audios) {
-        this.audios = audios;
-        return this;
-    }
-    public java.util.List<ListVideoAudiosResponseBodyAudios> getAudios() {
-        return this.audios;
     }
 
     public ListVideoAudiosResponseBody setVideoUri(String videoUri) {
@@ -46,6 +30,14 @@ public class ListVideoAudiosResponseBody extends TeaModel {
     }
     public String getVideoUri() {
         return this.videoUri;
+    }
+
+    public ListVideoAudiosResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListVideoAudiosResponseBody setNextMarker(String nextMarker) {
@@ -62,6 +54,14 @@ public class ListVideoAudiosResponseBody extends TeaModel {
     }
     public String getSetId() {
         return this.setId;
+    }
+
+    public ListVideoAudiosResponseBody setAudios(java.util.List<ListVideoAudiosResponseBodyAudios> audios) {
+        this.audios = audios;
+        return this;
+    }
+    public java.util.List<ListVideoAudiosResponseBodyAudios> getAudios() {
+        return this.audios;
     }
 
     public static class ListVideoAudiosResponseBodyAudiosAudioTexts extends TeaModel {
@@ -186,17 +186,17 @@ public class ListVideoAudiosResponseBody extends TeaModel {
         @NameInMap("SourcePosition")
         public String sourcePosition;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("RemarksC")
         public String remarksC;
 
-        @NameInMap("AudioDuration")
-        public Float audioDuration;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("SourceType")
         public String sourceType;
+
+        @NameInMap("AudioDuration")
+        public Float audioDuration;
 
         @NameInMap("AudioTextsStatus")
         public String audioTextsStatus;
@@ -207,26 +207,23 @@ public class ListVideoAudiosResponseBody extends TeaModel {
         @NameInMap("RemarksD")
         public String remarksD;
 
-        @NameInMap("ProcessModifyTime")
-        public String processModifyTime;
-
         @NameInMap("ProcessFailReason")
         public String processFailReason;
 
-        @NameInMap("AudioUri")
-        public String audioUri;
+        @NameInMap("ProcessModifyTime")
+        public String processModifyTime;
 
         @NameInMap("AudioRate")
         public Integer audioRate;
+
+        @NameInMap("AudioUri")
+        public String audioUri;
 
         @NameInMap("AudioTextsModifyTime")
         public String audioTextsModifyTime;
 
         @NameInMap("RemarksA")
         public String remarksA;
-
-        @NameInMap("AudioTexts")
-        public java.util.List<ListVideoAudiosResponseBodyAudiosAudioTexts> audioTexts;
 
         @NameInMap("ExternalId")
         public String externalId;
@@ -249,6 +246,9 @@ public class ListVideoAudiosResponseBody extends TeaModel {
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        @NameInMap("AudioTexts")
+        public java.util.List<ListVideoAudiosResponseBodyAudiosAudioTexts> audioTexts;
+
         public static ListVideoAudiosResponseBodyAudios build(java.util.Map<String, ?> map) throws Exception {
             ListVideoAudiosResponseBodyAudios self = new ListVideoAudiosResponseBodyAudios();
             return TeaModel.build(map, self);
@@ -262,14 +262,6 @@ public class ListVideoAudiosResponseBody extends TeaModel {
             return this.sourcePosition;
         }
 
-        public ListVideoAudiosResponseBodyAudios setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
         public ListVideoAudiosResponseBodyAudios setRemarksC(String remarksC) {
             this.remarksC = remarksC;
             return this;
@@ -278,12 +270,12 @@ public class ListVideoAudiosResponseBody extends TeaModel {
             return this.remarksC;
         }
 
-        public ListVideoAudiosResponseBodyAudios setAudioDuration(Float audioDuration) {
-            this.audioDuration = audioDuration;
+        public ListVideoAudiosResponseBodyAudios setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public Float getAudioDuration() {
-            return this.audioDuration;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListVideoAudiosResponseBodyAudios setSourceType(String sourceType) {
@@ -292,6 +284,14 @@ public class ListVideoAudiosResponseBody extends TeaModel {
         }
         public String getSourceType() {
             return this.sourceType;
+        }
+
+        public ListVideoAudiosResponseBodyAudios setAudioDuration(Float audioDuration) {
+            this.audioDuration = audioDuration;
+            return this;
+        }
+        public Float getAudioDuration() {
+            return this.audioDuration;
         }
 
         public ListVideoAudiosResponseBodyAudios setAudioTextsStatus(String audioTextsStatus) {
@@ -318,14 +318,6 @@ public class ListVideoAudiosResponseBody extends TeaModel {
             return this.remarksD;
         }
 
-        public ListVideoAudiosResponseBodyAudios setProcessModifyTime(String processModifyTime) {
-            this.processModifyTime = processModifyTime;
-            return this;
-        }
-        public String getProcessModifyTime() {
-            return this.processModifyTime;
-        }
-
         public ListVideoAudiosResponseBodyAudios setProcessFailReason(String processFailReason) {
             this.processFailReason = processFailReason;
             return this;
@@ -334,12 +326,12 @@ public class ListVideoAudiosResponseBody extends TeaModel {
             return this.processFailReason;
         }
 
-        public ListVideoAudiosResponseBodyAudios setAudioUri(String audioUri) {
-            this.audioUri = audioUri;
+        public ListVideoAudiosResponseBodyAudios setProcessModifyTime(String processModifyTime) {
+            this.processModifyTime = processModifyTime;
             return this;
         }
-        public String getAudioUri() {
-            return this.audioUri;
+        public String getProcessModifyTime() {
+            return this.processModifyTime;
         }
 
         public ListVideoAudiosResponseBodyAudios setAudioRate(Integer audioRate) {
@@ -348,6 +340,14 @@ public class ListVideoAudiosResponseBody extends TeaModel {
         }
         public Integer getAudioRate() {
             return this.audioRate;
+        }
+
+        public ListVideoAudiosResponseBodyAudios setAudioUri(String audioUri) {
+            this.audioUri = audioUri;
+            return this;
+        }
+        public String getAudioUri() {
+            return this.audioUri;
         }
 
         public ListVideoAudiosResponseBodyAudios setAudioTextsModifyTime(String audioTextsModifyTime) {
@@ -364,14 +364,6 @@ public class ListVideoAudiosResponseBody extends TeaModel {
         }
         public String getRemarksA() {
             return this.remarksA;
-        }
-
-        public ListVideoAudiosResponseBodyAudios setAudioTexts(java.util.List<ListVideoAudiosResponseBodyAudiosAudioTexts> audioTexts) {
-            this.audioTexts = audioTexts;
-            return this;
-        }
-        public java.util.List<ListVideoAudiosResponseBodyAudiosAudioTexts> getAudioTexts() {
-            return this.audioTexts;
         }
 
         public ListVideoAudiosResponseBodyAudios setExternalId(String externalId) {
@@ -428,6 +420,14 @@ public class ListVideoAudiosResponseBody extends TeaModel {
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public ListVideoAudiosResponseBodyAudios setAudioTexts(java.util.List<ListVideoAudiosResponseBodyAudiosAudioTexts> audioTexts) {
+            this.audioTexts = audioTexts;
+            return this;
+        }
+        public java.util.List<ListVideoAudiosResponseBodyAudiosAudioTexts> getAudioTexts() {
+            return this.audioTexts;
         }
 
     }

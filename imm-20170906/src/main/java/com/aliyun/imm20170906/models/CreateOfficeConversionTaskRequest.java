@@ -76,6 +76,9 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     @NameInMap("DisplayDpi")
     public Integer displayDpi;
 
+    @NameInMap("UserData")
+    public String userData;
+
     public static CreateOfficeConversionTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOfficeConversionTaskRequest self = new CreateOfficeConversionTaskRequest();
         return TeaModel.build(map, self);
@@ -271,6 +274,14 @@ public class CreateOfficeConversionTaskRequest extends TeaModel {
     }
     public Integer getDisplayDpi() {
         return this.displayDpi;
+    }
+
+    public CreateOfficeConversionTaskRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

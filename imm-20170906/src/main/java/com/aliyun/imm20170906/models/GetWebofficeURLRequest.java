@@ -28,6 +28,12 @@ public class GetWebofficeURLRequest extends TeaModel {
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
+    @NameInMap("Watermark")
+    public String watermark;
+
+    @NameInMap("Hidecmb")
+    public Boolean hidecmb;
+
     public static GetWebofficeURLRequest build(java.util.Map<String, ?> map) throws Exception {
         GetWebofficeURLRequest self = new GetWebofficeURLRequest();
         return TeaModel.build(map, self);
@@ -95,6 +101,22 @@ public class GetWebofficeURLRequest extends TeaModel {
     }
     public String getNotifyTopicName() {
         return this.notifyTopicName;
+    }
+
+    public GetWebofficeURLRequest setWatermark(String watermark) {
+        this.watermark = watermark;
+        return this;
+    }
+    public String getWatermark() {
+        return this.watermark;
+    }
+
+    public GetWebofficeURLRequest setHidecmb(Boolean hidecmb) {
+        this.hidecmb = hidecmb;
+        return this;
+    }
+    public Boolean getHidecmb() {
+        return this.hidecmb;
     }
 
 }

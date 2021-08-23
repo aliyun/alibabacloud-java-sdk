@@ -4,11 +4,11 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class DetectImageQRCodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ImageUri")
     public String imageUri;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("QRCodes")
     public java.util.List<DetectImageQRCodesResponseBodyQRCodes> QRCodes;
@@ -18,20 +18,20 @@ public class DetectImageQRCodesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetectImageQRCodesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DetectImageQRCodesResponseBody setImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     public String getImageUri() {
         return this.imageUri;
+    }
+
+    public DetectImageQRCodesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DetectImageQRCodesResponseBody setQRCodes(java.util.List<DetectImageQRCodesResponseBodyQRCodes> QRCodes) {
@@ -43,6 +43,9 @@ public class DetectImageQRCodesResponseBody extends TeaModel {
     }
 
     public static class DetectImageQRCodesResponseBodyQRCodesQRCodeBoundary extends TeaModel {
+        @NameInMap("Left")
+        public Integer left;
+
         @NameInMap("Top")
         public Integer top;
 
@@ -52,12 +55,17 @@ public class DetectImageQRCodesResponseBody extends TeaModel {
         @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("Left")
-        public Integer left;
-
         public static DetectImageQRCodesResponseBodyQRCodesQRCodeBoundary build(java.util.Map<String, ?> map) throws Exception {
             DetectImageQRCodesResponseBodyQRCodesQRCodeBoundary self = new DetectImageQRCodesResponseBodyQRCodesQRCodeBoundary();
             return TeaModel.build(map, self);
+        }
+
+        public DetectImageQRCodesResponseBodyQRCodesQRCodeBoundary setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
         }
 
         public DetectImageQRCodesResponseBodyQRCodesQRCodeBoundary setTop(Integer top) {
@@ -82,14 +90,6 @@ public class DetectImageQRCodesResponseBody extends TeaModel {
         }
         public Integer getHeight() {
             return this.height;
-        }
-
-        public DetectImageQRCodesResponseBodyQRCodesQRCodeBoundary setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
         }
 
     }

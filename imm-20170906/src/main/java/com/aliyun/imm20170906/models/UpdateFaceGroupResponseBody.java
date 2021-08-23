@@ -7,11 +7,11 @@ public class UpdateFaceGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("SetId")
-    public String setId;
-
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("SetId")
+    public String setId;
 
     public static UpdateFaceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateFaceGroupResponseBody self = new UpdateFaceGroupResponseBody();
@@ -26,20 +26,20 @@ public class UpdateFaceGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateFaceGroupResponseBody setSetId(String setId) {
-        this.setId = setId;
-        return this;
-    }
-    public String getSetId() {
-        return this.setId;
-    }
-
     public UpdateFaceGroupResponseBody setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public UpdateFaceGroupResponseBody setSetId(String setId) {
+        this.setId = setId;
+        return this;
+    }
+    public String getSetId() {
+        return this.setId;
     }
 
 }

@@ -4,26 +4,26 @@ package com.aliyun.imm20170906.models;
 import com.aliyun.tea.*;
 
 public class GetImageQualityResponseBody extends TeaModel {
-    @NameInMap("ImageQuality")
-    public GetImageQualityResponseBodyImageQuality imageQuality;
+    @NameInMap("ImageUri")
+    public String imageUri;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ImageUri")
-    public String imageUri;
+    @NameInMap("ImageQuality")
+    public GetImageQualityResponseBodyImageQuality imageQuality;
 
     public static GetImageQualityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageQualityResponseBody self = new GetImageQualityResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetImageQualityResponseBody setImageQuality(GetImageQualityResponseBodyImageQuality imageQuality) {
-        this.imageQuality = imageQuality;
+    public GetImageQualityResponseBody setImageUri(String imageUri) {
+        this.imageUri = imageUri;
         return this;
     }
-    public GetImageQualityResponseBodyImageQuality getImageQuality() {
-        return this.imageQuality;
+    public String getImageUri() {
+        return this.imageUri;
     }
 
     public GetImageQualityResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class GetImageQualityResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetImageQualityResponseBody setImageUri(String imageUri) {
-        this.imageUri = imageUri;
+    public GetImageQualityResponseBody setImageQuality(GetImageQualityResponseBodyImageQuality imageQuality) {
+        this.imageQuality = imageQuality;
         return this;
     }
-    public String getImageUri() {
-        return this.imageUri;
+    public GetImageQualityResponseBodyImageQuality getImageQuality() {
+        return this.imageQuality;
     }
 
     public static class GetImageQualityResponseBodyImageQuality extends TeaModel {
