@@ -257,7 +257,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         public QueryTouchListResponseBodyResultDataDataExtAttrs extAttrs;
 
         @NameInMap("ExtAttrsString")
-        public String extAttrsString;
+        public java.util.Map<String, ?> extAttrsString;
 
         public static QueryTouchListResponseBodyResultDataData build(java.util.Map<String, ?> map) throws Exception {
             QueryTouchListResponseBodyResultDataData self = new QueryTouchListResponseBodyResultDataData();
@@ -480,11 +480,11 @@ public class QueryTouchListResponseBody extends TeaModel {
             return this.extAttrs;
         }
 
-        public QueryTouchListResponseBodyResultDataData setExtAttrsString(String extAttrsString) {
+        public QueryTouchListResponseBodyResultDataData setExtAttrsString(java.util.Map<String, ?> extAttrsString) {
             this.extAttrsString = extAttrsString;
             return this;
         }
-        public String getExtAttrsString() {
+        public java.util.Map<String, ?> getExtAttrsString() {
             return this.extAttrsString;
         }
 
