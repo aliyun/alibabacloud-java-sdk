@@ -4,33 +4,33 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class StartConfigRuleEvaluationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Result")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean result;
+    public StartConfigRuleEvaluationResponseBody body;
 
     public static StartConfigRuleEvaluationResponse build(java.util.Map<String, ?> map) throws Exception {
         StartConfigRuleEvaluationResponse self = new StartConfigRuleEvaluationResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartConfigRuleEvaluationResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartConfigRuleEvaluationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StartConfigRuleEvaluationResponse setResult(Boolean result) {
-        this.result = result;
+    public StartConfigRuleEvaluationResponse setBody(StartConfigRuleEvaluationResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getResult() {
-        return this.result;
+    public StartConfigRuleEvaluationResponseBody getBody() {
+        return this.body;
     }
 
 }

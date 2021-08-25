@@ -14,15 +14,12 @@ public class PutDeliveryChannelRequest extends TeaModel {
     public String deliveryChannelName;
 
     @NameInMap("DeliveryChannelType")
-    @Validation(required = true)
     public String deliveryChannelType;
 
     @NameInMap("DeliveryChannelTargetArn")
-    @Validation(required = true)
     public String deliveryChannelTargetArn;
 
     @NameInMap("DeliveryChannelAssumeRoleArn")
-    @Validation(required = true)
     public String deliveryChannelAssumeRoleArn;
 
     @NameInMap("DeliveryChannelCondition")

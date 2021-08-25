@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ActiveConfigRulesRequest extends TeaModel {
     @NameInMap("ConfigRuleIds")
-    @Validation(required = true)
     public String configRuleIds;
 
     public static ActiveConfigRulesRequest build(java.util.Map<String, ?> map) throws Exception {

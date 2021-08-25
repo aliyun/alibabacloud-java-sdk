@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class PutConfigurationRecorderRequest extends TeaModel {
     @NameInMap("ResourceTypes")
-    @Validation(required = true)
     public String resourceTypes;
 
     public static PutConfigurationRecorderRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,101 +4,33 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class StartConfigurationRecorderResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ConfigurationRecorder")
+    @NameInMap("body")
     @Validation(required = true)
-    public StartConfigurationRecorderResponseConfigurationRecorder configurationRecorder;
+    public StartConfigurationRecorderResponseBody body;
 
     public static StartConfigurationRecorderResponse build(java.util.Map<String, ?> map) throws Exception {
         StartConfigurationRecorderResponse self = new StartConfigurationRecorderResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartConfigurationRecorderResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartConfigurationRecorderResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StartConfigurationRecorderResponse setConfigurationRecorder(StartConfigurationRecorderResponseConfigurationRecorder configurationRecorder) {
-        this.configurationRecorder = configurationRecorder;
+    public StartConfigurationRecorderResponse setBody(StartConfigurationRecorderResponseBody body) {
+        this.body = body;
         return this;
     }
-    public StartConfigurationRecorderResponseConfigurationRecorder getConfigurationRecorder() {
-        return this.configurationRecorder;
-    }
-
-    public static class StartConfigurationRecorderResponseConfigurationRecorder extends TeaModel {
-        @NameInMap("AccountId")
-        @Validation(required = true)
-        public Long accountId;
-
-        @NameInMap("ConfigurationRecorderStatus")
-        @Validation(required = true)
-        public String configurationRecorderStatus;
-
-        @NameInMap("OrganizationMasterId")
-        @Validation(required = true)
-        public Long organizationMasterId;
-
-        @NameInMap("OrganizationEnableStatus")
-        @Validation(required = true)
-        public String organizationEnableStatus;
-
-        @NameInMap("ResourceTypes")
-        @Validation(required = true)
-        public java.util.List<String> resourceTypes;
-
-        public static StartConfigurationRecorderResponseConfigurationRecorder build(java.util.Map<String, ?> map) throws Exception {
-            StartConfigurationRecorderResponseConfigurationRecorder self = new StartConfigurationRecorderResponseConfigurationRecorder();
-            return TeaModel.build(map, self);
-        }
-
-        public StartConfigurationRecorderResponseConfigurationRecorder setAccountId(Long accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public Long getAccountId() {
-            return this.accountId;
-        }
-
-        public StartConfigurationRecorderResponseConfigurationRecorder setConfigurationRecorderStatus(String configurationRecorderStatus) {
-            this.configurationRecorderStatus = configurationRecorderStatus;
-            return this;
-        }
-        public String getConfigurationRecorderStatus() {
-            return this.configurationRecorderStatus;
-        }
-
-        public StartConfigurationRecorderResponseConfigurationRecorder setOrganizationMasterId(Long organizationMasterId) {
-            this.organizationMasterId = organizationMasterId;
-            return this;
-        }
-        public Long getOrganizationMasterId() {
-            return this.organizationMasterId;
-        }
-
-        public StartConfigurationRecorderResponseConfigurationRecorder setOrganizationEnableStatus(String organizationEnableStatus) {
-            this.organizationEnableStatus = organizationEnableStatus;
-            return this;
-        }
-        public String getOrganizationEnableStatus() {
-            return this.organizationEnableStatus;
-        }
-
-        public StartConfigurationRecorderResponseConfigurationRecorder setResourceTypes(java.util.List<String> resourceTypes) {
-            this.resourceTypes = resourceTypes;
-            return this;
-        }
-        public java.util.List<String> getResourceTypes() {
-            return this.resourceTypes;
-        }
-
+    public StartConfigurationRecorderResponseBody getBody() {
+        return this.body;
     }
 
 }

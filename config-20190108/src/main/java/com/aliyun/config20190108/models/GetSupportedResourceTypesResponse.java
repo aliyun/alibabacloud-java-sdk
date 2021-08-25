@@ -4,33 +4,33 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class GetSupportedResourceTypesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ResourceTypes")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<String> resourceTypes;
+    public GetSupportedResourceTypesResponseBody body;
 
     public static GetSupportedResourceTypesResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSupportedResourceTypesResponse self = new GetSupportedResourceTypesResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSupportedResourceTypesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetSupportedResourceTypesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetSupportedResourceTypesResponse setResourceTypes(java.util.List<String> resourceTypes) {
-        this.resourceTypes = resourceTypes;
+    public GetSupportedResourceTypesResponse setBody(GetSupportedResourceTypesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<String> getResourceTypes() {
-        return this.resourceTypes;
+    public GetSupportedResourceTypesResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigRuleRequest extends TeaModel {
     @NameInMap("ConfigRuleId")
-    @Validation(required = true)
     public String configRuleId;
 
     @NameInMap("MultiAccount")

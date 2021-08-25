@@ -4,33 +4,33 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class PutDeliveryChannelResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DeliveryChannelId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String deliveryChannelId;
+    public PutDeliveryChannelResponseBody body;
 
     public static PutDeliveryChannelResponse build(java.util.Map<String, ?> map) throws Exception {
         PutDeliveryChannelResponse self = new PutDeliveryChannelResponse();
         return TeaModel.build(map, self);
     }
 
-    public PutDeliveryChannelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PutDeliveryChannelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PutDeliveryChannelResponse setDeliveryChannelId(String deliveryChannelId) {
-        this.deliveryChannelId = deliveryChannelId;
+    public PutDeliveryChannelResponse setBody(PutDeliveryChannelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getDeliveryChannelId() {
-        return this.deliveryChannelId;
+    public PutDeliveryChannelResponseBody getBody() {
+        return this.body;
     }
 
 }
