@@ -112,6 +112,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("CreateMergeRequest", "2020-04-14", "HTTPS", "POST", "AK", "/api/v4/projects/" + ProjectId + "/merge_requests", "json", req, runtime), new CreateMergeRequestResponse());
     }
 
+    public DeleteRepositoryMemberWithExternUidResponse deleteRepositoryMemberWithExternUid(String ProjectId, DeleteRepositoryMemberWithExternUidRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteRepositoryMemberWithExternUidWithOptions(ProjectId, request, headers, runtime);
+    }
+
+    public DeleteRepositoryMemberWithExternUidResponse deleteRepositoryMemberWithExternUidWithOptions(String ProjectId, DeleteRepositoryMemberWithExternUidRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("AccessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externUserId)) {
+            query.put("ExternUserId", request.externUserId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("DeleteRepositoryMemberWithExternUid", "2020-04-14", "HTTPS", "POST", "AK", "/api/v4/projects/" + ProjectId + "/members/remove", "json", req, runtime), new DeleteRepositoryMemberWithExternUidResponse());
+    }
+
     public DeleteRepositoryResponse deleteRepository(String ProjectId, DeleteRepositoryRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
