@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.config20200907.models;
+
+import com.aliyun.tea.*;
+
+public class ListAggregatorsResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ListAggregatorsResponseBody body;
+
+    public static ListAggregatorsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAggregatorsResponse self = new ListAggregatorsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ListAggregatorsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListAggregatorsResponse setBody(ListAggregatorsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListAggregatorsResponseBody getBody() {
+        return this.body;
+    }
+
+}

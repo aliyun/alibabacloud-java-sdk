@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.config20200907.models;
+
+import com.aliyun.tea.*;
+
+public class GetAggregateConfigRuleComplianceByPackResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetAggregateConfigRuleComplianceByPackResponseBody body;
+
+    public static GetAggregateConfigRuleComplianceByPackResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetAggregateConfigRuleComplianceByPackResponse self = new GetAggregateConfigRuleComplianceByPackResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetAggregateConfigRuleComplianceByPackResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetAggregateConfigRuleComplianceByPackResponse setBody(GetAggregateConfigRuleComplianceByPackResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetAggregateConfigRuleComplianceByPackResponseBody getBody() {
+        return this.body;
+    }
+
+}
