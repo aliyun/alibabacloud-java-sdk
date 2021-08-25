@@ -4,33 +4,33 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class PutConfigRuleResponse extends TeaModel {
-    @NameInMap("ConfigRuleId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String configRuleId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public PutConfigRuleResponseBody body;
 
     public static PutConfigRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         PutConfigRuleResponse self = new PutConfigRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public PutConfigRuleResponse setConfigRuleId(String configRuleId) {
-        this.configRuleId = configRuleId;
+    public PutConfigRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getConfigRuleId() {
-        return this.configRuleId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PutConfigRuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PutConfigRuleResponse setBody(PutConfigRuleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public PutConfigRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

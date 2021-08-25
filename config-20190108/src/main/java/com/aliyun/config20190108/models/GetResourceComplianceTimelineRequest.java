@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetResourceComplianceTimelineRequest extends TeaModel {
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("StartTime")
@@ -28,7 +26,6 @@ public class GetResourceComplianceTimelineRequest extends TeaModel {
     public String memberId;
 
     @NameInMap("Region")
-    @Validation(required = true)
     public String region;
 
     @NameInMap("NextToken")

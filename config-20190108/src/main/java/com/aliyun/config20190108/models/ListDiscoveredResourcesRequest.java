@@ -11,11 +11,9 @@ public class ListDiscoveredResourcesRequest extends TeaModel {
     public Integer resourceDeleted;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("ResourceTypes")

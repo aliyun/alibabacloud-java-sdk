@@ -13,9 +13,6 @@ public class ListConfigRulesRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
-    @NameInMap("MessageType")
-    public String messageType;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -27,6 +24,12 @@ public class ListConfigRulesRequest extends TeaModel {
 
     @NameInMap("MemberId")
     public Long memberId;
+
+    @NameInMap("ConfigRuleName")
+    public String configRuleName;
+
+    @NameInMap("CompliancePackId")
+    public String compliancePackId;
 
     public static ListConfigRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConfigRulesRequest self = new ListConfigRulesRequest();
@@ -55,14 +58,6 @@ public class ListConfigRulesRequest extends TeaModel {
     }
     public Integer getRiskLevel() {
         return this.riskLevel;
-    }
-
-    public ListConfigRulesRequest setMessageType(String messageType) {
-        this.messageType = messageType;
-        return this;
-    }
-    public String getMessageType() {
-        return this.messageType;
     }
 
     public ListConfigRulesRequest setPageNumber(Integer pageNumber) {
@@ -95,6 +90,22 @@ public class ListConfigRulesRequest extends TeaModel {
     }
     public Long getMemberId() {
         return this.memberId;
+    }
+
+    public ListConfigRulesRequest setConfigRuleName(String configRuleName) {
+        this.configRuleName = configRuleName;
+        return this;
+    }
+    public String getConfigRuleName() {
+        return this.configRuleName;
+    }
+
+    public ListConfigRulesRequest setCompliancePackId(String compliancePackId) {
+        this.compliancePackId = compliancePackId;
+        return this;
+    }
+    public String getCompliancePackId() {
+        return this.compliancePackId;
     }
 
 }

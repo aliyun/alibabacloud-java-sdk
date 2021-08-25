@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class PutEvaluationsRequest extends TeaModel {
     @NameInMap("ResultToken")
-    @Validation(required = true)
     public String resultToken;
 
     @NameInMap("Evaluations")

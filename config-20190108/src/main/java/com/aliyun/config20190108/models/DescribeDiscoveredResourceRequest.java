@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDiscoveredResourceRequest extends TeaModel {
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("Region")

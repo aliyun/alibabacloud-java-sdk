@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteConfigRulesRequest extends TeaModel {
     @NameInMap("ConfigRuleIds")
-    @Validation(required = true)
     public String configRuleIds;
 
     public static DeleteConfigRulesRequest build(java.util.Map<String, ?> map) throws Exception {

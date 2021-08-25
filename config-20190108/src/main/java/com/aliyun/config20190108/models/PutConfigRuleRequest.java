@@ -8,7 +8,6 @@ public class PutConfigRuleRequest extends TeaModel {
     public String configRuleId;
 
     @NameInMap("ConfigRuleName")
-    @Validation(required = true)
     public String configRuleName;
 
     @NameInMap("Description")
@@ -18,15 +17,12 @@ public class PutConfigRuleRequest extends TeaModel {
     public String inputParameters;
 
     @NameInMap("SourceOwner")
-    @Validation(required = true)
     public String sourceOwner;
 
     @NameInMap("SourceIdentifier")
-    @Validation(required = true)
     public String sourceIdentifier;
 
     @NameInMap("SourceDetailMessageType")
-    @Validation(required = true)
     public String sourceDetailMessageType;
 
     @NameInMap("SourceMaximumExecutionFrequency")
@@ -36,11 +32,9 @@ public class PutConfigRuleRequest extends TeaModel {
     public String scopeComplianceResourceId;
 
     @NameInMap("ScopeComplianceResourceTypes")
-    @Validation(required = true)
     public String scopeComplianceResourceTypes;
 
     @NameInMap("RiskLevel")
-    @Validation(required = true)
     public Integer riskLevel;
 
     @NameInMap("ClientToken")

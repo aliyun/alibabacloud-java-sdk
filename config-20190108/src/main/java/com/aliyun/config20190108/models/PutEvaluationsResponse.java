@@ -4,33 +4,33 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class PutEvaluationsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Result")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean result;
+    public PutEvaluationsResponseBody body;
 
     public static PutEvaluationsResponse build(java.util.Map<String, ?> map) throws Exception {
         PutEvaluationsResponse self = new PutEvaluationsResponse();
         return TeaModel.build(map, self);
     }
 
-    public PutEvaluationsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PutEvaluationsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PutEvaluationsResponse setResult(Boolean result) {
-        this.result = result;
+    public PutEvaluationsResponse setBody(PutEvaluationsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getResult() {
-        return this.result;
+    public PutEvaluationsResponseBody getBody() {
+        return this.body;
     }
 
 }

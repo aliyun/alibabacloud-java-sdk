@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetResourceConfigurationTimelineRequest extends TeaModel {
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("StartTime")
@@ -18,11 +17,9 @@ public class GetResourceConfigurationTimelineRequest extends TeaModel {
     public Integer limit;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("Region")
-    @Validation(required = true)
     public String region;
 
     @NameInMap("MultiAccount")
