@@ -139,6 +139,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("ListEcsSpecs", "2021-02-26", "HTTPS", "GET", "AK", "/api/v1/ecsSpecs", "json", req, runtime), new ListEcsSpecsResponse());
     }
 
+    public GetInstancesStatisticsResponse getInstancesStatistics(GetInstancesStatisticsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getInstancesStatisticsWithOptions(request, headers, runtime);
+    }
+
+    public GetInstancesStatisticsResponse getInstancesStatisticsWithOptions(GetInstancesStatisticsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceIds)) {
+            query.put("WorkspaceIds", request.workspaceIds);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("GetInstancesStatistics", "2021-02-26", "HTTPS", "GET", "AK", "/api/v1/statistics/instances", "json", req, runtime), new GetInstancesStatisticsResponse());
+    }
+
     public DeleteInstanceSnapshotResponse deleteInstanceSnapshot(String InstanceId, String InstanceSnapshotId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
