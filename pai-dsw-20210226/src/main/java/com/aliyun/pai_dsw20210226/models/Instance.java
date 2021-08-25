@@ -68,6 +68,14 @@ public class Instance extends TeaModel {
     @NameInMap("InstanceShutdownTimer")
     public InstanceShutdownTimer instanceShutdownTimer;
 
+    // 工作空间id
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
+    // 工作空间名称
+    @NameInMap("WorkspaceName")
+    public String workspaceName;
+
     public static Instance build(java.util.Map<String, ?> map) throws Exception {
         Instance self = new Instance();
         return TeaModel.build(map, self);
@@ -199,6 +207,22 @@ public class Instance extends TeaModel {
     }
     public InstanceShutdownTimer getInstanceShutdownTimer() {
         return this.instanceShutdownTimer;
+    }
+
+    public Instance setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public Instance setWorkspaceName(String workspaceName) {
+        this.workspaceName = workspaceName;
+        return this;
+    }
+    public String getWorkspaceName() {
+        return this.workspaceName;
     }
 
 }
