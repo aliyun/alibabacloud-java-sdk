@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.config20200907.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateConfigRuleResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateConfigRuleResponseBody body;
+
+    public static UpdateConfigRuleResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateConfigRuleResponse self = new UpdateConfigRuleResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateConfigRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateConfigRuleResponse setBody(UpdateConfigRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateConfigRuleResponseBody getBody() {
+        return this.body;
+    }
+
+}
