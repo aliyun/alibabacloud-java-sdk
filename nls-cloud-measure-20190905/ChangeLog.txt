@@ -1,3 +1,7 @@
+2021-08-25 Version: 0.0.2
+- First time build.
+
+
 2021-08-19 Version: 0.0.1
 - First time build.
 

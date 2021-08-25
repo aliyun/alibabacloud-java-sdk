@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>nls_cloud_measure20190905</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <packaging>jar</packaging>
   <name>nls_cloud_measure20190905</name>
   <description>Alibaba Cloud nls-cloud-measure (20190905) SDK for Java
