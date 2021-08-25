@@ -16,8 +16,8 @@ public class ModifyIpStatusResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("Data")
-    public ModifyIpStatusResponseBodyData data;
+    @NameInMap("ErrorIpList")
+    public java.util.List<ModifyIpStatusResponseBodyErrorIpList> errorIpList;
 
     public static ModifyIpStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyIpStatusResponseBody self = new ModifyIpStatusResponseBody();
@@ -56,27 +56,27 @@ public class ModifyIpStatusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModifyIpStatusResponseBody setData(ModifyIpStatusResponseBodyData data) {
-        this.data = data;
+    public ModifyIpStatusResponseBody setErrorIpList(java.util.List<ModifyIpStatusResponseBodyErrorIpList> errorIpList) {
+        this.errorIpList = errorIpList;
         return this;
     }
-    public ModifyIpStatusResponseBodyData getData() {
-        return this.data;
+    public java.util.List<ModifyIpStatusResponseBodyErrorIpList> getErrorIpList() {
+        return this.errorIpList;
     }
 
-    public static class ModifyIpStatusResponseBodyDataErrorIpList extends TeaModel {
+    public static class ModifyIpStatusResponseBodyErrorIpList extends TeaModel {
         @NameInMap("Cause")
         public String cause;
 
         @NameInMap("Ip")
         public String ip;
 
-        public static ModifyIpStatusResponseBodyDataErrorIpList build(java.util.Map<String, ?> map) throws Exception {
-            ModifyIpStatusResponseBodyDataErrorIpList self = new ModifyIpStatusResponseBodyDataErrorIpList();
+        public static ModifyIpStatusResponseBodyErrorIpList build(java.util.Map<String, ?> map) throws Exception {
+            ModifyIpStatusResponseBodyErrorIpList self = new ModifyIpStatusResponseBodyErrorIpList();
             return TeaModel.build(map, self);
         }
 
-        public ModifyIpStatusResponseBodyDataErrorIpList setCause(String cause) {
+        public ModifyIpStatusResponseBodyErrorIpList setCause(String cause) {
             this.cause = cause;
             return this;
         }
@@ -84,31 +84,12 @@ public class ModifyIpStatusResponseBody extends TeaModel {
             return this.cause;
         }
 
-        public ModifyIpStatusResponseBodyDataErrorIpList setIp(String ip) {
+        public ModifyIpStatusResponseBodyErrorIpList setIp(String ip) {
             this.ip = ip;
             return this;
         }
         public String getIp() {
             return this.ip;
-        }
-
-    }
-
-    public static class ModifyIpStatusResponseBodyData extends TeaModel {
-        @NameInMap("ErrorIpList")
-        public java.util.List<ModifyIpStatusResponseBodyDataErrorIpList> errorIpList;
-
-        public static ModifyIpStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ModifyIpStatusResponseBodyData self = new ModifyIpStatusResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyIpStatusResponseBodyData setErrorIpList(java.util.List<ModifyIpStatusResponseBodyDataErrorIpList> errorIpList) {
-            this.errorIpList = errorIpList;
-            return this;
-        }
-        public java.util.List<ModifyIpStatusResponseBodyDataErrorIpList> getErrorIpList() {
-            return this.errorIpList;
         }
 
     }
