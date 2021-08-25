@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>codeup20200414</artifactId>
-  <version>0.1.4</version>
+  <version>0.1.5</version>
   <packaging>jar</packaging>
   <name>codeup20200414</name>
   <description>Alibaba Cloud codeup (20200414) SDK for Java
