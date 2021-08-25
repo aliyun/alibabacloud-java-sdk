@@ -1,0 +1,86 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.computenestsupplier20210521.models;
+
+import com.aliyun.tea.*;
+
+public class ListServiceInstancesRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("MaxResults")
+    public String maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("Filter")
+    public java.util.List<ListServiceInstancesRequestFilter> filter;
+
+    public static ListServiceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListServiceInstancesRequest self = new ListServiceInstancesRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ListServiceInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListServiceInstancesRequest setMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public String getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListServiceInstancesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListServiceInstancesRequest setFilter(java.util.List<ListServiceInstancesRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<ListServiceInstancesRequestFilter> getFilter() {
+        return this.filter;
+    }
+
+    public static class ListServiceInstancesRequestFilter extends TeaModel {
+        @NameInMap("Value")
+        public java.util.List<String> value;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static ListServiceInstancesRequestFilter build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceInstancesRequestFilter self = new ListServiceInstancesRequestFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceInstancesRequestFilter setValue(java.util.List<String> value) {
+            this.value = value;
+            return this;
+        }
+        public java.util.List<String> getValue() {
+            return this.value;
+        }
+
+        public ListServiceInstancesRequestFilter setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+}
