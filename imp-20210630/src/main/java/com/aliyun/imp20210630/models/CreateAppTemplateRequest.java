@@ -9,8 +9,8 @@ public class CreateAppTemplateRequest extends TeaModel {
     public String appTemplateName;
 
     // 应用模板场景，电商business，课堂classroom
-    @NameInMap("Sence")
-    public String sence;
+    @NameInMap("Scene")
+    public String scene;
 
     // 组件列表
     @NameInMap("ComponentList")
@@ -29,12 +29,12 @@ public class CreateAppTemplateRequest extends TeaModel {
         return this.appTemplateName;
     }
 
-    public CreateAppTemplateRequest setSence(String sence) {
-        this.sence = sence;
+    public CreateAppTemplateRequest setScene(String scene) {
+        this.scene = scene;
         return this;
     }
-    public String getSence() {
-        return this.sence;
+    public String getScene() {
+        return this.scene;
     }
 
     public CreateAppTemplateRequest setComponentList(java.util.List<String> componentList) {
