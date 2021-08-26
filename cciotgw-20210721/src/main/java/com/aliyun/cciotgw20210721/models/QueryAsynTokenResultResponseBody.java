@@ -16,8 +16,11 @@ public class QueryAsynTokenResultResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("Data")
-    public QueryAsynTokenResultResponseBodyData data;
+    @NameInMap("Result")
+    public String result;
+
+    @NameInMap("Status")
+    public String status;
 
     public static QueryAsynTokenResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAsynTokenResultResponseBody self = new QueryAsynTokenResultResponseBody();
@@ -56,42 +59,20 @@ public class QueryAsynTokenResultResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryAsynTokenResultResponseBody setData(QueryAsynTokenResultResponseBodyData data) {
-        this.data = data;
+    public QueryAsynTokenResultResponseBody setResult(String result) {
+        this.result = result;
         return this;
     }
-    public QueryAsynTokenResultResponseBodyData getData() {
-        return this.data;
+    public String getResult() {
+        return this.result;
     }
 
-    public static class QueryAsynTokenResultResponseBodyData extends TeaModel {
-        @NameInMap("Result")
-        public String result;
-
-        @NameInMap("Status")
-        public String status;
-
-        public static QueryAsynTokenResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            QueryAsynTokenResultResponseBodyData self = new QueryAsynTokenResultResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryAsynTokenResultResponseBodyData setResult(String result) {
-            this.result = result;
-            return this;
-        }
-        public String getResult() {
-            return this.result;
-        }
-
-        public QueryAsynTokenResultResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
+    public QueryAsynTokenResultResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }
