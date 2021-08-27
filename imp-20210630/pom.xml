@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>imp20210630</artifactId>
-  <version>2.3.4</version>
+  <version>2.4.4</version>
   <packaging>jar</packaging>
   <name>imp20210630</name>
   <description>Alibaba Cloud imp (20210630) SDK for Java
