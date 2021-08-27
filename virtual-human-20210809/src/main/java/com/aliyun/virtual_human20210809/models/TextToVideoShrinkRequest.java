@@ -3,7 +3,7 @@ package com.aliyun.virtual_human20210809.models;
 
 import com.aliyun.tea.*;
 
-public class TextToVideoRequest extends TeaModel {
+public class TextToVideoShrinkRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
@@ -35,14 +35,14 @@ public class TextToVideoRequest extends TeaModel {
     public String virtualHumanCode;
 
     @NameInMap("ExtendParams")
-    public java.util.Map<String, String> extendParams;
+    public String extendParamsShrink;
 
-    public static TextToVideoRequest build(java.util.Map<String, ?> map) throws Exception {
-        TextToVideoRequest self = new TextToVideoRequest();
+    public static TextToVideoShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        TextToVideoShrinkRequest self = new TextToVideoShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public TextToVideoRequest setTaskId(String taskId) {
+    public TextToVideoShrinkRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
@@ -50,7 +50,7 @@ public class TextToVideoRequest extends TeaModel {
         return this.taskId;
     }
 
-    public TextToVideoRequest setSpeechText(String speechText) {
+    public TextToVideoShrinkRequest setSpeechText(String speechText) {
         this.speechText = speechText;
         return this;
     }
@@ -58,7 +58,7 @@ public class TextToVideoRequest extends TeaModel {
         return this.speechText;
     }
 
-    public TextToVideoRequest setId(String id) {
+    public TextToVideoShrinkRequest setId(String id) {
         this.id = id;
         return this;
     }
@@ -66,7 +66,7 @@ public class TextToVideoRequest extends TeaModel {
         return this.id;
     }
 
-    public TextToVideoRequest setCommandType(String commandType) {
+    public TextToVideoShrinkRequest setCommandType(String commandType) {
         this.commandType = commandType;
         return this;
     }
@@ -74,7 +74,7 @@ public class TextToVideoRequest extends TeaModel {
         return this.commandType;
     }
 
-    public TextToVideoRequest setSceneType(String sceneType) {
+    public TextToVideoShrinkRequest setSceneType(String sceneType) {
         this.sceneType = sceneType;
         return this;
     }
@@ -82,7 +82,7 @@ public class TextToVideoRequest extends TeaModel {
         return this.sceneType;
     }
 
-    public TextToVideoRequest setBeginText(String beginText) {
+    public TextToVideoShrinkRequest setBeginText(String beginText) {
         this.beginText = beginText;
         return this;
     }
@@ -90,7 +90,7 @@ public class TextToVideoRequest extends TeaModel {
         return this.beginText;
     }
 
-    public TextToVideoRequest setBeginAction(String beginAction) {
+    public TextToVideoShrinkRequest setBeginAction(String beginAction) {
         this.beginAction = beginAction;
         return this;
     }
@@ -98,7 +98,7 @@ public class TextToVideoRequest extends TeaModel {
         return this.beginAction;
     }
 
-    public TextToVideoRequest setEndText(String endText) {
+    public TextToVideoShrinkRequest setEndText(String endText) {
         this.endText = endText;
         return this;
     }
@@ -106,7 +106,7 @@ public class TextToVideoRequest extends TeaModel {
         return this.endText;
     }
 
-    public TextToVideoRequest setEndAction(String endAction) {
+    public TextToVideoShrinkRequest setEndAction(String endAction) {
         this.endAction = endAction;
         return this;
     }
@@ -114,7 +114,7 @@ public class TextToVideoRequest extends TeaModel {
         return this.endAction;
     }
 
-    public TextToVideoRequest setVirtualHumanCode(String virtualHumanCode) {
+    public TextToVideoShrinkRequest setVirtualHumanCode(String virtualHumanCode) {
         this.virtualHumanCode = virtualHumanCode;
         return this;
     }
@@ -122,12 +122,12 @@ public class TextToVideoRequest extends TeaModel {
         return this.virtualHumanCode;
     }
 
-    public TextToVideoRequest setExtendParams(java.util.Map<String, String> extendParams) {
-        this.extendParams = extendParams;
+    public TextToVideoShrinkRequest setExtendParamsShrink(String extendParamsShrink) {
+        this.extendParamsShrink = extendParamsShrink;
         return this;
     }
-    public java.util.Map<String, String> getExtendParams() {
-        return this.extendParams;
+    public String getExtendParamsShrink() {
+        return this.extendParamsShrink;
     }
 
 }
