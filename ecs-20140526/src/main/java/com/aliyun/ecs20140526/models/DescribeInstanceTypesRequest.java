@@ -22,6 +22,12 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
+    @NameInMap("MaxResults")
+    public Long maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     public static DescribeInstanceTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceTypesRequest self = new DescribeInstanceTypesRequest();
         return TeaModel.build(map, self);
@@ -73,6 +79,22 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
+    }
+
+    public DescribeInstanceTypesRequest setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeInstanceTypesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

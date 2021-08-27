@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImagePipelineRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<CreateImagePipelineRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -22,8 +25,11 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("Tag")
-    public java.util.List<CreateImagePipelineRequestTag> tag;
+    @NameInMap("AddAccount")
+    public java.util.List<Integer> addAccount;
+
+    @NameInMap("ToRegionId")
+    public java.util.List<String> toRegionId;
 
     @NameInMap("BaseImageType")
     public String baseImageType;
@@ -61,15 +67,17 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("AddAccount")
-    public java.util.List<Integer> addAccount;
-
-    @NameInMap("ToRegionId")
-    public java.util.List<String> toRegionId;
-
     public static CreateImagePipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImagePipelineRequest self = new CreateImagePipelineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateImagePipelineRequest setTag(java.util.List<CreateImagePipelineRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateImagePipelineRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateImagePipelineRequest setOwnerId(Long ownerId) {
@@ -120,12 +128,20 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateImagePipelineRequest setTag(java.util.List<CreateImagePipelineRequestTag> tag) {
-        this.tag = tag;
+    public CreateImagePipelineRequest setAddAccount(java.util.List<Integer> addAccount) {
+        this.addAccount = addAccount;
         return this;
     }
-    public java.util.List<CreateImagePipelineRequestTag> getTag() {
-        return this.tag;
+    public java.util.List<Integer> getAddAccount() {
+        return this.addAccount;
+    }
+
+    public CreateImagePipelineRequest setToRegionId(java.util.List<String> toRegionId) {
+        this.toRegionId = toRegionId;
+        return this;
+    }
+    public java.util.List<String> getToRegionId() {
+        return this.toRegionId;
     }
 
     public CreateImagePipelineRequest setBaseImageType(String baseImageType) {
@@ -222,22 +238,6 @@ public class CreateImagePipelineRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public CreateImagePipelineRequest setAddAccount(java.util.List<Integer> addAccount) {
-        this.addAccount = addAccount;
-        return this;
-    }
-    public java.util.List<Integer> getAddAccount() {
-        return this.addAccount;
-    }
-
-    public CreateImagePipelineRequest setToRegionId(java.util.List<String> toRegionId) {
-        this.toRegionId = toRegionId;
-        return this;
-    }
-    public java.util.List<String> getToRegionId() {
-        return this.toRegionId;
     }
 
     public static class CreateImagePipelineRequestTag extends TeaModel {

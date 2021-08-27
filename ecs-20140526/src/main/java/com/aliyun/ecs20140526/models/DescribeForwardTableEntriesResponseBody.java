@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("ForwardTableEntries")
     public DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries;
 
     public static DescribeForwardTableEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeForwardTableEntriesResponseBody self = new DescribeForwardTableEntriesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeForwardTableEntriesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeForwardTableEntriesResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeForwardTableEntriesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeForwardTableEntriesResponseBody setForwardTableEntries(DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries) {

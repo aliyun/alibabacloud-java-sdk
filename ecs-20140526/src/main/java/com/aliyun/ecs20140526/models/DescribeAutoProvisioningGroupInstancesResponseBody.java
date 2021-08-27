@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    public DescribeAutoProvisioningGroupInstancesResponseBodyInstances instances;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("Instances")
+    public DescribeAutoProvisioningGroupInstancesResponseBodyInstances instances;
+
     public static DescribeAutoProvisioningGroupInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoProvisioningGroupInstancesResponseBody self = new DescribeAutoProvisioningGroupInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAutoProvisioningGroupInstancesResponseBody setInstances(DescribeAutoProvisioningGroupInstancesResponseBodyInstances instances) {
-        this.instances = instances;
-        return this;
-    }
-    public DescribeAutoProvisioningGroupInstancesResponseBodyInstances getInstances() {
-        return this.instances;
-    }
-
-    public DescribeAutoProvisioningGroupInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeAutoProvisioningGroupInstancesResponseBody setPageSize(Integer pageSize) {
@@ -64,12 +48,28 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         return this.pageNumber;
     }
 
-    public static class DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
+    public DescribeAutoProvisioningGroupInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
+    public DescribeAutoProvisioningGroupInstancesResponseBody setInstances(DescribeAutoProvisioningGroupInstancesResponseBodyInstances instances) {
+        this.instances = instances;
+        return this;
+    }
+    public DescribeAutoProvisioningGroupInstancesResponseBodyInstances getInstances() {
+        return this.instances;
+    }
+
+    public static class DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance extends TeaModel {
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("IsSpot")
         public Boolean isSpot;
@@ -77,11 +77,11 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         @NameInMap("CPU")
         public Integer CPU;
 
-        @NameInMap("NetworkType")
-        public String networkType;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("NetworkType")
+        public String networkType;
 
         @NameInMap("InstanceType")
         public String instanceType;
@@ -106,20 +106,20 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return TeaModel.build(map, self);
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
         public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setIsSpot(Boolean isSpot) {
@@ -138,20 +138,20 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.CPU;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setNetworkType(String networkType) {
-            this.networkType = networkType;
-            return this;
-        }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
         public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setInstanceType(String instanceType) {

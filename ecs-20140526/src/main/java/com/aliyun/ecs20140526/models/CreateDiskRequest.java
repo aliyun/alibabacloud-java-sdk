@@ -67,6 +67,12 @@ public class CreateDiskRequest extends TeaModel {
     @NameInMap("StorageSetPartitionNumber")
     public Integer storageSetPartitionNumber;
 
+    @NameInMap("DedicatedBlockStorageClusterId")
+    public String dedicatedBlockStorageClusterId;
+
+    @NameInMap("MultiAttach")
+    public String multiAttach;
+
     @NameInMap("Tag")
     public java.util.List<CreateDiskRequestTag> tag;
 
@@ -244,6 +250,22 @@ public class CreateDiskRequest extends TeaModel {
     }
     public Integer getStorageSetPartitionNumber() {
         return this.storageSetPartitionNumber;
+    }
+
+    public CreateDiskRequest setDedicatedBlockStorageClusterId(String dedicatedBlockStorageClusterId) {
+        this.dedicatedBlockStorageClusterId = dedicatedBlockStorageClusterId;
+        return this;
+    }
+    public String getDedicatedBlockStorageClusterId() {
+        return this.dedicatedBlockStorageClusterId;
+    }
+
+    public CreateDiskRequest setMultiAttach(String multiAttach) {
+        this.multiAttach = multiAttach;
+        return this;
+    }
+    public String getMultiAttach() {
+        return this.multiAttach;
     }
 
     public CreateDiskRequest setTag(java.util.List<CreateDiskRequestTag> tag) {

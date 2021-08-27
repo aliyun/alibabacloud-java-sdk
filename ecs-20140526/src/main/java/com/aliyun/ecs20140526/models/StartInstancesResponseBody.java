@@ -32,12 +32,6 @@ public class StartInstancesResponseBody extends TeaModel {
     }
 
     public static class StartInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
-        @NameInMap("CurrentStatus")
-        public String currentStatus;
-
-        @NameInMap("PreviousStatus")
-        public String previousStatus;
-
         @NameInMap("Code")
         public String code;
 
@@ -47,25 +41,15 @@ public class StartInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("CurrentStatus")
+        public String currentStatus;
+
+        @NameInMap("PreviousStatus")
+        public String previousStatus;
+
         public static StartInstancesResponseBodyInstanceResponsesInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
             StartInstancesResponseBodyInstanceResponsesInstanceResponse self = new StartInstancesResponseBodyInstanceResponsesInstanceResponse();
             return TeaModel.build(map, self);
-        }
-
-        public StartInstancesResponseBodyInstanceResponsesInstanceResponse setCurrentStatus(String currentStatus) {
-            this.currentStatus = currentStatus;
-            return this;
-        }
-        public String getCurrentStatus() {
-            return this.currentStatus;
-        }
-
-        public StartInstancesResponseBodyInstanceResponsesInstanceResponse setPreviousStatus(String previousStatus) {
-            this.previousStatus = previousStatus;
-            return this;
-        }
-        public String getPreviousStatus() {
-            return this.previousStatus;
         }
 
         public StartInstancesResponseBodyInstanceResponsesInstanceResponse setCode(String code) {
@@ -90,6 +74,22 @@ public class StartInstancesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public StartInstancesResponseBodyInstanceResponsesInstanceResponse setCurrentStatus(String currentStatus) {
+            this.currentStatus = currentStatus;
+            return this;
+        }
+        public String getCurrentStatus() {
+            return this.currentStatus;
+        }
+
+        public StartInstancesResponseBodyInstanceResponsesInstanceResponse setPreviousStatus(String previousStatus) {
+            this.previousStatus = previousStatus;
+            return this;
+        }
+        public String getPreviousStatus() {
+            return this.previousStatus;
         }
 
     }

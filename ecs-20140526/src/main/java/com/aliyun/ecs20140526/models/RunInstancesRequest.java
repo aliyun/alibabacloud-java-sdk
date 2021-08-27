@@ -950,6 +950,9 @@ public class RunInstancesRequest extends TeaModel {
         @NameInMap("TrustedSystemMode")
         public String trustedSystemMode;
 
+        @NameInMap("ConfidentialComputingMode")
+        public String confidentialComputingMode;
+
         public static RunInstancesRequestSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
             RunInstancesRequestSecurityOptions self = new RunInstancesRequestSecurityOptions();
             return TeaModel.build(map, self);
@@ -961,6 +964,14 @@ public class RunInstancesRequest extends TeaModel {
         }
         public String getTrustedSystemMode() {
             return this.trustedSystemMode;
+        }
+
+        public RunInstancesRequestSecurityOptions setConfidentialComputingMode(String confidentialComputingMode) {
+            this.confidentialComputingMode = confidentialComputingMode;
+            return this;
+        }
+        public String getConfidentialComputingMode() {
+            return this.confidentialComputingMode;
         }
 
     }
@@ -1196,11 +1207,11 @@ public class RunInstancesRequest extends TeaModel {
     }
 
     public static class RunInstancesRequestNetworkInterface extends TeaModel {
-        @NameInMap("NetworkInterfaceName")
-        public String networkInterfaceName;
-
         @NameInMap("VSwitchId")
         public String vSwitchId;
+
+        @NameInMap("NetworkInterfaceName")
+        public String networkInterfaceName;
 
         @NameInMap("Description")
         public String description;
@@ -1222,20 +1233,20 @@ public class RunInstancesRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public RunInstancesRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
-            this.networkInterfaceName = networkInterfaceName;
-            return this;
-        }
-        public String getNetworkInterfaceName() {
-            return this.networkInterfaceName;
-        }
-
         public RunInstancesRequestNetworkInterface setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public RunInstancesRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
         }
 
         public RunInstancesRequestNetworkInterface setDescription(String description) {

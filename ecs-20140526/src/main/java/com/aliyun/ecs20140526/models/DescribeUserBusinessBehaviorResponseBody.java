@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserBusinessBehaviorResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("StatusValue")
     public String statusValue;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeUserBusinessBehaviorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserBusinessBehaviorResponseBody self = new DescribeUserBusinessBehaviorResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUserBusinessBehaviorResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeUserBusinessBehaviorResponseBody setStatusValue(String statusValue) {
@@ -29,6 +21,14 @@ public class DescribeUserBusinessBehaviorResponseBody extends TeaModel {
     }
     public String getStatusValue() {
         return this.statusValue;
+    }
+
+    public DescribeUserBusinessBehaviorResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

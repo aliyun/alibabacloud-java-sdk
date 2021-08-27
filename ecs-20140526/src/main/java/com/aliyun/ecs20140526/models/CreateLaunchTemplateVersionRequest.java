@@ -22,6 +22,18 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("DataDisk")
+    public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk;
+
+    @NameInMap("NetworkInterface")
+    public java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> networkInterface;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateLaunchTemplateVersionRequestTag> tag;
+
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
+
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
@@ -121,18 +133,6 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
-    @NameInMap("DataDisk")
-    public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk;
-
-    @NameInMap("NetworkInterface")
-    public java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> networkInterface;
-
-    @NameInMap("Tag")
-    public java.util.List<CreateLaunchTemplateVersionRequestTag> tag;
-
-    @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
-
     public static CreateLaunchTemplateVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLaunchTemplateVersionRequest self = new CreateLaunchTemplateVersionRequest();
         return TeaModel.build(map, self);
@@ -184,6 +184,38 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateLaunchTemplateVersionRequest setDataDisk(java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk) {
+        this.dataDisk = dataDisk;
+        return this;
+    }
+    public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> getDataDisk() {
+        return this.dataDisk;
+    }
+
+    public CreateLaunchTemplateVersionRequest setNetworkInterface(java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> networkInterface) {
+        this.networkInterface = networkInterface;
+        return this;
+    }
+    public java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> getNetworkInterface() {
+        return this.networkInterface;
+    }
+
+    public CreateLaunchTemplateVersionRequest setTag(java.util.List<CreateLaunchTemplateVersionRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateLaunchTemplateVersionRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateLaunchTemplateVersionRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
     public CreateLaunchTemplateVersionRequest setLaunchTemplateId(String launchTemplateId) {
@@ -450,38 +482,6 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         return this.deploymentSetId;
     }
 
-    public CreateLaunchTemplateVersionRequest setDataDisk(java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk) {
-        this.dataDisk = dataDisk;
-        return this;
-    }
-    public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> getDataDisk() {
-        return this.dataDisk;
-    }
-
-    public CreateLaunchTemplateVersionRequest setNetworkInterface(java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> networkInterface) {
-        this.networkInterface = networkInterface;
-        return this;
-    }
-    public java.util.List<CreateLaunchTemplateVersionRequestNetworkInterface> getNetworkInterface() {
-        return this.networkInterface;
-    }
-
-    public CreateLaunchTemplateVersionRequest setTag(java.util.List<CreateLaunchTemplateVersionRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateLaunchTemplateVersionRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public CreateLaunchTemplateVersionRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-        this.securityGroupIds = securityGroupIds;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupIds() {
-        return this.securityGroupIds;
-    }
-
     public static class CreateLaunchTemplateVersionRequestSystemDisk extends TeaModel {
         @NameInMap("Category")
         public String category;
@@ -675,11 +675,11 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
 
     public static class CreateLaunchTemplateVersionRequestNetworkInterface extends TeaModel {
-        @NameInMap("NetworkInterfaceName")
-        public String networkInterfaceName;
-
         @NameInMap("VSwitchId")
         public String vSwitchId;
+
+        @NameInMap("NetworkInterfaceName")
+        public String networkInterfaceName;
 
         @NameInMap("Description")
         public String description;
@@ -698,20 +698,20 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateLaunchTemplateVersionRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
-            this.networkInterfaceName = networkInterfaceName;
-            return this;
-        }
-        public String getNetworkInterfaceName() {
-            return this.networkInterfaceName;
-        }
-
         public CreateLaunchTemplateVersionRequestNetworkInterface setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public CreateLaunchTemplateVersionRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
         }
 
         public CreateLaunchTemplateVersionRequestNetworkInterface setDescription(String description) {

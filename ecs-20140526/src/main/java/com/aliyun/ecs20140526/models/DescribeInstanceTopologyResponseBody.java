@@ -32,23 +32,15 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyTopologysTopology extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("HostId")
         public String hostId;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         public static DescribeInstanceTopologyResponseBodyTopologysTopology build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTopologyResponseBodyTopologysTopology self = new DescribeInstanceTopologyResponseBodyTopologysTopology();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceTopologyResponseBodyTopologysTopology setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public DescribeInstanceTopologyResponseBodyTopologysTopology setHostId(String hostId) {
@@ -57,6 +49,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+        public DescribeInstanceTopologyResponseBodyTopologysTopology setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

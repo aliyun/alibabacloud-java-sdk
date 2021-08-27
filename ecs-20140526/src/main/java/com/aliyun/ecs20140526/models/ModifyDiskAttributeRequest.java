@@ -34,6 +34,9 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("DiskIds")
     public java.util.List<String> diskIds;
 
@@ -120,6 +123,14 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public ModifyDiskAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyDiskAttributeRequest setDiskIds(java.util.List<String> diskIds) {

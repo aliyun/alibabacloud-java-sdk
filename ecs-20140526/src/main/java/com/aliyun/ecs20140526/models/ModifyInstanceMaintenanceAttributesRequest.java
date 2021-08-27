@@ -16,6 +16,12 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
+    @NameInMap("MaintenanceWindow")
+    public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -24,12 +30,6 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
 
     @NameInMap("NotifyOnMaintenance")
     public Boolean notifyOnMaintenance;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
-
-    @NameInMap("MaintenanceWindow")
-    public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow;
 
     public static ModifyInstanceMaintenanceAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceMaintenanceAttributesRequest self = new ModifyInstanceMaintenanceAttributesRequest();
@@ -68,6 +68,22 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
         return this.ownerAccount;
     }
 
+    public ModifyInstanceMaintenanceAttributesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceMaintenanceAttributesRequest setMaintenanceWindow(java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+        return this;
+    }
+    public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> getMaintenanceWindow() {
+        return this.maintenanceWindow;
+    }
+
     public ModifyInstanceMaintenanceAttributesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -90,22 +106,6 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     }
     public Boolean getNotifyOnMaintenance() {
         return this.notifyOnMaintenance;
-    }
-
-    public ModifyInstanceMaintenanceAttributesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceMaintenanceAttributesRequest setMaintenanceWindow(java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow) {
-        this.maintenanceWindow = maintenanceWindow;
-        return this;
-    }
-    public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> getMaintenanceWindow() {
-        return this.maintenanceWindow;
     }
 
     public static class ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow extends TeaModel {

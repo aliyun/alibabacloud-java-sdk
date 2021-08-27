@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("Vpcs")
-    public DescribeVpcsResponseBodyVpcs vpcs;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeVpcsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("Vpcs")
+    public DescribeVpcsResponseBodyVpcs vpcs;
+
     public static DescribeVpcsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcsResponseBody self = new DescribeVpcsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVpcsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeVpcsResponseBody setVpcs(DescribeVpcsResponseBodyVpcs vpcs) {
-        this.vpcs = vpcs;
-        return this;
-    }
-    public DescribeVpcsResponseBodyVpcs getVpcs() {
-        return this.vpcs;
     }
 
     public DescribeVpcsResponseBody setPageSize(Integer pageSize) {
@@ -62,6 +46,22 @@ public class DescribeVpcsResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeVpcsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeVpcsResponseBody setVpcs(DescribeVpcsResponseBodyVpcs vpcs) {
+        this.vpcs = vpcs;
+        return this;
+    }
+    public DescribeVpcsResponseBodyVpcs getVpcs() {
+        return this.vpcs;
     }
 
     public static class DescribeVpcsResponseBodyVpcsVpcVSwitchIds extends TeaModel {
@@ -127,14 +127,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("VSwitchIds")
         public DescribeVpcsResponseBodyVpcsVpcVSwitchIds vSwitchIds;
 
         @NameInMap("UserCidrs")
         public DescribeVpcsResponseBodyVpcsVpcUserCidrs userCidrs;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         public static DescribeVpcsResponseBodyVpcsVpc build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcsResponseBodyVpcsVpc self = new DescribeVpcsResponseBodyVpcsVpc();
@@ -205,6 +205,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeVpcsResponseBodyVpcsVpc setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public DescribeVpcsResponseBodyVpcsVpc setVSwitchIds(DescribeVpcsResponseBodyVpcsVpcVSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
             return this;
@@ -219,14 +227,6 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
         public DescribeVpcsResponseBodyVpcsVpcUserCidrs getUserCidrs() {
             return this.userCidrs;
-        }
-
-        public DescribeVpcsResponseBodyVpcsVpc setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
     }

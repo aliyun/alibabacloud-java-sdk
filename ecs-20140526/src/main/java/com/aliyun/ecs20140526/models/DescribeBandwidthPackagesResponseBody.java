@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeBandwidthPackagesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("BandwidthPackages")
     public DescribeBandwidthPackagesResponseBodyBandwidthPackages bandwidthPackages;
 
     public static DescribeBandwidthPackagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBandwidthPackagesResponseBody self = new DescribeBandwidthPackagesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBandwidthPackagesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeBandwidthPackagesResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeBandwidthPackagesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeBandwidthPackagesResponseBody setBandwidthPackages(DescribeBandwidthPackagesResponseBodyBandwidthPackages bandwidthPackages) {
@@ -114,41 +114,38 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
     }
 
     public static class DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage extends TeaModel {
-        @NameInMap("PublicIpAddresses")
-        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackagePublicIpAddresses publicIpAddresses;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("IpCount")
         public String ipCount;
-
-        @NameInMap("InstanceChargeType")
-        public String instanceChargeType;
 
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("InstanceChargeType")
+        public String instanceChargeType;
+
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
-
-        @NameInMap("Bandwidth")
-        public String bandwidth;
 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Bandwidth")
+        public String bandwidth;
+
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
-        @NameInMap("InternetChargeType")
-        public String internetChargeType;
-
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("InternetChargeType")
+        public String internetChargeType;
 
         @NameInMap("BusinessStatus")
         public String businessStatus;
@@ -159,25 +156,12 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("ISP")
         public String ISP;
 
+        @NameInMap("PublicIpAddresses")
+        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackagePublicIpAddresses publicIpAddresses;
+
         public static DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage build(java.util.Map<String, ?> map) throws Exception {
             DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage self = new DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setPublicIpAddresses(DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackagePublicIpAddresses publicIpAddresses) {
-            this.publicIpAddresses = publicIpAddresses;
-            return this;
-        }
-        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackagePublicIpAddresses getPublicIpAddresses() {
-            return this.publicIpAddresses;
-        }
-
-        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
         }
 
         public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setStatus(String status) {
@@ -188,20 +172,20 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
             return this.status;
         }
 
+        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
         public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setIpCount(String ipCount) {
             this.ipCount = ipCount;
             return this;
         }
         public String getIpCount() {
             return this.ipCount;
-        }
-
-        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setInstanceChargeType(String instanceChargeType) {
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
         }
 
         public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setRegionId(String regionId) {
@@ -212,20 +196,20 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
         public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setBandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
             return this;
         }
         public String getBandwidthPackageId() {
             return this.bandwidthPackageId;
-        }
-
-        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setBandwidth(String bandwidth) {
-            this.bandwidth = bandwidth;
-            return this;
-        }
-        public String getBandwidth() {
-            return this.bandwidth;
         }
 
         public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setDescription(String description) {
@@ -236,6 +220,14 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setBandwidth(String bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public String getBandwidth() {
+            return this.bandwidth;
+        }
+
         public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setNatGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
             return this;
@@ -244,20 +236,20 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
             return this.natGatewayId;
         }
 
-        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
-        }
-
         public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
         }
 
         public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setBusinessStatus(String businessStatus) {
@@ -282,6 +274,14 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
         }
         public String getISP() {
             return this.ISP;
+        }
+
+        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackage setPublicIpAddresses(DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackagePublicIpAddresses publicIpAddresses) {
+            this.publicIpAddresses = publicIpAddresses;
+            return this;
+        }
+        public DescribeBandwidthPackagesResponseBodyBandwidthPackagesBandwidthPackagePublicIpAddresses getPublicIpAddresses() {
+            return this.publicIpAddresses;
         }
 
     }

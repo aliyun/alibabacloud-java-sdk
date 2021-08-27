@@ -49,6 +49,9 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     @NameInMap("Ipv6SourceCidrIp")
     public String ipv6SourceCidrIp;
 
+    @NameInMap("SourcePrefixListId")
+    public String sourcePrefixListId;
+
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
@@ -190,6 +193,14 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     }
     public String getIpv6SourceCidrIp() {
         return this.ipv6SourceCidrIp;
+    }
+
+    public RevokeSecurityGroupRequest setSourcePrefixListId(String sourcePrefixListId) {
+        this.sourcePrefixListId = sourcePrefixListId;
+        return this;
+    }
+    public String getSourcePrefixListId() {
+        return this.sourcePrefixListId;
     }
 
     public RevokeSecurityGroupRequest setSourcePortRange(String sourcePortRange) {

@@ -4,11 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskSpecResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("OrderId")
     public String orderId;
@@ -18,20 +18,20 @@ public class ModifyDiskSpecResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyDiskSpecResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public ModifyDiskSpecResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyDiskSpecResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public ModifyDiskSpecResponseBody setOrderId(String orderId) {

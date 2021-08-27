@@ -40,6 +40,9 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     @NameInMap("Status")
     public java.util.List<String> status;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeStorageCapacityUnitsRequestTag> tag;
+
     public static DescribeStorageCapacityUnitsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageCapacityUnitsRequest self = new DescribeStorageCapacityUnitsRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,44 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     }
     public java.util.List<String> getStatus() {
         return this.status;
+    }
+
+    public DescribeStorageCapacityUnitsRequest setTag(java.util.List<DescribeStorageCapacityUnitsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeStorageCapacityUnitsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeStorageCapacityUnitsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeStorageCapacityUnitsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageCapacityUnitsRequestTag self = new DescribeStorageCapacityUnitsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeStorageCapacityUnitsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeStorageCapacityUnitsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

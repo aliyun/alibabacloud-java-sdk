@@ -19,11 +19,11 @@ public class StopInvocationRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("InvokeId")
-    public String invokeId;
-
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
+
+    @NameInMap("InvokeId")
+    public String invokeId;
 
     public static StopInvocationRequest build(java.util.Map<String, ?> map) throws Exception {
         StopInvocationRequest self = new StopInvocationRequest();
@@ -70,20 +70,20 @@ public class StopInvocationRequest extends TeaModel {
         return this.regionId;
     }
 
-    public StopInvocationRequest setInvokeId(String invokeId) {
-        this.invokeId = invokeId;
-        return this;
-    }
-    public String getInvokeId() {
-        return this.invokeId;
-    }
-
     public StopInvocationRequest setInstanceId(java.util.List<String> instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public java.util.List<String> getInstanceId() {
         return this.instanceId;
+    }
+
+    public StopInvocationRequest setInvokeId(String invokeId) {
+        this.invokeId = invokeId;
+        return this;
+    }
+    public String getInvokeId() {
+        return this.invokeId;
     }
 
 }

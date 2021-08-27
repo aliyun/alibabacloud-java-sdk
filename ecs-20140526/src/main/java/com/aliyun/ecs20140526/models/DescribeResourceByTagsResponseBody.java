@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceByTagsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,20 +13,15 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Resources")
     public DescribeResourceByTagsResponseBodyResources resources;
 
     public static DescribeResourceByTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceByTagsResponseBody self = new DescribeResourceByTagsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeResourceByTagsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeResourceByTagsResponseBody setRequestId(String requestId) {
@@ -54,6 +46,14 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeResourceByTagsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeResourceByTagsResponseBody setResources(DescribeResourceByTagsResponseBodyResources resources) {

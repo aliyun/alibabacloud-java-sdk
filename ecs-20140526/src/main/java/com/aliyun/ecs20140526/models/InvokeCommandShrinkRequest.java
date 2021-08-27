@@ -19,8 +19,14 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     @NameInMap("CommandId")
     public String commandId;
+
+    @NameInMap("RepeatMode")
+    public String repeatMode;
 
     @NameInMap("Timed")
     public Boolean timed;
@@ -36,9 +42,6 @@ public class InvokeCommandShrinkRequest extends TeaModel {
 
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static InvokeCommandShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeCommandShrinkRequest self = new InvokeCommandShrinkRequest();
@@ -85,12 +88,28 @@ public class InvokeCommandShrinkRequest extends TeaModel {
         return this.regionId;
     }
 
+    public InvokeCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
     public InvokeCommandShrinkRequest setCommandId(String commandId) {
         this.commandId = commandId;
         return this;
     }
     public String getCommandId() {
         return this.commandId;
+    }
+
+    public InvokeCommandShrinkRequest setRepeatMode(String repeatMode) {
+        this.repeatMode = repeatMode;
+        return this;
+    }
+    public String getRepeatMode() {
+        return this.repeatMode;
     }
 
     public InvokeCommandShrinkRequest setTimed(Boolean timed) {
@@ -131,14 +150,6 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     }
     public String getWindowsPasswordName() {
         return this.windowsPasswordName;
-    }
-
-    public InvokeCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

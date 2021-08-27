@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -18,9 +21,6 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
 
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
 
     @NameInMap("ImagePipelineId")
     public String imagePipelineId;
@@ -40,6 +40,14 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public static DescribeImagePipelineExecutionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagePipelineExecutionsRequest self = new DescribeImagePipelineExecutionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImagePipelineExecutionsRequest setTag(java.util.List<DescribeImagePipelineExecutionsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeImagePipelineExecutionsRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeImagePipelineExecutionsRequest setOwnerId(Long ownerId) {
@@ -80,14 +88,6 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DescribeImagePipelineExecutionsRequest setTag(java.util.List<DescribeImagePipelineExecutionsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeImagePipelineExecutionsRequestTag> getTag() {
-        return this.tag;
     }
 
     public DescribeImagePipelineExecutionsRequest setImagePipelineId(String imagePipelineId) {

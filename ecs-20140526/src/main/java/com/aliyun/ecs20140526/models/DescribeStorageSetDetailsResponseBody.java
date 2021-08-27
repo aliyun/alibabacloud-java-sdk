@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageSetDetailsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Disks")
     public DescribeStorageSetDetailsResponseBodyDisks disks;
 
     public static DescribeStorageSetDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageSetDetailsResponseBody self = new DescribeStorageSetDetailsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeStorageSetDetailsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeStorageSetDetailsResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeStorageSetDetailsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeStorageSetDetailsResponseBody setDisks(DescribeStorageSetDetailsResponseBodyDisks disks) {

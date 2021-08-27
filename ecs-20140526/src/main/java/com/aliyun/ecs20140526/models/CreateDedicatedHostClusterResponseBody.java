@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedHostClusterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateDedicatedHostClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDedicatedHostClusterResponseBody self = new CreateDedicatedHostClusterResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDedicatedHostClusterResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateDedicatedHostClusterResponseBody setDedicatedHostClusterId(String dedicatedHostClusterId) {
@@ -29,6 +21,14 @@ public class CreateDedicatedHostClusterResponseBody extends TeaModel {
     }
     public String getDedicatedHostClusterId() {
         return this.dedicatedHostClusterId;
+    }
+
+    public CreateDedicatedHostClusterResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

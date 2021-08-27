@@ -97,6 +97,9 @@ public class DescribeDisksRequest extends TeaModel {
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
+    @NameInMap("MultiAttach")
+    public String multiAttach;
+
     @NameInMap("Tag")
     public java.util.List<DescribeDisksRequestTag> tag;
 
@@ -354,6 +357,14 @@ public class DescribeDisksRequest extends TeaModel {
     }
     public String getKMSKeyId() {
         return this.KMSKeyId;
+    }
+
+    public DescribeDisksRequest setMultiAttach(String multiAttach) {
+        this.multiAttach = multiAttach;
+        return this;
+    }
+    public String getMultiAttach() {
+        return this.multiAttach;
     }
 
     public DescribeDisksRequest setTag(java.util.List<DescribeDisksRequestTag> tag) {

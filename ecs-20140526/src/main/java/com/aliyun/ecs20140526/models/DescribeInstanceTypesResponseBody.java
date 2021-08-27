@@ -10,6 +10,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     @NameInMap("InstanceTypes")
     public DescribeInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     public static DescribeInstanceTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceTypesResponseBody self = new DescribeInstanceTypesResponseBody();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
     public DescribeInstanceTypesResponseBodyInstanceTypes getInstanceTypes() {
         return this.instanceTypes;
+    }
+
+    public DescribeInstanceTypesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
@@ -65,14 +76,20 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("InstanceBandwidthRx")
         public Integer instanceBandwidthRx;
 
-        @NameInMap("GPUSpec")
-        public String GPUSpec;
-
         @NameInMap("SecondaryEniQueueNumber")
         public Integer secondaryEniQueueNumber;
 
+        @NameInMap("GPUSpec")
+        public String GPUSpec;
+
         @NameInMap("InstanceBandwidthTx")
         public Integer instanceBandwidthTx;
+
+        @NameInMap("QueuePairNumber")
+        public Integer queuePairNumber;
+
+        @NameInMap("EriQuantity")
+        public Integer eriQuantity;
 
         @NameInMap("GPUAmount")
         public Integer GPUAmount;
@@ -80,11 +97,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("TotalEniQueueQuantity")
         public Integer totalEniQueueQuantity;
 
-        @NameInMap("InitialCredit")
-        public Integer initialCredit;
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
 
         @NameInMap("DiskQuantity")
         public Integer diskQuantity;
+
+        @NameInMap("InitialCredit")
+        public Integer initialCredit;
 
         @NameInMap("LocalStorageAmount")
         public Integer localStorageAmount;
@@ -98,11 +118,11 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("EniPrivateIpAddressQuantity")
         public Integer eniPrivateIpAddressQuantity;
 
-        @NameInMap("InstanceTypeFamily")
-        public String instanceTypeFamily;
-
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
+
+        @NameInMap("InstanceTypeFamily")
+        public String instanceTypeFamily;
 
         @NameInMap("EniQuantity")
         public Integer eniQuantity;
@@ -203,14 +223,6 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.instanceBandwidthRx;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setGPUSpec(String GPUSpec) {
-            this.GPUSpec = GPUSpec;
-            return this;
-        }
-        public String getGPUSpec() {
-            return this.GPUSpec;
-        }
-
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setSecondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
             this.secondaryEniQueueNumber = secondaryEniQueueNumber;
             return this;
@@ -219,12 +231,36 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.secondaryEniQueueNumber;
         }
 
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setGPUSpec(String GPUSpec) {
+            this.GPUSpec = GPUSpec;
+            return this;
+        }
+        public String getGPUSpec() {
+            return this.GPUSpec;
+        }
+
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceBandwidthTx(Integer instanceBandwidthTx) {
             this.instanceBandwidthTx = instanceBandwidthTx;
             return this;
         }
         public Integer getInstanceBandwidthTx() {
             return this.instanceBandwidthTx;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setQueuePairNumber(Integer queuePairNumber) {
+            this.queuePairNumber = queuePairNumber;
+            return this;
+        }
+        public Integer getQueuePairNumber() {
+            return this.queuePairNumber;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setEriQuantity(Integer eriQuantity) {
+            this.eriQuantity = eriQuantity;
+            return this;
+        }
+        public Integer getEriQuantity() {
+            return this.eriQuantity;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setGPUAmount(Integer GPUAmount) {
@@ -243,12 +279,12 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.totalEniQueueQuantity;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInitialCredit(Integer initialCredit) {
-            this.initialCredit = initialCredit;
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
             return this;
         }
-        public Integer getInitialCredit() {
-            return this.initialCredit;
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setDiskQuantity(Integer diskQuantity) {
@@ -257,6 +293,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getDiskQuantity() {
             return this.diskQuantity;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInitialCredit(Integer initialCredit) {
+            this.initialCredit = initialCredit;
+            return this;
+        }
+        public Integer getInitialCredit() {
+            return this.initialCredit;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setLocalStorageAmount(Integer localStorageAmount) {
@@ -291,20 +335,20 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.eniPrivateIpAddressQuantity;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeFamily(String instanceTypeFamily) {
-            this.instanceTypeFamily = instanceTypeFamily;
-            return this;
-        }
-        public String getInstanceTypeFamily() {
-            return this.instanceTypeFamily;
-        }
-
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setCpuCoreCount(Integer cpuCoreCount) {
             this.cpuCoreCount = cpuCoreCount;
             return this;
         }
         public Integer getCpuCoreCount() {
             return this.cpuCoreCount;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeFamily(String instanceTypeFamily) {
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setEniQuantity(Integer eniQuantity) {

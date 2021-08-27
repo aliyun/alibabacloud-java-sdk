@@ -121,6 +121,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
 
+    @NameInMap("Ipv6Address")
+    public java.util.List<String> ipv6Address;
+
     @NameInMap("Tag")
     public java.util.List<DescribeInstancesRequestTag> tag;
 
@@ -442,6 +445,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public Integer getHttpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
+    }
+
+    public DescribeInstancesRequest setIpv6Address(java.util.List<String> ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+    public java.util.List<String> getIpv6Address() {
+        return this.ipv6Address;
     }
 
     public DescribeInstancesRequest setTag(java.util.List<DescribeInstancesRequestTag> tag) {

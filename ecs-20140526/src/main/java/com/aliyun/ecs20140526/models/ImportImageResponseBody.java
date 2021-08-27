@@ -4,14 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ImportImageResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ImageId")
     public String imageId;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -19,14 +19,6 @@ public class ImportImageResponseBody extends TeaModel {
     public static ImportImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImportImageResponseBody self = new ImportImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ImportImageResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
     }
 
     public ImportImageResponseBody setRequestId(String requestId) {
@@ -43,6 +35,14 @@ public class ImportImageResponseBody extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public ImportImageResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public ImportImageResponseBody setRegionId(String regionId) {

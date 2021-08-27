@@ -50,11 +50,11 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         @NameInMap("IOPSWrite")
         public Integer IOPSWrite;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("IntranetTX")
         public Integer intranetTX;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
@@ -62,11 +62,11 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         @NameInMap("CPUNotpaidSurplusCreditUsage")
         public Float CPUNotpaidSurplusCreditUsage;
 
-        @NameInMap("IOPSRead")
-        public Integer IOPSRead;
-
         @NameInMap("CPUAdvanceCreditBalance")
         public Float CPUAdvanceCreditBalance;
+
+        @NameInMap("IOPSRead")
+        public Integer IOPSRead;
 
         @NameInMap("InternetBandwidth")
         public Integer internetBandwidth;
@@ -136,20 +136,20 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.IOPSWrite;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIntranetTX(Integer intranetTX) {
             this.intranetTX = intranetTX;
             return this;
         }
         public Integer getIntranetTX() {
             return this.intranetTX;
+        }
+
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setBPSWrite(Integer BPSWrite) {
@@ -168,20 +168,20 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.CPUNotpaidSurplusCreditUsage;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIOPSRead(Integer IOPSRead) {
-            this.IOPSRead = IOPSRead;
-            return this;
-        }
-        public Integer getIOPSRead() {
-            return this.IOPSRead;
-        }
-
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUAdvanceCreditBalance(Float CPUAdvanceCreditBalance) {
             this.CPUAdvanceCreditBalance = CPUAdvanceCreditBalance;
             return this;
         }
         public Float getCPUAdvanceCreditBalance() {
             return this.CPUAdvanceCreditBalance;
+        }
+
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIOPSRead(Integer IOPSRead) {
+            this.IOPSRead = IOPSRead;
+            return this;
+        }
+        public Integer getIOPSRead() {
+            return this.IOPSRead;
         }
 
         public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInternetBandwidth(Integer internetBandwidth) {

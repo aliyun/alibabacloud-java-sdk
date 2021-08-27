@@ -4,26 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
-    @NameInMap("StorageCapacityUnitIds")
-    public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds storageCapacityUnitIds;
+    @NameInMap("OrderId")
+    public String orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OrderId")
-    public String orderId;
+    @NameInMap("StorageCapacityUnitIds")
+    public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds storageCapacityUnitIds;
 
     public static PurchaseStorageCapacityUnitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PurchaseStorageCapacityUnitResponseBody self = new PurchaseStorageCapacityUnitResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public PurchaseStorageCapacityUnitResponseBody setStorageCapacityUnitIds(PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds storageCapacityUnitIds) {
-        this.storageCapacityUnitIds = storageCapacityUnitIds;
+    public PurchaseStorageCapacityUnitResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
-    public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds getStorageCapacityUnitIds() {
-        return this.storageCapacityUnitIds;
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public PurchaseStorageCapacityUnitResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public PurchaseStorageCapacityUnitResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
+    public PurchaseStorageCapacityUnitResponseBody setStorageCapacityUnitIds(PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds storageCapacityUnitIds) {
+        this.storageCapacityUnitIds = storageCapacityUnitIds;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds getStorageCapacityUnitIds() {
+        return this.storageCapacityUnitIds;
     }
 
     public static class PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds extends TeaModel {

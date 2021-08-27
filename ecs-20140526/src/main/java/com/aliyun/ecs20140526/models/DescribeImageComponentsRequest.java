@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageComponentsRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<DescribeImageComponentsRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -22,8 +25,8 @@ public class DescribeImageComponentsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeImageComponentsRequestTag> tag;
+    @NameInMap("ImageComponentId")
+    public java.util.List<String> imageComponentId;
 
     @NameInMap("Name")
     public String name;
@@ -34,12 +37,17 @@ public class DescribeImageComponentsRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    @NameInMap("ImageComponentId")
-    public java.util.List<String> imageComponentId;
-
     public static DescribeImageComponentsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageComponentsRequest self = new DescribeImageComponentsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImageComponentsRequest setTag(java.util.List<DescribeImageComponentsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeImageComponentsRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeImageComponentsRequest setOwnerId(Long ownerId) {
@@ -90,12 +98,12 @@ public class DescribeImageComponentsRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeImageComponentsRequest setTag(java.util.List<DescribeImageComponentsRequestTag> tag) {
-        this.tag = tag;
+    public DescribeImageComponentsRequest setImageComponentId(java.util.List<String> imageComponentId) {
+        this.imageComponentId = imageComponentId;
         return this;
     }
-    public java.util.List<DescribeImageComponentsRequestTag> getTag() {
-        return this.tag;
+    public java.util.List<String> getImageComponentId() {
+        return this.imageComponentId;
     }
 
     public DescribeImageComponentsRequest setName(String name) {
@@ -120,14 +128,6 @@ public class DescribeImageComponentsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
-    }
-
-    public DescribeImageComponentsRequest setImageComponentId(java.util.List<String> imageComponentId) {
-        this.imageComponentId = imageComponentId;
-        return this;
-    }
-    public java.util.List<String> getImageComponentId() {
-        return this.imageComponentId;
     }
 
     public static class DescribeImageComponentsRequestTag extends TeaModel {

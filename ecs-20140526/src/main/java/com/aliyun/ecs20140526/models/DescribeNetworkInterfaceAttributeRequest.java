@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -19,9 +22,6 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag;
-
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -31,6 +31,14 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public static DescribeNetworkInterfaceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfaceAttributeRequest self = new DescribeNetworkInterfaceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNetworkInterfaceAttributeRequest setTag(java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeNetworkInterfaceAttributeRequest setOwnerId(Long ownerId) {
@@ -71,14 +79,6 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DescribeNetworkInterfaceAttributeRequest setTag(java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> getTag() {
-        return this.tag;
     }
 
     public DescribeNetworkInterfaceAttributeRequest setNetworkInterfaceId(String networkInterfaceId) {

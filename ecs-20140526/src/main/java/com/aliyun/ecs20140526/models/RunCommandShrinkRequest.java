@@ -19,6 +19,9 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     @NameInMap("Name")
     public String name;
 
@@ -40,6 +43,9 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("EnableParameter")
     public Boolean enableParameter;
 
+    @NameInMap("RepeatMode")
+    public String repeatMode;
+
     @NameInMap("Timed")
     public Boolean timed;
 
@@ -60,9 +66,6 @@ public class RunCommandShrinkRequest extends TeaModel {
 
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static RunCommandShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCommandShrinkRequest self = new RunCommandShrinkRequest();
@@ -107,6 +110,14 @@ public class RunCommandShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RunCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
     public RunCommandShrinkRequest setName(String name) {
@@ -165,6 +176,14 @@ public class RunCommandShrinkRequest extends TeaModel {
         return this.enableParameter;
     }
 
+    public RunCommandShrinkRequest setRepeatMode(String repeatMode) {
+        this.repeatMode = repeatMode;
+        return this;
+    }
+    public String getRepeatMode() {
+        return this.repeatMode;
+    }
+
     public RunCommandShrinkRequest setTimed(Boolean timed) {
         this.timed = timed;
         return this;
@@ -219,14 +238,6 @@ public class RunCommandShrinkRequest extends TeaModel {
     }
     public String getWindowsPasswordName() {
         return this.windowsPasswordName;
-    }
-
-    public RunCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

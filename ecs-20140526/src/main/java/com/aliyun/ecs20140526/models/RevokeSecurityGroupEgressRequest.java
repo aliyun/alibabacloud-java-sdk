@@ -43,6 +43,9 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     @NameInMap("Ipv6DestCidrIp")
     public String ipv6DestCidrIp;
 
+    @NameInMap("DestPrefixListId")
+    public String destPrefixListId;
+
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 
@@ -174,6 +177,14 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     }
     public String getIpv6DestCidrIp() {
         return this.ipv6DestCidrIp;
+    }
+
+    public RevokeSecurityGroupEgressRequest setDestPrefixListId(String destPrefixListId) {
+        this.destPrefixListId = destPrefixListId;
+        return this;
+    }
+    public String getDestPrefixListId() {
+        return this.destPrefixListId;
     }
 
     public RevokeSecurityGroupEgressRequest setSourceCidrIp(String sourceCidrIp) {

@@ -4,40 +4,24 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
-    @NameInMap("CapacityReservationItem")
-    public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem capacityReservationItem;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("CapacityReservationItem")
+    public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem capacityReservationItem;
 
     public static DescribeCapacityReservationInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCapacityReservationInstancesResponseBody self = new DescribeCapacityReservationInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCapacityReservationInstancesResponseBody setCapacityReservationItem(DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem capacityReservationItem) {
-        this.capacityReservationItem = capacityReservationItem;
-        return this;
-    }
-    public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem getCapacityReservationItem() {
-        return this.capacityReservationItem;
-    }
-
-    public DescribeCapacityReservationInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeCapacityReservationInstancesResponseBody setNextToken(String nextToken) {
@@ -56,12 +40,28 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeCapacityReservationInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeCapacityReservationInstancesResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeCapacityReservationInstancesResponseBody setCapacityReservationItem(DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem capacityReservationItem) {
+        this.capacityReservationItem = capacityReservationItem;
+        return this;
+    }
+    public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem getCapacityReservationItem() {
+        return this.capacityReservationItem;
     }
 
     public static class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet extends TeaModel {

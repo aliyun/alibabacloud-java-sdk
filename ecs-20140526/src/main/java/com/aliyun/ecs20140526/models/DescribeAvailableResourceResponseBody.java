@@ -174,11 +174,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("StatusCategory")
         public String statusCategory;
@@ -194,20 +194,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setStatusCategory(String statusCategory) {

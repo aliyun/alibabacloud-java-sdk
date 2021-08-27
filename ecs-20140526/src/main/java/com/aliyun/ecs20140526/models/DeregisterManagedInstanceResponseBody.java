@@ -44,17 +44,17 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("IntranetIp")
-        public String intranetIp;
-
         @NameInMap("ActivationId")
         public String activationId;
 
-        @NameInMap("RegistrationTime")
-        public String registrationTime;
+        @NameInMap("IntranetIp")
+        public String intranetIp;
 
         @NameInMap("AgentVersion")
         public String agentVersion;
+
+        @NameInMap("RegistrationTime")
+        public String registrationTime;
 
         @NameInMap("InstanceName")
         public String instanceName;
@@ -62,11 +62,11 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         @NameInMap("OsType")
         public String osType;
 
-        @NameInMap("InvocationCount")
-        public Long invocationCount;
-
         @NameInMap("OsVersion")
         public String osVersion;
+
+        @NameInMap("InvocationCount")
+        public Long invocationCount;
 
         @NameInMap("MachineId")
         public String machineId;
@@ -108,14 +108,6 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setIntranetIp(String intranetIp) {
-            this.intranetIp = intranetIp;
-            return this;
-        }
-        public String getIntranetIp() {
-            return this.intranetIp;
-        }
-
         public DeregisterManagedInstanceResponseBodyInstance setActivationId(String activationId) {
             this.activationId = activationId;
             return this;
@@ -124,12 +116,12 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             return this.activationId;
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setRegistrationTime(String registrationTime) {
-            this.registrationTime = registrationTime;
+        public DeregisterManagedInstanceResponseBodyInstance setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
             return this;
         }
-        public String getRegistrationTime() {
-            return this.registrationTime;
+        public String getIntranetIp() {
+            return this.intranetIp;
         }
 
         public DeregisterManagedInstanceResponseBodyInstance setAgentVersion(String agentVersion) {
@@ -138,6 +130,14 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         }
         public String getAgentVersion() {
             return this.agentVersion;
+        }
+
+        public DeregisterManagedInstanceResponseBodyInstance setRegistrationTime(String registrationTime) {
+            this.registrationTime = registrationTime;
+            return this;
+        }
+        public String getRegistrationTime() {
+            return this.registrationTime;
         }
 
         public DeregisterManagedInstanceResponseBodyInstance setInstanceName(String instanceName) {
@@ -156,20 +156,20 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             return this.osType;
         }
 
-        public DeregisterManagedInstanceResponseBodyInstance setInvocationCount(Long invocationCount) {
-            this.invocationCount = invocationCount;
-            return this;
-        }
-        public Long getInvocationCount() {
-            return this.invocationCount;
-        }
-
         public DeregisterManagedInstanceResponseBodyInstance setOsVersion(String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
         public String getOsVersion() {
             return this.osVersion;
+        }
+
+        public DeregisterManagedInstanceResponseBodyInstance setInvocationCount(Long invocationCount) {
+            this.invocationCount = invocationCount;
+            return this;
+        }
+        public Long getInvocationCount() {
+            return this.invocationCount;
         }
 
         public DeregisterManagedInstanceResponseBodyInstance setMachineId(String machineId) {

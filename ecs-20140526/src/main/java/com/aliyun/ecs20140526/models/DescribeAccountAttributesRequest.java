@@ -13,14 +13,14 @@ public class DescribeAccountAttributesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("AttributeName")
+    public java.util.List<String> attributeName;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ZoneId")
     public String zoneId;
-
-    @NameInMap("AttributeName")
-    public java.util.List<String> attributeName;
 
     public static DescribeAccountAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountAttributesRequest self = new DescribeAccountAttributesRequest();
@@ -51,6 +51,14 @@ public class DescribeAccountAttributesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribeAccountAttributesRequest setAttributeName(java.util.List<String> attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+    public java.util.List<String> getAttributeName() {
+        return this.attributeName;
+    }
+
     public DescribeAccountAttributesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -65,14 +73,6 @@ public class DescribeAccountAttributesRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public DescribeAccountAttributesRequest setAttributeName(java.util.List<String> attributeName) {
-        this.attributeName = attributeName;
-        return this;
-    }
-    public java.util.List<String> getAttributeName() {
-        return this.attributeName;
     }
 
 }

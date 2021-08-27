@@ -4,20 +4,53 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
+    @NameInMap("CreationTime")
+    public String creationTime;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
+    @NameInMap("Type")
+    public String type;
+
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("NetworkInterfaceTrafficMode")
+    public String networkInterfaceTrafficMode;
 
-    @NameInMap("PrivateIpAddress")
-    public String privateIpAddress;
+    @NameInMap("NetworkInterfaceName")
+    public String networkInterfaceName;
+
+    @NameInMap("MacAddress")
+    public String macAddress;
+
+    @NameInMap("QueuePairNumber")
+    public Integer queuePairNumber;
+
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
+    @NameInMap("ServiceID")
+    public Long serviceID;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("OwnerId")
+    public String ownerId;
 
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -25,60 +58,57 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("NetworkInterfaceName")
-    public String networkInterfaceName;
-
-    @NameInMap("Attachment")
-    public DescribeNetworkInterfaceAttributeResponseBodyAttachment attachment;
-
-    @NameInMap("MacAddress")
-    public String macAddress;
-
-    @NameInMap("NetworkInterfaceId")
-    public String networkInterfaceId;
-
-    @NameInMap("SecurityGroupIds")
-    public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds securityGroupIds;
-
-    @NameInMap("ServiceID")
-    public Long serviceID;
-
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
 
     @NameInMap("QueueNumber")
     public Integer queueNumber;
 
-    @NameInMap("Ipv6Sets")
-    public DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets ipv6Sets;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("OwnerId")
-    public String ownerId;
+    @NameInMap("SecurityGroupIds")
+    public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds securityGroupIds;
 
     @NameInMap("AssociatedPublicIp")
     public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp associatedPublicIp;
 
-    @NameInMap("CreationTime")
-    public String creationTime;
-
-    @NameInMap("Tags")
-    public DescribeNetworkInterfaceAttributeResponseBodyTags tags;
+    @NameInMap("Attachment")
+    public DescribeNetworkInterfaceAttributeResponseBodyAttachment attachment;
 
     @NameInMap("PrivateIpSets")
     public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets privateIpSets;
 
+    @NameInMap("Ipv6Sets")
+    public DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets ipv6Sets;
+
+    @NameInMap("Tags")
+    public DescribeNetworkInterfaceAttributeResponseBodyTags tags;
+
     public static DescribeNetworkInterfaceAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfaceAttributeResponseBody self = new DescribeNetworkInterfaceAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setCreationTime(String creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    public String getCreationTime() {
+        return this.creationTime;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setStatus(String status) {
@@ -89,20 +119,68 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         return this.status;
     }
 
-    public DescribeNetworkInterfaceAttributeResponseBody setDescription(String description) {
-        this.description = description;
+    public DescribeNetworkInterfaceAttributeResponseBody setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+        this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getNetworkInterfaceTrafficMode() {
+        return this.networkInterfaceTrafficMode;
     }
 
-    public DescribeNetworkInterfaceAttributeResponseBody setPrivateIpAddress(String privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
+    public DescribeNetworkInterfaceAttributeResponseBody setNetworkInterfaceName(String networkInterfaceName) {
+        this.networkInterfaceName = networkInterfaceName;
         return this;
     }
-    public String getPrivateIpAddress() {
-        return this.privateIpAddress;
+    public String getNetworkInterfaceName() {
+        return this.networkInterfaceName;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+        return this;
+    }
+    public String getMacAddress() {
+        return this.macAddress;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setQueuePairNumber(Integer queuePairNumber) {
+        this.queuePairNumber = queuePairNumber;
+        return this;
+    }
+    public Integer getQueuePairNumber() {
+        return this.queuePairNumber;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setServiceID(Long serviceID) {
+        this.serviceID = serviceID;
+        return this;
+    }
+    public Long getServiceID() {
+        return this.serviceID;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setServiceManaged(Boolean serviceManaged) {
@@ -113,12 +191,28 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         return this.serviceManaged;
     }
 
+    public DescribeNetworkInterfaceAttributeResponseBody setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
     public DescribeNetworkInterfaceAttributeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setResourceGroupId(String resourceGroupId) {
@@ -137,76 +231,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         return this.zoneId;
     }
 
-    public DescribeNetworkInterfaceAttributeResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public DescribeNetworkInterfaceAttributeResponseBody setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setNetworkInterfaceName(String networkInterfaceName) {
-        this.networkInterfaceName = networkInterfaceName;
-        return this;
-    }
-    public String getNetworkInterfaceName() {
-        return this.networkInterfaceName;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setAttachment(DescribeNetworkInterfaceAttributeResponseBodyAttachment attachment) {
-        this.attachment = attachment;
-        return this;
-    }
-    public DescribeNetworkInterfaceAttributeResponseBodyAttachment getAttachment() {
-        return this.attachment;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setMacAddress(String macAddress) {
-        this.macAddress = macAddress;
-        return this;
-    }
-    public String getMacAddress() {
-        return this.macAddress;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setNetworkInterfaceId(String networkInterfaceId) {
-        this.networkInterfaceId = networkInterfaceId;
-        return this;
-    }
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setSecurityGroupIds(DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds securityGroupIds) {
-        this.securityGroupIds = securityGroupIds;
-        return this;
-    }
-    public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds getSecurityGroupIds() {
-        return this.securityGroupIds;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setServiceID(Long serviceID) {
-        this.serviceID = serviceID;
-        return this;
-    }
-    public Long getServiceID() {
-        return this.serviceID;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setQueueNumber(Integer queueNumber) {
@@ -217,28 +247,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         return this.queueNumber;
     }
 
-    public DescribeNetworkInterfaceAttributeResponseBody setIpv6Sets(DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets ipv6Sets) {
-        this.ipv6Sets = ipv6Sets;
+    public DescribeNetworkInterfaceAttributeResponseBody setSecurityGroupIds(DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
         return this;
     }
-    public DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets getIpv6Sets() {
-        return this.ipv6Sets;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public DescribeNetworkInterfaceAttributeResponseBody setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
+    public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setAssociatedPublicIp(DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp associatedPublicIp) {
@@ -249,12 +263,28 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         return this.associatedPublicIp;
     }
 
-    public DescribeNetworkInterfaceAttributeResponseBody setCreationTime(String creationTime) {
-        this.creationTime = creationTime;
+    public DescribeNetworkInterfaceAttributeResponseBody setAttachment(DescribeNetworkInterfaceAttributeResponseBodyAttachment attachment) {
+        this.attachment = attachment;
         return this;
     }
-    public String getCreationTime() {
-        return this.creationTime;
+    public DescribeNetworkInterfaceAttributeResponseBodyAttachment getAttachment() {
+        return this.attachment;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setPrivateIpSets(DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets privateIpSets) {
+        this.privateIpSets = privateIpSets;
+        return this;
+    }
+    public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets getPrivateIpSets() {
+        return this.privateIpSets;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setIpv6Sets(DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets ipv6Sets) {
+        this.ipv6Sets = ipv6Sets;
+        return this;
+    }
+    public DescribeNetworkInterfaceAttributeResponseBodyIpv6Sets getIpv6Sets() {
+        return this.ipv6Sets;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setTags(DescribeNetworkInterfaceAttributeResponseBodyTags tags) {
@@ -265,12 +295,53 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         return this.tags;
     }
 
-    public DescribeNetworkInterfaceAttributeResponseBody setPrivateIpSets(DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets privateIpSets) {
-        this.privateIpSets = privateIpSets;
-        return this;
+    public static class DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        public java.util.List<String> securityGroupId;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds self = new DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds setSecurityGroupId(java.util.List<String> securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
     }
-    public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets getPrivateIpSets() {
-        return this.privateIpSets;
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp extends TeaModel {
+        @NameInMap("PublicIpAddress")
+        public String publicIpAddress;
+
+        @NameInMap("AllocationId")
+        public String allocationId;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp self = new DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp setPublicIpAddress(String publicIpAddress) {
+            this.publicIpAddress = publicIpAddress;
+            return this;
+        }
+        public String getPublicIpAddress() {
+            return this.publicIpAddress;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp setAllocationId(String allocationId) {
+            this.allocationId = allocationId;
+            return this;
+        }
+        public String getAllocationId() {
+            return this.allocationId;
+        }
+
     }
 
     public static class DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds extends TeaModel {
@@ -299,11 +370,11 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("MemberNetworkInterfaceIds")
-        public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds memberNetworkInterfaceIds;
-
         @NameInMap("TrunkNetworkInterfaceId")
         public String trunkNetworkInterfaceId;
+
+        @NameInMap("MemberNetworkInterfaceIds")
+        public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds memberNetworkInterfaceIds;
 
         public static DescribeNetworkInterfaceAttributeResponseBodyAttachment build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInterfaceAttributeResponseBodyAttachment self = new DescribeNetworkInterfaceAttributeResponseBodyAttachment();
@@ -326,14 +397,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeNetworkInterfaceAttributeResponseBodyAttachment setMemberNetworkInterfaceIds(DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds memberNetworkInterfaceIds) {
-            this.memberNetworkInterfaceIds = memberNetworkInterfaceIds;
-            return this;
-        }
-        public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds getMemberNetworkInterfaceIds() {
-            return this.memberNetworkInterfaceIds;
-        }
-
         public DescribeNetworkInterfaceAttributeResponseBodyAttachment setTrunkNetworkInterfaceId(String trunkNetworkInterfaceId) {
             this.trunkNetworkInterfaceId = trunkNetworkInterfaceId;
             return this;
@@ -342,23 +405,102 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             return this.trunkNetworkInterfaceId;
         }
 
+        public DescribeNetworkInterfaceAttributeResponseBodyAttachment setMemberNetworkInterfaceIds(DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds memberNetworkInterfaceIds) {
+            this.memberNetworkInterfaceIds = memberNetworkInterfaceIds;
+            return this;
+        }
+        public DescribeNetworkInterfaceAttributeResponseBodyAttachmentMemberNetworkInterfaceIds getMemberNetworkInterfaceIds() {
+            return this.memberNetworkInterfaceIds;
+        }
+
     }
 
-    public static class DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        public java.util.List<String> securityGroupId;
+    public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp extends TeaModel {
+        @NameInMap("PublicIpAddress")
+        public String publicIpAddress;
 
-        public static DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds self = new DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds();
+        @NameInMap("AllocationId")
+        public String allocationId;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp self = new DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkInterfaceAttributeResponseBodySecurityGroupIds setSecurityGroupId(java.util.List<String> securityGroupId) {
-            this.securityGroupId = securityGroupId;
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp setPublicIpAddress(String publicIpAddress) {
+            this.publicIpAddress = publicIpAddress;
             return this;
         }
-        public java.util.List<String> getSecurityGroupId() {
-            return this.securityGroupId;
+        public String getPublicIpAddress() {
+            return this.publicIpAddress;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp setAllocationId(String allocationId) {
+            this.allocationId = allocationId;
+            return this;
+        }
+        public String getAllocationId() {
+            return this.allocationId;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
+
+        @NameInMap("Primary")
+        public Boolean primary;
+
+        @NameInMap("AssociatedPublicIp")
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet self = new DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet setAssociatedPublicIp(DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp) {
+            this.associatedPublicIp = associatedPublicIp;
+            return this;
+        }
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp getAssociatedPublicIp() {
+            return this.associatedPublicIp;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets extends TeaModel {
+        @NameInMap("PrivateIpSet")
+        public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> privateIpSet;
+
+        public static DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets self = new DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets setPrivateIpSet(java.util.List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> privateIpSet) {
+            this.privateIpSet = privateIpSet;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
         }
 
     }
@@ -397,36 +539,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyIpv6SetsIpv6Set> getIpv6Set() {
             return this.ipv6Set;
-        }
-
-    }
-
-    public static class DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp extends TeaModel {
-        @NameInMap("AllocationId")
-        public String allocationId;
-
-        @NameInMap("PublicIpAddress")
-        public String publicIpAddress;
-
-        public static DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp self = new DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp setAllocationId(String allocationId) {
-            this.allocationId = allocationId;
-            return this;
-        }
-        public String getAllocationId() {
-            return this.allocationId;
-        }
-
-        public DescribeNetworkInterfaceAttributeResponseBodyAssociatedPublicIp setPublicIpAddress(String publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
-            return this;
-        }
-        public String getPublicIpAddress() {
-            return this.publicIpAddress;
         }
 
     }
@@ -476,96 +588,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyTagsTag> getTag() {
             return this.tag;
-        }
-
-    }
-
-    public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp extends TeaModel {
-        @NameInMap("AllocationId")
-        public String allocationId;
-
-        @NameInMap("PublicIpAddress")
-        public String publicIpAddress;
-
-        public static DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp self = new DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp setAllocationId(String allocationId) {
-            this.allocationId = allocationId;
-            return this;
-        }
-        public String getAllocationId() {
-            return this.allocationId;
-        }
-
-        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp setPublicIpAddress(String publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
-            return this;
-        }
-        public String getPublicIpAddress() {
-            return this.publicIpAddress;
-        }
-
-    }
-
-    public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
-        @NameInMap("AssociatedPublicIp")
-        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp;
-
-        @NameInMap("Primary")
-        public Boolean primary;
-
-        @NameInMap("PrivateIpAddress")
-        public String privateIpAddress;
-
-        public static DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet self = new DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet setAssociatedPublicIp(DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp) {
-            this.associatedPublicIp = associatedPublicIp;
-            return this;
-        }
-        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSetAssociatedPublicIp getAssociatedPublicIp() {
-            return this.associatedPublicIp;
-        }
-
-        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet setPrimary(Boolean primary) {
-            this.primary = primary;
-            return this;
-        }
-        public Boolean getPrimary() {
-            return this.primary;
-        }
-
-        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
-            return this;
-        }
-        public String getPrivateIpAddress() {
-            return this.privateIpAddress;
-        }
-
-    }
-
-    public static class DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets extends TeaModel {
-        @NameInMap("PrivateIpSet")
-        public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> privateIpSet;
-
-        public static DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets self = new DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSets setPrivateIpSet(java.util.List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> privateIpSet) {
-            this.privateIpSet = privateIpSet;
-            return this;
-        }
-        public java.util.List<DescribeNetworkInterfaceAttributeResponseBodyPrivateIpSetsPrivateIpSet> getPrivateIpSet() {
-            return this.privateIpSet;
         }
 
     }

@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("MaintenanceAttributes")
     public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes;
 
     public static DescribeInstanceMaintenanceAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMaintenanceAttributesResponseBody self = new DescribeInstanceMaintenanceAttributesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceMaintenanceAttributesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeInstanceMaintenanceAttributesResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeInstanceMaintenanceAttributesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeInstanceMaintenanceAttributesResponseBody setMaintenanceAttributes(DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes) {
@@ -133,18 +133,26 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance extends TeaModel {
+        @NameInMap("DefaultValue")
+        public String defaultValue;
+
         @NameInMap("Value")
         public String value;
 
         @NameInMap("SupportedValues")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues;
 
-        @NameInMap("DefaultValue")
-        public String defaultValue;
-
         public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
         }
 
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance setValue(String value) {
@@ -163,25 +171,17 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             return this.supportedValues;
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance setDefaultValue(String defaultValue) {
-            this.defaultValue = defaultValue;
-            return this;
-        }
-        public String getDefaultValue() {
-            return this.defaultValue;
-        }
-
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute extends TeaModel {
         @NameInMap("NotifyOnMaintenance")
         public Boolean notifyOnMaintenance;
 
-        @NameInMap("MaintenanceWindows")
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("MaintenanceWindows")
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows;
 
         @NameInMap("ActionOnMaintenance")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance;
@@ -199,20 +199,20 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             return this.notifyOnMaintenance;
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute setMaintenanceWindows(DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows) {
-            this.maintenanceWindows = maintenanceWindows;
-            return this;
-        }
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows getMaintenanceWindows() {
-            return this.maintenanceWindows;
-        }
-
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute setMaintenanceWindows(DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows) {
+            this.maintenanceWindows = maintenanceWindows;
+            return this;
+        }
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows getMaintenanceWindows() {
+            return this.maintenanceWindows;
         }
 
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute setActionOnMaintenance(DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance) {

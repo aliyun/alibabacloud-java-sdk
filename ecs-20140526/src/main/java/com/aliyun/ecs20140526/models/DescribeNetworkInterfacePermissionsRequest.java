@@ -19,6 +19,9 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("NetworkInterfacePermissionId")
+    public java.util.List<String> networkInterfacePermissionId;
+
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
@@ -27,9 +30,6 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("NetworkInterfacePermissionId")
-    public java.util.List<String> networkInterfacePermissionId;
 
     public static DescribeNetworkInterfacePermissionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfacePermissionsRequest self = new DescribeNetworkInterfacePermissionsRequest();
@@ -76,6 +76,14 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeNetworkInterfacePermissionsRequest setNetworkInterfacePermissionId(java.util.List<String> networkInterfacePermissionId) {
+        this.networkInterfacePermissionId = networkInterfacePermissionId;
+        return this;
+    }
+    public java.util.List<String> getNetworkInterfacePermissionId() {
+        return this.networkInterfacePermissionId;
+    }
+
     public DescribeNetworkInterfacePermissionsRequest setNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -98,14 +106,6 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeNetworkInterfacePermissionsRequest setNetworkInterfacePermissionId(java.util.List<String> networkInterfacePermissionId) {
-        this.networkInterfacePermissionId = networkInterfacePermissionId;
-        return this;
-    }
-    public java.util.List<String> getNetworkInterfacePermissionId() {
-        return this.networkInterfacePermissionId;
     }
 
 }

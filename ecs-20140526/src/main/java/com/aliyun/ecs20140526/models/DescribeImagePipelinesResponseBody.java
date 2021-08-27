@@ -4,14 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -22,14 +22,6 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     public static DescribeImagePipelinesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagePipelinesResponseBody self = new DescribeImagePipelinesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImagePipelinesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeImagePipelinesResponseBody setNextToken(String nextToken) {
@@ -46,6 +38,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeImagePipelinesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeImagePipelinesResponseBody setMaxResults(Integer maxResults) {
@@ -155,35 +155,29 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("Tags")
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags;
-
         @NameInMap("DeleteInstanceOnFailure")
         public Boolean deleteInstanceOnFailure;
-
-        @NameInMap("InternetMaxBandwidthOut")
-        public Integer internetMaxBandwidthOut;
 
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("InternetMaxBandwidthOut")
+        public Integer internetMaxBandwidthOut;
+
         @NameInMap("ImagePipelineId")
         public String imagePipelineId;
 
-        @NameInMap("SystemDiskSize")
-        public Integer systemDiskSize;
-
         @NameInMap("VSwitchId")
         public String vSwitchId;
+
+        @NameInMap("SystemDiskSize")
+        public Integer systemDiskSize;
 
         @NameInMap("Description")
         public String description;
 
         @NameInMap("BaseImage")
         public String baseImage;
-
-        @NameInMap("ToRegionIds")
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds toRegionIds;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -194,14 +188,20 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @NameInMap("BaseImageType")
         public String baseImageType;
 
-        @NameInMap("AddAccounts")
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts;
-
         @NameInMap("Name")
         public String name;
 
         @NameInMap("BuildContent")
         public String buildContent;
+
+        @NameInMap("Tags")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags;
+
+        @NameInMap("ToRegionIds")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds toRegionIds;
+
+        @NameInMap("AddAccounts")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts;
 
         public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet();
@@ -216,28 +216,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setTags(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags getTags() {
-            return this.tags;
-        }
-
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setDeleteInstanceOnFailure(Boolean deleteInstanceOnFailure) {
             this.deleteInstanceOnFailure = deleteInstanceOnFailure;
             return this;
         }
         public Boolean getDeleteInstanceOnFailure() {
             return this.deleteInstanceOnFailure;
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
-            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
-            return this;
-        }
-        public Integer getInternetMaxBandwidthOut() {
-            return this.internetMaxBandwidthOut;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setInstanceType(String instanceType) {
@@ -248,6 +232,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+            return this;
+        }
+        public Integer getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
+        }
+
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImagePipelineId(String imagePipelineId) {
             this.imagePipelineId = imagePipelineId;
             return this;
@@ -256,20 +248,20 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.imagePipelineId;
         }
 
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setSystemDiskSize(Integer systemDiskSize) {
-            this.systemDiskSize = systemDiskSize;
-            return this;
-        }
-        public Integer getSystemDiskSize() {
-            return this.systemDiskSize;
-        }
-
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setSystemDiskSize(Integer systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setDescription(String description) {
@@ -286,14 +278,6 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public String getBaseImage() {
             return this.baseImage;
-        }
-
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setToRegionIds(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds toRegionIds) {
-            this.toRegionIds = toRegionIds;
-            return this;
-        }
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds getToRegionIds() {
-            return this.toRegionIds;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setResourceGroupId(String resourceGroupId) {
@@ -320,14 +304,6 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.baseImageType;
         }
 
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setAddAccounts(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts) {
-            this.addAccounts = addAccounts;
-            return this;
-        }
-        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts getAddAccounts() {
-            return this.addAccounts;
-        }
-
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setName(String name) {
             this.name = name;
             return this;
@@ -342,6 +318,30 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
         public String getBuildContent() {
             return this.buildContent;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setTags(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setToRegionIds(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds toRegionIds) {
+            this.toRegionIds = toRegionIds;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetToRegionIds getToRegionIds() {
+            return this.toRegionIds;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setAddAccounts(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts addAccounts) {
+            this.addAccounts = addAccounts;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAddAccounts getAddAccounts() {
+            return this.addAccounts;
         }
 
     }

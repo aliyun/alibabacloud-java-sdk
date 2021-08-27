@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<DescribeReservedInstancesRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -25,8 +28,11 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeReservedInstancesRequestTag> tag;
+    @NameInMap("ReservedInstanceId")
+    public java.util.List<String> reservedInstanceId;
+
+    @NameInMap("Status")
+    public java.util.List<String> status;
 
     @NameInMap("ZoneId")
     public String zoneId;
@@ -52,15 +58,17 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     @NameInMap("AllocationType")
     public String allocationType;
 
-    @NameInMap("ReservedInstanceId")
-    public java.util.List<String> reservedInstanceId;
-
-    @NameInMap("Status")
-    public java.util.List<String> status;
-
     public static DescribeReservedInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeReservedInstancesRequest self = new DescribeReservedInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeReservedInstancesRequest setTag(java.util.List<DescribeReservedInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeReservedInstancesRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeReservedInstancesRequest setOwnerId(Long ownerId) {
@@ -119,12 +127,20 @@ public class DescribeReservedInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeReservedInstancesRequest setTag(java.util.List<DescribeReservedInstancesRequestTag> tag) {
-        this.tag = tag;
+    public DescribeReservedInstancesRequest setReservedInstanceId(java.util.List<String> reservedInstanceId) {
+        this.reservedInstanceId = reservedInstanceId;
         return this;
     }
-    public java.util.List<DescribeReservedInstancesRequestTag> getTag() {
-        return this.tag;
+    public java.util.List<String> getReservedInstanceId() {
+        return this.reservedInstanceId;
+    }
+
+    public DescribeReservedInstancesRequest setStatus(java.util.List<String> status) {
+        this.status = status;
+        return this;
+    }
+    public java.util.List<String> getStatus() {
+        return this.status;
     }
 
     public DescribeReservedInstancesRequest setZoneId(String zoneId) {
@@ -189,22 +205,6 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     }
     public String getAllocationType() {
         return this.allocationType;
-    }
-
-    public DescribeReservedInstancesRequest setReservedInstanceId(java.util.List<String> reservedInstanceId) {
-        this.reservedInstanceId = reservedInstanceId;
-        return this;
-    }
-    public java.util.List<String> getReservedInstanceId() {
-        return this.reservedInstanceId;
-    }
-
-    public DescribeReservedInstancesRequest setStatus(java.util.List<String> status) {
-        this.status = status;
-        return this;
-    }
-    public java.util.List<String> getStatus() {
-        return this.status;
     }
 
     public static class DescribeReservedInstancesRequestTag extends TeaModel {

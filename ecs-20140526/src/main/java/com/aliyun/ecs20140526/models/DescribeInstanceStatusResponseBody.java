@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("InstanceStatuses")
     public DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses;
 
     public static DescribeInstanceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStatusResponseBody self = new DescribeInstanceStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceStatusResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeInstanceStatusResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeInstanceStatusResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeInstanceStatusResponseBody setInstanceStatuses(DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses) {

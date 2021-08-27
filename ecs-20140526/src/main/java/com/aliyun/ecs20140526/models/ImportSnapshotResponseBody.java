@@ -4,26 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ImportSnapshotResponseBody extends TeaModel {
-    @NameInMap("SnapshotId")
-    public String snapshotId;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TaskId")
     public String taskId;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("SnapshotId")
+    public String snapshotId;
 
     public static ImportSnapshotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImportSnapshotResponseBody self = new ImportSnapshotResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ImportSnapshotResponseBody setSnapshotId(String snapshotId) {
-        this.snapshotId = snapshotId;
+    public ImportSnapshotResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getSnapshotId() {
-        return this.snapshotId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ImportSnapshotResponseBody setTaskId(String taskId) {
@@ -34,12 +34,12 @@ public class ImportSnapshotResponseBody extends TeaModel {
         return this.taskId;
     }
 
-    public ImportSnapshotResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ImportSnapshotResponseBody setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
 }

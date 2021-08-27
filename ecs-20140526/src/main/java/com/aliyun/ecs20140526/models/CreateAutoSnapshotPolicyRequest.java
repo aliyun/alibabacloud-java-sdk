@@ -40,6 +40,9 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateAutoSnapshotPolicyRequestTag> tag;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoSnapshotPolicyRequest self = new CreateAutoSnapshotPolicyRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     }
     public java.util.List<CreateAutoSnapshotPolicyRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateAutoSnapshotPolicyRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class CreateAutoSnapshotPolicyRequestTag extends TeaModel {

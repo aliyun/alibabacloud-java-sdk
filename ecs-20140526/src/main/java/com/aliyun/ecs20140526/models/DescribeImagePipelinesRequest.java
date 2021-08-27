@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<DescribeImagePipelinesRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -22,8 +25,8 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeImagePipelinesRequestTag> tag;
+    @NameInMap("ImagePipelineId")
+    public java.util.List<String> imagePipelineId;
 
     @NameInMap("Name")
     public String name;
@@ -34,12 +37,17 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    @NameInMap("ImagePipelineId")
-    public java.util.List<String> imagePipelineId;
-
     public static DescribeImagePipelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagePipelinesRequest self = new DescribeImagePipelinesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImagePipelinesRequest setTag(java.util.List<DescribeImagePipelinesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeImagePipelinesRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeImagePipelinesRequest setOwnerId(Long ownerId) {
@@ -90,12 +98,12 @@ public class DescribeImagePipelinesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeImagePipelinesRequest setTag(java.util.List<DescribeImagePipelinesRequestTag> tag) {
-        this.tag = tag;
+    public DescribeImagePipelinesRequest setImagePipelineId(java.util.List<String> imagePipelineId) {
+        this.imagePipelineId = imagePipelineId;
         return this;
     }
-    public java.util.List<DescribeImagePipelinesRequestTag> getTag() {
-        return this.tag;
+    public java.util.List<String> getImagePipelineId() {
+        return this.imagePipelineId;
     }
 
     public DescribeImagePipelinesRequest setName(String name) {
@@ -120,14 +128,6 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
-    }
-
-    public DescribeImagePipelinesRequest setImagePipelineId(java.util.List<String> imagePipelineId) {
-        this.imagePipelineId = imagePipelineId;
-        return this;
-    }
-    public java.util.List<String> getImagePipelineId() {
-        return this.imagePipelineId;
     }
 
     public static class DescribeImagePipelinesRequestTag extends TeaModel {

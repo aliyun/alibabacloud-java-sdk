@@ -4,32 +4,24 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipAddressesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("EipAddresses")
-    public DescribeEipAddressesResponseBodyEipAddresses eipAddresses;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("EipAddresses")
+    public DescribeEipAddressesResponseBodyEipAddresses eipAddresses;
 
     public static DescribeEipAddressesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipAddressesResponseBody self = new DescribeEipAddressesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEipAddressesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeEipAddressesResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +40,28 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeEipAddressesResponseBody setEipAddresses(DescribeEipAddressesResponseBodyEipAddresses eipAddresses) {
-        this.eipAddresses = eipAddresses;
-        return this;
-    }
-    public DescribeEipAddressesResponseBodyEipAddresses getEipAddresses() {
-        return this.eipAddresses;
-    }
-
     public DescribeEipAddressesResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeEipAddressesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeEipAddressesResponseBody setEipAddresses(DescribeEipAddressesResponseBodyEipAddresses eipAddresses) {
+        this.eipAddresses = eipAddresses;
+        return this;
+    }
+    public DescribeEipAddressesResponseBodyEipAddresses getEipAddresses() {
+        return this.eipAddresses;
     }
 
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLockReason extends TeaModel {
@@ -106,9 +106,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("OperationLocks")
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks;
-
         @NameInMap("AllocationTime")
         public String allocationTime;
 
@@ -142,6 +139,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("EipBandwidth")
         public String eipBandwidth;
 
+        @NameInMap("OperationLocks")
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks;
+
         public static DescribeEipAddressesResponseBodyEipAddressesEipAddress build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipAddressesResponseBodyEipAddressesEipAddress self = new DescribeEipAddressesResponseBodyEipAddressesEipAddress();
             return TeaModel.build(map, self);
@@ -153,14 +153,6 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setOperationLocks(DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks) {
-            this.operationLocks = operationLocks;
-            return this;
-        }
-        public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks getOperationLocks() {
-            return this.operationLocks;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setAllocationTime(String allocationTime) {
@@ -249,6 +241,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
         public String getEipBandwidth() {
             return this.eipBandwidth;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setOperationLocks(DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks operationLocks) {
+            this.operationLocks = operationLocks;
+            return this;
+        }
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocks getOperationLocks() {
+            return this.operationLocks;
         }
 
     }

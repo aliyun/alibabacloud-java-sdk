@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImageComponentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ImageComponentId")
     public String imageComponentId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateImageComponentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateImageComponentResponseBody self = new CreateImageComponentResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateImageComponentResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateImageComponentResponseBody setImageComponentId(String imageComponentId) {
@@ -29,6 +21,14 @@ public class CreateImageComponentResponseBody extends TeaModel {
     }
     public String getImageComponentId() {
         return this.imageComponentId;
+    }
+
+    public CreateImageComponentResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

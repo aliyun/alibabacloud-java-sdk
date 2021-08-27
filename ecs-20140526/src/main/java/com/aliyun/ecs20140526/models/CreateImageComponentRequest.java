@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImageComponentRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<CreateImageComponentRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -21,9 +24,6 @@ public class CreateImageComponentRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<CreateImageComponentRequestTag> tag;
 
     @NameInMap("Name")
     public String name;
@@ -46,6 +46,14 @@ public class CreateImageComponentRequest extends TeaModel {
     public static CreateImageComponentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageComponentRequest self = new CreateImageComponentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateImageComponentRequest setTag(java.util.List<CreateImageComponentRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateImageComponentRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateImageComponentRequest setOwnerId(Long ownerId) {
@@ -94,14 +102,6 @@ public class CreateImageComponentRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public CreateImageComponentRequest setTag(java.util.List<CreateImageComponentRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateImageComponentRequestTag> getTag() {
-        return this.tag;
     }
 
     public CreateImageComponentRequest setName(String name) {

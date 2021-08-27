@@ -31,55 +31,6 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         return this.image;
     }
 
-    public static class DescribeImageFromFamilyResponseBodyImageTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        public static DescribeImageFromFamilyResponseBodyImageTagsTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageFromFamilyResponseBodyImageTagsTag self = new DescribeImageFromFamilyResponseBodyImageTagsTag();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeImageFromFamilyResponseBodyImageTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        public DescribeImageFromFamilyResponseBodyImageTagsTag setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-    }
-
-    public static class DescribeImageFromFamilyResponseBodyImageTags extends TeaModel {
-        @NameInMap("Tag")
-        public java.util.List<DescribeImageFromFamilyResponseBodyImageTagsTag> tag;
-
-        public static DescribeImageFromFamilyResponseBodyImageTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageFromFamilyResponseBodyImageTags self = new DescribeImageFromFamilyResponseBodyImageTags();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeImageFromFamilyResponseBodyImageTags setTag(java.util.List<DescribeImageFromFamilyResponseBodyImageTagsTag> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<DescribeImageFromFamilyResponseBodyImageTagsTag> getTag() {
-            return this.tag;
-        }
-
-    }
-
     public static class DescribeImageFromFamilyResponseBodyImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
         @NameInMap("Type")
         public String type;
@@ -184,15 +135,64 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeImageFromFamilyResponseBodyImageTagsTag extends TeaModel {
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        public static DescribeImageFromFamilyResponseBodyImageTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageFromFamilyResponseBodyImageTagsTag self = new DescribeImageFromFamilyResponseBodyImageTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageFromFamilyResponseBodyImageTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public DescribeImageFromFamilyResponseBodyImageTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+    }
+
+    public static class DescribeImageFromFamilyResponseBodyImageTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeImageFromFamilyResponseBodyImageTagsTag> tag;
+
+        public static DescribeImageFromFamilyResponseBodyImageTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageFromFamilyResponseBodyImageTags self = new DescribeImageFromFamilyResponseBodyImageTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageFromFamilyResponseBodyImageTags setTag(java.util.List<DescribeImageFromFamilyResponseBodyImageTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeImageFromFamilyResponseBodyImageTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeImageFromFamilyResponseBodyImage extends TeaModel {
-        @NameInMap("ImageFamily")
-        public String imageFamily;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("ImageFamily")
+        public String imageFamily;
 
         @NameInMap("Progress")
         public String progress;
@@ -200,23 +200,17 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         @NameInMap("IsCopied")
         public Boolean isCopied;
 
-        @NameInMap("ImageOwnerAlias")
-        public String imageOwnerAlias;
-
         @NameInMap("IsSupportIoOptimized")
         public Boolean isSupportIoOptimized;
 
-        @NameInMap("Tags")
-        public DescribeImageFromFamilyResponseBodyImageTags tags;
+        @NameInMap("ImageOwnerAlias")
+        public String imageOwnerAlias;
 
         @NameInMap("IsSupportCloudinit")
         public Boolean isSupportCloudinit;
 
         @NameInMap("ImageVersion")
         public String imageVersion;
-
-        @NameInMap("DiskDeviceMappings")
-        public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings diskDeviceMappings;
 
         @NameInMap("Usage")
         public String usage;
@@ -254,17 +248,23 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         @NameInMap("Architecture")
         public String architecture;
 
+        @NameInMap("DiskDeviceMappings")
+        public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings diskDeviceMappings;
+
+        @NameInMap("Tags")
+        public DescribeImageFromFamilyResponseBodyImageTags tags;
+
         public static DescribeImageFromFamilyResponseBodyImage build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageFromFamilyResponseBodyImage self = new DescribeImageFromFamilyResponseBodyImage();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageFromFamilyResponseBodyImage setImageFamily(String imageFamily) {
-            this.imageFamily = imageFamily;
+        public DescribeImageFromFamilyResponseBodyImage setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getImageFamily() {
-            return this.imageFamily;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeImageFromFamilyResponseBodyImage setStatus(String status) {
@@ -275,12 +275,12 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeImageFromFamilyResponseBodyImage setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
+        public DescribeImageFromFamilyResponseBodyImage setImageFamily(String imageFamily) {
+            this.imageFamily = imageFamily;
             return this;
         }
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getImageFamily() {
+            return this.imageFamily;
         }
 
         public DescribeImageFromFamilyResponseBodyImage setProgress(String progress) {
@@ -299,14 +299,6 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             return this.isCopied;
         }
 
-        public DescribeImageFromFamilyResponseBodyImage setImageOwnerAlias(String imageOwnerAlias) {
-            this.imageOwnerAlias = imageOwnerAlias;
-            return this;
-        }
-        public String getImageOwnerAlias() {
-            return this.imageOwnerAlias;
-        }
-
         public DescribeImageFromFamilyResponseBodyImage setIsSupportIoOptimized(Boolean isSupportIoOptimized) {
             this.isSupportIoOptimized = isSupportIoOptimized;
             return this;
@@ -315,12 +307,12 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
             return this.isSupportIoOptimized;
         }
 
-        public DescribeImageFromFamilyResponseBodyImage setTags(DescribeImageFromFamilyResponseBodyImageTags tags) {
-            this.tags = tags;
+        public DescribeImageFromFamilyResponseBodyImage setImageOwnerAlias(String imageOwnerAlias) {
+            this.imageOwnerAlias = imageOwnerAlias;
             return this;
         }
-        public DescribeImageFromFamilyResponseBodyImageTags getTags() {
-            return this.tags;
+        public String getImageOwnerAlias() {
+            return this.imageOwnerAlias;
         }
 
         public DescribeImageFromFamilyResponseBodyImage setIsSupportCloudinit(Boolean isSupportCloudinit) {
@@ -337,14 +329,6 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
         public String getImageVersion() {
             return this.imageVersion;
-        }
-
-        public DescribeImageFromFamilyResponseBodyImage setDiskDeviceMappings(DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings diskDeviceMappings) {
-            this.diskDeviceMappings = diskDeviceMappings;
-            return this;
-        }
-        public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings getDiskDeviceMappings() {
-            return this.diskDeviceMappings;
         }
 
         public DescribeImageFromFamilyResponseBodyImage setUsage(String usage) {
@@ -441,6 +425,22 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
         }
         public String getArchitecture() {
             return this.architecture;
+        }
+
+        public DescribeImageFromFamilyResponseBodyImage setDiskDeviceMappings(DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings diskDeviceMappings) {
+            this.diskDeviceMappings = diskDeviceMappings;
+            return this;
+        }
+        public DescribeImageFromFamilyResponseBodyImageDiskDeviceMappings getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
+        }
+
+        public DescribeImageFromFamilyResponseBodyImage setTags(DescribeImageFromFamilyResponseBodyImageTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeImageFromFamilyResponseBodyImageTags getTags() {
+            return this.tags;
         }
 
     }

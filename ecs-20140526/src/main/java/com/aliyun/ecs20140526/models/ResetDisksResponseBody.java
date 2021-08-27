@@ -32,23 +32,15 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Value")
+        public String value;
 
         public static ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem build(java.util.Map<String, ?> map) throws Exception {
             ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem self = new ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem();
             return TeaModel.build(map, self);
-        }
-
-        public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem setName(String name) {
@@ -57,6 +49,14 @@ public class ResetDisksResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -81,29 +81,21 @@ public class ResetDisksResponseBody extends TeaModel {
     }
 
     public static class ResetDisksResponseBodyOperationProgressSetOperationProgress extends TeaModel {
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        @NameInMap("RelatedItemSet")
-        public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
+        @NameInMap("ErrorCode")
+        public String errorCode;
 
         @NameInMap("OperationStatus")
         public String operationStatus;
 
+        @NameInMap("RelatedItemSet")
+        public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
+
         public static ResetDisksResponseBodyOperationProgressSetOperationProgress build(java.util.Map<String, ?> map) throws Exception {
             ResetDisksResponseBodyOperationProgressSetOperationProgress self = new ResetDisksResponseBodyOperationProgressSetOperationProgress();
             return TeaModel.build(map, self);
-        }
-
-        public ResetDisksResponseBodyOperationProgressSetOperationProgress setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
         }
 
         public ResetDisksResponseBodyOperationProgressSetOperationProgress setErrorMsg(String errorMsg) {
@@ -114,12 +106,12 @@ public class ResetDisksResponseBody extends TeaModel {
             return this.errorMsg;
         }
 
-        public ResetDisksResponseBodyOperationProgressSetOperationProgress setRelatedItemSet(ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet) {
-            this.relatedItemSet = relatedItemSet;
+        public ResetDisksResponseBodyOperationProgressSetOperationProgress setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
             return this;
         }
-        public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet getRelatedItemSet() {
-            return this.relatedItemSet;
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public ResetDisksResponseBodyOperationProgressSetOperationProgress setOperationStatus(String operationStatus) {
@@ -128,6 +120,14 @@ public class ResetDisksResponseBody extends TeaModel {
         }
         public String getOperationStatus() {
             return this.operationStatus;
+        }
+
+        public ResetDisksResponseBodyOperationProgressSetOperationProgress setRelatedItemSet(ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet) {
+            this.relatedItemSet = relatedItemSet;
+            return this;
+        }
+        public ResetDisksResponseBodyOperationProgressSetOperationProgressRelatedItemSet getRelatedItemSet() {
+            return this.relatedItemSet;
         }
 
     }

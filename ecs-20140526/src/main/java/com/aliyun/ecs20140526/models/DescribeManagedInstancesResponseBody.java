@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeManagedInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    public java.util.List<DescribeManagedInstancesResponseBodyInstances> instances;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
+    @NameInMap("Instances")
+    public java.util.List<DescribeManagedInstancesResponseBodyInstances> instances;
+
     public static DescribeManagedInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeManagedInstancesResponseBody self = new DescribeManagedInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeManagedInstancesResponseBody setInstances(java.util.List<DescribeManagedInstancesResponseBodyInstances> instances) {
-        this.instances = instances;
-        return this;
-    }
-    public java.util.List<DescribeManagedInstancesResponseBodyInstances> getInstances() {
-        return this.instances;
-    }
-
-    public DescribeManagedInstancesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeManagedInstancesResponseBody setPageSize(Long pageSize) {
@@ -64,6 +48,22 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeManagedInstancesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeManagedInstancesResponseBody setInstances(java.util.List<DescribeManagedInstancesResponseBodyInstances> instances) {
+        this.instances = instances;
+        return this;
+    }
+    public java.util.List<DescribeManagedInstancesResponseBodyInstances> getInstances() {
+        return this.instances;
+    }
+
     public static class DescribeManagedInstancesResponseBodyInstances extends TeaModel {
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
@@ -80,17 +80,17 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("IntranetIp")
-        public String intranetIp;
-
         @NameInMap("ActivationId")
         public String activationId;
 
-        @NameInMap("RegistrationTime")
-        public String registrationTime;
+        @NameInMap("IntranetIp")
+        public String intranetIp;
 
         @NameInMap("AgentVersion")
         public String agentVersion;
+
+        @NameInMap("RegistrationTime")
+        public String registrationTime;
 
         @NameInMap("InstanceName")
         public String instanceName;
@@ -152,14 +152,6 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeManagedInstancesResponseBodyInstances setIntranetIp(String intranetIp) {
-            this.intranetIp = intranetIp;
-            return this;
-        }
-        public String getIntranetIp() {
-            return this.intranetIp;
-        }
-
         public DescribeManagedInstancesResponseBodyInstances setActivationId(String activationId) {
             this.activationId = activationId;
             return this;
@@ -168,12 +160,12 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             return this.activationId;
         }
 
-        public DescribeManagedInstancesResponseBodyInstances setRegistrationTime(String registrationTime) {
-            this.registrationTime = registrationTime;
+        public DescribeManagedInstancesResponseBodyInstances setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
             return this;
         }
-        public String getRegistrationTime() {
-            return this.registrationTime;
+        public String getIntranetIp() {
+            return this.intranetIp;
         }
 
         public DescribeManagedInstancesResponseBodyInstances setAgentVersion(String agentVersion) {
@@ -182,6 +174,14 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
         public String getAgentVersion() {
             return this.agentVersion;
+        }
+
+        public DescribeManagedInstancesResponseBodyInstances setRegistrationTime(String registrationTime) {
+            this.registrationTime = registrationTime;
+            return this;
+        }
+        public String getRegistrationTime() {
+            return this.registrationTime;
         }
 
         public DescribeManagedInstancesResponseBodyInstances setInstanceName(String instanceName) {

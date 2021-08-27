@@ -19,11 +19,11 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("NetworkInterfaceId")
-    public String networkInterfaceId;
-
     @NameInMap("Ipv6Address")
     public java.util.List<String> ipv6Address;
+
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
 
     public static UnassignIpv6AddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         UnassignIpv6AddressesRequest self = new UnassignIpv6AddressesRequest();
@@ -70,20 +70,20 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UnassignIpv6AddressesRequest setNetworkInterfaceId(String networkInterfaceId) {
-        this.networkInterfaceId = networkInterfaceId;
-        return this;
-    }
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
     public UnassignIpv6AddressesRequest setIpv6Address(java.util.List<String> ipv6Address) {
         this.ipv6Address = ipv6Address;
         return this;
     }
     public java.util.List<String> getIpv6Address() {
         return this.ipv6Address;
+    }
+
+    public UnassignIpv6AddressesRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
 }

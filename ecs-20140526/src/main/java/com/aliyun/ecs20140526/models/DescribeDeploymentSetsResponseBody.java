@@ -4,35 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("DeploymentSets")
-    public DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("DeploymentSets")
+    public DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets;
+
     public static DescribeDeploymentSetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeploymentSetsResponseBody self = new DescribeDeploymentSetsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeploymentSetsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDeploymentSetsResponseBody setPageSize(Integer pageSize) {
@@ -43,14 +35,6 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDeploymentSetsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDeploymentSetsResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -59,12 +43,20 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDeploymentSetsResponseBody setDeploymentSets(DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets) {
-        this.deploymentSets = deploymentSets;
+    public DescribeDeploymentSetsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeDeploymentSetsResponseBodyDeploymentSets getDeploymentSets() {
-        return this.deploymentSets;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDeploymentSetsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeDeploymentSetsResponseBody setRegionId(String regionId) {
@@ -73,6 +65,14 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDeploymentSetsResponseBody setDeploymentSets(DescribeDeploymentSetsResponseBodyDeploymentSets deploymentSets) {
+        this.deploymentSets = deploymentSets;
+        return this;
+    }
+    public DescribeDeploymentSetsResponseBodyDeploymentSets getDeploymentSets() {
+        return this.deploymentSets;
     }
 
     public static class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds extends TeaModel {
@@ -119,14 +119,14 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         @NameInMap("Granularity")
         public String granularity;
 
-        @NameInMap("InstanceIds")
-        public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds instanceIds;
-
         @NameInMap("DeploymentSetName")
         public String deploymentSetName;
 
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
+
+        @NameInMap("InstanceIds")
+        public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds instanceIds;
 
         public static DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet self = new DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet();
@@ -197,14 +197,6 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             return this.granularity;
         }
 
-        public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setInstanceIds(DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds instanceIds) {
-            this.instanceIds = instanceIds;
-            return this;
-        }
-        public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds getInstanceIds() {
-            return this.instanceIds;
-        }
-
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setDeploymentSetName(String deploymentSetName) {
             this.deploymentSetName = deploymentSetName;
             return this;
@@ -219,6 +211,14 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
         public Integer getInstanceAmount() {
             return this.instanceAmount;
+        }
+
+        public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setInstanceIds(DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
+        public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetInstanceIds getInstanceIds() {
+            return this.instanceIds;
         }
 
     }

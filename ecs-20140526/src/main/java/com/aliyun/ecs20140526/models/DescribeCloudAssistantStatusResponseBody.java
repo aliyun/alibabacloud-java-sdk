@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     @NameInMap("InstanceCloudAssistantStatusSet")
     public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet;
 
     public static DescribeCloudAssistantStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudAssistantStatusResponseBody self = new DescribeCloudAssistantStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCloudAssistantStatusResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeCloudAssistantStatusResponseBody setPageSize(Long pageSize) {
@@ -54,6 +46,14 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     }
     public Long getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeCloudAssistantStatusResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeCloudAssistantStatusResponseBody setInstanceCloudAssistantStatusSet(DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet) {
@@ -83,8 +83,14 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("LastHeartbeatTime")
+        public String lastHeartbeatTime;
+
         @NameInMap("OSType")
         public String OSType;
+
+        @NameInMap("SupportSessionManager")
+        public Boolean supportSessionManager;
 
         public static DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus self = new DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus();
@@ -139,12 +145,28 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus setLastHeartbeatTime(String lastHeartbeatTime) {
+            this.lastHeartbeatTime = lastHeartbeatTime;
+            return this;
+        }
+        public String getLastHeartbeatTime() {
+            return this.lastHeartbeatTime;
+        }
+
         public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus setOSType(String OSType) {
             this.OSType = OSType;
             return this;
         }
         public String getOSType() {
             return this.OSType;
+        }
+
+        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus setSupportSessionManager(Boolean supportSessionManager) {
+            this.supportSessionManager = supportSessionManager;
+            return this;
+        }
+        public Boolean getSupportSessionManager() {
+            return this.supportSessionManager;
         }
 
     }

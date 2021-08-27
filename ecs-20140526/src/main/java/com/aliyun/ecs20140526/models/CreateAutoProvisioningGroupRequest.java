@@ -94,6 +94,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("DataDiskConfig")
     public java.util.List<CreateAutoProvisioningGroupRequestDataDiskConfig> dataDiskConfig;
 
+    @NameInMap("MinTargetCapacity")
+    public String minTargetCapacity;
+
     public static CreateAutoProvisioningGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoProvisioningGroupRequest self = new CreateAutoProvisioningGroupRequest();
         return TeaModel.build(map, self);
@@ -339,15 +342,23 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.dataDiskConfig;
     }
 
+    public CreateAutoProvisioningGroupRequest setMinTargetCapacity(String minTargetCapacity) {
+        this.minTargetCapacity = minTargetCapacity;
+        return this;
+    }
+    public String getMinTargetCapacity() {
+        return this.minTargetCapacity;
+    }
+
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -383,20 +394,20 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.performanceLevel;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setKmsKeyId(String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
         public String getKmsKeyId() {
             return this.kmsKeyId;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setSnapshotId(String snapshotId) {
@@ -559,6 +570,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
         @NameInMap("Tag")
         public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> tag;
+
+        @NameInMap("HostNames")
+        public java.util.List<String> hostNames;
 
         public static CreateAutoProvisioningGroupRequestLaunchConfiguration build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchConfiguration self = new CreateAutoProvisioningGroupRequestLaunchConfiguration();
@@ -757,6 +771,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.tag;
         }
 
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setHostNames(java.util.List<String> hostNames) {
+            this.hostNames = hostNames;
+            return this;
+        }
+        public java.util.List<String> getHostNames() {
+            return this.hostNames;
+        }
+
     }
 
     public static class CreateAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
@@ -769,11 +791,11 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("Priority")
         public Integer priority;
 
-        @NameInMap("WeightedCapacity")
-        public Double weightedCapacity;
-
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("WeightedCapacity")
+        public Double weightedCapacity;
 
         public static CreateAutoProvisioningGroupRequestLaunchTemplateConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchTemplateConfig self = new CreateAutoProvisioningGroupRequestLaunchTemplateConfig();
@@ -804,20 +826,20 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.priority;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
-            return this;
-        }
-        public Double getWeightedCapacity() {
-            return this.weightedCapacity;
-        }
-
         public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
+            this.weightedCapacity = weightedCapacity;
+            return this;
+        }
+        public Double getWeightedCapacity() {
+            return this.weightedCapacity;
         }
 
     }

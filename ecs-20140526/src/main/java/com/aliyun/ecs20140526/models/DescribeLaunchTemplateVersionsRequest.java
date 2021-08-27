@@ -19,6 +19,9 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("LaunchTemplateVersion")
+    public java.util.List<Integer> launchTemplateVersion;
+
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
@@ -42,9 +45,6 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("LaunchTemplateVersion")
-    public java.util.List<Integer> launchTemplateVersion;
 
     public static DescribeLaunchTemplateVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLaunchTemplateVersionsRequest self = new DescribeLaunchTemplateVersionsRequest();
@@ -89,6 +89,14 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateVersion(java.util.List<Integer> launchTemplateVersion) {
+        this.launchTemplateVersion = launchTemplateVersion;
+        return this;
+    }
+    public java.util.List<Integer> getLaunchTemplateVersion() {
+        return this.launchTemplateVersion;
     }
 
     public DescribeLaunchTemplateVersionsRequest setLaunchTemplateId(String launchTemplateId) {
@@ -153,14 +161,6 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateVersion(java.util.List<Integer> launchTemplateVersion) {
-        this.launchTemplateVersion = launchTemplateVersion;
-        return this;
-    }
-    public java.util.List<Integer> getLaunchTemplateVersion() {
-        return this.launchTemplateVersion;
     }
 
 }

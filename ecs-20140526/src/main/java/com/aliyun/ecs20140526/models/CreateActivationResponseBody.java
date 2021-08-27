@@ -7,11 +7,11 @@ public class CreateActivationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ActivationId")
-    public String activationId;
-
     @NameInMap("ActivationCode")
     public String activationCode;
+
+    @NameInMap("ActivationId")
+    public String activationId;
 
     public static CreateActivationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateActivationResponseBody self = new CreateActivationResponseBody();
@@ -26,20 +26,20 @@ public class CreateActivationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateActivationResponseBody setActivationId(String activationId) {
-        this.activationId = activationId;
-        return this;
-    }
-    public String getActivationId() {
-        return this.activationId;
-    }
-
     public CreateActivationResponseBody setActivationCode(String activationCode) {
         this.activationCode = activationCode;
         return this;
     }
     public String getActivationCode() {
         return this.activationCode;
+    }
+
+    public CreateActivationResponseBody setActivationId(String activationId) {
+        this.activationId = activationId;
+        return this;
+    }
+    public String getActivationId() {
+        return this.activationId;
     }
 
 }

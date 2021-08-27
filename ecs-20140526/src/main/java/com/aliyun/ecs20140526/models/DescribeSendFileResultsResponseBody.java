@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     @NameInMap("Invocations")
     public DescribeSendFileResultsResponseBodyInvocations invocations;
 
     public static DescribeSendFileResultsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSendFileResultsResponseBody self = new DescribeSendFileResultsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSendFileResultsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeSendFileResultsResponseBody setPageSize(Long pageSize) {
@@ -54,6 +46,14 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     }
     public Long getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeSendFileResultsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeSendFileResultsResponseBody setInvocations(DescribeSendFileResultsResponseBodyInvocations invocations) {
@@ -183,26 +183,23 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("ContentType")
-        public String contentType;
-
         @NameInMap("InvocationStatus")
         public String invocationStatus;
+
+        @NameInMap("ContentType")
+        public String contentType;
 
         @NameInMap("TargetDir")
         public String targetDir;
 
-        @NameInMap("InvokeInstances")
-        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances invokeInstances;
-
         @NameInMap("FileOwner")
         public String fileOwner;
 
-        @NameInMap("VmCount")
-        public Integer vmCount;
-
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("VmCount")
+        public Integer vmCount;
 
         @NameInMap("FileMode")
         public String fileMode;
@@ -210,17 +207,20 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         @NameInMap("FileGroup")
         public String fileGroup;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("InvokeId")
         public String invokeId;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Content")
         public String content;
 
         @NameInMap("Overwrite")
         public String overwrite;
+
+        @NameInMap("InvokeInstances")
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances invokeInstances;
 
         public static DescribeSendFileResultsResponseBodyInvocationsInvocation build(java.util.Map<String, ?> map) throws Exception {
             DescribeSendFileResultsResponseBodyInvocationsInvocation self = new DescribeSendFileResultsResponseBodyInvocationsInvocation();
@@ -235,20 +235,20 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvocation setContentType(String contentType) {
-            this.contentType = contentType;
-            return this;
-        }
-        public String getContentType() {
-            return this.contentType;
-        }
-
         public DescribeSendFileResultsResponseBodyInvocationsInvocation setInvocationStatus(String invocationStatus) {
             this.invocationStatus = invocationStatus;
             return this;
         }
         public String getInvocationStatus() {
             return this.invocationStatus;
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
         }
 
         public DescribeSendFileResultsResponseBodyInvocationsInvocation setTargetDir(String targetDir) {
@@ -259,14 +259,6 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.targetDir;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvocation setInvokeInstances(DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances invokeInstances) {
-            this.invokeInstances = invokeInstances;
-            return this;
-        }
-        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances getInvokeInstances() {
-            return this.invokeInstances;
-        }
-
         public DescribeSendFileResultsResponseBodyInvocationsInvocation setFileOwner(String fileOwner) {
             this.fileOwner = fileOwner;
             return this;
@@ -275,20 +267,20 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.fileOwner;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvocation setVmCount(Integer vmCount) {
-            this.vmCount = vmCount;
-            return this;
-        }
-        public Integer getVmCount() {
-            return this.vmCount;
-        }
-
         public DescribeSendFileResultsResponseBodyInvocationsInvocation setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setVmCount(Integer vmCount) {
+            this.vmCount = vmCount;
+            return this;
+        }
+        public Integer getVmCount() {
+            return this.vmCount;
         }
 
         public DescribeSendFileResultsResponseBodyInvocationsInvocation setFileMode(String fileMode) {
@@ -307,20 +299,20 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.fileGroup;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvocation setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeSendFileResultsResponseBodyInvocationsInvocation setInvokeId(String invokeId) {
             this.invokeId = invokeId;
             return this;
         }
         public String getInvokeId() {
             return this.invokeId;
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeSendFileResultsResponseBodyInvocationsInvocation setContent(String content) {
@@ -337,6 +329,14 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
         public String getOverwrite() {
             return this.overwrite;
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setInvokeInstances(DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances invokeInstances) {
+            this.invokeInstances = invokeInstances;
+            return this;
+        }
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances getInvokeInstances() {
+            return this.invokeInstances;
         }
 
     }

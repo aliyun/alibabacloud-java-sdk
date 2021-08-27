@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeHaVipsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("HaVips")
-    public DescribeHaVipsResponseBodyHaVips haVips;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("HaVips")
+    public DescribeHaVipsResponseBodyHaVips haVips;
+
     public static DescribeHaVipsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHaVipsResponseBody self = new DescribeHaVipsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeHaVipsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeHaVipsResponseBody setHaVips(DescribeHaVipsResponseBodyHaVips haVips) {
-        this.haVips = haVips;
-        return this;
-    }
-    public DescribeHaVipsResponseBodyHaVips getHaVips() {
-        return this.haVips;
     }
 
     public DescribeHaVipsResponseBody setPageSize(Integer pageSize) {
@@ -64,23 +48,20 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances extends TeaModel {
-        @NameInMap("associatedInstance")
-        public java.util.List<String> associatedInstance;
+    public DescribeHaVipsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
-        public static DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances self = new DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances setAssociatedInstance(java.util.List<String> associatedInstance) {
-            this.associatedInstance = associatedInstance;
-            return this;
-        }
-        public java.util.List<String> getAssociatedInstance() {
-            return this.associatedInstance;
-        }
-
+    public DescribeHaVipsResponseBody setHaVips(DescribeHaVipsResponseBodyHaVips haVips) {
+        this.haVips = haVips;
+        return this;
+    }
+    public DescribeHaVipsResponseBodyHaVips getHaVips() {
+        return this.haVips;
     }
 
     public static class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses extends TeaModel {
@@ -98,6 +79,25 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
         public java.util.List<String> getAssociatedEipAddresse() {
             return this.associatedEipAddresse;
+        }
+
+    }
+
+    public static class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances extends TeaModel {
+        @NameInMap("associatedInstance")
+        public java.util.List<String> associatedInstance;
+
+        public static DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances self = new DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances setAssociatedInstance(java.util.List<String> associatedInstance) {
+            this.associatedInstance = associatedInstance;
+            return this;
+        }
+        public java.util.List<String> getAssociatedInstance() {
+            return this.associatedInstance;
         }
 
     }
@@ -124,17 +124,17 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("AssociatedInstances")
-        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances associatedInstances;
-
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("AssociatedEipAddresses")
         public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses associatedEipAddresses;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("AssociatedInstances")
+        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances associatedInstances;
 
         public static DescribeHaVipsResponseBodyHaVipsHaVip build(java.util.Map<String, ?> map) throws Exception {
             DescribeHaVipsResponseBodyHaVipsHaVip self = new DescribeHaVipsResponseBodyHaVipsHaVip();
@@ -197,20 +197,20 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeHaVipsResponseBodyHaVipsHaVip setAssociatedInstances(DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances associatedInstances) {
-            this.associatedInstances = associatedInstances;
-            return this;
-        }
-        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances getAssociatedInstances() {
-            return this.associatedInstances;
-        }
-
         public DescribeHaVipsResponseBodyHaVipsHaVip setMasterInstanceId(String masterInstanceId) {
             this.masterInstanceId = masterInstanceId;
             return this;
         }
         public String getMasterInstanceId() {
             return this.masterInstanceId;
+        }
+
+        public DescribeHaVipsResponseBodyHaVipsHaVip setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeHaVipsResponseBodyHaVipsHaVip setAssociatedEipAddresses(DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses associatedEipAddresses) {
@@ -221,12 +221,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.associatedEipAddresses;
         }
 
-        public DescribeHaVipsResponseBodyHaVipsHaVip setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeHaVipsResponseBodyHaVipsHaVip setAssociatedInstances(DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances associatedInstances) {
+            this.associatedInstances = associatedInstances;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances getAssociatedInstances() {
+            return this.associatedInstances;
         }
 
     }

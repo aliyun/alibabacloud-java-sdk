@@ -79,6 +79,12 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<DescribeImagesRequestFilter> filter;
 
+    @NameInMap("IsPublic")
+    public Boolean isPublic;
+
+    @NameInMap("ImageOwnerId")
+    public Long imageOwnerId;
+
     public static DescribeImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagesRequest self = new DescribeImagesRequest();
         return TeaModel.build(map, self);
@@ -282,6 +288,22 @@ public class DescribeImagesRequest extends TeaModel {
     }
     public java.util.List<DescribeImagesRequestFilter> getFilter() {
         return this.filter;
+    }
+
+    public DescribeImagesRequest setIsPublic(Boolean isPublic) {
+        this.isPublic = isPublic;
+        return this;
+    }
+    public Boolean getIsPublic() {
+        return this.isPublic;
+    }
+
+    public DescribeImagesRequest setImageOwnerId(Long imageOwnerId) {
+        this.imageOwnerId = imageOwnerId;
+        return this;
+    }
+    public Long getImageOwnerId() {
+        return this.imageOwnerId;
     }
 
     public static class DescribeImagesRequestTag extends TeaModel {

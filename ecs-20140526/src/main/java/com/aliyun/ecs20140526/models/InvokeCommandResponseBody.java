@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class InvokeCommandResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InvokeId")
     public String invokeId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static InvokeCommandResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InvokeCommandResponseBody self = new InvokeCommandResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public InvokeCommandResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public InvokeCommandResponseBody setInvokeId(String invokeId) {
@@ -29,6 +21,14 @@ public class InvokeCommandResponseBody extends TeaModel {
     }
     public String getInvokeId() {
         return this.invokeId;
+    }
+
+    public InvokeCommandResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

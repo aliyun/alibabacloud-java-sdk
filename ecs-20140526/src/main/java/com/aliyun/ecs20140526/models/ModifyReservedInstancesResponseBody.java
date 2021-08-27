@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyReservedInstancesResponseBody extends TeaModel {
-    @NameInMap("ReservedInstanceIdSets")
-    public ModifyReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ReservedInstanceIdSets")
+    public ModifyReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets;
 
     public static ModifyReservedInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyReservedInstancesResponseBody self = new ModifyReservedInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyReservedInstancesResponseBody setReservedInstanceIdSets(ModifyReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets) {
-        this.reservedInstanceIdSets = reservedInstanceIdSets;
-        return this;
-    }
-    public ModifyReservedInstancesResponseBodyReservedInstanceIdSets getReservedInstanceIdSets() {
-        return this.reservedInstanceIdSets;
     }
 
     public ModifyReservedInstancesResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyReservedInstancesResponseBody setReservedInstanceIdSets(ModifyReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets) {
+        this.reservedInstanceIdSets = reservedInstanceIdSets;
+        return this;
+    }
+    public ModifyReservedInstancesResponseBodyReservedInstanceIdSets getReservedInstanceIdSets() {
+        return this.reservedInstanceIdSets;
     }
 
     public static class ModifyReservedInstancesResponseBodyReservedInstanceIdSets extends TeaModel {

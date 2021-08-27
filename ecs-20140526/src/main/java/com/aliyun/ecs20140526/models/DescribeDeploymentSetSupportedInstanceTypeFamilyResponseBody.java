@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceTypeFamilies")
     public String instanceTypeFamilies;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody self = new DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody setInstanceTypeFamilies(String instanceTypeFamilies) {
@@ -29,6 +21,14 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
     }
     public String getInstanceTypeFamilies() {
         return this.instanceTypeFamilies;
+    }
+
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
