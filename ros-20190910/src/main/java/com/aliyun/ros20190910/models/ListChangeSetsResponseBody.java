@@ -4,8 +4,8 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListChangeSetsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,8 +13,8 @@ public class ListChangeSetsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("ChangeSets")
     public java.util.List<ListChangeSetsResponseBodyChangeSets> changeSets;
@@ -24,12 +24,12 @@ public class ListChangeSetsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListChangeSetsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListChangeSetsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListChangeSetsResponseBody setPageSize(Integer pageSize) {
@@ -48,12 +48,12 @@ public class ListChangeSetsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListChangeSetsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListChangeSetsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListChangeSetsResponseBody setChangeSets(java.util.List<ListChangeSetsResponseBodyChangeSets> changeSets) {

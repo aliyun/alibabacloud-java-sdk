@@ -13,6 +13,9 @@ public class ValidateTemplateRequest extends TeaModel {
     @NameInMap("TemplateBody")
     public String templateBody;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     public static ValidateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         ValidateTemplateRequest self = new ValidateTemplateRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ValidateTemplateRequest extends TeaModel {
     }
     public String getTemplateBody() {
         return this.templateBody;
+    }
+
+    public ValidateTemplateRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
 }

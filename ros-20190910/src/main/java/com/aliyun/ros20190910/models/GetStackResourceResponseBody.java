@@ -7,35 +7,8 @@ public class GetStackResourceResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("StatusReason")
-    public String statusReason;
-
-    @NameInMap("PhysicalResourceId")
-    public String physicalResourceId;
-
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    @NameInMap("Metadata")
-    public java.util.Map<String, ?> metadata;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    @NameInMap("ResourceAttributes")
-    public java.util.List<java.util.Map<String, ?>> resourceAttributes;
-
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
-
-    @NameInMap("ResourceDriftStatus")
-    public String resourceDriftStatus;
 
     @NameInMap("UpdateTime")
     public String updateTime;
@@ -43,11 +16,38 @@ public class GetStackResourceResponseBody extends TeaModel {
     @NameInMap("DriftDetectionTime")
     public String driftDetectionTime;
 
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    @NameInMap("StatusReason")
+    public String statusReason;
+
     @NameInMap("StackName")
     public String stackName;
 
+    @NameInMap("PhysicalResourceId")
+    public String physicalResourceId;
+
     @NameInMap("StackId")
     public String stackId;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("ResourceDriftStatus")
+    public String resourceDriftStatus;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("Metadata")
+    public java.util.Map<String, ?> metadata;
+
+    @NameInMap("ResourceAttributes")
+    public java.util.List<java.util.Map<String, ?>> resourceAttributes;
 
     public static GetStackResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetStackResourceResponseBody self = new GetStackResourceResponseBody();
@@ -62,84 +62,12 @@ public class GetStackResourceResponseBody extends TeaModel {
         return this.status;
     }
 
-    public GetStackResourceResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public GetStackResourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetStackResourceResponseBody setStatusReason(String statusReason) {
-        this.statusReason = statusReason;
-        return this;
-    }
-    public String getStatusReason() {
-        return this.statusReason;
-    }
-
-    public GetStackResourceResponseBody setPhysicalResourceId(String physicalResourceId) {
-        this.physicalResourceId = physicalResourceId;
-        return this;
-    }
-    public String getPhysicalResourceId() {
-        return this.physicalResourceId;
-    }
-
-    public GetStackResourceResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public GetStackResourceResponseBody setMetadata(java.util.Map<String, ?> metadata) {
-        this.metadata = metadata;
-        return this;
-    }
-    public java.util.Map<String, ?> getMetadata() {
-        return this.metadata;
-    }
-
-    public GetStackResourceResponseBody setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    public GetStackResourceResponseBody setResourceAttributes(java.util.List<java.util.Map<String, ?>> resourceAttributes) {
-        this.resourceAttributes = resourceAttributes;
-        return this;
-    }
-    public java.util.List<java.util.Map<String, ?>> getResourceAttributes() {
-        return this.resourceAttributes;
-    }
-
     public GetStackResourceResponseBody setLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
     }
     public String getLogicalResourceId() {
         return this.logicalResourceId;
-    }
-
-    public GetStackResourceResponseBody setResourceDriftStatus(String resourceDriftStatus) {
-        this.resourceDriftStatus = resourceDriftStatus;
-        return this;
-    }
-    public String getResourceDriftStatus() {
-        return this.resourceDriftStatus;
     }
 
     public GetStackResourceResponseBody setUpdateTime(String updateTime) {
@@ -158,6 +86,22 @@ public class GetStackResourceResponseBody extends TeaModel {
         return this.driftDetectionTime;
     }
 
+    public GetStackResourceResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public GetStackResourceResponseBody setStatusReason(String statusReason) {
+        this.statusReason = statusReason;
+        return this;
+    }
+    public String getStatusReason() {
+        return this.statusReason;
+    }
+
     public GetStackResourceResponseBody setStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -166,12 +110,68 @@ public class GetStackResourceResponseBody extends TeaModel {
         return this.stackName;
     }
 
+    public GetStackResourceResponseBody setPhysicalResourceId(String physicalResourceId) {
+        this.physicalResourceId = physicalResourceId;
+        return this;
+    }
+    public String getPhysicalResourceId() {
+        return this.physicalResourceId;
+    }
+
     public GetStackResourceResponseBody setStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     public String getStackId() {
         return this.stackId;
+    }
+
+    public GetStackResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetStackResourceResponseBody setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public GetStackResourceResponseBody setResourceDriftStatus(String resourceDriftStatus) {
+        this.resourceDriftStatus = resourceDriftStatus;
+        return this;
+    }
+    public String getResourceDriftStatus() {
+        return this.resourceDriftStatus;
+    }
+
+    public GetStackResourceResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public GetStackResourceResponseBody setMetadata(java.util.Map<String, ?> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    public java.util.Map<String, ?> getMetadata() {
+        return this.metadata;
+    }
+
+    public GetStackResourceResponseBody setResourceAttributes(java.util.List<java.util.Map<String, ?>> resourceAttributes) {
+        this.resourceAttributes = resourceAttributes;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getResourceAttributes() {
+        return this.resourceAttributes;
     }
 
 }

@@ -80,9 +80,6 @@ public class GetStackInstanceResponseBody extends TeaModel {
         @NameInMap("StatusReason")
         public String statusReason;
 
-        @NameInMap("ParameterOverrides")
-        public java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> parameterOverrides;
-
         @NameInMap("StackGroupName")
         public String stackGroupName;
 
@@ -91,6 +88,9 @@ public class GetStackInstanceResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ParameterOverrides")
+        public java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> parameterOverrides;
 
         public static GetStackInstanceResponseBodyStackInstance build(java.util.Map<String, ?> map) throws Exception {
             GetStackInstanceResponseBodyStackInstance self = new GetStackInstanceResponseBodyStackInstance();
@@ -145,14 +145,6 @@ public class GetStackInstanceResponseBody extends TeaModel {
             return this.statusReason;
         }
 
-        public GetStackInstanceResponseBodyStackInstance setParameterOverrides(java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> parameterOverrides) {
-            this.parameterOverrides = parameterOverrides;
-            return this;
-        }
-        public java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> getParameterOverrides() {
-            return this.parameterOverrides;
-        }
-
         public GetStackInstanceResponseBodyStackInstance setStackGroupName(String stackGroupName) {
             this.stackGroupName = stackGroupName;
             return this;
@@ -175,6 +167,14 @@ public class GetStackInstanceResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetStackInstanceResponseBodyStackInstance setParameterOverrides(java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> parameterOverrides) {
+            this.parameterOverrides = parameterOverrides;
+            return this;
+        }
+        public java.util.List<GetStackInstanceResponseBodyStackInstanceParameterOverrides> getParameterOverrides() {
+            return this.parameterOverrides;
         }
 
     }

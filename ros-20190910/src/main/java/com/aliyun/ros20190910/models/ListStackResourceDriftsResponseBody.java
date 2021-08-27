@@ -4,26 +4,18 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackResourceDriftsResponseBody extends TeaModel {
-    @NameInMap("ResourceDrifts")
-    public java.util.List<ListStackResourceDriftsResponseBodyResourceDrifts> resourceDrifts;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceDrifts")
+    public java.util.List<ListStackResourceDriftsResponseBodyResourceDrifts> resourceDrifts;
+
     public static ListStackResourceDriftsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListStackResourceDriftsResponseBody self = new ListStackResourceDriftsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListStackResourceDriftsResponseBody setResourceDrifts(java.util.List<ListStackResourceDriftsResponseBodyResourceDrifts> resourceDrifts) {
-        this.resourceDrifts = resourceDrifts;
-        return this;
-    }
-    public java.util.List<ListStackResourceDriftsResponseBodyResourceDrifts> getResourceDrifts() {
-        return this.resourceDrifts;
     }
 
     public ListStackResourceDriftsResponseBody setNextToken(String nextToken) {
@@ -40,6 +32,14 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListStackResourceDriftsResponseBody setResourceDrifts(java.util.List<ListStackResourceDriftsResponseBodyResourceDrifts> resourceDrifts) {
+        this.resourceDrifts = resourceDrifts;
+        return this;
+    }
+    public java.util.List<ListStackResourceDriftsResponseBodyResourceDrifts> getResourceDrifts() {
+        return this.resourceDrifts;
     }
 
     public static class ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences extends TeaModel {
@@ -116,11 +116,11 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
         @NameInMap("ResourceDriftStatus")
         public String resourceDriftStatus;
 
-        @NameInMap("PropertyDifferences")
-        public java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> propertyDifferences;
-
         @NameInMap("ActualProperties")
         public String actualProperties;
+
+        @NameInMap("PropertyDifferences")
+        public java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> propertyDifferences;
 
         public static ListStackResourceDriftsResponseBodyResourceDrifts build(java.util.Map<String, ?> map) throws Exception {
             ListStackResourceDriftsResponseBodyResourceDrifts self = new ListStackResourceDriftsResponseBodyResourceDrifts();
@@ -183,20 +183,20 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
             return this.resourceDriftStatus;
         }
 
-        public ListStackResourceDriftsResponseBodyResourceDrifts setPropertyDifferences(java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> propertyDifferences) {
-            this.propertyDifferences = propertyDifferences;
-            return this;
-        }
-        public java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> getPropertyDifferences() {
-            return this.propertyDifferences;
-        }
-
         public ListStackResourceDriftsResponseBodyResourceDrifts setActualProperties(String actualProperties) {
             this.actualProperties = actualProperties;
             return this;
         }
         public String getActualProperties() {
             return this.actualProperties;
+        }
+
+        public ListStackResourceDriftsResponseBodyResourceDrifts setPropertyDifferences(java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> propertyDifferences) {
+            this.propertyDifferences = propertyDifferences;
+            return this;
+        }
+        public java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> getPropertyDifferences() {
+            return this.propertyDifferences;
         }
 
     }

@@ -4,8 +4,8 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackEventsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,8 +13,8 @@ public class ListStackEventsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Events")
     public java.util.List<ListStackEventsResponseBodyEvents> events;
@@ -24,12 +24,12 @@ public class ListStackEventsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListStackEventsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListStackEventsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListStackEventsResponseBody setPageSize(Integer pageSize) {
@@ -48,12 +48,12 @@ public class ListStackEventsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListStackEventsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListStackEventsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListStackEventsResponseBody setEvents(java.util.List<ListStackEventsResponseBodyEvents> events) {

@@ -4,26 +4,18 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateVersionsResponseBody extends TeaModel {
-    @NameInMap("Versions")
-    public java.util.List<ListTemplateVersionsResponseBodyVersions> versions;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Versions")
+    public java.util.List<ListTemplateVersionsResponseBodyVersions> versions;
+
     public static ListTemplateVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTemplateVersionsResponseBody self = new ListTemplateVersionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTemplateVersionsResponseBody setVersions(java.util.List<ListTemplateVersionsResponseBodyVersions> versions) {
-        this.versions = versions;
-        return this;
-    }
-    public java.util.List<ListTemplateVersionsResponseBodyVersions> getVersions() {
-        return this.versions;
     }
 
     public ListTemplateVersionsResponseBody setNextToken(String nextToken) {
@@ -40,6 +32,14 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListTemplateVersionsResponseBody setVersions(java.util.List<ListTemplateVersionsResponseBodyVersions> versions) {
+        this.versions = versions;
+        return this;
+    }
+    public java.util.List<ListTemplateVersionsResponseBodyVersions> getVersions() {
+        return this.versions;
     }
 
     public static class ListTemplateVersionsResponseBodyVersions extends TeaModel {

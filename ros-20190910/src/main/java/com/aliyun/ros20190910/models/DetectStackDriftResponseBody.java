@@ -4,23 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DetectStackDriftResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DriftDetectionId")
     public String driftDetectionId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectStackDriftResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectStackDriftResponseBody self = new DetectStackDriftResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectStackDriftResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectStackDriftResponseBody setDriftDetectionId(String driftDetectionId) {
@@ -29,6 +21,14 @@ public class DetectStackDriftResponseBody extends TeaModel {
     }
     public String getDriftDetectionId() {
         return this.driftDetectionId;
+    }
+
+    public DetectStackDriftResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

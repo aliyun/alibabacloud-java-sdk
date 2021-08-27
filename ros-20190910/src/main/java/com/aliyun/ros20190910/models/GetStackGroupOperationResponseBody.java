@@ -31,6 +31,69 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         return this.stackGroupOperation;
     }
 
+    public static class GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences extends TeaModel {
+        @NameInMap("FailureToleranceCount")
+        public Integer failureToleranceCount;
+
+        @NameInMap("MaxConcurrentCount")
+        public Integer maxConcurrentCount;
+
+        @NameInMap("MaxConcurrentPercentage")
+        public Integer maxConcurrentPercentage;
+
+        @NameInMap("FailureTolerancePercentage")
+        public Integer failureTolerancePercentage;
+
+        @NameInMap("RegionIdsOrder")
+        public java.util.List<String> regionIdsOrder;
+
+        public static GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences build(java.util.Map<String, ?> map) throws Exception {
+            GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences self = new GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setFailureToleranceCount(Integer failureToleranceCount) {
+            this.failureToleranceCount = failureToleranceCount;
+            return this;
+        }
+        public Integer getFailureToleranceCount() {
+            return this.failureToleranceCount;
+        }
+
+        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setMaxConcurrentCount(Integer maxConcurrentCount) {
+            this.maxConcurrentCount = maxConcurrentCount;
+            return this;
+        }
+        public Integer getMaxConcurrentCount() {
+            return this.maxConcurrentCount;
+        }
+
+        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setMaxConcurrentPercentage(Integer maxConcurrentPercentage) {
+            this.maxConcurrentPercentage = maxConcurrentPercentage;
+            return this;
+        }
+        public Integer getMaxConcurrentPercentage() {
+            return this.maxConcurrentPercentage;
+        }
+
+        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setFailureTolerancePercentage(Integer failureTolerancePercentage) {
+            this.failureTolerancePercentage = failureTolerancePercentage;
+            return this;
+        }
+        public Integer getFailureTolerancePercentage() {
+            return this.failureTolerancePercentage;
+        }
+
+        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setRegionIdsOrder(java.util.List<String> regionIdsOrder) {
+            this.regionIdsOrder = regionIdsOrder;
+            return this;
+        }
+        public java.util.List<String> getRegionIdsOrder() {
+            return this.regionIdsOrder;
+        }
+
+    }
+
     public static class GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail extends TeaModel {
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
@@ -138,72 +201,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
     }
 
-    public static class GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences extends TeaModel {
-        @NameInMap("MaxConcurrentCount")
-        public Integer maxConcurrentCount;
-
-        @NameInMap("FailureToleranceCount")
-        public Integer failureToleranceCount;
-
-        @NameInMap("MaxConcurrentPercentage")
-        public Integer maxConcurrentPercentage;
-
-        @NameInMap("RegionIdsOrder")
-        public java.util.List<String> regionIdsOrder;
-
-        @NameInMap("FailureTolerancePercentage")
-        public Integer failureTolerancePercentage;
-
-        public static GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences build(java.util.Map<String, ?> map) throws Exception {
-            GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences self = new GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences();
-            return TeaModel.build(map, self);
-        }
-
-        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setMaxConcurrentCount(Integer maxConcurrentCount) {
-            this.maxConcurrentCount = maxConcurrentCount;
-            return this;
-        }
-        public Integer getMaxConcurrentCount() {
-            return this.maxConcurrentCount;
-        }
-
-        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setFailureToleranceCount(Integer failureToleranceCount) {
-            this.failureToleranceCount = failureToleranceCount;
-            return this;
-        }
-        public Integer getFailureToleranceCount() {
-            return this.failureToleranceCount;
-        }
-
-        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setMaxConcurrentPercentage(Integer maxConcurrentPercentage) {
-            this.maxConcurrentPercentage = maxConcurrentPercentage;
-            return this;
-        }
-        public Integer getMaxConcurrentPercentage() {
-            return this.maxConcurrentPercentage;
-        }
-
-        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setRegionIdsOrder(java.util.List<String> regionIdsOrder) {
-            this.regionIdsOrder = regionIdsOrder;
-            return this;
-        }
-        public java.util.List<String> getRegionIdsOrder() {
-            return this.regionIdsOrder;
-        }
-
-        public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences setFailureTolerancePercentage(Integer failureTolerancePercentage) {
-            this.failureTolerancePercentage = failureTolerancePercentage;
-            return this;
-        }
-        public Integer getFailureTolerancePercentage() {
-            return this.failureTolerancePercentage;
-        }
-
-    }
-
     public static class GetStackGroupOperationResponseBodyStackGroupOperation extends TeaModel {
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("StackGroupId")
         public String stackGroupId;
@@ -213,6 +216,9 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("ExecutionRoleName")
+        public String executionRoleName;
 
         @NameInMap("RetainStacks")
         public Boolean retainStacks;
@@ -226,20 +232,14 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         @NameInMap("OperationDescription")
         public String operationDescription;
 
-        @NameInMap("StackGroupDriftDetectionDetail")
-        public GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail;
+        @NameInMap("AdministratorRoleName")
+        public String administratorRoleName;
 
         @NameInMap("OperationPreferences")
         public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences operationPreferences;
 
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("ExecutionRoleName")
-        public String executionRoleName;
-
-        @NameInMap("AdministratorRoleName")
-        public String administratorRoleName;
+        @NameInMap("StackGroupDriftDetectionDetail")
+        public GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail;
 
         public static GetStackGroupOperationResponseBodyStackGroupOperation build(java.util.Map<String, ?> map) throws Exception {
             GetStackGroupOperationResponseBodyStackGroupOperation self = new GetStackGroupOperationResponseBodyStackGroupOperation();
@@ -252,6 +252,14 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetStackGroupOperationResponseBodyStackGroupOperation setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public GetStackGroupOperationResponseBodyStackGroupOperation setStackGroupId(String stackGroupId) {
@@ -276,6 +284,14 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetStackGroupOperationResponseBodyStackGroupOperation setExecutionRoleName(String executionRoleName) {
+            this.executionRoleName = executionRoleName;
+            return this;
+        }
+        public String getExecutionRoleName() {
+            return this.executionRoleName;
         }
 
         public GetStackGroupOperationResponseBodyStackGroupOperation setRetainStacks(Boolean retainStacks) {
@@ -310,12 +326,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             return this.operationDescription;
         }
 
-        public GetStackGroupOperationResponseBodyStackGroupOperation setStackGroupDriftDetectionDetail(GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail) {
-            this.stackGroupDriftDetectionDetail = stackGroupDriftDetectionDetail;
+        public GetStackGroupOperationResponseBodyStackGroupOperation setAdministratorRoleName(String administratorRoleName) {
+            this.administratorRoleName = administratorRoleName;
             return this;
         }
-        public GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail getStackGroupDriftDetectionDetail() {
-            return this.stackGroupDriftDetectionDetail;
+        public String getAdministratorRoleName() {
+            return this.administratorRoleName;
         }
 
         public GetStackGroupOperationResponseBodyStackGroupOperation setOperationPreferences(GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences operationPreferences) {
@@ -326,28 +342,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             return this.operationPreferences;
         }
 
-        public GetStackGroupOperationResponseBodyStackGroupOperation setEndTime(String endTime) {
-            this.endTime = endTime;
+        public GetStackGroupOperationResponseBodyStackGroupOperation setStackGroupDriftDetectionDetail(GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail) {
+            this.stackGroupDriftDetectionDetail = stackGroupDriftDetectionDetail;
             return this;
         }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public GetStackGroupOperationResponseBodyStackGroupOperation setExecutionRoleName(String executionRoleName) {
-            this.executionRoleName = executionRoleName;
-            return this;
-        }
-        public String getExecutionRoleName() {
-            return this.executionRoleName;
-        }
-
-        public GetStackGroupOperationResponseBodyStackGroupOperation setAdministratorRoleName(String administratorRoleName) {
-            this.administratorRoleName = administratorRoleName;
-            return this;
-        }
-        public String getAdministratorRoleName() {
-            return this.administratorRoleName;
+        public GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail getStackGroupDriftDetectionDetail() {
+            return this.stackGroupDriftDetectionDetail;
         }
 
     }

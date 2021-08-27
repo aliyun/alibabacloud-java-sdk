@@ -4,17 +4,17 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackInstancesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("StackInstances")
     public java.util.List<ListStackInstancesResponseBodyStackInstances> stackInstances;
@@ -22,14 +22,6 @@ public class ListStackInstancesResponseBody extends TeaModel {
     public static ListStackInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListStackInstancesResponseBody self = new ListStackInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListStackInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListStackInstancesResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class ListStackInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListStackInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public ListStackInstancesResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class ListStackInstancesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListStackInstancesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListStackInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListStackInstancesResponseBody setStackInstances(java.util.List<ListStackInstancesResponseBodyStackInstances> stackInstances) {

@@ -74,11 +74,11 @@ public class PreviewStackResponseBody extends TeaModel {
         @NameInMap("Stack")
         public java.util.Map<String, ?> stack;
 
-        @NameInMap("RequiredBy")
-        public java.util.List<String> requiredBy;
-
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
+
+        @NameInMap("RequiredBy")
+        public java.util.List<String> requiredBy;
 
         public static PreviewStackResponseBodyStackResources build(java.util.Map<String, ?> map) throws Exception {
             PreviewStackResponseBodyStackResources self = new PreviewStackResponseBodyStackResources();
@@ -117,14 +117,6 @@ public class PreviewStackResponseBody extends TeaModel {
             return this.stack;
         }
 
-        public PreviewStackResponseBodyStackResources setRequiredBy(java.util.List<String> requiredBy) {
-            this.requiredBy = requiredBy;
-            return this;
-        }
-        public java.util.List<String> getRequiredBy() {
-            return this.requiredBy;
-        }
-
         public PreviewStackResponseBodyStackResources setProperties(java.util.Map<String, ?> properties) {
             this.properties = properties;
             return this;
@@ -133,14 +125,19 @@ public class PreviewStackResponseBody extends TeaModel {
             return this.properties;
         }
 
+        public PreviewStackResponseBodyStackResources setRequiredBy(java.util.List<String> requiredBy) {
+            this.requiredBy = requiredBy;
+            return this;
+        }
+        public java.util.List<String> getRequiredBy() {
+            return this.requiredBy;
+        }
+
     }
 
     public static class PreviewStackResponseBodyStack extends TeaModel {
         @NameInMap("TemplateDescription")
         public String templateDescription;
-
-        @NameInMap("Parameters")
-        public java.util.List<PreviewStackResponseBodyStackParameters> parameters;
 
         @NameInMap("Description")
         public String description;
@@ -157,11 +154,14 @@ public class PreviewStackResponseBody extends TeaModel {
         @NameInMap("StackPolicyBody")
         public java.util.Map<String, ?> stackPolicyBody;
 
-        @NameInMap("Resources")
-        public java.util.List<PreviewStackResponseBodyStackResources> resources;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Parameters")
+        public java.util.List<PreviewStackResponseBodyStackParameters> parameters;
+
+        @NameInMap("Resources")
+        public java.util.List<PreviewStackResponseBodyStackResources> resources;
 
         public static PreviewStackResponseBodyStack build(java.util.Map<String, ?> map) throws Exception {
             PreviewStackResponseBodyStack self = new PreviewStackResponseBodyStack();
@@ -174,14 +174,6 @@ public class PreviewStackResponseBody extends TeaModel {
         }
         public String getTemplateDescription() {
             return this.templateDescription;
-        }
-
-        public PreviewStackResponseBodyStack setParameters(java.util.List<PreviewStackResponseBodyStackParameters> parameters) {
-            this.parameters = parameters;
-            return this;
-        }
-        public java.util.List<PreviewStackResponseBodyStackParameters> getParameters() {
-            return this.parameters;
         }
 
         public PreviewStackResponseBodyStack setDescription(String description) {
@@ -224,20 +216,28 @@ public class PreviewStackResponseBody extends TeaModel {
             return this.stackPolicyBody;
         }
 
-        public PreviewStackResponseBodyStack setResources(java.util.List<PreviewStackResponseBodyStackResources> resources) {
-            this.resources = resources;
-            return this;
-        }
-        public java.util.List<PreviewStackResponseBodyStackResources> getResources() {
-            return this.resources;
-        }
-
         public PreviewStackResponseBodyStack setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public PreviewStackResponseBodyStack setParameters(java.util.List<PreviewStackResponseBodyStackParameters> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.List<PreviewStackResponseBodyStackParameters> getParameters() {
+            return this.parameters;
+        }
+
+        public PreviewStackResponseBodyStack setResources(java.util.List<PreviewStackResponseBodyStackResources> resources) {
+            this.resources = resources;
+            return this;
+        }
+        public java.util.List<PreviewStackResponseBodyStackResources> getResources() {
+            return this.resources;
         }
 
     }
