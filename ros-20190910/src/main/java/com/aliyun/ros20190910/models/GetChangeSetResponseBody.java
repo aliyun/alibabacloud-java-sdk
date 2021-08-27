@@ -7,17 +7,11 @@ public class GetChangeSetResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("Changes")
-    public java.util.List<java.util.Map<String, ?>> changes;
+    @NameInMap("ChangeSetName")
+    public String changeSetName;
 
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("Parameters")
-    public java.util.List<GetChangeSetResponseBodyParameters> parameters;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ChangeSetType")
+    public String changeSetType;
 
     @NameInMap("StatusReason")
     public String statusReason;
@@ -25,26 +19,11 @@ public class GetChangeSetResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
-    @NameInMap("TemplateBody")
-    public String templateBody;
-
-    @NameInMap("ChangeSetName")
-    public String changeSetName;
-
-    @NameInMap("ChangeSetId")
-    public String changeSetId;
+    @NameInMap("DisableRollback")
+    public Boolean disableRollback;
 
     @NameInMap("ExecutionStatus")
     public String executionStatus;
-
-    @NameInMap("ChangeSetType")
-    public String changeSetType;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DisableRollback")
-    public Boolean disableRollback;
 
     @NameInMap("StackName")
     public String stackName;
@@ -52,8 +31,29 @@ public class GetChangeSetResponseBody extends TeaModel {
     @NameInMap("TimeoutInMinutes")
     public Integer timeoutInMinutes;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("StackId")
     public String stackId;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("ChangeSetId")
+    public String changeSetId;
+
+    @NameInMap("TemplateBody")
+    public String templateBody;
+
+    @NameInMap("Changes")
+    public java.util.List<java.util.Map<String, ?>> changes;
+
+    @NameInMap("Parameters")
+    public java.util.List<GetChangeSetResponseBodyParameters> parameters;
 
     public static GetChangeSetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetChangeSetResponseBody self = new GetChangeSetResponseBody();
@@ -68,36 +68,20 @@ public class GetChangeSetResponseBody extends TeaModel {
         return this.status;
     }
 
-    public GetChangeSetResponseBody setChanges(java.util.List<java.util.Map<String, ?>> changes) {
-        this.changes = changes;
+    public GetChangeSetResponseBody setChangeSetName(String changeSetName) {
+        this.changeSetName = changeSetName;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getChanges() {
-        return this.changes;
+    public String getChangeSetName() {
+        return this.changeSetName;
     }
 
-    public GetChangeSetResponseBody setDescription(String description) {
-        this.description = description;
+    public GetChangeSetResponseBody setChangeSetType(String changeSetType) {
+        this.changeSetType = changeSetType;
         return this;
     }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public GetChangeSetResponseBody setParameters(java.util.List<GetChangeSetResponseBodyParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<GetChangeSetResponseBodyParameters> getParameters() {
-        return this.parameters;
-    }
-
-    public GetChangeSetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getChangeSetType() {
+        return this.changeSetType;
     }
 
     public GetChangeSetResponseBody setStatusReason(String statusReason) {
@@ -116,28 +100,12 @@ public class GetChangeSetResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public GetChangeSetResponseBody setTemplateBody(String templateBody) {
-        this.templateBody = templateBody;
+    public GetChangeSetResponseBody setDisableRollback(Boolean disableRollback) {
+        this.disableRollback = disableRollback;
         return this;
     }
-    public String getTemplateBody() {
-        return this.templateBody;
-    }
-
-    public GetChangeSetResponseBody setChangeSetName(String changeSetName) {
-        this.changeSetName = changeSetName;
-        return this;
-    }
-    public String getChangeSetName() {
-        return this.changeSetName;
-    }
-
-    public GetChangeSetResponseBody setChangeSetId(String changeSetId) {
-        this.changeSetId = changeSetId;
-        return this;
-    }
-    public String getChangeSetId() {
-        return this.changeSetId;
+    public Boolean getDisableRollback() {
+        return this.disableRollback;
     }
 
     public GetChangeSetResponseBody setExecutionStatus(String executionStatus) {
@@ -146,30 +114,6 @@ public class GetChangeSetResponseBody extends TeaModel {
     }
     public String getExecutionStatus() {
         return this.executionStatus;
-    }
-
-    public GetChangeSetResponseBody setChangeSetType(String changeSetType) {
-        this.changeSetType = changeSetType;
-        return this;
-    }
-    public String getChangeSetType() {
-        return this.changeSetType;
-    }
-
-    public GetChangeSetResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public GetChangeSetResponseBody setDisableRollback(Boolean disableRollback) {
-        this.disableRollback = disableRollback;
-        return this;
-    }
-    public Boolean getDisableRollback() {
-        return this.disableRollback;
     }
 
     public GetChangeSetResponseBody setStackName(String stackName) {
@@ -188,12 +132,68 @@ public class GetChangeSetResponseBody extends TeaModel {
         return this.timeoutInMinutes;
     }
 
+    public GetChangeSetResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public GetChangeSetResponseBody setStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     public String getStackId() {
         return this.stackId;
+    }
+
+    public GetChangeSetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetChangeSetResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public GetChangeSetResponseBody setChangeSetId(String changeSetId) {
+        this.changeSetId = changeSetId;
+        return this;
+    }
+    public String getChangeSetId() {
+        return this.changeSetId;
+    }
+
+    public GetChangeSetResponseBody setTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    public GetChangeSetResponseBody setChanges(java.util.List<java.util.Map<String, ?>> changes) {
+        this.changes = changes;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getChanges() {
+        return this.changes;
+    }
+
+    public GetChangeSetResponseBody setParameters(java.util.List<GetChangeSetResponseBodyParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<GetChangeSetResponseBodyParameters> getParameters() {
+        return this.parameters;
     }
 
     public static class GetChangeSetResponseBodyParameters extends TeaModel {

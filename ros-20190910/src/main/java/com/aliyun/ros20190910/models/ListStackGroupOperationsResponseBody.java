@@ -4,17 +4,17 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackGroupOperationsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("StackGroupOperations")
     public java.util.List<ListStackGroupOperationsResponseBodyStackGroupOperations> stackGroupOperations;
@@ -22,14 +22,6 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
     public static ListStackGroupOperationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListStackGroupOperationsResponseBody self = new ListStackGroupOperationsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListStackGroupOperationsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListStackGroupOperationsResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListStackGroupOperationsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public ListStackGroupOperationsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListStackGroupOperationsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListStackGroupOperationsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListStackGroupOperationsResponseBody setStackGroupOperations(java.util.List<ListStackGroupOperationsResponseBodyStackGroupOperations> stackGroupOperations) {

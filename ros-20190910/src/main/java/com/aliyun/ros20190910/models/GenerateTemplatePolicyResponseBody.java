@@ -4,23 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GenerateTemplatePolicyResponseBody extends TeaModel {
-    @NameInMap("Policy")
-    public GenerateTemplatePolicyResponseBodyPolicy policy;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Policy")
+    public GenerateTemplatePolicyResponseBodyPolicy policy;
 
     public static GenerateTemplatePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateTemplatePolicyResponseBody self = new GenerateTemplatePolicyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateTemplatePolicyResponseBody setPolicy(GenerateTemplatePolicyResponseBodyPolicy policy) {
-        this.policy = policy;
-        return this;
-    }
-    public GenerateTemplatePolicyResponseBodyPolicy getPolicy() {
-        return this.policy;
     }
 
     public GenerateTemplatePolicyResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GenerateTemplatePolicyResponseBody setPolicy(GenerateTemplatePolicyResponseBodyPolicy policy) {
+        this.policy = policy;
+        return this;
+    }
+    public GenerateTemplatePolicyResponseBodyPolicy getPolicy() {
+        return this.policy;
     }
 
     public static class GenerateTemplatePolicyResponseBodyPolicyStatement extends TeaModel {
