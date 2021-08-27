@@ -43,6 +43,9 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     @NameInMap("EventId")
     public java.util.List<String> eventId;
 
@@ -51,6 +54,15 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
 
     @NameInMap("InstanceEventType")
     public java.util.List<String> instanceEventType;
+
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeInstanceHistoryEventsRequestTag> tag;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static DescribeInstanceHistoryEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceHistoryEventsRequest self = new DescribeInstanceHistoryEventsRequest();
@@ -161,6 +173,14 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeInstanceHistoryEventsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public DescribeInstanceHistoryEventsRequest setEventId(java.util.List<String> eventId) {
         this.eventId = eventId;
         return this;
@@ -183,6 +203,30 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceEventType() {
         return this.instanceEventType;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setTag(java.util.List<DescribeInstanceHistoryEventsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeInstanceHistoryEventsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class DescribeInstanceHistoryEventsRequestNotBefore extends TeaModel {
@@ -241,6 +285,36 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
         }
         public String getEnd() {
             return this.end;
+        }
+
+    }
+
+    public static class DescribeInstanceHistoryEventsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstanceHistoryEventsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceHistoryEventsRequestTag self = new DescribeInstanceHistoryEventsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceHistoryEventsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeInstanceHistoryEventsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

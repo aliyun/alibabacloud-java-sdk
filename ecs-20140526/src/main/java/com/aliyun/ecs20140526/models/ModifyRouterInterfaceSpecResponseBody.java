@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouterInterfaceSpecResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Spec")
     public String spec;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ModifyRouterInterfaceSpecResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyRouterInterfaceSpecResponseBody self = new ModifyRouterInterfaceSpecResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyRouterInterfaceSpecResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ModifyRouterInterfaceSpecResponseBody setSpec(String spec) {
@@ -29,6 +21,14 @@ public class ModifyRouterInterfaceSpecResponseBody extends TeaModel {
     }
     public String getSpec() {
         return this.spec;
+    }
+
+    public ModifyRouterInterfaceSpecResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

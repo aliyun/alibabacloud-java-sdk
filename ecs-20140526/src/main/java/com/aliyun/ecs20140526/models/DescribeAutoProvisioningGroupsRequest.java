@@ -25,14 +25,14 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("AutoProvisioningGroupName")
-    public String autoProvisioningGroupName;
-
     @NameInMap("AutoProvisioningGroupId")
     public java.util.List<String> autoProvisioningGroupId;
 
     @NameInMap("AutoProvisioningGroupStatus")
     public java.util.List<String> autoProvisioningGroupStatus;
+
+    @NameInMap("AutoProvisioningGroupName")
+    public String autoProvisioningGroupName;
 
     public static DescribeAutoProvisioningGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoProvisioningGroupsRequest self = new DescribeAutoProvisioningGroupsRequest();
@@ -95,14 +95,6 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAutoProvisioningGroupsRequest setAutoProvisioningGroupName(String autoProvisioningGroupName) {
-        this.autoProvisioningGroupName = autoProvisioningGroupName;
-        return this;
-    }
-    public String getAutoProvisioningGroupName() {
-        return this.autoProvisioningGroupName;
-    }
-
     public DescribeAutoProvisioningGroupsRequest setAutoProvisioningGroupId(java.util.List<String> autoProvisioningGroupId) {
         this.autoProvisioningGroupId = autoProvisioningGroupId;
         return this;
@@ -117,6 +109,14 @@ public class DescribeAutoProvisioningGroupsRequest extends TeaModel {
     }
     public java.util.List<String> getAutoProvisioningGroupStatus() {
         return this.autoProvisioningGroupStatus;
+    }
+
+    public DescribeAutoProvisioningGroupsRequest setAutoProvisioningGroupName(String autoProvisioningGroupName) {
+        this.autoProvisioningGroupName = autoProvisioningGroupName;
+        return this;
+    }
+    public String getAutoProvisioningGroupName() {
+        return this.autoProvisioningGroupName;
     }
 
 }

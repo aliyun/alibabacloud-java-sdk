@@ -7,14 +7,14 @@ public class RunInstancesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InstanceIdSets")
-    public RunInstancesResponseBodyInstanceIdSets instanceIdSets;
-
     @NameInMap("OrderId")
     public String orderId;
 
     @NameInMap("TradePrice")
     public Float tradePrice;
+
+    @NameInMap("InstanceIdSets")
+    public RunInstancesResponseBodyInstanceIdSets instanceIdSets;
 
     public static RunInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunInstancesResponseBody self = new RunInstancesResponseBody();
@@ -27,14 +27,6 @@ public class RunInstancesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public RunInstancesResponseBody setInstanceIdSets(RunInstancesResponseBodyInstanceIdSets instanceIdSets) {
-        this.instanceIdSets = instanceIdSets;
-        return this;
-    }
-    public RunInstancesResponseBodyInstanceIdSets getInstanceIdSets() {
-        return this.instanceIdSets;
     }
 
     public RunInstancesResponseBody setOrderId(String orderId) {
@@ -51,6 +43,14 @@ public class RunInstancesResponseBody extends TeaModel {
     }
     public Float getTradePrice() {
         return this.tradePrice;
+    }
+
+    public RunInstancesResponseBody setInstanceIdSets(RunInstancesResponseBodyInstanceIdSets instanceIdSets) {
+        this.instanceIdSets = instanceIdSets;
+        return this;
+    }
+    public RunInstancesResponseBodyInstanceIdSets getInstanceIdSets() {
+        return this.instanceIdSets;
     }
 
     public static class RunInstancesResponseBodyInstanceIdSets extends TeaModel {

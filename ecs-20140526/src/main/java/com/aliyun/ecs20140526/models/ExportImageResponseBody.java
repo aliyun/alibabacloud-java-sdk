@@ -4,11 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ExportImageResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -18,20 +18,20 @@ public class ExportImageResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ExportImageResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public ExportImageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ExportImageResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public ExportImageResponseBody setRegionId(String regionId) {

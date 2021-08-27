@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class SendFileResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InvokeId")
     public String invokeId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SendFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SendFileResponseBody self = new SendFileResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SendFileResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SendFileResponseBody setInvokeId(String invokeId) {
@@ -29,6 +21,14 @@ public class SendFileResponseBody extends TeaModel {
     }
     public String getInvokeId() {
         return this.invokeId;
+    }
+
+    public SendFileResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

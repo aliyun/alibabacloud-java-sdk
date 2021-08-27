@@ -19,11 +19,11 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("Tag")
     public java.util.List<DescribeNetworkInterfacesRequestTag> tag;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -70,6 +70,9 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     @NameInMap("NetworkInterfaceId")
     public java.util.List<String> networkInterfaceId;
 
+    @NameInMap("Ipv6Address")
+    public java.util.List<String> ipv6Address;
+
     public static DescribeNetworkInterfacesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfacesRequest self = new DescribeNetworkInterfacesRequest();
         return TeaModel.build(map, self);
@@ -115,20 +118,20 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeNetworkInterfacesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public DescribeNetworkInterfacesRequest setTag(java.util.List<DescribeNetworkInterfacesRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<DescribeNetworkInterfacesRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeNetworkInterfacesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeNetworkInterfacesRequest setVSwitchId(String vSwitchId) {
@@ -249,6 +252,14 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     }
     public java.util.List<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
+    }
+
+    public DescribeNetworkInterfacesRequest setIpv6Address(java.util.List<String> ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+    public java.util.List<String> getIpv6Address() {
+        return this.ipv6Address;
     }
 
     public static class DescribeNetworkInterfacesRequestTag extends TeaModel {

@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
-    @NameInMap("DedicatedHostClusters")
-    public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("DedicatedHostClusters")
+    public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters;
+
     public static DescribeDedicatedHostClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostClustersResponseBody self = new DescribeDedicatedHostClustersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDedicatedHostClustersResponseBody setDedicatedHostClusters(DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters) {
-        this.dedicatedHostClusters = dedicatedHostClusters;
-        return this;
-    }
-    public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters getDedicatedHostClusters() {
-        return this.dedicatedHostClusters;
-    }
-
-    public DescribeDedicatedHostClustersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDedicatedHostClustersResponseBody setPageSize(Integer pageSize) {
@@ -62,6 +46,22 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeDedicatedHostClustersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeDedicatedHostClustersResponseBody setDedicatedHostClusters(DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters dedicatedHostClusters) {
+        this.dedicatedHostClusters = dedicatedHostClusters;
+        return this;
+    }
+    public DescribeDedicatedHostClustersResponseBodyDedicatedHostClusters getDedicatedHostClusters() {
+        return this.dedicatedHostClusters;
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag extends TeaModel {
@@ -109,6 +109,25 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTagsTag> getTag() {
             return this.tag;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds extends TeaModel {
+        @NameInMap("DedicatedHostId")
+        public java.util.List<String> dedicatedHostId;
+
+        public static DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds self = new DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds setDedicatedHostId(java.util.List<String> dedicatedHostId) {
+            this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+        public java.util.List<String> getDedicatedHostId() {
+            return this.dedicatedHostId;
         }
 
     }
@@ -174,23 +193,15 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType extends TeaModel {
-        @NameInMap("AvailableInstanceCapacity")
-        public Integer availableInstanceCapacity;
-
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("AvailableInstanceCapacity")
+        public Integer availableInstanceCapacity;
 
         public static DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType self = new DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType setAvailableInstanceCapacity(Integer availableInstanceCapacity) {
-            this.availableInstanceCapacity = availableInstanceCapacity;
-            return this;
-        }
-        public Integer getAvailableInstanceCapacity() {
-            return this.availableInstanceCapacity;
         }
 
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType setInstanceType(String instanceType) {
@@ -199,6 +210,14 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypesAvailableInstanceType setAvailableInstanceCapacity(Integer availableInstanceCapacity) {
+            this.availableInstanceCapacity = availableInstanceCapacity;
+            return this;
+        }
+        public Integer getAvailableInstanceCapacity() {
+            return this.availableInstanceCapacity;
         }
 
     }
@@ -223,8 +242,8 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity extends TeaModel {
-        @NameInMap("LocalStorageCapacities")
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities localStorageCapacities;
+        @NameInMap("AvailableVcpus")
+        public Integer availableVcpus;
 
         @NameInMap("AvailableMemory")
         public Integer availableMemory;
@@ -235,23 +254,23 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         @NameInMap("TotalVcpus")
         public Integer totalVcpus;
 
+        @NameInMap("LocalStorageCapacities")
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities localStorageCapacities;
+
         @NameInMap("AvailableInstanceTypes")
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes availableInstanceTypes;
-
-        @NameInMap("AvailableVcpus")
-        public Integer availableVcpus;
 
         public static DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity self = new DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity setLocalStorageCapacities(DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities localStorageCapacities) {
-            this.localStorageCapacities = localStorageCapacities;
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity setAvailableVcpus(Integer availableVcpus) {
+            this.availableVcpus = availableVcpus;
             return this;
         }
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities getLocalStorageCapacities() {
-            return this.localStorageCapacities;
+        public Integer getAvailableVcpus() {
+            return this.availableVcpus;
         }
 
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity setAvailableMemory(Integer availableMemory) {
@@ -278,39 +297,20 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             return this.totalVcpus;
         }
 
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity setLocalStorageCapacities(DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities localStorageCapacities) {
+            this.localStorageCapacities = localStorageCapacities;
+            return this;
+        }
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityLocalStorageCapacities getLocalStorageCapacities() {
+            return this.localStorageCapacities;
+        }
+
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity setAvailableInstanceTypes(DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes availableInstanceTypes) {
             this.availableInstanceTypes = availableInstanceTypes;
             return this;
         }
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacityAvailableInstanceTypes getAvailableInstanceTypes() {
             return this.availableInstanceTypes;
-        }
-
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity setAvailableVcpus(Integer availableVcpus) {
-            this.availableVcpus = availableVcpus;
-            return this;
-        }
-        public Integer getAvailableVcpus() {
-            return this.availableVcpus;
-        }
-
-    }
-
-    public static class DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds extends TeaModel {
-        @NameInMap("DedicatedHostId")
-        public java.util.List<String> dedicatedHostId;
-
-        public static DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds self = new DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds setDedicatedHostId(java.util.List<String> dedicatedHostId) {
-            this.dedicatedHostId = dedicatedHostId;
-            return this;
-        }
-        public java.util.List<String> getDedicatedHostId() {
-            return this.dedicatedHostId;
         }
 
     }
@@ -328,20 +328,20 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
-        @NameInMap("Tags")
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags tags;
-
-        @NameInMap("DedicatedHostClusterCapacity")
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity dedicatedHostClusterCapacity;
-
-        @NameInMap("DedicatedHostIds")
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds dedicatedHostIds;
-
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("DedicatedHostClusterName")
         public String dedicatedHostClusterName;
+
+        @NameInMap("Tags")
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags tags;
+
+        @NameInMap("DedicatedHostIds")
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds dedicatedHostIds;
+
+        @NameInMap("DedicatedHostClusterCapacity")
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity dedicatedHostClusterCapacity;
 
         public static DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster self = new DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster();
@@ -380,30 +380,6 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster setTags(DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster setDedicatedHostClusterCapacity(DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity dedicatedHostClusterCapacity) {
-            this.dedicatedHostClusterCapacity = dedicatedHostClusterCapacity;
-            return this;
-        }
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity getDedicatedHostClusterCapacity() {
-            return this.dedicatedHostClusterCapacity;
-        }
-
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster setDedicatedHostIds(DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds dedicatedHostIds) {
-            this.dedicatedHostIds = dedicatedHostIds;
-            return this;
-        }
-        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds getDedicatedHostIds() {
-            return this.dedicatedHostIds;
-        }
-
         public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -418,6 +394,30 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
         public String getDedicatedHostClusterName() {
             return this.dedicatedHostClusterName;
+        }
+
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster setTags(DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster setDedicatedHostIds(DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds dedicatedHostIds) {
+            this.dedicatedHostIds = dedicatedHostIds;
+            return this;
+        }
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostIds getDedicatedHostIds() {
+            return this.dedicatedHostIds;
+        }
+
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostCluster setDedicatedHostClusterCapacity(DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity dedicatedHostClusterCapacity) {
+            this.dedicatedHostClusterCapacity = dedicatedHostClusterCapacity;
+            return this;
+        }
+        public DescribeDedicatedHostClustersResponseBodyDedicatedHostClustersDedicatedHostClusterDedicatedHostClusterCapacity getDedicatedHostClusterCapacity() {
+            return this.dedicatedHostClusterCapacity;
         }
 
     }

@@ -7,11 +7,11 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OrderId")
-    public String orderId;
-
     @NameInMap("PrivatePoolOptionsId")
     public String privatePoolOptionsId;
+
+    @NameInMap("OrderId")
+    public String orderId;
 
     public static CreateElasticityAssuranceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateElasticityAssuranceResponseBody self = new CreateElasticityAssuranceResponseBody();
@@ -26,20 +26,20 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateElasticityAssuranceResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
-    }
-
     public CreateElasticityAssuranceResponseBody setPrivatePoolOptionsId(String privatePoolOptionsId) {
         this.privatePoolOptionsId = privatePoolOptionsId;
         return this;
     }
     public String getPrivatePoolOptionsId() {
         return this.privatePoolOptionsId;
+    }
+
+    public CreateElasticityAssuranceResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
 }

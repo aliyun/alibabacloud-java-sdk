@@ -4,43 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
-    @NameInMap("SecurityGroups")
-    public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("SecurityGroups")
+    public DescribeSecurityGroupsResponseBodySecurityGroups securityGroups;
 
     public static DescribeSecurityGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupsResponseBody self = new DescribeSecurityGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecurityGroupsResponseBody setSecurityGroups(DescribeSecurityGroupsResponseBodySecurityGroups securityGroups) {
-        this.securityGroups = securityGroups;
-        return this;
-    }
-    public DescribeSecurityGroupsResponseBodySecurityGroups getSecurityGroups() {
-        return this.securityGroups;
-    }
-
-    public DescribeSecurityGroupsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeSecurityGroupsResponseBody setPageSize(Integer pageSize) {
@@ -51,14 +35,6 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeSecurityGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeSecurityGroupsResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -67,12 +43,36 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeSecurityGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSecurityGroupsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeSecurityGroupsResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeSecurityGroupsResponseBody setSecurityGroups(DescribeSecurityGroupsResponseBodySecurityGroups securityGroups) {
+        this.securityGroups = securityGroups;
+        return this;
+    }
+    public DescribeSecurityGroupsResponseBodySecurityGroups getSecurityGroups() {
+        return this.securityGroups;
     }
 
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTagsTag extends TeaModel {
@@ -131,20 +131,14 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
-        @NameInMap("Tags")
-        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTags tags;
-
-        @NameInMap("ServiceID")
-        public Long serviceID;
-
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -155,11 +149,17 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
+        @NameInMap("ServiceID")
+        public Long serviceID;
+
         @NameInMap("SecurityGroupType")
         public String securityGroupType;
 
         @NameInMap("AvailableInstanceAmount")
         public Integer availableInstanceAmount;
+
+        @NameInMap("Tags")
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTags tags;
 
         public static DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup self = new DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup();
@@ -182,30 +182,6 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setTags(DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setServiceID(Long serviceID) {
-            this.serviceID = serviceID;
-            return this;
-        }
-        public Long getServiceID() {
-            return this.serviceID;
-        }
-
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setServiceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
             return this;
@@ -220,6 +196,14 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setResourceGroupId(String resourceGroupId) {
@@ -246,6 +230,14 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
             return this.ecsCount;
         }
 
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setServiceID(Long serviceID) {
+            this.serviceID = serviceID;
+            return this;
+        }
+        public Long getServiceID() {
+            return this.serviceID;
+        }
+
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setSecurityGroupType(String securityGroupType) {
             this.securityGroupType = securityGroupType;
             return this;
@@ -260,6 +252,14 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
         public Integer getAvailableInstanceAmount() {
             return this.availableInstanceAmount;
+        }
+
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setTags(DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupTags getTags() {
+            return this.tags;
         }
 
     }

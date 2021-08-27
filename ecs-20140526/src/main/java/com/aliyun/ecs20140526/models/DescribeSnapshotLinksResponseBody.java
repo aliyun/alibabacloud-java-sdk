@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("SnapshotLinks")
-    public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("SnapshotLinks")
+    public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
+
     public static DescribeSnapshotLinksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotLinksResponseBody self = new DescribeSnapshotLinksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSnapshotLinksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeSnapshotLinksResponseBody setSnapshotLinks(DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks) {
-        this.snapshotLinks = snapshotLinks;
-        return this;
-    }
-    public DescribeSnapshotLinksResponseBodySnapshotLinks getSnapshotLinks() {
-        return this.snapshotLinks;
     }
 
     public DescribeSnapshotLinksResponseBody setPageSize(Integer pageSize) {
@@ -64,6 +48,22 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeSnapshotLinksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeSnapshotLinksResponseBody setSnapshotLinks(DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks) {
+        this.snapshotLinks = snapshotLinks;
+        return this;
+    }
+    public DescribeSnapshotLinksResponseBodySnapshotLinks getSnapshotLinks() {
+        return this.snapshotLinks;
+    }
+
     public static class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink extends TeaModel {
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
@@ -83,11 +83,11 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("SnapshotLinkId")
         public String snapshotLinkId;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -154,20 +154,20 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
         public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSnapshotLinkId(String snapshotLinkId) {
             this.snapshotLinkId = snapshotLinkId;
             return this;
         }
         public String getSnapshotLinkId() {
             return this.snapshotLinkId;
+        }
+
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
         public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setRegionId(String regionId) {

@@ -4,17 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("VirtualBorderRouterSet")
     public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet virtualBorderRouterSet;
@@ -22,14 +22,6 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
     public static DescribeVirtualBorderRoutersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualBorderRoutersResponseBody self = new DescribeVirtualBorderRoutersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVirtualBorderRoutersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeVirtualBorderRoutersResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeVirtualBorderRoutersResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeVirtualBorderRoutersResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeVirtualBorderRoutersResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeVirtualBorderRoutersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeVirtualBorderRoutersResponseBody setVirtualBorderRouterSet(DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet virtualBorderRouterSet) {
@@ -65,14 +65,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
     }
 
     public static class DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("VlanInterfaceId")
+        public String vlanInterfaceId;
 
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("VlanInterfaceId")
-        public String vlanInterfaceId;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("CircuitCode")
         public String circuitCode;
@@ -130,12 +130,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setVlanInterfaceId(String vlanInterfaceId) {
+            this.vlanInterfaceId = vlanInterfaceId;
             return this;
         }
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getVlanInterfaceId() {
+            return this.vlanInterfaceId;
         }
 
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setStatus(String status) {
@@ -146,12 +146,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setVlanInterfaceId(String vlanInterfaceId) {
-            this.vlanInterfaceId = vlanInterfaceId;
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getVlanInterfaceId() {
-            return this.vlanInterfaceId;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setCircuitCode(String circuitCode) {

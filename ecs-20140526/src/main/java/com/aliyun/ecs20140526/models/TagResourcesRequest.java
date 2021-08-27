@@ -16,14 +16,14 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ResourceType")
-    public String resourceType;
-
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesRequest self = new TagResourcesRequest();
@@ -62,14 +62,6 @@ public class TagResourcesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public TagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
     public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -84,6 +76,14 @@ public class TagResourcesRequest extends TeaModel {
     }
     public java.util.List<TagResourcesRequestTag> getTag() {
         return this.tag;
+    }
+
+    public TagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

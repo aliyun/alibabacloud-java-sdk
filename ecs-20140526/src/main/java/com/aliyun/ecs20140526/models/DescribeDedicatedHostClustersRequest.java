@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostClustersRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<DescribeDedicatedHostClustersRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -24,9 +27,6 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeDedicatedHostClustersRequestTag> tag;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -49,6 +49,14 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     public static DescribeDedicatedHostClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostClustersRequest self = new DescribeDedicatedHostClustersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDedicatedHostClustersRequest setTag(java.util.List<DescribeDedicatedHostClustersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDedicatedHostClustersRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeDedicatedHostClustersRequest setOwnerId(Long ownerId) {
@@ -105,14 +113,6 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeDedicatedHostClustersRequest setTag(java.util.List<DescribeDedicatedHostClustersRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeDedicatedHostClustersRequestTag> getTag() {
-        return this.tag;
     }
 
     public DescribeDedicatedHostClustersRequest setRegionId(String regionId) {

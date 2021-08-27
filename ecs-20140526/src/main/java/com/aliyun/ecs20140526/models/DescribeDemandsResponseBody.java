@@ -4,35 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDemandsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Demands")
-    public DescribeDemandsResponseBodyDemands demands;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Demands")
+    public DescribeDemandsResponseBodyDemands demands;
+
     public static DescribeDemandsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDemandsResponseBody self = new DescribeDemandsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDemandsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDemandsResponseBody setPageSize(Integer pageSize) {
@@ -43,14 +35,6 @@ public class DescribeDemandsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDemandsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDemandsResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -59,12 +43,20 @@ public class DescribeDemandsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDemandsResponseBody setDemands(DescribeDemandsResponseBodyDemands demands) {
-        this.demands = demands;
+    public DescribeDemandsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeDemandsResponseBodyDemands getDemands() {
-        return this.demands;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDemandsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeDemandsResponseBody setRegionId(String regionId) {
@@ -75,18 +67,26 @@ public class DescribeDemandsResponseBody extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeDemandsResponseBody setDemands(DescribeDemandsResponseBodyDemands demands) {
+        this.demands = demands;
+        return this;
+    }
+    public DescribeDemandsResponseBodyDemands getDemands() {
+        return this.demands;
+    }
+
     public static class DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
-
-        @NameInMap("SupplyEndTime")
-        public String supplyEndTime;
 
         @NameInMap("SupplyStatus")
         public String supplyStatus;
 
         @NameInMap("SupplyStartTime")
         public String supplyStartTime;
+
+        @NameInMap("SupplyEndTime")
+        public String supplyEndTime;
 
         public static DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo self = new DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo();
@@ -99,14 +99,6 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
         public Integer getAmount() {
             return this.amount;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyEndTime(String supplyEndTime) {
-            this.supplyEndTime = supplyEndTime;
-            return this;
-        }
-        public String getSupplyEndTime() {
-            return this.supplyEndTime;
         }
 
         public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyStatus(String supplyStatus) {
@@ -123,6 +115,14 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
         public String getSupplyStartTime() {
             return this.supplyStartTime;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyEndTime(String supplyEndTime) {
+            this.supplyEndTime = supplyEndTime;
+            return this;
+        }
+        public String getSupplyEndTime() {
+            return this.supplyEndTime;
         }
 
     }
@@ -150,35 +150,32 @@ public class DescribeDemandsResponseBody extends TeaModel {
         @NameInMap("Comment")
         public String comment;
 
-        @NameInMap("DemandId")
-        public String demandId;
-
         @NameInMap("DemandDescription")
         public String demandDescription;
+
+        @NameInMap("DemandId")
+        public String demandId;
 
         @NameInMap("DemandTime")
         public String demandTime;
 
-        @NameInMap("SupplyInfos")
-        public DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos;
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         @NameInMap("DemandName")
         public String demandName;
 
-        @NameInMap("InstanceType")
-        public String instanceType;
+        @NameInMap("Period")
+        public Integer period;
 
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        @NameInMap("Period")
-        public Integer period;
+        @NameInMap("AvailableAmount")
+        public Integer availableAmount;
 
         @NameInMap("EndTime")
         public String endTime;
-
-        @NameInMap("AvailableAmount")
-        public Integer availableAmount;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -204,6 +201,9 @@ public class DescribeDemandsResponseBody extends TeaModel {
         @NameInMap("DemandStatus")
         public String demandStatus;
 
+        @NameInMap("SupplyInfos")
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos;
+
         public static DescribeDemandsResponseBodyDemandsDemand build(java.util.Map<String, ?> map) throws Exception {
             DescribeDemandsResponseBodyDemandsDemand self = new DescribeDemandsResponseBodyDemandsDemand();
             return TeaModel.build(map, self);
@@ -217,20 +217,20 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.comment;
         }
 
-        public DescribeDemandsResponseBodyDemandsDemand setDemandId(String demandId) {
-            this.demandId = demandId;
-            return this;
-        }
-        public String getDemandId() {
-            return this.demandId;
-        }
-
         public DescribeDemandsResponseBodyDemandsDemand setDemandDescription(String demandDescription) {
             this.demandDescription = demandDescription;
             return this;
         }
         public String getDemandDescription() {
             return this.demandDescription;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setDemandId(String demandId) {
+            this.demandId = demandId;
+            return this;
+        }
+        public String getDemandId() {
+            return this.demandId;
         }
 
         public DescribeDemandsResponseBodyDemandsDemand setDemandTime(String demandTime) {
@@ -241,12 +241,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.demandTime;
         }
 
-        public DescribeDemandsResponseBodyDemandsDemand setSupplyInfos(DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos) {
-            this.supplyInfos = supplyInfos;
+        public DescribeDemandsResponseBodyDemandsDemand setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
             return this;
         }
-        public DescribeDemandsResponseBodyDemandsDemandSupplyInfos getSupplyInfos() {
-            return this.supplyInfos;
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribeDemandsResponseBodyDemandsDemand setDemandName(String demandName) {
@@ -257,12 +257,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.demandName;
         }
 
-        public DescribeDemandsResponseBodyDemandsDemand setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
+        public DescribeDemandsResponseBodyDemandsDemand setPeriod(Integer period) {
+            this.period = period;
             return this;
         }
-        public String getInstanceType() {
-            return this.instanceType;
+        public Integer getPeriod() {
+            return this.period;
         }
 
         public DescribeDemandsResponseBodyDemandsDemand setInstanceChargeType(String instanceChargeType) {
@@ -273,12 +273,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.instanceChargeType;
         }
 
-        public DescribeDemandsResponseBodyDemandsDemand setPeriod(Integer period) {
-            this.period = period;
+        public DescribeDemandsResponseBodyDemandsDemand setAvailableAmount(Integer availableAmount) {
+            this.availableAmount = availableAmount;
             return this;
         }
-        public Integer getPeriod() {
-            return this.period;
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
         }
 
         public DescribeDemandsResponseBodyDemandsDemand setEndTime(String endTime) {
@@ -287,14 +287,6 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
-        }
-
-        public DescribeDemandsResponseBodyDemandsDemand setAvailableAmount(Integer availableAmount) {
-            this.availableAmount = availableAmount;
-            return this;
-        }
-        public Integer getAvailableAmount() {
-            return this.availableAmount;
         }
 
         public DescribeDemandsResponseBodyDemandsDemand setStartTime(String startTime) {
@@ -359,6 +351,14 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
         public String getDemandStatus() {
             return this.demandStatus;
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemand setSupplyInfos(DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos) {
+            this.supplyInfos = supplyInfos;
+            return this;
+        }
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfos getSupplyInfos() {
+            return this.supplyInfos;
         }
 
     }

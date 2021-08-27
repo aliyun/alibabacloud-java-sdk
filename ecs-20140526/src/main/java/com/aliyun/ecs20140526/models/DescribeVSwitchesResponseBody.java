@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("VSwitches")
     public DescribeVSwitchesResponseBodyVSwitches vSwitches;
 
     public static DescribeVSwitchesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVSwitchesResponseBody self = new DescribeVSwitchesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVSwitchesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeVSwitchesResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeVSwitchesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeVSwitchesResponseBody setVSwitches(DescribeVSwitchesResponseBodyVSwitches vSwitches) {

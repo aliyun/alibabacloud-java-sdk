@@ -31,58 +31,6 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         return this.priceInfo;
     }
 
-    public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
-        @NameInMap("DiscountPrice")
-        public Float discountPrice;
-
-        @NameInMap("TradePrice")
-        public Float tradePrice;
-
-        @NameInMap("OriginalPrice")
-        public Float originalPrice;
-
-        @NameInMap("Currency")
-        public String currency;
-
-        public static DescribeInstanceModificationPriceResponseBodyPriceInfoPrice build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceModificationPriceResponseBodyPriceInfoPrice self = new DescribeInstanceModificationPriceResponseBodyPriceInfoPrice();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setDiscountPrice(Float discountPrice) {
-            this.discountPrice = discountPrice;
-            return this;
-        }
-        public Float getDiscountPrice() {
-            return this.discountPrice;
-        }
-
-        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setTradePrice(Float tradePrice) {
-            this.tradePrice = tradePrice;
-            return this;
-        }
-        public Float getTradePrice() {
-            return this.tradePrice;
-        }
-
-        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setOriginalPrice(Float originalPrice) {
-            this.originalPrice = originalPrice;
-            return this;
-        }
-        public Float getOriginalPrice() {
-            return this.originalPrice;
-        }
-
-        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setCurrency(String currency) {
-            this.currency = currency;
-            return this;
-        }
-        public String getCurrency() {
-            return this.currency;
-        }
-
-    }
-
     public static class DescribeInstanceModificationPriceResponseBodyPriceInfoRulesRule extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -132,24 +80,68 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstanceModificationPriceResponseBodyPriceInfo extends TeaModel {
-        @NameInMap("Price")
-        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;
+    public static class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
 
+        @NameInMap("DiscountPrice")
+        public Float discountPrice;
+
+        @NameInMap("Currency")
+        public String currency;
+
+        @NameInMap("TradePrice")
+        public Float tradePrice;
+
+        public static DescribeInstanceModificationPriceResponseBodyPriceInfoPrice build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceModificationPriceResponseBodyPriceInfoPrice self = new DescribeInstanceModificationPriceResponseBodyPriceInfoPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setOriginalPrice(Float originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
+    }
+
+    public static class DescribeInstanceModificationPriceResponseBodyPriceInfo extends TeaModel {
         @NameInMap("Rules")
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRules rules;
+
+        @NameInMap("Price")
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price;
 
         public static DescribeInstanceModificationPriceResponseBodyPriceInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceModificationPriceResponseBodyPriceInfo self = new DescribeInstanceModificationPriceResponseBodyPriceInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceModificationPriceResponseBodyPriceInfo setPrice(DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price) {
-            this.price = price;
-            return this;
-        }
-        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice getPrice() {
-            return this.price;
         }
 
         public DescribeInstanceModificationPriceResponseBodyPriceInfo setRules(DescribeInstanceModificationPriceResponseBodyPriceInfoRules rules) {
@@ -158,6 +150,14 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
         }
         public DescribeInstanceModificationPriceResponseBodyPriceInfoRules getRules() {
             return this.rules;
+        }
+
+        public DescribeInstanceModificationPriceResponseBodyPriceInfo setPrice(DescribeInstanceModificationPriceResponseBodyPriceInfoPrice price) {
+            this.price = price;
+            return this;
+        }
+        public DescribeInstanceModificationPriceResponseBodyPriceInfoPrice getPrice() {
+            return this.price;
         }
 
     }

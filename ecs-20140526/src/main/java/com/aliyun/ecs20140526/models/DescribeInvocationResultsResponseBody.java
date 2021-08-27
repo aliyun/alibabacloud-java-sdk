@@ -38,14 +38,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("Repeats")
         public Integer repeats;
 
-        @NameInMap("Output")
-        public String output;
+        @NameInMap("CommandId")
+        public String commandId;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("CommandId")
-        public String commandId;
+        @NameInMap("Output")
+        public String output;
 
         @NameInMap("Dropped")
         public Integer dropped;
@@ -98,12 +98,12 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.repeats;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOutput(String output) {
-            this.output = output;
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setCommandId(String commandId) {
+            this.commandId = commandId;
             return this;
         }
-        public String getOutput() {
-            return this.output;
+        public String getCommandId() {
+            return this.commandId;
         }
 
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setInstanceId(String instanceId) {
@@ -114,12 +114,12 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setCommandId(String commandId) {
-            this.commandId = commandId;
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOutput(String output) {
+            this.output = output;
             return this;
         }
-        public String getCommandId() {
-            return this.commandId;
+        public String getOutput() {
+            return this.output;
         }
 
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setDropped(Integer dropped) {
@@ -230,11 +230,11 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("PageNumber")
         public Long pageNumber;
 
-        @NameInMap("InvocationResults")
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults invocationResults;
-
         @NameInMap("TotalCount")
         public Long totalCount;
+
+        @NameInMap("InvocationResults")
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResults invocationResults;
 
         public static DescribeInvocationResultsResponseBodyInvocation build(java.util.Map<String, ?> map) throws Exception {
             DescribeInvocationResultsResponseBodyInvocation self = new DescribeInvocationResultsResponseBodyInvocation();
@@ -257,20 +257,20 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.pageNumber;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocation setInvocationResults(DescribeInvocationResultsResponseBodyInvocationInvocationResults invocationResults) {
-            this.invocationResults = invocationResults;
-            return this;
-        }
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults getInvocationResults() {
-            return this.invocationResults;
-        }
-
         public DescribeInvocationResultsResponseBodyInvocation setTotalCount(Long totalCount) {
             this.totalCount = totalCount;
             return this;
         }
         public Long getTotalCount() {
             return this.totalCount;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocation setInvocationResults(DescribeInvocationResultsResponseBodyInvocationInvocationResults invocationResults) {
+            this.invocationResults = invocationResults;
+            return this;
+        }
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResults getInvocationResults() {
+            return this.invocationResults;
         }
 
     }

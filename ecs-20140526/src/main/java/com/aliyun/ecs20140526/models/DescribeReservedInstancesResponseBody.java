@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("ReservedInstances")
     public DescribeReservedInstancesResponseBodyReservedInstances reservedInstances;
 
     public static DescribeReservedInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeReservedInstancesResponseBody self = new DescribeReservedInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeReservedInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeReservedInstancesResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeReservedInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeReservedInstancesResponseBody setReservedInstances(DescribeReservedInstancesResponseBodyReservedInstances reservedInstances) {
@@ -152,23 +152,17 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("ReservedInstanceName")
         public String reservedInstanceName;
 
-        @NameInMap("OperationLocks")
-        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks operationLocks;
-
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;
-
-        @NameInMap("Tags")
-        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags;
 
         @NameInMap("InstanceType")
         public String instanceType;
@@ -176,11 +170,11 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceAmount")
         public Integer instanceAmount;
 
-        @NameInMap("OfferingType")
-        public String offeringType;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("OfferingType")
+        public String offeringType;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -206,17 +200,15 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         @NameInMap("Scope")
         public String scope;
 
+        @NameInMap("OperationLocks")
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks operationLocks;
+
+        @NameInMap("Tags")
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags;
+
         public static DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance self = new DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
         }
 
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setStatus(String status) {
@@ -227,6 +219,14 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setReservedInstanceName(String reservedInstanceName) {
             this.reservedInstanceName = reservedInstanceName;
             return this;
@@ -235,28 +235,12 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.reservedInstanceName;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setOperationLocks(DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks operationLocks) {
-            this.operationLocks = operationLocks;
-            return this;
-        }
-        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks getOperationLocks() {
-            return this.operationLocks;
-        }
-
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setReservedInstanceId(String reservedInstanceId) {
             this.reservedInstanceId = reservedInstanceId;
             return this;
         }
         public String getReservedInstanceId() {
             return this.reservedInstanceId;
-        }
-
-        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setTags(DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags getTags() {
-            return this.tags;
         }
 
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setInstanceType(String instanceType) {
@@ -275,20 +259,20 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.instanceAmount;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setOfferingType(String offeringType) {
-            this.offeringType = offeringType;
-            return this;
-        }
-        public String getOfferingType() {
-            return this.offeringType;
-        }
-
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setOfferingType(String offeringType) {
+            this.offeringType = offeringType;
+            return this;
+        }
+        public String getOfferingType() {
+            return this.offeringType;
         }
 
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setStartTime(String startTime) {
@@ -353,6 +337,22 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
         public String getScope() {
             return this.scope;
+        }
+
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setOperationLocks(DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks operationLocks) {
+            this.operationLocks = operationLocks;
+            return this;
+        }
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks getOperationLocks() {
+            return this.operationLocks;
+        }
+
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setTags(DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags getTags() {
+            return this.tags;
         }
 
     }

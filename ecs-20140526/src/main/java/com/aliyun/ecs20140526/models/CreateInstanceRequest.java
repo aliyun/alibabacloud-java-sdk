@@ -814,11 +814,11 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("Category")
         public String category;
 
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
-
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
 
         @NameInMap("EncryptAlgorithm")
         public String encryptAlgorithm;
@@ -887,20 +887,20 @@ public class CreateInstanceRequest extends TeaModel {
             return this.category;
         }
 
-        public CreateInstanceRequestDataDisk setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
-        }
-
         public CreateInstanceRequestDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
             this.deleteWithInstance = deleteWithInstance;
             return this;
         }
         public Boolean getDeleteWithInstance() {
             return this.deleteWithInstance;
+        }
+
+        public CreateInstanceRequestDataDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
         }
 
         public CreateInstanceRequestDataDisk setEncryptAlgorithm(String encryptAlgorithm) {

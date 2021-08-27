@@ -22,6 +22,12 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("DiskId")
+    public java.util.List<String> diskId;
+
+    @NameInMap("EventId")
+    public java.util.List<String> eventId;
+
     @NameInMap("Status")
     public String status;
 
@@ -36,12 +42,6 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("DiskId")
-    public java.util.List<String> diskId;
-
-    @NameInMap("EventId")
-    public java.util.List<String> eventId;
 
     public static DescribeDisksFullStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDisksFullStatusRequest self = new DescribeDisksFullStatusRequest();
@@ -96,6 +96,22 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeDisksFullStatusRequest setDiskId(java.util.List<String> diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public java.util.List<String> getDiskId() {
+        return this.diskId;
+    }
+
+    public DescribeDisksFullStatusRequest setEventId(java.util.List<String> eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public java.util.List<String> getEventId() {
+        return this.eventId;
+    }
+
     public DescribeDisksFullStatusRequest setStatus(String status) {
         this.status = status;
         return this;
@@ -134,22 +150,6 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeDisksFullStatusRequest setDiskId(java.util.List<String> diskId) {
-        this.diskId = diskId;
-        return this;
-    }
-    public java.util.List<String> getDiskId() {
-        return this.diskId;
-    }
-
-    public DescribeDisksFullStatusRequest setEventId(java.util.List<String> eventId) {
-        this.eventId = eventId;
-        return this;
-    }
-    public java.util.List<String> getEventId() {
-        return this.eventId;
     }
 
     public static class DescribeDisksFullStatusRequestEventTime extends TeaModel {

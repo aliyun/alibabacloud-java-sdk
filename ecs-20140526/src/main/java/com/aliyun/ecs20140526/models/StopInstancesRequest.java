@@ -19,6 +19,9 @@ public class StopInstancesRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -30,9 +33,6 @@ public class StopInstancesRequest extends TeaModel {
 
     @NameInMap("BatchOptimization")
     public String batchOptimization;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static StopInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         StopInstancesRequest self = new StopInstancesRequest();
@@ -79,6 +79,14 @@ public class StopInstancesRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public StopInstancesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
     public StopInstancesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -109,14 +117,6 @@ public class StopInstancesRequest extends TeaModel {
     }
     public String getBatchOptimization() {
         return this.batchOptimization;
-    }
-
-    public StopInstancesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

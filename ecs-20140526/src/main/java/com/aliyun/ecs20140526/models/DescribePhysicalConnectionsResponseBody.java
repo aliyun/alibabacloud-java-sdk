@@ -4,40 +4,24 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePhysicalConnectionsResponseBody extends TeaModel {
-    @NameInMap("PhysicalConnectionSet")
-    public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSet physicalConnectionSet;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("PhysicalConnectionSet")
+    public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSet physicalConnectionSet;
+
     public static DescribePhysicalConnectionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePhysicalConnectionsResponseBody self = new DescribePhysicalConnectionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePhysicalConnectionsResponseBody setPhysicalConnectionSet(DescribePhysicalConnectionsResponseBodyPhysicalConnectionSet physicalConnectionSet) {
-        this.physicalConnectionSet = physicalConnectionSet;
-        return this;
-    }
-    public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSet getPhysicalConnectionSet() {
-        return this.physicalConnectionSet;
-    }
-
-    public DescribePhysicalConnectionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribePhysicalConnectionsResponseBody setRequestId(String requestId) {
@@ -48,14 +32,6 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribePhysicalConnectionsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public DescribePhysicalConnectionsResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -64,42 +40,66 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public DescribePhysicalConnectionsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
 
-        @NameInMap("Status")
-        public String status;
+    public DescribePhysicalConnectionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribePhysicalConnectionsResponseBody setPhysicalConnectionSet(DescribePhysicalConnectionsResponseBodyPhysicalConnectionSet physicalConnectionSet) {
+        this.physicalConnectionSet = physicalConnectionSet;
+        return this;
+    }
+    public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSet getPhysicalConnectionSet() {
+        return this.physicalConnectionSet;
+    }
+
+    public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType extends TeaModel {
+        @NameInMap("AdLocation")
+        public String adLocation;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("AdLocation")
-        public String adLocation;
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("PortNumber")
         public String portNumber;
 
-        @NameInMap("Spec")
-        public String spec;
-
         @NameInMap("CircuitCode")
         public String circuitCode;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("Spec")
+        public String spec;
 
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("PortType")
         public String portType;
 
-        @NameInMap("BusinessStatus")
-        public String businessStatus;
-
         @NameInMap("EnabledTime")
         public String enabledTime;
+
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
 
         @NameInMap("LineOperator")
         public String lineOperator;
@@ -124,20 +124,12 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setType(String type) {
-            this.type = type;
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setAdLocation(String adLocation) {
+            this.adLocation = adLocation;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
+        public String getAdLocation() {
+            return this.adLocation;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setCreationTime(String creationTime) {
@@ -148,12 +140,20 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setAdLocation(String adLocation) {
-            this.adLocation = adLocation;
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getAdLocation() {
-            return this.adLocation;
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setPortNumber(String portNumber) {
@@ -164,14 +164,6 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             return this.portNumber;
         }
 
-        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
-        }
-
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setCircuitCode(String circuitCode) {
             this.circuitCode = circuitCode;
             return this;
@@ -180,12 +172,12 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             return this.circuitCode;
         }
 
-        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setDescription(String description) {
-            this.description = description;
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setSpec(String spec) {
+            this.spec = spec;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getSpec() {
+            return this.spec;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setBandwidth(Long bandwidth) {
@@ -196,6 +188,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             return this.bandwidth;
         }
 
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setPortType(String portType) {
             this.portType = portType;
             return this;
@@ -204,20 +204,20 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             return this.portType;
         }
 
-        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setBusinessStatus(String businessStatus) {
-            this.businessStatus = businessStatus;
-            return this;
-        }
-        public String getBusinessStatus() {
-            return this.businessStatus;
-        }
-
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setEnabledTime(String enabledTime) {
             this.enabledTime = enabledTime;
             return this;
         }
         public String getEnabledTime() {
             return this.enabledTime;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setLineOperator(String lineOperator) {

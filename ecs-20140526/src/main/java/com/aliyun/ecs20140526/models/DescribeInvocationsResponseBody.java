@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvocationsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     @NameInMap("Invocations")
     public DescribeInvocationsResponseBodyInvocations invocations;
 
     public static DescribeInvocationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInvocationsResponseBody self = new DescribeInvocationsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInvocationsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeInvocationsResponseBody setPageSize(Long pageSize) {
@@ -56,6 +48,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeInvocationsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeInvocationsResponseBody setInvocations(DescribeInvocationsResponseBodyInvocations invocations) {
         this.invocations = invocations;
         return this;
@@ -68,23 +68,23 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("InvocationStatus")
-        public String invocationStatus;
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         @NameInMap("FinishTime")
         public String finishTime;
 
-        @NameInMap("UpdateTime")
-        public String updateTime;
+        @NameInMap("InvocationStatus")
+        public String invocationStatus;
 
         @NameInMap("Repeats")
         public Integer repeats;
 
-        @NameInMap("Output")
-        public String output;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Output")
+        public String output;
 
         @NameInMap("Dropped")
         public Integer dropped;
@@ -100,6 +100,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
         @NameInMap("ErrorInfo")
         public String errorInfo;
+
+        @NameInMap("Timed")
+        public Boolean timed;
 
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -120,12 +123,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setInvocationStatus(String invocationStatus) {
-            this.invocationStatus = invocationStatus;
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public String getInvocationStatus() {
-            return this.invocationStatus;
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setFinishTime(String finishTime) {
@@ -136,12 +139,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.finishTime;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setInvocationStatus(String invocationStatus) {
+            this.invocationStatus = invocationStatus;
             return this;
         }
-        public String getUpdateTime() {
-            return this.updateTime;
+        public String getInvocationStatus() {
+            return this.invocationStatus;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setRepeats(Integer repeats) {
@@ -152,20 +155,20 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.repeats;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setOutput(String output) {
-            this.output = output;
-            return this;
-        }
-        public String getOutput() {
-            return this.output;
-        }
-
         public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setOutput(String output) {
+            this.output = output;
+            return this;
+        }
+        public String getOutput() {
+            return this.output;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setDropped(Integer dropped) {
@@ -208,6 +211,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.errorInfo;
         }
 
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setTimed(Boolean timed) {
+            this.timed = timed;
+            return this;
+        }
+        public Boolean getTimed() {
+            return this.timed;
+        }
+
         public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
@@ -246,26 +257,26 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     }
 
     public static class DescribeInvocationsResponseBodyInvocationsInvocation extends TeaModel {
-        @NameInMap("Frequency")
-        public String frequency;
-
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("Frequency")
+        public String frequency;
 
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
-        @NameInMap("InvokeInstances")
-        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances invokeInstances;
+        @NameInMap("RepeatMode")
+        public String repeatMode;
 
         @NameInMap("CommandId")
         public String commandId;
 
-        @NameInMap("InvokeStatus")
-        public String invokeStatus;
-
         @NameInMap("CommandType")
         public String commandType;
+
+        @NameInMap("InvokeStatus")
+        public String invokeStatus;
 
         @NameInMap("Parameters")
         public String parameters;
@@ -285,17 +296,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("Username")
         public String username;
 
+        @NameInMap("InvokeInstances")
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances invokeInstances;
+
         public static DescribeInvocationsResponseBodyInvocationsInvocation build(java.util.Map<String, ?> map) throws Exception {
             DescribeInvocationsResponseBodyInvocationsInvocation self = new DescribeInvocationsResponseBodyInvocationsInvocation();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInvocationsResponseBodyInvocationsInvocation setFrequency(String frequency) {
-            this.frequency = frequency;
-            return this;
-        }
-        public String getFrequency() {
-            return this.frequency;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocation setCreationTime(String creationTime) {
@@ -306,6 +312,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
+        public DescribeInvocationsResponseBodyInvocationsInvocation setFrequency(String frequency) {
+            this.frequency = frequency;
+            return this;
+        }
+        public String getFrequency() {
+            return this.frequency;
+        }
+
         public DescribeInvocationsResponseBodyInvocationsInvocation setInvocationStatus(String invocationStatus) {
             this.invocationStatus = invocationStatus;
             return this;
@@ -314,12 +328,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.invocationStatus;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvocation setInvokeInstances(DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances invokeInstances) {
-            this.invokeInstances = invokeInstances;
+        public DescribeInvocationsResponseBodyInvocationsInvocation setRepeatMode(String repeatMode) {
+            this.repeatMode = repeatMode;
             return this;
         }
-        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances getInvokeInstances() {
-            return this.invokeInstances;
+        public String getRepeatMode() {
+            return this.repeatMode;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocation setCommandId(String commandId) {
@@ -330,20 +344,20 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.commandId;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvocation setInvokeStatus(String invokeStatus) {
-            this.invokeStatus = invokeStatus;
-            return this;
-        }
-        public String getInvokeStatus() {
-            return this.invokeStatus;
-        }
-
         public DescribeInvocationsResponseBodyInvocationsInvocation setCommandType(String commandType) {
             this.commandType = commandType;
             return this;
         }
         public String getCommandType() {
             return this.commandType;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocation setInvokeStatus(String invokeStatus) {
+            this.invokeStatus = invokeStatus;
+            return this;
+        }
+        public String getInvokeStatus() {
+            return this.invokeStatus;
         }
 
         public DescribeInvocationsResponseBodyInvocationsInvocation setParameters(String parameters) {
@@ -392,6 +406,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
         public String getUsername() {
             return this.username;
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocation setInvokeInstances(DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances invokeInstances) {
+            this.invokeInstances = invokeInstances;
+            return this;
+        }
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances getInvokeInstances() {
+            return this.invokeInstances;
         }
 
     }

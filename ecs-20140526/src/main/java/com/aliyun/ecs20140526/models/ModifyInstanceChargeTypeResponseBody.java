@@ -4,26 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
-    @NameInMap("FeeOfInstances")
-    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances;
+    @NameInMap("OrderId")
+    public String orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OrderId")
-    public String orderId;
+    @NameInMap("FeeOfInstances")
+    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances;
 
     public static ModifyInstanceChargeTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceChargeTypeResponseBody self = new ModifyInstanceChargeTypeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceChargeTypeResponseBody setFeeOfInstances(ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
-        this.feeOfInstances = feeOfInstances;
+    public ModifyInstanceChargeTypeResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
-    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
-        return this.feeOfInstances;
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public ModifyInstanceChargeTypeResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyInstanceChargeTypeResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
+    public ModifyInstanceChargeTypeResponseBody setFeeOfInstances(ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
+        this.feeOfInstances = feeOfInstances;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
+        return this.feeOfInstances;
     }
 
     public static class ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance extends TeaModel {

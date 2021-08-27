@@ -4,32 +4,24 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageComponentsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ImageComponent")
-    public DescribeImageComponentsResponseBodyImageComponent imageComponent;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    @NameInMap("ImageComponent")
+    public DescribeImageComponentsResponseBodyImageComponent imageComponent;
+
     public static DescribeImageComponentsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageComponentsResponseBody self = new DescribeImageComponentsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImageComponentsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeImageComponentsResponseBody setNextToken(String nextToken) {
@@ -48,12 +40,12 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeImageComponentsResponseBody setImageComponent(DescribeImageComponentsResponseBodyImageComponent imageComponent) {
-        this.imageComponent = imageComponent;
+    public DescribeImageComponentsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public DescribeImageComponentsResponseBodyImageComponent getImageComponent() {
-        return this.imageComponent;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeImageComponentsResponseBody setMaxResults(Integer maxResults) {
@@ -62,6 +54,14 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeImageComponentsResponseBody setImageComponent(DescribeImageComponentsResponseBodyImageComponent imageComponent) {
+        this.imageComponent = imageComponent;
+        return this;
+    }
+    public DescribeImageComponentsResponseBodyImageComponent getImageComponent() {
+        return this.imageComponent;
     }
 
     public static class DescribeImageComponentsResponseBodyImageComponentImageComponentSetTagsTag extends TeaModel {
@@ -132,14 +132,14 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        @NameInMap("Tags")
-        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags tags;
-
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Tags")
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags tags;
 
         public static DescribeImageComponentsResponseBodyImageComponentImageComponentSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageComponentsResponseBodyImageComponentImageComponentSet self = new DescribeImageComponentsResponseBodyImageComponentImageComponentSet();
@@ -194,14 +194,6 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeImageComponentsResponseBodyImageComponentImageComponentSet setTags(DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags getTags() {
-            return this.tags;
-        }
-
         public DescribeImageComponentsResponseBodyImageComponentImageComponentSet setName(String name) {
             this.name = name;
             return this;
@@ -216,6 +208,14 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSet setTags(DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeImageComponentsResponseBodyImageComponentImageComponentSetTags getTags() {
+            return this.tags;
         }
 
     }

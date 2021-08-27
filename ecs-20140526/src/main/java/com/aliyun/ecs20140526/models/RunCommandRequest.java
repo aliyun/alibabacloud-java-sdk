@@ -19,6 +19,9 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     @NameInMap("Name")
     public String name;
 
@@ -40,6 +43,9 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("EnableParameter")
     public Boolean enableParameter;
 
+    @NameInMap("RepeatMode")
+    public String repeatMode;
+
     @NameInMap("Timed")
     public Boolean timed;
 
@@ -60,9 +66,6 @@ public class RunCommandRequest extends TeaModel {
 
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static RunCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCommandRequest self = new RunCommandRequest();
@@ -107,6 +110,14 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RunCommandRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
     public RunCommandRequest setName(String name) {
@@ -165,6 +176,14 @@ public class RunCommandRequest extends TeaModel {
         return this.enableParameter;
     }
 
+    public RunCommandRequest setRepeatMode(String repeatMode) {
+        this.repeatMode = repeatMode;
+        return this;
+    }
+    public String getRepeatMode() {
+        return this.repeatMode;
+    }
+
     public RunCommandRequest setTimed(Boolean timed) {
         this.timed = timed;
         return this;
@@ -219,14 +238,6 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getWindowsPasswordName() {
         return this.windowsPasswordName;
-    }
-
-    public RunCommandRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

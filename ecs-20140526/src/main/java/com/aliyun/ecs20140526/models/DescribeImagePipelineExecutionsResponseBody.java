@@ -4,14 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -22,14 +22,6 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     public static DescribeImagePipelineExecutionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagePipelineExecutionsResponseBody self = new DescribeImagePipelineExecutionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImagePipelineExecutionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeImagePipelineExecutionsResponseBody setNextToken(String nextToken) {
@@ -46,6 +38,14 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeImagePipelineExecutionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeImagePipelineExecutionsResponseBody setMaxResults(Integer maxResults) {
@@ -132,14 +132,14 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
-        @NameInMap("Tags")
-        public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags;
-
         @NameInMap("ImageId")
         public String imageId;
 
         @NameInMap("ExecutionId")
         public String executionId;
+
+        @NameInMap("Tags")
+        public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags;
 
         public static DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet self = new DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet();
@@ -194,14 +194,6 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet setTags(DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags getTags() {
-            return this.tags;
-        }
-
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet setImageId(String imageId) {
             this.imageId = imageId;
             return this;
@@ -216,6 +208,14 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
         public String getExecutionId() {
             return this.executionId;
+        }
+
+        public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSet setTags(DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags getTags() {
+            return this.tags;
         }
 
     }

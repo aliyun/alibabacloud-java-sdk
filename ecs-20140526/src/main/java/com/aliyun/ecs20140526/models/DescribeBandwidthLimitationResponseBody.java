@@ -32,37 +32,21 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
     }
 
     public static class DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth extends TeaModel {
-        @NameInMap("Max")
-        public Integer max;
-
-        @NameInMap("Unit")
-        public String unit;
-
         @NameInMap("InternetChargeType")
         public String internetChargeType;
+
+        @NameInMap("Max")
+        public Integer max;
 
         @NameInMap("Min")
         public Integer min;
 
+        @NameInMap("Unit")
+        public String unit;
+
         public static DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth build(java.util.Map<String, ?> map) throws Exception {
             DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth self = new DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setMax(Integer max) {
-            this.max = max;
-            return this;
-        }
-        public Integer getMax() {
-            return this.max;
-        }
-
-        public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setUnit(String unit) {
-            this.unit = unit;
-            return this;
-        }
-        public String getUnit() {
-            return this.unit;
         }
 
         public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setInternetChargeType(String internetChargeType) {
@@ -73,12 +57,28 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             return this.internetChargeType;
         }
 
+        public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setMax(Integer max) {
+            this.max = max;
+            return this;
+        }
+        public Integer getMax() {
+            return this.max;
+        }
+
         public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setMin(Integer min) {
             this.min = min;
             return this;
         }
         public Integer getMin() {
             return this.min;
+        }
+
+        public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
     }

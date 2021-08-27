@@ -52,6 +52,9 @@ public class DescribeInvocationsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("RepeatMode")
+    public String repeatMode;
+
     public static DescribeInvocationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInvocationsRequest self = new DescribeInvocationsRequest();
         return TeaModel.build(map, self);
@@ -183,6 +186,14 @@ public class DescribeInvocationsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeInvocationsRequest setRepeatMode(String repeatMode) {
+        this.repeatMode = repeatMode;
+        return this;
+    }
+    public String getRepeatMode() {
+        return this.repeatMode;
     }
 
 }

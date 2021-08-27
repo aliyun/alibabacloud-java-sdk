@@ -49,6 +49,9 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;
 
+    @NameInMap("DedicatedHostClusterId")
+    public String dedicatedHostClusterId;
+
     public static DescribeDedicatedHostsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostsRequest self = new DescribeDedicatedHostsRequest();
         return TeaModel.build(map, self);
@@ -172,6 +175,14 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     }
     public java.util.List<DescribeDedicatedHostsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeDedicatedHostsRequest setDedicatedHostClusterId(String dedicatedHostClusterId) {
+        this.dedicatedHostClusterId = dedicatedHostClusterId;
+        return this;
+    }
+    public String getDedicatedHostClusterId() {
+        return this.dedicatedHostClusterId;
     }
 
     public static class DescribeDedicatedHostsRequestTag extends TeaModel {

@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageComponentRequest extends TeaModel {
+    @NameInMap("TemplateTag")
+    public java.util.List<DeleteImageComponentRequestTemplateTag> templateTag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -19,15 +22,20 @@ public class DeleteImageComponentRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("TemplateTag")
-    public java.util.List<DeleteImageComponentRequestTemplateTag> templateTag;
-
     @NameInMap("ImageComponentId")
     public String imageComponentId;
 
     public static DeleteImageComponentRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteImageComponentRequest self = new DeleteImageComponentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteImageComponentRequest setTemplateTag(java.util.List<DeleteImageComponentRequestTemplateTag> templateTag) {
+        this.templateTag = templateTag;
+        return this;
+    }
+    public java.util.List<DeleteImageComponentRequestTemplateTag> getTemplateTag() {
+        return this.templateTag;
     }
 
     public DeleteImageComponentRequest setOwnerId(Long ownerId) {
@@ -68,14 +76,6 @@ public class DeleteImageComponentRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DeleteImageComponentRequest setTemplateTag(java.util.List<DeleteImageComponentRequestTemplateTag> templateTag) {
-        this.templateTag = templateTag;
-        return this;
-    }
-    public java.util.List<DeleteImageComponentRequestTemplateTag> getTemplateTag() {
-        return this.templateTag;
     }
 
     public DeleteImageComponentRequest setImageComponentId(String imageComponentId) {

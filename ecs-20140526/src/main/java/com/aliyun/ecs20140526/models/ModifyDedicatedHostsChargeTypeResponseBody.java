@@ -4,26 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
-    @NameInMap("FeeOfInstances")
-    public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances;
+    @NameInMap("OrderId")
+    public String orderId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("OrderId")
-    public String orderId;
+    @NameInMap("FeeOfInstances")
+    public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances;
 
     public static ModifyDedicatedHostsChargeTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDedicatedHostsChargeTypeResponseBody self = new ModifyDedicatedHostsChargeTypeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDedicatedHostsChargeTypeResponseBody setFeeOfInstances(ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
-        this.feeOfInstances = feeOfInstances;
+    public ModifyDedicatedHostsChargeTypeResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
-    public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
-        return this.feeOfInstances;
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public ModifyDedicatedHostsChargeTypeResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyDedicatedHostsChargeTypeResponseBody setOrderId(String orderId) {
-        this.orderId = orderId;
+    public ModifyDedicatedHostsChargeTypeResponseBody setFeeOfInstances(ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
+        this.feeOfInstances = feeOfInstances;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
+        return this.feeOfInstances;
     }
 
     public static class ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstancesFeeOfInstance extends TeaModel {

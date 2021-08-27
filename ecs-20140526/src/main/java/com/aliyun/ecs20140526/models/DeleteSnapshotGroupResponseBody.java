@@ -32,23 +32,15 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem build(java.util.Map<String, ?> map) throws Exception {
             DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem self = new DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem setName(String name) {
@@ -57,6 +49,14 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -81,29 +81,21 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress extends TeaModel {
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
-        @NameInMap("RelatedItemSet")
-        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
+        @NameInMap("ErrorCode")
+        public String errorCode;
 
         @NameInMap("OperationStatus")
         public String operationStatus;
 
+        @NameInMap("RelatedItemSet")
+        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
+
         public static DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress build(java.util.Map<String, ?> map) throws Exception {
             DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress self = new DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
         }
 
         public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress setErrorMsg(String errorMsg) {
@@ -114,12 +106,12 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             return this.errorMsg;
         }
 
-        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress setRelatedItemSet(DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet) {
-            this.relatedItemSet = relatedItemSet;
+        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
             return this;
         }
-        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet getRelatedItemSet() {
-            return this.relatedItemSet;
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress setOperationStatus(String operationStatus) {
@@ -128,6 +120,14 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         }
         public String getOperationStatus() {
             return this.operationStatus;
+        }
+
+        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgress setRelatedItemSet(DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet) {
+            this.relatedItemSet = relatedItemSet;
+            return this;
+        }
+        public DeleteSnapshotGroupResponseBodyOperationProgressSetOperationProgressRelatedItemSet getRelatedItemSet() {
+            return this.relatedItemSet;
         }
 
     }

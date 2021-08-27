@@ -19,6 +19,9 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     @NameInMap("Name")
     public String name;
 
@@ -48,9 +51,6 @@ public class SendFileRequest extends TeaModel {
 
     @NameInMap("Overwrite")
     public Boolean overwrite;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static SendFileRequest build(java.util.Map<String, ?> map) throws Exception {
         SendFileRequest self = new SendFileRequest();
@@ -95,6 +95,14 @@ public class SendFileRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SendFileRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
     public SendFileRequest setName(String name) {
@@ -175,14 +183,6 @@ public class SendFileRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
-    }
-
-    public SendFileRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

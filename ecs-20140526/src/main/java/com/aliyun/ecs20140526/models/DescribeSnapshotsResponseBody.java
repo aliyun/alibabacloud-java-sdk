@@ -4,20 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Snapshots")
     public DescribeSnapshotsResponseBodySnapshots snapshots;
@@ -25,14 +25,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public static DescribeSnapshotsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsResponseBody self = new DescribeSnapshotsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSnapshotsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeSnapshotsResponseBody setNextToken(String nextToken) {
@@ -51,6 +43,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeSnapshotsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeSnapshotsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -59,12 +59,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSnapshotsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSnapshotsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeSnapshotsResponseBody setSnapshots(DescribeSnapshotsResponseBodySnapshots snapshots) {
@@ -125,47 +125,26 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("InstantAccess")
-        public Boolean instantAccess;
-
-        @NameInMap("RetentionDays")
-        public Integer retentionDays;
-
-        @NameInMap("SourceDiskSize")
-        public String sourceDiskSize;
-
-        @NameInMap("Tags")
-        public DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags;
-
-        @NameInMap("LastModifiedTime")
-        public String lastModifiedTime;
-
-        @NameInMap("Encrypted")
-        public Boolean encrypted;
-
-        @NameInMap("SourceDiskId")
-        public String sourceDiskId;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("InstantAccessRetentionDays")
-        public Integer instantAccessRetentionDays;
-
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Progress")
         public String progress;
 
+        @NameInMap("InstantAccess")
+        public Boolean instantAccess;
+
         @NameInMap("RemainTime")
         public Integer remainTime;
+
+        @NameInMap("SourceDiskSize")
+        public String sourceDiskSize;
+
+        @NameInMap("RetentionDays")
+        public Integer retentionDays;
 
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
@@ -176,11 +155,26 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("Usage")
         public String usage;
 
+        @NameInMap("LastModifiedTime")
+        public String lastModifiedTime;
+
+        @NameInMap("Encrypted")
+        public Boolean encrypted;
+
         @NameInMap("SnapshotType")
         public String snapshotType;
 
+        @NameInMap("SourceDiskId")
+        public String sourceDiskId;
+
         @NameInMap("SnapshotName")
         public String snapshotName;
+
+        @NameInMap("InstantAccessRetentionDays")
+        public Integer instantAccessRetentionDays;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -191,23 +185,29 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
         @NameInMap("SnapshotSN")
         public String snapshotSN;
 
         @NameInMap("ProductCode")
         public String productCode;
 
+        // 源快照
+        @NameInMap("SourceSnapshotId")
+        public String sourceSnapshotId;
+
+        // 源快照地域
+        @NameInMap("SourceRegionId")
+        public String sourceRegionId;
+
+        @NameInMap("Tags")
+        public DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags;
+
         public static DescribeSnapshotsResponseBodySnapshotsSnapshot build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotsResponseBodySnapshotsSnapshot self = new DescribeSnapshotsResponseBodySnapshotsSnapshot();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setStatus(String status) {
@@ -218,84 +218,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setInstantAccess(Boolean instantAccess) {
-            this.instantAccess = instantAccess;
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public Boolean getInstantAccess() {
-            return this.instantAccess;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setRetentionDays(Integer retentionDays) {
-            this.retentionDays = retentionDays;
-            return this;
-        }
-        public Integer getRetentionDays() {
-            return this.retentionDays;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceDiskSize(String sourceDiskSize) {
-            this.sourceDiskSize = sourceDiskSize;
-            return this;
-        }
-        public String getSourceDiskSize() {
-            return this.sourceDiskSize;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setTags(DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeSnapshotsResponseBodySnapshotsSnapshotTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setLastModifiedTime(String lastModifiedTime) {
-            this.lastModifiedTime = lastModifiedTime;
-            return this;
-        }
-        public String getLastModifiedTime() {
-            return this.lastModifiedTime;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setEncrypted(Boolean encrypted) {
-            this.encrypted = encrypted;
-            return this;
-        }
-        public Boolean getEncrypted() {
-            return this.encrypted;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceDiskId(String sourceDiskId) {
-            this.sourceDiskId = sourceDiskId;
-            return this;
-        }
-        public String getSourceDiskId() {
-            return this.sourceDiskId;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setInstantAccessRetentionDays(Integer instantAccessRetentionDays) {
-            this.instantAccessRetentionDays = instantAccessRetentionDays;
-            return this;
-        }
-        public Integer getInstantAccessRetentionDays() {
-            return this.instantAccessRetentionDays;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setProgress(String progress) {
@@ -306,12 +234,36 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.progress;
         }
 
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setInstantAccess(Boolean instantAccess) {
+            this.instantAccess = instantAccess;
+            return this;
+        }
+        public Boolean getInstantAccess() {
+            return this.instantAccess;
+        }
+
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setRemainTime(Integer remainTime) {
             this.remainTime = remainTime;
             return this;
         }
         public Integer getRemainTime() {
             return this.remainTime;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceDiskSize(String sourceDiskSize) {
+            this.sourceDiskSize = sourceDiskSize;
+            return this;
+        }
+        public String getSourceDiskSize() {
+            return this.sourceDiskSize;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setRetentionDays(Integer retentionDays) {
+            this.retentionDays = retentionDays;
+            return this;
+        }
+        public Integer getRetentionDays() {
+            return this.retentionDays;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceDiskType(String sourceDiskType) {
@@ -338,6 +290,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.usage;
         }
 
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setLastModifiedTime(String lastModifiedTime) {
+            this.lastModifiedTime = lastModifiedTime;
+            return this;
+        }
+        public String getLastModifiedTime() {
+            return this.lastModifiedTime;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setEncrypted(Boolean encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotType(String snapshotType) {
             this.snapshotType = snapshotType;
             return this;
@@ -346,12 +314,36 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.snapshotType;
         }
 
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceDiskId(String sourceDiskId) {
+            this.sourceDiskId = sourceDiskId;
+            return this;
+        }
+        public String getSourceDiskId() {
+            return this.sourceDiskId;
+        }
+
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotName(String snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
         public String getSnapshotName() {
             return this.snapshotName;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setInstantAccessRetentionDays(Integer instantAccessRetentionDays) {
+            this.instantAccessRetentionDays = instantAccessRetentionDays;
+            return this;
+        }
+        public Integer getInstantAccessRetentionDays() {
+            return this.instantAccessRetentionDays;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotId(String snapshotId) {
@@ -378,6 +370,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.category;
         }
 
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotSN(String snapshotSN) {
             this.snapshotSN = snapshotSN;
             return this;
@@ -392,6 +392,30 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceSnapshotId(String sourceSnapshotId) {
+            this.sourceSnapshotId = sourceSnapshotId;
+            return this;
+        }
+        public String getSourceSnapshotId() {
+            return this.sourceSnapshotId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceRegionId(String sourceRegionId) {
+            this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+        public String getSourceRegionId() {
+            return this.sourceRegionId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setTags(DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeSnapshotsResponseBodySnapshotsSnapshotTags getTags() {
+            return this.tags;
         }
 
     }

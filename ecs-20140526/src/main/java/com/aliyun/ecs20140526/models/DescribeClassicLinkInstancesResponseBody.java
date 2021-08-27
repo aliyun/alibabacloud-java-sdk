@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Links")
     public DescribeClassicLinkInstancesResponseBodyLinks links;
 
     public static DescribeClassicLinkInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClassicLinkInstancesResponseBody self = new DescribeClassicLinkInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeClassicLinkInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeClassicLinkInstancesResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeClassicLinkInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeClassicLinkInstancesResponseBody setLinks(DescribeClassicLinkInstancesResponseBodyLinks links) {

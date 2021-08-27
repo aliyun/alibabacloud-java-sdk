@@ -4,23 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ResizeDiskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OrderId")
     public String orderId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ResizeDiskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResizeDiskResponseBody self = new ResizeDiskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ResizeDiskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ResizeDiskResponseBody setOrderId(String orderId) {
@@ -29,6 +21,14 @@ public class ResizeDiskResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public ResizeDiskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

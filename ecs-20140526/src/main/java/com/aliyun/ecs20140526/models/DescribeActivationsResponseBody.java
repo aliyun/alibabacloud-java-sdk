@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeActivationsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeActivationsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     @NameInMap("ActivationList")
     public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
 
     public static DescribeActivationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeActivationsResponseBody self = new DescribeActivationsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeActivationsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeActivationsResponseBody setPageSize(Long pageSize) {
@@ -54,6 +46,14 @@ public class DescribeActivationsResponseBody extends TeaModel {
     }
     public Long getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeActivationsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeActivationsResponseBody setActivationList(java.util.List<DescribeActivationsResponseBodyActivationList> activationList) {

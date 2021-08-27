@@ -19,8 +19,14 @@ public class InvokeCommandRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     @NameInMap("CommandId")
     public String commandId;
+
+    @NameInMap("RepeatMode")
+    public String repeatMode;
 
     @NameInMap("Timed")
     public Boolean timed;
@@ -36,9 +42,6 @@ public class InvokeCommandRequest extends TeaModel {
 
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static InvokeCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeCommandRequest self = new InvokeCommandRequest();
@@ -85,12 +88,28 @@ public class InvokeCommandRequest extends TeaModel {
         return this.regionId;
     }
 
+    public InvokeCommandRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
     public InvokeCommandRequest setCommandId(String commandId) {
         this.commandId = commandId;
         return this;
     }
     public String getCommandId() {
         return this.commandId;
+    }
+
+    public InvokeCommandRequest setRepeatMode(String repeatMode) {
+        this.repeatMode = repeatMode;
+        return this;
+    }
+    public String getRepeatMode() {
+        return this.repeatMode;
     }
 
     public InvokeCommandRequest setTimed(Boolean timed) {
@@ -131,14 +150,6 @@ public class InvokeCommandRequest extends TeaModel {
     }
     public String getWindowsPasswordName() {
         return this.windowsPasswordName;
-    }
-
-    public InvokeCommandRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

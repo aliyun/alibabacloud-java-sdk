@@ -4,26 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLimitationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Limitation")
     public String limitation;
 
     @NameInMap("Value")
     public String value;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribeLimitationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLimitationResponseBody self = new DescribeLimitationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLimitationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLimitationResponseBody setLimitation(String limitation) {
@@ -40,6 +32,14 @@ public class DescribeLimitationResponseBody extends TeaModel {
     }
     public String getValue() {
         return this.value;
+    }
+
+    public DescribeLimitationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

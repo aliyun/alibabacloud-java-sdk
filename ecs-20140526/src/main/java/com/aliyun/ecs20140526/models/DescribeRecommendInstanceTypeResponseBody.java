@@ -174,9 +174,6 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType extends TeaModel {
-        @NameInMap("Zones")
-        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones zones;
-
         @NameInMap("CommodityCode")
         public String commodityCode;
 
@@ -188,9 +185,6 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
         @NameInMap("NetworkType")
         public String networkType;
-
-        @NameInMap("InstanceType")
-        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType instanceType;
 
         @NameInMap("Scene")
         public String scene;
@@ -204,17 +198,15 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        @NameInMap("Zones")
+        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones zones;
+
+        @NameInMap("InstanceType")
+        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType instanceType;
+
         public static DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType build(java.util.Map<String, ?> map) throws Exception {
             DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType self = new DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType setZones(DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones zones) {
-            this.zones = zones;
-            return this;
-        }
-        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones getZones() {
-            return this.zones;
         }
 
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType setCommodityCode(String commodityCode) {
@@ -249,14 +241,6 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             return this.networkType;
         }
 
-        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType setInstanceType(DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType getInstanceType() {
-            return this.instanceType;
-        }
-
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType setScene(String scene) {
             this.scene = scene;
             return this;
@@ -287,6 +271,22 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         }
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType setZones(DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones zones) {
+            this.zones = zones;
+            return this;
+        }
+        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones getZones() {
+            return this.zones;
+        }
+
+        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceType setInstanceType(DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType getInstanceType() {
+            return this.instanceType;
         }
 
     }

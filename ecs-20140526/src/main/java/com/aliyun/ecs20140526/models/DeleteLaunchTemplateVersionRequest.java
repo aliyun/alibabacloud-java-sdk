@@ -19,14 +19,14 @@ public class DeleteLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("DeleteVersion")
+    public java.util.List<Integer> deleteVersion;
+
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
 
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
-
-    @NameInMap("DeleteVersion")
-    public java.util.List<Integer> deleteVersion;
 
     public static DeleteLaunchTemplateVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLaunchTemplateVersionRequest self = new DeleteLaunchTemplateVersionRequest();
@@ -73,6 +73,14 @@ public class DeleteLaunchTemplateVersionRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DeleteLaunchTemplateVersionRequest setDeleteVersion(java.util.List<Integer> deleteVersion) {
+        this.deleteVersion = deleteVersion;
+        return this;
+    }
+    public java.util.List<Integer> getDeleteVersion() {
+        return this.deleteVersion;
+    }
+
     public DeleteLaunchTemplateVersionRequest setLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -87,14 +95,6 @@ public class DeleteLaunchTemplateVersionRequest extends TeaModel {
     }
     public String getLaunchTemplateName() {
         return this.launchTemplateName;
-    }
-
-    public DeleteLaunchTemplateVersionRequest setDeleteVersion(java.util.List<Integer> deleteVersion) {
-        this.deleteVersion = deleteVersion;
-        return this;
-    }
-    public java.util.List<Integer> getDeleteVersion() {
-        return this.deleteVersion;
     }
 
 }

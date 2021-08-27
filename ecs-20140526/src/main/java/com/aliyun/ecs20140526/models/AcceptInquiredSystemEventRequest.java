@@ -22,6 +22,9 @@ public class AcceptInquiredSystemEventRequest extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
+    @NameInMap("Choice")
+    public String choice;
+
     public static AcceptInquiredSystemEventRequest build(java.util.Map<String, ?> map) throws Exception {
         AcceptInquiredSystemEventRequest self = new AcceptInquiredSystemEventRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class AcceptInquiredSystemEventRequest extends TeaModel {
     }
     public String getEventId() {
         return this.eventId;
+    }
+
+    public AcceptInquiredSystemEventRequest setChoice(String choice) {
+        this.choice = choice;
+        return this;
+    }
+    public String getChoice() {
+        return this.choice;
     }
 
 }

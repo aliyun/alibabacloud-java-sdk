@@ -31,6 +31,10 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     @NameInMap("RemoveAccount")
     public java.util.List<String> removeAccount;
 
+    // 发布为社区镜像
+    @NameInMap("IsPublic")
+    public Boolean isPublic;
+
     public static ModifyImageSharePermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyImageSharePermissionRequest self = new ModifyImageSharePermissionRequest();
         return TeaModel.build(map, self);
@@ -106,6 +110,14 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     }
     public java.util.List<String> getRemoveAccount() {
         return this.removeAccount;
+    }
+
+    public ModifyImageSharePermissionRequest setIsPublic(Boolean isPublic) {
+        this.isPublic = isPublic;
+        return this;
+    }
+    public Boolean getIsPublic() {
+        return this.isPublic;
     }
 
 }

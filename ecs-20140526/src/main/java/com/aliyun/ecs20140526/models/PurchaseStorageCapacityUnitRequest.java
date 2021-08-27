@@ -46,6 +46,9 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     @NameInMap("Amount")
     public Integer amount;
 
+    @NameInMap("Tag")
+    public java.util.List<PurchaseStorageCapacityUnitRequestTag> tag;
+
     public static PurchaseStorageCapacityUnitRequest build(java.util.Map<String, ?> map) throws Exception {
         PurchaseStorageCapacityUnitRequest self = new PurchaseStorageCapacityUnitRequest();
         return TeaModel.build(map, self);
@@ -161,6 +164,44 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     }
     public Integer getAmount() {
         return this.amount;
+    }
+
+    public PurchaseStorageCapacityUnitRequest setTag(java.util.List<PurchaseStorageCapacityUnitRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<PurchaseStorageCapacityUnitRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class PurchaseStorageCapacityUnitRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static PurchaseStorageCapacityUnitRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            PurchaseStorageCapacityUnitRequestTag self = new PurchaseStorageCapacityUnitRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public PurchaseStorageCapacityUnitRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public PurchaseStorageCapacityUnitRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

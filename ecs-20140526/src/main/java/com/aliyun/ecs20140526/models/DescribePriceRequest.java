@@ -85,6 +85,15 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("InstanceTypeList")
     public java.util.List<String> instanceTypeList;
 
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
+    @NameInMap("SpotDuration")
+    public Integer spotDuration;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
+
     public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceRequest self = new DescribePriceRequest();
         return TeaModel.build(map, self);
@@ -304,6 +313,30 @@ public class DescribePriceRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceTypeList() {
         return this.instanceTypeList;
+    }
+
+    public DescribePriceRequest setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    public DescribePriceRequest setSpotDuration(Integer spotDuration) {
+        this.spotDuration = spotDuration;
+        return this;
+    }
+    public Integer getSpotDuration() {
+        return this.spotDuration;
+    }
+
+    public DescribePriceRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static class DescribePriceRequestSystemDisk extends TeaModel {

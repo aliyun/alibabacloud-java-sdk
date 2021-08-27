@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplatesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("LaunchTemplateSets")
-    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("LaunchTemplateSets")
+    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
+
     public static DescribeLaunchTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLaunchTemplatesResponseBody self = new DescribeLaunchTemplatesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLaunchTemplatesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeLaunchTemplatesResponseBody setLaunchTemplateSets(DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets) {
-        this.launchTemplateSets = launchTemplateSets;
-        return this;
-    }
-    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets getLaunchTemplateSets() {
-        return this.launchTemplateSets;
     }
 
     public DescribeLaunchTemplatesResponseBody setPageSize(Integer pageSize) {
@@ -62,6 +46,22 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeLaunchTemplatesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeLaunchTemplatesResponseBody setLaunchTemplateSets(DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets) {
+        this.launchTemplateSets = launchTemplateSets;
+        return this;
+    }
+    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets getLaunchTemplateSets() {
+        return this.launchTemplateSets;
     }
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag extends TeaModel {
@@ -135,11 +135,11 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         @NameInMap("CreatedBy")
         public String createdBy;
 
-        @NameInMap("Tags")
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags;
-
         @NameInMap("LatestVersionNumber")
         public Long latestVersionNumber;
+
+        @NameInMap("Tags")
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags;
 
         public static DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet self = new DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet();
@@ -202,20 +202,20 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.createdBy;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setTags(DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags getTags() {
-            return this.tags;
-        }
-
         public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setLatestVersionNumber(Long latestVersionNumber) {
             this.latestVersionNumber = latestVersionNumber;
             return this;
         }
         public Long getLatestVersionNumber() {
             return this.latestVersionNumber;
+        }
+
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setTags(DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags getTags() {
+            return this.tags;
         }
 
     }

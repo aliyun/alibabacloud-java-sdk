@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteImagePipelineRequest extends TeaModel {
+    @NameInMap("TemplateTag")
+    public java.util.List<DeleteImagePipelineRequestTemplateTag> templateTag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -19,15 +22,20 @@ public class DeleteImagePipelineRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("TemplateTag")
-    public java.util.List<DeleteImagePipelineRequestTemplateTag> templateTag;
-
     @NameInMap("ImagePipelineId")
     public String imagePipelineId;
 
     public static DeleteImagePipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteImagePipelineRequest self = new DeleteImagePipelineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteImagePipelineRequest setTemplateTag(java.util.List<DeleteImagePipelineRequestTemplateTag> templateTag) {
+        this.templateTag = templateTag;
+        return this;
+    }
+    public java.util.List<DeleteImagePipelineRequestTemplateTag> getTemplateTag() {
+        return this.templateTag;
     }
 
     public DeleteImagePipelineRequest setOwnerId(Long ownerId) {
@@ -68,14 +76,6 @@ public class DeleteImagePipelineRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DeleteImagePipelineRequest setTemplateTag(java.util.List<DeleteImagePipelineRequestTemplateTag> templateTag) {
-        this.templateTag = templateTag;
-        return this;
-    }
-    public java.util.List<DeleteImagePipelineRequestTemplateTag> getTemplateTag() {
-        return this.templateTag;
     }
 
     public DeleteImagePipelineRequest setImagePipelineId(String imagePipelineId) {

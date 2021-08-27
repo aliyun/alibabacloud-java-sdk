@@ -4,35 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("TaskSet")
-    public DescribeTasksResponseBodyTaskSet taskSet;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("TaskSet")
+    public DescribeTasksResponseBodyTaskSet taskSet;
+
     public static DescribeTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTasksResponseBody self = new DescribeTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTasksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeTasksResponseBody setPageSize(Integer pageSize) {
@@ -43,14 +35,6 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeTasksResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -59,12 +43,20 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeTasksResponseBody setTaskSet(DescribeTasksResponseBodyTaskSet taskSet) {
-        this.taskSet = taskSet;
+    public DescribeTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeTasksResponseBodyTaskSet getTaskSet() {
-        return this.taskSet;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeTasksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeTasksResponseBody setRegionId(String regionId) {
@@ -73,6 +65,14 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeTasksResponseBody setTaskSet(DescribeTasksResponseBodyTaskSet taskSet) {
+        this.taskSet = taskSet;
+        return this;
+    }
+    public DescribeTasksResponseBodyTaskSet getTaskSet() {
+        return this.taskSet;
     }
 
     public static class DescribeTasksResponseBodyTaskSetTask extends TeaModel {

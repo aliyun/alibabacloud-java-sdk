@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteTablesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("RouteTables")
     public DescribeRouteTablesResponseBodyRouteTables routeTables;
 
     public static DescribeRouteTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteTablesResponseBody self = new DescribeRouteTablesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRouteTablesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeRouteTablesResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeRouteTablesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeRouteTablesResponseBody setRouteTables(DescribeRouteTablesResponseBodyRouteTables routeTables) {
@@ -148,14 +148,14 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
-        @NameInMap("NextHops")
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops nextHops;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("RouteTableId")
         public String routeTableId;
+
+        @NameInMap("NextHops")
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops nextHops;
 
         public static DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry self = new DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry();
@@ -194,14 +194,6 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             return this.destinationCidrBlock;
         }
 
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setNextHops(DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops nextHops) {
-            this.nextHops = nextHops;
-            return this;
-        }
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops getNextHops() {
-            return this.nextHops;
-        }
-
         public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
@@ -216,6 +208,14 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         }
         public String getRouteTableId() {
             return this.routeTableId;
+        }
+
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntry setNextHops(DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops nextHops) {
+            this.nextHops = nextHops;
+            return this;
+        }
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrysRouteEntryNextHops getNextHops() {
+            return this.nextHops;
         }
 
     }
@@ -246,8 +246,8 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         @NameInMap("VRouterId")
         public String VRouterId;
 
-        @NameInMap("RouteEntrys")
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys;
+        @NameInMap("RouteTableId")
+        public String routeTableId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -255,8 +255,8 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         @NameInMap("RouteTableType")
         public String routeTableType;
 
-        @NameInMap("RouteTableId")
-        public String routeTableId;
+        @NameInMap("RouteEntrys")
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys;
 
         public static DescribeRouteTablesResponseBodyRouteTablesRouteTable build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTablesResponseBodyRouteTablesRouteTable self = new DescribeRouteTablesResponseBodyRouteTablesRouteTable();
@@ -279,12 +279,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             return this.VRouterId;
         }
 
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteEntrys(DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys) {
-            this.routeEntrys = routeEntrys;
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
             return this;
         }
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys getRouteEntrys() {
-            return this.routeEntrys;
+        public String getRouteTableId() {
+            return this.routeTableId;
         }
 
         public DescribeRouteTablesResponseBodyRouteTablesRouteTable setResourceGroupId(String resourceGroupId) {
@@ -303,12 +303,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
             return this.routeTableType;
         }
 
-        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteTableId(String routeTableId) {
-            this.routeTableId = routeTableId;
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTable setRouteEntrys(DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys routeEntrys) {
+            this.routeEntrys = routeEntrys;
             return this;
         }
-        public String getRouteTableId() {
-            return this.routeTableId;
+        public DescribeRouteTablesResponseBodyRouteTablesRouteTableRouteEntrys getRouteEntrys() {
+            return this.routeEntrys;
         }
 
     }

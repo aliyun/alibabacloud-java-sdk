@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("StorageCapacityUnits")
     public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits;
 
     public static DescribeStorageCapacityUnitsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageCapacityUnitsResponseBody self = new DescribeStorageCapacityUnitsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeStorageCapacityUnitsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeStorageCapacityUnitsResponseBody setPageSize(Integer pageSize) {
@@ -56,12 +48,69 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeStorageCapacityUnitsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeStorageCapacityUnitsResponseBody setStorageCapacityUnits(DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits) {
         this.storageCapacityUnits = storageCapacityUnits;
         return this;
     }
     public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits getStorageCapacityUnits() {
         return this.storageCapacityUnits;
+    }
+
+    public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag extends TeaModel {
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        public static DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag self = new DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+    }
+
+    public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag> tag;
+
+        public static DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags self = new DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags setTag(java.util.List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTagsTag> getTag() {
+            return this.tag;
+        }
+
     }
 
     public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit extends TeaModel {
@@ -94,6 +143,9 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Tags")
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags tags;
 
         public static DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit build(java.util.Map<String, ?> map) throws Exception {
             DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit self = new DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit();
@@ -178,6 +230,14 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setTags(DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnitTags getTags() {
+            return this.tags;
         }
 
     }

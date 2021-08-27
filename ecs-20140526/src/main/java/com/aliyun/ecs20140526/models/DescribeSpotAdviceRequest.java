@@ -16,6 +16,9 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("InstanceTypes")
+    public java.util.List<String> instanceTypes;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -45,9 +48,6 @@ public class DescribeSpotAdviceRequest extends TeaModel {
 
     @NameInMap("GpuAmount")
     public Integer gpuAmount;
-
-    @NameInMap("InstanceTypes")
-    public java.util.List<String> instanceTypes;
 
     public static DescribeSpotAdviceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSpotAdviceRequest self = new DescribeSpotAdviceRequest();
@@ -84,6 +84,14 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribeSpotAdviceRequest setInstanceTypes(java.util.List<String> instanceTypes) {
+        this.instanceTypes = instanceTypes;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypes() {
+        return this.instanceTypes;
     }
 
     public DescribeSpotAdviceRequest setRegionId(String regionId) {
@@ -164,14 +172,6 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     }
     public Integer getGpuAmount() {
         return this.gpuAmount;
-    }
-
-    public DescribeSpotAdviceRequest setInstanceTypes(java.util.List<String> instanceTypes) {
-        this.instanceTypes = instanceTypes;
-        return this;
-    }
-    public java.util.List<String> getInstanceTypes() {
-        return this.instanceTypes;
     }
 
 }

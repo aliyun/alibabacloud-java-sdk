@@ -32,23 +32,15 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily extends TeaModel {
-        @NameInMap("InstanceTypeFamilyId")
-        public String instanceTypeFamilyId;
-
         @NameInMap("Generation")
         public String generation;
+
+        @NameInMap("InstanceTypeFamilyId")
+        public String instanceTypeFamilyId;
 
         public static DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily self = new DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily setInstanceTypeFamilyId(String instanceTypeFamilyId) {
-            this.instanceTypeFamilyId = instanceTypeFamilyId;
-            return this;
-        }
-        public String getInstanceTypeFamilyId() {
-            return this.instanceTypeFamilyId;
         }
 
         public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily setGeneration(String generation) {
@@ -57,6 +49,14 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         }
         public String getGeneration() {
             return this.generation;
+        }
+
+        public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily setInstanceTypeFamilyId(String instanceTypeFamilyId) {
+            this.instanceTypeFamilyId = instanceTypeFamilyId;
+            return this;
+        }
+        public String getInstanceTypeFamilyId() {
+            return this.instanceTypeFamilyId;
         }
 
     }

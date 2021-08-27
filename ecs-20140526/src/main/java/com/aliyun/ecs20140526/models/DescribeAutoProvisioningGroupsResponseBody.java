@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("AutoProvisioningGroups")
     public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroups autoProvisioningGroups;
 
     public static DescribeAutoProvisioningGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoProvisioningGroupsResponseBody self = new DescribeAutoProvisioningGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAutoProvisioningGroupsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeAutoProvisioningGroupsResponseBody setPageSize(Integer pageSize) {
@@ -56,6 +48,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeAutoProvisioningGroupsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeAutoProvisioningGroupsResponseBody setAutoProvisioningGroups(DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroups autoProvisioningGroups) {
         this.autoProvisioningGroups = autoProvisioningGroups;
         return this;
@@ -64,127 +64,15 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         return this.autoProvisioningGroups;
     }
 
-    public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions extends TeaModel {
-        @NameInMap("AllocationStrategy")
-        public String allocationStrategy;
-
-        public static DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions self = new DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions setAllocationStrategy(String allocationStrategy) {
-            this.allocationStrategy = allocationStrategy;
-            return this;
-        }
-        public String getAllocationStrategy() {
-            return this.allocationStrategy;
-        }
-
-    }
-
-    public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification extends TeaModel {
-        @NameInMap("SpotTargetCapacity")
-        public Float spotTargetCapacity;
-
-        @NameInMap("DefaultTargetCapacityType")
-        public String defaultTargetCapacityType;
-
-        @NameInMap("TotalTargetCapacity")
-        public Float totalTargetCapacity;
-
-        @NameInMap("PayAsYouGoTargetCapacity")
-        public Float payAsYouGoTargetCapacity;
-
-        public static DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification self = new DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification setSpotTargetCapacity(Float spotTargetCapacity) {
-            this.spotTargetCapacity = spotTargetCapacity;
-            return this;
-        }
-        public Float getSpotTargetCapacity() {
-            return this.spotTargetCapacity;
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification setDefaultTargetCapacityType(String defaultTargetCapacityType) {
-            this.defaultTargetCapacityType = defaultTargetCapacityType;
-            return this;
-        }
-        public String getDefaultTargetCapacityType() {
-            return this.defaultTargetCapacityType;
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification setTotalTargetCapacity(Float totalTargetCapacity) {
-            this.totalTargetCapacity = totalTargetCapacity;
-            return this;
-        }
-        public Float getTotalTargetCapacity() {
-            return this.totalTargetCapacity;
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification setPayAsYouGoTargetCapacity(Float payAsYouGoTargetCapacity) {
-            this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
-            return this;
-        }
-        public Float getPayAsYouGoTargetCapacity() {
-            return this.payAsYouGoTargetCapacity;
-        }
-
-    }
-
-    public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions extends TeaModel {
-        @NameInMap("InstancePoolsToUseCount")
-        public Integer instancePoolsToUseCount;
-
-        @NameInMap("InstanceInterruptionBehavior")
-        public String instanceInterruptionBehavior;
-
-        @NameInMap("AllocationStrategy")
-        public String allocationStrategy;
-
-        public static DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions self = new DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions setInstancePoolsToUseCount(Integer instancePoolsToUseCount) {
-            this.instancePoolsToUseCount = instancePoolsToUseCount;
-            return this;
-        }
-        public Integer getInstancePoolsToUseCount() {
-            return this.instancePoolsToUseCount;
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions setInstanceInterruptionBehavior(String instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = instanceInterruptionBehavior;
-            return this;
-        }
-        public String getInstanceInterruptionBehavior() {
-            return this.instanceInterruptionBehavior;
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions setAllocationStrategy(String allocationStrategy) {
-            this.allocationStrategy = allocationStrategy;
-            return this;
-        }
-        public String getAllocationStrategy() {
-            return this.allocationStrategy;
-        }
-
-    }
-
     public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig extends TeaModel {
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
         @NameInMap("MaxPrice")
         public Float maxPrice;
 
         @NameInMap("Priority")
         public Float priority;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         @NameInMap("WeightedCapacity")
         public Float weightedCapacity;
@@ -195,14 +83,6 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         public static DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig self = new DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
         }
 
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig setMaxPrice(Float maxPrice) {
@@ -219,6 +99,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
         public Float getPriority() {
             return this.priority;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigsLaunchTemplateConfig setWeightedCapacity(Float weightedCapacity) {
@@ -258,27 +146,139 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions extends TeaModel {
+        @NameInMap("InstancePoolsToUseCount")
+        public Integer instancePoolsToUseCount;
+
+        @NameInMap("AllocationStrategy")
+        public String allocationStrategy;
+
+        @NameInMap("InstanceInterruptionBehavior")
+        public String instanceInterruptionBehavior;
+
+        public static DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions self = new DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions setInstancePoolsToUseCount(Integer instancePoolsToUseCount) {
+            this.instancePoolsToUseCount = instancePoolsToUseCount;
+            return this;
+        }
+        public Integer getInstancePoolsToUseCount() {
+            return this.instancePoolsToUseCount;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions setAllocationStrategy(String allocationStrategy) {
+            this.allocationStrategy = allocationStrategy;
+            return this;
+        }
+        public String getAllocationStrategy() {
+            return this.allocationStrategy;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions setInstanceInterruptionBehavior(String instanceInterruptionBehavior) {
+            this.instanceInterruptionBehavior = instanceInterruptionBehavior;
+            return this;
+        }
+        public String getInstanceInterruptionBehavior() {
+            return this.instanceInterruptionBehavior;
+        }
+
+    }
+
+    public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions extends TeaModel {
+        @NameInMap("AllocationStrategy")
+        public String allocationStrategy;
+
+        public static DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions self = new DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions setAllocationStrategy(String allocationStrategy) {
+            this.allocationStrategy = allocationStrategy;
+            return this;
+        }
+        public String getAllocationStrategy() {
+            return this.allocationStrategy;
+        }
+
+    }
+
+    public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification extends TeaModel {
+        @NameInMap("SpotTargetCapacity")
+        public Float spotTargetCapacity;
+
+        @NameInMap("PayAsYouGoTargetCapacity")
+        public Float payAsYouGoTargetCapacity;
+
+        @NameInMap("DefaultTargetCapacityType")
+        public String defaultTargetCapacityType;
+
+        @NameInMap("TotalTargetCapacity")
+        public Float totalTargetCapacity;
+
+        public static DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification self = new DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification setSpotTargetCapacity(Float spotTargetCapacity) {
+            this.spotTargetCapacity = spotTargetCapacity;
+            return this;
+        }
+        public Float getSpotTargetCapacity() {
+            return this.spotTargetCapacity;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification setPayAsYouGoTargetCapacity(Float payAsYouGoTargetCapacity) {
+            this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
+            return this;
+        }
+        public Float getPayAsYouGoTargetCapacity() {
+            return this.payAsYouGoTargetCapacity;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification setDefaultTargetCapacityType(String defaultTargetCapacityType) {
+            this.defaultTargetCapacityType = defaultTargetCapacityType;
+            return this;
+        }
+        public String getDefaultTargetCapacityType() {
+            return this.defaultTargetCapacityType;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification setTotalTargetCapacity(Float totalTargetCapacity) {
+            this.totalTargetCapacity = totalTargetCapacity;
+            return this;
+        }
+        public Float getTotalTargetCapacity() {
+            return this.totalTargetCapacity;
+        }
+
+    }
+
     public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("AutoProvisioningGroupName")
         public String autoProvisioningGroupName;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("MaxSpotPrice")
-        public Float maxSpotPrice;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("TerminateInstances")
         public Boolean terminateInstances;
 
-        @NameInMap("LaunchTemplateId")
-        public String launchTemplateId;
+        @NameInMap("MaxSpotPrice")
+        public Float maxSpotPrice;
 
         @NameInMap("State")
         public String state;
+
+        @NameInMap("LaunchTemplateId")
+        public String launchTemplateId;
 
         @NameInMap("ValidFrom")
         public String validFrom;
@@ -286,14 +286,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         @NameInMap("LaunchTemplateVersion")
         public String launchTemplateVersion;
 
-        @NameInMap("ValidUntil")
-        public String validUntil;
+        @NameInMap("TerminateInstancesWithExpiration")
+        public Boolean terminateInstancesWithExpiration;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("TerminateInstancesWithExpiration")
-        public Boolean terminateInstancesWithExpiration;
+        @NameInMap("ValidUntil")
+        public String validUntil;
 
         @NameInMap("AutoProvisioningGroupType")
         public String autoProvisioningGroupType;
@@ -301,40 +301,24 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         @NameInMap("AutoProvisioningGroupId")
         public String autoProvisioningGroupId;
 
+        @NameInMap("ExcessCapacityTerminationPolicy")
+        public String excessCapacityTerminationPolicy;
+
+        @NameInMap("LaunchTemplateConfigs")
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigs launchTemplateConfigs;
+
+        @NameInMap("SpotOptions")
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions spotOptions;
+
         @NameInMap("PayAsYouGoOptions")
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions payAsYouGoOptions;
 
         @NameInMap("TargetCapacitySpecification")
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification targetCapacitySpecification;
 
-        @NameInMap("SpotOptions")
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions spotOptions;
-
-        @NameInMap("LaunchTemplateConfigs")
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigs launchTemplateConfigs;
-
-        @NameInMap("ExcessCapacityTerminationPolicy")
-        public String excessCapacityTerminationPolicy;
-
         public static DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup self = new DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setAutoProvisioningGroupName(String autoProvisioningGroupName) {
-            this.autoProvisioningGroupName = autoProvisioningGroupName;
-            return this;
-        }
-        public String getAutoProvisioningGroupName() {
-            return this.autoProvisioningGroupName;
         }
 
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setCreationTime(String creationTime) {
@@ -345,12 +329,20 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setMaxSpotPrice(Float maxSpotPrice) {
-            this.maxSpotPrice = maxSpotPrice;
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setAutoProvisioningGroupName(String autoProvisioningGroupName) {
+            this.autoProvisioningGroupName = autoProvisioningGroupName;
             return this;
         }
-        public Float getMaxSpotPrice() {
-            return this.maxSpotPrice;
+        public String getAutoProvisioningGroupName() {
+            return this.autoProvisioningGroupName;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setTerminateInstances(Boolean terminateInstances) {
@@ -361,12 +353,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             return this.terminateInstances;
         }
 
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setLaunchTemplateId(String launchTemplateId) {
-            this.launchTemplateId = launchTemplateId;
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setMaxSpotPrice(Float maxSpotPrice) {
+            this.maxSpotPrice = maxSpotPrice;
             return this;
         }
-        public String getLaunchTemplateId() {
-            return this.launchTemplateId;
+        public Float getMaxSpotPrice() {
+            return this.maxSpotPrice;
         }
 
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setState(String state) {
@@ -375,6 +367,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setLaunchTemplateId(String launchTemplateId) {
+            this.launchTemplateId = launchTemplateId;
+            return this;
+        }
+        public String getLaunchTemplateId() {
+            return this.launchTemplateId;
         }
 
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setValidFrom(String validFrom) {
@@ -393,12 +393,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             return this.launchTemplateVersion;
         }
 
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setValidUntil(String validUntil) {
-            this.validUntil = validUntil;
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setTerminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
+            this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
-        public String getValidUntil() {
-            return this.validUntil;
+        public Boolean getTerminateInstancesWithExpiration() {
+            return this.terminateInstancesWithExpiration;
         }
 
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setRegionId(String regionId) {
@@ -409,12 +409,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setTerminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
-            this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setValidUntil(String validUntil) {
+            this.validUntil = validUntil;
             return this;
         }
-        public Boolean getTerminateInstancesWithExpiration() {
-            return this.terminateInstancesWithExpiration;
+        public String getValidUntil() {
+            return this.validUntil;
         }
 
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setAutoProvisioningGroupType(String autoProvisioningGroupType) {
@@ -433,6 +433,30 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             return this.autoProvisioningGroupId;
         }
 
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setExcessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
+            this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
+            return this;
+        }
+        public String getExcessCapacityTerminationPolicy() {
+            return this.excessCapacityTerminationPolicy;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setLaunchTemplateConfigs(DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigs launchTemplateConfigs) {
+            this.launchTemplateConfigs = launchTemplateConfigs;
+            return this;
+        }
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigs getLaunchTemplateConfigs() {
+            return this.launchTemplateConfigs;
+        }
+
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setSpotOptions(DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions spotOptions) {
+            this.spotOptions = spotOptions;
+            return this;
+        }
+        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions getSpotOptions() {
+            return this.spotOptions;
+        }
+
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setPayAsYouGoOptions(DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupPayAsYouGoOptions payAsYouGoOptions) {
             this.payAsYouGoOptions = payAsYouGoOptions;
             return this;
@@ -447,30 +471,6 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupTargetCapacitySpecification getTargetCapacitySpecification() {
             return this.targetCapacitySpecification;
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setSpotOptions(DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions spotOptions) {
-            this.spotOptions = spotOptions;
-            return this;
-        }
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions getSpotOptions() {
-            return this.spotOptions;
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setLaunchTemplateConfigs(DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigs launchTemplateConfigs) {
-            this.launchTemplateConfigs = launchTemplateConfigs;
-            return this;
-        }
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupLaunchTemplateConfigs getLaunchTemplateConfigs() {
-            return this.launchTemplateConfigs;
-        }
-
-        public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroup setExcessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
-            this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
-            return this;
-        }
-        public String getExcessCapacityTerminationPolicy() {
-            return this.excessCapacityTerminationPolicy;
         }
 
     }

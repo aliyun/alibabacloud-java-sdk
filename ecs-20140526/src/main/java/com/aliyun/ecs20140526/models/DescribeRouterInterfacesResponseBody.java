@@ -4,17 +4,17 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouterInterfacesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("RouterInterfaceSet")
     public DescribeRouterInterfacesResponseBodyRouterInterfaceSet routerInterfaceSet;
@@ -22,14 +22,6 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
     public static DescribeRouterInterfacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouterInterfacesResponseBody self = new DescribeRouterInterfacesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRouterInterfacesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeRouterInterfacesResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeRouterInterfacesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeRouterInterfacesResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeRouterInterfacesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeRouterInterfacesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeRouterInterfacesResponseBody setRouterInterfaceSet(DescribeRouterInterfacesResponseBodyRouterInterfaceSet routerInterfaceSet) {
@@ -113,11 +113,11 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         @NameInMap("ConnectedTime")
         public String connectedTime;
 
-        @NameInMap("HealthCheckSourceIp")
-        public String healthCheckSourceIp;
-
         @NameInMap("OppositeInterfaceStatus")
         public String oppositeInterfaceStatus;
+
+        @NameInMap("HealthCheckSourceIp")
+        public String healthCheckSourceIp;
 
         @NameInMap("EndTime")
         public String endTime;
@@ -131,11 +131,11 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
-        @NameInMap("RouterType")
-        public String routerType;
-
         @NameInMap("Role")
         public String role;
+
+        @NameInMap("RouterType")
+        public String routerType;
 
         @NameInMap("AccessPointId")
         public String accessPointId;
@@ -273,20 +273,20 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.connectedTime;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setHealthCheckSourceIp(String healthCheckSourceIp) {
-            this.healthCheckSourceIp = healthCheckSourceIp;
-            return this;
-        }
-        public String getHealthCheckSourceIp() {
-            return this.healthCheckSourceIp;
-        }
-
         public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeInterfaceStatus(String oppositeInterfaceStatus) {
             this.oppositeInterfaceStatus = oppositeInterfaceStatus;
             return this;
         }
         public String getOppositeInterfaceStatus() {
             return this.oppositeInterfaceStatus;
+        }
+
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setHealthCheckSourceIp(String healthCheckSourceIp) {
+            this.healthCheckSourceIp = healthCheckSourceIp;
+            return this;
+        }
+        public String getHealthCheckSourceIp() {
+            return this.healthCheckSourceIp;
         }
 
         public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setEndTime(String endTime) {
@@ -321,20 +321,20 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.businessStatus;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setRouterType(String routerType) {
-            this.routerType = routerType;
-            return this;
-        }
-        public String getRouterType() {
-            return this.routerType;
-        }
-
         public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setRole(String role) {
             this.role = role;
             return this;
         }
         public String getRole() {
             return this.role;
+        }
+
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setRouterType(String routerType) {
+            this.routerType = routerType;
+            return this;
+        }
+        public String getRouterType() {
+            return this.routerType;
         }
 
         public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setAccessPointId(String accessPointId) {

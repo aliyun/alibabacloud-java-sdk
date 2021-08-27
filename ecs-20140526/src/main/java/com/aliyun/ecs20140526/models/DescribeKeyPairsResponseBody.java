@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("KeyPairs")
     public DescribeKeyPairsResponseBodyKeyPairs keyPairs;
 
     public static DescribeKeyPairsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeKeyPairsResponseBody self = new DescribeKeyPairsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeKeyPairsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeKeyPairsResponseBody setPageSize(Integer pageSize) {
@@ -54,6 +46,14 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeKeyPairsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeKeyPairsResponseBody setKeyPairs(DescribeKeyPairsResponseBodyKeyPairs keyPairs) {
@@ -120,14 +120,14 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         @NameInMap("KeyPairName")
         public String keyPairName;
 
+        @NameInMap("KeyPairFingerPrint")
+        public String keyPairFingerPrint;
+
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         @NameInMap("Tags")
         public DescribeKeyPairsResponseBodyKeyPairsKeyPairTags tags;
-
-        @NameInMap("KeyPairFingerPrint")
-        public String keyPairFingerPrint;
 
         public static DescribeKeyPairsResponseBodyKeyPairsKeyPair build(java.util.Map<String, ?> map) throws Exception {
             DescribeKeyPairsResponseBodyKeyPairsKeyPair self = new DescribeKeyPairsResponseBodyKeyPairsKeyPair();
@@ -150,6 +150,14 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             return this.keyPairName;
         }
 
+        public DescribeKeyPairsResponseBodyKeyPairsKeyPair setKeyPairFingerPrint(String keyPairFingerPrint) {
+            this.keyPairFingerPrint = keyPairFingerPrint;
+            return this;
+        }
+        public String getKeyPairFingerPrint() {
+            return this.keyPairFingerPrint;
+        }
+
         public DescribeKeyPairsResponseBodyKeyPairsKeyPair setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
@@ -164,14 +172,6 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
         public DescribeKeyPairsResponseBodyKeyPairsKeyPairTags getTags() {
             return this.tags;
-        }
-
-        public DescribeKeyPairsResponseBodyKeyPairsKeyPair setKeyPairFingerPrint(String keyPairFingerPrint) {
-            this.keyPairFingerPrint = keyPairFingerPrint;
-            return this;
-        }
-        public String getKeyPairFingerPrint() {
-            return this.keyPairFingerPrint;
         }
 
     }

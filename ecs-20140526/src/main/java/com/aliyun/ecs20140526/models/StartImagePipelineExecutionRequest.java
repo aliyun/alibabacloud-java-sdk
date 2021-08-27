@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartImagePipelineExecutionRequest extends TeaModel {
+    @NameInMap("TemplateTag")
+    public java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -19,9 +22,6 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("TemplateTag")
-    public java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag;
-
     @NameInMap("ImagePipelineId")
     public String imagePipelineId;
 
@@ -31,6 +31,14 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     public static StartImagePipelineExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
         StartImagePipelineExecutionRequest self = new StartImagePipelineExecutionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartImagePipelineExecutionRequest setTemplateTag(java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag) {
+        this.templateTag = templateTag;
+        return this;
+    }
+    public java.util.List<StartImagePipelineExecutionRequestTemplateTag> getTemplateTag() {
+        return this.templateTag;
     }
 
     public StartImagePipelineExecutionRequest setOwnerId(Long ownerId) {
@@ -71,14 +79,6 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public StartImagePipelineExecutionRequest setTemplateTag(java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag) {
-        this.templateTag = templateTag;
-        return this;
-    }
-    public java.util.List<StartImagePipelineExecutionRequestTemplateTag> getTemplateTag() {
-        return this.templateTag;
     }
 
     public StartImagePipelineExecutionRequest setImagePipelineId(String imagePipelineId) {

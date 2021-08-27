@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateNatGatewayResponseBody extends TeaModel {
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     @NameInMap("BandwidthPackageIds")
     public CreateNatGatewayResponseBodyBandwidthPackageIds bandwidthPackageIds;
 
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
-
     public static CreateNatGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateNatGatewayResponseBody self = new CreateNatGatewayResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateNatGatewayResponseBody setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     public CreateNatGatewayResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     }
     public CreateNatGatewayResponseBodyBandwidthPackageIds getBandwidthPackageIds() {
         return this.bandwidthPackageIds;
-    }
-
-    public CreateNatGatewayResponseBody setNatGatewayId(String natGatewayId) {
-        this.natGatewayId = natGatewayId;
-        return this;
-    }
-    public String getNatGatewayId() {
-        return this.natGatewayId;
     }
 
     public static class CreateNatGatewayResponseBodyForwardTableIds extends TeaModel {

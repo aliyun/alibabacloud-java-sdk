@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCommandsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeCommandsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     @NameInMap("Commands")
     public DescribeCommandsResponseBodyCommands commands;
 
     public static DescribeCommandsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCommandsResponseBody self = new DescribeCommandsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCommandsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeCommandsResponseBody setPageSize(Long pageSize) {
@@ -54,6 +46,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
     public Long getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeCommandsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeCommandsResponseBody setCommands(DescribeCommandsResponseBodyCommands commands) {
@@ -84,17 +84,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
     }
 
     public static class DescribeCommandsResponseBodyCommandsCommand extends TeaModel {
-        @NameInMap("Timeout")
-        public Long timeout;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("ParameterNames")
-        public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
+        @NameInMap("Timeout")
+        public Long timeout;
 
         @NameInMap("InvokeTimes")
         public Integer invokeTimes;
@@ -111,11 +108,11 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("Version")
         public Integer version;
 
-        @NameInMap("CommandContent")
-        public String commandContent;
-
         @NameInMap("Provider")
         public String provider;
+
+        @NameInMap("CommandContent")
+        public String commandContent;
 
         @NameInMap("Category")
         public String category;
@@ -129,25 +126,12 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("EnableParameter")
         public Boolean enableParameter;
 
+        @NameInMap("ParameterNames")
+        public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
+
         public static DescribeCommandsResponseBodyCommandsCommand build(java.util.Map<String, ?> map) throws Exception {
             DescribeCommandsResponseBodyCommandsCommand self = new DescribeCommandsResponseBodyCommandsCommand();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCommandsResponseBodyCommandsCommand setTimeout(Long timeout) {
-            this.timeout = timeout;
-            return this;
-        }
-        public Long getTimeout() {
-            return this.timeout;
-        }
-
-        public DescribeCommandsResponseBodyCommandsCommand setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public DescribeCommandsResponseBodyCommandsCommand setCreationTime(String creationTime) {
@@ -158,12 +142,20 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeCommandsResponseBodyCommandsCommand setParameterNames(DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames) {
-            this.parameterNames = parameterNames;
+        public DescribeCommandsResponseBodyCommandsCommand setType(String type) {
+            this.type = type;
             return this;
         }
-        public DescribeCommandsResponseBodyCommandsCommandParameterNames getParameterNames() {
-            return this.parameterNames;
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommand setTimeout(Long timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Long getTimeout() {
+            return this.timeout;
         }
 
         public DescribeCommandsResponseBodyCommandsCommand setInvokeTimes(Integer invokeTimes) {
@@ -206,20 +198,20 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.version;
         }
 
-        public DescribeCommandsResponseBodyCommandsCommand setCommandContent(String commandContent) {
-            this.commandContent = commandContent;
-            return this;
-        }
-        public String getCommandContent() {
-            return this.commandContent;
-        }
-
         public DescribeCommandsResponseBodyCommandsCommand setProvider(String provider) {
             this.provider = provider;
             return this;
         }
         public String getProvider() {
             return this.provider;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommand setCommandContent(String commandContent) {
+            this.commandContent = commandContent;
+            return this;
+        }
+        public String getCommandContent() {
+            return this.commandContent;
         }
 
         public DescribeCommandsResponseBodyCommandsCommand setCategory(String category) {
@@ -252,6 +244,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
         public Boolean getEnableParameter() {
             return this.enableParameter;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommand setParameterNames(DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames) {
+            this.parameterNames = parameterNames;
+            return this;
+        }
+        public DescribeCommandsResponseBodyCommandsCommandParameterNames getParameterNames() {
+            return this.parameterNames;
         }
 
     }

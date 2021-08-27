@@ -43,6 +43,9 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     @NameInMap("Ipv6SourceCidrIp")
     public String ipv6SourceCidrIp;
 
+    @NameInMap("SourcePrefixListId")
+    public String sourcePrefixListId;
+
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 
@@ -174,6 +177,14 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     }
     public String getIpv6SourceCidrIp() {
         return this.ipv6SourceCidrIp;
+    }
+
+    public ModifySecurityGroupRuleRequest setSourcePrefixListId(String sourcePrefixListId) {
+        this.sourcePrefixListId = sourcePrefixListId;
+        return this;
+    }
+    public String getSourcePrefixListId() {
+        return this.sourcePrefixListId;
     }
 
     public ModifySecurityGroupRuleRequest setSourcePortRange(String sourcePortRange) {

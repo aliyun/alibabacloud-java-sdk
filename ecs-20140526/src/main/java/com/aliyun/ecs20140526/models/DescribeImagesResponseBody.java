@@ -4,35 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImagesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Images")
-    public DescribeImagesResponseBodyImages images;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Images")
+    public DescribeImagesResponseBodyImages images;
+
     public static DescribeImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagesResponseBody self = new DescribeImagesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImagesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeImagesResponseBody setPageSize(Integer pageSize) {
@@ -43,14 +35,6 @@ public class DescribeImagesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeImagesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeImagesResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -59,12 +43,20 @@ public class DescribeImagesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeImagesResponseBody setImages(DescribeImagesResponseBodyImages images) {
-        this.images = images;
+    public DescribeImagesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeImagesResponseBodyImages getImages() {
-        return this.images;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeImagesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeImagesResponseBody setRegionId(String regionId) {
@@ -75,53 +67,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public static class DescribeImagesResponseBodyImagesImageTagsTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        public static DescribeImagesResponseBodyImagesImageTagsTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImagesResponseBodyImagesImageTagsTag self = new DescribeImagesResponseBodyImagesImageTagsTag();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeImagesResponseBodyImagesImageTagsTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-        public DescribeImagesResponseBodyImagesImageTagsTag setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
+    public DescribeImagesResponseBody setImages(DescribeImagesResponseBodyImages images) {
+        this.images = images;
+        return this;
     }
-
-    public static class DescribeImagesResponseBodyImagesImageTags extends TeaModel {
-        @NameInMap("Tag")
-        public java.util.List<DescribeImagesResponseBodyImagesImageTagsTag> tag;
-
-        public static DescribeImagesResponseBodyImagesImageTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImagesResponseBodyImagesImageTags self = new DescribeImagesResponseBodyImagesImageTags();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeImagesResponseBodyImagesImageTags setTag(java.util.List<DescribeImagesResponseBodyImagesImageTagsTag> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<DescribeImagesResponseBodyImagesImageTagsTag> getTag() {
-            return this.tag;
-        }
-
+    public DescribeImagesResponseBodyImages getImages() {
+        return this.images;
     }
 
     public static class DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
@@ -250,42 +201,61 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeImagesResponseBodyImagesImage extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public static class DescribeImagesResponseBodyImagesImageTagsTag extends TeaModel {
+        @NameInMap("TagValue")
+        public String tagValue;
 
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        public static DescribeImagesResponseBodyImagesImageTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagesResponseBodyImagesImageTagsTag self = new DescribeImagesResponseBodyImagesImageTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagesResponseBodyImagesImageTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public DescribeImagesResponseBodyImagesImageTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+    }
+
+    public static class DescribeImagesResponseBodyImagesImageTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeImagesResponseBodyImagesImageTagsTag> tag;
+
+        public static DescribeImagesResponseBodyImagesImageTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagesResponseBodyImagesImageTags self = new DescribeImagesResponseBodyImagesImageTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagesResponseBodyImagesImageTags setTag(java.util.List<DescribeImagesResponseBodyImagesImageTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeImagesResponseBodyImagesImageTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeImagesResponseBodyImagesImage extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("IsSupportIoOptimized")
-        public Boolean isSupportIoOptimized;
-
-        @NameInMap("Tags")
-        public DescribeImagesResponseBodyImagesImageTags tags;
-
-        @NameInMap("ImageVersion")
-        public String imageVersion;
-
-        @NameInMap("IsSelfShared")
-        public String isSelfShared;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("OSNameEn")
-        public String OSNameEn;
-
-        @NameInMap("Platform")
-        public String platform;
-
-        @NameInMap("OSName")
-        public String OSName;
-
-        @NameInMap("ImageId")
-        public String imageId;
-
-        @NameInMap("IsSubscribed")
-        public Boolean isSubscribed;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("ImageFamily")
         public String imageFamily;
@@ -296,17 +266,26 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("IsCopied")
         public Boolean isCopied;
 
+        @NameInMap("IsSupportIoOptimized")
+        public Boolean isSupportIoOptimized;
+
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
         @NameInMap("IsSupportCloudinit")
         public Boolean isSupportCloudinit;
 
-        @NameInMap("DiskDeviceMappings")
-        public DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
+        @NameInMap("ImageVersion")
+        public String imageVersion;
 
         @NameInMap("Usage")
         public String usage;
+
+        @NameInMap("IsSelfShared")
+        public String isSelfShared;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("Size")
         public Integer size;
@@ -314,29 +293,48 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("OSNameEn")
+        public String OSNameEn;
+
         @NameInMap("ImageName")
         public String imageName;
+
+        @NameInMap("OSName")
+        public String OSName;
+
+        @NameInMap("ImageId")
+        public String imageId;
 
         @NameInMap("OSType")
         public String OSType;
 
-        @NameInMap("Architecture")
-        public String architecture;
+        @NameInMap("IsSubscribed")
+        public Boolean isSubscribed;
 
         @NameInMap("ProductCode")
         public String productCode;
 
+        @NameInMap("Architecture")
+        public String architecture;
+
+        @NameInMap("DiskDeviceMappings")
+        public DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
+
+        @NameInMap("Tags")
+        public DescribeImagesResponseBodyImagesImageTags tags;
+
+        @NameInMap("IsPublic")
+        public Boolean isPublic;
+
+        @NameInMap("ImageOwnerId")
+        public Long imageOwnerId;
+
         public static DescribeImagesResponseBodyImagesImage build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagesResponseBodyImagesImage self = new DescribeImagesResponseBodyImagesImage();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeImagesResponseBodyImagesImage setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeImagesResponseBodyImagesImage setCreationTime(String creationTime) {
@@ -347,84 +345,12 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeImagesResponseBodyImagesImage setIsSupportIoOptimized(Boolean isSupportIoOptimized) {
-            this.isSupportIoOptimized = isSupportIoOptimized;
+        public DescribeImagesResponseBodyImagesImage setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public Boolean getIsSupportIoOptimized() {
-            return this.isSupportIoOptimized;
-        }
-
-        public DescribeImagesResponseBodyImagesImage setTags(DescribeImagesResponseBodyImagesImageTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeImagesResponseBodyImagesImageTags getTags() {
-            return this.tags;
-        }
-
-        public DescribeImagesResponseBodyImagesImage setImageVersion(String imageVersion) {
-            this.imageVersion = imageVersion;
-            return this;
-        }
-        public String getImageVersion() {
-            return this.imageVersion;
-        }
-
-        public DescribeImagesResponseBodyImagesImage setIsSelfShared(String isSelfShared) {
-            this.isSelfShared = isSelfShared;
-            return this;
-        }
-        public String getIsSelfShared() {
-            return this.isSelfShared;
-        }
-
-        public DescribeImagesResponseBodyImagesImage setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeImagesResponseBodyImagesImage setOSNameEn(String OSNameEn) {
-            this.OSNameEn = OSNameEn;
-            return this;
-        }
-        public String getOSNameEn() {
-            return this.OSNameEn;
-        }
-
-        public DescribeImagesResponseBodyImagesImage setPlatform(String platform) {
-            this.platform = platform;
-            return this;
-        }
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        public DescribeImagesResponseBodyImagesImage setOSName(String OSName) {
-            this.OSName = OSName;
-            return this;
-        }
-        public String getOSName() {
-            return this.OSName;
-        }
-
-        public DescribeImagesResponseBodyImagesImage setImageId(String imageId) {
-            this.imageId = imageId;
-            return this;
-        }
-        public String getImageId() {
-            return this.imageId;
-        }
-
-        public DescribeImagesResponseBodyImagesImage setIsSubscribed(Boolean isSubscribed) {
-            this.isSubscribed = isSubscribed;
-            return this;
-        }
-        public Boolean getIsSubscribed() {
-            return this.isSubscribed;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeImagesResponseBodyImagesImage setImageFamily(String imageFamily) {
@@ -451,6 +377,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.isCopied;
         }
 
+        public DescribeImagesResponseBodyImagesImage setIsSupportIoOptimized(Boolean isSupportIoOptimized) {
+            this.isSupportIoOptimized = isSupportIoOptimized;
+            return this;
+        }
+        public Boolean getIsSupportIoOptimized() {
+            return this.isSupportIoOptimized;
+        }
+
         public DescribeImagesResponseBodyImagesImage setImageOwnerAlias(String imageOwnerAlias) {
             this.imageOwnerAlias = imageOwnerAlias;
             return this;
@@ -467,12 +401,12 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.isSupportCloudinit;
         }
 
-        public DescribeImagesResponseBodyImagesImage setDiskDeviceMappings(DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings) {
-            this.diskDeviceMappings = diskDeviceMappings;
+        public DescribeImagesResponseBodyImagesImage setImageVersion(String imageVersion) {
+            this.imageVersion = imageVersion;
             return this;
         }
-        public DescribeImagesResponseBodyImagesImageDiskDeviceMappings getDiskDeviceMappings() {
-            return this.diskDeviceMappings;
+        public String getImageVersion() {
+            return this.imageVersion;
         }
 
         public DescribeImagesResponseBodyImagesImage setUsage(String usage) {
@@ -481,6 +415,22 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public String getUsage() {
             return this.usage;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setIsSelfShared(String isSelfShared) {
+            this.isSelfShared = isSelfShared;
+            return this;
+        }
+        public String getIsSelfShared() {
+            return this.isSelfShared;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeImagesResponseBodyImagesImage setSize(Integer size) {
@@ -499,12 +449,44 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public DescribeImagesResponseBodyImagesImage setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setOSNameEn(String OSNameEn) {
+            this.OSNameEn = OSNameEn;
+            return this;
+        }
+        public String getOSNameEn() {
+            return this.OSNameEn;
+        }
+
         public DescribeImagesResponseBodyImagesImage setImageName(String imageName) {
             this.imageName = imageName;
             return this;
         }
         public String getImageName() {
             return this.imageName;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setOSName(String OSName) {
+            this.OSName = OSName;
+            return this;
+        }
+        public String getOSName() {
+            return this.OSName;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
         }
 
         public DescribeImagesResponseBodyImagesImage setOSType(String OSType) {
@@ -515,12 +497,12 @@ public class DescribeImagesResponseBody extends TeaModel {
             return this.OSType;
         }
 
-        public DescribeImagesResponseBodyImagesImage setArchitecture(String architecture) {
-            this.architecture = architecture;
+        public DescribeImagesResponseBodyImagesImage setIsSubscribed(Boolean isSubscribed) {
+            this.isSubscribed = isSubscribed;
             return this;
         }
-        public String getArchitecture() {
-            return this.architecture;
+        public Boolean getIsSubscribed() {
+            return this.isSubscribed;
         }
 
         public DescribeImagesResponseBodyImagesImage setProductCode(String productCode) {
@@ -529,6 +511,46 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setArchitecture(String architecture) {
+            this.architecture = architecture;
+            return this;
+        }
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setDiskDeviceMappings(DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings) {
+            this.diskDeviceMappings = diskDeviceMappings;
+            return this;
+        }
+        public DescribeImagesResponseBodyImagesImageDiskDeviceMappings getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setTags(DescribeImagesResponseBodyImagesImageTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeImagesResponseBodyImagesImageTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setIsPublic(Boolean isPublic) {
+            this.isPublic = isPublic;
+            return this;
+        }
+        public Boolean getIsPublic() {
+            return this.isPublic;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setImageOwnerId(Long imageOwnerId) {
+            this.imageOwnerId = imageOwnerId;
+            return this;
+        }
+        public Long getImageOwnerId() {
+            return this.imageOwnerId;
         }
 
     }

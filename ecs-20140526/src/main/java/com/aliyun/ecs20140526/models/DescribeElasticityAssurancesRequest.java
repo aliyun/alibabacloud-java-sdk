@@ -7,6 +7,9 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeElasticityAssurancesRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -24,9 +27,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeElasticityAssurancesRequestTag> tag;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -60,6 +60,14 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     }
     public DescribeElasticityAssurancesRequestPrivatePoolOptions getPrivatePoolOptions() {
         return this.privatePoolOptions;
+    }
+
+    public DescribeElasticityAssurancesRequest setTag(java.util.List<DescribeElasticityAssurancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeElasticityAssurancesRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeElasticityAssurancesRequest setOwnerId(Long ownerId) {
@@ -108,14 +116,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeElasticityAssurancesRequest setTag(java.util.List<DescribeElasticityAssurancesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeElasticityAssurancesRequestTag> getTag() {
-        return this.tag;
     }
 
     public DescribeElasticityAssurancesRequest setMaxResults(Integer maxResults) {

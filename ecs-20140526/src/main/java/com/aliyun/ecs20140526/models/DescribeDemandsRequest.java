@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDemandsRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<DescribeDemandsRequestTag> tag;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -28,8 +31,8 @@ public class DescribeDemandsRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeDemandsRequestTag> tag;
+    @NameInMap("DemandStatus")
+    public java.util.List<String> demandStatus;
 
     @NameInMap("ZoneId")
     public String zoneId;
@@ -49,12 +52,17 @@ public class DescribeDemandsRequest extends TeaModel {
     @NameInMap("DemandType")
     public String demandType;
 
-    @NameInMap("DemandStatus")
-    public java.util.List<String> demandStatus;
-
     public static DescribeDemandsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDemandsRequest self = new DescribeDemandsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDemandsRequest setTag(java.util.List<DescribeDemandsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDemandsRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeDemandsRequest setOwnerId(Long ownerId) {
@@ -121,12 +129,12 @@ public class DescribeDemandsRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public DescribeDemandsRequest setTag(java.util.List<DescribeDemandsRequestTag> tag) {
-        this.tag = tag;
+    public DescribeDemandsRequest setDemandStatus(java.util.List<String> demandStatus) {
+        this.demandStatus = demandStatus;
         return this;
     }
-    public java.util.List<DescribeDemandsRequestTag> getTag() {
-        return this.tag;
+    public java.util.List<String> getDemandStatus() {
+        return this.demandStatus;
     }
 
     public DescribeDemandsRequest setZoneId(String zoneId) {
@@ -175,14 +183,6 @@ public class DescribeDemandsRequest extends TeaModel {
     }
     public String getDemandType() {
         return this.demandType;
-    }
-
-    public DescribeDemandsRequest setDemandStatus(java.util.List<String> demandStatus) {
-        this.demandStatus = demandStatus;
-        return this;
-    }
-    public java.util.List<String> getDemandStatus() {
-        return this.demandStatus;
     }
 
     public static class DescribeDemandsRequestTag extends TeaModel {

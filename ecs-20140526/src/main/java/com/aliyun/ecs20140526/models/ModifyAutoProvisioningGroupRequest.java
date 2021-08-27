@@ -19,6 +19,9 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("LaunchTemplateConfig")
+    public java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
+
     @NameInMap("AutoProvisioningGroupId")
     public String autoProvisioningGroupId;
 
@@ -45,9 +48,6 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
 
     @NameInMap("AutoProvisioningGroupName")
     public String autoProvisioningGroupName;
-
-    @NameInMap("LaunchTemplateConfig")
-    public java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
 
     public static ModifyAutoProvisioningGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAutoProvisioningGroupRequest self = new ModifyAutoProvisioningGroupRequest();
@@ -92,6 +92,14 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setLaunchTemplateConfig(java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig) {
+        this.launchTemplateConfig = launchTemplateConfig;
+        return this;
+    }
+    public java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> getLaunchTemplateConfig() {
+        return this.launchTemplateConfig;
     }
 
     public ModifyAutoProvisioningGroupRequest setAutoProvisioningGroupId(String autoProvisioningGroupId) {
@@ -166,14 +174,6 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
         return this.autoProvisioningGroupName;
     }
 
-    public ModifyAutoProvisioningGroupRequest setLaunchTemplateConfig(java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig) {
-        this.launchTemplateConfig = launchTemplateConfig;
-        return this;
-    }
-    public java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> getLaunchTemplateConfig() {
-        return this.launchTemplateConfig;
-    }
-
     public static class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -184,11 +184,11 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("Priority")
         public Integer priority;
 
-        @NameInMap("WeightedCapacity")
-        public Double weightedCapacity;
-
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("WeightedCapacity")
+        public Double weightedCapacity;
 
         public static ModifyAutoProvisioningGroupRequestLaunchTemplateConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyAutoProvisioningGroupRequestLaunchTemplateConfig self = new ModifyAutoProvisioningGroupRequestLaunchTemplateConfig();
@@ -219,20 +219,20 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
             return this.priority;
         }
 
-        public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
-            return this;
-        }
-        public Double getWeightedCapacity() {
-            return this.weightedCapacity;
-        }
-
         public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
+            this.weightedCapacity = weightedCapacity;
+            return this;
+        }
+        public Double getWeightedCapacity() {
+            return this.weightedCapacity;
         }
 
     }

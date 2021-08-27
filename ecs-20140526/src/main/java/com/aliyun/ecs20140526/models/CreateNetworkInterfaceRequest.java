@@ -58,11 +58,23 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("NetworkInterfaceTrafficMode")
+    public String networkInterfaceTrafficMode;
+
+    @NameInMap("QueuePairNumber")
+    public Integer queuePairNumber;
+
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
+
+    @NameInMap("Ipv6Address")
+    public java.util.List<String> ipv6Address;
+
+    @NameInMap("Ipv6AddressCount")
+    public Integer ipv6AddressCount;
 
     public static CreateNetworkInterfaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkInterfaceRequest self = new CreateNetworkInterfaceRequest();
@@ -213,6 +225,22 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateNetworkInterfaceRequest setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+        this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+        return this;
+    }
+    public String getNetworkInterfaceTrafficMode() {
+        return this.networkInterfaceTrafficMode;
+    }
+
+    public CreateNetworkInterfaceRequest setQueuePairNumber(Integer queuePairNumber) {
+        this.queuePairNumber = queuePairNumber;
+        return this;
+    }
+    public Integer getQueuePairNumber() {
+        return this.queuePairNumber;
+    }
+
     public CreateNetworkInterfaceRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -227,6 +255,22 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
     public java.util.List<String> getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    public CreateNetworkInterfaceRequest setIpv6Address(java.util.List<String> ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+    public java.util.List<String> getIpv6Address() {
+        return this.ipv6Address;
+    }
+
+    public CreateNetworkInterfaceRequest setIpv6AddressCount(Integer ipv6AddressCount) {
+        this.ipv6AddressCount = ipv6AddressCount;
+        return this;
+    }
+    public Integer getIpv6AddressCount() {
+        return this.ipv6AddressCount;
     }
 
     public static class CreateNetworkInterfaceRequestTag extends TeaModel {

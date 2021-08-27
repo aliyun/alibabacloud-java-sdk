@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVRoutersResponseBody extends TeaModel {
-    @NameInMap("VRouters")
-    public DescribeVRoutersResponseBodyVRouters VRouters;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeVRoutersResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("VRouters")
+    public DescribeVRoutersResponseBodyVRouters VRouters;
+
     public static DescribeVRoutersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVRoutersResponseBody self = new DescribeVRoutersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVRoutersResponseBody setVRouters(DescribeVRoutersResponseBodyVRouters VRouters) {
-        this.VRouters = VRouters;
-        return this;
-    }
-    public DescribeVRoutersResponseBodyVRouters getVRouters() {
-        return this.VRouters;
-    }
-
-    public DescribeVRoutersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeVRoutersResponseBody setPageSize(Integer pageSize) {
@@ -62,6 +46,22 @@ public class DescribeVRoutersResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeVRoutersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeVRoutersResponseBody setVRouters(DescribeVRoutersResponseBodyVRouters VRouters) {
+        this.VRouters = VRouters;
+        return this;
+    }
+    public DescribeVRoutersResponseBodyVRouters getVRouters() {
+        return this.VRouters;
     }
 
     public static class DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds extends TeaModel {
@@ -99,11 +99,11 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         @NameInMap("VRouterName")
         public String VRouterName;
 
-        @NameInMap("RouteTableIds")
-        public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds routeTableIds;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RouteTableIds")
+        public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds routeTableIds;
 
         public static DescribeVRoutersResponseBodyVRoutersVRouter build(java.util.Map<String, ?> map) throws Exception {
             DescribeVRoutersResponseBodyVRoutersVRouter self = new DescribeVRoutersResponseBodyVRoutersVRouter();
@@ -150,20 +150,20 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             return this.VRouterName;
         }
 
-        public DescribeVRoutersResponseBodyVRoutersVRouter setRouteTableIds(DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds routeTableIds) {
-            this.routeTableIds = routeTableIds;
-            return this;
-        }
-        public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds getRouteTableIds() {
-            return this.routeTableIds;
-        }
-
         public DescribeVRoutersResponseBodyVRoutersVRouter setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeVRoutersResponseBodyVRoutersVRouter setRouteTableIds(DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds routeTableIds) {
+            this.routeTableIds = routeTableIds;
+            return this;
+        }
+        public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds getRouteTableIds() {
+            return this.routeTableIds;
         }
 
     }

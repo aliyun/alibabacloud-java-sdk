@@ -4,40 +4,24 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsResponseBody extends TeaModel {
-    @NameInMap("AccessPointSet")
-    public DescribeAccessPointsResponseBodyAccessPointSet accessPointSet;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("AccessPointSet")
+    public DescribeAccessPointsResponseBodyAccessPointSet accessPointSet;
+
     public static DescribeAccessPointsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessPointsResponseBody self = new DescribeAccessPointsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccessPointsResponseBody setAccessPointSet(DescribeAccessPointsResponseBodyAccessPointSet accessPointSet) {
-        this.accessPointSet = accessPointSet;
-        return this;
-    }
-    public DescribeAccessPointsResponseBodyAccessPointSet getAccessPointSet() {
-        return this.accessPointSet;
-    }
-
-    public DescribeAccessPointsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeAccessPointsResponseBody setRequestId(String requestId) {
@@ -48,6 +32,14 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeAccessPointsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeAccessPointsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -56,12 +48,20 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAccessPointsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAccessPointsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeAccessPointsResponseBody setAccessPointSet(DescribeAccessPointsResponseBodyAccessPointSet accessPointSet) {
+        this.accessPointSet = accessPointSet;
+        return this;
+    }
+    public DescribeAccessPointsResponseBodyAccessPointSet getAccessPointSet() {
+        return this.accessPointSet;
     }
 
     public static class DescribeAccessPointsResponseBodyAccessPointSetAccessPointType extends TeaModel {

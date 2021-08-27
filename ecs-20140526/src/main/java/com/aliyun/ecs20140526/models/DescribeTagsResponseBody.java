@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,20 +13,15 @@ public class DescribeTagsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Tags")
     public DescribeTagsResponseBodyTags tags;
 
     public static DescribeTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagsResponseBody self = new DescribeTagsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTagsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeTagsResponseBody setRequestId(String requestId) {
@@ -56,6 +48,14 @@ public class DescribeTagsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeTagsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeTagsResponseBody setTags(DescribeTagsResponseBodyTags tags) {
         this.tags = tags;
         return this;
@@ -71,11 +71,11 @@ public class DescribeTagsResponseBody extends TeaModel {
         @NameInMap("Image")
         public Integer image;
 
-        @NameInMap("SnapshotPolicy")
-        public Integer snapshotPolicy;
-
         @NameInMap("Ddh")
         public Integer ddh;
+
+        @NameInMap("SnapshotPolicy")
+        public Integer snapshotPolicy;
 
         @NameInMap("Securitygroup")
         public Integer securitygroup;
@@ -86,17 +86,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         @NameInMap("ReservedInstance")
         public Integer reservedInstance;
 
-        @NameInMap("Eni")
-        public Integer eni;
-
         @NameInMap("LaunchTemplate")
         public Integer launchTemplate;
 
-        @NameInMap("KeyPair")
-        public Integer keyPair;
+        @NameInMap("Eni")
+        public Integer eni;
 
         @NameInMap("Disk")
         public Integer disk;
+
+        @NameInMap("KeyPair")
+        public Integer keyPair;
 
         @NameInMap("Volume")
         public Integer volume;
@@ -122,20 +122,20 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.image;
         }
 
-        public DescribeTagsResponseBodyTagsTagResourceTypeCount setSnapshotPolicy(Integer snapshotPolicy) {
-            this.snapshotPolicy = snapshotPolicy;
-            return this;
-        }
-        public Integer getSnapshotPolicy() {
-            return this.snapshotPolicy;
-        }
-
         public DescribeTagsResponseBodyTagsTagResourceTypeCount setDdh(Integer ddh) {
             this.ddh = ddh;
             return this;
         }
         public Integer getDdh() {
             return this.ddh;
+        }
+
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setSnapshotPolicy(Integer snapshotPolicy) {
+            this.snapshotPolicy = snapshotPolicy;
+            return this;
+        }
+        public Integer getSnapshotPolicy() {
+            return this.snapshotPolicy;
         }
 
         public DescribeTagsResponseBodyTagsTagResourceTypeCount setSecuritygroup(Integer securitygroup) {
@@ -162,14 +162,6 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.reservedInstance;
         }
 
-        public DescribeTagsResponseBodyTagsTagResourceTypeCount setEni(Integer eni) {
-            this.eni = eni;
-            return this;
-        }
-        public Integer getEni() {
-            return this.eni;
-        }
-
         public DescribeTagsResponseBodyTagsTagResourceTypeCount setLaunchTemplate(Integer launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
@@ -178,12 +170,12 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.launchTemplate;
         }
 
-        public DescribeTagsResponseBodyTagsTagResourceTypeCount setKeyPair(Integer keyPair) {
-            this.keyPair = keyPair;
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setEni(Integer eni) {
+            this.eni = eni;
             return this;
         }
-        public Integer getKeyPair() {
-            return this.keyPair;
+        public Integer getEni() {
+            return this.eni;
         }
 
         public DescribeTagsResponseBodyTagsTagResourceTypeCount setDisk(Integer disk) {
@@ -192,6 +184,14 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
         public Integer getDisk() {
             return this.disk;
+        }
+
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setKeyPair(Integer keyPair) {
+            this.keyPair = keyPair;
+            return this;
+        }
+        public Integer getKeyPair() {
+            return this.keyPair;
         }
 
         public DescribeTagsResponseBodyTagsTagResourceTypeCount setVolume(Integer volume) {
@@ -205,26 +205,18 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagsTag extends TeaModel {
-        @NameInMap("ResourceTypeCount")
-        public DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount;
-
         @NameInMap("TagValue")
         public String tagValue;
 
         @NameInMap("TagKey")
         public String tagKey;
 
+        @NameInMap("ResourceTypeCount")
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount;
+
         public static DescribeTagsResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeTagsResponseBodyTagsTag self = new DescribeTagsResponseBodyTagsTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTagsResponseBodyTagsTag setResourceTypeCount(DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount) {
-            this.resourceTypeCount = resourceTypeCount;
-            return this;
-        }
-        public DescribeTagsResponseBodyTagsTagResourceTypeCount getResourceTypeCount() {
-            return this.resourceTypeCount;
         }
 
         public DescribeTagsResponseBodyTagsTag setTagValue(String tagValue) {
@@ -241,6 +233,14 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeTagsResponseBodyTagsTag setResourceTypeCount(DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount) {
+            this.resourceTypeCount = resourceTypeCount;
+            return this;
+        }
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount getResourceTypeCount() {
+            return this.resourceTypeCount;
         }
 
     }

@@ -31,120 +31,6 @@ public class DescribeZonesResponseBody extends TeaModel {
         return this.zones;
     }
 
-    public static class DescribeZonesResponseBodyZonesZoneAvailableResourceCreation extends TeaModel {
-        @NameInMap("ResourceTypes")
-        public java.util.List<String> resourceTypes;
-
-        public static DescribeZonesResponseBodyZonesZoneAvailableResourceCreation build(java.util.Map<String, ?> map) throws Exception {
-            DescribeZonesResponseBodyZonesZoneAvailableResourceCreation self = new DescribeZonesResponseBodyZonesZoneAvailableResourceCreation();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation setResourceTypes(java.util.List<String> resourceTypes) {
-            this.resourceTypes = resourceTypes;
-            return this;
-        }
-        public java.util.List<String> getResourceTypes() {
-            return this.resourceTypes;
-        }
-
-    }
-
-    public static class DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations extends TeaModel {
-        @NameInMap("DedicatedHostGeneration")
-        public java.util.List<String> dedicatedHostGeneration;
-
-        public static DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations build(java.util.Map<String, ?> map) throws Exception {
-            DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations self = new DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations setDedicatedHostGeneration(java.util.List<String> dedicatedHostGeneration) {
-            this.dedicatedHostGeneration = dedicatedHostGeneration;
-            return this;
-        }
-        public java.util.List<String> getDedicatedHostGeneration() {
-            return this.dedicatedHostGeneration;
-        }
-
-    }
-
-    public static class DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes extends TeaModel {
-        @NameInMap("InstanceTypes")
-        public java.util.List<String> instanceTypes;
-
-        public static DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes self = new DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes setInstanceTypes(java.util.List<String> instanceTypes) {
-            this.instanceTypes = instanceTypes;
-            return this;
-        }
-        public java.util.List<String> getInstanceTypes() {
-            return this.instanceTypes;
-        }
-
-    }
-
-    public static class DescribeZonesResponseBodyZonesZoneAvailableDiskCategories extends TeaModel {
-        @NameInMap("DiskCategories")
-        public java.util.List<String> diskCategories;
-
-        public static DescribeZonesResponseBodyZonesZoneAvailableDiskCategories build(java.util.Map<String, ?> map) throws Exception {
-            DescribeZonesResponseBodyZonesZoneAvailableDiskCategories self = new DescribeZonesResponseBodyZonesZoneAvailableDiskCategories();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories setDiskCategories(java.util.List<String> diskCategories) {
-            this.diskCategories = diskCategories;
-            return this;
-        }
-        public java.util.List<String> getDiskCategories() {
-            return this.diskCategories;
-        }
-
-    }
-
-    public static class DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes extends TeaModel {
-        @NameInMap("DedicatedHostType")
-        public java.util.List<String> dedicatedHostType;
-
-        public static DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes self = new DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes setDedicatedHostType(java.util.List<String> dedicatedHostType) {
-            this.dedicatedHostType = dedicatedHostType;
-            return this;
-        }
-        public java.util.List<String> getDedicatedHostType() {
-            return this.dedicatedHostType;
-        }
-
-    }
-
-    public static class DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories extends TeaModel {
-        @NameInMap("VolumeCategories")
-        public java.util.List<String> volumeCategories;
-
-        public static DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories build(java.util.Map<String, ?> map) throws Exception {
-            DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories self = new DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories setVolumeCategories(java.util.List<String> volumeCategories) {
-            this.volumeCategories = volumeCategories;
-            return this;
-        }
-        public java.util.List<String> getVolumeCategories() {
-            return this.volumeCategories;
-        }
-
-    }
-
     public static class DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoSystemDiskCategories extends TeaModel {
         @NameInMap("supportedSystemDiskCategory")
         public java.util.List<String> supportedSystemDiskCategory;
@@ -363,21 +249,138 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeZonesResponseBodyZonesZoneAvailableResourceCreation extends TeaModel {
+        @NameInMap("ResourceTypes")
+        public java.util.List<String> resourceTypes;
+
+        public static DescribeZonesResponseBodyZonesZoneAvailableResourceCreation build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesResponseBodyZonesZoneAvailableResourceCreation self = new DescribeZonesResponseBodyZonesZoneAvailableResourceCreation();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation setResourceTypes(java.util.List<String> resourceTypes) {
+            this.resourceTypes = resourceTypes;
+            return this;
+        }
+        public java.util.List<String> getResourceTypes() {
+            return this.resourceTypes;
+        }
+
+    }
+
+    public static class DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations extends TeaModel {
+        @NameInMap("DedicatedHostGeneration")
+        public java.util.List<String> dedicatedHostGeneration;
+
+        public static DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations self = new DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations setDedicatedHostGeneration(java.util.List<String> dedicatedHostGeneration) {
+            this.dedicatedHostGeneration = dedicatedHostGeneration;
+            return this;
+        }
+        public java.util.List<String> getDedicatedHostGeneration() {
+            return this.dedicatedHostGeneration;
+        }
+
+    }
+
+    public static class DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes extends TeaModel {
+        @NameInMap("InstanceTypes")
+        public java.util.List<String> instanceTypes;
+
+        public static DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes self = new DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes setInstanceTypes(java.util.List<String> instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+    }
+
+    public static class DescribeZonesResponseBodyZonesZoneAvailableDiskCategories extends TeaModel {
+        @NameInMap("DiskCategories")
+        public java.util.List<String> diskCategories;
+
+        public static DescribeZonesResponseBodyZonesZoneAvailableDiskCategories build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesResponseBodyZonesZoneAvailableDiskCategories self = new DescribeZonesResponseBodyZonesZoneAvailableDiskCategories();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories setDiskCategories(java.util.List<String> diskCategories) {
+            this.diskCategories = diskCategories;
+            return this;
+        }
+        public java.util.List<String> getDiskCategories() {
+            return this.diskCategories;
+        }
+
+    }
+
+    public static class DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes extends TeaModel {
+        @NameInMap("DedicatedHostType")
+        public java.util.List<String> dedicatedHostType;
+
+        public static DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes self = new DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes setDedicatedHostType(java.util.List<String> dedicatedHostType) {
+            this.dedicatedHostType = dedicatedHostType;
+            return this;
+        }
+        public java.util.List<String> getDedicatedHostType() {
+            return this.dedicatedHostType;
+        }
+
+    }
+
+    public static class DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories extends TeaModel {
+        @NameInMap("VolumeCategories")
+        public java.util.List<String> volumeCategories;
+
+        public static DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories self = new DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories setVolumeCategories(java.util.List<String> volumeCategories) {
+            this.volumeCategories = volumeCategories;
+            return this;
+        }
+        public java.util.List<String> getVolumeCategories() {
+            return this.volumeCategories;
+        }
+
+    }
+
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        @NameInMap("LocalName")
+        public String localName;
+
+        @NameInMap("AvailableResources")
+        public DescribeZonesResponseBodyZonesZoneAvailableResources availableResources;
+
         @NameInMap("AvailableResourceCreation")
         public DescribeZonesResponseBodyZonesZoneAvailableResourceCreation availableResourceCreation;
 
         @NameInMap("DedicatedHostGenerations")
         public DescribeZonesResponseBodyZonesZoneDedicatedHostGenerations dedicatedHostGenerations;
 
-        @NameInMap("LocalName")
-        public String localName;
-
         @NameInMap("AvailableInstanceTypes")
         public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes availableInstanceTypes;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
 
         @NameInMap("AvailableDiskCategories")
         public DescribeZonesResponseBodyZonesZoneAvailableDiskCategories availableDiskCategories;
@@ -388,12 +391,33 @@ public class DescribeZonesResponseBody extends TeaModel {
         @NameInMap("AvailableVolumeCategories")
         public DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories availableVolumeCategories;
 
-        @NameInMap("AvailableResources")
-        public DescribeZonesResponseBodyZonesZoneAvailableResources availableResources;
-
         public static DescribeZonesResponseBodyZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseBodyZonesZone self = new DescribeZonesResponseBodyZonesZone();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeZonesResponseBodyZonesZone setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        public DescribeZonesResponseBodyZonesZone setAvailableResources(DescribeZonesResponseBodyZonesZoneAvailableResources availableResources) {
+            this.availableResources = availableResources;
+            return this;
+        }
+        public DescribeZonesResponseBodyZonesZoneAvailableResources getAvailableResources() {
+            return this.availableResources;
         }
 
         public DescribeZonesResponseBodyZonesZone setAvailableResourceCreation(DescribeZonesResponseBodyZonesZoneAvailableResourceCreation availableResourceCreation) {
@@ -412,28 +436,12 @@ public class DescribeZonesResponseBody extends TeaModel {
             return this.dedicatedHostGenerations;
         }
 
-        public DescribeZonesResponseBodyZonesZone setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
-        }
-
         public DescribeZonesResponseBodyZonesZone setAvailableInstanceTypes(DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes availableInstanceTypes) {
             this.availableInstanceTypes = availableInstanceTypes;
             return this;
         }
         public DescribeZonesResponseBodyZonesZoneAvailableInstanceTypes getAvailableInstanceTypes() {
             return this.availableInstanceTypes;
-        }
-
-        public DescribeZonesResponseBodyZonesZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeZonesResponseBodyZonesZone setAvailableDiskCategories(DescribeZonesResponseBodyZonesZoneAvailableDiskCategories availableDiskCategories) {
@@ -458,14 +466,6 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
         public DescribeZonesResponseBodyZonesZoneAvailableVolumeCategories getAvailableVolumeCategories() {
             return this.availableVolumeCategories;
-        }
-
-        public DescribeZonesResponseBodyZonesZone setAvailableResources(DescribeZonesResponseBodyZonesZoneAvailableResources availableResources) {
-            this.availableResources = availableResources;
-            return this;
-        }
-        public DescribeZonesResponseBodyZonesZoneAvailableResources getAvailableResources() {
-            return this.availableResources;
         }
 
     }

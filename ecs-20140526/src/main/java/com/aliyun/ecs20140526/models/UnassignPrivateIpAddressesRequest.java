@@ -19,11 +19,11 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("NetworkInterfaceId")
-    public String networkInterfaceId;
-
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
+
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
 
     public static UnassignPrivateIpAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         UnassignPrivateIpAddressesRequest self = new UnassignPrivateIpAddressesRequest();
@@ -70,20 +70,20 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UnassignPrivateIpAddressesRequest setNetworkInterfaceId(String networkInterfaceId) {
-        this.networkInterfaceId = networkInterfaceId;
-        return this;
-    }
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
-    }
-
     public UnassignPrivateIpAddressesRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
     public java.util.List<String> getPrivateIpAddress() {
         return this.privateIpAddress;
+    }
+
+    public UnassignPrivateIpAddressesRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
 }
