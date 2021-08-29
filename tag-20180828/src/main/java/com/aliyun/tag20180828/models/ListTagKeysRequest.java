@@ -28,8 +28,8 @@ public class ListTagKeysRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("TagProduct")
-    public String tagProduct;
+    @NameInMap("QueryType")
+    public String queryType;
 
     public static ListTagKeysRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagKeysRequest self = new ListTagKeysRequest();
@@ -100,12 +100,12 @@ public class ListTagKeysRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public ListTagKeysRequest setTagProduct(String tagProduct) {
-        this.tagProduct = tagProduct;
+    public ListTagKeysRequest setQueryType(String queryType) {
+        this.queryType = queryType;
         return this;
     }
-    public String getTagProduct() {
-        return this.tagProduct;
+    public String getQueryType() {
+        return this.queryType;
     }
 
 }

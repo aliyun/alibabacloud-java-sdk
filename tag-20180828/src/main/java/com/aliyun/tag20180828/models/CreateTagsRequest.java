@@ -1,0 +1,138 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.tag20180828.models;
+
+import com.aliyun.tea.*;
+
+public class CreateTagsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("TagKeyValueParamList")
+    public java.util.List<CreateTagsRequestTagKeyValueParamList> tagKeyValueParamList;
+
+    public static CreateTagsRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateTagsRequest self = new CreateTagsRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateTagsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateTagsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateTagsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateTagsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateTagsRequest setTagKeyValueParamList(java.util.List<CreateTagsRequestTagKeyValueParamList> tagKeyValueParamList) {
+        this.tagKeyValueParamList = tagKeyValueParamList;
+        return this;
+    }
+    public java.util.List<CreateTagsRequestTagKeyValueParamList> getTagKeyValueParamList() {
+        return this.tagKeyValueParamList;
+    }
+
+    public static class CreateTagsRequestTagKeyValueParamListTagValueParamList extends TeaModel {
+        @NameInMap("Value")
+        public String value;
+
+        @NameInMap("Description")
+        public String description;
+
+        public static CreateTagsRequestTagKeyValueParamListTagValueParamList build(java.util.Map<String, ?> map) throws Exception {
+            CreateTagsRequestTagKeyValueParamListTagValueParamList self = new CreateTagsRequestTagKeyValueParamListTagValueParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTagsRequestTagKeyValueParamListTagValueParamList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public CreateTagsRequestTagKeyValueParamListTagValueParamList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+    }
+
+    public static class CreateTagsRequestTagKeyValueParamList extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("TagValueParamList")
+        public java.util.List<CreateTagsRequestTagKeyValueParamListTagValueParamList> tagValueParamList;
+
+        @NameInMap("Description")
+        public String description;
+
+        public static CreateTagsRequestTagKeyValueParamList build(java.util.Map<String, ?> map) throws Exception {
+            CreateTagsRequestTagKeyValueParamList self = new CreateTagsRequestTagKeyValueParamList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTagsRequestTagKeyValueParamList setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTagsRequestTagKeyValueParamList setTagValueParamList(java.util.List<CreateTagsRequestTagKeyValueParamListTagValueParamList> tagValueParamList) {
+            this.tagValueParamList = tagValueParamList;
+            return this;
+        }
+        public java.util.List<CreateTagsRequestTagKeyValueParamListTagValueParamList> getTagValueParamList() {
+            return this.tagValueParamList;
+        }
+
+        public CreateTagsRequestTagKeyValueParamList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+    }
+
+}

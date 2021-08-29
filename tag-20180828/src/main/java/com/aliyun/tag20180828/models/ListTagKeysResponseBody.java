@@ -49,6 +49,9 @@ public class ListTagKeysResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("Description")
+        public String description;
+
         public static ListTagKeysResponseBodyKeysKey build(java.util.Map<String, ?> map) throws Exception {
             ListTagKeysResponseBodyKeysKey self = new ListTagKeysResponseBodyKeysKey();
             return TeaModel.build(map, self);
@@ -68,6 +71,14 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public ListTagKeysResponseBodyKeysKey setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
     }
