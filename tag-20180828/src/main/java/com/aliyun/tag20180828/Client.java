@@ -75,6 +75,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CreateTagsResponse createTagsWithOptions(CreateTagsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateTags", "2018-08-28", "HTTPS", "POST", "AK", "json", req, runtime), new CreateTagsResponse());
+    }
+
+    public CreateTagsResponse createTags(CreateTagsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createTagsWithOptions(request, runtime);
+    }
+
+    public DeleteTagResponse deleteTagWithOptions(DeleteTagRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteTag", "2018-08-28", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteTagResponse());
+    }
+
+    public DeleteTagResponse deleteTag(DeleteTagRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteTagWithOptions(request, runtime);
+    }
+
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
