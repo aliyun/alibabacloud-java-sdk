@@ -4,23 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
-    @NameInMap("Services")
-    public ListServicesResponseBodyServices services;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Services")
+    public ListServicesResponseBodyServices services;
 
     public static ListServicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListServicesResponseBody self = new ListServicesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListServicesResponseBody setServices(ListServicesResponseBodyServices services) {
-        this.services = services;
-        return this;
-    }
-    public ListServicesResponseBodyServices getServices() {
-        return this.services;
     }
 
     public ListServicesResponseBody setRequestId(String requestId) {
@@ -31,12 +23,20 @@ public class ListServicesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListServicesResponseBodyServicesService extends TeaModel {
-        @NameInMap("Pid")
-        public String pid;
+    public ListServicesResponseBody setServices(ListServicesResponseBodyServices services) {
+        this.services = services;
+        return this;
+    }
+    public ListServicesResponseBodyServices getServices() {
+        return this.services;
+    }
 
+    public static class ListServicesResponseBodyServicesService extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
+
+        @NameInMap("Pid")
+        public String pid;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -46,20 +46,20 @@ public class ListServicesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListServicesResponseBodyServicesService setPid(String pid) {
-            this.pid = pid;
-            return this;
-        }
-        public String getPid() {
-            return this.pid;
-        }
-
         public ListServicesResponseBodyServicesService setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        public ListServicesResponseBodyServicesService setPid(String pid) {
+            this.pid = pid;
+            return this;
+        }
+        public String getPid() {
+            return this.pid;
         }
 
         public ListServicesResponseBodyServicesService setRegionId(String regionId) {

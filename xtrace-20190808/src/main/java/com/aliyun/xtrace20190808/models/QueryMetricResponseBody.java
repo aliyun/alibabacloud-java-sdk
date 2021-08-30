@@ -4,23 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryMetricResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public String data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static QueryMetricResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryMetricResponseBody self = new QueryMetricResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryMetricResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public QueryMetricResponseBody setData(String data) {
@@ -29,6 +21,14 @@ public class QueryMetricResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public QueryMetricResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

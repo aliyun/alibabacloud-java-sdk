@@ -4,23 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class ListSpanNamesResponseBody extends TeaModel {
-    @NameInMap("SpanNames")
-    public ListSpanNamesResponseBodySpanNames spanNames;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SpanNames")
+    public ListSpanNamesResponseBodySpanNames spanNames;
 
     public static ListSpanNamesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSpanNamesResponseBody self = new ListSpanNamesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSpanNamesResponseBody setSpanNames(ListSpanNamesResponseBodySpanNames spanNames) {
-        this.spanNames = spanNames;
-        return this;
-    }
-    public ListSpanNamesResponseBodySpanNames getSpanNames() {
-        return this.spanNames;
     }
 
     public ListSpanNamesResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class ListSpanNamesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListSpanNamesResponseBody setSpanNames(ListSpanNamesResponseBodySpanNames spanNames) {
+        this.spanNames = spanNames;
+        return this;
+    }
+    public ListSpanNamesResponseBodySpanNames getSpanNames() {
+        return this.spanNames;
     }
 
     public static class ListSpanNamesResponseBodySpanNames extends TeaModel {
