@@ -130,23 +130,15 @@ public class GetTraceResponseBody extends TeaModel {
     }
 
     public static class GetTraceResponseBodySpansSpanLogEventListLogEvent extends TeaModel {
-        @NameInMap("TagEntryList")
-        public GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList tagEntryList;
-
         @NameInMap("Timestamp")
         public Long timestamp;
+
+        @NameInMap("TagEntryList")
+        public GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList tagEntryList;
 
         public static GetTraceResponseBodySpansSpanLogEventListLogEvent build(java.util.Map<String, ?> map) throws Exception {
             GetTraceResponseBodySpansSpanLogEventListLogEvent self = new GetTraceResponseBodySpansSpanLogEventListLogEvent();
             return TeaModel.build(map, self);
-        }
-
-        public GetTraceResponseBodySpansSpanLogEventListLogEvent setTagEntryList(GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList tagEntryList) {
-            this.tagEntryList = tagEntryList;
-            return this;
-        }
-        public GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList getTagEntryList() {
-            return this.tagEntryList;
         }
 
         public GetTraceResponseBodySpansSpanLogEventListLogEvent setTimestamp(Long timestamp) {
@@ -155,6 +147,14 @@ public class GetTraceResponseBody extends TeaModel {
         }
         public Long getTimestamp() {
             return this.timestamp;
+        }
+
+        public GetTraceResponseBodySpansSpanLogEventListLogEvent setTagEntryList(GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList tagEntryList) {
+            this.tagEntryList = tagEntryList;
+            return this;
+        }
+        public GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryList getTagEntryList() {
+            return this.tagEntryList;
         }
 
     }
@@ -182,29 +182,20 @@ public class GetTraceResponseBody extends TeaModel {
         @NameInMap("SpanId")
         public String spanId;
 
-        @NameInMap("OperationName")
-        public String operationName;
-
-        @NameInMap("ResultCode")
-        public String resultCode;
-
-        @NameInMap("Timestamp")
-        public Long timestamp;
-
-        @NameInMap("TagEntryList")
-        public GetTraceResponseBodySpansSpanTagEntryList tagEntryList;
-
-        @NameInMap("LogEventList")
-        public GetTraceResponseBodySpansSpanLogEventList logEventList;
-
         @NameInMap("HaveStack")
         public Boolean haveStack;
 
         @NameInMap("ServiceIp")
         public String serviceIp;
 
+        @NameInMap("OperationName")
+        public String operationName;
+
         @NameInMap("ParentSpanId")
         public String parentSpanId;
+
+        @NameInMap("ResultCode")
+        public String resultCode;
 
         @NameInMap("Duration")
         public Long duration;
@@ -212,11 +203,20 @@ public class GetTraceResponseBody extends TeaModel {
         @NameInMap("RpcId")
         public String rpcId;
 
+        @NameInMap("Timestamp")
+        public Long timestamp;
+
         @NameInMap("ServiceName")
         public String serviceName;
 
         @NameInMap("TraceID")
         public String traceID;
+
+        @NameInMap("TagEntryList")
+        public GetTraceResponseBodySpansSpanTagEntryList tagEntryList;
+
+        @NameInMap("LogEventList")
+        public GetTraceResponseBodySpansSpanLogEventList logEventList;
 
         public static GetTraceResponseBodySpansSpan build(java.util.Map<String, ?> map) throws Exception {
             GetTraceResponseBodySpansSpan self = new GetTraceResponseBodySpansSpan();
@@ -229,46 +229,6 @@ public class GetTraceResponseBody extends TeaModel {
         }
         public String getSpanId() {
             return this.spanId;
-        }
-
-        public GetTraceResponseBodySpansSpan setOperationName(String operationName) {
-            this.operationName = operationName;
-            return this;
-        }
-        public String getOperationName() {
-            return this.operationName;
-        }
-
-        public GetTraceResponseBodySpansSpan setResultCode(String resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-        public String getResultCode() {
-            return this.resultCode;
-        }
-
-        public GetTraceResponseBodySpansSpan setTimestamp(Long timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public Long getTimestamp() {
-            return this.timestamp;
-        }
-
-        public GetTraceResponseBodySpansSpan setTagEntryList(GetTraceResponseBodySpansSpanTagEntryList tagEntryList) {
-            this.tagEntryList = tagEntryList;
-            return this;
-        }
-        public GetTraceResponseBodySpansSpanTagEntryList getTagEntryList() {
-            return this.tagEntryList;
-        }
-
-        public GetTraceResponseBodySpansSpan setLogEventList(GetTraceResponseBodySpansSpanLogEventList logEventList) {
-            this.logEventList = logEventList;
-            return this;
-        }
-        public GetTraceResponseBodySpansSpanLogEventList getLogEventList() {
-            return this.logEventList;
         }
 
         public GetTraceResponseBodySpansSpan setHaveStack(Boolean haveStack) {
@@ -287,12 +247,28 @@ public class GetTraceResponseBody extends TeaModel {
             return this.serviceIp;
         }
 
+        public GetTraceResponseBodySpansSpan setOperationName(String operationName) {
+            this.operationName = operationName;
+            return this;
+        }
+        public String getOperationName() {
+            return this.operationName;
+        }
+
         public GetTraceResponseBodySpansSpan setParentSpanId(String parentSpanId) {
             this.parentSpanId = parentSpanId;
             return this;
         }
         public String getParentSpanId() {
             return this.parentSpanId;
+        }
+
+        public GetTraceResponseBodySpansSpan setResultCode(String resultCode) {
+            this.resultCode = resultCode;
+            return this;
+        }
+        public String getResultCode() {
+            return this.resultCode;
         }
 
         public GetTraceResponseBodySpansSpan setDuration(Long duration) {
@@ -311,6 +287,14 @@ public class GetTraceResponseBody extends TeaModel {
             return this.rpcId;
         }
 
+        public GetTraceResponseBodySpansSpan setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
         public GetTraceResponseBodySpansSpan setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
@@ -325,6 +309,22 @@ public class GetTraceResponseBody extends TeaModel {
         }
         public String getTraceID() {
             return this.traceID;
+        }
+
+        public GetTraceResponseBodySpansSpan setTagEntryList(GetTraceResponseBodySpansSpanTagEntryList tagEntryList) {
+            this.tagEntryList = tagEntryList;
+            return this;
+        }
+        public GetTraceResponseBodySpansSpanTagEntryList getTagEntryList() {
+            return this.tagEntryList;
+        }
+
+        public GetTraceResponseBodySpansSpan setLogEventList(GetTraceResponseBodySpansSpanLogEventList logEventList) {
+            this.logEventList = logEventList;
+            return this;
+        }
+        public GetTraceResponseBodySpansSpanLogEventList getLogEventList() {
+            return this.logEventList;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesResponseBody extends TeaModel {
-    @NameInMap("PageBean")
-    public SearchTracesResponseBodyPageBean pageBean;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageBean")
+    public SearchTracesResponseBodyPageBean pageBean;
 
     public static SearchTracesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchTracesResponseBody self = new SearchTracesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SearchTracesResponseBody setPageBean(SearchTracesResponseBodyPageBean pageBean) {
-        this.pageBean = pageBean;
-        return this;
-    }
-    public SearchTracesResponseBodyPageBean getPageBean() {
-        return this.pageBean;
     }
 
     public SearchTracesResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class SearchTracesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SearchTracesResponseBody setPageBean(SearchTracesResponseBodyPageBean pageBean) {
+        this.pageBean = pageBean;
+        return this;
+    }
+    public SearchTracesResponseBodyPageBean getPageBean() {
+        return this.pageBean;
     }
 
     public static class SearchTracesResponseBodyPageBeanTraceInfosTraceInfo extends TeaModel {
@@ -49,6 +49,9 @@ public class SearchTracesResponseBody extends TeaModel {
 
         @NameInMap("TraceID")
         public String traceID;
+
+        @NameInMap("TagMap")
+        public java.util.Map<String, ?> tagMap;
 
         public static SearchTracesResponseBodyPageBeanTraceInfosTraceInfo build(java.util.Map<String, ?> map) throws Exception {
             SearchTracesResponseBodyPageBeanTraceInfosTraceInfo self = new SearchTracesResponseBodyPageBeanTraceInfosTraceInfo();
@@ -103,6 +106,14 @@ public class SearchTracesResponseBody extends TeaModel {
             return this.traceID;
         }
 
+        public SearchTracesResponseBodyPageBeanTraceInfosTraceInfo setTagMap(java.util.Map<String, ?> tagMap) {
+            this.tagMap = tagMap;
+            return this;
+        }
+        public java.util.Map<String, ?> getTagMap() {
+            return this.tagMap;
+        }
+
     }
 
     public static class SearchTracesResponseBodyPageBeanTraceInfos extends TeaModel {
@@ -125,9 +136,6 @@ public class SearchTracesResponseBody extends TeaModel {
     }
 
     public static class SearchTracesResponseBodyPageBean extends TeaModel {
-        @NameInMap("TraceInfos")
-        public SearchTracesResponseBodyPageBeanTraceInfos traceInfos;
-
         @NameInMap("PageSize")
         public Integer pageSize;
 
@@ -137,17 +145,12 @@ public class SearchTracesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        @NameInMap("TraceInfos")
+        public SearchTracesResponseBodyPageBeanTraceInfos traceInfos;
+
         public static SearchTracesResponseBodyPageBean build(java.util.Map<String, ?> map) throws Exception {
             SearchTracesResponseBodyPageBean self = new SearchTracesResponseBodyPageBean();
             return TeaModel.build(map, self);
-        }
-
-        public SearchTracesResponseBodyPageBean setTraceInfos(SearchTracesResponseBodyPageBeanTraceInfos traceInfos) {
-            this.traceInfos = traceInfos;
-            return this;
-        }
-        public SearchTracesResponseBodyPageBeanTraceInfos getTraceInfos() {
-            return this.traceInfos;
         }
 
         public SearchTracesResponseBodyPageBean setPageSize(Integer pageSize) {
@@ -172,6 +175,14 @@ public class SearchTracesResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
+        }
+
+        public SearchTracesResponseBodyPageBean setTraceInfos(SearchTracesResponseBodyPageBeanTraceInfos traceInfos) {
+            this.traceInfos = traceInfos;
+            return this;
+        }
+        public SearchTracesResponseBodyPageBeanTraceInfos getTraceInfos() {
+            return this.traceInfos;
         }
 
     }
