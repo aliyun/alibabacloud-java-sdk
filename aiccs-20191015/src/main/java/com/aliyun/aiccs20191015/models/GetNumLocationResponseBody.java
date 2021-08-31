@@ -4,17 +4,17 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetNumLocationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class GetNumLocationResponseBody extends TeaModel {
     public static GetNumLocationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNumLocationResponseBody self = new GetNumLocationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetNumLocationResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetNumLocationResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class GetNumLocationResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetNumLocationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetNumLocationResponseBody setData(String data) {
         this.data = data;
         return this;
@@ -48,12 +48,12 @@ public class GetNumLocationResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetNumLocationResponseBody setCode(String code) {
-        this.code = code;
+    public GetNumLocationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetNumLocationResponseBody setSuccess(Boolean success) {

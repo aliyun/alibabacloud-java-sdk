@@ -4,24 +4,32 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineCallActionResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetHotlineCallActionResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public GetHotlineCallActionResponseBodyData data;
 
     public static GetHotlineCallActionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineCallActionResponseBody self = new GetHotlineCallActionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetHotlineCallActionResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetHotlineCallActionResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetHotlineCallActionResponseBody setData(GetHotlineCallActionResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetHotlineCallActionResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetHotlineCallActionResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetHotlineCallActionResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetHotlineCallActionResponseBody setData(GetHotlineCallActionResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetHotlineCallActionResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetHotlineCallActionResponseBodyData extends TeaModel {
@@ -71,23 +71,23 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         @NameInMap("DepId")
         public Long depId;
 
-        @NameInMap("MemberName")
-        public String memberName;
-
         @NameInMap("ServicerName")
         public String servicerName;
+
+        @NameInMap("MemberName")
+        public String memberName;
 
         @NameInMap("ChannelType")
         public Long channelType;
 
-        @NameInMap("ActionId")
-        public Long actionId;
+        @NameInMap("SubTouchId")
+        public Long subTouchId;
 
         @NameInMap("CalloutName")
         public String calloutName;
 
-        @NameInMap("SubTouchId")
-        public Long subTouchId;
+        @NameInMap("ActionId")
+        public Long actionId;
 
         @NameInMap("ServicerId")
         public Long servicerId;
@@ -137,20 +137,20 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             return this.depId;
         }
 
-        public GetHotlineCallActionResponseBodyData setMemberName(String memberName) {
-            this.memberName = memberName;
-            return this;
-        }
-        public String getMemberName() {
-            return this.memberName;
-        }
-
         public GetHotlineCallActionResponseBodyData setServicerName(String servicerName) {
             this.servicerName = servicerName;
             return this;
         }
         public String getServicerName() {
             return this.servicerName;
+        }
+
+        public GetHotlineCallActionResponseBodyData setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
         }
 
         public GetHotlineCallActionResponseBodyData setChannelType(Long channelType) {
@@ -161,12 +161,12 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             return this.channelType;
         }
 
-        public GetHotlineCallActionResponseBodyData setActionId(Long actionId) {
-            this.actionId = actionId;
+        public GetHotlineCallActionResponseBodyData setSubTouchId(Long subTouchId) {
+            this.subTouchId = subTouchId;
             return this;
         }
-        public Long getActionId() {
-            return this.actionId;
+        public Long getSubTouchId() {
+            return this.subTouchId;
         }
 
         public GetHotlineCallActionResponseBodyData setCalloutName(String calloutName) {
@@ -177,12 +177,12 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             return this.calloutName;
         }
 
-        public GetHotlineCallActionResponseBodyData setSubTouchId(Long subTouchId) {
-            this.subTouchId = subTouchId;
+        public GetHotlineCallActionResponseBodyData setActionId(Long actionId) {
+            this.actionId = actionId;
             return this;
         }
-        public Long getSubTouchId() {
-            return this.subTouchId;
+        public Long getActionId() {
+            return this.actionId;
         }
 
         public GetHotlineCallActionResponseBodyData setServicerId(Long servicerId) {

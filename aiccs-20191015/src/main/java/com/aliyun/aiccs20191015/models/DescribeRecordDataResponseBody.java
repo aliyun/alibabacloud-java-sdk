@@ -4,51 +4,27 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordDataResponseBody extends TeaModel {
-    @NameInMap("Acid")
-    public String acid;
+    @NameInMap("OssLink")
+    public String ossLink;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("OssLink")
-    public String ossLink;
-
     @NameInMap("AgentId")
     public String agentId;
+
+    @NameInMap("Acid")
+    public String acid;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Message")
+    public String message;
+
     public static DescribeRecordDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordDataResponseBody self = new DescribeRecordDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRecordDataResponseBody setAcid(String acid) {
-        this.acid = acid;
-        return this;
-    }
-    public String getAcid() {
-        return this.acid;
-    }
-
-    public DescribeRecordDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeRecordDataResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public DescribeRecordDataResponseBody setOssLink(String ossLink) {
@@ -59,6 +35,14 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         return this.ossLink;
     }
 
+    public DescribeRecordDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeRecordDataResponseBody setAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -67,12 +51,28 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         return this.agentId;
     }
 
+    public DescribeRecordDataResponseBody setAcid(String acid) {
+        this.acid = acid;
+        return this;
+    }
+    public String getAcid() {
+        return this.acid;
+    }
+
     public DescribeRecordDataResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public DescribeRecordDataResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }
