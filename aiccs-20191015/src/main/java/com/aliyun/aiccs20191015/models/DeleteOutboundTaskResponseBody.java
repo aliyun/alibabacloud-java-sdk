@@ -4,17 +4,17 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DeleteOutboundTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,14 +22,6 @@ public class DeleteOutboundTaskResponseBody extends TeaModel {
     public static DeleteOutboundTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteOutboundTaskResponseBody self = new DeleteOutboundTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteOutboundTaskResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DeleteOutboundTaskResponseBody setMessage(String message) {
@@ -40,6 +32,14 @@ public class DeleteOutboundTaskResponseBody extends TeaModel {
         return this.message;
     }
 
+    public DeleteOutboundTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DeleteOutboundTaskResponseBody setData(String data) {
         this.data = data;
         return this;
@@ -48,12 +48,12 @@ public class DeleteOutboundTaskResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteOutboundTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteOutboundTaskResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteOutboundTaskResponseBody setSuccess(Boolean success) {

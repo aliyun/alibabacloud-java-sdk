@@ -4,17 +4,17 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketsResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,14 +22,6 @@ public class QueryTicketsResponseBody extends TeaModel {
     public static QueryTicketsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTicketsResponseBody self = new QueryTicketsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTicketsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public QueryTicketsResponseBody setMessage(String message) {
@@ -40,6 +32,14 @@ public class QueryTicketsResponseBody extends TeaModel {
         return this.message;
     }
 
+    public QueryTicketsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryTicketsResponseBody setData(String data) {
         this.data = data;
         return this;
@@ -48,12 +48,12 @@ public class QueryTicketsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryTicketsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryTicketsResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public QueryTicketsResponseBody setSuccess(Boolean success) {

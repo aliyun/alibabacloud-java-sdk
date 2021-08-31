@@ -4,32 +4,24 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListSkillGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Data")
     public java.util.List<ListSkillGroupResponseBodyData> data;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ListSkillGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSkillGroupResponseBody self = new ListSkillGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSkillGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ListSkillGroupResponseBody setMessage(String message) {
@@ -48,20 +40,28 @@ public class ListSkillGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListSkillGroupResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public ListSkillGroupResponseBody setData(java.util.List<ListSkillGroupResponseBodyData> data) {
         this.data = data;
         return this;
     }
     public java.util.List<ListSkillGroupResponseBodyData> getData() {
         return this.data;
+    }
+
+    public ListSkillGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListSkillGroupResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ListSkillGroupResponseBodyData extends TeaModel {
@@ -71,14 +71,14 @@ public class ListSkillGroupResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("ChannelType")
         public Integer channelType;
 
         @NameInMap("SkillGroupId")
         public Long skillGroupId;
+
+        @NameInMap("Name")
+        public String name;
 
         public static ListSkillGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListSkillGroupResponseBodyData self = new ListSkillGroupResponseBodyData();
@@ -101,14 +101,6 @@ public class ListSkillGroupResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListSkillGroupResponseBodyData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public ListSkillGroupResponseBodyData setChannelType(Integer channelType) {
             this.channelType = channelType;
             return this;
@@ -123,6 +115,14 @@ public class ListSkillGroupResponseBody extends TeaModel {
         }
         public Long getSkillGroupId() {
             return this.skillGroupId;
+        }
+
+        public ListSkillGroupResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
