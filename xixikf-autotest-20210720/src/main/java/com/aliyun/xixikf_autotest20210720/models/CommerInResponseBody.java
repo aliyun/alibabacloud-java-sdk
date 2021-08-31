@@ -8,6 +8,9 @@ public class CommerInResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public String success;
+
     public static CommerInResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CommerInResponseBody self = new CommerInResponseBody();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class CommerInResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CommerInResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
     }
 
 }
