@@ -31,32 +31,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public CommerOutResponse commerOutWithOptions(CommerOutRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CommerOut", "2021-07-20", "HTTPS", "POST", "AK", "json", req, runtime), new CommerOutResponse());
-    }
-
-    public CommerOutResponse commerOut(CommerOutRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.commerOutWithOptions(request, runtime);
-    }
-
-    public CreateEnvironmentResponse createEnvironmentWithOptions(CreateEnvironmentRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateEnvironment", "2021-07-20", "HTTPS", "POST", "AK", "json", req, runtime), new CreateEnvironmentResponse());
-    }
-
-    public CreateEnvironmentResponse createEnvironment(CreateEnvironmentRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createEnvironmentWithOptions(request, runtime);
-    }
-
     public CommerInResponse commerInWithOptions(CommerInRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -70,16 +44,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.commerInWithOptions(request, runtime);
     }
 
-    public XixiServicerMockServiceResponse xixiServicerMockServiceWithOptions(XixiServicerMockServiceRequest request, RuntimeOptions runtime) throws Exception {
+    public CommerOutResponse commerOutWithOptions(CommerOutRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("XixiServicerMockService", "2021-07-20", "HTTPS", "POST", "AK", "json", req, runtime), new XixiServicerMockServiceResponse());
+        return TeaModel.toModel(this.doRPCRequest("CommerOut", "2021-07-20", "HTTPS", "POST", "AK", "json", req, runtime), new CommerOutResponse());
     }
 
-    public XixiServicerMockServiceResponse xixiServicerMockService(XixiServicerMockServiceRequest request) throws Exception {
+    public CommerOutResponse commerOut(CommerOutRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.xixiServicerMockServiceWithOptions(request, runtime);
+        return this.commerOutWithOptions(request, runtime);
     }
 }
