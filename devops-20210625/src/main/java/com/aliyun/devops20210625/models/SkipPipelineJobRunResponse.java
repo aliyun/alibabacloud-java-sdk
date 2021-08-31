@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.devops20210625.models;
+
+import com.aliyun.tea.*;
+
+public class SkipPipelineJobRunResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SkipPipelineJobRunResponseBody body;
+
+    public static SkipPipelineJobRunResponse build(java.util.Map<String, ?> map) throws Exception {
+        SkipPipelineJobRunResponse self = new SkipPipelineJobRunResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public SkipPipelineJobRunResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SkipPipelineJobRunResponse setBody(SkipPipelineJobRunResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SkipPipelineJobRunResponseBody getBody() {
+        return this.body;
+    }
+
+}
