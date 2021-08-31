@@ -245,14 +245,26 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Parameters")
         public String parameters;
 
-        @NameInMap("StatusDetail")
-        public String statusDetail;
-
         @NameInMap("Progress")
         public Long progress;
 
+        @NameInMap("StatusDetail")
+        public String statusDetail;
+
         @NameInMap("TemplateName")
         public String templateName;
+
+        @NameInMap("OperatedServiceInstanceId")
+        public String operatedServiceInstanceId;
+
+        @NameInMap("OperationStartTime")
+        public String operationStartTime;
+
+        @NameInMap("OperationEndTime")
+        public String operationEndTime;
+
+        @NameInMap("EnableInstanceOps")
+        public Boolean enableInstanceOps;
 
         public static ListServiceInstancesResponseBodyServiceInstances build(java.util.Map<String, ?> map) throws Exception {
             ListServiceInstancesResponseBodyServiceInstances self = new ListServiceInstancesResponseBodyServiceInstances();
@@ -315,14 +327,6 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             return this.parameters;
         }
 
-        public ListServiceInstancesResponseBodyServiceInstances setStatusDetail(String statusDetail) {
-            this.statusDetail = statusDetail;
-            return this;
-        }
-        public String getStatusDetail() {
-            return this.statusDetail;
-        }
-
         public ListServiceInstancesResponseBodyServiceInstances setProgress(Long progress) {
             this.progress = progress;
             return this;
@@ -331,12 +335,52 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             return this.progress;
         }
 
+        public ListServiceInstancesResponseBodyServiceInstances setStatusDetail(String statusDetail) {
+            this.statusDetail = statusDetail;
+            return this;
+        }
+        public String getStatusDetail() {
+            return this.statusDetail;
+        }
+
         public ListServiceInstancesResponseBodyServiceInstances setTemplateName(String templateName) {
             this.templateName = templateName;
             return this;
         }
         public String getTemplateName() {
             return this.templateName;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setOperatedServiceInstanceId(String operatedServiceInstanceId) {
+            this.operatedServiceInstanceId = operatedServiceInstanceId;
+            return this;
+        }
+        public String getOperatedServiceInstanceId() {
+            return this.operatedServiceInstanceId;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setOperationStartTime(String operationStartTime) {
+            this.operationStartTime = operationStartTime;
+            return this;
+        }
+        public String getOperationStartTime() {
+            return this.operationStartTime;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setOperationEndTime(String operationEndTime) {
+            this.operationEndTime = operationEndTime;
+            return this;
+        }
+        public String getOperationEndTime() {
+            return this.operationEndTime;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setEnableInstanceOps(Boolean enableInstanceOps) {
+            this.enableInstanceOps = enableInstanceOps;
+            return this;
+        }
+        public Boolean getEnableInstanceOps() {
+            return this.enableInstanceOps;
         }
 
     }

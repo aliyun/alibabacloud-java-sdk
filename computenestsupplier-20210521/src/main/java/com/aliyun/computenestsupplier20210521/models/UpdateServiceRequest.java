@@ -31,6 +31,15 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("ServiceInfo")
     public java.util.List<UpdateServiceRequestServiceInfo> serviceInfo;
 
+    @NameInMap("IsSupportOperated")
+    public Boolean isSupportOperated;
+
+    @NameInMap("PolicyNames")
+    public String policyNames;
+
+    @NameInMap("Duration")
+    public Long duration;
+
     public static UpdateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceRequest self = new UpdateServiceRequest();
         return TeaModel.build(map, self);
@@ -106,6 +115,30 @@ public class UpdateServiceRequest extends TeaModel {
     }
     public java.util.List<UpdateServiceRequestServiceInfo> getServiceInfo() {
         return this.serviceInfo;
+    }
+
+    public UpdateServiceRequest setIsSupportOperated(Boolean isSupportOperated) {
+        this.isSupportOperated = isSupportOperated;
+        return this;
+    }
+    public Boolean getIsSupportOperated() {
+        return this.isSupportOperated;
+    }
+
+    public UpdateServiceRequest setPolicyNames(String policyNames) {
+        this.policyNames = policyNames;
+        return this;
+    }
+    public String getPolicyNames() {
+        return this.policyNames;
+    }
+
+    public UpdateServiceRequest setDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Long getDuration() {
+        return this.duration;
     }
 
     public static class UpdateServiceRequestServiceInfo extends TeaModel {
