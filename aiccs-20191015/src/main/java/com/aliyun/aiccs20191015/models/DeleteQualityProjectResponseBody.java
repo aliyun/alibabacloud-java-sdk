@@ -4,17 +4,17 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DeleteQualityProjectResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class DeleteQualityProjectResponseBody extends TeaModel {
     public static DeleteQualityProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteQualityProjectResponseBody self = new DeleteQualityProjectResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteQualityProjectResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteQualityProjectResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class DeleteQualityProjectResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteQualityProjectResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DeleteQualityProjectResponseBody setData(String data) {
         this.data = data;
         return this;
@@ -48,12 +48,12 @@ public class DeleteQualityProjectResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteQualityProjectResponseBody setCode(String code) {
-        this.code = code;
+    public DeleteQualityProjectResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteQualityProjectResponseBody setSuccess(Boolean success) {

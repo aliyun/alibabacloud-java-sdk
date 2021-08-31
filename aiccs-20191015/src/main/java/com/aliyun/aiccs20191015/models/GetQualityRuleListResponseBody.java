@@ -4,24 +4,32 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityRuleListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetQualityRuleListResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public GetQualityRuleListResponseBodyData data;
 
     public static GetQualityRuleListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetQualityRuleListResponseBody self = new GetQualityRuleListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetQualityRuleListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetQualityRuleListResponseBody setMessage(String message) {
@@ -40,22 +48,6 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetQualityRuleListResponseBody setData(GetQualityRuleListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetQualityRuleListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetQualityRuleListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetQualityRuleListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,12 +56,17 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetQualityRuleListResponseBody setData(GetQualityRuleListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetQualityRuleListResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class GetQualityRuleListResponseBodyDataQualityRuleList extends TeaModel {
         @NameInMap("RuleTag")
         public Integer ruleTag;
-
-        @NameInMap("KeyWords")
-        public java.util.List<String> keyWords;
 
         @NameInMap("MatchType")
         public Integer matchType;
@@ -83,6 +80,9 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         @NameInMap("RuleId")
         public Long ruleId;
 
+        @NameInMap("KeyWords")
+        public java.util.List<String> keyWords;
+
         public static GetQualityRuleListResponseBodyDataQualityRuleList build(java.util.Map<String, ?> map) throws Exception {
             GetQualityRuleListResponseBodyDataQualityRuleList self = new GetQualityRuleListResponseBodyDataQualityRuleList();
             return TeaModel.build(map, self);
@@ -94,14 +94,6 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         }
         public Integer getRuleTag() {
             return this.ruleTag;
-        }
-
-        public GetQualityRuleListResponseBodyDataQualityRuleList setKeyWords(java.util.List<String> keyWords) {
-            this.keyWords = keyWords;
-            return this;
-        }
-        public java.util.List<String> getKeyWords() {
-            return this.keyWords;
         }
 
         public GetQualityRuleListResponseBodyDataQualityRuleList setMatchType(Integer matchType) {
@@ -134,6 +126,14 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         }
         public Long getRuleId() {
             return this.ruleId;
+        }
+
+        public GetQualityRuleListResponseBodyDataQualityRuleList setKeyWords(java.util.List<String> keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public java.util.List<String> getKeyWords() {
+            return this.keyWords;
         }
 
     }

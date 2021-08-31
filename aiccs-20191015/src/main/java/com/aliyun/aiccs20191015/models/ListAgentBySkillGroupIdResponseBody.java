@@ -4,24 +4,32 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<ListAgentBySkillGroupIdResponseBodyData> data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public java.util.List<ListAgentBySkillGroupIdResponseBodyData> data;
 
     public static ListAgentBySkillGroupIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAgentBySkillGroupIdResponseBody self = new ListAgentBySkillGroupIdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAgentBySkillGroupIdResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ListAgentBySkillGroupIdResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAgentBySkillGroupIdResponseBody setData(java.util.List<ListAgentBySkillGroupIdResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListAgentBySkillGroupIdResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public ListAgentBySkillGroupIdResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListAgentBySkillGroupIdResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListAgentBySkillGroupIdResponseBody setData(java.util.List<ListAgentBySkillGroupIdResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListAgentBySkillGroupIdResponseBodyData> getData() {
+        return this.data;
     }
 
     public static class ListAgentBySkillGroupIdResponseBodyData extends TeaModel {
