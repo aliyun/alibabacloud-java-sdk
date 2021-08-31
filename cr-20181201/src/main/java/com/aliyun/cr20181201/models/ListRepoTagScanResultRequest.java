@@ -25,6 +25,9 @@ public class ListRepoTagScanResultRequest extends TeaModel {
     @NameInMap("Severity")
     public String severity;
 
+    @NameInMap("Digest")
+    public String digest;
+
     public static ListRepoTagScanResultRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRepoTagScanResultRequest self = new ListRepoTagScanResultRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class ListRepoTagScanResultRequest extends TeaModel {
     }
     public String getSeverity() {
         return this.severity;
+    }
+
+    public ListRepoTagScanResultRequest setDigest(String digest) {
+        this.digest = digest;
+        return this;
+    }
+    public String getDigest() {
+        return this.digest;
     }
 
 }

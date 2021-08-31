@@ -4,8 +4,8 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceVpcEndpointResponseBody extends TeaModel {
-    @NameInMap("Domains")
-    public java.util.List<String> domains;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
@@ -16,8 +16,8 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Domains")
+    public java.util.List<String> domains;
 
     @NameInMap("LinkedVpcs")
     public java.util.List<GetInstanceVpcEndpointResponseBodyLinkedVpcs> linkedVpcs;
@@ -27,12 +27,12 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceVpcEndpointResponseBody setDomains(java.util.List<String> domains) {
-        this.domains = domains;
+    public GetInstanceVpcEndpointResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.List<String> getDomains() {
-        return this.domains;
+    public String getCode() {
+        return this.code;
     }
 
     public GetInstanceVpcEndpointResponseBody setIsSuccess(Boolean isSuccess) {
@@ -59,12 +59,12 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         return this.enable;
     }
 
-    public GetInstanceVpcEndpointResponseBody setCode(String code) {
-        this.code = code;
+    public GetInstanceVpcEndpointResponseBody setDomains(java.util.List<String> domains) {
+        this.domains = domains;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.List<String> getDomains() {
+        return this.domains;
     }
 
     public GetInstanceVpcEndpointResponseBody setLinkedVpcs(java.util.List<GetInstanceVpcEndpointResponseBodyLinkedVpcs> linkedVpcs) {
@@ -82,14 +82,14 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        @NameInMap("Ip")
+        public String ip;
+
         @NameInMap("DefaultAccess")
         public Boolean defaultAccess;
 
         @NameInMap("VswitchId")
         public String vswitchId;
-
-        @NameInMap("Ip")
-        public String ip;
 
         public static GetInstanceVpcEndpointResponseBodyLinkedVpcs build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceVpcEndpointResponseBodyLinkedVpcs self = new GetInstanceVpcEndpointResponseBodyLinkedVpcs();
@@ -112,6 +112,14 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
             return this.vpcId;
         }
 
+        public GetInstanceVpcEndpointResponseBodyLinkedVpcs setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
         public GetInstanceVpcEndpointResponseBodyLinkedVpcs setDefaultAccess(Boolean defaultAccess) {
             this.defaultAccess = defaultAccess;
             return this;
@@ -126,14 +134,6 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
         public String getVswitchId() {
             return this.vswitchId;
-        }
-
-        public GetInstanceVpcEndpointResponseBodyLinkedVpcs setIp(String ip) {
-            this.ip = ip;
-            return this;
-        }
-        public String getIp() {
-            return this.ip;
         }
 
     }

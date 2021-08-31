@@ -4,54 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoBuildRecordResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("BuildRecords")
-    public java.util.List<ListRepoBuildRecordResponseBodyBuildRecords> buildRecords;
-
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
+    @NameInMap("BuildRecords")
+    public java.util.List<ListRepoBuildRecordResponseBodyBuildRecords> buildRecords;
+
     public static ListRepoBuildRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepoBuildRecordResponseBody self = new ListRepoBuildRecordResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRepoBuildRecordResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListRepoBuildRecordResponseBody setBuildRecords(java.util.List<ListRepoBuildRecordResponseBodyBuildRecords> buildRecords) {
-        this.buildRecords = buildRecords;
-        return this;
-    }
-    public java.util.List<ListRepoBuildRecordResponseBodyBuildRecords> getBuildRecords() {
-        return this.buildRecords;
-    }
-
-    public ListRepoBuildRecordResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public ListRepoBuildRecordResponseBody setRequestId(String requestId) {
@@ -62,12 +38,12 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRepoBuildRecordResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListRepoBuildRecordResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getCode() {
+        return this.code;
     }
 
     public ListRepoBuildRecordResponseBody setPageNo(Integer pageNo) {
@@ -78,23 +54,47 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public ListRepoBuildRecordResponseBody setCode(String code) {
-        this.code = code;
+    public ListRepoBuildRecordResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListRepoBuildRecordResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListRepoBuildRecordResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListRepoBuildRecordResponseBody setBuildRecords(java.util.List<ListRepoBuildRecordResponseBodyBuildRecords> buildRecords) {
+        this.buildRecords = buildRecords;
+        return this;
+    }
+    public java.util.List<ListRepoBuildRecordResponseBodyBuildRecords> getBuildRecords() {
+        return this.buildRecords;
     }
 
     public static class ListRepoBuildRecordResponseBodyBuildRecordsImage extends TeaModel {
-        @NameInMap("RepoId")
-        public String repoId;
-
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
         @NameInMap("ImageTag")
         public String imageTag;
+
+        @NameInMap("RepoId")
+        public String repoId;
 
         @NameInMap("RepoName")
         public String repoName;
@@ -102,14 +102,6 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         public static ListRepoBuildRecordResponseBodyBuildRecordsImage build(java.util.Map<String, ?> map) throws Exception {
             ListRepoBuildRecordResponseBodyBuildRecordsImage self = new ListRepoBuildRecordResponseBodyBuildRecordsImage();
             return TeaModel.build(map, self);
-        }
-
-        public ListRepoBuildRecordResponseBodyBuildRecordsImage setRepoId(String repoId) {
-            this.repoId = repoId;
-            return this;
-        }
-        public String getRepoId() {
-            return this.repoId;
         }
 
         public ListRepoBuildRecordResponseBodyBuildRecordsImage setRepoNamespaceName(String repoNamespaceName) {
@@ -126,6 +118,14 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
         public String getImageTag() {
             return this.imageTag;
+        }
+
+        public ListRepoBuildRecordResponseBodyBuildRecordsImage setRepoId(String repoId) {
+            this.repoId = repoId;
+            return this;
+        }
+        public String getRepoId() {
+            return this.repoId;
         }
 
         public ListRepoBuildRecordResponseBodyBuildRecordsImage setRepoName(String repoName) {
@@ -145,14 +145,14 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
 
-        @NameInMap("Image")
-        public ListRepoBuildRecordResponseBodyBuildRecordsImage image;
-
         @NameInMap("BuildStatus")
         public String buildStatus;
 
         @NameInMap("BuildRecordId")
         public String buildRecordId;
+
+        @NameInMap("Image")
+        public ListRepoBuildRecordResponseBodyBuildRecordsImage image;
 
         public static ListRepoBuildRecordResponseBodyBuildRecords build(java.util.Map<String, ?> map) throws Exception {
             ListRepoBuildRecordResponseBodyBuildRecords self = new ListRepoBuildRecordResponseBodyBuildRecords();
@@ -175,14 +175,6 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public ListRepoBuildRecordResponseBodyBuildRecords setImage(ListRepoBuildRecordResponseBodyBuildRecordsImage image) {
-            this.image = image;
-            return this;
-        }
-        public ListRepoBuildRecordResponseBodyBuildRecordsImage getImage() {
-            return this.image;
-        }
-
         public ListRepoBuildRecordResponseBodyBuildRecords setBuildStatus(String buildStatus) {
             this.buildStatus = buildStatus;
             return this;
@@ -197,6 +189,14 @@ public class ListRepoBuildRecordResponseBody extends TeaModel {
         }
         public String getBuildRecordId() {
             return this.buildRecordId;
+        }
+
+        public ListRepoBuildRecordResponseBodyBuildRecords setImage(ListRepoBuildRecordResponseBodyBuildRecordsImage image) {
+            this.image = image;
+            return this;
+        }
+        public ListRepoBuildRecordResponseBodyBuildRecordsImage getImage() {
+            return this.image;
         }
 
     }

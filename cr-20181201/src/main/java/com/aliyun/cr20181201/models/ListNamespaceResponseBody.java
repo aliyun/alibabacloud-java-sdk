@@ -4,54 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListNamespaceResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("Namespaces")
-    public java.util.List<ListNamespaceResponseBodyNamespaces> namespaces;
-
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
+    @NameInMap("Namespaces")
+    public java.util.List<ListNamespaceResponseBodyNamespaces> namespaces;
+
     public static ListNamespaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNamespaceResponseBody self = new ListNamespaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListNamespaceResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListNamespaceResponseBody setNamespaces(java.util.List<ListNamespaceResponseBodyNamespaces> namespaces) {
-        this.namespaces = namespaces;
-        return this;
-    }
-    public java.util.List<ListNamespaceResponseBodyNamespaces> getNamespaces() {
-        return this.namespaces;
-    }
-
-    public ListNamespaceResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public ListNamespaceResponseBody setRequestId(String requestId) {
@@ -62,12 +38,12 @@ public class ListNamespaceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListNamespaceResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListNamespaceResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getCode() {
+        return this.code;
     }
 
     public ListNamespaceResponseBody setPageNo(Integer pageNo) {
@@ -78,12 +54,36 @@ public class ListNamespaceResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public ListNamespaceResponseBody setCode(String code) {
-        this.code = code;
+    public ListNamespaceResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListNamespaceResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListNamespaceResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListNamespaceResponseBody setNamespaces(java.util.List<ListNamespaceResponseBodyNamespaces> namespaces) {
+        this.namespaces = namespaces;
+        return this;
+    }
+    public java.util.List<ListNamespaceResponseBodyNamespaces> getNamespaces() {
+        return this.namespaces;
     }
 
     public static class ListNamespaceResponseBodyNamespaces extends TeaModel {

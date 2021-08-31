@@ -28,6 +28,9 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     @NameInMap("BuildRuleId")
     public String buildRuleId;
 
+    @NameInMap("Platforms")
+    public java.util.List<String> platforms;
+
     public static UpdateRepoBuildRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRepoBuildRuleRequest self = new UpdateRepoBuildRuleRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class UpdateRepoBuildRuleRequest extends TeaModel {
     }
     public String getBuildRuleId() {
         return this.buildRuleId;
+    }
+
+    public UpdateRepoBuildRuleRequest setPlatforms(java.util.List<String> platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    public java.util.List<String> getPlatforms() {
+        return this.platforms;
     }
 
 }

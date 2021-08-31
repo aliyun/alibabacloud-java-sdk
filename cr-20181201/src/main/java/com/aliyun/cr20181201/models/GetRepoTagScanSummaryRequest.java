@@ -16,6 +16,9 @@ public class GetRepoTagScanSummaryRequest extends TeaModel {
     @NameInMap("ScanTaskId")
     public String scanTaskId;
 
+    @NameInMap("Digest")
+    public String digest;
+
     public static GetRepoTagScanSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagScanSummaryRequest self = new GetRepoTagScanSummaryRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class GetRepoTagScanSummaryRequest extends TeaModel {
     }
     public String getScanTaskId() {
         return this.scanTaskId;
+    }
+
+    public GetRepoTagScanSummaryRequest setDigest(String digest) {
+        this.digest = digest;
+        return this;
+    }
+    public String getDigest() {
+        return this.digest;
     }
 
 }

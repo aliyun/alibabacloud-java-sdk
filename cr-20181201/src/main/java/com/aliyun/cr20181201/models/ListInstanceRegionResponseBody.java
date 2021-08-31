@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRegionResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
@@ -13,12 +16,17 @@ public class ListInstanceRegionResponseBody extends TeaModel {
     @NameInMap("Regions")
     public java.util.List<ListInstanceRegionResponseBodyRegions> regions;
 
-    @NameInMap("Code")
-    public String code;
-
     public static ListInstanceRegionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceRegionResponseBody self = new ListInstanceRegionResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstanceRegionResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ListInstanceRegionResponseBody setIsSuccess(Boolean isSuccess) {
@@ -43,14 +51,6 @@ public class ListInstanceRegionResponseBody extends TeaModel {
     }
     public java.util.List<ListInstanceRegionResponseBodyRegions> getRegions() {
         return this.regions;
-    }
-
-    public ListInstanceRegionResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class ListInstanceRegionResponseBodyRegions extends TeaModel {

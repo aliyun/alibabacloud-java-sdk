@@ -4,18 +4,26 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateChartNamespaceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static CreateChartNamespaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateChartNamespaceResponseBody self = new CreateChartNamespaceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateChartNamespaceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateChartNamespaceResponseBody setIsSuccess(Boolean isSuccess) {
@@ -32,14 +40,6 @@ public class CreateChartNamespaceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateChartNamespaceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

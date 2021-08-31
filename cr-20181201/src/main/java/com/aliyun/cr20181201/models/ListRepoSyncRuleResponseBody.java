@@ -4,46 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoSyncRuleResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("SyncRules")
-    public java.util.List<ListRepoSyncRuleResponseBodySyncRules> syncRules;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("SyncRules")
+    public java.util.List<ListRepoSyncRuleResponseBodySyncRules> syncRules;
+
     public static ListRepoSyncRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepoSyncRuleResponseBody self = new ListRepoSyncRuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRepoSyncRuleResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListRepoSyncRuleResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListRepoSyncRuleResponseBody setRequestId(String requestId) {
@@ -54,20 +38,12 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRepoSyncRuleResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListRepoSyncRuleResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListRepoSyncRuleResponseBody setSyncRules(java.util.List<ListRepoSyncRuleResponseBodySyncRules> syncRules) {
-        this.syncRules = syncRules;
-        return this;
-    }
-    public java.util.List<ListRepoSyncRuleResponseBodySyncRules> getSyncRules() {
-        return this.syncRules;
+    public String getCode() {
+        return this.code;
     }
 
     public ListRepoSyncRuleResponseBody setPageNo(Integer pageNo) {
@@ -78,12 +54,36 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public ListRepoSyncRuleResponseBody setCode(String code) {
-        this.code = code;
+    public ListRepoSyncRuleResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListRepoSyncRuleResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListRepoSyncRuleResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListRepoSyncRuleResponseBody setSyncRules(java.util.List<ListRepoSyncRuleResponseBodySyncRules> syncRules) {
+        this.syncRules = syncRules;
+        return this;
+    }
+    public java.util.List<ListRepoSyncRuleResponseBodySyncRules> getSyncRules() {
+        return this.syncRules;
     }
 
     public static class ListRepoSyncRuleResponseBodySyncRules extends TeaModel {
@@ -105,11 +105,11 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         @NameInMap("TargetNamespaceName")
         public String targetNamespaceName;
 
-        @NameInMap("TargetRepoName")
-        public String targetRepoName;
-
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
+
+        @NameInMap("TargetRepoName")
+        public String targetRepoName;
 
         @NameInMap("SyncRuleId")
         public String syncRuleId;
@@ -188,20 +188,20 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             return this.targetNamespaceName;
         }
 
-        public ListRepoSyncRuleResponseBodySyncRules setTargetRepoName(String targetRepoName) {
-            this.targetRepoName = targetRepoName;
-            return this;
-        }
-        public String getTargetRepoName() {
-            return this.targetRepoName;
-        }
-
         public ListRepoSyncRuleResponseBodySyncRules setTargetInstanceId(String targetInstanceId) {
             this.targetInstanceId = targetInstanceId;
             return this;
         }
         public String getTargetInstanceId() {
             return this.targetInstanceId;
+        }
+
+        public ListRepoSyncRuleResponseBodySyncRules setTargetRepoName(String targetRepoName) {
+            this.targetRepoName = targetRepoName;
+            return this;
+        }
+        public String getTargetRepoName() {
+            return this.targetRepoName;
         }
 
         public ListRepoSyncRuleResponseBodySyncRules setSyncRuleId(String syncRuleId) {

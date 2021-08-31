@@ -4,18 +4,26 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ResetLoginPasswordResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static ResetLoginPasswordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ResetLoginPasswordResponseBody self = new ResetLoginPasswordResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ResetLoginPasswordResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ResetLoginPasswordResponseBody setIsSuccess(Boolean isSuccess) {
@@ -32,14 +40,6 @@ public class ResetLoginPasswordResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ResetLoginPasswordResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceCountResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
@@ -13,12 +16,17 @@ public class GetInstanceCountResponseBody extends TeaModel {
     @NameInMap("Count")
     public Integer count;
 
-    @NameInMap("Code")
-    public String code;
-
     public static GetInstanceCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceCountResponseBody self = new GetInstanceCountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceCountResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetInstanceCountResponseBody setIsSuccess(Boolean isSuccess) {
@@ -43,14 +51,6 @@ public class GetInstanceCountResponseBody extends TeaModel {
     }
     public Integer getCount() {
         return this.count;
-    }
-
-    public GetInstanceCountResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

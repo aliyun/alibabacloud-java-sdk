@@ -7,11 +7,11 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("Domains")
-    public java.util.List<GetInstanceEndpointResponseBodyDomains> domains;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("AclEntries")
-    public java.util.List<GetInstanceEndpointResponseBodyAclEntries> aclEntries;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
@@ -19,14 +19,14 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
     @NameInMap("AclEnable")
     public Boolean aclEnable;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Enable")
     public Boolean enable;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Domains")
+    public java.util.List<GetInstanceEndpointResponseBodyDomains> domains;
+
+    @NameInMap("AclEntries")
+    public java.util.List<GetInstanceEndpointResponseBodyAclEntries> aclEntries;
 
     public static GetInstanceEndpointResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceEndpointResponseBody self = new GetInstanceEndpointResponseBody();
@@ -41,20 +41,20 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         return this.status;
     }
 
-    public GetInstanceEndpointResponseBody setDomains(java.util.List<GetInstanceEndpointResponseBodyDomains> domains) {
-        this.domains = domains;
+    public GetInstanceEndpointResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<GetInstanceEndpointResponseBodyDomains> getDomains() {
-        return this.domains;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetInstanceEndpointResponseBody setAclEntries(java.util.List<GetInstanceEndpointResponseBodyAclEntries> aclEntries) {
-        this.aclEntries = aclEntries;
+    public GetInstanceEndpointResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.List<GetInstanceEndpointResponseBodyAclEntries> getAclEntries() {
-        return this.aclEntries;
+    public String getCode() {
+        return this.code;
     }
 
     public GetInstanceEndpointResponseBody setIsSuccess(Boolean isSuccess) {
@@ -73,14 +73,6 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         return this.aclEnable;
     }
 
-    public GetInstanceEndpointResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetInstanceEndpointResponseBody setEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -89,12 +81,20 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
         return this.enable;
     }
 
-    public GetInstanceEndpointResponseBody setCode(String code) {
-        this.code = code;
+    public GetInstanceEndpointResponseBody setDomains(java.util.List<GetInstanceEndpointResponseBodyDomains> domains) {
+        this.domains = domains;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.List<GetInstanceEndpointResponseBodyDomains> getDomains() {
+        return this.domains;
+    }
+
+    public GetInstanceEndpointResponseBody setAclEntries(java.util.List<GetInstanceEndpointResponseBodyAclEntries> aclEntries) {
+        this.aclEntries = aclEntries;
+        return this;
+    }
+    public java.util.List<GetInstanceEndpointResponseBodyAclEntries> getAclEntries() {
+        return this.aclEntries;
     }
 
     public static class GetInstanceEndpointResponseBodyDomains extends TeaModel {

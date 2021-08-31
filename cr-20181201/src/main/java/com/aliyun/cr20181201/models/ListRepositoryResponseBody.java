@@ -4,54 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryResponseBody extends TeaModel {
-    @NameInMap("Repositories")
-    public java.util.List<ListRepositoryResponseBodyRepositories> repositories;
-
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
+    @NameInMap("Repositories")
+    public java.util.List<ListRepositoryResponseBodyRepositories> repositories;
+
     public static ListRepositoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepositoryResponseBody self = new ListRepositoryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRepositoryResponseBody setRepositories(java.util.List<ListRepositoryResponseBodyRepositories> repositories) {
-        this.repositories = repositories;
-        return this;
-    }
-    public java.util.List<ListRepositoryResponseBodyRepositories> getRepositories() {
-        return this.repositories;
-    }
-
-    public ListRepositoryResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListRepositoryResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public ListRepositoryResponseBody setRequestId(String requestId) {
@@ -62,12 +38,12 @@ public class ListRepositoryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRepositoryResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListRepositoryResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getCode() {
+        return this.code;
     }
 
     public ListRepositoryResponseBody setPageNo(Integer pageNo) {
@@ -78,12 +54,36 @@ public class ListRepositoryResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public ListRepositoryResponseBody setCode(String code) {
-        this.code = code;
+    public ListRepositoryResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListRepositoryResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListRepositoryResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListRepositoryResponseBody setRepositories(java.util.List<ListRepositoryResponseBodyRepositories> repositories) {
+        this.repositories = repositories;
+        return this;
+    }
+    public java.util.List<ListRepositoryResponseBodyRepositories> getRepositories() {
+        return this.repositories;
     }
 
     public static class ListRepositoryResponseBodyRepositories extends TeaModel {

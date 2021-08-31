@@ -13,6 +13,12 @@ public class CreateRepoTagScanTaskRequest extends TeaModel {
     @NameInMap("Tag")
     public String tag;
 
+    @NameInMap("Digest")
+    public String digest;
+
+    @NameInMap("ScanService")
+    public String scanService;
+
     public static CreateRepoTagScanTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRepoTagScanTaskRequest self = new CreateRepoTagScanTaskRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class CreateRepoTagScanTaskRequest extends TeaModel {
     }
     public String getTag() {
         return this.tag;
+    }
+
+    public CreateRepoTagScanTaskRequest setDigest(String digest) {
+        this.digest = digest;
+        return this;
+    }
+    public String getDigest() {
+        return this.digest;
+    }
+
+    public CreateRepoTagScanTaskRequest setScanService(String scanService) {
+        this.scanService = scanService;
+        return this;
+    }
+    public String getScanService() {
+        return this.scanService;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepoTriggerResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
@@ -13,12 +16,17 @@ public class CreateRepoTriggerResponseBody extends TeaModel {
     @NameInMap("TriggerId")
     public String triggerId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static CreateRepoTriggerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRepoTriggerResponseBody self = new CreateRepoTriggerResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRepoTriggerResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateRepoTriggerResponseBody setIsSuccess(Boolean isSuccess) {
@@ -43,14 +51,6 @@ public class CreateRepoTriggerResponseBody extends TeaModel {
     }
     public String getTriggerId() {
         return this.triggerId;
-    }
-
-    public CreateRepoTriggerResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

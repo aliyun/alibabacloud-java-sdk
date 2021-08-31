@@ -4,46 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChartReleaseResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("ChartReleases")
-    public java.util.List<ListChartReleaseResponseBodyChartReleases> chartReleases;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
+    @NameInMap("ChartReleases")
+    public java.util.List<ListChartReleaseResponseBodyChartReleases> chartReleases;
+
     public static ListChartReleaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListChartReleaseResponseBody self = new ListChartReleaseResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListChartReleaseResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListChartReleaseResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public ListChartReleaseResponseBody setRequestId(String requestId) {
@@ -54,20 +38,12 @@ public class ListChartReleaseResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListChartReleaseResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListChartReleaseResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListChartReleaseResponseBody setChartReleases(java.util.List<ListChartReleaseResponseBodyChartReleases> chartReleases) {
-        this.chartReleases = chartReleases;
-        return this;
-    }
-    public java.util.List<ListChartReleaseResponseBodyChartReleases> getChartReleases() {
-        return this.chartReleases;
+    public String getCode() {
+        return this.code;
     }
 
     public ListChartReleaseResponseBody setPageNo(Integer pageNo) {
@@ -78,12 +54,36 @@ public class ListChartReleaseResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public ListChartReleaseResponseBody setCode(String code) {
-        this.code = code;
+    public ListChartReleaseResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListChartReleaseResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListChartReleaseResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListChartReleaseResponseBody setChartReleases(java.util.List<ListChartReleaseResponseBodyChartReleases> chartReleases) {
+        this.chartReleases = chartReleases;
+        return this;
+    }
+    public java.util.List<ListChartReleaseResponseBodyChartReleases> getChartReleases() {
+        return this.chartReleases;
     }
 
     public static class ListChartReleaseResponseBodyChartReleases extends TeaModel {

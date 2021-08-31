@@ -4,46 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoTagResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("Images")
-    public java.util.List<ListRepoTagResponseBodyImages> images;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
+    @NameInMap("Images")
+    public java.util.List<ListRepoTagResponseBodyImages> images;
+
     public static ListRepoTagResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepoTagResponseBody self = new ListRepoTagResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRepoTagResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListRepoTagResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public ListRepoTagResponseBody setRequestId(String requestId) {
@@ -54,20 +38,12 @@ public class ListRepoTagResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRepoTagResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListRepoTagResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListRepoTagResponseBody setImages(java.util.List<ListRepoTagResponseBodyImages> images) {
-        this.images = images;
-        return this;
-    }
-    public java.util.List<ListRepoTagResponseBodyImages> getImages() {
-        return this.images;
+    public String getCode() {
+        return this.code;
     }
 
     public ListRepoTagResponseBody setPageNo(Integer pageNo) {
@@ -78,12 +54,36 @@ public class ListRepoTagResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public ListRepoTagResponseBody setCode(String code) {
-        this.code = code;
+    public ListRepoTagResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListRepoTagResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListRepoTagResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListRepoTagResponseBody setImages(java.util.List<ListRepoTagResponseBodyImages> images) {
+        this.images = images;
+        return this;
+    }
+    public java.util.List<ListRepoTagResponseBodyImages> getImages() {
+        return this.images;
     }
 
     public static class ListRepoTagResponseBodyImages extends TeaModel {
