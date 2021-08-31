@@ -24,6 +24,10 @@ public class SubmitTraceAbRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
+    // 外部url链接(Input和url二选一)
+    @NameInMap("Url")
+    public String url;
+
     public static SubmitTraceAbRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitTraceAbRequest self = new SubmitTraceAbRequest();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class SubmitTraceAbRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public SubmitTraceAbRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }

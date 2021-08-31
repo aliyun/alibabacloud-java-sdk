@@ -145,6 +145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Output", request.output);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -309,6 +313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("UserData", request.userData);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -359,6 +367,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
             body.put("UserData", request.userData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
