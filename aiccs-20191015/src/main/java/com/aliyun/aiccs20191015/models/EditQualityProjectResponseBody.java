@@ -4,32 +4,24 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class EditQualityProjectResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Data")
     public java.util.List<EditQualityProjectResponseBodyData> data;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static EditQualityProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EditQualityProjectResponseBody self = new EditQualityProjectResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public EditQualityProjectResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public EditQualityProjectResponseBody setMessage(String message) {
@@ -48,14 +40,6 @@ public class EditQualityProjectResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public EditQualityProjectResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public EditQualityProjectResponseBody setData(java.util.List<EditQualityProjectResponseBodyData> data) {
         this.data = data;
         return this;
@@ -64,27 +48,35 @@ public class EditQualityProjectResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class EditQualityProjectResponseBodyData extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
+    public EditQualityProjectResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
 
+    public EditQualityProjectResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class EditQualityProjectResponseBodyData extends TeaModel {
         @NameInMap("Version")
         public Integer version;
 
         @NameInMap("ProjectId")
         public Long projectId;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         public static EditQualityProjectResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             EditQualityProjectResponseBodyData self = new EditQualityProjectResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public EditQualityProjectResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public EditQualityProjectResponseBodyData setVersion(Integer version) {
@@ -101,6 +93,14 @@ public class EditQualityProjectResponseBody extends TeaModel {
         }
         public Long getProjectId() {
             return this.projectId;
+        }
+
+        public EditQualityProjectResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

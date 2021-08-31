@@ -4,35 +4,27 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityResultResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("ChannelTypeName")
-    public String channelTypeName;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Data")
     public GetQualityResultResponseBodyData data;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("ChannelTypeName")
+    public String channelTypeName;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetQualityResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetQualityResultResponseBody self = new GetQualityResultResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetQualityResultResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetQualityResultResponseBody setMessage(String message) {
@@ -43,28 +35,12 @@ public class GetQualityResultResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetQualityResultResponseBody setChannelTypeName(String channelTypeName) {
-        this.channelTypeName = channelTypeName;
-        return this;
-    }
-    public String getChannelTypeName() {
-        return this.channelTypeName;
-    }
-
     public GetQualityResultResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetQualityResultResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public GetQualityResultResponseBody setData(GetQualityResultResponseBodyData data) {
@@ -75,24 +51,48 @@ public class GetQualityResultResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetQualityResultResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetQualityResultResponseBody setChannelTypeName(String channelTypeName) {
+        this.channelTypeName = channelTypeName;
+        return this;
+    }
+    public String getChannelTypeName() {
+        return this.channelTypeName;
+    }
+
+    public GetQualityResultResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetQualityResultResponseBodyDataQualityResultResponseList extends TeaModel {
         @NameInMap("TouchId")
         public String touchId;
 
-        @NameInMap("MemberName")
-        public String memberName;
-
         @NameInMap("ServicerName")
         public String servicerName;
 
-        @NameInMap("ChannelType")
-        public String channelType;
+        @NameInMap("MemberName")
+        public String memberName;
+
+        @NameInMap("ProjectName")
+        public String projectName;
 
         @NameInMap("ProjectId")
         public String projectId;
 
-        @NameInMap("ProjectName")
-        public String projectName;
+        @NameInMap("ChannelType")
+        public String channelType;
 
         @NameInMap("ChannelTypeName")
         public String channelTypeName;
@@ -103,11 +103,11 @@ public class GetQualityResultResponseBody extends TeaModel {
         @NameInMap("ServicerId")
         public String servicerId;
 
-        @NameInMap("RuleId")
-        public String ruleId;
-
         @NameInMap("RuleName")
         public String ruleName;
+
+        @NameInMap("RuleId")
+        public String ruleId;
 
         @NameInMap("GroupName")
         public String groupName;
@@ -137,14 +137,6 @@ public class GetQualityResultResponseBody extends TeaModel {
             return this.touchId;
         }
 
-        public GetQualityResultResponseBodyDataQualityResultResponseList setMemberName(String memberName) {
-            this.memberName = memberName;
-            return this;
-        }
-        public String getMemberName() {
-            return this.memberName;
-        }
-
         public GetQualityResultResponseBodyDataQualityResultResponseList setServicerName(String servicerName) {
             this.servicerName = servicerName;
             return this;
@@ -153,12 +145,20 @@ public class GetQualityResultResponseBody extends TeaModel {
             return this.servicerName;
         }
 
-        public GetQualityResultResponseBodyDataQualityResultResponseList setChannelType(String channelType) {
-            this.channelType = channelType;
+        public GetQualityResultResponseBodyDataQualityResultResponseList setMemberName(String memberName) {
+            this.memberName = memberName;
             return this;
         }
-        public String getChannelType() {
-            return this.channelType;
+        public String getMemberName() {
+            return this.memberName;
+        }
+
+        public GetQualityResultResponseBodyDataQualityResultResponseList setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
         }
 
         public GetQualityResultResponseBodyDataQualityResultResponseList setProjectId(String projectId) {
@@ -169,12 +169,12 @@ public class GetQualityResultResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        public GetQualityResultResponseBodyDataQualityResultResponseList setProjectName(String projectName) {
-            this.projectName = projectName;
+        public GetQualityResultResponseBodyDataQualityResultResponseList setChannelType(String channelType) {
+            this.channelType = channelType;
             return this;
         }
-        public String getProjectName() {
-            return this.projectName;
+        public String getChannelType() {
+            return this.channelType;
         }
 
         public GetQualityResultResponseBodyDataQualityResultResponseList setChannelTypeName(String channelTypeName) {
@@ -201,20 +201,20 @@ public class GetQualityResultResponseBody extends TeaModel {
             return this.servicerId;
         }
 
-        public GetQualityResultResponseBodyDataQualityResultResponseList setRuleId(String ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public String getRuleId() {
-            return this.ruleId;
-        }
-
         public GetQualityResultResponseBodyDataQualityResultResponseList setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public GetQualityResultResponseBodyDataQualityResultResponseList setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
         }
 
         public GetQualityResultResponseBodyDataQualityResultResponseList setGroupName(String groupName) {
@@ -263,14 +263,14 @@ public class GetQualityResultResponseBody extends TeaModel {
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        @NameInMap("QualityResultResponseList")
+        public java.util.List<GetQualityResultResponseBodyDataQualityResultResponseList> qualityResultResponseList;
+
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("TotalNum")
         public Integer totalNum;
-
-        @NameInMap("QualityResultResponseList")
-        public java.util.List<GetQualityResultResponseBodyDataQualityResultResponseList> qualityResultResponseList;
 
         public static GetQualityResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityResultResponseBodyData self = new GetQualityResultResponseBodyData();
@@ -283,6 +283,14 @@ public class GetQualityResultResponseBody extends TeaModel {
         }
         public Integer getPageNo() {
             return this.pageNo;
+        }
+
+        public GetQualityResultResponseBodyData setQualityResultResponseList(java.util.List<GetQualityResultResponseBodyDataQualityResultResponseList> qualityResultResponseList) {
+            this.qualityResultResponseList = qualityResultResponseList;
+            return this;
+        }
+        public java.util.List<GetQualityResultResponseBodyDataQualityResultResponseList> getQualityResultResponseList() {
+            return this.qualityResultResponseList;
         }
 
         public GetQualityResultResponseBodyData setPageSize(Integer pageSize) {
@@ -299,14 +307,6 @@ public class GetQualityResultResponseBody extends TeaModel {
         }
         public Integer getTotalNum() {
             return this.totalNum;
-        }
-
-        public GetQualityResultResponseBodyData setQualityResultResponseList(java.util.List<GetQualityResultResponseBodyDataQualityResultResponseList> qualityResultResponseList) {
-            this.qualityResultResponseList = qualityResultResponseList;
-            return this;
-        }
-        public java.util.List<GetQualityResultResponseBodyDataQualityResultResponseList> getQualityResultResponseList() {
-            return this.qualityResultResponseList;
         }
 
     }

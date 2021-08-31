@@ -4,32 +4,24 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAgentByIdResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Data")
     public GetAgentByIdResponseBodyData data;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetAgentByIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAgentByIdResponseBody self = new GetAgentByIdResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAgentByIdResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetAgentByIdResponseBody setMessage(String message) {
@@ -48,20 +40,28 @@ public class GetAgentByIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAgentByIdResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public GetAgentByIdResponseBody setData(GetAgentByIdResponseBodyData data) {
         this.data = data;
         return this;
     }
     public GetAgentByIdResponseBodyData getData() {
         return this.data;
+    }
+
+    public GetAgentByIdResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetAgentByIdResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GetAgentByIdResponseBodyData extends TeaModel {

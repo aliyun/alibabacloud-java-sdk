@@ -4,9 +4,6 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListOutboundStrategiesResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
 
@@ -16,17 +13,12 @@ public class ListOutboundStrategiesResponseBody extends TeaModel {
     @NameInMap("OutboundStrategies")
     public java.util.List<ListOutboundStrategiesResponseBodyOutboundStrategies> outboundStrategies;
 
+    @NameInMap("Code")
+    public String code;
+
     public static ListOutboundStrategiesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOutboundStrategiesResponseBody self = new ListOutboundStrategiesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListOutboundStrategiesResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ListOutboundStrategiesResponseBody setMessage(String message) {
@@ -53,6 +45,14 @@ public class ListOutboundStrategiesResponseBody extends TeaModel {
         return this.outboundStrategies;
     }
 
+    public ListOutboundStrategiesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public static class ListOutboundStrategiesResponseBodyOutboundStrategies extends TeaModel {
         @NameInMap("Status")
         public Integer status;
@@ -69,17 +69,17 @@ public class ListOutboundStrategiesResponseBody extends TeaModel {
         @NameInMap("OutboundNum")
         public String outboundNum;
 
-        @NameInMap("OutboundStrategyName")
-        public String outboundStrategyName;
-
         @NameInMap("ModifierId")
         public Long modifierId;
 
-        @NameInMap("SceneName")
-        public String sceneName;
+        @NameInMap("OutboundStrategyName")
+        public String outboundStrategyName;
 
         @NameInMap("OutboundStrategyId")
         public Long outboundStrategyId;
+
+        @NameInMap("SceneName")
+        public String sceneName;
 
         @NameInMap("CreatorId")
         public Long creatorId;
@@ -165,14 +165,6 @@ public class ListOutboundStrategiesResponseBody extends TeaModel {
             return this.outboundNum;
         }
 
-        public ListOutboundStrategiesResponseBodyOutboundStrategies setOutboundStrategyName(String outboundStrategyName) {
-            this.outboundStrategyName = outboundStrategyName;
-            return this;
-        }
-        public String getOutboundStrategyName() {
-            return this.outboundStrategyName;
-        }
-
         public ListOutboundStrategiesResponseBodyOutboundStrategies setModifierId(Long modifierId) {
             this.modifierId = modifierId;
             return this;
@@ -181,12 +173,12 @@ public class ListOutboundStrategiesResponseBody extends TeaModel {
             return this.modifierId;
         }
 
-        public ListOutboundStrategiesResponseBodyOutboundStrategies setSceneName(String sceneName) {
-            this.sceneName = sceneName;
+        public ListOutboundStrategiesResponseBodyOutboundStrategies setOutboundStrategyName(String outboundStrategyName) {
+            this.outboundStrategyName = outboundStrategyName;
             return this;
         }
-        public String getSceneName() {
-            return this.sceneName;
+        public String getOutboundStrategyName() {
+            return this.outboundStrategyName;
         }
 
         public ListOutboundStrategiesResponseBodyOutboundStrategies setOutboundStrategyId(Long outboundStrategyId) {
@@ -195,6 +187,14 @@ public class ListOutboundStrategiesResponseBody extends TeaModel {
         }
         public Long getOutboundStrategyId() {
             return this.outboundStrategyId;
+        }
+
+        public ListOutboundStrategiesResponseBodyOutboundStrategies setSceneName(String sceneName) {
+            this.sceneName = sceneName;
+            return this;
+        }
+        public String getSceneName() {
+            return this.sceneName;
         }
 
         public ListOutboundStrategiesResponseBodyOutboundStrategies setCreatorId(Long creatorId) {
