@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoTriggerRecordResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
@@ -13,12 +16,17 @@ public class ListRepoTriggerRecordResponseBody extends TeaModel {
     @NameInMap("RepoTriggerRecords")
     public java.util.List<ListRepoTriggerRecordResponseBodyRepoTriggerRecords> repoTriggerRecords;
 
-    @NameInMap("Code")
-    public String code;
-
     public static ListRepoTriggerRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepoTriggerRecordResponseBody self = new ListRepoTriggerRecordResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListRepoTriggerRecordResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public ListRepoTriggerRecordResponseBody setIsSuccess(Boolean isSuccess) {
@@ -45,41 +53,33 @@ public class ListRepoTriggerRecordResponseBody extends TeaModel {
         return this.repoTriggerRecords;
     }
 
-    public ListRepoTriggerRecordResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class ListRepoTriggerRecordResponseBodyRepoTriggerRecords extends TeaModel {
         @NameInMap("RequestHeaders")
         public String requestHeaders;
 
-        @NameInMap("ResponseHeaders")
-        public String responseHeaders;
-
         @NameInMap("TriggerName")
         public String triggerName;
+
+        @NameInMap("ResponseHeaders")
+        public String responseHeaders;
 
         @NameInMap("TriggerLogId")
         public String triggerLogId;
 
-        @NameInMap("RequestBody")
-        public String requestBody;
+        @NameInMap("ResponseBody")
+        public String responseBody;
 
         @NameInMap("TriggerUrl")
         public String triggerUrl;
 
-        @NameInMap("ResponseBody")
-        public String responseBody;
-
-        @NameInMap("TriggerTag")
-        public String triggerTag;
+        @NameInMap("RequestBody")
+        public String requestBody;
 
         @NameInMap("TriggerType")
         public String triggerType;
+
+        @NameInMap("TriggerTag")
+        public String triggerTag;
 
         @NameInMap("StatusCode")
         public String statusCode;
@@ -106,20 +106,20 @@ public class ListRepoTriggerRecordResponseBody extends TeaModel {
             return this.requestHeaders;
         }
 
-        public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setResponseHeaders(String responseHeaders) {
-            this.responseHeaders = responseHeaders;
-            return this;
-        }
-        public String getResponseHeaders() {
-            return this.responseHeaders;
-        }
-
         public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setTriggerName(String triggerName) {
             this.triggerName = triggerName;
             return this;
         }
         public String getTriggerName() {
             return this.triggerName;
+        }
+
+        public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setResponseHeaders(String responseHeaders) {
+            this.responseHeaders = responseHeaders;
+            return this;
+        }
+        public String getResponseHeaders() {
+            return this.responseHeaders;
         }
 
         public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setTriggerLogId(String triggerLogId) {
@@ -130,12 +130,12 @@ public class ListRepoTriggerRecordResponseBody extends TeaModel {
             return this.triggerLogId;
         }
 
-        public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setRequestBody(String requestBody) {
-            this.requestBody = requestBody;
+        public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setResponseBody(String responseBody) {
+            this.responseBody = responseBody;
             return this;
         }
-        public String getRequestBody() {
-            return this.requestBody;
+        public String getResponseBody() {
+            return this.responseBody;
         }
 
         public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setTriggerUrl(String triggerUrl) {
@@ -146,20 +146,12 @@ public class ListRepoTriggerRecordResponseBody extends TeaModel {
             return this.triggerUrl;
         }
 
-        public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setResponseBody(String responseBody) {
-            this.responseBody = responseBody;
+        public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setRequestBody(String requestBody) {
+            this.requestBody = requestBody;
             return this;
         }
-        public String getResponseBody() {
-            return this.responseBody;
-        }
-
-        public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setTriggerTag(String triggerTag) {
-            this.triggerTag = triggerTag;
-            return this;
-        }
-        public String getTriggerTag() {
-            return this.triggerTag;
+        public String getRequestBody() {
+            return this.requestBody;
         }
 
         public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setTriggerType(String triggerType) {
@@ -168,6 +160,14 @@ public class ListRepoTriggerRecordResponseBody extends TeaModel {
         }
         public String getTriggerType() {
             return this.triggerType;
+        }
+
+        public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setTriggerTag(String triggerTag) {
+            this.triggerTag = triggerTag;
+            return this;
+        }
+        public String getTriggerTag() {
+            return this.triggerTag;
         }
 
         public ListRepoTriggerRecordResponseBodyRepoTriggerRecords setStatusCode(String statusCode) {

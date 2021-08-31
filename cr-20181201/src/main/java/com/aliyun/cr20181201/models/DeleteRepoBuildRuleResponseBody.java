@@ -4,18 +4,26 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepoBuildRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static DeleteRepoBuildRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRepoBuildRuleResponseBody self = new DeleteRepoBuildRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRepoBuildRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteRepoBuildRuleResponseBody setIsSuccess(Boolean isSuccess) {
@@ -32,14 +40,6 @@ public class DeleteRepoBuildRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteRepoBuildRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceEndpointAclPolicyResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static DeleteInstanceEndpointAclPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstanceEndpointAclPolicyResponseBody self = new DeleteInstanceEndpointAclPolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteInstanceEndpointAclPolicyResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteInstanceEndpointAclPolicyResponseBody setIsSuccess(Boolean isSuccess) {
@@ -32,14 +40,6 @@ public class DeleteInstanceEndpointAclPolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteInstanceEndpointAclPolicyResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

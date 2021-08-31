@@ -4,14 +4,14 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepoSyncTaskByRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("SyncTaskId")
     public String syncTaskId;
@@ -19,6 +19,14 @@ public class CreateRepoSyncTaskByRuleResponseBody extends TeaModel {
     public static CreateRepoSyncTaskByRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRepoSyncTaskByRuleResponseBody self = new CreateRepoSyncTaskByRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRepoSyncTaskByRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateRepoSyncTaskByRuleResponseBody setIsSuccess(Boolean isSuccess) {
@@ -35,14 +43,6 @@ public class CreateRepoSyncTaskByRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateRepoSyncTaskByRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CreateRepoSyncTaskByRuleResponseBody setSyncTaskId(String syncTaskId) {

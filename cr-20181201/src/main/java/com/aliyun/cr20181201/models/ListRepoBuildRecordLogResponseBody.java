@@ -4,54 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoBuildRecordLogResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("BuildRecordLogs")
-    public java.util.List<ListRepoBuildRecordLogResponseBodyBuildRecordLogs> buildRecordLogs;
-
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
+    @NameInMap("BuildRecordLogs")
+    public java.util.List<ListRepoBuildRecordLogResponseBodyBuildRecordLogs> buildRecordLogs;
+
     public static ListRepoBuildRecordLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepoBuildRecordLogResponseBody self = new ListRepoBuildRecordLogResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRepoBuildRecordLogResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListRepoBuildRecordLogResponseBody setBuildRecordLogs(java.util.List<ListRepoBuildRecordLogResponseBodyBuildRecordLogs> buildRecordLogs) {
-        this.buildRecordLogs = buildRecordLogs;
-        return this;
-    }
-    public java.util.List<ListRepoBuildRecordLogResponseBodyBuildRecordLogs> getBuildRecordLogs() {
-        return this.buildRecordLogs;
-    }
-
-    public ListRepoBuildRecordLogResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public ListRepoBuildRecordLogResponseBody setRequestId(String requestId) {
@@ -62,12 +38,12 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRepoBuildRecordLogResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListRepoBuildRecordLogResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getCode() {
+        return this.code;
     }
 
     public ListRepoBuildRecordLogResponseBody setPageNo(Integer pageNo) {
@@ -78,12 +54,36 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public ListRepoBuildRecordLogResponseBody setCode(String code) {
-        this.code = code;
+    public ListRepoBuildRecordLogResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListRepoBuildRecordLogResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListRepoBuildRecordLogResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListRepoBuildRecordLogResponseBody setBuildRecordLogs(java.util.List<ListRepoBuildRecordLogResponseBodyBuildRecordLogs> buildRecordLogs) {
+        this.buildRecordLogs = buildRecordLogs;
+        return this;
+    }
+    public java.util.List<ListRepoBuildRecordLogResponseBodyBuildRecordLogs> getBuildRecordLogs() {
+        return this.buildRecordLogs;
     }
 
     public static class ListRepoBuildRecordLogResponseBodyBuildRecordLogs extends TeaModel {

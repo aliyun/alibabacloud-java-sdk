@@ -7,26 +7,26 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
     @NameInMap("EndTime")
     public Long endTime;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("StartTime")
-    public Long startTime;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
 
     @NameInMap("BuildRecordId")
     public String buildRecordId;
 
     @NameInMap("Image")
     public GetRepoBuildRecordResponseBodyImage image;
-
-    @NameInMap("Code")
-    public String code;
 
     public static GetRepoBuildRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRepoBuildRecordResponseBody self = new GetRepoBuildRecordResponseBody();
@@ -41,20 +41,20 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         return this.status;
     }
 
-    public GetRepoBuildRecordResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
     public GetRepoBuildRecordResponseBody setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public GetRepoBuildRecordResponseBody setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public GetRepoBuildRecordResponseBody setRequestId(String requestId) {
@@ -65,12 +65,20 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetRepoBuildRecordResponseBody setStartTime(Long startTime) {
-        this.startTime = startTime;
+    public GetRepoBuildRecordResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Long getStartTime() {
-        return this.startTime;
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetRepoBuildRecordResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
+        return this;
+    }
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
     }
 
     public GetRepoBuildRecordResponseBody setBuildRecordId(String buildRecordId) {
@@ -87,14 +95,6 @@ public class GetRepoBuildRecordResponseBody extends TeaModel {
     }
     public GetRepoBuildRecordResponseBodyImage getImage() {
         return this.image;
-    }
-
-    public GetRepoBuildRecordResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class GetRepoBuildRecordResponseBodyImage extends TeaModel {

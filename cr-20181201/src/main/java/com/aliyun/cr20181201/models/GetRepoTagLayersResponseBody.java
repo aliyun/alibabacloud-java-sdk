@@ -4,14 +4,14 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagLayersResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Layers")
     public java.util.List<GetRepoTagLayersResponseBodyLayers> layers;
@@ -19,6 +19,14 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
     public static GetRepoTagLayersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagLayersResponseBody self = new GetRepoTagLayersResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetRepoTagLayersResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetRepoTagLayersResponseBody setIsSuccess(Boolean isSuccess) {
@@ -35,14 +43,6 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetRepoTagLayersResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetRepoTagLayersResponseBody setLayers(java.util.List<GetRepoTagLayersResponseBodyLayers> layers) {

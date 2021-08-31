@@ -4,32 +4,17 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepositoryResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("RepoNamespaceName")
-    public String repoNamespaceName;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Summary")
+    public String summary;
 
     @NameInMap("CreateTime")
     public Long createTime;
 
-    @NameInMap("RepoName")
-    public String repoName;
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("TagImmutability")
-    public Boolean tagImmutability;
-
-    @NameInMap("RepoBuildType")
-    public String repoBuildType;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("RepoStatus")
     public String repoStatus;
@@ -37,14 +22,29 @@ public class GetRepositoryResponseBody extends TeaModel {
     @NameInMap("RepoType")
     public String repoType;
 
+    @NameInMap("RepoBuildType")
+    public String repoBuildType;
+
     @NameInMap("ModifiedTime")
     public Long modifiedTime;
 
-    @NameInMap("Summary")
-    public String summary;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RepoId")
     public String repoId;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("RepoNamespaceName")
+    public String repoNamespaceName;
+
+    @NameInMap("TagImmutability")
+    public Boolean tagImmutability;
+
+    @NameInMap("RepoName")
+    public String repoName;
 
     @NameInMap("Detail")
     public String detail;
@@ -54,36 +54,12 @@ public class GetRepositoryResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetRepositoryResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
+    public GetRepositoryResponseBody setSummary(String summary) {
+        this.summary = summary;
         return this;
     }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public GetRepositoryResponseBody setRepoNamespaceName(String repoNamespaceName) {
-        this.repoNamespaceName = repoNamespaceName;
-        return this;
-    }
-    public String getRepoNamespaceName() {
-        return this.repoNamespaceName;
-    }
-
-    public GetRepositoryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetRepositoryResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getSummary() {
+        return this.summary;
     }
 
     public GetRepositoryResponseBody setCreateTime(Long createTime) {
@@ -94,36 +70,20 @@ public class GetRepositoryResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public GetRepositoryResponseBody setRepoName(String repoName) {
-        this.repoName = repoName;
+    public GetRepositoryResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getRepoName() {
-        return this.repoName;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
     }
 
-    public GetRepositoryResponseBody setCode(String code) {
-        this.code = code;
+    public GetRepositoryResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetRepositoryResponseBody setTagImmutability(Boolean tagImmutability) {
-        this.tagImmutability = tagImmutability;
-        return this;
-    }
-    public Boolean getTagImmutability() {
-        return this.tagImmutability;
-    }
-
-    public GetRepositoryResponseBody setRepoBuildType(String repoBuildType) {
-        this.repoBuildType = repoBuildType;
-        return this;
-    }
-    public String getRepoBuildType() {
-        return this.repoBuildType;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetRepositoryResponseBody setRepoStatus(String repoStatus) {
@@ -142,6 +102,14 @@ public class GetRepositoryResponseBody extends TeaModel {
         return this.repoType;
     }
 
+    public GetRepositoryResponseBody setRepoBuildType(String repoBuildType) {
+        this.repoBuildType = repoBuildType;
+        return this;
+    }
+    public String getRepoBuildType() {
+        return this.repoBuildType;
+    }
+
     public GetRepositoryResponseBody setModifiedTime(Long modifiedTime) {
         this.modifiedTime = modifiedTime;
         return this;
@@ -150,12 +118,12 @@ public class GetRepositoryResponseBody extends TeaModel {
         return this.modifiedTime;
     }
 
-    public GetRepositoryResponseBody setSummary(String summary) {
-        this.summary = summary;
+    public GetRepositoryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getSummary() {
-        return this.summary;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetRepositoryResponseBody setRepoId(String repoId) {
@@ -164,6 +132,38 @@ public class GetRepositoryResponseBody extends TeaModel {
     }
     public String getRepoId() {
         return this.repoId;
+    }
+
+    public GetRepositoryResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetRepositoryResponseBody setRepoNamespaceName(String repoNamespaceName) {
+        this.repoNamespaceName = repoNamespaceName;
+        return this;
+    }
+    public String getRepoNamespaceName() {
+        return this.repoNamespaceName;
+    }
+
+    public GetRepositoryResponseBody setTagImmutability(Boolean tagImmutability) {
+        this.tagImmutability = tagImmutability;
+        return this;
+    }
+    public Boolean getTagImmutability() {
+        return this.tagImmutability;
+    }
+
+    public GetRepositoryResponseBody setRepoName(String repoName) {
+        this.repoName = repoName;
+        return this;
+    }
+    public String getRepoName() {
+        return this.repoName;
     }
 
     public GetRepositoryResponseBody setDetail(String detail) {

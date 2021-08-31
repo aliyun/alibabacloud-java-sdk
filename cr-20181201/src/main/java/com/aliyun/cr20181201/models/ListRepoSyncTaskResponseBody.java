@@ -4,46 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoSyncTaskResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    @NameInMap("SyncTasks")
-    public java.util.List<ListRepoSyncTaskResponseBodySyncTasks> syncTasks;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
+    @NameInMap("SyncTasks")
+    public java.util.List<ListRepoSyncTaskResponseBodySyncTasks> syncTasks;
+
     public static ListRepoSyncTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRepoSyncTaskResponseBody self = new ListRepoSyncTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRepoSyncTaskResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListRepoSyncTaskResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public ListRepoSyncTaskResponseBody setRequestId(String requestId) {
@@ -54,12 +38,12 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListRepoSyncTaskResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListRepoSyncTaskResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getCode() {
+        return this.code;
     }
 
     public ListRepoSyncTaskResponseBody setPageNo(Integer pageNo) {
@@ -70,83 +54,36 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         return this.pageNo;
     }
 
+    public ListRepoSyncTaskResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
+        return this;
+    }
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListRepoSyncTaskResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListRepoSyncTaskResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public ListRepoSyncTaskResponseBody setSyncTasks(java.util.List<ListRepoSyncTaskResponseBodySyncTasks> syncTasks) {
         this.syncTasks = syncTasks;
         return this;
     }
     public java.util.List<ListRepoSyncTaskResponseBodySyncTasks> getSyncTasks() {
         return this.syncTasks;
-    }
-
-    public ListRepoSyncTaskResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public static class ListRepoSyncTaskResponseBodySyncTasksImageTo extends TeaModel {
-        @NameInMap("RepoNamespaceName")
-        public String repoNamespaceName;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("ImageTag")
-        public String imageTag;
-
-        @NameInMap("RepoName")
-        public String repoName;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        public static ListRepoSyncTaskResponseBodySyncTasksImageTo build(java.util.Map<String, ?> map) throws Exception {
-            ListRepoSyncTaskResponseBodySyncTasksImageTo self = new ListRepoSyncTaskResponseBodySyncTasksImageTo();
-            return TeaModel.build(map, self);
-        }
-
-        public ListRepoSyncTaskResponseBodySyncTasksImageTo setRepoNamespaceName(String repoNamespaceName) {
-            this.repoNamespaceName = repoNamespaceName;
-            return this;
-        }
-        public String getRepoNamespaceName() {
-            return this.repoNamespaceName;
-        }
-
-        public ListRepoSyncTaskResponseBodySyncTasksImageTo setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public ListRepoSyncTaskResponseBodySyncTasksImageTo setImageTag(String imageTag) {
-            this.imageTag = imageTag;
-            return this;
-        }
-        public String getImageTag() {
-            return this.imageTag;
-        }
-
-        public ListRepoSyncTaskResponseBodySyncTasksImageTo setRepoName(String repoName) {
-            this.repoName = repoName;
-            return this;
-        }
-        public String getRepoName() {
-            return this.repoName;
-        }
-
-        public ListRepoSyncTaskResponseBodySyncTasksImageTo setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
     }
 
     public static class ListRepoSyncTaskResponseBodySyncTasksImageFrom extends TeaModel {
@@ -212,6 +149,69 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
 
     }
 
+    public static class ListRepoSyncTaskResponseBodySyncTasksImageTo extends TeaModel {
+        @NameInMap("RepoNamespaceName")
+        public String repoNamespaceName;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("ImageTag")
+        public String imageTag;
+
+        @NameInMap("RepoName")
+        public String repoName;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        public static ListRepoSyncTaskResponseBodySyncTasksImageTo build(java.util.Map<String, ?> map) throws Exception {
+            ListRepoSyncTaskResponseBodySyncTasksImageTo self = new ListRepoSyncTaskResponseBodySyncTasksImageTo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasksImageTo setRepoNamespaceName(String repoNamespaceName) {
+            this.repoNamespaceName = repoNamespaceName;
+            return this;
+        }
+        public String getRepoNamespaceName() {
+            return this.repoNamespaceName;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasksImageTo setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasksImageTo setImageTag(String imageTag) {
+            this.imageTag = imageTag;
+            return this;
+        }
+        public String getImageTag() {
+            return this.imageTag;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasksImageTo setRepoName(String repoName) {
+            this.repoName = repoName;
+            return this;
+        }
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasksImageTo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
     public static class ListRepoSyncTaskResponseBodySyncTasks extends TeaModel {
         @NameInMap("ModifedTime")
         public Long modifedTime;
@@ -234,11 +234,11 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         @NameInMap("TaskTrigger")
         public String taskTrigger;
 
-        @NameInMap("ImageTo")
-        public ListRepoSyncTaskResponseBodySyncTasksImageTo imageTo;
-
         @NameInMap("ImageFrom")
         public ListRepoSyncTaskResponseBodySyncTasksImageFrom imageFrom;
+
+        @NameInMap("ImageTo")
+        public ListRepoSyncTaskResponseBodySyncTasksImageTo imageTo;
 
         public static ListRepoSyncTaskResponseBodySyncTasks build(java.util.Map<String, ?> map) throws Exception {
             ListRepoSyncTaskResponseBodySyncTasks self = new ListRepoSyncTaskResponseBodySyncTasks();
@@ -301,20 +301,20 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             return this.taskTrigger;
         }
 
-        public ListRepoSyncTaskResponseBodySyncTasks setImageTo(ListRepoSyncTaskResponseBodySyncTasksImageTo imageTo) {
-            this.imageTo = imageTo;
-            return this;
-        }
-        public ListRepoSyncTaskResponseBodySyncTasksImageTo getImageTo() {
-            return this.imageTo;
-        }
-
         public ListRepoSyncTaskResponseBodySyncTasks setImageFrom(ListRepoSyncTaskResponseBodySyncTasksImageFrom imageFrom) {
             this.imageFrom = imageFrom;
             return this;
         }
         public ListRepoSyncTaskResponseBodySyncTasksImageFrom getImageFrom() {
             return this.imageFrom;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasks setImageTo(ListRepoSyncTaskResponseBodySyncTasksImageTo imageTo) {
+            this.imageTo = imageTo;
+            return this;
+        }
+        public ListRepoSyncTaskResponseBodySyncTasksImageTo getImageTo() {
+            return this.imageTo;
         }
 
     }

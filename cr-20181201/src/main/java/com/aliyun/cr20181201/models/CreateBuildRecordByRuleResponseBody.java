@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateBuildRecordByRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
@@ -13,12 +16,17 @@ public class CreateBuildRecordByRuleResponseBody extends TeaModel {
     @NameInMap("BuildRecordId")
     public String buildRecordId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static CreateBuildRecordByRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateBuildRecordByRuleResponseBody self = new CreateBuildRecordByRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateBuildRecordByRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateBuildRecordByRuleResponseBody setIsSuccess(Boolean isSuccess) {
@@ -43,14 +51,6 @@ public class CreateBuildRecordByRuleResponseBody extends TeaModel {
     }
     public String getBuildRecordId() {
         return this.buildRecordId;
-    }
-
-    public CreateBuildRecordByRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

@@ -4,21 +4,29 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class UpdateRepoBuildRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
-
-    @NameInMap("BuildRuleId")
-    public String buildRuleId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("BuildRuleId")
+    public String buildRuleId;
 
     public static UpdateRepoBuildRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateRepoBuildRuleResponseBody self = new UpdateRepoBuildRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateRepoBuildRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public UpdateRepoBuildRuleResponseBody setIsSuccess(Boolean isSuccess) {
@@ -29,14 +37,6 @@ public class UpdateRepoBuildRuleResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public UpdateRepoBuildRuleResponseBody setBuildRuleId(String buildRuleId) {
-        this.buildRuleId = buildRuleId;
-        return this;
-    }
-    public String getBuildRuleId() {
-        return this.buildRuleId;
-    }
-
     public UpdateRepoBuildRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -45,12 +45,12 @@ public class UpdateRepoBuildRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateRepoBuildRuleResponseBody setCode(String code) {
-        this.code = code;
+    public UpdateRepoBuildRuleResponseBody setBuildRuleId(String buildRuleId) {
+        this.buildRuleId = buildRuleId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getBuildRuleId() {
+        return this.buildRuleId;
     }
 
 }

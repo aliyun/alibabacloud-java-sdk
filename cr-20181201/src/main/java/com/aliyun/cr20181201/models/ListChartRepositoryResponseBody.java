@@ -4,54 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChartRepositoryResponseBody extends TeaModel {
-    @NameInMap("Repositories")
-    public java.util.List<ListChartRepositoryResponseBodyRepositories> repositories;
-
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
+    @NameInMap("Repositories")
+    public java.util.List<ListChartRepositoryResponseBodyRepositories> repositories;
+
     public static ListChartRepositoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListChartRepositoryResponseBody self = new ListChartRepositoryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListChartRepositoryResponseBody setRepositories(java.util.List<ListChartRepositoryResponseBodyRepositories> repositories) {
-        this.repositories = repositories;
-        return this;
-    }
-    public java.util.List<ListChartRepositoryResponseBodyRepositories> getRepositories() {
-        return this.repositories;
-    }
-
-    public ListChartRepositoryResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListChartRepositoryResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public ListChartRepositoryResponseBody setRequestId(String requestId) {
@@ -62,12 +38,12 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListChartRepositoryResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListChartRepositoryResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getCode() {
+        return this.code;
     }
 
     public ListChartRepositoryResponseBody setPageNo(Integer pageNo) {
@@ -78,12 +54,36 @@ public class ListChartRepositoryResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public ListChartRepositoryResponseBody setCode(String code) {
-        this.code = code;
+    public ListChartRepositoryResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListChartRepositoryResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListChartRepositoryResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListChartRepositoryResponseBody setRepositories(java.util.List<ListChartRepositoryResponseBodyRepositories> repositories) {
+        this.repositories = repositories;
+        return this;
+    }
+    public java.util.List<ListChartRepositoryResponseBodyRepositories> getRepositories() {
+        return this.repositories;
     }
 
     public static class ListChartRepositoryResponseBodyRepositories extends TeaModel {

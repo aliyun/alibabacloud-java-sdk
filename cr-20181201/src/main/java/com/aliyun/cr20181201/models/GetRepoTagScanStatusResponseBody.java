@@ -7,14 +7,17 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("ScanService")
+    public String scanService;
 
     public static GetRepoTagScanStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRepoTagScanStatusResponseBody self = new GetRepoTagScanStatusResponseBody();
@@ -27,6 +30,14 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetRepoTagScanStatusResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetRepoTagScanStatusResponseBody setIsSuccess(Boolean isSuccess) {
@@ -45,12 +56,12 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetRepoTagScanStatusResponseBody setCode(String code) {
-        this.code = code;
+    public GetRepoTagScanStatusResponseBody setScanService(String scanService) {
+        this.scanService = scanService;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getScanService() {
+        return this.scanService;
     }
 
 }

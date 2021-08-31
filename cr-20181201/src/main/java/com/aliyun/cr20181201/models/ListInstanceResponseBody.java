@@ -4,54 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    public java.util.List<ListInstanceResponseBodyInstances> instances;
-
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("Instances")
+    public java.util.List<ListInstanceResponseBodyInstances> instances;
+
     public static ListInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceResponseBody self = new ListInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstanceResponseBody setInstances(java.util.List<ListInstanceResponseBodyInstances> instances) {
-        this.instances = instances;
-        return this;
-    }
-    public java.util.List<ListInstanceResponseBodyInstances> getInstances() {
-        return this.instances;
-    }
-
-    public ListInstanceResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public ListInstanceResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListInstanceResponseBody setRequestId(String requestId) {
@@ -62,12 +38,12 @@ public class ListInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListInstanceResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListInstanceResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getCode() {
+        return this.code;
     }
 
     public ListInstanceResponseBody setPageNo(Integer pageNo) {
@@ -78,12 +54,36 @@ public class ListInstanceResponseBody extends TeaModel {
         return this.pageNo;
     }
 
-    public ListInstanceResponseBody setCode(String code) {
-        this.code = code;
+    public ListInstanceResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public ListInstanceResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListInstanceResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListInstanceResponseBody setInstances(java.util.List<ListInstanceResponseBodyInstances> instances) {
+        this.instances = instances;
+        return this;
+    }
+    public java.util.List<ListInstanceResponseBodyInstances> getInstances() {
+        return this.instances;
     }
 
     public static class ListInstanceResponseBodyInstances extends TeaModel {
