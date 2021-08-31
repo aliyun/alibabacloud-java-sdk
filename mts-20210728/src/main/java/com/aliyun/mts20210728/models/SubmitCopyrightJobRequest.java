@@ -40,6 +40,10 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
+    // 外部url链接(Input和url二选一)
+    @NameInMap("Url")
+    public String url;
+
     public static SubmitCopyrightJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitCopyrightJobRequest self = new SubmitCopyrightJobRequest();
         return TeaModel.build(map, self);
@@ -115,6 +119,14 @@ public class SubmitCopyrightJobRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public SubmitCopyrightJobRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }
