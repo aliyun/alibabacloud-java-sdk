@@ -37,6 +37,9 @@ public class BeautifyBodyRequest extends TeaModel {
     @NameInMap("PoseList")
     public java.util.List<BeautifyBodyRequestPoseList> poseList;
 
+    @NameInMap("IsPregnant")
+    public Boolean isPregnant;
+
     public static BeautifyBodyRequest build(java.util.Map<String, ?> map) throws Exception {
         BeautifyBodyRequest self = new BeautifyBodyRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class BeautifyBodyRequest extends TeaModel {
     }
     public java.util.List<BeautifyBodyRequestPoseList> getPoseList() {
         return this.poseList;
+    }
+
+    public BeautifyBodyRequest setIsPregnant(Boolean isPregnant) {
+        this.isPregnant = isPregnant;
+        return this;
+    }
+    public Boolean getIsPregnant() {
+        return this.isPregnant;
     }
 
     public static class BeautifyBodyRequestAgeRange extends TeaModel {

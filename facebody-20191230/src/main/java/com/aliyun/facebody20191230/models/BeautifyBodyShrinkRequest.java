@@ -37,6 +37,9 @@ public class BeautifyBodyShrinkRequest extends TeaModel {
     @NameInMap("PoseList")
     public String poseListShrink;
 
+    @NameInMap("IsPregnant")
+    public Boolean isPregnant;
+
     public static BeautifyBodyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         BeautifyBodyShrinkRequest self = new BeautifyBodyShrinkRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class BeautifyBodyShrinkRequest extends TeaModel {
     }
     public String getPoseListShrink() {
         return this.poseListShrink;
+    }
+
+    public BeautifyBodyShrinkRequest setIsPregnant(Boolean isPregnant) {
+        this.isPregnant = isPregnant;
+        return this;
+    }
+    public Boolean getIsPregnant() {
+        return this.isPregnant;
     }
 
 }
