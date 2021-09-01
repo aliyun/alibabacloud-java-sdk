@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDISyncTaskRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("TaskType")
+    @Validation(required = true)
     public String taskType;
 
     @NameInMap("TaskContent")
+    @Validation(required = true)
     public String taskContent;
 
     @NameInMap("TaskParam")
+    @Validation(required = true)
     public String taskParam;
 
     @NameInMap("TaskName")
+    @Validation(required = true)
     public String taskName;
 
     @NameInMap("ClientToken")

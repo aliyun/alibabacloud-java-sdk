@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListCalcEnginesRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("Name")
     public String name;
 
     @NameInMap("CalcEngineType")
+    @Validation(required = true)
     public String calcEngineType;
 
     @NameInMap("EnvType")

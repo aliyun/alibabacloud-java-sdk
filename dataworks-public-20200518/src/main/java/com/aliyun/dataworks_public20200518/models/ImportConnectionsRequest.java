@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ImportConnectionsRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("Connections")
+    @Validation(required = true)
     public String connections;
 
     public static ImportConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {

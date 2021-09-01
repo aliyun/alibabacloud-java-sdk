@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListNodeInputOrOutputRequest extends TeaModel {
     @NameInMap("NodeId")
+    @Validation(required = true)
     public Long nodeId;
 
     @NameInMap("ProjectEnv")
+    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("IoType")
+    @Validation(required = true)
     public String ioType;
 
     public static ListNodeInputOrOutputRequest build(java.util.Map<String, ?> map) throws Exception {

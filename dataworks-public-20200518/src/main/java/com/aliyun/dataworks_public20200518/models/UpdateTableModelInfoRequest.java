@@ -14,6 +14,7 @@ public class UpdateTableModelInfoRequest extends TeaModel {
     public Long levelId;
 
     @NameInMap("TableGuid")
+    @Validation(required = true)
     public String tableGuid;
 
     @NameInMap("LevelType")

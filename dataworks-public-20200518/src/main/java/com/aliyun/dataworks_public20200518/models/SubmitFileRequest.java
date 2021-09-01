@@ -11,6 +11,7 @@ public class SubmitFileRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("FileId")
+    @Validation(required = true)
     public Long fileId;
 
     @NameInMap("Comment")

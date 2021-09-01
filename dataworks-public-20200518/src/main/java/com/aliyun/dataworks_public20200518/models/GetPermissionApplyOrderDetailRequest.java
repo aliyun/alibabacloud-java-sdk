@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPermissionApplyOrderDetailRequest extends TeaModel {
     @NameInMap("FlowId")
+    @Validation(required = true)
     public String flowId;
 
     public static GetPermissionApplyOrderDetailRequest build(java.util.Map<String, ?> map) throws Exception {

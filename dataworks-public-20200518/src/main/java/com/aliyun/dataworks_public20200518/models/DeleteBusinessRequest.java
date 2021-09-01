@@ -11,6 +11,7 @@ public class DeleteBusinessRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("BusinessId")
+    @Validation(required = true)
     public Long businessId;
 
     public static DeleteBusinessRequest build(java.util.Map<String, ?> map) throws Exception {

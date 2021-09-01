@@ -4,33 +4,65 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateDIProjectConfigResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public UpdateDIProjectConfigResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public UpdateDIProjectConfigResponseData data;
 
     public static UpdateDIProjectConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateDIProjectConfigResponse self = new UpdateDIProjectConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDIProjectConfigResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateDIProjectConfigResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateDIProjectConfigResponse setBody(UpdateDIProjectConfigResponseBody body) {
-        this.body = body;
+    public UpdateDIProjectConfigResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public UpdateDIProjectConfigResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UpdateDIProjectConfigResponse setData(UpdateDIProjectConfigResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public UpdateDIProjectConfigResponseData getData() {
+        return this.data;
+    }
+
+    public static class UpdateDIProjectConfigResponseData extends TeaModel {
+        @NameInMap("Status")
+        @Validation(required = true)
+        public String status;
+
+        public static UpdateDIProjectConfigResponseData build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDIProjectConfigResponseData self = new UpdateDIProjectConfigResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateDIProjectConfigResponseData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
 }

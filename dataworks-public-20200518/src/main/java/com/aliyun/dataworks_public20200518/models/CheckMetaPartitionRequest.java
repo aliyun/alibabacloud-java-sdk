@@ -8,6 +8,7 @@ public class CheckMetaPartitionRequest extends TeaModel {
     public String tableGuid;
 
     @NameInMap("Partition")
+    @Validation(required = true)
     public String partition;
 
     @NameInMap("ClusterId")

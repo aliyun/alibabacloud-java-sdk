@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetOpRiskDataResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("RiskData")
     @Validation(required = true)
-    public GetOpRiskDataResponseBody body;
+    public String riskData;
 
     public static GetOpRiskDataResponse build(java.util.Map<String, ?> map) throws Exception {
         GetOpRiskDataResponse self = new GetOpRiskDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetOpRiskDataResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetOpRiskDataResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetOpRiskDataResponse setBody(GetOpRiskDataResponseBody body) {
-        this.body = body;
+    public GetOpRiskDataResponse setRiskData(String riskData) {
+        this.riskData = riskData;
         return this;
     }
-    public GetOpRiskDataResponseBody getBody() {
-        return this.body;
+    public String getRiskData() {
+        return this.riskData;
     }
 
 }

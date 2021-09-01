@@ -59,6 +59,7 @@ public class UpdateFileRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("FileId")
+    @Validation(required = true)
     public Long fileId;
 
     @NameInMap("OutputList")

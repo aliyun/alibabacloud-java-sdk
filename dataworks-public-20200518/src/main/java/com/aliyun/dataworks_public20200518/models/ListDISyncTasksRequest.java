@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListDISyncTasksRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("TaskType")
+    @Validation(required = true)
     public String taskType;
 
     @NameInMap("PageNumber")

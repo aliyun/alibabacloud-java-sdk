@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     @NameInMap("ProjectEnv")
+    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("NodeId")
@@ -17,6 +18,7 @@ public class ListInstancesRequest extends TeaModel {
     public String owner;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("BizName")
