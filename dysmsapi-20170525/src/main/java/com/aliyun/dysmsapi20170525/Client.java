@@ -15,21 +15,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "central";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-northeast-1", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "dysmsapi.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "dysmsapi.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "dysmsapi-xman.ap-southeast-5.aliyuncs.com"),
             new TeaPair("cn-beijing", "dysmsapi-proxy.cn-beijing.aliyuncs.com"),
-            new TeaPair("eu-central-1", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dysmsapi.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "dysmsapi.ap-southeast-1.aliyuncs.com")
+            new TeaPair("cn-hongkong", "dysmsapi-xman.cn-hongkong.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dysmsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
