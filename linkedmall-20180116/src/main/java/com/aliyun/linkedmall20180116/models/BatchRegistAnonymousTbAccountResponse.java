@@ -4,57 +4,33 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class BatchRegistAnonymousTbAccountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("BatchId")
-    @Validation(required = true)
-    public String batchId;
+    public BatchRegistAnonymousTbAccountResponseBody body;
 
     public static BatchRegistAnonymousTbAccountResponse build(java.util.Map<String, ?> map) throws Exception {
         BatchRegistAnonymousTbAccountResponse self = new BatchRegistAnonymousTbAccountResponse();
         return TeaModel.build(map, self);
     }
 
-    public BatchRegistAnonymousTbAccountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public BatchRegistAnonymousTbAccountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public BatchRegistAnonymousTbAccountResponse setCode(String code) {
-        this.code = code;
+    public BatchRegistAnonymousTbAccountResponse setBody(BatchRegistAnonymousTbAccountResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public BatchRegistAnonymousTbAccountResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public BatchRegistAnonymousTbAccountResponse setBatchId(String batchId) {
-        this.batchId = batchId;
-        return this;
-    }
-    public String getBatchId() {
-        return this.batchId;
+    public BatchRegistAnonymousTbAccountResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryOrderLogisticsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("LmOrderId")
-    @Validation(required = true)
     public Long lmOrderId;
 
     @NameInMap("UseAnonymousTbAccount")

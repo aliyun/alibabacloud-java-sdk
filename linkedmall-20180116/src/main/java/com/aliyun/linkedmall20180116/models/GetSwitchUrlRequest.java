@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetSwitchUrlRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("Url")
-    @Validation(required = true)
     public String url;
 
     @NameInMap("UseAnonymousTbAccount")

@@ -4,57 +4,33 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyItemLimitRuleResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Model")
-    @Validation(required = true)
-    public Boolean model;
+    public ModifyItemLimitRuleResponseBody body;
 
     public static ModifyItemLimitRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyItemLimitRuleResponse self = new ModifyItemLimitRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyItemLimitRuleResponse setCode(String code) {
-        this.code = code;
+    public ModifyItemLimitRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ModifyItemLimitRuleResponse setMessage(String message) {
-        this.message = message;
+    public ModifyItemLimitRuleResponse setBody(ModifyItemLimitRuleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ModifyItemLimitRuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ModifyItemLimitRuleResponse setModel(Boolean model) {
-        this.model = model;
-        return this;
-    }
-    public Boolean getModel() {
-        return this.model;
+    public ModifyItemLimitRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

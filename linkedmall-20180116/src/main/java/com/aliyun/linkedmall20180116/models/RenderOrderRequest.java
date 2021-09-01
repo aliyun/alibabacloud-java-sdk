@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RenderOrderRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
@@ -13,9 +12,6 @@ public class RenderOrderRequest extends TeaModel {
 
     @NameInMap("ExtJson")
     public String extJson;
-
-    @NameInMap("ItemList")
-    public java.util.List<RenderOrderRequestItemList> itemList;
 
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
@@ -31,6 +27,9 @@ public class RenderOrderRequest extends TeaModel {
 
     @NameInMap("AccountType")
     public String accountType;
+
+    @NameInMap("ItemList")
+    public java.util.List<RenderOrderRequestItemList> itemList;
 
     public static RenderOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         RenderOrderRequest self = new RenderOrderRequest();
@@ -59,14 +58,6 @@ public class RenderOrderRequest extends TeaModel {
     }
     public String getExtJson() {
         return this.extJson;
-    }
-
-    public RenderOrderRequest setItemList(java.util.List<RenderOrderRequestItemList> itemList) {
-        this.itemList = itemList;
-        return this;
-    }
-    public java.util.List<RenderOrderRequestItemList> getItemList() {
-        return this.itemList;
     }
 
     public RenderOrderRequest setDeliveryAddress(String deliveryAddress) {
@@ -109,30 +100,30 @@ public class RenderOrderRequest extends TeaModel {
         return this.accountType;
     }
 
-    public static class RenderOrderRequestItemList extends TeaModel {
-        @NameInMap("ItemId")
-        public Long itemId;
+    public RenderOrderRequest setItemList(java.util.List<RenderOrderRequestItemList> itemList) {
+        this.itemList = itemList;
+        return this;
+    }
+    public java.util.List<RenderOrderRequestItemList> getItemList() {
+        return this.itemList;
+    }
 
+    public static class RenderOrderRequestItemList extends TeaModel {
         @NameInMap("SkuId")
         public Long skuId;
-
-        @NameInMap("Quantity")
-        public Integer quantity;
 
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        @NameInMap("ItemId")
+        public Long itemId;
+
+        @NameInMap("Quantity")
+        public Integer quantity;
+
         public static RenderOrderRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             RenderOrderRequestItemList self = new RenderOrderRequestItemList();
             return TeaModel.build(map, self);
-        }
-
-        public RenderOrderRequestItemList setItemId(Long itemId) {
-            this.itemId = itemId;
-            return this;
-        }
-        public Long getItemId() {
-            return this.itemId;
         }
 
         public RenderOrderRequestItemList setSkuId(Long skuId) {
@@ -143,20 +134,28 @@ public class RenderOrderRequest extends TeaModel {
             return this.skuId;
         }
 
-        public RenderOrderRequestItemList setQuantity(Integer quantity) {
-            this.quantity = quantity;
-            return this;
-        }
-        public Integer getQuantity() {
-            return this.quantity;
-        }
-
         public RenderOrderRequestItemList setLmItemId(String lmItemId) {
             this.lmItemId = lmItemId;
             return this;
         }
         public String getLmItemId() {
             return this.lmItemId;
+        }
+
+        public RenderOrderRequestItemList setItemId(Long itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public Long getItemId() {
+            return this.itemId;
+        }
+
+        public RenderOrderRequestItemList setQuantity(Integer quantity) {
+            this.quantity = quantity;
+            return this;
+        }
+        public Integer getQuantity() {
+            return this.quantity;
         }
 
     }

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateOrderV2Request extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("OutTradeId")
-    @Validation(required = true)
     public String outTradeId;
 
     @NameInMap("ItemId")
@@ -27,9 +24,6 @@ public class CreateOrderV2Request extends TeaModel {
 
     @NameInMap("ExtJson")
     public String extJson;
-
-    @NameInMap("ItemList")
-    public java.util.List<CreateOrderV2RequestItemList> itemList;
 
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
@@ -51,6 +45,9 @@ public class CreateOrderV2Request extends TeaModel {
 
     @NameInMap("BuyerMessageMap")
     public String buyerMessageMap;
+
+    @NameInMap("ItemList")
+    public java.util.List<CreateOrderV2RequestItemList> itemList;
 
     public static CreateOrderV2Request build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderV2Request self = new CreateOrderV2Request();
@@ -113,14 +110,6 @@ public class CreateOrderV2Request extends TeaModel {
         return this.extJson;
     }
 
-    public CreateOrderV2Request setItemList(java.util.List<CreateOrderV2RequestItemList> itemList) {
-        this.itemList = itemList;
-        return this;
-    }
-    public java.util.List<CreateOrderV2RequestItemList> getItemList() {
-        return this.itemList;
-    }
-
     public CreateOrderV2Request setDeliveryAddress(String deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
         return this;
@@ -177,30 +166,30 @@ public class CreateOrderV2Request extends TeaModel {
         return this.buyerMessageMap;
     }
 
-    public static class CreateOrderV2RequestItemList extends TeaModel {
-        @NameInMap("ItemId")
-        public Long itemId;
+    public CreateOrderV2Request setItemList(java.util.List<CreateOrderV2RequestItemList> itemList) {
+        this.itemList = itemList;
+        return this;
+    }
+    public java.util.List<CreateOrderV2RequestItemList> getItemList() {
+        return this.itemList;
+    }
 
+    public static class CreateOrderV2RequestItemList extends TeaModel {
         @NameInMap("SkuId")
         public Long skuId;
-
-        @NameInMap("Quantity")
-        public Integer quantity;
 
         @NameInMap("LmItemId")
         public String lmItemId;
 
+        @NameInMap("ItemId")
+        public Long itemId;
+
+        @NameInMap("Quantity")
+        public Integer quantity;
+
         public static CreateOrderV2RequestItemList build(java.util.Map<String, ?> map) throws Exception {
             CreateOrderV2RequestItemList self = new CreateOrderV2RequestItemList();
             return TeaModel.build(map, self);
-        }
-
-        public CreateOrderV2RequestItemList setItemId(Long itemId) {
-            this.itemId = itemId;
-            return this;
-        }
-        public Long getItemId() {
-            return this.itemId;
         }
 
         public CreateOrderV2RequestItemList setSkuId(Long skuId) {
@@ -211,20 +200,28 @@ public class CreateOrderV2Request extends TeaModel {
             return this.skuId;
         }
 
-        public CreateOrderV2RequestItemList setQuantity(Integer quantity) {
-            this.quantity = quantity;
-            return this;
-        }
-        public Integer getQuantity() {
-            return this.quantity;
-        }
-
         public CreateOrderV2RequestItemList setLmItemId(String lmItemId) {
             this.lmItemId = lmItemId;
             return this;
         }
         public String getLmItemId() {
             return this.lmItemId;
+        }
+
+        public CreateOrderV2RequestItemList setItemId(Long itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public Long getItemId() {
+            return this.itemId;
+        }
+
+        public CreateOrderV2RequestItemList setQuantity(Integer quantity) {
+            this.quantity = quantity;
+            return this;
+        }
+        public Integer getQuantity() {
+            return this.quantity;
         }
 
     }
