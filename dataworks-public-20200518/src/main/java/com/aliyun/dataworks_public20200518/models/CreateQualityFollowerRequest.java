@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateQualityFollowerRequest extends TeaModel {
     @NameInMap("ProjectName")
+    @Validation(required = true)
     public String projectName;
 
     @NameInMap("Follower")
+    @Validation(required = true)
     public String follower;
 
     @NameInMap("AlarmMode")
+    @Validation(required = true)
     public Integer alarmMode;
 
     @NameInMap("EntityId")
+    @Validation(required = true)
     public Long entityId;
 
     public static CreateQualityFollowerRequest build(java.util.Map<String, ?> map) throws Exception {

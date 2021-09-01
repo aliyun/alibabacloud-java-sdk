@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConnectionRequest extends TeaModel {
     @NameInMap("ConnectionId")
+    @Validation(required = true)
     public Long connectionId;
 
     public static DeleteConnectionRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListInstanceAmountRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("BeginDate")
+    @Validation(required = true)
     public String beginDate;
 
     @NameInMap("EndDate")
+    @Validation(required = true)
     public String endDate;
 
     public static ListInstanceAmountRequest build(java.util.Map<String, ?> map) throws Exception {

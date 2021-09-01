@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataServiceApiAuthorityResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Success")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public Boolean success;
 
-    @NameInMap("body")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public DeleteDataServiceApiAuthorityResponseBody body;
+    public String requestId;
 
     public static DeleteDataServiceApiAuthorityResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataServiceApiAuthorityResponse self = new DeleteDataServiceApiAuthorityResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDataServiceApiAuthorityResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteDataServiceApiAuthorityResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
-    public DeleteDataServiceApiAuthorityResponse setBody(DeleteDataServiceApiAuthorityResponseBody body) {
-        this.body = body;
+    public DeleteDataServiceApiAuthorityResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DeleteDataServiceApiAuthorityResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

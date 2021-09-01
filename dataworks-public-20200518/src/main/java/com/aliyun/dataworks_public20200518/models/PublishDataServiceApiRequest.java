@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class PublishDataServiceApiRequest extends TeaModel {
     @NameInMap("TenantId")
+    @Validation(required = true)
     public Long tenantId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("ApiId")
+    @Validation(required = true)
     public Long apiId;
 
     public static PublishDataServiceApiRequest build(java.util.Map<String, ?> map) throws Exception {

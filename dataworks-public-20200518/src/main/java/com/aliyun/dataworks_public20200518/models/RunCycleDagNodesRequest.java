@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class RunCycleDagNodesRequest extends TeaModel {
     @NameInMap("ProjectEnv")
+    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("StartBizDate")
+    @Validation(required = true)
     public String startBizDate;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("RootNodeId")
+    @Validation(required = true)
     public Long rootNodeId;
 
     @NameInMap("ExcludeNodeIds")
@@ -26,15 +30,18 @@ public class RunCycleDagNodesRequest extends TeaModel {
     public String bizEndTime;
 
     @NameInMap("Parallelism")
+    @Validation(required = true)
     public Boolean parallelism;
 
     @NameInMap("EndBizDate")
+    @Validation(required = true)
     public String endBizDate;
 
     @NameInMap("NodeParams")
     public String nodeParams;
 
     @NameInMap("IncludeNodeIds")
+    @Validation(required = true)
     public String includeNodeIds;
 
     public static RunCycleDagNodesRequest build(java.util.Map<String, ?> map) throws Exception {

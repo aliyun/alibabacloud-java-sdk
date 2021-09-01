@@ -4,33 +4,57 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateDataSourceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Success")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public Boolean success;
 
-    @NameInMap("body")
+    @NameInMap("HttpStatusCode")
     @Validation(required = true)
-    public UpdateDataSourceResponseBody body;
+    public String httpStatusCode;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public Boolean data;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     public static UpdateDataSourceResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateDataSourceResponse self = new UpdateDataSourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDataSourceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateDataSourceResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
-    public UpdateDataSourceResponse setBody(UpdateDataSourceResponseBody body) {
-        this.body = body;
+    public UpdateDataSourceResponse setHttpStatusCode(String httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public UpdateDataSourceResponseBody getBody() {
-        return this.body;
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public UpdateDataSourceResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
+    }
+
+    public UpdateDataSourceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

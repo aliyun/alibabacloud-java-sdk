@@ -11,15 +11,19 @@ public class CreateUdfFileRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("FileName")
+    @Validation(required = true)
     public String fileName;
 
     @NameInMap("FunctionType")
+    @Validation(required = true)
     public String functionType;
 
     @NameInMap("ClassName")
+    @Validation(required = true)
     public String className;
 
     @NameInMap("Resources")
+    @Validation(required = true)
     public String resources;
 
     @NameInMap("UdfDescription")

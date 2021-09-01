@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicRequest extends TeaModel {
     @NameInMap("TopicId")
+    @Validation(required = true)
     public Long topicId;
 
     public static GetTopicRequest build(java.util.Map<String, ?> map) throws Exception {

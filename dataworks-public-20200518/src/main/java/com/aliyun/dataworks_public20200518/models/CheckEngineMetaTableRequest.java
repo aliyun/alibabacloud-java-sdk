@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class CheckEngineMetaTableRequest extends TeaModel {
     @NameInMap("TableGuid")
+    @Validation(required = true)
     public String tableGuid;
 
     @NameInMap("DataSourceType")
+    @Validation(required = true)
     public String dataSourceType;
 
     public static CheckEngineMetaTableRequest build(java.util.Map<String, ?> map) throws Exception {

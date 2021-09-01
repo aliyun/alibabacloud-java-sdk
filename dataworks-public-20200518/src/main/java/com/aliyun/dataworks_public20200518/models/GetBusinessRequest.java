@@ -11,6 +11,7 @@ public class GetBusinessRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("BusinessId")
+    @Validation(required = true)
     public Long businessId;
 
     public static GetBusinessRequest build(java.util.Map<String, ?> map) throws Exception {

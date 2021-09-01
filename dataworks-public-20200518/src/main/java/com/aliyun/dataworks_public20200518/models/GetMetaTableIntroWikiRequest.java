@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableIntroWikiRequest extends TeaModel {
     @NameInMap("TableGuid")
+    @Validation(required = true)
     public String tableGuid;
 
     @NameInMap("WikiVersion")

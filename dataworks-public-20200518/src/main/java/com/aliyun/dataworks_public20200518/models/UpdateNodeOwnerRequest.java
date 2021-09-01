@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateNodeOwnerRequest extends TeaModel {
     @NameInMap("ProjectEnv")
+    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("NodeId")
+    @Validation(required = true)
     public Long nodeId;
 
     @NameInMap("UserId")
+    @Validation(required = true)
     public String userId;
 
     public static UpdateNodeOwnerRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,33 +4,81 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CheckMetaPartitionResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("ErrorCode")
     @Validation(required = true)
-    public CheckMetaPartitionResponseBody body;
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    @Validation(required = true)
+    public Integer httpStatusCode;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public Boolean data;
 
     public static CheckMetaPartitionResponse build(java.util.Map<String, ?> map) throws Exception {
         CheckMetaPartitionResponse self = new CheckMetaPartitionResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckMetaPartitionResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CheckMetaPartitionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CheckMetaPartitionResponse setBody(CheckMetaPartitionResponseBody body) {
-        this.body = body;
+    public CheckMetaPartitionResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public CheckMetaPartitionResponseBody getBody() {
-        return this.body;
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CheckMetaPartitionResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CheckMetaPartitionResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public CheckMetaPartitionResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CheckMetaPartitionResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
 }

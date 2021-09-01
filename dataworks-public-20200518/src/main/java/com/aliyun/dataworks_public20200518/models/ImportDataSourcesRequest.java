@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ImportDataSourcesRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("DataSources")
+    @Validation(required = true)
     public String dataSources;
 
     public static ImportDataSourcesRequest build(java.util.Map<String, ?> map) throws Exception {

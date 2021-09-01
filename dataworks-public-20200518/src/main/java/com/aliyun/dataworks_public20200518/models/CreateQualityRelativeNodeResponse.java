@@ -4,33 +4,81 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateQualityRelativeNodeResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Success")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public Boolean success;
 
-    @NameInMap("body")
+    @NameInMap("ErrorCode")
     @Validation(required = true)
-    public CreateQualityRelativeNodeResponseBody body;
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    @Validation(required = true)
+    public Integer httpStatusCode;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public Boolean data;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     public static CreateQualityRelativeNodeResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateQualityRelativeNodeResponse self = new CreateQualityRelativeNodeResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateQualityRelativeNodeResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateQualityRelativeNodeResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
-    public CreateQualityRelativeNodeResponse setBody(CreateQualityRelativeNodeResponseBody body) {
-        this.body = body;
+    public CreateQualityRelativeNodeResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public CreateQualityRelativeNodeResponseBody getBody() {
-        return this.body;
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateQualityRelativeNodeResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateQualityRelativeNodeResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public CreateQualityRelativeNodeResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
+    }
+
+    public CreateQualityRelativeNodeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
