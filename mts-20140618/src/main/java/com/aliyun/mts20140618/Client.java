@@ -1506,6 +1506,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.querySnapshotJobListWithOptions(request, runtime);
     }
 
+    public DetectImageSyncResponse detectImageSyncWithOptions(DetectImageSyncRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DetectImageSync", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new DetectImageSyncResponse());
+    }
+
+    public DetectImageSyncResponse detectImageSync(DetectImageSyncRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.detectImageSyncWithOptions(request, runtime);
+    }
+
     public QueryTagJobListResponse queryTagJobListWithOptions(QueryTagJobListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
