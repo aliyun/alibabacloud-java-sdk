@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryMovieCommentsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("MovieId")
-    @Validation(required = true)
     public Long movieId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Long pageNumber;
 
     @NameInMap("ExtJson")

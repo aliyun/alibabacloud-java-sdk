@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryStatementsRequest extends TeaModel {
     @NameInMap("TenantId")
-    @Validation(required = true)
     public String tenantId;
 
     @NameInMap("PayeeIds")

@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyBizItemsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("SubBizId")
     public String subBizId;
 
     @NameInMap("ItemList")
-    @Validation(required = true)
     public java.util.List<ModifyBizItemsRequestItemList> itemList;
 
     public static ModifyBizItemsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -45,11 +43,14 @@ public class ModifyBizItemsRequest extends TeaModel {
     }
 
     public static class ModifyBizItemsRequestItemListSkuList extends TeaModel {
-        @NameInMap("SkuId")
-        public Long skuId;
+        @NameInMap("StatusAction")
+        public Long statusAction;
 
         @NameInMap("PriceCent")
         public Long priceCent;
+
+        @NameInMap("SkuId")
+        public Long skuId;
 
         @NameInMap("Points")
         public Long points;
@@ -63,20 +64,17 @@ public class ModifyBizItemsRequest extends TeaModel {
         @NameInMap("Quantity")
         public Integer quantity;
 
-        @NameInMap("StatusAction")
-        public Long statusAction;
-
         public static ModifyBizItemsRequestItemListSkuList build(java.util.Map<String, ?> map) throws Exception {
             ModifyBizItemsRequestItemListSkuList self = new ModifyBizItemsRequestItemListSkuList();
             return TeaModel.build(map, self);
         }
 
-        public ModifyBizItemsRequestItemListSkuList setSkuId(Long skuId) {
-            this.skuId = skuId;
+        public ModifyBizItemsRequestItemListSkuList setStatusAction(Long statusAction) {
+            this.statusAction = statusAction;
             return this;
         }
-        public Long getSkuId() {
-            return this.skuId;
+        public Long getStatusAction() {
+            return this.statusAction;
         }
 
         public ModifyBizItemsRequestItemListSkuList setPriceCent(Long priceCent) {
@@ -85,6 +83,14 @@ public class ModifyBizItemsRequest extends TeaModel {
         }
         public Long getPriceCent() {
             return this.priceCent;
+        }
+
+        public ModifyBizItemsRequestItemListSkuList setSkuId(Long skuId) {
+            this.skuId = skuId;
+            return this;
+        }
+        public Long getSkuId() {
+            return this.skuId;
         }
 
         public ModifyBizItemsRequestItemListSkuList setPoints(Long points) {
@@ -119,29 +125,29 @@ public class ModifyBizItemsRequest extends TeaModel {
             return this.quantity;
         }
 
-        public ModifyBizItemsRequestItemListSkuList setStatusAction(Long statusAction) {
-            this.statusAction = statusAction;
-            return this;
-        }
-        public Long getStatusAction() {
-            return this.statusAction;
-        }
-
     }
 
     public static class ModifyBizItemsRequestItemList extends TeaModel {
+        @NameInMap("LmItemId")
+        public String lmItemId;
+
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("SkuList")
         public java.util.List<ModifyBizItemsRequestItemListSkuList> skuList;
 
-        @NameInMap("LmItemId")
-        public String lmItemId;
-
         public static ModifyBizItemsRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             ModifyBizItemsRequestItemList self = new ModifyBizItemsRequestItemList();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyBizItemsRequestItemList setLmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
+            return this;
+        }
+        public String getLmItemId() {
+            return this.lmItemId;
         }
 
         public ModifyBizItemsRequestItemList setItemId(Long itemId) {
@@ -158,14 +164,6 @@ public class ModifyBizItemsRequest extends TeaModel {
         }
         public java.util.List<ModifyBizItemsRequestItemListSkuList> getSkuList() {
             return this.skuList;
-        }
-
-        public ModifyBizItemsRequestItemList setLmItemId(String lmItemId) {
-            this.lmItemId = lmItemId;
-            return this;
-        }
-        public String getLmItemId() {
-            return this.lmItemId;
         }
 
     }

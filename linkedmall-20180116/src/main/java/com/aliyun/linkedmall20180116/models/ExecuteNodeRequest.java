@@ -8,14 +8,12 @@ public class ExecuteNodeRequest extends TeaModel {
     public String processInstanceId;
 
     @NameInMap("ProcessId")
-    @Validation(required = true)
     public String processId;
 
     @NameInMap("NodeInstanceId")
     public String nodeInstanceId;
 
     @NameInMap("NodeId")
-    @Validation(required = true)
     public String nodeId;
 
     @NameInMap("RequestData")

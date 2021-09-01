@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyItemLimitRuleRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("SubBizCode")
@@ -24,7 +23,6 @@ public class ModifyItemLimitRuleRequest extends TeaModel {
     public Integer upperNum;
 
     @NameInMap("RuleId")
-    @Validation(required = true)
     public Long ruleId;
 
     @NameInMap("RuleType")
