@@ -4,12 +4,15 @@ package com.aliyun.paiplugin20210325.models;
 import com.aliyun.tea.*;
 
 public class GetSignatureResponseBody extends TeaModel {
+    // 返回数据
     @NameInMap("Data")
     public GetSignatureResponseBodyData data;
 
+    // 错误码
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    // 错误信息
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -43,7 +46,7 @@ public class GetSignatureResponseBody extends TeaModel {
     }
 
     public static class GetSignatureResponseBodyData extends TeaModel {
-        // 签名归属方的三证合一，OSS地址
+        // 签名归属方的三证合一，OSS地址，必须以https开头，使用前需要授权
         @NameInMap("Certificates")
         public String certificates;
 
@@ -63,7 +66,7 @@ public class GetSignatureResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // 授权委托书(Power of attorney)， OSS地址
+        // 授权委托书(Power of attorney)， OSS地址，必须以https或oss开头，使用前需要授权，同上
         @NameInMap("PowerOfAttorney")
         public String powerOfAttorney;
 

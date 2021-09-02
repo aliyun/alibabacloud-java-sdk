@@ -5,8 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateScheduleRequest extends TeaModel {
     // 数据源地址
-    // - 0: endpoint/project/table:column
-    // - 1: oss地址
+    // - 0: project/table
+    // MaxCompute项目名和表名，使用前需要授权
+    // - 1: oss地址 https://bucket.endpoint/path/to/file
     // OSS地址，必须以https开头，使用前需要授权，如 https://bucket.endpoint/path/to/file
     @NameInMap("DataAddress")
     public String dataAddress;
