@@ -106,6 +106,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ProcessInstanceID", request.processInstanceID);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.signatureID)) {
+            body.put("SignatureID", request.signatureID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))

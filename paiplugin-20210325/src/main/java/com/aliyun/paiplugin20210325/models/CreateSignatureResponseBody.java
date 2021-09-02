@@ -4,12 +4,15 @@ package com.aliyun.paiplugin20210325.models;
 import com.aliyun.tea.*;
 
 public class CreateSignatureResponseBody extends TeaModel {
+    // 返回数据
     @NameInMap("Data")
     public CreateSignatureResponseBodyData data;
 
+    // 错误码
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    // 错误信息
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
