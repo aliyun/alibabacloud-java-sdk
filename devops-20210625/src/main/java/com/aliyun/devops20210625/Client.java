@@ -266,6 +266,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("ResetSshKey", "2021-06-25", "HTTPS", "PUT", "AK", "/organization/" + organizationId + "/sshKey", "json", req, runtime), new ResetSshKeyResponse());
     }
 
+    public CreateWorkspaceResponse createWorkspace(CreateWorkspaceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWorkspaceWithOptions(request, headers, runtime);
+    }
+
+    public CreateWorkspaceResponse createWorkspaceWithOptions(CreateWorkspaceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceTemplate)) {
+            body.put("workspaceTemplate", request.workspaceTemplate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeUrl)) {
+            body.put("codeUrl", request.codeUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeVersion)) {
+            body.put("codeVersion", request.codeVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            body.put("filePath", request.filePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reuse)) {
+            body.put("reuse", request.reuse);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdentifier)) {
+            body.put("resourceIdentifier", request.resourceIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestFrom)) {
+            body.put("requestFrom", request.requestFrom);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequestWithForm("CreateWorkspace", "2021-06-25", "HTTPS", "POST", "AK", "/api/workspaces", "json", req, runtime), new CreateWorkspaceResponse());
+    }
+
     public ListServiceConnectionsResponse listServiceConnections(String organizationId, ListServiceConnectionsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -481,6 +529,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequestWithForm("StartPipelineRun", "2021-06-25", "HTTPS", "POST", "AK", "/organizations/" + organizationId + "/pipelines/" + pipelineId + "/run", "json", req, runtime), new StartPipelineRunResponse());
     }
 
+    public ListWorkspacesResponse listWorkspaces(ListWorkspacesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWorkspacesWithOptions(request, headers, runtime);
+    }
+
+    public ListWorkspacesResponse listWorkspacesWithOptions(ListWorkspacesRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListWorkspacesShrinkRequest request = new ListWorkspacesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.statusList)) {
+            request.statusListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.statusList, "statusList", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.workspaceTemplateList)) {
+            request.workspaceTemplateListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.workspaceTemplateList, "workspaceTemplateList", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusListShrink)) {
+            query.put("statusList", request.statusListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceTemplateListShrink)) {
+            query.put("workspaceTemplateList", request.workspaceTemplateListShrink);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("ListWorkspaces", "2021-06-25", "HTTPS", "GET", "AK", "/api/workspaces", "json", req, runtime), new ListWorkspacesResponse());
+    }
+
     public GetPipelineRunResponse getPipelineRun(String organizationId, String pipelineId, String pipelineRunId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -548,6 +638,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("DeleteVariableGroup", "2021-06-25", "HTTPS", "DELETE", "AK", "/organization/" + organizationId + "/variableGroups/" + id + "", "json", req, runtime), new DeleteVariableGroupResponse());
     }
 
+    public GetWorkspaceResponse getWorkspace(String workspaceId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkspaceWithOptions(workspaceId, headers, runtime);
+    }
+
+    public GetWorkspaceResponse getWorkspaceWithOptions(String workspaceId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("GetWorkspace", "2021-06-25", "HTTPS", "GET", "AK", "/api/workspaces/" + workspaceId + "", "json", req, runtime), new GetWorkspaceResponse());
+    }
+
     public CreateSshKeyResponse createSshKey(String organizationId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -572,6 +675,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers)
         ));
         return TeaModel.toModel(this.doROARequest("DeleteHostGroup", "2021-06-25", "HTTPS", "DELETE", "AK", "/organization/" + organizationId + "/hostGroups/" + id + "", "json", req, runtime), new DeleteHostGroupResponse());
+    }
+
+    public ReleaseWorkspaceResponse releaseWorkspace(String workspaceId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.releaseWorkspaceWithOptions(workspaceId, headers, runtime);
+    }
+
+    public ReleaseWorkspaceResponse releaseWorkspaceWithOptions(String workspaceId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("ReleaseWorkspace", "2021-06-25", "HTTPS", "DELETE", "AK", "/api/workspaces/" + workspaceId + "/release", "json", req, runtime), new ReleaseWorkspaceResponse());
     }
 
     public ListVariableGroupsResponse listVariableGroups(String organizationId, ListVariableGroupsRequest request) throws Exception {
@@ -617,6 +733,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers)
         ));
         return TeaModel.toModel(this.doROARequest("DeletePipeline", "2021-06-25", "HTTPS", "DELETE", "AK", "/organization/" + organizationId + "/pipelines/" + pipelineId + "", "json", req, runtime), new DeletePipelineResponse());
+    }
+
+    public FrozenWorkspaceResponse frozenWorkspace(String workspaceId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.frozenWorkspaceWithOptions(workspaceId, headers, runtime);
+    }
+
+    public FrozenWorkspaceResponse frozenWorkspaceWithOptions(String workspaceId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("FrozenWorkspace", "2021-06-25", "HTTPS", "PUT", "AK", "/api/workspaces/" + workspaceId + "/frozen", "json", req, runtime), new FrozenWorkspaceResponse());
     }
 
     public ListPipelineRunsResponse listPipelineRuns(String organizationId, String pipelineId, ListPipelineRunsRequest request) throws Exception {
