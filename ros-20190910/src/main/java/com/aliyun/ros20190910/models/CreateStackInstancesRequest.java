@@ -11,10 +11,10 @@ public class CreateStackInstancesRequest extends TeaModel {
     public String stackGroupName;
 
     @NameInMap("AccountIds")
-    public java.util.Map<String, ?> accountIds;
+    public java.util.List<String> accountIds;
 
     @NameInMap("RegionIds")
-    public java.util.Map<String, ?> regionIds;
+    public java.util.List<String> regionIds;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -35,7 +35,7 @@ public class CreateStackInstancesRequest extends TeaModel {
     public java.util.List<CreateStackInstancesRequestParameterOverrides> parameterOverrides;
 
     @NameInMap("DeploymentTargets")
-    public java.util.Map<String, ?> deploymentTargets;
+    public CreateStackInstancesRequestDeploymentTargets deploymentTargets;
 
     public static CreateStackInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackInstancesRequest self = new CreateStackInstancesRequest();
@@ -58,19 +58,19 @@ public class CreateStackInstancesRequest extends TeaModel {
         return this.stackGroupName;
     }
 
-    public CreateStackInstancesRequest setAccountIds(java.util.Map<String, ?> accountIds) {
+    public CreateStackInstancesRequest setAccountIds(java.util.List<String> accountIds) {
         this.accountIds = accountIds;
         return this;
     }
-    public java.util.Map<String, ?> getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
-    public CreateStackInstancesRequest setRegionIds(java.util.Map<String, ?> regionIds) {
+    public CreateStackInstancesRequest setRegionIds(java.util.List<String> regionIds) {
         this.regionIds = regionIds;
         return this;
     }
-    public java.util.Map<String, ?> getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -122,11 +122,11 @@ public class CreateStackInstancesRequest extends TeaModel {
         return this.parameterOverrides;
     }
 
-    public CreateStackInstancesRequest setDeploymentTargets(java.util.Map<String, ?> deploymentTargets) {
+    public CreateStackInstancesRequest setDeploymentTargets(CreateStackInstancesRequestDeploymentTargets deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
     }
-    public java.util.Map<String, ?> getDeploymentTargets() {
+    public CreateStackInstancesRequestDeploymentTargets getDeploymentTargets() {
         return this.deploymentTargets;
     }
 
@@ -156,6 +156,25 @@ public class CreateStackInstancesRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class CreateStackInstancesRequestDeploymentTargets extends TeaModel {
+        @NameInMap("RdFolderIds")
+        public java.util.List<String> rdFolderIds;
+
+        public static CreateStackInstancesRequestDeploymentTargets build(java.util.Map<String, ?> map) throws Exception {
+            CreateStackInstancesRequestDeploymentTargets self = new CreateStackInstancesRequestDeploymentTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateStackInstancesRequestDeploymentTargets setRdFolderIds(java.util.List<String> rdFolderIds) {
+            this.rdFolderIds = rdFolderIds;
+            return this;
+        }
+        public java.util.List<String> getRdFolderIds() {
+            return this.rdFolderIds;
         }
 
     }

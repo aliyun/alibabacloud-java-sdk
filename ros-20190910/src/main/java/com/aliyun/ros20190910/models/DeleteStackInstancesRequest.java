@@ -11,10 +11,10 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public String stackGroupName;
 
     @NameInMap("AccountIds")
-    public java.util.Map<String, ?> accountIds;
+    public java.util.List<String> accountIds;
 
     @NameInMap("RegionIds")
-    public java.util.Map<String, ?> regionIds;
+    public java.util.List<String> regionIds;
 
     @NameInMap("RetainStacks")
     public Boolean retainStacks;
@@ -29,7 +29,7 @@ public class DeleteStackInstancesRequest extends TeaModel {
     public java.util.Map<String, ?> operationPreferences;
 
     @NameInMap("DeploymentTargets")
-    public java.util.Map<String, ?> deploymentTargets;
+    public DeleteStackInstancesRequestDeploymentTargets deploymentTargets;
 
     public static DeleteStackInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStackInstancesRequest self = new DeleteStackInstancesRequest();
@@ -52,19 +52,19 @@ public class DeleteStackInstancesRequest extends TeaModel {
         return this.stackGroupName;
     }
 
-    public DeleteStackInstancesRequest setAccountIds(java.util.Map<String, ?> accountIds) {
+    public DeleteStackInstancesRequest setAccountIds(java.util.List<String> accountIds) {
         this.accountIds = accountIds;
         return this;
     }
-    public java.util.Map<String, ?> getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
-    public DeleteStackInstancesRequest setRegionIds(java.util.Map<String, ?> regionIds) {
+    public DeleteStackInstancesRequest setRegionIds(java.util.List<String> regionIds) {
         this.regionIds = regionIds;
         return this;
     }
-    public java.util.Map<String, ?> getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -100,12 +100,31 @@ public class DeleteStackInstancesRequest extends TeaModel {
         return this.operationPreferences;
     }
 
-    public DeleteStackInstancesRequest setDeploymentTargets(java.util.Map<String, ?> deploymentTargets) {
+    public DeleteStackInstancesRequest setDeploymentTargets(DeleteStackInstancesRequestDeploymentTargets deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
     }
-    public java.util.Map<String, ?> getDeploymentTargets() {
+    public DeleteStackInstancesRequestDeploymentTargets getDeploymentTargets() {
         return this.deploymentTargets;
+    }
+
+    public static class DeleteStackInstancesRequestDeploymentTargets extends TeaModel {
+        @NameInMap("RdFolderIds")
+        public java.util.List<String> rdFolderIds;
+
+        public static DeleteStackInstancesRequestDeploymentTargets build(java.util.Map<String, ?> map) throws Exception {
+            DeleteStackInstancesRequestDeploymentTargets self = new DeleteStackInstancesRequestDeploymentTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteStackInstancesRequestDeploymentTargets setRdFolderIds(java.util.List<String> rdFolderIds) {
+            this.rdFolderIds = rdFolderIds;
+            return this;
+        }
+        public java.util.List<String> getRdFolderIds() {
+            return this.rdFolderIds;
+        }
+
     }
 
 }

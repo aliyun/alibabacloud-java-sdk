@@ -14,10 +14,10 @@ public class UpdateStackGroupRequest extends TeaModel {
     public String description;
 
     @NameInMap("AccountIds")
-    public java.util.Map<String, ?> accountIds;
+    public java.util.List<String> accountIds;
 
     @NameInMap("RegionIds")
-    public java.util.Map<String, ?> regionIds;
+    public java.util.List<String> regionIds;
 
     @NameInMap("TemplateBody")
     public String templateBody;
@@ -53,10 +53,10 @@ public class UpdateStackGroupRequest extends TeaModel {
     public String permissionModel;
 
     @NameInMap("AutoDeployment")
-    public java.util.Map<String, ?> autoDeployment;
+    public UpdateStackGroupRequestAutoDeployment autoDeployment;
 
     @NameInMap("DeploymentTargets")
-    public java.util.Map<String, ?> deploymentTargets;
+    public UpdateStackGroupRequestDeploymentTargets deploymentTargets;
 
     public static UpdateStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackGroupRequest self = new UpdateStackGroupRequest();
@@ -87,19 +87,19 @@ public class UpdateStackGroupRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateStackGroupRequest setAccountIds(java.util.Map<String, ?> accountIds) {
+    public UpdateStackGroupRequest setAccountIds(java.util.List<String> accountIds) {
         this.accountIds = accountIds;
         return this;
     }
-    public java.util.Map<String, ?> getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
-    public UpdateStackGroupRequest setRegionIds(java.util.Map<String, ?> regionIds) {
+    public UpdateStackGroupRequest setRegionIds(java.util.List<String> regionIds) {
         this.regionIds = regionIds;
         return this;
     }
-    public java.util.Map<String, ?> getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -191,19 +191,19 @@ public class UpdateStackGroupRequest extends TeaModel {
         return this.permissionModel;
     }
 
-    public UpdateStackGroupRequest setAutoDeployment(java.util.Map<String, ?> autoDeployment) {
+    public UpdateStackGroupRequest setAutoDeployment(UpdateStackGroupRequestAutoDeployment autoDeployment) {
         this.autoDeployment = autoDeployment;
         return this;
     }
-    public java.util.Map<String, ?> getAutoDeployment() {
+    public UpdateStackGroupRequestAutoDeployment getAutoDeployment() {
         return this.autoDeployment;
     }
 
-    public UpdateStackGroupRequest setDeploymentTargets(java.util.Map<String, ?> deploymentTargets) {
+    public UpdateStackGroupRequest setDeploymentTargets(UpdateStackGroupRequestDeploymentTargets deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
     }
-    public java.util.Map<String, ?> getDeploymentTargets() {
+    public UpdateStackGroupRequestDeploymentTargets getDeploymentTargets() {
         return this.deploymentTargets;
     }
 
@@ -233,6 +233,66 @@ public class UpdateStackGroupRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class UpdateStackGroupRequestAutoDeployment extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("RetainStacksOnAccountRemoval")
+        public Boolean retainStacksOnAccountRemoval;
+
+        public static UpdateStackGroupRequestAutoDeployment build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStackGroupRequestAutoDeployment self = new UpdateStackGroupRequestAutoDeployment();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStackGroupRequestAutoDeployment setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public UpdateStackGroupRequestAutoDeployment setRetainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
+            this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
+            return this;
+        }
+        public Boolean getRetainStacksOnAccountRemoval() {
+            return this.retainStacksOnAccountRemoval;
+        }
+
+    }
+
+    public static class UpdateStackGroupRequestDeploymentTargets extends TeaModel {
+        @NameInMap("RdFolderIds")
+        public java.util.List<String> rdFolderIds;
+
+        @NameInMap("AccountIds")
+        public java.util.List<String> accountIds;
+
+        public static UpdateStackGroupRequestDeploymentTargets build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStackGroupRequestDeploymentTargets self = new UpdateStackGroupRequestDeploymentTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStackGroupRequestDeploymentTargets setRdFolderIds(java.util.List<String> rdFolderIds) {
+            this.rdFolderIds = rdFolderIds;
+            return this;
+        }
+        public java.util.List<String> getRdFolderIds() {
+            return this.rdFolderIds;
+        }
+
+        public UpdateStackGroupRequestDeploymentTargets setAccountIds(java.util.List<String> accountIds) {
+            this.accountIds = accountIds;
+            return this;
+        }
+        public java.util.List<String> getAccountIds() {
+            return this.accountIds;
         }
 
     }
