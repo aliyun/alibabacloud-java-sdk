@@ -264,6 +264,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("UpdateMergeRequestComment", "2020-04-14", "HTTPS", "PUT", "AK", "/api/v3/projects/" + ProjectId + "/merge_requests/" + MergeRequestId + "/notes/" + NoteId + "", "json", req, runtime), new UpdateMergeRequestCommentResponse());
     }
 
+    public TriggerRepositoryMirrorSyncResponse triggerRepositoryMirrorSync(String ProjectId, TriggerRepositoryMirrorSyncRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.triggerRepositoryMirrorSyncWithOptions(ProjectId, request, headers, runtime);
+    }
+
+    public TriggerRepositoryMirrorSyncResponse triggerRepositoryMirrorSyncWithOptions(String ProjectId, TriggerRepositoryMirrorSyncRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("AccessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.account)) {
+            query.put("Account", request.account);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("TriggerRepositoryMirrorSync", "2020-04-14", "HTTPS", "POST", "AK", "/api/v4/projects/" + ProjectId + "/mirror", "json", req, runtime), new TriggerRepositoryMirrorSyncResponse());
+    }
+
     public DeleteBranchResponse deleteBranch(String ProjectId, DeleteBranchRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1918,6 +1950,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         return TeaModel.toModel(this.doROARequest("CreateBranch", "2020-04-14", "HTTPS", "POST", "AK", "/api/v3/projects/" + ProjectId + "/repository/branches", "json", req, runtime), new CreateBranchResponse());
+    }
+
+    public GetOrganizationRepositorySettingResponse getOrganizationRepositorySetting(GetOrganizationRepositorySettingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getOrganizationRepositorySettingWithOptions(request, headers, runtime);
+    }
+
+    public GetOrganizationRepositorySettingResponse getOrganizationRepositorySettingWithOptions(GetOrganizationRepositorySettingRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessToken)) {
+            query.put("AccessToken", request.accessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("GetOrganizationRepositorySetting", "2020-04-14", "HTTPS", "GET", "AK", "/api/v4/organization/settings/repo", "json", req, runtime), new GetOrganizationRepositorySettingResponse());
     }
 
     public ListGroupRepositoriesResponse listGroupRepositories(String Identity, ListGroupRepositoriesRequest request) throws Exception {
