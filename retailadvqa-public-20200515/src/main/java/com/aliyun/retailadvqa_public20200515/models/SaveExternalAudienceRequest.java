@@ -19,6 +19,9 @@ public class SaveExternalAudienceRequest extends TeaModel {
     @NameInMap("MappingType")
     public String mappingType;
 
+    @NameInMap("ParentId")
+    public String parentId;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -65,6 +68,14 @@ public class SaveExternalAudienceRequest extends TeaModel {
     }
     public String getMappingType() {
         return this.mappingType;
+    }
+
+    public SaveExternalAudienceRequest setParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public String getParentId() {
+        return this.parentId;
     }
 
     public SaveExternalAudienceRequest setWorkspaceId(String workspaceId) {

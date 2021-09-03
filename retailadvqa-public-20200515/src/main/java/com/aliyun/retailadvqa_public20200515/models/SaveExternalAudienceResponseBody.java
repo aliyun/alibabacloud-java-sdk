@@ -20,7 +20,7 @@ public class SaveExternalAudienceResponseBody extends TeaModel {
     public String errorCode;
 
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
 
     public static SaveExternalAudienceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveExternalAudienceResponseBody self = new SaveExternalAudienceResponseBody();
@@ -67,11 +67,11 @@ public class SaveExternalAudienceResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public SaveExternalAudienceResponseBody setSuccess(String success) {
+    public SaveExternalAudienceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
