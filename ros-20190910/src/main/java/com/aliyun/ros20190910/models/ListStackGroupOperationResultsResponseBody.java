@@ -4,17 +4,17 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackGroupOperationResultsResponseBody extends TeaModel {
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("StackGroupOperationResults")
     public java.util.List<ListStackGroupOperationResultsResponseBodyStackGroupOperationResults> stackGroupOperationResults;
@@ -22,6 +22,14 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
     public static ListStackGroupOperationResultsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListStackGroupOperationResultsResponseBody self = new ListStackGroupOperationResultsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListStackGroupOperationResultsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListStackGroupOperationResultsResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListStackGroupOperationResultsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public ListStackGroupOperationResultsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListStackGroupOperationResultsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListStackGroupOperationResultsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListStackGroupOperationResultsResponseBody setStackGroupOperationResults(java.util.List<ListStackGroupOperationResultsResponseBodyStackGroupOperationResults> stackGroupOperationResults) {
@@ -68,14 +68,17 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("AccountId")
-        public String accountId;
-
         @NameInMap("StatusReason")
         public String statusReason;
 
+        @NameInMap("AccountId")
+        public String accountId;
+
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RdFolderId")
+        public String rdFolderId;
 
         public static ListStackGroupOperationResultsResponseBodyStackGroupOperationResults build(java.util.Map<String, ?> map) throws Exception {
             ListStackGroupOperationResultsResponseBodyStackGroupOperationResults self = new ListStackGroupOperationResultsResponseBodyStackGroupOperationResults();
@@ -90,14 +93,6 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setAccountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public String getAccountId() {
-            return this.accountId;
-        }
-
         public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setStatusReason(String statusReason) {
             this.statusReason = statusReason;
             return this;
@@ -106,12 +101,28 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
             return this.statusReason;
         }
 
+        public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
+        }
+
         public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListStackGroupOperationResultsResponseBodyStackGroupOperationResults setRdFolderId(String rdFolderId) {
+            this.rdFolderId = rdFolderId;
+            return this;
+        }
+        public String getRdFolderId() {
+            return this.rdFolderId;
         }
 
     }

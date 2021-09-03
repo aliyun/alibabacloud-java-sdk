@@ -7,32 +7,32 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
 
-    @NameInMap("PhysicalResourceId")
-    public String physicalResourceId;
+    @NameInMap("ResourceDriftStatus")
+    public String resourceDriftStatus;
 
-    @NameInMap("StackId")
-    public String stackId;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    @NameInMap("DriftDetectionTime")
-    public String driftDetectionTime;
+    @NameInMap("PropertyDifferences")
+    public java.util.List<DetectStackResourceDriftResponseBodyPropertyDifferences> propertyDifferences;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("PhysicalResourceId")
+    public String physicalResourceId;
+
     @NameInMap("ExpectedProperties")
     public String expectedProperties;
 
-    @NameInMap("ResourceDriftStatus")
-    public String resourceDriftStatus;
+    @NameInMap("DriftDetectionTime")
+    public String driftDetectionTime;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("ActualProperties")
     public String actualProperties;
 
-    @NameInMap("PropertyDifferences")
-    public java.util.List<DetectStackResourceDriftResponseBodyPropertyDifferences> propertyDifferences;
+    @NameInMap("StackId")
+    public String stackId;
 
     public static DetectStackResourceDriftResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectStackResourceDriftResponseBody self = new DetectStackResourceDriftResponseBody();
@@ -47,36 +47,20 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         return this.logicalResourceId;
     }
 
-    public DetectStackResourceDriftResponseBody setPhysicalResourceId(String physicalResourceId) {
-        this.physicalResourceId = physicalResourceId;
+    public DetectStackResourceDriftResponseBody setResourceDriftStatus(String resourceDriftStatus) {
+        this.resourceDriftStatus = resourceDriftStatus;
         return this;
     }
-    public String getPhysicalResourceId() {
-        return this.physicalResourceId;
+    public String getResourceDriftStatus() {
+        return this.resourceDriftStatus;
     }
 
-    public DetectStackResourceDriftResponseBody setStackId(String stackId) {
-        this.stackId = stackId;
+    public DetectStackResourceDriftResponseBody setPropertyDifferences(java.util.List<DetectStackResourceDriftResponseBodyPropertyDifferences> propertyDifferences) {
+        this.propertyDifferences = propertyDifferences;
         return this;
     }
-    public String getStackId() {
-        return this.stackId;
-    }
-
-    public DetectStackResourceDriftResponseBody setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    public DetectStackResourceDriftResponseBody setDriftDetectionTime(String driftDetectionTime) {
-        this.driftDetectionTime = driftDetectionTime;
-        return this;
-    }
-    public String getDriftDetectionTime() {
-        return this.driftDetectionTime;
+    public java.util.List<DetectStackResourceDriftResponseBodyPropertyDifferences> getPropertyDifferences() {
+        return this.propertyDifferences;
     }
 
     public DetectStackResourceDriftResponseBody setRequestId(String requestId) {
@@ -87,6 +71,14 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DetectStackResourceDriftResponseBody setPhysicalResourceId(String physicalResourceId) {
+        this.physicalResourceId = physicalResourceId;
+        return this;
+    }
+    public String getPhysicalResourceId() {
+        return this.physicalResourceId;
+    }
+
     public DetectStackResourceDriftResponseBody setExpectedProperties(String expectedProperties) {
         this.expectedProperties = expectedProperties;
         return this;
@@ -95,12 +87,20 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         return this.expectedProperties;
     }
 
-    public DetectStackResourceDriftResponseBody setResourceDriftStatus(String resourceDriftStatus) {
-        this.resourceDriftStatus = resourceDriftStatus;
+    public DetectStackResourceDriftResponseBody setDriftDetectionTime(String driftDetectionTime) {
+        this.driftDetectionTime = driftDetectionTime;
         return this;
     }
-    public String getResourceDriftStatus() {
-        return this.resourceDriftStatus;
+    public String getDriftDetectionTime() {
+        return this.driftDetectionTime;
+    }
+
+    public DetectStackResourceDriftResponseBody setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public DetectStackResourceDriftResponseBody setActualProperties(String actualProperties) {
@@ -111,12 +111,12 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         return this.actualProperties;
     }
 
-    public DetectStackResourceDriftResponseBody setPropertyDifferences(java.util.List<DetectStackResourceDriftResponseBodyPropertyDifferences> propertyDifferences) {
-        this.propertyDifferences = propertyDifferences;
+    public DetectStackResourceDriftResponseBody setStackId(String stackId) {
+        this.stackId = stackId;
         return this;
     }
-    public java.util.List<DetectStackResourceDriftResponseBodyPropertyDifferences> getPropertyDifferences() {
-        return this.propertyDifferences;
+    public String getStackId() {
+        return this.stackId;
     }
 
     public static class DetectStackResourceDriftResponseBodyPropertyDifferences extends TeaModel {

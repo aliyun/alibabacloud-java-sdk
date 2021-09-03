@@ -31,6 +31,9 @@ public class UpdateStackInstancesRequest extends TeaModel {
     @NameInMap("ParameterOverrides")
     public java.util.List<UpdateStackInstancesRequestParameterOverrides> parameterOverrides;
 
+    @NameInMap("DeploymentTargets")
+    public java.util.Map<String, ?> deploymentTargets;
+
     public static UpdateStackInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackInstancesRequest self = new UpdateStackInstancesRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class UpdateStackInstancesRequest extends TeaModel {
     }
     public java.util.List<UpdateStackInstancesRequestParameterOverrides> getParameterOverrides() {
         return this.parameterOverrides;
+    }
+
+    public UpdateStackInstancesRequest setDeploymentTargets(java.util.Map<String, ?> deploymentTargets) {
+        this.deploymentTargets = deploymentTargets;
+        return this;
+    }
+    public java.util.Map<String, ?> getDeploymentTargets() {
+        return this.deploymentTargets;
     }
 
     public static class UpdateStackInstancesRequestParameterOverrides extends TeaModel {

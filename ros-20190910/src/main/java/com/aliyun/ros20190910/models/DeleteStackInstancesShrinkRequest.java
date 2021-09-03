@@ -28,6 +28,9 @@ public class DeleteStackInstancesShrinkRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public String operationPreferencesShrink;
 
+    @NameInMap("DeploymentTargets")
+    public String deploymentTargetsShrink;
+
     public static DeleteStackInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStackInstancesShrinkRequest self = new DeleteStackInstancesShrinkRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class DeleteStackInstancesShrinkRequest extends TeaModel {
     }
     public String getOperationPreferencesShrink() {
         return this.operationPreferencesShrink;
+    }
+
+    public DeleteStackInstancesShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
+        this.deploymentTargetsShrink = deploymentTargetsShrink;
+        return this;
+    }
+    public String getDeploymentTargetsShrink() {
+        return this.deploymentTargetsShrink;
     }
 
 }

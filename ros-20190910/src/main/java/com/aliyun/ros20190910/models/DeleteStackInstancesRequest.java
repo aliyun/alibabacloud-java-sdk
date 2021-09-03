@@ -28,6 +28,9 @@ public class DeleteStackInstancesRequest extends TeaModel {
     @NameInMap("OperationPreferences")
     public java.util.Map<String, ?> operationPreferences;
 
+    @NameInMap("DeploymentTargets")
+    public java.util.Map<String, ?> deploymentTargets;
+
     public static DeleteStackInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStackInstancesRequest self = new DeleteStackInstancesRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class DeleteStackInstancesRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getOperationPreferences() {
         return this.operationPreferences;
+    }
+
+    public DeleteStackInstancesRequest setDeploymentTargets(java.util.Map<String, ?> deploymentTargets) {
+        this.deploymentTargets = deploymentTargets;
+        return this;
+    }
+    public java.util.Map<String, ?> getDeploymentTargets() {
+        return this.deploymentTargets;
     }
 
 }

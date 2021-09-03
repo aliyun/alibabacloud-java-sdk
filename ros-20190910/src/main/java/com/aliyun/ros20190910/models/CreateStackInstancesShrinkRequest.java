@@ -34,6 +34,9 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
     @NameInMap("ParameterOverrides")
     public java.util.List<CreateStackInstancesShrinkRequestParameterOverrides> parameterOverrides;
 
+    @NameInMap("DeploymentTargets")
+    public String deploymentTargetsShrink;
+
     public static CreateStackInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackInstancesShrinkRequest self = new CreateStackInstancesShrinkRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class CreateStackInstancesShrinkRequest extends TeaModel {
     }
     public java.util.List<CreateStackInstancesShrinkRequestParameterOverrides> getParameterOverrides() {
         return this.parameterOverrides;
+    }
+
+    public CreateStackInstancesShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
+        this.deploymentTargetsShrink = deploymentTargetsShrink;
+        return this;
+    }
+    public String getDeploymentTargetsShrink() {
+        return this.deploymentTargetsShrink;
     }
 
     public static class CreateStackInstancesShrinkRequestParameterOverrides extends TeaModel {

@@ -293,11 +293,11 @@ public class CreateChangeSetRequest extends TeaModel {
     }
 
     public static class CreateChangeSetRequestResourcesToImport extends TeaModel {
-        @NameInMap("LogicalResourceId")
-        public String logicalResourceId;
-
         @NameInMap("ResourceIdentifier")
         public String resourceIdentifier;
+
+        @NameInMap("LogicalResourceId")
+        public String logicalResourceId;
 
         @NameInMap("ResourceType")
         public String resourceType;
@@ -307,20 +307,20 @@ public class CreateChangeSetRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateChangeSetRequestResourcesToImport setLogicalResourceId(String logicalResourceId) {
-            this.logicalResourceId = logicalResourceId;
-            return this;
-        }
-        public String getLogicalResourceId() {
-            return this.logicalResourceId;
-        }
-
         public CreateChangeSetRequestResourcesToImport setResourceIdentifier(String resourceIdentifier) {
             this.resourceIdentifier = resourceIdentifier;
             return this;
         }
         public String getResourceIdentifier() {
             return this.resourceIdentifier;
+        }
+
+        public CreateChangeSetRequestResourcesToImport setLogicalResourceId(String logicalResourceId) {
+            this.logicalResourceId = logicalResourceId;
+            return this;
+        }
+        public String getLogicalResourceId() {
+            return this.logicalResourceId;
         }
 
         public CreateChangeSetRequestResourcesToImport setResourceType(String resourceType) {

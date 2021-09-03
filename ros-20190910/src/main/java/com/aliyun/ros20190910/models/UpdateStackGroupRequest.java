@@ -49,6 +49,15 @@ public class UpdateStackGroupRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.List<UpdateStackGroupRequestParameters> parameters;
 
+    @NameInMap("PermissionModel")
+    public String permissionModel;
+
+    @NameInMap("AutoDeployment")
+    public java.util.Map<String, ?> autoDeployment;
+
+    @NameInMap("DeploymentTargets")
+    public java.util.Map<String, ?> deploymentTargets;
+
     public static UpdateStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackGroupRequest self = new UpdateStackGroupRequest();
         return TeaModel.build(map, self);
@@ -172,6 +181,30 @@ public class UpdateStackGroupRequest extends TeaModel {
     }
     public java.util.List<UpdateStackGroupRequestParameters> getParameters() {
         return this.parameters;
+    }
+
+    public UpdateStackGroupRequest setPermissionModel(String permissionModel) {
+        this.permissionModel = permissionModel;
+        return this;
+    }
+    public String getPermissionModel() {
+        return this.permissionModel;
+    }
+
+    public UpdateStackGroupRequest setAutoDeployment(java.util.Map<String, ?> autoDeployment) {
+        this.autoDeployment = autoDeployment;
+        return this;
+    }
+    public java.util.Map<String, ?> getAutoDeployment() {
+        return this.autoDeployment;
+    }
+
+    public UpdateStackGroupRequest setDeploymentTargets(java.util.Map<String, ?> deploymentTargets) {
+        this.deploymentTargets = deploymentTargets;
+        return this;
+    }
+    public java.util.Map<String, ?> getDeploymentTargets() {
+        return this.deploymentTargets;
     }
 
     public static class UpdateStackGroupRequestParameters extends TeaModel {
