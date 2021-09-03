@@ -106,6 +106,9 @@ public class ListAudienceResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Status")
+        public Integer status;
+
         public static ListAudienceResponseBodyDataContent build(java.util.Map<String, ?> map) throws Exception {
             ListAudienceResponseBodyDataContent self = new ListAudienceResponseBodyDataContent();
             return TeaModel.build(map, self);
@@ -189,6 +192,14 @@ public class ListAudienceResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListAudienceResponseBodyDataContent setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }

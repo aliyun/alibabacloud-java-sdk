@@ -28,6 +28,9 @@ public class ListAudienceRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    @NameInMap("UserId")
+    public String userId;
+
     public static ListAudienceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAudienceRequest self = new ListAudienceRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ListAudienceRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public ListAudienceRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
