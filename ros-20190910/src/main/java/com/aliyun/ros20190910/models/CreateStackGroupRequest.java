@@ -44,7 +44,7 @@ public class CreateStackGroupRequest extends TeaModel {
     public String permissionModel;
 
     @NameInMap("AutoDeployment")
-    public java.util.Map<String, ?> autoDeployment;
+    public CreateStackGroupRequestAutoDeployment autoDeployment;
 
     public static CreateStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackGroupRequest self = new CreateStackGroupRequest();
@@ -155,11 +155,11 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.permissionModel;
     }
 
-    public CreateStackGroupRequest setAutoDeployment(java.util.Map<String, ?> autoDeployment) {
+    public CreateStackGroupRequest setAutoDeployment(CreateStackGroupRequestAutoDeployment autoDeployment) {
         this.autoDeployment = autoDeployment;
         return this;
     }
-    public java.util.Map<String, ?> getAutoDeployment() {
+    public CreateStackGroupRequestAutoDeployment getAutoDeployment() {
         return this.autoDeployment;
     }
 
@@ -189,6 +189,36 @@ public class CreateStackGroupRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class CreateStackGroupRequestAutoDeployment extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("RetainStacksOnAccountRemoval")
+        public Boolean retainStacksOnAccountRemoval;
+
+        public static CreateStackGroupRequestAutoDeployment build(java.util.Map<String, ?> map) throws Exception {
+            CreateStackGroupRequestAutoDeployment self = new CreateStackGroupRequestAutoDeployment();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateStackGroupRequestAutoDeployment setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateStackGroupRequestAutoDeployment setRetainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
+            this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
+            return this;
+        }
+        public Boolean getRetainStacksOnAccountRemoval() {
+            return this.retainStacksOnAccountRemoval;
         }
 
     }

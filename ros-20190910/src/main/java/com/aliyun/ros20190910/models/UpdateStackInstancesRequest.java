@@ -11,10 +11,10 @@ public class UpdateStackInstancesRequest extends TeaModel {
     public String stackGroupName;
 
     @NameInMap("AccountIds")
-    public java.util.Map<String, ?> accountIds;
+    public java.util.List<String> accountIds;
 
     @NameInMap("RegionIds")
-    public java.util.Map<String, ?> regionIds;
+    public java.util.List<String> regionIds;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -32,7 +32,7 @@ public class UpdateStackInstancesRequest extends TeaModel {
     public java.util.List<UpdateStackInstancesRequestParameterOverrides> parameterOverrides;
 
     @NameInMap("DeploymentTargets")
-    public java.util.Map<String, ?> deploymentTargets;
+    public UpdateStackInstancesRequestDeploymentTargets deploymentTargets;
 
     public static UpdateStackInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackInstancesRequest self = new UpdateStackInstancesRequest();
@@ -55,19 +55,19 @@ public class UpdateStackInstancesRequest extends TeaModel {
         return this.stackGroupName;
     }
 
-    public UpdateStackInstancesRequest setAccountIds(java.util.Map<String, ?> accountIds) {
+    public UpdateStackInstancesRequest setAccountIds(java.util.List<String> accountIds) {
         this.accountIds = accountIds;
         return this;
     }
-    public java.util.Map<String, ?> getAccountIds() {
+    public java.util.List<String> getAccountIds() {
         return this.accountIds;
     }
 
-    public UpdateStackInstancesRequest setRegionIds(java.util.Map<String, ?> regionIds) {
+    public UpdateStackInstancesRequest setRegionIds(java.util.List<String> regionIds) {
         this.regionIds = regionIds;
         return this;
     }
-    public java.util.Map<String, ?> getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -111,11 +111,11 @@ public class UpdateStackInstancesRequest extends TeaModel {
         return this.parameterOverrides;
     }
 
-    public UpdateStackInstancesRequest setDeploymentTargets(java.util.Map<String, ?> deploymentTargets) {
+    public UpdateStackInstancesRequest setDeploymentTargets(UpdateStackInstancesRequestDeploymentTargets deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
     }
-    public java.util.Map<String, ?> getDeploymentTargets() {
+    public UpdateStackInstancesRequestDeploymentTargets getDeploymentTargets() {
         return this.deploymentTargets;
     }
 
@@ -145,6 +145,36 @@ public class UpdateStackInstancesRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class UpdateStackInstancesRequestDeploymentTargets extends TeaModel {
+        @NameInMap("RdFolderIds")
+        public java.util.List<String> rdFolderIds;
+
+        @NameInMap("AccountIds")
+        public java.util.List<String> accountIds;
+
+        public static UpdateStackInstancesRequestDeploymentTargets build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStackInstancesRequestDeploymentTargets self = new UpdateStackInstancesRequestDeploymentTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStackInstancesRequestDeploymentTargets setRdFolderIds(java.util.List<String> rdFolderIds) {
+            this.rdFolderIds = rdFolderIds;
+            return this;
+        }
+        public java.util.List<String> getRdFolderIds() {
+            return this.rdFolderIds;
+        }
+
+        public UpdateStackInstancesRequestDeploymentTargets setAccountIds(java.util.List<String> accountIds) {
+            this.accountIds = accountIds;
+            return this;
+        }
+        public java.util.List<String> getAccountIds() {
+            return this.accountIds;
         }
 
     }
