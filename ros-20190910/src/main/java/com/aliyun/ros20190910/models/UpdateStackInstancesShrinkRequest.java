@@ -31,6 +31,9 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
     @NameInMap("ParameterOverrides")
     public java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> parameterOverrides;
 
+    @NameInMap("DeploymentTargets")
+    public String deploymentTargetsShrink;
+
     public static UpdateStackInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackInstancesShrinkRequest self = new UpdateStackInstancesShrinkRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
     }
     public java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> getParameterOverrides() {
         return this.parameterOverrides;
+    }
+
+    public UpdateStackInstancesShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
+        this.deploymentTargetsShrink = deploymentTargetsShrink;
+        return this;
+    }
+    public String getDeploymentTargetsShrink() {
+        return this.deploymentTargetsShrink;
     }
 
     public static class UpdateStackInstancesShrinkRequestParameterOverrides extends TeaModel {

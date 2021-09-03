@@ -49,6 +49,15 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.List<UpdateStackGroupShrinkRequestParameters> parameters;
 
+    @NameInMap("PermissionModel")
+    public String permissionModel;
+
+    @NameInMap("AutoDeployment")
+    public String autoDeploymentShrink;
+
+    @NameInMap("DeploymentTargets")
+    public String deploymentTargetsShrink;
+
     public static UpdateStackGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackGroupShrinkRequest self = new UpdateStackGroupShrinkRequest();
         return TeaModel.build(map, self);
@@ -172,6 +181,30 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
     }
     public java.util.List<UpdateStackGroupShrinkRequestParameters> getParameters() {
         return this.parameters;
+    }
+
+    public UpdateStackGroupShrinkRequest setPermissionModel(String permissionModel) {
+        this.permissionModel = permissionModel;
+        return this;
+    }
+    public String getPermissionModel() {
+        return this.permissionModel;
+    }
+
+    public UpdateStackGroupShrinkRequest setAutoDeploymentShrink(String autoDeploymentShrink) {
+        this.autoDeploymentShrink = autoDeploymentShrink;
+        return this;
+    }
+    public String getAutoDeploymentShrink() {
+        return this.autoDeploymentShrink;
+    }
+
+    public UpdateStackGroupShrinkRequest setDeploymentTargetsShrink(String deploymentTargetsShrink) {
+        this.deploymentTargetsShrink = deploymentTargetsShrink;
+        return this;
+    }
+    public String getDeploymentTargetsShrink() {
+        return this.deploymentTargetsShrink;
     }
 
     public static class UpdateStackGroupShrinkRequestParameters extends TeaModel {

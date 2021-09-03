@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ros20190910</artifactId>
-  <version>1.0.2</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>ros20190910</name>
   <description>Alibaba Cloud Resource Orchestration Service (20190910) SDK for Java

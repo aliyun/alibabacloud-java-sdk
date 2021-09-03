@@ -3,7 +3,7 @@ package com.aliyun.ros20190910.models;
 
 import com.aliyun.tea.*;
 
-public class CreateStackGroupRequest extends TeaModel {
+public class CreateStackGroupShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
@@ -35,7 +35,7 @@ public class CreateStackGroupRequest extends TeaModel {
     public String templateVersion;
 
     @NameInMap("Parameters")
-    public java.util.List<CreateStackGroupRequestParameters> parameters;
+    public java.util.List<CreateStackGroupShrinkRequestParameters> parameters;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -44,14 +44,14 @@ public class CreateStackGroupRequest extends TeaModel {
     public String permissionModel;
 
     @NameInMap("AutoDeployment")
-    public java.util.Map<String, ?> autoDeployment;
+    public String autoDeploymentShrink;
 
-    public static CreateStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateStackGroupRequest self = new CreateStackGroupRequest();
+    public static CreateStackGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateStackGroupShrinkRequest self = new CreateStackGroupShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateStackGroupRequest setRegionId(String regionId) {
+    public CreateStackGroupShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -59,7 +59,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateStackGroupRequest setStackGroupName(String stackGroupName) {
+    public CreateStackGroupShrinkRequest setStackGroupName(String stackGroupName) {
         this.stackGroupName = stackGroupName;
         return this;
     }
@@ -67,7 +67,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.stackGroupName;
     }
 
-    public CreateStackGroupRequest setDescription(String description) {
+    public CreateStackGroupShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -75,7 +75,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateStackGroupRequest setTemplateBody(String templateBody) {
+    public CreateStackGroupShrinkRequest setTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
     }
@@ -83,7 +83,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.templateBody;
     }
 
-    public CreateStackGroupRequest setTemplateURL(String templateURL) {
+    public CreateStackGroupShrinkRequest setTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
     }
@@ -91,7 +91,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.templateURL;
     }
 
-    public CreateStackGroupRequest setClientToken(String clientToken) {
+    public CreateStackGroupShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -99,7 +99,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateStackGroupRequest setAdministrationRoleName(String administrationRoleName) {
+    public CreateStackGroupShrinkRequest setAdministrationRoleName(String administrationRoleName) {
         this.administrationRoleName = administrationRoleName;
         return this;
     }
@@ -107,7 +107,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.administrationRoleName;
     }
 
-    public CreateStackGroupRequest setExecutionRoleName(String executionRoleName) {
+    public CreateStackGroupShrinkRequest setExecutionRoleName(String executionRoleName) {
         this.executionRoleName = executionRoleName;
         return this;
     }
@@ -115,7 +115,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.executionRoleName;
     }
 
-    public CreateStackGroupRequest setTemplateId(String templateId) {
+    public CreateStackGroupShrinkRequest setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
@@ -123,7 +123,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateStackGroupRequest setTemplateVersion(String templateVersion) {
+    public CreateStackGroupShrinkRequest setTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
@@ -131,15 +131,15 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.templateVersion;
     }
 
-    public CreateStackGroupRequest setParameters(java.util.List<CreateStackGroupRequestParameters> parameters) {
+    public CreateStackGroupShrinkRequest setParameters(java.util.List<CreateStackGroupShrinkRequestParameters> parameters) {
         this.parameters = parameters;
         return this;
     }
-    public java.util.List<CreateStackGroupRequestParameters> getParameters() {
+    public java.util.List<CreateStackGroupShrinkRequestParameters> getParameters() {
         return this.parameters;
     }
 
-    public CreateStackGroupRequest setResourceGroupId(String resourceGroupId) {
+    public CreateStackGroupShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -147,7 +147,7 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public CreateStackGroupRequest setPermissionModel(String permissionModel) {
+    public CreateStackGroupShrinkRequest setPermissionModel(String permissionModel) {
         this.permissionModel = permissionModel;
         return this;
     }
@@ -155,27 +155,27 @@ public class CreateStackGroupRequest extends TeaModel {
         return this.permissionModel;
     }
 
-    public CreateStackGroupRequest setAutoDeployment(java.util.Map<String, ?> autoDeployment) {
-        this.autoDeployment = autoDeployment;
+    public CreateStackGroupShrinkRequest setAutoDeploymentShrink(String autoDeploymentShrink) {
+        this.autoDeploymentShrink = autoDeploymentShrink;
         return this;
     }
-    public java.util.Map<String, ?> getAutoDeployment() {
-        return this.autoDeployment;
+    public String getAutoDeploymentShrink() {
+        return this.autoDeploymentShrink;
     }
 
-    public static class CreateStackGroupRequestParameters extends TeaModel {
+    public static class CreateStackGroupShrinkRequestParameters extends TeaModel {
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         @NameInMap("ParameterValue")
         public String parameterValue;
 
-        public static CreateStackGroupRequestParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateStackGroupRequestParameters self = new CreateStackGroupRequestParameters();
+        public static CreateStackGroupShrinkRequestParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateStackGroupShrinkRequestParameters self = new CreateStackGroupShrinkRequestParameters();
             return TeaModel.build(map, self);
         }
 
-        public CreateStackGroupRequestParameters setParameterKey(String parameterKey) {
+        public CreateStackGroupShrinkRequestParameters setParameterKey(String parameterKey) {
             this.parameterKey = parameterKey;
             return this;
         }
@@ -183,7 +183,7 @@ public class CreateStackGroupRequest extends TeaModel {
             return this.parameterKey;
         }
 
-        public CreateStackGroupRequestParameters setParameterValue(String parameterValue) {
+        public CreateStackGroupShrinkRequestParameters setParameterValue(String parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }

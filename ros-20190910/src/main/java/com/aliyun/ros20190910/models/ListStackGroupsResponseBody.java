@@ -64,6 +64,36 @@ public class ListStackGroupsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public static class ListStackGroupsResponseBodyStackGroupsAutoDeployment extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("RetainStacksOnAccountRemoval")
+        public Boolean retainStacksOnAccountRemoval;
+
+        public static ListStackGroupsResponseBodyStackGroupsAutoDeployment build(java.util.Map<String, ?> map) throws Exception {
+            ListStackGroupsResponseBodyStackGroupsAutoDeployment self = new ListStackGroupsResponseBodyStackGroupsAutoDeployment();
+            return TeaModel.build(map, self);
+        }
+
+        public ListStackGroupsResponseBodyStackGroupsAutoDeployment setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public ListStackGroupsResponseBodyStackGroupsAutoDeployment setRetainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
+            this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
+            return this;
+        }
+        public Boolean getRetainStacksOnAccountRemoval() {
+            return this.retainStacksOnAccountRemoval;
+        }
+
+    }
+
     public static class ListStackGroupsResponseBodyStackGroups extends TeaModel {
         @NameInMap("StackGroupId")
         public String stackGroupId;
@@ -85,6 +115,12 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("PermissionModel")
+        public String permissionModel;
+
+        @NameInMap("AutoDeployment")
+        public ListStackGroupsResponseBodyStackGroupsAutoDeployment autoDeployment;
 
         public static ListStackGroupsResponseBodyStackGroups build(java.util.Map<String, ?> map) throws Exception {
             ListStackGroupsResponseBodyStackGroups self = new ListStackGroupsResponseBodyStackGroups();
@@ -145,6 +181,22 @@ public class ListStackGroupsResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListStackGroupsResponseBodyStackGroups setPermissionModel(String permissionModel) {
+            this.permissionModel = permissionModel;
+            return this;
+        }
+        public String getPermissionModel() {
+            return this.permissionModel;
+        }
+
+        public ListStackGroupsResponseBodyStackGroups setAutoDeployment(ListStackGroupsResponseBodyStackGroupsAutoDeployment autoDeployment) {
+            this.autoDeployment = autoDeployment;
+            return this;
+        }
+        public ListStackGroupsResponseBodyStackGroupsAutoDeployment getAutoDeployment() {
+            return this.autoDeployment;
         }
 
     }

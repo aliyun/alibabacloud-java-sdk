@@ -168,6 +168,36 @@ public class GetStackGroupResponseBody extends TeaModel {
 
     }
 
+    public static class GetStackGroupResponseBodyStackGroupAutoDeployment extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("RetainStacksOnAccountRemoval")
+        public Boolean retainStacksOnAccountRemoval;
+
+        public static GetStackGroupResponseBodyStackGroupAutoDeployment build(java.util.Map<String, ?> map) throws Exception {
+            GetStackGroupResponseBodyStackGroupAutoDeployment self = new GetStackGroupResponseBodyStackGroupAutoDeployment();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackGroupResponseBodyStackGroupAutoDeployment setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetStackGroupResponseBodyStackGroupAutoDeployment setRetainStacksOnAccountRemoval(Boolean retainStacksOnAccountRemoval) {
+            this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
+            return this;
+        }
+        public Boolean getRetainStacksOnAccountRemoval() {
+            return this.retainStacksOnAccountRemoval;
+        }
+
+    }
+
     public static class GetStackGroupResponseBodyStackGroup extends TeaModel {
         @NameInMap("StackGroupId")
         public String stackGroupId;
@@ -198,6 +228,15 @@ public class GetStackGroupResponseBody extends TeaModel {
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("PermissionModel")
+        public String permissionModel;
+
+        @NameInMap("AutoDeployment")
+        public GetStackGroupResponseBodyStackGroupAutoDeployment autoDeployment;
+
+        @NameInMap("RdFolderIds")
+        public java.util.List<String> rdFolderIds;
 
         public static GetStackGroupResponseBodyStackGroup build(java.util.Map<String, ?> map) throws Exception {
             GetStackGroupResponseBodyStackGroup self = new GetStackGroupResponseBodyStackGroup();
@@ -282,6 +321,30 @@ public class GetStackGroupResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setPermissionModel(String permissionModel) {
+            this.permissionModel = permissionModel;
+            return this;
+        }
+        public String getPermissionModel() {
+            return this.permissionModel;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setAutoDeployment(GetStackGroupResponseBodyStackGroupAutoDeployment autoDeployment) {
+            this.autoDeployment = autoDeployment;
+            return this;
+        }
+        public GetStackGroupResponseBodyStackGroupAutoDeployment getAutoDeployment() {
+            return this.autoDeployment;
+        }
+
+        public GetStackGroupResponseBodyStackGroup setRdFolderIds(java.util.List<String> rdFolderIds) {
+            this.rdFolderIds = rdFolderIds;
+            return this;
+        }
+        public java.util.List<String> getRdFolderIds() {
+            return this.rdFolderIds;
         }
 
     }
