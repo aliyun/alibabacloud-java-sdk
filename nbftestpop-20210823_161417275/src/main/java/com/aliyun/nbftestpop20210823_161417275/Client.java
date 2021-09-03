@@ -56,6 +56,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("Add", "2021-08-23_16-14-17-275", "HTTPS", "GET", "AK", "/kxNineSixThree/add", "json", req, runtime), new AddResponse());
     }
 
+    public HttpGroupTestResponse httpGroupTest(HttpGroupTestRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.httpGroupTestWithOptions(request, headers, runtime);
+    }
+
+    public HttpGroupTestResponse httpGroupTestWithOptions(HttpGroupTestRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.devConfig))) {
+            body.put("devConfig", request.devConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("groupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalId)) {
+            body.put("externalId", request.externalId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            body.put("extraInfo", request.extraInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
+            body.put("desc", request.desc);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("HttpGroupTest", "2021-08-23_16-14-17-275", "HTTPS", "POST", "AK", "/kxHttpTest/httpGroupTest", "json", req, runtime), new HttpGroupTestResponse());
+    }
+
     public MultiComplexResponse multiComplex(MultiComplexRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -88,5 +132,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         return TeaModel.toModel(this.doROARequest("MultiComplex", "2021-08-23_16-14-17-275", "HTTPS", "GET", "AK", "/kxNineSixThree/multiComplex", "json", req, runtime), new MultiComplexResponse());
+    }
+
+    public GetSiteDomainResponse getSiteDomain(GetSiteDomainRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSiteDomainWithOptions(request, headers, runtime);
+    }
+
+    public GetSiteDomainResponse getSiteDomainWithOptions(GetSiteDomainRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.age)) {
+            query.put("age", request.age);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hostName)) {
+            body.put("hostName", request.hostName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionType)) {
+            body.put("regionType", request.regionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionTypeName)) {
+            body.put("regionTypeName", request.regionTypeName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("GetSiteDomain", "2021-08-23_16-14-17-275", "HTTPS", "POST", "AK", "/kxHttpTest/firstHttp", "json", req, runtime), new GetSiteDomainResponse());
     }
 }
