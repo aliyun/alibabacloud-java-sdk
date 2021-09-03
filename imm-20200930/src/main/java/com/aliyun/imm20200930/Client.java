@@ -280,6 +280,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getProjectWithOptions(request, runtime);
     }
 
+    public GetWebofficeUrlResponse getWebofficeUrlWithOptions(GetWebofficeUrlRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetWebofficeUrlShrinkRequest request = new GetWebofficeUrlShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.permission))) {
+            request.permissionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.permission), "Permission", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.user))) {
+            request.userShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.user), "User", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.watermark))) {
+            request.watermarkShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.watermark), "Watermark", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.assumeRoleChain))) {
+            request.assumeRoleChainShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.assumeRoleChain), "AssumeRoleChain", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetWebofficeUrl", "2020-09-30", "HTTPS", "POST", "AK", "json", req, runtime), new GetWebofficeUrlResponse());
+    }
+
+    public GetWebofficeUrlResponse getWebofficeUrl(GetWebofficeUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getWebofficeUrlWithOptions(request, runtime);
+    }
+
     public IndexFileMetaResponse indexFileMetaWithOptions(IndexFileMetaRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         IndexFileMetaShrinkRequest request = new IndexFileMetaShrinkRequest();
@@ -336,6 +367,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListProjectsResponse listProjects(ListProjectsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listProjectsWithOptions(request, runtime);
+    }
+
+    public RefreshWebofficeTokenResponse refreshWebofficeTokenWithOptions(RefreshWebofficeTokenRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RefreshWebofficeTokenShrinkRequest request = new RefreshWebofficeTokenShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.assumeRoleChain))) {
+            request.assumeRoleChainShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.assumeRoleChain), "AssumeRoleChain", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RefreshWebofficeToken", "2020-09-30", "HTTPS", "POST", "AK", "json", req, runtime), new RefreshWebofficeTokenResponse());
+    }
+
+    public RefreshWebofficeTokenResponse refreshWebofficeToken(RefreshWebofficeTokenRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.refreshWebofficeTokenWithOptions(request, runtime);
     }
 
     public ResumeBindingResponse resumeBindingWithOptions(ResumeBindingRequest request, RuntimeOptions runtime) throws Exception {
