@@ -4,19 +4,21 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class DestroyRoomResponseBody extends TeaModel {
-    // 错误码。
+    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
-    // 错误信息。
+    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
-    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
-    // 请求是否成功。
+    // 是否销毁成功
+    @NameInMap("result")
+    public Boolean result;
+
     @NameInMap("ResponseSuccess")
     public Boolean responseSuccess;
 
@@ -47,6 +49,14 @@ public class DestroyRoomResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DestroyRoomResponseBody setResult(Boolean result) {
+        this.result = result;
+        return this;
+    }
+    public Boolean getResult() {
+        return this.result;
     }
 
     public DestroyRoomResponseBody setResponseSuccess(Boolean responseSuccess) {
