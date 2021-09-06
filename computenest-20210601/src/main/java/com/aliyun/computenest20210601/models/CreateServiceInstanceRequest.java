@@ -28,6 +28,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("OperationMetadata")
+    public CreateServiceInstanceRequestOperationMetadata operationMetadata;
+
     public static CreateServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceRequest self = new CreateServiceInstanceRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,66 @@ public class CreateServiceInstanceRequest extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public CreateServiceInstanceRequest setOperationMetadata(CreateServiceInstanceRequestOperationMetadata operationMetadata) {
+        this.operationMetadata = operationMetadata;
+        return this;
+    }
+    public CreateServiceInstanceRequestOperationMetadata getOperationMetadata() {
+        return this.operationMetadata;
+    }
+
+    public static class CreateServiceInstanceRequestOperationMetadata extends TeaModel {
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("Resources")
+        public String resources;
+
+        @NameInMap("ServiceInstanceId")
+        public String serviceInstanceId;
+
+        public static CreateServiceInstanceRequestOperationMetadata build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceInstanceRequestOperationMetadata self = new CreateServiceInstanceRequestOperationMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceInstanceRequestOperationMetadata setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public CreateServiceInstanceRequestOperationMetadata setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public CreateServiceInstanceRequestOperationMetadata setResources(String resources) {
+            this.resources = resources;
+            return this;
+        }
+        public String getResources() {
+            return this.resources;
+        }
+
+        public CreateServiceInstanceRequestOperationMetadata setServiceInstanceId(String serviceInstanceId) {
+            this.serviceInstanceId = serviceInstanceId;
+            return this;
+        }
+        public String getServiceInstanceId() {
+            return this.serviceInstanceId;
+        }
+
     }
 
 }
