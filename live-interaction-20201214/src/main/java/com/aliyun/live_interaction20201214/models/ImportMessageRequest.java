@@ -32,38 +32,6 @@ public class ImportMessageRequest extends TeaModel {
         return this.requestParams;
     }
 
-    public static class ImportMessageRequestRequestParamsMessagesReceiverUsers extends TeaModel {
-        // 接受者ID
-        @NameInMap("ReceiverId")
-        public String receiverId;
-
-        // 消息已阅读标志
-        @NameInMap("ReadFlag")
-        public Boolean readFlag;
-
-        public static ImportMessageRequestRequestParamsMessagesReceiverUsers build(java.util.Map<String, ?> map) throws Exception {
-            ImportMessageRequestRequestParamsMessagesReceiverUsers self = new ImportMessageRequestRequestParamsMessagesReceiverUsers();
-            return TeaModel.build(map, self);
-        }
-
-        public ImportMessageRequestRequestParamsMessagesReceiverUsers setReceiverId(String receiverId) {
-            this.receiverId = receiverId;
-            return this;
-        }
-        public String getReceiverId() {
-            return this.receiverId;
-        }
-
-        public ImportMessageRequestRequestParamsMessagesReceiverUsers setReadFlag(Boolean readFlag) {
-            this.readFlag = readFlag;
-            return this;
-        }
-        public Boolean getReadFlag() {
-            return this.readFlag;
-        }
-
-    }
-
     public static class ImportMessageRequestRequestParamsMessages extends TeaModel {
         // 唯一标识，用于重入
         @NameInMap("Uuid")
@@ -82,8 +50,8 @@ public class ImportMessageRequest extends TeaModel {
         public String senderId;
 
         // 接受者列表, 群聊如果列表为空者全员接收
-        @NameInMap("ReceiverUsers")
-        public java.util.List<ImportMessageRequestRequestParamsMessagesReceiverUsers> receiverUsers;
+        @NameInMap("ReceiverIds")
+        public java.util.List<String> receiverIds;
 
         // 消息类型
         @NameInMap("ContentType")
@@ -138,12 +106,12 @@ public class ImportMessageRequest extends TeaModel {
             return this.senderId;
         }
 
-        public ImportMessageRequestRequestParamsMessages setReceiverUsers(java.util.List<ImportMessageRequestRequestParamsMessagesReceiverUsers> receiverUsers) {
-            this.receiverUsers = receiverUsers;
+        public ImportMessageRequestRequestParamsMessages setReceiverIds(java.util.List<String> receiverIds) {
+            this.receiverIds = receiverIds;
             return this;
         }
-        public java.util.List<ImportMessageRequestRequestParamsMessagesReceiverUsers> getReceiverUsers() {
-            return this.receiverUsers;
+        public java.util.List<String> getReceiverIds() {
+            return this.receiverIds;
         }
 
         public ImportMessageRequestRequestParamsMessages setContentType(Long contentType) {
