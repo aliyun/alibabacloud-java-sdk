@@ -245,17 +245,29 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("StatusDetail")
         public String statusDetail;
 
+        @NameInMap("Progress")
+        public Long progress;
+
         @NameInMap("Resources")
         public String resources;
+
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        @NameInMap("OperatedServiceInstanceId")
+        public String operatedServiceInstanceId;
 
         @NameInMap("Service")
         public ListServiceInstancesResponseBodyServiceInstancesService service;
 
-        @NameInMap("Progress")
-        public Long progress;
+        @NameInMap("OperationStartTime")
+        public String operationStartTime;
 
-        @NameInMap("TemplateName")
-        public String templateName;
+        @NameInMap("OperationEndTime")
+        public String operationEndTime;
+
+        @NameInMap("EnableInstanceOps")
+        public Boolean enableInstanceOps;
 
         public static ListServiceInstancesResponseBodyServiceInstances build(java.util.Map<String, ?> map) throws Exception {
             ListServiceInstancesResponseBodyServiceInstances self = new ListServiceInstancesResponseBodyServiceInstances();
@@ -318,12 +330,36 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             return this.statusDetail;
         }
 
+        public ListServiceInstancesResponseBodyServiceInstances setProgress(Long progress) {
+            this.progress = progress;
+            return this;
+        }
+        public Long getProgress() {
+            return this.progress;
+        }
+
         public ListServiceInstancesResponseBodyServiceInstances setResources(String resources) {
             this.resources = resources;
             return this;
         }
         public String getResources() {
             return this.resources;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setOperatedServiceInstanceId(String operatedServiceInstanceId) {
+            this.operatedServiceInstanceId = operatedServiceInstanceId;
+            return this;
+        }
+        public String getOperatedServiceInstanceId() {
+            return this.operatedServiceInstanceId;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setService(ListServiceInstancesResponseBodyServiceInstancesService service) {
@@ -334,20 +370,28 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             return this.service;
         }
 
-        public ListServiceInstancesResponseBodyServiceInstances setProgress(Long progress) {
-            this.progress = progress;
+        public ListServiceInstancesResponseBodyServiceInstances setOperationStartTime(String operationStartTime) {
+            this.operationStartTime = operationStartTime;
             return this;
         }
-        public Long getProgress() {
-            return this.progress;
+        public String getOperationStartTime() {
+            return this.operationStartTime;
         }
 
-        public ListServiceInstancesResponseBodyServiceInstances setTemplateName(String templateName) {
-            this.templateName = templateName;
+        public ListServiceInstancesResponseBodyServiceInstances setOperationEndTime(String operationEndTime) {
+            this.operationEndTime = operationEndTime;
             return this;
         }
-        public String getTemplateName() {
-            return this.templateName;
+        public String getOperationEndTime() {
+            return this.operationEndTime;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setEnableInstanceOps(Boolean enableInstanceOps) {
+            this.enableInstanceOps = enableInstanceOps;
+            return this;
+        }
+        public Boolean getEnableInstanceOps() {
+            return this.enableInstanceOps;
         }
 
     }

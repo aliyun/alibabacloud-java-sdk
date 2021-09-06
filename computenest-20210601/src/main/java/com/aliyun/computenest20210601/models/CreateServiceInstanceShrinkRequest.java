@@ -28,6 +28,9 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("OperationMetadata")
+    public CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata;
+
     public static CreateServiceInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceShrinkRequest self = new CreateServiceInstanceShrinkRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,66 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public CreateServiceInstanceShrinkRequest setOperationMetadata(CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata) {
+        this.operationMetadata = operationMetadata;
+        return this;
+    }
+    public CreateServiceInstanceShrinkRequestOperationMetadata getOperationMetadata() {
+        return this.operationMetadata;
+    }
+
+    public static class CreateServiceInstanceShrinkRequestOperationMetadata extends TeaModel {
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("Resources")
+        public String resources;
+
+        @NameInMap("ServiceInstanceId")
+        public String serviceInstanceId;
+
+        public static CreateServiceInstanceShrinkRequestOperationMetadata build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceInstanceShrinkRequestOperationMetadata self = new CreateServiceInstanceShrinkRequestOperationMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceInstanceShrinkRequestOperationMetadata setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public CreateServiceInstanceShrinkRequestOperationMetadata setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public CreateServiceInstanceShrinkRequestOperationMetadata setResources(String resources) {
+            this.resources = resources;
+            return this;
+        }
+        public String getResources() {
+            return this.resources;
+        }
+
+        public CreateServiceInstanceShrinkRequestOperationMetadata setServiceInstanceId(String serviceInstanceId) {
+            this.serviceInstanceId = serviceInstanceId;
+            return this;
+        }
+        public String getServiceInstanceId() {
+            return this.serviceInstanceId;
+        }
+
     }
 
 }

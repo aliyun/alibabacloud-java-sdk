@@ -40,6 +40,15 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    @NameInMap("IsSupportOperated")
+    public Boolean isSupportOperated;
+
+    @NameInMap("PolicyNames")
+    public String policyNames;
+
+    @NameInMap("Duration")
+    public Long duration;
+
     public static GetServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceResponseBody self = new GetServiceResponseBody();
         return TeaModel.build(map, self);
@@ -139,6 +148,30 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public GetServiceResponseBody setIsSupportOperated(Boolean isSupportOperated) {
+        this.isSupportOperated = isSupportOperated;
+        return this;
+    }
+    public Boolean getIsSupportOperated() {
+        return this.isSupportOperated;
+    }
+
+    public GetServiceResponseBody setPolicyNames(String policyNames) {
+        this.policyNames = policyNames;
+        return this;
+    }
+    public String getPolicyNames() {
+        return this.policyNames;
+    }
+
+    public GetServiceResponseBody setDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Long getDuration() {
+        return this.duration;
     }
 
     public static class GetServiceResponseBodyServiceInfos extends TeaModel {

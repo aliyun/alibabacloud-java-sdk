@@ -10,8 +10,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("TemplateName")
+    public String templateName;
+
     @NameInMap("UpdateTime")
     public String updateTime;
+
+    @NameInMap("Progress")
+    public Long progress;
 
     @NameInMap("Parameters")
     public String parameters;
@@ -34,11 +40,20 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("Service")
     public GetServiceInstanceResponseBodyService service;
 
-    @NameInMap("Progress")
-    public Long progress;
+    @NameInMap("OperationStartTime")
+    public String operationStartTime;
 
-    @NameInMap("TemplateName")
-    public String templateName;
+    @NameInMap("OperationEndTime")
+    public String operationEndTime;
+
+    @NameInMap("OperatedServiceInstanceId")
+    public String operatedServiceInstanceId;
+
+    @NameInMap("EnableInstanceOps")
+    public Boolean enableInstanceOps;
+
+    @NameInMap("IsOperated")
+    public Boolean isOperated;
 
     public static GetServiceInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceInstanceResponseBody self = new GetServiceInstanceResponseBody();
@@ -61,12 +76,28 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.status;
     }
 
+    public GetServiceInstanceResponseBody setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
     public GetServiceInstanceResponseBody setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public GetServiceInstanceResponseBody setProgress(Long progress) {
+        this.progress = progress;
+        return this;
+    }
+    public Long getProgress() {
+        return this.progress;
     }
 
     public GetServiceInstanceResponseBody setParameters(String parameters) {
@@ -125,20 +156,44 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.service;
     }
 
-    public GetServiceInstanceResponseBody setProgress(Long progress) {
-        this.progress = progress;
+    public GetServiceInstanceResponseBody setOperationStartTime(String operationStartTime) {
+        this.operationStartTime = operationStartTime;
         return this;
     }
-    public Long getProgress() {
-        return this.progress;
+    public String getOperationStartTime() {
+        return this.operationStartTime;
     }
 
-    public GetServiceInstanceResponseBody setTemplateName(String templateName) {
-        this.templateName = templateName;
+    public GetServiceInstanceResponseBody setOperationEndTime(String operationEndTime) {
+        this.operationEndTime = operationEndTime;
         return this;
     }
-    public String getTemplateName() {
-        return this.templateName;
+    public String getOperationEndTime() {
+        return this.operationEndTime;
+    }
+
+    public GetServiceInstanceResponseBody setOperatedServiceInstanceId(String operatedServiceInstanceId) {
+        this.operatedServiceInstanceId = operatedServiceInstanceId;
+        return this;
+    }
+    public String getOperatedServiceInstanceId() {
+        return this.operatedServiceInstanceId;
+    }
+
+    public GetServiceInstanceResponseBody setEnableInstanceOps(Boolean enableInstanceOps) {
+        this.enableInstanceOps = enableInstanceOps;
+        return this;
+    }
+    public Boolean getEnableInstanceOps() {
+        return this.enableInstanceOps;
+    }
+
+    public GetServiceInstanceResponseBody setIsOperated(Boolean isOperated) {
+        this.isOperated = isOperated;
+        return this;
+    }
+    public Boolean getIsOperated() {
+        return this.isOperated;
     }
 
     public static class GetServiceInstanceResponseBodyServiceServiceInfos extends TeaModel {
@@ -203,6 +258,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
+        @NameInMap("DeployMetadata")
+        public String deployMetadata;
+
         @NameInMap("DeployType")
         public String deployType;
 
@@ -220,9 +278,6 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
         @NameInMap("ServiceInfos")
         public java.util.List<GetServiceInstanceResponseBodyServiceServiceInfos> serviceInfos;
-
-        @NameInMap("DeployMetadata")
-        public String deployMetadata;
 
         public static GetServiceInstanceResponseBodyService build(java.util.Map<String, ?> map) throws Exception {
             GetServiceInstanceResponseBodyService self = new GetServiceInstanceResponseBodyService();
@@ -251,6 +306,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public GetServiceInstanceResponseBodyService setDeployMetadata(String deployMetadata) {
+            this.deployMetadata = deployMetadata;
+            return this;
+        }
+        public String getDeployMetadata() {
+            return this.deployMetadata;
         }
 
         public GetServiceInstanceResponseBodyService setDeployType(String deployType) {
@@ -299,14 +362,6 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
         public java.util.List<GetServiceInstanceResponseBodyServiceServiceInfos> getServiceInfos() {
             return this.serviceInfos;
-        }
-
-        public GetServiceInstanceResponseBodyService setDeployMetadata(String deployMetadata) {
-            this.deployMetadata = deployMetadata;
-            return this;
-        }
-        public String getDeployMetadata() {
-            return this.deployMetadata;
         }
 
     }
