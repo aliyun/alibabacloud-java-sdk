@@ -3,7 +3,7 @@ package com.aliyun.live_interaction20201214.models;
 
 import com.aliyun.tea.*;
 
-public class ReadMessageShrinkRequest extends TeaModel {
+public class SetMessageReadShrinkRequest extends TeaModel {
     // AppId
     @NameInMap("AppId")
     public String appId;
@@ -11,12 +11,12 @@ public class ReadMessageShrinkRequest extends TeaModel {
     @NameInMap("RequestParams")
     public String requestParamsShrink;
 
-    public static ReadMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        ReadMessageShrinkRequest self = new ReadMessageShrinkRequest();
+    public static SetMessageReadShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SetMessageReadShrinkRequest self = new SetMessageReadShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ReadMessageShrinkRequest setAppId(String appId) {
+    public SetMessageReadShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -24,7 +24,7 @@ public class ReadMessageShrinkRequest extends TeaModel {
         return this.appId;
     }
 
-    public ReadMessageShrinkRequest setRequestParamsShrink(String requestParamsShrink) {
+    public SetMessageReadShrinkRequest setRequestParamsShrink(String requestParamsShrink) {
         this.requestParamsShrink = requestParamsShrink;
         return this;
     }
