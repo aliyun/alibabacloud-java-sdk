@@ -12,6 +12,14 @@ public class ListAppsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 应用状态
+    @NameInMap("Status")
+    public String status;
+
+    // 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
+    @NameInMap("IntegrationMode")
+    public String integrationMode;
+
     public static ListAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppsRequest self = new ListAppsRequest();
         return TeaModel.build(map, self);
@@ -31,6 +39,22 @@ public class ListAppsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAppsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ListAppsRequest setIntegrationMode(String integrationMode) {
+        this.integrationMode = integrationMode;
+        return this;
+    }
+    public String getIntegrationMode() {
+        return this.integrationMode;
     }
 
 }

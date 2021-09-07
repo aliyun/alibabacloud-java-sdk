@@ -98,6 +98,18 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         @NameInMap("ConfigList")
         public java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoListConfigList> configList;
 
+        // 应用模板场景，电商business，课堂classroom
+        @NameInMap("Scene")
+        public String scene;
+
+        // 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
+        @NameInMap("IntegrationMode")
+        public String integrationMode;
+
+        // 样板间信息
+        @NameInMap("StandardRoomInfo")
+        public String standardRoomInfo;
+
         public static ListAppTemplatesResponseBodyResultAppTemplateInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListAppTemplatesResponseBodyResultAppTemplateInfoList self = new ListAppTemplatesResponseBodyResultAppTemplateInfoList();
             return TeaModel.build(map, self);
@@ -165,6 +177,30 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         }
         public java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoListConfigList> getConfigList() {
             return this.configList;
+        }
+
+        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setIntegrationMode(String integrationMode) {
+            this.integrationMode = integrationMode;
+            return this;
+        }
+        public String getIntegrationMode() {
+            return this.integrationMode;
+        }
+
+        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setStandardRoomInfo(String standardRoomInfo) {
+            this.standardRoomInfo = standardRoomInfo;
+            return this;
+        }
+        public String getStandardRoomInfo() {
+            return this.standardRoomInfo;
         }
 
     }

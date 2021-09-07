@@ -50,6 +50,10 @@ public class GetAppResponseBody extends TeaModel {
         @NameInMap("AppStatus")
         public String appStatus;
 
+        // 应用配置状态
+        @NameInMap("AppConfigStatus")
+        public String appConfigStatus;
+
         // 应用Key
         @NameInMap("AppKey")
         public String appKey;
@@ -57,6 +61,14 @@ public class GetAppResponseBody extends TeaModel {
         // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
+
+        // 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
+        @NameInMap("IntegrationMode")
+        public String integrationMode;
+
+        // 样板间信息
+        @NameInMap("StandardRoomInfo")
+        public String standardRoomInfo;
 
         // 组件列表。
         @NameInMap("ComponentList")
@@ -99,6 +111,14 @@ public class GetAppResponseBody extends TeaModel {
             return this.appStatus;
         }
 
+        public GetAppResponseBodyResult setAppConfigStatus(String appConfigStatus) {
+            this.appConfigStatus = appConfigStatus;
+            return this;
+        }
+        public String getAppConfigStatus() {
+            return this.appConfigStatus;
+        }
+
         public GetAppResponseBodyResult setAppKey(String appKey) {
             this.appKey = appKey;
             return this;
@@ -113,6 +133,22 @@ public class GetAppResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetAppResponseBodyResult setIntegrationMode(String integrationMode) {
+            this.integrationMode = integrationMode;
+            return this;
+        }
+        public String getIntegrationMode() {
+            return this.integrationMode;
+        }
+
+        public GetAppResponseBodyResult setStandardRoomInfo(String standardRoomInfo) {
+            this.standardRoomInfo = standardRoomInfo;
+            return this;
+        }
+        public String getStandardRoomInfo() {
+            return this.standardRoomInfo;
         }
 
         public GetAppResponseBodyResult setComponentList(java.util.List<String> componentList) {
