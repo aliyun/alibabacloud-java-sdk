@@ -3,7 +3,7 @@ package com.aliyun.live_interaction20201214.models;
 
 import com.aliyun.tea.*;
 
-public class ReadMessageResponseBody extends TeaModel {
+public class SetMessageReadResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +13,12 @@ public class ReadMessageResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    public static ReadMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ReadMessageResponseBody self = new ReadMessageResponseBody();
+    public static SetMessageReadResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SetMessageReadResponseBody self = new SetMessageReadResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ReadMessageResponseBody setRequestId(String requestId) {
+    public SetMessageReadResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -26,7 +26,7 @@ public class ReadMessageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ReadMessageResponseBody setCode(String code) {
+    public SetMessageReadResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -34,7 +34,7 @@ public class ReadMessageResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ReadMessageResponseBody setMessage(String message) {
+    public SetMessageReadResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }

@@ -3,20 +3,20 @@ package com.aliyun.live_interaction20201214.models;
 
 import com.aliyun.tea.*;
 
-public class ReadMessageRequest extends TeaModel {
+public class SetMessageReadRequest extends TeaModel {
     // AppId
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("RequestParams")
-    public ReadMessageRequestRequestParams requestParams;
+    public SetMessageReadRequestRequestParams requestParams;
 
-    public static ReadMessageRequest build(java.util.Map<String, ?> map) throws Exception {
-        ReadMessageRequest self = new ReadMessageRequest();
+    public static SetMessageReadRequest build(java.util.Map<String, ?> map) throws Exception {
+        SetMessageReadRequest self = new SetMessageReadRequest();
         return TeaModel.build(map, self);
     }
 
-    public ReadMessageRequest setAppId(String appId) {
+    public SetMessageReadRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -24,15 +24,15 @@ public class ReadMessageRequest extends TeaModel {
         return this.appId;
     }
 
-    public ReadMessageRequest setRequestParams(ReadMessageRequestRequestParams requestParams) {
+    public SetMessageReadRequest setRequestParams(SetMessageReadRequestRequestParams requestParams) {
         this.requestParams = requestParams;
         return this;
     }
-    public ReadMessageRequestRequestParams getRequestParams() {
+    public SetMessageReadRequestRequestParams getRequestParams() {
         return this.requestParams;
     }
 
-    public static class ReadMessageRequestRequestParams extends TeaModel {
+    public static class SetMessageReadRequestRequestParams extends TeaModel {
         // 操作者ID
         @NameInMap("AppUid")
         public String appUid;
@@ -41,12 +41,12 @@ public class ReadMessageRequest extends TeaModel {
         @NameInMap("MsgId")
         public String msgId;
 
-        public static ReadMessageRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
-            ReadMessageRequestRequestParams self = new ReadMessageRequestRequestParams();
+        public static SetMessageReadRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
+            SetMessageReadRequestRequestParams self = new SetMessageReadRequestRequestParams();
             return TeaModel.build(map, self);
         }
 
-        public ReadMessageRequestRequestParams setAppUid(String appUid) {
+        public SetMessageReadRequestRequestParams setAppUid(String appUid) {
             this.appUid = appUid;
             return this;
         }
@@ -54,7 +54,7 @@ public class ReadMessageRequest extends TeaModel {
             return this.appUid;
         }
 
-        public ReadMessageRequestRequestParams setMsgId(String msgId) {
+        public SetMessageReadRequestRequestParams setMsgId(String msgId) {
             this.msgId = msgId;
             return this;
         }
