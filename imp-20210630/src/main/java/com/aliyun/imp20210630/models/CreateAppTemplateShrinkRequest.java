@@ -12,6 +12,10 @@ public class CreateAppTemplateShrinkRequest extends TeaModel {
     @NameInMap("Scene")
     public String scene;
 
+    // 集成方式（一体化SDK：paasSDK，样板间：standardRoom）
+    @NameInMap("IntegrationMode")
+    public String integrationMode;
+
     // 组件列表
     @NameInMap("ComponentList")
     public String componentListShrink;
@@ -35,6 +39,14 @@ public class CreateAppTemplateShrinkRequest extends TeaModel {
     }
     public String getScene() {
         return this.scene;
+    }
+
+    public CreateAppTemplateShrinkRequest setIntegrationMode(String integrationMode) {
+        this.integrationMode = integrationMode;
+        return this;
+    }
+    public String getIntegrationMode() {
+        return this.integrationMode;
     }
 
     public CreateAppTemplateShrinkRequest setComponentListShrink(String componentListShrink) {
