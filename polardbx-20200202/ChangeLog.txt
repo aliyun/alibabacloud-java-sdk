@@ -1,0 +1,3 @@
+2021-09-07 Version: 1.0.0
+- Support DescribeBinaryLog to search binary logs.
+
