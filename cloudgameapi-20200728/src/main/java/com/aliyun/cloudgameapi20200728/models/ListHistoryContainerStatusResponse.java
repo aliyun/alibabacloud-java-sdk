@@ -3,21 +3,21 @@ package com.aliyun.cloudgameapi20200728.models;
 
 import com.aliyun.tea.*;
 
-public class ListContainerStatusResponse extends TeaModel {
+public class ListHistoryContainerStatusResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
 
     @NameInMap("DataList")
     @Validation(required = true)
-    public java.util.List<ListContainerStatusResponseDataList> dataList;
+    public java.util.List<ListHistoryContainerStatusResponseDataList> dataList;
 
-    public static ListContainerStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListContainerStatusResponse self = new ListContainerStatusResponse();
+    public static ListHistoryContainerStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListHistoryContainerStatusResponse self = new ListHistoryContainerStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListContainerStatusResponse setRequestId(String requestId) {
+    public ListHistoryContainerStatusResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -25,15 +25,15 @@ public class ListContainerStatusResponse extends TeaModel {
         return this.requestId;
     }
 
-    public ListContainerStatusResponse setDataList(java.util.List<ListContainerStatusResponseDataList> dataList) {
+    public ListHistoryContainerStatusResponse setDataList(java.util.List<ListHistoryContainerStatusResponseDataList> dataList) {
         this.dataList = dataList;
         return this;
     }
-    public java.util.List<ListContainerStatusResponseDataList> getDataList() {
+    public java.util.List<ListHistoryContainerStatusResponseDataList> getDataList() {
         return this.dataList;
     }
 
-    public static class ListContainerStatusResponseDataListPlayerDetailList extends TeaModel {
+    public static class ListHistoryContainerStatusResponseDataListPlayerDetailList extends TeaModel {
         @NameInMap("AccountId")
         @Validation(required = true)
         public String accountId;
@@ -46,12 +46,12 @@ public class ListContainerStatusResponse extends TeaModel {
         @Validation(required = true)
         public Boolean isInitiator;
 
-        public static ListContainerStatusResponseDataListPlayerDetailList build(java.util.Map<String, ?> map) throws Exception {
-            ListContainerStatusResponseDataListPlayerDetailList self = new ListContainerStatusResponseDataListPlayerDetailList();
+        public static ListHistoryContainerStatusResponseDataListPlayerDetailList build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoryContainerStatusResponseDataListPlayerDetailList self = new ListHistoryContainerStatusResponseDataListPlayerDetailList();
             return TeaModel.build(map, self);
         }
 
-        public ListContainerStatusResponseDataListPlayerDetailList setAccountId(String accountId) {
+        public ListHistoryContainerStatusResponseDataListPlayerDetailList setAccountId(String accountId) {
             this.accountId = accountId;
             return this;
         }
@@ -59,7 +59,7 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.accountId;
         }
 
-        public ListContainerStatusResponseDataListPlayerDetailList setStartTime(Long startTime) {
+        public ListHistoryContainerStatusResponseDataListPlayerDetailList setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -67,7 +67,7 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.startTime;
         }
 
-        public ListContainerStatusResponseDataListPlayerDetailList setIsInitiator(Boolean isInitiator) {
+        public ListHistoryContainerStatusResponseDataListPlayerDetailList setIsInitiator(Boolean isInitiator) {
             this.isInitiator = isInitiator;
             return this;
         }
@@ -77,7 +77,7 @@ public class ListContainerStatusResponse extends TeaModel {
 
     }
 
-    public static class ListContainerStatusResponseDataList extends TeaModel {
+    public static class ListHistoryContainerStatusResponseDataList extends TeaModel {
         @NameInMap("ContainerState")
         @Validation(required = true)
         public String containerState;
@@ -110,20 +110,16 @@ public class ListContainerStatusResponse extends TeaModel {
         @Validation(required = true)
         public String gameSessionId;
 
-        @NameInMap("Timestamp")
-        @Validation(required = true)
-        public Long timestamp;
-
         @NameInMap("PlayerDetailList")
         @Validation(required = true)
-        public java.util.List<ListContainerStatusResponseDataListPlayerDetailList> playerDetailList;
+        public java.util.List<ListHistoryContainerStatusResponseDataListPlayerDetailList> playerDetailList;
 
-        public static ListContainerStatusResponseDataList build(java.util.Map<String, ?> map) throws Exception {
-            ListContainerStatusResponseDataList self = new ListContainerStatusResponseDataList();
+        public static ListHistoryContainerStatusResponseDataList build(java.util.Map<String, ?> map) throws Exception {
+            ListHistoryContainerStatusResponseDataList self = new ListHistoryContainerStatusResponseDataList();
             return TeaModel.build(map, self);
         }
 
-        public ListContainerStatusResponseDataList setContainerState(String containerState) {
+        public ListHistoryContainerStatusResponseDataList setContainerState(String containerState) {
             this.containerState = containerState;
             return this;
         }
@@ -131,7 +127,7 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.containerState;
         }
 
-        public ListContainerStatusResponseDataList setContainerStartTime(Long containerStartTime) {
+        public ListHistoryContainerStatusResponseDataList setContainerStartTime(Long containerStartTime) {
             this.containerStartTime = containerStartTime;
             return this;
         }
@@ -139,7 +135,7 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.containerStartTime;
         }
 
-        public ListContainerStatusResponseDataList setProjectId(String projectId) {
+        public ListHistoryContainerStatusResponseDataList setProjectId(String projectId) {
             this.projectId = projectId;
             return this;
         }
@@ -147,7 +143,7 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.projectId;
         }
 
-        public ListContainerStatusResponseDataList setContainerQuitTime(Long containerQuitTime) {
+        public ListHistoryContainerStatusResponseDataList setContainerQuitTime(Long containerQuitTime) {
             this.containerQuitTime = containerQuitTime;
             return this;
         }
@@ -155,7 +151,7 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.containerQuitTime;
         }
 
-        public ListContainerStatusResponseDataList setTags(String tags) {
+        public ListHistoryContainerStatusResponseDataList setTags(String tags) {
             this.tags = tags;
             return this;
         }
@@ -163,7 +159,7 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.tags;
         }
 
-        public ListContainerStatusResponseDataList setAccountId(String accountId) {
+        public ListHistoryContainerStatusResponseDataList setAccountId(String accountId) {
             this.accountId = accountId;
             return this;
         }
@@ -171,7 +167,7 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.accountId;
         }
 
-        public ListContainerStatusResponseDataList setGameId(String gameId) {
+        public ListHistoryContainerStatusResponseDataList setGameId(String gameId) {
             this.gameId = gameId;
             return this;
         }
@@ -179,7 +175,7 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.gameId;
         }
 
-        public ListContainerStatusResponseDataList setGameSessionId(String gameSessionId) {
+        public ListHistoryContainerStatusResponseDataList setGameSessionId(String gameSessionId) {
             this.gameSessionId = gameSessionId;
             return this;
         }
@@ -187,19 +183,11 @@ public class ListContainerStatusResponse extends TeaModel {
             return this.gameSessionId;
         }
 
-        public ListContainerStatusResponseDataList setTimestamp(Long timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public Long getTimestamp() {
-            return this.timestamp;
-        }
-
-        public ListContainerStatusResponseDataList setPlayerDetailList(java.util.List<ListContainerStatusResponseDataListPlayerDetailList> playerDetailList) {
+        public ListHistoryContainerStatusResponseDataList setPlayerDetailList(java.util.List<ListHistoryContainerStatusResponseDataListPlayerDetailList> playerDetailList) {
             this.playerDetailList = playerDetailList;
             return this;
         }
-        public java.util.List<ListContainerStatusResponseDataListPlayerDetailList> getPlayerDetailList() {
+        public java.util.List<ListHistoryContainerStatusResponseDataListPlayerDetailList> getPlayerDetailList() {
             return this.playerDetailList;
         }
 

@@ -106,77 +106,37 @@ public class DispatchGameSlotResponse extends TeaModel {
     }
 
     public static class BatchDispatchGameSlotResponseQueueResultList extends TeaModel {
-        @NameInMap("GameId")
+        @NameInMap("RegionName")
         @Validation(required = true)
-        public String gameId;
+        public String regionName;
 
         @NameInMap("GameSession")
         @Validation(required = true)
         public String gameSession;
 
-        @NameInMap("Message")
+        @NameInMap("UserId")
         @Validation(required = true)
-        public String message;
-
-        @NameInMap("QueueCode")
-        @Validation(required = true)
-        public Integer queueCode;
+        public String userId;
 
         @NameInMap("QueueState")
         @Validation(required = true)
         public Integer queueState;
 
-        @NameInMap("RegionName")
+        @NameInMap("Message")
         @Validation(required = true)
-        public String regionName;
+        public String message;
 
-        @NameInMap("UserId")
+        @NameInMap("GameId")
         @Validation(required = true)
-        public String userId;
+        public String gameId;
+
+        @NameInMap("QueueCode")
+        @Validation(required = true)
+        public Integer queueCode;
 
         public static BatchDispatchGameSlotResponseQueueResultList build(java.util.Map<String, ?> map) throws Exception {
             BatchDispatchGameSlotResponseQueueResultList self = new BatchDispatchGameSlotResponseQueueResultList();
             return TeaModel.build(map, self);
-        }
-
-        public BatchDispatchGameSlotResponseQueueResultList setGameId(String gameId) {
-            this.gameId = gameId;
-            return this;
-        }
-        public String getGameId() {
-            return this.gameId;
-        }
-
-        public BatchDispatchGameSlotResponseQueueResultList setGameSession(String gameSession) {
-            this.gameSession = gameSession;
-            return this;
-        }
-        public String getGameSession() {
-            return this.gameSession;
-        }
-
-        public BatchDispatchGameSlotResponseQueueResultList setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public BatchDispatchGameSlotResponseQueueResultList setQueueCode(Integer queueCode) {
-            this.queueCode = queueCode;
-            return this;
-        }
-        public Integer getQueueCode() {
-            return this.queueCode;
-        }
-
-        public BatchDispatchGameSlotResponseQueueResultList setQueueState(Integer queueState) {
-            this.queueState = queueState;
-            return this;
-        }
-        public Integer getQueueState() {
-            return this.queueState;
         }
 
         public BatchDispatchGameSlotResponseQueueResultList setRegionName(String regionName) {
@@ -187,12 +147,52 @@ public class DispatchGameSlotResponse extends TeaModel {
             return this.regionName;
         }
 
+        public BatchDispatchGameSlotResponseQueueResultList setGameSession(String gameSession) {
+            this.gameSession = gameSession;
+            return this;
+        }
+        public String getGameSession() {
+            return this.gameSession;
+        }
+
         public BatchDispatchGameSlotResponseQueueResultList setUserId(String userId) {
             this.userId = userId;
             return this;
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public BatchDispatchGameSlotResponseQueueResultList setQueueState(Integer queueState) {
+            this.queueState = queueState;
+            return this;
+        }
+        public Integer getQueueState() {
+            return this.queueState;
+        }
+
+        public BatchDispatchGameSlotResponseQueueResultList setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public BatchDispatchGameSlotResponseQueueResultList setGameId(String gameId) {
+            this.gameId = gameId;
+            return this;
+        }
+        public String getGameId() {
+            return this.gameId;
+        }
+
+        public BatchDispatchGameSlotResponseQueueResultList setQueueCode(Integer queueCode) {
+            this.queueCode = queueCode;
+            return this;
+        }
+        public Integer getQueueCode() {
+            return this.queueCode;
         }
 
     }
