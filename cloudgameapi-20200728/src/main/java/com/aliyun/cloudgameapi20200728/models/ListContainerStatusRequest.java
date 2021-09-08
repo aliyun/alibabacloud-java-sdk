@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListContainerStatusRequest extends TeaModel {
     @NameInMap("GameSessionIdList")
-    @Validation(required = true)
     public java.util.List<ListContainerStatusRequestGameSessionIdList> gameSessionIdList;
 
     public static ListContainerStatusRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -23,7 +22,6 @@ public class ListContainerStatusRequest extends TeaModel {
 
     public static class ListContainerStatusRequestGameSessionIdList extends TeaModel {
         @NameInMap("GameSessionId")
-        @Validation(required = true)
         public String gameSessionId;
 
         public static ListContainerStatusRequestGameSessionIdList build(java.util.Map<String, ?> map) throws Exception {

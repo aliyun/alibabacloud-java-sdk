@@ -4,53 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class CreateTokenResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreateTokenResponseData data;
+    public CreateTokenResponseBody body;
 
     public static CreateTokenResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateTokenResponse self = new CreateTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateTokenResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateTokenResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateTokenResponse setData(CreateTokenResponseData data) {
-        this.data = data;
+    public CreateTokenResponse setBody(CreateTokenResponseBody body) {
+        this.body = body;
         return this;
     }
-    public CreateTokenResponseData getData() {
-        return this.data;
-    }
-
-    public static class CreateTokenResponseData extends TeaModel {
-        @NameInMap("Token")
-        @Validation(required = true)
-        public String token;
-
-        public static CreateTokenResponseData build(java.util.Map<String, ?> map) throws Exception {
-            CreateTokenResponseData self = new CreateTokenResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateTokenResponseData setToken(String token) {
-            this.token = token;
-            return this;
-        }
-        public String getToken() {
-            return this.token;
-        }
-
+    public CreateTokenResponseBody getBody() {
+        return this.body;
     }
 
 }
