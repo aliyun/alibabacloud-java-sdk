@@ -8,12 +8,15 @@ public class BindApplicationToEdgeInstanceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ApplicationId")
+    @Validation(required = true)
     public String applicationId;
 
     @NameInMap("ApplicationVersion")
+    @Validation(required = true)
     public String applicationVersion;
 
     public static BindApplicationToEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

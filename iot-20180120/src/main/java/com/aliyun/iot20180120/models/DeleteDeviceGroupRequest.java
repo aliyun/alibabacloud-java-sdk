@@ -8,6 +8,7 @@ public class DeleteDeviceGroupRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("GroupId")
+    @Validation(required = true)
     public String groupId;
 
     public static DeleteDeviceGroupRequest build(java.util.Map<String, ?> map) throws Exception {

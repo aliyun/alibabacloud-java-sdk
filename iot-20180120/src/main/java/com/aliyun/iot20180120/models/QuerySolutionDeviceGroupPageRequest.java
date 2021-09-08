@@ -8,15 +8,18 @@ public class QuerySolutionDeviceGroupPageRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProjectCode")
+    @Validation(required = true)
     public String projectCode;
 
     @NameInMap("FuzzyGroupName")
     public String fuzzyGroupName;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageId")
+    @Validation(required = true)
     public Integer pageId;
 
     public static QuerySolutionDeviceGroupPageRequest build(java.util.Map<String, ?> map) throws Exception {

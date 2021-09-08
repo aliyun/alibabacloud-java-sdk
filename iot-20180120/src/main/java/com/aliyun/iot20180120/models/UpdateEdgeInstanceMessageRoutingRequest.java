@@ -8,9 +8,11 @@ public class UpdateEdgeInstanceMessageRoutingRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RouteId")
+    @Validation(required = true)
     public Long routeId;
 
     @NameInMap("Name")
@@ -20,12 +22,14 @@ public class UpdateEdgeInstanceMessageRoutingRequest extends TeaModel {
     public String topicFilter;
 
     @NameInMap("SourceType")
+    @Validation(required = true)
     public String sourceType;
 
     @NameInMap("SourceData")
     public String sourceData;
 
     @NameInMap("TargetType")
+    @Validation(required = true)
     public String targetType;
 
     @NameInMap("TargetData")

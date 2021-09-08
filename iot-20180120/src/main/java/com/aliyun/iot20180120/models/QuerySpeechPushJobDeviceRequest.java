@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySpeechPushJobDeviceRequest extends TeaModel {
     @NameInMap("JobCode")
+    @Validation(required = true)
     public String jobCode;
 
     @NameInMap("PageSize")

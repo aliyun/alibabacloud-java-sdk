@@ -8,9 +8,11 @@ public class UnbindApplicationFromEdgeInstanceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ApplicationId")
+    @Validation(required = true)
     public String applicationId;
 
     public static UnbindApplicationFromEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

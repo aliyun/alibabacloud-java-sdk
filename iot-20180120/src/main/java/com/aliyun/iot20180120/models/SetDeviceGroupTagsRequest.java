@@ -8,6 +8,7 @@ public class SetDeviceGroupTagsRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("GroupId")
+    @Validation(required = true)
     public String groupId;
 
     @NameInMap("TagString")

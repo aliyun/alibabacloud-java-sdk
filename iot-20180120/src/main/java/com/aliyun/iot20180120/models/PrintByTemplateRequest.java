@@ -11,12 +11,14 @@ public class PrintByTemplateRequest extends TeaModel {
     public String iotId;
 
     @NameInMap("ProjectCode")
+    @Validation(required = true)
     public String projectCode;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("TemplateBizCode")
+    @Validation(required = true)
     public String templateBizCode;
 
     @NameInMap("ProductKey")

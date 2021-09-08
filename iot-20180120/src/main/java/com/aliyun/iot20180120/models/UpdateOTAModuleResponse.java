@@ -4,33 +4,57 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateOTAModuleResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public UpdateOTAModuleResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
 
     public static UpdateOTAModuleResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateOTAModuleResponse self = new UpdateOTAModuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateOTAModuleResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateOTAModuleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateOTAModuleResponse setBody(UpdateOTAModuleResponseBody body) {
-        this.body = body;
+    public UpdateOTAModuleResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public UpdateOTAModuleResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UpdateOTAModuleResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateOTAModuleResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

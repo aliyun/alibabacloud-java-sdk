@@ -8,15 +8,19 @@ public class RRpcRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public String deviceName;
 
     @NameInMap("Timeout")
+    @Validation(required = true)
     public Integer timeout;
 
     @NameInMap("RequestBase64Byte")
+    @Validation(required = true)
     public String requestBase64Byte;
 
     @NameInMap("Topic")

@@ -8,6 +8,7 @@ public class CancelJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("JobId")
+    @Validation(required = true)
     public String jobId;
 
     public static CancelJobRequest build(java.util.Map<String, ?> map) throws Exception {

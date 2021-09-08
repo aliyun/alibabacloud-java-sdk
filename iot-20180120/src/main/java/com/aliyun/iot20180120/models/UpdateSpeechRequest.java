@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateSpeechRequest extends TeaModel {
     @NameInMap("Voice")
+    @Validation(required = true)
     public String voice;
 
     @NameInMap("SpeechCode")
+    @Validation(required = true)
     public String speechCode;
 
     @NameInMap("IotInstanceId")
@@ -20,6 +22,7 @@ public class UpdateSpeechRequest extends TeaModel {
     public Integer volume;
 
     @NameInMap("ProjectCode")
+    @Validation(required = true)
     public String projectCode;
 
     public static UpdateSpeechRequest build(java.util.Map<String, ?> map) throws Exception {

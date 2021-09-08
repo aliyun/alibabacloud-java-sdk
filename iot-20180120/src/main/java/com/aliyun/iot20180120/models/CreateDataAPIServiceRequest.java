@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateDataAPIServiceRequest extends TeaModel {
     @NameInMap("DisplayName")
+    @Validation(required = true)
     public String displayName;
 
     @NameInMap("OriginSql")
+    @Validation(required = true)
     public String originSql;
 
     @NameInMap("RequestParam")
@@ -20,9 +22,11 @@ public class CreateDataAPIServiceRequest extends TeaModel {
     public java.util.List<CreateDataAPIServiceRequestResponseParam> responseParam;
 
     @NameInMap("TemplateSql")
+    @Validation(required = true)
     public String templateSql;
 
     @NameInMap("ApiPath")
+    @Validation(required = true)
     public String apiPath;
 
     @NameInMap("IotInstanceId")

@@ -8,12 +8,15 @@ public class CancelOTATaskByDeviceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("FirmwareId")
+    @Validation(required = true)
     public String firmwareId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public java.util.List<String> deviceName;
 
     @NameInMap("JobId")

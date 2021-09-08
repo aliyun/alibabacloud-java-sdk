@@ -8,16 +8,18 @@ public class ListTaskByPageRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public String pageSize;
 
     @NameInMap("PageNo")
+    @Validation(required = true)
     public String pageNo;
 
     @NameInMap("JobId")
     public String jobId;
 
     @NameInMap("Device")
-    public String device;
+    public java.util.Map<String, ?> device;
 
     @NameInMap("Status")
     public String status;
@@ -65,11 +67,11 @@ public class ListTaskByPageRequest extends TeaModel {
         return this.jobId;
     }
 
-    public ListTaskByPageRequest setDevice(String device) {
+    public ListTaskByPageRequest setDevice(java.util.Map<String, ?> device) {
         this.device = device;
         return this;
     }
-    public String getDevice() {
+    public java.util.Map<String, ?> getDevice() {
         return this.device;
     }
 

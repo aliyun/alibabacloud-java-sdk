@@ -8,6 +8,7 @@ public class ListTaskRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("Limit")
+    @Validation(required = true)
     public Integer limit;
 
     @NameInMap("JobId")
@@ -17,7 +18,7 @@ public class ListTaskRequest extends TeaModel {
     public String nextToken;
 
     @NameInMap("Device")
-    public String device;
+    public java.util.Map<String, ?> device;
 
     @NameInMap("Status")
     public String status;
@@ -59,11 +60,11 @@ public class ListTaskRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListTaskRequest setDevice(String device) {
+    public ListTaskRequest setDevice(java.util.Map<String, ?> device) {
         this.device = device;
         return this;
     }
-    public String getDevice() {
+    public java.util.Map<String, ?> getDevice() {
         return this.device;
     }
 

@@ -8,18 +8,22 @@ public class BatchPubRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public java.util.List<String> deviceName;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Qos")
     public Integer qos;
 
     @NameInMap("TopicShortName")
+    @Validation(required = true)
     public String topicShortName;
 
     @NameInMap("MessageContent")
+    @Validation(required = true)
     public String messageContent;
 
     public static BatchPubRequest build(java.util.Map<String, ?> map) throws Exception {

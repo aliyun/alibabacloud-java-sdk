@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListAnalyticsDataRequest extends TeaModel {
     @NameInMap("IotInstanceId")
+    @Validation(required = true)
     public String iotInstanceId;
 
     @NameInMap("IsoId")
     public String isoId;
 
     @NameInMap("ApiPath")
+    @Validation(required = true)
     public String apiPath;
 
     @NameInMap("PageSize")
@@ -77,9 +79,11 @@ public class ListAnalyticsDataRequest extends TeaModel {
 
     public static class ListAnalyticsDataRequestCondition extends TeaModel {
         @NameInMap("FieldName")
+        @Validation(required = true)
         public String fieldName;
 
         @NameInMap("Operate")
+        @Validation(required = true)
         public String operate;
 
         @NameInMap("Value")

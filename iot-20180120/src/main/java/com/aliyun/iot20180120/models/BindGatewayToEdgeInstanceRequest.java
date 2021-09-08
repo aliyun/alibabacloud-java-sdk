@@ -8,6 +8,7 @@ public class BindGatewayToEdgeInstanceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ProductKey")

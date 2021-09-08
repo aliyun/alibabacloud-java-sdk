@@ -8,12 +8,14 @@ public class PubBroadcastRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("TopicFullName")
     public String topicFullName;
 
     @NameInMap("MessageContent")
+    @Validation(required = true)
     public String messageContent;
 
     public static PubBroadcastRequest build(java.util.Map<String, ?> map) throws Exception {

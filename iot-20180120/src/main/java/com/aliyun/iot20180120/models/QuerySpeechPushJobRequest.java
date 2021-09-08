@@ -11,6 +11,7 @@ public class QuerySpeechPushJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProjectCode")
+    @Validation(required = true)
     public String projectCode;
 
     @NameInMap("PushMode")

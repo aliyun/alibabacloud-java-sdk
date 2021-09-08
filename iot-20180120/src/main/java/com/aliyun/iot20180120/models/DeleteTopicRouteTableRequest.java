@@ -8,9 +8,11 @@ public class DeleteTopicRouteTableRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("DstTopic")
+    @Validation(required = true)
     public java.util.List<String> dstTopic;
 
     @NameInMap("SrcTopic")
+    @Validation(required = true)
     public String srcTopic;
 
     public static DeleteTopicRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {

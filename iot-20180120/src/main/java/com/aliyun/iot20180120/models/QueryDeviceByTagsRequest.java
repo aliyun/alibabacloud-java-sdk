@@ -55,9 +55,11 @@ public class QueryDeviceByTagsRequest extends TeaModel {
 
     public static class QueryDeviceByTagsRequestTag extends TeaModel {
         @NameInMap("TagKey")
+        @Validation(required = true)
         public String tagKey;
 
         @NameInMap("TagValue")
+        @Validation(required = true)
         public String tagValue;
 
         public static QueryDeviceByTagsRequestTag build(java.util.Map<String, ?> map) throws Exception {

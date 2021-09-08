@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateDeviceDistributeJobRequest extends TeaModel {
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public java.util.List<String> deviceName;
 
     @NameInMap("SourceInstanceId")
+    @Validation(required = true)
     public String sourceInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("TargetUid")
@@ -20,9 +23,11 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
     public String targetAliyunId;
 
     @NameInMap("TargetInstanceConfig")
+    @Validation(required = true)
     public java.util.List<CreateDeviceDistributeJobRequestTargetInstanceConfig> targetInstanceConfig;
 
     @NameInMap("Strategy")
+    @Validation(required = true)
     public Integer strategy;
 
     public static CreateDeviceDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -88,6 +93,7 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
 
     public static class CreateDeviceDistributeJobRequestTargetInstanceConfig extends TeaModel {
         @NameInMap("TargetInstanceId")
+        @Validation(required = true)
         public String targetInstanceId;
 
         public static CreateDeviceDistributeJobRequestTargetInstanceConfig build(java.util.Map<String, ?> map) throws Exception {

@@ -8,9 +8,11 @@ public class DeleteEdgeDriverVersionRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("DriverId")
+    @Validation(required = true)
     public String driverId;
 
     @NameInMap("DriverVersion")
+    @Validation(required = true)
     public String driverVersion;
 
     public static DeleteEdgeDriverVersionRequest build(java.util.Map<String, ?> map) throws Exception {

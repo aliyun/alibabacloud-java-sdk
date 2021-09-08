@@ -8,9 +8,11 @@ public class BatchRegisterDeviceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Count")
+    @Validation(required = true)
     public Integer count;
 
     public static BatchRegisterDeviceRequest build(java.util.Map<String, ?> map) throws Exception {

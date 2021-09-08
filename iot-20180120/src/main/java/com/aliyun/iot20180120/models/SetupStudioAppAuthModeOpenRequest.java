@@ -8,12 +8,15 @@ public class SetupStudioAppAuthModeOpenRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("AppId")
+    @Validation(required = true)
     public String appId;
 
     @NameInMap("AuthMode")
+    @Validation(required = true)
     public Integer authMode;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     public static SetupStudioAppAuthModeOpenRequest build(java.util.Map<String, ?> map) throws Exception {

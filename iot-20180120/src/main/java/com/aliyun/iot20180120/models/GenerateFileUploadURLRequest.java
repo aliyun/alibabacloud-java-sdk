@@ -8,9 +8,11 @@ public class GenerateFileUploadURLRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("FileSuffix")
+    @Validation(required = true)
     public String fileSuffix;
 
     @NameInMap("BizCode")
+    @Validation(required = true)
     public String bizCode;
 
     @NameInMap("FileName")

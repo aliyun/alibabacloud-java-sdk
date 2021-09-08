@@ -8,6 +8,7 @@ public class GetThingTopoRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ProductKey")
@@ -17,6 +18,7 @@ public class GetThingTopoRequest extends TeaModel {
     public String deviceName;
 
     @NameInMap("PageNo")
+    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("IotId")

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class BatchUnbindProjectDevicesRequest extends TeaModel {
     @NameInMap("Devices")
+    @Validation(required = true)
     public java.util.List<BatchUnbindProjectDevicesRequestDevices> devices;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     public static BatchUnbindProjectDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -44,9 +46,11 @@ public class BatchUnbindProjectDevicesRequest extends TeaModel {
 
     public static class BatchUnbindProjectDevicesRequestDevices extends TeaModel {
         @NameInMap("ProductKey")
+        @Validation(required = true)
         public String productKey;
 
         @NameInMap("DeviceName")
+        @Validation(required = true)
         public String deviceName;
 
         public static BatchUnbindProjectDevicesRequestDevices build(java.util.Map<String, ?> map) throws Exception {

@@ -11,9 +11,11 @@ public class ListOTAFirmwareRequest extends TeaModel {
     public String productKey;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("DestVersion")

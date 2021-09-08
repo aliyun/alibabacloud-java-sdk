@@ -4,33 +4,57 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEdgeInstanceMessageRoutingResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public UpdateEdgeInstanceMessageRoutingResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
 
     public static UpdateEdgeInstanceMessageRoutingResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateEdgeInstanceMessageRoutingResponse self = new UpdateEdgeInstanceMessageRoutingResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateEdgeInstanceMessageRoutingResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateEdgeInstanceMessageRoutingResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateEdgeInstanceMessageRoutingResponse setBody(UpdateEdgeInstanceMessageRoutingResponseBody body) {
-        this.body = body;
+    public UpdateEdgeInstanceMessageRoutingResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public UpdateEdgeInstanceMessageRoutingResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UpdateEdgeInstanceMessageRoutingResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateEdgeInstanceMessageRoutingResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

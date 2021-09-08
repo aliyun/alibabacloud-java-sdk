@@ -11,6 +11,7 @@ public class QueryDeviceByStatusRequest extends TeaModel {
     public String productKey;
 
     @NameInMap("Status")
+    @Validation(required = true)
     public Integer status;
 
     @NameInMap("CurrentPage")

@@ -11,10 +11,14 @@ public class QueryDeviceRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     public static QueryDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceRequest self = new QueryDeviceRequest();
@@ -51,6 +55,14 @@ public class QueryDeviceRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryDeviceRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

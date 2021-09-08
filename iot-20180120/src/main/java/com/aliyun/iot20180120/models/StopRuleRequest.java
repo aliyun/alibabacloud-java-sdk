@@ -8,6 +8,7 @@ public class StopRuleRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public Long ruleId;
 
     public static StopRuleRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -1,0 +1,79 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class ListOTAUnfinishedTaskByDeviceRequest extends TeaModel {
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("ModuleName")
+    public String moduleName;
+
+    @NameInMap("ProductKey")
+    public String productKey;
+
+    @NameInMap("DeviceName")
+    public String deviceName;
+
+    @NameInMap("TaskStatus")
+    @Validation(required = true)
+    public String taskStatus;
+
+    @NameInMap("IotId")
+    public String iotId;
+
+    public static ListOTAUnfinishedTaskByDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListOTAUnfinishedTaskByDeviceRequest self = new ListOTAUnfinishedTaskByDeviceRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ListOTAUnfinishedTaskByDeviceRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public ListOTAUnfinishedTaskByDeviceRequest setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+        return this;
+    }
+    public String getModuleName() {
+        return this.moduleName;
+    }
+
+    public ListOTAUnfinishedTaskByDeviceRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
+    }
+
+    public ListOTAUnfinishedTaskByDeviceRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
+    }
+
+    public ListOTAUnfinishedTaskByDeviceRequest setTaskStatus(String taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public String getTaskStatus() {
+        return this.taskStatus;
+    }
+
+    public ListOTAUnfinishedTaskByDeviceRequest setIotId(String iotId) {
+        this.iotId = iotId;
+        return this;
+    }
+    public String getIotId() {
+        return this.iotId;
+    }
+
+}

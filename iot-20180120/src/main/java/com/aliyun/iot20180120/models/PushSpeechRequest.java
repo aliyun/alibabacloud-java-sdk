@@ -8,18 +8,21 @@ public class PushSpeechRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PushMode")
+    @Validation(required = true)
     public String pushMode;
 
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("SpeechCodeList")
+    @Validation(required = true)
     public java.util.List<String> speechCodeList;
 
     @NameInMap("IotId")
     public String iotId;
 
     @NameInMap("ProjectCode")
+    @Validation(required = true)
     public String projectCode;
 
     @NameInMap("DeviceName")

@@ -4,33 +4,57 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateThingScriptResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public CreateThingScriptResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
 
     public static CreateThingScriptResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateThingScriptResponse self = new CreateThingScriptResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateThingScriptResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateThingScriptResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateThingScriptResponse setBody(CreateThingScriptResponseBody body) {
-        this.body = body;
+    public CreateThingScriptResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateThingScriptResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateThingScriptResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateThingScriptResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

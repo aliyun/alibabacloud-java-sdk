@@ -8,9 +8,11 @@ public class GetDeviceShadowRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public String deviceName;
 
     public static GetDeviceShadowRequest build(java.util.Map<String, ?> map) throws Exception {

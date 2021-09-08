@@ -8,9 +8,11 @@ public class QueryConsumerGroupListRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("Fuzzy")

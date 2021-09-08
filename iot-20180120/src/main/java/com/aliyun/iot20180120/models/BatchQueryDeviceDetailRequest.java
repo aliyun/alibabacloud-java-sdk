@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class BatchQueryDeviceDetailRequest extends TeaModel {
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public java.util.List<String> deviceName;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("IotInstanceId")

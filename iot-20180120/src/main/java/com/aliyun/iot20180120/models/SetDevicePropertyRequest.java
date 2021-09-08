@@ -17,6 +17,7 @@ public class SetDevicePropertyRequest extends TeaModel {
     public String iotId;
 
     @NameInMap("Items")
+    @Validation(required = true)
     public String items;
 
     public static SetDevicePropertyRequest build(java.util.Map<String, ?> map) throws Exception {

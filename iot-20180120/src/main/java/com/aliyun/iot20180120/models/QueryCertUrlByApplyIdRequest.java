@@ -8,6 +8,7 @@ public class QueryCertUrlByApplyIdRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ApplyId")
+    @Validation(required = true)
     public Long applyId;
 
     public static QueryCertUrlByApplyIdRequest build(java.util.Map<String, ?> map) throws Exception {

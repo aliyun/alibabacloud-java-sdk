@@ -8,6 +8,7 @@ public class QueryProductListRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ResourceGroupId")
@@ -17,6 +18,7 @@ public class QueryProductListRequest extends TeaModel {
     public String aliyunCommodityCode;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     public static QueryProductListRequest build(java.util.Map<String, ?> map) throws Exception {

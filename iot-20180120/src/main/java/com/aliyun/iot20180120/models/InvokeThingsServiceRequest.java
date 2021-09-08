@@ -5,18 +5,22 @@ import com.aliyun.tea.*;
 
 public class InvokeThingsServiceRequest extends TeaModel {
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public java.util.List<String> deviceName;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Identifier")
+    @Validation(required = true)
     public String identifier;
 
     @NameInMap("Args")
+    @Validation(required = true)
     public String args;
 
     public static InvokeThingsServiceRequest build(java.util.Map<String, ?> map) throws Exception {

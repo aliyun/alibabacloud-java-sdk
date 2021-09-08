@@ -8,9 +8,11 @@ public class CreateProductRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductName")
+    @Validation(required = true)
     public String productName;
 
     @NameInMap("NodeType")
+    @Validation(required = true)
     public Integer nodeType;
 
     @NameInMap("DataFormat")

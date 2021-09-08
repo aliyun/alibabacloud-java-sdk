@@ -4,33 +4,69 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateJobResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public CreateJobResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("JobId")
+    @Validation(required = true)
+    public String jobId;
 
     public static CreateJobResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateJobResponse self = new CreateJobResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateJobResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateJobResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateJobResponse setBody(CreateJobResponseBody body) {
-        this.body = body;
+    public CreateJobResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateJobResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateJobResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateJobResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateJobResponse setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }

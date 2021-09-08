@@ -4,33 +4,69 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryCertUrlByApplyIdResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public QueryCertUrlByApplyIdResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("CertUrl")
+    @Validation(required = true)
+    public String certUrl;
 
     public static QueryCertUrlByApplyIdResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryCertUrlByApplyIdResponse self = new QueryCertUrlByApplyIdResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryCertUrlByApplyIdResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public QueryCertUrlByApplyIdResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public QueryCertUrlByApplyIdResponse setBody(QueryCertUrlByApplyIdResponseBody body) {
-        this.body = body;
+    public QueryCertUrlByApplyIdResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public QueryCertUrlByApplyIdResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public QueryCertUrlByApplyIdResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryCertUrlByApplyIdResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public QueryCertUrlByApplyIdResponse setCertUrl(String certUrl) {
+        this.certUrl = certUrl;
+        return this;
+    }
+    public String getCertUrl() {
+        return this.certUrl;
     }
 
 }

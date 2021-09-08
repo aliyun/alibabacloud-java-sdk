@@ -17,9 +17,11 @@ public class SetDeviceDesiredPropertyRequest extends TeaModel {
     public String productKey;
 
     @NameInMap("Items")
+    @Validation(required = true)
     public String items;
 
     @NameInMap("Versions")
+    @Validation(required = true)
     public String versions;
 
     public static SetDeviceDesiredPropertyRequest build(java.util.Map<String, ?> map) throws Exception {

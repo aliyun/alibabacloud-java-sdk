@@ -14,6 +14,7 @@ public class ListOTATaskByJobRequest extends TeaModel {
     public String taskStatus;
 
     @NameInMap("JobId")
+    @Validation(required = true)
     public String jobId;
 
     @NameInMap("CurrentPage")
