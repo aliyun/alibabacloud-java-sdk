@@ -8,15 +8,12 @@ public class BatchAddThingTopoRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("TopoAddItem")
-    @Validation(required = true)
     public java.util.List<BatchAddThingTopoRequestTopoAddItem> topoAddItem;
 
     @NameInMap("GwProductKey")
-    @Validation(required = true)
     public String gwProductKey;
 
     @NameInMap("GwDeviceName")
-    @Validation(required = true)
     public String gwDeviceName;
 
     public static BatchAddThingTopoRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -58,19 +55,15 @@ public class BatchAddThingTopoRequest extends TeaModel {
 
     public static class BatchAddThingTopoRequestTopoAddItem extends TeaModel {
         @NameInMap("ProductKey")
-        @Validation(required = true)
         public String productKey;
 
         @NameInMap("DeviceName")
-        @Validation(required = true)
         public String deviceName;
 
         @NameInMap("Sign")
-        @Validation(required = true)
         public String sign;
 
         @NameInMap("SignMethod")
-        @Validation(required = true)
         public String signMethod;
 
         @NameInMap("Timestamp")

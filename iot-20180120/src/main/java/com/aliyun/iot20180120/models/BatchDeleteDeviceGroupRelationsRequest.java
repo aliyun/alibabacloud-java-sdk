@@ -8,7 +8,6 @@ public class BatchDeleteDeviceGroupRelationsRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     @NameInMap("Device")
@@ -45,11 +44,9 @@ public class BatchDeleteDeviceGroupRelationsRequest extends TeaModel {
 
     public static class BatchDeleteDeviceGroupRelationsRequestDevice extends TeaModel {
         @NameInMap("ProductKey")
-        @Validation(required = true)
         public String productKey;
 
         @NameInMap("DeviceName")
-        @Validation(required = true)
         public String deviceName;
 
         public static BatchDeleteDeviceGroupRelationsRequestDevice build(java.util.Map<String, ?> map) throws Exception {

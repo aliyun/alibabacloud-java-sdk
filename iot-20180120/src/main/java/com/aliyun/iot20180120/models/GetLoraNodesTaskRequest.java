@@ -8,7 +8,6 @@ public class GetLoraNodesTaskRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public String taskId;
 
     public static GetLoraNodesTaskRequest build(java.util.Map<String, ?> map) throws Exception {

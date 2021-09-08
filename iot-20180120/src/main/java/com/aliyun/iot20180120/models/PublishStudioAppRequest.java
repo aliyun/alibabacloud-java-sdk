@@ -8,14 +8,12 @@ public class PublishStudioAppRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("Description")
     public String description;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public String projectId;
 
     public static PublishStudioAppRequest build(java.util.Map<String, ?> map) throws Exception {

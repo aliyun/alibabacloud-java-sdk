@@ -4,69 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateProductTopicResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("TopicId")
-    @Validation(required = true)
-    public Long topicId;
+    public CreateProductTopicResponseBody body;
 
     public static CreateProductTopicResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateProductTopicResponse self = new CreateProductTopicResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateProductTopicResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateProductTopicResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateProductTopicResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CreateProductTopicResponse setBody(CreateProductTopicResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateProductTopicResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateProductTopicResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateProductTopicResponse setTopicId(Long topicId) {
-        this.topicId = topicId;
-        return this;
-    }
-    public Long getTopicId() {
-        return this.topicId;
+    public CreateProductTopicResponseBody getBody() {
+        return this.body;
     }
 
 }

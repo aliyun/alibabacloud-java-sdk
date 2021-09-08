@@ -5,25 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeOssPreSignedAddressRequest extends TeaModel {
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("FileName")
-    @Validation(required = true)
     public String fileName;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("ResourceVersion")
-    @Validation(required = true)
     public String resourceVersion;
 
     public static CreateEdgeOssPreSignedAddressRequest build(java.util.Map<String, ?> map) throws Exception {

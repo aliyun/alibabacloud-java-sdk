@@ -11,7 +11,6 @@ public class QueryPageByApplyIdRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ApplyId")
-    @Validation(required = true)
     public Long applyId;
 
     @NameInMap("CurrentPage")

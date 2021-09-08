@@ -11,7 +11,6 @@ public class ImportThingModelTslRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("TslStr")

@@ -8,22 +8,18 @@ public class QueryEdgeInstanceChannelRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DriverId")
-    @Validation(required = true)
     public String driverId;
 
     @NameInMap("ChannelName")
     public String channelName;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static QueryEdgeInstanceChannelRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -11,7 +11,6 @@ public class QueryDeviceRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("CurrentPage")

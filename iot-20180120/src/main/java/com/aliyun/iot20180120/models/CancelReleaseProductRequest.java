@@ -8,7 +8,6 @@ public class CancelReleaseProductRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static CancelReleaseProductRequest build(java.util.Map<String, ?> map) throws Exception {

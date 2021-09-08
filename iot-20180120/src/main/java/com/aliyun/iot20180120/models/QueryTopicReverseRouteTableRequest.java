@@ -11,7 +11,6 @@ public class QueryTopicReverseRouteTableRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("Topic")
-    @Validation(required = true)
     public String topic;
 
     public static QueryTopicReverseRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {

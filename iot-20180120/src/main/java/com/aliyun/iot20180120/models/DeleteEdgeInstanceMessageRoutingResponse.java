@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteEdgeInstanceMessageRoutingResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public DeleteEdgeInstanceMessageRoutingResponseBody body;
 
     public static DeleteEdgeInstanceMessageRoutingResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteEdgeInstanceMessageRoutingResponse self = new DeleteEdgeInstanceMessageRoutingResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteEdgeInstanceMessageRoutingResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteEdgeInstanceMessageRoutingResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteEdgeInstanceMessageRoutingResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteEdgeInstanceMessageRoutingResponse setBody(DeleteEdgeInstanceMessageRoutingResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteEdgeInstanceMessageRoutingResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DeleteEdgeInstanceMessageRoutingResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public DeleteEdgeInstanceMessageRoutingResponseBody getBody() {
+        return this.body;
     }
 
 }

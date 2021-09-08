@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateProductDistributeJobRequest extends TeaModel {
     @NameInMap("SourceInstanceId")
-    @Validation(required = true)
     public String sourceInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("TargetInstanceId")
-    @Validation(required = true)
     public String targetInstanceId;
 
     @NameInMap("TargetUid")

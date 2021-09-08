@@ -8,11 +8,9 @@ public class QuerySubscribeRelationRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     public static QuerySubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -11,7 +11,6 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     public Integer currentPage;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Status")

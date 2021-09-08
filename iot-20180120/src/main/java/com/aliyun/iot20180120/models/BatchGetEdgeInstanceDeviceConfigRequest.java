@@ -8,11 +8,9 @@ public class BatchGetEdgeInstanceDeviceConfigRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("IotIds")
-    @Validation(required = true)
     public java.util.List<String> iotIds;
 
     public static BatchGetEdgeInstanceDeviceConfigRequest build(java.util.Map<String, ?> map) throws Exception {

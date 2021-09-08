@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteEdgeInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public DeleteEdgeInstanceResponseBody body;
 
     public static DeleteEdgeInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteEdgeInstanceResponse self = new DeleteEdgeInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteEdgeInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteEdgeInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteEdgeInstanceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteEdgeInstanceResponse setBody(DeleteEdgeInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteEdgeInstanceResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DeleteEdgeInstanceResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public DeleteEdgeInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

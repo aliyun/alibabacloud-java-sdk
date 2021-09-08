@@ -8,11 +8,9 @@ public class QueryBatchRegisterDeviceStatusRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("ApplyId")
-    @Validation(required = true)
     public Long applyId;
 
     public static QueryBatchRegisterDeviceStatusRequest build(java.util.Map<String, ?> map) throws Exception {

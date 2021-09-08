@@ -8,7 +8,6 @@ public class UpdateDeviceGroupRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     @NameInMap("GroupDesc")

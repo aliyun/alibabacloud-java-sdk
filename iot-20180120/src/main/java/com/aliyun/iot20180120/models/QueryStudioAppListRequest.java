@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryStudioAppListRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public String projectId;
 
     @NameInMap("PageNo")
@@ -15,7 +14,6 @@ public class QueryStudioAppListRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("Types")
-    @Validation(required = true)
     public java.util.List<String> types;
 
     @NameInMap("FuzzyName")

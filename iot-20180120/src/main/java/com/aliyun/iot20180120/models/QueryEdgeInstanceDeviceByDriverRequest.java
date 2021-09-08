@@ -8,22 +8,18 @@ public class QueryEdgeInstanceDeviceByDriverRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ChannelId")
     public String channelId;
 
     @NameInMap("DriverId")
-    @Validation(required = true)
     public String driverId;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     public static QueryEdgeInstanceDeviceByDriverRequest build(java.util.Map<String, ?> map) throws Exception {

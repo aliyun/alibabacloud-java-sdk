@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetDataAPIServiceDetailRequest extends TeaModel {
     @NameInMap("ApiSrn")
-    @Validation(required = true)
     public String apiSrn;
 
     @NameInMap("IotInstanceId")

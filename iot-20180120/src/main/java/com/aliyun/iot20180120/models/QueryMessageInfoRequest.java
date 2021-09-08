@@ -8,7 +8,6 @@ public class QueryMessageInfoRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("UniMsgId")
-    @Validation(required = true)
     public String uniMsgId;
 
     public static QueryMessageInfoRequest build(java.util.Map<String, ?> map) throws Exception {

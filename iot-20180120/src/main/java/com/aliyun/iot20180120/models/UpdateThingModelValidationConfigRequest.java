@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateThingModelValidationConfigRequest extends TeaModel {
     @NameInMap("ValidateType")
-    @Validation(required = true)
     public Integer validateType;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static UpdateThingModelValidationConfigRequest build(java.util.Map<String, ?> map) throws Exception {

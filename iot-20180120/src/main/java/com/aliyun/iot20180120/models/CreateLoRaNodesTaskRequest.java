@@ -8,11 +8,9 @@ public class CreateLoRaNodesTaskRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceInfo")
-    @Validation(required = true)
     public java.util.List<CreateLoRaNodesTaskRequestDeviceInfo> deviceInfo;
 
     public static CreateLoRaNodesTaskRequest build(java.util.Map<String, ?> map) throws Exception {

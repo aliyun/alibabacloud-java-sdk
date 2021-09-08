@@ -8,15 +8,12 @@ public class ReplaceEdgeInstanceGatewayRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("CurrentGatewayId")
-    @Validation(required = true)
     public String currentGatewayId;
 
     @NameInMap("NewGatewayId")
-    @Validation(required = true)
     public String newGatewayId;
 
     public static ReplaceEdgeInstanceGatewayRequest build(java.util.Map<String, ?> map) throws Exception {

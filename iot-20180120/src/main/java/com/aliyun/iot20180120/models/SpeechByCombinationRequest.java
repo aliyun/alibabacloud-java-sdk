@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class SpeechByCombinationRequest extends TeaModel {
     @NameInMap("CombinationList")
-    @Validation(required = true)
     public java.util.List<String> combinationList;
 
     @NameInMap("IotId")
@@ -19,12 +18,6 @@ public class SpeechByCombinationRequest extends TeaModel {
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
-
-    @NameInMap("AudioFormat")
-    public String audioFormat;
-
-    @NameInMap("SpeechId")
-    public String speechId;
 
     public static SpeechByCombinationRequest build(java.util.Map<String, ?> map) throws Exception {
         SpeechByCombinationRequest self = new SpeechByCombinationRequest();
@@ -69,22 +62,6 @@ public class SpeechByCombinationRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
-    }
-
-    public SpeechByCombinationRequest setAudioFormat(String audioFormat) {
-        this.audioFormat = audioFormat;
-        return this;
-    }
-    public String getAudioFormat() {
-        return this.audioFormat;
-    }
-
-    public SpeechByCombinationRequest setSpeechId(String speechId) {
-        this.speechId = speechId;
-        return this;
-    }
-    public String getSpeechId() {
-        return this.speechId;
     }
 
 }

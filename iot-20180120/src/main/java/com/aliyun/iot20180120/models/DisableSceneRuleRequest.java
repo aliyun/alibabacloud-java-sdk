@@ -8,7 +8,6 @@ public class DisableSceneRuleRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("RuleId")
-    @Validation(required = true)
     public String ruleId;
 
     public static DisableSceneRuleRequest build(java.util.Map<String, ?> map) throws Exception {

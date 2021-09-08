@@ -8,11 +8,9 @@ public class UpdateEdgeInstanceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Tags")

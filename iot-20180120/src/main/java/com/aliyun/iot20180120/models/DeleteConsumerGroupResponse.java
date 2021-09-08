@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
+    public DeleteConsumerGroupResponseBody body;
 
     public static DeleteConsumerGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteConsumerGroupResponse self = new DeleteConsumerGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteConsumerGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteConsumerGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteConsumerGroupResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteConsumerGroupResponse setBody(DeleteConsumerGroupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteConsumerGroupResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public DeleteConsumerGroupResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public DeleteConsumerGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

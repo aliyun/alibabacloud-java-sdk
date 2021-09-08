@@ -8,11 +8,9 @@ public class UpdateConsumerGroupRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("NewGroupName")
-    @Validation(required = true)
     public String newGroupName;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     public static UpdateConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {

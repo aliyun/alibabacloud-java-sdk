@@ -8,7 +8,6 @@ public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     @NameInMap("Device")
@@ -45,11 +44,9 @@ public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
 
     public static class BatchAddDeviceGroupRelationsRequestDevice extends TeaModel {
         @NameInMap("ProductKey")
-        @Validation(required = true)
         public String productKey;
 
         @NameInMap("DeviceName")
-        @Validation(required = true)
         public String deviceName;
 
         public static BatchAddDeviceGroupRelationsRequestDevice build(java.util.Map<String, ?> map) throws Exception {

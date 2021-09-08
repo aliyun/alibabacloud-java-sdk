@@ -8,7 +8,6 @@ public class BatchGetEdgeDriverRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("DriverIds")
-    @Validation(required = true)
     public java.util.List<String> driverIds;
 
     public static BatchGetEdgeDriverRequest build(java.util.Map<String, ?> map) throws Exception {

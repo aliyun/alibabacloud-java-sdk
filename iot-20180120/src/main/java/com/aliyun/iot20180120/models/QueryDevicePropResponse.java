@@ -4,69 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicePropResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Props")
-    @Validation(required = true)
-    public String props;
+    public QueryDevicePropResponseBody body;
 
     public static QueryDevicePropResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryDevicePropResponse self = new QueryDevicePropResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryDevicePropResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryDevicePropResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public QueryDevicePropResponse setSuccess(Boolean success) {
-        this.success = success;
+    public QueryDevicePropResponse setBody(QueryDevicePropResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public QueryDevicePropResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryDevicePropResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDevicePropResponse setProps(String props) {
-        this.props = props;
-        return this;
-    }
-    public String getProps() {
-        return this.props;
+    public QueryDevicePropResponseBody getBody() {
+        return this.body;
     }
 
 }

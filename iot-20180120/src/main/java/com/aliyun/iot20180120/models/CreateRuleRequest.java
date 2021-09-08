@@ -20,7 +20,6 @@ public class CreateRuleRequest extends TeaModel {
     public String productKey;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("RuleDesc")

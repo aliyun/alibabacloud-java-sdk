@@ -8,15 +8,12 @@ public class SetEdgeInstanceDriverConfigsRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DriverId")
-    @Validation(required = true)
     public String driverId;
 
     @NameInMap("Configs")
-    @Validation(required = true)
     public java.util.List<SetEdgeInstanceDriverConfigsRequestConfigs> configs;
 
     public static SetEdgeInstanceDriverConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -58,11 +55,9 @@ public class SetEdgeInstanceDriverConfigsRequest extends TeaModel {
 
     public static class SetEdgeInstanceDriverConfigsRequestConfigs extends TeaModel {
         @NameInMap("Format")
-        @Validation(required = true)
         public String format;
 
         @NameInMap("Content")
-        @Validation(required = true)
         public String content;
 
         @NameInMap("Key")

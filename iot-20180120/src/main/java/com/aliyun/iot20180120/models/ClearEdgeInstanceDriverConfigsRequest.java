@@ -8,11 +8,9 @@ public class ClearEdgeInstanceDriverConfigsRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DriverId")
-    @Validation(required = true)
     public String driverId;
 
     public static ClearEdgeInstanceDriverConfigsRequest build(java.util.Map<String, ?> map) throws Exception {

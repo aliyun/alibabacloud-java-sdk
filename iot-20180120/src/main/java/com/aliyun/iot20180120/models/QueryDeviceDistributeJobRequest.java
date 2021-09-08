@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryDeviceDistributeJobRequest extends TeaModel {
     @NameInMap("JobId")
-    @Validation(required = true)
     public String jobId;
 
     public static QueryDeviceDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -8,7 +8,6 @@ public class DeleteRuleActionRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ActionId")
-    @Validation(required = true)
     public Long actionId;
 
     public static DeleteRuleActionRequest build(java.util.Map<String, ?> map) throws Exception {

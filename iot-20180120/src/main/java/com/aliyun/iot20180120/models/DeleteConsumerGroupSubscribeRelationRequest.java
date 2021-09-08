@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupSubscribeRelationRequest extends TeaModel {
     @NameInMap("ConsumerGroupId")
-    @Validation(required = true)
     public String consumerGroupId;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static DeleteConsumerGroupSubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {

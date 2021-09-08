@@ -8,11 +8,9 @@ public class DeleteSubscribeRelationRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     public static DeleteSubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {

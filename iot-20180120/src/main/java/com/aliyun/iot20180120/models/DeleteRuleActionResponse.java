@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteRuleActionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public DeleteRuleActionResponseBody body;
 
     public static DeleteRuleActionResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteRuleActionResponse self = new DeleteRuleActionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteRuleActionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteRuleActionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteRuleActionResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteRuleActionResponse setBody(DeleteRuleActionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteRuleActionResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DeleteRuleActionResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public DeleteRuleActionResponseBody getBody() {
+        return this.body;
     }
 
 }

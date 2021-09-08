@@ -8,11 +8,9 @@ public class DeleteProductTagsRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductTagKey")
-    @Validation(required = true)
     public java.util.List<String> productTagKey;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static DeleteProductTagsRequest build(java.util.Map<String, ?> map) throws Exception {

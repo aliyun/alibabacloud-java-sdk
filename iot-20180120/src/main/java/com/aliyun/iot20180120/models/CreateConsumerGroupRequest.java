@@ -8,7 +8,6 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("GroupName")
-    @Validation(required = true)
     public String groupName;
 
     public static CreateConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {

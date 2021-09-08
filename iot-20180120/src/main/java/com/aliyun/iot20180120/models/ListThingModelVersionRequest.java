@@ -8,7 +8,6 @@ public class ListThingModelVersionRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static ListThingModelVersionRequest build(java.util.Map<String, ?> map) throws Exception {

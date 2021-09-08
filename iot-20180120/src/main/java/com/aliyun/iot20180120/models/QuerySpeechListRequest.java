@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QuerySpeechListRequest extends TeaModel {
     @NameInMap("ProjectCode")
-    @Validation(required = true)
     public String projectCode;
 
     @NameInMap("PageSize")
@@ -16,9 +15,6 @@ public class QuerySpeechListRequest extends TeaModel {
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
-
-    @NameInMap("AudioFormat")
-    public String audioFormat;
 
     public static QuerySpeechListRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySpeechListRequest self = new QuerySpeechListRequest();
@@ -55,14 +51,6 @@ public class QuerySpeechListRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
-    }
-
-    public QuerySpeechListRequest setAudioFormat(String audioFormat) {
-        this.audioFormat = audioFormat;
-        return this;
-    }
-    public String getAudioFormat() {
-        return this.audioFormat;
     }
 
 }

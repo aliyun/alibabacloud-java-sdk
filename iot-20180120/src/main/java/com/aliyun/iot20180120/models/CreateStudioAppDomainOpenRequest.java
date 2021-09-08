@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateStudioAppDomainOpenRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("Host")
-    @Validation(required = true)
     public String host;
 
     @NameInMap("Protocol")
-    @Validation(required = true)
     public String protocol;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public String projectId;
 
     @NameInMap("IotInstanceId")

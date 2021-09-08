@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryStudioAppDomainListOpenRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public String projectId;
 
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("IotInstanceId")

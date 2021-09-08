@@ -8,19 +8,16 @@ public class QueryEdgeDriverRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     @NameInMap("Type")
-    @Validation(required = true)
     public Integer type;
 
     @NameInMap("DriverName")
     public String driverName;
-
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
-    public Integer currentPage;
 
     public static QueryEdgeDriverRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeDriverRequest self = new QueryEdgeDriverRequest();
@@ -43,6 +40,14 @@ public class QueryEdgeDriverRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryEdgeDriverRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
     public QueryEdgeDriverRequest setType(Integer type) {
         this.type = type;
         return this;
@@ -57,14 +62,6 @@ public class QueryEdgeDriverRequest extends TeaModel {
     }
     public String getDriverName() {
         return this.driverName;
-    }
-
-    public QueryEdgeDriverRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
     }
 
 }

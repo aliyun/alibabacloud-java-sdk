@@ -8,7 +8,6 @@ public class CreateSceneRuleRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("RuleName")
-    @Validation(required = true)
     public String ruleName;
 
     @NameInMap("RuleContent")

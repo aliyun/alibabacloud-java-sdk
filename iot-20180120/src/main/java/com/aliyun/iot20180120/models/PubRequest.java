@@ -8,18 +8,15 @@ public class PubRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Qos")
     public Integer qos;
 
     @NameInMap("TopicFullName")
-    @Validation(required = true)
     public String topicFullName;
 
     @NameInMap("MessageContent")
-    @Validation(required = true)
     public String messageContent;
 
     @NameInMap("ResponseTopic")
