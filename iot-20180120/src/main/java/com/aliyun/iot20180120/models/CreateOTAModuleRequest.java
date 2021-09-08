@@ -11,14 +11,12 @@ public class CreateOTAModuleRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ModuleName")
-    @Validation(required = true)
     public String moduleName;
 
     @NameInMap("Desc")
     public String desc;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static CreateOTAModuleRequest build(java.util.Map<String, ?> map) throws Exception {

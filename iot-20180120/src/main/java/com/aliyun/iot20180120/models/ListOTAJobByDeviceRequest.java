@@ -8,23 +8,18 @@ public class ListOTAJobByDeviceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("FirmwareId")
-    @Validation(required = true)
     public String firmwareId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
-    @Validation(required = true)
     public String deviceName;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     public static ListOTAJobByDeviceRequest build(java.util.Map<String, ?> map) throws Exception {

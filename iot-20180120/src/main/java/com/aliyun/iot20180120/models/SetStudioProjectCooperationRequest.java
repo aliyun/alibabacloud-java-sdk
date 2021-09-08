@@ -8,7 +8,6 @@ public class SetStudioProjectCooperationRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("Status")
-    @Validation(required = true)
     public String status;
 
     public static SetStudioProjectCooperationRequest build(java.util.Map<String, ?> map) throws Exception {

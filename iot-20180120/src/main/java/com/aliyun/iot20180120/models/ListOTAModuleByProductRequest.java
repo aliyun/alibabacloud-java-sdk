@@ -8,7 +8,6 @@ public class ListOTAModuleByProductRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static ListOTAModuleByProductRequest build(java.util.Map<String, ?> map) throws Exception {

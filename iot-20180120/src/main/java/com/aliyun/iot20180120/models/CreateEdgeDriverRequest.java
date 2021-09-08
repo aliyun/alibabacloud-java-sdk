@@ -8,15 +8,12 @@ public class CreateEdgeDriverRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("DriverName")
-    @Validation(required = true)
     public String driverName;
 
     @NameInMap("DriverProtocol")
-    @Validation(required = true)
     public String driverProtocol;
 
     @NameInMap("Runtime")
-    @Validation(required = true)
     public String runtime;
 
     @NameInMap("CpuArch")

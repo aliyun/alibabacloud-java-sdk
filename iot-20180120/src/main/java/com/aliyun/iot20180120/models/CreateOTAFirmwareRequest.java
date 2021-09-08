@@ -8,11 +8,9 @@ public class CreateOTAFirmwareRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("FirmwareName")
-    @Validation(required = true)
     public String firmwareName;
 
     @NameInMap("DestVersion")
-    @Validation(required = true)
     public String destVersion;
 
     @NameInMap("FirmwareUrl")
@@ -47,9 +45,6 @@ public class CreateOTAFirmwareRequest extends TeaModel {
 
     @NameInMap("Udi")
     public String udi;
-
-    @NameInMap("MultiFiles")
-    public java.util.List<CreateOTAFirmwareRequestMultiFiles> multiFiles;
 
     public static CreateOTAFirmwareRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOTAFirmwareRequest self = new CreateOTAFirmwareRequest();
@@ -166,77 +161,6 @@ public class CreateOTAFirmwareRequest extends TeaModel {
     }
     public String getUdi() {
         return this.udi;
-    }
-
-    public CreateOTAFirmwareRequest setMultiFiles(java.util.List<CreateOTAFirmwareRequestMultiFiles> multiFiles) {
-        this.multiFiles = multiFiles;
-        return this;
-    }
-    public java.util.List<CreateOTAFirmwareRequestMultiFiles> getMultiFiles() {
-        return this.multiFiles;
-    }
-
-    public static class CreateOTAFirmwareRequestMultiFiles extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Size")
-        public Integer size;
-
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("SignValue")
-        public String signValue;
-
-        @NameInMap("FileMd5")
-        public String fileMd5;
-
-        public static CreateOTAFirmwareRequestMultiFiles build(java.util.Map<String, ?> map) throws Exception {
-            CreateOTAFirmwareRequestMultiFiles self = new CreateOTAFirmwareRequestMultiFiles();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateOTAFirmwareRequestMultiFiles setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public CreateOTAFirmwareRequestMultiFiles setSize(Integer size) {
-            this.size = size;
-            return this;
-        }
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public CreateOTAFirmwareRequestMultiFiles setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public CreateOTAFirmwareRequestMultiFiles setSignValue(String signValue) {
-            this.signValue = signValue;
-            return this;
-        }
-        public String getSignValue() {
-            return this.signValue;
-        }
-
-        public CreateOTAFirmwareRequestMultiFiles setFileMd5(String fileMd5) {
-            this.fileMd5 = fileMd5;
-            return this;
-        }
-        public String getFileMd5() {
-            return this.fileMd5;
-        }
-
     }
 
 }

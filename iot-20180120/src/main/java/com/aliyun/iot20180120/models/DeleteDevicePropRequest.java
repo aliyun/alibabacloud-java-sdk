@@ -14,7 +14,6 @@ public class DeleteDevicePropRequest extends TeaModel {
     public String deviceName;
 
     @NameInMap("PropKey")
-    @Validation(required = true)
     public String propKey;
 
     @NameInMap("IotId")

@@ -8,15 +8,12 @@ public class CreateProductTopicRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("TopicShortName")
-    @Validation(required = true)
     public String topicShortName;
 
     @NameInMap("Operation")
-    @Validation(required = true)
     public String operation;
 
     @NameInMap("Desc")

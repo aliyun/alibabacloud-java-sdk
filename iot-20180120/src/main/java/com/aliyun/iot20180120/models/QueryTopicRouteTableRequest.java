@@ -8,7 +8,6 @@ public class QueryTopicRouteTableRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("Topic")
-    @Validation(required = true)
     public String topic;
 
     public static QueryTopicRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {

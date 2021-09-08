@@ -4,69 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteStudioAppDomainOpenResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public Boolean data;
+    public DeleteStudioAppDomainOpenResponseBody body;
 
     public static DeleteStudioAppDomainOpenResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteStudioAppDomainOpenResponse self = new DeleteStudioAppDomainOpenResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteStudioAppDomainOpenResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteStudioAppDomainOpenResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteStudioAppDomainOpenResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteStudioAppDomainOpenResponse setBody(DeleteStudioAppDomainOpenResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteStudioAppDomainOpenResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DeleteStudioAppDomainOpenResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public DeleteStudioAppDomainOpenResponse setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
+    public DeleteStudioAppDomainOpenResponseBody getBody() {
+        return this.body;
     }
 
 }

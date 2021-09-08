@@ -8,15 +8,12 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("FirmwareId")
-    @Validation(required = true)
     public String firmwareId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("TargetSelection")
-    @Validation(required = true)
     public String targetSelection;
 
     @NameInMap("SrcVersion")
@@ -212,11 +209,9 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
 
     public static class CreateOTAStaticUpgradeJobRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static CreateOTAStaticUpgradeJobRequestTag build(java.util.Map<String, ?> map) throws Exception {

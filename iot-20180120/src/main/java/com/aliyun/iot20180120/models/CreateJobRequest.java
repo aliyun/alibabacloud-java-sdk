@@ -11,29 +11,25 @@ public class CreateJobRequest extends TeaModel {
     public String description;
 
     @NameInMap("JobDocument")
-    @Validation(required = true)
     public String jobDocument;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("JobFile")
-    public java.util.Map<String, ?> jobFile;
+    public String jobFile;
 
     @NameInMap("JobName")
-    @Validation(required = true)
     public String jobName;
 
     @NameInMap("TimeoutConfig")
-    public java.util.Map<String, ?> timeoutConfig;
+    public String timeoutConfig;
 
     @NameInMap("RolloutConfig")
-    public java.util.Map<String, ?> rolloutConfig;
+    public String rolloutConfig;
 
     @NameInMap("TargetConfig")
-    @Validation(required = true)
-    public java.util.Map<String, ?> targetConfig;
+    public String targetConfig;
 
     @NameInMap("ScheduledTime")
     public Long scheduledTime;
@@ -75,11 +71,11 @@ public class CreateJobRequest extends TeaModel {
         return this.type;
     }
 
-    public CreateJobRequest setJobFile(java.util.Map<String, ?> jobFile) {
+    public CreateJobRequest setJobFile(String jobFile) {
         this.jobFile = jobFile;
         return this;
     }
-    public java.util.Map<String, ?> getJobFile() {
+    public String getJobFile() {
         return this.jobFile;
     }
 
@@ -91,27 +87,27 @@ public class CreateJobRequest extends TeaModel {
         return this.jobName;
     }
 
-    public CreateJobRequest setTimeoutConfig(java.util.Map<String, ?> timeoutConfig) {
+    public CreateJobRequest setTimeoutConfig(String timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
-    public java.util.Map<String, ?> getTimeoutConfig() {
+    public String getTimeoutConfig() {
         return this.timeoutConfig;
     }
 
-    public CreateJobRequest setRolloutConfig(java.util.Map<String, ?> rolloutConfig) {
+    public CreateJobRequest setRolloutConfig(String rolloutConfig) {
         this.rolloutConfig = rolloutConfig;
         return this;
     }
-    public java.util.Map<String, ?> getRolloutConfig() {
+    public String getRolloutConfig() {
         return this.rolloutConfig;
     }
 
-    public CreateJobRequest setTargetConfig(java.util.Map<String, ?> targetConfig) {
+    public CreateJobRequest setTargetConfig(String targetConfig) {
         this.targetConfig = targetConfig;
         return this;
     }
-    public java.util.Map<String, ?> getTargetConfig() {
+    public String getTargetConfig() {
         return this.targetConfig;
     }
 

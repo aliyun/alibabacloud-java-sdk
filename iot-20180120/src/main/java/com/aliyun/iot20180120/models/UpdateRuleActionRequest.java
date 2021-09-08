@@ -8,15 +8,12 @@ public class UpdateRuleActionRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ActionId")
-    @Validation(required = true)
     public Long actionId;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("Configuration")
-    @Validation(required = true)
     public String configuration;
 
     public static UpdateRuleActionRequest build(java.util.Map<String, ?> map) throws Exception {

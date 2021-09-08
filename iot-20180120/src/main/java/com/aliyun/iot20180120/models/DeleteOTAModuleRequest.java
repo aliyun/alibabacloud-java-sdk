@@ -8,11 +8,9 @@ public class DeleteOTAModuleRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("ModuleName")
-    @Validation(required = true)
     public String moduleName;
 
     public static DeleteOTAModuleRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -8,11 +8,9 @@ public class CreateTopicRouteTableRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("DstTopic")
-    @Validation(required = true)
     public java.util.List<String> dstTopic;
 
     @NameInMap("SrcTopic")
-    @Validation(required = true)
     public String srcTopic;
 
     public static CreateTopicRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {

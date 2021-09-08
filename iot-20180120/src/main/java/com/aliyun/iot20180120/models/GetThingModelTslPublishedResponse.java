@@ -4,101 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetThingModelTslPublishedResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public GetThingModelTslPublishedResponseData data;
+    public GetThingModelTslPublishedResponseBody body;
 
     public static GetThingModelTslPublishedResponse build(java.util.Map<String, ?> map) throws Exception {
         GetThingModelTslPublishedResponse self = new GetThingModelTslPublishedResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetThingModelTslPublishedResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetThingModelTslPublishedResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetThingModelTslPublishedResponse setSuccess(Boolean success) {
-        this.success = success;
+    public GetThingModelTslPublishedResponse setBody(GetThingModelTslPublishedResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetThingModelTslPublishedResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetThingModelTslPublishedResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetThingModelTslPublishedResponse setData(GetThingModelTslPublishedResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public GetThingModelTslPublishedResponseData getData() {
-        return this.data;
-    }
-
-    public static class GetThingModelTslPublishedResponseData extends TeaModel {
-        @NameInMap("TslStr")
-        @Validation(required = true)
-        public String tslStr;
-
-        @NameInMap("TslUri")
-        @Validation(required = true)
-        public String tslUri;
-
-        public static GetThingModelTslPublishedResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GetThingModelTslPublishedResponseData self = new GetThingModelTslPublishedResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetThingModelTslPublishedResponseData setTslStr(String tslStr) {
-            this.tslStr = tslStr;
-            return this;
-        }
-        public String getTslStr() {
-            return this.tslStr;
-        }
-
-        public GetThingModelTslPublishedResponseData setTslUri(String tslUri) {
-            this.tslUri = tslUri;
-            return this;
-        }
-        public String getTslUri() {
-            return this.tslUri;
-        }
-
+    public GetThingModelTslPublishedResponseBody getBody() {
+        return this.body;
     }
 
 }

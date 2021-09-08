@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SetDevicesPropertyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
+    public SetDevicesPropertyResponseBody body;
 
     public static SetDevicesPropertyResponse build(java.util.Map<String, ?> map) throws Exception {
         SetDevicesPropertyResponse self = new SetDevicesPropertyResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDevicesPropertyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetDevicesPropertyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetDevicesPropertyResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SetDevicesPropertyResponse setBody(SetDevicesPropertyResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public SetDevicesPropertyResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public SetDevicesPropertyResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public SetDevicesPropertyResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -8,7 +8,6 @@ public class QueryJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("JobId")
-    @Validation(required = true)
     public String jobId;
 
     public static QueryJobRequest build(java.util.Map<String, ?> map) throws Exception {

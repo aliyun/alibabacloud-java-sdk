@@ -8,7 +8,6 @@ public class CancelOTATaskByJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("JobId")
-    @Validation(required = true)
     public String jobId;
 
     @NameInMap("CancelScheduledTask")

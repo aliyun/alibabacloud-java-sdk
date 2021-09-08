@@ -4,149 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SpeechByCombinationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public SpeechByCombinationResponseBody body;
 
     public static SpeechByCombinationResponse build(java.util.Map<String, ?> map) throws Exception {
         SpeechByCombinationResponse self = new SpeechByCombinationResponse();
         return TeaModel.build(map, self);
     }
 
-    public SpeechByCombinationResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SpeechByCombinationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SpeechByCombinationResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SpeechByCombinationResponse setBody(SpeechByCombinationResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public SpeechByCombinationResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public SpeechByCombinationResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public static class SyncSpeechByCombinationResponseData extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
-        public String id;
-
-        @NameInMap("RetryCount")
-        @Validation(required = true)
-        public Integer retryCount;
-
-        @NameInMap("Success")
-        @Validation(required = true)
-        public Boolean success;
-
-        @NameInMap("MaxRetryCount")
-        @Validation(required = true)
-        public Integer maxRetryCount;
-
-        @NameInMap("DeviceErrorCode")
-        @Validation(required = true)
-        public String deviceErrorCode;
-
-        @NameInMap("DeviceErrorMessage")
-        @Validation(required = true)
-        public String deviceErrorMessage;
-
-        @NameInMap("Detail")
-        @Validation(required = true)
-        public String detail;
-
-        public static SyncSpeechByCombinationResponseData build(java.util.Map<String, ?> map) throws Exception {
-            SyncSpeechByCombinationResponseData self = new SyncSpeechByCombinationResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public SyncSpeechByCombinationResponseData setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public SyncSpeechByCombinationResponseData setRetryCount(Integer retryCount) {
-            this.retryCount = retryCount;
-            return this;
-        }
-        public Integer getRetryCount() {
-            return this.retryCount;
-        }
-
-        public SyncSpeechByCombinationResponseData setSuccess(Boolean success) {
-            this.success = success;
-            return this;
-        }
-        public Boolean getSuccess() {
-            return this.success;
-        }
-
-        public SyncSpeechByCombinationResponseData setMaxRetryCount(Integer maxRetryCount) {
-            this.maxRetryCount = maxRetryCount;
-            return this;
-        }
-        public Integer getMaxRetryCount() {
-            return this.maxRetryCount;
-        }
-
-        public SyncSpeechByCombinationResponseData setDeviceErrorCode(String deviceErrorCode) {
-            this.deviceErrorCode = deviceErrorCode;
-            return this;
-        }
-        public String getDeviceErrorCode() {
-            return this.deviceErrorCode;
-        }
-
-        public SyncSpeechByCombinationResponseData setDeviceErrorMessage(String deviceErrorMessage) {
-            this.deviceErrorMessage = deviceErrorMessage;
-            return this;
-        }
-        public String getDeviceErrorMessage() {
-            return this.deviceErrorMessage;
-        }
-
-        public SyncSpeechByCombinationResponseData setDetail(String detail) {
-            this.detail = detail;
-            return this;
-        }
-        public String getDetail() {
-            return this.detail;
-        }
-
+    public SpeechByCombinationResponseBody getBody() {
+        return this.body;
     }
 
 }

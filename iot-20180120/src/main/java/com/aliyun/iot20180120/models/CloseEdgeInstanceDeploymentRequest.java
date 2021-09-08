@@ -8,7 +8,6 @@ public class CloseEdgeInstanceDeploymentRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     public static CloseEdgeInstanceDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {

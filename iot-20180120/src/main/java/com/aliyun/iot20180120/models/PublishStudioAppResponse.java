@@ -4,69 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class PublishStudioAppResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public Boolean data;
+    public PublishStudioAppResponseBody body;
 
     public static PublishStudioAppResponse build(java.util.Map<String, ?> map) throws Exception {
         PublishStudioAppResponse self = new PublishStudioAppResponse();
         return TeaModel.build(map, self);
     }
 
-    public PublishStudioAppResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PublishStudioAppResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PublishStudioAppResponse setSuccess(Boolean success) {
-        this.success = success;
+    public PublishStudioAppResponse setBody(PublishStudioAppResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public PublishStudioAppResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public PublishStudioAppResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public PublishStudioAppResponse setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
+    public PublishStudioAppResponseBody getBody() {
+        return this.body;
     }
 
 }

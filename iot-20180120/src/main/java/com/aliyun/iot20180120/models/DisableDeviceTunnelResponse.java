@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DisableDeviceTunnelResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public DisableDeviceTunnelResponseBody body;
 
     public static DisableDeviceTunnelResponse build(java.util.Map<String, ?> map) throws Exception {
         DisableDeviceTunnelResponse self = new DisableDeviceTunnelResponse();
         return TeaModel.build(map, self);
     }
 
-    public DisableDeviceTunnelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DisableDeviceTunnelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DisableDeviceTunnelResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DisableDeviceTunnelResponse setBody(DisableDeviceTunnelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DisableDeviceTunnelResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DisableDeviceTunnelResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public DisableDeviceTunnelResponseBody getBody() {
+        return this.body;
     }
 
 }

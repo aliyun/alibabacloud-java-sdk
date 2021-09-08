@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupSubscribeRelationRequest extends TeaModel {
     @NameInMap("ConsumerGroupId")
-    @Validation(required = true)
     public String consumerGroupId;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static CreateConsumerGroupSubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {

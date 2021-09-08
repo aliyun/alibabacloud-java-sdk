@@ -8,7 +8,6 @@ public class CancelOTAStrategyByJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("JobId")
-    @Validation(required = true)
     public String jobId;
 
     public static CancelOTAStrategyByJobRequest build(java.util.Map<String, ?> map) throws Exception {

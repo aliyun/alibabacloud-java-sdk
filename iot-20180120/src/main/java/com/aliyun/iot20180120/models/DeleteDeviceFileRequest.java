@@ -17,7 +17,6 @@ public class DeleteDeviceFileRequest extends TeaModel {
     public String iotId;
 
     @NameInMap("FileId")
-    @Validation(required = true)
     public String fileId;
 
     public static DeleteDeviceFileRequest build(java.util.Map<String, ?> map) throws Exception {

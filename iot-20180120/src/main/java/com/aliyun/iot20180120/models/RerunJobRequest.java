@@ -8,7 +8,6 @@ public class RerunJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("JobId")
-    @Validation(required = true)
     public String jobId;
 
     public static RerunJobRequest build(java.util.Map<String, ?> map) throws Exception {

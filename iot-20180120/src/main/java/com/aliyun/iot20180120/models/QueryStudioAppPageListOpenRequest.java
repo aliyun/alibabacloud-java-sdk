@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryStudioAppPageListOpenRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("IotInstanceId")
@@ -21,7 +20,6 @@ public class QueryStudioAppPageListOpenRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public String projectId;
 
     public static QueryStudioAppPageListOpenRequest build(java.util.Map<String, ?> map) throws Exception {

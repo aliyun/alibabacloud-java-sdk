@@ -11,11 +11,9 @@ public class CopyThingModelRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("SourceProductKey")
-    @Validation(required = true)
     public String sourceProductKey;
 
     @NameInMap("TargetProductKey")
-    @Validation(required = true)
     public String targetProductKey;
 
     @NameInMap("SourceModelVersion")

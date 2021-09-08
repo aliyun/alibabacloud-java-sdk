@@ -8,7 +8,6 @@ public class QueryDeviceOriginalEventDataRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ProductKey")
@@ -21,22 +20,18 @@ public class QueryDeviceOriginalEventDataRequest extends TeaModel {
     public String nextPageToken;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("Identifier")
-    @Validation(required = true)
     public String identifier;
 
     @NameInMap("Asc")
-    @Validation(required = true)
     public Integer asc;
 
     @NameInMap("IotId")
     public String iotId;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     public static QueryDeviceOriginalEventDataRequest build(java.util.Map<String, ?> map) throws Exception {

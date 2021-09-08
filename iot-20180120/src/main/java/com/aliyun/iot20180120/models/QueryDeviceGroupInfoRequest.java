@@ -8,7 +8,6 @@ public class QueryDeviceGroupInfoRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     public static QueryDeviceGroupInfoRequest build(java.util.Map<String, ?> map) throws Exception {

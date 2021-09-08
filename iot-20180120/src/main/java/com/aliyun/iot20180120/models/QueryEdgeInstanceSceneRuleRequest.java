@@ -8,15 +8,12 @@ public class QueryEdgeInstanceSceneRuleRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static QueryEdgeInstanceSceneRuleRequest build(java.util.Map<String, ?> map) throws Exception {

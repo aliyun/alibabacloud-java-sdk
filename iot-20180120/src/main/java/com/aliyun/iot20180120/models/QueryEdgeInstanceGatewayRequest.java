@@ -8,7 +8,6 @@ public class QueryEdgeInstanceGatewayRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     public static QueryEdgeInstanceGatewayRequest build(java.util.Map<String, ?> map) throws Exception {

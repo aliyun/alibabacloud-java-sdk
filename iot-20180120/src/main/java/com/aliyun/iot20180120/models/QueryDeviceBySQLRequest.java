@@ -8,7 +8,6 @@ public class QueryDeviceBySQLRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("SQL")
-    @Validation(required = true)
     public String SQL;
 
     public static QueryDeviceBySQLRequest build(java.util.Map<String, ?> map) throws Exception {

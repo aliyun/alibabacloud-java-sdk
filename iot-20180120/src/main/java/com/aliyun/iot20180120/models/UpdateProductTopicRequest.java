@@ -11,15 +11,12 @@ public class UpdateProductTopicRequest extends TeaModel {
     public String desc;
 
     @NameInMap("Operation")
-    @Validation(required = true)
     public String operation;
 
     @NameInMap("TopicShortName")
-    @Validation(required = true)
     public String topicShortName;
 
     @NameInMap("TopicId")
-    @Validation(required = true)
     public String topicId;
 
     public static UpdateProductTopicRequest build(java.util.Map<String, ?> map) throws Exception {

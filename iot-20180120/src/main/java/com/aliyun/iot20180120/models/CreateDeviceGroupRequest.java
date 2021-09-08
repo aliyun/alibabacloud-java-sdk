@@ -14,7 +14,6 @@ public class CreateDeviceGroupRequest extends TeaModel {
     public String groupDesc;
 
     @NameInMap("GroupName")
-    @Validation(required = true)
     public String groupName;
 
     public static CreateDeviceGroupRequest build(java.util.Map<String, ?> map) throws Exception {

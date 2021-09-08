@@ -17,7 +17,6 @@ public class ListOTAUnfinishedTaskByDeviceRequest extends TeaModel {
     public String deviceName;
 
     @NameInMap("TaskStatus")
-    @Validation(required = true)
     public String taskStatus;
 
     @NameInMap("IotId")

@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteSceneRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
+    public DeleteSceneRuleResponseBody body;
 
     public static DeleteSceneRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteSceneRuleResponse self = new DeleteSceneRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSceneRuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteSceneRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteSceneRuleResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteSceneRuleResponse setBody(DeleteSceneRuleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteSceneRuleResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public DeleteSceneRuleResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public DeleteSceneRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

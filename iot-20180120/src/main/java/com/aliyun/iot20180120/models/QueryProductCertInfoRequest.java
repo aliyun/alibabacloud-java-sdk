@@ -8,7 +8,6 @@ public class QueryProductCertInfoRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static QueryProductCertInfoRequest build(java.util.Map<String, ?> map) throws Exception {

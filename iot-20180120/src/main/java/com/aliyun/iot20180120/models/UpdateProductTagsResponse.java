@@ -4,121 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateProductTagsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("InvalidProductTags")
-    @Validation(required = true)
-    public UpdateProductTagsResponseInvalidProductTags invalidProductTags;
+    public UpdateProductTagsResponseBody body;
 
     public static UpdateProductTagsResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateProductTagsResponse self = new UpdateProductTagsResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateProductTagsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateProductTagsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateProductTagsResponse setSuccess(Boolean success) {
-        this.success = success;
+    public UpdateProductTagsResponse setBody(UpdateProductTagsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public UpdateProductTagsResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public UpdateProductTagsResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public UpdateProductTagsResponse setInvalidProductTags(UpdateProductTagsResponseInvalidProductTags invalidProductTags) {
-        this.invalidProductTags = invalidProductTags;
-        return this;
-    }
-    public UpdateProductTagsResponseInvalidProductTags getInvalidProductTags() {
-        return this.invalidProductTags;
-    }
-
-    public static class UpdateProductTagsResponseInvalidProductTagsProductTag extends TeaModel {
-        @NameInMap("TagKey")
-        @Validation(required = true)
-        public String tagKey;
-
-        @NameInMap("TagValue")
-        @Validation(required = true)
-        public String tagValue;
-
-        public static UpdateProductTagsResponseInvalidProductTagsProductTag build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProductTagsResponseInvalidProductTagsProductTag self = new UpdateProductTagsResponseInvalidProductTagsProductTag();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateProductTagsResponseInvalidProductTagsProductTag setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public UpdateProductTagsResponseInvalidProductTagsProductTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-    }
-
-    public static class UpdateProductTagsResponseInvalidProductTags extends TeaModel {
-        @NameInMap("ProductTag")
-        @Validation(required = true)
-        public java.util.List<UpdateProductTagsResponseInvalidProductTagsProductTag> productTag;
-
-        public static UpdateProductTagsResponseInvalidProductTags build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProductTagsResponseInvalidProductTags self = new UpdateProductTagsResponseInvalidProductTags();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateProductTagsResponseInvalidProductTags setProductTag(java.util.List<UpdateProductTagsResponseInvalidProductTagsProductTag> productTag) {
-            this.productTag = productTag;
-            return this;
-        }
-        public java.util.List<UpdateProductTagsResponseInvalidProductTagsProductTag> getProductTag() {
-            return this.productTag;
-        }
-
+    public UpdateProductTagsResponseBody getBody() {
+        return this.body;
     }
 
 }

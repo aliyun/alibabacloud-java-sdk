@@ -8,7 +8,6 @@ public class DeleteOTAFirmwareRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("FirmwareId")
-    @Validation(required = true)
     public String firmwareId;
 
     public static DeleteOTAFirmwareRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SetEdgeInstanceDriverConfigsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public SetEdgeInstanceDriverConfigsResponseBody body;
 
     public static SetEdgeInstanceDriverConfigsResponse build(java.util.Map<String, ?> map) throws Exception {
         SetEdgeInstanceDriverConfigsResponse self = new SetEdgeInstanceDriverConfigsResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetEdgeInstanceDriverConfigsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetEdgeInstanceDriverConfigsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetEdgeInstanceDriverConfigsResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SetEdgeInstanceDriverConfigsResponse setBody(SetEdgeInstanceDriverConfigsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public SetEdgeInstanceDriverConfigsResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public SetEdgeInstanceDriverConfigsResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public SetEdgeInstanceDriverConfigsResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -14,11 +14,9 @@ public class InvokeThingServiceRequest extends TeaModel {
     public String deviceName;
 
     @NameInMap("Identifier")
-    @Validation(required = true)
     public String identifier;
 
     @NameInMap("Args")
-    @Validation(required = true)
     public String args;
 
     @NameInMap("IotId")

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ConfirmOTATaskRequest extends TeaModel {
     @NameInMap("TaskId")
-    @Validation(required = true)
     public java.util.List<String> taskId;
 
     @NameInMap("IotInstanceId")

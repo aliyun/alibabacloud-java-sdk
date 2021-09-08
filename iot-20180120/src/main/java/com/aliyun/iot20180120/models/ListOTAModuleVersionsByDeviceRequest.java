@@ -8,7 +8,6 @@ public class ListOTAModuleVersionsByDeviceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ProductKey")
@@ -21,7 +20,6 @@ public class ListOTAModuleVersionsByDeviceRequest extends TeaModel {
     public String iotId;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     public static ListOTAModuleVersionsByDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
