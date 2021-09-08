@@ -19,6 +19,16 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public ListHistoryContainerStatusResponse listHistoryContainerStatusWithOptions(ListHistoryContainerStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListHistoryContainerStatus", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new ListHistoryContainerStatusResponse());
+    }
+
+    public ListHistoryContainerStatusResponse listHistoryContainerStatus(ListHistoryContainerStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listHistoryContainerStatusWithOptions(request, runtime);
+    }
+
     public ListContainerStatusResponse listContainerStatusWithOptions(ListContainerStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListContainerStatus", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new ListContainerStatusResponse());
