@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class StopGameSessionRequest extends TeaModel {
     @NameInMap("GameId")
-    @Validation(required = true)
     public String gameId;
 
     @NameInMap("AccessKey")
-    @Validation(required = true)
     public String accessKey;
 
     @NameInMap("UserId")
-    @Validation(required = true)
     public String userId;
 
     @NameInMap("BizParam")

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetSessionRequest extends TeaModel {
     @NameInMap("Token")
-    @Validation(required = true)
     public String token;
 
     public static GetSessionRequest build(java.util.Map<String, ?> map) throws Exception {

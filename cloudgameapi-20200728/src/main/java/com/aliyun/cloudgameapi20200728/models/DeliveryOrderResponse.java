@@ -4,53 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class DeliveryOrderResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public DeliveryOrderResponseData data;
+    public DeliveryOrderResponseBody body;
 
     public static DeliveryOrderResponse build(java.util.Map<String, ?> map) throws Exception {
         DeliveryOrderResponse self = new DeliveryOrderResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeliveryOrderResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeliveryOrderResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeliveryOrderResponse setData(DeliveryOrderResponseData data) {
-        this.data = data;
+    public DeliveryOrderResponse setBody(DeliveryOrderResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DeliveryOrderResponseData getData() {
-        return this.data;
-    }
-
-    public static class DeliveryOrderResponseData extends TeaModel {
-        @NameInMap("DeliveryStatus")
-        @Validation(required = true)
-        public String deliveryStatus;
-
-        public static DeliveryOrderResponseData build(java.util.Map<String, ?> map) throws Exception {
-            DeliveryOrderResponseData self = new DeliveryOrderResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public DeliveryOrderResponseData setDeliveryStatus(String deliveryStatus) {
-            this.deliveryStatus = deliveryStatus;
-            return this;
-        }
-        public String getDeliveryStatus() {
-            return this.deliveryStatus;
-        }
-
+    public DeliveryOrderResponseBody getBody() {
+        return this.body;
     }
 
 }
