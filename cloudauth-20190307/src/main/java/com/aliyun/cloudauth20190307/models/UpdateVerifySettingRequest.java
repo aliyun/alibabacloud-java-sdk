@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateVerifySettingRequest extends TeaModel {
     @NameInMap("BizType")
-    @Validation(required = true)
     public String bizType;
 
     @NameInMap("BizName")

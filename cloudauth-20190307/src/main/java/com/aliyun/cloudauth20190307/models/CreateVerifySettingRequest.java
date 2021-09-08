@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateVerifySettingRequest extends TeaModel {
     @NameInMap("BizType")
-    @Validation(required = true)
     public String bizType;
 
     @NameInMap("BizName")
-    @Validation(required = true)
     public String bizName;
 
     @NameInMap("Solution")
-    @Validation(required = true)
     public String solution;
 
     @NameInMap("GuideStep")

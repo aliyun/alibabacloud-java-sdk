@@ -43,6 +43,9 @@ public class CompareFaceVerifyRequest extends TeaModel {
     @NameInMap("TargetOssObjectName")
     public String targetOssObjectName;
 
+    @NameInMap("Crop")
+    public String crop;
+
     public static CompareFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         CompareFaceVerifyRequest self = new CompareFaceVerifyRequest();
         return TeaModel.build(map, self);
@@ -150,6 +153,14 @@ public class CompareFaceVerifyRequest extends TeaModel {
     }
     public String getTargetOssObjectName() {
         return this.targetOssObjectName;
+    }
+
+    public CompareFaceVerifyRequest setCrop(String crop) {
+        this.crop = crop;
+        return this;
+    }
+    public String getCrop() {
+        return this.crop;
     }
 
 }

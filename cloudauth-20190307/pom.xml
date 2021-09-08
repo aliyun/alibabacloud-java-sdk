@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cloudauth20190307</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>cloudauth20190307</name>
   <description>Alibaba Cloud ID Verification (20190307) SDK for Java
@@ -25,11 +25,11 @@
   <distributionManagement>
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
       <id>sonatype-nexus-staging</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
   <scm>
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.11</version>
+      <version>0.2.13</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -61,17 +61,17 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>oss-client</artifactId>
-      <version>3.0.2</version>
+      <version>3.0.3</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openplatform20191219</artifactId>
-      <version>3.0.2</version>
+      <version>3.1.0</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>oss-util</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -86,12 +86,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.7</version>
+      <version>0.1.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.0.8</version>
+      <version>0.1.12</version>
     </dependency>
   </dependencies>
   <build>
@@ -126,7 +126,7 @@
         <extensions>true</extensions>
         <configuration>
           <serverId>sonatype-nexus-staging</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>

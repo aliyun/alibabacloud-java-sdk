@@ -43,6 +43,9 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     @NameInMap("Model")
     public String model;
 
+    @NameInMap("Crop")
+    public String crop;
+
     public static LivenessFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         LivenessFaceVerifyRequest self = new LivenessFaceVerifyRequest();
         return TeaModel.build(map, self);
@@ -150,6 +153,14 @@ public class LivenessFaceVerifyRequest extends TeaModel {
     }
     public String getModel() {
         return this.model;
+    }
+
+    public LivenessFaceVerifyRequest setCrop(String crop) {
+        this.crop = crop;
+        return this;
+    }
+    public String getCrop() {
+        return this.crop;
     }
 
 }

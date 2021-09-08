@@ -61,6 +61,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("CallbackToken")
     public String callbackToken;
 
+    @NameInMap("Crop")
+    public String crop;
+
     public static InitFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         InitFaceVerifyRequest self = new InitFaceVerifyRequest();
         return TeaModel.build(map, self);
@@ -216,6 +219,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getCallbackToken() {
         return this.callbackToken;
+    }
+
+    public InitFaceVerifyRequest setCrop(String crop) {
+        this.crop = crop;
+        return this;
+    }
+    public String getCrop() {
+        return this.crop;
     }
 
 }

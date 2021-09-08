@@ -55,6 +55,9 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     @NameInMap("FaceContrastFile")
     public String faceContrastFile;
 
+    @NameInMap("Crop")
+    public String crop;
+
     public static ContrastFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         ContrastFaceVerifyRequest self = new ContrastFaceVerifyRequest();
         return TeaModel.build(map, self);
@@ -194,6 +197,14 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     }
     public String getFaceContrastFile() {
         return this.faceContrastFile;
+    }
+
+    public ContrastFaceVerifyRequest setCrop(String crop) {
+        this.crop = crop;
+        return this;
+    }
+    public String getCrop() {
+        return this.crop;
     }
 
 }

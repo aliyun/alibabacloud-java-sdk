@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeFaceUsageRequest extends TeaModel {
     @NameInMap("StartDate")
-    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
-    @Validation(required = true)
     public String endDate;
 
     public static DescribeFaceUsageRequest build(java.util.Map<String, ?> map) throws Exception {
