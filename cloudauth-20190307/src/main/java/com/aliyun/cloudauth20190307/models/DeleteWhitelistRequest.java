@@ -11,7 +11,6 @@ public class DeleteWhitelistRequest extends TeaModel {
     public String lang;
 
     @NameInMap("Ids")
-    @Validation(required = true)
     public String ids;
 
     public static DeleteWhitelistRequest build(java.util.Map<String, ?> map) throws Exception {

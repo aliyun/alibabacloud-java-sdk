@@ -29,11 +29,9 @@ public class DescribeWhitelistRequest extends TeaModel {
     public String valid;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     public static DescribeWhitelistRequest build(java.util.Map<String, ?> map) throws Exception {

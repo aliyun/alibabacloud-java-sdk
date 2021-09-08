@@ -8,23 +8,18 @@ public class VerifyMaterialRequest extends TeaModel {
     public String idCardBackImageUrl;
 
     @NameInMap("FaceImageUrl")
-    @Validation(required = true)
     public String faceImageUrl;
 
     @NameInMap("BizType")
-    @Validation(required = true)
     public String bizType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("IdCardNumber")
-    @Validation(required = true)
     public String idCardNumber;
 
     @NameInMap("IdCardFrontImageUrl")

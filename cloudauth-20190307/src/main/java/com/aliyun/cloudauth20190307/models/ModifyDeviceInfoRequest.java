@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyDeviceInfoRequest extends TeaModel {
     @NameInMap("DeviceId")
-    @Validation(required = true)
     public String deviceId;
 
     @NameInMap("UserDeviceId")
