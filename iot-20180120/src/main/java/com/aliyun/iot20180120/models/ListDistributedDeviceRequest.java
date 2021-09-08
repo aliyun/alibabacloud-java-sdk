@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDistributedDeviceRequest extends TeaModel {
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ProductKey")
@@ -14,6 +15,7 @@ public class ListDistributedDeviceRequest extends TeaModel {
     public String deviceName;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("TargetUid")

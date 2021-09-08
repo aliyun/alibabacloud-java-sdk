@@ -11,9 +11,11 @@ public class UpdateProductRequest extends TeaModel {
     public String description;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("ProductName")
+    @Validation(required = true)
     public String productName;
 
     public static UpdateProductRequest build(java.util.Map<String, ?> map) throws Exception {

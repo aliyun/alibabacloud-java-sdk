@@ -8,9 +8,11 @@ public class BatchBindDevicesIntoProjectRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("Devices")
+    @Validation(required = true)
     public java.util.List<BatchBindDevicesIntoProjectRequestDevices> devices;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     public static BatchBindDevicesIntoProjectRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -44,9 +46,11 @@ public class BatchBindDevicesIntoProjectRequest extends TeaModel {
 
     public static class BatchBindDevicesIntoProjectRequestDevices extends TeaModel {
         @NameInMap("ProductKey")
+        @Validation(required = true)
         public String productKey;
 
         @NameInMap("DeviceName")
+        @Validation(required = true)
         public String deviceName;
 
         public static BatchBindDevicesIntoProjectRequestDevices build(java.util.Map<String, ?> map) throws Exception {

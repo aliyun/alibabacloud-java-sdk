@@ -8,6 +8,7 @@ public class DeleteSpeechRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("SpeechCodeList")
+    @Validation(required = true)
     public java.util.List<String> speechCodeList;
 
     public static DeleteSpeechRequest build(java.util.Map<String, ?> map) throws Exception {

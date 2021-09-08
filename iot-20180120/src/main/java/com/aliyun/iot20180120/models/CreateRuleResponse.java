@@ -4,33 +4,69 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public CreateRuleResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("RuleId")
+    @Validation(required = true)
+    public Long ruleId;
 
     public static CreateRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateRuleResponse self = new CreateRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateRuleResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateRuleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateRuleResponse setBody(CreateRuleResponseBody body) {
-        this.body = body;
+    public CreateRuleResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateRuleResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateRuleResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateRuleResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateRuleResponse setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
     }
 
 }

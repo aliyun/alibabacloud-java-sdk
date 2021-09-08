@@ -8,6 +8,7 @@ public class GetRuleActionRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ActionId")
+    @Validation(required = true)
     public Long actionId;
 
     public static GetRuleActionRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -14,9 +14,11 @@ public class UpdateSubscribeRelationRequest extends TeaModel {
     public Boolean thingHistoryFlag;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     @NameInMap("DeviceDataFlag")

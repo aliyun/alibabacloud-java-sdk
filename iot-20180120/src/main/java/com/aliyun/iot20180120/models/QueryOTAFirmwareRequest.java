@@ -8,6 +8,7 @@ public class QueryOTAFirmwareRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("FirmwareId")
+    @Validation(required = true)
     public String firmwareId;
 
     public static QueryOTAFirmwareRequest build(java.util.Map<String, ?> map) throws Exception {

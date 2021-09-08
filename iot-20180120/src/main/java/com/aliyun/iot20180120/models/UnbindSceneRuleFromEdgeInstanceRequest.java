@@ -8,9 +8,11 @@ public class UnbindSceneRuleFromEdgeInstanceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public String ruleId;
 
     public static UnbindSceneRuleFromEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

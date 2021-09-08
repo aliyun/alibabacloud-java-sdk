@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDistributedProductRequest extends TeaModel {
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("SourceInstanceId")
@@ -20,6 +21,7 @@ public class ListDistributedProductRequest extends TeaModel {
     public String targetUid;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     public static ListDistributedProductRequest build(java.util.Map<String, ?> map) throws Exception {

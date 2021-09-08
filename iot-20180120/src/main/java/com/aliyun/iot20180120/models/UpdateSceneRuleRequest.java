@@ -8,6 +8,7 @@ public class UpdateSceneRuleRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("RuleName")

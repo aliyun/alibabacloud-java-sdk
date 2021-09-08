@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySpeechRequest extends TeaModel {
     @NameInMap("SpeechCode")
+    @Validation(required = true)
     public String speechCode;
 
     @NameInMap("IotInstanceId")

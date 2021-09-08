@@ -8,12 +8,15 @@ public class QueryEdgeDriverVersionRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("DriverId")
+    @Validation(required = true)
     public String driverId;
 
     @NameInMap("DriverVersion")

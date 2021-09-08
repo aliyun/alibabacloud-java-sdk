@@ -8,21 +8,27 @@ public class QuerySummarySceneRuleLogRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Integer startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Integer endTime;
 
     @NameInMap("Status")
+    @Validation(required = true)
     public String status;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     public static QuerySummarySceneRuleLogRequest build(java.util.Map<String, ?> map) throws Exception {

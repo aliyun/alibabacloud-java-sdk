@@ -4,33 +4,57 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class StopRuleResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public StopRuleResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
 
     public static StopRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         StopRuleResponse self = new StopRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopRuleResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public StopRuleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public StopRuleResponse setBody(StopRuleResponseBody body) {
-        this.body = body;
+    public StopRuleResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public StopRuleResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public StopRuleResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public StopRuleResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

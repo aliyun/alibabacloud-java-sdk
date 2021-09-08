@@ -11,6 +11,7 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     public Integer currentPage;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Status")
@@ -18,6 +19,9 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
 
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     public static ListDeviceDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceDistributeJobRequest self = new ListDeviceDistributeJobRequest();
@@ -62,6 +66,14 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public ListDeviceDistributeJobRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

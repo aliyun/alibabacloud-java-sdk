@@ -8,6 +8,7 @@ public class CancelOTATaskByJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("JobId")
+    @Validation(required = true)
     public String jobId;
 
     @NameInMap("CancelScheduledTask")
@@ -21,6 +22,9 @@ public class CancelOTATaskByJobRequest extends TeaModel {
 
     @NameInMap("CancelNotifiedTask")
     public Boolean cancelNotifiedTask;
+
+    @NameInMap("CancelUnconfirmedTask")
+    public Boolean cancelUnconfirmedTask;
 
     public static CancelOTATaskByJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelOTATaskByJobRequest self = new CancelOTATaskByJobRequest();
@@ -73,6 +77,14 @@ public class CancelOTATaskByJobRequest extends TeaModel {
     }
     public Boolean getCancelNotifiedTask() {
         return this.cancelNotifiedTask;
+    }
+
+    public CancelOTATaskByJobRequest setCancelUnconfirmedTask(Boolean cancelUnconfirmedTask) {
+        this.cancelUnconfirmedTask = cancelUnconfirmedTask;
+        return this;
+    }
+    public Boolean getCancelUnconfirmedTask() {
+        return this.cancelUnconfirmedTask;
     }
 
 }

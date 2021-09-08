@@ -4,33 +4,57 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchClearEdgeInstanceDeviceConfigResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public BatchClearEdgeInstanceDeviceConfigResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
 
     public static BatchClearEdgeInstanceDeviceConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         BatchClearEdgeInstanceDeviceConfigResponse self = new BatchClearEdgeInstanceDeviceConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public BatchClearEdgeInstanceDeviceConfigResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public BatchClearEdgeInstanceDeviceConfigResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public BatchClearEdgeInstanceDeviceConfigResponse setBody(BatchClearEdgeInstanceDeviceConfigResponseBody body) {
-        this.body = body;
+    public BatchClearEdgeInstanceDeviceConfigResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public BatchClearEdgeInstanceDeviceConfigResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public BatchClearEdgeInstanceDeviceConfigResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public BatchClearEdgeInstanceDeviceConfigResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

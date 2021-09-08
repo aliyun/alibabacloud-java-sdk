@@ -8,6 +8,7 @@ public class CreateEdgeInstanceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("Tags")

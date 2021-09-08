@@ -11,9 +11,11 @@ public class ListJobRequest extends TeaModel {
     public String status;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     public static ListJobRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteStudioAppDomainOpenRequest extends TeaModel {
     @NameInMap("AppId")
+    @Validation(required = true)
     public String appId;
 
     @NameInMap("DomainId")
+    @Validation(required = true)
     public Integer domainId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     @NameInMap("IotInstanceId")

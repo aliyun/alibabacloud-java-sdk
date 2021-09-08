@@ -11,9 +11,11 @@ public class QuerySceneRuleRequest extends TeaModel {
     public String ruleName;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     public static QuerySceneRuleRequest build(java.util.Map<String, ?> map) throws Exception {

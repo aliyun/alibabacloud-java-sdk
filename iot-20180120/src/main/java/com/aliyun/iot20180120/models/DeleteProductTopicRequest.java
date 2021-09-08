@@ -8,6 +8,7 @@ public class DeleteProductTopicRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("TopicId")
+    @Validation(required = true)
     public String topicId;
 
     public static DeleteProductTopicRequest build(java.util.Map<String, ?> map) throws Exception {

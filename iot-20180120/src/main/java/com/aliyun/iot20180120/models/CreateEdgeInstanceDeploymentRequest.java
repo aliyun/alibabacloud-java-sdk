@@ -8,9 +8,11 @@ public class CreateEdgeInstanceDeploymentRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     public static CreateEdgeInstanceDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {

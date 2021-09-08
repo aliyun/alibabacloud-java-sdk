@@ -14,6 +14,7 @@ public class ListProductByTagsRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ProductTag")
+    @Validation(required = true)
     public java.util.List<ListProductByTagsRequestProductTag> productTag;
 
     public static ListProductByTagsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -55,6 +56,7 @@ public class ListProductByTagsRequest extends TeaModel {
 
     public static class ListProductByTagsRequestProductTag extends TeaModel {
         @NameInMap("TagKey")
+        @Validation(required = true)
         public String tagKey;
 
         @NameInMap("TagValue")

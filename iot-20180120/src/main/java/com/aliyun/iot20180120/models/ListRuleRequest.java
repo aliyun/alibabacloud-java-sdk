@@ -8,9 +8,11 @@ public class ListRuleRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ResourceGroupId")

@@ -8,21 +8,27 @@ public class QueryDetailSceneRuleLogRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Integer startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Integer endTime;
 
     @NameInMap("TraceId")
+    @Validation(required = true)
     public String traceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     public static QueryDetailSceneRuleLogRequest build(java.util.Map<String, ?> map) throws Exception {

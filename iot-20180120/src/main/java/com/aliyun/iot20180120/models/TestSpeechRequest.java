@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class TestSpeechRequest extends TeaModel {
     @NameInMap("Voice")
+    @Validation(required = true)
     public String voice;
 
     @NameInMap("Volume")
     public Integer volume;
 
     @NameInMap("ProjectCode")
+    @Validation(required = true)
     public String projectCode;
 
     @NameInMap("SpeechRate")
@@ -24,6 +26,9 @@ public class TestSpeechRequest extends TeaModel {
 
     @NameInMap("SpeechType")
     public String speechType;
+
+    @NameInMap("AudioFormat")
+    public String audioFormat;
 
     public static TestSpeechRequest build(java.util.Map<String, ?> map) throws Exception {
         TestSpeechRequest self = new TestSpeechRequest();
@@ -84,6 +89,14 @@ public class TestSpeechRequest extends TeaModel {
     }
     public String getSpeechType() {
         return this.speechType;
+    }
+
+    public TestSpeechRequest setAudioFormat(String audioFormat) {
+        this.audioFormat = audioFormat;
+        return this;
+    }
+    public String getAudioFormat() {
+        return this.audioFormat;
     }
 
 }

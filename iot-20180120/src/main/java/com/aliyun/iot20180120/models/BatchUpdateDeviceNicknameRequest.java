@@ -8,6 +8,7 @@ public class BatchUpdateDeviceNicknameRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("DeviceNicknameInfo")
+    @Validation(required = true)
     public java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> deviceNicknameInfo;
 
     public static BatchUpdateDeviceNicknameRequest build(java.util.Map<String, ?> map) throws Exception {

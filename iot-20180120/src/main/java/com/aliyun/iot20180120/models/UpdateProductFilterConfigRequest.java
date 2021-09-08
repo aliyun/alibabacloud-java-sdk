@@ -8,12 +8,15 @@ public class UpdateProductFilterConfigRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("PropertyTimestampFilter")
+    @Validation(required = true)
     public Boolean propertyTimestampFilter;
 
     @NameInMap("PropertyValueFilter")
+    @Validation(required = true)
     public Boolean propertyValueFilter;
 
     public static UpdateProductFilterConfigRequest build(java.util.Map<String, ?> map) throws Exception {

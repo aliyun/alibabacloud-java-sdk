@@ -8,6 +8,7 @@ public class QueryDeviceOriginalPropertyStatusRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ProductKey")
@@ -23,6 +24,7 @@ public class QueryDeviceOriginalPropertyStatusRequest extends TeaModel {
     public String iotId;
 
     @NameInMap("Asc")
+    @Validation(required = true)
     public Integer asc;
 
     public static QueryDeviceOriginalPropertyStatusRequest build(java.util.Map<String, ?> map) throws Exception {

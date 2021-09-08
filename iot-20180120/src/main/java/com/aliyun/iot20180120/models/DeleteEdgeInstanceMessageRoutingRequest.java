@@ -8,9 +8,11 @@ public class DeleteEdgeInstanceMessageRoutingRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RouteId")
+    @Validation(required = true)
     public Long routeId;
 
     public static DeleteEdgeInstanceMessageRoutingRequest build(java.util.Map<String, ?> map) throws Exception {

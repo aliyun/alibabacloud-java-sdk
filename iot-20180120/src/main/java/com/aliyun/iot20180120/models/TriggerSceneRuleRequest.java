@@ -8,6 +8,7 @@ public class TriggerSceneRuleRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("InstanceId")

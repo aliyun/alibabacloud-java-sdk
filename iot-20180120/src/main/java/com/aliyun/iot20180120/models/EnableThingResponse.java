@@ -4,33 +4,57 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class EnableThingResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public EnableThingResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
 
     public static EnableThingResponse build(java.util.Map<String, ?> map) throws Exception {
         EnableThingResponse self = new EnableThingResponse();
         return TeaModel.build(map, self);
     }
 
-    public EnableThingResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public EnableThingResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public EnableThingResponse setBody(EnableThingResponseBody body) {
-        this.body = body;
+    public EnableThingResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public EnableThingResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public EnableThingResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public EnableThingResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

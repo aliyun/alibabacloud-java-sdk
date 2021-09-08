@@ -8,15 +8,19 @@ public class BatchSetEdgeInstanceDeviceChannelRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DriverId")
+    @Validation(required = true)
     public String driverId;
 
     @NameInMap("ChannelId")
+    @Validation(required = true)
     public String channelId;
 
     @NameInMap("IotIds")
+    @Validation(required = true)
     public java.util.List<String> iotIds;
 
     public static BatchSetEdgeInstanceDeviceChannelRequest build(java.util.Map<String, ?> map) throws Exception {

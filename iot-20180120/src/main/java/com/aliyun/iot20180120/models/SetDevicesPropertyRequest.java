@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class SetDevicesPropertyRequest extends TeaModel {
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public java.util.List<String> deviceName;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Items")
+    @Validation(required = true)
     public String items;
 
     public static SetDevicesPropertyRequest build(java.util.Map<String, ?> map) throws Exception {

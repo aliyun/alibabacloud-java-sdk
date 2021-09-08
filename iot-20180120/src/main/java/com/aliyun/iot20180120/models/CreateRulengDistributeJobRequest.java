@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateRulengDistributeJobRequest extends TeaModel {
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("SourceInstanceId")
+    @Validation(required = true)
     public String sourceInstanceId;
 
     @NameInMap("TargetInstanceId")
+    @Validation(required = true)
     public String targetInstanceId;
 
     public static CreateRulengDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {

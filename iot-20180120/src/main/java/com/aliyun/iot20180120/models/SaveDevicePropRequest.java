@@ -14,6 +14,7 @@ public class SaveDevicePropRequest extends TeaModel {
     public String deviceName;
 
     @NameInMap("Props")
+    @Validation(required = true)
     public String props;
 
     @NameInMap("IotId")

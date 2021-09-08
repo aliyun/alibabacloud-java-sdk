@@ -8,9 +8,11 @@ public class DisableDeviceTunnelRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public String deviceName;
 
     public static DisableDeviceTunnelRequest build(java.util.Map<String, ?> map) throws Exception {

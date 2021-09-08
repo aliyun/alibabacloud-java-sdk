@@ -8,12 +8,15 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("FirmwareId")
+    @Validation(required = true)
     public String firmwareId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("TargetSelection")
+    @Validation(required = true)
     public String targetSelection;
 
     @NameInMap("SrcVersion")
@@ -51,6 +54,12 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
 
     @NameInMap("DnListFileUrl")
     public String dnListFileUrl;
+
+    @NameInMap("NeedPush")
+    public Boolean needPush;
+
+    @NameInMap("NeedConfirm")
+    public Boolean needConfirm;
 
     public static CreateOTAStaticUpgradeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOTAStaticUpgradeJobRequest self = new CreateOTAStaticUpgradeJobRequest();
@@ -185,11 +194,29 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
         return this.dnListFileUrl;
     }
 
+    public CreateOTAStaticUpgradeJobRequest setNeedPush(Boolean needPush) {
+        this.needPush = needPush;
+        return this;
+    }
+    public Boolean getNeedPush() {
+        return this.needPush;
+    }
+
+    public CreateOTAStaticUpgradeJobRequest setNeedConfirm(Boolean needConfirm) {
+        this.needConfirm = needConfirm;
+        return this;
+    }
+    public Boolean getNeedConfirm() {
+        return this.needConfirm;
+    }
+
     public static class CreateOTAStaticUpgradeJobRequestTag extends TeaModel {
         @NameInMap("Key")
+        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
+        @Validation(required = true)
         public String value;
 
         public static CreateOTAStaticUpgradeJobRequestTag build(java.util.Map<String, ?> map) throws Exception {

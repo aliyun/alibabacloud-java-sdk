@@ -8,12 +8,15 @@ public class BindRoleToEdgeInstanceRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RoleArn")
+    @Validation(required = true)
     public String roleArn;
 
     @NameInMap("RoleName")
+    @Validation(required = true)
     public String roleName;
 
     public static BindRoleToEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

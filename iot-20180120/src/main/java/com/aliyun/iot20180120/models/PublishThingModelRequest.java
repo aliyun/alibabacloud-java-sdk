@@ -11,6 +11,7 @@ public class PublishThingModelRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("ModelVersion")

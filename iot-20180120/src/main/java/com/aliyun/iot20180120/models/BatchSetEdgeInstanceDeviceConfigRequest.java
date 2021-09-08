@@ -8,9 +8,11 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DeviceConfigs")
+    @Validation(required = true)
     public java.util.List<BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs> deviceConfigs;
 
     public static BatchSetEdgeInstanceDeviceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -44,9 +46,11 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends TeaModel {
 
     public static class BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs extends TeaModel {
         @NameInMap("IotId")
+        @Validation(required = true)
         public String iotId;
 
         @NameInMap("Content")
+        @Validation(required = true)
         public String content;
 
         public static BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs build(java.util.Map<String, ?> map) throws Exception {

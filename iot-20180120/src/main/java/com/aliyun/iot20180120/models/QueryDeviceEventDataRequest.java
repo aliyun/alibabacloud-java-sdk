@@ -17,6 +17,7 @@ public class QueryDeviceEventDataRequest extends TeaModel {
     public String deviceName;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("Identifier")
@@ -32,6 +33,7 @@ public class QueryDeviceEventDataRequest extends TeaModel {
     public String iotId;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     public static QueryDeviceEventDataRequest build(java.util.Map<String, ?> map) throws Exception {

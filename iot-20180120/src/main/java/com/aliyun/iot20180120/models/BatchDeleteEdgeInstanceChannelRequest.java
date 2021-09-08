@@ -8,12 +8,15 @@ public class BatchDeleteEdgeInstanceChannelRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DriverId")
+    @Validation(required = true)
     public String driverId;
 
     @NameInMap("ChannelIds")
+    @Validation(required = true)
     public java.util.List<String> channelIds;
 
     public static BatchDeleteEdgeInstanceChannelRequest build(java.util.Map<String, ?> map) throws Exception {

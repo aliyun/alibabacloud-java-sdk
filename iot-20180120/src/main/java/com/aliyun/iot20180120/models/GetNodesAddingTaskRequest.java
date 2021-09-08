@@ -8,6 +8,7 @@ public class GetNodesAddingTaskRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("TaskId")
+    @Validation(required = true)
     public String taskId;
 
     public static GetNodesAddingTaskRequest build(java.util.Map<String, ?> map) throws Exception {

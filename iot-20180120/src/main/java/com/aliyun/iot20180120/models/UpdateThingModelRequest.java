@@ -8,6 +8,7 @@ public class UpdateThingModelRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Identifier")

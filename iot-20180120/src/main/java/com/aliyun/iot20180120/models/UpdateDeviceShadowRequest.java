@@ -8,12 +8,15 @@ public class UpdateDeviceShadowRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public String deviceName;
 
     @NameInMap("ShadowMessage")
+    @Validation(required = true)
     public String shadowMessage;
 
     @NameInMap("DeltaUpdate")

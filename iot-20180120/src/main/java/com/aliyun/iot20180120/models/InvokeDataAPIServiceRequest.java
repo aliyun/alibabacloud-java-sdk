@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvokeDataAPIServiceRequest extends TeaModel {
     @NameInMap("ApiSrn")
+    @Validation(required = true)
     public String apiSrn;
 
     @NameInMap("Param")

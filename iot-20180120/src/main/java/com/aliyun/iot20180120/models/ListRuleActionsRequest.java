@@ -8,6 +8,7 @@ public class ListRuleActionsRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public Long ruleId;
 
     public static ListRuleActionsRequest build(java.util.Map<String, ?> map) throws Exception {

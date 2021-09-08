@@ -8,6 +8,7 @@ public class DeleteJobRequest extends TeaModel {
     public String iotInstanceId;
 
     @NameInMap("JobId")
+    @Validation(required = true)
     public String jobId;
 
     public static DeleteJobRequest build(java.util.Map<String, ?> map) throws Exception {
