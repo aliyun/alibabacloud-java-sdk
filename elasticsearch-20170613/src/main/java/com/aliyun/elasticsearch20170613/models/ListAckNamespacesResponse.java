@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.elasticsearch20170613.models;
+
+import com.aliyun.tea.*;
+
+public class ListAckNamespacesResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ListAckNamespacesResponseBody body;
+
+    public static ListAckNamespacesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAckNamespacesResponse self = new ListAckNamespacesResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ListAckNamespacesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListAckNamespacesResponse setBody(ListAckNamespacesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListAckNamespacesResponseBody getBody() {
+        return this.body;
+    }
+
+}

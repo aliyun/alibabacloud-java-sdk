@@ -1,0 +1,190 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.elasticsearch20170613.models;
+
+import com.aliyun.tea.*;
+
+public class ModifyElastictaskResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Result")
+    public ModifyElastictaskResponseBodyResult result;
+
+    public static ModifyElastictaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyElastictaskResponseBody self = new ModifyElastictaskResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ModifyElastictaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyElastictaskResponseBody setResult(ModifyElastictaskResponseBodyResult result) {
+        this.result = result;
+        return this;
+    }
+    public ModifyElastictaskResponseBodyResult getResult() {
+        return this.result;
+    }
+
+    public static class ModifyElastictaskResponseBodyResultElasticExpansionTask extends TeaModel {
+        @NameInMap("triggerType")
+        public String triggerType;
+
+        @NameInMap("replicaCount")
+        public Integer replicaCount;
+
+        @NameInMap("elasticNodeCount")
+        public Integer elasticNodeCount;
+
+        @NameInMap("cronExpression")
+        public String cronExpression;
+
+        @NameInMap("targetIndices")
+        public java.util.List<String> targetIndices;
+
+        public static ModifyElastictaskResponseBodyResultElasticExpansionTask build(java.util.Map<String, ?> map) throws Exception {
+            ModifyElastictaskResponseBodyResultElasticExpansionTask self = new ModifyElastictaskResponseBodyResultElasticExpansionTask();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticExpansionTask setTriggerType(String triggerType) {
+            this.triggerType = triggerType;
+            return this;
+        }
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticExpansionTask setReplicaCount(Integer replicaCount) {
+            this.replicaCount = replicaCount;
+            return this;
+        }
+        public Integer getReplicaCount() {
+            return this.replicaCount;
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticExpansionTask setElasticNodeCount(Integer elasticNodeCount) {
+            this.elasticNodeCount = elasticNodeCount;
+            return this;
+        }
+        public Integer getElasticNodeCount() {
+            return this.elasticNodeCount;
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticExpansionTask setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticExpansionTask setTargetIndices(java.util.List<String> targetIndices) {
+            this.targetIndices = targetIndices;
+            return this;
+        }
+        public java.util.List<String> getTargetIndices() {
+            return this.targetIndices;
+        }
+
+    }
+
+    public static class ModifyElastictaskResponseBodyResultElasticShrinkTask extends TeaModel {
+        @NameInMap("triggerType")
+        public String triggerType;
+
+        @NameInMap("replicaCount")
+        public Integer replicaCount;
+
+        @NameInMap("elasticNodeCount")
+        public Integer elasticNodeCount;
+
+        @NameInMap("cronExpression")
+        public String cronExpression;
+
+        @NameInMap("targetIndices")
+        public java.util.List<String> targetIndices;
+
+        public static ModifyElastictaskResponseBodyResultElasticShrinkTask build(java.util.Map<String, ?> map) throws Exception {
+            ModifyElastictaskResponseBodyResultElasticShrinkTask self = new ModifyElastictaskResponseBodyResultElasticShrinkTask();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticShrinkTask setTriggerType(String triggerType) {
+            this.triggerType = triggerType;
+            return this;
+        }
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticShrinkTask setReplicaCount(Integer replicaCount) {
+            this.replicaCount = replicaCount;
+            return this;
+        }
+        public Integer getReplicaCount() {
+            return this.replicaCount;
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticShrinkTask setElasticNodeCount(Integer elasticNodeCount) {
+            this.elasticNodeCount = elasticNodeCount;
+            return this;
+        }
+        public Integer getElasticNodeCount() {
+            return this.elasticNodeCount;
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticShrinkTask setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        public ModifyElastictaskResponseBodyResultElasticShrinkTask setTargetIndices(java.util.List<String> targetIndices) {
+            this.targetIndices = targetIndices;
+            return this;
+        }
+        public java.util.List<String> getTargetIndices() {
+            return this.targetIndices;
+        }
+
+    }
+
+    public static class ModifyElastictaskResponseBodyResult extends TeaModel {
+        @NameInMap("elasticExpansionTask")
+        public ModifyElastictaskResponseBodyResultElasticExpansionTask elasticExpansionTask;
+
+        @NameInMap("elasticShrinkTask")
+        public ModifyElastictaskResponseBodyResultElasticShrinkTask elasticShrinkTask;
+
+        public static ModifyElastictaskResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            ModifyElastictaskResponseBodyResult self = new ModifyElastictaskResponseBodyResult();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyElastictaskResponseBodyResult setElasticExpansionTask(ModifyElastictaskResponseBodyResultElasticExpansionTask elasticExpansionTask) {
+            this.elasticExpansionTask = elasticExpansionTask;
+            return this;
+        }
+        public ModifyElastictaskResponseBodyResultElasticExpansionTask getElasticExpansionTask() {
+            return this.elasticExpansionTask;
+        }
+
+        public ModifyElastictaskResponseBodyResult setElasticShrinkTask(ModifyElastictaskResponseBodyResultElasticShrinkTask elasticShrinkTask) {
+            this.elasticShrinkTask = elasticShrinkTask;
+            return this;
+        }
+        public ModifyElastictaskResponseBodyResultElasticShrinkTask getElasticShrinkTask() {
+            return this.elasticShrinkTask;
+        }
+
+    }
+
+}

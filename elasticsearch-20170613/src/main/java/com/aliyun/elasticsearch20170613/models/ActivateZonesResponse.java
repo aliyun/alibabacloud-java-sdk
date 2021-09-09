@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.elasticsearch20170613.models;
+
+import com.aliyun.tea.*;
+
+public class ActivateZonesResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ActivateZonesResponseBody body;
+
+    public static ActivateZonesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ActivateZonesResponse self = new ActivateZonesResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ActivateZonesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ActivateZonesResponse setBody(ActivateZonesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ActivateZonesResponseBody getBody() {
+        return this.body;
+    }
+
+}
