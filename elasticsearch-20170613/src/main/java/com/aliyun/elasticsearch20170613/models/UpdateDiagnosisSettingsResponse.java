@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.elasticsearch20170613.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateDiagnosisSettingsResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateDiagnosisSettingsResponseBody body;
+
+    public static UpdateDiagnosisSettingsResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateDiagnosisSettingsResponse self = new UpdateDiagnosisSettingsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateDiagnosisSettingsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateDiagnosisSettingsResponse setBody(UpdateDiagnosisSettingsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateDiagnosisSettingsResponseBody getBody() {
+        return this.body;
+    }
+
+}

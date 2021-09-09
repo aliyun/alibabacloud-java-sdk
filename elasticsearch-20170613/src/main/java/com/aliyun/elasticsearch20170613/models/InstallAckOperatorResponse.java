@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.elasticsearch20170613.models;
+
+import com.aliyun.tea.*;
+
+public class InstallAckOperatorResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public InstallAckOperatorResponseBody body;
+
+    public static InstallAckOperatorResponse build(java.util.Map<String, ?> map) throws Exception {
+        InstallAckOperatorResponse self = new InstallAckOperatorResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public InstallAckOperatorResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public InstallAckOperatorResponse setBody(InstallAckOperatorResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public InstallAckOperatorResponseBody getBody() {
+        return this.body;
+    }
+
+}

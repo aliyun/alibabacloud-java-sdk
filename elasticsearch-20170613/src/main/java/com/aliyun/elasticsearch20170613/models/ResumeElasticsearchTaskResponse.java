@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.elasticsearch20170613.models;
+
+import com.aliyun.tea.*;
+
+public class ResumeElasticsearchTaskResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ResumeElasticsearchTaskResponseBody body;
+
+    public static ResumeElasticsearchTaskResponse build(java.util.Map<String, ?> map) throws Exception {
+        ResumeElasticsearchTaskResponse self = new ResumeElasticsearchTaskResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ResumeElasticsearchTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ResumeElasticsearchTaskResponse setBody(ResumeElasticsearchTaskResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ResumeElasticsearchTaskResponseBody getBody() {
+        return this.body;
+    }
+
+}

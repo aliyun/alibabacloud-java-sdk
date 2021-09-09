@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.elasticsearch20170613.models;
+
+import com.aliyun.tea.*;
+
+public class DescribePipelineResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribePipelineResponseBody body;
+
+    public static DescribePipelineResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribePipelineResponse self = new DescribePipelineResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribePipelineResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribePipelineResponse setBody(DescribePipelineResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribePipelineResponseBody getBody() {
+        return this.body;
+    }
+
+}
