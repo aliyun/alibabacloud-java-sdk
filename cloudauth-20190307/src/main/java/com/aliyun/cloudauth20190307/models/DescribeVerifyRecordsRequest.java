@@ -8,9 +8,11 @@ public class DescribeVerifyRecordsRequest extends TeaModel {
     public Integer totalCount;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("BizType")

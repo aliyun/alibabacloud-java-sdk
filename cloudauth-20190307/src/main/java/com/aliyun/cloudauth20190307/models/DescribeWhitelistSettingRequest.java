@@ -11,6 +11,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String lang;
 
     @NameInMap("ServiceCode")
+    @Validation(required = true)
     public String serviceCode;
 
     @NameInMap("SceneId")
@@ -32,9 +33,11 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String status;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     public static DescribeWhitelistSettingRequest build(java.util.Map<String, ?> map) throws Exception {

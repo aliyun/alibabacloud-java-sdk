@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyResultRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizType")
+    @Validation(required = true)
     public String bizType;
 
     public static DescribeVerifyResultRequest build(java.util.Map<String, ?> map) throws Exception {

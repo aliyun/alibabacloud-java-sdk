@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSdkUrlRequest extends TeaModel {
     @NameInMap("Id")
+    @Validation(required = true)
     public Long id;
 
     @NameInMap("Debug")

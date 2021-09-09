@@ -4,33 +4,101 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CompareFaceVerifyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public CompareFaceVerifyResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("ResultObject")
+    @Validation(required = true)
+    public CompareFaceVerifyResponseResultObject resultObject;
 
     public static CompareFaceVerifyResponse build(java.util.Map<String, ?> map) throws Exception {
         CompareFaceVerifyResponse self = new CompareFaceVerifyResponse();
         return TeaModel.build(map, self);
     }
 
-    public CompareFaceVerifyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CompareFaceVerifyResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public CompareFaceVerifyResponse setBody(CompareFaceVerifyResponseBody body) {
-        this.body = body;
+    public CompareFaceVerifyResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public CompareFaceVerifyResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CompareFaceVerifyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CompareFaceVerifyResponse setResultObject(CompareFaceVerifyResponseResultObject resultObject) {
+        this.resultObject = resultObject;
+        return this;
+    }
+    public CompareFaceVerifyResponseResultObject getResultObject() {
+        return this.resultObject;
+    }
+
+    public static class CompareFaceVerifyResponseResultObject extends TeaModel {
+        @NameInMap("CertifyId")
+        @Validation(required = true)
+        public String certifyId;
+
+        @NameInMap("VerifyScore")
+        @Validation(required = true)
+        public Float verifyScore;
+
+        @NameInMap("Passed")
+        @Validation(required = true)
+        public String passed;
+
+        public static CompareFaceVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
+            CompareFaceVerifyResponseResultObject self = new CompareFaceVerifyResponseResultObject();
+            return TeaModel.build(map, self);
+        }
+
+        public CompareFaceVerifyResponseResultObject setCertifyId(String certifyId) {
+            this.certifyId = certifyId;
+            return this;
+        }
+        public String getCertifyId() {
+            return this.certifyId;
+        }
+
+        public CompareFaceVerifyResponseResultObject setVerifyScore(Float verifyScore) {
+            this.verifyScore = verifyScore;
+            return this;
+        }
+        public Float getVerifyScore() {
+            return this.verifyScore;
+        }
+
+        public CompareFaceVerifyResponseResultObject setPassed(String passed) {
+            this.passed = passed;
+            return this;
+        }
+        public String getPassed() {
+            return this.passed;
+        }
+
     }
 
 }
