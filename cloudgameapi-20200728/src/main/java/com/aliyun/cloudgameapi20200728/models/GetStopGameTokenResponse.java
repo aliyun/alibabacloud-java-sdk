@@ -4,33 +4,45 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetStopGameTokenResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Token")
     @Validation(required = true)
-    public GetStopGameTokenResponseBody body;
+    public String token;
+
+    @NameInMap("ExpireTime")
+    @Validation(required = true)
+    public Long expireTime;
 
     public static GetStopGameTokenResponse build(java.util.Map<String, ?> map) throws Exception {
         GetStopGameTokenResponse self = new GetStopGameTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetStopGameTokenResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetStopGameTokenResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetStopGameTokenResponse setBody(GetStopGameTokenResponseBody body) {
-        this.body = body;
+    public GetStopGameTokenResponse setToken(String token) {
+        this.token = token;
         return this;
     }
-    public GetStopGameTokenResponseBody getBody() {
-        return this.body;
+    public String getToken() {
+        return this.token;
+    }
+
+    public GetStopGameTokenResponse setExpireTime(Long expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public Long getExpireTime() {
+        return this.expireTime;
     }
 
 }

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetStopGameTokenRequest extends TeaModel {
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("AccessKey")
+    @Validation(required = true)
     public String accessKey;
 
     public static GetStopGameTokenRequest build(java.util.Map<String, ?> map) throws Exception {

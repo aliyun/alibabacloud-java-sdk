@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryProjectRequest extends TeaModel {
     @NameInMap("PageNo")
+    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ProjectId")

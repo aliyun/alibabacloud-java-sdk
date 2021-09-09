@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryItemsRequest extends TeaModel {
     @NameInMap("PageNumber")
+    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     public static QueryItemsRequest build(java.util.Map<String, ?> map) throws Exception {
