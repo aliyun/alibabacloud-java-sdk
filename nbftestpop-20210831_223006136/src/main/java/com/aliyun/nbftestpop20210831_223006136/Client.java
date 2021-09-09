@@ -79,4 +79,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         return TeaModel.toModel(this.doROARequest("AddAsset", "2021-08-31_22-30-06-136", "HTTPS", "POST", "AK", "/asset/add", "json", req, runtime), new AddAssetResponse());
     }
+
+    public TestAssetResponse testAsset(TestAssetRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.testAssetWithOptions(request, headers, runtime);
+    }
+
+    public TestAssetResponse testAssetWithOptions(TestAssetRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.x)) {
+            query.put("x", request.x);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.y)) {
+            query.put("y", request.y);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("TestAsset", "2021-08-31_22-30-06-136", "HTTPS", "POST", "AK", "/test/url/a", "json", req, runtime), new TestAssetResponse());
+    }
 }
