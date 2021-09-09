@@ -1,3 +1,7 @@
+2021-09-09 Version: 1.6.0
+- Supported ListHistoryContainerStatus.
+- Supported ListContainerStatus Add Timestamp.
+
 2021-09-08 Version: 1.5.4
 - Supported ListHistoryContainerStatus.
 - Supported ListContainerStatus Add Timestamp.
