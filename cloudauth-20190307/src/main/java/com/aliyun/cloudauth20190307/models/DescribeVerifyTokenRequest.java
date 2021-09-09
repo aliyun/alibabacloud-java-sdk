@@ -8,6 +8,7 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String idCardBackImageUrl;
 
     @NameInMap("BizType")
+    @Validation(required = true)
     public String bizType;
 
     @NameInMap("FailedRedirectUrl")
@@ -26,6 +27,7 @@ public class DescribeVerifyTokenRequest extends TeaModel {
     public String userId;
 
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("Name")

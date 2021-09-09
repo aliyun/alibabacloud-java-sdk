@@ -11,9 +11,11 @@ public class DeleteWhitelistSettingRequest extends TeaModel {
     public String lang;
 
     @NameInMap("ServiceCode")
+    @Validation(required = true)
     public String serviceCode;
 
     @NameInMap("Ids")
+    @Validation(required = true)
     public String ids;
 
     public static DeleteWhitelistSettingRequest build(java.util.Map<String, ?> map) throws Exception {

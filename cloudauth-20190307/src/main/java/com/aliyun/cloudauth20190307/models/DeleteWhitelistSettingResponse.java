@@ -4,33 +4,33 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DeleteWhitelistSettingResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("ResultObject")
     @Validation(required = true)
-    public DeleteWhitelistSettingResponseBody body;
+    public Boolean resultObject;
 
     public static DeleteWhitelistSettingResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteWhitelistSettingResponse self = new DeleteWhitelistSettingResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteWhitelistSettingResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteWhitelistSettingResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DeleteWhitelistSettingResponse setBody(DeleteWhitelistSettingResponseBody body) {
-        this.body = body;
+    public DeleteWhitelistSettingResponse setResultObject(Boolean resultObject) {
+        this.resultObject = resultObject;
         return this;
     }
-    public DeleteWhitelistSettingResponseBody getBody() {
-        return this.body;
+    public Boolean getResultObject() {
+        return this.resultObject;
     }
 
 }

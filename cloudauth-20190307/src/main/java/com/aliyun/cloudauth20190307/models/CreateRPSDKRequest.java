@@ -11,6 +11,7 @@ public class CreateRPSDKRequest extends TeaModel {
     public String lang;
 
     @NameInMap("AppUrl")
+    @Validation(required = true)
     public String appUrl;
 
     @NameInMap("Platform")

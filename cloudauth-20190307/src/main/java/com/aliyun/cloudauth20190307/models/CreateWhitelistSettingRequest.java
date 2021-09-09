@@ -11,6 +11,7 @@ public class CreateWhitelistSettingRequest extends TeaModel {
     public String lang;
 
     @NameInMap("ServiceCode")
+    @Validation(required = true)
     public String serviceCode;
 
     @NameInMap("SceneId")
@@ -23,6 +24,7 @@ public class CreateWhitelistSettingRequest extends TeaModel {
     public String certNo;
 
     @NameInMap("ValidDay")
+    @Validation(required = true)
     public Integer validDay;
 
     public static CreateWhitelistSettingRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -8,9 +8,11 @@ public class DescribeVerifyUsageRequest extends TeaModel {
     public String bizType;
 
     @NameInMap("StartDate")
+    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
+    @Validation(required = true)
     public String endDate;
 
     public static DescribeVerifyUsageRequest build(java.util.Map<String, ?> map) throws Exception {

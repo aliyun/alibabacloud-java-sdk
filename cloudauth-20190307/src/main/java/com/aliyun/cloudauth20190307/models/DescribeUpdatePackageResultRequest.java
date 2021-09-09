@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUpdatePackageResultRequest extends TeaModel {
     @NameInMap("TaskId")
+    @Validation(required = true)
     public String taskId;
 
     public static DescribeUpdatePackageResultRequest build(java.util.Map<String, ?> map) throws Exception {
