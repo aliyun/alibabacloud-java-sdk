@@ -124,6 +124,15 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         @NameInMap("TemplateType")
         public String templateType;
 
+        @NameInMap("ProjectType")
+        public String projectType;
+
+        @NameInMap("BusinessConfig")
+        public String businessConfig;
+
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         public static SearchEditingProjectResponseBodyProjectList build(java.util.Map<String, ?> map) throws Exception {
             SearchEditingProjectResponseBodyProjectList self = new SearchEditingProjectResponseBodyProjectList();
             return TeaModel.build(map, self);
@@ -239,6 +248,30 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         }
         public String getTemplateType() {
             return this.templateType;
+        }
+
+        public SearchEditingProjectResponseBodyProjectList setProjectType(String projectType) {
+            this.projectType = projectType;
+            return this;
+        }
+        public String getProjectType() {
+            return this.projectType;
+        }
+
+        public SearchEditingProjectResponseBodyProjectList setBusinessConfig(String businessConfig) {
+            this.businessConfig = businessConfig;
+            return this;
+        }
+        public String getBusinessConfig() {
+            return this.businessConfig;
+        }
+
+        public SearchEditingProjectResponseBodyProjectList setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
     }

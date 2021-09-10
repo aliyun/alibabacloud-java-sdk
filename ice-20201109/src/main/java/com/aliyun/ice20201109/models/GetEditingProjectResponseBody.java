@@ -81,6 +81,15 @@ public class GetEditingProjectResponseBody extends TeaModel {
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
+        @NameInMap("ProjectType")
+        public String projectType;
+
+        @NameInMap("BusinessConfig")
+        public String businessConfig;
+
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         public static GetEditingProjectResponseBodyProject build(java.util.Map<String, ?> map) throws Exception {
             GetEditingProjectResponseBodyProject self = new GetEditingProjectResponseBodyProject();
             return TeaModel.build(map, self);
@@ -180,6 +189,30 @@ public class GetEditingProjectResponseBody extends TeaModel {
         }
         public String getModifiedSource() {
             return this.modifiedSource;
+        }
+
+        public GetEditingProjectResponseBodyProject setProjectType(String projectType) {
+            this.projectType = projectType;
+            return this;
+        }
+        public String getProjectType() {
+            return this.projectType;
+        }
+
+        public GetEditingProjectResponseBodyProject setBusinessConfig(String businessConfig) {
+            this.businessConfig = businessConfig;
+            return this;
+        }
+        public String getBusinessConfig() {
+            return this.businessConfig;
+        }
+
+        public GetEditingProjectResponseBodyProject setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
     }
