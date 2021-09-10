@@ -4,81 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateFileResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public Long data;
-
-    @NameInMap("HttpStatusCode")
-    @Validation(required = true)
-    public Integer httpStatusCode;
+    public CreateFileResponseBody body;
 
     public static CreateFileResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateFileResponse self = new CreateFileResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateFileResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateFileResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateFileResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CreateFileResponse setBody(CreateFileResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateFileResponse setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateFileResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateFileResponse setData(Long data) {
-        this.data = data;
-        return this;
-    }
-    public Long getData() {
-        return this.data;
-    }
-
-    public CreateFileResponse setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public CreateFileResponseBody getBody() {
+        return this.body;
     }
 
 }

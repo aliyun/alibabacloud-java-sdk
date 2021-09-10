@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTableLevelRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("LevelType")
-    @Validation(required = true)
     public Integer levelType;
 
     @NameInMap("PageNum")

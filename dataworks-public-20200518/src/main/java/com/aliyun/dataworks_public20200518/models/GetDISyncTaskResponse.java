@@ -4,89 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDISyncTaskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public GetDISyncTaskResponseData data;
+    public GetDISyncTaskResponseBody body;
 
     public static GetDISyncTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDISyncTaskResponse self = new GetDISyncTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDISyncTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetDISyncTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetDISyncTaskResponse setSuccess(Boolean success) {
-        this.success = success;
+    public GetDISyncTaskResponse setBody(GetDISyncTaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetDISyncTaskResponse setData(GetDISyncTaskResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public GetDISyncTaskResponseData getData() {
-        return this.data;
-    }
-
-    public static class GetDISyncTaskResponseData extends TeaModel {
-        @NameInMap("Code")
-        @Validation(required = true)
-        public String code;
-
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        public static GetDISyncTaskResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GetDISyncTaskResponseData self = new GetDISyncTaskResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetDISyncTaskResponseData setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public GetDISyncTaskResponseData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetDISyncTaskResponseData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
+    public GetDISyncTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

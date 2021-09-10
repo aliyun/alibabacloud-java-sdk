@@ -4,89 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDDLJobStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetDDLJobStatusResponseData data;
+    public GetDDLJobStatusResponseBody body;
 
     public static GetDDLJobStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDDLJobStatusResponse self = new GetDDLJobStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDDLJobStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetDDLJobStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetDDLJobStatusResponse setData(GetDDLJobStatusResponseData data) {
-        this.data = data;
+    public GetDDLJobStatusResponse setBody(GetDDLJobStatusResponseBody body) {
+        this.body = body;
         return this;
     }
-    public GetDDLJobStatusResponseData getData() {
-        return this.data;
-    }
-
-    public static class GetDDLJobStatusResponseData extends TeaModel {
-        @NameInMap("NextTaskId")
-        @Validation(required = true)
-        public String nextTaskId;
-
-        @NameInMap("Content")
-        @Validation(required = true)
-        public String content;
-
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("TaskId")
-        @Validation(required = true)
-        public String taskId;
-
-        public static GetDDLJobStatusResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GetDDLJobStatusResponseData self = new GetDDLJobStatusResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetDDLJobStatusResponseData setNextTaskId(String nextTaskId) {
-            this.nextTaskId = nextTaskId;
-            return this;
-        }
-        public String getNextTaskId() {
-            return this.nextTaskId;
-        }
-
-        public GetDDLJobStatusResponseData setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public GetDDLJobStatusResponseData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetDDLJobStatusResponseData setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
+    public GetDDLJobStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

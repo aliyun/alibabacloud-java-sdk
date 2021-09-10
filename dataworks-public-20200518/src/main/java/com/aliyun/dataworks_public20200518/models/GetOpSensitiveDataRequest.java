@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetOpSensitiveDataRequest extends TeaModel {
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("Date")
-    @Validation(required = true)
     public String date;
 
     @NameInMap("OpType")

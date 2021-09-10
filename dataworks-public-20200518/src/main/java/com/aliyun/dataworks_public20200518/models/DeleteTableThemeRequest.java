@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteTableThemeRequest extends TeaModel {
     @NameInMap("ThemeId")
-    @Validation(required = true)
     public Long themeId;
 
     @NameInMap("ProjectId")

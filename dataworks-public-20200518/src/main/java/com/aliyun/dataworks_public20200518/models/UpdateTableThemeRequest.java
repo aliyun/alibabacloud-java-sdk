@@ -8,11 +8,9 @@ public class UpdateTableThemeRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("ThemeId")
-    @Validation(required = true)
     public Long themeId;
 
     public static UpdateTableThemeRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -1,0 +1,215 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks_public20200518.models;
+
+import com.aliyun.tea.*;
+
+public class GetTopicInfluenceResponseBody extends TeaModel {
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Data")
+    public GetTopicInfluenceResponseBodyData data;
+
+    public static GetTopicInfluenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetTopicInfluenceResponseBody self = new GetTopicInfluenceResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public GetTopicInfluenceResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetTopicInfluenceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetTopicInfluenceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetTopicInfluenceResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetTopicInfluenceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetTopicInfluenceResponseBody setData(GetTopicInfluenceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetTopicInfluenceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public static class GetTopicInfluenceResponseBodyDataInfluences extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("BaselineName")
+        public String baselineName;
+
+        @NameInMap("BaselineId")
+        public Long baselineId;
+
+        @NameInMap("Bizdate")
+        public Long bizdate;
+
+        @NameInMap("Buffer")
+        public Long buffer;
+
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("InGroupId")
+        public Integer inGroupId;
+
+        public static GetTopicInfluenceResponseBodyDataInfluences build(java.util.Map<String, ?> map) throws Exception {
+            GetTopicInfluenceResponseBodyDataInfluences self = new GetTopicInfluenceResponseBodyDataInfluences();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setBaselineName(String baselineName) {
+            this.baselineName = baselineName;
+            return this;
+        }
+        public String getBaselineName() {
+            return this.baselineName;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setBaselineId(Long baselineId) {
+            this.baselineId = baselineId;
+            return this;
+        }
+        public Long getBaselineId() {
+            return this.baselineId;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setBizdate(Long bizdate) {
+            this.bizdate = bizdate;
+            return this;
+        }
+        public Long getBizdate() {
+            return this.bizdate;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setBuffer(Long buffer) {
+            this.buffer = buffer;
+            return this;
+        }
+        public Long getBuffer() {
+            return this.buffer;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public GetTopicInfluenceResponseBodyDataInfluences setInGroupId(Integer inGroupId) {
+            this.inGroupId = inGroupId;
+            return this;
+        }
+        public Integer getInGroupId() {
+            return this.inGroupId;
+        }
+
+    }
+
+    public static class GetTopicInfluenceResponseBodyData extends TeaModel {
+        @NameInMap("TopicId")
+        public Long topicId;
+
+        @NameInMap("Influences")
+        public java.util.List<GetTopicInfluenceResponseBodyDataInfluences> influences;
+
+        public static GetTopicInfluenceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetTopicInfluenceResponseBodyData self = new GetTopicInfluenceResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTopicInfluenceResponseBodyData setTopicId(Long topicId) {
+            this.topicId = topicId;
+            return this;
+        }
+        public Long getTopicId() {
+            return this.topicId;
+        }
+
+        public GetTopicInfluenceResponseBodyData setInfluences(java.util.List<GetTopicInfluenceResponseBodyDataInfluences> influences) {
+            this.influences = influences;
+            return this;
+        }
+        public java.util.List<GetTopicInfluenceResponseBodyDataInfluences> getInfluences() {
+            return this.influences;
+        }
+
+    }
+
+}

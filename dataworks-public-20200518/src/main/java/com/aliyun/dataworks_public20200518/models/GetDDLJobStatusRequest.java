@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetDDLJobStatusRequest extends TeaModel {
     @NameInMap("TaskId")
-    @Validation(required = true)
     public String taskId;
 
     public static GetDDLJobStatusRequest build(java.util.Map<String, ?> map) throws Exception {

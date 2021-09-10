@@ -4,65 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionMetaResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public GetConnectionMetaResponseData data;
+    public GetConnectionMetaResponseBody body;
 
     public static GetConnectionMetaResponse build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionMetaResponse self = new GetConnectionMetaResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetConnectionMetaResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetConnectionMetaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetConnectionMetaResponse setSuccess(Boolean success) {
-        this.success = success;
+    public GetConnectionMetaResponse setBody(GetConnectionMetaResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetConnectionMetaResponse setData(GetConnectionMetaResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public GetConnectionMetaResponseData getData() {
-        return this.data;
-    }
-
-    public static class GetConnectionMetaResponseData extends TeaModel {
-        @NameInMap("Meta")
-        @Validation(required = true)
-        public String meta;
-
-        public static GetConnectionMetaResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GetConnectionMetaResponseData self = new GetConnectionMetaResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetConnectionMetaResponseData setMeta(String meta) {
-            this.meta = meta;
-            return this;
-        }
-        public String getMeta() {
-            return this.meta;
-        }
-
+    public GetConnectionMetaResponseBody getBody() {
+        return this.body;
     }
 
 }

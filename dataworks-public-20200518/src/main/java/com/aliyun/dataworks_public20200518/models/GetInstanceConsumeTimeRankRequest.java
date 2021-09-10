@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetInstanceConsumeTimeRankRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("Bizdate")
-    @Validation(required = true)
     public String bizdate;
 
     public static GetInstanceConsumeTimeRankRequest build(java.util.Map<String, ?> map) throws Exception {

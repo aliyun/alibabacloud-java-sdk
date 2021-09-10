@@ -4,77 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class StopDISyncInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public StopDISyncInstanceResponseData data;
+    public StopDISyncInstanceResponseBody body;
 
     public static StopDISyncInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         StopDISyncInstanceResponse self = new StopDISyncInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopDISyncInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StopDISyncInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StopDISyncInstanceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public StopDISyncInstanceResponse setBody(StopDISyncInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public StopDISyncInstanceResponse setData(StopDISyncInstanceResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public StopDISyncInstanceResponseData getData() {
-        return this.data;
-    }
-
-    public static class StopDISyncInstanceResponseData extends TeaModel {
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        public static StopDISyncInstanceResponseData build(java.util.Map<String, ?> map) throws Exception {
-            StopDISyncInstanceResponseData self = new StopDISyncInstanceResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public StopDISyncInstanceResponseData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public StopDISyncInstanceResponseData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
+    public StopDISyncInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -8,7 +8,6 @@ public class DeleteTableRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("TableName")
-    @Validation(required = true)
     public String tableName;
 
     @NameInMap("EnvType")

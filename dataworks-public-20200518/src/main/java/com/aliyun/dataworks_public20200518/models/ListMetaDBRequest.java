@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListMetaDBRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("DataSourceType")
-    @Validation(required = true)
     public String dataSourceType;
 
     @NameInMap("PageNum")

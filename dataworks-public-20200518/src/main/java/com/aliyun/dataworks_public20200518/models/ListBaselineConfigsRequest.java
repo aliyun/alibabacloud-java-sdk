@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListBaselineConfigsRequest extends TeaModel {
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Owner")
     public String owner;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("Priority")

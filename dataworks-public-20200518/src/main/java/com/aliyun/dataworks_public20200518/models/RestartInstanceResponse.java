@@ -4,81 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RestartInstanceResponse extends TeaModel {
-    @NameInMap("ErrorCode")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String errorCode;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ErrorMessage")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("HttpStatusCode")
-    @Validation(required = true)
-    public Integer httpStatusCode;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public Boolean data;
+    public RestartInstanceResponseBody body;
 
     public static RestartInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         RestartInstanceResponse self = new RestartInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public RestartInstanceResponse setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public RestartInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RestartInstanceResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public RestartInstanceResponse setBody(RestartInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public RestartInstanceResponse setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public RestartInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public RestartInstanceResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public RestartInstanceResponse setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
+    public RestartInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }
