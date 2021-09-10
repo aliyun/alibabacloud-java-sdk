@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListRefDISyncTasksRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("DatasourceName")
-    @Validation(required = true)
     public String datasourceName;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public String taskType;
 
     @NameInMap("RefType")
-    @Validation(required = true)
     public String refType;
 
     @NameInMap("PageNumber")

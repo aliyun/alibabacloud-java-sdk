@@ -4,65 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class SetConnectionShareResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public SetConnectionShareResponseData data;
+    public SetConnectionShareResponseBody body;
 
     public static SetConnectionShareResponse build(java.util.Map<String, ?> map) throws Exception {
         SetConnectionShareResponse self = new SetConnectionShareResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetConnectionShareResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetConnectionShareResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetConnectionShareResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SetConnectionShareResponse setBody(SetConnectionShareResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public SetConnectionShareResponse setData(SetConnectionShareResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public SetConnectionShareResponseData getData() {
-        return this.data;
-    }
-
-    public static class SetConnectionShareResponseData extends TeaModel {
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        public static SetConnectionShareResponseData build(java.util.Map<String, ?> map) throws Exception {
-            SetConnectionShareResponseData self = new SetConnectionShareResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public SetConnectionShareResponseData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
+    public SetConnectionShareResponseBody getBody() {
+        return this.body;
     }
 
 }

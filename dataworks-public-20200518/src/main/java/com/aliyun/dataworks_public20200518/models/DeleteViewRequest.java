@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteViewRequest extends TeaModel {
     @NameInMap("ViewName")
-    @Validation(required = true)
     public String viewName;
 
     @NameInMap("AppGuid")

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetMetaTableThemeLevelRequest extends TeaModel {
     @NameInMap("TableGuid")
-    @Validation(required = true)
     public String tableGuid;
 
     @NameInMap("DataSourceType")
-    @Validation(required = true)
     public String dataSourceType;
 
     public static GetMetaTableThemeLevelRequest build(java.util.Map<String, ?> map) throws Exception {

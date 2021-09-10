@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class RevokeColumnPermissionRequest extends TeaModel {
     @NameInMap("WorkspaceId")
-    @Validation(required = true)
     public Long workspaceId;
 
     @NameInMap("MaxComputeProjectName")
-    @Validation(required = true)
     public String maxComputeProjectName;
 
     @NameInMap("TableName")
-    @Validation(required = true)
     public String tableName;
 
     @NameInMap("Columns")
-    @Validation(required = true)
     public String columns;
 
     @NameInMap("RevokeUserName")

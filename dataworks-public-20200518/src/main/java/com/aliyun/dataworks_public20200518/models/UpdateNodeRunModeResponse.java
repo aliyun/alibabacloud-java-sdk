@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateNodeRunModeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
+    public UpdateNodeRunModeResponseBody body;
 
     public static UpdateNodeRunModeResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateNodeRunModeResponse self = new UpdateNodeRunModeResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateNodeRunModeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateNodeRunModeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateNodeRunModeResponse setSuccess(Boolean success) {
-        this.success = success;
+    public UpdateNodeRunModeResponse setBody(UpdateNodeRunModeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public UpdateNodeRunModeResponseBody getBody() {
+        return this.body;
     }
 
 }

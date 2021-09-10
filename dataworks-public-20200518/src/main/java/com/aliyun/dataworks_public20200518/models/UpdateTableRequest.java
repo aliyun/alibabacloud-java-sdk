@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableRequest extends TeaModel {
-    @NameInMap("Columns")
-    public java.util.List<UpdateTableRequestColumns> columns;
-
     @NameInMap("IsView")
     public Integer isView;
 
@@ -35,7 +32,6 @@ public class UpdateTableRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("TableName")
-    @Validation(required = true)
     public String tableName;
 
     @NameInMap("Endpoint")
@@ -43,9 +39,6 @@ public class UpdateTableRequest extends TeaModel {
 
     @NameInMap("EnvType")
     public Integer envType;
-
-    @NameInMap("Themes")
-    public java.util.List<UpdateTableRequestThemes> themes;
 
     @NameInMap("AppGuid")
     public String appGuid;
@@ -62,17 +55,15 @@ public class UpdateTableRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
+    @NameInMap("Columns")
+    public java.util.List<UpdateTableRequestColumns> columns;
+
+    @NameInMap("Themes")
+    public java.util.List<UpdateTableRequestThemes> themes;
+
     public static UpdateTableRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableRequest self = new UpdateTableRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTableRequest setColumns(java.util.List<UpdateTableRequestColumns> columns) {
-        this.columns = columns;
-        return this;
-    }
-    public java.util.List<UpdateTableRequestColumns> getColumns() {
-        return this.columns;
     }
 
     public UpdateTableRequest setIsView(Integer isView) {
@@ -171,14 +162,6 @@ public class UpdateTableRequest extends TeaModel {
         return this.envType;
     }
 
-    public UpdateTableRequest setThemes(java.util.List<UpdateTableRequestThemes> themes) {
-        this.themes = themes;
-        return this;
-    }
-    public java.util.List<UpdateTableRequestThemes> getThemes() {
-        return this.themes;
-    }
-
     public UpdateTableRequest setAppGuid(String appGuid) {
         this.appGuid = appGuid;
         return this;
@@ -219,16 +202,33 @@ public class UpdateTableRequest extends TeaModel {
         return this.comment;
     }
 
-    public static class UpdateTableRequestColumns extends TeaModel {
-        @NameInMap("ColumnName")
-        @Validation(required = true)
-        public String columnName;
+    public UpdateTableRequest setColumns(java.util.List<UpdateTableRequestColumns> columns) {
+        this.columns = columns;
+        return this;
+    }
+    public java.util.List<UpdateTableRequestColumns> getColumns() {
+        return this.columns;
+    }
 
+    public UpdateTableRequest setThemes(java.util.List<UpdateTableRequestThemes> themes) {
+        this.themes = themes;
+        return this;
+    }
+    public java.util.List<UpdateTableRequestThemes> getThemes() {
+        return this.themes;
+    }
+
+    public static class UpdateTableRequestColumns extends TeaModel {
         @NameInMap("ColumnNameCn")
         public String columnNameCn;
 
+        @NameInMap("ColumnName")
+        public String columnName;
+
+        @NameInMap("Comment")
+        public String comment;
+
         @NameInMap("ColumnType")
-        @Validation(required = true)
         public String columnType;
 
         @NameInMap("SeqNumber")
@@ -240,12 +240,17 @@ public class UpdateTableRequest extends TeaModel {
         @NameInMap("IsPartitionCol")
         public Boolean isPartitionCol;
 
-        @NameInMap("Comment")
-        public String comment;
-
         public static UpdateTableRequestColumns build(java.util.Map<String, ?> map) throws Exception {
             UpdateTableRequestColumns self = new UpdateTableRequestColumns();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateTableRequestColumns setColumnNameCn(String columnNameCn) {
+            this.columnNameCn = columnNameCn;
+            return this;
+        }
+        public String getColumnNameCn() {
+            return this.columnNameCn;
         }
 
         public UpdateTableRequestColumns setColumnName(String columnName) {
@@ -256,12 +261,12 @@ public class UpdateTableRequest extends TeaModel {
             return this.columnName;
         }
 
-        public UpdateTableRequestColumns setColumnNameCn(String columnNameCn) {
-            this.columnNameCn = columnNameCn;
+        public UpdateTableRequestColumns setComment(String comment) {
+            this.comment = comment;
             return this;
         }
-        public String getColumnNameCn() {
-            return this.columnNameCn;
+        public String getComment() {
+            return this.comment;
         }
 
         public UpdateTableRequestColumns setColumnType(String columnType) {
@@ -294,14 +299,6 @@ public class UpdateTableRequest extends TeaModel {
         }
         public Boolean getIsPartitionCol() {
             return this.isPartitionCol;
-        }
-
-        public UpdateTableRequestColumns setComment(String comment) {
-            this.comment = comment;
-            return this;
-        }
-        public String getComment() {
-            return this.comment;
         }
 
     }
