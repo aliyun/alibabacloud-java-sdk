@@ -20,9 +20,17 @@ public class CreateEditingProjectRequest extends TeaModel {
     @NameInMap("CoverURL")
     public String coverURL;
 
-    // FEExtend
-    @NameInMap("FEExtend")
-    public String FEExtend;
+    // 工程关联素材，多个素材以逗号（,）分隔；每种类型最多支持10个素材ID
+    @NameInMap("MaterialMaps")
+    public String materialMaps;
+
+    // 工程业务配置。如果是直播剪辑工程必填OutputMediaConfig.StorageLocation,   Path 不填默认合成的直播片段存储在根路径下 OutputMediaTarget 不填默认oss-object，可以填vod-media 表示存储到vod  OutputMediaTarget 为vod-media 时，Path不生效。
+    @NameInMap("BusinessConfig")
+    public String businessConfig;
+
+    // 剪辑工程类型，EditingProject: 普通剪辑工程；LiveEditingProject: 直播剪辑工程
+    @NameInMap("ProjectType")
+    public String projectType;
 
     public static CreateEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEditingProjectRequest self = new CreateEditingProjectRequest();
@@ -61,12 +69,28 @@ public class CreateEditingProjectRequest extends TeaModel {
         return this.coverURL;
     }
 
-    public CreateEditingProjectRequest setFEExtend(String FEExtend) {
-        this.FEExtend = FEExtend;
+    public CreateEditingProjectRequest setMaterialMaps(String materialMaps) {
+        this.materialMaps = materialMaps;
         return this;
     }
-    public String getFEExtend() {
-        return this.FEExtend;
+    public String getMaterialMaps() {
+        return this.materialMaps;
+    }
+
+    public CreateEditingProjectRequest setBusinessConfig(String businessConfig) {
+        this.businessConfig = businessConfig;
+        return this;
+    }
+    public String getBusinessConfig() {
+        return this.businessConfig;
+    }
+
+    public CreateEditingProjectRequest setProjectType(String projectType) {
+        this.projectType = projectType;
+        return this;
+    }
+    public String getProjectType() {
+        return this.projectType;
     }
 
 }

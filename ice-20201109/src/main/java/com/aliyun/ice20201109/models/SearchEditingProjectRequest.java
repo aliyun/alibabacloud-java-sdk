@@ -36,6 +36,9 @@ public class SearchEditingProjectRequest extends TeaModel {
     @NameInMap("TemplateType")
     public String templateType;
 
+    @NameInMap("ProjectType")
+    public String projectType;
+
     public static SearchEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchEditingProjectRequest self = new SearchEditingProjectRequest();
         return TeaModel.build(map, self);
@@ -103,6 +106,14 @@ public class SearchEditingProjectRequest extends TeaModel {
     }
     public String getTemplateType() {
         return this.templateType;
+    }
+
+    public SearchEditingProjectRequest setProjectType(String projectType) {
+        this.projectType = projectType;
+        return this;
+    }
+    public String getProjectType() {
+        return this.projectType;
     }
 
 }

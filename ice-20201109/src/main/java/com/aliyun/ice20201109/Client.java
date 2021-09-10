@@ -104,6 +104,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSmartJobsWithOptions(request, runtime);
     }
 
+    public GetLiveEditingJobResponse getLiveEditingJobWithOptions(GetLiveEditingJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetLiveEditingJob", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new GetLiveEditingJobResponse());
+    }
+
+    public GetLiveEditingJobResponse getLiveEditingJob(GetLiveEditingJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getLiveEditingJobWithOptions(request, runtime);
+    }
+
     public DescribeRelatedAuthorizationStatusResponse describeRelatedAuthorizationStatusWithOptions(RuntimeOptions runtime) throws Exception {
         OpenApiRequest req = new OpenApiRequest();
         return TeaModel.toModel(this.doRPCRequest("DescribeRelatedAuthorizationStatus", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeRelatedAuthorizationStatusResponse());
@@ -129,11 +142,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public AddTemplateResponse addTemplateWithOptions(AddTemplateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("AddTemplate", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime), new AddTemplateResponse());
+        return TeaModel.toModel(this.doRPCRequest("AddTemplate", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new AddTemplateResponse());
     }
 
     public AddTemplateResponse addTemplate(AddTemplateRequest request) throws Exception {
@@ -318,6 +330,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeIceProductStatusResponse describeIceProductStatus() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeIceProductStatusWithOptions(runtime);
+    }
+
+    public GetLiveEditingIndexFileResponse getLiveEditingIndexFileWithOptions(GetLiveEditingIndexFileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetLiveEditingIndexFile", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime), new GetLiveEditingIndexFileResponse());
+    }
+
+    public GetLiveEditingIndexFileResponse getLiveEditingIndexFile(GetLiveEditingIndexFileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getLiveEditingIndexFileWithOptions(request, runtime);
     }
 
     public ListMediaBasicInfosResponse listMediaBasicInfosWithOptions(ListMediaBasicInfosRequest request, RuntimeOptions runtime) throws Exception {
@@ -535,11 +561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateTemplateResponse updateTemplateWithOptions(UpdateTemplateRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateTemplate", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime), new UpdateTemplateResponse());
+        return TeaModel.toModel(this.doRPCRequest("UpdateTemplate", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateTemplateResponse());
     }
 
     public UpdateTemplateResponse updateTemplate(UpdateTemplateRequest request) throws Exception {
@@ -673,6 +698,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitH2VJobResponse submitH2VJob(SubmitH2VJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitH2VJobWithOptions(request, runtime);
+    }
+
+    public SubmitLiveEditingJobResponse submitLiveEditingJobWithOptions(SubmitLiveEditingJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitLiveEditingJob", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitLiveEditingJobResponse());
+    }
+
+    public SubmitLiveEditingJobResponse submitLiveEditingJob(SubmitLiveEditingJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitLiveEditingJobWithOptions(request, runtime);
     }
 
     public SubmitPPTCutJobResponse submitPPTCutJobWithOptions(SubmitPPTCutJobRequest request, RuntimeOptions runtime) throws Exception {

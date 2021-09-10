@@ -8,9 +8,6 @@ public class DeleteEditingProjectsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("IgnoredList")
-    public String ignoredList;
-
     public static DeleteEditingProjectsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteEditingProjectsResponseBody self = new DeleteEditingProjectsResponseBody();
         return TeaModel.build(map, self);
@@ -22,14 +19,6 @@ public class DeleteEditingProjectsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteEditingProjectsResponseBody setIgnoredList(String ignoredList) {
-        this.ignoredList = ignoredList;
-        return this;
-    }
-    public String getIgnoredList() {
-        return this.ignoredList;
     }
 
 }

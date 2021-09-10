@@ -15,6 +15,12 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     @NameInMap("MediaInfos")
     public java.util.List<GetEditingProjectMaterialsResponseBodyMediaInfos> mediaInfos;
 
+    @NameInMap("LiveMaterials")
+    public java.util.List<GetEditingProjectMaterialsResponseBodyLiveMaterials> liveMaterials;
+
+    @NameInMap("ProjectMaterials")
+    public String projectMaterials;
+
     public static GetEditingProjectMaterialsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEditingProjectMaterialsResponseBody self = new GetEditingProjectMaterialsResponseBody();
         return TeaModel.build(map, self);
@@ -42,6 +48,22 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     }
     public java.util.List<GetEditingProjectMaterialsResponseBodyMediaInfos> getMediaInfos() {
         return this.mediaInfos;
+    }
+
+    public GetEditingProjectMaterialsResponseBody setLiveMaterials(java.util.List<GetEditingProjectMaterialsResponseBodyLiveMaterials> liveMaterials) {
+        this.liveMaterials = liveMaterials;
+        return this;
+    }
+    public java.util.List<GetEditingProjectMaterialsResponseBodyLiveMaterials> getLiveMaterials() {
+        return this.liveMaterials;
+    }
+
+    public GetEditingProjectMaterialsResponseBody setProjectMaterials(String projectMaterials) {
+        this.projectMaterials = projectMaterials;
+        return this;
+    }
+    public String getProjectMaterials() {
+        return this.projectMaterials;
     }
 
     public static class GetEditingProjectMaterialsResponseBodyMediaInfosMediaBasicInfo extends TeaModel {
@@ -468,6 +490,58 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         }
         public java.util.List<GetEditingProjectMaterialsResponseBodyMediaInfosFileInfoList> getFileInfoList() {
             return this.fileInfoList;
+        }
+
+    }
+
+    public static class GetEditingProjectMaterialsResponseBodyLiveMaterials extends TeaModel {
+        @NameInMap("AppName")
+        public String appName;
+
+        @NameInMap("StreamName")
+        public String streamName;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("LiveUrl")
+        public String liveUrl;
+
+        public static GetEditingProjectMaterialsResponseBodyLiveMaterials build(java.util.Map<String, ?> map) throws Exception {
+            GetEditingProjectMaterialsResponseBodyLiveMaterials self = new GetEditingProjectMaterialsResponseBodyLiveMaterials();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEditingProjectMaterialsResponseBodyLiveMaterials setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public GetEditingProjectMaterialsResponseBodyLiveMaterials setStreamName(String streamName) {
+            this.streamName = streamName;
+            return this;
+        }
+        public String getStreamName() {
+            return this.streamName;
+        }
+
+        public GetEditingProjectMaterialsResponseBodyLiveMaterials setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public GetEditingProjectMaterialsResponseBodyLiveMaterials setLiveUrl(String liveUrl) {
+            this.liveUrl = liveUrl;
+            return this;
+        }
+        public String getLiveUrl() {
+            return this.liveUrl;
         }
 
     }
