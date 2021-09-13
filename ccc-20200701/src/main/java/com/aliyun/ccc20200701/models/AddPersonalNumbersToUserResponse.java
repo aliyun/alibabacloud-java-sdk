@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ccc20200701.models;
+
+import com.aliyun.tea.*;
+
+public class AddPersonalNumbersToUserResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AddPersonalNumbersToUserResponseBody body;
+
+    public static AddPersonalNumbersToUserResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddPersonalNumbersToUserResponse self = new AddPersonalNumbersToUserResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public AddPersonalNumbersToUserResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddPersonalNumbersToUserResponse setBody(AddPersonalNumbersToUserResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddPersonalNumbersToUserResponseBody getBody() {
+        return this.body;
+    }
+
+}

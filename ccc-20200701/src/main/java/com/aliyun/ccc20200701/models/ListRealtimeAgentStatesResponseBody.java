@@ -1,0 +1,226 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ccc20200701.models;
+
+import com.aliyun.tea.*;
+
+public class ListRealtimeAgentStatesResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Data")
+    public ListRealtimeAgentStatesResponseBodyData data;
+
+    public static ListRealtimeAgentStatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListRealtimeAgentStatesResponseBody self = new ListRealtimeAgentStatesResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ListRealtimeAgentStatesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListRealtimeAgentStatesResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListRealtimeAgentStatesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListRealtimeAgentStatesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListRealtimeAgentStatesResponseBody setData(ListRealtimeAgentStatesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListRealtimeAgentStatesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public static class ListRealtimeAgentStatesResponseBodyDataList extends TeaModel {
+        @NameInMap("Extension")
+        public String extension;
+
+        @NameInMap("StateCode")
+        public String stateCode;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("AgentId")
+        public String agentId;
+
+        @NameInMap("StateTime")
+        public Long stateTime;
+
+        @NameInMap("AgentName")
+        public String agentName;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("CounterParty")
+        public String counterParty;
+
+        @NameInMap("SkillGroupIdList")
+        public java.util.List<String> skillGroupIdList;
+
+        public static ListRealtimeAgentStatesResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
+            ListRealtimeAgentStatesResponseBodyDataList self = new ListRealtimeAgentStatesResponseBodyDataList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setExtension(String extension) {
+            this.extension = extension;
+            return this;
+        }
+        public String getExtension() {
+            return this.extension;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setStateCode(String stateCode) {
+            this.stateCode = stateCode;
+            return this;
+        }
+        public String getStateCode() {
+            return this.stateCode;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setAgentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+        public String getAgentId() {
+            return this.agentId;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setStateTime(Long stateTime) {
+            this.stateTime = stateTime;
+            return this;
+        }
+        public Long getStateTime() {
+            return this.stateTime;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setAgentName(String agentName) {
+            this.agentName = agentName;
+            return this;
+        }
+        public String getAgentName() {
+            return this.agentName;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setCounterParty(String counterParty) {
+            this.counterParty = counterParty;
+            return this;
+        }
+        public String getCounterParty() {
+            return this.counterParty;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setSkillGroupIdList(java.util.List<String> skillGroupIdList) {
+            this.skillGroupIdList = skillGroupIdList;
+            return this;
+        }
+        public java.util.List<String> getSkillGroupIdList() {
+            return this.skillGroupIdList;
+        }
+
+    }
+
+    public static class ListRealtimeAgentStatesResponseBodyData extends TeaModel {
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        @NameInMap("List")
+        public java.util.List<ListRealtimeAgentStatesResponseBodyDataList> list;
+
+        public static ListRealtimeAgentStatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListRealtimeAgentStatesResponseBodyData self = new ListRealtimeAgentStatesResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRealtimeAgentStatesResponseBodyData setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyData setList(java.util.List<ListRealtimeAgentStatesResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListRealtimeAgentStatesResponseBodyDataList> getList() {
+            return this.list;
+        }
+
+    }
+
+}
