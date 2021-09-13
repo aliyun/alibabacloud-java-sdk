@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>nbf20210701_20105851</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>nbf20210701_20105851</name>
   <description>Alibaba Cloud NBF (20210701_20105851) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.11</version>
+      <version>0.1.12</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
