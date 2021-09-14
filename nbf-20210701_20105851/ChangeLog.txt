@@ -1,3 +1,6 @@
+2021-09-14 Version: 1.0.0-SNAPSHOT
+- First version.
+
 2021-09-13 Version: 1.0.1
 - Deploy.
 
