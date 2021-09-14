@@ -4,41 +4,33 @@ package com.aliyun.imgsearch20200320.models;
 import com.aliyun.tea.*;
 
 public class ListImageDbsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ListImageDbsResponseData data;
+    public ListImageDbsResponseBody body;
 
     public static ListImageDbsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListImageDbsResponse self = new ListImageDbsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListImageDbsResponseDataDbList extends TeaModel {
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        public static ListImageDbsResponseDataDbList build(java.util.Map<String, ?> map) throws Exception {
-            ListImageDbsResponseDataDbList self = new ListImageDbsResponseDataDbList();
-            return TeaModel.build(map, self);
-        }
-
+    public ListImageDbsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class ListImageDbsResponseData extends TeaModel {
-        @NameInMap("DbList")
-        @Validation(required = true)
-        public java.util.List<ListImageDbsResponseDataDbList> dbList;
-
-        public static ListImageDbsResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ListImageDbsResponseData self = new ListImageDbsResponseData();
-            return TeaModel.build(map, self);
-        }
-
+    public ListImageDbsResponse setBody(ListImageDbsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListImageDbsResponseBody getBody() {
+        return this.body;
     }
 
 }
