@@ -8,6 +8,14 @@ public class AscpPurchasingPurchaseOrderSupplierConfirmErpApiRequest extends Tea
     @NameInMap("purchaseOrderNo")
     public String purchaseOrderNo;
 
+    // 二级供应商ID
+    @NameInMap("supplierId")
+    public Long supplierId;
+
+    // 租户ID
+    @NameInMap("tenantId")
+    public String tenantId;
+
     // 货品行确认信息
     @NameInMap("items")
     public java.util.List<AscpPurchasingPurchaseOrderSupplierConfirmErpApiRequestItems> items;
@@ -23,6 +31,22 @@ public class AscpPurchasingPurchaseOrderSupplierConfirmErpApiRequest extends Tea
     }
     public String getPurchaseOrderNo() {
         return this.purchaseOrderNo;
+    }
+
+    public AscpPurchasingPurchaseOrderSupplierConfirmErpApiRequest setSupplierId(Long supplierId) {
+        this.supplierId = supplierId;
+        return this;
+    }
+    public Long getSupplierId() {
+        return this.supplierId;
+    }
+
+    public AscpPurchasingPurchaseOrderSupplierConfirmErpApiRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public AscpPurchasingPurchaseOrderSupplierConfirmErpApiRequest setItems(java.util.List<AscpPurchasingPurchaseOrderSupplierConfirmErpApiRequestItems> items) {
