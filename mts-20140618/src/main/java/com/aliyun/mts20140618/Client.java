@@ -1220,6 +1220,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryMediaCensorJobListWithOptions(request, runtime);
     }
 
+    public ImportFpShotJobResponse importFpShotJobWithOptions(ImportFpShotJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ImportFpShotJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new ImportFpShotJobResponse());
+    }
+
+    public ImportFpShotJobResponse importFpShotJob(ImportFpShotJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.importFpShotJobWithOptions(request, runtime);
+    }
+
     public ListPornPipelineResponse listPornPipelineWithOptions(ListPornPipelineRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2098,6 +2111,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.submitVideoSummaryJobWithOptions(request, runtime);
     }
 
+    public ImAuditResponse imAuditWithOptions(ImAuditRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ImAudit", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new ImAuditResponse());
+    }
+
+    public ImAuditResponse imAudit(ImAuditRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.imAuditWithOptions(request, runtime);
+    }
+
     public SubmitMediaDetailJobResponse submitMediaDetailJobWithOptions(SubmitMediaDetailJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2252,6 +2278,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryFpFileDeleteJobListResponse queryFpFileDeleteJobList(QueryFpFileDeleteJobListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryFpFileDeleteJobListWithOptions(request, runtime);
+    }
+
+    public QuerySmarttagJobListResponse querySmarttagJobListWithOptions(QuerySmarttagJobListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QuerySmarttagJobList", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new QuerySmarttagJobListResponse());
+    }
+
+    public QuerySmarttagJobListResponse querySmarttagJobList(QuerySmarttagJobListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.querySmarttagJobListWithOptions(request, runtime);
     }
 
     public SubmitImageSearchJobResponse submitImageSearchJobWithOptions(SubmitImageSearchJobRequest request, RuntimeOptions runtime) throws Exception {
@@ -2603,5 +2642,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PlayerAuthResponse playerAuth(PlayerAuthRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.playerAuthWithOptions(request, runtime);
+    }
+
+    public SubmitOssFileCopyJobResponse submitOssFileCopyJobWithOptions(SubmitOssFileCopyJobRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitOssFileCopyJobShrinkRequest request = new SubmitOssFileCopyJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.sourceStorage))) {
+            request.sourceStorageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.sourceStorage), "SourceStorage", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.targetStorage))) {
+            request.targetStorageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.targetStorage), "TargetStorage", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitOssFileCopyJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitOssFileCopyJobResponse());
+    }
+
+    public SubmitOssFileCopyJobResponse submitOssFileCopyJob(SubmitOssFileCopyJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitOssFileCopyJobWithOptions(request, runtime);
     }
 }
