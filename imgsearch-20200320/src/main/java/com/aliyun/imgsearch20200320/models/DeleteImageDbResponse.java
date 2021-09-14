@@ -4,13 +4,33 @@ package com.aliyun.imgsearch20200320.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageDbResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteImageDbResponseBody body;
 
     public static DeleteImageDbResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteImageDbResponse self = new DeleteImageDbResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteImageDbResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteImageDbResponse setBody(DeleteImageDbResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteImageDbResponseBody getBody() {
+        return this.body;
     }
 
 }

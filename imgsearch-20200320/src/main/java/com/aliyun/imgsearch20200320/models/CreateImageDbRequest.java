@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateImageDbRequest extends TeaModel {
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     public static CreateImageDbRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageDbRequest self = new CreateImageDbRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateImageDbRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
 }

@@ -4,29 +4,33 @@ package com.aliyun.imgsearch20200320.models;
 import com.aliyun.tea.*;
 
 public class AddImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public AddImageResponseData data;
+    public AddImageResponseBody body;
 
     public static AddImageResponse build(java.util.Map<String, ?> map) throws Exception {
         AddImageResponse self = new AddImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class AddImageResponseData extends TeaModel {
-        @NameInMap("DataId")
-        @Validation(required = true)
-        public String dataId;
+    public AddImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static AddImageResponseData build(java.util.Map<String, ?> map) throws Exception {
-            AddImageResponseData self = new AddImageResponseData();
-            return TeaModel.build(map, self);
-        }
-
+    public AddImageResponse setBody(AddImageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddImageResponseBody getBody() {
+        return this.body;
     }
 
 }
