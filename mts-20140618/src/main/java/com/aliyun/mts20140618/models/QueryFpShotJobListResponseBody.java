@@ -443,12 +443,176 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
 
+    public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment extends TeaModel {
+        @NameInMap("Start")
+        public String start;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        public static QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment build(java.util.Map<String, ?> map) throws Exception {
+            QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment self = new QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment setStart(String start) {
+            this.start = start;
+            return this;
+        }
+        public String getStart() {
+            return this.start;
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+    }
+
+    public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice extends TeaModel {
+        @NameInMap("Similarity")
+        public String similarity;
+
+        @NameInMap("InputText")
+        public String inputText;
+
+        @NameInMap("DuplicationText")
+        public String duplicationText;
+
+        @NameInMap("InputFragment")
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment inputFragment;
+
+        public static QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice build(java.util.Map<String, ?> map) throws Exception {
+            QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice self = new QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice setSimilarity(String similarity) {
+            this.similarity = similarity;
+            return this;
+        }
+        public String getSimilarity() {
+            return this.similarity;
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice setInputText(String inputText) {
+            this.inputText = inputText;
+            return this;
+        }
+        public String getInputText() {
+            return this.inputText;
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice setDuplicationText(String duplicationText) {
+            this.duplicationText = duplicationText;
+            return this;
+        }
+        public String getDuplicationText() {
+            return this.duplicationText;
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice setInputFragment(QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment inputFragment) {
+            this.inputFragment = inputFragment;
+            return this;
+        }
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSliceInputFragment getInputFragment() {
+            return this.inputFragment;
+        }
+
+    }
+
+    public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlices extends TeaModel {
+        @NameInMap("TextFpShotSlice")
+        public java.util.List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice> textFpShotSlice;
+
+        public static QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlices build(java.util.Map<String, ?> map) throws Exception {
+            QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlices self = new QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlices();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlices setTextFpShotSlice(java.util.List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice> textFpShotSlice) {
+            this.textFpShotSlice = textFpShotSlice;
+            return this;
+        }
+        public java.util.List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlicesTextFpShotSlice> getTextFpShotSlice() {
+            return this.textFpShotSlice;
+        }
+
+    }
+
+    public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot extends TeaModel {
+        @NameInMap("PrimaryKey")
+        public String primaryKey;
+
+        @NameInMap("Similarity")
+        public String similarity;
+
+        @NameInMap("TextFpShotSlices")
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlices textFpShotSlices;
+
+        public static QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot build(java.util.Map<String, ?> map) throws Exception {
+            QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot self = new QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot setPrimaryKey(String primaryKey) {
+            this.primaryKey = primaryKey;
+            return this;
+        }
+        public String getPrimaryKey() {
+            return this.primaryKey;
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot setSimilarity(String similarity) {
+            this.similarity = similarity;
+            return this;
+        }
+        public String getSimilarity() {
+            return this.similarity;
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot setTextFpShotSlices(QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlices textFpShotSlices) {
+            this.textFpShotSlices = textFpShotSlices;
+            return this;
+        }
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShotTextFpShotSlices getTextFpShotSlices() {
+            return this.textFpShotSlices;
+        }
+
+    }
+
+    public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShots extends TeaModel {
+        @NameInMap("TextFpShot")
+        public java.util.List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot> textFpShot;
+
+        public static QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShots build(java.util.Map<String, ?> map) throws Exception {
+            QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShots self = new QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShots();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShots setTextFpShot(java.util.List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot> textFpShot) {
+            this.textFpShot = textFpShot;
+            return this;
+        }
+        public java.util.List<QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShotsTextFpShot> getTextFpShot() {
+            return this.textFpShot;
+        }
+
+    }
+
     public static class QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResult extends TeaModel {
         @NameInMap("AudioFpShots")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultAudioFpShots audioFpShots;
 
         @NameInMap("FpShots")
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShots fpShots;
+
+        @NameInMap("TextFpShots")
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShots textFpShots;
 
         public static QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResult build(java.util.Map<String, ?> map) throws Exception {
             QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResult self = new QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResult();
@@ -469,6 +633,14 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         }
         public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultFpShots getFpShots() {
             return this.fpShots;
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResult setTextFpShots(QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShots textFpShots) {
+            this.textFpShots = textFpShots;
+            return this;
+        }
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJobFpShotResultTextFpShots getTextFpShots() {
+            return this.textFpShots;
         }
 
     }
