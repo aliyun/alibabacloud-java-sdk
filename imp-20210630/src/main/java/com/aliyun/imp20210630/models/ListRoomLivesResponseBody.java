@@ -70,6 +70,14 @@ public class ListRoomLivesResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        // 用户访问人次。
+        @NameInMap("Pv")
+        public Long pv;
+
+        // 在线用户数。
+        @NameInMap("OnlineCount")
+        public Long onlineCount;
+
         public static ListRoomLivesResponseBodyResultLiveList build(java.util.Map<String, ?> map) throws Exception {
             ListRoomLivesResponseBodyResultLiveList self = new ListRoomLivesResponseBodyResultLiveList();
             return TeaModel.build(map, self);
@@ -145,6 +153,22 @@ public class ListRoomLivesResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListRoomLivesResponseBodyResultLiveList setPv(Long pv) {
+            this.pv = pv;
+            return this;
+        }
+        public Long getPv() {
+            return this.pv;
+        }
+
+        public ListRoomLivesResponseBodyResultLiveList setOnlineCount(Long onlineCount) {
+            this.onlineCount = onlineCount;
+            return this;
+        }
+        public Long getOnlineCount() {
+            return this.onlineCount;
         }
 
     }

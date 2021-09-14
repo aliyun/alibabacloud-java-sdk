@@ -134,6 +134,10 @@ public class GetRoomResponseBody extends TeaModel {
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
+        // 访问用户人次。
+        @NameInMap("Pv")
+        public Long pv;
+
         public static GetRoomResponseBodyResultRoomInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRoomResponseBodyResultRoomInfo self = new GetRoomResponseBodyResultRoomInfo();
             return TeaModel.build(map, self);
@@ -225,6 +229,14 @@ public class GetRoomResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getExtension() {
             return this.extension;
+        }
+
+        public GetRoomResponseBodyResultRoomInfo setPv(Long pv) {
+            this.pv = pv;
+            return this;
+        }
+        public Long getPv() {
+            return this.pv;
         }
 
     }
