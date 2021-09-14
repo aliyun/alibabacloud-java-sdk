@@ -32,6 +32,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AddResponse add(AddRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addWithOptions(request, headers, runtime);
+    }
+
+    public AddResponse addWithOptions(AddRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.x)) {
+            query.put("x", request.x);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.y)) {
+            query.put("y", request.y);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("Add", "2021-09-14_16-39-42-8", "HTTPS", "GET", "AK", "/caiheRoaProduct/8_0_0/add", "json", req, runtime), new AddResponse());
+    }
+
     public MultiComplexResponse multiComplex(MultiComplexRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
