@@ -47,6 +47,9 @@ public class SearchFaceResponseBody extends TeaModel {
         @NameInMap("DbName")
         public String dbName;
 
+        @NameInMap("Confidence")
+        public Float confidence;
+
         public static SearchFaceResponseBodyDataMatchListFaceItems build(java.util.Map<String, ?> map) throws Exception {
             SearchFaceResponseBodyDataMatchListFaceItems self = new SearchFaceResponseBodyDataMatchListFaceItems();
             return TeaModel.build(map, self);
@@ -90,6 +93,14 @@ public class SearchFaceResponseBody extends TeaModel {
         }
         public String getDbName() {
             return this.dbName;
+        }
+
+        public SearchFaceResponseBodyDataMatchListFaceItems setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
         }
 
     }
