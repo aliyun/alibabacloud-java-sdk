@@ -7,11 +7,11 @@ public class SaveHotspotConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static SaveHotspotConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveHotspotConfigResponseBody self = new SaveHotspotConfigResponseBody();
@@ -26,20 +26,20 @@ public class SaveHotspotConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SaveHotspotConfigResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
     public SaveHotspotConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public SaveHotspotConfigResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }
