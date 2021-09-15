@@ -284,6 +284,10 @@ public class SearchCondition extends TeaModel {
     @NameInMap("sortBy")
     public String sortBy;
 
+    // 热搜标题倒排
+    @NameInMap("hotspotTitleIdx")
+    public String hotspotTitleIdx;
+
     public static SearchCondition build(java.util.Map<String, ?> map) throws Exception {
         SearchCondition self = new SearchCondition();
         return TeaModel.build(map, self);
@@ -847,6 +851,14 @@ public class SearchCondition extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public SearchCondition setHotspotTitleIdx(String hotspotTitleIdx) {
+        this.hotspotTitleIdx = hotspotTitleIdx;
+        return this;
+    }
+    public String getHotspotTitleIdx() {
+        return this.hotspotTitleIdx;
     }
 
 }

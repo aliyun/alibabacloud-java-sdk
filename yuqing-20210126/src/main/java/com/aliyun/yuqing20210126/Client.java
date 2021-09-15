@@ -64,6 +64,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("QueryAlarmDataList", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/queryAlarmDataList.json", "json", req, runtime), new QueryAlarmDataListResponse());
     }
 
+    public ListHotspotMessageResponse listHotspotMessage(ListHotspotMessageRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listHotspotMessageWithOptions(request, headers, runtime);
+    }
+
+    public ListHotspotMessageResponse listHotspotMessageWithOptions(ListHotspotMessageRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.teamHashId)) {
+            query.put("teamHashId", request.teamHashId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            query.put("requestId", request.requestId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.hotspotSearchCondition))) {
+            body.put("hotspotSearchCondition", request.hotspotSearchCondition);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequestWithForm("ListHotspotMessage", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/searchHotspotDetail.json", "json", req, runtime), new ListHotspotMessageResponse());
+    }
+
     public GetAnalysisComponentResultResponse getAnalysisComponentResult(GetAnalysisComponentResultRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
