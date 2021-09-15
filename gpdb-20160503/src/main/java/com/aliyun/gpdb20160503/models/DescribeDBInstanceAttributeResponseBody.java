@@ -1,0 +1,550 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.gpdb20160503.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Items")
+    public DescribeDBInstanceAttributeResponseBodyItems items;
+
+    public static DescribeDBInstanceAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBInstanceAttributeResponseBody self = new DescribeDBInstanceAttributeResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstanceAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBInstanceAttributeResponseBody setItems(DescribeDBInstanceAttributeResponseBodyItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeDBInstanceAttributeResponseBodyItems getItems() {
+        return this.items;
+    }
+
+    public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag> tag;
+
+        public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags setTag(java.util.List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute extends TeaModel {
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("DBInstanceCpuCores")
+        public Integer DBInstanceCpuCores;
+
+        @NameInMap("SegmentCounts")
+        public Integer segmentCounts;
+
+        @NameInMap("StoragePerNode")
+        public Integer storagePerNode;
+
+        @NameInMap("DBInstanceMemory")
+        public Long DBInstanceMemory;
+
+        @NameInMap("HostType")
+        public String hostType;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("StorageType")
+        public String storageType;
+
+        @NameInMap("CpuCoresPerNode")
+        public Integer cpuCoresPerNode;
+
+        @NameInMap("AvailabilityValue")
+        public String availabilityValue;
+
+        @NameInMap("ReadDelayTime")
+        public String readDelayTime;
+
+        @NameInMap("ConnectionMode")
+        public String connectionMode;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("LockMode")
+        public String lockMode;
+
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
+        @NameInMap("StorageUnit")
+        public String storageUnit;
+
+        @NameInMap("MemoryPerNode")
+        public Integer memoryPerNode;
+
+        @NameInMap("ConnectionString")
+        public String connectionString;
+
+        @NameInMap("InstanceNetworkType")
+        public String instanceNetworkType;
+
+        @NameInMap("SecurityIPList")
+        public String securityIPList;
+
+        @NameInMap("MemoryUnit")
+        public String memoryUnit;
+
+        @NameInMap("DBInstanceClassType")
+        public String DBInstanceClassType;
+
+        @NameInMap("DBInstanceDescription")
+        public String DBInstanceDescription;
+
+        @NameInMap("DBInstanceGroupCount")
+        public String DBInstanceGroupCount;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("DBInstanceNetType")
+        public String DBInstanceNetType;
+
+        @NameInMap("MaintainStartTime")
+        public String maintainStartTime;
+
+        @NameInMap("MaintainEndTime")
+        public String maintainEndTime;
+
+        @NameInMap("LockReason")
+        public String lockReason;
+
+        @NameInMap("DBInstanceStatus")
+        public String DBInstanceStatus;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("DBInstanceDiskMBPS")
+        public Long DBInstanceDiskMBPS;
+
+        @NameInMap("DBInstanceStorage")
+        public Long DBInstanceStorage;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        @NameInMap("MaxConnections")
+        public Integer maxConnections;
+
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
+        @NameInMap("DBInstanceClass")
+        public String DBInstanceClass;
+
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("Tags")
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags tags;
+
+        public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceCpuCores(Integer DBInstanceCpuCores) {
+            this.DBInstanceCpuCores = DBInstanceCpuCores;
+            return this;
+        }
+        public Integer getDBInstanceCpuCores() {
+            return this.DBInstanceCpuCores;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setSegmentCounts(Integer segmentCounts) {
+            this.segmentCounts = segmentCounts;
+            return this;
+        }
+        public Integer getSegmentCounts() {
+            return this.segmentCounts;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setStoragePerNode(Integer storagePerNode) {
+            this.storagePerNode = storagePerNode;
+            return this;
+        }
+        public Integer getStoragePerNode() {
+            return this.storagePerNode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceMemory(Long DBInstanceMemory) {
+            this.DBInstanceMemory = DBInstanceMemory;
+            return this;
+        }
+        public Long getDBInstanceMemory() {
+            return this.DBInstanceMemory;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setHostType(String hostType) {
+            this.hostType = hostType;
+            return this;
+        }
+        public String getHostType() {
+            return this.hostType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCpuCoresPerNode(Integer cpuCoresPerNode) {
+            this.cpuCoresPerNode = cpuCoresPerNode;
+            return this;
+        }
+        public Integer getCpuCoresPerNode() {
+            return this.cpuCoresPerNode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setAvailabilityValue(String availabilityValue) {
+            this.availabilityValue = availabilityValue;
+            return this;
+        }
+        public String getAvailabilityValue() {
+            return this.availabilityValue;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setReadDelayTime(String readDelayTime) {
+            this.readDelayTime = readDelayTime;
+            return this;
+        }
+        public String getReadDelayTime() {
+            return this.readDelayTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setConnectionMode(String connectionMode) {
+            this.connectionMode = connectionMode;
+            return this;
+        }
+        public String getConnectionMode() {
+            return this.connectionMode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setLockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+        public String getLockMode() {
+            return this.lockMode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setStorageUnit(String storageUnit) {
+            this.storageUnit = storageUnit;
+            return this;
+        }
+        public String getStorageUnit() {
+            return this.storageUnit;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMemoryPerNode(Integer memoryPerNode) {
+            this.memoryPerNode = memoryPerNode;
+            return this;
+        }
+        public Integer getMemoryPerNode() {
+            return this.memoryPerNode;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setConnectionString(String connectionString) {
+            this.connectionString = connectionString;
+            return this;
+        }
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setInstanceNetworkType(String instanceNetworkType) {
+            this.instanceNetworkType = instanceNetworkType;
+            return this;
+        }
+        public String getInstanceNetworkType() {
+            return this.instanceNetworkType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setSecurityIPList(String securityIPList) {
+            this.securityIPList = securityIPList;
+            return this;
+        }
+        public String getSecurityIPList() {
+            return this.securityIPList;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMemoryUnit(String memoryUnit) {
+            this.memoryUnit = memoryUnit;
+            return this;
+        }
+        public String getMemoryUnit() {
+            return this.memoryUnit;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceClassType(String DBInstanceClassType) {
+            this.DBInstanceClassType = DBInstanceClassType;
+            return this;
+        }
+        public String getDBInstanceClassType() {
+            return this.DBInstanceClassType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
+            return this;
+        }
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceGroupCount(String DBInstanceGroupCount) {
+            this.DBInstanceGroupCount = DBInstanceGroupCount;
+            return this;
+        }
+        public String getDBInstanceGroupCount() {
+            return this.DBInstanceGroupCount;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceNetType(String DBInstanceNetType) {
+            this.DBInstanceNetType = DBInstanceNetType;
+            return this;
+        }
+        public String getDBInstanceNetType() {
+            return this.DBInstanceNetType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMaintainStartTime(String maintainStartTime) {
+            this.maintainStartTime = maintainStartTime;
+            return this;
+        }
+        public String getMaintainStartTime() {
+            return this.maintainStartTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMaintainEndTime(String maintainEndTime) {
+            this.maintainEndTime = maintainEndTime;
+            return this;
+        }
+        public String getMaintainEndTime() {
+            return this.maintainEndTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceStatus(String DBInstanceStatus) {
+            this.DBInstanceStatus = DBInstanceStatus;
+            return this;
+        }
+        public String getDBInstanceStatus() {
+            return this.DBInstanceStatus;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceDiskMBPS(Long DBInstanceDiskMBPS) {
+            this.DBInstanceDiskMBPS = DBInstanceDiskMBPS;
+            return this;
+        }
+        public Long getDBInstanceDiskMBPS() {
+            return this.DBInstanceDiskMBPS;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceStorage(Long DBInstanceStorage) {
+            this.DBInstanceStorage = DBInstanceStorage;
+            return this;
+        }
+        public Long getDBInstanceStorage() {
+            return this.DBInstanceStorage;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMaxConnections(Integer maxConnections) {
+            this.maxConnections = maxConnections;
+            return this;
+        }
+        public Integer getMaxConnections() {
+            return this.maxConnections;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setDBInstanceClass(String DBInstanceClass) {
+            this.DBInstanceClass = DBInstanceClass;
+            return this;
+        }
+        public String getDBInstanceClass() {
+            return this.DBInstanceClass;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setTags(DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeTags getTags() {
+            return this.tags;
+        }
+
+    }
+
+    public static class DescribeDBInstanceAttributeResponseBodyItems extends TeaModel {
+        @NameInMap("DBInstanceAttribute")
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute> DBInstanceAttribute;
+
+        public static DescribeDBInstanceAttributeResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyItems self = new DescribeDBInstanceAttributeResponseBodyItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItems setDBInstanceAttribute(java.util.List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute> DBInstanceAttribute) {
+            this.DBInstanceAttribute = DBInstanceAttribute;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute> getDBInstanceAttribute() {
+            return this.DBInstanceAttribute;
+        }
+
+    }
+
+}
