@@ -17,6 +17,15 @@ public class AddFaceAdvanceRequest extends TeaModel {
     @NameInMap("ExtraData")
     public String extraData;
 
+    @NameInMap("QualityScoreThreshold")
+    public Float qualityScoreThreshold;
+
+    @NameInMap("SimilarityScoreThresholdInEntity")
+    public Float similarityScoreThresholdInEntity;
+
+    @NameInMap("SimilarityScoreThresholdBetweenEntity")
+    public Float similarityScoreThresholdBetweenEntity;
+
     public static AddFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddFaceAdvanceRequest self = new AddFaceAdvanceRequest();
         return TeaModel.build(map, self);
@@ -52,6 +61,30 @@ public class AddFaceAdvanceRequest extends TeaModel {
     }
     public String getExtraData() {
         return this.extraData;
+    }
+
+    public AddFaceAdvanceRequest setQualityScoreThreshold(Float qualityScoreThreshold) {
+        this.qualityScoreThreshold = qualityScoreThreshold;
+        return this;
+    }
+    public Float getQualityScoreThreshold() {
+        return this.qualityScoreThreshold;
+    }
+
+    public AddFaceAdvanceRequest setSimilarityScoreThresholdInEntity(Float similarityScoreThresholdInEntity) {
+        this.similarityScoreThresholdInEntity = similarityScoreThresholdInEntity;
+        return this;
+    }
+    public Float getSimilarityScoreThresholdInEntity() {
+        return this.similarityScoreThresholdInEntity;
+    }
+
+    public AddFaceAdvanceRequest setSimilarityScoreThresholdBetweenEntity(Float similarityScoreThresholdBetweenEntity) {
+        this.similarityScoreThresholdBetweenEntity = similarityScoreThresholdBetweenEntity;
+        return this;
+    }
+    public Float getSimilarityScoreThresholdBetweenEntity() {
+        return this.similarityScoreThresholdBetweenEntity;
     }
 
 }

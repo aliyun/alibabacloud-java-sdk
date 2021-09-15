@@ -16,6 +16,9 @@ public class SearchFaceRequest extends TeaModel {
     @NameInMap("DbNames")
     public String dbNames;
 
+    @NameInMap("QualityScoreThreshold")
+    public Float qualityScoreThreshold;
+
     public static SearchFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchFaceRequest self = new SearchFaceRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SearchFaceRequest extends TeaModel {
     }
     public String getDbNames() {
         return this.dbNames;
+    }
+
+    public SearchFaceRequest setQualityScoreThreshold(Float qualityScoreThreshold) {
+        this.qualityScoreThreshold = qualityScoreThreshold;
+        return this;
+    }
+    public Float getQualityScoreThreshold() {
+        return this.qualityScoreThreshold;
     }
 
 }
