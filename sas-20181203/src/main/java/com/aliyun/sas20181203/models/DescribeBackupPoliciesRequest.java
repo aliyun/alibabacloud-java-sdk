@@ -4,12 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPoliciesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("Name")
     public String name;
 
@@ -28,22 +22,6 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
     public static DescribeBackupPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPoliciesRequest self = new DescribeBackupPoliciesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupPoliciesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeBackupPoliciesRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescribeBackupPoliciesRequest setName(String name) {

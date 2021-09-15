@@ -10,12 +10,6 @@ public class OperateVulsRequest extends TeaModel {
     @NameInMap("OperateType")
     public String operateType;
 
-    @NameInMap("Reason")
-    public String reason;
-
-    @NameInMap("Precondition")
-    public Integer precondition;
-
     @NameInMap("VulNames")
     public java.util.List<String> vulNames;
 
@@ -41,22 +35,6 @@ public class OperateVulsRequest extends TeaModel {
     }
     public String getOperateType() {
         return this.operateType;
-    }
-
-    public OperateVulsRequest setReason(String reason) {
-        this.reason = reason;
-        return this;
-    }
-    public String getReason() {
-        return this.reason;
-    }
-
-    public OperateVulsRequest setPrecondition(Integer precondition) {
-        this.precondition = precondition;
-        return this;
-    }
-    public Integer getPrecondition() {
-        return this.precondition;
     }
 
     public OperateVulsRequest setVulNames(java.util.List<String> vulNames) {

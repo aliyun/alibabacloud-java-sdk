@@ -4,12 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateRestoreJobRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("Uuid")
     public String uuid;
 
@@ -37,22 +31,6 @@ public class CreateRestoreJobRequest extends TeaModel {
     public static CreateRestoreJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRestoreJobRequest self = new CreateRestoreJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateRestoreJobRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public CreateRestoreJobRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public CreateRestoreJobRequest setUuid(String uuid) {

@@ -129,13 +129,10 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         public Integer percentage;
 
         @NameInMap("GmtModified")
-        public Long gmtModified;
+        public String gmtModified;
 
         @NameInMap("RestoreType")
         public String restoreType;
-
-        @NameInMap("Extra")
-        public String extra;
 
         @NameInMap("ExitCode")
         public String exitCode;
@@ -214,9 +211,6 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
 
         @NameInMap("ItemsTotal")
         public Long itemsTotal;
-
-        @NameInMap("Id")
-        public Long id;
 
         @NameInMap("BytesDone")
         public Long bytesDone;
@@ -314,11 +308,11 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
             return this.percentage;
         }
 
-        public DescribeRestoreJobsResponseBodyRestoreJobs setGmtModified(Long gmtModified) {
+        public DescribeRestoreJobsResponseBodyRestoreJobs setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
-        public Long getGmtModified() {
+        public String getGmtModified() {
             return this.gmtModified;
         }
 
@@ -328,14 +322,6 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
         public String getRestoreType() {
             return this.restoreType;
-        }
-
-        public DescribeRestoreJobsResponseBodyRestoreJobs setExtra(String extra) {
-            this.extra = extra;
-            return this;
-        }
-        public String getExtra() {
-            return this.extra;
         }
 
         public DescribeRestoreJobsResponseBodyRestoreJobs setExitCode(String exitCode) {
@@ -544,14 +530,6 @@ public class DescribeRestoreJobsResponseBody extends TeaModel {
         }
         public Long getItemsTotal() {
             return this.itemsTotal;
-        }
-
-        public DescribeRestoreJobsResponseBodyRestoreJobs setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
         }
 
         public DescribeRestoreJobsResponseBodyRestoreJobs setBytesDone(Long bytesDone) {

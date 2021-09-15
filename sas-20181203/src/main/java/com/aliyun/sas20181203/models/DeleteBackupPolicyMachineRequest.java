@@ -4,12 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupPolicyMachineRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("Uuid")
     public String uuid;
 
@@ -25,22 +19,6 @@ public class DeleteBackupPolicyMachineRequest extends TeaModel {
     public static DeleteBackupPolicyMachineRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteBackupPolicyMachineRequest self = new DeleteBackupPolicyMachineRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteBackupPolicyMachineRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DeleteBackupPolicyMachineRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DeleteBackupPolicyMachineRequest setUuid(String uuid) {

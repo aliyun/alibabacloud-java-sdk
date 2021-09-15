@@ -4,12 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreJobsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("Status")
     public String status;
 
@@ -25,22 +19,6 @@ public class DescribeRestoreJobsRequest extends TeaModel {
     public static DescribeRestoreJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRestoreJobsRequest self = new DescribeRestoreJobsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRestoreJobsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeRestoreJobsRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescribeRestoreJobsRequest setStatus(String status) {

@@ -628,17 +628,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeBackupPolicyWithOptions(request, runtime);
     }
 
-    public DescribeBackupRestoreCountResponse describeBackupRestoreCountWithOptions(DescribeBackupRestoreCountRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
+    public DescribeBackupRestoreCountResponse describeBackupRestoreCountWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
         return TeaModel.toModel(this.doRPCRequest("DescribeBackupRestoreCount", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeBackupRestoreCountResponse());
     }
 
-    public DescribeBackupRestoreCountResponse describeBackupRestoreCount(DescribeBackupRestoreCountRequest request) throws Exception {
+    public DescribeBackupRestoreCountResponse describeBackupRestoreCount() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeBackupRestoreCountWithOptions(request, runtime);
+        return this.describeBackupRestoreCountWithOptions(runtime);
     }
 
     public DescribeBruteForceSummaryResponse describeBruteForceSummaryWithOptions(DescribeBruteForceSummaryRequest request, RuntimeOptions runtime) throws Exception {
@@ -1670,17 +1667,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeSummaryInfoWithOptions(request, runtime);
     }
 
-    public DescribeSupportRegionResponse describeSupportRegionWithOptions(DescribeSupportRegionRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
+    public DescribeSupportRegionResponse describeSupportRegionWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
         return TeaModel.toModel(this.doRPCRequest("DescribeSupportRegion", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSupportRegionResponse());
     }
 
-    public DescribeSupportRegionResponse describeSupportRegion(DescribeSupportRegionRequest request) throws Exception {
+    public DescribeSupportRegionResponse describeSupportRegion() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeSupportRegionWithOptions(request, runtime);
+        return this.describeSupportRegionWithOptions(runtime);
     }
 
     public DescribeSuspEventDetailResponse describeSuspEventDetailWithOptions(DescribeSuspEventDetailRequest request, RuntimeOptions runtime) throws Exception {
@@ -1794,17 +1788,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeUniSupportRegionWithOptions(runtime);
     }
 
-    public DescribeUserBackupMachinesResponse describeUserBackupMachinesWithOptions(DescribeUserBackupMachinesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
+    public DescribeUserBackupMachinesResponse describeUserBackupMachinesWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
         return TeaModel.toModel(this.doRPCRequest("DescribeUserBackupMachines", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUserBackupMachinesResponse());
     }
 
-    public DescribeUserBackupMachinesResponse describeUserBackupMachines(DescribeUserBackupMachinesRequest request) throws Exception {
+    public DescribeUserBackupMachinesResponse describeUserBackupMachines() throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeUserBackupMachinesWithOptions(request, runtime);
+        return this.describeUserBackupMachinesWithOptions(runtime);
     }
 
     public DescribeUserBaselineAuthorizationResponse describeUserBaselineAuthorizationWithOptions(DescribeUserBaselineAuthorizationRequest request, RuntimeOptions runtime) throws Exception {
@@ -2579,6 +2570,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyWebLockUpdateConfigResponse modifyWebLockUpdateConfig(ModifyWebLockUpdateConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyWebLockUpdateConfigWithOptions(request, runtime);
+    }
+
+    public OperateAgentClientInstallResponse operateAgentClientInstallWithOptions(OperateAgentClientInstallRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("OperateAgentClientInstall", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new OperateAgentClientInstallResponse());
+    }
+
+    public OperateAgentClientInstallResponse operateAgentClientInstall(OperateAgentClientInstallRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.operateAgentClientInstallWithOptions(request, runtime);
     }
 
     public OperateSuspiciousTargetConfigResponse operateSuspiciousTargetConfigWithOptions(OperateSuspiciousTargetConfigRequest request, RuntimeOptions runtime) throws Exception {

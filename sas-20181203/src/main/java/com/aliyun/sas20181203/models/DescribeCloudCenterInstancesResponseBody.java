@@ -142,6 +142,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("Flag")
         public Integer flag;
 
+        @NameInMap("LastLoginTimestamp")
+        public Long lastLoginTimestamp;
+
         @NameInMap("AuthVersion")
         public Integer authVersion;
 
@@ -343,6 +346,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public Integer getFlag() {
             return this.flag;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setLastLoginTimestamp(Long lastLoginTimestamp) {
+            this.lastLoginTimestamp = lastLoginTimestamp;
+            return this;
+        }
+        public Long getLastLoginTimestamp() {
+            return this.lastLoginTimestamp;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setAuthVersion(Integer authVersion) {

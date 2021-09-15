@@ -22,6 +22,9 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("CheckId")
+    public Long checkId;
+
     public static DescribeCheckWarningsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCheckWarningsRequest self = new DescribeCheckWarningsRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class DescribeCheckWarningsRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeCheckWarningsRequest setCheckId(Long checkId) {
+        this.checkId = checkId;
+        return this;
+    }
+    public Long getCheckId() {
+        return this.checkId;
     }
 
 }
