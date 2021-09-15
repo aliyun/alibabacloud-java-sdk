@@ -1,3 +1,6 @@
+2021-09-15 Version: 1.0.2
+- Add tenantId and supplierId.
+
 2021-09-14 Version: 1.0.0-SNAPSHOT
 - First version.
 
