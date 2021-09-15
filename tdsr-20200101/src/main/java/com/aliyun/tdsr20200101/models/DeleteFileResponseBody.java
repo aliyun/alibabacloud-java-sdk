@@ -7,11 +7,11 @@ public class DeleteFileResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static DeleteFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteFileResponseBody self = new DeleteFileResponseBody();
@@ -26,20 +26,20 @@ public class DeleteFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteFileResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
     public DeleteFileResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DeleteFileResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

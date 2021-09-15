@@ -671,19 +671,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.predictionWallLineWithOptions(request, runtime);
     }
 
-    public GetPolicyResponse getPolicyWithOptions(GetPolicyRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetPolicy", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetPolicyResponse());
-    }
-
-    public GetPolicyResponse getPolicy(GetPolicyRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getPolicyWithOptions(request, runtime);
-    }
-
     public GetScenePreviewInfoResponse getScenePreviewInfoWithOptions(GetScenePreviewInfoRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -695,6 +682,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetScenePreviewInfoResponse getScenePreviewInfo(GetScenePreviewInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getScenePreviewInfoWithOptions(request, runtime);
+    }
+
+    public GetPolicyResponse getPolicyWithOptions(GetPolicyRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetPolicy", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetPolicyResponse());
+    }
+
+    public GetPolicyResponse getPolicy(GetPolicyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getPolicyWithOptions(request, runtime);
     }
 
     public AddSubSceneResponse addSubSceneWithOptions(AddSubSceneRequest request, RuntimeOptions runtime) throws Exception {

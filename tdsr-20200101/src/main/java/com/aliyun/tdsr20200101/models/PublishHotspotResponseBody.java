@@ -4,29 +4,21 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class PublishHotspotResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     public static PublishHotspotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PublishHotspotResponseBody self = new PublishHotspotResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public PublishHotspotResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public PublishHotspotResponseBody setData(java.util.Map<String, ?> data) {
@@ -37,12 +29,12 @@ public class PublishHotspotResponseBody extends TeaModel {
         return this.data;
     }
 
-    public PublishHotspotResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public PublishHotspotResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PublishHotspotResponseBody setSuccess(Boolean success) {
@@ -51,6 +43,14 @@ public class PublishHotspotResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public PublishHotspotResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }
