@@ -17,7 +17,7 @@ public class StartBaselineSecurityCheckRequest extends TeaModel {
     public String type;
 
     @NameInMap("ItemIds")
-    public java.util.List<Integer> itemIds;
+    public java.util.List<Long> itemIds;
 
     public static StartBaselineSecurityCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         StartBaselineSecurityCheckRequest self = new StartBaselineSecurityCheckRequest();
@@ -56,11 +56,11 @@ public class StartBaselineSecurityCheckRequest extends TeaModel {
         return this.type;
     }
 
-    public StartBaselineSecurityCheckRequest setItemIds(java.util.List<Integer> itemIds) {
+    public StartBaselineSecurityCheckRequest setItemIds(java.util.List<Long> itemIds) {
         this.itemIds = itemIds;
         return this;
     }
-    public java.util.List<Integer> getItemIds() {
+    public java.util.List<Long> getItemIds() {
         return this.itemIds;
     }
 

@@ -71,6 +71,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        @NameInMap("PauseInstanceCount")
+        public Integer pauseInstanceCount;
+
         @NameInMap("IdcInstanceCount")
         public Integer idcInstanceCount;
 
@@ -190,6 +193,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
         public Integer getInstanceCount() {
             return this.instanceCount;
+        }
+
+        public DescribeFieldStatisticsResponseBodyGroupedFields setPauseInstanceCount(Integer pauseInstanceCount) {
+            this.pauseInstanceCount = pauseInstanceCount;
+            return this;
+        }
+        public Integer getPauseInstanceCount() {
+            return this.pauseInstanceCount;
         }
 
         public DescribeFieldStatisticsResponseBodyGroupedFields setIdcInstanceCount(Integer idcInstanceCount) {

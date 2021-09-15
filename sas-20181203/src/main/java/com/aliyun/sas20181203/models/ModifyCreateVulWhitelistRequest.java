@@ -10,6 +10,9 @@ public class ModifyCreateVulWhitelistRequest extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
+    @NameInMap("TargetInfo")
+    public String targetInfo;
+
     public static ModifyCreateVulWhitelistRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCreateVulWhitelistRequest self = new ModifyCreateVulWhitelistRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ModifyCreateVulWhitelistRequest extends TeaModel {
     }
     public String getReason() {
         return this.reason;
+    }
+
+    public ModifyCreateVulWhitelistRequest setTargetInfo(String targetInfo) {
+        this.targetInfo = targetInfo;
+        return this;
+    }
+    public String getTargetInfo() {
+        return this.targetInfo;
     }
 
 }

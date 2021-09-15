@@ -4,12 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExcludeSystemPathRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,22 +13,6 @@ public class DescribeExcludeSystemPathRequest extends TeaModel {
     public static DescribeExcludeSystemPathRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExcludeSystemPathRequest self = new DescribeExcludeSystemPathRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeExcludeSystemPathRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeExcludeSystemPathRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DescribeExcludeSystemPathRequest setPageSize(Integer pageSize) {

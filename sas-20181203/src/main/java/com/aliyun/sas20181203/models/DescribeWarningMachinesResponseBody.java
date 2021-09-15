@@ -79,23 +79,8 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        @NameInMap("LowWarningCount")
-        public Integer lowWarningCount;
-
-        @NameInMap("Uuid")
-        public String uuid;
-
-        @NameInMap("MediumWarningCount")
-        public Integer mediumWarningCount;
-
-        @NameInMap("PassCount")
-        public Integer passCount;
-
         @NameInMap("InternetIp")
         public String internetIp;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -108,6 +93,24 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("LowWarningCount")
+        public Integer lowWarningCount;
+
+        @NameInMap("PortOpen")
+        public Boolean portOpen;
+
+        @NameInMap("Uuid")
+        public String uuid;
+
+        @NameInMap("MediumWarningCount")
+        public Integer mediumWarningCount;
+
+        @NameInMap("PassCount")
+        public Integer passCount;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
 
         public static DescribeWarningMachinesResponseBodyWarningMachines build(java.util.Map<String, ?> map) throws Exception {
             DescribeWarningMachinesResponseBodyWarningMachines self = new DescribeWarningMachinesResponseBodyWarningMachines();
@@ -122,52 +125,12 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeWarningMachinesResponseBodyWarningMachines setLowWarningCount(Integer lowWarningCount) {
-            this.lowWarningCount = lowWarningCount;
-            return this;
-        }
-        public Integer getLowWarningCount() {
-            return this.lowWarningCount;
-        }
-
-        public DescribeWarningMachinesResponseBodyWarningMachines setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
-        }
-
-        public DescribeWarningMachinesResponseBodyWarningMachines setMediumWarningCount(Integer mediumWarningCount) {
-            this.mediumWarningCount = mediumWarningCount;
-            return this;
-        }
-        public Integer getMediumWarningCount() {
-            return this.mediumWarningCount;
-        }
-
-        public DescribeWarningMachinesResponseBodyWarningMachines setPassCount(Integer passCount) {
-            this.passCount = passCount;
-            return this;
-        }
-        public Integer getPassCount() {
-            return this.passCount;
-        }
-
         public DescribeWarningMachinesResponseBodyWarningMachines setInternetIp(String internetIp) {
             this.internetIp = internetIp;
             return this;
         }
         public String getInternetIp() {
             return this.internetIp;
-        }
-
-        public DescribeWarningMachinesResponseBodyWarningMachines setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
         }
 
         public DescribeWarningMachinesResponseBodyWarningMachines setInstanceId(String instanceId) {
@@ -200,6 +163,54 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setLowWarningCount(Integer lowWarningCount) {
+            this.lowWarningCount = lowWarningCount;
+            return this;
+        }
+        public Integer getLowWarningCount() {
+            return this.lowWarningCount;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setPortOpen(Boolean portOpen) {
+            this.portOpen = portOpen;
+            return this;
+        }
+        public Boolean getPortOpen() {
+            return this.portOpen;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setMediumWarningCount(Integer mediumWarningCount) {
+            this.mediumWarningCount = mediumWarningCount;
+            return this;
+        }
+        public Integer getMediumWarningCount() {
+            return this.mediumWarningCount;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setPassCount(Integer passCount) {
+            this.passCount = passCount;
+            return this;
+        }
+        public Integer getPassCount() {
+            return this.passCount;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
     }

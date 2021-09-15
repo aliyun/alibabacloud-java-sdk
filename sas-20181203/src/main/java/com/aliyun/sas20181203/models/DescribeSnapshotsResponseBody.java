@@ -124,26 +124,11 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("VaultId")
         public String vaultId;
 
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        @NameInMap("BackupType")
-        public String backupType;
-
         @NameInMap("ActualBytes")
         public Long actualBytes;
 
-        @NameInMap("Prefix")
-        public String prefix;
-
         @NameInMap("SourceType")
         public String sourceType;
-
-        @NameInMap("Extra")
-        public String extra;
-
-        @NameInMap("ServerId")
-        public String serverId;
 
         @NameInMap("ExitCode")
         public String exitCode;
@@ -157,9 +142,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("BytesTotal")
         public Long bytesTotal;
 
-        @NameInMap("CompleteTime")
-        public Long completeTime;
-
         @NameInMap("Retention")
         public Long retention;
 
@@ -169,14 +151,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        @NameInMap("Bucket")
-        public String bucket;
-
         @NameInMap("ParentSnapshotHash")
         public String parentSnapshotHash;
-
-        @NameInMap("MachineInfoJson")
-        public String machineInfoJson;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -190,14 +166,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("FileSystemId")
-        public String fileSystemId;
-
         @NameInMap("ParentHash")
         public String parentHash;
-
-        @NameInMap("StartTime")
-        public Long startTime;
 
         @NameInMap("Uuid")
         public String uuid;
@@ -213,9 +183,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         @NameInMap("SnapshotOption")
         public String snapshotOption;
-
-        @NameInMap("UpdatedTime")
-        public Long updatedTime;
 
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -297,22 +264,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.vaultId;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setBackupType(String backupType) {
-            this.backupType = backupType;
-            return this;
-        }
-        public String getBackupType() {
-            return this.backupType;
-        }
-
         public DescribeSnapshotsResponseBodySnapshots setActualBytes(Long actualBytes) {
             this.actualBytes = actualBytes;
             return this;
@@ -321,36 +272,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.actualBytes;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setPrefix(String prefix) {
-            this.prefix = prefix;
-            return this;
-        }
-        public String getPrefix() {
-            return this.prefix;
-        }
-
         public DescribeSnapshotsResponseBodySnapshots setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
         public String getSourceType() {
             return this.sourceType;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setExtra(String extra) {
-            this.extra = extra;
-            return this;
-        }
-        public String getExtra() {
-            return this.extra;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setServerId(String serverId) {
-            this.serverId = serverId;
-            return this;
-        }
-        public String getServerId() {
-            return this.serverId;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setExitCode(String exitCode) {
@@ -385,14 +312,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.bytesTotal;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setCompleteTime(Long completeTime) {
-            this.completeTime = completeTime;
-            return this;
-        }
-        public Long getCompleteTime() {
-            return this.completeTime;
-        }
-
         public DescribeSnapshotsResponseBodySnapshots setRetention(Long retention) {
             this.retention = retention;
             return this;
@@ -417,28 +336,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.createdTime;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
         public DescribeSnapshotsResponseBodySnapshots setParentSnapshotHash(String parentSnapshotHash) {
             this.parentSnapshotHash = parentSnapshotHash;
             return this;
         }
         public String getParentSnapshotHash() {
             return this.parentSnapshotHash;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setMachineInfoJson(String machineInfoJson) {
-            this.machineInfoJson = machineInfoJson;
-            return this;
-        }
-        public String getMachineInfoJson() {
-            return this.machineInfoJson;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setInstanceId(String instanceId) {
@@ -473,28 +376,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setFileSystemId(String fileSystemId) {
-            this.fileSystemId = fileSystemId;
-            return this;
-        }
-        public String getFileSystemId() {
-            return this.fileSystemId;
-        }
-
         public DescribeSnapshotsResponseBodySnapshots setParentHash(String parentHash) {
             this.parentHash = parentHash;
             return this;
         }
         public String getParentHash() {
             return this.parentHash;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setUuid(String uuid) {
@@ -535,14 +422,6 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getSnapshotOption() {
             return this.snapshotOption;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setUpdatedTime(Long updatedTime) {
-            this.updatedTime = updatedTime;
-            return this;
-        }
-        public Long getUpdatedTime() {
-            return this.updatedTime;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setSnapshotId(String snapshotId) {

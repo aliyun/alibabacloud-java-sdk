@@ -153,29 +153,14 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("VaultId")
-        public String vaultId;
-
-        @NameInMap("Jobs")
-        public String jobs;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("ClientStatus")
-        public String clientStatus;
-
-        @NameInMap("ClientId")
-        public String clientId;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("Uuid")
         public String uuid;
 
         @NameInMap("RequestId")
         public String requestId;
+
+        @NameInMap("VaultId")
+        public String vaultId;
 
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -183,8 +168,20 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         @NameInMap("SavedBackupCount")
         public Integer savedBackupCount;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("ClientStatus")
+        public String clientStatus;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ClientVersion")
         public String clientVersion;
+
+        @NameInMap("ClientId")
+        public String clientId;
 
         @NameInMap("ErrorList")
         public java.util.List<DescribeBackupMachineStatusResponseBodyBackupMachineStatusErrorList> errorList;
@@ -200,54 +197,6 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setVaultId(String vaultId) {
-            this.vaultId = vaultId;
-            return this;
-        }
-        public String getVaultId() {
-            return this.vaultId;
-        }
-
-        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setJobs(String jobs) {
-            this.jobs = jobs;
-            return this;
-        }
-        public String getJobs() {
-            return this.jobs;
-        }
-
-        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setClientStatus(String clientStatus) {
-            this.clientStatus = clientStatus;
-            return this;
-        }
-        public String getClientStatus() {
-            return this.clientStatus;
-        }
-
-        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setClientId(String clientId) {
-            this.clientId = clientId;
-            return this;
-        }
-        public String getClientId() {
-            return this.clientId;
-        }
-
-        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setUuid(String uuid) {
@@ -266,6 +215,14 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             return this.requestId;
         }
 
+        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setVaultId(String vaultId) {
+            this.vaultId = vaultId;
+            return this;
+        }
+        public String getVaultId() {
+            return this.vaultId;
+        }
+
         public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
@@ -282,12 +239,44 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             return this.savedBackupCount;
         }
 
+        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setClientStatus(String clientStatus) {
+            this.clientStatus = clientStatus;
+            return this;
+        }
+        public String getClientStatus() {
+            return this.clientStatus;
+        }
+
+        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setClientVersion(String clientVersion) {
             this.clientVersion = clientVersion;
             return this;
         }
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+        public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setClientId(String clientId) {
+            this.clientId = clientId;
+            return this;
+        }
+        public String getClientId() {
+            return this.clientId;
         }
 
         public DescribeBackupMachineStatusResponseBodyBackupMachineStatus setErrorList(java.util.List<DescribeBackupMachineStatusResponseBodyBackupMachineStatusErrorList> errorList) {

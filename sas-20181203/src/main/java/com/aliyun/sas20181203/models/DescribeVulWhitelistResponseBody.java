@@ -68,6 +68,9 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("TargetInfo")
+        public String targetInfo;
+
         @NameInMap("AliasName")
         public String aliasName;
 
@@ -76,6 +79,9 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
 
         @NameInMap("Reason")
         public String reason;
+
+        @NameInMap("Id")
+        public String id;
 
         public static DescribeVulWhitelistResponseBodyVulWhitelists build(java.util.Map<String, ?> map) throws Exception {
             DescribeVulWhitelistResponseBodyVulWhitelists self = new DescribeVulWhitelistResponseBodyVulWhitelists();
@@ -88,6 +94,14 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public DescribeVulWhitelistResponseBodyVulWhitelists setTargetInfo(String targetInfo) {
+            this.targetInfo = targetInfo;
+            return this;
+        }
+        public String getTargetInfo() {
+            return this.targetInfo;
         }
 
         public DescribeVulWhitelistResponseBodyVulWhitelists setAliasName(String aliasName) {
@@ -112,6 +126,14 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public DescribeVulWhitelistResponseBodyVulWhitelists setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

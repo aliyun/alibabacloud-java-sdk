@@ -101,9 +101,6 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         @NameInMap("Os")
         public String os;
 
-        @NameInMap("Id")
-        public Long id;
-
         public static DescribeExcludeSystemPathResponseBodyExcludePaths build(java.util.Map<String, ?> map) throws Exception {
             DescribeExcludeSystemPathResponseBodyExcludePaths self = new DescribeExcludeSystemPathResponseBodyExcludePaths();
             return TeaModel.build(map, self);
@@ -123,14 +120,6 @@ public class DescribeExcludeSystemPathResponseBody extends TeaModel {
         }
         public String getOs() {
             return this.os;
-        }
-
-        public DescribeExcludeSystemPathResponseBodyExcludePaths setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
         }
 
     }
