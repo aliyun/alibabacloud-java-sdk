@@ -40,6 +40,9 @@ public class SubmitMediaCensorJobRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("ExternalUrl")
+    public String externalUrl;
+
     public static SubmitMediaCensorJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitMediaCensorJobRequest self = new SubmitMediaCensorJobRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class SubmitMediaCensorJobRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public SubmitMediaCensorJobRequest setExternalUrl(String externalUrl) {
+        this.externalUrl = externalUrl;
+        return this;
+    }
+    public String getExternalUrl() {
+        return this.externalUrl;
     }
 
 }

@@ -2523,6 +2523,10 @@ public class QueryJobListResponseBody extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
+        // 扩展字段
+        @NameInMap("ExtendData")
+        public String extendData;
+
         @NameInMap("OutSubtitleList")
         public QueryJobListResponseBodyJobListJobOutputOutSubtitleList outSubtitleList;
 
@@ -2669,6 +2673,14 @@ public class QueryJobListResponseBody extends TeaModel {
         }
         public String getUserData() {
             return this.userData;
+        }
+
+        public QueryJobListResponseBodyJobListJobOutput setExtendData(String extendData) {
+            this.extendData = extendData;
+            return this;
+        }
+        public String getExtendData() {
+            return this.extendData;
         }
 
         public QueryJobListResponseBodyJobListJobOutput setOutSubtitleList(QueryJobListResponseBodyJobListJobOutputOutSubtitleList outSubtitleList) {
