@@ -182,6 +182,10 @@ public class CreateSubscriptionRequest extends TeaModel {
         @NameInMap("level")
         public String level;
 
+        // 时间动作
+        @NameInMap("action")
+        public String action;
+
         public static CreateSubscriptionRequestNotifyStrategyListStrategiesConditions build(java.util.Map<String, ?> map) throws Exception {
             CreateSubscriptionRequestNotifyStrategyListStrategiesConditions self = new CreateSubscriptionRequestNotifyStrategyListStrategiesConditions();
             return TeaModel.build(map, self);
@@ -209,6 +213,14 @@ public class CreateSubscriptionRequest extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public CreateSubscriptionRequestNotifyStrategyListStrategiesConditions setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
         }
 
     }

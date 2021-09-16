@@ -206,6 +206,10 @@ public class UpdateSubscriptionRequest extends TeaModel {
         @NameInMap("problemNotifyType")
         public String problemNotifyType;
 
+        // 事件动作
+        @NameInMap("action")
+        public String action;
+
         public static UpdateSubscriptionRequestNotifyStrategyListStrategiesConditions build(java.util.Map<String, ?> map) throws Exception {
             UpdateSubscriptionRequestNotifyStrategyListStrategiesConditions self = new UpdateSubscriptionRequestNotifyStrategyListStrategiesConditions();
             return TeaModel.build(map, self);
@@ -233,6 +237,14 @@ public class UpdateSubscriptionRequest extends TeaModel {
         }
         public String getProblemNotifyType() {
             return this.problemNotifyType;
+        }
+
+        public UpdateSubscriptionRequestNotifyStrategyListStrategiesConditions setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
         }
 
     }

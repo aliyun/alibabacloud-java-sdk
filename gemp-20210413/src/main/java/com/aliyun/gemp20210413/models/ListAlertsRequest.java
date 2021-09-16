@@ -16,11 +16,17 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("alertName")
     public String alertName;
 
+    // 当前页
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    // 页大小
     @NameInMap("pageSize")
     public Long pageSize;
+
+    // 报警来源
+    @NameInMap("alertSourceName")
+    public String alertSourceName;
 
     public static ListAlertsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlertsRequest self = new ListAlertsRequest();
@@ -65,6 +71,14 @@ public class ListAlertsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAlertsRequest setAlertSourceName(String alertSourceName) {
+        this.alertSourceName = alertSourceName;
+        return this;
+    }
+    public String getAlertSourceName() {
+        return this.alertSourceName;
     }
 
 }

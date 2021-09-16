@@ -45,6 +45,10 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
         @NameInMap("createUserName")
         public String createUserName;
 
+        // 操作人手机号
+        @NameInMap("createUserPhone")
+        public String createUserPhone;
+
         public static ListIncidentSubtotalsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListIncidentSubtotalsResponseBodyData self = new ListIncidentSubtotalsResponseBodyData();
             return TeaModel.build(map, self);
@@ -72,6 +76,14 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
         }
         public String getCreateUserName() {
             return this.createUserName;
+        }
+
+        public ListIncidentSubtotalsResponseBodyData setCreateUserPhone(String createUserPhone) {
+            this.createUserPhone = createUserPhone;
+            return this;
+        }
+        public String getCreateUserPhone() {
+            return this.createUserPhone;
         }
 
     }

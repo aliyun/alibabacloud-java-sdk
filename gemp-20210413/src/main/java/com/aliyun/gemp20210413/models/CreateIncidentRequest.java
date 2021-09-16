@@ -36,6 +36,10 @@ public class CreateIncidentRequest extends TeaModel {
     @NameInMap("channels")
     public java.util.List<String> channels;
 
+    // 服务组Id
+    @NameInMap("serviceGroupId")
+    public Long serviceGroupId;
+
     public static CreateIncidentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIncidentRequest self = new CreateIncidentRequest();
         return TeaModel.build(map, self);
@@ -103,6 +107,14 @@ public class CreateIncidentRequest extends TeaModel {
     }
     public java.util.List<String> getChannels() {
         return this.channels;
+    }
+
+    public CreateIncidentRequest setServiceGroupId(Long serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
+        return this;
+    }
+    public Long getServiceGroupId() {
+        return this.serviceGroupId;
     }
 
 }

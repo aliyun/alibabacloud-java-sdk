@@ -156,6 +156,10 @@ public class GetSubscriptionResponseBody extends TeaModel {
         @NameInMap("level")
         public String level;
 
+        // 事件动作
+        @NameInMap("action")
+        public String action;
+
         public static GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesConditions build(java.util.Map<String, ?> map) throws Exception {
             GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesConditions self = new GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesConditions();
             return TeaModel.build(map, self);
@@ -183,6 +187,14 @@ public class GetSubscriptionResponseBody extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public GetSubscriptionResponseBodyDataNotifyStrategyListStrategiesConditions setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
         }
 
     }

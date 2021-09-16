@@ -105,7 +105,7 @@ public class GetServiceGroupResponseBody extends TeaModel {
         @NameInMap("webhookLink")
         public String webhookLink;
 
-        // WEIXIN_GROUP 企微群 钉钉群
+        // WEIXIN_GROUP 微信 DING_GROUP 钉钉 FEISHU_GROUP飞书
         @NameInMap("webhookType")
         public String webhookType;
 
@@ -120,6 +120,10 @@ public class GetServiceGroupResponseBody extends TeaModel {
         // 服务组ID
         @NameInMap("serviceGroupId")
         public Long serviceGroupId;
+
+        // 创建时间
+        @NameInMap("createTime")
+        public String createTime;
 
         public static GetServiceGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetServiceGroupResponseBodyData self = new GetServiceGroupResponseBodyData();
@@ -188,6 +192,14 @@ public class GetServiceGroupResponseBody extends TeaModel {
         }
         public Long getServiceGroupId() {
             return this.serviceGroupId;
+        }
+
+        public GetServiceGroupResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
     }

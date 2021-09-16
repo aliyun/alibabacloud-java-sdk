@@ -16,8 +16,8 @@ public class ListServicesResponseBody extends TeaModel {
     public Long pageNumber;
 
     // 页大小
-    @NameInMap("pageSIze")
-    public Long pageSIze;
+    @NameInMap("pageSize")
+    public Long pageSize;
 
     // 总条数
     @NameInMap("totalCount")
@@ -52,12 +52,12 @@ public class ListServicesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListServicesResponseBody setPageSIze(Long pageSIze) {
-        this.pageSIze = pageSIze;
+    public ListServicesResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Long getPageSIze() {
-        return this.pageSIze;
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListServicesResponseBody setTotalCount(Long totalCount) {
