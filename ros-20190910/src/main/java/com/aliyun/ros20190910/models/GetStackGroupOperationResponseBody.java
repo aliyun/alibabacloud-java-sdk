@@ -268,8 +268,8 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         @NameInMap("ExecutionRoleName")
         public String executionRoleName;
 
-        @NameInMap("AdministratorRoleName")
-        public String administratorRoleName;
+        @NameInMap("AdministrationRoleName")
+        public String administrationRoleName;
 
         @NameInMap("DeploymentTargets")
         public GetStackGroupOperationResponseBodyStackGroupOperationDeploymentTargets deploymentTargets;
@@ -375,12 +375,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
             return this.executionRoleName;
         }
 
-        public GetStackGroupOperationResponseBodyStackGroupOperation setAdministratorRoleName(String administratorRoleName) {
-            this.administratorRoleName = administratorRoleName;
+        public GetStackGroupOperationResponseBodyStackGroupOperation setAdministrationRoleName(String administrationRoleName) {
+            this.administrationRoleName = administrationRoleName;
             return this;
         }
-        public String getAdministratorRoleName() {
-            return this.administratorRoleName;
+        public String getAdministrationRoleName() {
+            return this.administrationRoleName;
         }
 
         public GetStackGroupOperationResponseBodyStackGroupOperation setDeploymentTargets(GetStackGroupOperationResponseBodyStackGroupOperationDeploymentTargets deploymentTargets) {
