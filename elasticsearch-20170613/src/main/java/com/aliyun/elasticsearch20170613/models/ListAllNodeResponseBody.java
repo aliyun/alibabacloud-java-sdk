@@ -38,6 +38,9 @@ public class ListAllNodeResponseBody extends TeaModel {
         @NameInMap("zoneId")
         public String zoneId;
 
+        @NameInMap("hostName")
+        public String hostName;
+
         @NameInMap("cpuPercent")
         public String cpuPercent;
 
@@ -78,6 +81,14 @@ public class ListAllNodeResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public ListAllNodeResponseBodyResult setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
         }
 
         public ListAllNodeResponseBodyResult setCpuPercent(String cpuPercent) {

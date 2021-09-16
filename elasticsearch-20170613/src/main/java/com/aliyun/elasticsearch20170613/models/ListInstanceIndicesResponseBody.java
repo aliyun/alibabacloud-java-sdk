@@ -49,6 +49,12 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         @NameInMap("X-Managed-Count")
         public Integer xManagedCount;
 
+        @NameInMap("X-OSS-StorageSize")
+        public Long xOSSStorageSize;
+
+        @NameInMap("X-OSS-Count")
+        public Integer xOSSCount;
+
         public static ListInstanceIndicesResponseBodyHeaders build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceIndicesResponseBodyHeaders self = new ListInstanceIndicesResponseBodyHeaders();
             return TeaModel.build(map, self);
@@ -68,6 +74,22 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
         public Integer getXManagedCount() {
             return this.xManagedCount;
+        }
+
+        public ListInstanceIndicesResponseBodyHeaders setXOSSStorageSize(Long xOSSStorageSize) {
+            this.xOSSStorageSize = xOSSStorageSize;
+            return this;
+        }
+        public Long getXOSSStorageSize() {
+            return this.xOSSStorageSize;
+        }
+
+        public ListInstanceIndicesResponseBodyHeaders setXOSSCount(Integer xOSSCount) {
+            this.xOSSCount = xOSSCount;
+            return this;
+        }
+        public Integer getXOSSCount() {
+            return this.xOSSCount;
         }
 
     }
@@ -90,6 +112,12 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
 
         @NameInMap("health")
         public String health;
+
+        @NameInMap("phase")
+        public String phase;
+
+        @NameInMap("ilmExplain")
+        public String ilmExplain;
 
         public static ListInstanceIndicesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceIndicesResponseBodyResult self = new ListInstanceIndicesResponseBodyResult();
@@ -142,6 +170,22 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
         public String getHealth() {
             return this.health;
+        }
+
+        public ListInstanceIndicesResponseBodyResult setPhase(String phase) {
+            this.phase = phase;
+            return this;
+        }
+        public String getPhase() {
+            return this.phase;
+        }
+
+        public ListInstanceIndicesResponseBodyResult setIlmExplain(String ilmExplain) {
+            this.ilmExplain = ilmExplain;
+            return this;
+        }
+        public String getIlmExplain() {
+            return this.ilmExplain;
         }
 
     }
