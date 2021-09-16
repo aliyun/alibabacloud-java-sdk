@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndpointSwitchStatusRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("TaskId")
     public String taskId;
 
@@ -19,6 +22,14 @@ public class DescribeEndpointSwitchStatusRequest extends TeaModel {
     public static DescribeEndpointSwitchStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEndpointSwitchStatusRequest self = new DescribeEndpointSwitchStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEndpointSwitchStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeEndpointSwitchStatusRequest setTaskId(String taskId) {

@@ -7,20 +7,20 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static DescribeEndpointSwitchStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEndpointSwitchStatusResponseBody self = new DescribeEndpointSwitchStatusResponseBody();
@@ -35,14 +35,6 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         return this.status;
     }
 
-    public DescribeEndpointSwitchStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeEndpointSwitchStatusResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -51,12 +43,20 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public DescribeEndpointSwitchStatusResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public DescribeEndpointSwitchStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeEndpointSwitchStatusResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public DescribeEndpointSwitchStatusResponseBody setSuccess(String success) {
@@ -67,12 +67,12 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeEndpointSwitchStatusResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DescribeEndpointSwitchStatusResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

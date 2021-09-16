@@ -7,14 +7,14 @@ public class DeleteSynchronizationJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static DeleteSynchronizationJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSynchronizationJobResponseBody self = new DeleteSynchronizationJobResponseBody();
@@ -29,12 +29,12 @@ public class DeleteSynchronizationJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteSynchronizationJobResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public DeleteSynchronizationJobResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public DeleteSynchronizationJobResponseBody setSuccess(String success) {
@@ -45,12 +45,12 @@ public class DeleteSynchronizationJobResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeleteSynchronizationJobResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DeleteSynchronizationJobResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

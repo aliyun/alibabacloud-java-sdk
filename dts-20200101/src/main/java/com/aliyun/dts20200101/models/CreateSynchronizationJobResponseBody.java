@@ -4,32 +4,24 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateSynchronizationJobResponseBody extends TeaModel {
-    @NameInMap("SynchronizationJobId")
-    public String synchronizationJobId;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("Success")
-    public String success;
 
     @NameInMap("ErrCode")
     public String errCode;
 
+    @NameInMap("Success")
+    public String success;
+
+    @NameInMap("SynchronizationJobId")
+    public String synchronizationJobId;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     public static CreateSynchronizationJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSynchronizationJobResponseBody self = new CreateSynchronizationJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateSynchronizationJobResponseBody setSynchronizationJobId(String synchronizationJobId) {
-        this.synchronizationJobId = synchronizationJobId;
-        return this;
-    }
-    public String getSynchronizationJobId() {
-        return this.synchronizationJobId;
     }
 
     public CreateSynchronizationJobResponseBody setRequestId(String requestId) {
@@ -40,12 +32,12 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateSynchronizationJobResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public CreateSynchronizationJobResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public CreateSynchronizationJobResponseBody setSuccess(String success) {
@@ -56,12 +48,20 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
         return this.success;
     }
 
-    public CreateSynchronizationJobResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public CreateSynchronizationJobResponseBody setSynchronizationJobId(String synchronizationJobId) {
+        this.synchronizationJobId = synchronizationJobId;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getSynchronizationJobId() {
+        return this.synchronizationJobId;
+    }
+
+    public CreateSynchronizationJobResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

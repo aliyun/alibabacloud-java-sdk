@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubscriptionInstancesRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,15 +25,20 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     @NameInMap("AccountId")
     public String accountId;
 
-    @NameInMap("InstFilterRegion")
-    public String instFilterRegion;
-
     @NameInMap("Tag")
     public java.util.List<DescribeSubscriptionInstancesRequestTag> tag;
 
     public static DescribeSubscriptionInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSubscriptionInstancesRequest self = new DescribeSubscriptionInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSubscriptionInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSubscriptionInstancesRequest setPageSize(Integer pageSize) {
@@ -79,14 +87,6 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
-    }
-
-    public DescribeSubscriptionInstancesRequest setInstFilterRegion(String instFilterRegion) {
-        this.instFilterRegion = instFilterRegion;
-        return this;
-    }
-    public String getInstFilterRegion() {
-        return this.instFilterRegion;
     }
 
     public DescribeSubscriptionInstancesRequest setTag(java.util.List<DescribeSubscriptionInstancesRequestTag> tag) {

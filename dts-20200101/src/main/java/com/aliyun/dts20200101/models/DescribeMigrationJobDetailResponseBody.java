@@ -4,17 +4,23 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMigrationJobDetailResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Long totalRecordCount;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
-    @NameInMap("DataSynchronizationDetailList")
-    public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList dataSynchronizationDetailList;
+    @NameInMap("Success")
+    public String success;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("TotalRecordCount")
+    public Long totalRecordCount;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -22,29 +28,31 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     @NameInMap("DataInitializationDetailList")
     public DescribeMigrationJobDetailResponseBodyDataInitializationDetailList dataInitializationDetailList;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("Success")
-    public String success;
+    @NameInMap("DataSynchronizationDetailList")
+    public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList dataSynchronizationDetailList;
 
     @NameInMap("StructureInitializationDetailList")
     public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailList structureInitializationDetailList;
-
-    @NameInMap("ErrCode")
-    public String errCode;
 
     public static DescribeMigrationJobDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMigrationJobDetailResponseBody self = new DescribeMigrationJobDetailResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMigrationJobDetailResponseBody setTotalRecordCount(Long totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
+    public DescribeMigrationJobDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getTotalRecordCount() {
-        return this.totalRecordCount;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeMigrationJobDetailResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public DescribeMigrationJobDetailResponseBody setPageRecordCount(Integer pageRecordCount) {
@@ -55,20 +63,28 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         return this.pageRecordCount;
     }
 
-    public DescribeMigrationJobDetailResponseBody setDataSynchronizationDetailList(DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList dataSynchronizationDetailList) {
-        this.dataSynchronizationDetailList = dataSynchronizationDetailList;
+    public DescribeMigrationJobDetailResponseBody setSuccess(String success) {
+        this.success = success;
         return this;
     }
-    public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList getDataSynchronizationDetailList() {
-        return this.dataSynchronizationDetailList;
+    public String getSuccess() {
+        return this.success;
     }
 
-    public DescribeMigrationJobDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeMigrationJobDetailResponseBody setTotalRecordCount(Long totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public DescribeMigrationJobDetailResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public DescribeMigrationJobDetailResponseBody setPageNumber(Integer pageNumber) {
@@ -87,20 +103,12 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         return this.dataInitializationDetailList;
     }
 
-    public DescribeMigrationJobDetailResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public DescribeMigrationJobDetailResponseBody setDataSynchronizationDetailList(DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList dataSynchronizationDetailList) {
+        this.dataSynchronizationDetailList = dataSynchronizationDetailList;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
-    public DescribeMigrationJobDetailResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
+    public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList getDataSynchronizationDetailList() {
+        return this.dataSynchronizationDetailList;
     }
 
     public DescribeMigrationJobDetailResponseBody setStructureInitializationDetailList(DescribeMigrationJobDetailResponseBodyStructureInitializationDetailList structureInitializationDetailList) {
@@ -109,96 +117,6 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     }
     public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailList getStructureInitializationDetailList() {
         return this.structureInitializationDetailList;
-    }
-
-    public DescribeMigrationJobDetailResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
-    }
-
-    public static class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("SourceOwnerDBName")
-        public String sourceOwnerDBName;
-
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("DestinationOwnerDBName")
-        public String destinationOwnerDBName;
-
-        public static DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail self = new DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setSourceOwnerDBName(String sourceOwnerDBName) {
-            this.sourceOwnerDBName = sourceOwnerDBName;
-            return this;
-        }
-        public String getSourceOwnerDBName() {
-            return this.sourceOwnerDBName;
-        }
-
-        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setDestinationOwnerDBName(String destinationOwnerDBName) {
-            this.destinationOwnerDBName = destinationOwnerDBName;
-            return this;
-        }
-        public String getDestinationOwnerDBName() {
-            return this.destinationOwnerDBName;
-        }
-
-    }
-
-    public static class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList extends TeaModel {
-        @NameInMap("DataSynchronizationDetail")
-        public java.util.List<DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail> dataSynchronizationDetail;
-
-        public static DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList self = new DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList setDataSynchronizationDetail(java.util.List<DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail> dataSynchronizationDetail) {
-            this.dataSynchronizationDetail = dataSynchronizationDetail;
-            return this;
-        }
-        public java.util.List<DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail> getDataSynchronizationDetail() {
-            return this.dataSynchronizationDetail;
-        }
-
     }
 
     public static class DescribeMigrationJobDetailResponseBodyDataInitializationDetailListDataInitializationDetail extends TeaModel {
@@ -316,6 +234,88 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("SourceOwnerDBName")
+        public String sourceOwnerDBName;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("DestinationOwnerDBName")
+        public String destinationOwnerDBName;
+
+        public static DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail self = new DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setSourceOwnerDBName(String sourceOwnerDBName) {
+            this.sourceOwnerDBName = sourceOwnerDBName;
+            return this;
+        }
+        public String getSourceOwnerDBName() {
+            return this.sourceOwnerDBName;
+        }
+
+        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail setDestinationOwnerDBName(String destinationOwnerDBName) {
+            this.destinationOwnerDBName = destinationOwnerDBName;
+            return this;
+        }
+        public String getDestinationOwnerDBName() {
+            return this.destinationOwnerDBName;
+        }
+
+    }
+
+    public static class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList extends TeaModel {
+        @NameInMap("DataSynchronizationDetail")
+        public java.util.List<DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail> dataSynchronizationDetail;
+
+        public static DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList self = new DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList setDataSynchronizationDetail(java.util.List<DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail> dataSynchronizationDetail) {
+            this.dataSynchronizationDetail = dataSynchronizationDetail;
+            return this;
+        }
+        public java.util.List<DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail> getDataSynchronizationDetail() {
+            return this.dataSynchronizationDetail;
+        }
+
+    }
+
     public static class DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintListStructureInitializationDetail extends TeaModel {
         @NameInMap("Status")
         public String status;
@@ -427,9 +427,6 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         @NameInMap("SourceOwnerDBName")
         public String sourceOwnerDBName;
 
-        @NameInMap("ConstraintList")
-        public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList constraintList;
-
         @NameInMap("ObjectDefinition")
         public String objectDefinition;
 
@@ -444,6 +441,9 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
         @NameInMap("ObjectName")
         public String objectName;
+
+        @NameInMap("ConstraintList")
+        public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList constraintList;
 
         public static DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail self = new DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail();
@@ -464,14 +464,6 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
         public String getSourceOwnerDBName() {
             return this.sourceOwnerDBName;
-        }
-
-        public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail setConstraintList(DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList constraintList) {
-            this.constraintList = constraintList;
-            return this;
-        }
-        public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList getConstraintList() {
-            return this.constraintList;
         }
 
         public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail setObjectDefinition(String objectDefinition) {
@@ -512,6 +504,14 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
         public String getObjectName() {
             return this.objectName;
+        }
+
+        public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail setConstraintList(DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList constraintList) {
+            this.constraintList = constraintList;
+            return this;
+        }
+        public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList getConstraintList() {
+            return this.constraintList;
         }
 
     }

@@ -4,38 +4,30 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeInitializationStatusResponseBody extends TeaModel {
-    @NameInMap("StructureInitializationDetails")
-    public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetails> structureInitializationDetails;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("DataInitializationDetails")
-    public java.util.List<DescribeInitializationStatusResponseBodyDataInitializationDetails> dataInitializationDetails;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("Success")
-    public String success;
 
     @NameInMap("ErrCode")
     public String errCode;
 
+    @NameInMap("Success")
+    public String success;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
+    @NameInMap("DataInitializationDetails")
+    public java.util.List<DescribeInitializationStatusResponseBodyDataInitializationDetails> dataInitializationDetails;
+
     @NameInMap("DataSynchronizationDetails")
     public java.util.List<DescribeInitializationStatusResponseBodyDataSynchronizationDetails> dataSynchronizationDetails;
+
+    @NameInMap("StructureInitializationDetails")
+    public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetails> structureInitializationDetails;
 
     public static DescribeInitializationStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInitializationStatusResponseBody self = new DescribeInitializationStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInitializationStatusResponseBody setStructureInitializationDetails(java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetails> structureInitializationDetails) {
-        this.structureInitializationDetails = structureInitializationDetails;
-        return this;
-    }
-    public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetails> getStructureInitializationDetails() {
-        return this.structureInitializationDetails;
     }
 
     public DescribeInitializationStatusResponseBody setRequestId(String requestId) {
@@ -46,20 +38,12 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInitializationStatusResponseBody setDataInitializationDetails(java.util.List<DescribeInitializationStatusResponseBodyDataInitializationDetails> dataInitializationDetails) {
-        this.dataInitializationDetails = dataInitializationDetails;
+    public DescribeInitializationStatusResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public java.util.List<DescribeInitializationStatusResponseBodyDataInitializationDetails> getDataInitializationDetails() {
-        return this.dataInitializationDetails;
-    }
-
-    public DescribeInitializationStatusResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public DescribeInitializationStatusResponseBody setSuccess(String success) {
@@ -70,12 +54,20 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeInitializationStatusResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DescribeInitializationStatusResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
+    public DescribeInitializationStatusResponseBody setDataInitializationDetails(java.util.List<DescribeInitializationStatusResponseBodyDataInitializationDetails> dataInitializationDetails) {
+        this.dataInitializationDetails = dataInitializationDetails;
+        return this;
+    }
+    public java.util.List<DescribeInitializationStatusResponseBodyDataInitializationDetails> getDataInitializationDetails() {
+        return this.dataInitializationDetails;
     }
 
     public DescribeInitializationStatusResponseBody setDataSynchronizationDetails(java.util.List<DescribeInitializationStatusResponseBodyDataSynchronizationDetails> dataSynchronizationDetails) {
@@ -86,185 +78,12 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         return this.dataSynchronizationDetails;
     }
 
-    public static class DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("SourceOwnerDBName")
-        public String sourceOwnerDBName;
-
-        @NameInMap("ObjectDefinition")
-        public String objectDefinition;
-
-        @NameInMap("ObjectType")
-        public String objectType;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("DestinationOwnerDBName")
-        public String destinationOwnerDBName;
-
-        @NameInMap("ObjectName")
-        public String objectName;
-
-        public static DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints self = new DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setSourceOwnerDBName(String sourceOwnerDBName) {
-            this.sourceOwnerDBName = sourceOwnerDBName;
-            return this;
-        }
-        public String getSourceOwnerDBName() {
-            return this.sourceOwnerDBName;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setObjectDefinition(String objectDefinition) {
-            this.objectDefinition = objectDefinition;
-            return this;
-        }
-        public String getObjectDefinition() {
-            return this.objectDefinition;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setObjectType(String objectType) {
-            this.objectType = objectType;
-            return this;
-        }
-        public String getObjectType() {
-            return this.objectType;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setDestinationOwnerDBName(String destinationOwnerDBName) {
-            this.destinationOwnerDBName = destinationOwnerDBName;
-            return this;
-        }
-        public String getDestinationOwnerDBName() {
-            return this.destinationOwnerDBName;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setObjectName(String objectName) {
-            this.objectName = objectName;
-            return this;
-        }
-        public String getObjectName() {
-            return this.objectName;
-        }
-
+    public DescribeInitializationStatusResponseBody setStructureInitializationDetails(java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetails> structureInitializationDetails) {
+        this.structureInitializationDetails = structureInitializationDetails;
+        return this;
     }
-
-    public static class DescribeInitializationStatusResponseBodyStructureInitializationDetails extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("SourceOwnerDBName")
-        public String sourceOwnerDBName;
-
-        @NameInMap("ObjectDefinition")
-        public String objectDefinition;
-
-        @NameInMap("ObjectType")
-        public String objectType;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("Constraints")
-        public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> constraints;
-
-        @NameInMap("DestinationOwnerDBName")
-        public String destinationOwnerDBName;
-
-        @NameInMap("ObjectName")
-        public String objectName;
-
-        public static DescribeInitializationStatusResponseBodyStructureInitializationDetails build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInitializationStatusResponseBodyStructureInitializationDetails self = new DescribeInitializationStatusResponseBodyStructureInitializationDetails();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setSourceOwnerDBName(String sourceOwnerDBName) {
-            this.sourceOwnerDBName = sourceOwnerDBName;
-            return this;
-        }
-        public String getSourceOwnerDBName() {
-            return this.sourceOwnerDBName;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setObjectDefinition(String objectDefinition) {
-            this.objectDefinition = objectDefinition;
-            return this;
-        }
-        public String getObjectDefinition() {
-            return this.objectDefinition;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setObjectType(String objectType) {
-            this.objectType = objectType;
-            return this;
-        }
-        public String getObjectType() {
-            return this.objectType;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setConstraints(java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> constraints) {
-            this.constraints = constraints;
-            return this;
-        }
-        public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> getConstraints() {
-            return this.constraints;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setDestinationOwnerDBName(String destinationOwnerDBName) {
-            this.destinationOwnerDBName = destinationOwnerDBName;
-            return this;
-        }
-        public String getDestinationOwnerDBName() {
-            return this.destinationOwnerDBName;
-        }
-
-        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setObjectName(String objectName) {
-            this.objectName = objectName;
-            return this;
-        }
-        public String getObjectName() {
-            return this.objectName;
-        }
-
+    public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetails> getStructureInitializationDetails() {
+        return this.structureInitializationDetails;
     }
 
     public static class DescribeInitializationStatusResponseBodyDataInitializationDetails extends TeaModel {
@@ -422,6 +241,187 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         }
         public String getDestinationOwnerDBName() {
             return this.destinationOwnerDBName;
+        }
+
+    }
+
+    public static class DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("SourceOwnerDBName")
+        public String sourceOwnerDBName;
+
+        @NameInMap("ObjectDefinition")
+        public String objectDefinition;
+
+        @NameInMap("ObjectType")
+        public String objectType;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("DestinationOwnerDBName")
+        public String destinationOwnerDBName;
+
+        @NameInMap("ObjectName")
+        public String objectName;
+
+        public static DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints self = new DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setSourceOwnerDBName(String sourceOwnerDBName) {
+            this.sourceOwnerDBName = sourceOwnerDBName;
+            return this;
+        }
+        public String getSourceOwnerDBName() {
+            return this.sourceOwnerDBName;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setObjectDefinition(String objectDefinition) {
+            this.objectDefinition = objectDefinition;
+            return this;
+        }
+        public String getObjectDefinition() {
+            return this.objectDefinition;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setObjectType(String objectType) {
+            this.objectType = objectType;
+            return this;
+        }
+        public String getObjectType() {
+            return this.objectType;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setDestinationOwnerDBName(String destinationOwnerDBName) {
+            this.destinationOwnerDBName = destinationOwnerDBName;
+            return this;
+        }
+        public String getDestinationOwnerDBName() {
+            return this.destinationOwnerDBName;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints setObjectName(String objectName) {
+            this.objectName = objectName;
+            return this;
+        }
+        public String getObjectName() {
+            return this.objectName;
+        }
+
+    }
+
+    public static class DescribeInitializationStatusResponseBodyStructureInitializationDetails extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("SourceOwnerDBName")
+        public String sourceOwnerDBName;
+
+        @NameInMap("ObjectDefinition")
+        public String objectDefinition;
+
+        @NameInMap("ObjectType")
+        public String objectType;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("DestinationOwnerDBName")
+        public String destinationOwnerDBName;
+
+        @NameInMap("ObjectName")
+        public String objectName;
+
+        @NameInMap("Constraints")
+        public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> constraints;
+
+        public static DescribeInitializationStatusResponseBodyStructureInitializationDetails build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInitializationStatusResponseBodyStructureInitializationDetails self = new DescribeInitializationStatusResponseBodyStructureInitializationDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setSourceOwnerDBName(String sourceOwnerDBName) {
+            this.sourceOwnerDBName = sourceOwnerDBName;
+            return this;
+        }
+        public String getSourceOwnerDBName() {
+            return this.sourceOwnerDBName;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setObjectDefinition(String objectDefinition) {
+            this.objectDefinition = objectDefinition;
+            return this;
+        }
+        public String getObjectDefinition() {
+            return this.objectDefinition;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setObjectType(String objectType) {
+            this.objectType = objectType;
+            return this;
+        }
+        public String getObjectType() {
+            return this.objectType;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setDestinationOwnerDBName(String destinationOwnerDBName) {
+            this.destinationOwnerDBName = destinationOwnerDBName;
+            return this;
+        }
+        public String getDestinationOwnerDBName() {
+            return this.destinationOwnerDBName;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setObjectName(String objectName) {
+            this.objectName = objectName;
+            return this;
+        }
+        public String getObjectName() {
+            return this.objectName;
+        }
+
+        public DescribeInitializationStatusResponseBodyStructureInitializationDetails setConstraints(java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> constraints) {
+            this.constraints = constraints;
+            return this;
+        }
+        public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> getConstraints() {
+            return this.constraints;
         }
 
     }

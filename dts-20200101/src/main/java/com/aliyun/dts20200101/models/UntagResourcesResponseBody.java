@@ -7,14 +7,14 @@ public class UntagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesResponseBody self = new UntagResourcesResponseBody();
@@ -29,12 +29,12 @@ public class UntagResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UntagResourcesResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public UntagResourcesResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public UntagResourcesResponseBody setSuccess(Boolean success) {
@@ -45,12 +45,12 @@ public class UntagResourcesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public UntagResourcesResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public UntagResourcesResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

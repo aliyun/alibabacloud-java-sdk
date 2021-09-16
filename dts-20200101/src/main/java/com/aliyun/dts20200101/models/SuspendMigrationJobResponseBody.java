@@ -7,14 +7,14 @@ public class SuspendMigrationJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static SuspendMigrationJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SuspendMigrationJobResponseBody self = new SuspendMigrationJobResponseBody();
@@ -29,12 +29,12 @@ public class SuspendMigrationJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SuspendMigrationJobResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public SuspendMigrationJobResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public SuspendMigrationJobResponseBody setSuccess(String success) {
@@ -45,12 +45,12 @@ public class SuspendMigrationJobResponseBody extends TeaModel {
         return this.success;
     }
 
-    public SuspendMigrationJobResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public SuspendMigrationJobResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

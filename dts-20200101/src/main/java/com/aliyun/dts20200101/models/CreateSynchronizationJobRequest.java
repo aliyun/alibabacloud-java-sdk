@@ -10,6 +10,9 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     @NameInMap("DestinationEndpoint")
     public CreateSynchronizationJobRequestDestinationEndpoint destinationEndpoint;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SourceRegion")
     public String sourceRegion;
 
@@ -65,6 +68,14 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     }
     public CreateSynchronizationJobRequestDestinationEndpoint getDestinationEndpoint() {
         return this.destinationEndpoint;
+    }
+
+    public CreateSynchronizationJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateSynchronizationJobRequest setSourceRegion(String sourceRegion) {

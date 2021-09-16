@@ -65,10 +65,13 @@ public class DescribeConnectionStatusRequest extends TeaModel {
     public String destinationEndpointPassword;
 
     @NameInMap("DestinationEndpointOracleSID")
-    public Boolean destinationEndpointOracleSID;
+    public String destinationEndpointOracleSID;
 
     @NameInMap("DestinationEndpointArchitecture")
-    public Boolean destinationEndpointArchitecture;
+    public String destinationEndpointArchitecture;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeConnectionStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeConnectionStatusRequest self = new DescribeConnectionStatusRequest();
@@ -235,20 +238,28 @@ public class DescribeConnectionStatusRequest extends TeaModel {
         return this.destinationEndpointPassword;
     }
 
-    public DescribeConnectionStatusRequest setDestinationEndpointOracleSID(Boolean destinationEndpointOracleSID) {
+    public DescribeConnectionStatusRequest setDestinationEndpointOracleSID(String destinationEndpointOracleSID) {
         this.destinationEndpointOracleSID = destinationEndpointOracleSID;
         return this;
     }
-    public Boolean getDestinationEndpointOracleSID() {
+    public String getDestinationEndpointOracleSID() {
         return this.destinationEndpointOracleSID;
     }
 
-    public DescribeConnectionStatusRequest setDestinationEndpointArchitecture(Boolean destinationEndpointArchitecture) {
+    public DescribeConnectionStatusRequest setDestinationEndpointArchitecture(String destinationEndpointArchitecture) {
         this.destinationEndpointArchitecture = destinationEndpointArchitecture;
         return this;
     }
-    public Boolean getDestinationEndpointArchitecture() {
+    public String getDestinationEndpointArchitecture() {
         return this.destinationEndpointArchitecture;
+    }
+
+    public DescribeConnectionStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

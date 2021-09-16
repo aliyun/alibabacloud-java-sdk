@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSynchronizationObjectModifyStatusRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("TaskId")
     public String taskId;
 
@@ -19,6 +22,14 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends TeaModel {
     public static DescribeSynchronizationObjectModifyStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSynchronizationObjectModifyStatusRequest self = new DescribeSynchronizationObjectModifyStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSynchronizationObjectModifyStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSynchronizationObjectModifyStatusRequest setTaskId(String taskId) {

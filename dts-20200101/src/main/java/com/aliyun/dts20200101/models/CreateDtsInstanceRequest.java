@@ -49,6 +49,12 @@ public class CreateDtsInstanceRequest extends TeaModel {
     @NameInMap("DestinationEndpointEngineName")
     public String destinationEndpointEngineName;
 
+    @NameInMap("ComputeUnit")
+    public Integer computeUnit;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateDtsInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDtsInstanceRequest self = new CreateDtsInstanceRequest();
         return TeaModel.build(map, self);
@@ -172,6 +178,22 @@ public class CreateDtsInstanceRequest extends TeaModel {
     }
     public String getDestinationEndpointEngineName() {
         return this.destinationEndpointEngineName;
+    }
+
+    public CreateDtsInstanceRequest setComputeUnit(Integer computeUnit) {
+        this.computeUnit = computeUnit;
+        return this;
+    }
+    public Integer getComputeUnit() {
+        return this.computeUnit;
+    }
+
+    public CreateDtsInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

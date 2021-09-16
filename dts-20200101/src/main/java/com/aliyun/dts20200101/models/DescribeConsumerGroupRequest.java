@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumerGroupRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,6 +25,14 @@ public class DescribeConsumerGroupRequest extends TeaModel {
     public static DescribeConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeConsumerGroupRequest self = new DescribeConsumerGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeConsumerGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeConsumerGroupRequest setPageSize(Integer pageSize) {

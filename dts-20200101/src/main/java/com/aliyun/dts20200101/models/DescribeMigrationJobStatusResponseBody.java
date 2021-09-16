@@ -4,17 +4,20 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMigrationJobStatusResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
-    @NameInMap("DataInitializationStatus")
-    public DescribeMigrationJobStatusResponseBodyDataInitializationStatus dataInitializationStatus;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("MigrationJobName")
     public String migrationJobName;
+
+    @NameInMap("MigrationJobStatus")
+    public String migrationJobStatus;
+
+    @NameInMap("ErrCode")
+    public String errCode;
+
+    @NameInMap("Success")
+    public String success;
 
     @NameInMap("PayType")
     public String payType;
@@ -22,32 +25,32 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    @NameInMap("MigrationJobStatus")
-    public String migrationJobStatus;
-
-    @NameInMap("Success")
-    public String success;
-
-    @NameInMap("MigrationMode")
-    public DescribeMigrationJobStatusResponseBodyMigrationMode migrationMode;
-
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("MigrationObject")
+    public String migrationObject;
 
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
-    @NameInMap("PrecheckStatus")
-    public DescribeMigrationJobStatusResponseBodyPrecheckStatus precheckStatus;
+    @NameInMap("TaskId")
+    public String taskId;
 
-    @NameInMap("MigrationObject")
-    public String migrationObject;
+    @NameInMap("MigrationJobClass")
+    public String migrationJobClass;
+
+    @NameInMap("DataInitializationStatus")
+    public DescribeMigrationJobStatusResponseBodyDataInitializationStatus dataInitializationStatus;
+
+    @NameInMap("DataSynchronizationStatus")
+    public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus dataSynchronizationStatus;
 
     @NameInMap("DestinationEndpoint")
     public DescribeMigrationJobStatusResponseBodyDestinationEndpoint destinationEndpoint;
 
-    @NameInMap("MigrationJobClass")
-    public String migrationJobClass;
+    @NameInMap("MigrationMode")
+    public DescribeMigrationJobStatusResponseBodyMigrationMode migrationMode;
+
+    @NameInMap("PrecheckStatus")
+    public DescribeMigrationJobStatusResponseBodyPrecheckStatus precheckStatus;
 
     @NameInMap("SourceEndpoint")
     public DescribeMigrationJobStatusResponseBodySourceEndpoint sourceEndpoint;
@@ -55,28 +58,9 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     @NameInMap("StructureInitializationStatus")
     public DescribeMigrationJobStatusResponseBodyStructureInitializationStatus structureInitializationStatus;
 
-    @NameInMap("DataSynchronizationStatus")
-    public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus dataSynchronizationStatus;
-
     public static DescribeMigrationJobStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMigrationJobStatusResponseBody self = new DescribeMigrationJobStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMigrationJobStatusResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public DescribeMigrationJobStatusResponseBody setDataInitializationStatus(DescribeMigrationJobStatusResponseBodyDataInitializationStatus dataInitializationStatus) {
-        this.dataInitializationStatus = dataInitializationStatus;
-        return this;
-    }
-    public DescribeMigrationJobStatusResponseBodyDataInitializationStatus getDataInitializationStatus() {
-        return this.dataInitializationStatus;
     }
 
     public DescribeMigrationJobStatusResponseBody setRequestId(String requestId) {
@@ -95,6 +79,30 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         return this.migrationJobName;
     }
 
+    public DescribeMigrationJobStatusResponseBody setMigrationJobStatus(String migrationJobStatus) {
+        this.migrationJobStatus = migrationJobStatus;
+        return this;
+    }
+    public String getMigrationJobStatus() {
+        return this.migrationJobStatus;
+    }
+
+    public DescribeMigrationJobStatusResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
+        return this;
+    }
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public DescribeMigrationJobStatusResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
     public DescribeMigrationJobStatusResponseBody setPayType(String payType) {
         this.payType = payType;
         return this;
@@ -111,36 +119,12 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public DescribeMigrationJobStatusResponseBody setMigrationJobStatus(String migrationJobStatus) {
-        this.migrationJobStatus = migrationJobStatus;
+    public DescribeMigrationJobStatusResponseBody setMigrationObject(String migrationObject) {
+        this.migrationObject = migrationObject;
         return this;
     }
-    public String getMigrationJobStatus() {
-        return this.migrationJobStatus;
-    }
-
-    public DescribeMigrationJobStatusResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
-    public DescribeMigrationJobStatusResponseBody setMigrationMode(DescribeMigrationJobStatusResponseBodyMigrationMode migrationMode) {
-        this.migrationMode = migrationMode;
-        return this;
-    }
-    public DescribeMigrationJobStatusResponseBodyMigrationMode getMigrationMode() {
-        return this.migrationMode;
-    }
-
-    public DescribeMigrationJobStatusResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
-        return this;
-    }
-    public String getErrCode() {
-        return this.errCode;
+    public String getMigrationObject() {
+        return this.migrationObject;
     }
 
     public DescribeMigrationJobStatusResponseBody setMigrationJobId(String migrationJobId) {
@@ -151,20 +135,36 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         return this.migrationJobId;
     }
 
-    public DescribeMigrationJobStatusResponseBody setPrecheckStatus(DescribeMigrationJobStatusResponseBodyPrecheckStatus precheckStatus) {
-        this.precheckStatus = precheckStatus;
+    public DescribeMigrationJobStatusResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public DescribeMigrationJobStatusResponseBodyPrecheckStatus getPrecheckStatus() {
-        return this.precheckStatus;
+    public String getTaskId() {
+        return this.taskId;
     }
 
-    public DescribeMigrationJobStatusResponseBody setMigrationObject(String migrationObject) {
-        this.migrationObject = migrationObject;
+    public DescribeMigrationJobStatusResponseBody setMigrationJobClass(String migrationJobClass) {
+        this.migrationJobClass = migrationJobClass;
         return this;
     }
-    public String getMigrationObject() {
-        return this.migrationObject;
+    public String getMigrationJobClass() {
+        return this.migrationJobClass;
+    }
+
+    public DescribeMigrationJobStatusResponseBody setDataInitializationStatus(DescribeMigrationJobStatusResponseBodyDataInitializationStatus dataInitializationStatus) {
+        this.dataInitializationStatus = dataInitializationStatus;
+        return this;
+    }
+    public DescribeMigrationJobStatusResponseBodyDataInitializationStatus getDataInitializationStatus() {
+        return this.dataInitializationStatus;
+    }
+
+    public DescribeMigrationJobStatusResponseBody setDataSynchronizationStatus(DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus dataSynchronizationStatus) {
+        this.dataSynchronizationStatus = dataSynchronizationStatus;
+        return this;
+    }
+    public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus getDataSynchronizationStatus() {
+        return this.dataSynchronizationStatus;
     }
 
     public DescribeMigrationJobStatusResponseBody setDestinationEndpoint(DescribeMigrationJobStatusResponseBodyDestinationEndpoint destinationEndpoint) {
@@ -175,12 +175,20 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         return this.destinationEndpoint;
     }
 
-    public DescribeMigrationJobStatusResponseBody setMigrationJobClass(String migrationJobClass) {
-        this.migrationJobClass = migrationJobClass;
+    public DescribeMigrationJobStatusResponseBody setMigrationMode(DescribeMigrationJobStatusResponseBodyMigrationMode migrationMode) {
+        this.migrationMode = migrationMode;
         return this;
     }
-    public String getMigrationJobClass() {
-        return this.migrationJobClass;
+    public DescribeMigrationJobStatusResponseBodyMigrationMode getMigrationMode() {
+        return this.migrationMode;
+    }
+
+    public DescribeMigrationJobStatusResponseBody setPrecheckStatus(DescribeMigrationJobStatusResponseBodyPrecheckStatus precheckStatus) {
+        this.precheckStatus = precheckStatus;
+        return this;
+    }
+    public DescribeMigrationJobStatusResponseBodyPrecheckStatus getPrecheckStatus() {
+        return this.precheckStatus;
     }
 
     public DescribeMigrationJobStatusResponseBody setSourceEndpoint(DescribeMigrationJobStatusResponseBodySourceEndpoint sourceEndpoint) {
@@ -197,14 +205,6 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     }
     public DescribeMigrationJobStatusResponseBodyStructureInitializationStatus getStructureInitializationStatus() {
         return this.structureInitializationStatus;
-    }
-
-    public DescribeMigrationJobStatusResponseBody setDataSynchronizationStatus(DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus dataSynchronizationStatus) {
-        this.dataSynchronizationStatus = dataSynchronizationStatus;
-        return this;
-    }
-    public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus getDataSynchronizationStatus() {
-        return this.dataSynchronizationStatus;
     }
 
     public static class DescribeMigrationJobStatusResponseBodyDataInitializationStatus extends TeaModel {
@@ -259,15 +259,174 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Delay")
+        public String delay;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("Checkpoint")
+        public String checkpoint;
+
+        public static DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus self = new DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setDelay(String delay) {
+            this.delay = delay;
+            return this;
+        }
+        public String getDelay() {
+            return this.delay;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setCheckpoint(String checkpoint) {
+            this.checkpoint = checkpoint;
+            return this;
+        }
+        public String getCheckpoint() {
+            return this.checkpoint;
+        }
+
+    }
+
+    public static class DescribeMigrationJobStatusResponseBodyDestinationEndpoint extends TeaModel {
+        @NameInMap("DatabaseName")
+        public String databaseName;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("IP")
+        public String IP;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("UserName")
+        public String userName;
+
+        @NameInMap("oracleSID")
+        public String oracleSID;
+
+        @NameInMap("EngineName")
+        public String engineName;
+
+        public static DescribeMigrationJobStatusResponseBodyDestinationEndpoint build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMigrationJobStatusResponseBodyDestinationEndpoint self = new DescribeMigrationJobStatusResponseBodyDestinationEndpoint();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setDatabaseName(String databaseName) {
+            this.databaseName = databaseName;
+            return this;
+        }
+        public String getDatabaseName() {
+            return this.databaseName;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setIP(String IP) {
+            this.IP = IP;
+            return this;
+        }
+        public String getIP() {
+            return this.IP;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setOracleSID(String oracleSID) {
+            this.oracleSID = oracleSID;
+            return this;
+        }
+        public String getOracleSID() {
+            return this.oracleSID;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setEngineName(String engineName) {
+            this.engineName = engineName;
+            return this;
+        }
+        public String getEngineName() {
+            return this.engineName;
+        }
+
+    }
+
     public static class DescribeMigrationJobStatusResponseBodyMigrationMode extends TeaModel {
         @NameInMap("dataInitialization")
         public Boolean dataInitialization;
 
-        @NameInMap("structureInitialization")
-        public Boolean structureInitialization;
-
         @NameInMap("dataSynchronization")
         public Boolean dataSynchronization;
+
+        @NameInMap("structureInitialization")
+        public Boolean structureInitialization;
 
         public static DescribeMigrationJobStatusResponseBodyMigrationMode build(java.util.Map<String, ?> map) throws Exception {
             DescribeMigrationJobStatusResponseBodyMigrationMode self = new DescribeMigrationJobStatusResponseBodyMigrationMode();
@@ -282,20 +441,20 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             return this.dataInitialization;
         }
 
-        public DescribeMigrationJobStatusResponseBodyMigrationMode setStructureInitialization(Boolean structureInitialization) {
-            this.structureInitialization = structureInitialization;
-            return this;
-        }
-        public Boolean getStructureInitialization() {
-            return this.structureInitialization;
-        }
-
         public DescribeMigrationJobStatusResponseBodyMigrationMode setDataSynchronization(Boolean dataSynchronization) {
             this.dataSynchronization = dataSynchronization;
             return this;
         }
         public Boolean getDataSynchronization() {
             return this.dataSynchronization;
+        }
+
+        public DescribeMigrationJobStatusResponseBodyMigrationMode setStructureInitialization(Boolean structureInitialization) {
+            this.structureInitialization = structureInitialization;
+            return this;
+        }
+        public Boolean getStructureInitialization() {
+            return this.structureInitialization;
         }
 
     }
@@ -408,102 +567,6 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
         public DescribeMigrationJobStatusResponseBodyPrecheckStatusDetail getDetail() {
             return this.detail;
-        }
-
-    }
-
-    public static class DescribeMigrationJobStatusResponseBodyDestinationEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
-        public String databaseName;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("IP")
-        public String IP;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("Port")
-        public String port;
-
-        @NameInMap("UserName")
-        public String userName;
-
-        @NameInMap("oracleSID")
-        public String oracleSID;
-
-        @NameInMap("EngineName")
-        public String engineName;
-
-        public static DescribeMigrationJobStatusResponseBodyDestinationEndpoint build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMigrationJobStatusResponseBodyDestinationEndpoint self = new DescribeMigrationJobStatusResponseBodyDestinationEndpoint();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setDatabaseName(String databaseName) {
-            this.databaseName = databaseName;
-            return this;
-        }
-        public String getDatabaseName() {
-            return this.databaseName;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setIP(String IP) {
-            this.IP = IP;
-            return this;
-        }
-        public String getIP() {
-            return this.IP;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setPort(String port) {
-            this.port = port;
-            return this;
-        }
-        public String getPort() {
-            return this.port;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setOracleSID(String oracleSID) {
-            this.oracleSID = oracleSID;
-            return this;
-        }
-        public String getOracleSID() {
-            return this.oracleSID;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDestinationEndpoint setEngineName(String engineName) {
-            this.engineName = engineName;
-            return this;
-        }
-        public String getEngineName() {
-            return this.engineName;
         }
 
     }
@@ -652,69 +715,6 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
         public String getProgress() {
             return this.progress;
-        }
-
-    }
-
-    public static class DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Percent")
-        public String percent;
-
-        @NameInMap("Delay")
-        public String delay;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("Checkpoint")
-        public String checkpoint;
-
-        public static DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus self = new DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setPercent(String percent) {
-            this.percent = percent;
-            return this;
-        }
-        public String getPercent() {
-            return this.percent;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setDelay(String delay) {
-            this.delay = delay;
-            return this;
-        }
-        public String getDelay() {
-            return this.delay;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus setCheckpoint(String checkpoint) {
-            this.checkpoint = checkpoint;
-            return this;
-        }
-        public String getCheckpoint() {
-            return this.checkpoint;
         }
 
     }

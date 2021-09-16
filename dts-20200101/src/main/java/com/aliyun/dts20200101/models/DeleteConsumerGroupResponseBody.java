@@ -7,14 +7,14 @@ public class DeleteConsumerGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static DeleteConsumerGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteConsumerGroupResponseBody self = new DeleteConsumerGroupResponseBody();
@@ -29,12 +29,12 @@ public class DeleteConsumerGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteConsumerGroupResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public DeleteConsumerGroupResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public DeleteConsumerGroupResponseBody setSuccess(String success) {
@@ -45,12 +45,12 @@ public class DeleteConsumerGroupResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeleteConsumerGroupResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DeleteConsumerGroupResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

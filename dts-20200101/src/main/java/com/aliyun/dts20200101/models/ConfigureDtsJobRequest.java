@@ -118,6 +118,12 @@ public class ConfigureDtsJobRequest extends TeaModel {
     @NameInMap("ErrorNotice")
     public Boolean errorNotice;
 
+    @NameInMap("SynchronizationDirection")
+    public String synchronizationDirection;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ConfigureDtsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigureDtsJobRequest self = new ConfigureDtsJobRequest();
         return TeaModel.build(map, self);
@@ -425,6 +431,22 @@ public class ConfigureDtsJobRequest extends TeaModel {
     }
     public Boolean getErrorNotice() {
         return this.errorNotice;
+    }
+
+    public ConfigureDtsJobRequest setSynchronizationDirection(String synchronizationDirection) {
+        this.synchronizationDirection = synchronizationDirection;
+        return this;
+    }
+    public String getSynchronizationDirection() {
+        return this.synchronizationDirection;
+    }
+
+    public ConfigureDtsJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -13,6 +13,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     @NameInMap("MigrationMode")
     public ConfigureMigrationJobRequestMigrationMode migrationMode;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
@@ -61,6 +64,14 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     }
     public ConfigureMigrationJobRequestMigrationMode getMigrationMode() {
         return this.migrationMode;
+    }
+
+    public ConfigureMigrationJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ConfigureMigrationJobRequest setMigrationJobId(String migrationJobId) {

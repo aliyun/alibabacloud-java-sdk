@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 
@@ -25,6 +28,14 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public static CreateConsumerGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupRequest self = new CreateConsumerGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateConsumerGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateConsumerGroupRequest setSubscriptionInstanceId(String subscriptionInstanceId) {
