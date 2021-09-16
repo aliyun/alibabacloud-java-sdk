@@ -229,6 +229,10 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("replayDutyUserId")
         public Long replayDutyUserId;
 
+        // 复盘负责人手机号
+        @NameInMap("replayDutyUserPhone")
+        public String replayDutyUserPhone;
+
         // 故障责任部门
         @NameInMap("dutyDepartmentId")
         public String dutyDepartmentId;
@@ -236,6 +240,10 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         // 故障责任人名称
         @NameInMap("dutyUserName")
         public String dutyUserName;
+
+        // 故障责任人手机号
+        @NameInMap("dutyUserPhone")
+        public String dutyUserPhone;
 
         // 复盘负责人名称
         @NameInMap("replayDutyUserName")
@@ -350,6 +358,14 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             return this.replayDutyUserId;
         }
 
+        public GetProblemImprovementResponseBodyData setReplayDutyUserPhone(String replayDutyUserPhone) {
+            this.replayDutyUserPhone = replayDutyUserPhone;
+            return this;
+        }
+        public String getReplayDutyUserPhone() {
+            return this.replayDutyUserPhone;
+        }
+
         public GetProblemImprovementResponseBodyData setDutyDepartmentId(String dutyDepartmentId) {
             this.dutyDepartmentId = dutyDepartmentId;
             return this;
@@ -364,6 +380,14 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         }
         public String getDutyUserName() {
             return this.dutyUserName;
+        }
+
+        public GetProblemImprovementResponseBodyData setDutyUserPhone(String dutyUserPhone) {
+            this.dutyUserPhone = dutyUserPhone;
+            return this;
+        }
+        public String getDutyUserPhone() {
+            return this.dutyUserPhone;
         }
 
         public GetProblemImprovementResponseBodyData setReplayDutyUserName(String replayDutyUserName) {

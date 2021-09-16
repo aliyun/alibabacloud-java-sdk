@@ -8,6 +8,10 @@ public class CreateRouteRuleRequest extends TeaModel {
     @NameInMap("ruleName")
     public byte[] ruleName;
 
+    // 启用状态
+    @NameInMap("enableStatus")
+    public String enableStatus;
+
     // 关联服务ID
     @NameInMap("relatedServiceId")
     public Long relatedServiceId;
@@ -67,6 +71,14 @@ public class CreateRouteRuleRequest extends TeaModel {
     }
     public byte[] getRuleName() {
         return this.ruleName;
+    }
+
+    public CreateRouteRuleRequest setEnableStatus(String enableStatus) {
+        this.enableStatus = enableStatus;
+        return this;
+    }
+    public String getEnableStatus() {
+        return this.enableStatus;
     }
 
     public CreateRouteRuleRequest setRelatedServiceId(Long relatedServiceId) {

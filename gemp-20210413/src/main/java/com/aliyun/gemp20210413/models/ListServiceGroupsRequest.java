@@ -24,6 +24,10 @@ public class ListServiceGroupsRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    // 是否已经排班
+    @NameInMap("isScheduled")
+    public Boolean isScheduled;
+
     public static ListServiceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServiceGroupsRequest self = new ListServiceGroupsRequest();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class ListServiceGroupsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ListServiceGroupsRequest setIsScheduled(Boolean isScheduled) {
+        this.isScheduled = isScheduled;
+        return this;
+    }
+    public Boolean getIsScheduled() {
+        return this.isScheduled;
     }
 
 }

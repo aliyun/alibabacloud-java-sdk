@@ -4,18 +4,23 @@ package com.aliyun.gemp20210413.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
+    // 请求ID
     @NameInMap("requestId")
     public String requestId;
 
+    // 报警列表
     @NameInMap("data")
     public java.util.List<ListAlertsResponseBodyData> data;
 
+    // 总条数
     @NameInMap("totalCount")
     public Long totalCount;
 
+    // 当前页
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    // 页的大小
     @NameInMap("pageSize")
     public Integer pageSize;
 
@@ -89,6 +94,14 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("sourceEventCount")
         public Long sourceEventCount;
 
+        // 报警源
+        @NameInMap("alertSourceName")
+        public String alertSourceName;
+
+        // 关联流转规则ID
+        @NameInMap("routeRuleId")
+        public Long routeRuleId;
+
         public static ListAlertsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAlertsResponseBodyData self = new ListAlertsResponseBodyData();
             return TeaModel.build(map, self);
@@ -140,6 +153,22 @@ public class ListAlertsResponseBody extends TeaModel {
         }
         public Long getSourceEventCount() {
             return this.sourceEventCount;
+        }
+
+        public ListAlertsResponseBodyData setAlertSourceName(String alertSourceName) {
+            this.alertSourceName = alertSourceName;
+            return this;
+        }
+        public String getAlertSourceName() {
+            return this.alertSourceName;
+        }
+
+        public ListAlertsResponseBodyData setRouteRuleId(Long routeRuleId) {
+            this.routeRuleId = routeRuleId;
+            return this;
+        }
+        public Long getRouteRuleId() {
+            return this.routeRuleId;
         }
 
     }

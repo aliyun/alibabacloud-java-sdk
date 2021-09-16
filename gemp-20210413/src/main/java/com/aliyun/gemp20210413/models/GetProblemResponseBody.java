@@ -438,6 +438,10 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("mainHandlerId")
         public Long mainHandlerId;
 
+        // 主要处理人手机号
+        @NameInMap("mainHandlerPhone")
+        public String mainHandlerPhone;
+
         // 舆情反馈
         @NameInMap("feedback")
         public String feedback;
@@ -613,6 +617,14 @@ public class GetProblemResponseBody extends TeaModel {
         }
         public Long getMainHandlerId() {
             return this.mainHandlerId;
+        }
+
+        public GetProblemResponseBodyData setMainHandlerPhone(String mainHandlerPhone) {
+            this.mainHandlerPhone = mainHandlerPhone;
+            return this;
+        }
+        public String getMainHandlerPhone() {
+            return this.mainHandlerPhone;
         }
 
         public GetProblemResponseBodyData setFeedback(String feedback) {
