@@ -70,32 +70,26 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class GetEditingProjectMaterialsResponseBodyMaterialListMaterial extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("Sprites")
-        public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSprites sprites;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("CateId")
         public Integer cateId;
 
-        @NameInMap("Tags")
-        public String tags;
-
         @NameInMap("MaterialType")
         public String materialType;
+
+        @NameInMap("Tags")
+        public String tags;
 
         @NameInMap("SpriteConfig")
         public String spriteConfig;
 
         @NameInMap("Source")
         public String source;
-
-        @NameInMap("Snapshots")
-        public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots snapshots;
 
         @NameInMap("CateName")
         public String cateName;
@@ -121,17 +115,15 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("Sprites")
+        public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSprites sprites;
+
+        @NameInMap("Snapshots")
+        public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots snapshots;
+
         public static GetEditingProjectMaterialsResponseBodyMaterialListMaterial build(java.util.Map<String, ?> map) throws Exception {
             GetEditingProjectMaterialsResponseBodyMaterialListMaterial self = new GetEditingProjectMaterialsResponseBodyMaterialListMaterial();
             return TeaModel.build(map, self);
-        }
-
-        public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
         }
 
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setStatus(String status) {
@@ -142,12 +134,12 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setSprites(GetEditingProjectMaterialsResponseBodyMaterialListMaterialSprites sprites) {
-            this.sprites = sprites;
+        public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSprites getSprites() {
-            return this.sprites;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setCateId(Integer cateId) {
@@ -158,20 +150,20 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
             return this.cateId;
         }
 
-        public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setMaterialType(String materialType) {
             this.materialType = materialType;
             return this;
         }
         public String getMaterialType() {
             return this.materialType;
+        }
+
+        public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setSpriteConfig(String spriteConfig) {
@@ -188,14 +180,6 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         }
         public String getSource() {
             return this.source;
-        }
-
-        public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setSnapshots(GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots snapshots) {
-            this.snapshots = snapshots;
-            return this;
-        }
-        public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots getSnapshots() {
-            return this.snapshots;
         }
 
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setCateName(String cateName) {
@@ -260,6 +244,22 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setSprites(GetEditingProjectMaterialsResponseBodyMaterialListMaterialSprites sprites) {
+            this.sprites = sprites;
+            return this;
+        }
+        public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSprites getSprites() {
+            return this.sprites;
+        }
+
+        public GetEditingProjectMaterialsResponseBodyMaterialListMaterial setSnapshots(GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots snapshots) {
+            this.snapshots = snapshots;
+            return this;
+        }
+        public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots getSnapshots() {
+            return this.snapshots;
         }
 
     }

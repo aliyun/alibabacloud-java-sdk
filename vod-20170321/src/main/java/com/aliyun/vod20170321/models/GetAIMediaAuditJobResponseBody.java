@@ -32,11 +32,11 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
     }
 
     public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
         @NameInMap("Score")
         public String score;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         @NameInMap("Label")
         public String label;
@@ -49,20 +49,20 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult setScore(String score) {
             this.score = score;
             return this;
         }
         public String getScore() {
             return this.score;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult setLabel(String label) {
@@ -87,17 +87,17 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("Result")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult> result;
-
         @NameInMap("Url")
         public String url;
 
+        @NameInMap("Suggestion")
+        public String suggestion;
+
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Result")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult> result;
 
         public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult build(java.util.Map<String, ?> map) throws Exception {
             GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult();
@@ -112,28 +112,20 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             return this.type;
         }
 
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult setResult(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult> result) {
-            this.result = result;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult> getResult() {
-            return this.result;
-        }
-
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult setUrl(String url) {
             this.url = url;
             return this;
         }
         public String getUrl() {
             return this.url;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
         public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult setLabel(String label) {
@@ -144,921 +136,12 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             return this.label;
         }
 
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Scene")
-        public String scene;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult setScene(String scene) {
-            this.scene = scene;
-            return this;
-        }
-        public String getScene() {
-            return this.scene;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Timestamp")
-        public String timestamp;
-
-        @NameInMap("Label")
-        public String label;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Count")
-        public Integer count;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("TopList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList> topList;
-
-        @NameInMap("AverageScore")
-        public String averageScore;
-
-        @NameInMap("CounterList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList> counterList;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("MaxScore")
-        public String maxScore;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList> topList) {
-            this.topList = topList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList> getTopList() {
-            return this.topList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setAverageScore(String averageScore) {
-            this.averageScore = averageScore;
-            return this;
-        }
-        public String getAverageScore() {
-            return this.averageScore;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList> counterList) {
-            this.counterList = counterList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList> getCounterList() {
-            return this.counterList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setMaxScore(String maxScore) {
-            this.maxScore = maxScore;
-            return this;
-        }
-        public String getMaxScore() {
-            return this.maxScore;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Timestamp")
-        public String timestamp;
-
-        @NameInMap("Label")
-        public String label;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Count")
-        public Integer count;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("TopList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList> topList;
-
-        @NameInMap("AverageScore")
-        public String averageScore;
-
-        @NameInMap("CounterList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList> counterList;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("MaxScore")
-        public String maxScore;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList> topList) {
-            this.topList = topList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList> getTopList() {
-            return this.topList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setAverageScore(String averageScore) {
-            this.averageScore = averageScore;
-            return this;
-        }
-        public String getAverageScore() {
-            return this.averageScore;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList> counterList) {
-            this.counterList = counterList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList> getCounterList() {
-            return this.counterList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setMaxScore(String maxScore) {
-            this.maxScore = maxScore;
-            return this;
-        }
-        public String getMaxScore() {
-            return this.maxScore;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Timestamp")
-        public String timestamp;
-
-        @NameInMap("Label")
-        public String label;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Count")
-        public Integer count;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("TopList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList> topList;
-
-        @NameInMap("AverageScore")
-        public String averageScore;
-
-        @NameInMap("CounterList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList> counterList;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("MaxScore")
-        public String maxScore;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList> topList) {
-            this.topList = topList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList> getTopList() {
-            return this.topList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setAverageScore(String averageScore) {
-            this.averageScore = averageScore;
-            return this;
-        }
-        public String getAverageScore() {
-            return this.averageScore;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList> counterList) {
-            this.counterList = counterList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList> getCounterList() {
-            return this.counterList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setMaxScore(String maxScore) {
-            this.maxScore = maxScore;
-            return this;
-        }
-        public String getMaxScore() {
-            return this.maxScore;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Timestamp")
-        public String timestamp;
-
-        @NameInMap("Label")
-        public String label;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Count")
-        public Integer count;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("TopList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList> topList;
-
-        @NameInMap("AverageScore")
-        public String averageScore;
-
-        @NameInMap("CounterList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList> counterList;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("MaxScore")
-        public String maxScore;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList> topList) {
-            this.topList = topList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList> getTopList() {
-            return this.topList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setAverageScore(String averageScore) {
-            this.averageScore = averageScore;
-            return this;
-        }
-        public String getAverageScore() {
-            return this.averageScore;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList> counterList) {
-            this.counterList = counterList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList> getCounterList() {
-            return this.counterList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setMaxScore(String maxScore) {
-            this.maxScore = maxScore;
-            return this;
-        }
-        public String getMaxScore() {
-            return this.maxScore;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Timestamp")
-        public String timestamp;
-
-        @NameInMap("Label")
-        public String label;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Count")
-        public Integer count;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("TopList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> topList;
-
-        @NameInMap("AverageScore")
-        public String averageScore;
-
-        @NameInMap("CounterList")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList> counterList;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("MaxScore")
-        public String maxScore;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> topList) {
-            this.topList = topList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> getTopList() {
-            return this.topList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setAverageScore(String averageScore) {
-            this.averageScore = averageScore;
-            return this;
-        }
-        public String getAverageScore() {
-            return this.averageScore;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList> counterList) {
-            this.counterList = counterList;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList> getCounterList() {
-            return this.counterList;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setMaxScore(String maxScore) {
-            this.maxScore = maxScore;
-            return this;
-        }
-        public String getMaxScore() {
-            return this.maxScore;
-        }
-
-    }
-
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult extends TeaModel {
-        @NameInMap("LogoResult")
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult logoResult;
-
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("LiveResult")
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult liveResult;
-
-        @NameInMap("PornResult")
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult pornResult;
-
-        @NameInMap("AdResult")
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult adResult;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("TerrorismResult")
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult terrorismResult;
-
-        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult build(java.util.Map<String, ?> map) throws Exception {
-            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setLogoResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult logoResult) {
-            this.logoResult = logoResult;
-            return this;
-        }
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult getLogoResult() {
-            return this.logoResult;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setLiveResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult liveResult) {
-            this.liveResult = liveResult;
-            return this;
-        }
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult getLiveResult() {
-            return this.liveResult;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setPornResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult pornResult) {
-            this.pornResult = pornResult;
-            return this;
-        }
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult getPornResult() {
-            return this.pornResult;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setAdResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult adResult) {
-            this.adResult = adResult;
-            return this;
-        }
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult getAdResult() {
-            return this.adResult;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setTerrorismResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult terrorismResult) {
-            this.terrorismResult = terrorismResult;
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult setResult(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult> result) {
+            this.result = result;
             return this;
         }
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult getTerrorismResult() {
-            return this.terrorismResult;
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResultResult> getResult() {
+            return this.result;
         }
 
     }
@@ -1137,18 +220,926 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
 
     }
 
-    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobData extends TeaModel {
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult extends TeaModel {
+        @NameInMap("Score")
+        public String score;
+
         @NameInMap("Suggestion")
         public String suggestion;
 
-        @NameInMap("ImageResult")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult> imageResult;
+        @NameInMap("Label")
+        public String label;
 
-        @NameInMap("AudioResult")
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> audioResult;
+        @NameInMap("Scene")
+        public String scene;
 
-        @NameInMap("VideoResult")
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult videoResult;
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Count")
+        public Integer count;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList extends TeaModel {
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Label")
+        public String label;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult extends TeaModel {
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("AverageScore")
+        public String averageScore;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("MaxScore")
+        public String maxScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList> counterList;
+
+        @NameInMap("TopList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> topList;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setAverageScore(String averageScore) {
+            this.averageScore = averageScore;
+            return this;
+        }
+        public String getAverageScore() {
+            return this.averageScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setMaxScore(String maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public String getMaxScore() {
+            return this.maxScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultCounterList> getCounterList() {
+            return this.counterList;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> topList) {
+            this.topList = topList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> getTopList() {
+            return this.topList;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Count")
+        public Integer count;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList extends TeaModel {
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Label")
+        public String label;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult extends TeaModel {
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("AverageScore")
+        public String averageScore;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("MaxScore")
+        public String maxScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList> counterList;
+
+        @NameInMap("TopList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList> topList;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setAverageScore(String averageScore) {
+            this.averageScore = averageScore;
+            return this;
+        }
+        public String getAverageScore() {
+            return this.averageScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setMaxScore(String maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public String getMaxScore() {
+            return this.maxScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultCounterList> getCounterList() {
+            return this.counterList;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList> topList) {
+            this.topList = topList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResultTopList> getTopList() {
+            return this.topList;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Count")
+        public Integer count;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList extends TeaModel {
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Label")
+        public String label;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult extends TeaModel {
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("AverageScore")
+        public String averageScore;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("MaxScore")
+        public String maxScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList> counterList;
+
+        @NameInMap("TopList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList> topList;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setAverageScore(String averageScore) {
+            this.averageScore = averageScore;
+            return this;
+        }
+        public String getAverageScore() {
+            return this.averageScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setMaxScore(String maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public String getMaxScore() {
+            return this.maxScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultCounterList> getCounterList() {
+            return this.counterList;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList> topList) {
+            this.topList = topList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResultTopList> getTopList() {
+            return this.topList;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Count")
+        public Integer count;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList extends TeaModel {
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Label")
+        public String label;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult extends TeaModel {
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("AverageScore")
+        public String averageScore;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("MaxScore")
+        public String maxScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList> counterList;
+
+        @NameInMap("TopList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList> topList;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setAverageScore(String averageScore) {
+            this.averageScore = averageScore;
+            return this;
+        }
+        public String getAverageScore() {
+            return this.averageScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setMaxScore(String maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public String getMaxScore() {
+            return this.maxScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultCounterList> getCounterList() {
+            return this.counterList;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList> topList) {
+            this.topList = topList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResultTopList> getTopList() {
+            return this.topList;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Count")
+        public Integer count;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList extends TeaModel {
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Label")
+        public String label;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult extends TeaModel {
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("AverageScore")
+        public String averageScore;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("MaxScore")
+        public String maxScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList> counterList;
+
+        @NameInMap("TopList")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList> topList;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setAverageScore(String averageScore) {
+            this.averageScore = averageScore;
+            return this;
+        }
+        public String getAverageScore() {
+            return this.averageScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setMaxScore(String maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public String getMaxScore() {
+            return this.maxScore;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setCounterList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultCounterList> getCounterList() {
+            return this.counterList;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult setTopList(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList> topList) {
+            this.topList = topList;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResultTopList> getTopList() {
+            return this.topList;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("TerrorismResult")
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult terrorismResult;
+
+        @NameInMap("PornResult")
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult pornResult;
+
+        @NameInMap("AdResult")
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult adResult;
+
+        @NameInMap("LiveResult")
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult liveResult;
+
+        @NameInMap("LogoResult")
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult logoResult;
+
+        public static GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult build(java.util.Map<String, ?> map) throws Exception {
+            GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult self = new GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setTerrorismResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult terrorismResult) {
+            this.terrorismResult = terrorismResult;
+            return this;
+        }
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult getTerrorismResult() {
+            return this.terrorismResult;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setPornResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult pornResult) {
+            this.pornResult = pornResult;
+            return this;
+        }
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult getPornResult() {
+            return this.pornResult;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setAdResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult adResult) {
+            this.adResult = adResult;
+            return this;
+        }
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultAdResult getAdResult() {
+            return this.adResult;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setLiveResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult liveResult) {
+            this.liveResult = liveResult;
+            return this;
+        }
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLiveResult getLiveResult() {
+            return this.liveResult;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult setLogoResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult logoResult) {
+            this.logoResult = logoResult;
+            return this;
+        }
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult getLogoResult() {
+            return this.logoResult;
+        }
+
+    }
+
+    public static class GetAIMediaAuditJobResponseBodyMediaAuditJobData extends TeaModel {
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         @NameInMap("AbnormalModules")
         public String abnormalModules;
@@ -1156,8 +1147,17 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        @NameInMap("ImageResult")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult> imageResult;
+
         @NameInMap("TextResult")
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataTextResult> textResult;
+
+        @NameInMap("AudioResult")
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> audioResult;
+
+        @NameInMap("VideoResult")
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult videoResult;
 
         public static GetAIMediaAuditJobResponseBodyMediaAuditJobData build(java.util.Map<String, ?> map) throws Exception {
             GetAIMediaAuditJobResponseBodyMediaAuditJobData self = new GetAIMediaAuditJobResponseBodyMediaAuditJobData();
@@ -1170,30 +1170,6 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         }
         public String getSuggestion() {
             return this.suggestion;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobData setImageResult(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult> imageResult) {
-            this.imageResult = imageResult;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult> getImageResult() {
-            return this.imageResult;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobData setAudioResult(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> audioResult) {
-            this.audioResult = audioResult;
-            return this;
-        }
-        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> getAudioResult() {
-            return this.audioResult;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobData setVideoResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult videoResult) {
-            this.videoResult = videoResult;
-            return this;
-        }
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult getVideoResult() {
-            return this.videoResult;
         }
 
         public GetAIMediaAuditJobResponseBodyMediaAuditJobData setAbnormalModules(String abnormalModules) {
@@ -1212,12 +1188,36 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
             return this.label;
         }
 
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobData setImageResult(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult> imageResult) {
+            this.imageResult = imageResult;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataImageResult> getImageResult() {
+            return this.imageResult;
+        }
+
         public GetAIMediaAuditJobResponseBodyMediaAuditJobData setTextResult(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataTextResult> textResult) {
             this.textResult = textResult;
             return this;
         }
         public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataTextResult> getTextResult() {
             return this.textResult;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobData setAudioResult(java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> audioResult) {
+            this.audioResult = audioResult;
+            return this;
+        }
+        public java.util.List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataAudioResult> getAudioResult() {
+            return this.audioResult;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobData setVideoResult(GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult videoResult) {
+            this.videoResult = videoResult;
+            return this;
+        }
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResult getVideoResult() {
+            return this.videoResult;
         }
 
     }
@@ -1231,9 +1231,6 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
-
-        @NameInMap("Data")
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobData data;
 
         @NameInMap("CompleteTime")
         public String completeTime;
@@ -1249,6 +1246,9 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
 
         @NameInMap("MediaId")
         public String mediaId;
+
+        @NameInMap("Data")
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobData data;
 
         public static GetAIMediaAuditJobResponseBodyMediaAuditJob build(java.util.Map<String, ?> map) throws Exception {
             GetAIMediaAuditJobResponseBodyMediaAuditJob self = new GetAIMediaAuditJobResponseBodyMediaAuditJob();
@@ -1277,14 +1277,6 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public GetAIMediaAuditJobResponseBodyMediaAuditJob setData(GetAIMediaAuditJobResponseBodyMediaAuditJobData data) {
-            this.data = data;
-            return this;
-        }
-        public GetAIMediaAuditJobResponseBodyMediaAuditJobData getData() {
-            return this.data;
         }
 
         public GetAIMediaAuditJobResponseBodyMediaAuditJob setCompleteTime(String completeTime) {
@@ -1325,6 +1317,14 @@ public class GetAIMediaAuditJobResponseBody extends TeaModel {
         }
         public String getMediaId() {
             return this.mediaId;
+        }
+
+        public GetAIMediaAuditJobResponseBodyMediaAuditJob setData(GetAIMediaAuditJobResponseBodyMediaAuditJobData data) {
+            this.data = data;
+            return this;
+        }
+        public GetAIMediaAuditJobResponseBodyMediaAuditJobData getData() {
+            return this.data;
         }
 
     }

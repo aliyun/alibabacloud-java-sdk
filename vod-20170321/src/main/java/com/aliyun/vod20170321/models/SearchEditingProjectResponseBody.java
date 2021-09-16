@@ -4,11 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SearchEditingProjectResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Total")
     public Integer total;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ProjectList")
     public SearchEditingProjectResponseBodyProjectList projectList;
@@ -18,20 +18,20 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SearchEditingProjectResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public SearchEditingProjectResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }
     public Integer getTotal() {
         return this.total;
+    }
+
+    public SearchEditingProjectResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SearchEditingProjectResponseBody setProjectList(SearchEditingProjectResponseBodyProjectList projectList) {

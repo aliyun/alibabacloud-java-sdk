@@ -13,18 +13,6 @@ public class GetPlayInfoRequest extends TeaModel {
     @NameInMap("AuthTimeout")
     public Long authTimeout;
 
-    @NameInMap("Rand")
-    public String rand;
-
-    @NameInMap("AuthInfo")
-    public String authInfo;
-
-    @NameInMap("Channel")
-    public String channel;
-
-    @NameInMap("PlayerVersion")
-    public String playerVersion;
-
     @NameInMap("OutputType")
     public String outputType;
 
@@ -42,6 +30,9 @@ public class GetPlayInfoRequest extends TeaModel {
 
     @NameInMap("PlayConfig")
     public String playConfig;
+
+    @NameInMap("AdditionType")
+    public String additionType;
 
     public static GetPlayInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPlayInfoRequest self = new GetPlayInfoRequest();
@@ -70,38 +61,6 @@ public class GetPlayInfoRequest extends TeaModel {
     }
     public Long getAuthTimeout() {
         return this.authTimeout;
-    }
-
-    public GetPlayInfoRequest setRand(String rand) {
-        this.rand = rand;
-        return this;
-    }
-    public String getRand() {
-        return this.rand;
-    }
-
-    public GetPlayInfoRequest setAuthInfo(String authInfo) {
-        this.authInfo = authInfo;
-        return this;
-    }
-    public String getAuthInfo() {
-        return this.authInfo;
-    }
-
-    public GetPlayInfoRequest setChannel(String channel) {
-        this.channel = channel;
-        return this;
-    }
-    public String getChannel() {
-        return this.channel;
-    }
-
-    public GetPlayInfoRequest setPlayerVersion(String playerVersion) {
-        this.playerVersion = playerVersion;
-        return this;
-    }
-    public String getPlayerVersion() {
-        return this.playerVersion;
     }
 
     public GetPlayInfoRequest setOutputType(String outputType) {
@@ -150,6 +109,14 @@ public class GetPlayInfoRequest extends TeaModel {
     }
     public String getPlayConfig() {
         return this.playConfig;
+    }
+
+    public GetPlayInfoRequest setAdditionType(String additionType) {
+        this.additionType = additionType;
+        return this;
+    }
+    public String getAdditionType() {
+        return this.additionType;
     }
 
 }

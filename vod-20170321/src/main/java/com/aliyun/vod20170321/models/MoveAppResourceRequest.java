@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class MoveAppResourceRequest extends TeaModel {
-    @NameInMap("ResourceRealOwnerId")
-    public Long resourceRealOwnerId;
-
     @NameInMap("TargetAppId")
     public String targetAppId;
 
@@ -19,14 +16,6 @@ public class MoveAppResourceRequest extends TeaModel {
     public static MoveAppResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveAppResourceRequest self = new MoveAppResourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public MoveAppResourceRequest setResourceRealOwnerId(Long resourceRealOwnerId) {
-        this.resourceRealOwnerId = resourceRealOwnerId;
-        return this;
-    }
-    public Long getResourceRealOwnerId() {
-        return this.resourceRealOwnerId;
     }
 
     public MoveAppResourceRequest setTargetAppId(String targetAppId) {

@@ -84,14 +84,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("JobId")
-        public String jobId;
-
         @NameInMap("Regular")
         public String regular;
 
         @NameInMap("Total")
         public Long total;
+
+        @NameInMap("JobId")
+        public String jobId;
 
         @NameInMap("Snapshots")
         public ListSnapshotsResponseBodyMediaSnapshotSnapshots snapshots;
@@ -109,14 +109,6 @@ public class ListSnapshotsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public ListSnapshotsResponseBodyMediaSnapshot setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
         public ListSnapshotsResponseBodyMediaSnapshot setRegular(String regular) {
             this.regular = regular;
             return this;
@@ -131,6 +123,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
         public Long getTotal() {
             return this.total;
+        }
+
+        public ListSnapshotsResponseBodyMediaSnapshot setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
         }
 
         public ListSnapshotsResponseBodyMediaSnapshot setSnapshots(ListSnapshotsResponseBodyMediaSnapshotSnapshots snapshots) {

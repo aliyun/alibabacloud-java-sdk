@@ -4,11 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetPlayInfoResponseBody extends TeaModel {
-    @NameInMap("VideoBase")
-    public GetPlayInfoResponseBodyVideoBase videoBase;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("VideoBase")
+    public GetPlayInfoResponseBodyVideoBase videoBase;
 
     @NameInMap("PlayInfoList")
     public GetPlayInfoResponseBodyPlayInfoList playInfoList;
@@ -18,20 +18,20 @@ public class GetPlayInfoResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetPlayInfoResponseBody setVideoBase(GetPlayInfoResponseBodyVideoBase videoBase) {
-        this.videoBase = videoBase;
-        return this;
-    }
-    public GetPlayInfoResponseBodyVideoBase getVideoBase() {
-        return this.videoBase;
-    }
-
     public GetPlayInfoResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetPlayInfoResponseBody setVideoBase(GetPlayInfoResponseBodyVideoBase videoBase) {
+        this.videoBase = videoBase;
+        return this;
+    }
+    public GetPlayInfoResponseBodyVideoBase getVideoBase() {
+        return this.videoBase;
     }
 
     public GetPlayInfoResponseBody setPlayInfoList(GetPlayInfoResponseBodyPlayInfoList playInfoList) {
@@ -63,6 +63,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
         @NameInMap("MediaType")
         public String mediaType;
+
+        @NameInMap("DanMuURL")
+        public String danMuURL;
 
         public static GetPlayInfoResponseBodyVideoBase build(java.util.Map<String, ?> map) throws Exception {
             GetPlayInfoResponseBodyVideoBase self = new GetPlayInfoResponseBodyVideoBase();
@@ -125,14 +128,22 @@ public class GetPlayInfoResponseBody extends TeaModel {
             return this.mediaType;
         }
 
+        public GetPlayInfoResponseBodyVideoBase setDanMuURL(String danMuURL) {
+            this.danMuURL = danMuURL;
+            return this;
+        }
+        public String getDanMuURL() {
+            return this.danMuURL;
+        }
+
     }
 
     public static class GetPlayInfoResponseBodyPlayInfoListPlayInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("Specification")
         public String specification;
@@ -190,20 +201,20 @@ public class GetPlayInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetPlayInfoResponseBodyPlayInfoListPlayInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public GetPlayInfoResponseBodyPlayInfoListPlayInfo setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public GetPlayInfoResponseBodyPlayInfoListPlayInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetPlayInfoResponseBodyPlayInfoListPlayInfo setSpecification(String specification) {

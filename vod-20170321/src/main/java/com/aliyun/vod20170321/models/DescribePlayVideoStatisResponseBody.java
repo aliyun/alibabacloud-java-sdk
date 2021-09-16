@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayVideoStatisResponseBody extends TeaModel {
-    @NameInMap("VideoPlayStatisDetails")
-    public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails videoPlayStatisDetails;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("VideoPlayStatisDetails")
+    public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails videoPlayStatisDetails;
 
     public static DescribePlayVideoStatisResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePlayVideoStatisResponseBody self = new DescribePlayVideoStatisResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePlayVideoStatisResponseBody setVideoPlayStatisDetails(DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails videoPlayStatisDetails) {
-        this.videoPlayStatisDetails = videoPlayStatisDetails;
-        return this;
-    }
-    public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails getVideoPlayStatisDetails() {
-        return this.videoPlayStatisDetails;
     }
 
     public DescribePlayVideoStatisResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribePlayVideoStatisResponseBody setVideoPlayStatisDetails(DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails videoPlayStatisDetails) {
+        this.videoPlayStatisDetails = videoPlayStatisDetails;
+        return this;
+    }
+    public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails getVideoPlayStatisDetails() {
+        return this.videoPlayStatisDetails;
     }
 
     public static class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail extends TeaModel {

@@ -31,6 +31,88 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         return this.domainLogDetails;
     }
 
+    public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("LogSize")
+        public Long logSize;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("LogName")
+        public String logName;
+
+        @NameInMap("LogPath")
+        public String logPath;
+
+        public static DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail self = new DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setLogSize(Long logSize) {
+            this.logSize = logSize;
+            return this;
+        }
+        public Long getLogSize() {
+            return this.logSize;
+        }
+
+        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setLogName(String logName) {
+            this.logName = logName;
+            return this;
+        }
+        public String getLogName() {
+            return this.logName;
+        }
+
+        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setLogPath(String logPath) {
+            this.logPath = logPath;
+            return this;
+        }
+        public String getLogPath() {
+            return this.logPath;
+        }
+
+    }
+
+    public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos extends TeaModel {
+        @NameInMap("LogInfoDetail")
+        public java.util.List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> logInfoDetail;
+
+        public static DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos self = new DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos setLogInfoDetail(java.util.List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> logInfoDetail) {
+            this.logInfoDetail = logInfoDetail;
+            return this;
+        }
+        public java.util.List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> getLogInfoDetail() {
+            return this.logInfoDetail;
+        }
+
+    }
+
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
         @NameInMap("PageNumber")
         public Long pageNumber;
@@ -72,92 +154,7 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
-        @NameInMap("EndTime")
-        public String endTime;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("LogPath")
-        public String logPath;
-
-        @NameInMap("LogSize")
-        public Long logSize;
-
-        @NameInMap("LogName")
-        public String logName;
-
-        public static DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail self = new DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
-        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setLogPath(String logPath) {
-            this.logPath = logPath;
-            return this;
-        }
-        public String getLogPath() {
-            return this.logPath;
-        }
-
-        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setLogSize(Long logSize) {
-            this.logSize = logSize;
-            return this;
-        }
-        public Long getLogSize() {
-            return this.logSize;
-        }
-
-        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail setLogName(String logName) {
-            this.logName = logName;
-            return this;
-        }
-        public String getLogName() {
-            return this.logName;
-        }
-
-    }
-
-    public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos extends TeaModel {
-        @NameInMap("LogInfoDetail")
-        public java.util.List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> logInfoDetail;
-
-        public static DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos self = new DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos setLogInfoDetail(java.util.List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> logInfoDetail) {
-            this.logInfoDetail = logInfoDetail;
-            return this;
-        }
-        public java.util.List<DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail> getLogInfoDetail() {
-            return this.logInfoDetail;
-        }
-
-    }
-
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
-        @NameInMap("PageInfos")
-        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;
-
         @NameInMap("LogCount")
         public Long logCount;
 
@@ -167,17 +164,12 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         @NameInMap("LogInfos")
         public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
+        @NameInMap("PageInfos")
+        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;
+
         public static DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail self = new DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail setPageInfos(DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos) {
-            this.pageInfos = pageInfos;
-            return this;
-        }
-        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos getPageInfos() {
-            return this.pageInfos;
         }
 
         public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail setLogCount(Long logCount) {
@@ -202,6 +194,14 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
         }
         public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos getLogInfos() {
             return this.logInfos;
+        }
+
+        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail setPageInfos(DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos) {
+            this.pageInfos = pageInfos;
+            return this;
+        }
+        public DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos getPageInfos() {
+            return this.pageInfos;
         }
 
     }

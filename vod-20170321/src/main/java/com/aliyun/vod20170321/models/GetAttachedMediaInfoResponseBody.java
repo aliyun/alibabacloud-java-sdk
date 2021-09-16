@@ -4,11 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAttachedMediaInfoResponseBody extends TeaModel {
-    @NameInMap("NonExistMediaIds")
-    public java.util.List<String> nonExistMediaIds;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("NonExistMediaIds")
+    public java.util.List<String> nonExistMediaIds;
 
     @NameInMap("AttachedMediaList")
     public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaList> attachedMediaList;
@@ -18,20 +18,20 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetAttachedMediaInfoResponseBody setNonExistMediaIds(java.util.List<String> nonExistMediaIds) {
-        this.nonExistMediaIds = nonExistMediaIds;
-        return this;
-    }
-    public java.util.List<String> getNonExistMediaIds() {
-        return this.nonExistMediaIds;
-    }
-
     public GetAttachedMediaInfoResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAttachedMediaInfoResponseBody setNonExistMediaIds(java.util.List<String> nonExistMediaIds) {
+        this.nonExistMediaIds = nonExistMediaIds;
+        return this;
+    }
+    public java.util.List<String> getNonExistMediaIds() {
+        return this.nonExistMediaIds;
     }
 
     public GetAttachedMediaInfoResponseBody setAttachedMediaList(java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaList> attachedMediaList) {
@@ -95,17 +95,17 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetAttachedMediaInfoResponseBodyAttachedMediaList extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("StorageLocation")
         public String storageLocation;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("Tags")
         public String tags;
@@ -119,9 +119,6 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("Categories")
-        public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> categories;
-
         @NameInMap("AppId")
         public String appId;
 
@@ -131,25 +128,20 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("Categories")
+        public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> categories;
+
         public static GetAttachedMediaInfoResponseBodyAttachedMediaList build(java.util.Map<String, ?> map) throws Exception {
             GetAttachedMediaInfoResponseBodyAttachedMediaList self = new GetAttachedMediaInfoResponseBodyAttachedMediaList();
             return TeaModel.build(map, self);
         }
 
-        public GetAttachedMediaInfoResponseBodyAttachedMediaList setStatus(String status) {
-            this.status = status;
+        public GetAttachedMediaInfoResponseBodyAttachedMediaList setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetAttachedMediaInfoResponseBodyAttachedMediaList setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getType() {
+            return this.type;
         }
 
         public GetAttachedMediaInfoResponseBodyAttachedMediaList setStorageLocation(String storageLocation) {
@@ -160,12 +152,20 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             return this.storageLocation;
         }
 
-        public GetAttachedMediaInfoResponseBodyAttachedMediaList setType(String type) {
-            this.type = type;
+        public GetAttachedMediaInfoResponseBodyAttachedMediaList setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public GetAttachedMediaInfoResponseBodyAttachedMediaList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetAttachedMediaInfoResponseBodyAttachedMediaList setTags(String tags) {
@@ -200,14 +200,6 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetAttachedMediaInfoResponseBodyAttachedMediaList setCategories(java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> categories) {
-            this.categories = categories;
-            return this;
-        }
-        public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> getCategories() {
-            return this.categories;
-        }
-
         public GetAttachedMediaInfoResponseBodyAttachedMediaList setAppId(String appId) {
             this.appId = appId;
             return this;
@@ -230,6 +222,14 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public GetAttachedMediaInfoResponseBodyAttachedMediaList setCategories(java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> categories) {
+            this.categories = categories;
+            return this;
+        }
+        public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> getCategories() {
+            return this.categories;
         }
 
     }

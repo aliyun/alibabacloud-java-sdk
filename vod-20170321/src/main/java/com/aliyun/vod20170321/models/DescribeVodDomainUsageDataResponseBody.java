@@ -4,57 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
-    @NameInMap("UsageDataPerInterval")
-    public DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("Type")
     public String type;
 
-    @NameInMap("Area")
-    public String area;
-
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Area")
+    public String area;
+
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    @NameInMap("UsageDataPerInterval")
+    public DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
+
     public static DescribeVodDomainUsageDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainUsageDataResponseBody self = new DescribeVodDomainUsageDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVodDomainUsageDataResponseBody setUsageDataPerInterval(DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval) {
-        this.usageDataPerInterval = usageDataPerInterval;
-        return this;
-    }
-    public DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval getUsageDataPerInterval() {
-        return this.usageDataPerInterval;
-    }
-
-    public DescribeVodDomainUsageDataResponseBody setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public DescribeVodDomainUsageDataResponseBody setArea(String area) {
-        this.area = area;
-        return this;
-    }
-    public String getArea() {
-        return this.area;
     }
 
     public DescribeVodDomainUsageDataResponseBody setEndTime(String endTime) {
@@ -65,20 +41,12 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeVodDomainUsageDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeVodDomainUsageDataResponseBody setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeVodDomainUsageDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
+    public String getType() {
+        return this.type;
     }
 
     public DescribeVodDomainUsageDataResponseBody setStartTime(String startTime) {
@@ -89,12 +57,44 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
         return this.startTime;
     }
 
+    public DescribeVodDomainUsageDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeVodDomainUsageDataResponseBody setArea(String area) {
+        this.area = area;
+        return this;
+    }
+    public String getArea() {
+        return this.area;
+    }
+
+    public DescribeVodDomainUsageDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
     public DescribeVodDomainUsageDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeVodDomainUsageDataResponseBody setUsageDataPerInterval(DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval) {
+        this.usageDataPerInterval = usageDataPerInterval;
+        return this;
+    }
+    public DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval getUsageDataPerInterval() {
+        return this.usageDataPerInterval;
     }
 
     public static class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {

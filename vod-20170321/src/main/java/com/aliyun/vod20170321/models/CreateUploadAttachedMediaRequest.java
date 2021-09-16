@@ -22,9 +22,6 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     @NameInMap("Tags")
     public String tags;
 
-    @NameInMap("CateId")
-    public Long cateId;
-
     @NameInMap("StorageLocation")
     public String storageLocation;
 
@@ -39,9 +36,6 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
 
     @NameInMap("AppId")
     public String appId;
-
-    @NameInMap("Icon")
-    public String icon;
 
     public static CreateUploadAttachedMediaRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUploadAttachedMediaRequest self = new CreateUploadAttachedMediaRequest();
@@ -96,14 +90,6 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
         return this.tags;
     }
 
-    public CreateUploadAttachedMediaRequest setCateId(Long cateId) {
-        this.cateId = cateId;
-        return this;
-    }
-    public Long getCateId() {
-        return this.cateId;
-    }
-
     public CreateUploadAttachedMediaRequest setStorageLocation(String storageLocation) {
         this.storageLocation = storageLocation;
         return this;
@@ -142,14 +128,6 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public CreateUploadAttachedMediaRequest setIcon(String icon) {
-        this.icon = icon;
-        return this;
-    }
-    public String getIcon() {
-        return this.icon;
     }
 
 }

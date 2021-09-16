@@ -10,9 +10,6 @@ public class GetMezzanineInfoRequest extends TeaModel {
     @NameInMap("AuthTimeout")
     public Long authTimeout;
 
-    @NameInMap("PreviewSegment")
-    public Boolean previewSegment;
-
     @NameInMap("OutputType")
     public String outputType;
 
@@ -38,14 +35,6 @@ public class GetMezzanineInfoRequest extends TeaModel {
     }
     public Long getAuthTimeout() {
         return this.authTimeout;
-    }
-
-    public GetMezzanineInfoRequest setPreviewSegment(Boolean previewSegment) {
-        this.previewSegment = previewSegment;
-        return this;
-    }
-    public Boolean getPreviewSegment() {
-        return this.previewSegment;
     }
 
     public GetMezzanineInfoRequest setOutputType(String outputType) {

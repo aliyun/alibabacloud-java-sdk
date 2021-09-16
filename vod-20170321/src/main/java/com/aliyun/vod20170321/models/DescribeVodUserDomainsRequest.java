@@ -25,18 +25,6 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
-    @NameInMap("CdnType")
-    public String cdnType;
-
-    @NameInMap("CheckDomainShow")
-    public Boolean checkDomainShow;
-
-    @NameInMap("FuncId")
-    public String funcId;
-
-    @NameInMap("FuncFilter")
-    public String funcFilter;
-
     @NameInMap("Tag")
     public java.util.List<DescribeVodUserDomainsRequestTag> tag;
 
@@ -99,38 +87,6 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     }
     public String getDomainSearchType() {
         return this.domainSearchType;
-    }
-
-    public DescribeVodUserDomainsRequest setCdnType(String cdnType) {
-        this.cdnType = cdnType;
-        return this;
-    }
-    public String getCdnType() {
-        return this.cdnType;
-    }
-
-    public DescribeVodUserDomainsRequest setCheckDomainShow(Boolean checkDomainShow) {
-        this.checkDomainShow = checkDomainShow;
-        return this;
-    }
-    public Boolean getCheckDomainShow() {
-        return this.checkDomainShow;
-    }
-
-    public DescribeVodUserDomainsRequest setFuncId(String funcId) {
-        this.funcId = funcId;
-        return this;
-    }
-    public String getFuncId() {
-        return this.funcId;
-    }
-
-    public DescribeVodUserDomainsRequest setFuncFilter(String funcFilter) {
-        this.funcFilter = funcFilter;
-        return this;
-    }
-    public String getFuncFilter() {
-        return this.funcFilter;
     }
 
     public DescribeVodUserDomainsRequest setTag(java.util.List<DescribeVodUserDomainsRequestTag> tag) {

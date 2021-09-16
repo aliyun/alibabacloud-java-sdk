@@ -38,11 +38,11 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         @NameInMap("AdLabel")
         public String adLabel;
 
-        @NameInMap("PornScore")
-        public String pornScore;
-
         @NameInMap("PornLabel")
         public String pornLabel;
+
+        @NameInMap("PornScore")
+        public String pornScore;
 
         @NameInMap("LiveLabel")
         public String liveLabel;
@@ -53,11 +53,11 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public String timestamp;
 
-        @NameInMap("LiveScore")
-        public String liveScore;
-
         @NameInMap("AdScore")
         public String adScore;
+
+        @NameInMap("LiveScore")
+        public String liveScore;
 
         @NameInMap("LogoScore")
         public String logoScore;
@@ -89,20 +89,20 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             return this.adLabel;
         }
 
-        public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList setPornScore(String pornScore) {
-            this.pornScore = pornScore;
-            return this;
-        }
-        public String getPornScore() {
-            return this.pornScore;
-        }
-
         public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList setPornLabel(String pornLabel) {
             this.pornLabel = pornLabel;
             return this;
         }
         public String getPornLabel() {
             return this.pornLabel;
+        }
+
+        public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList setPornScore(String pornScore) {
+            this.pornScore = pornScore;
+            return this;
+        }
+        public String getPornScore() {
+            return this.pornScore;
         }
 
         public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList setLiveLabel(String liveLabel) {
@@ -129,20 +129,20 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList setLiveScore(String liveScore) {
-            this.liveScore = liveScore;
-            return this;
-        }
-        public String getLiveScore() {
-            return this.liveScore;
-        }
-
         public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList setAdScore(String adScore) {
             this.adScore = adScore;
             return this;
         }
         public String getAdScore() {
             return this.adScore;
+        }
+
+        public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList setLiveScore(String liveScore) {
+            this.liveScore = liveScore;
+            return this;
+        }
+        public String getLiveScore() {
+            return this.liveScore;
         }
 
         public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList setLogoScore(String logoScore) {
@@ -172,23 +172,15 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail extends TeaModel {
-        @NameInMap("List")
-        public java.util.List<GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList> list;
-
         @NameInMap("Total")
         public Integer total;
+
+        @NameInMap("List")
+        public java.util.List<GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList> list;
 
         public static GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail self = new GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail();
             return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail setList(java.util.List<GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList> getList() {
-            return this.list;
         }
 
         public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail setTotal(Integer total) {
@@ -197,6 +189,14 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
         }
         public Integer getTotal() {
             return this.total;
+        }
+
+        public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail setList(java.util.List<GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList> getList() {
+            return this.list;
         }
 
     }

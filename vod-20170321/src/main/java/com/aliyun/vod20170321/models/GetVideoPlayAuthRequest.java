@@ -10,12 +10,6 @@ public class GetVideoPlayAuthRequest extends TeaModel {
     @NameInMap("AuthInfoTimeout")
     public Long authInfoTimeout;
 
-    @NameInMap("ReAuthInfo")
-    public String reAuthInfo;
-
-    @NameInMap("PlayConfig")
-    public String playConfig;
-
     public static GetVideoPlayAuthRequest build(java.util.Map<String, ?> map) throws Exception {
         GetVideoPlayAuthRequest self = new GetVideoPlayAuthRequest();
         return TeaModel.build(map, self);
@@ -35,22 +29,6 @@ public class GetVideoPlayAuthRequest extends TeaModel {
     }
     public Long getAuthInfoTimeout() {
         return this.authInfoTimeout;
-    }
-
-    public GetVideoPlayAuthRequest setReAuthInfo(String reAuthInfo) {
-        this.reAuthInfo = reAuthInfo;
-        return this;
-    }
-    public String getReAuthInfo() {
-        return this.reAuthInfo;
-    }
-
-    public GetVideoPlayAuthRequest setPlayConfig(String playConfig) {
-        this.playConfig = playConfig;
-        return this;
-    }
-    public String getPlayConfig() {
-        return this.playConfig;
     }
 
 }

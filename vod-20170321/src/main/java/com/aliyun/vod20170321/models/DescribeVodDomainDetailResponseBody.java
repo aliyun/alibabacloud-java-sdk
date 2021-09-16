@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainDetailResponseBody extends TeaModel {
-    @NameInMap("DomainDetail")
-    public DescribeVodDomainDetailResponseBodyDomainDetail domainDetail;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("DomainDetail")
+    public DescribeVodDomainDetailResponseBodyDomainDetail domainDetail;
 
     public static DescribeVodDomainDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainDetailResponseBody self = new DescribeVodDomainDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVodDomainDetailResponseBody setDomainDetail(DescribeVodDomainDetailResponseBodyDomainDetail domainDetail) {
-        this.domainDetail = domainDetail;
-        return this;
-    }
-    public DescribeVodDomainDetailResponseBodyDomainDetail getDomainDetail() {
-        return this.domainDetail;
     }
 
     public DescribeVodDomainDetailResponseBody setRequestId(String requestId) {
@@ -31,12 +23,17 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeVodDomainDetailResponseBody setDomainDetail(DescribeVodDomainDetailResponseBodyDomainDetail domainDetail) {
+        this.domainDetail = domainDetail;
+        return this;
+    }
+    public DescribeVodDomainDetailResponseBodyDomainDetail getDomainDetail() {
+        return this.domainDetail;
+    }
+
     public static class DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
         @NameInMap("Type")
         public String type;
-
-        @NameInMap("Enabled")
-        public String enabled;
 
         @NameInMap("Priority")
         public String priority;
@@ -46,6 +43,9 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
 
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Enabled")
+        public String enabled;
 
         public static DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource self = new DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource();
@@ -58,14 +58,6 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setEnabled(String enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public String getEnabled() {
-            return this.enabled;
         }
 
         public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setPriority(String priority) {
@@ -92,6 +84,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             return this.content;
         }
 
+        public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
+        }
+
     }
 
     public static class DescribeVodDomainDetailResponseBodyDomainDetailSources extends TeaModel {
@@ -114,23 +114,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainDetailResponseBodyDomainDetail extends TeaModel {
-        @NameInMap("SSLPub")
-        public String SSLPub;
-
-        @NameInMap("Sources")
-        public DescribeVodDomainDetailResponseBodyDomainDetailSources sources;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
-        @NameInMap("DomainName")
-        public String domainName;
-
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         @NameInMap("Weight")
         public String weight;
+
+        @NameInMap("SSLPub")
+        public String SSLPub;
 
         @NameInMap("Description")
         public String description;
@@ -150,41 +141,18 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("Sources")
+        public DescribeVodDomainDetailResponseBodyDomainDetailSources sources;
+
         public static DescribeVodDomainDetailResponseBodyDomainDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodDomainDetailResponseBodyDomainDetail self = new DescribeVodDomainDetailResponseBodyDomainDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setSSLPub(String SSLPub) {
-            this.SSLPub = SSLPub;
-            return this;
-        }
-        public String getSSLPub() {
-            return this.SSLPub;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setSources(DescribeVodDomainDetailResponseBodyDomainDetailSources sources) {
-            this.sources = sources;
-            return this;
-        }
-        public DescribeVodDomainDetailResponseBodyDomainDetailSources getSources() {
-            return this.sources;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
         public DescribeVodDomainDetailResponseBodyDomainDetail setGmtCreated(String gmtCreated) {
@@ -201,6 +169,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         }
         public String getWeight() {
             return this.weight;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setSSLPub(String SSLPub) {
+            this.SSLPub = SSLPub;
+            return this;
+        }
+        public String getSSLPub() {
+            return this.SSLPub;
         }
 
         public DescribeVodDomainDetailResponseBodyDomainDetail setDescription(String description) {
@@ -249,6 +225,30 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         }
         public String getDomainStatus() {
             return this.domainStatus;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setSources(DescribeVodDomainDetailResponseBodyDomainDetailSources sources) {
+            this.sources = sources;
+            return this;
+        }
+        public DescribeVodDomainDetailResponseBodyDomainDetailSources getSources() {
+            return this.sources;
         }
 
     }

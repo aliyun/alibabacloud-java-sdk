@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddCategoryResponseBody extends TeaModel {
-    @NameInMap("Category")
-    public AddCategoryResponseBodyCategory category;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Category")
+    public AddCategoryResponseBodyCategory category;
 
     public static AddCategoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddCategoryResponseBody self = new AddCategoryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddCategoryResponseBody setCategory(AddCategoryResponseBodyCategory category) {
-        this.category = category;
-        return this;
-    }
-    public AddCategoryResponseBodyCategory getCategory() {
-        return this.category;
     }
 
     public AddCategoryResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class AddCategoryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AddCategoryResponseBody setCategory(AddCategoryResponseBodyCategory category) {
+        this.category = category;
+        return this;
+    }
+    public AddCategoryResponseBodyCategory getCategory() {
+        return this.category;
     }
 
     public static class AddCategoryResponseBodyCategory extends TeaModel {

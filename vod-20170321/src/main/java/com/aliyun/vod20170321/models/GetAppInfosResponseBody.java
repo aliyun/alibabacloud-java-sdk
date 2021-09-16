@@ -7,11 +7,11 @@ public class GetAppInfosResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AppInfoList")
-    public java.util.List<GetAppInfosResponseBodyAppInfoList> appInfoList;
-
     @NameInMap("NonExistAppIds")
     public java.util.List<String> nonExistAppIds;
+
+    @NameInMap("AppInfoList")
+    public java.util.List<GetAppInfosResponseBodyAppInfoList> appInfoList;
 
     public static GetAppInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAppInfosResponseBody self = new GetAppInfosResponseBody();
@@ -26,20 +26,20 @@ public class GetAppInfosResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAppInfosResponseBody setAppInfoList(java.util.List<GetAppInfosResponseBodyAppInfoList> appInfoList) {
-        this.appInfoList = appInfoList;
-        return this;
-    }
-    public java.util.List<GetAppInfosResponseBodyAppInfoList> getAppInfoList() {
-        return this.appInfoList;
-    }
-
     public GetAppInfosResponseBody setNonExistAppIds(java.util.List<String> nonExistAppIds) {
         this.nonExistAppIds = nonExistAppIds;
         return this;
     }
     public java.util.List<String> getNonExistAppIds() {
         return this.nonExistAppIds;
+    }
+
+    public GetAppInfosResponseBody setAppInfoList(java.util.List<GetAppInfosResponseBodyAppInfoList> appInfoList) {
+        this.appInfoList = appInfoList;
+        return this;
+    }
+    public java.util.List<GetAppInfosResponseBodyAppInfoList> getAppInfoList() {
+        return this.appInfoList;
     }
 
     public static class GetAppInfosResponseBodyAppInfoList extends TeaModel {

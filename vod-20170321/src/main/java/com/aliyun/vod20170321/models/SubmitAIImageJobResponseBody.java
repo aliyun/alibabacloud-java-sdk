@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitAIImageJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SubmitAIImageJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitAIImageJobResponseBody self = new SubmitAIImageJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitAIImageJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitAIImageJobResponseBody setJobId(String jobId) {
@@ -29,6 +21,14 @@ public class SubmitAIImageJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public SubmitAIImageJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

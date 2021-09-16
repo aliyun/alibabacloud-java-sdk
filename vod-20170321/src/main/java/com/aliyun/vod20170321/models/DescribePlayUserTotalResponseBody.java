@@ -32,37 +32,21 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV extends TeaModel {
-        @NameInMap("iOS")
-        public String iOS;
-
-        @NameInMap("Android")
-        public String android;
-
         @NameInMap("Flash")
         public String flash;
+
+        @NameInMap("iOS")
+        public String iOS;
 
         @NameInMap("HTML5")
         public String HTML5;
 
+        @NameInMap("Android")
+        public String android;
+
         public static DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV build(java.util.Map<String, ?> map) throws Exception {
             DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV self = new DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV setIOS(String iOS) {
-            this.iOS = iOS;
-            return this;
-        }
-        public String getIOS() {
-            return this.iOS;
-        }
-
-        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV setAndroid(String android) {
-            this.android = android;
-            return this;
-        }
-        public String getAndroid() {
-            return this.android;
         }
 
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV setFlash(String flash) {
@@ -73,6 +57,14 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             return this.flash;
         }
 
+        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV setIOS(String iOS) {
+            this.iOS = iOS;
+            return this;
+        }
+        public String getIOS() {
+            return this.iOS;
+        }
+
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV setHTML5(String HTML5) {
             this.HTML5 = HTML5;
             return this;
@@ -81,40 +73,32 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             return this.HTML5;
         }
 
-    }
-
-    public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV extends TeaModel {
-        @NameInMap("iOS")
-        public String iOS;
-
-        @NameInMap("Android")
-        public String android;
-
-        @NameInMap("Flash")
-        public String flash;
-
-        @NameInMap("HTML5")
-        public String HTML5;
-
-        public static DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV build(java.util.Map<String, ?> map) throws Exception {
-            DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV self = new DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV setIOS(String iOS) {
-            this.iOS = iOS;
-            return this;
-        }
-        public String getIOS() {
-            return this.iOS;
-        }
-
-        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV setAndroid(String android) {
+        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV setAndroid(String android) {
             this.android = android;
             return this;
         }
         public String getAndroid() {
             return this.android;
+        }
+
+    }
+
+    public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV extends TeaModel {
+        @NameInMap("Flash")
+        public String flash;
+
+        @NameInMap("iOS")
+        public String iOS;
+
+        @NameInMap("HTML5")
+        public String HTML5;
+
+        @NameInMap("Android")
+        public String android;
+
+        public static DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV build(java.util.Map<String, ?> map) throws Exception {
+            DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV self = new DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV();
+            return TeaModel.build(map, self);
         }
 
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV setFlash(String flash) {
@@ -125,6 +109,14 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             return this.flash;
         }
 
+        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV setIOS(String iOS) {
+            this.iOS = iOS;
+            return this;
+        }
+        public String getIOS() {
+            return this.iOS;
+        }
+
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV setHTML5(String HTML5) {
             this.HTML5 = HTML5;
             return this;
@@ -133,20 +125,28 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             return this.HTML5;
         }
 
+        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV setAndroid(String android) {
+            this.android = android;
+            return this;
+        }
+        public String getAndroid() {
+            return this.android;
+        }
+
     }
 
     public static class DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal extends TeaModel {
-        @NameInMap("PlayDuration")
-        public String playDuration;
-
         @NameInMap("Date")
         public String date;
 
-        @NameInMap("VV")
-        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV VV;
+        @NameInMap("PlayDuration")
+        public String playDuration;
 
         @NameInMap("PlayRange")
         public String playRange;
+
+        @NameInMap("VV")
+        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV VV;
 
         @NameInMap("UV")
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV UV;
@@ -154,14 +154,6 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         public static DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal build(java.util.Map<String, ?> map) throws Exception {
             DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal self = new DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal setPlayDuration(String playDuration) {
-            this.playDuration = playDuration;
-            return this;
-        }
-        public String getPlayDuration() {
-            return this.playDuration;
         }
 
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal setDate(String date) {
@@ -172,12 +164,12 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             return this.date;
         }
 
-        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal setVV(DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV VV) {
-            this.VV = VV;
+        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal setPlayDuration(String playDuration) {
+            this.playDuration = playDuration;
             return this;
         }
-        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV getVV() {
-            return this.VV;
+        public String getPlayDuration() {
+            return this.playDuration;
         }
 
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal setPlayRange(String playRange) {
@@ -186,6 +178,14 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
         }
         public String getPlayRange() {
             return this.playRange;
+        }
+
+        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal setVV(DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV VV) {
+            this.VV = VV;
+            return this;
+        }
+        public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalVV getVV() {
+            return this.VV;
         }
 
         public DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotal setUV(DescribePlayUserTotalResponseBodyUserPlayStatisTotalsUserPlayStatisTotalUV UV) {

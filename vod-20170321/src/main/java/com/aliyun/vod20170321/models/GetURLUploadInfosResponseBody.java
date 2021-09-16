@@ -7,11 +7,11 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("URLUploadInfoList")
-    public java.util.List<GetURLUploadInfosResponseBodyURLUploadInfoList> URLUploadInfoList;
-
     @NameInMap("NonExists")
     public java.util.List<String> nonExists;
+
+    @NameInMap("URLUploadInfoList")
+    public java.util.List<GetURLUploadInfosResponseBodyURLUploadInfoList> URLUploadInfoList;
 
     public static GetURLUploadInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetURLUploadInfosResponseBody self = new GetURLUploadInfosResponseBody();
@@ -26,20 +26,20 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetURLUploadInfosResponseBody setURLUploadInfoList(java.util.List<GetURLUploadInfosResponseBodyURLUploadInfoList> URLUploadInfoList) {
-        this.URLUploadInfoList = URLUploadInfoList;
-        return this;
-    }
-    public java.util.List<GetURLUploadInfosResponseBodyURLUploadInfoList> getURLUploadInfoList() {
-        return this.URLUploadInfoList;
-    }
-
     public GetURLUploadInfosResponseBody setNonExists(java.util.List<String> nonExists) {
         this.nonExists = nonExists;
         return this;
     }
     public java.util.List<String> getNonExists() {
         return this.nonExists;
+    }
+
+    public GetURLUploadInfosResponseBody setURLUploadInfoList(java.util.List<GetURLUploadInfosResponseBodyURLUploadInfoList> URLUploadInfoList) {
+        this.URLUploadInfoList = URLUploadInfoList;
+        return this;
+    }
+    public java.util.List<GetURLUploadInfosResponseBodyURLUploadInfoList> getURLUploadInfoList() {
+        return this.URLUploadInfoList;
     }
 
     public static class GetURLUploadInfosResponseBodyURLUploadInfoList extends TeaModel {

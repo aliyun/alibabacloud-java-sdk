@@ -25,12 +25,6 @@ public class SearchMediaRequest extends TeaModel {
     @NameInMap("ScrollToken")
     public String scrollToken;
 
-    @NameInMap("SessionId")
-    public String sessionId;
-
-    @NameInMap("ResultTypes")
-    public String resultTypes;
-
     public static SearchMediaRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaRequest self = new SearchMediaRequest();
         return TeaModel.build(map, self);
@@ -90,22 +84,6 @@ public class SearchMediaRequest extends TeaModel {
     }
     public String getScrollToken() {
         return this.scrollToken;
-    }
-
-    public SearchMediaRequest setSessionId(String sessionId) {
-        this.sessionId = sessionId;
-        return this;
-    }
-    public String getSessionId() {
-        return this.sessionId;
-    }
-
-    public SearchMediaRequest setResultTypes(String resultTypes) {
-        this.resultTypes = resultTypes;
-        return this;
-    }
-    public String getResultTypes() {
-        return this.resultTypes;
     }
 
 }

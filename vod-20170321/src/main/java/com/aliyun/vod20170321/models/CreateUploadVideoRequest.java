@@ -16,9 +16,6 @@ public class CreateUploadVideoRequest extends TeaModel {
     @NameInMap("FileSize")
     public Long fileSize;
 
-    @NameInMap("IP")
-    public String IP;
-
     @NameInMap("Title")
     public String title;
 
@@ -27,9 +24,6 @@ public class CreateUploadVideoRequest extends TeaModel {
 
     @NameInMap("Tags")
     public String tags;
-
-    @NameInMap("TranscodeMode")
-    public String transcodeMode;
 
     @NameInMap("UserData")
     public String userData;
@@ -42,9 +36,6 @@ public class CreateUploadVideoRequest extends TeaModel {
 
     @NameInMap("StorageLocation")
     public String storageLocation;
-
-    @NameInMap("CustomMediaInfo")
-    public String customMediaInfo;
 
     @NameInMap("AppId")
     public String appId;
@@ -86,14 +77,6 @@ public class CreateUploadVideoRequest extends TeaModel {
         return this.fileSize;
     }
 
-    public CreateUploadVideoRequest setIP(String IP) {
-        this.IP = IP;
-        return this;
-    }
-    public String getIP() {
-        return this.IP;
-    }
-
     public CreateUploadVideoRequest setTitle(String title) {
         this.title = title;
         return this;
@@ -116,14 +99,6 @@ public class CreateUploadVideoRequest extends TeaModel {
     }
     public String getTags() {
         return this.tags;
-    }
-
-    public CreateUploadVideoRequest setTranscodeMode(String transcodeMode) {
-        this.transcodeMode = transcodeMode;
-        return this;
-    }
-    public String getTranscodeMode() {
-        return this.transcodeMode;
     }
 
     public CreateUploadVideoRequest setUserData(String userData) {
@@ -156,14 +131,6 @@ public class CreateUploadVideoRequest extends TeaModel {
     }
     public String getStorageLocation() {
         return this.storageLocation;
-    }
-
-    public CreateUploadVideoRequest setCustomMediaInfo(String customMediaInfo) {
-        this.customMediaInfo = customMediaInfo;
-        return this;
-    }
-    public String getCustomMediaInfo() {
-        return this.customMediaInfo;
     }
 
     public CreateUploadVideoRequest setAppId(String appId) {

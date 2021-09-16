@@ -7,9 +7,6 @@ public class GetVideoInfosRequest extends TeaModel {
     @NameInMap("VideoIds")
     public String videoIds;
 
-    @NameInMap("AdditionType")
-    public String additionType;
-
     public static GetVideoInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         GetVideoInfosRequest self = new GetVideoInfosRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class GetVideoInfosRequest extends TeaModel {
     }
     public String getVideoIds() {
         return this.videoIds;
-    }
-
-    public GetVideoInfosRequest setAdditionType(String additionType) {
-        this.additionType = additionType;
-        return this;
-    }
-    public String getAdditionType() {
-        return this.additionType;
     }
 
 }

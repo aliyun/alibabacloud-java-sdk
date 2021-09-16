@@ -4,14 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class RefreshUploadVideoResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("UploadAddress")
     public String uploadAddress;
 
     @NameInMap("VideoId")
     public String videoId;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("UploadAuth")
     public String uploadAuth;
@@ -19,6 +19,14 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
     public static RefreshUploadVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RefreshUploadVideoResponseBody self = new RefreshUploadVideoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RefreshUploadVideoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public RefreshUploadVideoResponseBody setUploadAddress(String uploadAddress) {
@@ -35,14 +43,6 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
     }
     public String getVideoId() {
         return this.videoId;
-    }
-
-    public RefreshUploadVideoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RefreshUploadVideoResponseBody setUploadAuth(String uploadAuth) {

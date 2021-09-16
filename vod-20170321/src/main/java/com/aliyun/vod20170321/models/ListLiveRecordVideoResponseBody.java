@@ -4,11 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRecordVideoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Total")
     public Integer total;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("LiveRecordVideoList")
     public ListLiveRecordVideoResponseBodyLiveRecordVideoList liveRecordVideoList;
@@ -18,20 +18,20 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListLiveRecordVideoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListLiveRecordVideoResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }
     public Integer getTotal() {
         return this.total;
+    }
+
+    public ListLiveRecordVideoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListLiveRecordVideoResponseBody setLiveRecordVideoList(ListLiveRecordVideoResponseBodyLiveRecordVideoList liveRecordVideoList) {
@@ -62,11 +62,11 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("CateId")
         public Integer cateId;
@@ -76,9 +76,6 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
 
         @NameInMap("Tags")
         public String tags;
-
-        @NameInMap("Snapshots")
-        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideoSnapshots snapshots;
 
         @NameInMap("CateName")
         public String cateName;
@@ -104,17 +101,12 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        @NameInMap("Snapshots")
+        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideoSnapshots snapshots;
+
         public static ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo self = new ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo();
             return TeaModel.build(map, self);
-        }
-
-        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo setCreationTime(String creationTime) {
@@ -123,6 +115,14 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo setCateId(Integer cateId) {
@@ -147,14 +147,6 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         }
         public String getTags() {
             return this.tags;
-        }
-
-        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo setSnapshots(ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideoSnapshots snapshots) {
-            this.snapshots = snapshots;
-            return this;
-        }
-        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideoSnapshots getSnapshots() {
-            return this.snapshots;
         }
 
         public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo setCateName(String cateName) {
@@ -221,12 +213,17 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
+        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo setSnapshots(ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideoSnapshots snapshots) {
+            this.snapshots = snapshots;
+            return this;
+        }
+        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideoSnapshots getSnapshots() {
+            return this.snapshots;
+        }
+
     }
 
     public static class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo extends TeaModel {
-        @NameInMap("Video")
-        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo video;
-
         @NameInMap("AppName")
         public String appName;
 
@@ -245,17 +242,12 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("Video")
+        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo video;
+
         public static ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo self = new ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo();
             return TeaModel.build(map, self);
-        }
-
-        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo setVideo(ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo video) {
-            this.video = video;
-            return this;
-        }
-        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo getVideo() {
-            return this.video;
         }
 
         public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo setAppName(String appName) {
@@ -304,6 +296,14 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo setVideo(ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo video) {
+            this.video = video;
+            return this;
+        }
+        public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo getVideo() {
+            return this.video;
         }
 
     }

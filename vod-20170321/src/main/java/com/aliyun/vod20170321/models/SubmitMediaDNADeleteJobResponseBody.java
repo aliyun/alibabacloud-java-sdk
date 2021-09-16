@@ -7,9 +7,6 @@ public class SubmitMediaDNADeleteJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("MediaId")
-    public String mediaId;
-
     @NameInMap("JobId")
     public String jobId;
 
@@ -24,14 +21,6 @@ public class SubmitMediaDNADeleteJobResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public SubmitMediaDNADeleteJobResponseBody setMediaId(String mediaId) {
-        this.mediaId = mediaId;
-        return this;
-    }
-    public String getMediaId() {
-        return this.mediaId;
     }
 
     public SubmitMediaDNADeleteJobResponseBody setJobId(String jobId) {

@@ -28,9 +28,6 @@ public class SubmitAIJobRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
-    @NameInMap("Input")
-    public String input;
-
     public static SubmitAIJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitAIJobRequest self = new SubmitAIJobRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class SubmitAIJobRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public SubmitAIJobRequest setInput(String input) {
-        this.input = input;
-        return this;
-    }
-    public String getInput() {
-        return this.input;
     }
 
 }
