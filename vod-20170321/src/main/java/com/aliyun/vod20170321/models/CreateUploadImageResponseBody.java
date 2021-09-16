@@ -7,20 +7,20 @@ public class CreateUploadImageResponseBody extends TeaModel {
     @NameInMap("FileURL")
     public String fileURL;
 
-    @NameInMap("UploadAddress")
-    public String uploadAddress;
-
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("UploadAuth")
-    public String uploadAuth;
+    @NameInMap("UploadAddress")
+    public String uploadAddress;
+
+    @NameInMap("ImageURL")
+    public String imageURL;
 
     @NameInMap("ImageId")
     public String imageId;
 
-    @NameInMap("ImageURL")
-    public String imageURL;
+    @NameInMap("UploadAuth")
+    public String uploadAuth;
 
     public static CreateUploadImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateUploadImageResponseBody self = new CreateUploadImageResponseBody();
@@ -35,14 +35,6 @@ public class CreateUploadImageResponseBody extends TeaModel {
         return this.fileURL;
     }
 
-    public CreateUploadImageResponseBody setUploadAddress(String uploadAddress) {
-        this.uploadAddress = uploadAddress;
-        return this;
-    }
-    public String getUploadAddress() {
-        return this.uploadAddress;
-    }
-
     public CreateUploadImageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -51,12 +43,20 @@ public class CreateUploadImageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateUploadImageResponseBody setUploadAuth(String uploadAuth) {
-        this.uploadAuth = uploadAuth;
+    public CreateUploadImageResponseBody setUploadAddress(String uploadAddress) {
+        this.uploadAddress = uploadAddress;
         return this;
     }
-    public String getUploadAuth() {
-        return this.uploadAuth;
+    public String getUploadAddress() {
+        return this.uploadAddress;
+    }
+
+    public CreateUploadImageResponseBody setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
     }
 
     public CreateUploadImageResponseBody setImageId(String imageId) {
@@ -67,12 +67,12 @@ public class CreateUploadImageResponseBody extends TeaModel {
         return this.imageId;
     }
 
-    public CreateUploadImageResponseBody setImageURL(String imageURL) {
-        this.imageURL = imageURL;
+    public CreateUploadImageResponseBody setUploadAuth(String uploadAuth) {
+        this.uploadAuth = uploadAuth;
         return this;
     }
-    public String getImageURL() {
-        return this.imageURL;
+    public String getUploadAuth() {
+        return this.uploadAuth;
     }
 
 }

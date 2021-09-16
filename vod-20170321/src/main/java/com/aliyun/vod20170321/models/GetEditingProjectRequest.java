@@ -19,9 +19,6 @@ public class GetEditingProjectRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
-    @NameInMap("FEExtendFlag")
-    public Integer FEExtendFlag;
-
     public static GetEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         GetEditingProjectRequest self = new GetEditingProjectRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class GetEditingProjectRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
-    }
-
-    public GetEditingProjectRequest setFEExtendFlag(Integer FEExtendFlag) {
-        this.FEExtendFlag = FEExtendFlag;
-        return this;
-    }
-    public Integer getFEExtendFlag() {
-        return this.FEExtendFlag;
     }
 
 }

@@ -31,54 +31,16 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         return this.DNAResult;
     }
 
-    public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication extends TeaModel {
-        @NameInMap("Start")
-        public String start;
-
-        @NameInMap("Duration")
-        public String duration;
-
-        public static GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication self = new GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication setStart(String start) {
-            this.start = start;
-            return this;
-        }
-        public String getStart() {
-            return this.start;
-        }
-
-        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication setDuration(String duration) {
-            this.duration = duration;
-            return this;
-        }
-        public String getDuration() {
-            return this.duration;
-        }
-
-    }
-
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput extends TeaModel {
-        @NameInMap("Start")
-        public String start;
-
         @NameInMap("Duration")
         public String duration;
+
+        @NameInMap("Start")
+        public String start;
 
         public static GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput build(java.util.Map<String, ?> map) throws Exception {
             GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput self = new GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput();
             return TeaModel.build(map, self);
-        }
-
-        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput setStart(String start) {
-            this.start = start;
-            return this;
-        }
-        public String getStart() {
-            return this.start;
         }
 
         public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput setDuration(String duration) {
@@ -89,26 +51,56 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
             return this.duration;
         }
 
+        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput setStart(String start) {
+            this.start = start;
+            return this;
+        }
+        public String getStart() {
+            return this.start;
+        }
+
+    }
+
+    public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication extends TeaModel {
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Start")
+        public String start;
+
+        public static GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication self = new GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication setStart(String start) {
+            this.start = start;
+            return this;
+        }
+        public String getStart() {
+            return this.start;
+        }
+
     }
 
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetail extends TeaModel {
-        @NameInMap("Duplication")
-        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication duplication;
-
         @NameInMap("Input")
         public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput input;
+
+        @NameInMap("Duplication")
+        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication duplication;
 
         public static GetMediaDNAResultResponseBodyDNAResultVideoDNADetail build(java.util.Map<String, ?> map) throws Exception {
             GetMediaDNAResultResponseBodyDNAResultVideoDNADetail self = new GetMediaDNAResultResponseBodyDNAResultVideoDNADetail();
             return TeaModel.build(map, self);
-        }
-
-        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetail setDuplication(GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication duplication) {
-            this.duplication = duplication;
-            return this;
-        }
-        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication getDuplication() {
-            return this.duplication;
         }
 
         public GetMediaDNAResultResponseBodyDNAResultVideoDNADetail setInput(GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput input) {
@@ -117,6 +109,14 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
         }
         public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput getInput() {
             return this.input;
+        }
+
+        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetail setDuplication(GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication duplication) {
+            this.duplication = duplication;
+            return this;
+        }
+        public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication getDuplication() {
+            return this.duplication;
         }
 
     }

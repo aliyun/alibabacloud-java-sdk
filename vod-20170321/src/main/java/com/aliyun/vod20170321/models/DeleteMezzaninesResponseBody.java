@@ -7,11 +7,11 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("NonExistVideoIds")
-    public java.util.List<String> nonExistVideoIds;
-
     @NameInMap("UnRemoveableVideoIds")
     public java.util.List<String> unRemoveableVideoIds;
+
+    @NameInMap("NonExistVideoIds")
+    public java.util.List<String> nonExistVideoIds;
 
     public static DeleteMezzaninesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMezzaninesResponseBody self = new DeleteMezzaninesResponseBody();
@@ -26,20 +26,20 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteMezzaninesResponseBody setNonExistVideoIds(java.util.List<String> nonExistVideoIds) {
-        this.nonExistVideoIds = nonExistVideoIds;
-        return this;
-    }
-    public java.util.List<String> getNonExistVideoIds() {
-        return this.nonExistVideoIds;
-    }
-
     public DeleteMezzaninesResponseBody setUnRemoveableVideoIds(java.util.List<String> unRemoveableVideoIds) {
         this.unRemoveableVideoIds = unRemoveableVideoIds;
         return this;
     }
     public java.util.List<String> getUnRemoveableVideoIds() {
         return this.unRemoveableVideoIds;
+    }
+
+    public DeleteMezzaninesResponseBody setNonExistVideoIds(java.util.List<String> nonExistVideoIds) {
+        this.nonExistVideoIds = nonExistVideoIds;
+        return this;
+    }
+    public java.util.List<String> getNonExistVideoIds() {
+        return this.nonExistVideoIds;
     }
 
 }

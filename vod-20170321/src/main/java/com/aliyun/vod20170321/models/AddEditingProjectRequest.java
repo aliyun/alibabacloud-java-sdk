@@ -31,12 +31,6 @@ public class AddEditingProjectRequest extends TeaModel {
     @NameInMap("Division")
     public String division;
 
-    @NameInMap("FEExtend")
-    public String FEExtend;
-
-    @NameInMap("Duration")
-    public Float duration;
-
     public static AddEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         AddEditingProjectRequest self = new AddEditingProjectRequest();
         return TeaModel.build(map, self);
@@ -112,22 +106,6 @@ public class AddEditingProjectRequest extends TeaModel {
     }
     public String getDivision() {
         return this.division;
-    }
-
-    public AddEditingProjectRequest setFEExtend(String FEExtend) {
-        this.FEExtend = FEExtend;
-        return this;
-    }
-    public String getFEExtend() {
-        return this.FEExtend;
-    }
-
-    public AddEditingProjectRequest setDuration(Float duration) {
-        this.duration = duration;
-        return this;
-    }
-    public Float getDuration() {
-        return this.duration;
     }
 
 }

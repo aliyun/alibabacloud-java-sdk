@@ -7,9 +7,6 @@ public class GetMessageCallbackRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("ResourceRealOwnerId")
-    public Long resourceRealOwnerId;
-
     @NameInMap("AppId")
     public String appId;
 
@@ -24,14 +21,6 @@ public class GetMessageCallbackRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public GetMessageCallbackRequest setResourceRealOwnerId(Long resourceRealOwnerId) {
-        this.resourceRealOwnerId = resourceRealOwnerId;
-        return this;
-    }
-    public Long getResourceRealOwnerId() {
-        return this.resourceRealOwnerId;
     }
 
     public GetMessageCallbackRequest setAppId(String appId) {

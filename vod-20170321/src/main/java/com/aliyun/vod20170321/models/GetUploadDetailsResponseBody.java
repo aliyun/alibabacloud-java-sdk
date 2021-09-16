@@ -4,37 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetUploadDetailsResponseBody extends TeaModel {
-    @NameInMap("NonExistMediaIds")
-    public java.util.List<String> nonExistMediaIds;
-
-    @NameInMap("UploadDetails")
-    public java.util.List<GetUploadDetailsResponseBodyUploadDetails> uploadDetails;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ForbiddenMediaIds")
     public java.util.List<String> forbiddenMediaIds;
 
+    @NameInMap("NonExistMediaIds")
+    public java.util.List<String> nonExistMediaIds;
+
+    @NameInMap("UploadDetails")
+    public java.util.List<GetUploadDetailsResponseBodyUploadDetails> uploadDetails;
+
     public static GetUploadDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUploadDetailsResponseBody self = new GetUploadDetailsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetUploadDetailsResponseBody setNonExistMediaIds(java.util.List<String> nonExistMediaIds) {
-        this.nonExistMediaIds = nonExistMediaIds;
-        return this;
-    }
-    public java.util.List<String> getNonExistMediaIds() {
-        return this.nonExistMediaIds;
-    }
-
-    public GetUploadDetailsResponseBody setUploadDetails(java.util.List<GetUploadDetailsResponseBodyUploadDetails> uploadDetails) {
-        this.uploadDetails = uploadDetails;
-        return this;
-    }
-    public java.util.List<GetUploadDetailsResponseBodyUploadDetails> getUploadDetails() {
-        return this.uploadDetails;
     }
 
     public GetUploadDetailsResponseBody setRequestId(String requestId) {
@@ -53,15 +37,31 @@ public class GetUploadDetailsResponseBody extends TeaModel {
         return this.forbiddenMediaIds;
     }
 
+    public GetUploadDetailsResponseBody setNonExistMediaIds(java.util.List<String> nonExistMediaIds) {
+        this.nonExistMediaIds = nonExistMediaIds;
+        return this;
+    }
+    public java.util.List<String> getNonExistMediaIds() {
+        return this.nonExistMediaIds;
+    }
+
+    public GetUploadDetailsResponseBody setUploadDetails(java.util.List<GetUploadDetailsResponseBodyUploadDetails> uploadDetails) {
+        this.uploadDetails = uploadDetails;
+        return this;
+    }
+    public java.util.List<GetUploadDetailsResponseBodyUploadDetails> getUploadDetails() {
+        return this.uploadDetails;
+    }
+
     public static class GetUploadDetailsResponseBodyUploadDetails extends TeaModel {
-        @NameInMap("UploadSource")
-        public String uploadSource;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("UploadSource")
+        public String uploadSource;
 
         @NameInMap("UploadIP")
         public String uploadIP;
@@ -98,12 +98,12 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetUploadDetailsResponseBodyUploadDetails setUploadSource(String uploadSource) {
-            this.uploadSource = uploadSource;
+        public GetUploadDetailsResponseBodyUploadDetails setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getUploadSource() {
-            return this.uploadSource;
+        public String getStatus() {
+            return this.status;
         }
 
         public GetUploadDetailsResponseBodyUploadDetails setCreationTime(String creationTime) {
@@ -114,12 +114,12 @@ public class GetUploadDetailsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public GetUploadDetailsResponseBodyUploadDetails setStatus(String status) {
-            this.status = status;
+        public GetUploadDetailsResponseBodyUploadDetails setUploadSource(String uploadSource) {
+            this.uploadSource = uploadSource;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getUploadSource() {
+            return this.uploadSource;
         }
 
         public GetUploadDetailsResponseBodyUploadDetails setUploadIP(String uploadIP) {

@@ -22,15 +22,6 @@ public class UpdateVideoInfoRequest extends TeaModel {
     @NameInMap("CateId")
     public Long cateId;
 
-    @NameInMap("DownloadSwitch")
-    public String downloadSwitch;
-
-    @NameInMap("Status")
-    public String status;
-
-    @NameInMap("CustomMediaInfo")
-    public String customMediaInfo;
-
     public static UpdateVideoInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateVideoInfoRequest self = new UpdateVideoInfoRequest();
         return TeaModel.build(map, self);
@@ -82,30 +73,6 @@ public class UpdateVideoInfoRequest extends TeaModel {
     }
     public Long getCateId() {
         return this.cateId;
-    }
-
-    public UpdateVideoInfoRequest setDownloadSwitch(String downloadSwitch) {
-        this.downloadSwitch = downloadSwitch;
-        return this;
-    }
-    public String getDownloadSwitch() {
-        return this.downloadSwitch;
-    }
-
-    public UpdateVideoInfoRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public UpdateVideoInfoRequest setCustomMediaInfo(String customMediaInfo) {
-        this.customMediaInfo = customMediaInfo;
-        return this;
-    }
-    public String getCustomMediaInfo() {
-        return this.customMediaInfo;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateVodTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("VodTemplateId")
     public String vodTemplateId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateVodTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateVodTemplateResponseBody self = new UpdateVodTemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateVodTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateVodTemplateResponseBody setVodTemplateId(String vodTemplateId) {
@@ -29,6 +21,14 @@ public class UpdateVodTemplateResponseBody extends TeaModel {
     }
     public String getVodTemplateId() {
         return this.vodTemplateId;
+    }
+
+    public UpdateVodTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

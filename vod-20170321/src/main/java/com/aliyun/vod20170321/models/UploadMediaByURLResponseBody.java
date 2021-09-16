@@ -32,23 +32,15 @@ public class UploadMediaByURLResponseBody extends TeaModel {
     }
 
     public static class UploadMediaByURLResponseBodyUploadJobs extends TeaModel {
-        @NameInMap("JobId")
-        public String jobId;
-
         @NameInMap("SourceURL")
         public String sourceURL;
+
+        @NameInMap("JobId")
+        public String jobId;
 
         public static UploadMediaByURLResponseBodyUploadJobs build(java.util.Map<String, ?> map) throws Exception {
             UploadMediaByURLResponseBodyUploadJobs self = new UploadMediaByURLResponseBodyUploadJobs();
             return TeaModel.build(map, self);
-        }
-
-        public UploadMediaByURLResponseBodyUploadJobs setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
         }
 
         public UploadMediaByURLResponseBodyUploadJobs setSourceURL(String sourceURL) {
@@ -57,6 +49,14 @@ public class UploadMediaByURLResponseBody extends TeaModel {
         }
         public String getSourceURL() {
             return this.sourceURL;
+        }
+
+        public UploadMediaByURLResponseBodyUploadJobs setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
         }
 
     }

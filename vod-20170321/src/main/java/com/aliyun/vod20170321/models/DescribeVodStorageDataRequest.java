@@ -22,9 +22,6 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     @NameInMap("Storage")
     public String storage;
 
-    @NameInMap("Interval")
-    public String interval;
-
     public static DescribeVodStorageDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodStorageDataRequest self = new DescribeVodStorageDataRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class DescribeVodStorageDataRequest extends TeaModel {
     }
     public String getStorage() {
         return this.storage;
-    }
-
-    public DescribeVodStorageDataRequest setInterval(String interval) {
-        this.interval = interval;
-        return this;
-    }
-    public String getInterval() {
-        return this.interval;
     }
 
 }

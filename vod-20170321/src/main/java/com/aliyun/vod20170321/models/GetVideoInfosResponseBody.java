@@ -43,14 +43,14 @@ public class GetVideoInfosResponseBody extends TeaModel {
     }
 
     public static class GetVideoInfosResponseBodyVideoList extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("StorageLocation")
+        public String storageLocation;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("StorageLocation")
-        public String storageLocation;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("CateId")
         public Long cateId;
@@ -63,9 +63,6 @@ public class GetVideoInfosResponseBody extends TeaModel {
 
         @NameInMap("ModificationTime")
         public String modificationTime;
-
-        @NameInMap("Snapshots")
-        public java.util.List<String> snapshots;
 
         @NameInMap("CateName")
         public String cateName;
@@ -91,17 +88,20 @@ public class GetVideoInfosResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("Snapshots")
+        public java.util.List<String> snapshots;
+
         public static GetVideoInfosResponseBodyVideoList build(java.util.Map<String, ?> map) throws Exception {
             GetVideoInfosResponseBodyVideoList self = new GetVideoInfosResponseBodyVideoList();
             return TeaModel.build(map, self);
         }
 
-        public GetVideoInfosResponseBodyVideoList setStatus(String status) {
-            this.status = status;
+        public GetVideoInfosResponseBodyVideoList setStorageLocation(String storageLocation) {
+            this.storageLocation = storageLocation;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getStorageLocation() {
+            return this.storageLocation;
         }
 
         public GetVideoInfosResponseBodyVideoList setCreationTime(String creationTime) {
@@ -112,12 +112,12 @@ public class GetVideoInfosResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public GetVideoInfosResponseBodyVideoList setStorageLocation(String storageLocation) {
-            this.storageLocation = storageLocation;
+        public GetVideoInfosResponseBodyVideoList setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getStorageLocation() {
-            return this.storageLocation;
+        public String getStatus() {
+            return this.status;
         }
 
         public GetVideoInfosResponseBodyVideoList setCateId(Long cateId) {
@@ -150,14 +150,6 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
         public String getModificationTime() {
             return this.modificationTime;
-        }
-
-        public GetVideoInfosResponseBodyVideoList setSnapshots(java.util.List<String> snapshots) {
-            this.snapshots = snapshots;
-            return this;
-        }
-        public java.util.List<String> getSnapshots() {
-            return this.snapshots;
         }
 
         public GetVideoInfosResponseBodyVideoList setCateName(String cateName) {
@@ -222,6 +214,14 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public GetVideoInfosResponseBodyVideoList setSnapshots(java.util.List<String> snapshots) {
+            this.snapshots = snapshots;
+            return this;
+        }
+        public java.util.List<String> getSnapshots() {
+            return this.snapshots;
         }
 
     }

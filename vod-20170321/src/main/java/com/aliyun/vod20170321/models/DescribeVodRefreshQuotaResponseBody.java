@@ -4,29 +4,29 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("UrlRemain")
-    public String urlRemain;
+    @NameInMap("BlockQuota")
+    public String blockQuota;
 
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
-    @NameInMap("BlockQuota")
-    public String blockQuota;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("blockRemain")
+    public String blockRemain;
 
     @NameInMap("DirRemain")
     public String dirRemain;
 
-    @NameInMap("UrlQuota")
-    public String urlQuota;
+    @NameInMap("UrlRemain")
+    public String urlRemain;
 
     @NameInMap("DirQuota")
     public String dirQuota;
 
-    @NameInMap("blockRemain")
-    public String blockRemain;
+    @NameInMap("UrlQuota")
+    public String urlQuota;
 
     @NameInMap("PreloadQuota")
     public String preloadQuota;
@@ -34,30 +34,6 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
     public static DescribeVodRefreshQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodRefreshQuotaResponseBody self = new DescribeVodRefreshQuotaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVodRefreshQuotaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeVodRefreshQuotaResponseBody setUrlRemain(String urlRemain) {
-        this.urlRemain = urlRemain;
-        return this;
-    }
-    public String getUrlRemain() {
-        return this.urlRemain;
-    }
-
-    public DescribeVodRefreshQuotaResponseBody setPreloadRemain(String preloadRemain) {
-        this.preloadRemain = preloadRemain;
-        return this;
-    }
-    public String getPreloadRemain() {
-        return this.preloadRemain;
     }
 
     public DescribeVodRefreshQuotaResponseBody setBlockQuota(String blockQuota) {
@@ -68,6 +44,30 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         return this.blockQuota;
     }
 
+    public DescribeVodRefreshQuotaResponseBody setPreloadRemain(String preloadRemain) {
+        this.preloadRemain = preloadRemain;
+        return this;
+    }
+    public String getPreloadRemain() {
+        return this.preloadRemain;
+    }
+
+    public DescribeVodRefreshQuotaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeVodRefreshQuotaResponseBody setBlockRemain(String blockRemain) {
+        this.blockRemain = blockRemain;
+        return this;
+    }
+    public String getBlockRemain() {
+        return this.blockRemain;
+    }
+
     public DescribeVodRefreshQuotaResponseBody setDirRemain(String dirRemain) {
         this.dirRemain = dirRemain;
         return this;
@@ -76,12 +76,12 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         return this.dirRemain;
     }
 
-    public DescribeVodRefreshQuotaResponseBody setUrlQuota(String urlQuota) {
-        this.urlQuota = urlQuota;
+    public DescribeVodRefreshQuotaResponseBody setUrlRemain(String urlRemain) {
+        this.urlRemain = urlRemain;
         return this;
     }
-    public String getUrlQuota() {
-        return this.urlQuota;
+    public String getUrlRemain() {
+        return this.urlRemain;
     }
 
     public DescribeVodRefreshQuotaResponseBody setDirQuota(String dirQuota) {
@@ -92,12 +92,12 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         return this.dirQuota;
     }
 
-    public DescribeVodRefreshQuotaResponseBody setBlockRemain(String blockRemain) {
-        this.blockRemain = blockRemain;
+    public DescribeVodRefreshQuotaResponseBody setUrlQuota(String urlQuota) {
+        this.urlQuota = urlQuota;
         return this;
     }
-    public String getBlockRemain() {
-        return this.blockRemain;
+    public String getUrlQuota() {
+        return this.urlQuota;
     }
 
     public DescribeVodRefreshQuotaResponseBody setPreloadQuota(String preloadQuota) {

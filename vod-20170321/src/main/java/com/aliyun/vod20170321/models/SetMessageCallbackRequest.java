@@ -7,9 +7,6 @@ public class SetMessageCallbackRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("CallbackSwitch")
-    public String callbackSwitch;
-
     @NameInMap("CallbackType")
     public String callbackType;
 
@@ -24,9 +21,6 @@ public class SetMessageCallbackRequest extends TeaModel {
 
     @NameInMap("AuthKey")
     public String authKey;
-
-    @NameInMap("ResourceRealOwnerId")
-    public Long resourceRealOwnerId;
 
     @NameInMap("MnsEndpoint")
     public String mnsEndpoint;
@@ -48,14 +42,6 @@ public class SetMessageCallbackRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public SetMessageCallbackRequest setCallbackSwitch(String callbackSwitch) {
-        this.callbackSwitch = callbackSwitch;
-        return this;
-    }
-    public String getCallbackSwitch() {
-        return this.callbackSwitch;
     }
 
     public SetMessageCallbackRequest setCallbackType(String callbackType) {
@@ -96,14 +82,6 @@ public class SetMessageCallbackRequest extends TeaModel {
     }
     public String getAuthKey() {
         return this.authKey;
-    }
-
-    public SetMessageCallbackRequest setResourceRealOwnerId(Long resourceRealOwnerId) {
-        this.resourceRealOwnerId = resourceRealOwnerId;
-        return this;
-    }
-    public Long getResourceRealOwnerId() {
-        return this.resourceRealOwnerId;
     }
 
     public SetMessageCallbackRequest setMnsEndpoint(String mnsEndpoint) {

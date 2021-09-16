@@ -4,18 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodTranscodeDataResponseBody extends TeaModel {
+    @NameInMap("DataInterval")
+    public String dataInterval;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TranscodeData")
     public DescribeVodTranscodeDataResponseBodyTranscodeData transcodeData;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
-
     public static DescribeVodTranscodeDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodTranscodeDataResponseBody self = new DescribeVodTranscodeDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodTranscodeDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
+        return this;
+    }
+    public String getDataInterval() {
+        return this.dataInterval;
     }
 
     public DescribeVodTranscodeDataResponseBody setRequestId(String requestId) {
@@ -34,32 +42,16 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         return this.transcodeData;
     }
 
-    public DescribeVodTranscodeDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
-        return this;
-    }
-    public String getDataInterval() {
-        return this.dataInterval;
-    }
-
     public static class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem extends TeaModel {
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem self = new DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem setName(String name) {
@@ -68,6 +60,14 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -92,23 +92,15 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem extends TeaModel {
-        @NameInMap("Data")
-        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData data;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("Data")
+        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData data;
 
         public static DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem self = new DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem setData(DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData data) {
-            this.data = data;
-            return this;
-        }
-        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData getData() {
-            return this.data;
         }
 
         public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem setTimeStamp(String timeStamp) {
@@ -117,6 +109,14 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem setData(DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData data) {
+            this.data = data;
+            return this;
+        }
+        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData getData() {
+            return this.data;
         }
 
     }

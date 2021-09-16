@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetEditingProjectResponseBody extends TeaModel {
-    @NameInMap("Project")
-    public GetEditingProjectResponseBodyProject project;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Project")
+    public GetEditingProjectResponseBodyProject project;
 
     public static GetEditingProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEditingProjectResponseBody self = new GetEditingProjectResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetEditingProjectResponseBody setProject(GetEditingProjectResponseBodyProject project) {
-        this.project = project;
-        return this;
-    }
-    public GetEditingProjectResponseBodyProject getProject() {
-        return this.project;
     }
 
     public GetEditingProjectResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetEditingProjectResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetEditingProjectResponseBody setProject(GetEditingProjectResponseBodyProject project) {
+        this.project = project;
+        return this;
+    }
+    public GetEditingProjectResponseBodyProject getProject() {
+        return this.project;
     }
 
     public static class GetEditingProjectResponseBodyProject extends TeaModel {

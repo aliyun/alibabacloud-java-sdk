@@ -31,12 +31,6 @@ public class UpdateEditingProjectRequest extends TeaModel {
     @NameInMap("CoverURL")
     public String coverURL;
 
-    @NameInMap("FEExtend")
-    public String FEExtend;
-
-    @NameInMap("Duration")
-    public Float duration;
-
     public static UpdateEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEditingProjectRequest self = new UpdateEditingProjectRequest();
         return TeaModel.build(map, self);
@@ -112,22 +106,6 @@ public class UpdateEditingProjectRequest extends TeaModel {
     }
     public String getCoverURL() {
         return this.coverURL;
-    }
-
-    public UpdateEditingProjectRequest setFEExtend(String FEExtend) {
-        this.FEExtend = FEExtend;
-        return this;
-    }
-    public String getFEExtend() {
-        return this.FEExtend;
-    }
-
-    public UpdateEditingProjectRequest setDuration(Float duration) {
-        this.duration = duration;
-        return this;
-    }
-    public Float getDuration() {
-        return this.duration;
     }
 
 }

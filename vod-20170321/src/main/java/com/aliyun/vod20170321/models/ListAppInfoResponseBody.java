@@ -4,11 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAppInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Total")
     public Integer total;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("AppInfoList")
     public java.util.List<ListAppInfoResponseBodyAppInfoList> appInfoList;
@@ -18,20 +18,20 @@ public class ListAppInfoResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListAppInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListAppInfoResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }
     public Integer getTotal() {
         return this.total;
+    }
+
+    public ListAppInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListAppInfoResponseBody setAppInfoList(java.util.List<ListAppInfoResponseBodyAppInfoList> appInfoList) {

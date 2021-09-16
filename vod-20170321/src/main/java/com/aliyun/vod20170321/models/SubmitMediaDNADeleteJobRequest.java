@@ -19,9 +19,6 @@ public class SubmitMediaDNADeleteJobRequest extends TeaModel {
     @NameInMap("MediaId")
     public String mediaId;
 
-    @NameInMap("FpDBId")
-    public String fpDBId;
-
     public static SubmitMediaDNADeleteJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitMediaDNADeleteJobRequest self = new SubmitMediaDNADeleteJobRequest();
         return TeaModel.build(map, self);
@@ -65,14 +62,6 @@ public class SubmitMediaDNADeleteJobRequest extends TeaModel {
     }
     public String getMediaId() {
         return this.mediaId;
-    }
-
-    public SubmitMediaDNADeleteJobRequest setFpDBId(String fpDBId) {
-        this.fpDBId = fpDBId;
-        return this;
-    }
-    public String getFpDBId() {
-        return this.fpDBId;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetCategoriesResponseBody extends TeaModel {
-    @NameInMap("Category")
-    public GetCategoriesResponseBodyCategory category;
+    @NameInMap("SubTotal")
+    public Long subTotal;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("SubTotal")
-    public Long subTotal;
+    @NameInMap("Category")
+    public GetCategoriesResponseBodyCategory category;
 
     @NameInMap("SubCategories")
     public GetCategoriesResponseBodySubCategories subCategories;
@@ -21,12 +21,12 @@ public class GetCategoriesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetCategoriesResponseBody setCategory(GetCategoriesResponseBodyCategory category) {
-        this.category = category;
+    public GetCategoriesResponseBody setSubTotal(Long subTotal) {
+        this.subTotal = subTotal;
         return this;
     }
-    public GetCategoriesResponseBodyCategory getCategory() {
-        return this.category;
+    public Long getSubTotal() {
+        return this.subTotal;
     }
 
     public GetCategoriesResponseBody setRequestId(String requestId) {
@@ -37,12 +37,12 @@ public class GetCategoriesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetCategoriesResponseBody setSubTotal(Long subTotal) {
-        this.subTotal = subTotal;
+    public GetCategoriesResponseBody setCategory(GetCategoriesResponseBodyCategory category) {
+        this.category = category;
         return this;
     }
-    public Long getSubTotal() {
-        return this.subTotal;
+    public GetCategoriesResponseBodyCategory getCategory() {
+        return this.category;
     }
 
     public GetCategoriesResponseBody setSubCategories(GetCategoriesResponseBodySubCategories subCategories) {

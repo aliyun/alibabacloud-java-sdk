@@ -13,9 +13,6 @@ public class ListLiveRecordVideoRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("QueryType")
-    public String queryType;
-
     @NameInMap("PageNo")
     public Integer pageNo;
 
@@ -58,14 +55,6 @@ public class ListLiveRecordVideoRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
-    }
-
-    public ListLiveRecordVideoRequest setQueryType(String queryType) {
-        this.queryType = queryType;
-        return this;
-    }
-    public String getQueryType() {
-        return this.queryType;
     }
 
     public ListLiveRecordVideoRequest setPageNo(Integer pageNo) {

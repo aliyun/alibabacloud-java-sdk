@@ -4,11 +4,8 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayTopVideosResponseBody extends TeaModel {
-    @NameInMap("TopPlayVideos")
-    public DescribePlayTopVideosResponseBodyTopPlayVideos topPlayVideos;
-
-    @NameInMap("TotalNum")
-    public Long totalNum;
+    @NameInMap("PageNo")
+    public Long pageNo;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,28 +13,23 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("PageNo")
-    public Long pageNo;
+    @NameInMap("TotalNum")
+    public Long totalNum;
+
+    @NameInMap("TopPlayVideos")
+    public DescribePlayTopVideosResponseBodyTopPlayVideos topPlayVideos;
 
     public static DescribePlayTopVideosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePlayTopVideosResponseBody self = new DescribePlayTopVideosResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribePlayTopVideosResponseBody setTopPlayVideos(DescribePlayTopVideosResponseBodyTopPlayVideos topPlayVideos) {
-        this.topPlayVideos = topPlayVideos;
+    public DescribePlayTopVideosResponseBody setPageNo(Long pageNo) {
+        this.pageNo = pageNo;
         return this;
     }
-    public DescribePlayTopVideosResponseBodyTopPlayVideos getTopPlayVideos() {
-        return this.topPlayVideos;
-    }
-
-    public DescribePlayTopVideosResponseBody setTotalNum(Long totalNum) {
-        this.totalNum = totalNum;
-        return this;
-    }
-    public Long getTotalNum() {
-        return this.totalNum;
+    public Long getPageNo() {
+        return this.pageNo;
     }
 
     public DescribePlayTopVideosResponseBody setRequestId(String requestId) {
@@ -56,26 +48,34 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribePlayTopVideosResponseBody setPageNo(Long pageNo) {
-        this.pageNo = pageNo;
+    public DescribePlayTopVideosResponseBody setTotalNum(Long totalNum) {
+        this.totalNum = totalNum;
         return this;
     }
-    public Long getPageNo() {
-        return this.pageNo;
+    public Long getTotalNum() {
+        return this.totalNum;
+    }
+
+    public DescribePlayTopVideosResponseBody setTopPlayVideos(DescribePlayTopVideosResponseBodyTopPlayVideos topPlayVideos) {
+        this.topPlayVideos = topPlayVideos;
+        return this;
+    }
+    public DescribePlayTopVideosResponseBodyTopPlayVideos getTopPlayVideos() {
+        return this.topPlayVideos;
     }
 
     public static class DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis extends TeaModel {
-        @NameInMap("PlayDuration")
-        public String playDuration;
-
-        @NameInMap("VideoId")
-        public String videoId;
-
         @NameInMap("Title")
         public String title;
 
         @NameInMap("VV")
         public String VV;
+
+        @NameInMap("PlayDuration")
+        public String playDuration;
+
+        @NameInMap("VideoId")
+        public String videoId;
 
         @NameInMap("UV")
         public String UV;
@@ -83,22 +83,6 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         public static DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis build(java.util.Map<String, ?> map) throws Exception {
             DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis self = new DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis setPlayDuration(String playDuration) {
-            this.playDuration = playDuration;
-            return this;
-        }
-        public String getPlayDuration() {
-            return this.playDuration;
-        }
-
-        public DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis setVideoId(String videoId) {
-            this.videoId = videoId;
-            return this;
-        }
-        public String getVideoId() {
-            return this.videoId;
         }
 
         public DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis setTitle(String title) {
@@ -115,6 +99,22 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
         public String getVV() {
             return this.VV;
+        }
+
+        public DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis setPlayDuration(String playDuration) {
+            this.playDuration = playDuration;
+            return this;
+        }
+        public String getPlayDuration() {
+            return this.playDuration;
+        }
+
+        public DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis setVideoId(String videoId) {
+            this.videoId = videoId;
+            return this;
+        }
+        public String getVideoId() {
+            return this.videoId;
         }
 
         public DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis setUV(String UV) {

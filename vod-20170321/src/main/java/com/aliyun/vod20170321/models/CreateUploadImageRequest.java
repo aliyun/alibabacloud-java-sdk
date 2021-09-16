@@ -13,9 +13,6 @@ public class CreateUploadImageRequest extends TeaModel {
     @NameInMap("ImageExt")
     public String imageExt;
 
-    @NameInMap("OriginalFileName")
-    public String originalFileName;
-
     @NameInMap("Tags")
     public String tags;
 
@@ -61,14 +58,6 @@ public class CreateUploadImageRequest extends TeaModel {
     }
     public String getImageExt() {
         return this.imageExt;
-    }
-
-    public CreateUploadImageRequest setOriginalFileName(String originalFileName) {
-        this.originalFileName = originalFileName;
-        return this;
-    }
-    public String getOriginalFileName() {
-        return this.originalFileName;
     }
 
     public CreateUploadImageRequest setTags(String tags) {

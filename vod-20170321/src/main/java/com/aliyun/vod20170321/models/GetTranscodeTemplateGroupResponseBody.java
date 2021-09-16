@@ -32,47 +32,44 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList extends TeaModel {
-        @NameInMap("Video")
-        public String video;
-
         @NameInMap("Type")
         public String type;
+
+        @NameInMap("Video")
+        public String video;
 
         @NameInMap("TransConfig")
         public String transConfig;
 
-        @NameInMap("TranscodeTemplateId")
-        public String transcodeTemplateId;
-
         @NameInMap("Rotate")
         public String rotate;
 
-        @NameInMap("EncryptSetting")
-        public String encryptSetting;
+        @NameInMap("TranscodeTemplateId")
+        public String transcodeTemplateId;
 
         @NameInMap("TemplateName")
         public String templateName;
 
+        @NameInMap("EncryptSetting")
+        public String encryptSetting;
+
         @NameInMap("Audio")
         public String audio;
-
-        @NameInMap("Container")
-        public String container;
 
         @NameInMap("TranscodeFileRegular")
         public String transcodeFileRegular;
 
-        @NameInMap("Definition")
-        public String definition;
+        @NameInMap("Container")
+        public String container;
 
         @NameInMap("Clip")
         public String clip;
 
+        @NameInMap("Definition")
+        public String definition;
+
         @NameInMap("PackageSetting")
         public String packageSetting;
-
-        @NameInMap("WatermarkIds")
-        public java.util.List<String> watermarkIds;
 
         @NameInMap("SubtitleList")
         public String subtitleList;
@@ -80,17 +77,12 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         @NameInMap("MuxConfig")
         public String muxConfig;
 
+        @NameInMap("WatermarkIds")
+        public java.util.List<String> watermarkIds;
+
         public static GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList build(java.util.Map<String, ?> map) throws Exception {
             GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList self = new GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList();
             return TeaModel.build(map, self);
-        }
-
-        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setVideo(String video) {
-            this.video = video;
-            return this;
-        }
-        public String getVideo() {
-            return this.video;
         }
 
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setType(String type) {
@@ -101,20 +93,20 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             return this.type;
         }
 
+        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setVideo(String video) {
+            this.video = video;
+            return this;
+        }
+        public String getVideo() {
+            return this.video;
+        }
+
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setTransConfig(String transConfig) {
             this.transConfig = transConfig;
             return this;
         }
         public String getTransConfig() {
             return this.transConfig;
-        }
-
-        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setTranscodeTemplateId(String transcodeTemplateId) {
-            this.transcodeTemplateId = transcodeTemplateId;
-            return this;
-        }
-        public String getTranscodeTemplateId() {
-            return this.transcodeTemplateId;
         }
 
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setRotate(String rotate) {
@@ -125,12 +117,12 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             return this.rotate;
         }
 
-        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setEncryptSetting(String encryptSetting) {
-            this.encryptSetting = encryptSetting;
+        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setTranscodeTemplateId(String transcodeTemplateId) {
+            this.transcodeTemplateId = transcodeTemplateId;
             return this;
         }
-        public String getEncryptSetting() {
-            return this.encryptSetting;
+        public String getTranscodeTemplateId() {
+            return this.transcodeTemplateId;
         }
 
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setTemplateName(String templateName) {
@@ -141,20 +133,20 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             return this.templateName;
         }
 
+        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setEncryptSetting(String encryptSetting) {
+            this.encryptSetting = encryptSetting;
+            return this;
+        }
+        public String getEncryptSetting() {
+            return this.encryptSetting;
+        }
+
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setAudio(String audio) {
             this.audio = audio;
             return this;
         }
         public String getAudio() {
             return this.audio;
-        }
-
-        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setContainer(String container) {
-            this.container = container;
-            return this;
-        }
-        public String getContainer() {
-            return this.container;
         }
 
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setTranscodeFileRegular(String transcodeFileRegular) {
@@ -165,12 +157,12 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             return this.transcodeFileRegular;
         }
 
-        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setDefinition(String definition) {
-            this.definition = definition;
+        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setContainer(String container) {
+            this.container = container;
             return this;
         }
-        public String getDefinition() {
-            return this.definition;
+        public String getContainer() {
+            return this.container;
         }
 
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setClip(String clip) {
@@ -181,20 +173,20 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             return this.clip;
         }
 
+        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setDefinition(String definition) {
+            this.definition = definition;
+            return this;
+        }
+        public String getDefinition() {
+            return this.definition;
+        }
+
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setPackageSetting(String packageSetting) {
             this.packageSetting = packageSetting;
             return this;
         }
         public String getPackageSetting() {
             return this.packageSetting;
-        }
-
-        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setWatermarkIds(java.util.List<String> watermarkIds) {
-            this.watermarkIds = watermarkIds;
-            return this;
-        }
-        public java.util.List<String> getWatermarkIds() {
-            return this.watermarkIds;
         }
 
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setSubtitleList(String subtitleList) {
@@ -213,6 +205,14 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
             return this.muxConfig;
         }
 
+        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList setWatermarkIds(java.util.List<String> watermarkIds) {
+            this.watermarkIds = watermarkIds;
+            return this;
+        }
+        public java.util.List<String> getWatermarkIds() {
+            return this.watermarkIds;
+        }
+
     }
 
     public static class GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup extends TeaModel {
@@ -225,9 +225,6 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
-        @NameInMap("TranscodeTemplateList")
-        public java.util.List<GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList> transcodeTemplateList;
-
         @NameInMap("TranscodeTemplateGroupId")
         public String transcodeTemplateGroupId;
 
@@ -239,6 +236,9 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
 
         @NameInMap("Locked")
         public String locked;
+
+        @NameInMap("TranscodeTemplateList")
+        public java.util.List<GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList> transcodeTemplateList;
 
         public static GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup build(java.util.Map<String, ?> map) throws Exception {
             GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup self = new GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup();
@@ -267,14 +267,6 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
-        }
-
-        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup setTranscodeTemplateList(java.util.List<GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList> transcodeTemplateList) {
-            this.transcodeTemplateList = transcodeTemplateList;
-            return this;
-        }
-        public java.util.List<GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList> getTranscodeTemplateList() {
-            return this.transcodeTemplateList;
         }
 
         public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup setTranscodeTemplateGroupId(String transcodeTemplateGroupId) {
@@ -307,6 +299,14 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
         }
         public String getLocked() {
             return this.locked;
+        }
+
+        public GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroup setTranscodeTemplateList(java.util.List<GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList> transcodeTemplateList) {
+            this.transcodeTemplateList = transcodeTemplateList;
+            return this;
+        }
+        public java.util.List<GetTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupTranscodeTemplateList> getTranscodeTemplateList() {
+            return this.transcodeTemplateList;
         }
 
     }

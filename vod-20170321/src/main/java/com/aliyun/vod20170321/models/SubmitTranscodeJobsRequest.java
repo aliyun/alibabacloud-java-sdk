@@ -25,9 +25,6 @@ public class SubmitTranscodeJobsRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
-    @NameInMap("FileUrl")
-    public String fileUrl;
-
     public static SubmitTranscodeJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitTranscodeJobsRequest self = new SubmitTranscodeJobsRequest();
         return TeaModel.build(map, self);
@@ -87,14 +84,6 @@ public class SubmitTranscodeJobsRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public SubmitTranscodeJobsRequest setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
-        return this;
-    }
-    public String getFileUrl() {
-        return this.fileUrl;
     }
 
 }

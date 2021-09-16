@@ -4,11 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodStorageDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("StorageData")
     public DescribeVodStorageDataResponseBodyStorageData storageData;
@@ -18,20 +18,20 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVodStorageDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeVodStorageDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeVodStorageDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeVodStorageDataResponseBody setStorageData(DescribeVodStorageDataResponseBodyStorageData storageData) {
@@ -43,11 +43,11 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodStorageDataResponseBodyStorageDataStorageDataItem extends TeaModel {
-        @NameInMap("StorageUtilization")
-        public String storageUtilization;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("StorageUtilization")
+        public String storageUtilization;
 
         @NameInMap("NetworkOut")
         public String networkOut;
@@ -57,20 +57,20 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeVodStorageDataResponseBodyStorageDataStorageDataItem setStorageUtilization(String storageUtilization) {
-            this.storageUtilization = storageUtilization;
-            return this;
-        }
-        public String getStorageUtilization() {
-            return this.storageUtilization;
-        }
-
         public DescribeVodStorageDataResponseBodyStorageDataStorageDataItem setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeVodStorageDataResponseBodyStorageDataStorageDataItem setStorageUtilization(String storageUtilization) {
+            this.storageUtilization = storageUtilization;
+            return this;
+        }
+        public String getStorageUtilization() {
+            return this.storageUtilization;
         }
 
         public DescribeVodStorageDataResponseBodyStorageDataStorageDataItem setNetworkOut(String networkOut) {

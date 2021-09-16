@@ -4,24 +4,48 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodRefreshTasksResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("TotalCount")
     public Long totalCount;
 
     @NameInMap("Tasks")
     public DescribeVodRefreshTasksResponseBodyTasks tasks;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     public static DescribeVodRefreshTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodRefreshTasksResponseBody self = new DescribeVodRefreshTasksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodRefreshTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeVodRefreshTasksResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeVodRefreshTasksResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeVodRefreshTasksResponseBody setTotalCount(Long totalCount) {
@@ -38,30 +62,6 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
     }
     public DescribeVodRefreshTasksResponseBodyTasks getTasks() {
         return this.tasks;
-    }
-
-    public DescribeVodRefreshTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeVodRefreshTasksResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeVodRefreshTasksResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
     }
 
     public static class DescribeVodRefreshTasksResponseBodyTasksTask extends TeaModel {

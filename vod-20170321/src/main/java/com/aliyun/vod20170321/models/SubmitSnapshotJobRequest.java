@@ -31,9 +31,6 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
-    @NameInMap("FileUrl")
-    public String fileUrl;
-
     public static SubmitSnapshotJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitSnapshotJobRequest self = new SubmitSnapshotJobRequest();
         return TeaModel.build(map, self);
@@ -109,14 +106,6 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public SubmitSnapshotJobRequest setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
-        return this;
-    }
-    public String getFileUrl() {
-        return this.fileUrl;
     }
 
 }

@@ -16,9 +16,6 @@ public class AttachAppPolicyToIdentityRequest extends TeaModel {
     @NameInMap("PolicyNames")
     public String policyNames;
 
-    @NameInMap("ResourceRealOwnerId")
-    public String resourceRealOwnerId;
-
     public static AttachAppPolicyToIdentityRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachAppPolicyToIdentityRequest self = new AttachAppPolicyToIdentityRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class AttachAppPolicyToIdentityRequest extends TeaModel {
     }
     public String getPolicyNames() {
         return this.policyNames;
-    }
-
-    public AttachAppPolicyToIdentityRequest setResourceRealOwnerId(String resourceRealOwnerId) {
-        this.resourceRealOwnerId = resourceRealOwnerId;
-        return this;
-    }
-    public String getResourceRealOwnerId() {
-        return this.resourceRealOwnerId;
     }
 
 }

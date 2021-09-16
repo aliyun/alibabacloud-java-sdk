@@ -35,14 +35,14 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("SecurityGroupName")
-        public String securityGroupName;
-
         @NameInMap("Ips")
         public String ips;
 
         @NameInMap("ModificationTime")
         public String modificationTime;
+
+        @NameInMap("SecurityGroupName")
+        public String securityGroupName;
 
         public static ListAuditSecurityIpResponseBodySecurityIpList build(java.util.Map<String, ?> map) throws Exception {
             ListAuditSecurityIpResponseBodySecurityIpList self = new ListAuditSecurityIpResponseBodySecurityIpList();
@@ -55,14 +55,6 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
-        }
-
-        public ListAuditSecurityIpResponseBodySecurityIpList setSecurityGroupName(String securityGroupName) {
-            this.securityGroupName = securityGroupName;
-            return this;
-        }
-        public String getSecurityGroupName() {
-            return this.securityGroupName;
         }
 
         public ListAuditSecurityIpResponseBodySecurityIpList setIps(String ips) {
@@ -79,6 +71,14 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
         }
         public String getModificationTime() {
             return this.modificationTime;
+        }
+
+        public ListAuditSecurityIpResponseBodySecurityIpList setSecurityGroupName(String securityGroupName) {
+            this.securityGroupName = securityGroupName;
+            return this;
+        }
+        public String getSecurityGroupName() {
+            return this.securityGroupName;
         }
 
     }

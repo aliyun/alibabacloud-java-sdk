@@ -25,9 +25,6 @@ public class SetVodDomainCertificateRequest extends TeaModel {
     @NameInMap("SSLPri")
     public String SSLPri;
 
-    @NameInMap("Region")
-    public String region;
-
     public static SetVodDomainCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         SetVodDomainCertificateRequest self = new SetVodDomainCertificateRequest();
         return TeaModel.build(map, self);
@@ -87,14 +84,6 @@ public class SetVodDomainCertificateRequest extends TeaModel {
     }
     public String getSSLPri() {
         return this.SSLPri;
-    }
-
-    public SetVodDomainCertificateRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
     }
 
 }

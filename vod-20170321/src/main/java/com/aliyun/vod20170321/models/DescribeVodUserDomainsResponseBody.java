@@ -4,40 +4,24 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodUserDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
-    public DescribeVodUserDomainsResponseBodyDomains domains;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
+    @NameInMap("Domains")
+    public DescribeVodUserDomainsResponseBodyDomains domains;
+
     public static DescribeVodUserDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodUserDomainsResponseBody self = new DescribeVodUserDomainsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVodUserDomainsResponseBody setDomains(DescribeVodUserDomainsResponseBodyDomains domains) {
-        this.domains = domains;
-        return this;
-    }
-    public DescribeVodUserDomainsResponseBodyDomains getDomains() {
-        return this.domains;
-    }
-
-    public DescribeVodUserDomainsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeVodUserDomainsResponseBody setRequestId(String requestId) {
@@ -48,6 +32,14 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeVodUserDomainsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeVodUserDomainsResponseBody setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -56,12 +48,20 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeVodUserDomainsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeVodUserDomainsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeVodUserDomainsResponseBody setDomains(DescribeVodUserDomainsResponseBodyDomains domains) {
+        this.domains = domains;
+        return this;
+    }
+    public DescribeVodUserDomainsResponseBodyDomains getDomains() {
+        return this.domains;
     }
 
     public static class DescribeVodUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
@@ -154,14 +154,14 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        @NameInMap("Sources")
-        public DescribeVodUserDomainsResponseBodyDomainsPageDataSources sources;
-
         @NameInMap("GmtModified")
         public String gmtModified;
 
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("Sources")
+        public DescribeVodUserDomainsResponseBodyDomainsPageDataSources sources;
 
         public static DescribeVodUserDomainsResponseBodyDomainsPageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodUserDomainsResponseBodyDomainsPageData self = new DescribeVodUserDomainsResponseBodyDomainsPageData();
@@ -216,14 +216,6 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
             return this.domainStatus;
         }
 
-        public DescribeVodUserDomainsResponseBodyDomainsPageData setSources(DescribeVodUserDomainsResponseBodyDomainsPageDataSources sources) {
-            this.sources = sources;
-            return this;
-        }
-        public DescribeVodUserDomainsResponseBodyDomainsPageDataSources getSources() {
-            return this.sources;
-        }
-
         public DescribeVodUserDomainsResponseBodyDomainsPageData setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
@@ -238,6 +230,14 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeVodUserDomainsResponseBodyDomainsPageData setSources(DescribeVodUserDomainsResponseBodyDomainsPageDataSources sources) {
+            this.sources = sources;
+            return this;
+        }
+        public DescribeVodUserDomainsResponseBodyDomainsPageDataSources getSources() {
+            return this.sources;
         }
 
     }

@@ -35,14 +35,14 @@ public class GetImageInfoResponseBody extends TeaModel {
         @NameInMap("FileURL")
         public String fileURL;
 
+        @NameInMap("OriginalFileName")
+        public String originalFileName;
+
         @NameInMap("Width")
         public Integer width;
 
         @NameInMap("Height")
         public Integer height;
-
-        @NameInMap("OriginalFileName")
-        public String originalFileName;
 
         @NameInMap("FileSize")
         public String fileSize;
@@ -58,6 +58,14 @@ public class GetImageInfoResponseBody extends TeaModel {
         }
         public String getFileURL() {
             return this.fileURL;
+        }
+
+        public GetImageInfoResponseBodyImageInfoMezzanine setOriginalFileName(String originalFileName) {
+            this.originalFileName = originalFileName;
+            return this;
+        }
+        public String getOriginalFileName() {
+            return this.originalFileName;
         }
 
         public GetImageInfoResponseBodyImageInfoMezzanine setWidth(Integer width) {
@@ -76,14 +84,6 @@ public class GetImageInfoResponseBody extends TeaModel {
             return this.height;
         }
 
-        public GetImageInfoResponseBodyImageInfoMezzanine setOriginalFileName(String originalFileName) {
-            this.originalFileName = originalFileName;
-            return this;
-        }
-        public String getOriginalFileName() {
-            return this.originalFileName;
-        }
-
         public GetImageInfoResponseBodyImageInfoMezzanine setFileSize(String fileSize) {
             this.fileSize = fileSize;
             return this;
@@ -95,17 +95,14 @@ public class GetImageInfoResponseBody extends TeaModel {
     }
 
     public static class GetImageInfoResponseBodyImageInfo extends TeaModel {
-        @NameInMap("Mezzanine")
-        public GetImageInfoResponseBodyImageInfoMezzanine mezzanine;
-
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("StorageLocation")
         public String storageLocation;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("CateId")
         public Long cateId;
@@ -113,11 +110,11 @@ public class GetImageInfoResponseBody extends TeaModel {
         @NameInMap("Tags")
         public String tags;
 
-        @NameInMap("CateName")
-        public String cateName;
-
         @NameInMap("ImageType")
         public String imageType;
+
+        @NameInMap("CateName")
+        public String cateName;
 
         @NameInMap("Description")
         public String description;
@@ -134,25 +131,20 @@ public class GetImageInfoResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
+        @NameInMap("Mezzanine")
+        public GetImageInfoResponseBodyImageInfoMezzanine mezzanine;
+
         public static GetImageInfoResponseBodyImageInfo build(java.util.Map<String, ?> map) throws Exception {
             GetImageInfoResponseBodyImageInfo self = new GetImageInfoResponseBodyImageInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetImageInfoResponseBodyImageInfo setMezzanine(GetImageInfoResponseBodyImageInfoMezzanine mezzanine) {
-            this.mezzanine = mezzanine;
+        public GetImageInfoResponseBodyImageInfo setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public GetImageInfoResponseBodyImageInfoMezzanine getMezzanine() {
-            return this.mezzanine;
-        }
-
-        public GetImageInfoResponseBodyImageInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public GetImageInfoResponseBodyImageInfo setStorageLocation(String storageLocation) {
@@ -163,12 +155,12 @@ public class GetImageInfoResponseBody extends TeaModel {
             return this.storageLocation;
         }
 
-        public GetImageInfoResponseBodyImageInfo setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
+        public GetImageInfoResponseBodyImageInfo setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getStatus() {
+            return this.status;
         }
 
         public GetImageInfoResponseBodyImageInfo setCateId(Long cateId) {
@@ -187,20 +179,20 @@ public class GetImageInfoResponseBody extends TeaModel {
             return this.tags;
         }
 
-        public GetImageInfoResponseBodyImageInfo setCateName(String cateName) {
-            this.cateName = cateName;
-            return this;
-        }
-        public String getCateName() {
-            return this.cateName;
-        }
-
         public GetImageInfoResponseBodyImageInfo setImageType(String imageType) {
             this.imageType = imageType;
             return this;
         }
         public String getImageType() {
             return this.imageType;
+        }
+
+        public GetImageInfoResponseBodyImageInfo setCateName(String cateName) {
+            this.cateName = cateName;
+            return this;
+        }
+        public String getCateName() {
+            return this.cateName;
         }
 
         public GetImageInfoResponseBodyImageInfo setDescription(String description) {
@@ -241,6 +233,14 @@ public class GetImageInfoResponseBody extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public GetImageInfoResponseBodyImageInfo setMezzanine(GetImageInfoResponseBodyImageInfoMezzanine mezzanine) {
+            this.mezzanine = mezzanine;
+            return this;
+        }
+        public GetImageInfoResponseBodyImageInfoMezzanine getMezzanine() {
+            return this.mezzanine;
         }
 
     }

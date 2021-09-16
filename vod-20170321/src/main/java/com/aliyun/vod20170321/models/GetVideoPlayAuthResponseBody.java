@@ -7,11 +7,11 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
     @NameInMap("PlayAuth")
     public String playAuth;
 
-    @NameInMap("VideoMeta")
-    public GetVideoPlayAuthResponseBodyVideoMeta videoMeta;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("VideoMeta")
+    public GetVideoPlayAuthResponseBodyVideoMeta videoMeta;
 
     public static GetVideoPlayAuthResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVideoPlayAuthResponseBody self = new GetVideoPlayAuthResponseBody();
@@ -26,14 +26,6 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         return this.playAuth;
     }
 
-    public GetVideoPlayAuthResponseBody setVideoMeta(GetVideoPlayAuthResponseBodyVideoMeta videoMeta) {
-        this.videoMeta = videoMeta;
-        return this;
-    }
-    public GetVideoPlayAuthResponseBodyVideoMeta getVideoMeta() {
-        return this.videoMeta;
-    }
-
     public GetVideoPlayAuthResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,21 +34,29 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetVideoPlayAuthResponseBody setVideoMeta(GetVideoPlayAuthResponseBodyVideoMeta videoMeta) {
+        this.videoMeta = videoMeta;
+        return this;
+    }
+    public GetVideoPlayAuthResponseBodyVideoMeta getVideoMeta() {
+        return this.videoMeta;
+    }
+
     public static class GetVideoPlayAuthResponseBodyVideoMeta extends TeaModel {
         @NameInMap("Status")
         public String status;
-
-        @NameInMap("VideoId")
-        public String videoId;
-
-        @NameInMap("CoverURL")
-        public String coverURL;
 
         @NameInMap("Duration")
         public Float duration;
 
         @NameInMap("Title")
         public String title;
+
+        @NameInMap("VideoId")
+        public String videoId;
+
+        @NameInMap("CoverURL")
+        public String coverURL;
 
         public static GetVideoPlayAuthResponseBodyVideoMeta build(java.util.Map<String, ?> map) throws Exception {
             GetVideoPlayAuthResponseBodyVideoMeta self = new GetVideoPlayAuthResponseBodyVideoMeta();
@@ -69,22 +69,6 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public GetVideoPlayAuthResponseBodyVideoMeta setVideoId(String videoId) {
-            this.videoId = videoId;
-            return this;
-        }
-        public String getVideoId() {
-            return this.videoId;
-        }
-
-        public GetVideoPlayAuthResponseBodyVideoMeta setCoverURL(String coverURL) {
-            this.coverURL = coverURL;
-            return this;
-        }
-        public String getCoverURL() {
-            return this.coverURL;
         }
 
         public GetVideoPlayAuthResponseBodyVideoMeta setDuration(Float duration) {
@@ -101,6 +85,22 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public GetVideoPlayAuthResponseBodyVideoMeta setVideoId(String videoId) {
+            this.videoId = videoId;
+            return this;
+        }
+        public String getVideoId() {
+            return this.videoId;
+        }
+
+        public GetVideoPlayAuthResponseBodyVideoMeta setCoverURL(String coverURL) {
+            this.coverURL = coverURL;
+            return this;
+        }
+        public String getCoverURL() {
+            return this.coverURL;
         }
 
     }

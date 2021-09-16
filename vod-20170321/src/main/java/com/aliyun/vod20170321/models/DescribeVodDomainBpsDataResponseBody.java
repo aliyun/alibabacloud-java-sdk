@@ -4,23 +4,23 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
-    @NameInMap("IspNameEn")
-    public String ispNameEn;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("IspNameEn")
+    public String ispNameEn;
 
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -33,20 +33,20 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVodDomainBpsDataResponseBody setIspNameEn(String ispNameEn) {
-        this.ispNameEn = ispNameEn;
-        return this;
-    }
-    public String getIspNameEn() {
-        return this.ispNameEn;
-    }
-
     public DescribeVodDomainBpsDataResponseBody setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeVodDomainBpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeVodDomainBpsDataResponseBody setRequestId(String requestId) {
@@ -57,12 +57,12 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeVodDomainBpsDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
+    public DescribeVodDomainBpsDataResponseBody setIspNameEn(String ispNameEn) {
+        this.ispNameEn = ispNameEn;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getIspNameEn() {
+        return this.ispNameEn;
     }
 
     public DescribeVodDomainBpsDataResponseBody setLocationNameEn(String locationNameEn) {
@@ -73,12 +73,12 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         return this.locationNameEn;
     }
 
-    public DescribeVodDomainBpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeVodDomainBpsDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeVodDomainBpsDataResponseBody setDataInterval(String dataInterval) {

@@ -7,11 +7,11 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TranscodeSummaryList")
-    public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryList> transcodeSummaryList;
-
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;
+
+    @NameInMap("TranscodeSummaryList")
+    public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryList> transcodeSummaryList;
 
     public static GetTranscodeSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTranscodeSummaryResponseBody self = new GetTranscodeSummaryResponseBody();
@@ -26,20 +26,20 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTranscodeSummaryResponseBody setTranscodeSummaryList(java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryList> transcodeSummaryList) {
-        this.transcodeSummaryList = transcodeSummaryList;
-        return this;
-    }
-    public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryList> getTranscodeSummaryList() {
-        return this.transcodeSummaryList;
-    }
-
     public GetTranscodeSummaryResponseBody setNonExistVideoIds(java.util.List<String> nonExistVideoIds) {
         this.nonExistVideoIds = nonExistVideoIds;
         return this;
     }
     public java.util.List<String> getNonExistVideoIds() {
         return this.nonExistVideoIds;
+    }
+
+    public GetTranscodeSummaryResponseBody setTranscodeSummaryList(java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryList> transcodeSummaryList) {
+        this.transcodeSummaryList = transcodeSummaryList;
+        return this;
+    }
+    public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryList> getTranscodeSummaryList() {
+        return this.transcodeSummaryList;
     }
 
     public static class GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList extends TeaModel {
@@ -55,23 +55,20 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         @NameInMap("TranscodeProgress")
         public Long transcodeProgress;
 
-        @NameInMap("Bitrate")
-        public String bitrate;
-
         @NameInMap("TranscodeTemplateId")
         public String transcodeTemplateId;
+
+        @NameInMap("Bitrate")
+        public String bitrate;
 
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        @NameInMap("WatermarkIdList")
-        public java.util.List<String> watermarkIdList;
+        @NameInMap("CompleteTime")
+        public String completeTime;
 
         @NameInMap("Width")
         public String width;
-
-        @NameInMap("CompleteTime")
-        public String completeTime;
 
         @NameInMap("Duration")
         public String duration;
@@ -87,6 +84,9 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
 
         @NameInMap("Format")
         public String format;
+
+        @NameInMap("WatermarkIdList")
+        public java.util.List<String> watermarkIdList;
 
         public static GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList build(java.util.Map<String, ?> map) throws Exception {
             GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList self = new GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList();
@@ -125,20 +125,20 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             return this.transcodeProgress;
         }
 
-        public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setBitrate(String bitrate) {
-            this.bitrate = bitrate;
-            return this;
-        }
-        public String getBitrate() {
-            return this.bitrate;
-        }
-
         public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setTranscodeTemplateId(String transcodeTemplateId) {
             this.transcodeTemplateId = transcodeTemplateId;
             return this;
         }
         public String getTranscodeTemplateId() {
             return this.transcodeTemplateId;
+        }
+
+        public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setBitrate(String bitrate) {
+            this.bitrate = bitrate;
+            return this;
+        }
+        public String getBitrate() {
+            return this.bitrate;
         }
 
         public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setErrorCode(String errorCode) {
@@ -149,12 +149,12 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             return this.errorCode;
         }
 
-        public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setWatermarkIdList(java.util.List<String> watermarkIdList) {
-            this.watermarkIdList = watermarkIdList;
+        public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setCompleteTime(String completeTime) {
+            this.completeTime = completeTime;
             return this;
         }
-        public java.util.List<String> getWatermarkIdList() {
-            return this.watermarkIdList;
+        public String getCompleteTime() {
+            return this.completeTime;
         }
 
         public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setWidth(String width) {
@@ -163,14 +163,6 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         }
         public String getWidth() {
             return this.width;
-        }
-
-        public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setCompleteTime(String completeTime) {
-            this.completeTime = completeTime;
-            return this;
-        }
-        public String getCompleteTime() {
-            return this.completeTime;
         }
 
         public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setDuration(String duration) {
@@ -213,14 +205,19 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
             return this.format;
         }
 
+        public GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList setWatermarkIdList(java.util.List<String> watermarkIdList) {
+            this.watermarkIdList = watermarkIdList;
+            return this;
+        }
+        public java.util.List<String> getWatermarkIdList() {
+            return this.watermarkIdList;
+        }
+
     }
 
     public static class GetTranscodeSummaryResponseBodyTranscodeSummaryList extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
-
-        @NameInMap("TranscodeJobInfoSummaryList")
-        public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList> transcodeJobInfoSummaryList;
 
         @NameInMap("VideoId")
         public String videoId;
@@ -234,6 +231,9 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         @NameInMap("TranscodeTemplateGroupId")
         public String transcodeTemplateGroupId;
 
+        @NameInMap("TranscodeJobInfoSummaryList")
+        public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList> transcodeJobInfoSummaryList;
+
         public static GetTranscodeSummaryResponseBodyTranscodeSummaryList build(java.util.Map<String, ?> map) throws Exception {
             GetTranscodeSummaryResponseBodyTranscodeSummaryList self = new GetTranscodeSummaryResponseBodyTranscodeSummaryList();
             return TeaModel.build(map, self);
@@ -245,14 +245,6 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
-        }
-
-        public GetTranscodeSummaryResponseBodyTranscodeSummaryList setTranscodeJobInfoSummaryList(java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList> transcodeJobInfoSummaryList) {
-            this.transcodeJobInfoSummaryList = transcodeJobInfoSummaryList;
-            return this;
-        }
-        public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList> getTranscodeJobInfoSummaryList() {
-            return this.transcodeJobInfoSummaryList;
         }
 
         public GetTranscodeSummaryResponseBodyTranscodeSummaryList setVideoId(String videoId) {
@@ -285,6 +277,14 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
         }
         public String getTranscodeTemplateGroupId() {
             return this.transcodeTemplateGroupId;
+        }
+
+        public GetTranscodeSummaryResponseBodyTranscodeSummaryList setTranscodeJobInfoSummaryList(java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList> transcodeJobInfoSummaryList) {
+            this.transcodeJobInfoSummaryList = transcodeJobInfoSummaryList;
+            return this;
+        }
+        public java.util.List<GetTranscodeSummaryResponseBodyTranscodeSummaryListTranscodeJobInfoSummaryList> getTranscodeJobInfoSummaryList() {
+            return this.transcodeJobInfoSummaryList;
         }
 
     }

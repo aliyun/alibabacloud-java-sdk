@@ -16,12 +16,6 @@ public class UploadMediaByURLRequest extends TeaModel {
     @NameInMap("UploadMetadatas")
     public String uploadMetadatas;
 
-    @NameInMap("Priority")
-    public String priority;
-
-    @NameInMap("MessageCallback")
-    public String messageCallback;
-
     @NameInMap("UserData")
     public String userData;
 
@@ -66,22 +60,6 @@ public class UploadMediaByURLRequest extends TeaModel {
     }
     public String getUploadMetadatas() {
         return this.uploadMetadatas;
-    }
-
-    public UploadMediaByURLRequest setPriority(String priority) {
-        this.priority = priority;
-        return this;
-    }
-    public String getPriority() {
-        return this.priority;
-    }
-
-    public UploadMediaByURLRequest setMessageCallback(String messageCallback) {
-        this.messageCallback = messageCallback;
-        return this;
-    }
-    public String getMessageCallback() {
-        return this.messageCallback;
     }
 
     public UploadMediaByURLRequest setUserData(String userData) {

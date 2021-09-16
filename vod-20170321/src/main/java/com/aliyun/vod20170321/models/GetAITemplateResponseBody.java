@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAITemplateResponseBody extends TeaModel {
-    @NameInMap("TemplateInfo")
-    public GetAITemplateResponseBodyTemplateInfo templateInfo;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TemplateInfo")
+    public GetAITemplateResponseBodyTemplateInfo templateInfo;
 
     public static GetAITemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAITemplateResponseBody self = new GetAITemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAITemplateResponseBody setTemplateInfo(GetAITemplateResponseBodyTemplateInfo templateInfo) {
-        this.templateInfo = templateInfo;
-        return this;
-    }
-    public GetAITemplateResponseBodyTemplateInfo getTemplateInfo() {
-        return this.templateInfo;
     }
 
     public GetAITemplateResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetAITemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAITemplateResponseBody setTemplateInfo(GetAITemplateResponseBodyTemplateInfo templateInfo) {
+        this.templateInfo = templateInfo;
+        return this;
+    }
+    public GetAITemplateResponseBodyTemplateInfo getTemplateInfo() {
+        return this.templateInfo;
     }
 
     public static class GetAITemplateResponseBodyTemplateInfo extends TeaModel {

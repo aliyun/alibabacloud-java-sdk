@@ -10,9 +10,6 @@ public class GetAttachedMediaInfoRequest extends TeaModel {
     @NameInMap("AuthTimeout")
     public Long authTimeout;
 
-    @NameInMap("ResourceRealOwnerId")
-    public Long resourceRealOwnerId;
-
     @NameInMap("OutputType")
     public String outputType;
 
@@ -35,14 +32,6 @@ public class GetAttachedMediaInfoRequest extends TeaModel {
     }
     public Long getAuthTimeout() {
         return this.authTimeout;
-    }
-
-    public GetAttachedMediaInfoRequest setResourceRealOwnerId(Long resourceRealOwnerId) {
-        this.resourceRealOwnerId = resourceRealOwnerId;
-        return this;
-    }
-    public Long getResourceRealOwnerId() {
-        return this.resourceRealOwnerId;
     }
 
     public GetAttachedMediaInfoRequest setOutputType(String outputType) {

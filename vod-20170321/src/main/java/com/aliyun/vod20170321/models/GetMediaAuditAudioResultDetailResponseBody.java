@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
-    @NameInMap("MediaAuditAudioResultDetail")
-    public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail mediaAuditAudioResultDetail;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("MediaAuditAudioResultDetail")
+    public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail mediaAuditAudioResultDetail;
 
     public static GetMediaAuditAudioResultDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMediaAuditAudioResultDetailResponseBody self = new GetMediaAuditAudioResultDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetMediaAuditAudioResultDetailResponseBody setMediaAuditAudioResultDetail(GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail mediaAuditAudioResultDetail) {
-        this.mediaAuditAudioResultDetail = mediaAuditAudioResultDetail;
-        return this;
-    }
-    public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail getMediaAuditAudioResultDetail() {
-        return this.mediaAuditAudioResultDetail;
     }
 
     public GetMediaAuditAudioResultDetailResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetMediaAuditAudioResultDetailResponseBody setMediaAuditAudioResultDetail(GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail mediaAuditAudioResultDetail) {
+        this.mediaAuditAudioResultDetail = mediaAuditAudioResultDetail;
+        return this;
+    }
+    public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail getMediaAuditAudioResultDetail() {
+        return this.mediaAuditAudioResultDetail;
     }
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList extends TeaModel {
@@ -84,26 +84,26 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail extends TeaModel {
-        @NameInMap("List")
-        public java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> list;
+        @NameInMap("Total")
+        public Integer total;
 
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        @NameInMap("Total")
-        public Integer total;
+        @NameInMap("List")
+        public java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> list;
 
         public static GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail self = new GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail setList(java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> list) {
-            this.list = list;
+        public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail setTotal(Integer total) {
+            this.total = total;
             return this;
         }
-        public java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> getList() {
-            return this.list;
+        public Integer getTotal() {
+            return this.total;
         }
 
         public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail setPageTotal(Integer pageTotal) {
@@ -114,12 +114,12 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
             return this.pageTotal;
         }
 
-        public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail setTotal(Integer total) {
-            this.total = total;
+        public GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetail setList(java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> list) {
+            this.list = list;
             return this;
         }
-        public Integer getTotal() {
-            return this.total;
+        public java.util.List<GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList> getList() {
+            return this.list;
         }
 
     }

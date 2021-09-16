@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetAIImageJobsResponseBody extends TeaModel {
-    @NameInMap("AIImageJobList")
-    public java.util.List<GetAIImageJobsResponseBodyAIImageJobList> AIImageJobList;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("AIImageJobList")
+    public java.util.List<GetAIImageJobsResponseBodyAIImageJobList> AIImageJobList;
 
     public static GetAIImageJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAIImageJobsResponseBody self = new GetAIImageJobsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAIImageJobsResponseBody setAIImageJobList(java.util.List<GetAIImageJobsResponseBodyAIImageJobList> AIImageJobList) {
-        this.AIImageJobList = AIImageJobList;
-        return this;
-    }
-    public java.util.List<GetAIImageJobsResponseBodyAIImageJobList> getAIImageJobList() {
-        return this.AIImageJobList;
     }
 
     public GetAIImageJobsResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetAIImageJobsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAIImageJobsResponseBody setAIImageJobList(java.util.List<GetAIImageJobsResponseBodyAIImageJobList> AIImageJobList) {
+        this.AIImageJobList = AIImageJobList;
+        return this;
+    }
+    public java.util.List<GetAIImageJobsResponseBodyAIImageJobList> getAIImageJobList() {
+        return this.AIImageJobList;
     }
 
     public static class GetAIImageJobsResponseBodyAIImageJobList extends TeaModel {

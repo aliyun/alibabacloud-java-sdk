@@ -10,9 +10,6 @@ public class AddVodTemplateRequest extends TeaModel {
     @NameInMap("TemplateType")
     public String templateType;
 
-    @NameInMap("SubTemplateType")
-    public String subTemplateType;
-
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
@@ -38,14 +35,6 @@ public class AddVodTemplateRequest extends TeaModel {
     }
     public String getTemplateType() {
         return this.templateType;
-    }
-
-    public AddVodTemplateRequest setSubTemplateType(String subTemplateType) {
-        this.subTemplateType = subTemplateType;
-        return this;
-    }
-    public String getSubTemplateType() {
-        return this.subTemplateType;
     }
 
     public AddVodTemplateRequest setTemplateConfig(String templateConfig) {

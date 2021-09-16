@@ -7,17 +7,17 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
     @NameInMap("FileURL")
     public String fileURL;
 
-    @NameInMap("MediaURL")
-    public String mediaURL;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("UploadAddress")
     public String uploadAddress;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MediaId")
     public String mediaId;
+
+    @NameInMap("MediaURL")
+    public String mediaURL;
 
     @NameInMap("UploadAuth")
     public String uploadAuth;
@@ -35,12 +35,12 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         return this.fileURL;
     }
 
-    public CreateUploadAttachedMediaResponseBody setMediaURL(String mediaURL) {
-        this.mediaURL = mediaURL;
+    public CreateUploadAttachedMediaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getMediaURL() {
-        return this.mediaURL;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateUploadAttachedMediaResponseBody setUploadAddress(String uploadAddress) {
@@ -51,20 +51,20 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         return this.uploadAddress;
     }
 
-    public CreateUploadAttachedMediaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateUploadAttachedMediaResponseBody setMediaId(String mediaId) {
         this.mediaId = mediaId;
         return this;
     }
     public String getMediaId() {
         return this.mediaId;
+    }
+
+    public CreateUploadAttachedMediaResponseBody setMediaURL(String mediaURL) {
+        this.mediaURL = mediaURL;
+        return this;
+    }
+    public String getMediaURL() {
+        return this.mediaURL;
     }
 
     public CreateUploadAttachedMediaResponseBody setUploadAuth(String uploadAuth) {

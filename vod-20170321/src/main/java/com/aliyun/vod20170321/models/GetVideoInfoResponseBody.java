@@ -51,44 +51,26 @@ public class GetVideoInfoResponseBody extends TeaModel {
     }
 
     public static class GetVideoInfoResponseBodyVideo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("StorageLocation")
+        public String storageLocation;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("StorageLocation")
-        public String storageLocation;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("CateId")
         public Long cateId;
+
+        @NameInMap("VideoId")
+        public String videoId;
 
         @NameInMap("Tags")
         public String tags;
 
         @NameInMap("ModificationTime")
         public String modificationTime;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("CoverURL")
-        public String coverURL;
-
-        @NameInMap("TemplateGroupId")
-        public String templateGroupId;
-
-        @NameInMap("AuditStatus")
-        public String auditStatus;
-
-        @NameInMap("VideoId")
-        public String videoId;
-
-        @NameInMap("Snapshots")
-        public GetVideoInfoResponseBodyVideoSnapshots snapshots;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -99,8 +81,20 @@ public class GetVideoInfoResponseBody extends TeaModel {
         @NameInMap("CateName")
         public String cateName;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("Size")
         public Long size;
+
+        @NameInMap("CoverURL")
+        public String coverURL;
+
+        @NameInMap("TemplateGroupId")
+        public String templateGroupId;
 
         @NameInMap("Duration")
         public Float duration;
@@ -108,25 +102,15 @@ public class GetVideoInfoResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("AuditStatus")
+        public String auditStatus;
+
+        @NameInMap("Snapshots")
+        public GetVideoInfoResponseBodyVideoSnapshots snapshots;
+
         public static GetVideoInfoResponseBodyVideo build(java.util.Map<String, ?> map) throws Exception {
             GetVideoInfoResponseBodyVideo self = new GetVideoInfoResponseBodyVideo();
             return TeaModel.build(map, self);
-        }
-
-        public GetVideoInfoResponseBodyVideo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetVideoInfoResponseBodyVideo setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
         }
 
         public GetVideoInfoResponseBodyVideo setStorageLocation(String storageLocation) {
@@ -137,12 +121,36 @@ public class GetVideoInfoResponseBody extends TeaModel {
             return this.storageLocation;
         }
 
+        public GetVideoInfoResponseBodyVideo setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public GetVideoInfoResponseBodyVideo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
         public GetVideoInfoResponseBodyVideo setCateId(Long cateId) {
             this.cateId = cateId;
             return this;
         }
         public Long getCateId() {
             return this.cateId;
+        }
+
+        public GetVideoInfoResponseBodyVideo setVideoId(String videoId) {
+            this.videoId = videoId;
+            return this;
+        }
+        public String getVideoId() {
+            return this.videoId;
         }
 
         public GetVideoInfoResponseBodyVideo setTags(String tags) {
@@ -159,62 +167,6 @@ public class GetVideoInfoResponseBody extends TeaModel {
         }
         public String getModificationTime() {
             return this.modificationTime;
-        }
-
-        public GetVideoInfoResponseBodyVideo setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public GetVideoInfoResponseBodyVideo setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public GetVideoInfoResponseBodyVideo setCoverURL(String coverURL) {
-            this.coverURL = coverURL;
-            return this;
-        }
-        public String getCoverURL() {
-            return this.coverURL;
-        }
-
-        public GetVideoInfoResponseBodyVideo setTemplateGroupId(String templateGroupId) {
-            this.templateGroupId = templateGroupId;
-            return this;
-        }
-        public String getTemplateGroupId() {
-            return this.templateGroupId;
-        }
-
-        public GetVideoInfoResponseBodyVideo setAuditStatus(String auditStatus) {
-            this.auditStatus = auditStatus;
-            return this;
-        }
-        public String getAuditStatus() {
-            return this.auditStatus;
-        }
-
-        public GetVideoInfoResponseBodyVideo setVideoId(String videoId) {
-            this.videoId = videoId;
-            return this;
-        }
-        public String getVideoId() {
-            return this.videoId;
-        }
-
-        public GetVideoInfoResponseBodyVideo setSnapshots(GetVideoInfoResponseBodyVideoSnapshots snapshots) {
-            this.snapshots = snapshots;
-            return this;
-        }
-        public GetVideoInfoResponseBodyVideoSnapshots getSnapshots() {
-            return this.snapshots;
         }
 
         public GetVideoInfoResponseBodyVideo setRegionId(String regionId) {
@@ -241,12 +193,44 @@ public class GetVideoInfoResponseBody extends TeaModel {
             return this.cateName;
         }
 
+        public GetVideoInfoResponseBodyVideo setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetVideoInfoResponseBodyVideo setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
         public GetVideoInfoResponseBodyVideo setSize(Long size) {
             this.size = size;
             return this;
         }
         public Long getSize() {
             return this.size;
+        }
+
+        public GetVideoInfoResponseBodyVideo setCoverURL(String coverURL) {
+            this.coverURL = coverURL;
+            return this;
+        }
+        public String getCoverURL() {
+            return this.coverURL;
+        }
+
+        public GetVideoInfoResponseBodyVideo setTemplateGroupId(String templateGroupId) {
+            this.templateGroupId = templateGroupId;
+            return this;
+        }
+        public String getTemplateGroupId() {
+            return this.templateGroupId;
         }
 
         public GetVideoInfoResponseBodyVideo setDuration(Float duration) {
@@ -263,6 +247,22 @@ public class GetVideoInfoResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public GetVideoInfoResponseBodyVideo setAuditStatus(String auditStatus) {
+            this.auditStatus = auditStatus;
+            return this;
+        }
+        public String getAuditStatus() {
+            return this.auditStatus;
+        }
+
+        public GetVideoInfoResponseBodyVideo setSnapshots(GetVideoInfoResponseBodyVideoSnapshots snapshots) {
+            this.snapshots = snapshots;
+            return this;
+        }
+        public GetVideoInfoResponseBodyVideoSnapshots getSnapshots() {
+            return this.snapshots;
         }
 
     }
