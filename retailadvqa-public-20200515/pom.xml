@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>retailadvqa_public20200515</artifactId>
-  <version>3.3.26</version>
+  <version>3.3.27</version>
   <packaging>jar</packaging>
   <name>retailadvqa_public20200515</name>
   <description>Alibaba Cloud retailadvqa-public (20200515) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.11</version>
+      <version>0.1.12</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

@@ -133,6 +133,12 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ModifyTime")
+        public String modifyTime;
+
         public static GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks build(java.util.Map<String, ?> map) throws Exception {
             GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks self = new GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks();
             return TeaModel.build(map, self);
@@ -176,6 +182,22 @@ public class GetAudienceMarketingInfoResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetAudienceMarketingInfoResponseBodyDataContentSmsMarketingModelMarketingTasks setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public String getModifyTime() {
+            return this.modifyTime;
         }
 
     }
