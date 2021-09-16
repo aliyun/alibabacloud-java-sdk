@@ -4,49 +4,33 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumerGroupResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("ConsumerChannels")
-    public DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels;
-
-    @NameInMap("Success")
-    public String success;
 
     @NameInMap("ErrCode")
     public String errCode;
 
+    @NameInMap("Success")
+    public String success;
+
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("ConsumerChannels")
+    public DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels;
+
     public static DescribeConsumerGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeConsumerGroupResponseBody self = new DescribeConsumerGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeConsumerGroupResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
-    public DescribeConsumerGroupResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
     }
 
     public DescribeConsumerGroupResponseBody setRequestId(String requestId) {
@@ -57,28 +41,12 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeConsumerGroupResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeConsumerGroupResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeConsumerGroupResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
-    public DescribeConsumerGroupResponseBody setConsumerChannels(DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels) {
-        this.consumerChannels = consumerChannels;
-        return this;
-    }
-    public DescribeConsumerGroupResponseBodyConsumerChannels getConsumerChannels() {
-        return this.consumerChannels;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public DescribeConsumerGroupResponseBody setSuccess(String success) {
@@ -89,12 +57,44 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeConsumerGroupResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DescribeConsumerGroupResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeConsumerGroupResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public DescribeConsumerGroupResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
+    public DescribeConsumerGroupResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeConsumerGroupResponseBody setConsumerChannels(DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels) {
+        this.consumerChannels = consumerChannels;
+        return this;
+    }
+    public DescribeConsumerGroupResponseBodyConsumerChannels getConsumerChannels() {
+        return this.consumerChannels;
     }
 
     public static class DescribeConsumerGroupResponseBodyConsumerChannelsDescribeConsumerChannel extends TeaModel {

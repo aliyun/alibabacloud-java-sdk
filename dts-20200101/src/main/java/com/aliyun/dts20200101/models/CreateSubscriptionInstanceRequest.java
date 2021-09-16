@@ -7,6 +7,9 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("SourceEndpoint")
     public CreateSubscriptionInstanceRequestSourceEndpoint sourceEndpoint;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Region")
     public String region;
 
@@ -39,6 +42,14 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     }
     public CreateSubscriptionInstanceRequestSourceEndpoint getSourceEndpoint() {
         return this.sourceEndpoint;
+    }
+
+    public CreateSubscriptionInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateSubscriptionInstanceRequest setRegion(String region) {

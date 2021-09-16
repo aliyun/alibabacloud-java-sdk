@@ -13,6 +13,9 @@ public class StartDtsJobRequest extends TeaModel {
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static StartDtsJobRequest build(java.util.Map<String, ?> map) throws Exception {
         StartDtsJobRequest self = new StartDtsJobRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class StartDtsJobRequest extends TeaModel {
     }
     public String getSynchronizationDirection() {
         return this.synchronizationDirection;
+    }
+
+    public StartDtsJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

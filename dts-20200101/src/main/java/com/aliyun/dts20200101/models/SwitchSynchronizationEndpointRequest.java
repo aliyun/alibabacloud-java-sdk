@@ -10,6 +10,9 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     @NameInMap("SourceEndpoint")
     public SwitchSynchronizationEndpointRequestSourceEndpoint sourceEndpoint;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;
 
@@ -41,6 +44,14 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     }
     public SwitchSynchronizationEndpointRequestSourceEndpoint getSourceEndpoint() {
         return this.sourceEndpoint;
+    }
+
+    public SwitchSynchronizationEndpointRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SwitchSynchronizationEndpointRequest setSynchronizationJobId(String synchronizationJobId) {

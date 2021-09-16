@@ -7,14 +7,14 @@ public class ConfigureSubscriptionInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static ConfigureSubscriptionInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConfigureSubscriptionInstanceResponseBody self = new ConfigureSubscriptionInstanceResponseBody();
@@ -29,12 +29,12 @@ public class ConfigureSubscriptionInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ConfigureSubscriptionInstanceResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public ConfigureSubscriptionInstanceResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public ConfigureSubscriptionInstanceResponseBody setSuccess(String success) {
@@ -45,12 +45,12 @@ public class ConfigureSubscriptionInstanceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ConfigureSubscriptionInstanceResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public ConfigureSubscriptionInstanceResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

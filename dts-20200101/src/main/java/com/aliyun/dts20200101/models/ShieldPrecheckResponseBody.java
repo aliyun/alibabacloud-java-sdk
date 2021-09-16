@@ -7,14 +7,14 @@ public class ShieldPrecheckResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static ShieldPrecheckResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ShieldPrecheckResponseBody self = new ShieldPrecheckResponseBody();
@@ -29,12 +29,12 @@ public class ShieldPrecheckResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ShieldPrecheckResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public ShieldPrecheckResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public ShieldPrecheckResponseBody setSuccess(Boolean success) {
@@ -45,12 +45,12 @@ public class ShieldPrecheckResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ShieldPrecheckResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public ShieldPrecheckResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

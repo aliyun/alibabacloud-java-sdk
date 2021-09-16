@@ -13,6 +13,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("SubscriptionInstance")
     public ConfigureSubscriptionInstanceRequestSubscriptionInstance subscriptionInstance;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 
@@ -58,6 +61,14 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     }
     public ConfigureSubscriptionInstanceRequestSubscriptionInstance getSubscriptionInstance() {
         return this.subscriptionInstance;
+    }
+
+    public ConfigureSubscriptionInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ConfigureSubscriptionInstanceRequest setSubscriptionInstanceId(String subscriptionInstanceId) {

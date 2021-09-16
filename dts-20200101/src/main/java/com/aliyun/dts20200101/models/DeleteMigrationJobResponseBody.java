@@ -7,14 +7,14 @@ public class DeleteMigrationJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static DeleteMigrationJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMigrationJobResponseBody self = new DeleteMigrationJobResponseBody();
@@ -29,12 +29,12 @@ public class DeleteMigrationJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteMigrationJobResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public DeleteMigrationJobResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public DeleteMigrationJobResponseBody setSuccess(String success) {
@@ -45,12 +45,12 @@ public class DeleteMigrationJobResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeleteMigrationJobResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DeleteMigrationJobResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

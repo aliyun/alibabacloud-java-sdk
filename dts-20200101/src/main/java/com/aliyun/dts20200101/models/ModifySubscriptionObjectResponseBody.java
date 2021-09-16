@@ -7,14 +7,14 @@ public class ModifySubscriptionObjectResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static ModifySubscriptionObjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifySubscriptionObjectResponseBody self = new ModifySubscriptionObjectResponseBody();
@@ -29,12 +29,12 @@ public class ModifySubscriptionObjectResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifySubscriptionObjectResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public ModifySubscriptionObjectResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public ModifySubscriptionObjectResponseBody setSuccess(String success) {
@@ -45,12 +45,12 @@ public class ModifySubscriptionObjectResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModifySubscriptionObjectResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public ModifySubscriptionObjectResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

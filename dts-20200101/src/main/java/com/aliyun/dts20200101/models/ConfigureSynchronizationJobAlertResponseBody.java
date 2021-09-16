@@ -7,14 +7,14 @@ public class ConfigureSynchronizationJobAlertResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static ConfigureSynchronizationJobAlertResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConfigureSynchronizationJobAlertResponseBody self = new ConfigureSynchronizationJobAlertResponseBody();
@@ -29,12 +29,12 @@ public class ConfigureSynchronizationJobAlertResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ConfigureSynchronizationJobAlertResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public ConfigureSynchronizationJobAlertResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public ConfigureSynchronizationJobAlertResponseBody setSuccess(String success) {
@@ -45,12 +45,12 @@ public class ConfigureSynchronizationJobAlertResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ConfigureSynchronizationJobAlertResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public ConfigureSynchronizationJobAlertResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

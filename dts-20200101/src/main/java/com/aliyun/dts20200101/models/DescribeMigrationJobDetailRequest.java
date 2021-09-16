@@ -7,6 +7,9 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     @NameInMap("MigrationMode")
     public DescribeMigrationJobDetailRequestMigrationMode migrationMode;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -36,6 +39,14 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     }
     public DescribeMigrationJobDetailRequestMigrationMode getMigrationMode() {
         return this.migrationMode;
+    }
+
+    public DescribeMigrationJobDetailRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeMigrationJobDetailRequest setPageSize(Integer pageSize) {

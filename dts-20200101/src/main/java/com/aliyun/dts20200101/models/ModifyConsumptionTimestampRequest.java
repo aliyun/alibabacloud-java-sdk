@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyConsumptionTimestampRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 
@@ -19,6 +22,14 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
     public static ModifyConsumptionTimestampRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyConsumptionTimestampRequest self = new ModifyConsumptionTimestampRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyConsumptionTimestampRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ModifyConsumptionTimestampRequest setSubscriptionInstanceId(String subscriptionInstanceId) {

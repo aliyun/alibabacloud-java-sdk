@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dts20200101.models;
+
+import com.aliyun.tea.*;
+
+public class DescribePreCheckStatusResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribePreCheckStatusResponseBody body;
+
+    public static DescribePreCheckStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribePreCheckStatusResponse self = new DescribePreCheckStatusResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribePreCheckStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribePreCheckStatusResponse setBody(DescribePreCheckStatusResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribePreCheckStatusResponseBody getBody() {
+        return this.body;
+    }
+
+}

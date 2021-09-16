@@ -7,20 +7,20 @@ public class DescribeDTSIPResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
-
-    @NameInMap("DynamicMessage")
-    public String dynamicMessage;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
+    @NameInMap("DynamicMessage")
+    public String dynamicMessage;
+
+    @NameInMap("DynamicCode")
+    public String dynamicCode;
 
     public static DescribeDTSIPResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDTSIPResponseBody self = new DescribeDTSIPResponseBody();
@@ -35,28 +35,12 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDTSIPResponseBody setDynamicCode(String dynamicCode) {
-        this.dynamicCode = dynamicCode;
+    public DescribeDTSIPResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getDynamicCode() {
-        return this.dynamicCode;
-    }
-
-    public DescribeDTSIPResponseBody setDynamicMessage(String dynamicMessage) {
-        this.dynamicMessage = dynamicMessage;
-        return this;
-    }
-    public String getDynamicMessage() {
-        return this.dynamicMessage;
-    }
-
-    public DescribeDTSIPResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public DescribeDTSIPResponseBody setSuccess(String success) {
@@ -67,12 +51,28 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeDTSIPResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DescribeDTSIPResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
+    public DescribeDTSIPResponseBody setDynamicMessage(String dynamicMessage) {
+        this.dynamicMessage = dynamicMessage;
+        return this;
+    }
+    public String getDynamicMessage() {
+        return this.dynamicMessage;
+    }
+
+    public DescribeDTSIPResponseBody setDynamicCode(String dynamicCode) {
+        this.dynamicCode = dynamicCode;
+        return this;
+    }
+    public String getDynamicCode() {
+        return this.dynamicCode;
     }
 
 }

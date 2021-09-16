@@ -4,49 +4,33 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Long totalRecordCount;
-
-    @NameInMap("PageRecordCount")
-    public Integer pageRecordCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("SynchronizationJobListStatusList")
-    public java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList> synchronizationJobListStatusList;
-
-    @NameInMap("Success")
-    public String success;
 
     @NameInMap("ErrCode")
     public String errCode;
 
+    @NameInMap("PageRecordCount")
+    public Integer pageRecordCount;
+
+    @NameInMap("Success")
+    public String success;
+
+    @NameInMap("TotalRecordCount")
+    public Long totalRecordCount;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("SynchronizationJobListStatusList")
+    public java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList> synchronizationJobListStatusList;
+
     public static DescribeSynchronizationJobStatusListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSynchronizationJobStatusListResponseBody self = new DescribeSynchronizationJobStatusListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSynchronizationJobStatusListResponseBody setTotalRecordCount(Long totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Long getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
-    public DescribeSynchronizationJobStatusListResponseBody setPageRecordCount(Integer pageRecordCount) {
-        this.pageRecordCount = pageRecordCount;
-        return this;
-    }
-    public Integer getPageRecordCount() {
-        return this.pageRecordCount;
     }
 
     public DescribeSynchronizationJobStatusListResponseBody setRequestId(String requestId) {
@@ -57,28 +41,20 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSynchronizationJobStatusListResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSynchronizationJobStatusListResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getErrCode() {
+        return this.errCode;
     }
 
-    public DescribeSynchronizationJobStatusListResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public DescribeSynchronizationJobStatusListResponseBody setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
-    public DescribeSynchronizationJobStatusListResponseBody setSynchronizationJobListStatusList(java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList> synchronizationJobListStatusList) {
-        this.synchronizationJobListStatusList = synchronizationJobListStatusList;
-        return this;
-    }
-    public java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList> getSynchronizationJobListStatusList() {
-        return this.synchronizationJobListStatusList;
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
     }
 
     public DescribeSynchronizationJobStatusListResponseBody setSuccess(String success) {
@@ -89,12 +65,36 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeSynchronizationJobStatusListResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public DescribeSynchronizationJobStatusListResponseBody setTotalRecordCount(Long totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public Long getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public DescribeSynchronizationJobStatusListResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
+    public DescribeSynchronizationJobStatusListResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSynchronizationJobStatusListResponseBody setSynchronizationJobListStatusList(java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList> synchronizationJobListStatusList) {
+        this.synchronizationJobListStatusList = synchronizationJobListStatusList;
+        return this;
+    }
+    public java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList> getSynchronizationJobListStatusList() {
+        return this.synchronizationJobListStatusList;
     }
 
     public static class DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusListSynchronizationDirectionInfoList extends TeaModel {

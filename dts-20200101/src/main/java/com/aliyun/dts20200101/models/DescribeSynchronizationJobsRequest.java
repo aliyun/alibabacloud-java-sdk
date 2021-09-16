@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSynchronizationJobsRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,15 +25,20 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     @NameInMap("AccountId")
     public String accountId;
 
-    @NameInMap("InstFilterRegion")
-    public String instFilterRegion;
-
     @NameInMap("Tag")
     public java.util.List<DescribeSynchronizationJobsRequestTag> tag;
 
     public static DescribeSynchronizationJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSynchronizationJobsRequest self = new DescribeSynchronizationJobsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSynchronizationJobsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSynchronizationJobsRequest setPageSize(Integer pageSize) {
@@ -79,14 +87,6 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
-    }
-
-    public DescribeSynchronizationJobsRequest setInstFilterRegion(String instFilterRegion) {
-        this.instFilterRegion = instFilterRegion;
-        return this;
-    }
-    public String getInstFilterRegion() {
-        return this.instFilterRegion;
     }
 
     public DescribeSynchronizationJobsRequest setTag(java.util.List<DescribeSynchronizationJobsRequestTag> tag) {

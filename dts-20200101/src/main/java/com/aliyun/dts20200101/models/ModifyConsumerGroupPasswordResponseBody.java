@@ -7,14 +7,14 @@ public class ModifyConsumerGroupPasswordResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public String success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     public static ModifyConsumerGroupPasswordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyConsumerGroupPasswordResponseBody self = new ModifyConsumerGroupPasswordResponseBody();
@@ -29,12 +29,12 @@ public class ModifyConsumerGroupPasswordResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyConsumerGroupPasswordResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public ModifyConsumerGroupPasswordResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public ModifyConsumerGroupPasswordResponseBody setSuccess(String success) {
@@ -45,12 +45,12 @@ public class ModifyConsumerGroupPasswordResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModifyConsumerGroupPasswordResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public ModifyConsumerGroupPasswordResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

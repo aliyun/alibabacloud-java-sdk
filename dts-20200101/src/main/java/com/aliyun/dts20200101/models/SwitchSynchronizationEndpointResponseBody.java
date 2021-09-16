@@ -4,32 +4,24 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class SwitchSynchronizationEndpointResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
-    @NameInMap("Success")
-    public String success;
 
     @NameInMap("ErrCode")
     public String errCode;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
+    @NameInMap("Success")
+    public String success;
+
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     public static SwitchSynchronizationEndpointResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SwitchSynchronizationEndpointResponseBody self = new SwitchSynchronizationEndpointResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SwitchSynchronizationEndpointResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
     }
 
     public SwitchSynchronizationEndpointResponseBody setRequestId(String requestId) {
@@ -40,12 +32,20 @@ public class SwitchSynchronizationEndpointResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SwitchSynchronizationEndpointResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public SwitchSynchronizationEndpointResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
+    }
+
+    public SwitchSynchronizationEndpointResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public SwitchSynchronizationEndpointResponseBody setSuccess(String success) {
@@ -56,12 +56,12 @@ public class SwitchSynchronizationEndpointResponseBody extends TeaModel {
         return this.success;
     }
 
-    public SwitchSynchronizationEndpointResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public SwitchSynchronizationEndpointResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
 }

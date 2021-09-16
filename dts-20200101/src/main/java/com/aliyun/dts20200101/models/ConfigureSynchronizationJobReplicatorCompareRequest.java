@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigureSynchronizationJobReplicatorCompareRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;
 
@@ -25,6 +28,14 @@ public class ConfigureSynchronizationJobReplicatorCompareRequest extends TeaMode
     public static ConfigureSynchronizationJobReplicatorCompareRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigureSynchronizationJobReplicatorCompareRequest self = new ConfigureSynchronizationJobReplicatorCompareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ConfigureSynchronizationJobReplicatorCompareRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ConfigureSynchronizationJobReplicatorCompareRequest setSynchronizationJobId(String synchronizationJobId) {

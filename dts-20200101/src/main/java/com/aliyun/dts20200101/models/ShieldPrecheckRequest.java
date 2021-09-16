@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ShieldPrecheckRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
@@ -13,6 +16,14 @@ public class ShieldPrecheckRequest extends TeaModel {
     public static ShieldPrecheckRequest build(java.util.Map<String, ?> map) throws Exception {
         ShieldPrecheckRequest self = new ShieldPrecheckRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ShieldPrecheckRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ShieldPrecheckRequest setDtsInstanceId(String dtsInstanceId) {

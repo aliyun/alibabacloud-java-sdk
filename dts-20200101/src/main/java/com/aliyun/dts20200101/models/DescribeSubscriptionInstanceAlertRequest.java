@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubscriptionInstanceAlertRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 
@@ -19,6 +22,14 @@ public class DescribeSubscriptionInstanceAlertRequest extends TeaModel {
     public static DescribeSubscriptionInstanceAlertRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSubscriptionInstanceAlertRequest self = new DescribeSubscriptionInstanceAlertRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSubscriptionInstanceAlertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeSubscriptionInstanceAlertRequest setSubscriptionInstanceId(String subscriptionInstanceId) {

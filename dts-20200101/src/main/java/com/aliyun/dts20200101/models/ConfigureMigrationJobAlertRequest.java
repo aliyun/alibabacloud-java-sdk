@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ConfigureMigrationJobAlertRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
@@ -31,6 +34,14 @@ public class ConfigureMigrationJobAlertRequest extends TeaModel {
     public static ConfigureMigrationJobAlertRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigureMigrationJobAlertRequest self = new ConfigureMigrationJobAlertRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ConfigureMigrationJobAlertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ConfigureMigrationJobAlertRequest setMigrationJobId(String migrationJobId) {

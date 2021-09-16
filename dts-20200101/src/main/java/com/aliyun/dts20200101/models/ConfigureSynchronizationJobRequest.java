@@ -13,6 +13,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     @NameInMap("PartitionKey")
     public ConfigureSynchronizationJobRequestPartitionKey partitionKey;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SynchronizationJobName")
     public String synchronizationJobName;
 
@@ -70,6 +73,14 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     }
     public ConfigureSynchronizationJobRequestPartitionKey getPartitionKey() {
         return this.partitionKey;
+    }
+
+    public ConfigureSynchronizationJobRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ConfigureSynchronizationJobRequest setSynchronizationJobName(String synchronizationJobName) {

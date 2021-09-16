@@ -10,17 +10,17 @@ public class ListTagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TagResources")
-    public ListTagResourcesResponseBodyTagResources tagResources;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("ErrCode")
+    public String errCode;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrCode")
-    public String errCode;
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
+    @NameInMap("TagResources")
+    public ListTagResourcesResponseBodyTagResources tagResources;
 
     public static ListTagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesResponseBody self = new ListTagResourcesResponseBody();
@@ -43,20 +43,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTagResourcesResponseBody setTagResources(ListTagResourcesResponseBodyTagResources tagResources) {
-        this.tagResources = tagResources;
+    public ListTagResourcesResponseBody setErrCode(String errCode) {
+        this.errCode = errCode;
         return this;
     }
-    public ListTagResourcesResponseBodyTagResources getTagResources() {
-        return this.tagResources;
-    }
-
-    public ListTagResourcesResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getErrCode() {
+        return this.errCode;
     }
 
     public ListTagResourcesResponseBody setSuccess(Boolean success) {
@@ -67,20 +59,28 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListTagResourcesResponseBody setErrCode(String errCode) {
-        this.errCode = errCode;
+    public ListTagResourcesResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public String getErrCode() {
-        return this.errCode;
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
+    public ListTagResourcesResponseBody setTagResources(ListTagResourcesResponseBodyTagResources tagResources) {
+        this.tagResources = tagResources;
+        return this;
+    }
+    public ListTagResourcesResponseBodyTagResources getTagResources() {
+        return this.tagResources;
     }
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
-        @NameInMap("ResourceType")
-        public String resourceType;
-
         @NameInMap("TagValue")
         public String tagValue;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
 
         @NameInMap("ResourceId")
         public String resourceId;
@@ -93,20 +93,20 @@ public class ListTagResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
         public ListTagResourcesResponseBodyTagResourcesTagResource setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public ListTagResourcesResponseBodyTagResourcesTagResource setResourceId(String resourceId) {
