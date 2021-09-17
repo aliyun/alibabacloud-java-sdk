@@ -68,9 +68,6 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         @NameInMap("CertificateId")
         public String certificateId;
 
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
@@ -88,14 +85,6 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         }
         public String getCertificateId() {
             return this.certificateId;
-        }
-
-        public ListListenerCertificatesResponseBodyCertificates setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public ListListenerCertificatesResponseBodyCertificates setIsDefault(Boolean isDefault) {
