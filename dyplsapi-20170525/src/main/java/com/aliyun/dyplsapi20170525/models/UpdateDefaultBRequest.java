@@ -13,9 +13,6 @@ public class UpdateDefaultBRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     @NameInMap("PoolKey")
     public String poolKey;
 
@@ -55,14 +52,6 @@ public class UpdateDefaultBRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UpdateDefaultBRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
     public UpdateDefaultBRequest setPoolKey(String poolKey) {

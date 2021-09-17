@@ -4,6 +4,9 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySecretNoRemainResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
     @NameInMap("SecretRemainDTO")
     public QuerySecretNoRemainResponseBodySecretRemainDTO secretRemainDTO;
 
-    @NameInMap("Code")
-    public String code;
-
     public static QuerySecretNoRemainResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySecretNoRemainResponseBody self = new QuerySecretNoRemainResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySecretNoRemainResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QuerySecretNoRemainResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
     }
     public QuerySecretNoRemainResponseBodySecretRemainDTO getSecretRemainDTO() {
         return this.secretRemainDTO;
-    }
-
-    public QuerySecretNoRemainResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOListRemainDTO extends TeaModel {

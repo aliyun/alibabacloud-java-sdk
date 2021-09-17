@@ -13,9 +13,6 @@ public class UpdatePhoneNumberRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     @NameInMap("PoolKey")
     public String poolKey;
 
@@ -58,14 +55,6 @@ public class UpdatePhoneNumberRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UpdatePhoneNumberRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
     public UpdatePhoneNumberRequest setPoolKey(String poolKey) {

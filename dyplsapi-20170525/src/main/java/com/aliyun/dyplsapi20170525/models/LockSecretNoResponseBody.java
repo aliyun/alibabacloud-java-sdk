@@ -4,18 +4,26 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class LockSecretNoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static LockSecretNoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         LockSecretNoResponseBody self = new LockSecretNoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public LockSecretNoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public LockSecretNoResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class LockSecretNoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public LockSecretNoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateAxgGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("GroupId")
     public Long groupId;
@@ -19,6 +19,14 @@ public class CreateAxgGroupResponseBody extends TeaModel {
     public static CreateAxgGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAxgGroupResponseBody self = new CreateAxgGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAxgGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateAxgGroupResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class CreateAxgGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateAxgGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CreateAxgGroupResponseBody setGroupId(Long groupId) {

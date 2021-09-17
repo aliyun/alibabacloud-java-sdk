@@ -4,8 +4,8 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class BindAxbResponseBody extends TeaModel {
-    @NameInMap("SecretBindDTO")
-    public BindAxbResponseBodySecretBindDTO secretBindDTO;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class BindAxbResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("SecretBindDTO")
+    public BindAxbResponseBodySecretBindDTO secretBindDTO;
 
     public static BindAxbResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BindAxbResponseBody self = new BindAxbResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BindAxbResponseBody setSecretBindDTO(BindAxbResponseBodySecretBindDTO secretBindDTO) {
-        this.secretBindDTO = secretBindDTO;
+    public BindAxbResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public BindAxbResponseBodySecretBindDTO getSecretBindDTO() {
-        return this.secretBindDTO;
+    public String getCode() {
+        return this.code;
     }
 
     public BindAxbResponseBody setMessage(String message) {
@@ -45,12 +45,12 @@ public class BindAxbResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BindAxbResponseBody setCode(String code) {
-        this.code = code;
+    public BindAxbResponseBody setSecretBindDTO(BindAxbResponseBodySecretBindDTO secretBindDTO) {
+        this.secretBindDTO = secretBindDTO;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public BindAxbResponseBodySecretBindDTO getSecretBindDTO() {
+        return this.secretBindDTO;
     }
 
     public static class BindAxbResponseBodySecretBindDTO extends TeaModel {

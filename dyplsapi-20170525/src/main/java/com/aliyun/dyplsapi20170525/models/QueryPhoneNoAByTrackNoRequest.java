@@ -13,11 +13,14 @@ public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PhoneNoX")
-    public String phoneNoX;
-
     @NameInMap("trackNo")
     public String trackNo;
+
+    @NameInMap("CabinetNo")
+    public String cabinetNo;
+
+    @NameInMap("PhoneNoX")
+    public String phoneNoX;
 
     public static QueryPhoneNoAByTrackNoRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPhoneNoAByTrackNoRequest self = new QueryPhoneNoAByTrackNoRequest();
@@ -48,20 +51,28 @@ public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public QueryPhoneNoAByTrackNoRequest setPhoneNoX(String phoneNoX) {
-        this.phoneNoX = phoneNoX;
-        return this;
-    }
-    public String getPhoneNoX() {
-        return this.phoneNoX;
-    }
-
     public QueryPhoneNoAByTrackNoRequest setTrackNo(String trackNo) {
         this.trackNo = trackNo;
         return this;
     }
     public String getTrackNo() {
         return this.trackNo;
+    }
+
+    public QueryPhoneNoAByTrackNoRequest setCabinetNo(String cabinetNo) {
+        this.cabinetNo = cabinetNo;
+        return this;
+    }
+    public String getCabinetNo() {
+        return this.cabinetNo;
+    }
+
+    public QueryPhoneNoAByTrackNoRequest setPhoneNoX(String phoneNoX) {
+        this.phoneNoX = phoneNoX;
+        return this;
+    }
+    public String getPhoneNoX() {
+        return this.phoneNoX;
     }
 
 }

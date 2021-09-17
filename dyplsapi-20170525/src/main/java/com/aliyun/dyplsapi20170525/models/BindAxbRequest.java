@@ -55,6 +55,9 @@ public class BindAxbRequest extends TeaModel {
     @NameInMap("ASRModelId")
     public String ASRModelId;
 
+    @NameInMap("CallTimeout")
+    public Integer callTimeout;
+
     public static BindAxbRequest build(java.util.Map<String, ?> map) throws Exception {
         BindAxbRequest self = new BindAxbRequest();
         return TeaModel.build(map, self);
@@ -194,6 +197,14 @@ public class BindAxbRequest extends TeaModel {
     }
     public String getASRModelId() {
         return this.ASRModelId;
+    }
+
+    public BindAxbRequest setCallTimeout(Integer callTimeout) {
+        this.callTimeout = callTimeout;
+        return this;
+    }
+    public Integer getCallTimeout() {
+        return this.callTimeout;
     }
 
 }

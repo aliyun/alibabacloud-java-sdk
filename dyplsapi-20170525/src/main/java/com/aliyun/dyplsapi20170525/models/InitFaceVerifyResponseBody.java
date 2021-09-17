@@ -4,6 +4,9 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class InitFaceVerifyResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class InitFaceVerifyResponseBody extends TeaModel {
     @NameInMap("Data")
     public InitFaceVerifyResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
     public static InitFaceVerifyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InitFaceVerifyResponseBody self = new InitFaceVerifyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public InitFaceVerifyResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public InitFaceVerifyResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class InitFaceVerifyResponseBody extends TeaModel {
     }
     public InitFaceVerifyResponseBodyData getData() {
         return this.data;
-    }
-
-    public InitFaceVerifyResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class InitFaceVerifyResponseBodyData extends TeaModel {
