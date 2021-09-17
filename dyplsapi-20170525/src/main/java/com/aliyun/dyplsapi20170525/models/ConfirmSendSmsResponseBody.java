@@ -3,7 +3,7 @@ package com.aliyun.dyplsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class UpdatePhoneNumberResponseBody extends TeaModel {
+public class ConfirmSendSmsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -16,12 +16,12 @@ public class UpdatePhoneNumberResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static UpdatePhoneNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdatePhoneNumberResponseBody self = new UpdatePhoneNumberResponseBody();
+    public static ConfirmSendSmsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ConfirmSendSmsResponseBody self = new ConfirmSendSmsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePhoneNumberResponseBody setCode(String code) {
+    public ConfirmSendSmsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdatePhoneNumberResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdatePhoneNumberResponseBody setMessage(String message) {
+    public ConfirmSendSmsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -37,7 +37,7 @@ public class UpdatePhoneNumberResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdatePhoneNumberResponseBody setData(String data) {
+    public ConfirmSendSmsResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -45,7 +45,7 @@ public class UpdatePhoneNumberResponseBody extends TeaModel {
         return this.data;
     }
 
-    public UpdatePhoneNumberResponseBody setRequestId(String requestId) {
+    public ConfirmSendSmsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

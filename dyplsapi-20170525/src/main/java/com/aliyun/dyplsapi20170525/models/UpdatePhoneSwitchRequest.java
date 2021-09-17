@@ -25,9 +25,6 @@ public class UpdatePhoneSwitchRequest extends TeaModel {
     @NameInMap("SwitchStatus")
     public Integer switchStatus;
 
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     public static UpdatePhoneSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePhoneSwitchRequest self = new UpdatePhoneSwitchRequest();
         return TeaModel.build(map, self);
@@ -87,14 +84,6 @@ public class UpdatePhoneSwitchRequest extends TeaModel {
     }
     public Integer getSwitchStatus() {
         return this.switchStatus;
-    }
-
-    public UpdatePhoneSwitchRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
 }

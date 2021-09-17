@@ -25,9 +25,6 @@ public class CreateSubscriptionRequest extends TeaModel {
     @NameInMap("BindToken")
     public String bindToken;
 
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     public static CreateSubscriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSubscriptionRequest self = new CreateSubscriptionRequest();
         return TeaModel.build(map, self);
@@ -87,14 +84,6 @@ public class CreateSubscriptionRequest extends TeaModel {
     }
     public String getBindToken() {
         return this.bindToken;
-    }
-
-    public CreateSubscriptionRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
 }

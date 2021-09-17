@@ -4,8 +4,8 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class BindAxnExtensionResponseBody extends TeaModel {
-    @NameInMap("SecretBindDTO")
-    public BindAxnExtensionResponseBodySecretBindDTO secretBindDTO;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class BindAxnExtensionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("SecretBindDTO")
+    public BindAxnExtensionResponseBodySecretBindDTO secretBindDTO;
 
     public static BindAxnExtensionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BindAxnExtensionResponseBody self = new BindAxnExtensionResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BindAxnExtensionResponseBody setSecretBindDTO(BindAxnExtensionResponseBodySecretBindDTO secretBindDTO) {
-        this.secretBindDTO = secretBindDTO;
+    public BindAxnExtensionResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public BindAxnExtensionResponseBodySecretBindDTO getSecretBindDTO() {
-        return this.secretBindDTO;
+    public String getCode() {
+        return this.code;
     }
 
     public BindAxnExtensionResponseBody setMessage(String message) {
@@ -45,12 +45,12 @@ public class BindAxnExtensionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BindAxnExtensionResponseBody setCode(String code) {
-        this.code = code;
+    public BindAxnExtensionResponseBody setSecretBindDTO(BindAxnExtensionResponseBodySecretBindDTO secretBindDTO) {
+        this.secretBindDTO = secretBindDTO;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public BindAxnExtensionResponseBodySecretBindDTO getSecretBindDTO() {
+        return this.secretBindDTO;
     }
 
     public static class BindAxnExtensionResponseBodySecretBindDTO extends TeaModel {

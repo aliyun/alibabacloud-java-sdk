@@ -4,6 +4,9 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class BuySecretNoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class BuySecretNoResponseBody extends TeaModel {
     @NameInMap("SecretBuyInfoDTO")
     public BuySecretNoResponseBodySecretBuyInfoDTO secretBuyInfoDTO;
 
-    @NameInMap("Code")
-    public String code;
-
     public static BuySecretNoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BuySecretNoResponseBody self = new BuySecretNoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BuySecretNoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public BuySecretNoResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class BuySecretNoResponseBody extends TeaModel {
     }
     public BuySecretNoResponseBodySecretBuyInfoDTO getSecretBuyInfoDTO() {
         return this.secretBuyInfoDTO;
-    }
-
-    public BuySecretNoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class BuySecretNoResponseBodySecretBuyInfoDTO extends TeaModel {

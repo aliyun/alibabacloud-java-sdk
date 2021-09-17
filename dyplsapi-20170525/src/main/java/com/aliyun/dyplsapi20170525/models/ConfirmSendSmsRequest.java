@@ -3,7 +3,7 @@ package com.aliyun.dyplsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class GetSubscriptionDetailRequest extends TeaModel {
+public class ConfirmSendSmsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,18 +16,18 @@ public class GetSubscriptionDetailRequest extends TeaModel {
     @NameInMap("PoolKey")
     public String poolKey;
 
-    @NameInMap("SubsId")
-    public Long subsId;
-
     @NameInMap("SecretNo")
     public String secretNo;
 
-    public static GetSubscriptionDetailRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetSubscriptionDetailRequest self = new GetSubscriptionDetailRequest();
+    @NameInMap("CallId")
+    public String callId;
+
+    public static ConfirmSendSmsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ConfirmSendSmsRequest self = new ConfirmSendSmsRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetSubscriptionDetailRequest setOwnerId(Long ownerId) {
+    public ConfirmSendSmsRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -35,7 +35,7 @@ public class GetSubscriptionDetailRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public GetSubscriptionDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ConfirmSendSmsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -43,7 +43,7 @@ public class GetSubscriptionDetailRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public GetSubscriptionDetailRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ConfirmSendSmsRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -51,7 +51,7 @@ public class GetSubscriptionDetailRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetSubscriptionDetailRequest setPoolKey(String poolKey) {
+    public ConfirmSendSmsRequest setPoolKey(String poolKey) {
         this.poolKey = poolKey;
         return this;
     }
@@ -59,20 +59,20 @@ public class GetSubscriptionDetailRequest extends TeaModel {
         return this.poolKey;
     }
 
-    public GetSubscriptionDetailRequest setSubsId(Long subsId) {
-        this.subsId = subsId;
-        return this;
-    }
-    public Long getSubsId() {
-        return this.subsId;
-    }
-
-    public GetSubscriptionDetailRequest setSecretNo(String secretNo) {
+    public ConfirmSendSmsRequest setSecretNo(String secretNo) {
         this.secretNo = secretNo;
         return this;
     }
     public String getSecretNo() {
         return this.secretNo;
+    }
+
+    public ConfirmSendSmsRequest setCallId(String callId) {
+        this.callId = callId;
+        return this;
+    }
+    public String getCallId() {
+        return this.callId;
     }
 
 }

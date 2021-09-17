@@ -4,6 +4,9 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetSubscriptionDetailResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class GetSubscriptionDetailResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetSubscriptionDetailResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
     public static GetSubscriptionDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSubscriptionDetailResponseBody self = new GetSubscriptionDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetSubscriptionDetailResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetSubscriptionDetailResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetSubscriptionDetailResponseBody extends TeaModel {
     }
     public GetSubscriptionDetailResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetSubscriptionDetailResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class GetSubscriptionDetailResponseBodyData extends TeaModel {

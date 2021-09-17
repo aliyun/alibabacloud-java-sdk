@@ -4,14 +4,14 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySubsIdResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("SubsId")
     public String subsId;
@@ -19,6 +19,14 @@ public class QuerySubsIdResponseBody extends TeaModel {
     public static QuerySubsIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySubsIdResponseBody self = new QuerySubsIdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySubsIdResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QuerySubsIdResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class QuerySubsIdResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public QuerySubsIdResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public QuerySubsIdResponseBody setSubsId(String subsId) {

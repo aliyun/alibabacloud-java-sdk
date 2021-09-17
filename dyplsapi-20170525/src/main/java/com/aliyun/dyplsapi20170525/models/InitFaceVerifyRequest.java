@@ -13,9 +13,6 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     @NameInMap("MetaInfo")
     public String metaInfo;
 
@@ -46,14 +43,6 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public InitFaceVerifyRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
     public InitFaceVerifyRequest setMetaInfo(String metaInfo) {

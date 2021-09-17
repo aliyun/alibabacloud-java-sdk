@@ -4,18 +4,26 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class UnlockSecretNoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static UnlockSecretNoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UnlockSecretNoResponseBody self = new UnlockSecretNoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UnlockSecretNoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public UnlockSecretNoResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class UnlockSecretNoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public UnlockSecretNoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

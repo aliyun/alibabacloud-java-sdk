@@ -4,15 +4,6 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddSecretBlacklistRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("PoolKey")
     public String poolKey;
 
@@ -31,30 +22,6 @@ public class AddSecretBlacklistRequest extends TeaModel {
     public static AddSecretBlacklistRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSecretBlacklistRequest self = new AddSecretBlacklistRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddSecretBlacklistRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public AddSecretBlacklistRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public AddSecretBlacklistRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public AddSecretBlacklistRequest setPoolKey(String poolKey) {

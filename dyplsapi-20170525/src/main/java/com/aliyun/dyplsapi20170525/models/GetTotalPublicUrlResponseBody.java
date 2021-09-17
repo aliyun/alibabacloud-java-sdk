@@ -4,6 +4,9 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetTotalPublicUrlResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetTotalPublicUrlResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
     public static GetTotalPublicUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTotalPublicUrlResponseBody self = new GetTotalPublicUrlResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTotalPublicUrlResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetTotalPublicUrlResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
     }
     public GetTotalPublicUrlResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetTotalPublicUrlResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class GetTotalPublicUrlResponseBodyData extends TeaModel {

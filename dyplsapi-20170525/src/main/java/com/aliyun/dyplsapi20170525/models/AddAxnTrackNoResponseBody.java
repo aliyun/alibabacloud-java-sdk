@@ -4,18 +4,26 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddAxnTrackNoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static AddAxnTrackNoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddAxnTrackNoResponseBody self = new AddAxnTrackNoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddAxnTrackNoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public AddAxnTrackNoResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class AddAxnTrackNoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AddAxnTrackNoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }
