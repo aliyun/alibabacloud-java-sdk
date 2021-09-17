@@ -2819,6 +2819,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.uninstallUniBackupAgentWithOptions(request, runtime);
     }
 
+    public UpgradeBackupPolicyVersionResponse upgradeBackupPolicyVersionWithOptions(UpgradeBackupPolicyVersionRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpgradeBackupPolicyVersion", "2018-12-03", "HTTPS", "POST", "AK", "json", req, runtime), new UpgradeBackupPolicyVersionResponse());
+    }
+
+    public UpgradeBackupPolicyVersionResponse upgradeBackupPolicyVersion(UpgradeBackupPolicyVersionRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.upgradeBackupPolicyVersionWithOptions(request, runtime);
+    }
+
     public ValidateHcWarningsResponse validateHcWarningsWithOptions(ValidateHcWarningsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

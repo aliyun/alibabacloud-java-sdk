@@ -13,6 +13,9 @@ public class DescribeStrategyRequest extends TeaModel {
     @NameInMap("StrategyIds")
     public String strategyIds;
 
+    @NameInMap("CustomType")
+    public String customType;
+
     public static DescribeStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeStrategyRequest self = new DescribeStrategyRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DescribeStrategyRequest extends TeaModel {
     }
     public String getStrategyIds() {
         return this.strategyIds;
+    }
+
+    public DescribeStrategyRequest setCustomType(String customType) {
+        this.customType = customType;
+        return this;
+    }
+    public String getCustomType() {
+        return this.customType;
     }
 
 }
