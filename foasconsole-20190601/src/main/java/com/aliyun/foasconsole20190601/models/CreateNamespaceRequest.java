@@ -21,20 +21,31 @@ public class CreateNamespaceRequest extends TeaModel {
     }
 
     public static class CreateNamespaceRequestCreateNamespaceRequestResourceSpec extends TeaModel {
-        @NameInMap("Cu")
-        public Integer cu;
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
 
         public static CreateNamespaceRequestCreateNamespaceRequestResourceSpec build(java.util.Map<String, ?> map) throws Exception {
             CreateNamespaceRequestCreateNamespaceRequestResourceSpec self = new CreateNamespaceRequestCreateNamespaceRequestResourceSpec();
             return TeaModel.build(map, self);
         }
 
-        public CreateNamespaceRequestCreateNamespaceRequestResourceSpec setCu(Integer cu) {
-            this.cu = cu;
+        public CreateNamespaceRequestCreateNamespaceRequestResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
             return this;
         }
-        public Integer getCu() {
-            return this.cu;
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public CreateNamespaceRequestCreateNamespaceRequestResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
         }
 
     }
