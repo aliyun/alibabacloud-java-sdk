@@ -89,20 +89,61 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespacesResourceSpec extends TeaModel {
-        @NameInMap("Cu")
-        public Integer cu;
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
 
         public static DescribeNamespacesResponseBodyNamespacesResourceSpec build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespacesResponseBodyNamespacesResourceSpec self = new DescribeNamespacesResponseBodyNamespacesResourceSpec();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNamespacesResponseBodyNamespacesResourceSpec setCu(Integer cu) {
-            this.cu = cu;
+        public DescribeNamespacesResponseBodyNamespacesResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
             return this;
         }
-        public Integer getCu() {
-            return this.cu;
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+    }
+
+    public static class DescribeNamespacesResponseBodyNamespacesResourceUsed extends TeaModel {
+        @NameInMap("Cpu")
+        public Float cpu;
+
+        @NameInMap("MemoryGB")
+        public Float memoryGB;
+
+        public static DescribeNamespacesResponseBodyNamespacesResourceUsed build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespacesResponseBodyNamespacesResourceUsed self = new DescribeNamespacesResponseBodyNamespacesResourceUsed();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesResourceUsed setCpu(Float cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Float getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesResourceUsed setMemoryGB(Float memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Float getMemoryGB() {
+            return this.memoryGB;
         }
 
     }
@@ -122,6 +163,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
         @NameInMap("ResourceSpec")
         public DescribeNamespacesResponseBodyNamespacesResourceSpec resourceSpec;
+
+        @NameInMap("ResourceUsed")
+        public DescribeNamespacesResponseBodyNamespacesResourceUsed resourceUsed;
 
         public static DescribeNamespacesResponseBodyNamespaces build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespacesResponseBodyNamespaces self = new DescribeNamespacesResponseBodyNamespaces();
@@ -166,6 +210,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public DescribeNamespacesResponseBodyNamespacesResourceSpec getResourceSpec() {
             return this.resourceSpec;
+        }
+
+        public DescribeNamespacesResponseBodyNamespaces setResourceUsed(DescribeNamespacesResponseBodyNamespacesResourceUsed resourceUsed) {
+            this.resourceUsed = resourceUsed;
+            return this;
+        }
+        public DescribeNamespacesResponseBodyNamespacesResourceUsed getResourceUsed() {
+            return this.resourceUsed;
         }
 
     }

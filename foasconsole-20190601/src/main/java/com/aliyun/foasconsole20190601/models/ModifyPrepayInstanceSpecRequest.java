@@ -21,20 +21,31 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     }
 
     public static class ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec extends TeaModel {
-        @NameInMap("Cu")
-        public Integer cu;
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
 
         public static ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec build(java.util.Map<String, ?> map) throws Exception {
             ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec self = new ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec();
             return TeaModel.build(map, self);
         }
 
-        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec setCu(Integer cu) {
-            this.cu = cu;
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
             return this;
         }
-        public Integer getCu() {
-            return this.cu;
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
         }
 
     }

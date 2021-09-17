@@ -125,20 +125,31 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesResourceSpec extends TeaModel {
-        @NameInMap("Cu")
-        public Integer cu;
+        @NameInMap("Cpu")
+        public Integer cpu;
+
+        @NameInMap("MemoryGB")
+        public Integer memoryGB;
 
         public static DescribeInstancesResponseBodyInstancesResourceSpec build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesResourceSpec self = new DescribeInstancesResponseBodyInstancesResourceSpec();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesResourceSpec setCu(Integer cu) {
-            this.cu = cu;
+        public DescribeInstancesResponseBodyInstancesResourceSpec setCpu(Integer cpu) {
+            this.cpu = cpu;
             return this;
         }
-        public Integer getCu() {
-            return this.cu;
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public DescribeInstancesResponseBodyInstancesResourceSpec setMemoryGB(Integer memoryGB) {
+            this.memoryGB = memoryGB;
+            return this;
+        }
+        public Integer getMemoryGB() {
+            return this.memoryGB;
         }
 
     }
