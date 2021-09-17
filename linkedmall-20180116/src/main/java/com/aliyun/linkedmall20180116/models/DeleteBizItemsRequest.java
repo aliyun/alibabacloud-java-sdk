@@ -11,7 +11,7 @@ public class DeleteBizItemsRequest extends TeaModel {
     public String subBizId;
 
     @NameInMap("ItemIdList")
-    public java.util.List<Integer> itemIdList;
+    public java.util.List<Long> itemIdList;
 
     public static DeleteBizItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteBizItemsRequest self = new DeleteBizItemsRequest();
@@ -34,11 +34,11 @@ public class DeleteBizItemsRequest extends TeaModel {
         return this.subBizId;
     }
 
-    public DeleteBizItemsRequest setItemIdList(java.util.List<Integer> itemIdList) {
+    public DeleteBizItemsRequest setItemIdList(java.util.List<Long> itemIdList) {
         this.itemIdList = itemIdList;
         return this;
     }
-    public java.util.List<Integer> getItemIdList() {
+    public java.util.List<Long> getItemIdList() {
         return this.itemIdList;
     }
 
