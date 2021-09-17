@@ -7,11 +7,11 @@ public class ListListenerCertificatesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     @NameInMap("AcceleratorId")
     public String acceleratorId;
+
+    @NameInMap("Role")
+    public String role;
 
     @NameInMap("ListenerId")
     public String listenerId;
@@ -35,20 +35,20 @@ public class ListListenerCertificatesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListListenerCertificatesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public ListListenerCertificatesRequest setAcceleratorId(String acceleratorId) {
         this.acceleratorId = acceleratorId;
         return this;
     }
     public String getAcceleratorId() {
         return this.acceleratorId;
+    }
+
+    public ListListenerCertificatesRequest setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
     }
 
     public ListListenerCertificatesRequest setListenerId(String listenerId) {

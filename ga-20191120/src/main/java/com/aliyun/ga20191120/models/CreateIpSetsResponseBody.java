@@ -52,9 +52,6 @@ public class CreateIpSetsResponseBody extends TeaModel {
         @NameInMap("IpSetId")
         public String ipSetId;
 
-        @NameInMap("IpList")
-        public java.util.List<String> ipList;
-
         public static CreateIpSetsResponseBodyIpSets build(java.util.Map<String, ?> map) throws Exception {
             CreateIpSetsResponseBodyIpSets self = new CreateIpSetsResponseBodyIpSets();
             return TeaModel.build(map, self);
@@ -82,14 +79,6 @@ public class CreateIpSetsResponseBody extends TeaModel {
         }
         public String getIpSetId() {
             return this.ipSetId;
-        }
-
-        public CreateIpSetsResponseBodyIpSets setIpList(java.util.List<String> ipList) {
-            this.ipList = ipList;
-            return this;
-        }
-        public java.util.List<String> getIpList() {
-            return this.ipList;
         }
 
     }
