@@ -226,6 +226,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setAppStatusWithOptions(request, runtime);
     }
 
+    public DescribeWhiteBoardRecordingsResponse describeWhiteBoardRecordingsWithOptions(DescribeWhiteBoardRecordingsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeWhiteBoardRecordings", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeWhiteBoardRecordingsResponse());
+    }
+
+    public DescribeWhiteBoardRecordingsResponse describeWhiteBoardRecordings(DescribeWhiteBoardRecordingsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeWhiteBoardRecordingsWithOptions(request, runtime);
+    }
+
     public StopWhiteBoardRecordingResponse stopWhiteBoardRecordingWithOptions(StopWhiteBoardRecordingRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
