@@ -53,47 +53,6 @@ public class ApplyRefundResponseBody extends TeaModel {
         return this.refundApplicationData;
     }
 
-    public static class ApplyRefundResponseBodyRefundApplicationData extends TeaModel {
-        @NameInMap("DisputeType")
-        public Integer disputeType;
-
-        @NameInMap("SubLmOrderId")
-        public String subLmOrderId;
-
-        @NameInMap("DisputeStatus")
-        public Integer disputeStatus;
-
-        public static ApplyRefundResponseBodyRefundApplicationData build(java.util.Map<String, ?> map) throws Exception {
-            ApplyRefundResponseBodyRefundApplicationData self = new ApplyRefundResponseBodyRefundApplicationData();
-            return TeaModel.build(map, self);
-        }
-
-        public ApplyRefundResponseBodyRefundApplicationData setDisputeType(Integer disputeType) {
-            this.disputeType = disputeType;
-            return this;
-        }
-        public Integer getDisputeType() {
-            return this.disputeType;
-        }
-
-        public ApplyRefundResponseBodyRefundApplicationData setSubLmOrderId(String subLmOrderId) {
-            this.subLmOrderId = subLmOrderId;
-            return this;
-        }
-        public String getSubLmOrderId() {
-            return this.subLmOrderId;
-        }
-
-        public ApplyRefundResponseBodyRefundApplicationData setDisputeStatus(Integer disputeStatus) {
-            this.disputeStatus = disputeStatus;
-            return this;
-        }
-        public Integer getDisputeStatus() {
-            return this.disputeStatus;
-        }
-
-    }
-
     public static class InitApplyRefundResponseBodyInitApplyRefundDataRefundReasonListRefundReasonList extends TeaModel {
         @NameInMap("ReasonTextId")
         public Long reasonTextId;
@@ -243,6 +202,47 @@ public class ApplyRefundResponseBody extends TeaModel {
         }
         public InitApplyRefundResponseBodyInitApplyRefundDataMaxRefundFeeData getMaxRefundFeeData() {
             return this.maxRefundFeeData;
+        }
+
+    }
+
+    public static class ApplyRefundResponseBodyRefundApplicationData extends TeaModel {
+        @NameInMap("DisputeType")
+        public Integer disputeType;
+
+        @NameInMap("SubLmOrderId")
+        public String subLmOrderId;
+
+        @NameInMap("DisputeStatus")
+        public Integer disputeStatus;
+
+        public static ApplyRefundResponseBodyRefundApplicationData build(java.util.Map<String, ?> map) throws Exception {
+            ApplyRefundResponseBodyRefundApplicationData self = new ApplyRefundResponseBodyRefundApplicationData();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyRefundResponseBodyRefundApplicationData setDisputeType(Integer disputeType) {
+            this.disputeType = disputeType;
+            return this;
+        }
+        public Integer getDisputeType() {
+            return this.disputeType;
+        }
+
+        public ApplyRefundResponseBodyRefundApplicationData setSubLmOrderId(String subLmOrderId) {
+            this.subLmOrderId = subLmOrderId;
+            return this;
+        }
+        public String getSubLmOrderId() {
+            return this.subLmOrderId;
+        }
+
+        public ApplyRefundResponseBodyRefundApplicationData setDisputeStatus(Integer disputeStatus) {
+            this.disputeStatus = disputeStatus;
+            return this;
+        }
+        public Integer getDisputeStatus() {
+            return this.disputeStatus;
         }
 
     }
