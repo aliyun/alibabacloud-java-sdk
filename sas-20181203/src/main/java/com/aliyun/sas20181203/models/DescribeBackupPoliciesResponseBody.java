@@ -107,6 +107,9 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         @NameInMap("Policy")
         public String policy;
 
+        @NameInMap("UpgradeStatus")
+        public String upgradeStatus;
+
         @NameInMap("ServiceErrorCount")
         public Integer serviceErrorCount;
 
@@ -175,6 +178,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
         public String getPolicy() {
             return this.policy;
+        }
+
+        public DescribeBackupPoliciesResponseBodyPolicies setUpgradeStatus(String upgradeStatus) {
+            this.upgradeStatus = upgradeStatus;
+            return this;
+        }
+        public String getUpgradeStatus() {
+            return this.upgradeStatus;
         }
 
         public DescribeBackupPoliciesResponseBodyPolicies setServiceErrorCount(Integer serviceErrorCount) {

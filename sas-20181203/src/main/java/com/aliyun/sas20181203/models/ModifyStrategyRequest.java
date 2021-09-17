@@ -22,6 +22,12 @@ public class ModifyStrategyRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("RiskCustomParams")
+    public String riskCustomParams;
+
+    @NameInMap("CustomType")
+    public String customType;
+
     public static ModifyStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyStrategyRequest self = new ModifyStrategyRequest();
         return TeaModel.build(map, self);
@@ -73,6 +79,22 @@ public class ModifyStrategyRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public ModifyStrategyRequest setRiskCustomParams(String riskCustomParams) {
+        this.riskCustomParams = riskCustomParams;
+        return this;
+    }
+    public String getRiskCustomParams() {
+        return this.riskCustomParams;
+    }
+
+    public ModifyStrategyRequest setCustomType(String customType) {
+        this.customType = customType;
+        return this;
+    }
+    public String getCustomType() {
+        return this.customType;
     }
 
 }

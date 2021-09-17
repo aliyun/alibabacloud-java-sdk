@@ -101,6 +101,9 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         @NameInMap("InternetIp")
         public String internetIp;
 
+        @NameInMap("Pid")
+        public String pid;
+
         @NameInMap("BindIp")
         public String bindIp;
 
@@ -150,6 +153,14 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         }
         public String getInternetIp() {
             return this.internetIp;
+        }
+
+        public DescribePropertyPortDetailResponseBodyPropertys setPid(String pid) {
+            this.pid = pid;
+            return this;
+        }
+        public String getPid() {
+            return this.pid;
         }
 
         public DescribePropertyPortDetailResponseBodyPropertys setBindIp(String bindIp) {

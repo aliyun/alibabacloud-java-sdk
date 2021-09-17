@@ -73,14 +73,20 @@ public class DescribeStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeStrategyResponseBodyStrategies extends TeaModel {
-        @NameInMap("ExecStatus")
-        public Integer execStatus;
-
         @NameInMap("Type")
         public Integer type;
 
+        @NameInMap("ExecStatus")
+        public Integer execStatus;
+
+        @NameInMap("PassRate")
+        public Integer passRate;
+
         @NameInMap("CycleStartTime")
         public Integer cycleStartTime;
+
+        @NameInMap("CustomType")
+        public String customType;
 
         @NameInMap("EcsCount")
         public Integer ecsCount;
@@ -97,9 +103,6 @@ public class DescribeStrategyResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("PassRate")
-        public Integer passRate;
-
         @NameInMap("Id")
         public Integer id;
 
@@ -111,14 +114,6 @@ public class DescribeStrategyResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeStrategyResponseBodyStrategies setExecStatus(Integer execStatus) {
-            this.execStatus = execStatus;
-            return this;
-        }
-        public Integer getExecStatus() {
-            return this.execStatus;
-        }
-
         public DescribeStrategyResponseBodyStrategies setType(Integer type) {
             this.type = type;
             return this;
@@ -127,12 +122,36 @@ public class DescribeStrategyResponseBody extends TeaModel {
             return this.type;
         }
 
+        public DescribeStrategyResponseBodyStrategies setExecStatus(Integer execStatus) {
+            this.execStatus = execStatus;
+            return this;
+        }
+        public Integer getExecStatus() {
+            return this.execStatus;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setPassRate(Integer passRate) {
+            this.passRate = passRate;
+            return this;
+        }
+        public Integer getPassRate() {
+            return this.passRate;
+        }
+
         public DescribeStrategyResponseBodyStrategies setCycleStartTime(Integer cycleStartTime) {
             this.cycleStartTime = cycleStartTime;
             return this;
         }
         public Integer getCycleStartTime() {
             return this.cycleStartTime;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setCustomType(String customType) {
+            this.customType = customType;
+            return this;
+        }
+        public String getCustomType() {
+            return this.customType;
         }
 
         public DescribeStrategyResponseBodyStrategies setEcsCount(Integer ecsCount) {
@@ -173,14 +192,6 @@ public class DescribeStrategyResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public DescribeStrategyResponseBodyStrategies setPassRate(Integer passRate) {
-            this.passRate = passRate;
-            return this;
-        }
-        public Integer getPassRate() {
-            return this.passRate;
         }
 
         public DescribeStrategyResponseBodyStrategies setId(Integer id) {
