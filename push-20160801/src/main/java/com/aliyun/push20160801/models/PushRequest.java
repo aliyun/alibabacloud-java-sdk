@@ -163,6 +163,30 @@ public class PushRequest extends TeaModel {
     @NameInMap("AndroidXiaomiBigPictureUrl")
     public String androidXiaomiBigPictureUrl;
 
+    @NameInMap("iOSNotificationThreadId")
+    public String iOSNotificationThreadId;
+
+    @NameInMap("AndroidBigPictureUrl")
+    public String androidBigPictureUrl;
+
+    @NameInMap("AndroidInboxBody")
+    public String androidInboxBody;
+
+    @NameInMap("AndroidImageUrl")
+    public String androidImageUrl;
+
+    @NameInMap("AndroidXiaomiImageUrl")
+    public String androidXiaomiImageUrl;
+
+    @NameInMap("AndroidMessageHuaweiUrgency")
+    public String androidMessageHuaweiUrgency;
+
+    @NameInMap("AndroidMessageHuaweiCategory")
+    public String androidMessageHuaweiCategory;
+
+    @NameInMap("SendChannels")
+    public String sendChannels;
+
     public static PushRequest build(java.util.Map<String, ?> map) throws Exception {
         PushRequest self = new PushRequest();
         return TeaModel.build(map, self);
@@ -592,6 +616,70 @@ public class PushRequest extends TeaModel {
         return this.androidXiaomiBigPictureUrl;
     }
 
+    public PushRequest setIOSNotificationThreadId(String iOSNotificationThreadId) {
+        this.iOSNotificationThreadId = iOSNotificationThreadId;
+        return this;
+    }
+    public String getIOSNotificationThreadId() {
+        return this.iOSNotificationThreadId;
+    }
+
+    public PushRequest setAndroidBigPictureUrl(String androidBigPictureUrl) {
+        this.androidBigPictureUrl = androidBigPictureUrl;
+        return this;
+    }
+    public String getAndroidBigPictureUrl() {
+        return this.androidBigPictureUrl;
+    }
+
+    public PushRequest setAndroidInboxBody(String androidInboxBody) {
+        this.androidInboxBody = androidInboxBody;
+        return this;
+    }
+    public String getAndroidInboxBody() {
+        return this.androidInboxBody;
+    }
+
+    public PushRequest setAndroidImageUrl(String androidImageUrl) {
+        this.androidImageUrl = androidImageUrl;
+        return this;
+    }
+    public String getAndroidImageUrl() {
+        return this.androidImageUrl;
+    }
+
+    public PushRequest setAndroidXiaomiImageUrl(String androidXiaomiImageUrl) {
+        this.androidXiaomiImageUrl = androidXiaomiImageUrl;
+        return this;
+    }
+    public String getAndroidXiaomiImageUrl() {
+        return this.androidXiaomiImageUrl;
+    }
+
+    public PushRequest setAndroidMessageHuaweiUrgency(String androidMessageHuaweiUrgency) {
+        this.androidMessageHuaweiUrgency = androidMessageHuaweiUrgency;
+        return this;
+    }
+    public String getAndroidMessageHuaweiUrgency() {
+        return this.androidMessageHuaweiUrgency;
+    }
+
+    public PushRequest setAndroidMessageHuaweiCategory(String androidMessageHuaweiCategory) {
+        this.androidMessageHuaweiCategory = androidMessageHuaweiCategory;
+        return this;
+    }
+    public String getAndroidMessageHuaweiCategory() {
+        return this.androidMessageHuaweiCategory;
+    }
+
+    public PushRequest setSendChannels(String sendChannels) {
+        this.sendChannels = sendChannels;
+        return this;
+    }
+    public String getSendChannels() {
+        return this.sendChannels;
+    }
+
     public static class MassPushRequestPushTask extends TeaModel {
         @NameInMap("JobKey")
         public String jobKey;
@@ -599,26 +687,17 @@ public class PushRequest extends TeaModel {
         @NameInMap("iOSSilentNotification")
         public Boolean iOSSilentNotification;
 
-        @NameInMap("iOSNotificationCollapseId")
-        public String iOSNotificationCollapseId;
-
-        @NameInMap("AndroidRenderStyle")
-        public String androidRenderStyle;
-
         @NameInMap("StoreOffline")
         public Boolean storeOffline;
 
         @NameInMap("iOSSubtitle")
         public String iOSSubtitle;
 
-        @NameInMap("iOSNotificationCategory")
-        public String iOSNotificationCategory;
+        @NameInMap("AndroidNotificationHuaweiChannel")
+        public String androidNotificationHuaweiChannel;
 
         @NameInMap("AndroidNotificationChannel")
         public String androidNotificationChannel;
-
-        @NameInMap("AndroidNotificationHuaweiChannel")
-        public String androidNotificationHuaweiChannel;
 
         @NameInMap("iOSApnsEnv")
         public String iOSApnsEnv;
@@ -641,20 +720,8 @@ public class PushRequest extends TeaModel {
         @NameInMap("iOSRemindBody")
         public String iOSRemindBody;
 
-        @NameInMap("AndroidActivity")
-        public String androidActivity;
-
         @NameInMap("AndroidNotifyType")
         public String androidNotifyType;
-
-        @NameInMap("AndroidBigBody")
-        public String androidBigBody;
-
-        @NameInMap("iOSMutableContent")
-        public Boolean iOSMutableContent;
-
-        @NameInMap("Target")
-        public String target;
 
         @NameInMap("AndroidOpenUrl")
         public String androidOpenUrl;
@@ -662,47 +729,17 @@ public class PushRequest extends TeaModel {
         @NameInMap("AndroidBigTitle")
         public String androidBigTitle;
 
-        @NameInMap("AndroidNotificationNotifyId")
-        public Integer androidNotificationNotifyId;
-
         @NameInMap("ExpireTime")
         public String expireTime;
-
-        @NameInMap("AndroidNotificationVivoChannel")
-        public String androidNotificationVivoChannel;
-
-        @NameInMap("DeviceType")
-        public String deviceType;
 
         @NameInMap("AndroidOpenType")
         public String androidOpenType;
 
-        @NameInMap("AndroidPopupActivity")
-        public String androidPopupActivity;
-
-        @NameInMap("AndroidRemind")
-        public Boolean androidRemind;
-
-        @NameInMap("AndroidPopupBody")
-        public String androidPopupBody;
-
         @NameInMap("AndroidExtParameters")
         public String androidExtParameters;
 
-        @NameInMap("iOSExtParameters")
-        public String iOSExtParameters;
-
         @NameInMap("AndroidXiaoMiNotifyBody")
         public String androidXiaoMiNotifyBody;
-
-        @NameInMap("Body")
-        public String body;
-
-        @NameInMap("AndroidNotificationBarType")
-        public Integer androidNotificationBarType;
-
-        @NameInMap("AndroidNotificationBarPriority")
-        public Integer androidNotificationBarPriority;
 
         @NameInMap("AndroidXiaomiBigPictureUrl")
         public String androidXiaomiBigPictureUrl;
@@ -716,23 +753,98 @@ public class PushRequest extends TeaModel {
         @NameInMap("iOSRemind")
         public Boolean iOSRemind;
 
-        @NameInMap("PushType")
-        public String pushType;
-
-        @NameInMap("SendSpeed")
-        public Integer sendSpeed;
-
         @NameInMap("iOSBadge")
         public Integer iOSBadge;
 
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("AndroidMusic")
+        public String androidMusic;
+
+        @NameInMap("iOSNotificationCollapseId")
+        public String iOSNotificationCollapseId;
+
+        @NameInMap("AndroidRenderStyle")
+        public String androidRenderStyle;
+
+        @NameInMap("iOSNotificationCategory")
+        public String iOSNotificationCategory;
+
+        @NameInMap("iOSNotificationThreadId")
+        public String iOSNotificationThreadId;
+
+        @NameInMap("AndroidActivity")
+        public String androidActivity;
+
+        @NameInMap("AndroidBigBody")
+        public String androidBigBody;
+
+        @NameInMap("iOSMutableContent")
+        public Boolean iOSMutableContent;
+
+        @NameInMap("Target")
+        public String target;
+
+        @NameInMap("AndroidNotificationNotifyId")
+        public Integer androidNotificationNotifyId;
+
+        @NameInMap("AndroidNotificationVivoChannel")
+        public String androidNotificationVivoChannel;
+
+        @NameInMap("AndroidPopupActivity")
+        public String androidPopupActivity;
+
+        @NameInMap("DeviceType")
+        public String deviceType;
+
+        @NameInMap("AndroidRemind")
+        public Boolean androidRemind;
+
+        @NameInMap("AndroidPopupBody")
+        public String androidPopupBody;
+
+        @NameInMap("iOSExtParameters")
+        public String iOSExtParameters;
+
+        @NameInMap("Body")
+        public String body;
+
+        @NameInMap("AndroidNotificationBarPriority")
+        public Integer androidNotificationBarPriority;
+
+        @NameInMap("AndroidNotificationBarType")
+        public Integer androidNotificationBarType;
+
+        @NameInMap("PushType")
+        public String pushType;
+
+        @NameInMap("SendSpeed")
+        public Integer sendSpeed;
+
         @NameInMap("PushTime")
         public String pushTime;
 
-        @NameInMap("AndroidMusic")
-        public String androidMusic;
+        @NameInMap("AndroidBigPictureUrl")
+        public String androidBigPictureUrl;
+
+        @NameInMap("AndroidInboxBody")
+        public String androidInboxBody;
+
+        @NameInMap("AndroidImageUrl")
+        public String androidImageUrl;
+
+        @NameInMap("AndroidXiaomiImageUrl")
+        public String androidXiaomiImageUrl;
+
+        @NameInMap("AndroidMessageHuaweiUrgency")
+        public String androidMessageHuaweiUrgency;
+
+        @NameInMap("AndroidMessageHuaweiCategory")
+        public String androidMessageHuaweiCategory;
+
+        @NameInMap("SendChannels")
+        public String sendChannels;
 
         public static MassPushRequestPushTask build(java.util.Map<String, ?> map) throws Exception {
             MassPushRequestPushTask self = new MassPushRequestPushTask();
@@ -755,22 +867,6 @@ public class PushRequest extends TeaModel {
             return this.iOSSilentNotification;
         }
 
-        public MassPushRequestPushTask setIOSNotificationCollapseId(String iOSNotificationCollapseId) {
-            this.iOSNotificationCollapseId = iOSNotificationCollapseId;
-            return this;
-        }
-        public String getIOSNotificationCollapseId() {
-            return this.iOSNotificationCollapseId;
-        }
-
-        public MassPushRequestPushTask setAndroidRenderStyle(String androidRenderStyle) {
-            this.androidRenderStyle = androidRenderStyle;
-            return this;
-        }
-        public String getAndroidRenderStyle() {
-            return this.androidRenderStyle;
-        }
-
         public MassPushRequestPushTask setStoreOffline(Boolean storeOffline) {
             this.storeOffline = storeOffline;
             return this;
@@ -787,12 +883,12 @@ public class PushRequest extends TeaModel {
             return this.iOSSubtitle;
         }
 
-        public MassPushRequestPushTask setIOSNotificationCategory(String iOSNotificationCategory) {
-            this.iOSNotificationCategory = iOSNotificationCategory;
+        public MassPushRequestPushTask setAndroidNotificationHuaweiChannel(String androidNotificationHuaweiChannel) {
+            this.androidNotificationHuaweiChannel = androidNotificationHuaweiChannel;
             return this;
         }
-        public String getIOSNotificationCategory() {
-            return this.iOSNotificationCategory;
+        public String getAndroidNotificationHuaweiChannel() {
+            return this.androidNotificationHuaweiChannel;
         }
 
         public MassPushRequestPushTask setAndroidNotificationChannel(String androidNotificationChannel) {
@@ -801,14 +897,6 @@ public class PushRequest extends TeaModel {
         }
         public String getAndroidNotificationChannel() {
             return this.androidNotificationChannel;
-        }
-
-        public MassPushRequestPushTask setAndroidNotificationHuaweiChannel(String androidNotificationHuaweiChannel) {
-            this.androidNotificationHuaweiChannel = androidNotificationHuaweiChannel;
-            return this;
-        }
-        public String getAndroidNotificationHuaweiChannel() {
-            return this.androidNotificationHuaweiChannel;
         }
 
         public MassPushRequestPushTask setIOSApnsEnv(String iOSApnsEnv) {
@@ -867,44 +955,12 @@ public class PushRequest extends TeaModel {
             return this.iOSRemindBody;
         }
 
-        public MassPushRequestPushTask setAndroidActivity(String androidActivity) {
-            this.androidActivity = androidActivity;
-            return this;
-        }
-        public String getAndroidActivity() {
-            return this.androidActivity;
-        }
-
         public MassPushRequestPushTask setAndroidNotifyType(String androidNotifyType) {
             this.androidNotifyType = androidNotifyType;
             return this;
         }
         public String getAndroidNotifyType() {
             return this.androidNotifyType;
-        }
-
-        public MassPushRequestPushTask setAndroidBigBody(String androidBigBody) {
-            this.androidBigBody = androidBigBody;
-            return this;
-        }
-        public String getAndroidBigBody() {
-            return this.androidBigBody;
-        }
-
-        public MassPushRequestPushTask setIOSMutableContent(Boolean iOSMutableContent) {
-            this.iOSMutableContent = iOSMutableContent;
-            return this;
-        }
-        public Boolean getIOSMutableContent() {
-            return this.iOSMutableContent;
-        }
-
-        public MassPushRequestPushTask setTarget(String target) {
-            this.target = target;
-            return this;
-        }
-        public String getTarget() {
-            return this.target;
         }
 
         public MassPushRequestPushTask setAndroidOpenUrl(String androidOpenUrl) {
@@ -923,36 +979,12 @@ public class PushRequest extends TeaModel {
             return this.androidBigTitle;
         }
 
-        public MassPushRequestPushTask setAndroidNotificationNotifyId(Integer androidNotificationNotifyId) {
-            this.androidNotificationNotifyId = androidNotificationNotifyId;
-            return this;
-        }
-        public Integer getAndroidNotificationNotifyId() {
-            return this.androidNotificationNotifyId;
-        }
-
         public MassPushRequestPushTask setExpireTime(String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
         public String getExpireTime() {
             return this.expireTime;
-        }
-
-        public MassPushRequestPushTask setAndroidNotificationVivoChannel(String androidNotificationVivoChannel) {
-            this.androidNotificationVivoChannel = androidNotificationVivoChannel;
-            return this;
-        }
-        public String getAndroidNotificationVivoChannel() {
-            return this.androidNotificationVivoChannel;
-        }
-
-        public MassPushRequestPushTask setDeviceType(String deviceType) {
-            this.deviceType = deviceType;
-            return this;
-        }
-        public String getDeviceType() {
-            return this.deviceType;
         }
 
         public MassPushRequestPushTask setAndroidOpenType(String androidOpenType) {
@@ -963,30 +995,6 @@ public class PushRequest extends TeaModel {
             return this.androidOpenType;
         }
 
-        public MassPushRequestPushTask setAndroidPopupActivity(String androidPopupActivity) {
-            this.androidPopupActivity = androidPopupActivity;
-            return this;
-        }
-        public String getAndroidPopupActivity() {
-            return this.androidPopupActivity;
-        }
-
-        public MassPushRequestPushTask setAndroidRemind(Boolean androidRemind) {
-            this.androidRemind = androidRemind;
-            return this;
-        }
-        public Boolean getAndroidRemind() {
-            return this.androidRemind;
-        }
-
-        public MassPushRequestPushTask setAndroidPopupBody(String androidPopupBody) {
-            this.androidPopupBody = androidPopupBody;
-            return this;
-        }
-        public String getAndroidPopupBody() {
-            return this.androidPopupBody;
-        }
-
         public MassPushRequestPushTask setAndroidExtParameters(String androidExtParameters) {
             this.androidExtParameters = androidExtParameters;
             return this;
@@ -995,44 +1003,12 @@ public class PushRequest extends TeaModel {
             return this.androidExtParameters;
         }
 
-        public MassPushRequestPushTask setIOSExtParameters(String iOSExtParameters) {
-            this.iOSExtParameters = iOSExtParameters;
-            return this;
-        }
-        public String getIOSExtParameters() {
-            return this.iOSExtParameters;
-        }
-
         public MassPushRequestPushTask setAndroidXiaoMiNotifyBody(String androidXiaoMiNotifyBody) {
             this.androidXiaoMiNotifyBody = androidXiaoMiNotifyBody;
             return this;
         }
         public String getAndroidXiaoMiNotifyBody() {
             return this.androidXiaoMiNotifyBody;
-        }
-
-        public MassPushRequestPushTask setBody(String body) {
-            this.body = body;
-            return this;
-        }
-        public String getBody() {
-            return this.body;
-        }
-
-        public MassPushRequestPushTask setAndroidNotificationBarType(Integer androidNotificationBarType) {
-            this.androidNotificationBarType = androidNotificationBarType;
-            return this;
-        }
-        public Integer getAndroidNotificationBarType() {
-            return this.androidNotificationBarType;
-        }
-
-        public MassPushRequestPushTask setAndroidNotificationBarPriority(Integer androidNotificationBarPriority) {
-            this.androidNotificationBarPriority = androidNotificationBarPriority;
-            return this;
-        }
-        public Integer getAndroidNotificationBarPriority() {
-            return this.androidNotificationBarPriority;
         }
 
         public MassPushRequestPushTask setAndroidXiaomiBigPictureUrl(String androidXiaomiBigPictureUrl) {
@@ -1067,22 +1043,6 @@ public class PushRequest extends TeaModel {
             return this.iOSRemind;
         }
 
-        public MassPushRequestPushTask setPushType(String pushType) {
-            this.pushType = pushType;
-            return this;
-        }
-        public String getPushType() {
-            return this.pushType;
-        }
-
-        public MassPushRequestPushTask setSendSpeed(Integer sendSpeed) {
-            this.sendSpeed = sendSpeed;
-            return this;
-        }
-        public Integer getSendSpeed() {
-            return this.sendSpeed;
-        }
-
         public MassPushRequestPushTask setIOSBadge(Integer iOSBadge) {
             this.iOSBadge = iOSBadge;
             return this;
@@ -1099,6 +1059,174 @@ public class PushRequest extends TeaModel {
             return this.title;
         }
 
+        public MassPushRequestPushTask setAndroidMusic(String androidMusic) {
+            this.androidMusic = androidMusic;
+            return this;
+        }
+        public String getAndroidMusic() {
+            return this.androidMusic;
+        }
+
+        public MassPushRequestPushTask setIOSNotificationCollapseId(String iOSNotificationCollapseId) {
+            this.iOSNotificationCollapseId = iOSNotificationCollapseId;
+            return this;
+        }
+        public String getIOSNotificationCollapseId() {
+            return this.iOSNotificationCollapseId;
+        }
+
+        public MassPushRequestPushTask setAndroidRenderStyle(String androidRenderStyle) {
+            this.androidRenderStyle = androidRenderStyle;
+            return this;
+        }
+        public String getAndroidRenderStyle() {
+            return this.androidRenderStyle;
+        }
+
+        public MassPushRequestPushTask setIOSNotificationCategory(String iOSNotificationCategory) {
+            this.iOSNotificationCategory = iOSNotificationCategory;
+            return this;
+        }
+        public String getIOSNotificationCategory() {
+            return this.iOSNotificationCategory;
+        }
+
+        public MassPushRequestPushTask setIOSNotificationThreadId(String iOSNotificationThreadId) {
+            this.iOSNotificationThreadId = iOSNotificationThreadId;
+            return this;
+        }
+        public String getIOSNotificationThreadId() {
+            return this.iOSNotificationThreadId;
+        }
+
+        public MassPushRequestPushTask setAndroidActivity(String androidActivity) {
+            this.androidActivity = androidActivity;
+            return this;
+        }
+        public String getAndroidActivity() {
+            return this.androidActivity;
+        }
+
+        public MassPushRequestPushTask setAndroidBigBody(String androidBigBody) {
+            this.androidBigBody = androidBigBody;
+            return this;
+        }
+        public String getAndroidBigBody() {
+            return this.androidBigBody;
+        }
+
+        public MassPushRequestPushTask setIOSMutableContent(Boolean iOSMutableContent) {
+            this.iOSMutableContent = iOSMutableContent;
+            return this;
+        }
+        public Boolean getIOSMutableContent() {
+            return this.iOSMutableContent;
+        }
+
+        public MassPushRequestPushTask setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+        public MassPushRequestPushTask setAndroidNotificationNotifyId(Integer androidNotificationNotifyId) {
+            this.androidNotificationNotifyId = androidNotificationNotifyId;
+            return this;
+        }
+        public Integer getAndroidNotificationNotifyId() {
+            return this.androidNotificationNotifyId;
+        }
+
+        public MassPushRequestPushTask setAndroidNotificationVivoChannel(String androidNotificationVivoChannel) {
+            this.androidNotificationVivoChannel = androidNotificationVivoChannel;
+            return this;
+        }
+        public String getAndroidNotificationVivoChannel() {
+            return this.androidNotificationVivoChannel;
+        }
+
+        public MassPushRequestPushTask setAndroidPopupActivity(String androidPopupActivity) {
+            this.androidPopupActivity = androidPopupActivity;
+            return this;
+        }
+        public String getAndroidPopupActivity() {
+            return this.androidPopupActivity;
+        }
+
+        public MassPushRequestPushTask setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+        }
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        public MassPushRequestPushTask setAndroidRemind(Boolean androidRemind) {
+            this.androidRemind = androidRemind;
+            return this;
+        }
+        public Boolean getAndroidRemind() {
+            return this.androidRemind;
+        }
+
+        public MassPushRequestPushTask setAndroidPopupBody(String androidPopupBody) {
+            this.androidPopupBody = androidPopupBody;
+            return this;
+        }
+        public String getAndroidPopupBody() {
+            return this.androidPopupBody;
+        }
+
+        public MassPushRequestPushTask setIOSExtParameters(String iOSExtParameters) {
+            this.iOSExtParameters = iOSExtParameters;
+            return this;
+        }
+        public String getIOSExtParameters() {
+            return this.iOSExtParameters;
+        }
+
+        public MassPushRequestPushTask setBody(String body) {
+            this.body = body;
+            return this;
+        }
+        public String getBody() {
+            return this.body;
+        }
+
+        public MassPushRequestPushTask setAndroidNotificationBarPriority(Integer androidNotificationBarPriority) {
+            this.androidNotificationBarPriority = androidNotificationBarPriority;
+            return this;
+        }
+        public Integer getAndroidNotificationBarPriority() {
+            return this.androidNotificationBarPriority;
+        }
+
+        public MassPushRequestPushTask setAndroidNotificationBarType(Integer androidNotificationBarType) {
+            this.androidNotificationBarType = androidNotificationBarType;
+            return this;
+        }
+        public Integer getAndroidNotificationBarType() {
+            return this.androidNotificationBarType;
+        }
+
+        public MassPushRequestPushTask setPushType(String pushType) {
+            this.pushType = pushType;
+            return this;
+        }
+        public String getPushType() {
+            return this.pushType;
+        }
+
+        public MassPushRequestPushTask setSendSpeed(Integer sendSpeed) {
+            this.sendSpeed = sendSpeed;
+            return this;
+        }
+        public Integer getSendSpeed() {
+            return this.sendSpeed;
+        }
+
         public MassPushRequestPushTask setPushTime(String pushTime) {
             this.pushTime = pushTime;
             return this;
@@ -1107,12 +1235,60 @@ public class PushRequest extends TeaModel {
             return this.pushTime;
         }
 
-        public MassPushRequestPushTask setAndroidMusic(String androidMusic) {
-            this.androidMusic = androidMusic;
+        public MassPushRequestPushTask setAndroidBigPictureUrl(String androidBigPictureUrl) {
+            this.androidBigPictureUrl = androidBigPictureUrl;
             return this;
         }
-        public String getAndroidMusic() {
-            return this.androidMusic;
+        public String getAndroidBigPictureUrl() {
+            return this.androidBigPictureUrl;
+        }
+
+        public MassPushRequestPushTask setAndroidInboxBody(String androidInboxBody) {
+            this.androidInboxBody = androidInboxBody;
+            return this;
+        }
+        public String getAndroidInboxBody() {
+            return this.androidInboxBody;
+        }
+
+        public MassPushRequestPushTask setAndroidImageUrl(String androidImageUrl) {
+            this.androidImageUrl = androidImageUrl;
+            return this;
+        }
+        public String getAndroidImageUrl() {
+            return this.androidImageUrl;
+        }
+
+        public MassPushRequestPushTask setAndroidXiaomiImageUrl(String androidXiaomiImageUrl) {
+            this.androidXiaomiImageUrl = androidXiaomiImageUrl;
+            return this;
+        }
+        public String getAndroidXiaomiImageUrl() {
+            return this.androidXiaomiImageUrl;
+        }
+
+        public MassPushRequestPushTask setAndroidMessageHuaweiUrgency(String androidMessageHuaweiUrgency) {
+            this.androidMessageHuaweiUrgency = androidMessageHuaweiUrgency;
+            return this;
+        }
+        public String getAndroidMessageHuaweiUrgency() {
+            return this.androidMessageHuaweiUrgency;
+        }
+
+        public MassPushRequestPushTask setAndroidMessageHuaweiCategory(String androidMessageHuaweiCategory) {
+            this.androidMessageHuaweiCategory = androidMessageHuaweiCategory;
+            return this;
+        }
+        public String getAndroidMessageHuaweiCategory() {
+            return this.androidMessageHuaweiCategory;
+        }
+
+        public MassPushRequestPushTask setSendChannels(String sendChannels) {
+            this.sendChannels = sendChannels;
+            return this;
+        }
+        public String getSendChannels() {
+            return this.sendChannels;
         }
 
     }
