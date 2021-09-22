@@ -40,6 +40,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("Duration")
     public Long duration;
 
+    @NameInMap("RequestTags")
+    public java.util.List<CreateServiceRequestRequestTags> requestTags;
+
     public static CreateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceRequest self = new CreateServiceRequest();
         return TeaModel.build(map, self);
@@ -141,6 +144,14 @@ public class CreateServiceRequest extends TeaModel {
         return this.duration;
     }
 
+    public CreateServiceRequest setRequestTags(java.util.List<CreateServiceRequestRequestTags> requestTags) {
+        this.requestTags = requestTags;
+        return this;
+    }
+    public java.util.List<CreateServiceRequestRequestTags> getRequestTags() {
+        return this.requestTags;
+    }
+
     public static class CreateServiceRequestServiceInfo extends TeaModel {
         @NameInMap("Locale")
         public String locale;
@@ -189,6 +200,36 @@ public class CreateServiceRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class CreateServiceRequestRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateServiceRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceRequestRequestTags self = new CreateServiceRequestRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceRequestRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateServiceRequestRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
