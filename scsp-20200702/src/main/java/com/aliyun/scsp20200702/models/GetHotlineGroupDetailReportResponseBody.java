@@ -4,24 +4,32 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetHotlineGroupDetailReportResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("Data")
+    public GetHotlineGroupDetailReportResponseBodyData data;
 
     public static GetHotlineGroupDetailReportResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineGroupDetailReportResponseBody self = new GetHotlineGroupDetailReportResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetHotlineGroupDetailReportResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetHotlineGroupDetailReportResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetHotlineGroupDetailReportResponseBody setData(GetHotlineGroupDetailReportResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetHotlineGroupDetailReportResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetHotlineGroupDetailReportResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetHotlineGroupDetailReportResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public GetHotlineGroupDetailReportResponseBody setData(GetHotlineGroupDetailReportResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetHotlineGroupDetailReportResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetHotlineGroupDetailReportResponseBodyDataColumns extends TeaModel {
@@ -95,32 +95,24 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
     }
 
     public static class GetHotlineGroupDetailReportResponseBodyData extends TeaModel {
-        @NameInMap("Rows")
-        public java.util.List<java.util.Map<String, ?>> rows;
-
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Total")
         public Integer total;
 
+        @NameInMap("Page")
+        public Integer page;
+
         @NameInMap("Columns")
         public java.util.List<GetHotlineGroupDetailReportResponseBodyDataColumns> columns;
 
-        @NameInMap("Page")
-        public Integer page;
+        @NameInMap("Rows")
+        public java.util.List<java.util.Map<String, ?>> rows;
 
         public static GetHotlineGroupDetailReportResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetHotlineGroupDetailReportResponseBodyData self = new GetHotlineGroupDetailReportResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetHotlineGroupDetailReportResponseBodyData setRows(java.util.List<java.util.Map<String, ?>> rows) {
-            this.rows = rows;
-            return this;
-        }
-        public java.util.List<java.util.Map<String, ?>> getRows() {
-            return this.rows;
         }
 
         public GetHotlineGroupDetailReportResponseBodyData setPageSize(Integer pageSize) {
@@ -139,6 +131,14 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
             return this.total;
         }
 
+        public GetHotlineGroupDetailReportResponseBodyData setPage(Integer page) {
+            this.page = page;
+            return this;
+        }
+        public Integer getPage() {
+            return this.page;
+        }
+
         public GetHotlineGroupDetailReportResponseBodyData setColumns(java.util.List<GetHotlineGroupDetailReportResponseBodyDataColumns> columns) {
             this.columns = columns;
             return this;
@@ -147,12 +147,12 @@ public class GetHotlineGroupDetailReportResponseBody extends TeaModel {
             return this.columns;
         }
 
-        public GetHotlineGroupDetailReportResponseBodyData setPage(Integer page) {
-            this.page = page;
+        public GetHotlineGroupDetailReportResponseBodyData setRows(java.util.List<java.util.Map<String, ?>> rows) {
+            this.rows = rows;
             return this;
         }
-        public Integer getPage() {
-            return this.page;
+        public java.util.List<java.util.Map<String, ?>> getRows() {
+            return this.rows;
         }
 
     }

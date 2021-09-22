@@ -40,6 +40,18 @@ public class QueryTicketsShrinkRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    @NameInMap("MemberId")
+    public Long memberId;
+
+    @NameInMap("ParentCaseId")
+    public Long parentCaseId;
+
+    @NameInMap("StartCaseGmtCreate")
+    public Long startCaseGmtCreate;
+
+    @NameInMap("EndCaseGmtCreate")
+    public Long endCaseGmtCreate;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -145,6 +157,38 @@ public class QueryTicketsShrinkRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public QueryTicketsShrinkRequest setMemberId(Long memberId) {
+        this.memberId = memberId;
+        return this;
+    }
+    public Long getMemberId() {
+        return this.memberId;
+    }
+
+    public QueryTicketsShrinkRequest setParentCaseId(Long parentCaseId) {
+        this.parentCaseId = parentCaseId;
+        return this;
+    }
+    public Long getParentCaseId() {
+        return this.parentCaseId;
+    }
+
+    public QueryTicketsShrinkRequest setStartCaseGmtCreate(Long startCaseGmtCreate) {
+        this.startCaseGmtCreate = startCaseGmtCreate;
+        return this;
+    }
+    public Long getStartCaseGmtCreate() {
+        return this.startCaseGmtCreate;
+    }
+
+    public QueryTicketsShrinkRequest setEndCaseGmtCreate(Long endCaseGmtCreate) {
+        this.endCaseGmtCreate = endCaseGmtCreate;
+        return this;
+    }
+    public Long getEndCaseGmtCreate() {
+        return this.endCaseGmtCreate;
     }
 
     public QueryTicketsShrinkRequest setPageSize(Integer pageSize) {

@@ -3,7 +3,7 @@ package com.aliyun.scsp20200702.models;
 
 import com.aliyun.tea.*;
 
-public class QueryTicketsRequest extends TeaModel {
+public class QueryRelationTicketsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,11 +13,8 @@ public class QueryTicketsRequest extends TeaModel {
     @NameInMap("CaseType")
     public Integer caseType;
 
-    @NameInMap("CaseStatus")
-    public Integer caseStatus;
-
     @NameInMap("SrType")
-    public Long srType;
+    public Integer srType;
 
     @NameInMap("TaskStatus")
     public Integer taskStatus;
@@ -37,14 +34,8 @@ public class QueryTicketsRequest extends TeaModel {
     @NameInMap("Extra")
     public java.util.Map<String, ?> extra;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
     @NameInMap("MemberId")
     public Long memberId;
-
-    @NameInMap("ParentCaseId")
-    public Long parentCaseId;
 
     @NameInMap("StartCaseGmtCreate")
     public Long startCaseGmtCreate;
@@ -58,12 +49,12 @@ public class QueryTicketsRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    public static QueryTicketsRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryTicketsRequest self = new QueryTicketsRequest();
+    public static QueryRelationTicketsRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryRelationTicketsRequest self = new QueryRelationTicketsRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryTicketsRequest setInstanceId(String instanceId) {
+    public QueryRelationTicketsRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -71,7 +62,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public QueryTicketsRequest setCaseId(Long caseId) {
+    public QueryRelationTicketsRequest setCaseId(Long caseId) {
         this.caseId = caseId;
         return this;
     }
@@ -79,7 +70,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.caseId;
     }
 
-    public QueryTicketsRequest setCaseType(Integer caseType) {
+    public QueryRelationTicketsRequest setCaseType(Integer caseType) {
         this.caseType = caseType;
         return this;
     }
@@ -87,23 +78,15 @@ public class QueryTicketsRequest extends TeaModel {
         return this.caseType;
     }
 
-    public QueryTicketsRequest setCaseStatus(Integer caseStatus) {
-        this.caseStatus = caseStatus;
-        return this;
-    }
-    public Integer getCaseStatus() {
-        return this.caseStatus;
-    }
-
-    public QueryTicketsRequest setSrType(Long srType) {
+    public QueryRelationTicketsRequest setSrType(Integer srType) {
         this.srType = srType;
         return this;
     }
-    public Long getSrType() {
+    public Integer getSrType() {
         return this.srType;
     }
 
-    public QueryTicketsRequest setTaskStatus(Integer taskStatus) {
+    public QueryRelationTicketsRequest setTaskStatus(Integer taskStatus) {
         this.taskStatus = taskStatus;
         return this;
     }
@@ -111,7 +94,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.taskStatus;
     }
 
-    public QueryTicketsRequest setChannelId(String channelId) {
+    public QueryRelationTicketsRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
     }
@@ -119,7 +102,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.channelId;
     }
 
-    public QueryTicketsRequest setChannelType(Integer channelType) {
+    public QueryRelationTicketsRequest setChannelType(Integer channelType) {
         this.channelType = channelType;
         return this;
     }
@@ -127,7 +110,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.channelType;
     }
 
-    public QueryTicketsRequest setTouchId(Long touchId) {
+    public QueryRelationTicketsRequest setTouchId(Long touchId) {
         this.touchId = touchId;
         return this;
     }
@@ -135,7 +118,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.touchId;
     }
 
-    public QueryTicketsRequest setDealId(Long dealId) {
+    public QueryRelationTicketsRequest setDealId(Long dealId) {
         this.dealId = dealId;
         return this;
     }
@@ -143,7 +126,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.dealId;
     }
 
-    public QueryTicketsRequest setExtra(java.util.Map<String, ?> extra) {
+    public QueryRelationTicketsRequest setExtra(java.util.Map<String, ?> extra) {
         this.extra = extra;
         return this;
     }
@@ -151,15 +134,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.extra;
     }
 
-    public QueryTicketsRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    public QueryTicketsRequest setMemberId(Long memberId) {
+    public QueryRelationTicketsRequest setMemberId(Long memberId) {
         this.memberId = memberId;
         return this;
     }
@@ -167,15 +142,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.memberId;
     }
 
-    public QueryTicketsRequest setParentCaseId(Long parentCaseId) {
-        this.parentCaseId = parentCaseId;
-        return this;
-    }
-    public Long getParentCaseId() {
-        return this.parentCaseId;
-    }
-
-    public QueryTicketsRequest setStartCaseGmtCreate(Long startCaseGmtCreate) {
+    public QueryRelationTicketsRequest setStartCaseGmtCreate(Long startCaseGmtCreate) {
         this.startCaseGmtCreate = startCaseGmtCreate;
         return this;
     }
@@ -183,7 +150,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.startCaseGmtCreate;
     }
 
-    public QueryTicketsRequest setEndCaseGmtCreate(Long endCaseGmtCreate) {
+    public QueryRelationTicketsRequest setEndCaseGmtCreate(Long endCaseGmtCreate) {
         this.endCaseGmtCreate = endCaseGmtCreate;
         return this;
     }
@@ -191,7 +158,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.endCaseGmtCreate;
     }
 
-    public QueryTicketsRequest setPageSize(Integer pageSize) {
+    public QueryRelationTicketsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -199,7 +166,7 @@ public class QueryTicketsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryTicketsRequest setCurrentPage(Integer currentPage) {
+    public QueryRelationTicketsRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }

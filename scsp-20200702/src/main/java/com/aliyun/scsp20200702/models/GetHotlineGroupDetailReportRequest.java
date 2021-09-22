@@ -20,10 +20,10 @@ public class GetHotlineGroupDetailReportRequest extends TeaModel {
     public String instanceId;
 
     @NameInMap("DepIds")
-    public java.util.List<Integer> depIds;
+    public java.util.List<Long> depIds;
 
     @NameInMap("GroupIds")
-    public java.util.List<Integer> groupIds;
+    public java.util.List<Long> groupIds;
 
     public static GetHotlineGroupDetailReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineGroupDetailReportRequest self = new GetHotlineGroupDetailReportRequest();
@@ -70,19 +70,19 @@ public class GetHotlineGroupDetailReportRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetHotlineGroupDetailReportRequest setDepIds(java.util.List<Integer> depIds) {
+    public GetHotlineGroupDetailReportRequest setDepIds(java.util.List<Long> depIds) {
         this.depIds = depIds;
         return this;
     }
-    public java.util.List<Integer> getDepIds() {
+    public java.util.List<Long> getDepIds() {
         return this.depIds;
     }
 
-    public GetHotlineGroupDetailReportRequest setGroupIds(java.util.List<Integer> groupIds) {
+    public GetHotlineGroupDetailReportRequest setGroupIds(java.util.List<Long> groupIds) {
         this.groupIds = groupIds;
         return this;
     }
-    public java.util.List<Integer> getGroupIds() {
+    public java.util.List<Long> getGroupIds() {
         return this.groupIds;
     }
 
