@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetAuthorizationUrlResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAuthorizationUrlResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
     public static GetAuthorizationUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAuthorizationUrlResponseBody self = new GetAuthorizationUrlResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAuthorizationUrlResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetAuthorizationUrlResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetAuthorizationUrlResponseBody extends TeaModel {
     }
     public GetAuthorizationUrlResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetAuthorizationUrlResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class GetAuthorizationUrlResponseBodyData extends TeaModel {

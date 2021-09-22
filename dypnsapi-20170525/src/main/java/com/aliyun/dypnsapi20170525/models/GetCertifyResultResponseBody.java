@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetCertifyResultResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class GetCertifyResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<GetCertifyResultResponseBodyData> data;
 
-    @NameInMap("Code")
-    public String code;
-
     public static GetCertifyResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCertifyResultResponseBody self = new GetCertifyResultResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetCertifyResultResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetCertifyResultResponseBody setMessage(String message) {
@@ -45,23 +53,15 @@ public class GetCertifyResultResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetCertifyResultResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class GetCertifyResultResponseBodyData extends TeaModel {
         @NameInMap("MaterialInfo")
         public String materialInfo;
 
-        @NameInMap("VerifyDesc")
-        public String verifyDesc;
-
         @NameInMap("IdentityInfo")
         public String identityInfo;
+
+        @NameInMap("VerifyDesc")
+        public String verifyDesc;
 
         @NameInMap("VerifyResult")
         public String verifyResult;
@@ -82,20 +82,20 @@ public class GetCertifyResultResponseBody extends TeaModel {
             return this.materialInfo;
         }
 
-        public GetCertifyResultResponseBodyData setVerifyDesc(String verifyDesc) {
-            this.verifyDesc = verifyDesc;
-            return this;
-        }
-        public String getVerifyDesc() {
-            return this.verifyDesc;
-        }
-
         public GetCertifyResultResponseBodyData setIdentityInfo(String identityInfo) {
             this.identityInfo = identityInfo;
             return this;
         }
         public String getIdentityInfo() {
             return this.identityInfo;
+        }
+
+        public GetCertifyResultResponseBodyData setVerifyDesc(String verifyDesc) {
+            this.verifyDesc = verifyDesc;
+            return this;
+        }
+        public String getVerifyDesc() {
+            return this.verifyDesc;
         }
 
         public GetCertifyResultResponseBodyData setVerifyResult(String verifyResult) {

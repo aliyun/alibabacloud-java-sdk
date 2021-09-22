@@ -4,14 +4,14 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DescribeVerifySchemeResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("SchemeQueryResultDTO")
     public DescribeVerifySchemeResponseBodySchemeQueryResultDTO schemeQueryResultDTO;
@@ -19,6 +19,14 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
     public static DescribeVerifySchemeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVerifySchemeResponseBody self = new DescribeVerifySchemeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVerifySchemeResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeVerifySchemeResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class DescribeVerifySchemeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeVerifySchemeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DescribeVerifySchemeResponseBody setSchemeQueryResultDTO(DescribeVerifySchemeResponseBodySchemeQueryResultDTO schemeQueryResultDTO) {

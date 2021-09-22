@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class VerifyPhoneWithTokenResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
     @NameInMap("GateVerify")
     public VerifyPhoneWithTokenResponseBodyGateVerify gateVerify;
 
-    @NameInMap("Code")
-    public String code;
-
     public static VerifyPhoneWithTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VerifyPhoneWithTokenResponseBody self = new VerifyPhoneWithTokenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public VerifyPhoneWithTokenResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public VerifyPhoneWithTokenResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class VerifyPhoneWithTokenResponseBody extends TeaModel {
     }
     public VerifyPhoneWithTokenResponseBodyGateVerify getGateVerify() {
         return this.gateVerify;
-    }
-
-    public VerifyPhoneWithTokenResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class VerifyPhoneWithTokenResponseBodyGateVerify extends TeaModel {

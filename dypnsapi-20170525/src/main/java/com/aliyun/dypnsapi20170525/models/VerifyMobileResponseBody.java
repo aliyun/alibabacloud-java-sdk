@@ -4,8 +4,8 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class VerifyMobileResponseBody extends TeaModel {
-    @NameInMap("GateVerifyResultDTO")
-    public VerifyMobileResponseBodyGateVerifyResultDTO gateVerifyResultDTO;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class VerifyMobileResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("GateVerifyResultDTO")
+    public VerifyMobileResponseBodyGateVerifyResultDTO gateVerifyResultDTO;
 
     public static VerifyMobileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VerifyMobileResponseBody self = new VerifyMobileResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public VerifyMobileResponseBody setGateVerifyResultDTO(VerifyMobileResponseBodyGateVerifyResultDTO gateVerifyResultDTO) {
-        this.gateVerifyResultDTO = gateVerifyResultDTO;
+    public VerifyMobileResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public VerifyMobileResponseBodyGateVerifyResultDTO getGateVerifyResultDTO() {
-        return this.gateVerifyResultDTO;
+    public String getCode() {
+        return this.code;
     }
 
     public VerifyMobileResponseBody setMessage(String message) {
@@ -45,12 +45,12 @@ public class VerifyMobileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public VerifyMobileResponseBody setCode(String code) {
-        this.code = code;
+    public VerifyMobileResponseBody setGateVerifyResultDTO(VerifyMobileResponseBodyGateVerifyResultDTO gateVerifyResultDTO) {
+        this.gateVerifyResultDTO = gateVerifyResultDTO;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public VerifyMobileResponseBodyGateVerifyResultDTO getGateVerifyResultDTO() {
+        return this.gateVerifyResultDTO;
     }
 
     public static class VerifyMobileResponseBodyGateVerifyResultDTO extends TeaModel {

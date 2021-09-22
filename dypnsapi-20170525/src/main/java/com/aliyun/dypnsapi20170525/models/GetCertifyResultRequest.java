@@ -13,9 +13,6 @@ public class GetCertifyResultRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ProductCode")
-    public String productCode;
-
     @NameInMap("Token")
     public String token;
 
@@ -46,14 +43,6 @@ public class GetCertifyResultRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public GetCertifyResultRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
     }
 
     public GetCertifyResultRequest setToken(String token) {
