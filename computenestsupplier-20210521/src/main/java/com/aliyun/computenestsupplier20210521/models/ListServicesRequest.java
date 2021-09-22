@@ -19,6 +19,9 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<ListServicesRequestFilter> filter;
 
+    @NameInMap("RequestTags")
+    public java.util.List<ListServicesRequestRequestTags> requestTags;
+
     public static ListServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServicesRequest self = new ListServicesRequest();
         return TeaModel.build(map, self);
@@ -64,6 +67,14 @@ public class ListServicesRequest extends TeaModel {
         return this.filter;
     }
 
+    public ListServicesRequest setRequestTags(java.util.List<ListServicesRequestRequestTags> requestTags) {
+        this.requestTags = requestTags;
+        return this;
+    }
+    public java.util.List<ListServicesRequestRequestTags> getRequestTags() {
+        return this.requestTags;
+    }
+
     public static class ListServicesRequestFilter extends TeaModel {
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -90,6 +101,36 @@ public class ListServicesRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class ListServicesRequestRequestTags extends TeaModel {
+        @NameInMap("Value")
+        public String value;
+
+        @NameInMap("Key")
+        public String key;
+
+        public static ListServicesRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListServicesRequestRequestTags self = new ListServicesRequestRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServicesRequestRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public ListServicesRequestRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }
