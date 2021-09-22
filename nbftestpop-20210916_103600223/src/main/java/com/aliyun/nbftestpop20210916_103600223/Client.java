@@ -111,4 +111,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         return TeaModel.toModel(this.doROARequest("AssetPublishTestOpenApi", "2021-09-16_10-36-00-223", "HTTPS", "POST", "AK", "/kxRoaProduct/9_0_9/assetPublishTestOpenApi", "json", req, runtime), new AssetPublishTestOpenApiResponse());
     }
+
+    public AddTestResponse addTest(AddTestRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addTestWithOptions(request, headers, runtime);
+    }
+
+    public AddTestResponse addTestWithOptions(AddTestRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.x)) {
+            query.put("x", request.x);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.y)) {
+            query.put("y", request.y);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("AddTest", "2021-09-16_10-36-00-223", "HTTPS", "POST", "AK", "/kxRoaProduct/9_0_9/addTest", "json", req, runtime), new AddTestResponse());
+    }
 }
