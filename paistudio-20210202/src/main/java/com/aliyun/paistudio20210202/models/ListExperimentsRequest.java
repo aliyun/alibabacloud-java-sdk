@@ -28,6 +28,9 @@ public class ListExperimentsRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    @NameInMap("SortBy")
+    public String sortBy;
+
     public static ListExperimentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExperimentsRequest self = new ListExperimentsRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ListExperimentsRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public ListExperimentsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
 }
