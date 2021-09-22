@@ -31,8 +31,8 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("OperationMetadata")
     public CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata;
 
-    @NameInMap("RequestTags")
-    public java.util.List<CreateServiceInstanceShrinkRequestRequestTags> requestTags;
+    @NameInMap("RequestTag")
+    public java.util.List<CreateServiceInstanceShrinkRequestRequestTag> requestTag;
 
     public static CreateServiceInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceShrinkRequest self = new CreateServiceInstanceShrinkRequest();
@@ -111,12 +111,12 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         return this.operationMetadata;
     }
 
-    public CreateServiceInstanceShrinkRequest setRequestTags(java.util.List<CreateServiceInstanceShrinkRequestRequestTags> requestTags) {
-        this.requestTags = requestTags;
+    public CreateServiceInstanceShrinkRequest setRequestTag(java.util.List<CreateServiceInstanceShrinkRequestRequestTag> requestTag) {
+        this.requestTag = requestTag;
         return this;
     }
-    public java.util.List<CreateServiceInstanceShrinkRequestRequestTags> getRequestTags() {
-        return this.requestTags;
+    public java.util.List<CreateServiceInstanceShrinkRequestRequestTag> getRequestTag() {
+        return this.requestTag;
     }
 
     public static class CreateServiceInstanceShrinkRequestOperationMetadata extends TeaModel {
@@ -171,19 +171,19 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
 
     }
 
-    public static class CreateServiceInstanceShrinkRequestRequestTags extends TeaModel {
+    public static class CreateServiceInstanceShrinkRequestRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static CreateServiceInstanceShrinkRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            CreateServiceInstanceShrinkRequestRequestTags self = new CreateServiceInstanceShrinkRequestRequestTags();
+        public static CreateServiceInstanceShrinkRequestRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceInstanceShrinkRequestRequestTag self = new CreateServiceInstanceShrinkRequestRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateServiceInstanceShrinkRequestRequestTags setKey(String key) {
+        public CreateServiceInstanceShrinkRequestRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -191,7 +191,7 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateServiceInstanceShrinkRequestRequestTags setValue(String value) {
+        public CreateServiceInstanceShrinkRequestRequestTag setValue(String value) {
             this.value = value;
             return this;
         }
