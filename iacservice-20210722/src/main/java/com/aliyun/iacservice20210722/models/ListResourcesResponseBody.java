@@ -9,7 +9,13 @@ public class ListResourcesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("totalCount")
-    public Long totalCount;
+    public Integer totalCount;
+
+    @NameInMap("pageNum")
+    public Integer pageNum;
+
+    @NameInMap("pageSize")
+    public Integer pageSize;
 
     @NameInMap("resources")
     public java.util.List<ListResourcesResponseBodyResources> resources;
@@ -27,12 +33,28 @@ public class ListResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListResourcesResponseBody setTotalCount(Long totalCount) {
+    public ListResourcesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
-    public Long getTotalCount() {
+    public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public ListResourcesResponseBody setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListResourcesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListResourcesResponseBody setResources(java.util.List<ListResourcesResponseBodyResources> resources) {
@@ -49,6 +71,9 @@ public class ListResourcesResponseBody extends TeaModel {
 
         @NameInMap("resourceTypeCode")
         public String resourceTypeCode;
+
+        @NameInMap("regionId")
+        public String regionId;
 
         @NameInMap("resourceId")
         public String resourceId;
@@ -75,6 +100,14 @@ public class ListResourcesResponseBody extends TeaModel {
         }
         public String getResourceTypeCode() {
             return this.resourceTypeCode;
+        }
+
+        public ListResourcesResponseBodyResources setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public ListResourcesResponseBodyResources setResourceId(String resourceId) {

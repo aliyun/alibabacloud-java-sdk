@@ -39,6 +39,9 @@ public class GetResourceResponseBody extends TeaModel {
         @NameInMap("resourceTypeCode")
         public String resourceTypeCode;
 
+        @NameInMap("regionId")
+        public String regionId;
+
         @NameInMap("resourceId")
         public String resourceId;
 
@@ -64,6 +67,14 @@ public class GetResourceResponseBody extends TeaModel {
         }
         public String getResourceTypeCode() {
             return this.resourceTypeCode;
+        }
+
+        public GetResourceResponseBodyResource setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public GetResourceResponseBodyResource setResourceId(String resourceId) {

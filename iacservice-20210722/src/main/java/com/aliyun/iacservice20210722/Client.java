@@ -32,6 +32,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public ReloadResourcesResponse reloadResources(String provider, String productCode, String resourceTypeCode, ReloadResourcesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.reloadResourcesWithOptions(provider, productCode, resourceTypeCode, request, headers, runtime);
+    }
+
+    public ReloadResourcesResponse reloadResourcesWithOptions(String provider, String productCode, String resourceTypeCode, ReloadResourcesRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        provider = com.aliyun.openapiutil.Client.getEncodeParam(provider);
+        productCode = com.aliyun.openapiutil.Client.getEncodeParam(productCode);
+        resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
+        ReloadResourcesShrinkRequest request = new ReloadResourcesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
+            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "regionIds", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdsShrink)) {
+            query.put("regionIds", request.regionIdsShrink);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("ReloadResources", "2021-07-22", "HTTPS", "PUT", "AK", "/api/v1/providers/" + provider + "/products/" + productCode + "/resourceTypes/" + resourceTypeCode + "/resources/operation/reload", "json", req, runtime), new ReloadResourcesResponse());
+    }
+
     public ListResourceTypesResponse listResourceTypes(String provider, String productCode, ListResourceTypesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -40,6 +69,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListResourceTypesResponse listResourceTypesWithOptions(String provider, String productCode, ListResourceTypesRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
+        provider = com.aliyun.openapiutil.Client.getEncodeParam(provider);
+        productCode = com.aliyun.openapiutil.Client.getEncodeParam(productCode);
         ListResourceTypesShrinkRequest request = new ListResourceTypesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceTypeCodes)) {
@@ -74,6 +105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListProductsResponse listProductsWithOptions(String provider, ListProductsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        provider = com.aliyun.openapiutil.Client.getEncodeParam(provider);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
@@ -98,6 +130,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public ListResourcesResponse listResourcesWithOptions(String provider, String productCode, String resourceTypeCode, ListResourcesRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
+        provider = com.aliyun.openapiutil.Client.getEncodeParam(provider);
+        productCode = com.aliyun.openapiutil.Client.getEncodeParam(productCode);
+        resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
         ListResourcesShrinkRequest request = new ListResourcesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
@@ -109,8 +144,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("regionIds", request.regionIdsShrink);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("resourceGroupId", request.resourceGroupId);
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isReload)) {
+            query.put("isReload", request.isReload);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -128,11 +171,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public CreateResourceResponse createResourceWithOptions(String provider, String productCode, String resourceTypeCode, CreateResourceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        provider = com.aliyun.openapiutil.Client.getEncodeParam(provider);
+        productCode = com.aliyun.openapiutil.Client.getEncodeParam(productCode);
+        resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isAsync)) {
+            query.put("isAsync", request.isAsync);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", request.body)
         ));
         return TeaModel.toModel(this.doROARequest("CreateResource", "2021-07-22", "HTTPS", "POST", "AK", "/api/v1/providers/" + provider + "/products/" + productCode + "/resourceTypes/" + resourceTypeCode + "/resources", "json", req, runtime), new CreateResourceResponse());
+    }
+
+    public GetTaskResponse getTask(String taskId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTaskWithOptions(taskId, headers, runtime);
+    }
+
+    public GetTaskResponse getTaskWithOptions(String taskId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        taskId = com.aliyun.openapiutil.Client.getEncodeParam(taskId);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("GetTask", "2021-07-22", "HTTPS", "GET", "AK", "/api/v1/tasks/" + taskId + "", "json", req, runtime), new GetTaskResponse());
     }
 
     public UpdateResourceResponse updateResource(String provider, String productCode, String resourceTypeCode, String resourceId, UpdateResourceRequest request) throws Exception {
@@ -143,8 +209,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UpdateResourceResponse updateResourceWithOptions(String provider, String productCode, String resourceTypeCode, String resourceId, UpdateResourceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        provider = com.aliyun.openapiutil.Client.getEncodeParam(provider);
+        productCode = com.aliyun.openapiutil.Client.getEncodeParam(productCode);
+        resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
+        resourceId = com.aliyun.openapiutil.Client.getEncodeParam(resourceId);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isAsync)) {
+            query.put("isAsync", request.isAsync);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", request.body)
         ));
         return TeaModel.toModel(this.doROARequest("UpdateResource", "2021-07-22", "HTTPS", "PUT", "AK", "/api/v1/providers/" + provider + "/products/" + productCode + "/resourceTypes/" + resourceTypeCode + "/resources/" + resourceId + "", "json", req, runtime), new UpdateResourceResponse());
@@ -158,6 +234,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetResourceResponse getResourceWithOptions(String provider, String productCode, String resourceTypeCode, String resourceId, GetResourceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        provider = com.aliyun.openapiutil.Client.getEncodeParam(provider);
+        productCode = com.aliyun.openapiutil.Client.getEncodeParam(productCode);
+        resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
+        resourceId = com.aliyun.openapiutil.Client.getEncodeParam(resourceId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("regionId", request.regionId);
@@ -178,9 +258,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public DeleteResourceResponse deleteResourceWithOptions(String provider, String productCode, String resourceTypeCode, String resourceId, DeleteResourceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        provider = com.aliyun.openapiutil.Client.getEncodeParam(provider);
+        productCode = com.aliyun.openapiutil.Client.getEncodeParam(productCode);
+        resourceTypeCode = com.aliyun.openapiutil.Client.getEncodeParam(resourceTypeCode);
+        resourceId = com.aliyun.openapiutil.Client.getEncodeParam(resourceId);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAsync)) {
+            query.put("isAsync", request.isAsync);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
