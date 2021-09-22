@@ -19,8 +19,8 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<ListServicesRequestFilter> filter;
 
-    @NameInMap("RequestTags")
-    public java.util.List<ListServicesRequestRequestTags> requestTags;
+    @NameInMap("RequestTag")
+    public java.util.List<ListServicesRequestRequestTag> requestTag;
 
     public static ListServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServicesRequest self = new ListServicesRequest();
@@ -67,12 +67,12 @@ public class ListServicesRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListServicesRequest setRequestTags(java.util.List<ListServicesRequestRequestTags> requestTags) {
-        this.requestTags = requestTags;
+    public ListServicesRequest setRequestTag(java.util.List<ListServicesRequestRequestTag> requestTag) {
+        this.requestTag = requestTag;
         return this;
     }
-    public java.util.List<ListServicesRequestRequestTags> getRequestTags() {
-        return this.requestTags;
+    public java.util.List<ListServicesRequestRequestTag> getRequestTag() {
+        return this.requestTag;
     }
 
     public static class ListServicesRequestFilter extends TeaModel {
@@ -105,19 +105,19 @@ public class ListServicesRequest extends TeaModel {
 
     }
 
-    public static class ListServicesRequestRequestTags extends TeaModel {
+    public static class ListServicesRequestRequestTag extends TeaModel {
         @NameInMap("Value")
         public String value;
 
         @NameInMap("Key")
         public String key;
 
-        public static ListServicesRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListServicesRequestRequestTags self = new ListServicesRequestRequestTags();
+        public static ListServicesRequestRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListServicesRequestRequestTag self = new ListServicesRequestRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public ListServicesRequestRequestTags setValue(String value) {
+        public ListServicesRequestRequestTag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -125,7 +125,7 @@ public class ListServicesRequest extends TeaModel {
             return this.value;
         }
 
-        public ListServicesRequestRequestTags setKey(String key) {
+        public ListServicesRequestRequestTag setKey(String key) {
             this.key = key;
             return this;
         }

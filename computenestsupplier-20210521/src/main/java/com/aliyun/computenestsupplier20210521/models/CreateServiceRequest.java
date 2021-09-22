@@ -40,8 +40,8 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("Duration")
     public Long duration;
 
-    @NameInMap("RequestTags")
-    public java.util.List<CreateServiceRequestRequestTags> requestTags;
+    @NameInMap("RequestTag")
+    public java.util.List<CreateServiceRequestRequestTag> requestTag;
 
     public static CreateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceRequest self = new CreateServiceRequest();
@@ -144,12 +144,12 @@ public class CreateServiceRequest extends TeaModel {
         return this.duration;
     }
 
-    public CreateServiceRequest setRequestTags(java.util.List<CreateServiceRequestRequestTags> requestTags) {
-        this.requestTags = requestTags;
+    public CreateServiceRequest setRequestTag(java.util.List<CreateServiceRequestRequestTag> requestTag) {
+        this.requestTag = requestTag;
         return this;
     }
-    public java.util.List<CreateServiceRequestRequestTags> getRequestTags() {
-        return this.requestTags;
+    public java.util.List<CreateServiceRequestRequestTag> getRequestTag() {
+        return this.requestTag;
     }
 
     public static class CreateServiceRequestServiceInfo extends TeaModel {
@@ -204,19 +204,19 @@ public class CreateServiceRequest extends TeaModel {
 
     }
 
-    public static class CreateServiceRequestRequestTags extends TeaModel {
+    public static class CreateServiceRequestRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static CreateServiceRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            CreateServiceRequestRequestTags self = new CreateServiceRequestRequestTags();
+        public static CreateServiceRequestRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceRequestRequestTag self = new CreateServiceRequestRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateServiceRequestRequestTags setKey(String key) {
+        public CreateServiceRequestRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -224,7 +224,7 @@ public class CreateServiceRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateServiceRequestRequestTags setValue(String value) {
+        public CreateServiceRequestRequestTag setValue(String value) {
             this.value = value;
             return this;
         }
