@@ -81,6 +81,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AddDataForApiSourceResponse addDataForApiSourceWithOptions(AddDataForApiSourceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddDataForApiSource", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new AddDataForApiSourceResponse());
+    }
+
+    public AddDataForApiSourceResponse addDataForApiSource(AddDataForApiSourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addDataForApiSourceWithOptions(request, runtime);
+    }
+
     public BatchAddDeviceGroupRelationsResponse batchAddDeviceGroupRelationsWithOptions(BatchAddDeviceGroupRelationsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
