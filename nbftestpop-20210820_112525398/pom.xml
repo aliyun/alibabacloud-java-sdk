@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>nbftestpop20210820_112525398</artifactId>
-  <version>1.0.0</version>
+  <version>2.1.2</version>
   <packaging>jar</packaging>
   <name>nbftestpop20210820_112525398</name>
   <description>Alibaba Cloud NbfTestPop (20210820_112525398) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.11</version>
+      <version>0.1.12</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
