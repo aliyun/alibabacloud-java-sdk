@@ -31,6 +31,9 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("OperationMetadata")
     public CreateServiceInstanceShrinkRequestOperationMetadata operationMetadata;
 
+    @NameInMap("RequestTags")
+    public java.util.List<CreateServiceInstanceShrinkRequestRequestTags> requestTags;
+
     public static CreateServiceInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceShrinkRequest self = new CreateServiceInstanceShrinkRequest();
         return TeaModel.build(map, self);
@@ -108,6 +111,14 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         return this.operationMetadata;
     }
 
+    public CreateServiceInstanceShrinkRequest setRequestTags(java.util.List<CreateServiceInstanceShrinkRequestRequestTags> requestTags) {
+        this.requestTags = requestTags;
+        return this;
+    }
+    public java.util.List<CreateServiceInstanceShrinkRequestRequestTags> getRequestTags() {
+        return this.requestTags;
+    }
+
     public static class CreateServiceInstanceShrinkRequestOperationMetadata extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
@@ -156,6 +167,36 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
         }
         public String getServiceInstanceId() {
             return this.serviceInstanceId;
+        }
+
+    }
+
+    public static class CreateServiceInstanceShrinkRequestRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateServiceInstanceShrinkRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceInstanceShrinkRequestRequestTags self = new CreateServiceInstanceShrinkRequestRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceInstanceShrinkRequestRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateServiceInstanceShrinkRequestRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
