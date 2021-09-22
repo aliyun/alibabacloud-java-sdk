@@ -70,19 +70,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createVerifySchemeWithOptions(request, runtime);
     }
 
-    public GetSmsCodeResponse getSmsCodeWithOptions(GetSmsCodeRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetSmsCode", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new GetSmsCodeResponse());
-    }
-
-    public GetSmsCodeResponse getSmsCode(GetSmsCodeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getSmsCodeWithOptions(request, runtime);
-    }
-
     public VerifySmsCodeResponse verifySmsCodeWithOptions(VerifySmsCodeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -198,18 +185,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public VerifyMobileResponse verifyMobile(VerifyMobileRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.verifyMobileWithOptions(request, runtime);
-    }
-
-    public CheckServiceLinkedRoleForDeletingResponse checkServiceLinkedRoleForDeletingWithOptions(CheckServiceLinkedRoleForDeletingRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CheckServiceLinkedRoleForDeleting", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new CheckServiceLinkedRoleForDeletingResponse());
-    }
-
-    public CheckServiceLinkedRoleForDeletingResponse checkServiceLinkedRoleForDeleting(CheckServiceLinkedRoleForDeletingRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.checkServiceLinkedRoleForDeletingWithOptions(request, runtime);
     }
 }
