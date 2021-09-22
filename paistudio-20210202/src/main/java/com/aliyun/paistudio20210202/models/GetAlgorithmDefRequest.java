@@ -10,8 +10,8 @@ public class GetAlgorithmDefRequest extends TeaModel {
     @NameInMap("Identifier")
     public String identifier;
 
-    @NameInMap("Version")
-    public String version;
+    @NameInMap("AlgoVersion")
+    public String algoVersion;
 
     @NameInMap("Signature")
     public String signature;
@@ -37,12 +37,12 @@ public class GetAlgorithmDefRequest extends TeaModel {
         return this.identifier;
     }
 
-    public GetAlgorithmDefRequest setVersion(String version) {
-        this.version = version;
+    public GetAlgorithmDefRequest setAlgoVersion(String algoVersion) {
+        this.algoVersion = algoVersion;
         return this;
     }
-    public String getVersion() {
-        return this.version;
+    public String getAlgoVersion() {
+        return this.algoVersion;
     }
 
     public GetAlgorithmDefRequest setSignature(String signature) {
