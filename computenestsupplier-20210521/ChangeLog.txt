@@ -1,3 +1,6 @@
+2021-09-22 Version: 2.0.2
+- Support ComputeNest Operation.
+
 2021-09-22 Version: 2.0.1
 - Support ComputeNest Operation.
 
