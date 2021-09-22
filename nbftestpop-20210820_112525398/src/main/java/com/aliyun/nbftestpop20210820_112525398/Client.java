@@ -56,6 +56,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("Add", "2021-08-20_11-25-25-398", "HTTPS", "GET", "AK", "/kxTestNineFive/add", "json", req, runtime), new AddResponse());
     }
 
+    public MultiComplexResponse multiComplex(MultiComplexRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.multiComplexWithOptions(request, headers, runtime);
+    }
+
+    public MultiComplexResponse multiComplexWithOptions(MultiComplexRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        MultiComplexShrinkRequest request = new MultiComplexShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.arg2))) {
+            request.arg2Shrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.arg2), "arg2", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arg0)) {
+            query.put("arg0", request.arg0);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arg1)) {
+            query.put("arg1", request.arg1);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arg2Shrink)) {
+            query.put("arg2", request.arg2Shrink);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("MultiComplex", "2021-08-20_11-25-25-398", "HTTPS", "POST", "AK", "/kxNineFive/multiComplexTest", "json", req, runtime), new MultiComplexResponse());
+    }
+
+    public ArrayInputResponse arrayInput(ArrayInputRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.arrayInputWithOptions(request, headers, runtime);
+    }
+
+    public ArrayInputResponse arrayInputWithOptions(ArrayInputRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ArrayInputShrinkRequest request = new ArrayInputShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.firstInput)) {
+            request.firstInputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.firstInput, "firstInput", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.firstInputShrink)) {
+            query.put("firstInput", request.firstInputShrink);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("ArrayInput", "2021-08-20_11-25-25-398", "HTTPS", "GET", "AK", "/kxNineFiveTest/arrayTestwo", "json", req, runtime), new ArrayInputResponse());
+    }
+
     public PublishTestResponse publishTest(PublishTestRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
