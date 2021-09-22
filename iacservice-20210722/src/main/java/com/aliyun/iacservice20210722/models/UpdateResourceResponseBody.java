@@ -8,6 +8,9 @@ public class UpdateResourceResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("taskId")
+    public String taskId;
+
     public static UpdateResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceResponseBody self = new UpdateResourceResponseBody();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class UpdateResourceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateResourceResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

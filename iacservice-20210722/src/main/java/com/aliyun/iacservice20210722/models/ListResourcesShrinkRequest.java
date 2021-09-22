@@ -7,8 +7,14 @@ public class ListResourcesShrinkRequest extends TeaModel {
     @NameInMap("regionIds")
     public String regionIdsShrink;
 
-    @NameInMap("resourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("pageNum")
+    public Integer pageNum;
+
+    @NameInMap("pageSize")
+    public Integer pageSize;
+
+    @NameInMap("isReload")
+    public Boolean isReload;
 
     public static ListResourcesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesShrinkRequest self = new ListResourcesShrinkRequest();
@@ -23,12 +29,28 @@ public class ListResourcesShrinkRequest extends TeaModel {
         return this.regionIdsShrink;
     }
 
-    public ListResourcesShrinkRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public ListResourcesShrinkRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListResourcesShrinkRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListResourcesShrinkRequest setIsReload(Boolean isReload) {
+        this.isReload = isReload;
+        return this;
+    }
+    public Boolean getIsReload() {
+        return this.isReload;
     }
 
 }

@@ -3,7 +3,7 @@ package com.aliyun.iacservice20210722.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteResourceResponseBody extends TeaModel {
+public class ReloadResourcesResponseBody extends TeaModel {
     // Id of the request
     @NameInMap("requestId")
     public String requestId;
@@ -11,12 +11,12 @@ public class DeleteResourceResponseBody extends TeaModel {
     @NameInMap("taskId")
     public String taskId;
 
-    public static DeleteResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteResourceResponseBody self = new DeleteResourceResponseBody();
+    public static ReloadResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ReloadResourcesResponseBody self = new ReloadResourcesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteResourceResponseBody setRequestId(String requestId) {
+    public ReloadResourcesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -24,7 +24,7 @@ public class DeleteResourceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteResourceResponseBody setTaskId(String taskId) {
+    public ReloadResourcesResponseBody setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
