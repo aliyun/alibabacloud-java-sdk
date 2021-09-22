@@ -16,8 +16,8 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<ListServiceInstancesRequestFilter> filter;
 
-    @NameInMap("RequestTags")
-    public java.util.List<ListServiceInstancesRequestRequestTags> requestTags;
+    @NameInMap("RequestTag")
+    public java.util.List<ListServiceInstancesRequestRequestTag> requestTag;
 
     public static ListServiceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServiceInstancesRequest self = new ListServiceInstancesRequest();
@@ -56,12 +56,12 @@ public class ListServiceInstancesRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListServiceInstancesRequest setRequestTags(java.util.List<ListServiceInstancesRequestRequestTags> requestTags) {
-        this.requestTags = requestTags;
+    public ListServiceInstancesRequest setRequestTag(java.util.List<ListServiceInstancesRequestRequestTag> requestTag) {
+        this.requestTag = requestTag;
         return this;
     }
-    public java.util.List<ListServiceInstancesRequestRequestTags> getRequestTags() {
-        return this.requestTags;
+    public java.util.List<ListServiceInstancesRequestRequestTag> getRequestTag() {
+        return this.requestTag;
     }
 
     public static class ListServiceInstancesRequestFilter extends TeaModel {
@@ -94,19 +94,19 @@ public class ListServiceInstancesRequest extends TeaModel {
 
     }
 
-    public static class ListServiceInstancesRequestRequestTags extends TeaModel {
+    public static class ListServiceInstancesRequestRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static ListServiceInstancesRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListServiceInstancesRequestRequestTags self = new ListServiceInstancesRequestRequestTags();
+        public static ListServiceInstancesRequestRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceInstancesRequestRequestTag self = new ListServiceInstancesRequestRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public ListServiceInstancesRequestRequestTags setKey(String key) {
+        public ListServiceInstancesRequestRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -114,7 +114,7 @@ public class ListServiceInstancesRequest extends TeaModel {
             return this.key;
         }
 
-        public ListServiceInstancesRequestRequestTags setValue(String value) {
+        public ListServiceInstancesRequestRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

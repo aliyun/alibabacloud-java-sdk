@@ -31,8 +31,8 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("OperationMetadata")
     public CreateServiceInstanceRequestOperationMetadata operationMetadata;
 
-    @NameInMap("RequestTags")
-    public java.util.List<CreateServiceInstanceRequestRequestTags> requestTags;
+    @NameInMap("RequestTag")
+    public java.util.List<CreateServiceInstanceRequestRequestTag> requestTag;
 
     public static CreateServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceRequest self = new CreateServiceInstanceRequest();
@@ -111,12 +111,12 @@ public class CreateServiceInstanceRequest extends TeaModel {
         return this.operationMetadata;
     }
 
-    public CreateServiceInstanceRequest setRequestTags(java.util.List<CreateServiceInstanceRequestRequestTags> requestTags) {
-        this.requestTags = requestTags;
+    public CreateServiceInstanceRequest setRequestTag(java.util.List<CreateServiceInstanceRequestRequestTag> requestTag) {
+        this.requestTag = requestTag;
         return this;
     }
-    public java.util.List<CreateServiceInstanceRequestRequestTags> getRequestTags() {
-        return this.requestTags;
+    public java.util.List<CreateServiceInstanceRequestRequestTag> getRequestTag() {
+        return this.requestTag;
     }
 
     public static class CreateServiceInstanceRequestOperationMetadata extends TeaModel {
@@ -171,19 +171,19 @@ public class CreateServiceInstanceRequest extends TeaModel {
 
     }
 
-    public static class CreateServiceInstanceRequestRequestTags extends TeaModel {
+    public static class CreateServiceInstanceRequestRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static CreateServiceInstanceRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            CreateServiceInstanceRequestRequestTags self = new CreateServiceInstanceRequestRequestTags();
+        public static CreateServiceInstanceRequestRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceInstanceRequestRequestTag self = new CreateServiceInstanceRequestRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateServiceInstanceRequestRequestTags setKey(String key) {
+        public CreateServiceInstanceRequestRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -191,7 +191,7 @@ public class CreateServiceInstanceRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateServiceInstanceRequestRequestTags setValue(String value) {
+        public CreateServiceInstanceRequestRequestTag setValue(String value) {
             this.value = value;
             return this;
         }
