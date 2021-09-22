@@ -7,11 +7,11 @@ public class RunFunctionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RuntimeMeta")
-    public RunFunctionResponseBodyRuntimeMeta runtimeMeta;
-
     @NameInMap("Result")
     public String result;
+
+    @NameInMap("RuntimeMeta")
+    public RunFunctionResponseBodyRuntimeMeta runtimeMeta;
 
     public static RunFunctionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RunFunctionResponseBody self = new RunFunctionResponseBody();
@@ -26,20 +26,20 @@ public class RunFunctionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RunFunctionResponseBody setRuntimeMeta(RunFunctionResponseBodyRuntimeMeta runtimeMeta) {
-        this.runtimeMeta = runtimeMeta;
-        return this;
-    }
-    public RunFunctionResponseBodyRuntimeMeta getRuntimeMeta() {
-        return this.runtimeMeta;
-    }
-
     public RunFunctionResponseBody setResult(String result) {
         this.result = result;
         return this;
     }
     public String getResult() {
         return this.result;
+    }
+
+    public RunFunctionResponseBody setRuntimeMeta(RunFunctionResponseBodyRuntimeMeta runtimeMeta) {
+        this.runtimeMeta = runtimeMeta;
+        return this;
+    }
+    public RunFunctionResponseBodyRuntimeMeta getRuntimeMeta() {
+        return this.runtimeMeta;
     }
 
     public static class RunFunctionResponseBodyRuntimeMeta extends TeaModel {

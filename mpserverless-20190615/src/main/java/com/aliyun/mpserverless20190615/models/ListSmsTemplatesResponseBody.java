@@ -4,17 +4,17 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListSmsTemplatesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("SmsTemplates")
     public java.util.List<ListSmsTemplatesResponseBodySmsTemplates> smsTemplates;
@@ -22,14 +22,6 @@ public class ListSmsTemplatesResponseBody extends TeaModel {
     public static ListSmsTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSmsTemplatesResponseBody self = new ListSmsTemplatesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSmsTemplatesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListSmsTemplatesResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class ListSmsTemplatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListSmsTemplatesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public ListSmsTemplatesResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class ListSmsTemplatesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListSmsTemplatesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListSmsTemplatesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListSmsTemplatesResponseBody setSmsTemplates(java.util.List<ListSmsTemplatesResponseBodySmsTemplates> smsTemplates) {

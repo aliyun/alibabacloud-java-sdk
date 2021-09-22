@@ -7,20 +7,20 @@ public class DescribeSpaceResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("Desc")
-    public String desc;
-
-    @NameInMap("GmtCreate")
-    public String gmtCreate;
+    @NameInMap("SpaceId")
+    public String spaceId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("SpaceId")
-    public String spaceId;
+    @NameInMap("GmtCreate")
+    public String gmtCreate;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Desc")
+    public String desc;
 
     public static DescribeSpaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSpaceResponseBody self = new DescribeSpaceResponseBody();
@@ -35,20 +35,12 @@ public class DescribeSpaceResponseBody extends TeaModel {
         return this.status;
     }
 
-    public DescribeSpaceResponseBody setDesc(String desc) {
-        this.desc = desc;
+    public DescribeSpaceResponseBody setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
-    public String getDesc() {
-        return this.desc;
-    }
-
-    public DescribeSpaceResponseBody setGmtCreate(String gmtCreate) {
-        this.gmtCreate = gmtCreate;
-        return this;
-    }
-    public String getGmtCreate() {
-        return this.gmtCreate;
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
     public DescribeSpaceResponseBody setRequestId(String requestId) {
@@ -59,12 +51,12 @@ public class DescribeSpaceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSpaceResponseBody setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
+    public DescribeSpaceResponseBody setGmtCreate(String gmtCreate) {
+        this.gmtCreate = gmtCreate;
         return this;
     }
-    public String getSpaceId() {
-        return this.spaceId;
+    public String getGmtCreate() {
+        return this.gmtCreate;
     }
 
     public DescribeSpaceResponseBody setName(String name) {
@@ -73,6 +65,14 @@ public class DescribeSpaceResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeSpaceResponseBody setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
     }
 
 }

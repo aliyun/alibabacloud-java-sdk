@@ -4,11 +4,17 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class DescribeServicePolicyResponseBody extends TeaModel {
-    @NameInMap("Policy")
-    public String policy;
+    @NameInMap("SpaceId")
+    public String spaceId;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Policy")
+    public String policy;
+
+    @NameInMap("PolicyName")
+    public String policyName;
 
     @NameInMap("ServiceName")
     public String serviceName;
@@ -16,15 +22,25 @@ public class DescribeServicePolicyResponseBody extends TeaModel {
     @NameInMap("CollectionName")
     public String collectionName;
 
-    @NameInMap("PolicyName")
-    public String policyName;
-
-    @NameInMap("SpaceId")
-    public String spaceId;
-
     public static DescribeServicePolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeServicePolicyResponseBody self = new DescribeServicePolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeServicePolicyResponseBody setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
+        return this;
+    }
+    public String getSpaceId() {
+        return this.spaceId;
+    }
+
+    public DescribeServicePolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeServicePolicyResponseBody setPolicy(String policy) {
@@ -35,12 +51,12 @@ public class DescribeServicePolicyResponseBody extends TeaModel {
         return this.policy;
     }
 
-    public DescribeServicePolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeServicePolicyResponseBody setPolicyName(String policyName) {
+        this.policyName = policyName;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getPolicyName() {
+        return this.policyName;
     }
 
     public DescribeServicePolicyResponseBody setServiceName(String serviceName) {
@@ -57,22 +73,6 @@ public class DescribeServicePolicyResponseBody extends TeaModel {
     }
     public String getCollectionName() {
         return this.collectionName;
-    }
-
-    public DescribeServicePolicyResponseBody setPolicyName(String policyName) {
-        this.policyName = policyName;
-        return this;
-    }
-    public String getPolicyName() {
-        return this.policyName;
-    }
-
-    public DescribeServicePolicyResponseBody setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
-        return this;
-    }
-    public String getSpaceId() {
-        return this.spaceId;
     }
 
 }

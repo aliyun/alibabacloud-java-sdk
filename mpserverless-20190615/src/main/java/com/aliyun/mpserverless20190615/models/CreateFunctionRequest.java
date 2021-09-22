@@ -13,6 +13,9 @@ public class CreateFunctionRequest extends TeaModel {
     @NameInMap("SpaceId")
     public String spaceId;
 
+    @NameInMap("Runtime")
+    public String runtime;
+
     public static CreateFunctionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFunctionRequest self = new CreateFunctionRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class CreateFunctionRequest extends TeaModel {
     }
     public String getSpaceId() {
         return this.spaceId;
+    }
+
+    public CreateFunctionRequest setRuntime(String runtime) {
+        this.runtime = runtime;
+        return this;
+    }
+    public String getRuntime() {
+        return this.runtime;
     }
 
 }

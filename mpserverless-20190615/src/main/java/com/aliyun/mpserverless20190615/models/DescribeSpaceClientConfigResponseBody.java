@@ -7,23 +7,23 @@ public class DescribeSpaceClientConfigResponseBody extends TeaModel {
     @NameInMap("ApiKey")
     public String apiKey;
 
-    @NameInMap("PrivateKey")
-    public String privateKey;
+    @NameInMap("SpaceId")
+    public String spaceId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("SpaceId")
-    public String spaceId;
-
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("PrivateKey")
+    public String privateKey;
 
     @NameInMap("Endpoint")
     public String endpoint;
 
     @NameInMap("FileUploadEndpoint")
     public String fileUploadEndpoint;
+
+    @NameInMap("Name")
+    public String name;
 
     public static DescribeSpaceClientConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSpaceClientConfigResponseBody self = new DescribeSpaceClientConfigResponseBody();
@@ -38,12 +38,12 @@ public class DescribeSpaceClientConfigResponseBody extends TeaModel {
         return this.apiKey;
     }
 
-    public DescribeSpaceClientConfigResponseBody setPrivateKey(String privateKey) {
-        this.privateKey = privateKey;
+    public DescribeSpaceClientConfigResponseBody setSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
-    public String getPrivateKey() {
-        return this.privateKey;
+    public String getSpaceId() {
+        return this.spaceId;
     }
 
     public DescribeSpaceClientConfigResponseBody setRequestId(String requestId) {
@@ -54,20 +54,12 @@ public class DescribeSpaceClientConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSpaceClientConfigResponseBody setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
+    public DescribeSpaceClientConfigResponseBody setPrivateKey(String privateKey) {
+        this.privateKey = privateKey;
         return this;
     }
-    public String getSpaceId() {
-        return this.spaceId;
-    }
-
-    public DescribeSpaceClientConfigResponseBody setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
+    public String getPrivateKey() {
+        return this.privateKey;
     }
 
     public DescribeSpaceClientConfigResponseBody setEndpoint(String endpoint) {
@@ -84,6 +76,14 @@ public class DescribeSpaceClientConfigResponseBody extends TeaModel {
     }
     public String getFileUploadEndpoint() {
         return this.fileUploadEndpoint;
+    }
+
+    public DescribeSpaceClientConfigResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
 }

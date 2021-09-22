@@ -10,9 +10,6 @@ public class DescribeFileUploadSignedUrlRequest extends TeaModel {
     @NameInMap("Size")
     public Long size;
 
-    @NameInMap("TargetPath")
-    public String targetPath;
-
     @NameInMap("SpaceId")
     public String spaceId;
 
@@ -38,14 +35,6 @@ public class DescribeFileUploadSignedUrlRequest extends TeaModel {
     }
     public Long getSize() {
         return this.size;
-    }
-
-    public DescribeFileUploadSignedUrlRequest setTargetPath(String targetPath) {
-        this.targetPath = targetPath;
-        return this;
-    }
-    public String getTargetPath() {
-        return this.targetPath;
     }
 
     public DescribeFileUploadSignedUrlRequest setSpaceId(String spaceId) {

@@ -32,26 +32,18 @@ public class ListAvailableCertificatesResponseBody extends TeaModel {
     }
 
     public static class ListAvailableCertificatesResponseBodyData extends TeaModel {
-        @NameInMap("StatusCode")
-        public String statusCode;
-
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("StatusCode")
+        public String statusCode;
+
         public static ListAvailableCertificatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAvailableCertificatesResponseBodyData self = new ListAvailableCertificatesResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListAvailableCertificatesResponseBodyData setStatusCode(String statusCode) {
-            this.statusCode = statusCode;
-            return this;
-        }
-        public String getStatusCode() {
-            return this.statusCode;
         }
 
         public ListAvailableCertificatesResponseBodyData setName(String name) {
@@ -68,6 +60,14 @@ public class ListAvailableCertificatesResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListAvailableCertificatesResponseBodyData setStatusCode(String statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+        public String getStatusCode() {
+            return this.statusCode;
         }
 
     }

@@ -4,49 +4,33 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class UpdateFunctionResponseBody extends TeaModel {
-    @NameInMap("ModifiedAt")
-    public String modifiedAt;
-
-    @NameInMap("Desc")
-    public String desc;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TimingTriggerConfig")
     public String timingTriggerConfig;
 
-    @NameInMap("CreatedAt")
-    public String createdAt;
-
     @NameInMap("HttpTriggerPath")
     public String httpTriggerPath;
 
-    @NameInMap("Spec")
-    public UpdateFunctionResponseBodySpec spec;
+    @NameInMap("CreatedAt")
+    public String createdAt;
 
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ModifiedAt")
+    public String modifiedAt;
+
+    @NameInMap("Desc")
+    public String desc;
+
+    @NameInMap("Spec")
+    public UpdateFunctionResponseBodySpec spec;
+
     public static UpdateFunctionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateFunctionResponseBody self = new UpdateFunctionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateFunctionResponseBody setModifiedAt(String modifiedAt) {
-        this.modifiedAt = modifiedAt;
-        return this;
-    }
-    public String getModifiedAt() {
-        return this.modifiedAt;
-    }
-
-    public UpdateFunctionResponseBody setDesc(String desc) {
-        this.desc = desc;
-        return this;
-    }
-    public String getDesc() {
-        return this.desc;
     }
 
     public UpdateFunctionResponseBody setRequestId(String requestId) {
@@ -65,14 +49,6 @@ public class UpdateFunctionResponseBody extends TeaModel {
         return this.timingTriggerConfig;
     }
 
-    public UpdateFunctionResponseBody setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-        return this;
-    }
-    public String getCreatedAt() {
-        return this.createdAt;
-    }
-
     public UpdateFunctionResponseBody setHttpTriggerPath(String httpTriggerPath) {
         this.httpTriggerPath = httpTriggerPath;
         return this;
@@ -81,12 +57,12 @@ public class UpdateFunctionResponseBody extends TeaModel {
         return this.httpTriggerPath;
     }
 
-    public UpdateFunctionResponseBody setSpec(UpdateFunctionResponseBodySpec spec) {
-        this.spec = spec;
+    public UpdateFunctionResponseBody setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
         return this;
     }
-    public UpdateFunctionResponseBodySpec getSpec() {
-        return this.spec;
+    public String getCreatedAt() {
+        return this.createdAt;
     }
 
     public UpdateFunctionResponseBody setName(String name) {
@@ -97,12 +73,39 @@ public class UpdateFunctionResponseBody extends TeaModel {
         return this.name;
     }
 
+    public UpdateFunctionResponseBody setModifiedAt(String modifiedAt) {
+        this.modifiedAt = modifiedAt;
+        return this;
+    }
+    public String getModifiedAt() {
+        return this.modifiedAt;
+    }
+
+    public UpdateFunctionResponseBody setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
+    }
+
+    public UpdateFunctionResponseBody setSpec(UpdateFunctionResponseBodySpec spec) {
+        this.spec = spec;
+        return this;
+    }
+    public UpdateFunctionResponseBodySpec getSpec() {
+        return this.spec;
+    }
+
     public static class UpdateFunctionResponseBodySpec extends TeaModel {
         @NameInMap("Timeout")
         public String timeout;
 
         @NameInMap("Runtime")
         public String runtime;
+
+        @NameInMap("InstanceConcurrency")
+        public Integer instanceConcurrency;
 
         @NameInMap("Memory")
         public String memory;
@@ -126,6 +129,14 @@ public class UpdateFunctionResponseBody extends TeaModel {
         }
         public String getRuntime() {
             return this.runtime;
+        }
+
+        public UpdateFunctionResponseBodySpec setInstanceConcurrency(Integer instanceConcurrency) {
+            this.instanceConcurrency = instanceConcurrency;
+            return this;
+        }
+        public Integer getInstanceConcurrency() {
+            return this.instanceConcurrency;
         }
 
         public UpdateFunctionResponseBodySpec setMemory(String memory) {

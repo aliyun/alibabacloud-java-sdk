@@ -4,29 +4,21 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListSpaceResponseBody extends TeaModel {
-    @NameInMap("GmtCreate")
-    public String gmtCreate;
-
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Spaces")
-    public java.util.List<ListSpaceResponseBodySpaces> spaces;
+    @NameInMap("GmtCreate")
+    public String gmtCreate;
 
     @NameInMap("Count")
     public Integer count;
 
+    @NameInMap("Spaces")
+    public java.util.List<ListSpaceResponseBodySpaces> spaces;
+
     public static ListSpaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSpaceResponseBody self = new ListSpaceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSpaceResponseBody setGmtCreate(String gmtCreate) {
-        this.gmtCreate = gmtCreate;
-        return this;
-    }
-    public String getGmtCreate() {
-        return this.gmtCreate;
     }
 
     public ListSpaceResponseBody setRequestId(String requestId) {
@@ -37,12 +29,12 @@ public class ListSpaceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListSpaceResponseBody setSpaces(java.util.List<ListSpaceResponseBodySpaces> spaces) {
-        this.spaces = spaces;
+    public ListSpaceResponseBody setGmtCreate(String gmtCreate) {
+        this.gmtCreate = gmtCreate;
         return this;
     }
-    public java.util.List<ListSpaceResponseBodySpaces> getSpaces() {
-        return this.spaces;
+    public String getGmtCreate() {
+        return this.gmtCreate;
     }
 
     public ListSpaceResponseBody setCount(Integer count) {
@@ -53,15 +45,23 @@ public class ListSpaceResponseBody extends TeaModel {
         return this.count;
     }
 
+    public ListSpaceResponseBody setSpaces(java.util.List<ListSpaceResponseBodySpaces> spaces) {
+        this.spaces = spaces;
+        return this;
+    }
+    public java.util.List<ListSpaceResponseBodySpaces> getSpaces() {
+        return this.spaces;
+    }
+
     public static class ListSpaceResponseBodySpaces extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("SpaceId")
-        public String spaceId;
-
         @NameInMap("GmtCreate")
         public Long gmtCreate;
+
+        @NameInMap("SpaceId")
+        public String spaceId;
 
         @NameInMap("Name")
         public String name;
@@ -82,20 +82,20 @@ public class ListSpaceResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListSpaceResponseBodySpaces setSpaceId(String spaceId) {
-            this.spaceId = spaceId;
-            return this;
-        }
-        public String getSpaceId() {
-            return this.spaceId;
-        }
-
         public ListSpaceResponseBodySpaces setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
         public Long getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public ListSpaceResponseBodySpaces setSpaceId(String spaceId) {
+            this.spaceId = spaceId;
+            return this;
+        }
+        public String getSpaceId() {
+            return this.spaceId;
         }
 
         public ListSpaceResponseBodySpaces setName(String name) {
