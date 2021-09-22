@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ailab_vision_public20210709</artifactId>
-  <version>1.0.8</version>
+  <version>1.0.9</version>
   <packaging>jar</packaging>
   <name>ailab_vision_public20210709</name>
   <description>Alibaba Cloud ailab-vision-public (20210709) SDK for Java
