@@ -4,14 +4,14 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DeleteVerifySchemeResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Result")
     public Boolean result;
@@ -19,6 +19,14 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
     public static DeleteVerifySchemeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteVerifySchemeResponseBody self = new DeleteVerifySchemeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteVerifySchemeResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteVerifySchemeResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class DeleteVerifySchemeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteVerifySchemeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DeleteVerifySchemeResponseBody setResult(Boolean result) {

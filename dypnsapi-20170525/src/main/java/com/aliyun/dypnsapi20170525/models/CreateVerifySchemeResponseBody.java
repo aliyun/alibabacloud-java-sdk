@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateVerifySchemeResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     @NameInMap("GateVerifySchemeDTO")
     public CreateVerifySchemeResponseBodyGateVerifySchemeDTO gateVerifySchemeDTO;
 
-    @NameInMap("Code")
-    public String code;
-
     public static CreateVerifySchemeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVerifySchemeResponseBody self = new CreateVerifySchemeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVerifySchemeResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateVerifySchemeResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class CreateVerifySchemeResponseBody extends TeaModel {
     }
     public CreateVerifySchemeResponseBodyGateVerifySchemeDTO getGateVerifySchemeDTO() {
         return this.gateVerifySchemeDTO;
-    }
-
-    public CreateVerifySchemeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class CreateVerifySchemeResponseBodyGateVerifySchemeDTO extends TeaModel {

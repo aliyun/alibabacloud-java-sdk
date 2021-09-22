@@ -4,6 +4,9 @@ package com.aliyun.dypnsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetAuthTokenResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class GetAuthTokenResponseBody extends TeaModel {
     @NameInMap("TokenInfo")
     public GetAuthTokenResponseBodyTokenInfo tokenInfo;
 
-    @NameInMap("Code")
-    public String code;
-
     public static GetAuthTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAuthTokenResponseBody self = new GetAuthTokenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAuthTokenResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetAuthTokenResponseBody setMessage(String message) {
@@ -45,32 +53,16 @@ public class GetAuthTokenResponseBody extends TeaModel {
         return this.tokenInfo;
     }
 
-    public GetAuthTokenResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class GetAuthTokenResponseBodyTokenInfo extends TeaModel {
-        @NameInMap("JwtToken")
-        public String jwtToken;
-
         @NameInMap("AccessToken")
         public String accessToken;
+
+        @NameInMap("JwtToken")
+        public String jwtToken;
 
         public static GetAuthTokenResponseBodyTokenInfo build(java.util.Map<String, ?> map) throws Exception {
             GetAuthTokenResponseBodyTokenInfo self = new GetAuthTokenResponseBodyTokenInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetAuthTokenResponseBodyTokenInfo setJwtToken(String jwtToken) {
-            this.jwtToken = jwtToken;
-            return this;
-        }
-        public String getJwtToken() {
-            return this.jwtToken;
         }
 
         public GetAuthTokenResponseBodyTokenInfo setAccessToken(String accessToken) {
@@ -79,6 +71,14 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
         public String getAccessToken() {
             return this.accessToken;
+        }
+
+        public GetAuthTokenResponseBodyTokenInfo setJwtToken(String jwtToken) {
+            this.jwtToken = jwtToken;
+            return this;
+        }
+        public String getJwtToken() {
+            return this.jwtToken;
         }
 
     }
