@@ -16,6 +16,9 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("Filter")
     public java.util.List<ListServiceInstancesRequestFilter> filter;
 
+    @NameInMap("RequestTags")
+    public java.util.List<ListServiceInstancesRequestRequestTags> requestTags;
+
     public static ListServiceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServiceInstancesRequest self = new ListServiceInstancesRequest();
         return TeaModel.build(map, self);
@@ -53,6 +56,14 @@ public class ListServiceInstancesRequest extends TeaModel {
         return this.filter;
     }
 
+    public ListServiceInstancesRequest setRequestTags(java.util.List<ListServiceInstancesRequestRequestTags> requestTags) {
+        this.requestTags = requestTags;
+        return this;
+    }
+    public java.util.List<ListServiceInstancesRequestRequestTags> getRequestTags() {
+        return this.requestTags;
+    }
+
     public static class ListServiceInstancesRequestFilter extends TeaModel {
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -79,6 +90,36 @@ public class ListServiceInstancesRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class ListServiceInstancesRequestRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListServiceInstancesRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListServiceInstancesRequestRequestTags self = new ListServiceInstancesRequestRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServiceInstancesRequestRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListServiceInstancesRequestRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

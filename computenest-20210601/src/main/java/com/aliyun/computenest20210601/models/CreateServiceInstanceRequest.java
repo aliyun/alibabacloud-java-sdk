@@ -31,6 +31,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("OperationMetadata")
     public CreateServiceInstanceRequestOperationMetadata operationMetadata;
 
+    @NameInMap("RequestTags")
+    public java.util.List<CreateServiceInstanceRequestRequestTags> requestTags;
+
     public static CreateServiceInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceInstanceRequest self = new CreateServiceInstanceRequest();
         return TeaModel.build(map, self);
@@ -108,6 +111,14 @@ public class CreateServiceInstanceRequest extends TeaModel {
         return this.operationMetadata;
     }
 
+    public CreateServiceInstanceRequest setRequestTags(java.util.List<CreateServiceInstanceRequestRequestTags> requestTags) {
+        this.requestTags = requestTags;
+        return this;
+    }
+    public java.util.List<CreateServiceInstanceRequestRequestTags> getRequestTags() {
+        return this.requestTags;
+    }
+
     public static class CreateServiceInstanceRequestOperationMetadata extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
@@ -156,6 +167,36 @@ public class CreateServiceInstanceRequest extends TeaModel {
         }
         public String getServiceInstanceId() {
             return this.serviceInstanceId;
+        }
+
+    }
+
+    public static class CreateServiceInstanceRequestRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateServiceInstanceRequestRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceInstanceRequestRequestTags self = new CreateServiceInstanceRequestRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceInstanceRequestRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateServiceInstanceRequestRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
