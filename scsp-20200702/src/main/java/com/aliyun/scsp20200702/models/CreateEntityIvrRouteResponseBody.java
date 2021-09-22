@@ -4,14 +4,14 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class CreateEntityIvrRouteResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class CreateEntityIvrRouteResponseBody extends TeaModel {
     public static CreateEntityIvrRouteResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateEntityIvrRouteResponseBody self = new CreateEntityIvrRouteResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateEntityIvrRouteResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateEntityIvrRouteResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class CreateEntityIvrRouteResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateEntityIvrRouteResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CreateEntityIvrRouteResponseBody setSuccess(Boolean success) {

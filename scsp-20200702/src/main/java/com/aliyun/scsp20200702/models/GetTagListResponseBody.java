@@ -4,24 +4,32 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetTagListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<GetTagListResponseBodyData> data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public java.util.List<GetTagListResponseBodyData> data;
 
     public static GetTagListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTagListResponseBody self = new GetTagListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTagListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetTagListResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class GetTagListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTagListResponseBody setData(java.util.List<GetTagListResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetTagListResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public GetTagListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetTagListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetTagListResponseBody setData(java.util.List<GetTagListResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetTagListResponseBodyData> getData() {
+        return this.data;
     }
 
     public static class GetTagListResponseBodyDataTagValues extends TeaModel {
@@ -156,11 +156,11 @@ public class GetTagListResponseBody extends TeaModel {
         @NameInMap("TagGroupCode")
         public String tagGroupCode;
 
-        @NameInMap("TagValues")
-        public java.util.List<GetTagListResponseBodyDataTagValues> tagValues;
-
         @NameInMap("TagGroupName")
         public String tagGroupName;
+
+        @NameInMap("TagValues")
+        public java.util.List<GetTagListResponseBodyDataTagValues> tagValues;
 
         public static GetTagListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTagListResponseBodyData self = new GetTagListResponseBodyData();
@@ -183,20 +183,20 @@ public class GetTagListResponseBody extends TeaModel {
             return this.tagGroupCode;
         }
 
-        public GetTagListResponseBodyData setTagValues(java.util.List<GetTagListResponseBodyDataTagValues> tagValues) {
-            this.tagValues = tagValues;
-            return this;
-        }
-        public java.util.List<GetTagListResponseBodyDataTagValues> getTagValues() {
-            return this.tagValues;
-        }
-
         public GetTagListResponseBodyData setTagGroupName(String tagGroupName) {
             this.tagGroupName = tagGroupName;
             return this;
         }
         public String getTagGroupName() {
             return this.tagGroupName;
+        }
+
+        public GetTagListResponseBodyData setTagValues(java.util.List<GetTagListResponseBodyDataTagValues> tagValues) {
+            this.tagValues = tagValues;
+            return this;
+        }
+        public java.util.List<GetTagListResponseBodyDataTagValues> getTagValues() {
+            return this.tagValues;
         }
 
     }

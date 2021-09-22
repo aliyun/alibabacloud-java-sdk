@@ -4,24 +4,32 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetEntityRouteResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetEntityRouteResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public GetEntityRouteResponseBodyData data;
 
     public static GetEntityRouteResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEntityRouteResponseBody self = new GetEntityRouteResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetEntityRouteResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetEntityRouteResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class GetEntityRouteResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetEntityRouteResponseBody setData(GetEntityRouteResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetEntityRouteResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetEntityRouteResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetEntityRouteResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetEntityRouteResponseBody setData(GetEntityRouteResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetEntityRouteResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetEntityRouteResponseBodyData extends TeaModel {

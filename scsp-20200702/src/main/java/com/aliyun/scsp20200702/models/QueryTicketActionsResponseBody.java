@@ -4,17 +4,17 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketActionsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,14 @@ public class QueryTicketActionsResponseBody extends TeaModel {
     public static QueryTicketActionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTicketActionsResponseBody self = new QueryTicketActionsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryTicketActionsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QueryTicketActionsResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class QueryTicketActionsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public QueryTicketActionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QueryTicketActionsResponseBody setData(String data) {
         this.data = data;
         return this;
@@ -48,12 +48,12 @@ public class QueryTicketActionsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryTicketActionsResponseBody setCode(String code) {
-        this.code = code;
+    public QueryTicketActionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryTicketActionsResponseBody setSuccess(Boolean success) {

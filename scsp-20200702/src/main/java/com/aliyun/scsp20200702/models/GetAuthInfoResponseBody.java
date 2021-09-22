@@ -4,24 +4,32 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetAuthInfoResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetAuthInfoResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public GetAuthInfoResponseBodyData data;
 
     public static GetAuthInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAuthInfoResponseBody self = new GetAuthInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAuthInfoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetAuthInfoResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class GetAuthInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAuthInfoResponseBody setData(GetAuthInfoResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAuthInfoResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetAuthInfoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetAuthInfoResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetAuthInfoResponseBody setData(GetAuthInfoResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAuthInfoResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetAuthInfoResponseBodyData extends TeaModel {

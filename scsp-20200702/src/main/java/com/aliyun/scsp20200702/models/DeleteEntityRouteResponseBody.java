@@ -4,14 +4,14 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class DeleteEntityRouteResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,6 +19,14 @@ public class DeleteEntityRouteResponseBody extends TeaModel {
     public static DeleteEntityRouteResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteEntityRouteResponseBody self = new DeleteEntityRouteResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteEntityRouteResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteEntityRouteResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class DeleteEntityRouteResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteEntityRouteResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public DeleteEntityRouteResponseBody setSuccess(Boolean success) {

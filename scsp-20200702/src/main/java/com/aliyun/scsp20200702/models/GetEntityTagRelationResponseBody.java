@@ -4,24 +4,32 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetEntityTagRelationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<GetEntityTagRelationResponseBodyData> data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public java.util.List<GetEntityTagRelationResponseBodyData> data;
 
     public static GetEntityTagRelationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEntityTagRelationResponseBody self = new GetEntityTagRelationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetEntityTagRelationResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetEntityTagRelationResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class GetEntityTagRelationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetEntityTagRelationResponseBody setData(java.util.List<GetEntityTagRelationResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetEntityTagRelationResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public GetEntityTagRelationResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetEntityTagRelationResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetEntityTagRelationResponseBody setData(java.util.List<GetEntityTagRelationResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetEntityTagRelationResponseBodyData> getData() {
+        return this.data;
     }
 
     public static class GetEntityTagRelationResponseBodyData extends TeaModel {
