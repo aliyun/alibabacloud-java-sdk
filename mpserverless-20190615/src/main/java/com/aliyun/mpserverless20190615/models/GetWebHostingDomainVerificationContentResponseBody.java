@@ -32,23 +32,15 @@ public class GetWebHostingDomainVerificationContentResponseBody extends TeaModel
     }
 
     public static class GetWebHostingDomainVerificationContentResponseBodyData extends TeaModel {
-        @NameInMap("Domain")
-        public String domain;
-
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Domain")
+        public String domain;
 
         public static GetWebHostingDomainVerificationContentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetWebHostingDomainVerificationContentResponseBodyData self = new GetWebHostingDomainVerificationContentResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetWebHostingDomainVerificationContentResponseBodyData setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
         }
 
         public GetWebHostingDomainVerificationContentResponseBodyData setContent(String content) {
@@ -57,6 +49,14 @@ public class GetWebHostingDomainVerificationContentResponseBody extends TeaModel
         }
         public String getContent() {
             return this.content;
+        }
+
+        public GetWebHostingDomainVerificationContentResponseBodyData setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
     }

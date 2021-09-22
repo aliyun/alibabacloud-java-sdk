@@ -4,17 +4,17 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListExtensionsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Extensions")
     public java.util.List<ListExtensionsResponseBodyExtensions> extensions;
@@ -22,14 +22,6 @@ public class ListExtensionsResponseBody extends TeaModel {
     public static ListExtensionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListExtensionsResponseBody self = new ListExtensionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListExtensionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListExtensionsResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class ListExtensionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListExtensionsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public ListExtensionsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class ListExtensionsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListExtensionsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListExtensionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListExtensionsResponseBody setExtensions(java.util.List<ListExtensionsResponseBodyExtensions> extensions) {
@@ -65,14 +65,11 @@ public class ListExtensionsResponseBody extends TeaModel {
     }
 
     public static class ListExtensionsResponseBodyExtensions extends TeaModel {
-        @NameInMap("ExtensionId")
-        public String extensionId;
-
-        @NameInMap("Enabled")
-        public String enabled;
-
         @NameInMap("ExtensionDocumentationLink")
         public String extensionDocumentationLink;
+
+        @NameInMap("ExtensionId")
+        public String extensionId;
 
         @NameInMap("ExtensionDesc")
         public String extensionDesc;
@@ -80,25 +77,12 @@ public class ListExtensionsResponseBody extends TeaModel {
         @NameInMap("ExtensionName")
         public String extensionName;
 
+        @NameInMap("Enabled")
+        public String enabled;
+
         public static ListExtensionsResponseBodyExtensions build(java.util.Map<String, ?> map) throws Exception {
             ListExtensionsResponseBodyExtensions self = new ListExtensionsResponseBodyExtensions();
             return TeaModel.build(map, self);
-        }
-
-        public ListExtensionsResponseBodyExtensions setExtensionId(String extensionId) {
-            this.extensionId = extensionId;
-            return this;
-        }
-        public String getExtensionId() {
-            return this.extensionId;
-        }
-
-        public ListExtensionsResponseBodyExtensions setEnabled(String enabled) {
-            this.enabled = enabled;
-            return this;
-        }
-        public String getEnabled() {
-            return this.enabled;
         }
 
         public ListExtensionsResponseBodyExtensions setExtensionDocumentationLink(String extensionDocumentationLink) {
@@ -107,6 +91,14 @@ public class ListExtensionsResponseBody extends TeaModel {
         }
         public String getExtensionDocumentationLink() {
             return this.extensionDocumentationLink;
+        }
+
+        public ListExtensionsResponseBodyExtensions setExtensionId(String extensionId) {
+            this.extensionId = extensionId;
+            return this;
+        }
+        public String getExtensionId() {
+            return this.extensionId;
         }
 
         public ListExtensionsResponseBodyExtensions setExtensionDesc(String extensionDesc) {
@@ -123,6 +115,14 @@ public class ListExtensionsResponseBody extends TeaModel {
         }
         public String getExtensionName() {
             return this.extensionName;
+        }
+
+        public ListExtensionsResponseBodyExtensions setEnabled(String enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public String getEnabled() {
+            return this.enabled;
         }
 
     }

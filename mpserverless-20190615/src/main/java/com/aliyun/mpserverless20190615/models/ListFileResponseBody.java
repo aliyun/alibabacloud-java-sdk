@@ -4,26 +4,18 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListFileResponseBody extends TeaModel {
-    @NameInMap("DataList")
-    public java.util.List<ListFileResponseBodyDataList> dataList;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Paginator")
     public ListFileResponseBodyPaginator paginator;
 
+    @NameInMap("DataList")
+    public java.util.List<ListFileResponseBodyDataList> dataList;
+
     public static ListFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFileResponseBody self = new ListFileResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListFileResponseBody setDataList(java.util.List<ListFileResponseBodyDataList> dataList) {
-        this.dataList = dataList;
-        return this;
-    }
-    public java.util.List<ListFileResponseBodyDataList> getDataList() {
-        return this.dataList;
     }
 
     public ListFileResponseBody setRequestId(String requestId) {
@@ -40,6 +32,66 @@ public class ListFileResponseBody extends TeaModel {
     }
     public ListFileResponseBodyPaginator getPaginator() {
         return this.paginator;
+    }
+
+    public ListFileResponseBody setDataList(java.util.List<ListFileResponseBodyDataList> dataList) {
+        this.dataList = dataList;
+        return this;
+    }
+    public java.util.List<ListFileResponseBodyDataList> getDataList() {
+        return this.dataList;
+    }
+
+    public static class ListFileResponseBodyPaginator extends TeaModel {
+        @NameInMap("PageNum")
+        public Integer pageNum;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("Total")
+        public Integer total;
+
+        @NameInMap("PageCount")
+        public Integer pageCount;
+
+        public static ListFileResponseBodyPaginator build(java.util.Map<String, ?> map) throws Exception {
+            ListFileResponseBodyPaginator self = new ListFileResponseBodyPaginator();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFileResponseBodyPaginator setPageNum(Integer pageNum) {
+            this.pageNum = pageNum;
+            return this;
+        }
+        public Integer getPageNum() {
+            return this.pageNum;
+        }
+
+        public ListFileResponseBodyPaginator setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListFileResponseBodyPaginator setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
+        public ListFileResponseBodyPaginator setPageCount(Integer pageCount) {
+            this.pageCount = pageCount;
+            return this;
+        }
+        public Integer getPageCount() {
+            return this.pageCount;
+        }
+
     }
 
     public static class ListFileResponseBodyDataList extends TeaModel {
@@ -123,58 +175,6 @@ public class ListFileResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
-        }
-
-    }
-
-    public static class ListFileResponseBodyPaginator extends TeaModel {
-        @NameInMap("PageNum")
-        public Integer pageNum;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("PageCount")
-        public Integer pageCount;
-
-        public static ListFileResponseBodyPaginator build(java.util.Map<String, ?> map) throws Exception {
-            ListFileResponseBodyPaginator self = new ListFileResponseBodyPaginator();
-            return TeaModel.build(map, self);
-        }
-
-        public ListFileResponseBodyPaginator setPageNum(Integer pageNum) {
-            this.pageNum = pageNum;
-            return this;
-        }
-        public Integer getPageNum() {
-            return this.pageNum;
-        }
-
-        public ListFileResponseBodyPaginator setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        public ListFileResponseBodyPaginator setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-        public ListFileResponseBodyPaginator setPageCount(Integer pageCount) {
-            this.pageCount = pageCount;
-            return this;
-        }
-        public Integer getPageCount() {
-            return this.pageCount;
         }
 
     }

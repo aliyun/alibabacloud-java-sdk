@@ -35,11 +35,11 @@ public class DescribeSmsTemplateStatusResponseBody extends TeaModel {
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        @NameInMap("TemplateStatus")
-        public String templateStatus;
-
         @NameInMap("Reason")
         public String reason;
+
+        @NameInMap("TemplateStatus")
+        public String templateStatus;
 
         public static DescribeSmsTemplateStatusResponseBodyTemplateStatuses build(java.util.Map<String, ?> map) throws Exception {
             DescribeSmsTemplateStatusResponseBodyTemplateStatuses self = new DescribeSmsTemplateStatusResponseBodyTemplateStatuses();
@@ -54,20 +54,20 @@ public class DescribeSmsTemplateStatusResponseBody extends TeaModel {
             return this.templateCode;
         }
 
-        public DescribeSmsTemplateStatusResponseBodyTemplateStatuses setTemplateStatus(String templateStatus) {
-            this.templateStatus = templateStatus;
-            return this;
-        }
-        public String getTemplateStatus() {
-            return this.templateStatus;
-        }
-
         public DescribeSmsTemplateStatusResponseBodyTemplateStatuses setReason(String reason) {
             this.reason = reason;
             return this;
         }
         public String getReason() {
             return this.reason;
+        }
+
+        public DescribeSmsTemplateStatusResponseBodyTemplateStatuses setTemplateStatus(String templateStatus) {
+            this.templateStatus = templateStatus;
+            return this;
+        }
+        public String getTemplateStatus() {
+            return this.templateStatus;
         }
 
     }

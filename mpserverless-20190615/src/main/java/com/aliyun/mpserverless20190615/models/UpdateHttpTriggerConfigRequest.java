@@ -10,6 +10,15 @@ public class UpdateHttpTriggerConfigRequest extends TeaModel {
     @NameInMap("SpaceId")
     public String spaceId;
 
+    @NameInMap("CustomDomain")
+    public String customDomain;
+
+    @NameInMap("CustomDomainCertificate")
+    public String customDomainCertificate;
+
+    @NameInMap("CustomDomainPrivateKey")
+    public String customDomainPrivateKey;
+
     public static UpdateHttpTriggerConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateHttpTriggerConfigRequest self = new UpdateHttpTriggerConfigRequest();
         return TeaModel.build(map, self);
@@ -29,6 +38,30 @@ public class UpdateHttpTriggerConfigRequest extends TeaModel {
     }
     public String getSpaceId() {
         return this.spaceId;
+    }
+
+    public UpdateHttpTriggerConfigRequest setCustomDomain(String customDomain) {
+        this.customDomain = customDomain;
+        return this;
+    }
+    public String getCustomDomain() {
+        return this.customDomain;
+    }
+
+    public UpdateHttpTriggerConfigRequest setCustomDomainCertificate(String customDomainCertificate) {
+        this.customDomainCertificate = customDomainCertificate;
+        return this;
+    }
+    public String getCustomDomainCertificate() {
+        return this.customDomainCertificate;
+    }
+
+    public UpdateHttpTriggerConfigRequest setCustomDomainPrivateKey(String customDomainPrivateKey) {
+        this.customDomainPrivateKey = customDomainPrivateKey;
+        return this;
+    }
+    public String getCustomDomainPrivateKey() {
+        return this.customDomainPrivateKey;
     }
 
 }

@@ -7,11 +7,11 @@ public class ListFunctionSpecResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RuntimeList")
-    public java.util.List<ListFunctionSpecResponseBodyRuntimeList> runtimeList;
-
     @NameInMap("MemoryList")
     public java.util.List<ListFunctionSpecResponseBodyMemoryList> memoryList;
+
+    @NameInMap("RuntimeList")
+    public java.util.List<ListFunctionSpecResponseBodyRuntimeList> runtimeList;
 
     public static ListFunctionSpecResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFunctionSpecResponseBody self = new ListFunctionSpecResponseBody();
@@ -26,14 +26,6 @@ public class ListFunctionSpecResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListFunctionSpecResponseBody setRuntimeList(java.util.List<ListFunctionSpecResponseBodyRuntimeList> runtimeList) {
-        this.runtimeList = runtimeList;
-        return this;
-    }
-    public java.util.List<ListFunctionSpecResponseBodyRuntimeList> getRuntimeList() {
-        return this.runtimeList;
-    }
-
     public ListFunctionSpecResponseBody setMemoryList(java.util.List<ListFunctionSpecResponseBodyMemoryList> memoryList) {
         this.memoryList = memoryList;
         return this;
@@ -42,23 +34,12 @@ public class ListFunctionSpecResponseBody extends TeaModel {
         return this.memoryList;
     }
 
-    public static class ListFunctionSpecResponseBodyRuntimeList extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
-        public static ListFunctionSpecResponseBodyRuntimeList build(java.util.Map<String, ?> map) throws Exception {
-            ListFunctionSpecResponseBodyRuntimeList self = new ListFunctionSpecResponseBodyRuntimeList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListFunctionSpecResponseBodyRuntimeList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
+    public ListFunctionSpecResponseBody setRuntimeList(java.util.List<ListFunctionSpecResponseBodyRuntimeList> runtimeList) {
+        this.runtimeList = runtimeList;
+        return this;
+    }
+    public java.util.List<ListFunctionSpecResponseBodyRuntimeList> getRuntimeList() {
+        return this.runtimeList;
     }
 
     public static class ListFunctionSpecResponseBodyMemoryList extends TeaModel {
@@ -71,6 +52,25 @@ public class ListFunctionSpecResponseBody extends TeaModel {
         }
 
         public ListFunctionSpecResponseBodyMemoryList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class ListFunctionSpecResponseBodyRuntimeList extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        public static ListFunctionSpecResponseBodyRuntimeList build(java.util.Map<String, ?> map) throws Exception {
+            ListFunctionSpecResponseBodyRuntimeList self = new ListFunctionSpecResponseBodyRuntimeList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFunctionSpecResponseBodyRuntimeList setName(String name) {
             this.name = name;
             return this;
         }

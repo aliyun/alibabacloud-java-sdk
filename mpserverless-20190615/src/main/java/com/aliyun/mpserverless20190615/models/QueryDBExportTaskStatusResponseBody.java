@@ -13,11 +13,11 @@ public class QueryDBExportTaskStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DetailMessage")
-    public String detailMessage;
-
     @NameInMap("DownloadUrl")
     public String downloadUrl;
+
+    @NameInMap("DetailMessage")
+    public String detailMessage;
 
     public static QueryDBExportTaskStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDBExportTaskStatusResponseBody self = new QueryDBExportTaskStatusResponseBody();
@@ -48,20 +48,20 @@ public class QueryDBExportTaskStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryDBExportTaskStatusResponseBody setDetailMessage(String detailMessage) {
-        this.detailMessage = detailMessage;
-        return this;
-    }
-    public String getDetailMessage() {
-        return this.detailMessage;
-    }
-
     public QueryDBExportTaskStatusResponseBody setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
     }
     public String getDownloadUrl() {
         return this.downloadUrl;
+    }
+
+    public QueryDBExportTaskStatusResponseBody setDetailMessage(String detailMessage) {
+        this.detailMessage = detailMessage;
+        return this;
+    }
+    public String getDetailMessage() {
+        return this.detailMessage;
     }
 
 }

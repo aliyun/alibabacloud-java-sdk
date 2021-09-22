@@ -4,11 +4,11 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class DescribeFunctionResponseBody extends TeaModel {
-    @NameInMap("Function")
-    public DescribeFunctionResponseBodyFunction function;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Function")
+    public DescribeFunctionResponseBodyFunction function;
 
     @NameInMap("Deployment")
     public DescribeFunctionResponseBodyDeployment deployment;
@@ -18,20 +18,20 @@ public class DescribeFunctionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeFunctionResponseBody setFunction(DescribeFunctionResponseBodyFunction function) {
-        this.function = function;
-        return this;
-    }
-    public DescribeFunctionResponseBodyFunction getFunction() {
-        return this.function;
-    }
-
     public DescribeFunctionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeFunctionResponseBody setFunction(DescribeFunctionResponseBodyFunction function) {
+        this.function = function;
+        return this;
+    }
+    public DescribeFunctionResponseBodyFunction getFunction() {
+        return this.function;
     }
 
     public DescribeFunctionResponseBody setDeployment(DescribeFunctionResponseBodyDeployment deployment) {
@@ -48,6 +48,9 @@ public class DescribeFunctionResponseBody extends TeaModel {
 
         @NameInMap("Runtime")
         public String runtime;
+
+        @NameInMap("InstanceConcurrency")
+        public Integer instanceConcurrency;
 
         @NameInMap("Memory")
         public String memory;
@@ -73,6 +76,14 @@ public class DescribeFunctionResponseBody extends TeaModel {
             return this.runtime;
         }
 
+        public DescribeFunctionResponseBodyFunctionSpec setInstanceConcurrency(Integer instanceConcurrency) {
+            this.instanceConcurrency = instanceConcurrency;
+            return this;
+        }
+        public Integer getInstanceConcurrency() {
+            return this.instanceConcurrency;
+        }
+
         public DescribeFunctionResponseBodyFunctionSpec setMemory(String memory) {
             this.memory = memory;
             return this;
@@ -86,9 +97,6 @@ public class DescribeFunctionResponseBody extends TeaModel {
     public static class DescribeFunctionResponseBodyFunction extends TeaModel {
         @NameInMap("TimingTriggerConfig")
         public String timingTriggerConfig;
-
-        @NameInMap("Spec")
-        public DescribeFunctionResponseBodyFunctionSpec spec;
 
         @NameInMap("HttpTriggerPath")
         public String httpTriggerPath;
@@ -105,6 +113,9 @@ public class DescribeFunctionResponseBody extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
+        @NameInMap("Spec")
+        public DescribeFunctionResponseBodyFunctionSpec spec;
+
         public static DescribeFunctionResponseBodyFunction build(java.util.Map<String, ?> map) throws Exception {
             DescribeFunctionResponseBodyFunction self = new DescribeFunctionResponseBodyFunction();
             return TeaModel.build(map, self);
@@ -116,14 +127,6 @@ public class DescribeFunctionResponseBody extends TeaModel {
         }
         public String getTimingTriggerConfig() {
             return this.timingTriggerConfig;
-        }
-
-        public DescribeFunctionResponseBodyFunction setSpec(DescribeFunctionResponseBodyFunctionSpec spec) {
-            this.spec = spec;
-            return this;
-        }
-        public DescribeFunctionResponseBodyFunctionSpec getSpec() {
-            return this.spec;
         }
 
         public DescribeFunctionResponseBodyFunction setHttpTriggerPath(String httpTriggerPath) {
@@ -166,14 +169,22 @@ public class DescribeFunctionResponseBody extends TeaModel {
             return this.desc;
         }
 
+        public DescribeFunctionResponseBodyFunction setSpec(DescribeFunctionResponseBodyFunctionSpec spec) {
+            this.spec = spec;
+            return this;
+        }
+        public DescribeFunctionResponseBodyFunctionSpec getSpec() {
+            return this.spec;
+        }
+
     }
 
     public static class DescribeFunctionResponseBodyDeployment extends TeaModel {
-        @NameInMap("DeploymentId")
-        public String deploymentId;
-
         @NameInMap("CreatedAt")
         public String createdAt;
+
+        @NameInMap("DeploymentId")
+        public String deploymentId;
 
         @NameInMap("DownloadSignedUrl")
         public String downloadSignedUrl;
@@ -189,20 +200,20 @@ public class DescribeFunctionResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeFunctionResponseBodyDeployment setDeploymentId(String deploymentId) {
-            this.deploymentId = deploymentId;
-            return this;
-        }
-        public String getDeploymentId() {
-            return this.deploymentId;
-        }
-
         public DescribeFunctionResponseBodyDeployment setCreatedAt(String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
         public String getCreatedAt() {
             return this.createdAt;
+        }
+
+        public DescribeFunctionResponseBodyDeployment setDeploymentId(String deploymentId) {
+            this.deploymentId = deploymentId;
+            return this;
+        }
+        public String getDeploymentId() {
+            return this.deploymentId;
         }
 
         public DescribeFunctionResponseBodyDeployment setDownloadSignedUrl(String downloadSignedUrl) {

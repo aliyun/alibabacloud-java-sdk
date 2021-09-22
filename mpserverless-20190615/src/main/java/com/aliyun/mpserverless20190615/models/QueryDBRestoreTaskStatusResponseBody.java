@@ -7,11 +7,11 @@ public class QueryDBRestoreTaskStatusResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FailedCount")
     public Long failedCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("DetailMessage")
     public String detailMessage;
@@ -32,20 +32,20 @@ public class QueryDBRestoreTaskStatusResponseBody extends TeaModel {
         return this.status;
     }
 
-    public QueryDBRestoreTaskStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QueryDBRestoreTaskStatusResponseBody setFailedCount(Long failedCount) {
         this.failedCount = failedCount;
         return this;
     }
     public Long getFailedCount() {
         return this.failedCount;
+    }
+
+    public QueryDBRestoreTaskStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryDBRestoreTaskStatusResponseBody setDetailMessage(String detailMessage) {

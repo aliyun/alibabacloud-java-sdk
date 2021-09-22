@@ -4,17 +4,14 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class CreateDBImportTaskResponseBody extends TeaModel {
-    @NameInMap("Policy")
-    public String policy;
+    @NameInMap("Host")
+    public String host;
+
+    @NameInMap("ExpireTime")
+    public String expireTime;
 
     @NameInMap("FileKey")
     public String fileKey;
-
-    @NameInMap("TaskId")
-    public String taskId;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("AccessKeyId")
     public String accessKeyId;
@@ -22,23 +19,34 @@ public class CreateDBImportTaskResponseBody extends TeaModel {
     @NameInMap("Signature")
     public String signature;
 
-    @NameInMap("Host")
-    public String host;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("ExpireTime")
-    public String expireTime;
+    @NameInMap("Policy")
+    public String policy;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static CreateDBImportTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDBImportTaskResponseBody self = new CreateDBImportTaskResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBImportTaskResponseBody setPolicy(String policy) {
-        this.policy = policy;
+    public CreateDBImportTaskResponseBody setHost(String host) {
+        this.host = host;
         return this;
     }
-    public String getPolicy() {
-        return this.policy;
+    public String getHost() {
+        return this.host;
+    }
+
+    public CreateDBImportTaskResponseBody setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public String getExpireTime() {
+        return this.expireTime;
     }
 
     public CreateDBImportTaskResponseBody setFileKey(String fileKey) {
@@ -47,22 +55,6 @@ public class CreateDBImportTaskResponseBody extends TeaModel {
     }
     public String getFileKey() {
         return this.fileKey;
-    }
-
-    public CreateDBImportTaskResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public CreateDBImportTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateDBImportTaskResponseBody setAccessKeyId(String accessKeyId) {
@@ -81,20 +73,28 @@ public class CreateDBImportTaskResponseBody extends TeaModel {
         return this.signature;
     }
 
-    public CreateDBImportTaskResponseBody setHost(String host) {
-        this.host = host;
+    public CreateDBImportTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getHost() {
-        return this.host;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateDBImportTaskResponseBody setExpireTime(String expireTime) {
-        this.expireTime = expireTime;
+    public CreateDBImportTaskResponseBody setPolicy(String policy) {
+        this.policy = policy;
         return this;
     }
-    public String getExpireTime() {
-        return this.expireTime;
+    public String getPolicy() {
+        return this.policy;
+    }
+
+    public CreateDBImportTaskResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

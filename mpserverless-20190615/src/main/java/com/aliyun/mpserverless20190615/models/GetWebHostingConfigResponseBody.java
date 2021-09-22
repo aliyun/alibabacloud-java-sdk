@@ -35,14 +35,17 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
         @NameInMap("SpaceId")
         public String spaceId;
 
+        @NameInMap("AllowedIps")
+        public String allowedIps;
+
+        @NameInMap("ErrorPath")
+        public String errorPath;
+
         @NameInMap("DefaultDomain")
         public String defaultDomain;
 
         @NameInMap("IndexPath")
         public String indexPath;
-
-        @NameInMap("ErrorPath")
-        public String errorPath;
 
         public static GetWebHostingConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetWebHostingConfigResponseBodyData self = new GetWebHostingConfigResponseBodyData();
@@ -55,6 +58,22 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
         }
         public String getSpaceId() {
             return this.spaceId;
+        }
+
+        public GetWebHostingConfigResponseBodyData setAllowedIps(String allowedIps) {
+            this.allowedIps = allowedIps;
+            return this;
+        }
+        public String getAllowedIps() {
+            return this.allowedIps;
+        }
+
+        public GetWebHostingConfigResponseBodyData setErrorPath(String errorPath) {
+            this.errorPath = errorPath;
+            return this;
+        }
+        public String getErrorPath() {
+            return this.errorPath;
         }
 
         public GetWebHostingConfigResponseBodyData setDefaultDomain(String defaultDomain) {
@@ -71,14 +90,6 @@ public class GetWebHostingConfigResponseBody extends TeaModel {
         }
         public String getIndexPath() {
             return this.indexPath;
-        }
-
-        public GetWebHostingConfigResponseBodyData setErrorPath(String errorPath) {
-            this.errorPath = errorPath;
-            return this;
-        }
-        public String getErrorPath() {
-            return this.errorPath;
         }
 
     }

@@ -106,26 +106,18 @@ public class ListWebHostingFilesResponseBody extends TeaModel {
     }
 
     public static class ListWebHostingFilesResponseBodyData extends TeaModel {
-        @NameInMap("WebHostingFiles")
-        public java.util.List<ListWebHostingFilesResponseBodyDataWebHostingFiles> webHostingFiles;
-
         @NameInMap("NextMarker")
         public String nextMarker;
 
         @NameInMap("Count")
         public Integer count;
 
+        @NameInMap("WebHostingFiles")
+        public java.util.List<ListWebHostingFilesResponseBodyDataWebHostingFiles> webHostingFiles;
+
         public static ListWebHostingFilesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListWebHostingFilesResponseBodyData self = new ListWebHostingFilesResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListWebHostingFilesResponseBodyData setWebHostingFiles(java.util.List<ListWebHostingFilesResponseBodyDataWebHostingFiles> webHostingFiles) {
-            this.webHostingFiles = webHostingFiles;
-            return this;
-        }
-        public java.util.List<ListWebHostingFilesResponseBodyDataWebHostingFiles> getWebHostingFiles() {
-            return this.webHostingFiles;
         }
 
         public ListWebHostingFilesResponseBodyData setNextMarker(String nextMarker) {
@@ -142,6 +134,14 @@ public class ListWebHostingFilesResponseBody extends TeaModel {
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public ListWebHostingFilesResponseBodyData setWebHostingFiles(java.util.List<ListWebHostingFilesResponseBodyDataWebHostingFiles> webHostingFiles) {
+            this.webHostingFiles = webHostingFiles;
+            return this;
+        }
+        public java.util.List<ListWebHostingFilesResponseBodyDataWebHostingFiles> getWebHostingFiles() {
+            return this.webHostingFiles;
         }
 
     }

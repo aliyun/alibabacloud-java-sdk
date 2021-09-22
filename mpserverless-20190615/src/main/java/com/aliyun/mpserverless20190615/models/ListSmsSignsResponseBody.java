@@ -4,32 +4,24 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListSmsSignsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("SmsSigns")
-    public java.util.List<ListSmsSignsResponseBodySmsSigns> smsSigns;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("SmsSigns")
+    public java.util.List<ListSmsSignsResponseBodySmsSigns> smsSigns;
+
     public static ListSmsSignsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSmsSignsResponseBody self = new ListSmsSignsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSmsSignsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListSmsSignsResponseBody setRequestId(String requestId) {
@@ -40,12 +32,28 @@ public class ListSmsSignsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListSmsSignsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public ListSmsSignsResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSmsSignsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListSmsSignsResponseBody setSmsSigns(java.util.List<ListSmsSignsResponseBodySmsSigns> smsSigns) {
@@ -56,29 +64,21 @@ public class ListSmsSignsResponseBody extends TeaModel {
         return this.smsSigns;
     }
 
-    public ListSmsSignsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public static class ListSmsSignsResponseBodySmsSigns extends TeaModel {
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        @NameInMap("Remark")
-        public String remark;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
         @NameInMap("SignId")
         public String signId;
 
+        @NameInMap("Remark")
+        public String remark;
+
         @NameInMap("SignName")
         public String signName;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         public static ListSmsSignsResponseBodySmsSigns build(java.util.Map<String, ?> map) throws Exception {
             ListSmsSignsResponseBodySmsSigns self = new ListSmsSignsResponseBodySmsSigns();
@@ -93,22 +93,6 @@ public class ListSmsSignsResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public ListSmsSignsResponseBodySmsSigns setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
-        }
-
-        public ListSmsSignsResponseBodySmsSigns setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
         public ListSmsSignsResponseBodySmsSigns setSignId(String signId) {
             this.signId = signId;
             return this;
@@ -117,12 +101,28 @@ public class ListSmsSignsResponseBody extends TeaModel {
             return this.signId;
         }
 
+        public ListSmsSignsResponseBodySmsSigns setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
         public ListSmsSignsResponseBodySmsSigns setSignName(String signName) {
             this.signName = signName;
             return this;
         }
         public String getSignName() {
             return this.signName;
+        }
+
+        public ListSmsSignsResponseBodySmsSigns setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
     }

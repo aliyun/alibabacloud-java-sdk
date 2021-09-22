@@ -13,6 +13,9 @@ public class ModifyWebHostingConfigRequest extends TeaModel {
     @NameInMap("ErrorPath")
     public String errorPath;
 
+    @NameInMap("AllowedIps")
+    public String allowedIps;
+
     public static ModifyWebHostingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyWebHostingConfigRequest self = new ModifyWebHostingConfigRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ModifyWebHostingConfigRequest extends TeaModel {
     }
     public String getErrorPath() {
         return this.errorPath;
+    }
+
+    public ModifyWebHostingConfigRequest setAllowedIps(String allowedIps) {
+        this.allowedIps = allowedIps;
+        return this;
+    }
+    public String getAllowedIps() {
+        return this.allowedIps;
     }
 
 }

@@ -25,6 +25,12 @@ public class UpdateFunctionRequest extends TeaModel {
     @NameInMap("TimingTriggerConfig")
     public String timingTriggerConfig;
 
+    @NameInMap("InstanceConcurrency")
+    public Integer instanceConcurrency;
+
+    @NameInMap("Runtime")
+    public String runtime;
+
     public static UpdateFunctionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFunctionRequest self = new UpdateFunctionRequest();
         return TeaModel.build(map, self);
@@ -84,6 +90,22 @@ public class UpdateFunctionRequest extends TeaModel {
     }
     public String getTimingTriggerConfig() {
         return this.timingTriggerConfig;
+    }
+
+    public UpdateFunctionRequest setInstanceConcurrency(Integer instanceConcurrency) {
+        this.instanceConcurrency = instanceConcurrency;
+        return this;
+    }
+    public Integer getInstanceConcurrency() {
+        return this.instanceConcurrency;
+    }
+
+    public UpdateFunctionRequest setRuntime(String runtime) {
+        this.runtime = runtime;
+        return this;
+    }
+    public String getRuntime() {
+        return this.runtime;
     }
 
 }

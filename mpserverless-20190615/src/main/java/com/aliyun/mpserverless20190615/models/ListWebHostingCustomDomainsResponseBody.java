@@ -56,6 +56,12 @@ public class ListWebHostingCustomDomainsResponseBody extends TeaModel {
         @NameInMap("Cname")
         public String cname;
 
+        @NameInMap("EnableCors")
+        public Boolean enableCors;
+
+        @NameInMap("AccessControlAllowOrigin")
+        public String accessControlAllowOrigin;
+
         public static ListWebHostingCustomDomainsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListWebHostingCustomDomainsResponseBodyData self = new ListWebHostingCustomDomainsResponseBodyData();
             return TeaModel.build(map, self);
@@ -123,6 +129,22 @@ public class ListWebHostingCustomDomainsResponseBody extends TeaModel {
         }
         public String getCname() {
             return this.cname;
+        }
+
+        public ListWebHostingCustomDomainsResponseBodyData setEnableCors(Boolean enableCors) {
+            this.enableCors = enableCors;
+            return this;
+        }
+        public Boolean getEnableCors() {
+            return this.enableCors;
+        }
+
+        public ListWebHostingCustomDomainsResponseBodyData setAccessControlAllowOrigin(String accessControlAllowOrigin) {
+            this.accessControlAllowOrigin = accessControlAllowOrigin;
+            return this;
+        }
+        public String getAccessControlAllowOrigin() {
+            return this.accessControlAllowOrigin;
         }
 
     }
