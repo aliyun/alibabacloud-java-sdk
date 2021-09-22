@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>nbftestpop20210916_103600223</artifactId>
-  <version>2.0.1</version>
+  <version>2.0.2</version>
   <packaging>jar</packaging>
   <name>nbftestpop20210916_103600223</name>
   <description>Alibaba Cloud NbfTestPop (20210916_103600223) SDK for Java
