@@ -41,6 +41,15 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
 
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
+
+    @NameInMap("HealthCheckReq")
+    public String healthCheckReq;
+
+    @NameInMap("HealthCheckExp")
+    public String healthCheckExp;
+
     public static DescribeLoadBalancerUDPListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerUDPListenerAttributeResponseBody self = new DescribeLoadBalancerUDPListenerAttributeResponseBody();
         return TeaModel.build(map, self);
@@ -140,6 +149,30 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     }
     public Integer getBackendServerPort() {
         return this.backendServerPort;
+    }
+
+    public DescribeLoadBalancerUDPListenerAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        this.healthCheckConnectPort = healthCheckConnectPort;
+        return this;
+    }
+    public Integer getHealthCheckConnectPort() {
+        return this.healthCheckConnectPort;
+    }
+
+    public DescribeLoadBalancerUDPListenerAttributeResponseBody setHealthCheckReq(String healthCheckReq) {
+        this.healthCheckReq = healthCheckReq;
+        return this;
+    }
+    public String getHealthCheckReq() {
+        return this.healthCheckReq;
+    }
+
+    public DescribeLoadBalancerUDPListenerAttributeResponseBody setHealthCheckExp(String healthCheckExp) {
+        this.healthCheckExp = healthCheckExp;
+        return this;
+    }
+    public String getHealthCheckExp() {
+        return this.healthCheckExp;
     }
 
 }

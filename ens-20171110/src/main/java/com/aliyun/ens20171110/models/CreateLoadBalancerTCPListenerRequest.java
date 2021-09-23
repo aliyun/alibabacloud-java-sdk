@@ -64,6 +64,10 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
 
+    // 健康检查使用的端口。  取值：1~65535。  不设置此参数时，表示使用后端服务端口（BackendServerPort）。
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
+
     public static CreateLoadBalancerTCPListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerTCPListenerRequest self = new CreateLoadBalancerTCPListenerRequest();
         return TeaModel.build(map, self);
@@ -187,6 +191,14 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     }
     public Integer getBackendServerPort() {
         return this.backendServerPort;
+    }
+
+    public CreateLoadBalancerTCPListenerRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        this.healthCheckConnectPort = healthCheckConnectPort;
+        return this;
+    }
+    public Integer getHealthCheckConnectPort() {
+        return this.healthCheckConnectPort;
     }
 
 }

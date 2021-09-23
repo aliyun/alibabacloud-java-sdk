@@ -40,6 +40,14 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     @NameInMap("HealthCheckConnectPort")
     public Integer healthCheckConnectPort;
 
+    // UDP监听健康检查的请求串，只允许包含字母、数字，最大长度限制为64个字符。
+    @NameInMap("HealthCheckReq")
+    public String healthCheckReq;
+
+    // UDP监听健康检查的响应串，只允许包含字母、数字，最大长度限制为64个字符。
+    @NameInMap("HealthCheckExp")
+    public String healthCheckExp;
+
     public static SetLoadBalancerUDPListenerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLoadBalancerUDPListenerAttributeRequest self = new SetLoadBalancerUDPListenerAttributeRequest();
         return TeaModel.build(map, self);
@@ -115,6 +123,22 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     }
     public Integer getHealthCheckConnectPort() {
         return this.healthCheckConnectPort;
+    }
+
+    public SetLoadBalancerUDPListenerAttributeRequest setHealthCheckReq(String healthCheckReq) {
+        this.healthCheckReq = healthCheckReq;
+        return this;
+    }
+    public String getHealthCheckReq() {
+        return this.healthCheckReq;
+    }
+
+    public SetLoadBalancerUDPListenerAttributeRequest setHealthCheckExp(String healthCheckExp) {
+        this.healthCheckExp = healthCheckExp;
+        return this;
+    }
+    public String getHealthCheckExp() {
+        return this.healthCheckExp;
     }
 
 }
