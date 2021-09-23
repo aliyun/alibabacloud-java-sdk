@@ -4,8 +4,8 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,8 +13,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Snapshots")
     public DescribeSnapshotsResponseBodySnapshots snapshots;
@@ -24,12 +24,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSnapshotsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeSnapshotsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeSnapshotsResponseBody setRequestId(String requestId) {
@@ -48,12 +48,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeSnapshotsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeSnapshotsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeSnapshotsResponseBody setSnapshots(DescribeSnapshotsResponseBodySnapshots snapshots) {
@@ -77,20 +77,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("SourceFileSystemId")
         public String sourceFileSystemId;
 
-        @NameInMap("RetentionDays")
-        public Integer retentionDays;
-
         @NameInMap("RemainTime")
         public Integer remainTime;
+
+        @NameInMap("RetentionDays")
+        public Integer retentionDays;
 
         @NameInMap("SourceFileSystemSize")
         public Long sourceFileSystemSize;
 
-        @NameInMap("SourceFileSystemVersion")
-        public String sourceFileSystemVersion;
-
         @NameInMap("SnapshotName")
         public String snapshotName;
+
+        @NameInMap("SourceFileSystemVersion")
+        public String sourceFileSystemVersion;
 
         @NameInMap("EncryptType")
         public Integer encryptType;
@@ -138,20 +138,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.sourceFileSystemId;
         }
 
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setRetentionDays(Integer retentionDays) {
-            this.retentionDays = retentionDays;
-            return this;
-        }
-        public Integer getRetentionDays() {
-            return this.retentionDays;
-        }
-
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setRemainTime(Integer remainTime) {
             this.remainTime = remainTime;
             return this;
         }
         public Integer getRemainTime() {
             return this.remainTime;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setRetentionDays(Integer retentionDays) {
+            this.retentionDays = retentionDays;
+            return this;
+        }
+        public Integer getRetentionDays() {
+            return this.retentionDays;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceFileSystemSize(Long sourceFileSystemSize) {
@@ -162,20 +162,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.sourceFileSystemSize;
         }
 
-        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceFileSystemVersion(String sourceFileSystemVersion) {
-            this.sourceFileSystemVersion = sourceFileSystemVersion;
-            return this;
-        }
-        public String getSourceFileSystemVersion() {
-            return this.sourceFileSystemVersion;
-        }
-
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotName(String snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
         public String getSnapshotName() {
             return this.snapshotName;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceFileSystemVersion(String sourceFileSystemVersion) {
+            this.sourceFileSystemVersion = sourceFileSystemVersion;
+            return this;
+        }
+        public String getSourceFileSystemVersion() {
+            return this.sourceFileSystemVersion;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setEncryptType(Integer encryptType) {

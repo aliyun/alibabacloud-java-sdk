@@ -19,6 +19,9 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     @NameInMap("StorageType")
     public String storageType;
 
+    @NameInMap("Paths")
+    public java.util.List<String> paths;
+
     public static CreateLifecyclePolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLifecyclePolicyRequest self = new CreateLifecyclePolicyRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     }
     public String getStorageType() {
         return this.storageType;
+    }
+
+    public CreateLifecyclePolicyRequest setPaths(java.util.List<String> paths) {
+        this.paths = paths;
+        return this;
+    }
+    public java.util.List<String> getPaths() {
+        return this.paths;
     }
 
 }

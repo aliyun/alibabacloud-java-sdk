@@ -69,6 +69,55 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType extends TeaModel {
+        @NameInMap("StorageType")
+        public String storageType;
+
+        @NameInMap("ProtocolType")
+        public String protocolType;
+
+        public static DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType self = new DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        public DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
+        }
+
+    }
+
+    public static class DescribeZonesResponseBodyZonesZoneInstanceTypes extends TeaModel {
+        @NameInMap("InstanceType")
+        public java.util.List<DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType> instanceType;
+
+        public static DescribeZonesResponseBodyZonesZoneInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZonesResponseBodyZonesZoneInstanceTypes self = new DescribeZonesResponseBodyZonesZoneInstanceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseBodyZonesZoneInstanceTypes setInstanceType(java.util.List<DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType> instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public java.util.List<DescribeZonesResponseBodyZonesZoneInstanceTypesInstanceType> getInstanceType() {
+            return this.instanceType;
+        }
+
+    }
+
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
         @NameInMap("Performance")
         public DescribeZonesResponseBodyZonesZonePerformance performance;
@@ -78,6 +127,9 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("InstanceTypes")
+        public DescribeZonesResponseBodyZonesZoneInstanceTypes instanceTypes;
 
         public static DescribeZonesResponseBodyZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseBodyZonesZone self = new DescribeZonesResponseBodyZonesZone();
@@ -106,6 +158,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeZonesResponseBodyZonesZone setInstanceTypes(DescribeZonesResponseBodyZonesZoneInstanceTypes instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public DescribeZonesResponseBodyZonesZoneInstanceTypes getInstanceTypes() {
+            return this.instanceTypes;
         }
 
     }

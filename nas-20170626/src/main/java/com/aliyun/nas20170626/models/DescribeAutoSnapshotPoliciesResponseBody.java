@@ -4,8 +4,8 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,8 +13,8 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("AutoSnapshotPolicies")
     public DescribeAutoSnapshotPoliciesResponseBodyAutoSnapshotPolicies autoSnapshotPolicies;
@@ -24,12 +24,12 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAutoSnapshotPoliciesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeAutoSnapshotPoliciesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAutoSnapshotPoliciesResponseBody setRequestId(String requestId) {
@@ -48,12 +48,12 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAutoSnapshotPoliciesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAutoSnapshotPoliciesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeAutoSnapshotPoliciesResponseBody setAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesResponseBodyAutoSnapshotPolicies autoSnapshotPolicies) {

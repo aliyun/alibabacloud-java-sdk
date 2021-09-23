@@ -7,9 +7,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
-    @NameInMap("Description")
-    public String description;
-
     @NameInMap("FileSystemType")
     public String fileSystemType;
 
@@ -21,27 +18,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
-
-    @NameInMap("UseUTCDateTime")
-    public Boolean useUTCDateTime;
-
-    @NameInMap("StorageType")
-    public String storageType;
-
-    @NameInMap("PackageIds")
-    public String packageIds;
-
-    @NameInMap("FileSystemIds")
-    public String fileSystemIds;
-
-    @NameInMap("OrderByField")
-    public String orderByField;
-
-    @NameInMap("SortOrder")
-    public String sortOrder;
-
-    @NameInMap("ChargeType")
-    public String chargeType;
 
     @NameInMap("Tag")
     public java.util.List<DescribeFileSystemsRequestTag> tag;
@@ -57,14 +33,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
     }
     public String getFileSystemId() {
         return this.fileSystemId;
-    }
-
-    public DescribeFileSystemsRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public DescribeFileSystemsRequest setFileSystemType(String fileSystemType) {
@@ -97,62 +65,6 @@ public class DescribeFileSystemsRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
-    }
-
-    public DescribeFileSystemsRequest setUseUTCDateTime(Boolean useUTCDateTime) {
-        this.useUTCDateTime = useUTCDateTime;
-        return this;
-    }
-    public Boolean getUseUTCDateTime() {
-        return this.useUTCDateTime;
-    }
-
-    public DescribeFileSystemsRequest setStorageType(String storageType) {
-        this.storageType = storageType;
-        return this;
-    }
-    public String getStorageType() {
-        return this.storageType;
-    }
-
-    public DescribeFileSystemsRequest setPackageIds(String packageIds) {
-        this.packageIds = packageIds;
-        return this;
-    }
-    public String getPackageIds() {
-        return this.packageIds;
-    }
-
-    public DescribeFileSystemsRequest setFileSystemIds(String fileSystemIds) {
-        this.fileSystemIds = fileSystemIds;
-        return this;
-    }
-    public String getFileSystemIds() {
-        return this.fileSystemIds;
-    }
-
-    public DescribeFileSystemsRequest setOrderByField(String orderByField) {
-        this.orderByField = orderByField;
-        return this;
-    }
-    public String getOrderByField() {
-        return this.orderByField;
-    }
-
-    public DescribeFileSystemsRequest setSortOrder(String sortOrder) {
-        this.sortOrder = sortOrder;
-        return this;
-    }
-    public String getSortOrder() {
-        return this.sortOrder;
-    }
-
-    public DescribeFileSystemsRequest setChargeType(String chargeType) {
-        this.chargeType = chargeType;
-        return this;
-    }
-    public String getChargeType() {
-        return this.chargeType;
     }
 
     public DescribeFileSystemsRequest setTag(java.util.List<DescribeFileSystemsRequestTag> tag) {

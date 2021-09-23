@@ -4,11 +4,8 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessGroupsResponseBody extends TeaModel {
-    @NameInMap("AccessGroups")
-    public DescribeAccessGroupsResponseBodyAccessGroups accessGroups;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,28 +13,23 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("AccessGroups")
+    public DescribeAccessGroupsResponseBodyAccessGroups accessGroups;
 
     public static DescribeAccessGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessGroupsResponseBody self = new DescribeAccessGroupsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAccessGroupsResponseBody setAccessGroups(DescribeAccessGroupsResponseBodyAccessGroups accessGroups) {
-        this.accessGroups = accessGroups;
+    public DescribeAccessGroupsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public DescribeAccessGroupsResponseBodyAccessGroups getAccessGroups() {
-        return this.accessGroups;
-    }
-
-    public DescribeAccessGroupsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAccessGroupsResponseBody setRequestId(String requestId) {
@@ -56,12 +48,20 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAccessGroupsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAccessGroupsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeAccessGroupsResponseBody setAccessGroups(DescribeAccessGroupsResponseBodyAccessGroups accessGroups) {
+        this.accessGroups = accessGroups;
+        return this;
+    }
+    public DescribeAccessGroupsResponseBodyAccessGroups getAccessGroups() {
+        return this.accessGroups;
     }
 
     public static class DescribeAccessGroupsResponseBodyAccessGroupsAccessGroup extends TeaModel {

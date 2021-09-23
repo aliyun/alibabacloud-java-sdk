@@ -10,9 +10,6 @@ public class DescribeAccessRulesRequest extends TeaModel {
     @NameInMap("AccessRuleId")
     public String accessRuleId;
 
-    @NameInMap("SourceCidrIp")
-    public String sourceCidrIp;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -21,9 +18,6 @@ public class DescribeAccessRulesRequest extends TeaModel {
 
     @NameInMap("FileSystemType")
     public String fileSystemType;
-
-    @NameInMap("SourceCidrIpFilter")
-    public String sourceCidrIpFilter;
 
     public static DescribeAccessRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessRulesRequest self = new DescribeAccessRulesRequest();
@@ -44,14 +38,6 @@ public class DescribeAccessRulesRequest extends TeaModel {
     }
     public String getAccessRuleId() {
         return this.accessRuleId;
-    }
-
-    public DescribeAccessRulesRequest setSourceCidrIp(String sourceCidrIp) {
-        this.sourceCidrIp = sourceCidrIp;
-        return this;
-    }
-    public String getSourceCidrIp() {
-        return this.sourceCidrIp;
     }
 
     public DescribeAccessRulesRequest setPageSize(Integer pageSize) {
@@ -76,14 +62,6 @@ public class DescribeAccessRulesRequest extends TeaModel {
     }
     public String getFileSystemType() {
         return this.fileSystemType;
-    }
-
-    public DescribeAccessRulesRequest setSourceCidrIpFilter(String sourceCidrIpFilter) {
-        this.sourceCidrIpFilter = sourceCidrIpFilter;
-        return this;
-    }
-    public String getSourceCidrIpFilter() {
-        return this.sourceCidrIpFilter;
     }
 
 }

@@ -4,8 +4,8 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeMountTargetsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,8 +13,8 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("MountTargets")
     public DescribeMountTargetsResponseBodyMountTargets mountTargets;
@@ -24,12 +24,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeMountTargetsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeMountTargetsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeMountTargetsResponseBody setRequestId(String requestId) {
@@ -48,12 +48,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeMountTargetsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeMountTargetsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeMountTargetsResponseBody setMountTargets(DescribeMountTargetsResponseBodyMountTargets mountTargets) {
@@ -65,18 +65,26 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     }
 
     public static class DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode extends TeaModel {
+        @NameInMap("EcsIp")
+        public String ecsIp;
+
         @NameInMap("EcsId")
         public String ecsId;
 
         @NameInMap("DefaultPasswd")
         public String defaultPasswd;
 
-        @NameInMap("EcsIp")
-        public String ecsIp;
-
         public static DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode build(java.util.Map<String, ?> map) throws Exception {
             DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode self = new DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode setEcsIp(String ecsIp) {
+            this.ecsIp = ecsIp;
+            return this;
+        }
+        public String getEcsIp() {
+            return this.ecsIp;
         }
 
         public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode setEcsId(String ecsId) {
@@ -93,14 +101,6 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
         public String getDefaultPasswd() {
             return this.defaultPasswd;
-        }
-
-        public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodesClientMasterNode setEcsIp(String ecsIp) {
-            this.ecsIp = ecsIp;
-            return this;
-        }
-        public String getEcsIp() {
-            return this.ecsIp;
         }
 
     }
@@ -131,9 +131,6 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("ClientMasterNodes")
-        public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes clientMasterNodes;
-
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
@@ -148,6 +145,9 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
         @NameInMap("NetworkType")
         public String networkType;
+
+        @NameInMap("ClientMasterNodes")
+        public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes clientMasterNodes;
 
         public static DescribeMountTargetsResponseBodyMountTargetsMountTarget build(java.util.Map<String, ?> map) throws Exception {
             DescribeMountTargetsResponseBodyMountTargetsMountTarget self = new DescribeMountTargetsResponseBodyMountTargetsMountTarget();
@@ -168,14 +168,6 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeMountTargetsResponseBodyMountTargetsMountTarget setClientMasterNodes(DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes clientMasterNodes) {
-            this.clientMasterNodes = clientMasterNodes;
-            return this;
-        }
-        public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes getClientMasterNodes() {
-            return this.clientMasterNodes;
         }
 
         public DescribeMountTargetsResponseBodyMountTargetsMountTarget setMountTargetDomain(String mountTargetDomain) {
@@ -216,6 +208,14 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
         public String getNetworkType() {
             return this.networkType;
+        }
+
+        public DescribeMountTargetsResponseBodyMountTargetsMountTarget setClientMasterNodes(DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes clientMasterNodes) {
+            this.clientMasterNodes = clientMasterNodes;
+            return this;
+        }
+        public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes getClientMasterNodes() {
+            return this.clientMasterNodes;
         }
 
     }
