@@ -59,6 +59,9 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
 
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
+
     public static DescribeLoadBalancerTCPListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerTCPListenerAttributeResponseBody self = new DescribeLoadBalancerTCPListenerAttributeResponseBody();
         return TeaModel.build(map, self);
@@ -206,6 +209,14 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     }
     public Integer getBackendServerPort() {
         return this.backendServerPort;
+    }
+
+    public DescribeLoadBalancerTCPListenerAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        this.healthCheckConnectPort = healthCheckConnectPort;
+        return this;
+    }
+    public Integer getHealthCheckConnectPort() {
+        return this.healthCheckConnectPort;
     }
 
 }

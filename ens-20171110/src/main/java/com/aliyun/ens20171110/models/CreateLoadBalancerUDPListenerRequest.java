@@ -40,6 +40,18 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
 
+    // 健康检查使用的端口。取值：1-65535  不设置此参数时，表示使用后端服务端口（BackendServerPort）
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
+
+    // UDP监听健康检查的请求串，只允许包含字母、数字，最大长度限制为64个字符。
+    @NameInMap("HealthCheckReq")
+    public String healthCheckReq;
+
+    // UDP监听健康检查的响应串，只允许包含字母、数字，最大长度限制为64个字符。
+    @NameInMap("HealthCheckExp")
+    public String healthCheckExp;
+
     public static CreateLoadBalancerUDPListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerUDPListenerRequest self = new CreateLoadBalancerUDPListenerRequest();
         return TeaModel.build(map, self);
@@ -115,6 +127,30 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     }
     public Integer getBackendServerPort() {
         return this.backendServerPort;
+    }
+
+    public CreateLoadBalancerUDPListenerRequest setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        this.healthCheckConnectPort = healthCheckConnectPort;
+        return this;
+    }
+    public Integer getHealthCheckConnectPort() {
+        return this.healthCheckConnectPort;
+    }
+
+    public CreateLoadBalancerUDPListenerRequest setHealthCheckReq(String healthCheckReq) {
+        this.healthCheckReq = healthCheckReq;
+        return this;
+    }
+    public String getHealthCheckReq() {
+        return this.healthCheckReq;
+    }
+
+    public CreateLoadBalancerUDPListenerRequest setHealthCheckExp(String healthCheckExp) {
+        this.healthCheckExp = healthCheckExp;
+        return this;
+    }
+    public String getHealthCheckExp() {
+        return this.healthCheckExp;
     }
 
 }

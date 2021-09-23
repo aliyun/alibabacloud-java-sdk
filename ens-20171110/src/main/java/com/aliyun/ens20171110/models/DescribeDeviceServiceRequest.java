@@ -17,6 +17,9 @@ public class DescribeDeviceServiceRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("EnsRegionId")
+    public String ensRegionId;
+
     public static DescribeDeviceServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeviceServiceRequest self = new DescribeDeviceServiceRequest();
         return TeaModel.build(map, self);
@@ -52,6 +55,14 @@ public class DescribeDeviceServiceRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DescribeDeviceServiceRequest setEnsRegionId(String ensRegionId) {
+        this.ensRegionId = ensRegionId;
+        return this;
+    }
+    public String getEnsRegionId() {
+        return this.ensRegionId;
     }
 
 }

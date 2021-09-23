@@ -910,6 +910,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEnsRegionIdIpv6InfoWithOptions(request, runtime);
     }
 
+    public ModifyInstanceAutoRenewAttributeResponse modifyInstanceAutoRenewAttributeWithOptions(ModifyInstanceAutoRenewAttributeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ModifyInstanceAutoRenewAttribute", "2017-11-10", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyInstanceAutoRenewAttributeResponse());
+    }
+
+    public ModifyInstanceAutoRenewAttributeResponse modifyInstanceAutoRenewAttribute(ModifyInstanceAutoRenewAttributeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyInstanceAutoRenewAttributeWithOptions(request, runtime);
+    }
+
     public DescribeApplicationResponse describeApplicationWithOptions(DescribeApplicationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

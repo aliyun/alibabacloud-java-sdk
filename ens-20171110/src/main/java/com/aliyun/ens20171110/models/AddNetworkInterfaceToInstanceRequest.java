@@ -10,6 +10,9 @@ public class AddNetworkInterfaceToInstanceRequest extends TeaModel {
     @NameInMap("Networks")
     public String networks;
 
+    @NameInMap("AutoStart")
+    public Boolean autoStart;
+
     public static AddNetworkInterfaceToInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddNetworkInterfaceToInstanceRequest self = new AddNetworkInterfaceToInstanceRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class AddNetworkInterfaceToInstanceRequest extends TeaModel {
     }
     public String getNetworks() {
         return this.networks;
+    }
+
+    public AddNetworkInterfaceToInstanceRequest setAutoStart(Boolean autoStart) {
+        this.autoStart = autoStart;
+        return this;
+    }
+    public Boolean getAutoStart() {
+        return this.autoStart;
     }
 
 }
