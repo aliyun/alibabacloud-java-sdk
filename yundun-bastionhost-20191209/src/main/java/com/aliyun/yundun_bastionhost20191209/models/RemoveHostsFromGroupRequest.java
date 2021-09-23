@@ -4,9 +4,6 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class RemoveHostsFromGroupRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,14 +19,6 @@ public class RemoveHostsFromGroupRequest extends TeaModel {
     public static RemoveHostsFromGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveHostsFromGroupRequest self = new RemoveHostsFromGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveHostsFromGroupRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public RemoveHostsFromGroupRequest setInstanceId(String instanceId) {

@@ -73,12 +73,6 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
     }
 
     public static class AttachHostAccountsToUserGroupResponseBodyResults extends TeaModel {
-        @NameInMap("UserGroupId")
-        public String userGroupId;
-
-        @NameInMap("HostAccounts")
-        public java.util.List<AttachHostAccountsToUserGroupResponseBodyResultsHostAccounts> hostAccounts;
-
         @NameInMap("Code")
         public String code;
 
@@ -88,25 +82,15 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
         @NameInMap("HostId")
         public String hostId;
 
+        @NameInMap("UserGroupId")
+        public String userGroupId;
+
+        @NameInMap("HostAccounts")
+        public java.util.List<AttachHostAccountsToUserGroupResponseBodyResultsHostAccounts> hostAccounts;
+
         public static AttachHostAccountsToUserGroupResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             AttachHostAccountsToUserGroupResponseBodyResults self = new AttachHostAccountsToUserGroupResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public AttachHostAccountsToUserGroupResponseBodyResults setUserGroupId(String userGroupId) {
-            this.userGroupId = userGroupId;
-            return this;
-        }
-        public String getUserGroupId() {
-            return this.userGroupId;
-        }
-
-        public AttachHostAccountsToUserGroupResponseBodyResults setHostAccounts(java.util.List<AttachHostAccountsToUserGroupResponseBodyResultsHostAccounts> hostAccounts) {
-            this.hostAccounts = hostAccounts;
-            return this;
-        }
-        public java.util.List<AttachHostAccountsToUserGroupResponseBodyResultsHostAccounts> getHostAccounts() {
-            return this.hostAccounts;
         }
 
         public AttachHostAccountsToUserGroupResponseBodyResults setCode(String code) {
@@ -131,6 +115,22 @@ public class AttachHostAccountsToUserGroupResponseBody extends TeaModel {
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+        public AttachHostAccountsToUserGroupResponseBodyResults setUserGroupId(String userGroupId) {
+            this.userGroupId = userGroupId;
+            return this;
+        }
+        public String getUserGroupId() {
+            return this.userGroupId;
+        }
+
+        public AttachHostAccountsToUserGroupResponseBodyResults setHostAccounts(java.util.List<AttachHostAccountsToUserGroupResponseBodyResultsHostAccounts> hostAccounts) {
+            this.hostAccounts = hostAccounts;
+            return this;
+        }
+        public java.util.List<AttachHostAccountsToUserGroupResponseBodyResultsHostAccounts> getHostAccounts() {
+            return this.hostAccounts;
         }
 
     }

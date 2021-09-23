@@ -4,26 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostsForUserResponseBody extends TeaModel {
-    @NameInMap("Hosts")
-    public java.util.List<ListHostsForUserResponseBodyHosts> hosts;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Hosts")
+    public java.util.List<ListHostsForUserResponseBodyHosts> hosts;
+
     public static ListHostsForUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHostsForUserResponseBody self = new ListHostsForUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListHostsForUserResponseBody setHosts(java.util.List<ListHostsForUserResponseBodyHosts> hosts) {
-        this.hosts = hosts;
-        return this;
-    }
-    public java.util.List<ListHostsForUserResponseBodyHosts> getHosts() {
-        return this.hosts;
     }
 
     public ListHostsForUserResponseBody setTotalCount(Integer totalCount) {
@@ -40,6 +32,14 @@ public class ListHostsForUserResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListHostsForUserResponseBody setHosts(java.util.List<ListHostsForUserResponseBodyHosts> hosts) {
+        this.hosts = hosts;
+        return this;
+    }
+    public java.util.List<ListHostsForUserResponseBodyHosts> getHosts() {
+        return this.hosts;
     }
 
     public static class ListHostsForUserResponseBodyHosts extends TeaModel {

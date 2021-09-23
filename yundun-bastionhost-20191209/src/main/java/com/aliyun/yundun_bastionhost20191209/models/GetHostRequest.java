@@ -4,9 +4,6 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetHostRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,14 +16,6 @@ public class GetHostRequest extends TeaModel {
     public static GetHostRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHostRequest self = new GetHostRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetHostRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public GetHostRequest setInstanceId(String instanceId) {

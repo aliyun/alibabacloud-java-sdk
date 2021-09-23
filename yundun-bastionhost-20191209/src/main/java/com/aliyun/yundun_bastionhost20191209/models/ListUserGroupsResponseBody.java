@@ -43,6 +43,9 @@ public class ListUserGroupsResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsResponseBodyUserGroups extends TeaModel {
+        @NameInMap("UserGroupName")
+        public String userGroupName;
+
         @NameInMap("MemberCount")
         public Integer memberCount;
 
@@ -52,12 +55,17 @@ public class ListUserGroupsResponseBody extends TeaModel {
         @NameInMap("UserGroupId")
         public String userGroupId;
 
-        @NameInMap("UserGroupName")
-        public String userGroupName;
-
         public static ListUserGroupsResponseBodyUserGroups build(java.util.Map<String, ?> map) throws Exception {
             ListUserGroupsResponseBodyUserGroups self = new ListUserGroupsResponseBodyUserGroups();
             return TeaModel.build(map, self);
+        }
+
+        public ListUserGroupsResponseBodyUserGroups setUserGroupName(String userGroupName) {
+            this.userGroupName = userGroupName;
+            return this;
+        }
+        public String getUserGroupName() {
+            return this.userGroupName;
         }
 
         public ListUserGroupsResponseBodyUserGroups setMemberCount(Integer memberCount) {
@@ -82,14 +90,6 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
         public String getUserGroupId() {
             return this.userGroupId;
-        }
-
-        public ListUserGroupsResponseBodyUserGroups setUserGroupName(String userGroupName) {
-            this.userGroupName = userGroupName;
-            return this;
-        }
-        public String getUserGroupName() {
-            return this.userGroupName;
         }
 
     }

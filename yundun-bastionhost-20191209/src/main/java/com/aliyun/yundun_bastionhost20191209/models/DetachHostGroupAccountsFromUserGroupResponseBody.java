@@ -73,12 +73,6 @@ public class DetachHostGroupAccountsFromUserGroupResponseBody extends TeaModel {
     }
 
     public static class DetachHostGroupAccountsFromUserGroupResponseBodyResults extends TeaModel {
-        @NameInMap("HostAccountNames")
-        public java.util.List<DetachHostGroupAccountsFromUserGroupResponseBodyResultsHostAccountNames> hostAccountNames;
-
-        @NameInMap("UserGroupId")
-        public String userGroupId;
-
         @NameInMap("Code")
         public String code;
 
@@ -88,25 +82,15 @@ public class DetachHostGroupAccountsFromUserGroupResponseBody extends TeaModel {
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
+        @NameInMap("UserGroupId")
+        public String userGroupId;
+
+        @NameInMap("HostAccountNames")
+        public java.util.List<DetachHostGroupAccountsFromUserGroupResponseBodyResultsHostAccountNames> hostAccountNames;
+
         public static DetachHostGroupAccountsFromUserGroupResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             DetachHostGroupAccountsFromUserGroupResponseBodyResults self = new DetachHostGroupAccountsFromUserGroupResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public DetachHostGroupAccountsFromUserGroupResponseBodyResults setHostAccountNames(java.util.List<DetachHostGroupAccountsFromUserGroupResponseBodyResultsHostAccountNames> hostAccountNames) {
-            this.hostAccountNames = hostAccountNames;
-            return this;
-        }
-        public java.util.List<DetachHostGroupAccountsFromUserGroupResponseBodyResultsHostAccountNames> getHostAccountNames() {
-            return this.hostAccountNames;
-        }
-
-        public DetachHostGroupAccountsFromUserGroupResponseBodyResults setUserGroupId(String userGroupId) {
-            this.userGroupId = userGroupId;
-            return this;
-        }
-        public String getUserGroupId() {
-            return this.userGroupId;
         }
 
         public DetachHostGroupAccountsFromUserGroupResponseBodyResults setCode(String code) {
@@ -131,6 +115,22 @@ public class DetachHostGroupAccountsFromUserGroupResponseBody extends TeaModel {
         }
         public String getHostGroupId() {
             return this.hostGroupId;
+        }
+
+        public DetachHostGroupAccountsFromUserGroupResponseBodyResults setUserGroupId(String userGroupId) {
+            this.userGroupId = userGroupId;
+            return this;
+        }
+        public String getUserGroupId() {
+            return this.userGroupId;
+        }
+
+        public DetachHostGroupAccountsFromUserGroupResponseBodyResults setHostAccountNames(java.util.List<DetachHostGroupAccountsFromUserGroupResponseBodyResultsHostAccountNames> hostAccountNames) {
+            this.hostAccountNames = hostAccountNames;
+            return this;
+        }
+        public java.util.List<DetachHostGroupAccountsFromUserGroupResponseBodyResultsHostAccountNames> getHostAccountNames() {
+            return this.hostAccountNames;
         }
 
     }

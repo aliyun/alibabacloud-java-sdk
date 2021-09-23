@@ -4,26 +4,18 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    public java.util.List<DescribeInstancesResponseBodyInstances> instances;
-
     @NameInMap("TotalCount")
     public Long totalCount;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Instances")
+    public java.util.List<DescribeInstancesResponseBodyInstances> instances;
+
     public static DescribeInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesResponseBody self = new DescribeInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstancesResponseBody setInstances(java.util.List<DescribeInstancesResponseBodyInstances> instances) {
-        this.instances = instances;
-        return this;
-    }
-    public java.util.List<DescribeInstancesResponseBodyInstances> getInstances() {
-        return this.instances;
     }
 
     public DescribeInstancesResponseBody setTotalCount(Long totalCount) {
@@ -40,6 +32,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeInstancesResponseBody setInstances(java.util.List<DescribeInstancesResponseBodyInstances> instances) {
+        this.instances = instances;
+        return this;
+    }
+    public java.util.List<DescribeInstancesResponseBodyInstances> getInstances() {
+        return this.instances;
     }
 
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
@@ -64,11 +64,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Legacy")
         public Boolean legacy;
 
-        @NameInMap("InternetEndpoint")
-        public String internetEndpoint;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InternetEndpoint")
+        public String internetEndpoint;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -78,6 +78,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("StartTime")
         public Long startTime;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("InstanceStatus")
         public String instanceStatus;
@@ -149,20 +152,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.legacy;
         }
 
-        public DescribeInstancesResponseBodyInstances setInternetEndpoint(String internetEndpoint) {
-            this.internetEndpoint = internetEndpoint;
-            return this;
-        }
-        public String getInternetEndpoint() {
-            return this.internetEndpoint;
-        }
-
         public DescribeInstancesResponseBodyInstances setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeInstancesResponseBodyInstances setInternetEndpoint(String internetEndpoint) {
+            this.internetEndpoint = internetEndpoint;
+            return this;
+        }
+        public String getInternetEndpoint() {
+            return this.internetEndpoint;
         }
 
         public DescribeInstancesResponseBodyInstances setRegionId(String regionId) {
@@ -187,6 +190,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public DescribeInstancesResponseBodyInstances setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeInstancesResponseBodyInstances setInstanceStatus(String instanceStatus) {

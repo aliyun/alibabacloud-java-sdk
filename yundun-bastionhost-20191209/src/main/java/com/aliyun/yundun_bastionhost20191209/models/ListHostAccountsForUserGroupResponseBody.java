@@ -43,17 +43,17 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
     }
 
     public static class ListHostAccountsForUserGroupResponseBodyHostAccounts extends TeaModel {
-        @NameInMap("IsAuthorized")
-        public Boolean isAuthorized;
-
-        @NameInMap("ProtocolName")
-        public String protocolName;
-
         @NameInMap("HostAccountName")
         public String hostAccountName;
 
         @NameInMap("HostAccountId")
         public String hostAccountId;
+
+        @NameInMap("IsAuthorized")
+        public Boolean isAuthorized;
+
+        @NameInMap("ProtocolName")
+        public String protocolName;
 
         @NameInMap("HostId")
         public String hostId;
@@ -61,22 +61,6 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         public static ListHostAccountsForUserGroupResponseBodyHostAccounts build(java.util.Map<String, ?> map) throws Exception {
             ListHostAccountsForUserGroupResponseBodyHostAccounts self = new ListHostAccountsForUserGroupResponseBodyHostAccounts();
             return TeaModel.build(map, self);
-        }
-
-        public ListHostAccountsForUserGroupResponseBodyHostAccounts setIsAuthorized(Boolean isAuthorized) {
-            this.isAuthorized = isAuthorized;
-            return this;
-        }
-        public Boolean getIsAuthorized() {
-            return this.isAuthorized;
-        }
-
-        public ListHostAccountsForUserGroupResponseBodyHostAccounts setProtocolName(String protocolName) {
-            this.protocolName = protocolName;
-            return this;
-        }
-        public String getProtocolName() {
-            return this.protocolName;
         }
 
         public ListHostAccountsForUserGroupResponseBodyHostAccounts setHostAccountName(String hostAccountName) {
@@ -93,6 +77,22 @@ public class ListHostAccountsForUserGroupResponseBody extends TeaModel {
         }
         public String getHostAccountId() {
             return this.hostAccountId;
+        }
+
+        public ListHostAccountsForUserGroupResponseBodyHostAccounts setIsAuthorized(Boolean isAuthorized) {
+            this.isAuthorized = isAuthorized;
+            return this;
+        }
+        public Boolean getIsAuthorized() {
+            return this.isAuthorized;
+        }
+
+        public ListHostAccountsForUserGroupResponseBodyHostAccounts setProtocolName(String protocolName) {
+            this.protocolName = protocolName;
+            return this;
+        }
+        public String getProtocolName() {
+            return this.protocolName;
         }
 
         public ListHostAccountsForUserGroupResponseBodyHostAccounts setHostId(String hostId) {

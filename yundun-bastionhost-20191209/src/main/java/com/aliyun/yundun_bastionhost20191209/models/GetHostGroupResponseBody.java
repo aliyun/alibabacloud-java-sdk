@@ -32,11 +32,11 @@ public class GetHostGroupResponseBody extends TeaModel {
     }
 
     public static class GetHostGroupResponseBodyHostGroup extends TeaModel {
-        @NameInMap("Comment")
-        public String comment;
-
         @NameInMap("HostGroupId")
         public String hostGroupId;
+
+        @NameInMap("Comment")
+        public String comment;
 
         @NameInMap("HostGroupName")
         public String hostGroupName;
@@ -46,20 +46,20 @@ public class GetHostGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetHostGroupResponseBodyHostGroup setComment(String comment) {
-            this.comment = comment;
-            return this;
-        }
-        public String getComment() {
-            return this.comment;
-        }
-
         public GetHostGroupResponseBodyHostGroup setHostGroupId(String hostGroupId) {
             this.hostGroupId = hostGroupId;
             return this;
         }
         public String getHostGroupId() {
             return this.hostGroupId;
+        }
+
+        public GetHostGroupResponseBodyHostGroup setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
         public GetHostGroupResponseBodyHostGroup setHostGroupName(String hostGroupName) {

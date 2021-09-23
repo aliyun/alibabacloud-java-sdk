@@ -68,38 +68,23 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("VswitchId")
         public String vswitchId;
 
-        @NameInMap("Ports")
-        public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> ports;
-
-        @NameInMap("AuthorizedSecurityGroups")
-        public java.util.List<String> authorizedSecurityGroups;
-
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("PrivateExportIps")
-        public java.util.List<String> privateExportIps;
-
-        @NameInMap("PrivateWhiteList")
-        public java.util.List<String> privateWhiteList;
 
         @NameInMap("ExpireTime")
         public Long expireTime;
 
-        @NameInMap("EniInstanceId")
-        public String eniInstanceId;
-
         @NameInMap("ModifyPasswordModule")
         public String modifyPasswordModule;
 
-        @NameInMap("InternetEndpoint")
-        public String internetEndpoint;
+        @NameInMap("EniInstanceId")
+        public String eniInstanceId;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("SecurityGroupIds")
-        public java.util.List<String> securityGroupIds;
+        @NameInMap("InternetEndpoint")
+        public String internetEndpoint;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -107,14 +92,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("IntranetEndpoint")
         public String intranetEndpoint;
 
-        @NameInMap("PublicExportIps")
-        public java.util.List<String> publicExportIps;
-
         @NameInMap("StartTime")
         public Long startTime;
 
-        @NameInMap("PublicWhiteList")
-        public java.util.List<String> publicWhiteList;
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("NetworkProxyModule")
+        public String networkProxyModule;
 
         @NameInMap("WebTerminalModule")
         public String webTerminalModule;
@@ -125,14 +110,35 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("LicenseCode")
         public String licenseCode;
 
-        @NameInMap("PublicIps")
-        public java.util.List<String> publicIps;
-
         @NameInMap("PublicNetworkAccess")
         public Boolean publicNetworkAccess;
 
         @NameInMap("Storage")
         public Long storage;
+
+        @NameInMap("Ports")
+        public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> ports;
+
+        @NameInMap("PublicExportIps")
+        public java.util.List<String> publicExportIps;
+
+        @NameInMap("PublicWhiteList")
+        public java.util.List<String> publicWhiteList;
+
+        @NameInMap("AuthorizedSecurityGroups")
+        public java.util.List<String> authorizedSecurityGroups;
+
+        @NameInMap("PrivateExportIps")
+        public java.util.List<String> privateExportIps;
+
+        @NameInMap("PublicIps")
+        public java.util.List<String> publicIps;
+
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
+        @NameInMap("PrivateWhiteList")
+        public java.util.List<String> privateWhiteList;
 
         public static DescribeInstanceAttributeResponseBodyInstanceAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAttributeResponseBodyInstanceAttribute self = new DescribeInstanceAttributeResponseBodyInstanceAttribute();
@@ -155,44 +161,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.vswitchId;
         }
 
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPorts(java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> ports) {
-            this.ports = ports;
-            return this;
-        }
-        public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> getPorts() {
-            return this.ports;
-        }
-
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setAuthorizedSecurityGroups(java.util.List<String> authorizedSecurityGroups) {
-            this.authorizedSecurityGroups = authorizedSecurityGroups;
-            return this;
-        }
-        public java.util.List<String> getAuthorizedSecurityGroups() {
-            return this.authorizedSecurityGroups;
-        }
-
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPrivateExportIps(java.util.List<String> privateExportIps) {
-            this.privateExportIps = privateExportIps;
-            return this;
-        }
-        public java.util.List<String> getPrivateExportIps() {
-            return this.privateExportIps;
-        }
-
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPrivateWhiteList(java.util.List<String> privateWhiteList) {
-            this.privateWhiteList = privateWhiteList;
-            return this;
-        }
-        public java.util.List<String> getPrivateWhiteList() {
-            return this.privateWhiteList;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setExpireTime(Long expireTime) {
@@ -203,14 +177,6 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.expireTime;
         }
 
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setEniInstanceId(String eniInstanceId) {
-            this.eniInstanceId = eniInstanceId;
-            return this;
-        }
-        public String getEniInstanceId() {
-            return this.eniInstanceId;
-        }
-
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setModifyPasswordModule(String modifyPasswordModule) {
             this.modifyPasswordModule = modifyPasswordModule;
             return this;
@@ -219,12 +185,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.modifyPasswordModule;
         }
 
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setInternetEndpoint(String internetEndpoint) {
-            this.internetEndpoint = internetEndpoint;
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setEniInstanceId(String eniInstanceId) {
+            this.eniInstanceId = eniInstanceId;
             return this;
         }
-        public String getInternetEndpoint() {
-            return this.internetEndpoint;
+        public String getEniInstanceId() {
+            return this.eniInstanceId;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setInstanceId(String instanceId) {
@@ -235,12 +201,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setInternetEndpoint(String internetEndpoint) {
+            this.internetEndpoint = internetEndpoint;
             return this;
         }
-        public java.util.List<String> getSecurityGroupIds() {
-            return this.securityGroupIds;
+        public String getInternetEndpoint() {
+            return this.internetEndpoint;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setRegionId(String regionId) {
@@ -259,14 +225,6 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.intranetEndpoint;
         }
 
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPublicExportIps(java.util.List<String> publicExportIps) {
-            this.publicExportIps = publicExportIps;
-            return this;
-        }
-        public java.util.List<String> getPublicExportIps() {
-            return this.publicExportIps;
-        }
-
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
@@ -275,12 +233,20 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPublicWhiteList(java.util.List<String> publicWhiteList) {
-            this.publicWhiteList = publicWhiteList;
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public java.util.List<String> getPublicWhiteList() {
-            return this.publicWhiteList;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setNetworkProxyModule(String networkProxyModule) {
+            this.networkProxyModule = networkProxyModule;
+            return this;
+        }
+        public String getNetworkProxyModule() {
+            return this.networkProxyModule;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setWebTerminalModule(String webTerminalModule) {
@@ -307,14 +273,6 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.licenseCode;
         }
 
-        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPublicIps(java.util.List<String> publicIps) {
-            this.publicIps = publicIps;
-            return this;
-        }
-        public java.util.List<String> getPublicIps() {
-            return this.publicIps;
-        }
-
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setPublicNetworkAccess(Boolean publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
@@ -329,6 +287,70 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public Long getStorage() {
             return this.storage;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPorts(java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> ports) {
+            this.ports = ports;
+            return this;
+        }
+        public java.util.List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> getPorts() {
+            return this.ports;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPublicExportIps(java.util.List<String> publicExportIps) {
+            this.publicExportIps = publicExportIps;
+            return this;
+        }
+        public java.util.List<String> getPublicExportIps() {
+            return this.publicExportIps;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPublicWhiteList(java.util.List<String> publicWhiteList) {
+            this.publicWhiteList = publicWhiteList;
+            return this;
+        }
+        public java.util.List<String> getPublicWhiteList() {
+            return this.publicWhiteList;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setAuthorizedSecurityGroups(java.util.List<String> authorizedSecurityGroups) {
+            this.authorizedSecurityGroups = authorizedSecurityGroups;
+            return this;
+        }
+        public java.util.List<String> getAuthorizedSecurityGroups() {
+            return this.authorizedSecurityGroups;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPrivateExportIps(java.util.List<String> privateExportIps) {
+            this.privateExportIps = privateExportIps;
+            return this;
+        }
+        public java.util.List<String> getPrivateExportIps() {
+            return this.privateExportIps;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPublicIps(java.util.List<String> publicIps) {
+            this.publicIps = publicIps;
+            return this;
+        }
+        public java.util.List<String> getPublicIps() {
+            return this.publicIps;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPrivateWhiteList(java.util.List<String> privateWhiteList) {
+            this.privateWhiteList = privateWhiteList;
+            return this;
+        }
+        public java.util.List<String> getPrivateWhiteList() {
+            return this.privateWhiteList;
         }
 
     }

@@ -4,12 +4,6 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ConfigInstanceWhiteListRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -22,22 +16,6 @@ public class ConfigInstanceWhiteListRequest extends TeaModel {
     public static ConfigInstanceWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigInstanceWhiteListRequest self = new ConfigInstanceWhiteListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigInstanceWhiteListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ConfigInstanceWhiteListRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ConfigInstanceWhiteListRequest setInstanceId(String instanceId) {

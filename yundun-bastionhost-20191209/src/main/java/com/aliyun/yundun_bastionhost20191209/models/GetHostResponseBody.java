@@ -32,26 +32,18 @@ public class GetHostResponseBody extends TeaModel {
     }
 
     public static class GetHostResponseBodyHostProtocols extends TeaModel {
-        @NameInMap("ProtocolName")
-        public String protocolName;
-
         @NameInMap("HostFingerPrint")
         public String hostFingerPrint;
 
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("ProtocolName")
+        public String protocolName;
+
         public static GetHostResponseBodyHostProtocols build(java.util.Map<String, ?> map) throws Exception {
             GetHostResponseBodyHostProtocols self = new GetHostResponseBodyHostProtocols();
             return TeaModel.build(map, self);
-        }
-
-        public GetHostResponseBodyHostProtocols setProtocolName(String protocolName) {
-            this.protocolName = protocolName;
-            return this;
-        }
-        public String getProtocolName() {
-            return this.protocolName;
         }
 
         public GetHostResponseBodyHostProtocols setHostFingerPrint(String hostFingerPrint) {
@@ -70,6 +62,14 @@ public class GetHostResponseBody extends TeaModel {
             return this.port;
         }
 
+        public GetHostResponseBodyHostProtocols setProtocolName(String protocolName) {
+            this.protocolName = protocolName;
+            return this;
+        }
+        public String getProtocolName() {
+            return this.protocolName;
+        }
+
     }
 
     public static class GetHostResponseBodyHost extends TeaModel {
@@ -81,9 +81,6 @@ public class GetHostResponseBody extends TeaModel {
 
         @NameInMap("HostPublicAddress")
         public String hostPublicAddress;
-
-        @NameInMap("Protocols")
-        public java.util.List<GetHostResponseBodyHostProtocols> protocols;
 
         @NameInMap("HostName")
         public String hostName;
@@ -105,6 +102,9 @@ public class GetHostResponseBody extends TeaModel {
 
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
+
+        @NameInMap("Protocols")
+        public java.util.List<GetHostResponseBodyHostProtocols> protocols;
 
         public static GetHostResponseBodyHost build(java.util.Map<String, ?> map) throws Exception {
             GetHostResponseBodyHost self = new GetHostResponseBodyHost();
@@ -133,14 +133,6 @@ public class GetHostResponseBody extends TeaModel {
         }
         public String getHostPublicAddress() {
             return this.hostPublicAddress;
-        }
-
-        public GetHostResponseBodyHost setProtocols(java.util.List<GetHostResponseBodyHostProtocols> protocols) {
-            this.protocols = protocols;
-            return this;
-        }
-        public java.util.List<GetHostResponseBodyHostProtocols> getProtocols() {
-            return this.protocols;
         }
 
         public GetHostResponseBodyHost setHostName(String hostName) {
@@ -197,6 +189,14 @@ public class GetHostResponseBody extends TeaModel {
         }
         public String getSourceInstanceId() {
             return this.sourceInstanceId;
+        }
+
+        public GetHostResponseBodyHost setProtocols(java.util.List<GetHostResponseBodyHostProtocols> protocols) {
+            this.protocols = protocols;
+            return this;
+        }
+        public java.util.List<GetHostResponseBodyHostProtocols> getProtocols() {
+            return this.protocols;
         }
 
     }

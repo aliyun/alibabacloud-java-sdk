@@ -73,12 +73,6 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
     }
 
     public static class AttachHostGroupAccountsToUserResponseBodyResults extends TeaModel {
-        @NameInMap("HostAccountNames")
-        public java.util.List<AttachHostGroupAccountsToUserResponseBodyResultsHostAccountNames> hostAccountNames;
-
-        @NameInMap("UserId")
-        public String userId;
-
         @NameInMap("Code")
         public String code;
 
@@ -88,25 +82,15 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
         @NameInMap("HostGroupId")
         public String hostGroupId;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("HostAccountNames")
+        public java.util.List<AttachHostGroupAccountsToUserResponseBodyResultsHostAccountNames> hostAccountNames;
+
         public static AttachHostGroupAccountsToUserResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             AttachHostGroupAccountsToUserResponseBodyResults self = new AttachHostGroupAccountsToUserResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public AttachHostGroupAccountsToUserResponseBodyResults setHostAccountNames(java.util.List<AttachHostGroupAccountsToUserResponseBodyResultsHostAccountNames> hostAccountNames) {
-            this.hostAccountNames = hostAccountNames;
-            return this;
-        }
-        public java.util.List<AttachHostGroupAccountsToUserResponseBodyResultsHostAccountNames> getHostAccountNames() {
-            return this.hostAccountNames;
-        }
-
-        public AttachHostGroupAccountsToUserResponseBodyResults setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public AttachHostGroupAccountsToUserResponseBodyResults setCode(String code) {
@@ -131,6 +115,22 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
         }
         public String getHostGroupId() {
             return this.hostGroupId;
+        }
+
+        public AttachHostGroupAccountsToUserResponseBodyResults setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public AttachHostGroupAccountsToUserResponseBodyResults setHostAccountNames(java.util.List<AttachHostGroupAccountsToUserResponseBodyResultsHostAccountNames> hostAccountNames) {
+            this.hostAccountNames = hostAccountNames;
+            return this;
+        }
+        public java.util.List<AttachHostGroupAccountsToUserResponseBodyResultsHostAccountNames> getHostAccountNames() {
+            return this.hostAccountNames;
         }
 
     }
