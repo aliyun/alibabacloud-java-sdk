@@ -13,11 +13,14 @@ public class QueryConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryConfigResponseBodyData data;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
+
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     public static QueryConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryConfigResponseBody self = new QueryConfigResponseBody();
@@ -48,20 +51,28 @@ public class QueryConfigResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryConfigResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public QueryConfigResponseBody setSuccess(String success) {
+    public QueryConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
+    }
+
+    public QueryConfigResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public QueryConfigResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public static class QueryConfigResponseBodyData extends TeaModel {
@@ -115,6 +126,12 @@ public class QueryConfigResponseBody extends TeaModel {
 
         @NameInMap("UserName")
         public String userName;
+
+        @NameInMap("ConfigSecretSupported")
+        public Boolean configSecretSupported;
+
+        @NameInMap("ConfigSecretEnabled")
+        public Boolean configSecretEnabled;
 
         public static QueryConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryConfigResponseBodyData self = new QueryConfigResponseBodyData();
@@ -255,6 +272,22 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public String getUserName() {
             return this.userName;
+        }
+
+        public QueryConfigResponseBodyData setConfigSecretSupported(Boolean configSecretSupported) {
+            this.configSecretSupported = configSecretSupported;
+            return this;
+        }
+        public Boolean getConfigSecretSupported() {
+            return this.configSecretSupported;
+        }
+
+        public QueryConfigResponseBodyData setConfigSecretEnabled(Boolean configSecretEnabled) {
+            this.configSecretEnabled = configSecretEnabled;
+            return this;
+        }
+        public Boolean getConfigSecretEnabled() {
+            return this.configSecretEnabled;
         }
 
     }

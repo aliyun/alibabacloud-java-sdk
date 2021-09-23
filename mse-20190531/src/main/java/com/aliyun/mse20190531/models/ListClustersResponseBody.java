@@ -145,6 +145,15 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("AppVersion")
         public String appVersion;
 
+        @NameInMap("CanUpdate")
+        public Boolean canUpdate;
+
+        @NameInMap("VersionCode")
+        public String versionCode;
+
+        @NameInMap("InstanceCount")
+        public Long instanceCount;
+
         public static ListClustersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListClustersResponseBodyData self = new ListClustersResponseBodyData();
             return TeaModel.build(map, self);
@@ -244,6 +253,30 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public String getAppVersion() {
             return this.appVersion;
+        }
+
+        public ListClustersResponseBodyData setCanUpdate(Boolean canUpdate) {
+            this.canUpdate = canUpdate;
+            return this;
+        }
+        public Boolean getCanUpdate() {
+            return this.canUpdate;
+        }
+
+        public ListClustersResponseBodyData setVersionCode(String versionCode) {
+            this.versionCode = versionCode;
+            return this;
+        }
+        public String getVersionCode() {
+            return this.versionCode;
+        }
+
+        public ListClustersResponseBodyData setInstanceCount(Long instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Long getInstanceCount() {
+            return this.instanceCount;
         }
 
     }

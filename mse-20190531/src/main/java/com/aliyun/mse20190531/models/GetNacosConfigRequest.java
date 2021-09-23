@@ -16,6 +16,9 @@ public class GetNacosConfigRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    @NameInMap("Beta")
+    public Boolean beta;
+
     public static GetNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetNacosConfigRequest self = new GetNacosConfigRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class GetNacosConfigRequest extends TeaModel {
     }
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    public GetNacosConfigRequest setBeta(Boolean beta) {
+        this.beta = beta;
+        return this;
+    }
+    public Boolean getBeta() {
+        return this.beta;
     }
 
 }

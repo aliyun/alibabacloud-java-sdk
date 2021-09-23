@@ -31,6 +31,9 @@ public class CreateNacosConfigRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    @NameInMap("BetaIps")
+    public String betaIps;
+
     public static CreateNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNacosConfigRequest self = new CreateNacosConfigRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class CreateNacosConfigRequest extends TeaModel {
     }
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    public CreateNacosConfigRequest setBetaIps(String betaIps) {
+        this.betaIps = betaIps;
+        return this;
+    }
+    public String getBetaIps() {
+        return this.betaIps;
     }
 
 }

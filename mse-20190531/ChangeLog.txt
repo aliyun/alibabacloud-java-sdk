@@ -1,3 +1,6 @@
+2021-09-23 Version: 2.7.32-SNAPSHOT
+- Add Gateway ListGateway api.
+
 2021-04-15 Version: 1.0.0
 - Publish first version.
 
