@@ -10,11 +10,8 @@ public class IndexFileMetaShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    @NameInMap("URI")
-    public String URI;
-
-    @NameInMap("CustomLabels")
-    public String customLabelsShrink;
+    @NameInMap("File")
+    public String fileShrink;
 
     public static IndexFileMetaShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         IndexFileMetaShrinkRequest self = new IndexFileMetaShrinkRequest();
@@ -37,20 +34,12 @@ public class IndexFileMetaShrinkRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public IndexFileMetaShrinkRequest setURI(String URI) {
-        this.URI = URI;
+    public IndexFileMetaShrinkRequest setFileShrink(String fileShrink) {
+        this.fileShrink = fileShrink;
         return this;
     }
-    public String getURI() {
-        return this.URI;
-    }
-
-    public IndexFileMetaShrinkRequest setCustomLabelsShrink(String customLabelsShrink) {
-        this.customLabelsShrink = customLabelsShrink;
-        return this;
-    }
-    public String getCustomLabelsShrink() {
-        return this.customLabelsShrink;
+    public String getFileShrink() {
+        return this.fileShrink;
     }
 
 }

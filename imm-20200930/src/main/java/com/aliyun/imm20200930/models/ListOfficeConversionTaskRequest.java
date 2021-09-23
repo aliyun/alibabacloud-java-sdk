@@ -3,28 +3,25 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class ListDatasetsRequest extends TeaModel {
+public class ListOfficeConversionTaskRequest extends TeaModel {
     // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
-    // 返回最大个数
+    // 最大结果数
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 当总结果个数大于MaxResults时，用于翻页的token
+    // 下一条记录开始标记
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Prefix")
-    public String prefix;
-
-    public static ListDatasetsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListDatasetsRequest self = new ListDatasetsRequest();
+    public static ListOfficeConversionTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListOfficeConversionTaskRequest self = new ListOfficeConversionTaskRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDatasetsRequest setProjectName(String projectName) {
+    public ListOfficeConversionTaskRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -32,7 +29,7 @@ public class ListDatasetsRequest extends TeaModel {
         return this.projectName;
     }
 
-    public ListDatasetsRequest setMaxResults(Long maxResults) {
+    public ListOfficeConversionTaskRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -40,20 +37,12 @@ public class ListDatasetsRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListDatasetsRequest setNextToken(String nextToken) {
+    public ListOfficeConversionTaskRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListDatasetsRequest setPrefix(String prefix) {
-        this.prefix = prefix;
-        return this;
-    }
-    public String getPrefix() {
-        return this.prefix;
     }
 
 }

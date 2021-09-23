@@ -12,6 +12,10 @@ public class ListProjectsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    // 列出包含某前缀的project
+    @NameInMap("Prefix")
+    public String prefix;
+
     public static ListProjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProjectsRequest self = new ListProjectsRequest();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class ListProjectsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListProjectsRequest setPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    public String getPrefix() {
+        return this.prefix;
     }
 
 }

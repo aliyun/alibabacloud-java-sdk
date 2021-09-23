@@ -8,6 +8,9 @@ public class UpdateDatasetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Dataset")
+    public Dataset dataset;
+
     public static UpdateDatasetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetResponseBody self = new UpdateDatasetResponseBody();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class UpdateDatasetResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateDatasetResponseBody setDataset(Dataset dataset) {
+        this.dataset = dataset;
+        return this;
+    }
+    public Dataset getDataset() {
+        return this.dataset;
     }
 
 }

@@ -11,7 +11,7 @@ public class BatchUpdateFileMetaRequest extends TeaModel {
     public String datasetName;
 
     @NameInMap("Files")
-    public java.util.List<BatchUpdateFileMetaRequestFiles> files;
+    public java.util.List<FileForReq> files;
 
     public static BatchUpdateFileMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchUpdateFileMetaRequest self = new BatchUpdateFileMetaRequest();
@@ -34,42 +34,12 @@ public class BatchUpdateFileMetaRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public BatchUpdateFileMetaRequest setFiles(java.util.List<BatchUpdateFileMetaRequestFiles> files) {
+    public BatchUpdateFileMetaRequest setFiles(java.util.List<FileForReq> files) {
         this.files = files;
         return this;
     }
-    public java.util.List<BatchUpdateFileMetaRequestFiles> getFiles() {
+    public java.util.List<FileForReq> getFiles() {
         return this.files;
-    }
-
-    public static class BatchUpdateFileMetaRequestFiles extends TeaModel {
-        @NameInMap("URI")
-        public String URI;
-
-        @NameInMap("CustomLabels")
-        public java.util.Map<String, ?> customLabels;
-
-        public static BatchUpdateFileMetaRequestFiles build(java.util.Map<String, ?> map) throws Exception {
-            BatchUpdateFileMetaRequestFiles self = new BatchUpdateFileMetaRequestFiles();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchUpdateFileMetaRequestFiles setURI(String URI) {
-            this.URI = URI;
-            return this;
-        }
-        public String getURI() {
-            return this.URI;
-        }
-
-        public BatchUpdateFileMetaRequestFiles setCustomLabels(java.util.Map<String, ?> customLabels) {
-            this.customLabels = customLabels;
-            return this;
-        }
-        public java.util.Map<String, ?> getCustomLabels() {
-            return this.customLabels;
-        }
-
     }
 
 }

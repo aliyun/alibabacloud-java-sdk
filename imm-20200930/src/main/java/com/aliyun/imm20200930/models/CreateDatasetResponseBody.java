@@ -8,20 +8,8 @@ public class CreateDatasetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 项目名称
-    @NameInMap("ProjectName")
-    public String projectName;
-
-    // 数据集名称
-    @NameInMap("DatasetName")
-    public String datasetName;
-
-    // 数据集创建时间
-    @NameInMap("CreateTime")
-    public Long createTime;
-
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("Dataset")
+    public Dataset dataset;
 
     public static CreateDatasetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDatasetResponseBody self = new CreateDatasetResponseBody();
@@ -36,36 +24,12 @@ public class CreateDatasetResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDatasetResponseBody setProjectName(String projectName) {
-        this.projectName = projectName;
+    public CreateDatasetResponseBody setDataset(Dataset dataset) {
+        this.dataset = dataset;
         return this;
     }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
-    public CreateDatasetResponseBody setDatasetName(String datasetName) {
-        this.datasetName = datasetName;
-        return this;
-    }
-    public String getDatasetName() {
-        return this.datasetName;
-    }
-
-    public CreateDatasetResponseBody setCreateTime(Long createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public Long getCreateTime() {
-        return this.createTime;
-    }
-
-    public CreateDatasetResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
+    public Dataset getDataset() {
+        return this.dataset;
     }
 
 }

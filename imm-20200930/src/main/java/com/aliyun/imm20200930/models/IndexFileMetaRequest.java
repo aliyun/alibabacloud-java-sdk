@@ -10,11 +10,8 @@ public class IndexFileMetaRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    @NameInMap("URI")
-    public String URI;
-
-    @NameInMap("CustomLabels")
-    public java.util.Map<String, ?> customLabels;
+    @NameInMap("File")
+    public FileForReq file;
 
     public static IndexFileMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         IndexFileMetaRequest self = new IndexFileMetaRequest();
@@ -37,50 +34,12 @@ public class IndexFileMetaRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public IndexFileMetaRequest setURI(String URI) {
-        this.URI = URI;
+    public IndexFileMetaRequest setFile(FileForReq file) {
+        this.file = file;
         return this;
     }
-    public String getURI() {
-        return this.URI;
-    }
-
-    public IndexFileMetaRequest setCustomLabels(java.util.Map<String, ?> customLabels) {
-        this.customLabels = customLabels;
-        return this;
-    }
-    public java.util.Map<String, ?> getCustomLabels() {
-        return this.customLabels;
-    }
-
-    public static class BatchIndexFileMetaRequestFiles extends TeaModel {
-        @NameInMap("URI")
-        public String URI;
-
-        @NameInMap("CustomLabels")
-        public java.util.Map<String, ?> customLabels;
-
-        public static BatchIndexFileMetaRequestFiles build(java.util.Map<String, ?> map) throws Exception {
-            BatchIndexFileMetaRequestFiles self = new BatchIndexFileMetaRequestFiles();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchIndexFileMetaRequestFiles setURI(String URI) {
-            this.URI = URI;
-            return this;
-        }
-        public String getURI() {
-            return this.URI;
-        }
-
-        public BatchIndexFileMetaRequestFiles setCustomLabels(java.util.Map<String, ?> customLabels) {
-            this.customLabels = customLabels;
-            return this;
-        }
-        public java.util.Map<String, ?> getCustomLabels() {
-            return this.customLabels;
-        }
-
+    public FileForReq getFile() {
+        return this.file;
     }
 
 }

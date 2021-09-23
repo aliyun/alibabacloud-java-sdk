@@ -3,14 +3,14 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class GetWebofficeUrlRequest extends TeaModel {
+public class GetWebofficeURLRequest extends TeaModel {
     // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
     // 预览编辑地址
-    @NameInMap("SourceUri")
-    public String sourceUri;
+    @NameInMap("SourceURI")
+    public String sourceURI;
 
     // 文件名，必须带文件名后缀，默认是 SourceUri 的最后一级
     @NameInMap("Filename")
@@ -60,12 +60,12 @@ public class GetWebofficeUrlRequest extends TeaModel {
     @NameInMap("AssumeRoleChain")
     public AssumeRoleChain assumeRoleChain;
 
-    public static GetWebofficeUrlRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetWebofficeUrlRequest self = new GetWebofficeUrlRequest();
+    public static GetWebofficeURLRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetWebofficeURLRequest self = new GetWebofficeURLRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetWebofficeUrlRequest setProjectName(String projectName) {
+    public GetWebofficeURLRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -73,15 +73,15 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.projectName;
     }
 
-    public GetWebofficeUrlRequest setSourceUri(String sourceUri) {
-        this.sourceUri = sourceUri;
+    public GetWebofficeURLRequest setSourceURI(String sourceURI) {
+        this.sourceURI = sourceURI;
         return this;
     }
-    public String getSourceUri() {
-        return this.sourceUri;
+    public String getSourceURI() {
+        return this.sourceURI;
     }
 
-    public GetWebofficeUrlRequest setFilename(String filename) {
+    public GetWebofficeURLRequest setFilename(String filename) {
         this.filename = filename;
         return this;
     }
@@ -89,7 +89,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.filename;
     }
 
-    public GetWebofficeUrlRequest setUserData(String userData) {
+    public GetWebofficeURLRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
@@ -97,7 +97,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.userData;
     }
 
-    public GetWebofficeUrlRequest setPreviewPages(Long previewPages) {
+    public GetWebofficeURLRequest setPreviewPages(Long previewPages) {
         this.previewPages = previewPages;
         return this;
     }
@@ -105,7 +105,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.previewPages;
     }
 
-    public GetWebofficeUrlRequest setPassword(String password) {
+    public GetWebofficeURLRequest setPassword(String password) {
         this.password = password;
         return this;
     }
@@ -113,7 +113,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.password;
     }
 
-    public GetWebofficeUrlRequest setExternalUploaded(Boolean externalUploaded) {
+    public GetWebofficeURLRequest setExternalUploaded(Boolean externalUploaded) {
         this.externalUploaded = externalUploaded;
         return this;
     }
@@ -121,7 +121,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.externalUploaded;
     }
 
-    public GetWebofficeUrlRequest setNotifyEndpoint(String notifyEndpoint) {
+    public GetWebofficeURLRequest setNotifyEndpoint(String notifyEndpoint) {
         this.notifyEndpoint = notifyEndpoint;
         return this;
     }
@@ -129,7 +129,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.notifyEndpoint;
     }
 
-    public GetWebofficeUrlRequest setNotifyTopicName(String notifyTopicName) {
+    public GetWebofficeURLRequest setNotifyTopicName(String notifyTopicName) {
         this.notifyTopicName = notifyTopicName;
         return this;
     }
@@ -137,7 +137,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.notifyTopicName;
     }
 
-    public GetWebofficeUrlRequest setHidecmb(Boolean hidecmb) {
+    public GetWebofficeURLRequest setHidecmb(Boolean hidecmb) {
         this.hidecmb = hidecmb;
         return this;
     }
@@ -145,7 +145,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.hidecmb;
     }
 
-    public GetWebofficeUrlRequest setPermission(WebofficePermission permission) {
+    public GetWebofficeURLRequest setPermission(WebofficePermission permission) {
         this.permission = permission;
         return this;
     }
@@ -153,7 +153,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.permission;
     }
 
-    public GetWebofficeUrlRequest setUser(WebofficeUser user) {
+    public GetWebofficeURLRequest setUser(WebofficeUser user) {
         this.user = user;
         return this;
     }
@@ -161,7 +161,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.user;
     }
 
-    public GetWebofficeUrlRequest setWatermark(WebofficeWatermark watermark) {
+    public GetWebofficeURLRequest setWatermark(WebofficeWatermark watermark) {
         this.watermark = watermark;
         return this;
     }
@@ -169,7 +169,7 @@ public class GetWebofficeUrlRequest extends TeaModel {
         return this.watermark;
     }
 
-    public GetWebofficeUrlRequest setAssumeRoleChain(AssumeRoleChain assumeRoleChain) {
+    public GetWebofficeURLRequest setAssumeRoleChain(AssumeRoleChain assumeRoleChain) {
         this.assumeRoleChain = assumeRoleChain;
         return this;
     }

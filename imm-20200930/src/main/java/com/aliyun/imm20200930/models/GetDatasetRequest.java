@@ -10,6 +10,9 @@ public class GetDatasetRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
+    @NameInMap("WithStatistics")
+    public Boolean withStatistics;
+
     public static GetDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDatasetRequest self = new GetDatasetRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetDatasetRequest extends TeaModel {
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public GetDatasetRequest setWithStatistics(Boolean withStatistics) {
+        this.withStatistics = withStatistics;
+        return this;
+    }
+    public Boolean getWithStatistics() {
+        return this.withStatistics;
     }
 
 }

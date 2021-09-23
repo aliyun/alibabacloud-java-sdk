@@ -4,35 +4,41 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatasetRequest extends TeaModel {
+    // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
+    // 媒体集名称
     @NameInMap("DatasetName")
     public String datasetName;
 
+    // 描述
     @NameInMap("Description")
     public String description;
 
+    // 模板Id
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("DatasetMaxOSSBindCount")
-    public Long datasetMaxOSSBindCount;
+    // 媒体集最多绑定数
+    @NameInMap("DatasetMaxBindCount")
+    public Long datasetMaxBindCount;
 
+    // 媒体集最多文件数
     @NameInMap("DatasetMaxFileCount")
     public Long datasetMaxFileCount;
 
+    // 媒体集最多实体数
     @NameInMap("DatasetMaxEntityCount")
     public Long datasetMaxEntityCount;
 
+    // 媒体集最多关系数
     @NameInMap("DatasetMaxRelationCount")
     public Long datasetMaxRelationCount;
 
+    // 媒体集最大文件总大小
     @NameInMap("DatasetMaxTotalFileSize")
     public Long datasetMaxTotalFileSize;
-
-    @NameInMap("ResetItems")
-    public java.util.List<String> resetItems;
 
     public static UpdateDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetRequest self = new UpdateDatasetRequest();
@@ -71,12 +77,12 @@ public class UpdateDatasetRequest extends TeaModel {
         return this.templateId;
     }
 
-    public UpdateDatasetRequest setDatasetMaxOSSBindCount(Long datasetMaxOSSBindCount) {
-        this.datasetMaxOSSBindCount = datasetMaxOSSBindCount;
+    public UpdateDatasetRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {
+        this.datasetMaxBindCount = datasetMaxBindCount;
         return this;
     }
-    public Long getDatasetMaxOSSBindCount() {
-        return this.datasetMaxOSSBindCount;
+    public Long getDatasetMaxBindCount() {
+        return this.datasetMaxBindCount;
     }
 
     public UpdateDatasetRequest setDatasetMaxFileCount(Long datasetMaxFileCount) {
@@ -109,14 +115,6 @@ public class UpdateDatasetRequest extends TeaModel {
     }
     public Long getDatasetMaxTotalFileSize() {
         return this.datasetMaxTotalFileSize;
-    }
-
-    public UpdateDatasetRequest setResetItems(java.util.List<String> resetItems) {
-        this.resetItems = resetItems;
-        return this;
-    }
-    public java.util.List<String> getResetItems() {
-        return this.resetItems;
     }
 
 }
