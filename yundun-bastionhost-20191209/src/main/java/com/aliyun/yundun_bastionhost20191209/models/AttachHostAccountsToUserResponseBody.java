@@ -73,12 +73,6 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
     }
 
     public static class AttachHostAccountsToUserResponseBodyResults extends TeaModel {
-        @NameInMap("HostAccounts")
-        public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts;
-
-        @NameInMap("UserId")
-        public String userId;
-
         @NameInMap("Code")
         public String code;
 
@@ -88,25 +82,15 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
         @NameInMap("HostId")
         public String hostId;
 
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("HostAccounts")
+        public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts;
+
         public static AttachHostAccountsToUserResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             AttachHostAccountsToUserResponseBodyResults self = new AttachHostAccountsToUserResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public AttachHostAccountsToUserResponseBodyResults setHostAccounts(java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts) {
-            this.hostAccounts = hostAccounts;
-            return this;
-        }
-        public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> getHostAccounts() {
-            return this.hostAccounts;
-        }
-
-        public AttachHostAccountsToUserResponseBodyResults setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public AttachHostAccountsToUserResponseBodyResults setCode(String code) {
@@ -131,6 +115,22 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+        public AttachHostAccountsToUserResponseBodyResults setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public AttachHostAccountsToUserResponseBodyResults setHostAccounts(java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts) {
+            this.hostAccounts = hostAccounts;
+            return this;
+        }
+        public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> getHostAccounts() {
+            return this.hostAccounts;
         }
 
     }

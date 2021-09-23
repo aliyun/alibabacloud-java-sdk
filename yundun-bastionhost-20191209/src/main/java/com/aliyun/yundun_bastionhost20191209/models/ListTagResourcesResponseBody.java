@@ -43,11 +43,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        @NameInMap("ResourceType")
-        public String resourceType;
-
         @NameInMap("TagValue")
         public String tagValue;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
 
         @NameInMap("ResourceId")
         public String resourceId;
@@ -60,20 +60,20 @@ public class ListTagResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListTagResourcesResponseBodyTagResources setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
         public ListTagResourcesResponseBodyTagResources setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+        public ListTagResourcesResponseBodyTagResources setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
         }
 
         public ListTagResourcesResponseBodyTagResources setResourceId(String resourceId) {

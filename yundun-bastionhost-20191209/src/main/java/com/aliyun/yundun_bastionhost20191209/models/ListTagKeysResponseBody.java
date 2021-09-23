@@ -4,17 +4,17 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("TagKeys")
     public java.util.List<ListTagKeysResponseBodyTagKeys> tagKeys;
@@ -22,14 +22,6 @@ public class ListTagKeysResponseBody extends TeaModel {
     public static ListTagKeysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagKeysResponseBody self = new ListTagKeysResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagKeysResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListTagKeysResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class ListTagKeysResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListTagKeysResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public ListTagKeysResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class ListTagKeysResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListTagKeysResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListTagKeysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListTagKeysResponseBody setTagKeys(java.util.List<ListTagKeysResponseBodyTagKeys> tagKeys) {

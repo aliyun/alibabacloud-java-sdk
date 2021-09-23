@@ -4,12 +4,6 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class DisableInstancePublicAccessRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,22 +13,6 @@ public class DisableInstancePublicAccessRequest extends TeaModel {
     public static DisableInstancePublicAccessRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableInstancePublicAccessRequest self = new DisableInstancePublicAccessRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DisableInstancePublicAccessRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DisableInstancePublicAccessRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DisableInstancePublicAccessRequest setInstanceId(String instanceId) {

@@ -4,9 +4,6 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListHostAccountsForUserRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -31,14 +28,6 @@ public class ListHostAccountsForUserRequest extends TeaModel {
     public static ListHostAccountsForUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHostAccountsForUserRequest self = new ListHostAccountsForUserRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListHostAccountsForUserRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ListHostAccountsForUserRequest setInstanceId(String instanceId) {

@@ -4,23 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ConfigInstanceSecurityGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ConfigInstanceSecurityGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConfigInstanceSecurityGroupsResponseBody self = new ConfigInstanceSecurityGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigInstanceSecurityGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ConfigInstanceSecurityGroupsResponseBody setInstanceId(String instanceId) {
@@ -29,6 +21,14 @@ public class ConfigInstanceSecurityGroupsResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ConfigInstanceSecurityGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -67,11 +67,11 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("UserName")
         public String userName;
 
-        @NameInMap("UserState")
-        public java.util.List<String> userState;
-
         @NameInMap("SourceUserId")
         public String sourceUserId;
+
+        @NameInMap("UserState")
+        public java.util.List<String> userState;
 
         public static ListUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             ListUsersResponseBodyUsers self = new ListUsersResponseBodyUsers();
@@ -142,20 +142,20 @@ public class ListUsersResponseBody extends TeaModel {
             return this.userName;
         }
 
-        public ListUsersResponseBodyUsers setUserState(java.util.List<String> userState) {
-            this.userState = userState;
-            return this;
-        }
-        public java.util.List<String> getUserState() {
-            return this.userState;
-        }
-
         public ListUsersResponseBodyUsers setSourceUserId(String sourceUserId) {
             this.sourceUserId = sourceUserId;
             return this;
         }
         public String getSourceUserId() {
             return this.sourceUserId;
+        }
+
+        public ListUsersResponseBodyUsers setUserState(java.util.List<String> userState) {
+            this.userState = userState;
+            return this;
+        }
+        public java.util.List<String> getUserState() {
+            return this.userState;
         }
 
     }

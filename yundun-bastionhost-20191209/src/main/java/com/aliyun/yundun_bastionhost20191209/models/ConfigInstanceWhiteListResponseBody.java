@@ -4,23 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ConfigInstanceWhiteListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ConfigInstanceWhiteListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ConfigInstanceWhiteListResponseBody self = new ConfigInstanceWhiteListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigInstanceWhiteListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ConfigInstanceWhiteListResponseBody setInstanceId(String instanceId) {
@@ -29,6 +21,14 @@ public class ConfigInstanceWhiteListResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ConfigInstanceWhiteListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

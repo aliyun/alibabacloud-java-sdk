@@ -4,9 +4,6 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class LockUsersRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -19,14 +16,6 @@ public class LockUsersRequest extends TeaModel {
     public static LockUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         LockUsersRequest self = new LockUsersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public LockUsersRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public LockUsersRequest setInstanceId(String instanceId) {

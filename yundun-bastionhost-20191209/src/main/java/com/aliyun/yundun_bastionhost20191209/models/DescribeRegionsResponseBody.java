@@ -32,11 +32,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
-        @NameInMap("LocalName")
-        public String localName;
-
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
+
+        @NameInMap("LocalName")
+        public String localName;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -46,20 +46,20 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRegionsResponseBodyRegions setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
-        }
-
         public DescribeRegionsResponseBodyRegions setRegionEndpoint(String regionEndpoint) {
             this.regionEndpoint = regionEndpoint;
             return this;
         }
         public String getRegionEndpoint() {
             return this.regionEndpoint;
+        }
+
+        public DescribeRegionsResponseBodyRegions setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
         }
 
         public DescribeRegionsResponseBodyRegions setRegionId(String regionId) {

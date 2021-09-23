@@ -32,37 +32,21 @@ public class AddUsersToGroupResponseBody extends TeaModel {
     }
 
     public static class AddUsersToGroupResponseBodyResults extends TeaModel {
-        @NameInMap("UserGroupId")
-        public String userGroupId;
-
-        @NameInMap("UserId")
-        public String userId;
-
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("UserGroupId")
+        public String userGroupId;
+
+        @NameInMap("UserId")
+        public String userId;
+
         public static AddUsersToGroupResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             AddUsersToGroupResponseBodyResults self = new AddUsersToGroupResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public AddUsersToGroupResponseBodyResults setUserGroupId(String userGroupId) {
-            this.userGroupId = userGroupId;
-            return this;
-        }
-        public String getUserGroupId() {
-            return this.userGroupId;
-        }
-
-        public AddUsersToGroupResponseBodyResults setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public AddUsersToGroupResponseBodyResults setCode(String code) {
@@ -79,6 +63,22 @@ public class AddUsersToGroupResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public AddUsersToGroupResponseBodyResults setUserGroupId(String userGroupId) {
+            this.userGroupId = userGroupId;
+            return this;
+        }
+        public String getUserGroupId() {
+            return this.userGroupId;
+        }
+
+        public AddUsersToGroupResponseBodyResults setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

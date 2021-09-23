@@ -4,12 +4,6 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,22 +19,6 @@ public class ListTagKeysRequest extends TeaModel {
     public static ListTagKeysRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagKeysRequest self = new ListTagKeysRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagKeysRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ListTagKeysRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ListTagKeysRequest setRegionId(String regionId) {

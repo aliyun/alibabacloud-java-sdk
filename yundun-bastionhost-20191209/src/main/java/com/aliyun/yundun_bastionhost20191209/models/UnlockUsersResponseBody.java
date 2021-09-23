@@ -32,26 +32,18 @@ public class UnlockUsersResponseBody extends TeaModel {
     }
 
     public static class UnlockUsersResponseBodyResults extends TeaModel {
-        @NameInMap("UserId")
-        public String userId;
-
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("UserId")
+        public String userId;
+
         public static UnlockUsersResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             UnlockUsersResponseBodyResults self = new UnlockUsersResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public UnlockUsersResponseBodyResults setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public UnlockUsersResponseBodyResults setCode(String code) {
@@ -68,6 +60,14 @@ public class UnlockUsersResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public UnlockUsersResponseBodyResults setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

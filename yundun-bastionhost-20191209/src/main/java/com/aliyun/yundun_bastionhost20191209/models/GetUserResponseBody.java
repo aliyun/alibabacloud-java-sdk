@@ -4,23 +4,15 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
-    @NameInMap("User")
-    public GetUserResponseBodyUser user;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("User")
+    public GetUserResponseBodyUser user;
 
     public static GetUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserResponseBody self = new GetUserResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetUserResponseBody setUser(GetUserResponseBodyUser user) {
-        this.user = user;
-        return this;
-    }
-    public GetUserResponseBodyUser getUser() {
-        return this.user;
     }
 
     public GetUserResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class GetUserResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetUserResponseBody setUser(GetUserResponseBodyUser user) {
+        this.user = user;
+        return this;
+    }
+    public GetUserResponseBodyUser getUser() {
+        return this.user;
     }
 
     public static class GetUserResponseBodyUser extends TeaModel {
@@ -56,11 +56,11 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("UserName")
         public String userName;
 
-        @NameInMap("UserState")
-        public java.util.List<String> userState;
-
         @NameInMap("SourceUserId")
         public String sourceUserId;
+
+        @NameInMap("UserState")
+        public java.util.List<String> userState;
 
         public static GetUserResponseBodyUser build(java.util.Map<String, ?> map) throws Exception {
             GetUserResponseBodyUser self = new GetUserResponseBodyUser();
@@ -131,20 +131,20 @@ public class GetUserResponseBody extends TeaModel {
             return this.userName;
         }
 
-        public GetUserResponseBodyUser setUserState(java.util.List<String> userState) {
-            this.userState = userState;
-            return this;
-        }
-        public java.util.List<String> getUserState() {
-            return this.userState;
-        }
-
         public GetUserResponseBodyUser setSourceUserId(String sourceUserId) {
             this.sourceUserId = sourceUserId;
             return this;
         }
         public String getSourceUserId() {
             return this.sourceUserId;
+        }
+
+        public GetUserResponseBodyUser setUserState(java.util.List<String> userState) {
+            this.userState = userState;
+            return this;
+        }
+        public java.util.List<String> getUserState() {
+            return this.userState;
         }
 
     }

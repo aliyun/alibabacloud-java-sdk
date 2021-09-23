@@ -32,37 +32,21 @@ public class RemoveUsersFromGroupResponseBody extends TeaModel {
     }
 
     public static class RemoveUsersFromGroupResponseBodyResults extends TeaModel {
-        @NameInMap("UserGroupId")
-        public String userGroupId;
-
-        @NameInMap("UserId")
-        public String userId;
-
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("UserGroupId")
+        public String userGroupId;
+
+        @NameInMap("UserId")
+        public String userId;
+
         public static RemoveUsersFromGroupResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             RemoveUsersFromGroupResponseBodyResults self = new RemoveUsersFromGroupResponseBodyResults();
             return TeaModel.build(map, self);
-        }
-
-        public RemoveUsersFromGroupResponseBodyResults setUserGroupId(String userGroupId) {
-            this.userGroupId = userGroupId;
-            return this;
-        }
-        public String getUserGroupId() {
-            return this.userGroupId;
-        }
-
-        public RemoveUsersFromGroupResponseBodyResults setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public RemoveUsersFromGroupResponseBodyResults setCode(String code) {
@@ -79,6 +63,22 @@ public class RemoveUsersFromGroupResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public RemoveUsersFromGroupResponseBodyResults setUserGroupId(String userGroupId) {
+            this.userGroupId = userGroupId;
+            return this;
+        }
+        public String getUserGroupId() {
+            return this.userGroupId;
+        }
+
+        public RemoveUsersFromGroupResponseBodyResults setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }
