@@ -40,6 +40,9 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.List<PreviewStackRequestParameters> parameters;
 
+    @NameInMap("Parallelism")
+    public Long parallelism;
+
     public static PreviewStackRequest build(java.util.Map<String, ?> map) throws Exception {
         PreviewStackRequest self = new PreviewStackRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class PreviewStackRequest extends TeaModel {
     }
     public java.util.List<PreviewStackRequestParameters> getParameters() {
         return this.parameters;
+    }
+
+    public PreviewStackRequest setParallelism(Long parallelism) {
+        this.parallelism = parallelism;
+        return this;
+    }
+    public Long getParallelism() {
+        return this.parallelism;
     }
 
     public static class PreviewStackRequestParameters extends TeaModel {

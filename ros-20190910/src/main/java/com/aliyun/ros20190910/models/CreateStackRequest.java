@@ -58,6 +58,9 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Parallelism")
+    public Long parallelism;
+
     public static CreateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackRequest self = new CreateStackRequest();
         return TeaModel.build(map, self);
@@ -205,6 +208,14 @@ public class CreateStackRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateStackRequest setParallelism(Long parallelism) {
+        this.parallelism = parallelism;
+        return this;
+    }
+    public Long getParallelism() {
+        return this.parallelism;
     }
 
     public static class ContinueCreateStackRequestParameters extends TeaModel {
