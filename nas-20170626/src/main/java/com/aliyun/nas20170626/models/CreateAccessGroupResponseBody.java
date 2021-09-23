@@ -4,23 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AccessGroupName")
     public String accessGroupName;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateAccessGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAccessGroupResponseBody self = new CreateAccessGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAccessGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateAccessGroupResponseBody setAccessGroupName(String accessGroupName) {
@@ -29,6 +21,14 @@ public class CreateAccessGroupResponseBody extends TeaModel {
     }
     public String getAccessGroupName() {
         return this.accessGroupName;
+    }
+
+    public CreateAccessGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

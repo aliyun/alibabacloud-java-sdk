@@ -4,8 +4,8 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessRulesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,8 +13,8 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("AccessRules")
     public DescribeAccessRulesResponseBodyAccessRules accessRules;
@@ -24,12 +24,12 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAccessRulesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeAccessRulesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAccessRulesResponseBody setRequestId(String requestId) {
@@ -48,12 +48,12 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAccessRulesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAccessRulesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeAccessRulesResponseBody setAccessRules(DescribeAccessRulesResponseBodyAccessRules accessRules) {

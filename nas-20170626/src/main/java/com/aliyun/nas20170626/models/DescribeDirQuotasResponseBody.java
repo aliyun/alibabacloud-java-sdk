@@ -4,11 +4,8 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirQuotasResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("DirQuotaInfos")
-    public java.util.List<DescribeDirQuotasResponseBodyDirQuotaInfos> dirQuotaInfos;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,28 +13,23 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("DirQuotaInfos")
+    public java.util.List<DescribeDirQuotasResponseBodyDirQuotaInfos> dirQuotaInfos;
 
     public static DescribeDirQuotasResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDirQuotasResponseBody self = new DescribeDirQuotasResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDirQuotasResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeDirQuotasResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeDirQuotasResponseBody setDirQuotaInfos(java.util.List<DescribeDirQuotasResponseBodyDirQuotaInfos> dirQuotaInfos) {
-        this.dirQuotaInfos = dirQuotaInfos;
-        return this;
-    }
-    public java.util.List<DescribeDirQuotasResponseBodyDirQuotaInfos> getDirQuotaInfos() {
-        return this.dirQuotaInfos;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeDirQuotasResponseBody setRequestId(String requestId) {
@@ -56,12 +48,20 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDirQuotasResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDirQuotasResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeDirQuotasResponseBody setDirQuotaInfos(java.util.List<DescribeDirQuotasResponseBodyDirQuotaInfos> dirQuotaInfos) {
+        this.dirQuotaInfos = dirQuotaInfos;
+        return this;
+    }
+    public java.util.List<DescribeDirQuotasResponseBodyDirQuotaInfos> getDirQuotaInfos() {
+        return this.dirQuotaInfos;
     }
 
     public static class DescribeDirQuotasResponseBodyDirQuotaInfosUserQuotaInfos extends TeaModel {
@@ -150,11 +150,11 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
     }
 
     public static class DescribeDirQuotasResponseBodyDirQuotaInfos extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("Path")
         public String path;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("DirInode")
         public String dirInode;
@@ -167,20 +167,20 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDirQuotasResponseBodyDirQuotaInfos setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public DescribeDirQuotasResponseBodyDirQuotaInfos setPath(String path) {
             this.path = path;
             return this;
         }
         public String getPath() {
             return this.path;
+        }
+
+        public DescribeDirQuotasResponseBodyDirQuotaInfos setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeDirQuotasResponseBodyDirQuotaInfos setDirInode(String dirInode) {

@@ -4,8 +4,11 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogAnalysisResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,26 +16,31 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Analyses")
     public DescribeLogAnalysisResponseBodyAnalyses analyses;
-
-    @NameInMap("Code")
-    public String code;
 
     public static DescribeLogAnalysisResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogAnalysisResponseBody self = new DescribeLogAnalysisResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLogAnalysisResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeLogAnalysisResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getCode() {
+        return this.code;
+    }
+
+    public DescribeLogAnalysisResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeLogAnalysisResponseBody setPageSize(Integer pageSize) {
@@ -51,12 +59,12 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLogAnalysisResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeLogAnalysisResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeLogAnalysisResponseBody setAnalyses(DescribeLogAnalysisResponseBodyAnalyses analyses) {
@@ -67,46 +75,22 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         return this.analyses;
     }
 
-    public DescribeLogAnalysisResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue extends TeaModel {
-        @NameInMap("RoleArn")
-        public String roleArn;
-
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("Logstore")
         public String logstore;
+
+        @NameInMap("RoleArn")
+        public String roleArn;
 
         @NameInMap("Project")
         public String project;
 
+        @NameInMap("Region")
+        public String region;
+
         public static DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue self = new DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue setRoleArn(String roleArn) {
-            this.roleArn = roleArn;
-            return this;
-        }
-        public String getRoleArn() {
-            return this.roleArn;
-        }
-
-        public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue setLogstore(String logstore) {
@@ -117,12 +101,28 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             return this.logstore;
         }
 
+        public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
         public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue setProject(String project) {
             this.project = project;
             return this;
         }
         public String getProject() {
             return this.project;
+        }
+
+        public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }

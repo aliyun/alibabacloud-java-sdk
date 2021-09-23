@@ -83,6 +83,9 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         @NameInMap("LifecyclePolicyName")
         public String lifecyclePolicyName;
 
+        @NameInMap("Paths")
+        public java.util.List<String> paths;
+
         public static DescribeLifecyclePoliciesResponseBodyLifecyclePolicies build(java.util.Map<String, ?> map) throws Exception {
             DescribeLifecyclePoliciesResponseBodyLifecyclePolicies self = new DescribeLifecyclePoliciesResponseBodyLifecyclePolicies();
             return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         }
         public String getLifecyclePolicyName() {
             return this.lifecyclePolicyName;
+        }
+
+        public DescribeLifecyclePoliciesResponseBodyLifecyclePolicies setPaths(java.util.List<String> paths) {
+            this.paths = paths;
+            return this;
+        }
+        public java.util.List<String> getPaths() {
+            return this.paths;
         }
 
     }

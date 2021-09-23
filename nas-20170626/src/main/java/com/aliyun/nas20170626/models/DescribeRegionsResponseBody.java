@@ -4,8 +4,8 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,8 +13,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
@@ -24,12 +24,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeRegionsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeRegionsResponseBody setRequestId(String requestId) {
@@ -48,12 +48,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeRegionsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeRegionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeRegionsResponseBody setRegions(DescribeRegionsResponseBodyRegions regions) {
@@ -65,11 +65,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        @NameInMap("LocalName")
-        public String localName;
-
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
+
+        @NameInMap("LocalName")
+        public String localName;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -79,20 +79,20 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRegionsResponseBodyRegionsRegion setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
-        }
-
         public DescribeRegionsResponseBodyRegionsRegion setRegionEndpoint(String regionEndpoint) {
             this.regionEndpoint = regionEndpoint;
             return this;
         }
         public String getRegionEndpoint() {
             return this.regionEndpoint;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {

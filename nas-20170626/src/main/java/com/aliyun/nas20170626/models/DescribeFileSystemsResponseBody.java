@@ -4,11 +4,8 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeFileSystemsResponseBody extends TeaModel {
-    @NameInMap("FileSystems")
-    public DescribeFileSystemsResponseBodyFileSystems fileSystems;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,28 +13,23 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("FileSystems")
+    public DescribeFileSystemsResponseBodyFileSystems fileSystems;
 
     public static DescribeFileSystemsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFileSystemsResponseBody self = new DescribeFileSystemsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeFileSystemsResponseBody setFileSystems(DescribeFileSystemsResponseBodyFileSystems fileSystems) {
-        this.fileSystems = fileSystems;
+    public DescribeFileSystemsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public DescribeFileSystemsResponseBodyFileSystems getFileSystems() {
-        return this.fileSystems;
-    }
-
-    public DescribeFileSystemsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeFileSystemsResponseBody setRequestId(String requestId) {
@@ -56,95 +48,43 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeFileSystemsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeFileSystemsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
-    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public DescribeFileSystemsResponseBody setFileSystems(DescribeFileSystemsResponseBodyFileSystems fileSystems) {
+        this.fileSystems = fileSystems;
+        return this;
     }
-
-    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemTags extends TeaModel {
-        @NameInMap("Tag")
-        public java.util.List<DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag> tag;
-
-        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeFileSystemsResponseBodyFileSystemsFileSystemTags self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemTags();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTags setTag(java.util.List<DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag> getTag() {
-            return this.tag;
-        }
-
-    }
-
-    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures extends TeaModel {
-        @NameInMap("SupportedFeature")
-        public java.util.List<String> supportedFeature;
-
-        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures build(java.util.Map<String, ?> map) throws Exception {
-            DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures setSupportedFeature(java.util.List<String> supportedFeature) {
-            this.supportedFeature = supportedFeature;
-            return this;
-        }
-        public java.util.List<String> getSupportedFeature() {
-            return this.supportedFeature;
-        }
-
+    public DescribeFileSystemsResponseBodyFileSystems getFileSystems() {
+        return this.fileSystems;
     }
 
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode extends TeaModel {
+        @NameInMap("EcsIp")
+        public String ecsIp;
+
         @NameInMap("EcsId")
         public String ecsId;
 
         @NameInMap("DefaultPasswd")
         public String defaultPasswd;
 
-        @NameInMap("EcsIp")
-        public String ecsIp;
-
         public static DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode build(java.util.Map<String, ?> map) throws Exception {
             DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode setEcsIp(String ecsIp) {
+            this.ecsIp = ecsIp;
+            return this;
+        }
+        public String getEcsIp() {
+            return this.ecsIp;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode setEcsId(String ecsId) {
@@ -161,14 +101,6 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public String getDefaultPasswd() {
             return this.defaultPasswd;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodesClientMasterNode setEcsIp(String ecsIp) {
-            this.ecsIp = ecsIp;
-            return this;
-        }
-        public String getEcsIp() {
-            return this.ecsIp;
         }
 
     }
@@ -248,9 +180,6 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("ClientMasterNodes")
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodes clientMasterNodes;
-
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
@@ -263,11 +192,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("VswId")
         public String vswId;
 
-        @NameInMap("Tags")
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetTags tags;
-
         @NameInMap("NetworkType")
         public String networkType;
+
+        @NameInMap("ClientMasterNodes")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodes clientMasterNodes;
+
+        @NameInMap("Tags")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetTags tags;
 
         public static DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget build(java.util.Map<String, ?> map) throws Exception {
             DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget();
@@ -288,14 +220,6 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget setClientMasterNodes(DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodes clientMasterNodes) {
-            this.clientMasterNodes = clientMasterNodes;
-            return this;
-        }
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodes getClientMasterNodes() {
-            return this.clientMasterNodes;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget setMountTargetDomain(String mountTargetDomain) {
@@ -330,20 +254,28 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             return this.vswId;
         }
 
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget setTags(DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetTags getTags() {
-            return this.tags;
-        }
-
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget setNetworkType(String networkType) {
             this.networkType = networkType;
             return this;
         }
         public String getNetworkType() {
             return this.networkType;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget setClientMasterNodes(DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodes clientMasterNodes) {
+            this.clientMasterNodes = clientMasterNodes;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetClientMasterNodes getClientMasterNodes() {
+            return this.clientMasterNodes;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTarget setTags(DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargetsMountTargetTags getTags() {
+            return this.tags;
         }
 
     }
@@ -367,59 +299,18 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap extends TeaModel {
-        @NameInMap("BindDN")
-        public String bindDN;
-
-        @NameInMap("SearchBase")
-        public String searchBase;
-
-        @NameInMap("URI")
-        public String URI;
-
-        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap build(java.util.Map<String, ?> map) throws Exception {
-            DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap setBindDN(String bindDN) {
-            this.bindDN = bindDN;
-            return this;
-        }
-        public String getBindDN() {
-            return this.bindDN;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap setSearchBase(String searchBase) {
-            this.searchBase = searchBase;
-            return this;
-        }
-        public String getSearchBase() {
-            return this.searchBase;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap setURI(String URI) {
-            this.URI = URI;
-            return this;
-        }
-        public String getURI() {
-            return this.URI;
-        }
-
-    }
-
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemPackagesPackage extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
+
+        @NameInMap("PackageId")
+        public String packageId;
 
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         @NameInMap("Size")
         public Long size;
-
-        @NameInMap("PackageId")
-        public String packageId;
 
         @NameInMap("PackageType")
         public String packageType;
@@ -437,6 +328,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             return this.startTime;
         }
 
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemPackagesPackage setPackageId(String packageId) {
+            this.packageId = packageId;
+            return this;
+        }
+        public String getPackageId() {
+            return this.packageId;
+        }
+
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemPackagesPackage setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
@@ -451,14 +350,6 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public Long getSize() {
             return this.size;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemPackagesPackage setPackageId(String packageId) {
-            this.packageId = packageId;
-            return this;
-        }
-        public String getPackageId() {
-            return this.packageId;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemPackagesPackage setPackageType(String packageType) {
@@ -490,15 +381,124 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag> tag;
+
+        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileSystemsResponseBodyFileSystemsFileSystemTags self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTags setTag(java.util.List<DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeFileSystemsResponseBodyFileSystemsFileSystemTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures extends TeaModel {
+        @NameInMap("SupportedFeature")
+        public java.util.List<String> supportedFeature;
+
+        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures setSupportedFeature(java.util.List<String> supportedFeature) {
+            this.supportedFeature = supportedFeature;
+            return this;
+        }
+        public java.util.List<String> getSupportedFeature() {
+            return this.supportedFeature;
+        }
+
+    }
+
+    public static class DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap extends TeaModel {
+        @NameInMap("SearchBase")
+        public String searchBase;
+
+        @NameInMap("URI")
+        public String URI;
+
+        @NameInMap("BindDN")
+        public String bindDN;
+
+        public static DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap self = new DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap setSearchBase(String searchBase) {
+            this.searchBase = searchBase;
+            return this;
+        }
+        public String getSearchBase() {
+            return this.searchBase;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap setURI(String URI) {
+            this.URI = URI;
+            return this;
+        }
+        public String getURI() {
+            return this.URI;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap setBindDN(String bindDN) {
+            this.bindDN = bindDN;
+            return this;
+        }
+        public String getBindDN() {
+            return this.bindDN;
+        }
+
+    }
+
     public static class DescribeFileSystemsResponseBodyFileSystemsFileSystem extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("MeteredIASize")
-        public Long meteredIASize;
-
         @NameInMap("Capacity")
         public Long capacity;
+
+        @NameInMap("MeteredIASize")
+        public Long meteredIASize;
 
         @NameInMap("CreateTime")
         public String createTime;
@@ -506,35 +506,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
-        @NameInMap("Tags")
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTags tags;
-
         @NameInMap("StorageType")
         public String storageType;
-
-        @NameInMap("MeteredSize")
-        public Long meteredSize;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Bandwidth")
-        public Long bandwidth;
-
-        @NameInMap("SupportedFeatures")
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures supportedFeatures;
-
-        @NameInMap("Version")
-        public String version;
-
-        @NameInMap("ProtocolType")
-        public String protocolType;
-
-        @NameInMap("MountTargets")
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargets mountTargets;
-
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -545,11 +518,20 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        @NameInMap("MeteredSize")
+        public Long meteredSize;
+
         @NameInMap("EncryptType")
         public Integer encryptType;
 
-        @NameInMap("Ldap")
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap ldap;
+        @NameInMap("Bandwidth")
+        public Long bandwidth;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Version")
+        public String version;
 
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -557,8 +539,26 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
+        @NameInMap("ProtocolType")
+        public String protocolType;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
+        @NameInMap("MountTargets")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargets mountTargets;
+
         @NameInMap("Packages")
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemPackages packages;
+
+        @NameInMap("Tags")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTags tags;
+
+        @NameInMap("SupportedFeatures")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures supportedFeatures;
+
+        @NameInMap("Ldap")
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap ldap;
 
         public static DescribeFileSystemsResponseBodyFileSystemsFileSystem build(java.util.Map<String, ?> map) throws Exception {
             DescribeFileSystemsResponseBodyFileSystemsFileSystem self = new DescribeFileSystemsResponseBodyFileSystemsFileSystem();
@@ -573,20 +573,20 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setMeteredIASize(Long meteredIASize) {
-            this.meteredIASize = meteredIASize;
-            return this;
-        }
-        public Long getMeteredIASize() {
-            return this.meteredIASize;
-        }
-
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setCapacity(Long capacity) {
             this.capacity = capacity;
             return this;
         }
         public Long getCapacity() {
             return this.capacity;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setMeteredIASize(Long meteredIASize) {
+            this.meteredIASize = meteredIASize;
+            return this;
+        }
+        public Long getMeteredIASize() {
+            return this.meteredIASize;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setCreateTime(String createTime) {
@@ -605,84 +605,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             return this.chargeType;
         }
 
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setTags(DescribeFileSystemsResponseBodyFileSystemsFileSystemTags tags) {
-            this.tags = tags;
-            return this;
-        }
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTags getTags() {
-            return this.tags;
-        }
-
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setStorageType(String storageType) {
             this.storageType = storageType;
             return this;
         }
         public String getStorageType() {
             return this.storageType;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setMeteredSize(Long meteredSize) {
-            this.meteredSize = meteredSize;
-            return this;
-        }
-        public Long getMeteredSize() {
-            return this.meteredSize;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setBandwidth(Long bandwidth) {
-            this.bandwidth = bandwidth;
-            return this;
-        }
-        public Long getBandwidth() {
-            return this.bandwidth;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setSupportedFeatures(DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures supportedFeatures) {
-            this.supportedFeatures = supportedFeatures;
-            return this;
-        }
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures getSupportedFeatures() {
-            return this.supportedFeatures;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setProtocolType(String protocolType) {
-            this.protocolType = protocolType;
-            return this;
-        }
-        public String getProtocolType() {
-            return this.protocolType;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setMountTargets(DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargets mountTargets) {
-            this.mountTargets = mountTargets;
-            return this;
-        }
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargets getMountTargets() {
-            return this.mountTargets;
-        }
-
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setRegionId(String regionId) {
@@ -709,6 +637,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             return this.fileSystemId;
         }
 
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setMeteredSize(Long meteredSize) {
+            this.meteredSize = meteredSize;
+            return this;
+        }
+        public Long getMeteredSize() {
+            return this.meteredSize;
+        }
+
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setEncryptType(Integer encryptType) {
             this.encryptType = encryptType;
             return this;
@@ -717,12 +653,28 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             return this.encryptType;
         }
 
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setLdap(DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap ldap) {
-            this.ldap = ldap;
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setBandwidth(Long bandwidth) {
+            this.bandwidth = bandwidth;
             return this;
         }
-        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap getLdap() {
-            return this.ldap;
+        public Long getBandwidth() {
+            return this.bandwidth;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setExpiredTime(String expiredTime) {
@@ -741,12 +693,60 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             return this.zoneId;
         }
 
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setMountTargets(DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargets mountTargets) {
+            this.mountTargets = mountTargets;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemMountTargets getMountTargets() {
+            return this.mountTargets;
+        }
+
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setPackages(DescribeFileSystemsResponseBodyFileSystemsFileSystemPackages packages) {
             this.packages = packages;
             return this;
         }
         public DescribeFileSystemsResponseBodyFileSystemsFileSystemPackages getPackages() {
             return this.packages;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setTags(DescribeFileSystemsResponseBodyFileSystemsFileSystemTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setSupportedFeatures(DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures supportedFeatures) {
+            this.supportedFeatures = supportedFeatures;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemSupportedFeatures getSupportedFeatures() {
+            return this.supportedFeatures;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setLdap(DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap ldap) {
+            this.ldap = ldap;
+            return this;
+        }
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystemLdap getLdap() {
+            return this.ldap;
         }
 
     }

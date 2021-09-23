@@ -4,8 +4,8 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,8 +13,8 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("AutoSnapshotTasks")
     public DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasks autoSnapshotTasks;
@@ -24,12 +24,12 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAutoSnapshotTasksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeAutoSnapshotTasksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAutoSnapshotTasksResponseBody setRequestId(String requestId) {
@@ -48,12 +48,12 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAutoSnapshotTasksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAutoSnapshotTasksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeAutoSnapshotTasksResponseBody setAutoSnapshotTasks(DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasks autoSnapshotTasks) {
@@ -65,23 +65,15 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask extends TeaModel {
-        @NameInMap("SourceFileSystemId")
-        public String sourceFileSystemId;
-
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
+
+        @NameInMap("SourceFileSystemId")
+        public String sourceFileSystemId;
 
         public static DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask self = new DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask setSourceFileSystemId(String sourceFileSystemId) {
-            this.sourceFileSystemId = sourceFileSystemId;
-            return this;
-        }
-        public String getSourceFileSystemId() {
-            return this.sourceFileSystemId;
         }
 
         public DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
@@ -90,6 +82,14 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
         public String getAutoSnapshotPolicyId() {
             return this.autoSnapshotPolicyId;
+        }
+
+        public DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask setSourceFileSystemId(String sourceFileSystemId) {
+            this.sourceFileSystemId = sourceFileSystemId;
+            return this;
+        }
+        public String getSourceFileSystemId() {
+            return this.sourceFileSystemId;
         }
 
     }
