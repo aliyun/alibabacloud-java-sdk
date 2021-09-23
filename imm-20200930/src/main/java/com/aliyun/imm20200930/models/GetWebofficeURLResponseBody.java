@@ -3,14 +3,14 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class GetWebofficeUrlResponseBody extends TeaModel {
+public class GetWebofficeURLResponseBody extends TeaModel {
     // 请求 id
     @NameInMap("RequestId")
     public String requestId;
 
     // 预览编辑地址
-    @NameInMap("WebofficeUrl")
-    public String webofficeUrl;
+    @NameInMap("WebofficeURL")
+    public String webofficeURL;
 
     // access token
     @NameInMap("AccessToken")
@@ -28,12 +28,12 @@ public class GetWebofficeUrlResponseBody extends TeaModel {
     @NameInMap("RefreshTokenExpiredTime")
     public String refreshTokenExpiredTime;
 
-    public static GetWebofficeUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetWebofficeUrlResponseBody self = new GetWebofficeUrlResponseBody();
+    public static GetWebofficeURLResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetWebofficeURLResponseBody self = new GetWebofficeURLResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetWebofficeUrlResponseBody setRequestId(String requestId) {
+    public GetWebofficeURLResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -41,15 +41,15 @@ public class GetWebofficeUrlResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetWebofficeUrlResponseBody setWebofficeUrl(String webofficeUrl) {
-        this.webofficeUrl = webofficeUrl;
+    public GetWebofficeURLResponseBody setWebofficeURL(String webofficeURL) {
+        this.webofficeURL = webofficeURL;
         return this;
     }
-    public String getWebofficeUrl() {
-        return this.webofficeUrl;
+    public String getWebofficeURL() {
+        return this.webofficeURL;
     }
 
-    public GetWebofficeUrlResponseBody setAccessToken(String accessToken) {
+    public GetWebofficeURLResponseBody setAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
@@ -57,7 +57,7 @@ public class GetWebofficeUrlResponseBody extends TeaModel {
         return this.accessToken;
     }
 
-    public GetWebofficeUrlResponseBody setRefreshToken(String refreshToken) {
+    public GetWebofficeURLResponseBody setRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
@@ -65,7 +65,7 @@ public class GetWebofficeUrlResponseBody extends TeaModel {
         return this.refreshToken;
     }
 
-    public GetWebofficeUrlResponseBody setAccessTokenExpiredTime(String accessTokenExpiredTime) {
+    public GetWebofficeURLResponseBody setAccessTokenExpiredTime(String accessTokenExpiredTime) {
         this.accessTokenExpiredTime = accessTokenExpiredTime;
         return this;
     }
@@ -73,7 +73,7 @@ public class GetWebofficeUrlResponseBody extends TeaModel {
         return this.accessTokenExpiredTime;
     }
 
-    public GetWebofficeUrlResponseBody setRefreshTokenExpiredTime(String refreshTokenExpiredTime) {
+    public GetWebofficeURLResponseBody setRefreshTokenExpiredTime(String refreshTokenExpiredTime) {
         this.refreshTokenExpiredTime = refreshTokenExpiredTime;
         return this;
     }

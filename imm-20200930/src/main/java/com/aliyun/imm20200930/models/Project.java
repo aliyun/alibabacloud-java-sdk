@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateProjectRequest extends TeaModel {
+public class Project extends TeaModel {
     // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
@@ -12,52 +12,68 @@ public class UpdateProjectRequest extends TeaModel {
     @NameInMap("ServiceRole")
     public String serviceRole;
 
-    // 项目描述
+    // 创建时间
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    // 更新时间
+    @NameInMap("UpdateTime")
+    public String updateTime;
+
+    // 描述
     @NameInMap("Description")
     public String description;
-
-    // 模板Id
-    @NameInMap("TemplateId")
-    public String templateId;
 
     // 项目QPS
     @NameInMap("ProjectQueriesPerSecond")
     public Long projectQueriesPerSecond;
 
-    // 项目并发数
+    // 项目最大并发数
     @NameInMap("EngineConcurrency")
     public Long engineConcurrency;
 
-    // 项目最多媒体集数
+    // 项目最多媒体集数量
     @NameInMap("ProjectMaxDatasetCount")
     public Long projectMaxDatasetCount;
 
-    // 媒体集最多绑定数
+    // 项目最多绑定数
     @NameInMap("DatasetMaxBindCount")
     public Long datasetMaxBindCount;
 
-    // 媒体集最多文件数
+    // 项目最多文件数
     @NameInMap("DatasetMaxFileCount")
     public Long datasetMaxFileCount;
 
-    // 媒体集最多实体数
+    // 项目最多实体数
     @NameInMap("DatasetMaxEntityCount")
     public Long datasetMaxEntityCount;
 
-    // 媒体集最多关系数
+    // 项目最多关系数
     @NameInMap("DatasetMaxRelationCount")
     public Long datasetMaxRelationCount;
 
-    // 媒体集最大文件总大小
+    // 项目最大文件总大小
     @NameInMap("DatasetMaxTotalFileSize")
     public Long datasetMaxTotalFileSize;
 
-    public static UpdateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateProjectRequest self = new UpdateProjectRequest();
+    // 项目当前媒体集数
+    @NameInMap("DatasetCount")
+    public Long datasetCount;
+
+    // 项目当前文件数
+    @NameInMap("FileCount")
+    public Long fileCount;
+
+    // 项目当前文件总大小
+    @NameInMap("TotalFileSize")
+    public Long totalFileSize;
+
+    public static Project build(java.util.Map<String, ?> map) throws Exception {
+        Project self = new Project();
         return TeaModel.build(map, self);
     }
 
-    public UpdateProjectRequest setProjectName(String projectName) {
+    public Project setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -65,7 +81,7 @@ public class UpdateProjectRequest extends TeaModel {
         return this.projectName;
     }
 
-    public UpdateProjectRequest setServiceRole(String serviceRole) {
+    public Project setServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
     }
@@ -73,7 +89,23 @@ public class UpdateProjectRequest extends TeaModel {
         return this.serviceRole;
     }
 
-    public UpdateProjectRequest setDescription(String description) {
+    public Project setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public Project setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+    public String getUpdateTime() {
+        return this.updateTime;
+    }
+
+    public Project setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -81,15 +113,7 @@ public class UpdateProjectRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateProjectRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
-    }
-
-    public UpdateProjectRequest setProjectQueriesPerSecond(Long projectQueriesPerSecond) {
+    public Project setProjectQueriesPerSecond(Long projectQueriesPerSecond) {
         this.projectQueriesPerSecond = projectQueriesPerSecond;
         return this;
     }
@@ -97,7 +121,7 @@ public class UpdateProjectRequest extends TeaModel {
         return this.projectQueriesPerSecond;
     }
 
-    public UpdateProjectRequest setEngineConcurrency(Long engineConcurrency) {
+    public Project setEngineConcurrency(Long engineConcurrency) {
         this.engineConcurrency = engineConcurrency;
         return this;
     }
@@ -105,7 +129,7 @@ public class UpdateProjectRequest extends TeaModel {
         return this.engineConcurrency;
     }
 
-    public UpdateProjectRequest setProjectMaxDatasetCount(Long projectMaxDatasetCount) {
+    public Project setProjectMaxDatasetCount(Long projectMaxDatasetCount) {
         this.projectMaxDatasetCount = projectMaxDatasetCount;
         return this;
     }
@@ -113,7 +137,7 @@ public class UpdateProjectRequest extends TeaModel {
         return this.projectMaxDatasetCount;
     }
 
-    public UpdateProjectRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {
+    public Project setDatasetMaxBindCount(Long datasetMaxBindCount) {
         this.datasetMaxBindCount = datasetMaxBindCount;
         return this;
     }
@@ -121,7 +145,7 @@ public class UpdateProjectRequest extends TeaModel {
         return this.datasetMaxBindCount;
     }
 
-    public UpdateProjectRequest setDatasetMaxFileCount(Long datasetMaxFileCount) {
+    public Project setDatasetMaxFileCount(Long datasetMaxFileCount) {
         this.datasetMaxFileCount = datasetMaxFileCount;
         return this;
     }
@@ -129,7 +153,7 @@ public class UpdateProjectRequest extends TeaModel {
         return this.datasetMaxFileCount;
     }
 
-    public UpdateProjectRequest setDatasetMaxEntityCount(Long datasetMaxEntityCount) {
+    public Project setDatasetMaxEntityCount(Long datasetMaxEntityCount) {
         this.datasetMaxEntityCount = datasetMaxEntityCount;
         return this;
     }
@@ -137,7 +161,7 @@ public class UpdateProjectRequest extends TeaModel {
         return this.datasetMaxEntityCount;
     }
 
-    public UpdateProjectRequest setDatasetMaxRelationCount(Long datasetMaxRelationCount) {
+    public Project setDatasetMaxRelationCount(Long datasetMaxRelationCount) {
         this.datasetMaxRelationCount = datasetMaxRelationCount;
         return this;
     }
@@ -145,12 +169,36 @@ public class UpdateProjectRequest extends TeaModel {
         return this.datasetMaxRelationCount;
     }
 
-    public UpdateProjectRequest setDatasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
+    public Project setDatasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
         this.datasetMaxTotalFileSize = datasetMaxTotalFileSize;
         return this;
     }
     public Long getDatasetMaxTotalFileSize() {
         return this.datasetMaxTotalFileSize;
+    }
+
+    public Project setDatasetCount(Long datasetCount) {
+        this.datasetCount = datasetCount;
+        return this;
+    }
+    public Long getDatasetCount() {
+        return this.datasetCount;
+    }
+
+    public Project setFileCount(Long fileCount) {
+        this.fileCount = fileCount;
+        return this;
+    }
+    public Long getFileCount() {
+        return this.fileCount;
+    }
+
+    public Project setTotalFileSize(Long totalFileSize) {
+        this.totalFileSize = totalFileSize;
+        return this;
+    }
+    public Long getTotalFileSize() {
+        return this.totalFileSize;
     }
 
 }

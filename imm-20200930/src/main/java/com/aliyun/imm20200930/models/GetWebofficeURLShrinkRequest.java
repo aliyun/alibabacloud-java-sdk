@@ -3,14 +3,14 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class GetWebofficeUrlShrinkRequest extends TeaModel {
+public class GetWebofficeURLShrinkRequest extends TeaModel {
     // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
 
     // 预览编辑地址
-    @NameInMap("SourceUri")
-    public String sourceUri;
+    @NameInMap("SourceURI")
+    public String sourceURI;
 
     // 文件名，必须带文件名后缀，默认是 SourceUri 的最后一级
     @NameInMap("Filename")
@@ -60,12 +60,12 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
     @NameInMap("AssumeRoleChain")
     public String assumeRoleChainShrink;
 
-    public static GetWebofficeUrlShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetWebofficeUrlShrinkRequest self = new GetWebofficeUrlShrinkRequest();
+    public static GetWebofficeURLShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetWebofficeURLShrinkRequest self = new GetWebofficeURLShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetWebofficeUrlShrinkRequest setProjectName(String projectName) {
+    public GetWebofficeURLShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -73,15 +73,15 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.projectName;
     }
 
-    public GetWebofficeUrlShrinkRequest setSourceUri(String sourceUri) {
-        this.sourceUri = sourceUri;
+    public GetWebofficeURLShrinkRequest setSourceURI(String sourceURI) {
+        this.sourceURI = sourceURI;
         return this;
     }
-    public String getSourceUri() {
-        return this.sourceUri;
+    public String getSourceURI() {
+        return this.sourceURI;
     }
 
-    public GetWebofficeUrlShrinkRequest setFilename(String filename) {
+    public GetWebofficeURLShrinkRequest setFilename(String filename) {
         this.filename = filename;
         return this;
     }
@@ -89,7 +89,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.filename;
     }
 
-    public GetWebofficeUrlShrinkRequest setUserData(String userData) {
+    public GetWebofficeURLShrinkRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
@@ -97,7 +97,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.userData;
     }
 
-    public GetWebofficeUrlShrinkRequest setPreviewPages(Long previewPages) {
+    public GetWebofficeURLShrinkRequest setPreviewPages(Long previewPages) {
         this.previewPages = previewPages;
         return this;
     }
@@ -105,7 +105,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.previewPages;
     }
 
-    public GetWebofficeUrlShrinkRequest setPassword(String password) {
+    public GetWebofficeURLShrinkRequest setPassword(String password) {
         this.password = password;
         return this;
     }
@@ -113,7 +113,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.password;
     }
 
-    public GetWebofficeUrlShrinkRequest setExternalUploaded(Boolean externalUploaded) {
+    public GetWebofficeURLShrinkRequest setExternalUploaded(Boolean externalUploaded) {
         this.externalUploaded = externalUploaded;
         return this;
     }
@@ -121,7 +121,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.externalUploaded;
     }
 
-    public GetWebofficeUrlShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
+    public GetWebofficeURLShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
         this.notifyEndpoint = notifyEndpoint;
         return this;
     }
@@ -129,7 +129,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.notifyEndpoint;
     }
 
-    public GetWebofficeUrlShrinkRequest setNotifyTopicName(String notifyTopicName) {
+    public GetWebofficeURLShrinkRequest setNotifyTopicName(String notifyTopicName) {
         this.notifyTopicName = notifyTopicName;
         return this;
     }
@@ -137,7 +137,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.notifyTopicName;
     }
 
-    public GetWebofficeUrlShrinkRequest setHidecmb(Boolean hidecmb) {
+    public GetWebofficeURLShrinkRequest setHidecmb(Boolean hidecmb) {
         this.hidecmb = hidecmb;
         return this;
     }
@@ -145,7 +145,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.hidecmb;
     }
 
-    public GetWebofficeUrlShrinkRequest setPermissionShrink(String permissionShrink) {
+    public GetWebofficeURLShrinkRequest setPermissionShrink(String permissionShrink) {
         this.permissionShrink = permissionShrink;
         return this;
     }
@@ -153,7 +153,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.permissionShrink;
     }
 
-    public GetWebofficeUrlShrinkRequest setUserShrink(String userShrink) {
+    public GetWebofficeURLShrinkRequest setUserShrink(String userShrink) {
         this.userShrink = userShrink;
         return this;
     }
@@ -161,7 +161,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.userShrink;
     }
 
-    public GetWebofficeUrlShrinkRequest setWatermarkShrink(String watermarkShrink) {
+    public GetWebofficeURLShrinkRequest setWatermarkShrink(String watermarkShrink) {
         this.watermarkShrink = watermarkShrink;
         return this;
     }
@@ -169,7 +169,7 @@ public class GetWebofficeUrlShrinkRequest extends TeaModel {
         return this.watermarkShrink;
     }
 
-    public GetWebofficeUrlShrinkRequest setAssumeRoleChainShrink(String assumeRoleChainShrink) {
+    public GetWebofficeURLShrinkRequest setAssumeRoleChainShrink(String assumeRoleChainShrink) {
         this.assumeRoleChainShrink = assumeRoleChainShrink;
         return this;
     }

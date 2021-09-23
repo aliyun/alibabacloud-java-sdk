@@ -10,11 +10,8 @@ public class UpdateFileMetaShrinkRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    @NameInMap("URI")
-    public String URI;
-
-    @NameInMap("CustomLabels")
-    public String customLabelsShrink;
+    @NameInMap("File")
+    public String fileShrink;
 
     public static UpdateFileMetaShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFileMetaShrinkRequest self = new UpdateFileMetaShrinkRequest();
@@ -37,20 +34,12 @@ public class UpdateFileMetaShrinkRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public UpdateFileMetaShrinkRequest setURI(String URI) {
-        this.URI = URI;
+    public UpdateFileMetaShrinkRequest setFileShrink(String fileShrink) {
+        this.fileShrink = fileShrink;
         return this;
     }
-    public String getURI() {
-        return this.URI;
-    }
-
-    public UpdateFileMetaShrinkRequest setCustomLabelsShrink(String customLabelsShrink) {
-        this.customLabelsShrink = customLabelsShrink;
-        return this;
-    }
-    public String getCustomLabelsShrink() {
-        return this.customLabelsShrink;
+    public String getFileShrink() {
+        return this.fileShrink;
     }
 
 }

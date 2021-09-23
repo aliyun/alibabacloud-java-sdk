@@ -16,21 +16,27 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    // 模板Id
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("DatasetMaxOSSBindCount")
-    public Long datasetMaxOSSBindCount;
+    // 媒体集最多帮定数
+    @NameInMap("DatasetMaxBindCount")
+    public Long datasetMaxBindCount;
 
+    // 媒体集最多文件数
     @NameInMap("DatasetMaxFileCount")
     public Long datasetMaxFileCount;
 
+    // 媒体集最多实体数
     @NameInMap("DatasetMaxEntityCount")
     public Long datasetMaxEntityCount;
 
+    // 媒体集最多关系数
     @NameInMap("DatasetMaxRelationCount")
     public Long datasetMaxRelationCount;
 
+    // 媒体集最大文件总大小
     @NameInMap("DatasetMaxTotalFileSize")
     public Long datasetMaxTotalFileSize;
 
@@ -71,12 +77,12 @@ public class CreateDatasetRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateDatasetRequest setDatasetMaxOSSBindCount(Long datasetMaxOSSBindCount) {
-        this.datasetMaxOSSBindCount = datasetMaxOSSBindCount;
+    public CreateDatasetRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {
+        this.datasetMaxBindCount = datasetMaxBindCount;
         return this;
     }
-    public Long getDatasetMaxOSSBindCount() {
-        return this.datasetMaxOSSBindCount;
+    public Long getDatasetMaxBindCount() {
+        return this.datasetMaxBindCount;
     }
 
     public CreateDatasetRequest setDatasetMaxFileCount(Long datasetMaxFileCount) {

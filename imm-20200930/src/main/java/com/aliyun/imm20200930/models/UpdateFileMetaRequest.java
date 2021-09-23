@@ -10,11 +10,8 @@ public class UpdateFileMetaRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    @NameInMap("URI")
-    public String URI;
-
-    @NameInMap("CustomLabels")
-    public java.util.Map<String, ?> customLabels;
+    @NameInMap("File")
+    public FileForReq file;
 
     public static UpdateFileMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFileMetaRequest self = new UpdateFileMetaRequest();
@@ -37,50 +34,12 @@ public class UpdateFileMetaRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public UpdateFileMetaRequest setURI(String URI) {
-        this.URI = URI;
+    public UpdateFileMetaRequest setFile(FileForReq file) {
+        this.file = file;
         return this;
     }
-    public String getURI() {
-        return this.URI;
-    }
-
-    public UpdateFileMetaRequest setCustomLabels(java.util.Map<String, ?> customLabels) {
-        this.customLabels = customLabels;
-        return this;
-    }
-    public java.util.Map<String, ?> getCustomLabels() {
-        return this.customLabels;
-    }
-
-    public static class BatchUpdateFileMetaRequestFiles extends TeaModel {
-        @NameInMap("URI")
-        public String URI;
-
-        @NameInMap("CustomLabels")
-        public java.util.Map<String, ?> customLabels;
-
-        public static BatchUpdateFileMetaRequestFiles build(java.util.Map<String, ?> map) throws Exception {
-            BatchUpdateFileMetaRequestFiles self = new BatchUpdateFileMetaRequestFiles();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchUpdateFileMetaRequestFiles setURI(String URI) {
-            this.URI = URI;
-            return this;
-        }
-        public String getURI() {
-            return this.URI;
-        }
-
-        public BatchUpdateFileMetaRequestFiles setCustomLabels(java.util.Map<String, ?> customLabels) {
-            this.customLabels = customLabels;
-            return this;
-        }
-        public java.util.Map<String, ?> getCustomLabels() {
-            return this.customLabels;
-        }
-
+    public FileForReq getFile() {
+        return this.file;
     }
 
 }

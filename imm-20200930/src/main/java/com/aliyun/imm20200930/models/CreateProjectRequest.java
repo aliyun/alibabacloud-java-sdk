@@ -8,28 +8,26 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
-    // 项目描述
     @NameInMap("Description")
     public String description;
 
-    // 服务角色
     @NameInMap("ServiceRole")
     public String serviceRole;
 
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("ProjectQPS")
-    public Long projectQPS;
+    @NameInMap("ProjectQueriesPerSecond")
+    public Long projectQueriesPerSecond;
 
-    @NameInMap("ProjectTPS")
-    public Long projectTPS;
+    @NameInMap("EngineConcurrency")
+    public Long engineConcurrency;
 
     @NameInMap("ProjectMaxDatasetCount")
     public Long projectMaxDatasetCount;
 
-    @NameInMap("DatasetMaxOSSBindCount")
-    public Long datasetMaxOSSBindCount;
+    @NameInMap("DatasetMaxBindCount")
+    public Long datasetMaxBindCount;
 
     @NameInMap("DatasetMaxFileCount")
     public Long datasetMaxFileCount;
@@ -80,20 +78,20 @@ public class CreateProjectRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateProjectRequest setProjectQPS(Long projectQPS) {
-        this.projectQPS = projectQPS;
+    public CreateProjectRequest setProjectQueriesPerSecond(Long projectQueriesPerSecond) {
+        this.projectQueriesPerSecond = projectQueriesPerSecond;
         return this;
     }
-    public Long getProjectQPS() {
-        return this.projectQPS;
+    public Long getProjectQueriesPerSecond() {
+        return this.projectQueriesPerSecond;
     }
 
-    public CreateProjectRequest setProjectTPS(Long projectTPS) {
-        this.projectTPS = projectTPS;
+    public CreateProjectRequest setEngineConcurrency(Long engineConcurrency) {
+        this.engineConcurrency = engineConcurrency;
         return this;
     }
-    public Long getProjectTPS() {
-        return this.projectTPS;
+    public Long getEngineConcurrency() {
+        return this.engineConcurrency;
     }
 
     public CreateProjectRequest setProjectMaxDatasetCount(Long projectMaxDatasetCount) {
@@ -104,12 +102,12 @@ public class CreateProjectRequest extends TeaModel {
         return this.projectMaxDatasetCount;
     }
 
-    public CreateProjectRequest setDatasetMaxOSSBindCount(Long datasetMaxOSSBindCount) {
-        this.datasetMaxOSSBindCount = datasetMaxOSSBindCount;
+    public CreateProjectRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {
+        this.datasetMaxBindCount = datasetMaxBindCount;
         return this;
     }
-    public Long getDatasetMaxOSSBindCount() {
-        return this.datasetMaxOSSBindCount;
+    public Long getDatasetMaxBindCount() {
+        return this.datasetMaxBindCount;
     }
 
     public CreateProjectRequest setDatasetMaxFileCount(Long datasetMaxFileCount) {
