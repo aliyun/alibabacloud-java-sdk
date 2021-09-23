@@ -52,6 +52,9 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("ConfigSecretEnabled")
+    public Boolean configSecretEnabled;
+
     public static UpdateConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateConfigRequest self = new UpdateConfigRequest();
         return TeaModel.build(map, self);
@@ -183,6 +186,14 @@ public class UpdateConfigRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateConfigRequest setConfigSecretEnabled(Boolean configSecretEnabled) {
+        this.configSecretEnabled = configSecretEnabled;
+        return this;
+    }
+    public Boolean getConfigSecretEnabled() {
+        return this.configSecretEnabled;
     }
 
 }

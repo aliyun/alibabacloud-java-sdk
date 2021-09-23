@@ -89,6 +89,12 @@ public class GetNacosConfigResponseBody extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
+        @NameInMap("EncryptedDataKey")
+        public String encryptedDataKey;
+
+        @NameInMap("BetaIps")
+        public String betaIps;
+
         public static GetNacosConfigResponseBodyConfiguration build(java.util.Map<String, ?> map) throws Exception {
             GetNacosConfigResponseBodyConfiguration self = new GetNacosConfigResponseBodyConfiguration();
             return TeaModel.build(map, self);
@@ -156,6 +162,22 @@ public class GetNacosConfigResponseBody extends TeaModel {
         }
         public String getDesc() {
             return this.desc;
+        }
+
+        public GetNacosConfigResponseBodyConfiguration setEncryptedDataKey(String encryptedDataKey) {
+            this.encryptedDataKey = encryptedDataKey;
+            return this;
+        }
+        public String getEncryptedDataKey() {
+            return this.encryptedDataKey;
+        }
+
+        public GetNacosConfigResponseBodyConfiguration setBetaIps(String betaIps) {
+            this.betaIps = betaIps;
+            return this;
+        }
+        public String getBetaIps() {
+            return this.betaIps;
         }
 
     }

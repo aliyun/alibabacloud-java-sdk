@@ -16,6 +16,9 @@ public class DeleteNacosConfigRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    @NameInMap("Beta")
+    public Boolean beta;
+
     public static DeleteNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteNacosConfigRequest self = new DeleteNacosConfigRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DeleteNacosConfigRequest extends TeaModel {
     }
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    public DeleteNacosConfigRequest setBeta(Boolean beta) {
+        this.beta = beta;
+        return this;
+    }
+    public Boolean getBeta() {
+        return this.beta;
     }
 
 }

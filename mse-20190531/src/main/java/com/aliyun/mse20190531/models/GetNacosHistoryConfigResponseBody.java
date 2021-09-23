@@ -83,6 +83,9 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         @NameInMap("OpType")
         public String opType;
 
+        @NameInMap("EncryptedDataKey")
+        public String encryptedDataKey;
+
         public static GetNacosHistoryConfigResponseBodyConfiguration build(java.util.Map<String, ?> map) throws Exception {
             GetNacosHistoryConfigResponseBodyConfiguration self = new GetNacosHistoryConfigResponseBodyConfiguration();
             return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         }
         public String getOpType() {
             return this.opType;
+        }
+
+        public GetNacosHistoryConfigResponseBodyConfiguration setEncryptedDataKey(String encryptedDataKey) {
+            this.encryptedDataKey = encryptedDataKey;
+            return this;
+        }
+        public String getEncryptedDataKey() {
+            return this.encryptedDataKey;
         }
 
     }

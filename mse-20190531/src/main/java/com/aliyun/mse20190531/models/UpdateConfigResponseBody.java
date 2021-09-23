@@ -10,11 +10,14 @@ public class UpdateConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
 
     public static UpdateConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateConfigResponseBody self = new UpdateConfigResponseBody();
@@ -37,20 +40,28 @@ public class UpdateConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateConfigResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
     public UpdateConfigResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UpdateConfigResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public UpdateConfigResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }

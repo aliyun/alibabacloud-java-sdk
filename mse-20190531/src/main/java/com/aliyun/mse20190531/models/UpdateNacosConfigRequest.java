@@ -37,6 +37,9 @@ public class UpdateNacosConfigRequest extends TeaModel {
     @NameInMap("BetaIps")
     public String betaIps;
 
+    @NameInMap("EncryptedDataKey")
+    public String encryptedDataKey;
+
     public static UpdateNacosConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNacosConfigRequest self = new UpdateNacosConfigRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class UpdateNacosConfigRequest extends TeaModel {
     }
     public String getBetaIps() {
         return this.betaIps;
+    }
+
+    public UpdateNacosConfigRequest setEncryptedDataKey(String encryptedDataKey) {
+        this.encryptedDataKey = encryptedDataKey;
+        return this;
+    }
+    public String getEncryptedDataKey() {
+        return this.encryptedDataKey;
     }
 
 }

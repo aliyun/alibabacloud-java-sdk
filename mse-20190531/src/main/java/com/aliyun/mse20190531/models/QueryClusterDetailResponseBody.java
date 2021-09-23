@@ -235,6 +235,12 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("ConnectionType")
         public String connectionType;
 
+        @NameInMap("MseVersion")
+        public String mseVersion;
+
+        @NameInMap("ChargeType")
+        public String chargeType;
+
         public static QueryClusterDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryClusterDetailResponseBodyData self = new QueryClusterDetailResponseBodyData();
             return TeaModel.build(map, self);
@@ -494,6 +500,22 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
         public String getConnectionType() {
             return this.connectionType;
+        }
+
+        public QueryClusterDetailResponseBodyData setMseVersion(String mseVersion) {
+            this.mseVersion = mseVersion;
+            return this;
+        }
+        public String getMseVersion() {
+            return this.mseVersion;
+        }
+
+        public QueryClusterDetailResponseBodyData setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterResponseBody extends TeaModel {
-    @NameInMap("HttpCode")
-    public String httpCode;
-
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("HttpCode")
+    public String httpCode;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -24,20 +24,20 @@ public class UpgradeClusterResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpgradeClusterResponseBody setHttpCode(String httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public String getHttpCode() {
-        return this.httpCode;
-    }
-
     public UpgradeClusterResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public UpgradeClusterResponseBody setHttpCode(String httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public String getHttpCode() {
+        return this.httpCode;
     }
 
     public UpgradeClusterResponseBody setRequestId(String requestId) {

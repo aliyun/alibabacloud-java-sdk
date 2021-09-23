@@ -4,17 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryClusterSpecificationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("Data")
-    public java.util.List<QueryClusterSpecificationResponseBodyData> data;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -22,28 +19,15 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public java.util.List<QueryClusterSpecificationResponseBodyData> data;
 
     public static QueryClusterSpecificationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryClusterSpecificationResponseBody self = new QueryClusterSpecificationResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryClusterSpecificationResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryClusterSpecificationResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public QueryClusterSpecificationResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -54,12 +38,20 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public QueryClusterSpecificationResponseBody setData(java.util.List<QueryClusterSpecificationResponseBodyData> data) {
-        this.data = data;
+    public QueryClusterSpecificationResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<QueryClusterSpecificationResponseBodyData> getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryClusterSpecificationResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public QueryClusterSpecificationResponseBody setErrorCode(String errorCode) {
@@ -78,12 +70,20 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QueryClusterSpecificationResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public QueryClusterSpecificationResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryClusterSpecificationResponseBody setData(java.util.List<QueryClusterSpecificationResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<QueryClusterSpecificationResponseBodyData> getData() {
+        return this.data;
     }
 
     public static class QueryClusterSpecificationResponseBodyData extends TeaModel {
