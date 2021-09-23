@@ -58,6 +58,9 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<UpdateStackRequestTags> tags;
 
+    @NameInMap("Parallelism")
+    public Long parallelism;
+
     public static UpdateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackRequest self = new UpdateStackRequest();
         return TeaModel.build(map, self);
@@ -205,6 +208,14 @@ public class UpdateStackRequest extends TeaModel {
     }
     public java.util.List<UpdateStackRequestTags> getTags() {
         return this.tags;
+    }
+
+    public UpdateStackRequest setParallelism(Long parallelism) {
+        this.parallelism = parallelism;
+        return this;
+    }
+    public Long getParallelism() {
+        return this.parallelism;
     }
 
     public static class UpdateStackRequestParameters extends TeaModel {

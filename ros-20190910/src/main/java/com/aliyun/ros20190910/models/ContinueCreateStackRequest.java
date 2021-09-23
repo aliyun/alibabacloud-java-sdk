@@ -37,6 +37,9 @@ public class ContinueCreateStackRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.List<ContinueCreateStackRequestParameters> parameters;
 
+    @NameInMap("Parallelism")
+    public Long parallelism;
+
     public static ContinueCreateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         ContinueCreateStackRequest self = new ContinueCreateStackRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class ContinueCreateStackRequest extends TeaModel {
     }
     public java.util.List<ContinueCreateStackRequestParameters> getParameters() {
         return this.parameters;
+    }
+
+    public ContinueCreateStackRequest setParallelism(Long parallelism) {
+        this.parallelism = parallelism;
+        return this;
+    }
+    public Long getParallelism() {
+        return this.parallelism;
     }
 
     public static class ContinueCreateStackRequestParameters extends TeaModel {
