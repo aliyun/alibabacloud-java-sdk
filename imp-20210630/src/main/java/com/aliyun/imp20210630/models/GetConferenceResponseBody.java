@@ -62,6 +62,10 @@ public class GetConferenceResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // 录制回放地址，m3u8格式，会议结束后10秒才会生成。
+        @NameInMap("PlaybackUrl")
+        public String playbackUrl;
+
         public static GetConferenceResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetConferenceResponseBodyResult self = new GetConferenceResponseBodyResult();
             return TeaModel.build(map, self);
@@ -121,6 +125,14 @@ public class GetConferenceResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public GetConferenceResponseBodyResult setPlaybackUrl(String playbackUrl) {
+            this.playbackUrl = playbackUrl;
+            return this;
+        }
+        public String getPlaybackUrl() {
+            return this.playbackUrl;
         }
 
     }
