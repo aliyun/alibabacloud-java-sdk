@@ -31,6 +31,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public DescribePhoneNumberStatusResponse describePhoneNumberStatusWithOptions(DescribePhoneNumberStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribePhoneNumberStatus", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime), new DescribePhoneNumberStatusResponse());
+    }
+
+    public DescribePhoneNumberStatusResponse describePhoneNumberStatus(DescribePhoneNumberStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describePhoneNumberStatusWithOptions(request, runtime);
+    }
+
     public DescribePhoneNumberAttributeResponse describePhoneNumberAttributeWithOptions(DescribePhoneNumberAttributeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -55,41 +68,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePhoneNumberResaleResponse describePhoneNumberResale(DescribePhoneNumberResaleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describePhoneNumberResaleWithOptions(request, runtime);
-    }
-
-    public DescribePhoneNumberStatusResponse describePhoneNumberStatusWithOptions(DescribePhoneNumberStatusRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribePhoneNumberStatus", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime), new DescribePhoneNumberStatusResponse());
-    }
-
-    public DescribePhoneNumberStatusResponse describePhoneNumberStatus(DescribePhoneNumberStatusRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describePhoneNumberStatusWithOptions(request, runtime);
-    }
-
-    public PvrCallbackFCUResponse pvrCallbackFCUWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
-        return TeaModel.toModel(this.doRPCRequest("PvrCallbackFCU", "2020-02-17", "HTTPS", "POST", "AK", "none", req, runtime), new PvrCallbackFCUResponse());
-    }
-
-    public PvrCallbackFCUResponse pvrCallbackFCU() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.pvrCallbackFCUWithOptions(runtime);
-    }
-
-    public QueryPhoneNumberAttributeResponse queryPhoneNumberAttributeWithOptions(QueryPhoneNumberAttributeRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("QueryPhoneNumberAttribute", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime), new QueryPhoneNumberAttributeResponse());
-    }
-
-    public QueryPhoneNumberAttributeResponse queryPhoneNumberAttribute(QueryPhoneNumberAttributeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryPhoneNumberAttributeWithOptions(request, runtime);
     }
 }
