@@ -112,6 +112,10 @@ public class GetIncidentResponseBody extends TeaModel {
         @NameInMap("problemNumber")
         public String problemNumber;
 
+        // 持续时间
+        @NameInMap("durationTime")
+        public Long durationTime;
+
         public static GetIncidentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetIncidentResponseBodyData self = new GetIncidentResponseBodyData();
             return TeaModel.build(map, self);
@@ -275,6 +279,14 @@ public class GetIncidentResponseBody extends TeaModel {
         }
         public String getProblemNumber() {
             return this.problemNumber;
+        }
+
+        public GetIncidentResponseBodyData setDurationTime(Long durationTime) {
+            this.durationTime = durationTime;
+            return this;
+        }
+        public Long getDurationTime() {
+            return this.durationTime;
         }
 
     }

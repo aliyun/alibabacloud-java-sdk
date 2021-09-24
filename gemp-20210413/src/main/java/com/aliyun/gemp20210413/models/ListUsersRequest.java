@@ -32,6 +32,10 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    // 移动应用协同渠道
+    @NameInMap("synergyChannel")
+    public String synergyChannel;
+
     public static ListUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUsersRequest self = new ListUsersRequest();
         return TeaModel.build(map, self);
@@ -91,6 +95,14 @@ public class ListUsersRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListUsersRequest setSynergyChannel(String synergyChannel) {
+        this.synergyChannel = synergyChannel;
+        return this;
+    }
+    public String getSynergyChannel() {
+        return this.synergyChannel;
     }
 
 }
