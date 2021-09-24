@@ -98,6 +98,18 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("accountType")
         public Long accountType;
 
+        // 移动应用账户
+        @NameInMap("appAccount")
+        public String appAccount;
+
+        // 移动应用协同渠道
+        @NameInMap("synergyChannel")
+        public String synergyChannel;
+
+        // 是否关联
+        @NameInMap("isRelated")
+        public String isRelated;
+
         public static ListUsersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListUsersResponseBodyData self = new ListUsersResponseBodyData();
             return TeaModel.build(map, self);
@@ -157,6 +169,30 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public Long getAccountType() {
             return this.accountType;
+        }
+
+        public ListUsersResponseBodyData setAppAccount(String appAccount) {
+            this.appAccount = appAccount;
+            return this;
+        }
+        public String getAppAccount() {
+            return this.appAccount;
+        }
+
+        public ListUsersResponseBodyData setSynergyChannel(String synergyChannel) {
+            this.synergyChannel = synergyChannel;
+            return this;
+        }
+        public String getSynergyChannel() {
+            return this.synergyChannel;
+        }
+
+        public ListUsersResponseBodyData setIsRelated(String isRelated) {
+            this.isRelated = isRelated;
+            return this;
+        }
+        public String getIsRelated() {
+            return this.isRelated;
         }
 
     }

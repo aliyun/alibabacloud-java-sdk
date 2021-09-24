@@ -97,6 +97,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("pageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.synergyChannel)) {
+            body.put("synergyChannel", request.synergyChannel);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -394,6 +398,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         return TeaModel.toModel(this.doROARequest("DisableRouteRule", "2021-04-13", "HTTPS", "POST", "AK", "/routeRule/disable", "json", req, runtime), new DisableRouteRuleResponse());
+    }
+
+    public GetTenantApplicationResponse getTenantApplication(GetTenantApplicationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTenantApplicationWithOptions(request, headers, runtime);
+    }
+
+    public GetTenantApplicationResponse getTenantApplicationWithOptions(GetTenantApplicationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("GetTenantApplication", "2021-04-13", "HTTPS", "POST", "AK", "/mobileApp/detail", "json", req, runtime), new GetTenantApplicationResponse());
     }
 
     public GenerateProblemPictureUploadSignResponse generateProblemPictureUploadSign(GenerateProblemPictureUploadSignRequest request) throws Exception {
@@ -2300,6 +2324,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("CreateProblemTimelines", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/timeline/batchCreate", "json", req, runtime), new CreateProblemTimelinesResponse());
     }
 
+    public GetSimilarIncidentStatisticsResponse getSimilarIncidentStatistics(GetSimilarIncidentStatisticsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSimilarIncidentStatisticsWithOptions(request, headers, runtime);
+    }
+
+    public GetSimilarIncidentStatisticsResponse getSimilarIncidentStatisticsWithOptions(GetSimilarIncidentStatisticsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.incidentId)) {
+            body.put("incidentId", request.incidentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.incidentTitle)) {
+            body.put("incidentTitle", request.incidentTitle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTime)) {
+            body.put("createTime", request.createTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relatedServiceId)) {
+            body.put("relatedServiceId", request.relatedServiceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.events)) {
+            body.put("events", request.events);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("GetSimilarIncidentStatistics", "2021-04-13", "HTTPS", "POST", "AK", "/incident/similarIncident/statistics", "json", req, runtime), new GetSimilarIncidentStatisticsResponse());
+    }
+
     public CreateProblemTimelineResponse createProblemTimeline(CreateProblemTimelineRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3324,6 +3388,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("GenerateProblemPictureLink", "2021-04-13", "HTTPS", "POST", "AK", "/problem/process/oss/getPresignedLink", "json", req, runtime), new GenerateProblemPictureLinkResponse());
     }
 
+    public CreateTenantApplicationResponse createTenantApplication(CreateTenantApplicationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createTenantApplicationWithOptions(request, headers, runtime);
+    }
+
+    public CreateTenantApplicationResponse createTenantApplicationWithOptions(CreateTenantApplicationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            body.put("channel", request.channel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("CreateTenantApplication", "2021-04-13", "HTTPS", "POST", "AK", "/mobileApp/create", "json", req, runtime), new CreateTenantApplicationResponse());
+    }
+
     public GetIntegrationConfigResponse getIntegrationConfig(GetIntegrationConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -3374,6 +3462,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         return TeaModel.toModel(this.doROARequest("RevokeProblemRecovery", "2021-04-13", "HTTPS", "POST", "AK", "/problem/revoke", "json", req, runtime), new RevokeProblemRecoveryResponse());
+    }
+
+    public GetIncidentSubtotalCountResponse getIncidentSubtotalCount(GetIncidentSubtotalCountRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIncidentSubtotalCountWithOptions(request, headers, runtime);
+    }
+
+    public GetIncidentSubtotalCountResponse getIncidentSubtotalCountWithOptions(GetIncidentSubtotalCountRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.incidentIds)) {
+            body.put("incidentIds", request.incidentIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("clientToken", request.clientToken);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("GetIncidentSubtotalCount", "2021-04-13", "HTTPS", "POST", "AK", "/incident/subtotal/count", "json", req, runtime), new GetIncidentSubtotalCountResponse());
     }
 
     public EnableIntegrationConfigResponse enableIntegrationConfig(EnableIntegrationConfigRequest request) throws Exception {

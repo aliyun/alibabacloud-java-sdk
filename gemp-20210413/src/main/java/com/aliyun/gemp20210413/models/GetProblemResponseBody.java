@@ -454,6 +454,10 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("cancelReason")
         public Long cancelReason;
 
+        // 持续时间
+        @NameInMap("durationTime")
+        public Long durationTime;
+
         // 处理中故障操作日志
         @NameInMap("handingProblemOperateLogs")
         public java.util.List<GetProblemResponseBodyDataHandingProblemOperateLogs> handingProblemOperateLogs;
@@ -649,6 +653,14 @@ public class GetProblemResponseBody extends TeaModel {
         }
         public Long getCancelReason() {
             return this.cancelReason;
+        }
+
+        public GetProblemResponseBodyData setDurationTime(Long durationTime) {
+            this.durationTime = durationTime;
+            return this;
+        }
+        public Long getDurationTime() {
+            return this.durationTime;
         }
 
         public GetProblemResponseBodyData setHandingProblemOperateLogs(java.util.List<GetProblemResponseBodyDataHandingProblemOperateLogs> handingProblemOperateLogs) {
