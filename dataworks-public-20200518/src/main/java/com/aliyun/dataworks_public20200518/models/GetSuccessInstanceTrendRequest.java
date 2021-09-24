@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSuccessInstanceTrendRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     public static GetSuccessInstanceTrendRequest build(java.util.Map<String, ?> map) throws Exception {

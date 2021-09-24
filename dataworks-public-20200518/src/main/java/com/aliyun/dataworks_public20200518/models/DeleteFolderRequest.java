@@ -11,6 +11,7 @@ public class DeleteFolderRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("FolderId")
+    @Validation(required = true)
     public String folderId;
 
     public static DeleteFolderRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceFolderRequest extends TeaModel {
     @NameInMap("TenantId")
+    @Validation(required = true)
     public Long tenantId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("FolderName")
+    @Validation(required = true)
     public String folderName;
 
     @NameInMap("ParentId")
+    @Validation(required = true)
     public Long parentId;
 
     @NameInMap("GroupId")
+    @Validation(required = true)
     public String groupId;
 
     public static CreateDataServiceFolderRequest build(java.util.Map<String, ?> map) throws Exception {

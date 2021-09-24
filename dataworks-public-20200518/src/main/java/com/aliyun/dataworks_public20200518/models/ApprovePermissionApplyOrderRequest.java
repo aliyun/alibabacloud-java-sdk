@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ApprovePermissionApplyOrderRequest extends TeaModel {
     @NameInMap("FlowId")
+    @Validation(required = true)
     public String flowId;
 
     @NameInMap("ApproveComment")
+    @Validation(required = true)
     public String approveComment;
 
     @NameInMap("ApproveAction")
+    @Validation(required = true)
     public Integer approveAction;
 
     public static ApprovePermissionApplyOrderRequest build(java.util.Map<String, ?> map) throws Exception {

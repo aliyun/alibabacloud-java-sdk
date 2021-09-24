@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConnectionsRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("Name")

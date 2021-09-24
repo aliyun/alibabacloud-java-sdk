@@ -4,33 +4,21 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CheckFileDeploymentResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public CheckFileDeploymentResponseBody body;
+    public String requestId;
 
     public static CheckFileDeploymentResponse build(java.util.Map<String, ?> map) throws Exception {
         CheckFileDeploymentResponse self = new CheckFileDeploymentResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckFileDeploymentResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CheckFileDeploymentResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public CheckFileDeploymentResponse setBody(CheckFileDeploymentResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public CheckFileDeploymentResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
