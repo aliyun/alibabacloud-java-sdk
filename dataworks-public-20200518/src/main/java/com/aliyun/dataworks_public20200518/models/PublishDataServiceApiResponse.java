@@ -4,33 +4,81 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class PublishDataServiceApiResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Data")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public Boolean data;
 
-    @NameInMap("body")
+    @NameInMap("ErrorCode")
     @Validation(required = true)
-    public PublishDataServiceApiResponseBody body;
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    @Validation(required = true)
+    public Integer httpStatusCode;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
 
     public static PublishDataServiceApiResponse build(java.util.Map<String, ?> map) throws Exception {
         PublishDataServiceApiResponse self = new PublishDataServiceApiResponse();
         return TeaModel.build(map, self);
     }
 
-    public PublishDataServiceApiResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public PublishDataServiceApiResponse setData(Boolean data) {
+        this.data = data;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getData() {
+        return this.data;
     }
 
-    public PublishDataServiceApiResponse setBody(PublishDataServiceApiResponseBody body) {
-        this.body = body;
+    public PublishDataServiceApiResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public PublishDataServiceApiResponseBody getBody() {
-        return this.body;
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public PublishDataServiceApiResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public PublishDataServiceApiResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public PublishDataServiceApiResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public PublishDataServiceApiResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

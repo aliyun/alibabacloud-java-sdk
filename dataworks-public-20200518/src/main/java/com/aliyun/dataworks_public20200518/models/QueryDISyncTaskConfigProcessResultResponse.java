@@ -4,33 +4,89 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class QueryDISyncTaskConfigProcessResultResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public QueryDISyncTaskConfigProcessResultResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public QueryDISyncTaskConfigProcessResultResponseData data;
 
     public static QueryDISyncTaskConfigProcessResultResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryDISyncTaskConfigProcessResultResponse self = new QueryDISyncTaskConfigProcessResultResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryDISyncTaskConfigProcessResultResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public QueryDISyncTaskConfigProcessResultResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public QueryDISyncTaskConfigProcessResultResponse setBody(QueryDISyncTaskConfigProcessResultResponseBody body) {
-        this.body = body;
+    public QueryDISyncTaskConfigProcessResultResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public QueryDISyncTaskConfigProcessResultResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public QueryDISyncTaskConfigProcessResultResponse setData(QueryDISyncTaskConfigProcessResultResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryDISyncTaskConfigProcessResultResponseData getData() {
+        return this.data;
+    }
+
+    public static class QueryDISyncTaskConfigProcessResultResponseData extends TeaModel {
+        @NameInMap("Status")
+        @Validation(required = true)
+        public String status;
+
+        @NameInMap("Message")
+        @Validation(required = true)
+        public String message;
+
+        @NameInMap("TaskContent")
+        @Validation(required = true)
+        public String taskContent;
+
+        public static QueryDISyncTaskConfigProcessResultResponseData build(java.util.Map<String, ?> map) throws Exception {
+            QueryDISyncTaskConfigProcessResultResponseData self = new QueryDISyncTaskConfigProcessResultResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDISyncTaskConfigProcessResultResponseData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public QueryDISyncTaskConfigProcessResultResponseData setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public QueryDISyncTaskConfigProcessResultResponseData setTaskContent(String taskContent) {
+            this.taskContent = taskContent;
+            return this;
+        }
+        public String getTaskContent() {
+            return this.taskContent;
+        }
+
     }
 
 }

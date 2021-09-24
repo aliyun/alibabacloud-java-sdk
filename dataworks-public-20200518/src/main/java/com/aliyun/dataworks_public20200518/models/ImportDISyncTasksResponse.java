@@ -4,33 +4,65 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ImportDISyncTasksResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public ImportDISyncTasksResponseBody body;
+    public Boolean success;
+
+    @NameInMap("TaskInfo")
+    @Validation(required = true)
+    public ImportDISyncTasksResponseTaskInfo taskInfo;
 
     public static ImportDISyncTasksResponse build(java.util.Map<String, ?> map) throws Exception {
         ImportDISyncTasksResponse self = new ImportDISyncTasksResponse();
         return TeaModel.build(map, self);
     }
 
-    public ImportDISyncTasksResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ImportDISyncTasksResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ImportDISyncTasksResponse setBody(ImportDISyncTasksResponseBody body) {
-        this.body = body;
+    public ImportDISyncTasksResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public ImportDISyncTasksResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ImportDISyncTasksResponse setTaskInfo(ImportDISyncTasksResponseTaskInfo taskInfo) {
+        this.taskInfo = taskInfo;
+        return this;
+    }
+    public ImportDISyncTasksResponseTaskInfo getTaskInfo() {
+        return this.taskInfo;
+    }
+
+    public static class ImportDISyncTasksResponseTaskInfo extends TeaModel {
+        @NameInMap("TaskId")
+        @Validation(required = true)
+        public Long taskId;
+
+        public static ImportDISyncTasksResponseTaskInfo build(java.util.Map<String, ?> map) throws Exception {
+            ImportDISyncTasksResponseTaskInfo self = new ImportDISyncTasksResponseTaskInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportDISyncTasksResponseTaskInfo setTaskId(Long taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public Long getTaskId() {
+            return this.taskId;
+        }
+
     }
 
 }

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetFileTypeStatisticRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("ProjectEnv")
+    @Validation(required = true)
     public String projectEnv;
 
     public static GetFileTypeStatisticRequest build(java.util.Map<String, ?> map) throws Exception {

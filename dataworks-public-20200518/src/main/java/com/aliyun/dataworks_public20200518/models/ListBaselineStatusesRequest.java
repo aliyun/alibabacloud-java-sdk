@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListBaselineStatusesRequest extends TeaModel {
     @NameInMap("PageNumber")
+    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Bizdate")
+    @Validation(required = true)
     public String bizdate;
 
     @NameInMap("Priority")

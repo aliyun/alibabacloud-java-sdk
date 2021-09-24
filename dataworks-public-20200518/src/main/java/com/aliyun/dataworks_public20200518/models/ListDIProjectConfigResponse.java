@@ -4,33 +4,65 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListDIProjectConfigResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public ListDIProjectConfigResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public ListDIProjectConfigResponseData data;
 
     public static ListDIProjectConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         ListDIProjectConfigResponse self = new ListDIProjectConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListDIProjectConfigResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ListDIProjectConfigResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ListDIProjectConfigResponse setBody(ListDIProjectConfigResponseBody body) {
-        this.body = body;
+    public ListDIProjectConfigResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public ListDIProjectConfigResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListDIProjectConfigResponse setData(ListDIProjectConfigResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ListDIProjectConfigResponseData getData() {
+        return this.data;
+    }
+
+    public static class ListDIProjectConfigResponseData extends TeaModel {
+        @NameInMap("Config")
+        @Validation(required = true)
+        public String config;
+
+        public static ListDIProjectConfigResponseData build(java.util.Map<String, ?> map) throws Exception {
+            ListDIProjectConfigResponseData self = new ListDIProjectConfigResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDIProjectConfigResponseData setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
+        }
+
     }
 
 }

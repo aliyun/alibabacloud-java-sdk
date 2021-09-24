@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class StartDISyncInstanceRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("TaskType")
+    @Validation(required = true)
     public String taskType;
 
     @NameInMap("FileId")
+    @Validation(required = true)
     public Long fileId;
 
     @NameInMap("StartParam")

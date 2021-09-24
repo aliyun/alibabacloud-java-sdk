@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetConnectionMetaRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("DatasourceName")
+    @Validation(required = true)
     public String datasourceName;
 
     @NameInMap("PageNumber")

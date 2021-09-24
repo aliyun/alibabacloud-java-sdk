@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableLevelRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("LevelType")
@@ -17,6 +18,7 @@ public class UpdateTableLevelRequest extends TeaModel {
     public String description;
 
     @NameInMap("LevelId")
+    @Validation(required = true)
     public Long levelId;
 
     public static UpdateTableLevelRequest build(java.util.Map<String, ?> map) throws Exception {

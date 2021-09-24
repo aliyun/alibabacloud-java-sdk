@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateDIProjectConfigRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("DestinationType")
+    @Validation(required = true)
     public String destinationType;
 
     @NameInMap("SourceType")
     public String sourceType;
 
     @NameInMap("ProjectConfig")
+    @Validation(required = true)
     public String projectConfig;
 
     public static UpdateDIProjectConfigRequest build(java.util.Map<String, ?> map) throws Exception {

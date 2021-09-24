@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class GetOpRiskDataRequest extends TeaModel {
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNo")
+    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Date")
+    @Validation(required = true)
     public String date;
 
     @NameInMap("RiskType")

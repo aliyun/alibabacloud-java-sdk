@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodesByBaselineRequest extends TeaModel {
     @NameInMap("BaselineId")
+    @Validation(required = true)
     public Long baselineId;
 
     public static ListNodesByBaselineRequest build(java.util.Map<String, ?> map) throws Exception {

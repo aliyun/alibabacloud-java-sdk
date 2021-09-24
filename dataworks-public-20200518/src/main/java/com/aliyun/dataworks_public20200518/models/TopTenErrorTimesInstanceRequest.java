@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TopTenErrorTimesInstanceRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     public static TopTenErrorTimesInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

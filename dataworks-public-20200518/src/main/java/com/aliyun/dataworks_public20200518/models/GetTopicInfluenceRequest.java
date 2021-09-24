@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicInfluenceRequest extends TeaModel {
     @NameInMap("TopicId")
+    @Validation(required = true)
     public Long topicId;
 
     public static GetTopicInfluenceRequest build(java.util.Map<String, ?> map) throws Exception {
