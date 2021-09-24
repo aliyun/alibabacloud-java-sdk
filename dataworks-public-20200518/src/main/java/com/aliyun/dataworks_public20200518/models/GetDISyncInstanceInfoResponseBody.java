@@ -42,6 +42,99 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         return this.data;
     }
 
+    public static class GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StepId")
+        public Long stepId;
+
+        @NameInMap("StepName")
+        public String stepName;
+
+        public static GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail build(java.util.Map<String, ?> map) throws Exception {
+            GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail self = new GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail setStepId(Long stepId) {
+            this.stepId = stepId;
+            return this;
+        }
+        public Long getStepId() {
+            return this.stepId;
+        }
+
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail setStepName(String stepName) {
+            this.stepName = stepName;
+            return this;
+        }
+        public String getStepName() {
+            return this.stepName;
+        }
+
+    }
+
+    public static class GetDISyncInstanceInfoResponseBodyDataSolutionInfo extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("CreatorName")
+        public String creatorName;
+
+        @NameInMap("StepDetail")
+        public java.util.List<GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail> stepDetail;
+
+        public static GetDISyncInstanceInfoResponseBodyDataSolutionInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetDISyncInstanceInfoResponseBodyDataSolutionInfo self = new GetDISyncInstanceInfoResponseBodyDataSolutionInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfo setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfo setCreatorName(String creatorName) {
+            this.creatorName = creatorName;
+            return this;
+        }
+        public String getCreatorName() {
+            return this.creatorName;
+        }
+
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfo setStepDetail(java.util.List<GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail> stepDetail) {
+            this.stepDetail = stepDetail;
+            return this;
+        }
+        public java.util.List<GetDISyncInstanceInfoResponseBodyDataSolutionInfoStepDetail> getStepDetail() {
+            return this.stepDetail;
+        }
+
+    }
+
     public static class GetDISyncInstanceInfoResponseBodyData extends TeaModel {
         @NameInMap("Status")
         public String status;
@@ -51,6 +144,9 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("SolutionInfo")
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfo solutionInfo;
 
         public static GetDISyncInstanceInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDISyncInstanceInfoResponseBodyData self = new GetDISyncInstanceInfoResponseBodyData();
@@ -79,6 +175,14 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetDISyncInstanceInfoResponseBodyData setSolutionInfo(GetDISyncInstanceInfoResponseBodyDataSolutionInfo solutionInfo) {
+            this.solutionInfo = solutionInfo;
+            return this;
+        }
+        public GetDISyncInstanceInfoResponseBodyDataSolutionInfo getSolutionInfo() {
+            return this.solutionInfo;
         }
 
     }
