@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks_public20200518.models;
+
+import com.aliyun.tea.*;
+
+public class QueryDISyncTaskConfigProcessResultResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public QueryDISyncTaskConfigProcessResultResponseBody body;
+
+    public static QueryDISyncTaskConfigProcessResultResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryDISyncTaskConfigProcessResultResponse self = new QueryDISyncTaskConfigProcessResultResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryDISyncTaskConfigProcessResultResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public QueryDISyncTaskConfigProcessResultResponse setBody(QueryDISyncTaskConfigProcessResultResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public QueryDISyncTaskConfigProcessResultResponseBody getBody() {
+        return this.body;
+    }
+
+}
