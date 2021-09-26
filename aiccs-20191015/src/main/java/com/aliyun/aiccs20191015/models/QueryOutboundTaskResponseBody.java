@@ -4,27 +4,43 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryOutboundTaskResponseBody extends TeaModel {
+    @NameInMap("HttpStatusCode")
+    public String httpStatusCode;
+
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public String httpStatusCode;
+    @NameInMap("Success")
+    public String success;
 
     @NameInMap("Data")
     public QueryOutboundTaskResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public String success;
-
     public static QueryOutboundTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryOutboundTaskResponseBody self = new QueryOutboundTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryOutboundTaskResponseBody setHttpStatusCode(String httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public QueryOutboundTaskResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QueryOutboundTaskResponseBody setMessage(String message) {
@@ -43,12 +59,12 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryOutboundTaskResponseBody setHttpStatusCode(String httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public QueryOutboundTaskResponseBody setSuccess(String success) {
+        this.success = success;
         return this;
     }
-    public String getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getSuccess() {
+        return this.success;
     }
 
     public QueryOutboundTaskResponseBody setData(QueryOutboundTaskResponseBodyData data) {
@@ -59,37 +75,21 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryOutboundTaskResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryOutboundTaskResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
     public static class QueryOutboundTaskResponseBodyDataList extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
         @NameInMap("Type")
         public Integer type;
+
+        @NameInMap("Status")
+        public Integer status;
 
         @NameInMap("EndDate")
         public String endDate;
 
-        @NameInMap("RetryTime")
-        public Integer retryTime;
-
         @NameInMap("RetryInterval")
         public Integer retryInterval;
+
+        @NameInMap("RetryTime")
+        public Integer retryTime;
 
         @NameInMap("StartDate")
         public String startDate;
@@ -103,14 +103,14 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("BuId")
+        public Long buId;
 
         @NameInMap("Model")
         public Integer model;
 
-        @NameInMap("BuId")
-        public Long buId;
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("Modifier")
         public String modifier;
@@ -147,20 +147,20 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public QueryOutboundTaskResponseBodyDataList setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
         public QueryOutboundTaskResponseBodyDataList setType(Integer type) {
             this.type = type;
             return this;
         }
         public Integer getType() {
             return this.type;
+        }
+
+        public QueryOutboundTaskResponseBodyDataList setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
         public QueryOutboundTaskResponseBodyDataList setEndDate(String endDate) {
@@ -171,20 +171,20 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
             return this.endDate;
         }
 
-        public QueryOutboundTaskResponseBodyDataList setRetryTime(Integer retryTime) {
-            this.retryTime = retryTime;
-            return this;
-        }
-        public Integer getRetryTime() {
-            return this.retryTime;
-        }
-
         public QueryOutboundTaskResponseBodyDataList setRetryInterval(Integer retryInterval) {
             this.retryInterval = retryInterval;
             return this;
         }
         public Integer getRetryInterval() {
             return this.retryInterval;
+        }
+
+        public QueryOutboundTaskResponseBodyDataList setRetryTime(Integer retryTime) {
+            this.retryTime = retryTime;
+            return this;
+        }
+        public Integer getRetryTime() {
+            return this.retryTime;
         }
 
         public QueryOutboundTaskResponseBodyDataList setStartDate(String startDate) {
@@ -219,12 +219,12 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public QueryOutboundTaskResponseBodyDataList setStartTime(String startTime) {
-            this.startTime = startTime;
+        public QueryOutboundTaskResponseBodyDataList setBuId(Long buId) {
+            this.buId = buId;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public Long getBuId() {
+            return this.buId;
         }
 
         public QueryOutboundTaskResponseBodyDataList setModel(Integer model) {
@@ -235,12 +235,12 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
             return this.model;
         }
 
-        public QueryOutboundTaskResponseBodyDataList setBuId(Long buId) {
-            this.buId = buId;
+        public QueryOutboundTaskResponseBodyDataList setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public Long getBuId() {
-            return this.buId;
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public QueryOutboundTaskResponseBodyDataList setModifier(String modifier) {
@@ -332,11 +332,11 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public String currentPage;
 
-        @NameInMap("List")
-        public java.util.List<QueryOutboundTaskResponseBodyDataList> list;
-
         @NameInMap("PageSize")
         public String pageSize;
+
+        @NameInMap("List")
+        public java.util.List<QueryOutboundTaskResponseBodyDataList> list;
 
         public static QueryOutboundTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryOutboundTaskResponseBodyData self = new QueryOutboundTaskResponseBodyData();
@@ -359,20 +359,20 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public QueryOutboundTaskResponseBodyData setList(java.util.List<QueryOutboundTaskResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<QueryOutboundTaskResponseBodyDataList> getList() {
-            return this.list;
-        }
-
         public QueryOutboundTaskResponseBodyData setPageSize(String pageSize) {
             this.pageSize = pageSize;
             return this;
         }
         public String getPageSize() {
             return this.pageSize;
+        }
+
+        public QueryOutboundTaskResponseBodyData setList(java.util.List<QueryOutboundTaskResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<QueryOutboundTaskResponseBodyDataList> getList() {
+            return this.list;
         }
 
     }

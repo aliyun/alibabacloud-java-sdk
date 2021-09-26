@@ -29,13 +29,13 @@ public class EditQualityProjectRequest extends TeaModel {
     public String timeRangeEnd;
 
     @NameInMap("AnalysisIds")
-    public java.util.List<Integer> analysisIds;
+    public java.util.List<Long> analysisIds;
 
     @NameInMap("DepList")
-    public java.util.List<Integer> depList;
+    public java.util.List<Long> depList;
 
     @NameInMap("GroupList")
-    public java.util.List<Integer> groupList;
+    public java.util.List<Long> groupList;
 
     @NameInMap("ServicerList")
     public java.util.List<String> servicerList;
@@ -112,27 +112,27 @@ public class EditQualityProjectRequest extends TeaModel {
         return this.timeRangeEnd;
     }
 
-    public EditQualityProjectRequest setAnalysisIds(java.util.List<Integer> analysisIds) {
+    public EditQualityProjectRequest setAnalysisIds(java.util.List<Long> analysisIds) {
         this.analysisIds = analysisIds;
         return this;
     }
-    public java.util.List<Integer> getAnalysisIds() {
+    public java.util.List<Long> getAnalysisIds() {
         return this.analysisIds;
     }
 
-    public EditQualityProjectRequest setDepList(java.util.List<Integer> depList) {
+    public EditQualityProjectRequest setDepList(java.util.List<Long> depList) {
         this.depList = depList;
         return this;
     }
-    public java.util.List<Integer> getDepList() {
+    public java.util.List<Long> getDepList() {
         return this.depList;
     }
 
-    public EditQualityProjectRequest setGroupList(java.util.List<Integer> groupList) {
+    public EditQualityProjectRequest setGroupList(java.util.List<Long> groupList) {
         this.groupList = groupList;
         return this;
     }
-    public java.util.List<Integer> getGroupList() {
+    public java.util.List<Long> getGroupList() {
         return this.groupList;
     }
 

@@ -4,24 +4,32 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class CreateQualityProjectResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateQualityProjectResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public CreateQualityProjectResponseBodyData data;
 
     public static CreateQualityProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateQualityProjectResponseBody self = new CreateQualityProjectResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateQualityProjectResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CreateQualityProjectResponseBody setMessage(String message) {
@@ -40,22 +48,6 @@ public class CreateQualityProjectResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateQualityProjectResponseBody setData(CreateQualityProjectResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateQualityProjectResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateQualityProjectResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public CreateQualityProjectResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,19 +56,35 @@ public class CreateQualityProjectResponseBody extends TeaModel {
         return this.success;
     }
 
+    public CreateQualityProjectResponseBody setData(CreateQualityProjectResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateQualityProjectResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class CreateQualityProjectResponseBodyData extends TeaModel {
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("Version")
         public Integer version;
 
         @NameInMap("ProjectId")
         public Long projectId;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         public static CreateQualityProjectResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateQualityProjectResponseBodyData self = new CreateQualityProjectResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateQualityProjectResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public CreateQualityProjectResponseBodyData setVersion(Integer version) {
@@ -93,14 +101,6 @@ public class CreateQualityProjectResponseBody extends TeaModel {
         }
         public Long getProjectId() {
             return this.projectId;
-        }
-
-        public CreateQualityProjectResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
     }
