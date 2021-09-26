@@ -84,6 +84,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getRoomWithOptions(request, runtime);
     }
 
+    public GetLiveRoomUserStatisticsResponse getLiveRoomUserStatisticsWithOptions(GetLiveRoomUserStatisticsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetLiveRoomUserStatistics", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new GetLiveRoomUserStatisticsResponse());
+    }
+
+    public GetLiveRoomUserStatisticsResponse getLiveRoomUserStatistics(GetLiveRoomUserStatisticsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getLiveRoomUserStatisticsWithOptions(request, runtime);
+    }
+
     public BanCommentResponse banCommentWithOptions(BanCommentRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -611,6 +624,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateLiveWithOptions(request, runtime);
     }
 
+    public CreateLiveRoomResponse createLiveRoomWithOptions(CreateLiveRoomRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateLiveRoomShrinkRequest request = new CreateLiveRoomShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extension)) {
+            request.extensionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extension, "Extension", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateLiveRoom", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new CreateLiveRoomResponse());
+    }
+
+    public CreateLiveRoomResponse createLiveRoom(CreateLiveRoomRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createLiveRoomWithOptions(request, runtime);
+    }
+
     public ApplyLinkMicResponse applyLinkMicWithOptions(ApplyLinkMicRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -648,6 +680,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAppResponse getApp(GetAppRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getAppWithOptions(request, runtime);
+    }
+
+    public ListLiveRoomsResponse listLiveRoomsWithOptions(ListLiveRoomsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListLiveRooms", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new ListLiveRoomsResponse());
+    }
+
+    public ListLiveRoomsResponse listLiveRooms(ListLiveRoomsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listLiveRoomsWithOptions(request, runtime);
+    }
+
+    public StopLiveRoomResponse stopLiveRoomWithOptions(StopLiveRoomRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StopLiveRoom", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new StopLiveRoomResponse());
+    }
+
+    public StopLiveRoomResponse stopLiveRoom(StopLiveRoomRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.stopLiveRoomWithOptions(request, runtime);
+    }
+
+    public GetLiveRoomStatisticsResponse getLiveRoomStatisticsWithOptions(GetLiveRoomStatisticsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetLiveRoomStatistics", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new GetLiveRoomStatisticsResponse());
+    }
+
+    public GetLiveRoomStatisticsResponse getLiveRoomStatistics(GetLiveRoomStatisticsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getLiveRoomStatisticsWithOptions(request, runtime);
     }
 
     public SendCustomMessageToUsersResponse sendCustomMessageToUsersWithOptions(SendCustomMessageToUsersRequest request, RuntimeOptions runtime) throws Exception {
@@ -732,5 +803,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateConferenceResponse updateConference(UpdateConferenceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateConferenceWithOptions(request, runtime);
+    }
+
+    public GetLiveRoomResponse getLiveRoomWithOptions(GetLiveRoomRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetLiveRoom", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new GetLiveRoomResponse());
+    }
+
+    public GetLiveRoomResponse getLiveRoom(GetLiveRoomRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getLiveRoomWithOptions(request, runtime);
     }
 }
