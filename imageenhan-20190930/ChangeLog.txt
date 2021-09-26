@@ -1,3 +1,6 @@
+2021-09-26 Version: 1.0.2
+- Update imageenhan.
+
 2021-04-29 Version: 1.0.1
 - Update imageenhan javasdk.
 
