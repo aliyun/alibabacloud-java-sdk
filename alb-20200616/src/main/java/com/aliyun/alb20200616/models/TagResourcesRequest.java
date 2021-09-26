@@ -77,38 +77,6 @@ public class TagResourcesRequest extends TeaModel {
 
     }
 
-    public static class UnTagResourcesRequestTag extends TeaModel {
-        // 标签键
-        @NameInMap("Key")
-        public String key;
-
-        // 标签值
-        @NameInMap("Value")
-        public String value;
-
-        public static UnTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            UnTagResourcesRequestTag self = new UnTagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public UnTagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public UnTagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class TagResourcesRequestTag extends TeaModel {
         // 标签键
         @NameInMap("Key")
@@ -132,6 +100,38 @@ public class TagResourcesRequest extends TeaModel {
         }
 
         public TagResourcesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class UnTagResourcesRequestTag extends TeaModel {
+        // 标签键
+        @NameInMap("Key")
+        public String key;
+
+        // 标签值
+        @NameInMap("Value")
+        public String value;
+
+        public static UnTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            UnTagResourcesRequestTag self = new UnTagResourcesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public UnTagResourcesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UnTagResourcesRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

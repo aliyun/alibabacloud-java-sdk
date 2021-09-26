@@ -4,9 +4,13 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateServerGroupRequest extends TeaModel {
-    // Acl名称
+    // 服务器组名称
     @NameInMap("ServerGroupName")
     public String serverGroupName;
+
+    // 服务器组类型
+    @NameInMap("ServerGroupType")
+    public String serverGroupType;
 
     // VpcId
     @NameInMap("VpcId")
@@ -51,6 +55,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public String getServerGroupName() {
         return this.serverGroupName;
+    }
+
+    public CreateServerGroupRequest setServerGroupType(String serverGroupType) {
+        this.serverGroupType = serverGroupType;
+        return this;
+    }
+    public String getServerGroupType() {
+        return this.serverGroupType;
     }
 
     public CreateServerGroupRequest setVpcId(String vpcId) {
