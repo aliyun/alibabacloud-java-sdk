@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryDISyncTaskConfigProcessResultRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public String taskType;
 
     @NameInMap("AsyncProcessId")
-    @Validation(required = true)
     public Long asyncProcessId;
 
     public static QueryDISyncTaskConfigProcessResultRequest build(java.util.Map<String, ?> map) throws Exception {

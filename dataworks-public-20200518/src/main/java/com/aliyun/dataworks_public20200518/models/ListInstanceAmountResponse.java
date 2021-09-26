@@ -4,65 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceAmountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("InstanceCounts")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<ListInstanceAmountResponseInstanceCounts> instanceCounts;
+    public ListInstanceAmountResponseBody body;
 
     public static ListInstanceAmountResponse build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceAmountResponse self = new ListInstanceAmountResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListInstanceAmountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListInstanceAmountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ListInstanceAmountResponse setInstanceCounts(java.util.List<ListInstanceAmountResponseInstanceCounts> instanceCounts) {
-        this.instanceCounts = instanceCounts;
+    public ListInstanceAmountResponse setBody(ListInstanceAmountResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<ListInstanceAmountResponseInstanceCounts> getInstanceCounts() {
-        return this.instanceCounts;
-    }
-
-    public static class ListInstanceAmountResponseInstanceCounts extends TeaModel {
-        @NameInMap("Date")
-        @Validation(required = true)
-        public Long date;
-
-        @NameInMap("Count")
-        @Validation(required = true)
-        public Integer count;
-
-        public static ListInstanceAmountResponseInstanceCounts build(java.util.Map<String, ?> map) throws Exception {
-            ListInstanceAmountResponseInstanceCounts self = new ListInstanceAmountResponseInstanceCounts();
-            return TeaModel.build(map, self);
-        }
-
-        public ListInstanceAmountResponseInstanceCounts setDate(Long date) {
-            this.date = date;
-            return this;
-        }
-        public Long getDate() {
-            return this.date;
-        }
-
-        public ListInstanceAmountResponseInstanceCounts setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
+    public ListInstanceAmountResponseBody getBody() {
+        return this.body;
     }
 
 }

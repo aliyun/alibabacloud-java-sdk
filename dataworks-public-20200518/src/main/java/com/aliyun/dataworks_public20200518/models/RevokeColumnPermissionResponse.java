@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RevokeColumnPermissionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RevokeSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean revokeSuccess;
+    public RevokeColumnPermissionResponseBody body;
 
     public static RevokeColumnPermissionResponse build(java.util.Map<String, ?> map) throws Exception {
         RevokeColumnPermissionResponse self = new RevokeColumnPermissionResponse();
         return TeaModel.build(map, self);
     }
 
-    public RevokeColumnPermissionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RevokeColumnPermissionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RevokeColumnPermissionResponse setRevokeSuccess(Boolean revokeSuccess) {
-        this.revokeSuccess = revokeSuccess;
+    public RevokeColumnPermissionResponse setBody(RevokeColumnPermissionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getRevokeSuccess() {
-        return this.revokeSuccess;
+    public RevokeColumnPermissionResponseBody getBody() {
+        return this.body;
     }
 
 }

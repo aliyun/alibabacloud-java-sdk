@@ -9,15 +9,12 @@ public class CreateImportMigrationAdvanceRequest extends TeaModel {
     public java.io.InputStream packageFileObject;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("PackageType")
-    @Validation(required = true)
     public String packageType;
 
     @NameInMap("ResourceGroupMap")

@@ -4,57 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataSourceResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("HttpStatusCode")
+    @NameInMap("body")
     @Validation(required = true)
-    public String httpStatusCode;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public Boolean data;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public DeleteDataSourceResponseBody body;
 
     public static DeleteDataSourceResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataSourceResponse self = new DeleteDataSourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDataSourceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteDataSourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteDataSourceResponse setHttpStatusCode(String httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public DeleteDataSourceResponse setBody(DeleteDataSourceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public DeleteDataSourceResponse setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
-    }
-
-    public DeleteDataSourceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public DeleteDataSourceResponseBody getBody() {
+        return this.body;
     }
 
 }

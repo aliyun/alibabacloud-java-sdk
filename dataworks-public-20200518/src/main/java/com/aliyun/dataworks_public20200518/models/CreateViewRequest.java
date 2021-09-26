@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateViewRequest extends TeaModel {
     @NameInMap("ViewName")
-    @Validation(required = true)
     public String viewName;
 
     @NameInMap("SelectColumn")
@@ -21,18 +20,16 @@ public class CreateViewRequest extends TeaModel {
     public String selectSQL;
 
     @NameInMap("AppGuid")
-    @Validation(required = true)
     public String appGuid;
 
     @NameInMap("Comment")
     public String comment;
 
-    @NameInMap("ViewColumn")
-    @Validation(required = true)
-    public java.util.List<CreateViewRequestViewColumn> viewColumn;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("ViewColumn")
+    public java.util.List<CreateViewRequestViewColumn> viewColumn;
 
     public static CreateViewRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateViewRequest self = new CreateViewRequest();
@@ -95,20 +92,20 @@ public class CreateViewRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateViewRequest setViewColumn(java.util.List<CreateViewRequestViewColumn> viewColumn) {
-        this.viewColumn = viewColumn;
-        return this;
-    }
-    public java.util.List<CreateViewRequestViewColumn> getViewColumn() {
-        return this.viewColumn;
-    }
-
     public CreateViewRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateViewRequest setViewColumn(java.util.List<CreateViewRequestViewColumn> viewColumn) {
+        this.viewColumn = viewColumn;
+        return this;
+    }
+    public java.util.List<CreateViewRequestViewColumn> getViewColumn() {
+        return this.viewColumn;
     }
 
     public static class CreateViewRequestViewColumn extends TeaModel {

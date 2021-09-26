@@ -4,81 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateTableLevelResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ErrorCode")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("HttpStatusCode")
-    @Validation(required = true)
-    public Integer httpStatusCode;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("LevelId")
-    @Validation(required = true)
-    public Long levelId;
+    public CreateTableLevelResponseBody body;
 
     public static CreateTableLevelResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateTableLevelResponse self = new CreateTableLevelResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateTableLevelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateTableLevelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateTableLevelResponse setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public CreateTableLevelResponse setBody(CreateTableLevelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateTableLevelResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateTableLevelResponse setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public CreateTableLevelResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateTableLevelResponse setLevelId(Long levelId) {
-        this.levelId = levelId;
-        return this;
-    }
-    public Long getLevelId() {
-        return this.levelId;
+    public CreateTableLevelResponseBody getBody() {
+        return this.body;
     }
 
 }

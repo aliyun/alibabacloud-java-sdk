@@ -4,77 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class StartDISyncInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public StartDISyncInstanceResponseData data;
+    public StartDISyncInstanceResponseBody body;
 
     public static StartDISyncInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         StartDISyncInstanceResponse self = new StartDISyncInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartDISyncInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartDISyncInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StartDISyncInstanceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public StartDISyncInstanceResponse setBody(StartDISyncInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public StartDISyncInstanceResponse setData(StartDISyncInstanceResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public StartDISyncInstanceResponseData getData() {
-        return this.data;
-    }
-
-    public static class StartDISyncInstanceResponseData extends TeaModel {
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        public static StartDISyncInstanceResponseData build(java.util.Map<String, ?> map) throws Exception {
-            StartDISyncInstanceResponseData self = new StartDISyncInstanceResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public StartDISyncInstanceResponseData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public StartDISyncInstanceResponseData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
+    public StartDISyncInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

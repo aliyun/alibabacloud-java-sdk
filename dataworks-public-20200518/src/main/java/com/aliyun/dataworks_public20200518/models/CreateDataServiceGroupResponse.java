@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDataServiceGroupResponse extends TeaModel {
-    @NameInMap("GroupId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String groupId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public CreateDataServiceGroupResponseBody body;
 
     public static CreateDataServiceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDataServiceGroupResponse self = new CreateDataServiceGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDataServiceGroupResponse setGroupId(String groupId) {
-        this.groupId = groupId;
+    public CreateDataServiceGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getGroupId() {
-        return this.groupId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateDataServiceGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateDataServiceGroupResponse setBody(CreateDataServiceGroupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public CreateDataServiceGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

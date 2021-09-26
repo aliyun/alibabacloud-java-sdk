@@ -14,7 +14,6 @@ public class SearchMetaTablesRequest extends TeaModel {
     public String appGuid;
 
     @NameInMap("Keyword")
-    @Validation(required = true)
     public String keyword;
 
     @NameInMap("EntityType")

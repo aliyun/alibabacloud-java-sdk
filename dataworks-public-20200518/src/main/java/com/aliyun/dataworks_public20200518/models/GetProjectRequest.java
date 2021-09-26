@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetProjectRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     public static GetProjectRequest build(java.util.Map<String, ?> map) throws Exception {

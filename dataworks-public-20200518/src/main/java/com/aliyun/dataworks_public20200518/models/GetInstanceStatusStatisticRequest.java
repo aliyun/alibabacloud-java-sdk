@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetInstanceStatusStatisticRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("BizDate")
-    @Validation(required = true)
     public String bizDate;
 
     public static GetInstanceStatusStatisticRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public Long instanceId;
 
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     public static RestartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

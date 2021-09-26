@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetInstanceCountTrendRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("BeginDate")
-    @Validation(required = true)
     public String beginDate;
 
     @NameInMap("EndDate")
-    @Validation(required = true)
     public String endDate;
 
     public static GetInstanceCountTrendRequest build(java.util.Map<String, ?> map) throws Exception {

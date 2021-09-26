@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateMetaCategoryRequest extends TeaModel {
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Comment")

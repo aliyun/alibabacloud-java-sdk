@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListDataSourcesRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("Name")

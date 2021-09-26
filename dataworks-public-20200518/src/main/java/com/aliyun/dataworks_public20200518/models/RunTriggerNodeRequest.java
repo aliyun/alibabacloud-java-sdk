@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class RunTriggerNodeRequest extends TeaModel {
     @NameInMap("NodeId")
-    @Validation(required = true)
     public Long nodeId;
 
     @NameInMap("CycleTime")
-    @Validation(required = true)
     public Long cycleTime;
 
     @NameInMap("BizDate")
-    @Validation(required = true)
     public Long bizDate;
 
     @NameInMap("AppId")
-    @Validation(required = true)
     public Long appId;
 
     public static RunTriggerNodeRequest build(java.util.Map<String, ?> map) throws Exception {

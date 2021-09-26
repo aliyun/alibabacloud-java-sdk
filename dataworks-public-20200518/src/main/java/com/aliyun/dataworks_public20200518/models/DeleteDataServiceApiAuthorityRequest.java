@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteDataServiceApiAuthorityRequest extends TeaModel {
     @NameInMap("TenantId")
-    @Validation(required = true)
     public Long tenantId;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("ApiId")
-    @Validation(required = true)
     public Long apiId;
 
     @NameInMap("AuthorizedProjectId")
-    @Validation(required = true)
     public Long authorizedProjectId;
 
     public static DeleteDataServiceApiAuthorityRequest build(java.util.Map<String, ?> map) throws Exception {

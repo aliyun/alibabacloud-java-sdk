@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckEngineMetaPartitionRequest extends TeaModel {
     @NameInMap("TableGuid")
-    @Validation(required = true)
     public String tableGuid;
 
     @NameInMap("Partition")
-    @Validation(required = true)
     public String partition;
 
     @NameInMap("DataSourceType")
-    @Validation(required = true)
     public String dataSourceType;
 
     public static CheckEngineMetaPartitionRequest build(java.util.Map<String, ?> map) throws Exception {
