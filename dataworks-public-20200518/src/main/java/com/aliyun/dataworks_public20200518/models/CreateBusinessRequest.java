@@ -11,7 +11,6 @@ public class CreateBusinessRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("BusinessName")
-    @Validation(required = true)
     public String businessName;
 
     @NameInMap("Description")

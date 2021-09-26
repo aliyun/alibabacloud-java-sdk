@@ -4,89 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetDataSourceMetaResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public GetDataSourceMetaResponseData data;
+    public GetDataSourceMetaResponseBody body;
 
     public static GetDataSourceMetaResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDataSourceMetaResponse self = new GetDataSourceMetaResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDataSourceMetaResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetDataSourceMetaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetDataSourceMetaResponse setSuccess(Boolean success) {
-        this.success = success;
+    public GetDataSourceMetaResponse setBody(GetDataSourceMetaResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetDataSourceMetaResponse setData(GetDataSourceMetaResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public GetDataSourceMetaResponseData getData() {
-        return this.data;
-    }
-
-    public static class GetDataSourceMetaResponseData extends TeaModel {
-        @NameInMap("Meta")
-        @Validation(required = true)
-        public String meta;
-
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        public static GetDataSourceMetaResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GetDataSourceMetaResponseData self = new GetDataSourceMetaResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetDataSourceMetaResponseData setMeta(String meta) {
-            this.meta = meta;
-            return this;
-        }
-        public String getMeta() {
-            return this.meta;
-        }
-
-        public GetDataSourceMetaResponseData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetDataSourceMetaResponseData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
+    public GetDataSourceMetaResponseBody getBody() {
+        return this.body;
     }
 
 }

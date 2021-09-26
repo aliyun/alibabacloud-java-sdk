@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetSuccessInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public Long instanceId;
 
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     public static SetSuccessInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

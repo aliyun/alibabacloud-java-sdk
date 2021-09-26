@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateQualityRuleRequest extends TeaModel {
     @NameInMap("BlockType")
-    @Validation(required = true)
     public Integer blockType;
 
     @NameInMap("EntityId")
-    @Validation(required = true)
     public Long entityId;
 
     @NameInMap("Comment")
@@ -31,7 +29,6 @@ public class CreateQualityRuleRequest extends TeaModel {
     public String operator;
 
     @NameInMap("ProjectName")
-    @Validation(required = true)
     public String projectName;
 
     @NameInMap("Property")
@@ -41,7 +38,6 @@ public class CreateQualityRuleRequest extends TeaModel {
     public String propertyType;
 
     @NameInMap("RuleType")
-    @Validation(required = true)
     public Integer ruleType;
 
     @NameInMap("WhereCondition")
@@ -57,11 +53,9 @@ public class CreateQualityRuleRequest extends TeaModel {
     public Integer templateId;
 
     @NameInMap("RuleName")
-    @Validation(required = true)
     public String ruleName;
 
     @NameInMap("PredictType")
-    @Validation(required = true)
     public Integer predictType;
 
     public static CreateQualityRuleRequest build(java.util.Map<String, ?> map) throws Exception {

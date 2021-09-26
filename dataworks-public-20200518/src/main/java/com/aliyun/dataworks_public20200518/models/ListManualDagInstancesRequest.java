@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListManualDagInstancesRequest extends TeaModel {
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("ProjectName")
-    @Validation(required = true)
     public String projectName;
 
     @NameInMap("DagId")
-    @Validation(required = true)
     public String dagId;
 
     public static ListManualDagInstancesRequest build(java.util.Map<String, ?> map) throws Exception {

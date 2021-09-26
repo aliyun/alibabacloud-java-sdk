@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteRemindRequest extends TeaModel {
     @NameInMap("RemindId")
-    @Validation(required = true)
     public Long remindId;
 
     public static DeleteRemindRequest build(java.util.Map<String, ?> map) throws Exception {

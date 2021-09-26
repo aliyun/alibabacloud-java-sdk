@@ -11,15 +11,12 @@ public class GetMetaTableOutputRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("TableGuid")
-    @Validation(required = true)
     public String tableGuid;
 
     @NameInMap("StartDate")
-    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
-    @Validation(required = true)
     public String endDate;
 
     public static GetMetaTableOutputRequest build(java.util.Map<String, ?> map) throws Exception {

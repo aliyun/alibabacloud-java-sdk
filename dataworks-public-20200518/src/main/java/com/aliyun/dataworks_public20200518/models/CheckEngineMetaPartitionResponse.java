@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CheckEngineMetaPartitionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean data;
+    public CheckEngineMetaPartitionResponseBody body;
 
     public static CheckEngineMetaPartitionResponse build(java.util.Map<String, ?> map) throws Exception {
         CheckEngineMetaPartitionResponse self = new CheckEngineMetaPartitionResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckEngineMetaPartitionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CheckEngineMetaPartitionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CheckEngineMetaPartitionResponse setData(Boolean data) {
-        this.data = data;
+    public CheckEngineMetaPartitionResponse setBody(CheckEngineMetaPartitionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getData() {
-        return this.data;
+    public CheckEngineMetaPartitionResponseBody getBody() {
+        return this.body;
     }
 
 }

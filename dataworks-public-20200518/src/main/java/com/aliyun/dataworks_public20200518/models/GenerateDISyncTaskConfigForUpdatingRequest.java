@@ -5,22 +5,18 @@ import com.aliyun.tea.*;
 
 public class GenerateDISyncTaskConfigForUpdatingRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public String taskType;
 
     @NameInMap("TaskParam")
-    @Validation(required = true)
     public String taskParam;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public Long taskId;
 
     public static GenerateDISyncTaskConfigForUpdatingRequest build(java.util.Map<String, ?> map) throws Exception {

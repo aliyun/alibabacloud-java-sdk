@@ -20,11 +20,9 @@ public class ListNodesRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("NodeName")

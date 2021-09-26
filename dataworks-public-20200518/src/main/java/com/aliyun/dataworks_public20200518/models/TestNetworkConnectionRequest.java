@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class TestNetworkConnectionRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("DatasourceName")
-    @Validation(required = true)
     public String datasourceName;
 
     @NameInMap("EnvType")
-    @Validation(required = true)
     public String envType;
 
     @NameInMap("ResourceGroup")
-    @Validation(required = true)
     public String resourceGroup;
 
     public static TestNetworkConnectionRequest build(java.util.Map<String, ?> map) throws Exception {

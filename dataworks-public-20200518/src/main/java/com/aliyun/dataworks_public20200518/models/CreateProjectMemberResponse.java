@@ -4,21 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectMemberResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CreateProjectMemberResponseBody body;
 
     public static CreateProjectMemberResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateProjectMemberResponse self = new CreateProjectMemberResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateProjectMemberResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateProjectMemberResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateProjectMemberResponse setBody(CreateProjectMemberResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateProjectMemberResponseBody getBody() {
+        return this.body;
     }
 
 }

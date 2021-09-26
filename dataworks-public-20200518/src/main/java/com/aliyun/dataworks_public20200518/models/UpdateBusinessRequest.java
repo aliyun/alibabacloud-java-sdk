@@ -20,7 +20,6 @@ public class UpdateBusinessRequest extends TeaModel {
     public String owner;
 
     @NameInMap("BusinessId")
-    @Validation(required = true)
     public Long businessId;
 
     public static UpdateBusinessRequest build(java.util.Map<String, ?> map) throws Exception {
