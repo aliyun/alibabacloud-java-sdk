@@ -1,0 +1,317 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sddp20190103.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeInstanceSourcesResponseBody extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("Items")
+    public java.util.List<DescribeInstanceSourcesResponseBodyItems> items;
+
+    public static DescribeInstanceSourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInstanceSourcesResponseBody self = new DescribeInstanceSourcesResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceSourcesResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeInstanceSourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeInstanceSourcesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeInstanceSourcesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeInstanceSourcesResponseBody setItems(java.util.List<DescribeInstanceSourcesResponseBodyItems> items) {
+        this.items = items;
+        return this;
+    }
+    public java.util.List<DescribeInstanceSourcesResponseBodyItems> getItems() {
+        return this.items;
+    }
+
+    public static class DescribeInstanceSourcesResponseBodyItems extends TeaModel {
+        @NameInMap("LastModifyUserId")
+        public String lastModifyUserId;
+
+        @NameInMap("PasswordStatus")
+        public Integer passwordStatus;
+
+        @NameInMap("EngineType")
+        public String engineType;
+
+        @NameInMap("TenantName")
+        public String tenantName;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceDescription")
+        public String instanceDescription;
+
+        @NameInMap("DataLimitId")
+        public Long dataLimitId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("DbName")
+        public String dbName;
+
+        @NameInMap("LastModifyTime")
+        public Long lastModifyTime;
+
+        @NameInMap("RegionName")
+        public String regionName;
+
+        @NameInMap("CanModifyUserName")
+        public Boolean canModifyUserName;
+
+        @NameInMap("LogStoreDay")
+        public Integer logStoreDay;
+
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        @NameInMap("AutoScan")
+        public Integer autoScan;
+
+        @NameInMap("ProductId")
+        public Long productId;
+
+        @NameInMap("InstanceSize")
+        public Long instanceSize;
+
+        @NameInMap("UserName")
+        public String userName;
+
+        @NameInMap("AuditStatus")
+        public Integer auditStatus;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("TenantId")
+        public String tenantId;
+
+        @NameInMap("Enable")
+        public Integer enable;
+
+        public static DescribeInstanceSourcesResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceSourcesResponseBodyItems self = new DescribeInstanceSourcesResponseBodyItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setLastModifyUserId(String lastModifyUserId) {
+            this.lastModifyUserId = lastModifyUserId;
+            return this;
+        }
+        public String getLastModifyUserId() {
+            return this.lastModifyUserId;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setPasswordStatus(Integer passwordStatus) {
+            this.passwordStatus = passwordStatus;
+            return this;
+        }
+        public Integer getPasswordStatus() {
+            return this.passwordStatus;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setEngineType(String engineType) {
+            this.engineType = engineType;
+            return this;
+        }
+        public String getEngineType() {
+            return this.engineType;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setTenantName(String tenantName) {
+            this.tenantName = tenantName;
+            return this;
+        }
+        public String getTenantName() {
+            return this.tenantName;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setInstanceDescription(String instanceDescription) {
+            this.instanceDescription = instanceDescription;
+            return this;
+        }
+        public String getInstanceDescription() {
+            return this.instanceDescription;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setDataLimitId(Long dataLimitId) {
+            this.dataLimitId = dataLimitId;
+            return this;
+        }
+        public Long getDataLimitId() {
+            return this.dataLimitId;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setDbName(String dbName) {
+            this.dbName = dbName;
+            return this;
+        }
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setLastModifyTime(Long lastModifyTime) {
+            this.lastModifyTime = lastModifyTime;
+            return this;
+        }
+        public Long getLastModifyTime() {
+            return this.lastModifyTime;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setCanModifyUserName(Boolean canModifyUserName) {
+            this.canModifyUserName = canModifyUserName;
+            return this;
+        }
+        public Boolean getCanModifyUserName() {
+            return this.canModifyUserName;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setLogStoreDay(Integer logStoreDay) {
+            this.logStoreDay = logStoreDay;
+            return this;
+        }
+        public Integer getLogStoreDay() {
+            return this.logStoreDay;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setAutoScan(Integer autoScan) {
+            this.autoScan = autoScan;
+            return this;
+        }
+        public Integer getAutoScan() {
+            return this.autoScan;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setProductId(Long productId) {
+            this.productId = productId;
+            return this;
+        }
+        public Long getProductId() {
+            return this.productId;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setInstanceSize(Long instanceSize) {
+            this.instanceSize = instanceSize;
+            return this;
+        }
+        public Long getInstanceSize() {
+            return this.instanceSize;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setAuditStatus(Integer auditStatus) {
+            this.auditStatus = auditStatus;
+            return this;
+        }
+        public Integer getAuditStatus() {
+            return this.auditStatus;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        public DescribeInstanceSourcesResponseBodyItems setEnable(Integer enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Integer getEnable() {
+            return this.enable;
+        }
+
+    }
+
+}
