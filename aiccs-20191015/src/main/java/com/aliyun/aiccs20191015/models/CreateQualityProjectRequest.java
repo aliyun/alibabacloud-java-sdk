@@ -26,16 +26,16 @@ public class CreateQualityProjectRequest extends TeaModel {
     public java.util.List<Integer> channelTouchType;
 
     @NameInMap("DepList")
-    public java.util.List<Integer> depList;
+    public java.util.List<Long> depList;
 
     @NameInMap("GroupList")
-    public java.util.List<Integer> groupList;
+    public java.util.List<Long> groupList;
 
     @NameInMap("ServicerList")
     public java.util.List<String> servicerList;
 
     @NameInMap("AnalysisIds")
-    public java.util.List<Integer> analysisIds;
+    public java.util.List<Long> analysisIds;
 
     public static CreateQualityProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateQualityProjectRequest self = new CreateQualityProjectRequest();
@@ -98,19 +98,19 @@ public class CreateQualityProjectRequest extends TeaModel {
         return this.channelTouchType;
     }
 
-    public CreateQualityProjectRequest setDepList(java.util.List<Integer> depList) {
+    public CreateQualityProjectRequest setDepList(java.util.List<Long> depList) {
         this.depList = depList;
         return this;
     }
-    public java.util.List<Integer> getDepList() {
+    public java.util.List<Long> getDepList() {
         return this.depList;
     }
 
-    public CreateQualityProjectRequest setGroupList(java.util.List<Integer> groupList) {
+    public CreateQualityProjectRequest setGroupList(java.util.List<Long> groupList) {
         this.groupList = groupList;
         return this;
     }
-    public java.util.List<Integer> getGroupList() {
+    public java.util.List<Long> getGroupList() {
         return this.groupList;
     }
 
@@ -122,11 +122,11 @@ public class CreateQualityProjectRequest extends TeaModel {
         return this.servicerList;
     }
 
-    public CreateQualityProjectRequest setAnalysisIds(java.util.List<Integer> analysisIds) {
+    public CreateQualityProjectRequest setAnalysisIds(java.util.List<Long> analysisIds) {
         this.analysisIds = analysisIds;
         return this;
     }
-    public java.util.List<Integer> getAnalysisIds() {
+    public java.util.List<Long> getAnalysisIds() {
         return this.analysisIds;
     }
 

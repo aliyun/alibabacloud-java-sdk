@@ -88,6 +88,18 @@ public class SendCcoSmartCallRequest extends TeaModel {
     @NameInMap("TtsSpeed")
     public Integer ttsSpeed;
 
+    @NameInMap("BackgroundFileCode")
+    public String backgroundFileCode;
+
+    @NameInMap("BackgroundVolume")
+    public Integer backgroundVolume;
+
+    @NameInMap("BackgroundSpeed")
+    public Integer backgroundSpeed;
+
+    @NameInMap("EnableITN")
+    public Boolean enableITN;
+
     public static SendCcoSmartCallRequest build(java.util.Map<String, ?> map) throws Exception {
         SendCcoSmartCallRequest self = new SendCcoSmartCallRequest();
         return TeaModel.build(map, self);
@@ -315,6 +327,38 @@ public class SendCcoSmartCallRequest extends TeaModel {
     }
     public Integer getTtsSpeed() {
         return this.ttsSpeed;
+    }
+
+    public SendCcoSmartCallRequest setBackgroundFileCode(String backgroundFileCode) {
+        this.backgroundFileCode = backgroundFileCode;
+        return this;
+    }
+    public String getBackgroundFileCode() {
+        return this.backgroundFileCode;
+    }
+
+    public SendCcoSmartCallRequest setBackgroundVolume(Integer backgroundVolume) {
+        this.backgroundVolume = backgroundVolume;
+        return this;
+    }
+    public Integer getBackgroundVolume() {
+        return this.backgroundVolume;
+    }
+
+    public SendCcoSmartCallRequest setBackgroundSpeed(Integer backgroundSpeed) {
+        this.backgroundSpeed = backgroundSpeed;
+        return this;
+    }
+    public Integer getBackgroundSpeed() {
+        return this.backgroundSpeed;
+    }
+
+    public SendCcoSmartCallRequest setEnableITN(Boolean enableITN) {
+        this.enableITN = enableITN;
+        return this;
+    }
+    public Boolean getEnableITN() {
+        return this.enableITN;
     }
 
 }

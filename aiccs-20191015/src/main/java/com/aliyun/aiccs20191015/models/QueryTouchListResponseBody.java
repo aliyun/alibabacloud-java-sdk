@@ -4,8 +4,8 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryTouchListResponseBody extends TeaModel {
-    @NameInMap("ResultData")
-    public QueryTouchListResponseBodyResultData resultData;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,23 +13,23 @@ public class QueryTouchListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("ResultData")
+    public QueryTouchListResponseBodyResultData resultData;
 
     public static QueryTouchListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTouchListResponseBody self = new QueryTouchListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public QueryTouchListResponseBody setResultData(QueryTouchListResponseBodyResultData resultData) {
-        this.resultData = resultData;
+    public QueryTouchListResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public QueryTouchListResponseBodyResultData getResultData() {
-        return this.resultData;
+    public String getCode() {
+        return this.code;
     }
 
     public QueryTouchListResponseBody setMessage(String message) {
@@ -48,20 +48,20 @@ public class QueryTouchListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryTouchListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public QueryTouchListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public QueryTouchListResponseBody setResultData(QueryTouchListResponseBodyResultData resultData) {
+        this.resultData = resultData;
+        return this;
+    }
+    public QueryTouchListResponseBodyResultData getResultData() {
+        return this.resultData;
     }
 
     public static class QueryTouchListResponseBodyResultDataDataExtAttrs extends TeaModel {
@@ -74,26 +74,23 @@ public class QueryTouchListResponseBody extends TeaModel {
         @NameInMap("EvaluationSolution")
         public Integer evaluationSolution;
 
-        @NameInMap("OnlineSessionSource")
-        public Integer onlineSessionSource;
+        @NameInMap("Ani")
+        public String ani;
 
         @NameInMap("OnlineJoinRespInterval")
         public Integer onlineJoinRespInterval;
 
+        @NameInMap("OnlineSessionSource")
+        public Integer onlineSessionSource;
+
         @NameInMap("EvaluationStatus")
         public Integer evaluationStatus;
 
-        // 外呼为主叫号码
-        @NameInMap("OutCallRouteNumber")
-        public String outCallRouteNumber;
-
-        // 外呼为被叫号码,入呼为被叫号码
         @NameInMap("Dnis")
         public String dnis;
 
-        // 入呼为主叫号码
-        @NameInMap("Ani")
-        public String ani;
+        @NameInMap("OutCallRouteNumber")
+        public String outCallRouteNumber;
 
         public static QueryTouchListResponseBodyResultDataDataExtAttrs build(java.util.Map<String, ?> map) throws Exception {
             QueryTouchListResponseBodyResultDataDataExtAttrs self = new QueryTouchListResponseBodyResultDataDataExtAttrs();
@@ -124,12 +121,12 @@ public class QueryTouchListResponseBody extends TeaModel {
             return this.evaluationSolution;
         }
 
-        public QueryTouchListResponseBodyResultDataDataExtAttrs setOnlineSessionSource(Integer onlineSessionSource) {
-            this.onlineSessionSource = onlineSessionSource;
+        public QueryTouchListResponseBodyResultDataDataExtAttrs setAni(String ani) {
+            this.ani = ani;
             return this;
         }
-        public Integer getOnlineSessionSource() {
-            return this.onlineSessionSource;
+        public String getAni() {
+            return this.ani;
         }
 
         public QueryTouchListResponseBodyResultDataDataExtAttrs setOnlineJoinRespInterval(Integer onlineJoinRespInterval) {
@@ -140,20 +137,20 @@ public class QueryTouchListResponseBody extends TeaModel {
             return this.onlineJoinRespInterval;
         }
 
+        public QueryTouchListResponseBodyResultDataDataExtAttrs setOnlineSessionSource(Integer onlineSessionSource) {
+            this.onlineSessionSource = onlineSessionSource;
+            return this;
+        }
+        public Integer getOnlineSessionSource() {
+            return this.onlineSessionSource;
+        }
+
         public QueryTouchListResponseBodyResultDataDataExtAttrs setEvaluationStatus(Integer evaluationStatus) {
             this.evaluationStatus = evaluationStatus;
             return this;
         }
         public Integer getEvaluationStatus() {
             return this.evaluationStatus;
-        }
-
-        public QueryTouchListResponseBodyResultDataDataExtAttrs setOutCallRouteNumber(String outCallRouteNumber) {
-            this.outCallRouteNumber = outCallRouteNumber;
-            return this;
-        }
-        public String getOutCallRouteNumber() {
-            return this.outCallRouteNumber;
         }
 
         public QueryTouchListResponseBodyResultDataDataExtAttrs setDnis(String dnis) {
@@ -164,12 +161,12 @@ public class QueryTouchListResponseBody extends TeaModel {
             return this.dnis;
         }
 
-        public QueryTouchListResponseBodyResultDataDataExtAttrs setAni(String ani) {
-            this.ani = ani;
+        public QueryTouchListResponseBodyResultDataDataExtAttrs setOutCallRouteNumber(String outCallRouteNumber) {
+            this.outCallRouteNumber = outCallRouteNumber;
             return this;
         }
-        public String getAni() {
-            return this.ani;
+        public String getOutCallRouteNumber() {
+            return this.outCallRouteNumber;
         }
 
     }
@@ -244,20 +241,20 @@ public class QueryTouchListResponseBody extends TeaModel {
         @NameInMap("TouchType")
         public Integer touchType;
 
-        @NameInMap("ChannelId")
-        public String channelId;
-
         @NameInMap("GmtCreate")
         public Long gmtCreate;
+
+        @NameInMap("ChannelId")
+        public String channelId;
 
         @NameInMap("MemberId")
         public Long memberId;
 
-        @NameInMap("ExtAttrs")
-        public QueryTouchListResponseBodyResultDataDataExtAttrs extAttrs;
-
         @NameInMap("ExtAttrsString")
         public java.util.Map<String, ?> extAttrsString;
+
+        @NameInMap("ExtAttrs")
+        public QueryTouchListResponseBodyResultDataDataExtAttrs extAttrs;
 
         public static QueryTouchListResponseBodyResultDataData build(java.util.Map<String, ?> map) throws Exception {
             QueryTouchListResponseBodyResultDataData self = new QueryTouchListResponseBodyResultDataData();
@@ -448,20 +445,20 @@ public class QueryTouchListResponseBody extends TeaModel {
             return this.touchType;
         }
 
-        public QueryTouchListResponseBodyResultDataData setChannelId(String channelId) {
-            this.channelId = channelId;
-            return this;
-        }
-        public String getChannelId() {
-            return this.channelId;
-        }
-
         public QueryTouchListResponseBodyResultDataData setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
         public Long getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public QueryTouchListResponseBodyResultDataData setChannelId(String channelId) {
+            this.channelId = channelId;
+            return this;
+        }
+        public String getChannelId() {
+            return this.channelId;
         }
 
         public QueryTouchListResponseBodyResultDataData setMemberId(Long memberId) {
@@ -472,20 +469,20 @@ public class QueryTouchListResponseBody extends TeaModel {
             return this.memberId;
         }
 
-        public QueryTouchListResponseBodyResultDataData setExtAttrs(QueryTouchListResponseBodyResultDataDataExtAttrs extAttrs) {
-            this.extAttrs = extAttrs;
-            return this;
-        }
-        public QueryTouchListResponseBodyResultDataDataExtAttrs getExtAttrs() {
-            return this.extAttrs;
-        }
-
         public QueryTouchListResponseBodyResultDataData setExtAttrsString(java.util.Map<String, ?> extAttrsString) {
             this.extAttrsString = extAttrsString;
             return this;
         }
         public java.util.Map<String, ?> getExtAttrsString() {
             return this.extAttrsString;
+        }
+
+        public QueryTouchListResponseBodyResultDataData setExtAttrs(QueryTouchListResponseBodyResultDataDataExtAttrs extAttrs) {
+            this.extAttrs = extAttrs;
+            return this;
+        }
+        public QueryTouchListResponseBodyResultDataDataExtAttrs getExtAttrs() {
+            return this.extAttrs;
         }
 
     }
@@ -500,9 +497,6 @@ public class QueryTouchListResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
-        @NameInMap("Data")
-        public java.util.List<QueryTouchListResponseBodyResultDataData> data;
-
         @NameInMap("TotalPage")
         public Integer totalPage;
 
@@ -514,6 +508,9 @@ public class QueryTouchListResponseBody extends TeaModel {
 
         @NameInMap("Empty")
         public Boolean empty;
+
+        @NameInMap("Data")
+        public java.util.List<QueryTouchListResponseBodyResultDataData> data;
 
         public static QueryTouchListResponseBodyResultData build(java.util.Map<String, ?> map) throws Exception {
             QueryTouchListResponseBodyResultData self = new QueryTouchListResponseBodyResultData();
@@ -542,14 +539,6 @@ public class QueryTouchListResponseBody extends TeaModel {
         }
         public Integer getCurrentPage() {
             return this.currentPage;
-        }
-
-        public QueryTouchListResponseBodyResultData setData(java.util.List<QueryTouchListResponseBodyResultDataData> data) {
-            this.data = data;
-            return this;
-        }
-        public java.util.List<QueryTouchListResponseBodyResultDataData> getData() {
-            return this.data;
         }
 
         public QueryTouchListResponseBodyResultData setTotalPage(Integer totalPage) {
@@ -582,6 +571,14 @@ public class QueryTouchListResponseBody extends TeaModel {
         }
         public Boolean getEmpty() {
             return this.empty;
+        }
+
+        public QueryTouchListResponseBodyResultData setData(java.util.List<QueryTouchListResponseBodyResultDataData> data) {
+            this.data = data;
+            return this;
+        }
+        public java.util.List<QueryTouchListResponseBodyResultDataData> getData() {
+            return this.data;
         }
 
     }

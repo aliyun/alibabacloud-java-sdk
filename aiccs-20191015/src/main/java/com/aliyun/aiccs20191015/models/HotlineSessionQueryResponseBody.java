@@ -4,24 +4,32 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class HotlineSessionQueryResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public HotlineSessionQueryResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public HotlineSessionQueryResponseBodyData data;
 
     public static HotlineSessionQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         HotlineSessionQueryResponseBody self = new HotlineSessionQueryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public HotlineSessionQueryResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public HotlineSessionQueryResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public HotlineSessionQueryResponseBody setData(HotlineSessionQueryResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public HotlineSessionQueryResponseBodyData getData() {
-        return this.data;
-    }
-
-    public HotlineSessionQueryResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public HotlineSessionQueryResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public HotlineSessionQueryResponseBody setData(HotlineSessionQueryResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public HotlineSessionQueryResponseBodyData getData() {
+        return this.data;
     }
 
     public static class HotlineSessionQueryResponseBodyDataCallDetailRecord extends TeaModel {
@@ -137,20 +137,20 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         @NameInMap("RingEndTime")
         public String ringEndTime;
 
-        @NameInMap("CallingNumber")
-        public String callingNumber;
-
         @NameInMap("InQueueTime")
         public String inQueueTime;
+
+        @NameInMap("CallingNumber")
+        public String callingNumber;
 
         @NameInMap("MemberId")
         public String memberId;
 
-        @NameInMap("Id")
-        public String id;
-
         @NameInMap("QueueUpContinueTime")
         public Integer queueUpContinueTime;
+
+        @NameInMap("Id")
+        public String id;
 
         public static HotlineSessionQueryResponseBodyDataCallDetailRecord build(java.util.Map<String, ?> map) throws Exception {
             HotlineSessionQueryResponseBodyDataCallDetailRecord self = new HotlineSessionQueryResponseBodyDataCallDetailRecord();
@@ -349,20 +349,20 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             return this.ringEndTime;
         }
 
-        public HotlineSessionQueryResponseBodyDataCallDetailRecord setCallingNumber(String callingNumber) {
-            this.callingNumber = callingNumber;
-            return this;
-        }
-        public String getCallingNumber() {
-            return this.callingNumber;
-        }
-
         public HotlineSessionQueryResponseBodyDataCallDetailRecord setInQueueTime(String inQueueTime) {
             this.inQueueTime = inQueueTime;
             return this;
         }
         public String getInQueueTime() {
             return this.inQueueTime;
+        }
+
+        public HotlineSessionQueryResponseBodyDataCallDetailRecord setCallingNumber(String callingNumber) {
+            this.callingNumber = callingNumber;
+            return this;
+        }
+        public String getCallingNumber() {
+            return this.callingNumber;
         }
 
         public HotlineSessionQueryResponseBodyDataCallDetailRecord setMemberId(String memberId) {
@@ -373,14 +373,6 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             return this.memberId;
         }
 
-        public HotlineSessionQueryResponseBodyDataCallDetailRecord setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public HotlineSessionQueryResponseBodyDataCallDetailRecord setQueueUpContinueTime(Integer queueUpContinueTime) {
             this.queueUpContinueTime = queueUpContinueTime;
             return this;
@@ -389,12 +381,17 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             return this.queueUpContinueTime;
         }
 
+        public HotlineSessionQueryResponseBodyDataCallDetailRecord setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
     }
 
     public static class HotlineSessionQueryResponseBodyData extends TeaModel {
-        @NameInMap("CallDetailRecord")
-        public java.util.List<HotlineSessionQueryResponseBodyDataCallDetailRecord> callDetailRecord;
-
         @NameInMap("PageSize")
         public Integer pageSize;
 
@@ -404,17 +401,12 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        @NameInMap("CallDetailRecord")
+        public java.util.List<HotlineSessionQueryResponseBodyDataCallDetailRecord> callDetailRecord;
+
         public static HotlineSessionQueryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             HotlineSessionQueryResponseBodyData self = new HotlineSessionQueryResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public HotlineSessionQueryResponseBodyData setCallDetailRecord(java.util.List<HotlineSessionQueryResponseBodyDataCallDetailRecord> callDetailRecord) {
-            this.callDetailRecord = callDetailRecord;
-            return this;
-        }
-        public java.util.List<HotlineSessionQueryResponseBodyDataCallDetailRecord> getCallDetailRecord() {
-            return this.callDetailRecord;
         }
 
         public HotlineSessionQueryResponseBodyData setPageSize(Integer pageSize) {
@@ -439,6 +431,14 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public HotlineSessionQueryResponseBodyData setCallDetailRecord(java.util.List<HotlineSessionQueryResponseBodyDataCallDetailRecord> callDetailRecord) {
+            this.callDetailRecord = callDetailRecord;
+            return this;
+        }
+        public java.util.List<HotlineSessionQueryResponseBodyDataCallDetailRecord> getCallDetailRecord() {
+            return this.callDetailRecord;
         }
 
     }

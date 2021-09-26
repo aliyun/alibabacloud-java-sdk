@@ -17,7 +17,7 @@ public class BatchCreateQualityProjectsRequest extends TeaModel {
     public String timeRangeEnd;
 
     @NameInMap("AnalysisIds")
-    public java.util.List<Integer> analysisIds;
+    public java.util.List<Long> analysisIds;
 
     @NameInMap("InstanceList")
     public java.util.List<String> instanceList;
@@ -62,11 +62,11 @@ public class BatchCreateQualityProjectsRequest extends TeaModel {
         return this.timeRangeEnd;
     }
 
-    public BatchCreateQualityProjectsRequest setAnalysisIds(java.util.List<Integer> analysisIds) {
+    public BatchCreateQualityProjectsRequest setAnalysisIds(java.util.List<Long> analysisIds) {
         this.analysisIds = analysisIds;
         return this;
     }
-    public java.util.List<Integer> getAnalysisIds() {
+    public java.util.List<Long> getAnalysisIds() {
         return this.analysisIds;
     }
 

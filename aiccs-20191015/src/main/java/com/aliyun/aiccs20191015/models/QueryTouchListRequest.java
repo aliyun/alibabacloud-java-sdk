@@ -7,18 +7,6 @@ public class QueryTouchListRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("FirstTimeStart")
-    public Long firstTimeStart;
-
-    @NameInMap("FirstTimeEnd")
-    public Long firstTimeEnd;
-
-    @NameInMap("CloseTimeStart")
-    public Long closeTimeStart;
-
-    @NameInMap("CloseTimeEnd")
-    public Long closeTimeEnd;
-
     @NameInMap("TouchId")
     public java.util.List<Long> touchId;
 
@@ -55,6 +43,18 @@ public class QueryTouchListRequest extends TeaModel {
     @NameInMap("EvaluationScore")
     public java.util.List<Integer> evaluationScore;
 
+    @NameInMap("FirstTimeStart")
+    public Long firstTimeStart;
+
+    @NameInMap("FirstTimeEnd")
+    public Long firstTimeEnd;
+
+    @NameInMap("CloseTimeStart")
+    public Long closeTimeStart;
+
+    @NameInMap("CloseTimeEnd")
+    public Long closeTimeEnd;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -72,38 +72,6 @@ public class QueryTouchListRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public QueryTouchListRequest setFirstTimeStart(Long firstTimeStart) {
-        this.firstTimeStart = firstTimeStart;
-        return this;
-    }
-    public Long getFirstTimeStart() {
-        return this.firstTimeStart;
-    }
-
-    public QueryTouchListRequest setFirstTimeEnd(Long firstTimeEnd) {
-        this.firstTimeEnd = firstTimeEnd;
-        return this;
-    }
-    public Long getFirstTimeEnd() {
-        return this.firstTimeEnd;
-    }
-
-    public QueryTouchListRequest setCloseTimeStart(Long closeTimeStart) {
-        this.closeTimeStart = closeTimeStart;
-        return this;
-    }
-    public Long getCloseTimeStart() {
-        return this.closeTimeStart;
-    }
-
-    public QueryTouchListRequest setCloseTimeEnd(Long closeTimeEnd) {
-        this.closeTimeEnd = closeTimeEnd;
-        return this;
-    }
-    public Long getCloseTimeEnd() {
-        return this.closeTimeEnd;
     }
 
     public QueryTouchListRequest setTouchId(java.util.List<Long> touchId) {
@@ -200,6 +168,38 @@ public class QueryTouchListRequest extends TeaModel {
     }
     public java.util.List<Integer> getEvaluationScore() {
         return this.evaluationScore;
+    }
+
+    public QueryTouchListRequest setFirstTimeStart(Long firstTimeStart) {
+        this.firstTimeStart = firstTimeStart;
+        return this;
+    }
+    public Long getFirstTimeStart() {
+        return this.firstTimeStart;
+    }
+
+    public QueryTouchListRequest setFirstTimeEnd(Long firstTimeEnd) {
+        this.firstTimeEnd = firstTimeEnd;
+        return this;
+    }
+    public Long getFirstTimeEnd() {
+        return this.firstTimeEnd;
+    }
+
+    public QueryTouchListRequest setCloseTimeStart(Long closeTimeStart) {
+        this.closeTimeStart = closeTimeStart;
+        return this;
+    }
+    public Long getCloseTimeStart() {
+        return this.closeTimeStart;
+    }
+
+    public QueryTouchListRequest setCloseTimeEnd(Long closeTimeEnd) {
+        this.closeTimeEnd = closeTimeEnd;
+        return this;
+    }
+    public Long getCloseTimeEnd() {
+        return this.closeTimeEnd;
     }
 
     public QueryTouchListRequest setPageSize(Integer pageSize) {

@@ -26,13 +26,13 @@ public class GetQualityResultRequest extends TeaModel {
     public Integer hitStatus;
 
     @NameInMap("GroupIds")
-    public java.util.List<Integer> groupIds;
+    public java.util.List<Long> groupIds;
 
     @NameInMap("QualityRuleIds")
-    public java.util.List<Integer> qualityRuleIds;
+    public java.util.List<Long> qualityRuleIds;
 
     @NameInMap("ProjectIds")
-    public java.util.List<Integer> projectIds;
+    public java.util.List<Long> projectIds;
 
     public static GetQualityResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetQualityResultRequest self = new GetQualityResultRequest();
@@ -95,27 +95,27 @@ public class GetQualityResultRequest extends TeaModel {
         return this.hitStatus;
     }
 
-    public GetQualityResultRequest setGroupIds(java.util.List<Integer> groupIds) {
+    public GetQualityResultRequest setGroupIds(java.util.List<Long> groupIds) {
         this.groupIds = groupIds;
         return this;
     }
-    public java.util.List<Integer> getGroupIds() {
+    public java.util.List<Long> getGroupIds() {
         return this.groupIds;
     }
 
-    public GetQualityResultRequest setQualityRuleIds(java.util.List<Integer> qualityRuleIds) {
+    public GetQualityResultRequest setQualityRuleIds(java.util.List<Long> qualityRuleIds) {
         this.qualityRuleIds = qualityRuleIds;
         return this;
     }
-    public java.util.List<Integer> getQualityRuleIds() {
+    public java.util.List<Long> getQualityRuleIds() {
         return this.qualityRuleIds;
     }
 
-    public GetQualityResultRequest setProjectIds(java.util.List<Integer> projectIds) {
+    public GetQualityResultRequest setProjectIds(java.util.List<Long> projectIds) {
         this.projectIds = projectIds;
         return this;
     }
-    public java.util.List<Integer> getProjectIds() {
+    public java.util.List<Long> getProjectIds() {
         return this.projectIds;
     }
 

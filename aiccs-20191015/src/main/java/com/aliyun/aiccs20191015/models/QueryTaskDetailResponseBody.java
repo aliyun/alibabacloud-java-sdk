@@ -4,27 +4,43 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskDetailResponseBody extends TeaModel {
+    @NameInMap("HttpStatusCode")
+    public String httpStatusCode;
+
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("HttpStatusCode")
-    public String httpStatusCode;
+    @NameInMap("Success")
+    public String success;
 
     @NameInMap("Data")
     public QueryTaskDetailResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public String success;
-
     public static QueryTaskDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskDetailResponseBody self = new QueryTaskDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryTaskDetailResponseBody setHttpStatusCode(String httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public QueryTaskDetailResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QueryTaskDetailResponseBody setMessage(String message) {
@@ -43,12 +59,12 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QueryTaskDetailResponseBody setHttpStatusCode(String httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public QueryTaskDetailResponseBody setSuccess(String success) {
+        this.success = success;
         return this;
     }
-    public String getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getSuccess() {
+        return this.success;
     }
 
     public QueryTaskDetailResponseBody setData(QueryTaskDetailResponseBodyData data) {
@@ -59,31 +75,15 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         return this.data;
     }
 
-    public QueryTaskDetailResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryTaskDetailResponseBody setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
     public static class QueryTaskDetailResponseBodyDataList extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
-        @NameInMap("MemberName")
-        public String memberName;
-
         @NameInMap("ServicerName")
         public String servicerName;
+
+        @NameInMap("MemberName")
+        public String memberName;
 
         @NameInMap("OutboundNum")
         public Integer outboundNum;
@@ -146,20 +146,20 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             return this.status;
         }
 
-        public QueryTaskDetailResponseBodyDataList setMemberName(String memberName) {
-            this.memberName = memberName;
-            return this;
-        }
-        public String getMemberName() {
-            return this.memberName;
-        }
-
         public QueryTaskDetailResponseBodyDataList setServicerName(String servicerName) {
             this.servicerName = servicerName;
             return this;
         }
         public String getServicerName() {
             return this.servicerName;
+        }
+
+        public QueryTaskDetailResponseBodyDataList setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
         }
 
         public QueryTaskDetailResponseBodyDataList setOutboundNum(Integer outboundNum) {
@@ -299,11 +299,11 @@ public class QueryTaskDetailResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public String currentPage;
 
-        @NameInMap("List")
-        public java.util.List<QueryTaskDetailResponseBodyDataList> list;
-
         @NameInMap("PageSize")
         public String pageSize;
+
+        @NameInMap("List")
+        public java.util.List<QueryTaskDetailResponseBodyDataList> list;
 
         public static QueryTaskDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryTaskDetailResponseBodyData self = new QueryTaskDetailResponseBodyData();
@@ -326,20 +326,20 @@ public class QueryTaskDetailResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public QueryTaskDetailResponseBodyData setList(java.util.List<QueryTaskDetailResponseBodyDataList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<QueryTaskDetailResponseBodyDataList> getList() {
-            return this.list;
-        }
-
         public QueryTaskDetailResponseBodyData setPageSize(String pageSize) {
             this.pageSize = pageSize;
             return this;
         }
         public String getPageSize() {
             return this.pageSize;
+        }
+
+        public QueryTaskDetailResponseBodyData setList(java.util.List<QueryTaskDetailResponseBodyDataList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<QueryTaskDetailResponseBodyDataList> getList() {
+            return this.list;
         }
 
     }

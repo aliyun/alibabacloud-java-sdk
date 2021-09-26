@@ -88,6 +88,18 @@ public class AiccsSmartCallRequest extends TeaModel {
     @NameInMap("TtsSpeed")
     public Integer ttsSpeed;
 
+    @NameInMap("EnableITN")
+    public Boolean enableITN;
+
+    @NameInMap("BackgroundFileCode")
+    public String backgroundFileCode;
+
+    @NameInMap("BackgroundVolume")
+    public Integer backgroundVolume;
+
+    @NameInMap("BackgroundSpeed")
+    public Integer backgroundSpeed;
+
     public static AiccsSmartCallRequest build(java.util.Map<String, ?> map) throws Exception {
         AiccsSmartCallRequest self = new AiccsSmartCallRequest();
         return TeaModel.build(map, self);
@@ -315,6 +327,38 @@ public class AiccsSmartCallRequest extends TeaModel {
     }
     public Integer getTtsSpeed() {
         return this.ttsSpeed;
+    }
+
+    public AiccsSmartCallRequest setEnableITN(Boolean enableITN) {
+        this.enableITN = enableITN;
+        return this;
+    }
+    public Boolean getEnableITN() {
+        return this.enableITN;
+    }
+
+    public AiccsSmartCallRequest setBackgroundFileCode(String backgroundFileCode) {
+        this.backgroundFileCode = backgroundFileCode;
+        return this;
+    }
+    public String getBackgroundFileCode() {
+        return this.backgroundFileCode;
+    }
+
+    public AiccsSmartCallRequest setBackgroundVolume(Integer backgroundVolume) {
+        this.backgroundVolume = backgroundVolume;
+        return this;
+    }
+    public Integer getBackgroundVolume() {
+        return this.backgroundVolume;
+    }
+
+    public AiccsSmartCallRequest setBackgroundSpeed(Integer backgroundSpeed) {
+        this.backgroundSpeed = backgroundSpeed;
+        return this;
+    }
+    public Integer getBackgroundSpeed() {
+        return this.backgroundSpeed;
     }
 
 }

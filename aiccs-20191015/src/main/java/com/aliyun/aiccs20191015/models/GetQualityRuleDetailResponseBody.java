@@ -4,24 +4,32 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityRuleDetailResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetQualityRuleDetailResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public GetQualityRuleDetailResponseBodyData data;
 
     public static GetQualityRuleDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetQualityRuleDetailResponseBody self = new GetQualityRuleDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetQualityRuleDetailResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetQualityRuleDetailResponseBody setMessage(String message) {
@@ -40,22 +48,6 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetQualityRuleDetailResponseBody setData(GetQualityRuleDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetQualityRuleDetailResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetQualityRuleDetailResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetQualityRuleDetailResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -64,12 +56,17 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetQualityRuleDetailResponseBody setData(GetQualityRuleDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetQualityRuleDetailResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class GetQualityRuleDetailResponseBodyData extends TeaModel {
         @NameInMap("RuleTag")
         public Integer ruleTag;
-
-        @NameInMap("KeyWords")
-        public java.util.List<String> keyWords;
 
         @NameInMap("MatchType")
         public Integer matchType;
@@ -83,6 +80,9 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         @NameInMap("RuleId")
         public Long ruleId;
 
+        @NameInMap("KeyWords")
+        public java.util.List<String> keyWords;
+
         public static GetQualityRuleDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityRuleDetailResponseBodyData self = new GetQualityRuleDetailResponseBodyData();
             return TeaModel.build(map, self);
@@ -94,14 +94,6 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         }
         public Integer getRuleTag() {
             return this.ruleTag;
-        }
-
-        public GetQualityRuleDetailResponseBodyData setKeyWords(java.util.List<String> keyWords) {
-            this.keyWords = keyWords;
-            return this;
-        }
-        public java.util.List<String> getKeyWords() {
-            return this.keyWords;
         }
 
         public GetQualityRuleDetailResponseBodyData setMatchType(Integer matchType) {
@@ -134,6 +126,14 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         }
         public Long getRuleId() {
             return this.ruleId;
+        }
+
+        public GetQualityRuleDetailResponseBodyData setKeyWords(java.util.List<String> keyWords) {
+            this.keyWords = keyWords;
+            return this;
+        }
+        public java.util.List<String> getKeyWords() {
+            return this.keyWords;
         }
 
     }

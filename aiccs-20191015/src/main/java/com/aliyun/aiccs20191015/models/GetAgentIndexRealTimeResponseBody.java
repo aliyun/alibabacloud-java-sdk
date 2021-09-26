@@ -4,24 +4,32 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAgentIndexRealTimeResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetAgentIndexRealTimeResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public GetAgentIndexRealTimeResponseBodyData data;
 
     public static GetAgentIndexRealTimeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAgentIndexRealTimeResponseBody self = new GetAgentIndexRealTimeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAgentIndexRealTimeResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetAgentIndexRealTimeResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAgentIndexRealTimeResponseBody setData(GetAgentIndexRealTimeResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAgentIndexRealTimeResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetAgentIndexRealTimeResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public GetAgentIndexRealTimeResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetAgentIndexRealTimeResponseBody setData(GetAgentIndexRealTimeResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAgentIndexRealTimeResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetAgentIndexRealTimeResponseBodyDataColumns extends TeaModel {
@@ -95,32 +95,24 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
     }
 
     public static class GetAgentIndexRealTimeResponseBodyData extends TeaModel {
-        @NameInMap("Rows")
-        public java.util.List<java.util.Map<String, ?>> rows;
-
         @NameInMap("PageSize")
         public Integer pageSize;
 
         @NameInMap("Total")
         public Integer total;
 
+        @NameInMap("Page")
+        public Integer page;
+
         @NameInMap("Columns")
         public java.util.List<GetAgentIndexRealTimeResponseBodyDataColumns> columns;
 
-        @NameInMap("Page")
-        public Integer page;
+        @NameInMap("Rows")
+        public java.util.List<java.util.Map<String, ?>> rows;
 
         public static GetAgentIndexRealTimeResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAgentIndexRealTimeResponseBodyData self = new GetAgentIndexRealTimeResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetAgentIndexRealTimeResponseBodyData setRows(java.util.List<java.util.Map<String, ?>> rows) {
-            this.rows = rows;
-            return this;
-        }
-        public java.util.List<java.util.Map<String, ?>> getRows() {
-            return this.rows;
         }
 
         public GetAgentIndexRealTimeResponseBodyData setPageSize(Integer pageSize) {
@@ -139,6 +131,14 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
             return this.total;
         }
 
+        public GetAgentIndexRealTimeResponseBodyData setPage(Integer page) {
+            this.page = page;
+            return this;
+        }
+        public Integer getPage() {
+            return this.page;
+        }
+
         public GetAgentIndexRealTimeResponseBodyData setColumns(java.util.List<GetAgentIndexRealTimeResponseBodyDataColumns> columns) {
             this.columns = columns;
             return this;
@@ -147,12 +147,12 @@ public class GetAgentIndexRealTimeResponseBody extends TeaModel {
             return this.columns;
         }
 
-        public GetAgentIndexRealTimeResponseBodyData setPage(Integer page) {
-            this.page = page;
+        public GetAgentIndexRealTimeResponseBodyData setRows(java.util.List<java.util.Map<String, ?>> rows) {
+            this.rows = rows;
             return this;
         }
-        public Integer getPage() {
-            return this.page;
+        public java.util.List<java.util.Map<String, ?>> getRows() {
+            return this.rows;
         }
 
     }
