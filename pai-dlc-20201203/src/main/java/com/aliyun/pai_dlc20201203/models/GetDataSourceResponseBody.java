@@ -24,6 +24,18 @@ public class GetDataSourceResponseBody extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    // 阿里云OSS文件系统路径
+    @NameInMap("Path")
+    public String path;
+
+    // 阿里云OSS文件系统服务端点
+    @NameInMap("Endpoint")
+    public String endpoint;
+
+    // 阿里云OSS文件系统配置选项
+    @NameInMap("Options")
+    public String options;
+
     // 本地挂载目录
     @NameInMap("MountPath")
     public String mountPath;
@@ -87,6 +99,30 @@ public class GetDataSourceResponseBody extends TeaModel {
     }
     public String getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    public GetDataSourceResponseBody setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
+    }
+
+    public GetDataSourceResponseBody setEndpoint(String endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+    public String getEndpoint() {
+        return this.endpoint;
+    }
+
+    public GetDataSourceResponseBody setOptions(String options) {
+        this.options = options;
+        return this;
+    }
+    public String getOptions() {
+        return this.options;
     }
 
     public GetDataSourceResponseBody setMountPath(String mountPath) {

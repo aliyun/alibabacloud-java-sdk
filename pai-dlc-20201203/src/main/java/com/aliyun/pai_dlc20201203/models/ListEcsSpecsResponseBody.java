@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListEcsSpecsResponseBody extends TeaModel {
     // 请求Id
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     public String requestId;
 
-    // ECS规格
-    @NameInMap("EcsSpec")
-    public java.util.List<EcsSpec> ecsSpec;
+    // ECS规格列表
+    @NameInMap("EcsSpecs")
+    public java.util.List<EcsSpec> ecsSpecs;
 
     // 符合过滤条件的总数量
     @NameInMap("TotalCount")
@@ -29,12 +29,12 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListEcsSpecsResponseBody setEcsSpec(java.util.List<EcsSpec> ecsSpec) {
-        this.ecsSpec = ecsSpec;
+    public ListEcsSpecsResponseBody setEcsSpecs(java.util.List<EcsSpec> ecsSpecs) {
+        this.ecsSpecs = ecsSpecs;
         return this;
     }
-    public java.util.List<EcsSpec> getEcsSpec() {
-        return this.ecsSpec;
+    public java.util.List<EcsSpec> getEcsSpecs() {
+        return this.ecsSpecs;
     }
 
     public ListEcsSpecsResponseBody setTotalCount(Long totalCount) {

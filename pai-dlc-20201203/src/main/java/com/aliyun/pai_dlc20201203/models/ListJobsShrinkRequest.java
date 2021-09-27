@@ -3,7 +3,7 @@ package com.aliyun.pai_dlc20201203.models;
 
 import com.aliyun.tea.*;
 
-public class ListJobsRequest extends TeaModel {
+public class ListJobsShrinkRequest extends TeaModel {
     // 作业显示名称，支持模糊查询
     @NameInMap("DisplayName")
     public String displayName;
@@ -62,18 +62,18 @@ public class ListJobsRequest extends TeaModel {
 
     // 自定义标签
     @NameInMap("Tags")
-    public java.util.Map<String, String> tags;
+    public String tagsShrink;
 
     // 工作流ID
     @NameInMap("PipelineId")
     public String pipelineId;
 
-    public static ListJobsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListJobsRequest self = new ListJobsRequest();
+    public static ListJobsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListJobsShrinkRequest self = new ListJobsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListJobsRequest setDisplayName(String displayName) {
+    public ListJobsShrinkRequest setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
@@ -81,7 +81,7 @@ public class ListJobsRequest extends TeaModel {
         return this.displayName;
     }
 
-    public ListJobsRequest setJobType(String jobType) {
+    public ListJobsShrinkRequest setJobType(String jobType) {
         this.jobType = jobType;
         return this;
     }
@@ -89,7 +89,7 @@ public class ListJobsRequest extends TeaModel {
         return this.jobType;
     }
 
-    public ListJobsRequest setStatus(String status) {
+    public ListJobsShrinkRequest setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -97,7 +97,7 @@ public class ListJobsRequest extends TeaModel {
         return this.status;
     }
 
-    public ListJobsRequest setStartTime(String startTime) {
+    public ListJobsShrinkRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -105,7 +105,7 @@ public class ListJobsRequest extends TeaModel {
         return this.startTime;
     }
 
-    public ListJobsRequest setEndTime(String endTime) {
+    public ListJobsShrinkRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -113,7 +113,7 @@ public class ListJobsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public ListJobsRequest setPageNumber(Integer pageNumber) {
+    public ListJobsShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -121,7 +121,7 @@ public class ListJobsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListJobsRequest setPageSize(Integer pageSize) {
+    public ListJobsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -129,7 +129,7 @@ public class ListJobsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListJobsRequest setSortBy(String sortBy) {
+    public ListJobsShrinkRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
@@ -137,7 +137,7 @@ public class ListJobsRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListJobsRequest setOrder(String order) {
+    public ListJobsShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -145,7 +145,7 @@ public class ListJobsRequest extends TeaModel {
         return this.order;
     }
 
-    public ListJobsRequest setShowOwn(Boolean showOwn) {
+    public ListJobsShrinkRequest setShowOwn(Boolean showOwn) {
         this.showOwn = showOwn;
         return this;
     }
@@ -153,7 +153,7 @@ public class ListJobsRequest extends TeaModel {
         return this.showOwn;
     }
 
-    public ListJobsRequest setWorkspaceId(String workspaceId) {
+    public ListJobsShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
@@ -161,7 +161,7 @@ public class ListJobsRequest extends TeaModel {
         return this.workspaceId;
     }
 
-    public ListJobsRequest setResourceId(String resourceId) {
+    public ListJobsShrinkRequest setResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
@@ -169,7 +169,7 @@ public class ListJobsRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public ListJobsRequest setBusinessUserId(String businessUserId) {
+    public ListJobsShrinkRequest setBusinessUserId(String businessUserId) {
         this.businessUserId = businessUserId;
         return this;
     }
@@ -177,7 +177,7 @@ public class ListJobsRequest extends TeaModel {
         return this.businessUserId;
     }
 
-    public ListJobsRequest setCaller(String caller) {
+    public ListJobsShrinkRequest setCaller(String caller) {
         this.caller = caller;
         return this;
     }
@@ -185,15 +185,15 @@ public class ListJobsRequest extends TeaModel {
         return this.caller;
     }
 
-    public ListJobsRequest setTags(java.util.Map<String, String> tags) {
-        this.tags = tags;
+    public ListJobsShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.Map<String, String> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public ListJobsRequest setPipelineId(String pipelineId) {
+    public ListJobsShrinkRequest setPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
     }

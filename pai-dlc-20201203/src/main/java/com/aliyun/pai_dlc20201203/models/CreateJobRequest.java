@@ -44,6 +44,28 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
+    // 作业最大运行时间
+    @NameInMap("JobMaxRunningTimeMinutes")
+    public Long jobMaxRunningTimeMinutes;
+
+    // 工作空间编号
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
+    // 资源组编号
+    @NameInMap("ResourceId")
+    public String resourceId;
+
+    // 作业优先级
+    @NameInMap("Priority")
+    public Integer priority;
+
+    @NameInMap("Settings")
+    public JobSettings settings;
+
+    @NameInMap("ElasticSpec")
+    public JobElasticSpec elasticSpec;
+
     public static CreateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateJobRequest self = new CreateJobRequest();
         return TeaModel.build(map, self);
@@ -129,10 +151,62 @@ public class CreateJobRequest extends TeaModel {
         return this.envs;
     }
 
+    public CreateJobRequest setJobMaxRunningTimeMinutes(Long jobMaxRunningTimeMinutes) {
+        this.jobMaxRunningTimeMinutes = jobMaxRunningTimeMinutes;
+        return this;
+    }
+    public Long getJobMaxRunningTimeMinutes() {
+        return this.jobMaxRunningTimeMinutes;
+    }
+
+    public CreateJobRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public CreateJobRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public CreateJobRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    public CreateJobRequest setSettings(JobSettings settings) {
+        this.settings = settings;
+        return this;
+    }
+    public JobSettings getSettings() {
+        return this.settings;
+    }
+
+    public CreateJobRequest setElasticSpec(JobElasticSpec elasticSpec) {
+        this.elasticSpec = elasticSpec;
+        return this;
+    }
+    public JobElasticSpec getElasticSpec() {
+        return this.elasticSpec;
+    }
+
     public static class CreateJobRequestDataSources extends TeaModel {
         // 数据源Id
         @NameInMap("DataSourceId")
         public String dataSourceId;
+
+        // 本地挂载路径
+        @NameInMap("MountPath")
+        public String mountPath;
 
         public static CreateJobRequestDataSources build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestDataSources self = new CreateJobRequestDataSources();
@@ -145,6 +219,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getDataSourceId() {
             return this.dataSourceId;
+        }
+
+        public CreateJobRequestDataSources setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
         }
 
     }
@@ -161,6 +243,10 @@ public class CreateJobRequest extends TeaModel {
         // 代码Commit
         @NameInMap("Commit")
         public String commit;
+
+        // 本地挂载路径
+        @NameInMap("MountPath")
+        public String mountPath;
 
         public static CreateJobRequestCodeSource build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestCodeSource self = new CreateJobRequestCodeSource();
@@ -189,6 +275,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getCommit() {
             return this.commit;
+        }
+
+        public CreateJobRequestCodeSource setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
         }
 
     }
