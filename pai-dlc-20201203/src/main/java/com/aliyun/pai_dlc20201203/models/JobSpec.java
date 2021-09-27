@@ -24,6 +24,10 @@ public class JobSpec extends TeaModel {
     @NameInMap("ExtraPodSpec")
     public ExtraPodSpec extraPodSpec;
 
+    // 资源配置
+    @NameInMap("ResourceConfig")
+    public ResourceConfig resourceConfig;
+
     public static JobSpec build(java.util.Map<String, ?> map) throws Exception {
         JobSpec self = new JobSpec();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class JobSpec extends TeaModel {
     }
     public ExtraPodSpec getExtraPodSpec() {
         return this.extraPodSpec;
+    }
+
+    public JobSpec setResourceConfig(ResourceConfig resourceConfig) {
+        this.resourceConfig = resourceConfig;
+        return this;
+    }
+    public ResourceConfig getResourceConfig() {
+        return this.resourceConfig;
     }
 
 }

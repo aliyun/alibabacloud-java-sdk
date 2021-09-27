@@ -24,6 +24,18 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    // 作业所属工作空间ID
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
+    // 作业所属工作空间名称
+    @NameInMap("WorkspaceName")
+    public String workspaceName;
+
+    // 作业运行所在的资源组ID
+    @NameInMap("ResourceId")
+    public String resourceId;
+
     // 状态详情码
     @NameInMap("ReasonCode")
     public String reasonCode;
@@ -64,6 +76,21 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    @NameInMap("GmtSubmittedTime")
+    public String gmtSubmittedTime;
+
+    @NameInMap("GmtRunningTime")
+    public String gmtRunningTime;
+
+    @NameInMap("GmtSuccessedTime")
+    public String gmtSuccessedTime;
+
+    @NameInMap("GmtStoppedTime")
+    public String gmtStoppedTime;
+
+    @NameInMap("GmtFailedTime")
+    public String gmtFailedTime;
+
     // 作业结束时间（UTC）
     @NameInMap("GmtFinishTime")
     public String gmtFinishTime;
@@ -79,6 +106,18 @@ public class GetJobResponseBody extends TeaModel {
     // 请求Id
     @NameInMap("RequestId")
     public String requestId;
+
+    // 作业额外参数配置
+    @NameInMap("Settings")
+    public JobSettings settings;
+
+    // 集群ID
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    // 弹性任务参数
+    @NameInMap("ElasticSpec")
+    public JobElasticSpec elasticSpec;
 
     public static GetJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetJobResponseBody self = new GetJobResponseBody();
@@ -123,6 +162,30 @@ public class GetJobResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetJobResponseBody setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public GetJobResponseBody setWorkspaceName(String workspaceName) {
+        this.workspaceName = workspaceName;
+        return this;
+    }
+    public String getWorkspaceName() {
+        return this.workspaceName;
+    }
+
+    public GetJobResponseBody setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public GetJobResponseBody setReasonCode(String reasonCode) {
@@ -205,6 +268,46 @@ public class GetJobResponseBody extends TeaModel {
         return this.gmtCreateTime;
     }
 
+    public GetJobResponseBody setGmtSubmittedTime(String gmtSubmittedTime) {
+        this.gmtSubmittedTime = gmtSubmittedTime;
+        return this;
+    }
+    public String getGmtSubmittedTime() {
+        return this.gmtSubmittedTime;
+    }
+
+    public GetJobResponseBody setGmtRunningTime(String gmtRunningTime) {
+        this.gmtRunningTime = gmtRunningTime;
+        return this;
+    }
+    public String getGmtRunningTime() {
+        return this.gmtRunningTime;
+    }
+
+    public GetJobResponseBody setGmtSuccessedTime(String gmtSuccessedTime) {
+        this.gmtSuccessedTime = gmtSuccessedTime;
+        return this;
+    }
+    public String getGmtSuccessedTime() {
+        return this.gmtSuccessedTime;
+    }
+
+    public GetJobResponseBody setGmtStoppedTime(String gmtStoppedTime) {
+        this.gmtStoppedTime = gmtStoppedTime;
+        return this;
+    }
+    public String getGmtStoppedTime() {
+        return this.gmtStoppedTime;
+    }
+
+    public GetJobResponseBody setGmtFailedTime(String gmtFailedTime) {
+        this.gmtFailedTime = gmtFailedTime;
+        return this;
+    }
+    public String getGmtFailedTime() {
+        return this.gmtFailedTime;
+    }
+
     public GetJobResponseBody setGmtFinishTime(String gmtFinishTime) {
         this.gmtFinishTime = gmtFinishTime;
         return this;
@@ -237,10 +340,38 @@ public class GetJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetJobResponseBody setSettings(JobSettings settings) {
+        this.settings = settings;
+        return this;
+    }
+    public JobSettings getSettings() {
+        return this.settings;
+    }
+
+    public GetJobResponseBody setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    public GetJobResponseBody setElasticSpec(JobElasticSpec elasticSpec) {
+        this.elasticSpec = elasticSpec;
+        return this;
+    }
+    public JobElasticSpec getElasticSpec() {
+        return this.elasticSpec;
+    }
+
     public static class GetJobResponseBodyDataSources extends TeaModel {
         // 数据源Id
         @NameInMap("DataSourceId")
         public String dataSourceId;
+
+        // 本地挂载路径
+        @NameInMap("MountPath")
+        public String mountPath;
 
         public static GetJobResponseBodyDataSources build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyDataSources self = new GetJobResponseBodyDataSources();
@@ -253,6 +384,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getDataSourceId() {
             return this.dataSourceId;
+        }
+
+        public GetJobResponseBodyDataSources setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
         }
 
     }
@@ -269,6 +408,10 @@ public class GetJobResponseBody extends TeaModel {
         // 代码Commit
         @NameInMap("Commit")
         public String commit;
+
+        // 本地挂载路径
+        @NameInMap("MountPath")
+        public String mountPath;
 
         public static GetJobResponseBodyCodeSource build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyCodeSource self = new GetJobResponseBodyCodeSource();
@@ -299,6 +442,14 @@ public class GetJobResponseBody extends TeaModel {
             return this.commit;
         }
 
+        public GetJobResponseBodyCodeSource setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
     }
 
     public static class GetJobResponseBodyPods extends TeaModel {
@@ -319,8 +470,8 @@ public class GetJobResponseBody extends TeaModel {
         public String ip;
 
         // Pod创建时间（UTC）
-        @NameInMap("GmtGreateTime")
-        public String gmtGreateTime;
+        @NameInMap("GmtCreateTime")
+        public String gmtCreateTime;
 
         // Pod启动时间（UTC）
         @NameInMap("GmtStartTime")
@@ -367,12 +518,12 @@ public class GetJobResponseBody extends TeaModel {
             return this.ip;
         }
 
-        public GetJobResponseBodyPods setGmtGreateTime(String gmtGreateTime) {
-            this.gmtGreateTime = gmtGreateTime;
+        public GetJobResponseBodyPods setGmtCreateTime(String gmtCreateTime) {
+            this.gmtCreateTime = gmtCreateTime;
             return this;
         }
-        public String getGmtGreateTime() {
-            return this.gmtGreateTime;
+        public String getGmtCreateTime() {
+            return this.gmtCreateTime;
         }
 
         public GetJobResponseBodyPods setGmtStartTime(String gmtStartTime) {

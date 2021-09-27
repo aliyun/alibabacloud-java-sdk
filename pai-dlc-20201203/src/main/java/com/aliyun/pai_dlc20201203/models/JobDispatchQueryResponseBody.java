@@ -3,7 +3,7 @@ package com.aliyun.pai_dlc20201203.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteJobResponseBody extends TeaModel {
+public class JobDispatchQueryResponseBody extends TeaModel {
     // 作业Id
     @NameInMap("JobId")
     public String jobId;
@@ -12,12 +12,12 @@ public class DeleteJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteJobResponseBody self = new DeleteJobResponseBody();
+    public static JobDispatchQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        JobDispatchQueryResponseBody self = new JobDispatchQueryResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteJobResponseBody setJobId(String jobId) {
+    public JobDispatchQueryResponseBody setJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -25,7 +25,7 @@ public class DeleteJobResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public DeleteJobResponseBody setRequestId(String requestId) {
+    public JobDispatchQueryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

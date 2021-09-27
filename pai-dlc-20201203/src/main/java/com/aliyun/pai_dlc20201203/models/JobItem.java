@@ -24,6 +24,18 @@ public class JobItem extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    // 作业所属工作空间ID
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
+    // 作业所属工作空间名称
+    @NameInMap("WorkspaceName")
+    public String workspaceName;
+
+    // 作业运行所在的资源组ID
+    @NameInMap("ResourceId")
+    public String resourceId;
+
     // 状态详情码
     @NameInMap("ReasonCode")
     public String reasonCode;
@@ -72,6 +84,10 @@ public class JobItem extends TeaModel {
     @NameInMap("Duration")
     public Long duration;
 
+    // 作业额外参数
+    @NameInMap("Settings")
+    public JobSettings settings;
+
     public static JobItem build(java.util.Map<String, ?> map) throws Exception {
         JobItem self = new JobItem();
         return TeaModel.build(map, self);
@@ -115,6 +131,30 @@ public class JobItem extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public JobItem setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public JobItem setWorkspaceName(String workspaceName) {
+        this.workspaceName = workspaceName;
+        return this;
+    }
+    public String getWorkspaceName() {
+        return this.workspaceName;
+    }
+
+    public JobItem setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public JobItem setReasonCode(String reasonCode) {
@@ -213,10 +253,22 @@ public class JobItem extends TeaModel {
         return this.duration;
     }
 
+    public JobItem setSettings(JobSettings settings) {
+        this.settings = settings;
+        return this;
+    }
+    public JobSettings getSettings() {
+        return this.settings;
+    }
+
     public static class JobItemDataSources extends TeaModel {
         // 数据源Id
         @NameInMap("DataSourceId")
         public String dataSourceId;
+
+        // 本地挂载路径
+        @NameInMap("MountPath")
+        public String mountPath;
 
         public static JobItemDataSources build(java.util.Map<String, ?> map) throws Exception {
             JobItemDataSources self = new JobItemDataSources();
@@ -229,6 +281,14 @@ public class JobItem extends TeaModel {
         }
         public String getDataSourceId() {
             return this.dataSourceId;
+        }
+
+        public JobItemDataSources setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
         }
 
     }
@@ -245,6 +305,10 @@ public class JobItem extends TeaModel {
         // 代码Commit
         @NameInMap("Commit")
         public String commit;
+
+        // 本地挂载路径
+        @NameInMap("MountPath")
+        public String mountPath;
 
         public static JobItemCodeSource build(java.util.Map<String, ?> map) throws Exception {
             JobItemCodeSource self = new JobItemCodeSource();
@@ -273,6 +337,14 @@ public class JobItem extends TeaModel {
         }
         public String getCommit() {
             return this.commit;
+        }
+
+        public JobItemCodeSource setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
         }
 
     }

@@ -3,21 +3,21 @@ package com.aliyun.pai_dlc20201203.models;
 
 import com.aliyun.tea.*;
 
-public class GetTaskEventsResponse extends TeaModel {
+public class ListWorkspacesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetTaskEventsResponseBody body;
+    public ListWorkspacesResponseBody body;
 
-    public static GetTaskEventsResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetTaskEventsResponse self = new GetTaskEventsResponse();
+    public static ListWorkspacesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListWorkspacesResponse self = new ListWorkspacesResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetTaskEventsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListWorkspacesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetTaskEventsResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetTaskEventsResponse setBody(GetTaskEventsResponseBody body) {
+    public ListWorkspacesResponse setBody(ListWorkspacesResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetTaskEventsResponseBody getBody() {
+    public ListWorkspacesResponseBody getBody() {
         return this.body;
     }
 

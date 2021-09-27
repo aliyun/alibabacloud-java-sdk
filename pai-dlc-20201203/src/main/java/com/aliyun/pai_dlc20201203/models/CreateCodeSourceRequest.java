@@ -24,6 +24,14 @@ public class CreateCodeSourceRequest extends TeaModel {
     @NameInMap("MountPath")
     public String mountPath;
 
+    // 用户名
+    @NameInMap("CodeRepoUserName")
+    public String codeRepoUserName;
+
+    // 密码
+    @NameInMap("CodeRepoAccessToken")
+    public String codeRepoAccessToken;
+
     public static CreateCodeSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCodeSourceRequest self = new CreateCodeSourceRequest();
         return TeaModel.build(map, self);
@@ -67,6 +75,22 @@ public class CreateCodeSourceRequest extends TeaModel {
     }
     public String getMountPath() {
         return this.mountPath;
+    }
+
+    public CreateCodeSourceRequest setCodeRepoUserName(String codeRepoUserName) {
+        this.codeRepoUserName = codeRepoUserName;
+        return this;
+    }
+    public String getCodeRepoUserName() {
+        return this.codeRepoUserName;
+    }
+
+    public CreateCodeSourceRequest setCodeRepoAccessToken(String codeRepoAccessToken) {
+        this.codeRepoAccessToken = codeRepoAccessToken;
+        return this;
+    }
+    public String getCodeRepoAccessToken() {
+        return this.codeRepoAccessToken;
     }
 
 }
