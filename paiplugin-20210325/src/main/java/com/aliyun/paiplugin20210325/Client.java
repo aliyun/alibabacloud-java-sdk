@@ -75,6 +75,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteTemplateResponse deleteTemplateWithOptions(String ID, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ID = com.aliyun.openapiutil.Client.getEncodeParam(ID);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -160,6 +161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteScheduleResponse deleteScheduleWithOptions(String ID, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ID = com.aliyun.openapiutil.Client.getEncodeParam(ID);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -173,6 +175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetTemplateResponse getTemplateWithOptions(String ID, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ID = com.aliyun.openapiutil.Client.getEncodeParam(ID);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -218,6 +221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public GetSignatureResponse getSignatureWithOptions(String ID, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ID = com.aliyun.openapiutil.Client.getEncodeParam(ID);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -316,6 +320,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("ListSchedules", "2021-03-25", "HTTPS", "GET", "AK", "/api/v1/schedules", "json", req, runtime), new ListSchedulesResponse());
     }
 
+    public UploadMediaByURLResponse uploadMediaByURL(UploadMediaByURLRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.uploadMediaByURLWithOptions(request, headers, runtime);
+    }
+
+    public UploadMediaByURLResponse uploadMediaByURLWithOptions(UploadMediaByURLRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadMetadatas)) {
+            body.put("UploadMetadatas", request.uploadMetadatas);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadURLs)) {
+            body.put("UploadURLs", request.uploadURLs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.userData))) {
+            body.put("UserData", request.userData);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("UploadMediaByURL", "2021-03-25", "HTTPS", "POST", "AK", "/api/v1/media/api/v1/video/upload", "json", req, runtime), new UploadMediaByURLResponse());
+    }
+
     public DeleteSignatureResponse deleteSignature(String ID) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -323,6 +355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     public DeleteSignatureResponse deleteSignatureWithOptions(String ID, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        ID = com.aliyun.openapiutil.Client.getEncodeParam(ID);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
