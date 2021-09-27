@@ -166,9 +166,13 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         @NameInMap("organizationMemberName")
         public String organizationMemberName;
 
-        // 企业角色
-        @NameInMap("organizationRole")
-        public String organizationRole;
+        // 企业角色名字
+        @NameInMap("organizationRoleName")
+        public String organizationRoleName;
+
+        // 企业角色Id
+        @NameInMap("organizationRoleId")
+        public String organizationRoleId;
 
         // 用户状态
         @NameInMap("state")
@@ -259,12 +263,20 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
             return this.organizationMemberName;
         }
 
-        public ListOrganizationMembersResponseBodyMembers setOrganizationRole(String organizationRole) {
-            this.organizationRole = organizationRole;
+        public ListOrganizationMembersResponseBodyMembers setOrganizationRoleName(String organizationRoleName) {
+            this.organizationRoleName = organizationRoleName;
             return this;
         }
-        public String getOrganizationRole() {
-            return this.organizationRole;
+        public String getOrganizationRoleName() {
+            return this.organizationRoleName;
+        }
+
+        public ListOrganizationMembersResponseBodyMembers setOrganizationRoleId(String organizationRoleId) {
+            this.organizationRoleId = organizationRoleId;
+            return this;
+        }
+        public String getOrganizationRoleId() {
+            return this.organizationRoleId;
         }
 
         public ListOrganizationMembersResponseBodyMembers setState(String state) {
