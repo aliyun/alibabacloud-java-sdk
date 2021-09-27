@@ -345,7 +345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UploadMediaByURL", "2021-03-25", "HTTPS", "POST", "AK", "/api/v1/media/api/v1/video/upload", "json", req, runtime), new UploadMediaByURLResponse());
+        return TeaModel.toModel(this.doROARequest("UploadMediaByURL", "2021-03-25", "HTTPS", "POST", "AK", "/media/api/v1/video/upload", "json", req, runtime), new UploadMediaByURLResponse());
     }
 
     public DeleteSignatureResponse deleteSignature(String ID) throws Exception {
