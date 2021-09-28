@@ -32,6 +32,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public GetPhoneNumberResponse getPhoneNumber() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        GetPhoneNumberHeaders headers = new GetPhoneNumberHeaders();
+        return this.getPhoneNumberWithOptions(headers, runtime);
+    }
+
+    public GetPhoneNumberResponse getPhoneNumberWithOptions(GetPhoneNumberHeaders tmpHeader, RuntimeOptions runtime) throws Exception {
+        GetPhoneNumberShrinkHeaders headers = new GetPhoneNumberShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpHeader.commonParams))) {
+            headers.commonParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpHeader.commonParams), "CommonParams", "json");
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonParamsShrink)) {
+            realHeaders.put("CommonParams", headers.commonParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", headers.authorization);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPhoneNumber"),
+            new TeaPair("version", "iap_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/iap/profile/phoneNumber"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberResponse());
+    }
+
     public WakeUpAppResponse wakeUpApp(WakeUpAppRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         WakeUpAppHeaders headers = new WakeUpAppHeaders();
