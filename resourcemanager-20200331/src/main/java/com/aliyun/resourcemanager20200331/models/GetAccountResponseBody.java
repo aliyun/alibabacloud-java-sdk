@@ -65,6 +65,9 @@ public class GetAccountResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("ResourceDirectoryPath")
+        public String resourceDirectoryPath;
+
         public static GetAccountResponseBodyAccount build(java.util.Map<String, ?> map) throws Exception {
             GetAccountResponseBodyAccount self = new GetAccountResponseBodyAccount();
             return TeaModel.build(map, self);
@@ -156,6 +159,14 @@ public class GetAccountResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public GetAccountResponseBodyAccount setResourceDirectoryPath(String resourceDirectoryPath) {
+            this.resourceDirectoryPath = resourceDirectoryPath;
+            return this;
+        }
+        public String getResourceDirectoryPath() {
+            return this.resourceDirectoryPath;
         }
 
     }

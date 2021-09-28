@@ -239,6 +239,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.declineHandshakeWithOptions(request, runtime);
     }
 
+    public DeleteAccountResponse deleteAccountWithOptions(DeleteAccountRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteAccount", "2020-03-31", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteAccountResponse());
+    }
+
+    public DeleteAccountResponse deleteAccount(DeleteAccountRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteAccountWithOptions(request, runtime);
+    }
+
     public DeleteControlPolicyResponse deleteControlPolicyWithOptions(DeleteControlPolicyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -817,6 +830,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MoveAccountResponse moveAccount(MoveAccountRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.moveAccountWithOptions(request, runtime);
+    }
+
+    public MoveResourcesResponse moveResourcesWithOptions(MoveResourcesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("MoveResources", "2020-03-31", "HTTPS", "POST", "AK", "json", req, runtime), new MoveResourcesResponse());
+    }
+
+    public MoveResourcesResponse moveResources(MoveResourcesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.moveResourcesWithOptions(request, runtime);
     }
 
     public PromoteResourceAccountResponse promoteResourceAccountWithOptions(PromoteResourceAccountRequest request, RuntimeOptions runtime) throws Exception {
