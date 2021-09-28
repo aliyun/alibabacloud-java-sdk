@@ -38,11 +38,14 @@ public class GetFolderResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("ParentFolderId")
+        public String parentFolderId;
+
         @NameInMap("FolderName")
         public String folderName;
 
-        @NameInMap("ParentFolderId")
-        public String parentFolderId;
+        @NameInMap("ResourceDirectoryPath")
+        public String resourceDirectoryPath;
 
         public static GetFolderResponseBodyFolder build(java.util.Map<String, ?> map) throws Exception {
             GetFolderResponseBodyFolder self = new GetFolderResponseBodyFolder();
@@ -65,6 +68,14 @@ public class GetFolderResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public GetFolderResponseBodyFolder setParentFolderId(String parentFolderId) {
+            this.parentFolderId = parentFolderId;
+            return this;
+        }
+        public String getParentFolderId() {
+            return this.parentFolderId;
+        }
+
         public GetFolderResponseBodyFolder setFolderName(String folderName) {
             this.folderName = folderName;
             return this;
@@ -73,12 +84,12 @@ public class GetFolderResponseBody extends TeaModel {
             return this.folderName;
         }
 
-        public GetFolderResponseBodyFolder setParentFolderId(String parentFolderId) {
-            this.parentFolderId = parentFolderId;
+        public GetFolderResponseBodyFolder setResourceDirectoryPath(String resourceDirectoryPath) {
+            this.resourceDirectoryPath = resourceDirectoryPath;
             return this;
         }
-        public String getParentFolderId() {
-            return this.parentFolderId;
+        public String getResourceDirectoryPath() {
+            return this.resourceDirectoryPath;
         }
 
     }

@@ -50,6 +50,9 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("ControlPolicyStatus")
         public String controlPolicyStatus;
 
+        @NameInMap("MemberDeletionStatus")
+        public String memberDeletionStatus;
+
         public static GetResourceDirectoryResponseBodyResourceDirectory build(java.util.Map<String, ?> map) throws Exception {
             GetResourceDirectoryResponseBodyResourceDirectory self = new GetResourceDirectoryResponseBodyResourceDirectory();
             return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         }
         public String getControlPolicyStatus() {
             return this.controlPolicyStatus;
+        }
+
+        public GetResourceDirectoryResponseBodyResourceDirectory setMemberDeletionStatus(String memberDeletionStatus) {
+            this.memberDeletionStatus = memberDeletionStatus;
+            return this;
+        }
+        public String getMemberDeletionStatus() {
+            return this.memberDeletionStatus;
         }
 
     }
