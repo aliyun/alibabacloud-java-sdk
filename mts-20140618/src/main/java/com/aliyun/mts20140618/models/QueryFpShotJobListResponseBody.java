@@ -781,6 +781,9 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Input")
+        public String input;
+
         public static QueryFpShotJobListResponseBodyFpShotJobListFpShotJob build(java.util.Map<String, ?> map) throws Exception {
             QueryFpShotJobListResponseBodyFpShotJobListFpShotJob self = new QueryFpShotJobListResponseBodyFpShotJobListFpShotJob();
             return TeaModel.build(map, self);
@@ -896,6 +899,14 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public QueryFpShotJobListResponseBodyFpShotJobListFpShotJob setInput(String input) {
+            this.input = input;
+            return this;
+        }
+        public String getInput() {
+            return this.input;
         }
 
     }
