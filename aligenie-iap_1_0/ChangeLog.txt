@@ -1,3 +1,7 @@
+2021-09-28 Version: 1.0.8
+- Support PushNotifications.
+- Support WakeUpApp.
+
 2021-09-10 Version: 1.0.7
 - Support PushNotifications.
 - Support WakeUpApp.
