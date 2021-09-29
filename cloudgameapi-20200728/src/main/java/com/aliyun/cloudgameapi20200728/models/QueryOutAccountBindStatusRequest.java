@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryOutAccountBindStatusRequest extends TeaModel {
     @NameInMap("AccountId")
-    @Validation(required = true)
     public String accountId;
 
     @NameInMap("GameId")
-    @Validation(required = true)
     public String gameId;
 
     @NameInMap("AccountDomain")

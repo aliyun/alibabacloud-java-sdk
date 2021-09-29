@@ -4,65 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseOrdersResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public SubmitInternalPurchaseOrdersResponseData data;
+    public SubmitInternalPurchaseOrdersResponseBody body;
 
     public static SubmitInternalPurchaseOrdersResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitInternalPurchaseOrdersResponse self = new SubmitInternalPurchaseOrdersResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitInternalPurchaseOrdersResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubmitInternalPurchaseOrdersResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SubmitInternalPurchaseOrdersResponse setData(SubmitInternalPurchaseOrdersResponseData data) {
-        this.data = data;
+    public SubmitInternalPurchaseOrdersResponse setBody(SubmitInternalPurchaseOrdersResponseBody body) {
+        this.body = body;
         return this;
     }
-    public SubmitInternalPurchaseOrdersResponseData getData() {
-        return this.data;
-    }
-
-    public static class SubmitInternalPurchaseOrdersResponseData extends TeaModel {
-        @NameInMap("Status")
-        @Validation(required = true)
-        public Integer status;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        public static SubmitInternalPurchaseOrdersResponseData build(java.util.Map<String, ?> map) throws Exception {
-            SubmitInternalPurchaseOrdersResponseData self = new SubmitInternalPurchaseOrdersResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitInternalPurchaseOrdersResponseData setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public SubmitInternalPurchaseOrdersResponseData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
+    public SubmitInternalPurchaseOrdersResponseBody getBody() {
+        return this.body;
     }
 
 }

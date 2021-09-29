@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CloseOrderRequest extends TeaModel {
     @NameInMap("BuyerAccountId")
-    @Validation(required = true)
     public String buyerAccountId;
 
     @NameInMap("OrderId")
-    @Validation(required = true)
     public String orderId;
 
     @NameInMap("AccountDomain")

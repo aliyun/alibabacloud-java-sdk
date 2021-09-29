@@ -4,53 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class GetSessionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetSessionResponseData data;
+    public GetSessionResponseBody body;
 
     public static GetSessionResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSessionResponse self = new GetSessionResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSessionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetSessionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetSessionResponse setData(GetSessionResponseData data) {
-        this.data = data;
+    public GetSessionResponse setBody(GetSessionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public GetSessionResponseData getData() {
-        return this.data;
-    }
-
-    public static class GetSessionResponseData extends TeaModel {
-        @NameInMap("Session")
-        @Validation(required = true)
-        public String session;
-
-        public static GetSessionResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GetSessionResponseData self = new GetSessionResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetSessionResponseData setSession(String session) {
-            this.session = session;
-            return this;
-        }
-        public String getSession() {
-            return this.session;
-        }
-
+    public GetSessionResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,31 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreateOrderRequest extends TeaModel {
     @NameInMap("BuyerAccountId")
-    @Validation(required = true)
     public String buyerAccountId;
 
     @NameInMap("ItemId")
-    @Validation(required = true)
     public String itemId;
 
     @NameInMap("SkuId")
-    @Validation(required = true)
     public String skuId;
 
     @NameInMap("OriginPrice")
-    @Validation(required = true)
     public Long originPrice;
 
     @NameInMap("SettlementPrice")
-    @Validation(required = true)
     public Long settlementPrice;
 
     @NameInMap("Amount")
-    @Validation(required = true)
     public Long amount;
 
     @NameInMap("IdempotentCode")
-    @Validation(required = true)
     public String idempotentCode;
 
     @NameInMap("AccountDomain")

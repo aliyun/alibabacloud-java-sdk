@@ -8,11 +8,9 @@ public class QueryGameRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("TenantId")
