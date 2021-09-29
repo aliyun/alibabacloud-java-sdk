@@ -8,11 +8,9 @@ public class QueryTenantRequest extends TeaModel {
     public String param;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static QueryTenantRequest build(java.util.Map<String, ?> map) throws Exception {

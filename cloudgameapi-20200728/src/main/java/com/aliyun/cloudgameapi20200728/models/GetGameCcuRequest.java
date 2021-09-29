@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetGameCcuRequest extends TeaModel {
     @NameInMap("GameId")
-    @Validation(required = true)
     public String gameId;
 
     @NameInMap("RegionName")
     public String regionName;
 
     @NameInMap("AccessKey")
-    @Validation(required = true)
     public String accessKey;
 
     public static GetGameCcuRequest build(java.util.Map<String, ?> map) throws Exception {
