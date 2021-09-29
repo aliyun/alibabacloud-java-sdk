@@ -72,67 +72,12 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     }
 
-    public static class GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions extends TeaModel {
-        @NameInMap("DesiredValue")
-        public String desiredValue;
-
-        @NameInMap("Tips")
-        public String tips;
-
-        @NameInMap("Operator")
-        public String operator;
-
-        @NameInMap("Name")
-        public String name;
-
-        public static GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions build(java.util.Map<String, ?> map) throws Exception {
-            GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions self = new GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions setDesiredValue(String desiredValue) {
-            this.desiredValue = desiredValue;
-            return this;
-        }
-        public String getDesiredValue() {
-            return this.desiredValue;
-        }
-
-        public GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions setTips(String tips) {
-            this.tips = tips;
-            return this;
-        }
-        public String getTips() {
-            return this.tips;
-        }
-
-        public GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions setOperator(String operator) {
-            this.operator = operator;
-            return this;
-        }
-        public String getOperator() {
-            return this.operator;
-        }
-
-        public GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
     public static class GetAggregateConfigRuleResponseBodyConfigRuleSource extends TeaModel {
         @NameInMap("SourceDetails")
         public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails;
 
         @NameInMap("Owner")
         public String owner;
-
-        @NameInMap("SourceConditions")
-        public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions> sourceConditions;
 
         @NameInMap("Identifier")
         public String identifier;
@@ -156,14 +101,6 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         }
         public String getOwner() {
             return this.owner;
-        }
-
-        public GetAggregateConfigRuleResponseBodyConfigRuleSource setSourceConditions(java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions> sourceConditions) {
-            this.sourceConditions = sourceConditions;
-            return this;
-        }
-        public java.util.List<GetAggregateConfigRuleResponseBodyConfigRuleSourceSourceConditions> getSourceConditions() {
-            return this.sourceConditions;
         }
 
         public GetAggregateConfigRuleResponseBodyConfigRuleSource setIdentifier(String identifier) {

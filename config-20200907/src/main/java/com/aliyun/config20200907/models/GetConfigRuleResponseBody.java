@@ -72,67 +72,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
 
-    public static class GetConfigRuleResponseBodyConfigRuleSourceSourceConditions extends TeaModel {
-        @NameInMap("DesiredValue")
-        public String desiredValue;
-
-        @NameInMap("Tips")
-        public String tips;
-
-        @NameInMap("Operator")
-        public String operator;
-
-        @NameInMap("Name")
-        public String name;
-
-        public static GetConfigRuleResponseBodyConfigRuleSourceSourceConditions build(java.util.Map<String, ?> map) throws Exception {
-            GetConfigRuleResponseBodyConfigRuleSourceSourceConditions self = new GetConfigRuleResponseBodyConfigRuleSourceSourceConditions();
-            return TeaModel.build(map, self);
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSourceSourceConditions setDesiredValue(String desiredValue) {
-            this.desiredValue = desiredValue;
-            return this;
-        }
-        public String getDesiredValue() {
-            return this.desiredValue;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSourceSourceConditions setTips(String tips) {
-            this.tips = tips;
-            return this;
-        }
-        public String getTips() {
-            return this.tips;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSourceSourceConditions setOperator(String operator) {
-            this.operator = operator;
-            return this;
-        }
-        public String getOperator() {
-            return this.operator;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSourceSourceConditions setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
     public static class GetConfigRuleResponseBodyConfigRuleSource extends TeaModel {
         @NameInMap("SourceDetails")
         public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails;
 
         @NameInMap("Owner")
         public String owner;
-
-        @NameInMap("SourceConditions")
-        public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceConditions> sourceConditions;
 
         @NameInMap("Identifier")
         public String identifier;
@@ -156,14 +101,6 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
         public String getOwner() {
             return this.owner;
-        }
-
-        public GetConfigRuleResponseBodyConfigRuleSource setSourceConditions(java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceConditions> sourceConditions) {
-            this.sourceConditions = sourceConditions;
-            return this;
-        }
-        public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceConditions> getSourceConditions() {
-            return this.sourceConditions;
         }
 
         public GetConfigRuleResponseBodyConfigRuleSource setIdentifier(String identifier) {

@@ -112,6 +112,18 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
         @NameInMap("ConfigRuleParameters")
         public java.util.List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
 
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
+
+        @NameInMap("ConfigRuleName")
+        public String configRuleName;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
+
         public static UpdateAggregateCompliancePackRequestConfigRules build(java.util.Map<String, ?> map) throws Exception {
             UpdateAggregateCompliancePackRequestConfigRules self = new UpdateAggregateCompliancePackRequestConfigRules();
             return TeaModel.build(map, self);
@@ -131,6 +143,38 @@ public class UpdateAggregateCompliancePackRequest extends TeaModel {
         }
         public java.util.List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
+        }
+
+        public UpdateAggregateCompliancePackRequestConfigRules setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
+            return this;
+        }
+        public String getConfigRuleId() {
+            return this.configRuleId;
+        }
+
+        public UpdateAggregateCompliancePackRequestConfigRules setConfigRuleName(String configRuleName) {
+            this.configRuleName = configRuleName;
+            return this;
+        }
+        public String getConfigRuleName() {
+            return this.configRuleName;
+        }
+
+        public UpdateAggregateCompliancePackRequestConfigRules setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public UpdateAggregateCompliancePackRequestConfigRules setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
         }
 
     }

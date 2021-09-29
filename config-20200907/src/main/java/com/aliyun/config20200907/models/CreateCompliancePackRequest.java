@@ -115,6 +115,15 @@ public class CreateCompliancePackRequest extends TeaModel {
         @NameInMap("ConfigRuleParameters")
         public java.util.List<CreateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
 
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
+
         public static CreateCompliancePackRequestConfigRules build(java.util.Map<String, ?> map) throws Exception {
             CreateCompliancePackRequestConfigRules self = new CreateCompliancePackRequestConfigRules();
             return TeaModel.build(map, self);
@@ -142,6 +151,30 @@ public class CreateCompliancePackRequest extends TeaModel {
         }
         public java.util.List<CreateCompliancePackRequestConfigRulesConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
+        }
+
+        public CreateCompliancePackRequestConfigRules setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
+            return this;
+        }
+        public String getConfigRuleId() {
+            return this.configRuleId;
+        }
+
+        public CreateCompliancePackRequestConfigRules setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateCompliancePackRequestConfigRules setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
         }
 
     }

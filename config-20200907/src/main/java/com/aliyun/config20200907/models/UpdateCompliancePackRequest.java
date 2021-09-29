@@ -101,6 +101,18 @@ public class UpdateCompliancePackRequest extends TeaModel {
         @NameInMap("ConfigRuleParameters")
         public java.util.List<UpdateCompliancePackRequestConfigRulesConfigRuleParameters> configRuleParameters;
 
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
+
+        @NameInMap("ConfigRuleName")
+        public String configRuleName;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
+
         public static UpdateCompliancePackRequestConfigRules build(java.util.Map<String, ?> map) throws Exception {
             UpdateCompliancePackRequestConfigRules self = new UpdateCompliancePackRequestConfigRules();
             return TeaModel.build(map, self);
@@ -120,6 +132,38 @@ public class UpdateCompliancePackRequest extends TeaModel {
         }
         public java.util.List<UpdateCompliancePackRequestConfigRulesConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
+        }
+
+        public UpdateCompliancePackRequestConfigRules setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
+            return this;
+        }
+        public String getConfigRuleId() {
+            return this.configRuleId;
+        }
+
+        public UpdateCompliancePackRequestConfigRules setConfigRuleName(String configRuleName) {
+            this.configRuleName = configRuleName;
+            return this;
+        }
+        public String getConfigRuleName() {
+            return this.configRuleName;
+        }
+
+        public UpdateCompliancePackRequestConfigRules setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public UpdateCompliancePackRequestConfigRules setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
         }
 
     }
