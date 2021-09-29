@@ -4,32 +4,32 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class ListJobOrdersResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<java.util.Map<String, ?>> data;
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
 
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Data")
+    public java.util.List<java.util.Map<String, ?>> data;
 
     public static ListJobOrdersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListJobOrdersResponseBody self = new ListJobOrdersResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListJobOrdersResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
+    public ListJobOrdersResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListJobOrdersResponseBody setRequestId(String requestId) {
@@ -40,12 +40,12 @@ public class ListJobOrdersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListJobOrdersResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
-        this.data = data;
+    public ListJobOrdersResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getData() {
-        return this.data;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
     }
 
     public ListJobOrdersResponseBody setErrorCode(Integer errorCode) {
@@ -56,12 +56,12 @@ public class ListJobOrdersResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ListJobOrdersResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public ListJobOrdersResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
+        this.data = data;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public java.util.List<java.util.Map<String, ?>> getData() {
+        return this.data;
     }
 
 }

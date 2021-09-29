@@ -10,11 +10,11 @@ public class UpdateNetDeviceInfoRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Devices")
     public java.util.List<UpdateNetDeviceInfoRequestDevices> devices;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateNetDeviceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNetDeviceInfoRequest self = new UpdateNetDeviceInfoRequest();
@@ -37,20 +37,20 @@ public class UpdateNetDeviceInfoRequest extends TeaModel {
         return this.appCode;
     }
 
-    public UpdateNetDeviceInfoRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public UpdateNetDeviceInfoRequest setDevices(java.util.List<UpdateNetDeviceInfoRequestDevices> devices) {
         this.devices = devices;
         return this;
     }
     public java.util.List<UpdateNetDeviceInfoRequestDevices> getDevices() {
         return this.devices;
+    }
+
+    public UpdateNetDeviceInfoRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class UpdateNetDeviceInfoRequestDevices extends TeaModel {
@@ -72,11 +72,11 @@ public class UpdateNetDeviceInfoRequest extends TeaModel {
         @NameInMap("MgnIp")
         public String mgnIp;
 
-        @NameInMap("Password")
-        public String password;
-
         @NameInMap("Model")
         public String model;
+
+        @NameInMap("Password")
+        public String password;
 
         @NameInMap("Idc")
         public String idc;
@@ -143,20 +143,20 @@ public class UpdateNetDeviceInfoRequest extends TeaModel {
             return this.mgnIp;
         }
 
-        public UpdateNetDeviceInfoRequestDevices setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
-        }
-
         public UpdateNetDeviceInfoRequestDevices setModel(String model) {
             this.model = model;
             return this;
         }
         public String getModel() {
             return this.model;
+        }
+
+        public UpdateNetDeviceInfoRequestDevices setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
         }
 
         public UpdateNetDeviceInfoRequestDevices setIdc(String idc) {

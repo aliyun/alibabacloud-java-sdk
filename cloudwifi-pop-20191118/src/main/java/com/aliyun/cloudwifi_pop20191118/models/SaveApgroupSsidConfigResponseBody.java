@@ -7,14 +7,14 @@ public class SaveApgroupSsidConfigResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    @NameInMap("Data")
-    public java.util.List<Long> data;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Data")
+    public java.util.List<Long> data;
 
     public static SaveApgroupSsidConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveApgroupSsidConfigResponseBody self = new SaveApgroupSsidConfigResponseBody();
@@ -29,12 +29,12 @@ public class SaveApgroupSsidConfigResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public SaveApgroupSsidConfigResponseBody setData(java.util.List<Long> data) {
-        this.data = data;
+    public SaveApgroupSsidConfigResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public java.util.List<Long> getData() {
-        return this.data;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public SaveApgroupSsidConfigResponseBody setErrorCode(Integer errorCode) {
@@ -45,12 +45,12 @@ public class SaveApgroupSsidConfigResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public SaveApgroupSsidConfigResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public SaveApgroupSsidConfigResponseBody setData(java.util.List<Long> data) {
+        this.data = data;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public java.util.List<Long> getData() {
+        return this.data;
     }
 
 }

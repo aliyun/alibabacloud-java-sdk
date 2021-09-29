@@ -7,14 +7,14 @@ public class GetApgroupSsidConfigResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    @NameInMap("Data")
-    public java.util.List<java.util.Map<String, ?>> data;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Data")
+    public java.util.List<java.util.Map<String, ?>> data;
 
     public static GetApgroupSsidConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetApgroupSsidConfigResponseBody self = new GetApgroupSsidConfigResponseBody();
@@ -29,12 +29,12 @@ public class GetApgroupSsidConfigResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public GetApgroupSsidConfigResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
-        this.data = data;
+    public GetApgroupSsidConfigResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getData() {
-        return this.data;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetApgroupSsidConfigResponseBody setErrorCode(Integer errorCode) {
@@ -45,12 +45,12 @@ public class GetApgroupSsidConfigResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetApgroupSsidConfigResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public GetApgroupSsidConfigResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
+        this.data = data;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public java.util.List<java.util.Map<String, ?>> getData() {
+        return this.data;
     }
 
 }
