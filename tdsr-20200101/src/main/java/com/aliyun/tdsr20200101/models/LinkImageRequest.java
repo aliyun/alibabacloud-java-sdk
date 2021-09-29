@@ -16,6 +16,10 @@ public class LinkImageRequest extends TeaModel {
     @NameInMap("CameraHeight")
     public Integer cameraHeight;
 
+    // 平台标识，默认PC
+    @NameInMap("Platform")
+    public String platform;
+
     public static LinkImageRequest build(java.util.Map<String, ?> map) throws Exception {
         LinkImageRequest self = new LinkImageRequest();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class LinkImageRequest extends TeaModel {
     }
     public Integer getCameraHeight() {
         return this.cameraHeight;
+    }
+
+    public LinkImageRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
     }
 
 }

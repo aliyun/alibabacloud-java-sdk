@@ -158,6 +158,14 @@ public class ListSubSceneResponseBody extends TeaModel {
         @NameInMap("CubemapPath")
         public String cubemapPath;
 
+        // 是否删除
+        @NameInMap("Deleted")
+        public Boolean deleted;
+
+        // 原图地址
+        @NameInMap("OriginUrl")
+        public String originUrl;
+
         public static ListSubSceneResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
             ListSubSceneResponseBodyList self = new ListSubSceneResponseBodyList();
             return TeaModel.build(map, self);
@@ -241,6 +249,22 @@ public class ListSubSceneResponseBody extends TeaModel {
         }
         public String getCubemapPath() {
             return this.cubemapPath;
+        }
+
+        public ListSubSceneResponseBodyList setDeleted(Boolean deleted) {
+            this.deleted = deleted;
+            return this;
+        }
+        public Boolean getDeleted() {
+            return this.deleted;
+        }
+
+        public ListSubSceneResponseBodyList setOriginUrl(String originUrl) {
+            this.originUrl = originUrl;
+            return this;
+        }
+        public String getOriginUrl() {
+            return this.originUrl;
         }
 
     }
