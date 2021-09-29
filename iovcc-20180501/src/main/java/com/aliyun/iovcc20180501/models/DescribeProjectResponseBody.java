@@ -59,6 +59,9 @@ public class DescribeProjectResponseBody extends TeaModel {
         @NameInMap("Creator")
         public String creator;
 
+        @NameInMap("VehicleCommunicationProtocol")
+        public String vehicleCommunicationProtocol;
+
         public static DescribeProjectResponseBodyProject build(java.util.Map<String, ?> map) throws Exception {
             DescribeProjectResponseBodyProject self = new DescribeProjectResponseBodyProject();
             return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class DescribeProjectResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public DescribeProjectResponseBodyProject setVehicleCommunicationProtocol(String vehicleCommunicationProtocol) {
+            this.vehicleCommunicationProtocol = vehicleCommunicationProtocol;
+            return this;
+        }
+        public String getVehicleCommunicationProtocol() {
+            return this.vehicleCommunicationProtocol;
         }
 
     }
