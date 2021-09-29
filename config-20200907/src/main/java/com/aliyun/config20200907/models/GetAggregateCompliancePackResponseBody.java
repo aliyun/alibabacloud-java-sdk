@@ -85,6 +85,12 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         @NameInMap("ConfigRuleParameters")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("RiskLevel")
+        public Integer riskLevel;
+
         public static GetAggregateCompliancePackResponseBodyCompliancePackConfigRules build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateCompliancePackResponseBodyCompliancePackConfigRules self = new GetAggregateCompliancePackResponseBodyCompliancePackConfigRules();
             return TeaModel.build(map, self);
@@ -120,6 +126,22 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         }
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackConfigRules setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetAggregateCompliancePackResponseBodyCompliancePackConfigRules setRiskLevel(Integer riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Integer getRiskLevel() {
+            return this.riskLevel;
         }
 
     }

@@ -726,11 +726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetConfigRuleResponse getConfigRuleWithOptions(GetConfigRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetConfigRule", "2020-09-07", "HTTPS", "GET", "AK", "json", req, runtime), new GetConfigRuleResponse());
+        return TeaModel.toModel(this.doRPCRequest("GetConfigRule", "2020-09-07", "HTTPS", "POST", "AK", "json", req, runtime), new GetConfigRuleResponse());
     }
 
     public GetConfigRuleResponse getConfigRule(GetConfigRuleRequest request) throws Exception {
@@ -948,11 +947,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public GetAggregateConfigRuleResponse getAggregateConfigRuleWithOptions(GetAggregateConfigRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetAggregateConfigRule", "2020-09-07", "HTTPS", "GET", "AK", "json", req, runtime), new GetAggregateConfigRuleResponse());
+        return TeaModel.toModel(this.doRPCRequest("GetAggregateConfigRule", "2020-09-07", "HTTPS", "POST", "AK", "json", req, runtime), new GetAggregateConfigRuleResponse());
     }
 
     public GetAggregateConfigRuleResponse getAggregateConfigRule(GetAggregateConfigRuleRequest request) throws Exception {
