@@ -4,29 +4,21 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetApDetailedConfigResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
-
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
+
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     public static GetApDetailedConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetApDetailedConfigResponseBody self = new GetApDetailedConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetApDetailedConfigResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
     }
 
     public GetApDetailedConfigResponseBody setData(java.util.Map<String, ?> data) {
@@ -37,20 +29,28 @@ public class GetApDetailedConfigResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetApDetailedConfigResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
     public GetApDetailedConfigResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetApDetailedConfigResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
+        return this;
+    }
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public GetApDetailedConfigResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
 }

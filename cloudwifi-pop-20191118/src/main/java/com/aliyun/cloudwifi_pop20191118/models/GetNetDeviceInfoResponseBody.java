@@ -4,32 +4,32 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetNetDeviceInfoResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<java.util.Map<String, ?>> data;
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
 
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Data")
+    public java.util.List<java.util.Map<String, ?>> data;
 
     public static GetNetDeviceInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNetDeviceInfoResponseBody self = new GetNetDeviceInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetNetDeviceInfoResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
+    public GetNetDeviceInfoResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetNetDeviceInfoResponseBody setRequestId(String requestId) {
@@ -40,12 +40,12 @@ public class GetNetDeviceInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetNetDeviceInfoResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
-        this.data = data;
+    public GetNetDeviceInfoResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getData() {
-        return this.data;
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
     }
 
     public GetNetDeviceInfoResponseBody setErrorCode(Integer errorCode) {
@@ -56,12 +56,12 @@ public class GetNetDeviceInfoResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public GetNetDeviceInfoResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public GetNetDeviceInfoResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
+        this.data = data;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public java.util.List<java.util.Map<String, ?>> getData() {
+        return this.data;
     }
 
 }

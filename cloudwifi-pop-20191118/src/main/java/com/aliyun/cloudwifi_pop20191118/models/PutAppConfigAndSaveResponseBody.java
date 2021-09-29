@@ -4,40 +4,24 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class PutAppConfigAndSaveResponseBody extends TeaModel {
-    @NameInMap("IsSuccess")
-    public Boolean isSuccess;
+    @NameInMap("Data")
+    public java.util.Map<String, ?> data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.Map<String, ?> data;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("IsSuccess")
+    public Boolean isSuccess;
 
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     public static PutAppConfigAndSaveResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PutAppConfigAndSaveResponseBody self = new PutAppConfigAndSaveResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public PutAppConfigAndSaveResponseBody setIsSuccess(Boolean isSuccess) {
-        this.isSuccess = isSuccess;
-        return this;
-    }
-    public Boolean getIsSuccess() {
-        return this.isSuccess;
-    }
-
-    public PutAppConfigAndSaveResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public PutAppConfigAndSaveResponseBody setData(java.util.Map<String, ?> data) {
@@ -48,12 +32,12 @@ public class PutAppConfigAndSaveResponseBody extends TeaModel {
         return this.data;
     }
 
-    public PutAppConfigAndSaveResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
+    public PutAppConfigAndSaveResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public PutAppConfigAndSaveResponseBody setErrorMessage(String errorMessage) {
@@ -62,6 +46,22 @@ public class PutAppConfigAndSaveResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public PutAppConfigAndSaveResponseBody setIsSuccess(Boolean isSuccess) {
+        this.isSuccess = isSuccess;
+        return this;
+    }
+    public Boolean getIsSuccess() {
+        return this.isSuccess;
+    }
+
+    public PutAppConfigAndSaveResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
 }

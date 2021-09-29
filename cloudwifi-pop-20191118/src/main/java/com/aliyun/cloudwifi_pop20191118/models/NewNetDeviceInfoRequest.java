@@ -10,11 +10,11 @@ public class NewNetDeviceInfoRequest extends TeaModel {
     @NameInMap("AppCode")
     public String appCode;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Devices")
     public java.util.List<NewNetDeviceInfoRequestDevices> devices;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static NewNetDeviceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         NewNetDeviceInfoRequest self = new NewNetDeviceInfoRequest();
@@ -37,14 +37,6 @@ public class NewNetDeviceInfoRequest extends TeaModel {
         return this.appCode;
     }
 
-    public NewNetDeviceInfoRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public NewNetDeviceInfoRequest setDevices(java.util.List<NewNetDeviceInfoRequestDevices> devices) {
         this.devices = devices;
         return this;
@@ -53,15 +45,23 @@ public class NewNetDeviceInfoRequest extends TeaModel {
         return this.devices;
     }
 
+    public NewNetDeviceInfoRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class NewNetDeviceInfoRequestDevices extends TeaModel {
         @NameInMap("MgnIp")
         public String mgnIp;
 
-        @NameInMap("Model")
-        public String model;
-
         @NameInMap("Password")
         public String password;
+
+        @NameInMap("Model")
+        public String model;
 
         @NameInMap("LogicNetPod")
         public String logicNetPod;
@@ -100,20 +100,20 @@ public class NewNetDeviceInfoRequest extends TeaModel {
             return this.mgnIp;
         }
 
-        public NewNetDeviceInfoRequestDevices setModel(String model) {
-            this.model = model;
-            return this;
-        }
-        public String getModel() {
-            return this.model;
-        }
-
         public NewNetDeviceInfoRequestDevices setPassword(String password) {
             this.password = password;
             return this;
         }
         public String getPassword() {
             return this.password;
+        }
+
+        public NewNetDeviceInfoRequestDevices setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
         }
 
         public NewNetDeviceInfoRequestDevices setLogicNetPod(String logicNetPod) {
