@@ -38,12 +38,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shanghai-et2-b01", "sts.aliyuncs.com"),
             new TeaPair("cn-shanghai-inner", "sts.aliyuncs.com"),
             new TeaPair("cn-shanghai-internal-test-1", "sts.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "sts.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "sts-vpc.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen-inner", "sts.aliyuncs.com"),
             new TeaPair("cn-shenzhen-st4-d01", "sts.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "sts.aliyuncs.com"),
             new TeaPair("cn-wuhan", "sts.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "sts.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "sts.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "sts.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou-na62-a01", "sts.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "sts.aliyuncs.com"),
@@ -78,6 +79,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AssumeRoleResponse assumeRole(AssumeRoleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.assumeRoleWithOptions(request, runtime);
+    }
+
+    public AssumeRoleWithOIDCResponse assumeRoleWithOIDCWithOptions(AssumeRoleWithOIDCRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AssumeRoleWithOIDC", "2015-04-01", "HTTPS", "POST", "AK", "json", req, runtime), new AssumeRoleWithOIDCResponse());
+    }
+
+    public AssumeRoleWithOIDCResponse assumeRoleWithOIDC(AssumeRoleWithOIDCRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.assumeRoleWithOIDCWithOptions(request, runtime);
     }
 
     public AssumeRoleWithSAMLResponse assumeRoleWithSAMLWithOptions(AssumeRoleWithSAMLRequest request, RuntimeOptions runtime) throws Exception {
