@@ -502,6 +502,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.tempPreviewWithOptions(request, runtime);
     }
 
+    public PublishSceneResponse publishSceneWithOptions(PublishSceneRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("PublishScene", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new PublishSceneResponse());
+    }
+
+    public PublishSceneResponse publishScene(PublishSceneRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.publishSceneWithOptions(request, runtime);
+    }
+
     public DetailProjectResponse detailProjectWithOptions(DetailProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
