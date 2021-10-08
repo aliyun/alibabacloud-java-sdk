@@ -7,6 +7,18 @@ public class DetectFaceRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
+    @NameInMap("Landmark")
+    public Boolean landmark;
+
+    @NameInMap("Quality")
+    public Boolean quality;
+
+    @NameInMap("Pose")
+    public Boolean pose;
+
+    @NameInMap("MaxFaceNumber")
+    public Long maxFaceNumber;
+
     public static DetectFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectFaceRequest self = new DetectFaceRequest();
         return TeaModel.build(map, self);
@@ -18,6 +30,38 @@ public class DetectFaceRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
+    }
+
+    public DetectFaceRequest setLandmark(Boolean landmark) {
+        this.landmark = landmark;
+        return this;
+    }
+    public Boolean getLandmark() {
+        return this.landmark;
+    }
+
+    public DetectFaceRequest setQuality(Boolean quality) {
+        this.quality = quality;
+        return this;
+    }
+    public Boolean getQuality() {
+        return this.quality;
+    }
+
+    public DetectFaceRequest setPose(Boolean pose) {
+        this.pose = pose;
+        return this;
+    }
+    public Boolean getPose() {
+        return this.pose;
+    }
+
+    public DetectFaceRequest setMaxFaceNumber(Long maxFaceNumber) {
+        this.maxFaceNumber = maxFaceNumber;
+        return this;
+    }
+    public Long getMaxFaceNumber() {
+        return this.maxFaceNumber;
     }
 
 }

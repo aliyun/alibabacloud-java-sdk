@@ -20,6 +20,9 @@ public class SearchFaceAdvanceRequest extends TeaModel {
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
 
+    @NameInMap("MaxFaceNum")
+    public Long maxFaceNum;
+
     public static SearchFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchFaceAdvanceRequest self = new SearchFaceAdvanceRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class SearchFaceAdvanceRequest extends TeaModel {
     }
     public Float getQualityScoreThreshold() {
         return this.qualityScoreThreshold;
+    }
+
+    public SearchFaceAdvanceRequest setMaxFaceNum(Long maxFaceNum) {
+        this.maxFaceNum = maxFaceNum;
+        return this;
+    }
+    public Long getMaxFaceNum() {
+        return this.maxFaceNum;
     }
 
 }
