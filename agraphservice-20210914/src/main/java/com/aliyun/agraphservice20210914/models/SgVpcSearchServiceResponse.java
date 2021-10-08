@@ -3,21 +3,21 @@ package com.aliyun.agraphservice20210914.models;
 
 import com.aliyun.tea.*;
 
-public class SgVpcSearchServicePreResponse extends TeaModel {
+public class SgVpcSearchServiceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public SgVpcSearchServicePreResponseBody body;
+    public SgVpcSearchServiceResponseBody body;
 
-    public static SgVpcSearchServicePreResponse build(java.util.Map<String, ?> map) throws Exception {
-        SgVpcSearchServicePreResponse self = new SgVpcSearchServicePreResponse();
+    public static SgVpcSearchServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        SgVpcSearchServiceResponse self = new SgVpcSearchServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public SgVpcSearchServicePreResponse setHeaders(java.util.Map<String, String> headers) {
+    public SgVpcSearchServiceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class SgVpcSearchServicePreResponse extends TeaModel {
         return this.headers;
     }
 
-    public SgVpcSearchServicePreResponse setBody(SgVpcSearchServicePreResponseBody body) {
+    public SgVpcSearchServiceResponse setBody(SgVpcSearchServiceResponseBody body) {
         this.body = body;
         return this;
     }
-    public SgVpcSearchServicePreResponseBody getBody() {
+    public SgVpcSearchServiceResponseBody getBody() {
         return this.body;
     }
 
