@@ -3,7 +3,7 @@ package com.aliyun.agraphservice20210914.models;
 
 import com.aliyun.tea.*;
 
-public class SgVpcSearchServicePreResponseBody extends TeaModel {
+public class AgraphSearchServiceSgVpcPreResponseBody extends TeaModel {
     // message
     @NameInMap("Message")
     public String message;
@@ -20,12 +20,12 @@ public class SgVpcSearchServicePreResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static SgVpcSearchServicePreResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SgVpcSearchServicePreResponseBody self = new SgVpcSearchServicePreResponseBody();
+    public static AgraphSearchServiceSgVpcPreResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AgraphSearchServiceSgVpcPreResponseBody self = new AgraphSearchServiceSgVpcPreResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SgVpcSearchServicePreResponseBody setMessage(String message) {
+    public AgraphSearchServiceSgVpcPreResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -33,7 +33,7 @@ public class SgVpcSearchServicePreResponseBody extends TeaModel {
         return this.message;
     }
 
-    public SgVpcSearchServicePreResponseBody setData(String data) {
+    public AgraphSearchServiceSgVpcPreResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -41,7 +41,7 @@ public class SgVpcSearchServicePreResponseBody extends TeaModel {
         return this.data;
     }
 
-    public SgVpcSearchServicePreResponseBody setCode(Integer code) {
+    public AgraphSearchServiceSgVpcPreResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -49,7 +49,7 @@ public class SgVpcSearchServicePreResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SgVpcSearchServicePreResponseBody setSuccess(Boolean success) {
+    public AgraphSearchServiceSgVpcPreResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

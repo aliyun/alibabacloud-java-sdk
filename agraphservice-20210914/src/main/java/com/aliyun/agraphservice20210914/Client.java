@@ -32,18 +32,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public SgVpcSearchServicePreResponse sgVpcSearchServicePreWithOptions(SgVpcSearchServicePreRequest request, RuntimeOptions runtime) throws Exception {
+    public AgraphSearchServiceSgVpcPreResponse agraphSearchServiceSgVpcPreWithOptions(AgraphSearchServiceSgVpcPreRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", query)
         ));
-        return TeaModel.toModel(this.doRPCRequest("SgVpcSearchServicePre", "2021-09-14", "HTTPS", "GET", "AK", "json", req, runtime), new SgVpcSearchServicePreResponse());
+        return TeaModel.toModel(this.doRPCRequest("AgraphSearchServiceSgVpcPre", "2021-09-14", "HTTPS", "GET", "AK", "json", req, runtime), new AgraphSearchServiceSgVpcPreResponse());
     }
 
-    public SgVpcSearchServicePreResponse sgVpcSearchServicePre(SgVpcSearchServicePreRequest request) throws Exception {
+    public AgraphSearchServiceSgVpcPreResponse agraphSearchServiceSgVpcPre(AgraphSearchServiceSgVpcPreRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.sgVpcSearchServicePreWithOptions(request, runtime);
+        return this.agraphSearchServiceSgVpcPreWithOptions(request, runtime);
     }
 
     public SearchSgVpcGraphServiceResponse searchSgVpcGraphServiceWithOptions(SearchSgVpcGraphServiceRequest request, RuntimeOptions runtime) throws Exception {
@@ -58,5 +58,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchSgVpcGraphServiceResponse searchSgVpcGraphService(SearchSgVpcGraphServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.searchSgVpcGraphServiceWithOptions(request, runtime);
+    }
+
+    public SgVpcSearchServiceResponse sgVpcSearchServiceWithOptions(SgVpcSearchServiceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SgVpcSearchService", "2021-09-14", "HTTPS", "GET", "AK", "json", req, runtime), new SgVpcSearchServiceResponse());
+    }
+
+    public SgVpcSearchServiceResponse sgVpcSearchService(SgVpcSearchServiceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sgVpcSearchServiceWithOptions(request, runtime);
     }
 }

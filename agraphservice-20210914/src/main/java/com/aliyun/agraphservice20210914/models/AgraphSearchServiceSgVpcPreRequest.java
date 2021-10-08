@@ -3,7 +3,7 @@ package com.aliyun.agraphservice20210914.models;
 
 import com.aliyun.tea.*;
 
-public class SgVpcSearchServicePreRequest extends TeaModel {
+public class AgraphSearchServiceSgVpcPreRequest extends TeaModel {
     // param0
     @NameInMap("secretKeyId")
     public String secretKeyId;
@@ -16,12 +16,12 @@ public class SgVpcSearchServicePreRequest extends TeaModel {
     @NameInMap("nodeId")
     public String nodeId;
 
-    public static SgVpcSearchServicePreRequest build(java.util.Map<String, ?> map) throws Exception {
-        SgVpcSearchServicePreRequest self = new SgVpcSearchServicePreRequest();
+    public static AgraphSearchServiceSgVpcPreRequest build(java.util.Map<String, ?> map) throws Exception {
+        AgraphSearchServiceSgVpcPreRequest self = new AgraphSearchServiceSgVpcPreRequest();
         return TeaModel.build(map, self);
     }
 
-    public SgVpcSearchServicePreRequest setSecretKeyId(String secretKeyId) {
+    public AgraphSearchServiceSgVpcPreRequest setSecretKeyId(String secretKeyId) {
         this.secretKeyId = secretKeyId;
         return this;
     }
@@ -29,7 +29,7 @@ public class SgVpcSearchServicePreRequest extends TeaModel {
         return this.secretKeyId;
     }
 
-    public SgVpcSearchServicePreRequest setGraphCode(String graphCode) {
+    public AgraphSearchServiceSgVpcPreRequest setGraphCode(String graphCode) {
         this.graphCode = graphCode;
         return this;
     }
@@ -37,7 +37,7 @@ public class SgVpcSearchServicePreRequest extends TeaModel {
         return this.graphCode;
     }
 
-    public SgVpcSearchServicePreRequest setNodeId(String nodeId) {
+    public AgraphSearchServiceSgVpcPreRequest setNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
