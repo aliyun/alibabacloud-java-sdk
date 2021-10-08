@@ -3500,4 +3500,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBodyDbWithOptions(request, runtime);
     }
+
+    public BatchAddFacesResponse batchAddFacesWithOptions(BatchAddFacesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchAddFacesShrinkRequest request = new BatchAddFacesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.faces)) {
+            request.facesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.faces, "Faces", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BatchAddFaces", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime), new BatchAddFacesResponse());
+    }
+
+    public BatchAddFacesResponse batchAddFaces(BatchAddFacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchAddFacesWithOptions(request, runtime);
+    }
 }
