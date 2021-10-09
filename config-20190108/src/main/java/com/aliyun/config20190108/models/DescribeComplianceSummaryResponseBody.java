@@ -31,82 +31,22 @@ public class DescribeComplianceSummaryResponseBody extends TeaModel {
         return this.complianceSummary;
     }
 
-    public static class DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule extends TeaModel {
-        @NameInMap("ComplianceSummaryTimestamp")
-        public Long complianceSummaryTimestamp;
-
-        @NameInMap("CompliantCount")
-        public Integer compliantCount;
-
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
-        @NameInMap("NonCompliantCount")
-        public Integer nonCompliantCount;
-
-        public static DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule build(java.util.Map<String, ?> map) throws Exception {
-            DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule self = new DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule setComplianceSummaryTimestamp(Long complianceSummaryTimestamp) {
-            this.complianceSummaryTimestamp = complianceSummaryTimestamp;
-            return this;
-        }
-        public Long getComplianceSummaryTimestamp() {
-            return this.complianceSummaryTimestamp;
-        }
-
-        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule setCompliantCount(Integer compliantCount) {
-            this.compliantCount = compliantCount;
-            return this;
-        }
-        public Integer getCompliantCount() {
-            return this.compliantCount;
-        }
-
-        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
-        }
-
-        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule setNonCompliantCount(Integer nonCompliantCount) {
-            this.nonCompliantCount = nonCompliantCount;
-            return this;
-        }
-        public Integer getNonCompliantCount() {
-            return this.nonCompliantCount;
-        }
-
-    }
-
     public static class DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource extends TeaModel {
-        @NameInMap("ComplianceSummaryTimestamp")
-        public Long complianceSummaryTimestamp;
-
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
+
+        @NameInMap("ComplianceSummaryTimestamp")
+        public Long complianceSummaryTimestamp;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource self = new DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setComplianceSummaryTimestamp(Long complianceSummaryTimestamp) {
-            this.complianceSummaryTimestamp = complianceSummaryTimestamp;
-            return this;
-        }
-        public Long getComplianceSummaryTimestamp() {
-            return this.complianceSummaryTimestamp;
         }
 
         public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setCompliantCount(Integer compliantCount) {
@@ -117,14 +57,6 @@ public class DescribeComplianceSummaryResponseBody extends TeaModel {
             return this.compliantCount;
         }
 
-        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
-        }
-
         public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setNonCompliantCount(Integer nonCompliantCount) {
             this.nonCompliantCount = nonCompliantCount;
             return this;
@@ -133,26 +65,86 @@ public class DescribeComplianceSummaryResponseBody extends TeaModel {
             return this.nonCompliantCount;
         }
 
+        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setComplianceSummaryTimestamp(Long complianceSummaryTimestamp) {
+            this.complianceSummaryTimestamp = complianceSummaryTimestamp;
+            return this;
+        }
+        public Long getComplianceSummaryTimestamp() {
+            return this.complianceSummaryTimestamp;
+        }
+
+        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
+    public static class DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule extends TeaModel {
+        @NameInMap("CompliantCount")
+        public Integer compliantCount;
+
+        @NameInMap("NonCompliantCount")
+        public Integer nonCompliantCount;
+
+        @NameInMap("ComplianceSummaryTimestamp")
+        public Long complianceSummaryTimestamp;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
+        public static DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule self = new DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule setCompliantCount(Integer compliantCount) {
+            this.compliantCount = compliantCount;
+            return this;
+        }
+        public Integer getCompliantCount() {
+            return this.compliantCount;
+        }
+
+        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule setNonCompliantCount(Integer nonCompliantCount) {
+            this.nonCompliantCount = nonCompliantCount;
+            return this;
+        }
+        public Integer getNonCompliantCount() {
+            return this.nonCompliantCount;
+        }
+
+        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule setComplianceSummaryTimestamp(Long complianceSummaryTimestamp) {
+            this.complianceSummaryTimestamp = complianceSummaryTimestamp;
+            return this;
+        }
+        public Long getComplianceSummaryTimestamp() {
+            return this.complianceSummaryTimestamp;
+        }
+
+        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
     }
 
     public static class DescribeComplianceSummaryResponseBodyComplianceSummary extends TeaModel {
-        @NameInMap("ComplianceSummaryByConfigRule")
-        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule complianceSummaryByConfigRule;
-
         @NameInMap("ComplianceSummaryByResource")
         public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource complianceSummaryByResource;
+
+        @NameInMap("ComplianceSummaryByConfigRule")
+        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule complianceSummaryByConfigRule;
 
         public static DescribeComplianceSummaryResponseBodyComplianceSummary build(java.util.Map<String, ?> map) throws Exception {
             DescribeComplianceSummaryResponseBodyComplianceSummary self = new DescribeComplianceSummaryResponseBodyComplianceSummary();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeComplianceSummaryResponseBodyComplianceSummary setComplianceSummaryByConfigRule(DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule complianceSummaryByConfigRule) {
-            this.complianceSummaryByConfigRule = complianceSummaryByConfigRule;
-            return this;
-        }
-        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule getComplianceSummaryByConfigRule() {
-            return this.complianceSummaryByConfigRule;
         }
 
         public DescribeComplianceSummaryResponseBodyComplianceSummary setComplianceSummaryByResource(DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource complianceSummaryByResource) {
@@ -161,6 +153,14 @@ public class DescribeComplianceSummaryResponseBody extends TeaModel {
         }
         public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource getComplianceSummaryByResource() {
             return this.complianceSummaryByResource;
+        }
+
+        public DescribeComplianceSummaryResponseBodyComplianceSummary setComplianceSummaryByConfigRule(DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule complianceSummaryByConfigRule) {
+            this.complianceSummaryByConfigRule = complianceSummaryByConfigRule;
+            return this;
+        }
+        public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule getComplianceSummaryByConfigRule() {
+            return this.complianceSummaryByConfigRule;
         }
 
     }

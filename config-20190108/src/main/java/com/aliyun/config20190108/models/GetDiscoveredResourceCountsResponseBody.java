@@ -32,23 +32,15 @@ public class GetDiscoveredResourceCountsResponseBody extends TeaModel {
     }
 
     public static class GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList extends TeaModel {
-        @NameInMap("GroupName")
-        public String groupName;
-
         @NameInMap("ResourceCount")
         public Long resourceCount;
+
+        @NameInMap("GroupName")
+        public String groupName;
 
         public static GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList build(java.util.Map<String, ?> map) throws Exception {
             GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList self = new GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList();
             return TeaModel.build(map, self);
-        }
-
-        public GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
         }
 
         public GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList setResourceCount(Long resourceCount) {
@@ -59,26 +51,26 @@ public class GetDiscoveredResourceCountsResponseBody extends TeaModel {
             return this.resourceCount;
         }
 
+        public GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
     }
 
     public static class GetDiscoveredResourceCountsResponseBodyGroupedResourceCounts extends TeaModel {
-        @NameInMap("GroupByKey")
-        public String groupByKey;
-
         @NameInMap("GroupedResourceCountList")
         public java.util.List<GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList> groupedResourceCountList;
+
+        @NameInMap("GroupByKey")
+        public String groupByKey;
 
         public static GetDiscoveredResourceCountsResponseBodyGroupedResourceCounts build(java.util.Map<String, ?> map) throws Exception {
             GetDiscoveredResourceCountsResponseBodyGroupedResourceCounts self = new GetDiscoveredResourceCountsResponseBodyGroupedResourceCounts();
             return TeaModel.build(map, self);
-        }
-
-        public GetDiscoveredResourceCountsResponseBodyGroupedResourceCounts setGroupByKey(String groupByKey) {
-            this.groupByKey = groupByKey;
-            return this;
-        }
-        public String getGroupByKey() {
-            return this.groupByKey;
         }
 
         public GetDiscoveredResourceCountsResponseBodyGroupedResourceCounts setGroupedResourceCountList(java.util.List<GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList> groupedResourceCountList) {
@@ -87,6 +79,14 @@ public class GetDiscoveredResourceCountsResponseBody extends TeaModel {
         }
         public java.util.List<GetDiscoveredResourceCountsResponseBodyGroupedResourceCountsGroupedResourceCountList> getGroupedResourceCountList() {
             return this.groupedResourceCountList;
+        }
+
+        public GetDiscoveredResourceCountsResponseBodyGroupedResourceCounts setGroupByKey(String groupByKey) {
+            this.groupByKey = groupByKey;
+            return this;
+        }
+        public String getGroupByKey() {
+            return this.groupByKey;
         }
 
     }
