@@ -4,23 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class GetSupportedResourceTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ResourceTypes")
     public java.util.List<String> resourceTypes;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetSupportedResourceTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSupportedResourceTypesResponseBody self = new GetSupportedResourceTypesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSupportedResourceTypesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetSupportedResourceTypesResponseBody setResourceTypes(java.util.List<String> resourceTypes) {
@@ -29,6 +21,14 @@ public class GetSupportedResourceTypesResponseBody extends TeaModel {
     }
     public java.util.List<String> getResourceTypes() {
         return this.resourceTypes;
+    }
+
+    public GetSupportedResourceTypesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -165,11 +165,11 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
         @NameInMap("InvokingEventMessageType")
         public String invokingEventMessageType;
 
-        @NameInMap("RemediationEnabled")
-        public Boolean remediationEnabled;
-
         @NameInMap("EvaluationResultIdentifier")
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier;
+
+        @NameInMap("RemediationEnabled")
+        public Boolean remediationEnabled;
 
         public static DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList build(java.util.Map<String, ?> map) throws Exception {
             DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList self = new DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList();
@@ -224,14 +224,6 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
             return this.invokingEventMessageType;
         }
 
-        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setRemediationEnabled(Boolean remediationEnabled) {
-            this.remediationEnabled = remediationEnabled;
-            return this;
-        }
-        public Boolean getRemediationEnabled() {
-            return this.remediationEnabled;
-        }
-
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setEvaluationResultIdentifier(DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier) {
             this.evaluationResultIdentifier = evaluationResultIdentifier;
             return this;
@@ -240,9 +232,20 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
             return this.evaluationResultIdentifier;
         }
 
+        public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setRemediationEnabled(Boolean remediationEnabled) {
+            this.remediationEnabled = remediationEnabled;
+            return this;
+        }
+        public Boolean getRemediationEnabled() {
+            return this.remediationEnabled;
+        }
+
     }
 
     public static class DescribeEvaluationResultsResponseBodyEvaluationResults extends TeaModel {
+        @NameInMap("EvaluationResultList")
+        public java.util.List<DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> evaluationResultList;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -252,12 +255,17 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
-        @NameInMap("EvaluationResultList")
-        public java.util.List<DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> evaluationResultList;
-
         public static DescribeEvaluationResultsResponseBodyEvaluationResults build(java.util.Map<String, ?> map) throws Exception {
             DescribeEvaluationResultsResponseBodyEvaluationResults self = new DescribeEvaluationResultsResponseBodyEvaluationResults();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEvaluationResultsResponseBodyEvaluationResults setEvaluationResultList(java.util.List<DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> evaluationResultList) {
+            this.evaluationResultList = evaluationResultList;
+            return this;
+        }
+        public java.util.List<DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> getEvaluationResultList() {
+            return this.evaluationResultList;
         }
 
         public DescribeEvaluationResultsResponseBodyEvaluationResults setPageNumber(Integer pageNumber) {
@@ -282,14 +290,6 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
-        }
-
-        public DescribeEvaluationResultsResponseBodyEvaluationResults setEvaluationResultList(java.util.List<DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> evaluationResultList) {
-            this.evaluationResultList = evaluationResultList;
-            return this;
-        }
-        public java.util.List<DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> getEvaluationResultList() {
-            return this.evaluationResultList;
         }
 
     }

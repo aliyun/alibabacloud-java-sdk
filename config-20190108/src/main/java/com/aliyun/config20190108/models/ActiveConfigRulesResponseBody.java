@@ -32,26 +32,18 @@ public class ActiveConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
-        @NameInMap("ConfigRuleId")
-        public String configRuleId;
-
         @NameInMap("ErrorCode")
         public String errorCode;
 
         @NameInMap("Success")
         public Boolean success;
 
+        @NameInMap("ConfigRuleId")
+        public String configRuleId;
+
         public static ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList build(java.util.Map<String, ?> map) throws Exception {
             ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList self = new ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList();
             return TeaModel.build(map, self);
-        }
-
-        public ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setConfigRuleId(String configRuleId) {
-            this.configRuleId = configRuleId;
-            return this;
-        }
-        public String getConfigRuleId() {
-            return this.configRuleId;
         }
 
         public ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setErrorCode(String errorCode) {
@@ -68,6 +60,14 @@ public class ActiveConfigRulesResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
+        }
+
+        public ActiveConfigRulesResponseBodyOperateRuleResultOperateRuleItemList setConfigRuleId(String configRuleId) {
+            this.configRuleId = configRuleId;
+            return this;
+        }
+        public String getConfigRuleId() {
+            return this.configRuleId;
         }
 
     }

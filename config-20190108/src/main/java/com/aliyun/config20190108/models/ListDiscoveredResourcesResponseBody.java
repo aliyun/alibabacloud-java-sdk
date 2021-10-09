@@ -4,23 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class ListDiscoveredResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DiscoveredResourceProfiles")
     public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListDiscoveredResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDiscoveredResourcesResponseBody self = new ListDiscoveredResourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDiscoveredResourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListDiscoveredResourcesResponseBody setDiscoveredResourceProfiles(ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles) {
@@ -29,6 +21,14 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
     }
     public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles getDiscoveredResourceProfiles() {
         return this.discoveredResourceProfiles;
+    }
+
+    public ListDiscoveredResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList extends TeaModel {
@@ -139,6 +139,9 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
     }
 
     public static class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles extends TeaModel {
+        @NameInMap("DiscoveredResourceProfileList")
+        public java.util.List<ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList;
+
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
@@ -148,12 +151,17 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("DiscoveredResourceProfileList")
-        public java.util.List<ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList;
-
         public static ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles build(java.util.Map<String, ?> map) throws Exception {
             ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles self = new ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles();
             return TeaModel.build(map, self);
+        }
+
+        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles setDiscoveredResourceProfileList(java.util.List<ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList) {
+            this.discoveredResourceProfileList = discoveredResourceProfileList;
+            return this;
+        }
+        public java.util.List<ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> getDiscoveredResourceProfileList() {
+            return this.discoveredResourceProfileList;
         }
 
         public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles setPageNumber(Integer pageNumber) {
@@ -178,14 +186,6 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles setDiscoveredResourceProfileList(java.util.List<ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList) {
-            this.discoveredResourceProfileList = discoveredResourceProfileList;
-            return this;
-        }
-        public java.util.List<ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> getDiscoveredResourceProfileList() {
-            return this.discoveredResourceProfileList;
         }
 
     }

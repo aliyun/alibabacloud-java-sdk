@@ -32,11 +32,11 @@ public class DescribeConfigurationRecorderResponseBody extends TeaModel {
     }
 
     public static class DescribeConfigurationRecorderResponseBodyConfigurationRecorder extends TeaModel {
-        @NameInMap("AccountId")
-        public Long accountId;
-
         @NameInMap("ConfigurationRecorderStatus")
         public String configurationRecorderStatus;
+
+        @NameInMap("AccountId")
+        public Long accountId;
 
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
@@ -46,20 +46,20 @@ public class DescribeConfigurationRecorderResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeConfigurationRecorderResponseBodyConfigurationRecorder setAccountId(Long accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public Long getAccountId() {
-            return this.accountId;
-        }
-
         public DescribeConfigurationRecorderResponseBodyConfigurationRecorder setConfigurationRecorderStatus(String configurationRecorderStatus) {
             this.configurationRecorderStatus = configurationRecorderStatus;
             return this;
         }
         public String getConfigurationRecorderStatus() {
             return this.configurationRecorderStatus;
+        }
+
+        public DescribeConfigurationRecorderResponseBodyConfigurationRecorder setAccountId(Long accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public Long getAccountId() {
+            return this.accountId;
         }
 
         public DescribeConfigurationRecorderResponseBodyConfigurationRecorder setResourceTypes(java.util.List<String> resourceTypes) {

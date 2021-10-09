@@ -32,14 +32,14 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
     }
 
     public static class GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList extends TeaModel {
-        @NameInMap("ResourceEventType")
-        public String resourceEventType;
+        @NameInMap("Tags")
+        public String tags;
 
         @NameInMap("AccountId")
         public Long accountId;
 
-        @NameInMap("Tags")
-        public String tags;
+        @NameInMap("ResourceEventType")
+        public String resourceEventType;
 
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
@@ -70,12 +70,12 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setResourceEventType(String resourceEventType) {
-            this.resourceEventType = resourceEventType;
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setTags(String tags) {
+            this.tags = tags;
             return this;
         }
-        public String getResourceEventType() {
-            return this.resourceEventType;
+        public String getTags() {
+            return this.tags;
         }
 
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setAccountId(Long accountId) {
@@ -86,12 +86,12 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             return this.accountId;
         }
 
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setTags(String tags) {
-            this.tags = tags;
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setResourceEventType(String resourceEventType) {
+            this.resourceEventType = resourceEventType;
             return this;
         }
-        public String getTags() {
-            return this.tags;
+        public String getResourceEventType() {
+            return this.resourceEventType;
         }
 
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList setAvailabilityZone(String availabilityZone) {
@@ -164,14 +164,14 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         @NameInMap("NextToken")
         public String nextToken;
 
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("Limit")
         public Integer limit;
 
         @NameInMap("ConfigurationList")
         public java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> configurationList;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline build(java.util.Map<String, ?> map) throws Exception {
             GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline self = new GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline();
@@ -184,14 +184,6 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         }
         public String getNextToken() {
             return this.nextToken;
-        }
-
-        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
         }
 
         public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline setLimit(Integer limit) {
@@ -208,6 +200,14 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         }
         public java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> getConfigurationList() {
             return this.configurationList;
+        }
+
+        public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

@@ -32,11 +32,11 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
     }
 
     public static class GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList extends TeaModel {
-        @NameInMap("AccountId")
-        public String accountId;
-
         @NameInMap("Tags")
         public String tags;
+
+        @NameInMap("AccountId")
+        public String accountId;
 
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
@@ -47,11 +47,11 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         @NameInMap("ResourceCreateTime")
         public Long resourceCreateTime;
 
-        @NameInMap("Configuration")
-        public String configuration;
-
         @NameInMap("Region")
         public String region;
+
+        @NameInMap("Configuration")
+        public String configuration;
 
         @NameInMap("CaptureTime")
         public Long captureTime;
@@ -73,20 +73,20 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setAccountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public String getAccountId() {
-            return this.accountId;
-        }
-
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setTags(String tags) {
             this.tags = tags;
             return this;
         }
         public String getTags() {
             return this.tags;
+        }
+
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setAvailabilityZone(String availabilityZone) {
@@ -113,20 +113,20 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             return this.resourceCreateTime;
         }
 
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setConfiguration(String configuration) {
-            this.configuration = configuration;
-            return this;
-        }
-        public String getConfiguration() {
-            return this.configuration;
-        }
-
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setRegion(String region) {
             this.region = region;
             return this;
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setConfiguration(String configuration) {
+            this.configuration = configuration;
+            return this;
+        }
+        public String getConfiguration() {
+            return this.configuration;
         }
 
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList setCaptureTime(Long captureTime) {
@@ -175,14 +175,14 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         @NameInMap("NextToken")
         public String nextToken;
 
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         @NameInMap("Limit")
         public Integer limit;
 
         @NameInMap("ComplianceList")
         public java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline build(java.util.Map<String, ?> map) throws Exception {
             GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline self = new GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline();
@@ -195,14 +195,6 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         }
         public String getNextToken() {
             return this.nextToken;
-        }
-
-        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
         }
 
         public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline setLimit(Integer limit) {
@@ -219,6 +211,14 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         }
         public java.util.List<GetResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> getComplianceList() {
             return this.complianceList;
+        }
+
+        public GetResourceComplianceTimelineResponseBodyResourceComplianceTimeline setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }
