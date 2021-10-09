@@ -549,6 +549,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.appMessagePushWithOptions(request, runtime);
     }
 
+    public GetTicketByCaseIdResponse getTicketByCaseIdWithOptions(GetTicketByCaseIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetTicketByCaseId", "2020-07-02", "HTTPS", "POST", "AK", "json", req, runtime), new GetTicketByCaseIdResponse());
+    }
+
+    public GetTicketByCaseIdResponse getTicketByCaseId(GetTicketByCaseIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getTicketByCaseIdWithOptions(request, runtime);
+    }
+
     public GetHotlineAgentStatusResponse getHotlineAgentStatusWithOptions(GetHotlineAgentStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
