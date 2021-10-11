@@ -69,4 +69,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describePhoneNumberResaleWithOptions(request, runtime);
     }
+
+    public DescribeEmptyNumberDetectResponse describeEmptyNumberDetectWithOptions(DescribeEmptyNumberDetectRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeEmptyNumberDetect", "2020-02-17", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeEmptyNumberDetectResponse());
+    }
+
+    public DescribeEmptyNumberDetectResponse describeEmptyNumberDetect(DescribeEmptyNumberDetectRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeEmptyNumberDetectWithOptions(request, runtime);
+    }
 }
