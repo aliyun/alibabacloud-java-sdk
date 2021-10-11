@@ -1,3 +1,6 @@
+2021-10-11 Version: v1.0.2
+- The first openAPI version.
+
 2021-09-29 Version: 1.0.1
 - The first openAPI version.
 

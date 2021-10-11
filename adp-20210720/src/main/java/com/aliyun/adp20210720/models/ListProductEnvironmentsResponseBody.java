@@ -82,12 +82,6 @@ public class ListProductEnvironmentsResponseBody extends TeaModel {
         @NameInMap("instanceStatus")
         public String instanceStatus;
 
-        @NameInMap("platformStatus")
-        public String platformStatus;
-
-        @NameInMap("vendorConfig")
-        public String vendorConfig;
-
         public static ListProductEnvironmentsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListProductEnvironmentsResponseBodyData self = new ListProductEnvironmentsResponseBodyData();
             return TeaModel.build(map, self);
@@ -195,22 +189,6 @@ public class ListProductEnvironmentsResponseBody extends TeaModel {
         }
         public String getInstanceStatus() {
             return this.instanceStatus;
-        }
-
-        public ListProductEnvironmentsResponseBodyData setPlatformStatus(String platformStatus) {
-            this.platformStatus = platformStatus;
-            return this;
-        }
-        public String getPlatformStatus() {
-            return this.platformStatus;
-        }
-
-        public ListProductEnvironmentsResponseBodyData setVendorConfig(String vendorConfig) {
-            this.vendorConfig = vendorConfig;
-            return this;
-        }
-        public String getVendorConfig() {
-            return this.vendorConfig;
         }
 
     }
