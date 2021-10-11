@@ -1,3 +1,6 @@
+2021-10-11 Version: 1.1.2
+- Support aliyun intl group graph.
+
 2021-10-08 Version: 1.1.1
 - Support aliyun intl group graph.
 
