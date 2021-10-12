@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetOutAccountBindDetailRequest extends TeaModel {
     @NameInMap("OutAccountType")
+    @Validation(required = true)
     public String outAccountType;
 
     @NameInMap("AccountId")
+    @Validation(required = true)
     public String accountId;
 
     @NameInMap("AccountDomain")

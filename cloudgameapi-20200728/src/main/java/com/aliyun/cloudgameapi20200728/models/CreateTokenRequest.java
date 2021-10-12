@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTokenRequest extends TeaModel {
     @NameInMap("Session")
+    @Validation(required = true)
     public String session;
 
     @NameInMap("CurrentToken")

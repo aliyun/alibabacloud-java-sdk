@@ -4,33 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("ProjectId")
     @Validation(required = true)
-    public CreateProjectResponseBody body;
+    public String projectId;
 
     public static CreateProjectResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateProjectResponse self = new CreateProjectResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateProjectResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateProjectResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateProjectResponse setBody(CreateProjectResponseBody body) {
-        this.body = body;
+    public CreateProjectResponse setProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
-    public CreateProjectResponseBody getBody() {
-        return this.body;
+    public String getProjectId() {
+        return this.projectId;
     }
 
 }

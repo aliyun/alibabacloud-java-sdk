@@ -4,12 +4,12 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class AddGameToProjectRequest extends TeaModel {
-    // 项目ID
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
-    // 游戏iD
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     public static AddGameToProjectRequest build(java.util.Map<String, ?> map) throws Exception {

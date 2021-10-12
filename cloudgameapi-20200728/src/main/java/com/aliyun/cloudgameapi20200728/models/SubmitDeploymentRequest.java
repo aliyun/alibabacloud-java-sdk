@@ -4,24 +4,24 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SubmitDeploymentRequest extends TeaModel {
-    // 项目ID
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
-    // 游戏iD
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
-    // 游戏版本ID
     @NameInMap("VersionId")
+    @Validation(required = true)
     public String versionId;
 
-    // 实例ID列表
     @NameInMap("CloudGameInstanceIds")
+    @Validation(required = true)
     public String cloudGameInstanceIds;
 
-    // 操作类型
     @NameInMap("OperationType")
+    @Validation(required = true)
     public String operationType;
 
     public static SubmitDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {

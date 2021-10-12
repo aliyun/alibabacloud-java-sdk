@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBoughtGamesRequest extends TeaModel {
     @NameInMap("AccountId")
+    @Validation(required = true)
     public String accountId;
 
     @NameInMap("AccountDomain")

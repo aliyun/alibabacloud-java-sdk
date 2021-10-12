@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class DispatchGameSlotRequest extends TeaModel {
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("AccessKey")
+    @Validation(required = true)
     public String accessKey;
 
     @NameInMap("RegionName")
     public String regionName;
 
     @NameInMap("UserId")
+    @Validation(required = true)
     public String userId;
 
     @NameInMap("BizParam")

@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class UploadGameVersionByDownloadRequest extends TeaModel {
     @NameInMap("Hash")
+    @Validation(required = true)
     public String hash;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("DownloadType")
+    @Validation(required = true)
     public String downloadType;
 
     @NameInMap("FileType")
+    @Validation(required = true)
     public String fileType;
 
     @NameInMap("VersionName")

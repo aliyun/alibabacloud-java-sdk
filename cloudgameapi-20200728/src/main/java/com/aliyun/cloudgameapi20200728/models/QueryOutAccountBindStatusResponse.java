@@ -4,33 +4,53 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class QueryOutAccountBindStatusResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public QueryOutAccountBindStatusResponseBody body;
+    public QueryOutAccountBindStatusResponseData data;
 
     public static QueryOutAccountBindStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryOutAccountBindStatusResponse self = new QueryOutAccountBindStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryOutAccountBindStatusResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public QueryOutAccountBindStatusResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public QueryOutAccountBindStatusResponse setBody(QueryOutAccountBindStatusResponseBody body) {
-        this.body = body;
+    public QueryOutAccountBindStatusResponse setData(QueryOutAccountBindStatusResponseData data) {
+        this.data = data;
         return this;
     }
-    public QueryOutAccountBindStatusResponseBody getBody() {
-        return this.body;
+    public QueryOutAccountBindStatusResponseData getData() {
+        return this.data;
+    }
+
+    public static class QueryOutAccountBindStatusResponseData extends TeaModel {
+        @NameInMap("BindStatus")
+        @Validation(required = true)
+        public Integer bindStatus;
+
+        public static QueryOutAccountBindStatusResponseData build(java.util.Map<String, ?> map) throws Exception {
+            QueryOutAccountBindStatusResponseData self = new QueryOutAccountBindStatusResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryOutAccountBindStatusResponseData setBindStatus(Integer bindStatus) {
+            this.bindStatus = bindStatus;
+            return this;
+        }
+        public Integer getBindStatus() {
+            return this.bindStatus;
+        }
+
     }
 
 }
