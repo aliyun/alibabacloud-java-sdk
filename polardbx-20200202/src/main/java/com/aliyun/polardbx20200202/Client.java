@@ -288,6 +288,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeBackupSetListWithOptions(request, runtime);
     }
 
+    public DescribeBinaryLogListResponse describeBinaryLogListWithOptions(DescribeBinaryLogListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeBinaryLogList", "2020-02-02", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeBinaryLogListResponse());
+    }
+
+    public DescribeBinaryLogListResponse describeBinaryLogList(DescribeBinaryLogListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeBinaryLogListWithOptions(request, runtime);
+    }
+
     public DescribeDBInstanceAttributeResponse describeDBInstanceAttributeWithOptions(DescribeDBInstanceAttributeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
