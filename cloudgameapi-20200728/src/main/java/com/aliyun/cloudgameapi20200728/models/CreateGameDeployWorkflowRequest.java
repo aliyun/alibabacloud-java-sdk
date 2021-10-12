@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateGameDeployWorkflowRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     @NameInMap("Hash")
+    @Validation(required = true)
     public String hash;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("DownloadType")
+    @Validation(required = true)
     public String downloadType;
 
     @NameInMap("FileType")
+    @Validation(required = true)
     public String fileType;
 
     @NameInMap("VersionName")
@@ -32,6 +37,7 @@ public class CreateGameDeployWorkflowRequest extends TeaModel {
     public String frameRate;
 
     @NameInMap("Instance")
+    @Validation(required = true)
     public String instance;
 
     public static CreateGameDeployWorkflowRequest build(java.util.Map<String, ?> map) throws Exception {

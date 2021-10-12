@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitInternalPurchaseReadyFlagRequest extends TeaModel {
     @NameInMap("Status")
+    @Validation(required = true)
     public Integer status;
 
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     @NameInMap("ChargeDate")
+    @Validation(required = true)
     public String chargeDate;
 
     @NameInMap("OrderTotalCount")
+    @Validation(required = true)
     public Integer orderTotalCount;
 
     @NameInMap("BatchInfoList")
+    @Validation(required = true)
     public java.util.List<SubmitInternalPurchaseReadyFlagRequestBatchInfoList> batchInfoList;
 
     public static SubmitInternalPurchaseReadyFlagRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -65,23 +70,17 @@ public class SubmitInternalPurchaseReadyFlagRequest extends TeaModel {
     }
 
     public static class SubmitInternalPurchaseReadyFlagRequestBatchInfoList extends TeaModel {
-        @NameInMap("BatchSize")
-        public Integer batchSize;
-
         @NameInMap("BatchNumbers")
+        @Validation(required = true)
         public String batchNumbers;
+
+        @NameInMap("BatchSize")
+        @Validation(required = true)
+        public Integer batchSize;
 
         public static SubmitInternalPurchaseReadyFlagRequestBatchInfoList build(java.util.Map<String, ?> map) throws Exception {
             SubmitInternalPurchaseReadyFlagRequestBatchInfoList self = new SubmitInternalPurchaseReadyFlagRequestBatchInfoList();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitInternalPurchaseReadyFlagRequestBatchInfoList setBatchSize(Integer batchSize) {
-            this.batchSize = batchSize;
-            return this;
-        }
-        public Integer getBatchSize() {
-            return this.batchSize;
         }
 
         public SubmitInternalPurchaseReadyFlagRequestBatchInfoList setBatchNumbers(String batchNumbers) {
@@ -90,6 +89,14 @@ public class SubmitInternalPurchaseReadyFlagRequest extends TeaModel {
         }
         public String getBatchNumbers() {
             return this.batchNumbers;
+        }
+
+        public SubmitInternalPurchaseReadyFlagRequestBatchInfoList setBatchSize(Integer batchSize) {
+            this.batchSize = batchSize;
+            return this;
+        }
+        public Integer getBatchSize() {
+            return this.batchSize;
         }
 
     }

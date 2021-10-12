@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchStopGameSessionsRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     @NameInMap("GameId")

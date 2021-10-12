@@ -4,15 +4,13 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class AdaptGameVersionRequest extends TeaModel {
-    // 游戏版本ID
     @NameInMap("VersionId")
+    @Validation(required = true)
     public String versionId;
 
-    // 分辨率
     @NameInMap("Resolution")
     public String resolution;
 
-    // 帧率
     @NameInMap("FrameRate")
     public String frameRate;
 

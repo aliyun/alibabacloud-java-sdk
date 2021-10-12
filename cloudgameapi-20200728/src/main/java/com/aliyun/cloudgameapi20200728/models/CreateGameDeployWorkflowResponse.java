@@ -4,33 +4,33 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class CreateGameDeployWorkflowResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("TaskId")
     @Validation(required = true)
-    public CreateGameDeployWorkflowResponseBody body;
+    public String taskId;
 
     public static CreateGameDeployWorkflowResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateGameDeployWorkflowResponse self = new CreateGameDeployWorkflowResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateGameDeployWorkflowResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateGameDeployWorkflowResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateGameDeployWorkflowResponse setBody(CreateGameDeployWorkflowResponseBody body) {
-        this.body = body;
+    public CreateGameDeployWorkflowResponse setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public CreateGameDeployWorkflowResponseBody getBody() {
-        return this.body;
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

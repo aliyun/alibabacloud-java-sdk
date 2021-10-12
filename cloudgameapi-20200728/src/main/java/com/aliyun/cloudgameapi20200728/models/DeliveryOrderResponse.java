@@ -4,33 +4,53 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class DeliveryOrderResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public DeliveryOrderResponseBody body;
+    public DeliveryOrderResponseData data;
 
     public static DeliveryOrderResponse build(java.util.Map<String, ?> map) throws Exception {
         DeliveryOrderResponse self = new DeliveryOrderResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeliveryOrderResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeliveryOrderResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DeliveryOrderResponse setBody(DeliveryOrderResponseBody body) {
-        this.body = body;
+    public DeliveryOrderResponse setData(DeliveryOrderResponseData data) {
+        this.data = data;
         return this;
     }
-    public DeliveryOrderResponseBody getBody() {
-        return this.body;
+    public DeliveryOrderResponseData getData() {
+        return this.data;
+    }
+
+    public static class DeliveryOrderResponseData extends TeaModel {
+        @NameInMap("DeliveryStatus")
+        @Validation(required = true)
+        public String deliveryStatus;
+
+        public static DeliveryOrderResponseData build(java.util.Map<String, ?> map) throws Exception {
+            DeliveryOrderResponseData self = new DeliveryOrderResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public DeliveryOrderResponseData setDeliveryStatus(String deliveryStatus) {
+            this.deliveryStatus = deliveryStatus;
+            return this;
+        }
+        public String getDeliveryStatus() {
+            return this.deliveryStatus;
+        }
+
     }
 
 }

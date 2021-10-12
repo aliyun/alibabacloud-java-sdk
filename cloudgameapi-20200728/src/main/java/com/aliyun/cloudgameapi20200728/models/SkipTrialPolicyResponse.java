@@ -4,33 +4,53 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class SkipTrialPolicyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public SkipTrialPolicyResponseBody body;
+    public SkipTrialPolicyResponseData data;
 
     public static SkipTrialPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         SkipTrialPolicyResponse self = new SkipTrialPolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public SkipTrialPolicyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SkipTrialPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SkipTrialPolicyResponse setBody(SkipTrialPolicyResponseBody body) {
-        this.body = body;
+    public SkipTrialPolicyResponse setData(SkipTrialPolicyResponseData data) {
+        this.data = data;
         return this;
     }
-    public SkipTrialPolicyResponseBody getBody() {
-        return this.body;
+    public SkipTrialPolicyResponseData getData() {
+        return this.data;
+    }
+
+    public static class SkipTrialPolicyResponseData extends TeaModel {
+        @NameInMap("SkipResult")
+        @Validation(required = true)
+        public Integer skipResult;
+
+        public static SkipTrialPolicyResponseData build(java.util.Map<String, ?> map) throws Exception {
+            SkipTrialPolicyResponseData self = new SkipTrialPolicyResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public SkipTrialPolicyResponseData setSkipResult(Integer skipResult) {
+            this.skipResult = skipResult;
+            return this;
+        }
+        public Integer getSkipResult() {
+            return this.skipResult;
+        }
+
     }
 
 }

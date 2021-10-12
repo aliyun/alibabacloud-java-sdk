@@ -4,8 +4,8 @@ package com.aliyun.cloudgameapi20200728.models;
 import com.aliyun.tea.*;
 
 public class DeleteGameRequest extends TeaModel {
-    // 游戏ID
     @NameInMap("GameId")
+    @Validation(required = true)
     public String gameId;
 
     public static DeleteGameRequest build(java.util.Map<String, ?> map) throws Exception {
