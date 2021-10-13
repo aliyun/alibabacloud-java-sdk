@@ -1,3 +1,6 @@
+2021-10-13 Version: 1.0.9
+- Update GetPhoneNumber.
+
 2021-09-28 Version: 1.0.8
 - Support PushNotifications.
 - Support WakeUpApp.

@@ -32,76 +32,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public GetPhoneNumberResponse getPhoneNumber() throws Exception {
+    public GetPhoneNumberResponse getPhoneNumber(GetPhoneNumberRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         GetPhoneNumberHeaders headers = new GetPhoneNumberHeaders();
-        return this.getPhoneNumberWithOptions(headers, runtime);
+        return this.getPhoneNumberWithOptions(request, headers, runtime);
     }
 
-    public GetPhoneNumberResponse getPhoneNumberWithOptions(GetPhoneNumberHeaders tmpHeader, RuntimeOptions runtime) throws Exception {
-        GetPhoneNumberShrinkHeaders headers = new GetPhoneNumberShrinkHeaders();
-        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpHeader.commonParams))) {
-            headers.commonParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpHeader.commonParams), "CommonParams", "json");
+    public GetPhoneNumberResponse getPhoneNumberWithOptions(GetPhoneNumberRequest tmpReq, GetPhoneNumberHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetPhoneNumberShrinkRequest request = new GetPhoneNumberShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.userInfo))) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.userInfo), "UserInfo", "json");
         }
 
-        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
-            realHeaders = headers.commonHeaders;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.commonParamsShrink)) {
-            realHeaders.put("CommonParams", headers.commonParamsShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
-            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
-            realHeaders.put("Authorization", headers.authorization);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", realHeaders)
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetPhoneNumber"),
-            new TeaPair("version", "iap_1.0"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1.0/iap/profile/phoneNumber"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberResponse());
-    }
-
-    public WakeUpAppResponse wakeUpApp(WakeUpAppRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        WakeUpAppHeaders headers = new WakeUpAppHeaders();
-        return this.wakeUpAppWithOptions(request, headers, runtime);
-    }
-
-    public WakeUpAppResponse wakeUpAppWithOptions(WakeUpAppRequest request, WakeUpAppHeaders headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
-            body.put("Path", request.path);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.genieAppId)) {
-            body.put("GenieAppId", request.genieAppId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.targetInfo))) {
-            body.put("TargetInfo", request.targetInfo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.isDebug)) {
-            body.put("IsDebug", request.isDebug);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userInfoShrink)) {
+            query.put("UserInfo", request.userInfoShrink);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -119,20 +66,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "WakeUpApp"),
+            new TeaPair("action", "GetPhoneNumber"),
             new TeaPair("version", "iap_1.0"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/v1.0/iap/wakeup"),
-            new TeaPair("method", "PUT"),
+            new TeaPair("pathname", "/v1.0/iap/profile/phoneNumber"),
+            new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
+            new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new WakeUpAppResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberResponse());
     }
 
     public PushNotificationsResponse pushNotifications(PushNotificationsRequest request) throws Exception {
@@ -191,5 +138,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new PushNotificationsResponse());
+    }
+
+    public WakeUpAppResponse wakeUpApp(WakeUpAppRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        WakeUpAppHeaders headers = new WakeUpAppHeaders();
+        return this.wakeUpAppWithOptions(request, headers, runtime);
+    }
+
+    public WakeUpAppResponse wakeUpAppWithOptions(WakeUpAppRequest request, WakeUpAppHeaders headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.genieAppId)) {
+            body.put("GenieAppId", request.genieAppId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDebug)) {
+            body.put("IsDebug", request.isDebug);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            body.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.targetInfo))) {
+            body.put("TargetInfo", request.targetInfo);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", headers.xAcsAligenieAccessToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", headers.authorization);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "WakeUpApp"),
+            new TeaPair("version", "iap_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/iap/wakeup"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WakeUpAppResponse());
     }
 }
