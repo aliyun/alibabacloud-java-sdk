@@ -42,12 +42,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public SearchByPicResponse searchByPicWithOptions(SearchByPicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetProductInfoByIdsResponse getProductInfoByIdsWithOptions(GetProductInfoByIdsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("SearchByPic", "2021-05-01", "HTTPS", "POST", "AK", "json", req, runtime), new SearchByPicResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProductInfoByIds"),
+            new TeaPair("version", "2021-05-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductInfoByIdsResponse());
+    }
+
+    public GetProductInfoByIdsResponse getProductInfoByIds(GetProductInfoByIdsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getProductInfoByIdsWithOptions(request, runtime);
+    }
+
+    public SearchByPicResponse searchByPicWithOptions(SearchByPicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("UserType", request.userType);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchByPic"),
+            new TeaPair("version", "2021-05-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchByPicResponse());
     }
 
     public SearchByPicResponse searchByPic(SearchByPicRequest request) throws Exception {
@@ -131,10 +169,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public SearchByUrlResponse searchByUrlWithOptions(SearchByUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        query.put("UserType", request.userType);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("SearchByUrl", "2021-05-01", "HTTPS", "POST", "AK", "json", req, runtime), new SearchByUrlResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchByUrl"),
+            new TeaPair("version", "2021-05-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchByUrlResponse());
     }
 
     public SearchByUrlResponse searchByUrl(SearchByUrlRequest request) throws Exception {
