@@ -7,6 +7,9 @@ public class ServiceInvokeResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class ServiceInvokeResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public String data;
 
     public static ServiceInvokeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ServiceInvokeResponseBody self = new ServiceInvokeResponseBody();
@@ -30,6 +30,14 @@ public class ServiceInvokeResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ServiceInvokeResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public ServiceInvokeResponseBody setMessage(String message) {
@@ -54,14 +62,6 @@ public class ServiceInvokeResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ServiceInvokeResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
 }
