@@ -4,44 +4,39 @@ package com.aliyun.imagesearch20210501.models;
 import com.aliyun.tea.*;
 
 public class SearchByUrlRequest extends TeaModel {
-    @NameInMap("PicUrl")
-    public String picUrl;
-
     @NameInMap("CategoryId")
     public Integer categoryId;
 
     @NameInMap("Crop")
     public Boolean crop;
 
-    @NameInMap("Region")
-    public String region;
-
-    @NameInMap("Start")
-    public Integer start;
+    @NameInMap("Fields")
+    public String fields;
 
     @NameInMap("Num")
     public Integer num;
 
-    @NameInMap("Fields")
-    public String fields;
-
-    @NameInMap("RelationId")
-    public Long relationId;
+    @NameInMap("PicUrl")
+    public String picUrl;
 
     @NameInMap("Pid")
     public String pid;
 
+    @NameInMap("Region")
+    public String region;
+
+    @NameInMap("RelationId")
+    public Long relationId;
+
+    @NameInMap("Start")
+    public Integer start;
+
+    @NameInMap("UserType")
+    public Long userType;
+
     public static SearchByUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchByUrlRequest self = new SearchByUrlRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchByUrlRequest setPicUrl(String picUrl) {
-        this.picUrl = picUrl;
-        return this;
-    }
-    public String getPicUrl() {
-        return this.picUrl;
     }
 
     public SearchByUrlRequest setCategoryId(Integer categoryId) {
@@ -60,20 +55,12 @@ public class SearchByUrlRequest extends TeaModel {
         return this.crop;
     }
 
-    public SearchByUrlRequest setRegion(String region) {
-        this.region = region;
+    public SearchByUrlRequest setFields(String fields) {
+        this.fields = fields;
         return this;
     }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public SearchByUrlRequest setStart(Integer start) {
-        this.start = start;
-        return this;
-    }
-    public Integer getStart() {
-        return this.start;
+    public String getFields() {
+        return this.fields;
     }
 
     public SearchByUrlRequest setNum(Integer num) {
@@ -84,12 +71,28 @@ public class SearchByUrlRequest extends TeaModel {
         return this.num;
     }
 
-    public SearchByUrlRequest setFields(String fields) {
-        this.fields = fields;
+    public SearchByUrlRequest setPicUrl(String picUrl) {
+        this.picUrl = picUrl;
         return this;
     }
-    public String getFields() {
-        return this.fields;
+    public String getPicUrl() {
+        return this.picUrl;
+    }
+
+    public SearchByUrlRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
+    }
+
+    public SearchByUrlRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public SearchByUrlRequest setRelationId(Long relationId) {
@@ -100,12 +103,20 @@ public class SearchByUrlRequest extends TeaModel {
         return this.relationId;
     }
 
-    public SearchByUrlRequest setPid(String pid) {
-        this.pid = pid;
+    public SearchByUrlRequest setStart(Integer start) {
+        this.start = start;
         return this;
     }
-    public String getPid() {
-        return this.pid;
+    public Integer getStart() {
+        return this.start;
+    }
+
+    public SearchByUrlRequest setUserType(Long userType) {
+        this.userType = userType;
+        return this;
+    }
+    public Long getUserType() {
+        return this.userType;
     }
 
 }

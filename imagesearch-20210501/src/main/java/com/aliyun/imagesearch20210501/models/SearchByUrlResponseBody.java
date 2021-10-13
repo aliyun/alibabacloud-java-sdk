@@ -4,35 +4,27 @@ package com.aliyun.imagesearch20210501.models;
 import com.aliyun.tea.*;
 
 public class SearchByUrlResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("Code")
     public Integer code;
-
-    @NameInMap("Message")
-    public String message;
 
     @NameInMap("Data")
     public SearchByUrlResponseBodyData data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("PicInfo")
     public SearchByUrlResponseBodyPicInfo picInfo;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static SearchByUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchByUrlResponseBody self = new SearchByUrlResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SearchByUrlResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public SearchByUrlResponseBody setCode(Integer code) {
@@ -43,6 +35,14 @@ public class SearchByUrlResponseBody extends TeaModel {
         return this.code;
     }
 
+    public SearchByUrlResponseBody setData(SearchByUrlResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public SearchByUrlResponseBodyData getData() {
+        return this.data;
+    }
+
     public SearchByUrlResponseBody setMessage(String message) {
         this.message = message;
         return this;
@@ -51,12 +51,12 @@ public class SearchByUrlResponseBody extends TeaModel {
         return this.message;
     }
 
-    public SearchByUrlResponseBody setData(SearchByUrlResponseBodyData data) {
-        this.data = data;
+    public SearchByUrlResponseBody setPicInfo(SearchByUrlResponseBodyPicInfo picInfo) {
+        this.picInfo = picInfo;
         return this;
     }
-    public SearchByUrlResponseBodyData getData() {
-        return this.data;
+    public SearchByUrlResponseBodyPicInfo getPicInfo() {
+        return this.picInfo;
     }
 
     public SearchByUrlResponseBody setRequestId(String requestId) {
@@ -67,12 +67,12 @@ public class SearchByUrlResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SearchByUrlResponseBody setPicInfo(SearchByUrlResponseBodyPicInfo picInfo) {
-        this.picInfo = picInfo;
+    public SearchByUrlResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SearchByUrlResponseBodyPicInfo getPicInfo() {
-        return this.picInfo;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class SearchByUrlResponseBodyDataAuctionsResultMaxCommission extends TeaModel {
@@ -120,26 +120,20 @@ public class SearchByUrlResponseBody extends TeaModel {
         @NameInMap("ItemId")
         public String itemId;
 
-        @NameInMap("ItemName")
-        public String itemName;
-
         @NameInMap("Title")
         public String title;
 
-        @NameInMap("Pic")
-        public String pic;
+        @NameInMap("ShortTitle")
+        public String shortTitle;
+
+        @NameInMap("SubTitle")
+        public String subTitle;
 
         @NameInMap("PicUrl")
         public String picUrl;
 
-        @NameInMap("Price")
-        public String price;
-
         @NameInMap("ReservePrice")
         public String reservePrice;
-
-        @NameInMap("PromotionPrice")
-        public String promotionPrice;
 
         @NameInMap("ZkFinalPrice")
         public String zkFinalPrice;
@@ -153,17 +147,11 @@ public class SearchByUrlResponseBody extends TeaModel {
         @NameInMap("Provcity")
         public String provcity;
 
-        @NameInMap("SellerNickName")
-        public String sellerNickName;
-
         @NameInMap("Nick")
         public String nick;
 
         @NameInMap("SellerId")
         public String sellerId;
-
-        @NameInMap("MonthSellCount")
-        public Integer monthSellCount;
 
         @NameInMap("Volume")
         public Integer volume;
@@ -174,14 +162,8 @@ public class SearchByUrlResponseBody extends TeaModel {
         @NameInMap("CategoryName")
         public String categoryName;
 
-        @NameInMap("CouponActivityId")
-        public String couponActivityId;
-
         @NameInMap("CouponTotalCount")
         public String couponTotalCount;
-
-        @NameInMap("CouponSendCount")
-        public String couponSendCount;
 
         @NameInMap("CouponRemainCount")
         public Integer couponRemainCount;
@@ -198,17 +180,8 @@ public class SearchByUrlResponseBody extends TeaModel {
         @NameInMap("CouponAmount")
         public Integer couponAmount;
 
-        @NameInMap("CouponSaleTextInfo")
-        public String couponSaleTextInfo;
-
         @NameInMap("CouponInfo")
         public String couponInfo;
-
-        @NameInMap("TkMktRate")
-        public Integer tkMktRate;
-
-        @NameInMap("TkRate")
-        public Integer tkRate;
 
         @NameInMap("CommissionRate")
         public String commissionRate;
@@ -216,17 +189,14 @@ public class SearchByUrlResponseBody extends TeaModel {
         @NameInMap("CouponShareUrl")
         public String couponShareUrl;
 
-        @NameInMap("ClickUrl")
-        public String clickUrl;
+        @NameInMap("DeeplinkCouponShareUrl")
+        public String deeplinkCouponShareUrl;
 
         @NameInMap("Url")
         public String url;
 
-        @NameInMap("ShortUrl")
-        public String shortUrl;
-
-        @NameInMap("Key")
-        public String key;
+        @NameInMap("DeeplinkUrl")
+        public String deeplinkUrl;
 
         @NameInMap("ShopTitle")
         public String shopTitle;
@@ -247,14 +217,6 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.itemId;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setItemName(String itemName) {
-            this.itemName = itemName;
-            return this;
-        }
-        public String getItemName() {
-            return this.itemName;
-        }
-
         public SearchByUrlResponseBodyDataAuctionsResult setTitle(String title) {
             this.title = title;
             return this;
@@ -263,12 +225,20 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.title;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setPic(String pic) {
-            this.pic = pic;
+        public SearchByUrlResponseBodyDataAuctionsResult setShortTitle(String shortTitle) {
+            this.shortTitle = shortTitle;
             return this;
         }
-        public String getPic() {
-            return this.pic;
+        public String getShortTitle() {
+            return this.shortTitle;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setSubTitle(String subTitle) {
+            this.subTitle = subTitle;
+            return this;
+        }
+        public String getSubTitle() {
+            return this.subTitle;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setPicUrl(String picUrl) {
@@ -279,28 +249,12 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.picUrl;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setPrice(String price) {
-            this.price = price;
-            return this;
-        }
-        public String getPrice() {
-            return this.price;
-        }
-
         public SearchByUrlResponseBodyDataAuctionsResult setReservePrice(String reservePrice) {
             this.reservePrice = reservePrice;
             return this;
         }
         public String getReservePrice() {
             return this.reservePrice;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setPromotionPrice(String promotionPrice) {
-            this.promotionPrice = promotionPrice;
-            return this;
-        }
-        public String getPromotionPrice() {
-            return this.promotionPrice;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setZkFinalPrice(String zkFinalPrice) {
@@ -335,14 +289,6 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.provcity;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setSellerNickName(String sellerNickName) {
-            this.sellerNickName = sellerNickName;
-            return this;
-        }
-        public String getSellerNickName() {
-            return this.sellerNickName;
-        }
-
         public SearchByUrlResponseBodyDataAuctionsResult setNick(String nick) {
             this.nick = nick;
             return this;
@@ -357,14 +303,6 @@ public class SearchByUrlResponseBody extends TeaModel {
         }
         public String getSellerId() {
             return this.sellerId;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setMonthSellCount(Integer monthSellCount) {
-            this.monthSellCount = monthSellCount;
-            return this;
-        }
-        public Integer getMonthSellCount() {
-            return this.monthSellCount;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setVolume(Integer volume) {
@@ -391,28 +329,12 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.categoryName;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponActivityId(String couponActivityId) {
-            this.couponActivityId = couponActivityId;
-            return this;
-        }
-        public String getCouponActivityId() {
-            return this.couponActivityId;
-        }
-
         public SearchByUrlResponseBodyDataAuctionsResult setCouponTotalCount(String couponTotalCount) {
             this.couponTotalCount = couponTotalCount;
             return this;
         }
         public String getCouponTotalCount() {
             return this.couponTotalCount;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponSendCount(String couponSendCount) {
-            this.couponSendCount = couponSendCount;
-            return this;
-        }
-        public String getCouponSendCount() {
-            return this.couponSendCount;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setCouponRemainCount(Integer couponRemainCount) {
@@ -455,36 +377,12 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.couponAmount;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponSaleTextInfo(String couponSaleTextInfo) {
-            this.couponSaleTextInfo = couponSaleTextInfo;
-            return this;
-        }
-        public String getCouponSaleTextInfo() {
-            return this.couponSaleTextInfo;
-        }
-
         public SearchByUrlResponseBodyDataAuctionsResult setCouponInfo(String couponInfo) {
             this.couponInfo = couponInfo;
             return this;
         }
         public String getCouponInfo() {
             return this.couponInfo;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setTkMktRate(Integer tkMktRate) {
-            this.tkMktRate = tkMktRate;
-            return this;
-        }
-        public Integer getTkMktRate() {
-            return this.tkMktRate;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setTkRate(Integer tkRate) {
-            this.tkRate = tkRate;
-            return this;
-        }
-        public Integer getTkRate() {
-            return this.tkRate;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setCommissionRate(String commissionRate) {
@@ -503,12 +401,12 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.couponShareUrl;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setClickUrl(String clickUrl) {
-            this.clickUrl = clickUrl;
+        public SearchByUrlResponseBodyDataAuctionsResult setDeeplinkCouponShareUrl(String deeplinkCouponShareUrl) {
+            this.deeplinkCouponShareUrl = deeplinkCouponShareUrl;
             return this;
         }
-        public String getClickUrl() {
-            return this.clickUrl;
+        public String getDeeplinkCouponShareUrl() {
+            return this.deeplinkCouponShareUrl;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setUrl(String url) {
@@ -519,20 +417,12 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.url;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setShortUrl(String shortUrl) {
-            this.shortUrl = shortUrl;
+        public SearchByUrlResponseBodyDataAuctionsResult setDeeplinkUrl(String deeplinkUrl) {
+            this.deeplinkUrl = deeplinkUrl;
             return this;
         }
-        public String getShortUrl() {
-            return this.shortUrl;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
+        public String getDeeplinkUrl() {
+            return this.deeplinkUrl;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setShopTitle(String shopTitle) {
@@ -633,23 +523,15 @@ public class SearchByUrlResponseBody extends TeaModel {
     }
 
     public static class SearchByUrlResponseBodyPicInfoMainRegion extends TeaModel {
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("MultiCategoryId")
         public java.util.List<SearchByUrlResponseBodyPicInfoMainRegionMultiCategoryId> multiCategoryId;
+
+        @NameInMap("Region")
+        public String region;
 
         public static SearchByUrlResponseBodyPicInfoMainRegion build(java.util.Map<String, ?> map) throws Exception {
             SearchByUrlResponseBodyPicInfoMainRegion self = new SearchByUrlResponseBodyPicInfoMainRegion();
             return TeaModel.build(map, self);
-        }
-
-        public SearchByUrlResponseBodyPicInfoMainRegion setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public SearchByUrlResponseBodyPicInfoMainRegion setMultiCategoryId(java.util.List<SearchByUrlResponseBodyPicInfoMainRegionMultiCategoryId> multiCategoryId) {
@@ -658,6 +540,14 @@ public class SearchByUrlResponseBody extends TeaModel {
         }
         public java.util.List<SearchByUrlResponseBodyPicInfoMainRegionMultiCategoryId> getMultiCategoryId() {
             return this.multiCategoryId;
+        }
+
+        public SearchByUrlResponseBodyPicInfoMainRegion setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }
