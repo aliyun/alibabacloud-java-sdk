@@ -3,12 +3,9 @@ package com.aliyun.idaas_doraemon20210520.models;
 
 import com.aliyun.tea.*;
 
-public class ServiceInvokeRequest extends TeaModel {
+public class FetchAccessTokenRequest extends TeaModel {
     @NameInMap("ApplicationExternalId")
     public String applicationExternalId;
-
-    @NameInMap("DoraemonAction")
-    public String doraemonAction;
 
     @NameInMap("MobileExtendParamsJson")
     public String mobileExtendParamsJson;
@@ -19,21 +16,15 @@ public class ServiceInvokeRequest extends TeaModel {
     @NameInMap("ServerExtendParamsJson")
     public String serverExtendParamsJson;
 
-    @NameInMap("ServiceCode")
-    public String serviceCode;
-
-    @NameInMap("TestModel")
-    public Boolean testModel;
-
     @NameInMap("XClientIp")
     public String XClientIp;
 
-    public static ServiceInvokeRequest build(java.util.Map<String, ?> map) throws Exception {
-        ServiceInvokeRequest self = new ServiceInvokeRequest();
+    public static FetchAccessTokenRequest build(java.util.Map<String, ?> map) throws Exception {
+        FetchAccessTokenRequest self = new FetchAccessTokenRequest();
         return TeaModel.build(map, self);
     }
 
-    public ServiceInvokeRequest setApplicationExternalId(String applicationExternalId) {
+    public FetchAccessTokenRequest setApplicationExternalId(String applicationExternalId) {
         this.applicationExternalId = applicationExternalId;
         return this;
     }
@@ -41,15 +32,7 @@ public class ServiceInvokeRequest extends TeaModel {
         return this.applicationExternalId;
     }
 
-    public ServiceInvokeRequest setDoraemonAction(String doraemonAction) {
-        this.doraemonAction = doraemonAction;
-        return this;
-    }
-    public String getDoraemonAction() {
-        return this.doraemonAction;
-    }
-
-    public ServiceInvokeRequest setMobileExtendParamsJson(String mobileExtendParamsJson) {
+    public FetchAccessTokenRequest setMobileExtendParamsJson(String mobileExtendParamsJson) {
         this.mobileExtendParamsJson = mobileExtendParamsJson;
         return this;
     }
@@ -57,7 +40,7 @@ public class ServiceInvokeRequest extends TeaModel {
         return this.mobileExtendParamsJson;
     }
 
-    public ServiceInvokeRequest setMobileExtendParamsJsonSign(String mobileExtendParamsJsonSign) {
+    public FetchAccessTokenRequest setMobileExtendParamsJsonSign(String mobileExtendParamsJsonSign) {
         this.mobileExtendParamsJsonSign = mobileExtendParamsJsonSign;
         return this;
     }
@@ -65,7 +48,7 @@ public class ServiceInvokeRequest extends TeaModel {
         return this.mobileExtendParamsJsonSign;
     }
 
-    public ServiceInvokeRequest setServerExtendParamsJson(String serverExtendParamsJson) {
+    public FetchAccessTokenRequest setServerExtendParamsJson(String serverExtendParamsJson) {
         this.serverExtendParamsJson = serverExtendParamsJson;
         return this;
     }
@@ -73,23 +56,7 @@ public class ServiceInvokeRequest extends TeaModel {
         return this.serverExtendParamsJson;
     }
 
-    public ServiceInvokeRequest setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-        return this;
-    }
-    public String getServiceCode() {
-        return this.serviceCode;
-    }
-
-    public ServiceInvokeRequest setTestModel(Boolean testModel) {
-        this.testModel = testModel;
-        return this;
-    }
-    public Boolean getTestModel() {
-        return this.testModel;
-    }
-
-    public ServiceInvokeRequest setXClientIp(String XClientIp) {
+    public FetchAccessTokenRequest setXClientIp(String XClientIp) {
         this.XClientIp = XClientIp;
         return this;
     }
