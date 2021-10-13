@@ -36,17 +36,17 @@ public class GetResourceResponseBody extends TeaModel {
         @NameInMap("productCode")
         public String productCode;
 
-        @NameInMap("resourceTypeCode")
-        public String resourceTypeCode;
-
         @NameInMap("regionId")
         public String regionId;
+
+        @NameInMap("resourceAttributes")
+        public String resourceAttributes;
 
         @NameInMap("resourceId")
         public String resourceId;
 
-        @NameInMap("resourceAttributes")
-        public String resourceAttributes;
+        @NameInMap("resourceTypeCode")
+        public String resourceTypeCode;
 
         public static GetResourceResponseBodyResource build(java.util.Map<String, ?> map) throws Exception {
             GetResourceResponseBodyResource self = new GetResourceResponseBodyResource();
@@ -61,20 +61,20 @@ public class GetResourceResponseBody extends TeaModel {
             return this.productCode;
         }
 
-        public GetResourceResponseBodyResource setResourceTypeCode(String resourceTypeCode) {
-            this.resourceTypeCode = resourceTypeCode;
-            return this;
-        }
-        public String getResourceTypeCode() {
-            return this.resourceTypeCode;
-        }
-
         public GetResourceResponseBodyResource setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetResourceResponseBodyResource setResourceAttributes(String resourceAttributes) {
+            this.resourceAttributes = resourceAttributes;
+            return this;
+        }
+        public String getResourceAttributes() {
+            return this.resourceAttributes;
         }
 
         public GetResourceResponseBodyResource setResourceId(String resourceId) {
@@ -85,12 +85,12 @@ public class GetResourceResponseBody extends TeaModel {
             return this.resourceId;
         }
 
-        public GetResourceResponseBodyResource setResourceAttributes(String resourceAttributes) {
-            this.resourceAttributes = resourceAttributes;
+        public GetResourceResponseBodyResource setResourceTypeCode(String resourceTypeCode) {
+            this.resourceTypeCode = resourceTypeCode;
             return this;
         }
-        public String getResourceAttributes() {
-            return this.resourceAttributes;
+        public String getResourceTypeCode() {
+            return this.resourceTypeCode;
         }
 
     }

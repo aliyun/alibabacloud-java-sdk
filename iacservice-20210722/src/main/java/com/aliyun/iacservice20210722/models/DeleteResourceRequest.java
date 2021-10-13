@@ -4,23 +4,15 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class DeleteResourceRequest extends TeaModel {
-    @NameInMap("regionId")
-    public String regionId;
-
     @NameInMap("isAsync")
     public Boolean isAsync;
+
+    @NameInMap("regionId")
+    public String regionId;
 
     public static DeleteResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteResourceRequest self = new DeleteResourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteResourceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteResourceRequest setIsAsync(Boolean isAsync) {
@@ -29,6 +21,14 @@ public class DeleteResourceRequest extends TeaModel {
     }
     public Boolean getIsAsync() {
         return this.isAsync;
+    }
+
+    public DeleteResourceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

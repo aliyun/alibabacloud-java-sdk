@@ -4,8 +4,11 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesShrinkRequest extends TeaModel {
-    @NameInMap("regionIds")
-    public String regionIdsShrink;
+    @NameInMap("filter")
+    public String filterShrink;
+
+    @NameInMap("isReload")
+    public Boolean isReload;
 
     @NameInMap("pageNum")
     public Integer pageNum;
@@ -13,20 +16,28 @@ public class ListResourcesShrinkRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    @NameInMap("isReload")
-    public Boolean isReload;
+    @NameInMap("regionIds")
+    public String regionIdsShrink;
 
     public static ListResourcesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesShrinkRequest self = new ListResourcesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListResourcesShrinkRequest setRegionIdsShrink(String regionIdsShrink) {
-        this.regionIdsShrink = regionIdsShrink;
+    public ListResourcesShrinkRequest setFilterShrink(String filterShrink) {
+        this.filterShrink = filterShrink;
         return this;
     }
-    public String getRegionIdsShrink() {
-        return this.regionIdsShrink;
+    public String getFilterShrink() {
+        return this.filterShrink;
+    }
+
+    public ListResourcesShrinkRequest setIsReload(Boolean isReload) {
+        this.isReload = isReload;
+        return this;
+    }
+    public Boolean getIsReload() {
+        return this.isReload;
     }
 
     public ListResourcesShrinkRequest setPageNum(Integer pageNum) {
@@ -45,12 +56,12 @@ public class ListResourcesShrinkRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListResourcesShrinkRequest setIsReload(Boolean isReload) {
-        this.isReload = isReload;
+    public ListResourcesShrinkRequest setRegionIdsShrink(String regionIdsShrink) {
+        this.regionIdsShrink = regionIdsShrink;
         return this;
     }
-    public Boolean getIsReload() {
-        return this.isReload;
+    public String getRegionIdsShrink() {
+        return this.regionIdsShrink;
     }
 
 }
