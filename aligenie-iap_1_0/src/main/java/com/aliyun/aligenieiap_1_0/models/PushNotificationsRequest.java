@@ -34,25 +34,17 @@ public class PushNotificationsRequest extends TeaModel {
     }
 
     public static class PushNotificationsRequestNotificationUnicastRequestSendTarget extends TeaModel {
-        // 推送的目标类型，获取到对应设备或用户标识时的类型 - DEVICE_UNION_ID：设备unionId - DEVICE_OPEN_ID：设备openId - USER_UNION_ID：用户unionId - USER_OPEN_ID：用户openId
-        @NameInMap("TargetType")
-        public String targetType;
-
         // 推送目标类型对应的标识值。
         @NameInMap("TargetIdentity")
         public String targetIdentity;
 
+        // 推送的目标类型，获取到对应设备或用户标识时的类型 - DEVICE_UNION_ID：设备unionId - DEVICE_OPEN_ID：设备openId - USER_UNION_ID：用户unionId - USER_OPEN_ID：用户openId
+        @NameInMap("TargetType")
+        public String targetType;
+
         public static PushNotificationsRequestNotificationUnicastRequestSendTarget build(java.util.Map<String, ?> map) throws Exception {
             PushNotificationsRequestNotificationUnicastRequestSendTarget self = new PushNotificationsRequestNotificationUnicastRequestSendTarget();
             return TeaModel.build(map, self);
-        }
-
-        public PushNotificationsRequestNotificationUnicastRequestSendTarget setTargetType(String targetType) {
-            this.targetType = targetType;
-            return this;
-        }
-        public String getTargetType() {
-            return this.targetType;
         }
 
         public PushNotificationsRequestNotificationUnicastRequestSendTarget setTargetIdentity(String targetIdentity) {
@@ -63,72 +55,48 @@ public class PushNotificationsRequest extends TeaModel {
             return this.targetIdentity;
         }
 
+        public PushNotificationsRequestNotificationUnicastRequestSendTarget setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
+        }
+
     }
 
     public static class PushNotificationsRequestNotificationUnicastRequest extends TeaModel {
-        // 消息推送的目标信息。
-        @NameInMap("SendTarget")
-        public PushNotificationsRequestNotificationUnicastRequestSendTarget sendTarget;
-
-        // 消息模板，在天猫精灵应用平台中申请消息模板时得到的模板id。
-        @NameInMap("MessageTemplateId")
-        public String messageTemplateId;
-
-        // 占位符信息，例如：模板是【你好，{nick}！】这里可以是：{"nick":"小甜甜"}
-        @NameInMap("PlaceHolder")
-        public java.util.Map<String, ?> placeHolder;
+        // 编码类型对应的值，例如：编码类型是SKILLID，其值就为webhook服务中得到的skillId；编码类似是PACKAGENAME，其值就为对应客户端app的packageName。
+        @NameInMap("EncodeKey")
+        public String encodeKey;
 
         // 编码类型，获取猫精的设备标识的途径有多种，不同途径对应不同的编码类型： PACKAGE_NAME：apk包名 SKILL_ID：技能id
         @NameInMap("EncodeType")
         public String encodeType;
 
-        // 编码类型对应的值，例如：编码类型是SKILLID，其值就为webhook服务中得到的skillId；编码类似是PACKAGENAME，其值就为对应客户端app的packageName。
-        @NameInMap("EncodeKey")
-        public String encodeKey;
+        // 调试标识
+        @NameInMap("IsDebug")
+        public Boolean isDebug;
+
+        // 消息模板，在天猫精灵应用平台中申请消息模板时得到的模板id。
+        @NameInMap("MessageTemplateId")
+        public String messageTemplateId;
 
         // 组织标识，推送类型是XX_UNION_XX时才需要配。当存在多种途径获取猫精设备或用户标识且又需要能互通的情况下需要找平台申请组织，申请通过后由平台分配得到。
         @NameInMap("OrganizationId")
         public String organizationId;
 
-        // 调试标识
-        @NameInMap("IsDebug")
-        public Boolean isDebug;
+        // 占位符信息，例如：模板是【你好，{nick}！】这里可以是：{"nick":"小甜甜"}
+        @NameInMap("PlaceHolder")
+        public java.util.Map<String, ?> placeHolder;
+
+        // 消息推送的目标信息。
+        @NameInMap("SendTarget")
+        public PushNotificationsRequestNotificationUnicastRequestSendTarget sendTarget;
 
         public static PushNotificationsRequestNotificationUnicastRequest build(java.util.Map<String, ?> map) throws Exception {
             PushNotificationsRequestNotificationUnicastRequest self = new PushNotificationsRequestNotificationUnicastRequest();
             return TeaModel.build(map, self);
-        }
-
-        public PushNotificationsRequestNotificationUnicastRequest setSendTarget(PushNotificationsRequestNotificationUnicastRequestSendTarget sendTarget) {
-            this.sendTarget = sendTarget;
-            return this;
-        }
-        public PushNotificationsRequestNotificationUnicastRequestSendTarget getSendTarget() {
-            return this.sendTarget;
-        }
-
-        public PushNotificationsRequestNotificationUnicastRequest setMessageTemplateId(String messageTemplateId) {
-            this.messageTemplateId = messageTemplateId;
-            return this;
-        }
-        public String getMessageTemplateId() {
-            return this.messageTemplateId;
-        }
-
-        public PushNotificationsRequestNotificationUnicastRequest setPlaceHolder(java.util.Map<String, ?> placeHolder) {
-            this.placeHolder = placeHolder;
-            return this;
-        }
-        public java.util.Map<String, ?> getPlaceHolder() {
-            return this.placeHolder;
-        }
-
-        public PushNotificationsRequestNotificationUnicastRequest setEncodeType(String encodeType) {
-            this.encodeType = encodeType;
-            return this;
-        }
-        public String getEncodeType() {
-            return this.encodeType;
         }
 
         public PushNotificationsRequestNotificationUnicastRequest setEncodeKey(String encodeKey) {
@@ -139,12 +107,12 @@ public class PushNotificationsRequest extends TeaModel {
             return this.encodeKey;
         }
 
-        public PushNotificationsRequestNotificationUnicastRequest setOrganizationId(String organizationId) {
-            this.organizationId = organizationId;
+        public PushNotificationsRequestNotificationUnicastRequest setEncodeType(String encodeType) {
+            this.encodeType = encodeType;
             return this;
         }
-        public String getOrganizationId() {
-            return this.organizationId;
+        public String getEncodeType() {
+            return this.encodeType;
         }
 
         public PushNotificationsRequestNotificationUnicastRequest setIsDebug(Boolean isDebug) {
@@ -153,6 +121,38 @@ public class PushNotificationsRequest extends TeaModel {
         }
         public Boolean getIsDebug() {
             return this.isDebug;
+        }
+
+        public PushNotificationsRequestNotificationUnicastRequest setMessageTemplateId(String messageTemplateId) {
+            this.messageTemplateId = messageTemplateId;
+            return this;
+        }
+        public String getMessageTemplateId() {
+            return this.messageTemplateId;
+        }
+
+        public PushNotificationsRequestNotificationUnicastRequest setOrganizationId(String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+        public String getOrganizationId() {
+            return this.organizationId;
+        }
+
+        public PushNotificationsRequestNotificationUnicastRequest setPlaceHolder(java.util.Map<String, ?> placeHolder) {
+            this.placeHolder = placeHolder;
+            return this;
+        }
+        public java.util.Map<String, ?> getPlaceHolder() {
+            return this.placeHolder;
+        }
+
+        public PushNotificationsRequestNotificationUnicastRequest setSendTarget(PushNotificationsRequestNotificationUnicastRequestSendTarget sendTarget) {
+            this.sendTarget = sendTarget;
+            return this;
+        }
+        public PushNotificationsRequestNotificationUnicastRequestSendTarget getSendTarget() {
+            return this.sendTarget;
         }
 
     }
