@@ -4,32 +4,23 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class ModifyRuleRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("Id")
-    public Long id;
-
-    @NameInMap("CustomType")
-    public Integer customType;
-
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("Category")
     public Integer category;
 
     @NameInMap("Content")
     public String content;
 
-    @NameInMap("StatExpress")
-    public String statExpress;
+    @NameInMap("CustomType")
+    public Integer customType;
 
-    @NameInMap("RiskLevelId")
-    public Long riskLevelId;
+    @NameInMap("Id")
+    public Long id;
 
-    @NameInMap("RuleType")
-    public Integer ruleType;
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("ProductCode")
     public String productCode;
@@ -37,53 +28,21 @@ public class ModifyRuleRequest extends TeaModel {
     @NameInMap("ProductId")
     public Long productId;
 
+    @NameInMap("RiskLevelId")
+    public Long riskLevelId;
+
+    @NameInMap("RuleType")
+    public Integer ruleType;
+
+    @NameInMap("StatExpress")
+    public String statExpress;
+
     @NameInMap("WarnLevel")
     public Integer warnLevel;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("ContentCategory")
-    public Integer contentCategory;
-
-    @NameInMap("Target")
-    public String target;
 
     public static ModifyRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRuleRequest self = new ModifyRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyRuleRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public ModifyRuleRequest setId(Long id) {
-        this.id = id;
-        return this;
-    }
-    public Long getId() {
-        return this.id;
-    }
-
-    public ModifyRuleRequest setCustomType(Integer customType) {
-        this.customType = customType;
-        return this;
-    }
-    public Integer getCustomType() {
-        return this.customType;
-    }
-
-    public ModifyRuleRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public ModifyRuleRequest setCategory(Integer category) {
@@ -102,28 +61,36 @@ public class ModifyRuleRequest extends TeaModel {
         return this.content;
     }
 
-    public ModifyRuleRequest setStatExpress(String statExpress) {
-        this.statExpress = statExpress;
+    public ModifyRuleRequest setCustomType(Integer customType) {
+        this.customType = customType;
         return this;
     }
-    public String getStatExpress() {
-        return this.statExpress;
+    public Integer getCustomType() {
+        return this.customType;
     }
 
-    public ModifyRuleRequest setRiskLevelId(Long riskLevelId) {
-        this.riskLevelId = riskLevelId;
+    public ModifyRuleRequest setId(Long id) {
+        this.id = id;
         return this;
     }
-    public Long getRiskLevelId() {
-        return this.riskLevelId;
+    public Long getId() {
+        return this.id;
     }
 
-    public ModifyRuleRequest setRuleType(Integer ruleType) {
-        this.ruleType = ruleType;
+    public ModifyRuleRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public Integer getRuleType() {
-        return this.ruleType;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public ModifyRuleRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ModifyRuleRequest setProductCode(String productCode) {
@@ -142,36 +109,36 @@ public class ModifyRuleRequest extends TeaModel {
         return this.productId;
     }
 
+    public ModifyRuleRequest setRiskLevelId(Long riskLevelId) {
+        this.riskLevelId = riskLevelId;
+        return this;
+    }
+    public Long getRiskLevelId() {
+        return this.riskLevelId;
+    }
+
+    public ModifyRuleRequest setRuleType(Integer ruleType) {
+        this.ruleType = ruleType;
+        return this;
+    }
+    public Integer getRuleType() {
+        return this.ruleType;
+    }
+
+    public ModifyRuleRequest setStatExpress(String statExpress) {
+        this.statExpress = statExpress;
+        return this;
+    }
+    public String getStatExpress() {
+        return this.statExpress;
+    }
+
     public ModifyRuleRequest setWarnLevel(Integer warnLevel) {
         this.warnLevel = warnLevel;
         return this;
     }
     public Integer getWarnLevel() {
         return this.warnLevel;
-    }
-
-    public ModifyRuleRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public ModifyRuleRequest setContentCategory(Integer contentCategory) {
-        this.contentCategory = contentCategory;
-        return this;
-    }
-    public Integer getContentCategory() {
-        return this.contentCategory;
-    }
-
-    public ModifyRuleRequest setTarget(String target) {
-        this.target = target;
-        return this;
-    }
-    public String getTarget() {
-        return this.target;
     }
 
 }

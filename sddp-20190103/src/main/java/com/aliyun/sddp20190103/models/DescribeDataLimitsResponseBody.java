@@ -7,17 +7,17 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public java.util.List<DescribeDataLimitsResponseBodyItems> items;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeDataLimitsResponseBodyItems> items;
 
     public static DescribeDataLimitsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataLimitsResponseBody self = new DescribeDataLimitsResponseBody();
@@ -32,12 +32,12 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeDataLimitsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDataLimitsResponseBody setItems(java.util.List<DescribeDataLimitsResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeDataLimitsResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribeDataLimitsResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +48,20 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeDataLimitsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeDataLimitsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeDataLimitsResponseBody setItems(java.util.List<DescribeDataLimitsResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeDataLimitsResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public static class DescribeDataLimitsResponseBodyItems extends TeaModel {

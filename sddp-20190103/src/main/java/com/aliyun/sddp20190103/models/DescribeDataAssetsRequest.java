@@ -4,11 +4,20 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataAssetsRequest extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RangeId")
+    public Integer rangeId;
 
     @NameInMap("RiskLevels")
     public String riskLevels;
@@ -16,18 +25,17 @@ public class DescribeDataAssetsRequest extends TeaModel {
     @NameInMap("RuleId")
     public Long ruleId;
 
-    @NameInMap("RangeId")
-    public Integer rangeId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
     public static DescribeDataAssetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataAssetsRequest self = new DescribeDataAssetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDataAssetsRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeDataAssetsRequest setLang(String lang) {
@@ -46,6 +54,22 @@ public class DescribeDataAssetsRequest extends TeaModel {
         return this.name;
     }
 
+    public DescribeDataAssetsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDataAssetsRequest setRangeId(Integer rangeId) {
+        this.rangeId = rangeId;
+        return this;
+    }
+    public Integer getRangeId() {
+        return this.rangeId;
+    }
+
     public DescribeDataAssetsRequest setRiskLevels(String riskLevels) {
         this.riskLevels = riskLevels;
         return this;
@@ -60,30 +84,6 @@ public class DescribeDataAssetsRequest extends TeaModel {
     }
     public Long getRuleId() {
         return this.ruleId;
-    }
-
-    public DescribeDataAssetsRequest setRangeId(Integer rangeId) {
-        this.rangeId = rangeId;
-        return this;
-    }
-    public Integer getRangeId() {
-        return this.rangeId;
-    }
-
-    public DescribeDataAssetsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDataAssetsRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
     }
 
 }

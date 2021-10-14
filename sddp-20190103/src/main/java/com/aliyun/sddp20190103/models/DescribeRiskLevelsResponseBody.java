@@ -38,9 +38,6 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("Alias")
-        public String alias;
-
         @NameInMap("Id")
         public Long id;
 
@@ -66,14 +63,6 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribeRiskLevelsResponseBodyRiskLevelList setAlias(String alias) {
-            this.alias = alias;
-            return this;
-        }
-        public String getAlias() {
-            return this.alias;
         }
 
         public DescribeRiskLevelsResponseBodyRiskLevelList setId(Long id) {

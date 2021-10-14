@@ -7,17 +7,17 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public java.util.List<DescribeDataMaskingRunHistoryResponseBodyItems> items;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeDataMaskingRunHistoryResponseBodyItems> items;
 
     public static DescribeDataMaskingRunHistoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataMaskingRunHistoryResponseBody self = new DescribeDataMaskingRunHistoryResponseBody();
@@ -32,12 +32,12 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeDataMaskingRunHistoryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDataMaskingRunHistoryResponseBody setItems(java.util.List<DescribeDataMaskingRunHistoryResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeDataMaskingRunHistoryResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribeDataMaskingRunHistoryResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +48,20 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeDataMaskingRunHistoryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeDataMaskingRunHistoryResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeDataMaskingRunHistoryResponseBody setItems(java.util.List<DescribeDataMaskingRunHistoryResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeDataMaskingRunHistoryResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public static class DescribeDataMaskingRunHistoryResponseBodyItems extends TeaModel {

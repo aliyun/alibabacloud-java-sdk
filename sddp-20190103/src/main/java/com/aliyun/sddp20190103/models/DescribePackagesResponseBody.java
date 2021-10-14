@@ -7,17 +7,17 @@ public class DescribePackagesResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public java.util.List<DescribePackagesResponseBodyItems> items;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribePackagesResponseBodyItems> items;
 
     public static DescribePackagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePackagesResponseBody self = new DescribePackagesResponseBody();
@@ -32,12 +32,12 @@ public class DescribePackagesResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribePackagesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribePackagesResponseBody setItems(java.util.List<DescribePackagesResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribePackagesResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribePackagesResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +48,20 @@ public class DescribePackagesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribePackagesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribePackagesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribePackagesResponseBody setItems(java.util.List<DescribePackagesResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribePackagesResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public static class DescribePackagesResponseBodyItems extends TeaModel {

@@ -4,35 +4,17 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeTablesRequest extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("InstanceId")
+    public Long instanceId;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("ProductId")
-    public Long productId;
-
-    @NameInMap("ProductCode")
-    public String productCode;
-
-    @NameInMap("RiskLevelId")
-    public Long riskLevelId;
-
-    @NameInMap("RuleId")
-    public Long ruleId;
-
-    @NameInMap("InstanceId")
-    public Long instanceId;
-
-    @NameInMap("InstanceName")
-    public String instanceName;
-
-    @NameInMap("RuleName")
-    public String ruleName;
-
-    @NameInMap("SensLevelName")
-    public String sensLevelName;
 
     @NameInMap("PackageId")
     public Long packageId;
@@ -40,27 +22,40 @@ public class DescribeTablesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("ProductCode")
+    public String productCode;
 
-    @NameInMap("LastScanTimeStart")
-    public Long lastScanTimeStart;
+    @NameInMap("ProductId")
+    public Long productId;
 
-    @NameInMap("LastScanTimeEnd")
-    public Long lastScanTimeEnd;
+    @NameInMap("RiskLevelId")
+    public Long riskLevelId;
 
-    @NameInMap("StartTime")
-    public Long startTime;
+    @NameInMap("RuleId")
+    public Long ruleId;
 
-    @NameInMap("EndTime")
-    public Long endTime;
-
-    @NameInMap("InstanceDescription")
-    public String instanceDescription;
+    @NameInMap("ServiceRegionId")
+    public String serviceRegionId;
 
     public static DescribeTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTablesRequest self = new DescribeTablesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTablesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeTablesRequest setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public Long getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeTablesRequest setLang(String lang) {
@@ -79,12 +74,20 @@ public class DescribeTablesRequest extends TeaModel {
         return this.name;
     }
 
-    public DescribeTablesRequest setProductId(Long productId) {
-        this.productId = productId;
+    public DescribeTablesRequest setPackageId(Long packageId) {
+        this.packageId = packageId;
         return this;
     }
-    public Long getProductId() {
-        return this.productId;
+    public Long getPackageId() {
+        return this.packageId;
+    }
+
+    public DescribeTablesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeTablesRequest setProductCode(String productCode) {
@@ -93,6 +96,14 @@ public class DescribeTablesRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public DescribeTablesRequest setProductId(Long productId) {
+        this.productId = productId;
+        return this;
+    }
+    public Long getProductId() {
+        return this.productId;
     }
 
     public DescribeTablesRequest setRiskLevelId(Long riskLevelId) {
@@ -111,100 +122,12 @@ public class DescribeTablesRequest extends TeaModel {
         return this.ruleId;
     }
 
-    public DescribeTablesRequest setInstanceId(Long instanceId) {
-        this.instanceId = instanceId;
+    public DescribeTablesRequest setServiceRegionId(String serviceRegionId) {
+        this.serviceRegionId = serviceRegionId;
         return this;
     }
-    public Long getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeTablesRequest setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
-        return this;
-    }
-    public String getInstanceName() {
-        return this.instanceName;
-    }
-
-    public DescribeTablesRequest setRuleName(String ruleName) {
-        this.ruleName = ruleName;
-        return this;
-    }
-    public String getRuleName() {
-        return this.ruleName;
-    }
-
-    public DescribeTablesRequest setSensLevelName(String sensLevelName) {
-        this.sensLevelName = sensLevelName;
-        return this;
-    }
-    public String getSensLevelName() {
-        return this.sensLevelName;
-    }
-
-    public DescribeTablesRequest setPackageId(Long packageId) {
-        this.packageId = packageId;
-        return this;
-    }
-    public Long getPackageId() {
-        return this.packageId;
-    }
-
-    public DescribeTablesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeTablesRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public DescribeTablesRequest setLastScanTimeStart(Long lastScanTimeStart) {
-        this.lastScanTimeStart = lastScanTimeStart;
-        return this;
-    }
-    public Long getLastScanTimeStart() {
-        return this.lastScanTimeStart;
-    }
-
-    public DescribeTablesRequest setLastScanTimeEnd(Long lastScanTimeEnd) {
-        this.lastScanTimeEnd = lastScanTimeEnd;
-        return this;
-    }
-    public Long getLastScanTimeEnd() {
-        return this.lastScanTimeEnd;
-    }
-
-    public DescribeTablesRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeTablesRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeTablesRequest setInstanceDescription(String instanceDescription) {
-        this.instanceDescription = instanceDescription;
-        return this;
-    }
-    public String getInstanceDescription() {
-        return this.instanceDescription;
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
     }
 
 }

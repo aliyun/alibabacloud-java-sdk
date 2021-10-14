@@ -4,20 +4,8 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnsRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("TableId")
-    public Long tableId;
-
-    @NameInMap("RuleId")
-    public Long ruleId;
-
-    @NameInMap("ProductCode")
-    public String productCode;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("InstanceId")
     public Long instanceId;
@@ -25,8 +13,23 @@ public class DescribeColumnsRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    @NameInMap("TableName")
-    public String tableName;
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ProductCode")
+    public String productCode;
+
+    @NameInMap("RiskLevelId")
+    public Long riskLevelId;
+
+    @NameInMap("RuleId")
+    public Long ruleId;
 
     @NameInMap("RuleName")
     public String ruleName;
@@ -34,58 +37,23 @@ public class DescribeColumnsRequest extends TeaModel {
     @NameInMap("SensLevelName")
     public String sensLevelName;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("TableId")
+    public Long tableId;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
-    @NameInMap("RiskLevelId")
-    public Long riskLevelId;
+    @NameInMap("TableName")
+    public String tableName;
 
     public static DescribeColumnsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeColumnsRequest self = new DescribeColumnsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeColumnsRequest setLang(String lang) {
-        this.lang = lang;
+    public DescribeColumnsRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public DescribeColumnsRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public DescribeColumnsRequest setTableId(Long tableId) {
-        this.tableId = tableId;
-        return this;
-    }
-    public Long getTableId() {
-        return this.tableId;
-    }
-
-    public DescribeColumnsRequest setRuleId(Long ruleId) {
-        this.ruleId = ruleId;
-        return this;
-    }
-    public Long getRuleId() {
-        return this.ruleId;
-    }
-
-    public DescribeColumnsRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeColumnsRequest setInstanceId(Long instanceId) {
@@ -104,12 +72,52 @@ public class DescribeColumnsRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public DescribeColumnsRequest setTableName(String tableName) {
-        this.tableName = tableName;
+    public DescribeColumnsRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getTableName() {
-        return this.tableName;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeColumnsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeColumnsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeColumnsRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    public DescribeColumnsRequest setRiskLevelId(Long riskLevelId) {
+        this.riskLevelId = riskLevelId;
+        return this;
+    }
+    public Long getRiskLevelId() {
+        return this.riskLevelId;
+    }
+
+    public DescribeColumnsRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
     }
 
     public DescribeColumnsRequest setRuleName(String ruleName) {
@@ -128,28 +136,20 @@ public class DescribeColumnsRequest extends TeaModel {
         return this.sensLevelName;
     }
 
-    public DescribeColumnsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeColumnsRequest setTableId(Long tableId) {
+        this.tableId = tableId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Long getTableId() {
+        return this.tableId;
     }
 
-    public DescribeColumnsRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeColumnsRequest setTableName(String tableName) {
+        this.tableName = tableName;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public DescribeColumnsRequest setRiskLevelId(Long riskLevelId) {
-        this.riskLevelId = riskLevelId;
-        return this;
-    }
-    public Long getRiskLevelId() {
-        return this.riskLevelId;
+    public String getTableName() {
+        return this.tableName;
     }
 
 }

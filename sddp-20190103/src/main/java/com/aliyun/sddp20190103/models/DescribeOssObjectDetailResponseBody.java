@@ -4,23 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssObjectDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OssObjectDetail")
     public DescribeOssObjectDetailResponseBodyOssObjectDetail ossObjectDetail;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeOssObjectDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeOssObjectDetailResponseBody self = new DescribeOssObjectDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeOssObjectDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeOssObjectDetailResponseBody setOssObjectDetail(DescribeOssObjectDetailResponseBodyOssObjectDetail ossObjectDetail) {
@@ -29,6 +21,14 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
     }
     public DescribeOssObjectDetailResponseBodyOssObjectDetail getOssObjectDetail() {
         return this.ossObjectDetail;
+    }
+
+    public DescribeOssObjectDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList extends TeaModel {
@@ -95,20 +95,20 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeOssObjectDetailResponseBodyOssObjectDetail extends TeaModel {
+        @NameInMap("BucketName")
+        public String bucketName;
+
         @NameInMap("CategoryName")
         public String categoryName;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("BucketName")
-        public String bucketName;
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("RiskLevelName")
         public String riskLevelName;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList> ruleList;
@@ -116,6 +116,14 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public static DescribeOssObjectDetailResponseBodyOssObjectDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeOssObjectDetailResponseBodyOssObjectDetail self = new DescribeOssObjectDetailResponseBodyOssObjectDetail();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeOssObjectDetailResponseBodyOssObjectDetail setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
         }
 
         public DescribeOssObjectDetailResponseBodyOssObjectDetail setCategoryName(String categoryName) {
@@ -134,12 +142,12 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeOssObjectDetailResponseBodyOssObjectDetail setBucketName(String bucketName) {
-            this.bucketName = bucketName;
+        public DescribeOssObjectDetailResponseBodyOssObjectDetail setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getBucketName() {
-            return this.bucketName;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeOssObjectDetailResponseBodyOssObjectDetail setRiskLevelName(String riskLevelName) {
@@ -148,14 +156,6 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         }
         public String getRiskLevelName() {
             return this.riskLevelName;
-        }
-
-        public DescribeOssObjectDetailResponseBodyOssObjectDetail setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeOssObjectDetailResponseBodyOssObjectDetail setRuleList(java.util.List<DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList> ruleList) {

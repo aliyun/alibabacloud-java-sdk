@@ -7,17 +7,17 @@ public class DescribeTablesResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public java.util.List<DescribeTablesResponseBodyItems> items;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeTablesResponseBodyItems> items;
 
     public static DescribeTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTablesResponseBody self = new DescribeTablesResponseBody();
@@ -32,12 +32,12 @@ public class DescribeTablesResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeTablesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeTablesResponseBody setItems(java.util.List<DescribeTablesResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeTablesResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribeTablesResponseBody setPageSize(Integer pageSize) {
@@ -48,6 +48,14 @@ public class DescribeTablesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeTablesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeTablesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,18 +64,7 @@ public class DescribeTablesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeTablesResponseBody setItems(java.util.List<DescribeTablesResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeTablesResponseBodyItems> getItems() {
-        return this.items;
-    }
-
     public static class DescribeTablesResponseBodyItemsRuleList extends TeaModel {
-        @NameInMap("DisplayName")
-        public String displayName;
-
         @NameInMap("Name")
         public String name;
 
@@ -80,14 +77,6 @@ public class DescribeTablesResponseBody extends TeaModel {
         public static DescribeTablesResponseBodyItemsRuleList build(java.util.Map<String, ?> map) throws Exception {
             DescribeTablesResponseBodyItemsRuleList self = new DescribeTablesResponseBodyItemsRuleList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTablesResponseBodyItemsRuleList setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
         }
 
         public DescribeTablesResponseBodyItemsRuleList setName(String name) {

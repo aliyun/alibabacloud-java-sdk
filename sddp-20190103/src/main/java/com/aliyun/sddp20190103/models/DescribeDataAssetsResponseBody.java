@@ -7,17 +7,17 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public java.util.List<DescribeDataAssetsResponseBodyItems> items;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeDataAssetsResponseBodyItems> items;
 
     public static DescribeDataAssetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataAssetsResponseBody self = new DescribeDataAssetsResponseBody();
@@ -32,12 +32,12 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeDataAssetsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDataAssetsResponseBody setItems(java.util.List<DescribeDataAssetsResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeDataAssetsResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribeDataAssetsResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +48,20 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeDataAssetsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeDataAssetsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeDataAssetsResponseBody setItems(java.util.List<DescribeDataAssetsResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeDataAssetsResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public static class DescribeDataAssetsResponseBodyItems extends TeaModel {

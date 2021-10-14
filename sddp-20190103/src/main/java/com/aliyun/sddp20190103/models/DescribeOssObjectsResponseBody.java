@@ -7,17 +7,17 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public java.util.List<DescribeOssObjectsResponseBodyItems> items;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeOssObjectsResponseBodyItems> items;
 
     public static DescribeOssObjectsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeOssObjectsResponseBody self = new DescribeOssObjectsResponseBody();
@@ -32,12 +32,12 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeOssObjectsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeOssObjectsResponseBody setItems(java.util.List<DescribeOssObjectsResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeOssObjectsResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribeOssObjectsResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +48,20 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeOssObjectsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeOssObjectsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeOssObjectsResponseBody setItems(java.util.List<DescribeOssObjectsResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeOssObjectsResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public static class DescribeOssObjectsResponseBodyItemsRuleList extends TeaModel {
