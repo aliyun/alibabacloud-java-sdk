@@ -136,11 +136,17 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnoseReportResponseBodyResult extends TeaModel {
-        @NameInMap("trigger")
-        public String trigger;
-
         @NameInMap("createTime")
         public Long createTime;
+
+        @NameInMap("diagnoseItems")
+        public java.util.List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems;
+
+        @NameInMap("health")
+        public String health;
+
+        @NameInMap("instanceId")
+        public String instanceId;
 
         @NameInMap("reportId")
         public String reportId;
@@ -148,26 +154,12 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         @NameInMap("state")
         public String state;
 
-        @NameInMap("instanceId")
-        public String instanceId;
-
-        @NameInMap("health")
-        public String health;
-
-        @NameInMap("diagnoseItems")
-        public java.util.List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems;
+        @NameInMap("trigger")
+        public String trigger;
 
         public static DescribeDiagnoseReportResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeDiagnoseReportResponseBodyResult self = new DescribeDiagnoseReportResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDiagnoseReportResponseBodyResult setTrigger(String trigger) {
-            this.trigger = trigger;
-            return this;
-        }
-        public String getTrigger() {
-            return this.trigger;
         }
 
         public DescribeDiagnoseReportResponseBodyResult setCreateTime(Long createTime) {
@@ -176,6 +168,30 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeDiagnoseReportResponseBodyResult setDiagnoseItems(java.util.List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems) {
+            this.diagnoseItems = diagnoseItems;
+            return this;
+        }
+        public java.util.List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> getDiagnoseItems() {
+            return this.diagnoseItems;
+        }
+
+        public DescribeDiagnoseReportResponseBodyResult setHealth(String health) {
+            this.health = health;
+            return this;
+        }
+        public String getHealth() {
+            return this.health;
+        }
+
+        public DescribeDiagnoseReportResponseBodyResult setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeDiagnoseReportResponseBodyResult setReportId(String reportId) {
@@ -194,28 +210,12 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             return this.state;
         }
 
-        public DescribeDiagnoseReportResponseBodyResult setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public DescribeDiagnoseReportResponseBodyResult setTrigger(String trigger) {
+            this.trigger = trigger;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeDiagnoseReportResponseBodyResult setHealth(String health) {
-            this.health = health;
-            return this;
-        }
-        public String getHealth() {
-            return this.health;
-        }
-
-        public DescribeDiagnoseReportResponseBodyResult setDiagnoseItems(java.util.List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> diagnoseItems) {
-            this.diagnoseItems = diagnoseItems;
-            return this;
-        }
-        public java.util.List<DescribeDiagnoseReportResponseBodyResultDiagnoseItems> getDiagnoseItems() {
-            return this.diagnoseItems;
+        public String getTrigger() {
+            return this.trigger;
         }
 
     }

@@ -32,23 +32,15 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
     }
 
     public static class UpdateSnapshotSettingResponseBodyResult extends TeaModel {
-        @NameInMap("quartzRegex")
-        public String quartzRegex;
-
         @NameInMap("enable")
         public Boolean enable;
+
+        @NameInMap("quartzRegex")
+        public String quartzRegex;
 
         public static UpdateSnapshotSettingResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             UpdateSnapshotSettingResponseBodyResult self = new UpdateSnapshotSettingResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateSnapshotSettingResponseBodyResult setQuartzRegex(String quartzRegex) {
-            this.quartzRegex = quartzRegex;
-            return this;
-        }
-        public String getQuartzRegex() {
-            return this.quartzRegex;
         }
 
         public UpdateSnapshotSettingResponseBodyResult setEnable(Boolean enable) {
@@ -57,6 +49,14 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         }
         public Boolean getEnable() {
             return this.enable;
+        }
+
+        public UpdateSnapshotSettingResponseBodyResult setQuartzRegex(String quartzRegex) {
+            this.quartzRegex = quartzRegex;
+            return this;
+        }
+        public String getQuartzRegex() {
+            return this.quartzRegex;
         }
 
     }

@@ -32,29 +32,14 @@ public class DescribePipelineResponseBody extends TeaModel {
     }
 
     public static class DescribePipelineResponseBodyResult extends TeaModel {
-        @NameInMap("pipelineId")
-        public String pipelineId;
-
-        @NameInMap("gmtUpdateTime")
-        public String gmtUpdateTime;
-
-        @NameInMap("queueType")
-        public String queueType;
-
-        @NameInMap("queueCheckPointWrites")
-        public Integer queueCheckPointWrites;
-
-        @NameInMap("queueMaxBytes")
-        public Integer queueMaxBytes;
-
-        @NameInMap("config")
-        public String config;
-
         @NameInMap("batchDelay")
         public Integer batchDelay;
 
-        @NameInMap("workers")
-        public Integer workers;
+        @NameInMap("batchSize")
+        public Integer batchSize;
+
+        @NameInMap("config")
+        public String config;
 
         @NameInMap("description")
         public String description;
@@ -62,63 +47,30 @@ public class DescribePipelineResponseBody extends TeaModel {
         @NameInMap("gmtCreatedTime")
         public String gmtCreatedTime;
 
-        @NameInMap("batchSize")
-        public Integer batchSize;
+        @NameInMap("gmtUpdateTime")
+        public String gmtUpdateTime;
+
+        @NameInMap("pipelineId")
+        public String pipelineId;
 
         @NameInMap("pipelineStatus")
         public String pipelineStatus;
 
+        @NameInMap("queueCheckPointWrites")
+        public Integer queueCheckPointWrites;
+
+        @NameInMap("queueMaxBytes")
+        public Integer queueMaxBytes;
+
+        @NameInMap("queueType")
+        public String queueType;
+
+        @NameInMap("workers")
+        public Integer workers;
+
         public static DescribePipelineResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribePipelineResponseBodyResult self = new DescribePipelineResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePipelineResponseBodyResult setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-        public String getPipelineId() {
-            return this.pipelineId;
-        }
-
-        public DescribePipelineResponseBodyResult setGmtUpdateTime(String gmtUpdateTime) {
-            this.gmtUpdateTime = gmtUpdateTime;
-            return this;
-        }
-        public String getGmtUpdateTime() {
-            return this.gmtUpdateTime;
-        }
-
-        public DescribePipelineResponseBodyResult setQueueType(String queueType) {
-            this.queueType = queueType;
-            return this;
-        }
-        public String getQueueType() {
-            return this.queueType;
-        }
-
-        public DescribePipelineResponseBodyResult setQueueCheckPointWrites(Integer queueCheckPointWrites) {
-            this.queueCheckPointWrites = queueCheckPointWrites;
-            return this;
-        }
-        public Integer getQueueCheckPointWrites() {
-            return this.queueCheckPointWrites;
-        }
-
-        public DescribePipelineResponseBodyResult setQueueMaxBytes(Integer queueMaxBytes) {
-            this.queueMaxBytes = queueMaxBytes;
-            return this;
-        }
-        public Integer getQueueMaxBytes() {
-            return this.queueMaxBytes;
-        }
-
-        public DescribePipelineResponseBodyResult setConfig(String config) {
-            this.config = config;
-            return this;
-        }
-        public String getConfig() {
-            return this.config;
         }
 
         public DescribePipelineResponseBodyResult setBatchDelay(Integer batchDelay) {
@@ -129,12 +81,20 @@ public class DescribePipelineResponseBody extends TeaModel {
             return this.batchDelay;
         }
 
-        public DescribePipelineResponseBodyResult setWorkers(Integer workers) {
-            this.workers = workers;
+        public DescribePipelineResponseBodyResult setBatchSize(Integer batchSize) {
+            this.batchSize = batchSize;
             return this;
         }
-        public Integer getWorkers() {
-            return this.workers;
+        public Integer getBatchSize() {
+            return this.batchSize;
+        }
+
+        public DescribePipelineResponseBodyResult setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public DescribePipelineResponseBodyResult setDescription(String description) {
@@ -153,12 +113,20 @@ public class DescribePipelineResponseBody extends TeaModel {
             return this.gmtCreatedTime;
         }
 
-        public DescribePipelineResponseBodyResult setBatchSize(Integer batchSize) {
-            this.batchSize = batchSize;
+        public DescribePipelineResponseBodyResult setGmtUpdateTime(String gmtUpdateTime) {
+            this.gmtUpdateTime = gmtUpdateTime;
             return this;
         }
-        public Integer getBatchSize() {
-            return this.batchSize;
+        public String getGmtUpdateTime() {
+            return this.gmtUpdateTime;
+        }
+
+        public DescribePipelineResponseBodyResult setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
         public DescribePipelineResponseBodyResult setPipelineStatus(String pipelineStatus) {
@@ -167,6 +135,38 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
         public String getPipelineStatus() {
             return this.pipelineStatus;
+        }
+
+        public DescribePipelineResponseBodyResult setQueueCheckPointWrites(Integer queueCheckPointWrites) {
+            this.queueCheckPointWrites = queueCheckPointWrites;
+            return this;
+        }
+        public Integer getQueueCheckPointWrites() {
+            return this.queueCheckPointWrites;
+        }
+
+        public DescribePipelineResponseBodyResult setQueueMaxBytes(Integer queueMaxBytes) {
+            this.queueMaxBytes = queueMaxBytes;
+            return this;
+        }
+        public Integer getQueueMaxBytes() {
+            return this.queueMaxBytes;
+        }
+
+        public DescribePipelineResponseBodyResult setQueueType(String queueType) {
+            this.queueType = queueType;
+            return this;
+        }
+        public String getQueueType() {
+            return this.queueType;
+        }
+
+        public DescribePipelineResponseBodyResult setWorkers(Integer workers) {
+            this.workers = workers;
+            return this;
+        }
+        public Integer getWorkers() {
+            return this.workers;
         }
 
     }

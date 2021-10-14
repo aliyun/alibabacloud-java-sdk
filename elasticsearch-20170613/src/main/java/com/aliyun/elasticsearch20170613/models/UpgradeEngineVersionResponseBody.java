@@ -32,26 +32,18 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     }
 
     public static class UpgradeEngineVersionResponseBodyResultValidateResult extends TeaModel {
-        @NameInMap("errorType")
-        public String errorType;
-
         @NameInMap("errorCode")
         public String errorCode;
 
         @NameInMap("errorMsg")
         public String errorMsg;
 
+        @NameInMap("errorType")
+        public String errorType;
+
         public static UpgradeEngineVersionResponseBodyResultValidateResult build(java.util.Map<String, ?> map) throws Exception {
             UpgradeEngineVersionResponseBodyResultValidateResult self = new UpgradeEngineVersionResponseBodyResultValidateResult();
             return TeaModel.build(map, self);
-        }
-
-        public UpgradeEngineVersionResponseBodyResultValidateResult setErrorType(String errorType) {
-            this.errorType = errorType;
-            return this;
-        }
-        public String getErrorType() {
-            return this.errorType;
         }
 
         public UpgradeEngineVersionResponseBodyResultValidateResult setErrorCode(String errorCode) {
@@ -70,29 +62,29 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
             return this.errorMsg;
         }
 
+        public UpgradeEngineVersionResponseBodyResultValidateResult setErrorType(String errorType) {
+            this.errorType = errorType;
+            return this;
+        }
+        public String getErrorType() {
+            return this.errorType;
+        }
+
     }
 
     public static class UpgradeEngineVersionResponseBodyResult extends TeaModel {
-        @NameInMap("validateType")
-        public String validateType;
-
         @NameInMap("status")
         public String status;
 
         @NameInMap("validateResult")
         public UpgradeEngineVersionResponseBodyResultValidateResult validateResult;
 
+        @NameInMap("validateType")
+        public String validateType;
+
         public static UpgradeEngineVersionResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             UpgradeEngineVersionResponseBodyResult self = new UpgradeEngineVersionResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public UpgradeEngineVersionResponseBodyResult setValidateType(String validateType) {
-            this.validateType = validateType;
-            return this;
-        }
-        public String getValidateType() {
-            return this.validateType;
         }
 
         public UpgradeEngineVersionResponseBodyResult setStatus(String status) {
@@ -109,6 +101,14 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
         }
         public UpgradeEngineVersionResponseBodyResultValidateResult getValidateResult() {
             return this.validateResult;
+        }
+
+        public UpgradeEngineVersionResponseBodyResult setValidateType(String validateType) {
+            this.validateType = validateType;
+            return this;
+        }
+        public String getValidateType() {
+            return this.validateType;
         }
 
     }

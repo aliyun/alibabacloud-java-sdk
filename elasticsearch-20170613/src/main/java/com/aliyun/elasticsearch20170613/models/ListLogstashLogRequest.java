@@ -4,12 +4,6 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListLogstashLogRequest extends TeaModel {
-    @NameInMap("type")
-    public String type;
-
-    @NameInMap("query")
-    public String query;
-
     @NameInMap("beginTime")
     public Long beginTime;
 
@@ -19,28 +13,18 @@ public class ListLogstashLogRequest extends TeaModel {
     @NameInMap("page")
     public Integer page;
 
+    @NameInMap("query")
+    public String query;
+
     @NameInMap("size")
     public Integer size;
+
+    @NameInMap("type")
+    public String type;
 
     public static ListLogstashLogRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLogstashLogRequest self = new ListLogstashLogRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListLogstashLogRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public ListLogstashLogRequest setQuery(String query) {
-        this.query = query;
-        return this;
-    }
-    public String getQuery() {
-        return this.query;
     }
 
     public ListLogstashLogRequest setBeginTime(Long beginTime) {
@@ -67,12 +51,28 @@ public class ListLogstashLogRequest extends TeaModel {
         return this.page;
     }
 
+    public ListLogstashLogRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
+    }
+
     public ListLogstashLogRequest setSize(Integer size) {
         this.size = size;
         return this;
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public ListLogstashLogRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

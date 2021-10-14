@@ -4,20 +4,20 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("Page")
     public Integer page;
 
-    @NameInMap("Size")
-    public Integer size;
+    @NameInMap("ResourceIds")
+    public String resourceIds;
 
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("ResourceIds")
-    public String resourceIds;
+    @NameInMap("Size")
+    public Integer size;
 
     @NameInMap("Tags")
     public String tags;
@@ -25,30 +25,6 @@ public class ListTagResourcesRequest extends TeaModel {
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagResourcesRequest setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
-    }
-
-    public ListTagResourcesRequest setSize(Integer size) {
-        this.size = size;
-        return this;
-    }
-    public Integer getSize() {
-        return this.size;
-    }
-
-    public ListTagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     public ListTagResourcesRequest setNextToken(String nextToken) {
@@ -59,12 +35,36 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListTagResourcesRequest setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
     public ListTagResourcesRequest setResourceIds(String resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
     public String getResourceIds() {
         return this.resourceIds;
+    }
+
+    public ListTagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public ListTagResourcesRequest setSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    public Integer getSize() {
+        return this.size;
     }
 
     public ListTagResourcesRequest setTags(String tags) {

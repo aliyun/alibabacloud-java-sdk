@@ -4,23 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ValidateShrinkNodesRequest extends TeaModel {
-    @NameInMap("nodeType")
-    public String nodeType;
-
     @NameInMap("ignoreStatus")
     public Boolean ignoreStatus;
+
+    @NameInMap("nodeType")
+    public String nodeType;
 
     public static ValidateShrinkNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ValidateShrinkNodesRequest self = new ValidateShrinkNodesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ValidateShrinkNodesRequest setNodeType(String nodeType) {
-        this.nodeType = nodeType;
-        return this;
-    }
-    public String getNodeType() {
-        return this.nodeType;
     }
 
     public ValidateShrinkNodesRequest setIgnoreStatus(Boolean ignoreStatus) {
@@ -29,6 +21,14 @@ public class ValidateShrinkNodesRequest extends TeaModel {
     }
     public Boolean getIgnoreStatus() {
         return this.ignoreStatus;
+    }
+
+    public ValidateShrinkNodesRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
 }

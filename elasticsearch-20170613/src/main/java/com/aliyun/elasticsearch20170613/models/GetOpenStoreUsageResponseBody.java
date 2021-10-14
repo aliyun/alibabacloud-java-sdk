@@ -33,25 +33,17 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
     }
 
     public static class GetOpenStoreUsageResponseBodyResult extends TeaModel {
-        // 昨日使用容量
-        @NameInMap("lastDayUsage")
-        public Long lastDayUsage;
-
         // 当前使用量
         @NameInMap("currentUsage")
         public Long currentUsage;
 
+        // 昨日使用容量
+        @NameInMap("lastDayUsage")
+        public Long lastDayUsage;
+
         public static GetOpenStoreUsageResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetOpenStoreUsageResponseBodyResult self = new GetOpenStoreUsageResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetOpenStoreUsageResponseBodyResult setLastDayUsage(Long lastDayUsage) {
-            this.lastDayUsage = lastDayUsage;
-            return this;
-        }
-        public Long getLastDayUsage() {
-            return this.lastDayUsage;
         }
 
         public GetOpenStoreUsageResponseBodyResult setCurrentUsage(Long currentUsage) {
@@ -60,6 +52,14 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
         }
         public Long getCurrentUsage() {
             return this.currentUsage;
+        }
+
+        public GetOpenStoreUsageResponseBodyResult setLastDayUsage(Long lastDayUsage) {
+            this.lastDayUsage = lastDayUsage;
+            return this;
+        }
+        public Long getLastDayUsage() {
+            return this.lastDayUsage;
         }
 
     }
