@@ -4,11 +4,11 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class QueryJobOrderRequest extends TeaModel {
-    @NameInMap("AppName")
-    public String appName;
-
     @NameInMap("AppCode")
     public String appCode;
+
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("OrderId")
     public Long orderId;
@@ -21,20 +21,20 @@ public class QueryJobOrderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryJobOrderRequest setAppName(String appName) {
-        this.appName = appName;
-        return this;
-    }
-    public String getAppName() {
-        return this.appName;
-    }
-
     public QueryJobOrderRequest setAppCode(String appCode) {
         this.appCode = appCode;
         return this;
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public QueryJobOrderRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public QueryJobOrderRequest setOrderId(Long orderId) {

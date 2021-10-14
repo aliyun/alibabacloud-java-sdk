@@ -4,11 +4,11 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class NewNetDeviceInfoRequest extends TeaModel {
-    @NameInMap("AppName")
-    public String appName;
-
     @NameInMap("AppCode")
     public String appCode;
+
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("Devices")
     public java.util.List<NewNetDeviceInfoRequestDevices> devices;
@@ -21,20 +21,20 @@ public class NewNetDeviceInfoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public NewNetDeviceInfoRequest setAppName(String appName) {
-        this.appName = appName;
-        return this;
-    }
-    public String getAppName() {
-        return this.appName;
-    }
-
     public NewNetDeviceInfoRequest setAppCode(String appCode) {
         this.appCode = appCode;
         return this;
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public NewNetDeviceInfoRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public NewNetDeviceInfoRequest setDevices(java.util.List<NewNetDeviceInfoRequestDevices> devices) {

@@ -4,32 +4,32 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetGroupMiscAggTimeSerRequest extends TeaModel {
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("ApgroupUuid")
+    public String apgroupUuid;
 
     @NameInMap("AppCode")
     public String appCode;
 
-    @NameInMap("Start")
-    public Long start;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("End")
     public Long end;
 
-    @NameInMap("ApgroupUuid")
-    public String apgroupUuid;
+    @NameInMap("Start")
+    public Long start;
 
     public static GetGroupMiscAggTimeSerRequest build(java.util.Map<String, ?> map) throws Exception {
         GetGroupMiscAggTimeSerRequest self = new GetGroupMiscAggTimeSerRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetGroupMiscAggTimeSerRequest setAppName(String appName) {
-        this.appName = appName;
+    public GetGroupMiscAggTimeSerRequest setApgroupUuid(String apgroupUuid) {
+        this.apgroupUuid = apgroupUuid;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getApgroupUuid() {
+        return this.apgroupUuid;
     }
 
     public GetGroupMiscAggTimeSerRequest setAppCode(String appCode) {
@@ -40,12 +40,12 @@ public class GetGroupMiscAggTimeSerRequest extends TeaModel {
         return this.appCode;
     }
 
-    public GetGroupMiscAggTimeSerRequest setStart(Long start) {
-        this.start = start;
+    public GetGroupMiscAggTimeSerRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public Long getStart() {
-        return this.start;
+    public String getAppName() {
+        return this.appName;
     }
 
     public GetGroupMiscAggTimeSerRequest setEnd(Long end) {
@@ -56,12 +56,12 @@ public class GetGroupMiscAggTimeSerRequest extends TeaModel {
         return this.end;
     }
 
-    public GetGroupMiscAggTimeSerRequest setApgroupUuid(String apgroupUuid) {
-        this.apgroupUuid = apgroupUuid;
+    public GetGroupMiscAggTimeSerRequest setStart(Long start) {
+        this.start = start;
         return this;
     }
-    public String getApgroupUuid() {
-        return this.apgroupUuid;
+    public Long getStart() {
+        return this.start;
     }
 
 }

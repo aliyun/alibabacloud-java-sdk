@@ -4,17 +4,17 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetApStatusByGroupIdRequest extends TeaModel {
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("ApgroupId")
+    public String apgroupId;
 
     @NameInMap("AppCode")
     public String appCode;
 
+    @NameInMap("AppName")
+    public String appName;
+
     @NameInMap("Cursor")
     public Long cursor;
-
-    @NameInMap("ApgroupId")
-    public String apgroupId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +24,12 @@ public class GetApStatusByGroupIdRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetApStatusByGroupIdRequest setAppName(String appName) {
-        this.appName = appName;
+    public GetApStatusByGroupIdRequest setApgroupId(String apgroupId) {
+        this.apgroupId = apgroupId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getApgroupId() {
+        return this.apgroupId;
     }
 
     public GetApStatusByGroupIdRequest setAppCode(String appCode) {
@@ -40,20 +40,20 @@ public class GetApStatusByGroupIdRequest extends TeaModel {
         return this.appCode;
     }
 
+    public GetApStatusByGroupIdRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
     public GetApStatusByGroupIdRequest setCursor(Long cursor) {
         this.cursor = cursor;
         return this;
     }
     public Long getCursor() {
         return this.cursor;
-    }
-
-    public GetApStatusByGroupIdRequest setApgroupId(String apgroupId) {
-        this.apgroupId = apgroupId;
-        return this;
-    }
-    public String getApgroupId() {
-        return this.apgroupId;
     }
 
     public GetApStatusByGroupIdRequest setPageSize(Integer pageSize) {

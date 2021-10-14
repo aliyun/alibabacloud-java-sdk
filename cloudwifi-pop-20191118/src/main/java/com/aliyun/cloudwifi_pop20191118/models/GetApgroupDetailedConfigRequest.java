@@ -4,14 +4,6 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetApgroupDetailedConfigRequest extends TeaModel {
-    // appKey
-    @NameInMap("AppName")
-    public String appName;
-
-    // appSecret
-    @NameInMap("AppCode")
-    public String appCode;
-
     // apgroupId
     @NameInMap("ApgroupId")
     public Long apgroupId;
@@ -20,25 +12,17 @@ public class GetApgroupDetailedConfigRequest extends TeaModel {
     @NameInMap("ApgroupUuid")
     public String apgroupUuid;
 
+    // appSecret
+    @NameInMap("AppCode")
+    public String appCode;
+
+    // appKey
+    @NameInMap("AppName")
+    public String appName;
+
     public static GetApgroupDetailedConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetApgroupDetailedConfigRequest self = new GetApgroupDetailedConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetApgroupDetailedConfigRequest setAppName(String appName) {
-        this.appName = appName;
-        return this;
-    }
-    public String getAppName() {
-        return this.appName;
-    }
-
-    public GetApgroupDetailedConfigRequest setAppCode(String appCode) {
-        this.appCode = appCode;
-        return this;
-    }
-    public String getAppCode() {
-        return this.appCode;
     }
 
     public GetApgroupDetailedConfigRequest setApgroupId(Long apgroupId) {
@@ -55,6 +39,22 @@ public class GetApgroupDetailedConfigRequest extends TeaModel {
     }
     public String getApgroupUuid() {
         return this.apgroupUuid;
+    }
+
+    public GetApgroupDetailedConfigRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public GetApgroupDetailedConfigRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
 }

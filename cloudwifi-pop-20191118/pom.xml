@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cloudwifi_pop20191118</artifactId>
-  <version>1.9.5</version>
+  <version>1.9.6</version>
   <packaging>jar</packaging>
   <name>cloudwifi_pop20191118</name>
   <description>Alibaba Cloud cloudwifi-pop (20191118) SDK for Java

@@ -7,14 +7,14 @@ public class DeleteApSsidConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     public static DeleteApSsidConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteApSsidConfigResponseBody self = new DeleteApSsidConfigResponseBody();
@@ -27,6 +27,14 @@ public class DeleteApSsidConfigResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public DeleteApSsidConfigResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteApSsidConfigResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class DeleteApSsidConfigResponseBody extends TeaModel {
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
-    }
-
-    public DeleteApSsidConfigResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
 }

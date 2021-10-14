@@ -7,8 +7,8 @@ public class GetGroupMiscAggTimeSerResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -16,8 +16,8 @@ public class GetGroupMiscAggTimeSerResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetGroupMiscAggTimeSerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetGroupMiscAggTimeSerResponseBody self = new GetGroupMiscAggTimeSerResponseBody();
@@ -32,12 +32,12 @@ public class GetGroupMiscAggTimeSerResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetGroupMiscAggTimeSerResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetGroupMiscAggTimeSerResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public GetGroupMiscAggTimeSerResponseBody setErrorMessage(String errorMessage) {
@@ -56,12 +56,12 @@ public class GetGroupMiscAggTimeSerResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public GetGroupMiscAggTimeSerResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
+    public GetGroupMiscAggTimeSerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

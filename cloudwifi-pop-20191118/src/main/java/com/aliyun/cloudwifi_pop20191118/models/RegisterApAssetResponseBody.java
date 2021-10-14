@@ -7,8 +7,8 @@ public class RegisterApAssetResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -16,8 +16,8 @@ public class RegisterApAssetResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RegisterApAssetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RegisterApAssetResponseBody self = new RegisterApAssetResponseBody();
@@ -32,12 +32,12 @@ public class RegisterApAssetResponseBody extends TeaModel {
         return this.data;
     }
 
-    public RegisterApAssetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RegisterApAssetResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public RegisterApAssetResponseBody setErrorMessage(String errorMessage) {
@@ -56,12 +56,12 @@ public class RegisterApAssetResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public RegisterApAssetResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
+    public RegisterApAssetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
