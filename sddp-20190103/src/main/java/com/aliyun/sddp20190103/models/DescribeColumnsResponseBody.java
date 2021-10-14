@@ -7,17 +7,17 @@ public class DescribeColumnsResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public java.util.List<DescribeColumnsResponseBodyItems> items;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeColumnsResponseBodyItems> items;
 
     public static DescribeColumnsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeColumnsResponseBody self = new DescribeColumnsResponseBody();
@@ -32,12 +32,12 @@ public class DescribeColumnsResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeColumnsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeColumnsResponseBody setItems(java.util.List<DescribeColumnsResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeColumnsResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribeColumnsResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +48,20 @@ public class DescribeColumnsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeColumnsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeColumnsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeColumnsResponseBody setItems(java.util.List<DescribeColumnsResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeColumnsResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public static class DescribeColumnsResponseBodyItems extends TeaModel {

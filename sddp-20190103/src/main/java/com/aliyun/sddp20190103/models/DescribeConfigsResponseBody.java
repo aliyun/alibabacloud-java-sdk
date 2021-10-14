@@ -4,23 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ConfigList")
     public java.util.List<DescribeConfigsResponseBodyConfigList> configList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeConfigsResponseBody self = new DescribeConfigsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeConfigsResponseBody setConfigList(java.util.List<DescribeConfigsResponseBodyConfigList> configList) {
@@ -31,12 +23,20 @@ public class DescribeConfigsResponseBody extends TeaModel {
         return this.configList;
     }
 
+    public DescribeConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeConfigsResponseBodyConfigList extends TeaModel {
         @NameInMap("Code")
-        public Integer code;
+        public String code;
 
         @NameInMap("Value")
-        public Long value;
+        public String value;
 
         @NameInMap("DefaultValue")
         public String defaultValue;
@@ -52,19 +52,19 @@ public class DescribeConfigsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeConfigsResponseBodyConfigList setCode(Integer code) {
+        public DescribeConfigsResponseBodyConfigList setCode(String code) {
             this.code = code;
             return this;
         }
-        public Integer getCode() {
+        public String getCode() {
             return this.code;
         }
 
-        public DescribeConfigsResponseBodyConfigList setValue(Long value) {
+        public DescribeConfigsResponseBodyConfigList setValue(String value) {
             this.value = value;
             return this;
         }
-        public Long getValue() {
+        public String getValue() {
             return this.value;
         }
 

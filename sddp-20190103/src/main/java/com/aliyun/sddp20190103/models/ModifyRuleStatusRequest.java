@@ -4,14 +4,14 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class ModifyRuleStatusRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Id")
     public Long id;
 
     @NameInMap("Ids")
     public String ids;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("Status")
     public Integer status;
@@ -19,14 +19,6 @@ public class ModifyRuleStatusRequest extends TeaModel {
     public static ModifyRuleStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRuleStatusRequest self = new ModifyRuleStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyRuleStatusRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ModifyRuleStatusRequest setId(Long id) {
@@ -43,6 +35,14 @@ public class ModifyRuleStatusRequest extends TeaModel {
     }
     public String getIds() {
         return this.ids;
+    }
+
+    public ModifyRuleStatusRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ModifyRuleStatusRequest setStatus(Integer status) {

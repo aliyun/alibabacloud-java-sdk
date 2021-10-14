@@ -4,17 +4,8 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSourcesRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
-
-    @NameInMap("ServiceRegionId")
-    public String serviceRegionId;
 
     @NameInMap("EngineType")
     public String engineType;
@@ -22,34 +13,21 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("DbName")
-    public String dbName;
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ProductId")
     public Long productId;
 
-    @NameInMap("Authed")
-    public Boolean authed;
+    @NameInMap("ServiceRegionId")
+    public String serviceRegionId;
 
     public static DescribeInstanceSourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceSourcesRequest self = new DescribeInstanceSourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceSourcesRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public DescribeInstanceSourcesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeInstanceSourcesRequest setCurrentPage(Integer currentPage) {
@@ -58,14 +36,6 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
-    }
-
-    public DescribeInstanceSourcesRequest setServiceRegionId(String serviceRegionId) {
-        this.serviceRegionId = serviceRegionId;
-        return this;
-    }
-    public String getServiceRegionId() {
-        return this.serviceRegionId;
     }
 
     public DescribeInstanceSourcesRequest setEngineType(String engineType) {
@@ -84,12 +54,20 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeInstanceSourcesRequest setDbName(String dbName) {
-        this.dbName = dbName;
+    public DescribeInstanceSourcesRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getDbName() {
-        return this.dbName;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeInstanceSourcesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeInstanceSourcesRequest setProductId(Long productId) {
@@ -100,12 +78,12 @@ public class DescribeInstanceSourcesRequest extends TeaModel {
         return this.productId;
     }
 
-    public DescribeInstanceSourcesRequest setAuthed(Boolean authed) {
-        this.authed = authed;
+    public DescribeInstanceSourcesRequest setServiceRegionId(String serviceRegionId) {
+        this.serviceRegionId = serviceRegionId;
         return this;
     }
-    public Boolean getAuthed() {
-        return this.authed;
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
     }
 
 }

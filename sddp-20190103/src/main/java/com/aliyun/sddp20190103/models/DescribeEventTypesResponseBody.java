@@ -4,23 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("EventTypeList")
     public java.util.List<DescribeEventTypesResponseBodyEventTypeList> eventTypeList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeEventTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventTypesResponseBody self = new DescribeEventTypesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEventTypesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEventTypesResponseBody setEventTypeList(java.util.List<DescribeEventTypesResponseBodyEventTypeList> eventTypeList) {
@@ -29,6 +21,14 @@ public class DescribeEventTypesResponseBody extends TeaModel {
     }
     public java.util.List<DescribeEventTypesResponseBodyEventTypeList> getEventTypeList() {
         return this.eventTypeList;
+    }
+
+    public DescribeEventTypesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeEventTypesResponseBodyEventTypeListSubTypeList extends TeaModel {

@@ -4,11 +4,11 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeRulesRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("Category")
+    public Integer category;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("ContentCategory")
+    public Integer contentCategory;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -16,17 +16,20 @@ public class DescribeRulesRequest extends TeaModel {
     @NameInMap("CustomType")
     public Integer customType;
 
-    @NameInMap("Category")
-    public Integer category;
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("KeywordCompatible")
+    public Boolean keywordCompatible;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("RiskLevelId")
-    public Long riskLevelId;
-
-    @NameInMap("RuleType")
-    public Integer ruleType;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ProductCode")
     public Integer productCode;
@@ -34,40 +37,37 @@ public class DescribeRulesRequest extends TeaModel {
     @NameInMap("ProductId")
     public Long productId;
 
-    @NameInMap("WarnLevel")
-    public Integer warnLevel;
+    @NameInMap("RiskLevelId")
+    public Long riskLevelId;
 
-    @NameInMap("ContentCategory")
-    public Integer contentCategory;
+    @NameInMap("RuleType")
+    public Integer ruleType;
 
     @NameInMap("Status")
     public Integer status;
 
-    @NameInMap("KeywordCompatible")
-    public Boolean keywordCompatible;
-
-    @NameInMap("GroupId")
-    public String groupId;
+    @NameInMap("WarnLevel")
+    public Integer warnLevel;
 
     public static DescribeRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRulesRequest self = new DescribeRulesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRulesRequest setLang(String lang) {
-        this.lang = lang;
+    public DescribeRulesRequest setCategory(Integer category) {
+        this.category = category;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public Integer getCategory() {
+        return this.category;
     }
 
-    public DescribeRulesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeRulesRequest setContentCategory(Integer contentCategory) {
+        this.contentCategory = contentCategory;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Integer getContentCategory() {
+        return this.contentCategory;
     }
 
     public DescribeRulesRequest setCurrentPage(Integer currentPage) {
@@ -86,12 +86,28 @@ public class DescribeRulesRequest extends TeaModel {
         return this.customType;
     }
 
-    public DescribeRulesRequest setCategory(Integer category) {
-        this.category = category;
+    public DescribeRulesRequest setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public Integer getCategory() {
-        return this.category;
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeRulesRequest setKeywordCompatible(Boolean keywordCompatible) {
+        this.keywordCompatible = keywordCompatible;
+        return this;
+    }
+    public Boolean getKeywordCompatible() {
+        return this.keywordCompatible;
+    }
+
+    public DescribeRulesRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeRulesRequest setName(String name) {
@@ -102,20 +118,12 @@ public class DescribeRulesRequest extends TeaModel {
         return this.name;
     }
 
-    public DescribeRulesRequest setRiskLevelId(Long riskLevelId) {
-        this.riskLevelId = riskLevelId;
+    public DescribeRulesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Long getRiskLevelId() {
-        return this.riskLevelId;
-    }
-
-    public DescribeRulesRequest setRuleType(Integer ruleType) {
-        this.ruleType = ruleType;
-        return this;
-    }
-    public Integer getRuleType() {
-        return this.ruleType;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeRulesRequest setProductCode(Integer productCode) {
@@ -134,20 +142,20 @@ public class DescribeRulesRequest extends TeaModel {
         return this.productId;
     }
 
-    public DescribeRulesRequest setWarnLevel(Integer warnLevel) {
-        this.warnLevel = warnLevel;
+    public DescribeRulesRequest setRiskLevelId(Long riskLevelId) {
+        this.riskLevelId = riskLevelId;
         return this;
     }
-    public Integer getWarnLevel() {
-        return this.warnLevel;
+    public Long getRiskLevelId() {
+        return this.riskLevelId;
     }
 
-    public DescribeRulesRequest setContentCategory(Integer contentCategory) {
-        this.contentCategory = contentCategory;
+    public DescribeRulesRequest setRuleType(Integer ruleType) {
+        this.ruleType = ruleType;
         return this;
     }
-    public Integer getContentCategory() {
-        return this.contentCategory;
+    public Integer getRuleType() {
+        return this.ruleType;
     }
 
     public DescribeRulesRequest setStatus(Integer status) {
@@ -158,20 +166,12 @@ public class DescribeRulesRequest extends TeaModel {
         return this.status;
     }
 
-    public DescribeRulesRequest setKeywordCompatible(Boolean keywordCompatible) {
-        this.keywordCompatible = keywordCompatible;
+    public DescribeRulesRequest setWarnLevel(Integer warnLevel) {
+        this.warnLevel = warnLevel;
         return this;
     }
-    public Boolean getKeywordCompatible() {
-        return this.keywordCompatible;
-    }
-
-    public DescribeRulesRequest setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
+    public Integer getWarnLevel() {
+        return this.warnLevel;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventDetailRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Id")
     public Long id;
+
+    @NameInMap("Lang")
+    public String lang;
 
     public static DescribeEventDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventDetailRequest self = new DescribeEventDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEventDetailRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DescribeEventDetailRequest setId(Long id) {
@@ -29,6 +21,14 @@ public class DescribeEventDetailRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public DescribeEventDetailRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
 }

@@ -7,11 +7,11 @@ public class DescribeDataLimitSetRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("ResourceType")
-    public Integer resourceType;
-
     @NameInMap("ParentId")
     public String parentId;
+
+    @NameInMap("ResourceType")
+    public Integer resourceType;
 
     public static DescribeDataLimitSetRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataLimitSetRequest self = new DescribeDataLimitSetRequest();
@@ -26,20 +26,20 @@ public class DescribeDataLimitSetRequest extends TeaModel {
         return this.lang;
     }
 
-    public DescribeDataLimitSetRequest setResourceType(Integer resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public Integer getResourceType() {
-        return this.resourceType;
-    }
-
     public DescribeDataLimitSetRequest setParentId(String parentId) {
         this.parentId = parentId;
         return this;
     }
     public String getParentId() {
         return this.parentId;
+    }
+
+    public DescribeDataLimitSetRequest setResourceType(Integer resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public Integer getResourceType() {
+        return this.resourceType;
     }
 
 }

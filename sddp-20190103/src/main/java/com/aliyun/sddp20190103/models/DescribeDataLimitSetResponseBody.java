@@ -4,23 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataLimitSetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DataLimitSet")
     public DescribeDataLimitSetResponseBodyDataLimitSet dataLimitSet;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDataLimitSetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataLimitSetResponseBody self = new DescribeDataLimitSetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDataLimitSetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDataLimitSetResponseBody setDataLimitSet(DescribeDataLimitSetResponseBodyDataLimitSet dataLimitSet) {
@@ -31,10 +23,15 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         return this.dataLimitSet;
     }
 
-    public static class DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList extends TeaModel {
-        @NameInMap("SupportEvent")
-        public Boolean supportEvent;
+    public DescribeDataLimitSetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
@@ -43,9 +40,6 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
         @NameInMap("Connector")
         public String connector;
-
-        @NameInMap("Port")
-        public Integer port;
 
         @NameInMap("CheckStatusName")
         public String checkStatusName;
@@ -59,12 +53,6 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public Long resourceType;
 
-        @NameInMap("LogStoreDay")
-        public Integer logStoreDay;
-
-        @NameInMap("EventStatus")
-        public Integer eventStatus;
-
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
@@ -77,20 +65,9 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
-        @NameInMap("AuditStatus")
-        public Integer auditStatus;
-
         public static DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList self = new DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setSupportEvent(Boolean supportEvent) {
-            this.supportEvent = supportEvent;
-            return this;
-        }
-        public Boolean getSupportEvent() {
-            return this.supportEvent;
         }
 
         public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setLocalName(String localName) {
@@ -115,14 +92,6 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         }
         public String getConnector() {
             return this.connector;
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
         }
 
         public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setCheckStatusName(String checkStatusName) {
@@ -157,22 +126,6 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             return this.resourceType;
         }
 
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setLogStoreDay(Integer logStoreDay) {
-            this.logStoreDay = logStoreDay;
-            return this;
-        }
-        public Integer getLogStoreDay() {
-            return this.logStoreDay;
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setEventStatus(Integer eventStatus) {
-            this.eventStatus = eventStatus;
-            return this;
-        }
-        public Integer getEventStatus() {
-            return this.eventStatus;
-        }
-
         public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -203,14 +156,6 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setAuditStatus(Integer auditStatus) {
-            this.auditStatus = auditStatus;
-            return this;
-        }
-        public Integer getAuditStatus() {
-            return this.auditStatus;
         }
 
     }
@@ -276,15 +221,6 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
     }
 
     public static class DescribeDataLimitSetResponseBodyDataLimitSet extends TeaModel {
-        @NameInMap("ResourceTypeCode")
-        public String resourceTypeCode;
-
-        @NameInMap("ResourceType")
-        public Long resourceType;
-
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("DataLimitList")
         public java.util.List<DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList> dataLimitList;
 
@@ -294,33 +230,18 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         @NameInMap("RegionList")
         public java.util.List<DescribeDataLimitSetResponseBodyDataLimitSetRegionList> regionList;
 
+        @NameInMap("ResourceType")
+        public Long resourceType;
+
+        @NameInMap("ResourceTypeCode")
+        public String resourceTypeCode;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
         public static DescribeDataLimitSetResponseBodyDataLimitSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataLimitSetResponseBodyDataLimitSet self = new DescribeDataLimitSetResponseBodyDataLimitSet();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSet setResourceTypeCode(String resourceTypeCode) {
-            this.resourceTypeCode = resourceTypeCode;
-            return this;
-        }
-        public String getResourceTypeCode() {
-            return this.resourceTypeCode;
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSet setResourceType(Long resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public Long getResourceType() {
-            return this.resourceType;
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSet setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
         }
 
         public DescribeDataLimitSetResponseBodyDataLimitSet setDataLimitList(java.util.List<DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList> dataLimitList) {
@@ -345,6 +266,30 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDataLimitSetResponseBodyDataLimitSetRegionList> getRegionList() {
             return this.regionList;
+        }
+
+        public DescribeDataLimitSetResponseBodyDataLimitSet setResourceType(Long resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public Long getResourceType() {
+            return this.resourceType;
+        }
+
+        public DescribeDataLimitSetResponseBodyDataLimitSet setResourceTypeCode(String resourceTypeCode) {
+            this.resourceTypeCode = resourceTypeCode;
+            return this;
+        }
+        public String getResourceTypeCode() {
+            return this.resourceTypeCode;
+        }
+
+        public DescribeDataLimitSetResponseBodyDataLimitSet setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

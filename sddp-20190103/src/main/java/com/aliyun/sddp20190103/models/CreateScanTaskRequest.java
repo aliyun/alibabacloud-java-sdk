@@ -10,20 +10,17 @@ public class CreateScanTaskRequest extends TeaModel {
     @NameInMap("IntervalDay")
     public Integer intervalDay;
 
+    @NameInMap("OssScanPath")
+    public String ossScanPath;
+
+    @NameInMap("ResourceType")
+    public Long resourceType;
+
     @NameInMap("RunHour")
     public Integer runHour;
 
     @NameInMap("RunMinute")
     public Integer runMinute;
-
-    @NameInMap("TaskName")
-    public String taskName;
-
-    @NameInMap("TaskUserName")
-    public String taskUserName;
-
-    @NameInMap("OssScanPath")
-    public String ossScanPath;
 
     @NameInMap("ScanRange")
     public Integer scanRange;
@@ -31,8 +28,11 @@ public class CreateScanTaskRequest extends TeaModel {
     @NameInMap("ScanRangeContent")
     public String scanRangeContent;
 
-    @NameInMap("ResourceType")
-    public Long resourceType;
+    @NameInMap("TaskName")
+    public String taskName;
+
+    @NameInMap("TaskUserName")
+    public String taskUserName;
 
     public static CreateScanTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScanTaskRequest self = new CreateScanTaskRequest();
@@ -55,6 +55,22 @@ public class CreateScanTaskRequest extends TeaModel {
         return this.intervalDay;
     }
 
+    public CreateScanTaskRequest setOssScanPath(String ossScanPath) {
+        this.ossScanPath = ossScanPath;
+        return this;
+    }
+    public String getOssScanPath() {
+        return this.ossScanPath;
+    }
+
+    public CreateScanTaskRequest setResourceType(Long resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public Long getResourceType() {
+        return this.resourceType;
+    }
+
     public CreateScanTaskRequest setRunHour(Integer runHour) {
         this.runHour = runHour;
         return this;
@@ -69,30 +85,6 @@ public class CreateScanTaskRequest extends TeaModel {
     }
     public Integer getRunMinute() {
         return this.runMinute;
-    }
-
-    public CreateScanTaskRequest setTaskName(String taskName) {
-        this.taskName = taskName;
-        return this;
-    }
-    public String getTaskName() {
-        return this.taskName;
-    }
-
-    public CreateScanTaskRequest setTaskUserName(String taskUserName) {
-        this.taskUserName = taskUserName;
-        return this;
-    }
-    public String getTaskUserName() {
-        return this.taskUserName;
-    }
-
-    public CreateScanTaskRequest setOssScanPath(String ossScanPath) {
-        this.ossScanPath = ossScanPath;
-        return this;
-    }
-    public String getOssScanPath() {
-        return this.ossScanPath;
     }
 
     public CreateScanTaskRequest setScanRange(Integer scanRange) {
@@ -111,12 +103,20 @@ public class CreateScanTaskRequest extends TeaModel {
         return this.scanRangeContent;
     }
 
-    public CreateScanTaskRequest setResourceType(Long resourceType) {
-        this.resourceType = resourceType;
+    public CreateScanTaskRequest setTaskName(String taskName) {
+        this.taskName = taskName;
         return this;
     }
-    public Long getResourceType() {
-        return this.resourceType;
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public CreateScanTaskRequest setTaskUserName(String taskUserName) {
+        this.taskUserName = taskUserName;
+        return this;
+    }
+    public String getTaskUserName() {
+        return this.taskUserName;
     }
 
 }

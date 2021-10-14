@@ -4,14 +4,14 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class CreateConfigRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("Value")
     public String value;
@@ -19,14 +19,6 @@ public class CreateConfigRequest extends TeaModel {
     public static CreateConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConfigRequest self = new CreateConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateConfigRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public CreateConfigRequest setCode(String code) {
@@ -43,6 +35,14 @@ public class CreateConfigRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateConfigRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public CreateConfigRequest setValue(String value) {

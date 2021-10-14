@@ -4,11 +4,20 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribePackagesRequest extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("InstanceId")
+    public Long instanceId;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("ProductId")
     public Long productId;
@@ -19,18 +28,25 @@ public class DescribePackagesRequest extends TeaModel {
     @NameInMap("RuleId")
     public Long ruleId;
 
-    @NameInMap("InstanceId")
-    public Long instanceId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
     public static DescribePackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePackagesRequest self = new DescribePackagesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePackagesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribePackagesRequest setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public Long getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribePackagesRequest setLang(String lang) {
@@ -47,6 +63,14 @@ public class DescribePackagesRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribePackagesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribePackagesRequest setProductId(Long productId) {
@@ -71,30 +95,6 @@ public class DescribePackagesRequest extends TeaModel {
     }
     public Long getRuleId() {
         return this.ruleId;
-    }
-
-    public DescribePackagesRequest setInstanceId(Long instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public Long getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribePackagesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribePackagesRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
     }
 
 }

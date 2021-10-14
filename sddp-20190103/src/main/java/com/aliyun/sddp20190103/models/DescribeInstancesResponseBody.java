@@ -7,17 +7,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public java.util.List<DescribeInstancesResponseBodyItems> items;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeInstancesResponseBodyItems> items;
 
     public static DescribeInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesResponseBody self = new DescribeInstancesResponseBody();
@@ -32,12 +32,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstancesResponseBody setItems(java.util.List<DescribeInstancesResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeInstancesResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribeInstancesResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +48,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeInstancesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeInstancesResponseBody setItems(java.util.List<DescribeInstancesResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeInstancesResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public static class DescribeInstancesResponseBodyItems extends TeaModel {

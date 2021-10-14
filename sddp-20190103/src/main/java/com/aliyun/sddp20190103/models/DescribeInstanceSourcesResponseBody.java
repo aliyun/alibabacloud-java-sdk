@@ -7,17 +7,17 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Items")
+    public java.util.List<DescribeInstanceSourcesResponseBodyItems> items;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Items")
-    public java.util.List<DescribeInstanceSourcesResponseBodyItems> items;
 
     public static DescribeInstanceSourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceSourcesResponseBody self = new DescribeInstanceSourcesResponseBody();
@@ -32,12 +32,12 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeInstanceSourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstanceSourcesResponseBody setItems(java.util.List<DescribeInstanceSourcesResponseBodyItems> items) {
+        this.items = items;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeInstanceSourcesResponseBodyItems> getItems() {
+        return this.items;
     }
 
     public DescribeInstanceSourcesResponseBody setPageSize(Integer pageSize) {
@@ -48,20 +48,20 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeInstanceSourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeInstanceSourcesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public DescribeInstanceSourcesResponseBody setItems(java.util.List<DescribeInstanceSourcesResponseBodyItems> items) {
-        this.items = items;
-        return this;
-    }
-    public java.util.List<DescribeInstanceSourcesResponseBodyItems> getItems() {
-        return this.items;
     }
 
     public static class DescribeInstanceSourcesResponseBodyItems extends TeaModel {
@@ -82,9 +82,6 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
 
         @NameInMap("InstanceDescription")
         public String instanceDescription;
-
-        @NameInMap("DataLimitId")
-        public Long dataLimitId;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -182,14 +179,6 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
         }
         public String getInstanceDescription() {
             return this.instanceDescription;
-        }
-
-        public DescribeInstanceSourcesResponseBodyItems setDataLimitId(Long dataLimitId) {
-            this.dataLimitId = dataLimitId;
-            return this;
-        }
-        public Long getDataLimitId() {
-            return this.dataLimitId;
         }
 
         public DescribeInstanceSourcesResponseBodyItems setRegionId(String regionId) {
