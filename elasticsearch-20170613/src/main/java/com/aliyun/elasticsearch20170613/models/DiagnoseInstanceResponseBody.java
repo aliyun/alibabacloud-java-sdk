@@ -54,17 +54,17 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         @NameInMap("createTime")
         public Long createTime;
 
+        @NameInMap("diagnoseItems")
+        public java.util.List<DiagnoseInstanceResponseBodyResultDiagnoseItems> diagnoseItems;
+
+        @NameInMap("instanceId")
+        public String instanceId;
+
         @NameInMap("reportId")
         public String reportId;
 
         @NameInMap("state")
         public String state;
-
-        @NameInMap("instanceId")
-        public String instanceId;
-
-        @NameInMap("diagnoseItems")
-        public java.util.List<DiagnoseInstanceResponseBodyResultDiagnoseItems> diagnoseItems;
 
         public static DiagnoseInstanceResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DiagnoseInstanceResponseBodyResult self = new DiagnoseInstanceResponseBodyResult();
@@ -77,6 +77,22 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public DiagnoseInstanceResponseBodyResult setDiagnoseItems(java.util.List<DiagnoseInstanceResponseBodyResultDiagnoseItems> diagnoseItems) {
+            this.diagnoseItems = diagnoseItems;
+            return this;
+        }
+        public java.util.List<DiagnoseInstanceResponseBodyResultDiagnoseItems> getDiagnoseItems() {
+            return this.diagnoseItems;
+        }
+
+        public DiagnoseInstanceResponseBodyResult setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DiagnoseInstanceResponseBodyResult setReportId(String reportId) {
@@ -93,22 +109,6 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DiagnoseInstanceResponseBodyResult setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DiagnoseInstanceResponseBodyResult setDiagnoseItems(java.util.List<DiagnoseInstanceResponseBodyResultDiagnoseItems> diagnoseItems) {
-            this.diagnoseItems = diagnoseItems;
-            return this;
-        }
-        public java.util.List<DiagnoseInstanceResponseBodyResultDiagnoseItems> getDiagnoseItems() {
-            return this.diagnoseItems;
         }
 
     }

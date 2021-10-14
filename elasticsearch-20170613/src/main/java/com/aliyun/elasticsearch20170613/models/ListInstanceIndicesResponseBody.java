@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceIndicesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Headers")
     public ListInstanceIndicesResponseBodyHeaders headers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Result")
     public java.util.List<ListInstanceIndicesResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListInstanceIndicesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListInstanceIndicesResponseBody setHeaders(ListInstanceIndicesResponseBodyHeaders headers) {
         this.headers = headers;
         return this;
     }
     public ListInstanceIndicesResponseBodyHeaders getHeaders() {
         return this.headers;
+    }
+
+    public ListInstanceIndicesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListInstanceIndicesResponseBody setResult(java.util.List<ListInstanceIndicesResponseBodyResult> result) {
@@ -43,29 +43,21 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
     }
 
     public static class ListInstanceIndicesResponseBodyHeaders extends TeaModel {
-        @NameInMap("X-Managed-StorageSize")
-        public Long xManagedStorageSize;
-
         @NameInMap("X-Managed-Count")
         public Integer xManagedCount;
 
-        @NameInMap("X-OSS-StorageSize")
-        public Long xOSSStorageSize;
+        @NameInMap("X-Managed-StorageSize")
+        public Long xManagedStorageSize;
 
         @NameInMap("X-OSS-Count")
         public Integer xOSSCount;
 
+        @NameInMap("X-OSS-StorageSize")
+        public Long xOSSStorageSize;
+
         public static ListInstanceIndicesResponseBodyHeaders build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceIndicesResponseBodyHeaders self = new ListInstanceIndicesResponseBodyHeaders();
             return TeaModel.build(map, self);
-        }
-
-        public ListInstanceIndicesResponseBodyHeaders setXManagedStorageSize(Long xManagedStorageSize) {
-            this.xManagedStorageSize = xManagedStorageSize;
-            return this;
-        }
-        public Long getXManagedStorageSize() {
-            return this.xManagedStorageSize;
         }
 
         public ListInstanceIndicesResponseBodyHeaders setXManagedCount(Integer xManagedCount) {
@@ -76,12 +68,12 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             return this.xManagedCount;
         }
 
-        public ListInstanceIndicesResponseBodyHeaders setXOSSStorageSize(Long xOSSStorageSize) {
-            this.xOSSStorageSize = xOSSStorageSize;
+        public ListInstanceIndicesResponseBodyHeaders setXManagedStorageSize(Long xManagedStorageSize) {
+            this.xManagedStorageSize = xManagedStorageSize;
             return this;
         }
-        public Long getXOSSStorageSize() {
-            return this.xOSSStorageSize;
+        public Long getXManagedStorageSize() {
+            return this.xManagedStorageSize;
         }
 
         public ListInstanceIndicesResponseBodyHeaders setXOSSCount(Integer xOSSCount) {
@@ -90,6 +82,14 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
         public Integer getXOSSCount() {
             return this.xOSSCount;
+        }
+
+        public ListInstanceIndicesResponseBodyHeaders setXOSSStorageSize(Long xOSSStorageSize) {
+            this.xOSSStorageSize = xOSSStorageSize;
+            return this;
+        }
+        public Long getXOSSStorageSize() {
+            return this.xOSSStorageSize;
         }
 
     }

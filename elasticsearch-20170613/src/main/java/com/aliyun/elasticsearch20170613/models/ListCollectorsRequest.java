@@ -4,17 +4,17 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListCollectorsRequest extends TeaModel {
-    @NameInMap("resId")
-    public String resId;
+    @NameInMap("instanceId")
+    public String instanceId;
 
     @NameInMap("name")
     public String name;
 
-    @NameInMap("instanceId")
-    public String instanceId;
-
     @NameInMap("page")
     public Integer page;
+
+    @NameInMap("resId")
+    public String resId;
 
     @NameInMap("size")
     public Integer size;
@@ -27,12 +27,12 @@ public class ListCollectorsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListCollectorsRequest setResId(String resId) {
-        this.resId = resId;
+    public ListCollectorsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getResId() {
-        return this.resId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListCollectorsRequest setName(String name) {
@@ -43,20 +43,20 @@ public class ListCollectorsRequest extends TeaModel {
         return this.name;
     }
 
-    public ListCollectorsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public ListCollectorsRequest setPage(Integer page) {
         this.page = page;
         return this;
     }
     public Integer getPage() {
         return this.page;
+    }
+
+    public ListCollectorsRequest setResId(String resId) {
+        this.resId = resId;
+        return this;
+    }
+    public String getResId() {
+        return this.resId;
     }
 
     public ListCollectorsRequest setSize(Integer size) {

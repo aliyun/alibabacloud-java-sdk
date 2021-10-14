@@ -4,23 +4,29 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRequest extends TeaModel {
-    @NameInMap("page")
-    public Integer page;
-
-    @NameInMap("size")
-    public Integer size;
-
     @NameInMap("description")
     public String description;
-
-    @NameInMap("instanceId")
-    public String instanceId;
 
     @NameInMap("esVersion")
     public String esVersion;
 
+    @NameInMap("instanceCategory")
+    public String instanceCategory;
+
+    @NameInMap("instanceId")
+    public String instanceId;
+
+    @NameInMap("page")
+    public Integer page;
+
+    @NameInMap("paymentType")
+    public String paymentType;
+
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("size")
+    public Integer size;
 
     @NameInMap("tags")
     public String tags;
@@ -31,31 +37,9 @@ public class ListInstanceRequest extends TeaModel {
     @NameInMap("zoneId")
     public String zoneId;
 
-    @NameInMap("paymentType")
-    public String paymentType;
-
-    @NameInMap("instanceCategory")
-    public String instanceCategory;
-
     public static ListInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstanceRequest self = new ListInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListInstanceRequest setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
-    }
-
-    public ListInstanceRequest setSize(Integer size) {
-        this.size = size;
-        return this;
-    }
-    public Integer getSize() {
-        return this.size;
     }
 
     public ListInstanceRequest setDescription(String description) {
@@ -66,14 +50,6 @@ public class ListInstanceRequest extends TeaModel {
         return this.description;
     }
 
-    public ListInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public ListInstanceRequest setEsVersion(String esVersion) {
         this.esVersion = esVersion;
         return this;
@@ -82,12 +58,52 @@ public class ListInstanceRequest extends TeaModel {
         return this.esVersion;
     }
 
+    public ListInstanceRequest setInstanceCategory(String instanceCategory) {
+        this.instanceCategory = instanceCategory;
+        return this;
+    }
+    public String getInstanceCategory() {
+        return this.instanceCategory;
+    }
+
+    public ListInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ListInstanceRequest setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
+    public ListInstanceRequest setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
+    public String getPaymentType() {
+        return this.paymentType;
+    }
+
     public ListInstanceRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListInstanceRequest setSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    public Integer getSize() {
+        return this.size;
     }
 
     public ListInstanceRequest setTags(String tags) {
@@ -112,22 +128,6 @@ public class ListInstanceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
-    }
-
-    public ListInstanceRequest setPaymentType(String paymentType) {
-        this.paymentType = paymentType;
-        return this;
-    }
-    public String getPaymentType() {
-        return this.paymentType;
-    }
-
-    public ListInstanceRequest setInstanceCategory(String instanceCategory) {
-        this.instanceCategory = instanceCategory;
-        return this;
-    }
-    public String getInstanceCategory() {
-        return this.instanceCategory;
     }
 
 }
