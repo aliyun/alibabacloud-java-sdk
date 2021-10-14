@@ -7,6 +7,9 @@ public class QueryJobOrderResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -15,9 +18,6 @@ public class QueryJobOrderResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     public static QueryJobOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryJobOrderResponseBody self = new QueryJobOrderResponseBody();
@@ -30,6 +30,14 @@ public class QueryJobOrderResponseBody extends TeaModel {
     }
     public java.util.Map<String, ?> getData() {
         return this.data;
+    }
+
+    public QueryJobOrderResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public QueryJobOrderResponseBody setErrorMessage(String errorMessage) {
@@ -54,14 +62,6 @@ public class QueryJobOrderResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public QueryJobOrderResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
 }

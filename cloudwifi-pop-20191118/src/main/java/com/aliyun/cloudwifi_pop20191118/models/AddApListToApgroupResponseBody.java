@@ -7,14 +7,14 @@ public class AddApListToApgroupResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     public static AddApListToApgroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddApListToApgroupResponseBody self = new AddApListToApgroupResponseBody();
@@ -27,6 +27,14 @@ public class AddApListToApgroupResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public AddApListToApgroupResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public AddApListToApgroupResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class AddApListToApgroupResponseBody extends TeaModel {
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
-    }
-
-    public AddApListToApgroupResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
 }

@@ -4,11 +4,14 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetStaStatusListByApRequest extends TeaModel {
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("ApMac")
+    public String apMac;
 
     @NameInMap("AppCode")
     public String appCode;
+
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("Cursor")
     public Long cursor;
@@ -16,20 +19,17 @@ public class GetStaStatusListByApRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ApMac")
-    public String apMac;
-
     public static GetStaStatusListByApRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStaStatusListByApRequest self = new GetStaStatusListByApRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetStaStatusListByApRequest setAppName(String appName) {
-        this.appName = appName;
+    public GetStaStatusListByApRequest setApMac(String apMac) {
+        this.apMac = apMac;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getApMac() {
+        return this.apMac;
     }
 
     public GetStaStatusListByApRequest setAppCode(String appCode) {
@@ -38,6 +38,14 @@ public class GetStaStatusListByApRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public GetStaStatusListByApRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public GetStaStatusListByApRequest setCursor(Long cursor) {
@@ -54,14 +62,6 @@ public class GetStaStatusListByApRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public GetStaStatusListByApRequest setApMac(String apMac) {
-        this.apMac = apMac;
-        return this;
-    }
-    public String getApMac() {
-        return this.apMac;
     }
 
 }

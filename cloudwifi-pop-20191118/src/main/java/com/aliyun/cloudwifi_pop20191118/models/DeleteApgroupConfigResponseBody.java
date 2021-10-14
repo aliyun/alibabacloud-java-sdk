@@ -7,14 +7,14 @@ public class DeleteApgroupConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     public static DeleteApgroupConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteApgroupConfigResponseBody self = new DeleteApgroupConfigResponseBody();
@@ -27,6 +27,14 @@ public class DeleteApgroupConfigResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public DeleteApgroupConfigResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public DeleteApgroupConfigResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class DeleteApgroupConfigResponseBody extends TeaModel {
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
-    }
-
-    public DeleteApgroupConfigResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
 }

@@ -7,14 +7,14 @@ public class GetApgroupIdResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     public static GetApgroupIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetApgroupIdResponseBody self = new GetApgroupIdResponseBody();
@@ -27,6 +27,14 @@ public class GetApgroupIdResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public GetApgroupIdResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public GetApgroupIdResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class GetApgroupIdResponseBody extends TeaModel {
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
-    }
-
-    public GetApgroupIdResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
 }

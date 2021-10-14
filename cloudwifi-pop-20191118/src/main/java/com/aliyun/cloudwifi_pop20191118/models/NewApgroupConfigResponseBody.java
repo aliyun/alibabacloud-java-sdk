@@ -7,14 +7,14 @@ public class NewApgroupConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     public static NewApgroupConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         NewApgroupConfigResponseBody self = new NewApgroupConfigResponseBody();
@@ -27,6 +27,14 @@ public class NewApgroupConfigResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public NewApgroupConfigResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public NewApgroupConfigResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class NewApgroupConfigResponseBody extends TeaModel {
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
-    }
-
-    public NewApgroupConfigResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
 }

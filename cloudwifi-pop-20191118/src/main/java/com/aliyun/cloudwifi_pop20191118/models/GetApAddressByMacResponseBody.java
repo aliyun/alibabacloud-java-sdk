@@ -7,14 +7,14 @@ public class GetApAddressByMacResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     public static GetApAddressByMacResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetApAddressByMacResponseBody self = new GetApAddressByMacResponseBody();
@@ -27,6 +27,14 @@ public class GetApAddressByMacResponseBody extends TeaModel {
     }
     public java.util.Map<String, ?> getData() {
         return this.data;
+    }
+
+    public GetApAddressByMacResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public GetApAddressByMacResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class GetApAddressByMacResponseBody extends TeaModel {
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
-    }
-
-    public GetApAddressByMacResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
 }

@@ -4,20 +4,20 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class RegisterApAssetRequest extends TeaModel {
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("ApGroupUUId")
+    public String apGroupUUId;
 
     @NameInMap("AppCode")
     public String appCode;
+
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("Id")
     public Long id;
 
     @NameInMap("Mac")
     public String mac;
-
-    @NameInMap("ApGroupUUId")
-    public String apGroupUUId;
 
     @NameInMap("SerialNo")
     public String serialNo;
@@ -27,12 +27,12 @@ public class RegisterApAssetRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RegisterApAssetRequest setAppName(String appName) {
-        this.appName = appName;
+    public RegisterApAssetRequest setApGroupUUId(String apGroupUUId) {
+        this.apGroupUUId = apGroupUUId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getApGroupUUId() {
+        return this.apGroupUUId;
     }
 
     public RegisterApAssetRequest setAppCode(String appCode) {
@@ -41,6 +41,14 @@ public class RegisterApAssetRequest extends TeaModel {
     }
     public String getAppCode() {
         return this.appCode;
+    }
+
+    public RegisterApAssetRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public RegisterApAssetRequest setId(Long id) {
@@ -57,14 +65,6 @@ public class RegisterApAssetRequest extends TeaModel {
     }
     public String getMac() {
         return this.mac;
-    }
-
-    public RegisterApAssetRequest setApGroupUUId(String apGroupUUId) {
-        this.apGroupUUId = apGroupUUId;
-        return this;
-    }
-    public String getApGroupUUId() {
-        return this.apGroupUUId;
     }
 
     public RegisterApAssetRequest setSerialNo(String serialNo) {

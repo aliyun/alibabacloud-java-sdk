@@ -7,8 +7,8 @@ public class RebootApResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -16,8 +16,8 @@ public class RebootApResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RebootApResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RebootApResponseBody self = new RebootApResponseBody();
@@ -32,12 +32,12 @@ public class RebootApResponseBody extends TeaModel {
         return this.data;
     }
 
-    public RebootApResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RebootApResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public RebootApResponseBody setErrorMessage(String errorMessage) {
@@ -56,12 +56,12 @@ public class RebootApResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public RebootApResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
+    public RebootApResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -7,8 +7,8 @@ public class RepairApRadioResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrorCode")
+    public Boolean errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -16,8 +16,8 @@ public class RepairApRadioResponseBody extends TeaModel {
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
-    @NameInMap("ErrorCode")
-    public Boolean errorCode;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RepairApRadioResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RepairApRadioResponseBody self = new RepairApRadioResponseBody();
@@ -32,12 +32,12 @@ public class RepairApRadioResponseBody extends TeaModel {
         return this.data;
     }
 
-    public RepairApRadioResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RepairApRadioResponseBody setErrorCode(Boolean errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Boolean getErrorCode() {
+        return this.errorCode;
     }
 
     public RepairApRadioResponseBody setErrorMessage(String errorMessage) {
@@ -56,12 +56,12 @@ public class RepairApRadioResponseBody extends TeaModel {
         return this.isSuccess;
     }
 
-    public RepairApRadioResponseBody setErrorCode(Boolean errorCode) {
-        this.errorCode = errorCode;
+    public RepairApRadioResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Boolean getErrorCode() {
-        return this.errorCode;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -7,14 +7,14 @@ public class GetApInfoFromPoolResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     public static GetApInfoFromPoolResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetApInfoFromPoolResponseBody self = new GetApInfoFromPoolResponseBody();
@@ -27,6 +27,14 @@ public class GetApInfoFromPoolResponseBody extends TeaModel {
     }
     public java.util.Map<String, ?> getData() {
         return this.data;
+    }
+
+    public GetApInfoFromPoolResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public GetApInfoFromPoolResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class GetApInfoFromPoolResponseBody extends TeaModel {
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
-    }
-
-    public GetApInfoFromPoolResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
 }

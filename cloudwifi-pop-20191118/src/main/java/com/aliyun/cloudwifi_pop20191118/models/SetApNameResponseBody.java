@@ -7,14 +7,14 @@ public class SetApNameResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
 
     public static SetApNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetApNameResponseBody self = new SetApNameResponseBody();
@@ -27,6 +27,14 @@ public class SetApNameResponseBody extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public SetApNameResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
     }
 
     public SetApNameResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class SetApNameResponseBody extends TeaModel {
     }
     public Boolean getIsSuccess() {
         return this.isSuccess;
-    }
-
-    public SetApNameResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
     }
 
 }
