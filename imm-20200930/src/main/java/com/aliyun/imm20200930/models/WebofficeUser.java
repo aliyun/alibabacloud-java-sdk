@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class WebofficeUser extends TeaModel {
+    // 头像
+    @NameInMap("Avatar")
+    public String avatar;
+
     // Id
     @NameInMap("Id")
     public String id;
@@ -12,13 +16,17 @@ public class WebofficeUser extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // 头像
-    @NameInMap("Avatar")
-    public String avatar;
-
     public static WebofficeUser build(java.util.Map<String, ?> map) throws Exception {
         WebofficeUser self = new WebofficeUser();
         return TeaModel.build(map, self);
+    }
+
+    public WebofficeUser setAvatar(String avatar) {
+        this.avatar = avatar;
+        return this;
+    }
+    public String getAvatar() {
+        return this.avatar;
     }
 
     public WebofficeUser setId(String id) {
@@ -35,14 +43,6 @@ public class WebofficeUser extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public WebofficeUser setAvatar(String avatar) {
-        this.avatar = avatar;
-        return this;
-    }
-    public String getAvatar() {
-        return this.avatar;
     }
 
 }

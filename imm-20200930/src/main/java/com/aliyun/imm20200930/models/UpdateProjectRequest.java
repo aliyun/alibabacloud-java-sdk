@@ -4,45 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
-    // 项目名称
-    @NameInMap("ProjectName")
-    public String projectName;
-
-    // 服务角色
-    @NameInMap("ServiceRole")
-    public String serviceRole;
-
-    // 项目描述
-    @NameInMap("Description")
-    public String description;
-
-    // 模板Id
-    @NameInMap("TemplateId")
-    public String templateId;
-
-    // 项目QPS
-    @NameInMap("ProjectQueriesPerSecond")
-    public Long projectQueriesPerSecond;
-
-    // 项目并发数
-    @NameInMap("EngineConcurrency")
-    public Long engineConcurrency;
-
-    // 项目最多媒体集数
-    @NameInMap("ProjectMaxDatasetCount")
-    public Long projectMaxDatasetCount;
-
     // 媒体集最多绑定数
     @NameInMap("DatasetMaxBindCount")
     public Long datasetMaxBindCount;
 
-    // 媒体集最多文件数
-    @NameInMap("DatasetMaxFileCount")
-    public Long datasetMaxFileCount;
-
     // 媒体集最多实体数
     @NameInMap("DatasetMaxEntityCount")
     public Long datasetMaxEntityCount;
+
+    // 媒体集最多文件数
+    @NameInMap("DatasetMaxFileCount")
+    public Long datasetMaxFileCount;
 
     // 媒体集最多关系数
     @NameInMap("DatasetMaxRelationCount")
@@ -52,25 +24,77 @@ public class UpdateProjectRequest extends TeaModel {
     @NameInMap("DatasetMaxTotalFileSize")
     public Long datasetMaxTotalFileSize;
 
+    // 项目描述
+    @NameInMap("Description")
+    public String description;
+
+    // 项目并发数
+    @NameInMap("EngineConcurrency")
+    public Long engineConcurrency;
+
+    // 项目最多媒体集数
+    @NameInMap("ProjectMaxDatasetCount")
+    public Long projectMaxDatasetCount;
+
+    // 项目名称
+    @NameInMap("ProjectName")
+    public String projectName;
+
+    // 项目QPS
+    @NameInMap("ProjectQueriesPerSecond")
+    public Long projectQueriesPerSecond;
+
+    // 服务角色
+    @NameInMap("ServiceRole")
+    public String serviceRole;
+
+    // 模板Id
+    @NameInMap("TemplateId")
+    public String templateId;
+
     public static UpdateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectRequest self = new UpdateProjectRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateProjectRequest setProjectName(String projectName) {
-        this.projectName = projectName;
+    public UpdateProjectRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {
+        this.datasetMaxBindCount = datasetMaxBindCount;
         return this;
     }
-    public String getProjectName() {
-        return this.projectName;
+    public Long getDatasetMaxBindCount() {
+        return this.datasetMaxBindCount;
     }
 
-    public UpdateProjectRequest setServiceRole(String serviceRole) {
-        this.serviceRole = serviceRole;
+    public UpdateProjectRequest setDatasetMaxEntityCount(Long datasetMaxEntityCount) {
+        this.datasetMaxEntityCount = datasetMaxEntityCount;
         return this;
     }
-    public String getServiceRole() {
-        return this.serviceRole;
+    public Long getDatasetMaxEntityCount() {
+        return this.datasetMaxEntityCount;
+    }
+
+    public UpdateProjectRequest setDatasetMaxFileCount(Long datasetMaxFileCount) {
+        this.datasetMaxFileCount = datasetMaxFileCount;
+        return this;
+    }
+    public Long getDatasetMaxFileCount() {
+        return this.datasetMaxFileCount;
+    }
+
+    public UpdateProjectRequest setDatasetMaxRelationCount(Long datasetMaxRelationCount) {
+        this.datasetMaxRelationCount = datasetMaxRelationCount;
+        return this;
+    }
+    public Long getDatasetMaxRelationCount() {
+        return this.datasetMaxRelationCount;
+    }
+
+    public UpdateProjectRequest setDatasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
+        this.datasetMaxTotalFileSize = datasetMaxTotalFileSize;
+        return this;
+    }
+    public Long getDatasetMaxTotalFileSize() {
+        return this.datasetMaxTotalFileSize;
     }
 
     public UpdateProjectRequest setDescription(String description) {
@@ -79,22 +103,6 @@ public class UpdateProjectRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public UpdateProjectRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
-    }
-
-    public UpdateProjectRequest setProjectQueriesPerSecond(Long projectQueriesPerSecond) {
-        this.projectQueriesPerSecond = projectQueriesPerSecond;
-        return this;
-    }
-    public Long getProjectQueriesPerSecond() {
-        return this.projectQueriesPerSecond;
     }
 
     public UpdateProjectRequest setEngineConcurrency(Long engineConcurrency) {
@@ -113,44 +121,36 @@ public class UpdateProjectRequest extends TeaModel {
         return this.projectMaxDatasetCount;
     }
 
-    public UpdateProjectRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {
-        this.datasetMaxBindCount = datasetMaxBindCount;
+    public UpdateProjectRequest setProjectName(String projectName) {
+        this.projectName = projectName;
         return this;
     }
-    public Long getDatasetMaxBindCount() {
-        return this.datasetMaxBindCount;
+    public String getProjectName() {
+        return this.projectName;
     }
 
-    public UpdateProjectRequest setDatasetMaxFileCount(Long datasetMaxFileCount) {
-        this.datasetMaxFileCount = datasetMaxFileCount;
+    public UpdateProjectRequest setProjectQueriesPerSecond(Long projectQueriesPerSecond) {
+        this.projectQueriesPerSecond = projectQueriesPerSecond;
         return this;
     }
-    public Long getDatasetMaxFileCount() {
-        return this.datasetMaxFileCount;
+    public Long getProjectQueriesPerSecond() {
+        return this.projectQueriesPerSecond;
     }
 
-    public UpdateProjectRequest setDatasetMaxEntityCount(Long datasetMaxEntityCount) {
-        this.datasetMaxEntityCount = datasetMaxEntityCount;
+    public UpdateProjectRequest setServiceRole(String serviceRole) {
+        this.serviceRole = serviceRole;
         return this;
     }
-    public Long getDatasetMaxEntityCount() {
-        return this.datasetMaxEntityCount;
+    public String getServiceRole() {
+        return this.serviceRole;
     }
 
-    public UpdateProjectRequest setDatasetMaxRelationCount(Long datasetMaxRelationCount) {
-        this.datasetMaxRelationCount = datasetMaxRelationCount;
+    public UpdateProjectRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
-    public Long getDatasetMaxRelationCount() {
-        return this.datasetMaxRelationCount;
-    }
-
-    public UpdateProjectRequest setDatasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
-        this.datasetMaxTotalFileSize = datasetMaxTotalFileSize;
-        return this;
-    }
-    public Long getDatasetMaxTotalFileSize() {
-        return this.datasetMaxTotalFileSize;
+    public String getTemplateId() {
+        return this.templateId;
     }
 
 }

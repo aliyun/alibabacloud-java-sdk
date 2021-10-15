@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class FuzzyQueryResponseBody extends TeaModel {
+    @NameInMap("Files")
+    public java.util.List<File> files;
+
     // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
@@ -12,12 +15,17 @@ public class FuzzyQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Files")
-    public java.util.List<File> files;
-
     public static FuzzyQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         FuzzyQueryResponseBody self = new FuzzyQueryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public FuzzyQueryResponseBody setFiles(java.util.List<File> files) {
+        this.files = files;
+        return this;
+    }
+    public java.util.List<File> getFiles() {
+        return this.files;
     }
 
     public FuzzyQueryResponseBody setNextToken(String nextToken) {
@@ -34,14 +42,6 @@ public class FuzzyQueryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public FuzzyQueryResponseBody setFiles(java.util.List<File> files) {
-        this.files = files;
-        return this;
-    }
-    public java.util.List<File> getFiles() {
-        return this.files;
     }
 
 }

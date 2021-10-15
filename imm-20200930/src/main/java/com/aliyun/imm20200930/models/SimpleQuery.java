@@ -8,10 +8,6 @@ public class SimpleQuery extends TeaModel {
     @NameInMap("Field")
     public String field;
 
-    // 需要查询的字段值
-    @NameInMap("Value")
-    public String value;
-
     // 运算符
     @NameInMap("Operation")
     public String operation;
@@ -19,6 +15,10 @@ public class SimpleQuery extends TeaModel {
     // 由 SimpleQuery 结构体组成的子查询数组
     @NameInMap("SubQueries")
     public java.util.List<SimpleQuery> subQueries;
+
+    // 需要查询的字段值
+    @NameInMap("Value")
+    public String value;
 
     public static SimpleQuery build(java.util.Map<String, ?> map) throws Exception {
         SimpleQuery self = new SimpleQuery();
@@ -31,14 +31,6 @@ public class SimpleQuery extends TeaModel {
     }
     public String getField() {
         return this.field;
-    }
-
-    public SimpleQuery setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
     }
 
     public SimpleQuery setOperation(String operation) {
@@ -55,6 +47,14 @@ public class SimpleQuery extends TeaModel {
     }
     public java.util.List<SimpleQuery> getSubQueries() {
         return this.subQueries;
+    }
+
+    public SimpleQuery setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

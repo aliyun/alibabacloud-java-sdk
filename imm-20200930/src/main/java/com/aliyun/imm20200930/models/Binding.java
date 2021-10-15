@@ -4,33 +4,33 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Binding extends TeaModel {
-    // ProjectName
-    @NameInMap("ProjectName")
-    public String projectName;
+    // CreateTime
+    @NameInMap("CreateTime")
+    public String createTime;
 
     // DatasetName
     @NameInMap("DatasetName")
     public String datasetName;
 
-    // URI
-    @NameInMap("URI")
-    public String URI;
-
-    // State
-    @NameInMap("State")
-    public String state;
+    // Detail
+    @NameInMap("Detail")
+    public String detail;
 
     // Phase
     @NameInMap("Phase")
     public String phase;
 
-    // Detail
-    @NameInMap("Detail")
-    public String detail;
+    // ProjectName
+    @NameInMap("ProjectName")
+    public String projectName;
 
-    // CreateTime
-    @NameInMap("CreateTime")
-    public String createTime;
+    // State
+    @NameInMap("State")
+    public String state;
+
+    // URI
+    @NameInMap("URI")
+    public String URI;
 
     // UpdateTime
     @NameInMap("UpdateTime")
@@ -41,12 +41,12 @@ public class Binding extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public Binding setProjectName(String projectName) {
-        this.projectName = projectName;
+    public Binding setCreateTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
-    public String getProjectName() {
-        return this.projectName;
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public Binding setDatasetName(String datasetName) {
@@ -57,20 +57,12 @@ public class Binding extends TeaModel {
         return this.datasetName;
     }
 
-    public Binding setURI(String URI) {
-        this.URI = URI;
+    public Binding setDetail(String detail) {
+        this.detail = detail;
         return this;
     }
-    public String getURI() {
-        return this.URI;
-    }
-
-    public Binding setState(String state) {
-        this.state = state;
-        return this;
-    }
-    public String getState() {
-        return this.state;
+    public String getDetail() {
+        return this.detail;
     }
 
     public Binding setPhase(String phase) {
@@ -81,20 +73,28 @@ public class Binding extends TeaModel {
         return this.phase;
     }
 
-    public Binding setDetail(String detail) {
-        this.detail = detail;
+    public Binding setProjectName(String projectName) {
+        this.projectName = projectName;
         return this;
     }
-    public String getDetail() {
-        return this.detail;
+    public String getProjectName() {
+        return this.projectName;
     }
 
-    public Binding setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public Binding setState(String state) {
+        this.state = state;
         return this;
     }
-    public String getCreateTime() {
-        return this.createTime;
+    public String getState() {
+        return this.state;
+    }
+
+    public Binding setURI(String URI) {
+        this.URI = URI;
+        return this;
+    }
+    public String getURI() {
+        return this.URI;
     }
 
     public Binding setUpdateTime(String updateTime) {

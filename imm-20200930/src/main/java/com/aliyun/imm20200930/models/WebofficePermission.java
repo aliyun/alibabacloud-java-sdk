@@ -4,13 +4,13 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class WebofficePermission extends TeaModel {
-    // 重命名
-    @NameInMap("Rename")
-    public Boolean rename;
+    // 拷贝
+    @NameInMap("Copy")
+    public Boolean copy;
 
-    // 只读模式
-    @NameInMap("Readonly")
-    public Boolean readonly;
+    // 导出
+    @NameInMap("Export")
+    public Boolean export;
 
     // 查看历史版本
     @NameInMap("History")
@@ -20,33 +20,33 @@ public class WebofficePermission extends TeaModel {
     @NameInMap("Print")
     public Boolean print;
 
-    // 导出
-    @NameInMap("Export")
-    public Boolean export;
+    // 只读模式
+    @NameInMap("Readonly")
+    public Boolean readonly;
 
-    // 拷贝
-    @NameInMap("Copy")
-    public Boolean copy;
+    // 重命名
+    @NameInMap("Rename")
+    public Boolean rename;
 
     public static WebofficePermission build(java.util.Map<String, ?> map) throws Exception {
         WebofficePermission self = new WebofficePermission();
         return TeaModel.build(map, self);
     }
 
-    public WebofficePermission setRename(Boolean rename) {
-        this.rename = rename;
+    public WebofficePermission setCopy(Boolean copy) {
+        this.copy = copy;
         return this;
     }
-    public Boolean getRename() {
-        return this.rename;
+    public Boolean getCopy() {
+        return this.copy;
     }
 
-    public WebofficePermission setReadonly(Boolean readonly) {
-        this.readonly = readonly;
+    public WebofficePermission setExport(Boolean export) {
+        this.export = export;
         return this;
     }
-    public Boolean getReadonly() {
-        return this.readonly;
+    public Boolean getExport() {
+        return this.export;
     }
 
     public WebofficePermission setHistory(Boolean history) {
@@ -65,20 +65,20 @@ public class WebofficePermission extends TeaModel {
         return this.print;
     }
 
-    public WebofficePermission setExport(Boolean export) {
-        this.export = export;
+    public WebofficePermission setReadonly(Boolean readonly) {
+        this.readonly = readonly;
         return this;
     }
-    public Boolean getExport() {
-        return this.export;
+    public Boolean getReadonly() {
+        return this.readonly;
     }
 
-    public WebofficePermission setCopy(Boolean copy) {
-        this.copy = copy;
+    public WebofficePermission setRename(Boolean rename) {
+        this.rename = rename;
         return this;
     }
-    public Boolean getCopy() {
-        return this.copy;
+    public Boolean getRename() {
+        return this.rename;
     }
 
 }

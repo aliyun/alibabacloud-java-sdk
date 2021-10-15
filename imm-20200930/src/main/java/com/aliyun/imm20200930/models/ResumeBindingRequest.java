@@ -4,11 +4,11 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ResumeBindingRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("DatasetName")
     public String datasetName;
+
+    @NameInMap("ProjectName")
+    public String projectName;
 
     @NameInMap("URI")
     public String URI;
@@ -18,20 +18,20 @@ public class ResumeBindingRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ResumeBindingRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
     public ResumeBindingRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public ResumeBindingRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
     public ResumeBindingRequest setURI(String URI) {

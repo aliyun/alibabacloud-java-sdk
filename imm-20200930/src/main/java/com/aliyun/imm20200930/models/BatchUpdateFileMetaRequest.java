@@ -4,26 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchUpdateFileMetaRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("DatasetName")
     public String datasetName;
 
     @NameInMap("Files")
     public java.util.List<FileForReq> files;
 
+    @NameInMap("NotifyEndpoint")
+    public String notifyEndpoint;
+
+    @NameInMap("NotifyTopicName")
+    public String notifyTopicName;
+
+    @NameInMap("ProjectName")
+    public String projectName;
+
     public static BatchUpdateFileMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchUpdateFileMetaRequest self = new BatchUpdateFileMetaRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchUpdateFileMetaRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
     }
 
     public BatchUpdateFileMetaRequest setDatasetName(String datasetName) {
@@ -40,6 +38,30 @@ public class BatchUpdateFileMetaRequest extends TeaModel {
     }
     public java.util.List<FileForReq> getFiles() {
         return this.files;
+    }
+
+    public BatchUpdateFileMetaRequest setNotifyEndpoint(String notifyEndpoint) {
+        this.notifyEndpoint = notifyEndpoint;
+        return this;
+    }
+    public String getNotifyEndpoint() {
+        return this.notifyEndpoint;
+    }
+
+    public BatchUpdateFileMetaRequest setNotifyTopicName(String notifyTopicName) {
+        this.notifyTopicName = notifyTopicName;
+        return this;
+    }
+    public String getNotifyTopicName() {
+        return this.notifyTopicName;
+    }
+
+    public BatchUpdateFileMetaRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
 }

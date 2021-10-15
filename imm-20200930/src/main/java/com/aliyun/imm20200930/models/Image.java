@@ -4,24 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Image extends TeaModel {
-    // ImageWidth
-    @NameInMap("ImageWidth")
-    public Long imageWidth;
-
-    // ImageHeight
-    @NameInMap("ImageHeight")
-    public Long imageHeight;
+    // CroppingSuggestions
+    @NameInMap("CroppingSuggestions")
+    public java.util.List<CroppingSuggestion> croppingSuggestions;
 
     // EXIF
     @NameInMap("EXIF")
     public String EXIF;
 
+    // ImageHeight
+    @NameInMap("ImageHeight")
+    public Long imageHeight;
+
     @NameInMap("ImageScore")
     public ImageScore imageScore;
 
-    // CroppingSuggestions
-    @NameInMap("CroppingSuggestions")
-    public java.util.List<CroppingSuggestion> croppingSuggestions;
+    // ImageWidth
+    @NameInMap("ImageWidth")
+    public Long imageWidth;
 
     // OCRContents
     @NameInMap("OCRContents")
@@ -32,20 +32,12 @@ public class Image extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public Image setImageWidth(Long imageWidth) {
-        this.imageWidth = imageWidth;
+    public Image setCroppingSuggestions(java.util.List<CroppingSuggestion> croppingSuggestions) {
+        this.croppingSuggestions = croppingSuggestions;
         return this;
     }
-    public Long getImageWidth() {
-        return this.imageWidth;
-    }
-
-    public Image setImageHeight(Long imageHeight) {
-        this.imageHeight = imageHeight;
-        return this;
-    }
-    public Long getImageHeight() {
-        return this.imageHeight;
+    public java.util.List<CroppingSuggestion> getCroppingSuggestions() {
+        return this.croppingSuggestions;
     }
 
     public Image setEXIF(String EXIF) {
@@ -56,6 +48,14 @@ public class Image extends TeaModel {
         return this.EXIF;
     }
 
+    public Image setImageHeight(Long imageHeight) {
+        this.imageHeight = imageHeight;
+        return this;
+    }
+    public Long getImageHeight() {
+        return this.imageHeight;
+    }
+
     public Image setImageScore(ImageScore imageScore) {
         this.imageScore = imageScore;
         return this;
@@ -64,12 +64,12 @@ public class Image extends TeaModel {
         return this.imageScore;
     }
 
-    public Image setCroppingSuggestions(java.util.List<CroppingSuggestion> croppingSuggestions) {
-        this.croppingSuggestions = croppingSuggestions;
+    public Image setImageWidth(Long imageWidth) {
+        this.imageWidth = imageWidth;
         return this;
     }
-    public java.util.List<CroppingSuggestion> getCroppingSuggestions() {
-        return this.croppingSuggestions;
+    public Long getImageWidth() {
+        return this.imageWidth;
     }
 
     public Image setOCRContents(java.util.List<OCRContents> OCRContents) {

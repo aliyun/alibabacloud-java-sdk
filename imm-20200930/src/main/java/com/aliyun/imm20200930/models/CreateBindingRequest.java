@@ -4,13 +4,13 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateBindingRequest extends TeaModel {
-    // ProjectName
-    @NameInMap("ProjectName")
-    public String projectName;
-
     // DatasetName
     @NameInMap("DatasetName")
     public String datasetName;
+
+    // ProjectName
+    @NameInMap("ProjectName")
+    public String projectName;
 
     // URI
     @NameInMap("URI")
@@ -21,20 +21,20 @@ public class CreateBindingRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateBindingRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
     public CreateBindingRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public CreateBindingRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
     public CreateBindingRequest setURI(String URI) {

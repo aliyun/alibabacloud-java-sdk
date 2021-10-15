@@ -4,37 +4,25 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Dataset extends TeaModel {
-    // 项目名称
-    @NameInMap("ProjectName")
-    public String projectName;
-
-    // 媒体集名称
-    @NameInMap("DatasetName")
-    public String datasetName;
+    // 媒体集当前绑定数
+    @NameInMap("BindCount")
+    public Long bindCount;
 
     // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 更新时间
-    @NameInMap("UpdateTime")
-    public String updateTime;
-
-    // 描述
-    @NameInMap("Description")
-    public String description;
-
     // 媒体集最大绑定数
     @NameInMap("DatasetMaxBindCount")
     public Long datasetMaxBindCount;
 
-    // 媒体集最多文件数量
-    @NameInMap("DatasetMaxFileCount")
-    public Long datasetMaxFileCount;
-
     // 媒体集最多实体数量
     @NameInMap("DatasetMaxEntityCount")
     public Long datasetMaxEntityCount;
+
+    // 媒体集最多文件数量
+    @NameInMap("DatasetMaxFileCount")
+    public Long datasetMaxFileCount;
 
     // 媒体集最多关系数量
     @NameInMap("DatasetMaxRelationCount")
@@ -44,37 +32,41 @@ public class Dataset extends TeaModel {
     @NameInMap("DatasetMaxTotalFileSize")
     public Long datasetMaxTotalFileSize;
 
-    // 媒体集当前绑定数
-    @NameInMap("BindCount")
-    public Long bindCount;
+    // 媒体集名称
+    @NameInMap("DatasetName")
+    public String datasetName;
+
+    // 描述
+    @NameInMap("Description")
+    public String description;
 
     // 媒体集当前文件数
     @NameInMap("FileCount")
     public Long fileCount;
 
+    // 项目名称
+    @NameInMap("ProjectName")
+    public String projectName;
+
     // 媒体集当前文件总大小
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
+
+    // 更新时间
+    @NameInMap("UpdateTime")
+    public String updateTime;
 
     public static Dataset build(java.util.Map<String, ?> map) throws Exception {
         Dataset self = new Dataset();
         return TeaModel.build(map, self);
     }
 
-    public Dataset setProjectName(String projectName) {
-        this.projectName = projectName;
+    public Dataset setBindCount(Long bindCount) {
+        this.bindCount = bindCount;
         return this;
     }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
-    public Dataset setDatasetName(String datasetName) {
-        this.datasetName = datasetName;
-        return this;
-    }
-    public String getDatasetName() {
-        return this.datasetName;
+    public Long getBindCount() {
+        return this.bindCount;
     }
 
     public Dataset setCreateTime(String createTime) {
@@ -85,22 +77,6 @@ public class Dataset extends TeaModel {
         return this.createTime;
     }
 
-    public Dataset setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-        return this;
-    }
-    public String getUpdateTime() {
-        return this.updateTime;
-    }
-
-    public Dataset setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
     public Dataset setDatasetMaxBindCount(Long datasetMaxBindCount) {
         this.datasetMaxBindCount = datasetMaxBindCount;
         return this;
@@ -109,20 +85,20 @@ public class Dataset extends TeaModel {
         return this.datasetMaxBindCount;
     }
 
-    public Dataset setDatasetMaxFileCount(Long datasetMaxFileCount) {
-        this.datasetMaxFileCount = datasetMaxFileCount;
-        return this;
-    }
-    public Long getDatasetMaxFileCount() {
-        return this.datasetMaxFileCount;
-    }
-
     public Dataset setDatasetMaxEntityCount(Long datasetMaxEntityCount) {
         this.datasetMaxEntityCount = datasetMaxEntityCount;
         return this;
     }
     public Long getDatasetMaxEntityCount() {
         return this.datasetMaxEntityCount;
+    }
+
+    public Dataset setDatasetMaxFileCount(Long datasetMaxFileCount) {
+        this.datasetMaxFileCount = datasetMaxFileCount;
+        return this;
+    }
+    public Long getDatasetMaxFileCount() {
+        return this.datasetMaxFileCount;
     }
 
     public Dataset setDatasetMaxRelationCount(Long datasetMaxRelationCount) {
@@ -141,12 +117,20 @@ public class Dataset extends TeaModel {
         return this.datasetMaxTotalFileSize;
     }
 
-    public Dataset setBindCount(Long bindCount) {
-        this.bindCount = bindCount;
+    public Dataset setDatasetName(String datasetName) {
+        this.datasetName = datasetName;
         return this;
     }
-    public Long getBindCount() {
-        return this.bindCount;
+    public String getDatasetName() {
+        return this.datasetName;
+    }
+
+    public Dataset setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public Dataset setFileCount(Long fileCount) {
@@ -157,12 +141,28 @@ public class Dataset extends TeaModel {
         return this.fileCount;
     }
 
+    public Dataset setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
     public Dataset setTotalFileSize(Long totalFileSize) {
         this.totalFileSize = totalFileSize;
         return this;
     }
     public Long getTotalFileSize() {
         return this.totalFileSize;
+    }
+
+    public Dataset setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+    public String getUpdateTime() {
+        return this.updateTime;
     }
 
 }

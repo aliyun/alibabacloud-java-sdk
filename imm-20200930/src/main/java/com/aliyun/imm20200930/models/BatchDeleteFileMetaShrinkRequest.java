@@ -4,11 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteFileMetaShrinkRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("DatasetName")
     public String datasetName;
+
+    @NameInMap("NotifyEndpoint")
+    public String notifyEndpoint;
+
+    @NameInMap("NotifyTopicName")
+    public String notifyTopicName;
+
+    @NameInMap("ProjectName")
+    public String projectName;
 
     @NameInMap("URIs")
     public String URIsShrink;
@@ -18,20 +24,36 @@ public class BatchDeleteFileMetaShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BatchDeleteFileMetaShrinkRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
     public BatchDeleteFileMetaShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public BatchDeleteFileMetaShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
+        this.notifyEndpoint = notifyEndpoint;
+        return this;
+    }
+    public String getNotifyEndpoint() {
+        return this.notifyEndpoint;
+    }
+
+    public BatchDeleteFileMetaShrinkRequest setNotifyTopicName(String notifyTopicName) {
+        this.notifyTopicName = notifyTopicName;
+        return this;
+    }
+    public String getNotifyTopicName() {
+        return this.notifyTopicName;
+    }
+
+    public BatchDeleteFileMetaShrinkRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
     public BatchDeleteFileMetaShrinkRequest setURIsShrink(String URIsShrink) {

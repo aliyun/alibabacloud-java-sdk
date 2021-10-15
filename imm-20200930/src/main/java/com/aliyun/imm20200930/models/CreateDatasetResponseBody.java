@@ -4,24 +4,16 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetResponseBody extends TeaModel {
+    @NameInMap("Dataset")
+    public Dataset dataset;
+
     // 请求 ID
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Dataset")
-    public Dataset dataset;
-
     public static CreateDatasetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDatasetResponseBody self = new CreateDatasetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDatasetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateDatasetResponseBody setDataset(Dataset dataset) {
@@ -30,6 +22,14 @@ public class CreateDatasetResponseBody extends TeaModel {
     }
     public Dataset getDataset() {
         return this.dataset;
+    }
+
+    public CreateDatasetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

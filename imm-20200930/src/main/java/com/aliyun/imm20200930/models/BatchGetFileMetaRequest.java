@@ -4,11 +4,11 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchGetFileMetaRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("DatasetName")
     public String datasetName;
+
+    @NameInMap("ProjectName")
+    public String projectName;
 
     @NameInMap("URIs")
     public java.util.List<String> URIs;
@@ -18,20 +18,20 @@ public class BatchGetFileMetaRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BatchGetFileMetaRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
     public BatchGetFileMetaRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public BatchGetFileMetaRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
     public BatchGetFileMetaRequest setURIs(java.util.List<String> URIs) {

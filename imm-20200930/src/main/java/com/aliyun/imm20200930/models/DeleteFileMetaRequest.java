@@ -4,11 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteFileMetaRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("DatasetName")
     public String datasetName;
+
+    @NameInMap("NotifyEndpoint")
+    public String notifyEndpoint;
+
+    @NameInMap("NotifyTopicName")
+    public String notifyTopicName;
+
+    @NameInMap("ProjectName")
+    public String projectName;
 
     @NameInMap("URI")
     public String URI;
@@ -18,20 +24,36 @@ public class DeleteFileMetaRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteFileMetaRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
     public DeleteFileMetaRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public DeleteFileMetaRequest setNotifyEndpoint(String notifyEndpoint) {
+        this.notifyEndpoint = notifyEndpoint;
+        return this;
+    }
+    public String getNotifyEndpoint() {
+        return this.notifyEndpoint;
+    }
+
+    public DeleteFileMetaRequest setNotifyTopicName(String notifyTopicName) {
+        this.notifyTopicName = notifyTopicName;
+        return this;
+    }
+    public String getNotifyTopicName() {
+        return this.notifyTopicName;
+    }
+
+    public DeleteFileMetaRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
     public DeleteFileMetaRequest setURI(String URI) {
