@@ -4,14 +4,14 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseReportRequest extends TeaModel {
-    @NameInMap("detail")
-    public Boolean detail;
+    @NameInMap("lang")
+    public String lang;
+
+    @NameInMap("startTime")
+    public Long startTime;
 
     @NameInMap("endTime")
     public Long endTime;
-
-    @NameInMap("lang")
-    public String lang;
 
     @NameInMap("page")
     public Integer page;
@@ -19,8 +19,8 @@ public class ListDiagnoseReportRequest extends TeaModel {
     @NameInMap("size")
     public Integer size;
 
-    @NameInMap("startTime")
-    public Long startTime;
+    @NameInMap("detail")
+    public Boolean detail;
 
     @NameInMap("trigger")
     public String trigger;
@@ -30,12 +30,20 @@ public class ListDiagnoseReportRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDiagnoseReportRequest setDetail(Boolean detail) {
-        this.detail = detail;
+    public ListDiagnoseReportRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public Boolean getDetail() {
-        return this.detail;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public ListDiagnoseReportRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public ListDiagnoseReportRequest setEndTime(Long endTime) {
@@ -44,14 +52,6 @@ public class ListDiagnoseReportRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
-    }
-
-    public ListDiagnoseReportRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ListDiagnoseReportRequest setPage(Integer page) {
@@ -70,12 +70,12 @@ public class ListDiagnoseReportRequest extends TeaModel {
         return this.size;
     }
 
-    public ListDiagnoseReportRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
+    public ListDiagnoseReportRequest setDetail(Boolean detail) {
+        this.detail = detail;
         return this;
     }
-    public Long getStartTime() {
-        return this.startTime;
+    public Boolean getDetail() {
+        return this.detail;
     }
 
     public ListDiagnoseReportRequest setTrigger(String trigger) {

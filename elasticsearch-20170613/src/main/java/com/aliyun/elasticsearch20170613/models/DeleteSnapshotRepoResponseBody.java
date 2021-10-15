@@ -4,23 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotRepoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Result")
     public Boolean result;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeleteSnapshotRepoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSnapshotRepoResponseBody self = new DeleteSnapshotRepoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteSnapshotRepoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteSnapshotRepoResponseBody setResult(Boolean result) {
@@ -29,6 +21,14 @@ public class DeleteSnapshotRepoResponseBody extends TeaModel {
     }
     public Boolean getResult() {
         return this.result;
+    }
+
+    public DeleteSnapshotRepoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

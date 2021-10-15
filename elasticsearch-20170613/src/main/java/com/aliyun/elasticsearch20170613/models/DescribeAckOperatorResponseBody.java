@@ -32,23 +32,15 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
     }
 
     public static class DescribeAckOperatorResponseBodyResult extends TeaModel {
-        @NameInMap("status")
-        public String status;
-
         @NameInMap("version")
         public String version;
+
+        @NameInMap("status")
+        public String status;
 
         public static DescribeAckOperatorResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeAckOperatorResponseBodyResult self = new DescribeAckOperatorResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAckOperatorResponseBodyResult setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeAckOperatorResponseBodyResult setVersion(String version) {
@@ -57,6 +49,14 @@ public class DescribeAckOperatorResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public DescribeAckOperatorResponseBodyResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

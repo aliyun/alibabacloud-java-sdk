@@ -4,26 +4,18 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDictInformationRequest extends TeaModel {
-    @NameInMap("analyzerType")
-    public String analyzerType;
-
     @NameInMap("bucketName")
     public String bucketName;
 
     @NameInMap("key")
     public String key;
 
+    @NameInMap("analyzerType")
+    public String analyzerType;
+
     public static ListDictInformationRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDictInformationRequest self = new ListDictInformationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDictInformationRequest setAnalyzerType(String analyzerType) {
-        this.analyzerType = analyzerType;
-        return this;
-    }
-    public String getAnalyzerType() {
-        return this.analyzerType;
     }
 
     public ListDictInformationRequest setBucketName(String bucketName) {
@@ -40,6 +32,14 @@ public class ListDictInformationRequest extends TeaModel {
     }
     public String getKey() {
         return this.key;
+    }
+
+    public ListDictInformationRequest setAnalyzerType(String analyzerType) {
+        this.analyzerType = analyzerType;
+        return this;
+    }
+    public String getAnalyzerType() {
+        return this.analyzerType;
     }
 
 }

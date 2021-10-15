@@ -83,203 +83,6 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     }
 
-    public static class MoveResourceGroupResponseBodyResultKibanaConfiguration extends TeaModel {
-        @NameInMap("amount")
-        public Integer amount;
-
-        @NameInMap("disk")
-        public Integer disk;
-
-        @NameInMap("diskType")
-        public String diskType;
-
-        @NameInMap("spec")
-        public String spec;
-
-        public static MoveResourceGroupResponseBodyResultKibanaConfiguration build(java.util.Map<String, ?> map) throws Exception {
-            MoveResourceGroupResponseBodyResultKibanaConfiguration self = new MoveResourceGroupResponseBodyResultKibanaConfiguration();
-            return TeaModel.build(map, self);
-        }
-
-        public MoveResourceGroupResponseBodyResultKibanaConfiguration setAmount(Integer amount) {
-            this.amount = amount;
-            return this;
-        }
-        public Integer getAmount() {
-            return this.amount;
-        }
-
-        public MoveResourceGroupResponseBodyResultKibanaConfiguration setDisk(Integer disk) {
-            this.disk = disk;
-            return this;
-        }
-        public Integer getDisk() {
-            return this.disk;
-        }
-
-        public MoveResourceGroupResponseBodyResultKibanaConfiguration setDiskType(String diskType) {
-            this.diskType = diskType;
-            return this;
-        }
-        public String getDiskType() {
-            return this.diskType;
-        }
-
-        public MoveResourceGroupResponseBodyResultKibanaConfiguration setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
-        }
-
-    }
-
-    public static class MoveResourceGroupResponseBodyResultMasterConfiguration extends TeaModel {
-        @NameInMap("amount")
-        public Integer amount;
-
-        @NameInMap("disk")
-        public Integer disk;
-
-        @NameInMap("diskType")
-        public String diskType;
-
-        @NameInMap("spec")
-        public String spec;
-
-        public static MoveResourceGroupResponseBodyResultMasterConfiguration build(java.util.Map<String, ?> map) throws Exception {
-            MoveResourceGroupResponseBodyResultMasterConfiguration self = new MoveResourceGroupResponseBodyResultMasterConfiguration();
-            return TeaModel.build(map, self);
-        }
-
-        public MoveResourceGroupResponseBodyResultMasterConfiguration setAmount(Integer amount) {
-            this.amount = amount;
-            return this;
-        }
-        public Integer getAmount() {
-            return this.amount;
-        }
-
-        public MoveResourceGroupResponseBodyResultMasterConfiguration setDisk(Integer disk) {
-            this.disk = disk;
-            return this;
-        }
-        public Integer getDisk() {
-            return this.disk;
-        }
-
-        public MoveResourceGroupResponseBodyResultMasterConfiguration setDiskType(String diskType) {
-            this.diskType = diskType;
-            return this;
-        }
-        public String getDiskType() {
-            return this.diskType;
-        }
-
-        public MoveResourceGroupResponseBodyResultMasterConfiguration setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
-        }
-
-    }
-
-    public static class MoveResourceGroupResponseBodyResultNetworkConfig extends TeaModel {
-        @NameInMap("type")
-        public String type;
-
-        @NameInMap("vpcId")
-        public String vpcId;
-
-        @NameInMap("vsArea")
-        public String vsArea;
-
-        @NameInMap("vswitchId")
-        public String vswitchId;
-
-        public static MoveResourceGroupResponseBodyResultNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
-            MoveResourceGroupResponseBodyResultNetworkConfig self = new MoveResourceGroupResponseBodyResultNetworkConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public MoveResourceGroupResponseBodyResultNetworkConfig setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public MoveResourceGroupResponseBodyResultNetworkConfig setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public MoveResourceGroupResponseBodyResultNetworkConfig setVsArea(String vsArea) {
-            this.vsArea = vsArea;
-            return this;
-        }
-        public String getVsArea() {
-            return this.vsArea;
-        }
-
-        public MoveResourceGroupResponseBodyResultNetworkConfig setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
-        }
-
-    }
-
-    public static class MoveResourceGroupResponseBodyResultNodeSpec extends TeaModel {
-        @NameInMap("disk")
-        public Integer disk;
-
-        @NameInMap("diskType")
-        public String diskType;
-
-        @NameInMap("spec")
-        public String spec;
-
-        public static MoveResourceGroupResponseBodyResultNodeSpec build(java.util.Map<String, ?> map) throws Exception {
-            MoveResourceGroupResponseBodyResultNodeSpec self = new MoveResourceGroupResponseBodyResultNodeSpec();
-            return TeaModel.build(map, self);
-        }
-
-        public MoveResourceGroupResponseBodyResultNodeSpec setDisk(Integer disk) {
-            this.disk = disk;
-            return this;
-        }
-        public Integer getDisk() {
-            return this.disk;
-        }
-
-        public MoveResourceGroupResponseBodyResultNodeSpec setDiskType(String diskType) {
-            this.diskType = diskType;
-            return this;
-        }
-        public String getDiskType() {
-            return this.diskType;
-        }
-
-        public MoveResourceGroupResponseBodyResultNodeSpec setSpec(String spec) {
-            this.spec = spec;
-            return this;
-        }
-        public String getSpec() {
-            return this.spec;
-        }
-
-    }
-
     public static class MoveResourceGroupResponseBodyResultSynonymsDicts extends TeaModel {
         @NameInMap("fileSize")
         public Long fileSize;
@@ -332,155 +135,264 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     }
 
+    public static class MoveResourceGroupResponseBodyResultNodeSpec extends TeaModel {
+        @NameInMap("spec")
+        public String spec;
+
+        @NameInMap("disk")
+        public Integer disk;
+
+        @NameInMap("diskType")
+        public String diskType;
+
+        public static MoveResourceGroupResponseBodyResultNodeSpec build(java.util.Map<String, ?> map) throws Exception {
+            MoveResourceGroupResponseBodyResultNodeSpec self = new MoveResourceGroupResponseBodyResultNodeSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public MoveResourceGroupResponseBodyResultNodeSpec setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public MoveResourceGroupResponseBodyResultNodeSpec setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public MoveResourceGroupResponseBodyResultNodeSpec setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+    }
+
+    public static class MoveResourceGroupResponseBodyResultNetworkConfig extends TeaModel {
+        @NameInMap("vpcId")
+        public String vpcId;
+
+        @NameInMap("vsArea")
+        public String vsArea;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("vswitchId")
+        public String vswitchId;
+
+        public static MoveResourceGroupResponseBodyResultNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
+            MoveResourceGroupResponseBodyResultNetworkConfig self = new MoveResourceGroupResponseBodyResultNetworkConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public MoveResourceGroupResponseBodyResultNetworkConfig setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public MoveResourceGroupResponseBodyResultNetworkConfig setVsArea(String vsArea) {
+            this.vsArea = vsArea;
+            return this;
+        }
+        public String getVsArea() {
+            return this.vsArea;
+        }
+
+        public MoveResourceGroupResponseBodyResultNetworkConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public MoveResourceGroupResponseBodyResultNetworkConfig setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+    }
+
+    public static class MoveResourceGroupResponseBodyResultKibanaConfiguration extends TeaModel {
+        @NameInMap("spec")
+        public String spec;
+
+        @NameInMap("amount")
+        public Integer amount;
+
+        @NameInMap("disk")
+        public Integer disk;
+
+        @NameInMap("diskType")
+        public String diskType;
+
+        public static MoveResourceGroupResponseBodyResultKibanaConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            MoveResourceGroupResponseBodyResultKibanaConfiguration self = new MoveResourceGroupResponseBodyResultKibanaConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public MoveResourceGroupResponseBodyResultKibanaConfiguration setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public MoveResourceGroupResponseBodyResultKibanaConfiguration setAmount(Integer amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        public MoveResourceGroupResponseBodyResultKibanaConfiguration setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public MoveResourceGroupResponseBodyResultKibanaConfiguration setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+    }
+
+    public static class MoveResourceGroupResponseBodyResultMasterConfiguration extends TeaModel {
+        @NameInMap("spec")
+        public String spec;
+
+        @NameInMap("amount")
+        public Integer amount;
+
+        @NameInMap("disk")
+        public Integer disk;
+
+        @NameInMap("diskType")
+        public String diskType;
+
+        public static MoveResourceGroupResponseBodyResultMasterConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            MoveResourceGroupResponseBodyResultMasterConfiguration self = new MoveResourceGroupResponseBodyResultMasterConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public MoveResourceGroupResponseBodyResultMasterConfiguration setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public MoveResourceGroupResponseBodyResultMasterConfiguration setAmount(Integer amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        public MoveResourceGroupResponseBodyResultMasterConfiguration setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public MoveResourceGroupResponseBodyResultMasterConfiguration setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+    }
+
     public static class MoveResourceGroupResponseBodyResult extends TeaModel {
-        @NameInMap("createdAt")
-        public String createdAt;
-
-        @NameInMap("description")
-        public String description;
-
-        @NameInMap("dictList")
-        public java.util.List<MoveResourceGroupResponseBodyResultDictList> dictList;
-
-        @NameInMap("domain")
-        public String domain;
-
-        @NameInMap("esVersion")
-        public String esVersion;
-
-        @NameInMap("instanceId")
-        public String instanceId;
-
-        @NameInMap("kibanaConfiguration")
-        public MoveResourceGroupResponseBodyResultKibanaConfiguration kibanaConfiguration;
-
-        @NameInMap("kibanaDomain")
-        public String kibanaDomain;
-
-        @NameInMap("kibanaPort")
-        public Integer kibanaPort;
-
-        @NameInMap("masterConfiguration")
-        public MoveResourceGroupResponseBodyResultMasterConfiguration masterConfiguration;
-
-        @NameInMap("networkConfig")
-        public MoveResourceGroupResponseBodyResultNetworkConfig networkConfig;
-
         @NameInMap("nodeAmount")
         public Integer nodeAmount;
-
-        @NameInMap("nodeSpec")
-        public MoveResourceGroupResponseBodyResultNodeSpec nodeSpec;
-
-        @NameInMap("paymentType")
-        public String paymentType;
 
         @NameInMap("publicDomain")
         public String publicDomain;
 
-        @NameInMap("publicPort")
-        public Integer publicPort;
+        @NameInMap("createdAt")
+        public String createdAt;
 
         @NameInMap("status")
         public String status;
 
-        @NameInMap("synonymsDicts")
-        public java.util.List<MoveResourceGroupResponseBodyResultSynonymsDicts> synonymsDicts;
+        @NameInMap("publicPort")
+        public Integer publicPort;
+
+        @NameInMap("kibanaPort")
+        public Integer kibanaPort;
+
+        @NameInMap("paymentType")
+        public String paymentType;
+
+        @NameInMap("domain")
+        public String domain;
+
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("esVersion")
+        public String esVersion;
+
+        @NameInMap("kibanaDomain")
+        public String kibanaDomain;
 
         @NameInMap("updatedAt")
         public String updatedAt;
 
+        @NameInMap("instanceId")
+        public String instanceId;
+
+        @NameInMap("dictList")
+        public java.util.List<MoveResourceGroupResponseBodyResultDictList> dictList;
+
+        @NameInMap("synonymsDicts")
+        public java.util.List<MoveResourceGroupResponseBodyResultSynonymsDicts> synonymsDicts;
+
+        @NameInMap("nodeSpec")
+        public MoveResourceGroupResponseBodyResultNodeSpec nodeSpec;
+
+        @NameInMap("networkConfig")
+        public MoveResourceGroupResponseBodyResultNetworkConfig networkConfig;
+
+        @NameInMap("kibanaConfiguration")
+        public MoveResourceGroupResponseBodyResultKibanaConfiguration kibanaConfiguration;
+
+        @NameInMap("masterConfiguration")
+        public MoveResourceGroupResponseBodyResultMasterConfiguration masterConfiguration;
+
         public static MoveResourceGroupResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             MoveResourceGroupResponseBodyResult self = new MoveResourceGroupResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public MoveResourceGroupResponseBodyResult setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
-            return this;
-        }
-        public String getCreatedAt() {
-            return this.createdAt;
-        }
-
-        public MoveResourceGroupResponseBodyResult setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public MoveResourceGroupResponseBodyResult setDictList(java.util.List<MoveResourceGroupResponseBodyResultDictList> dictList) {
-            this.dictList = dictList;
-            return this;
-        }
-        public java.util.List<MoveResourceGroupResponseBodyResultDictList> getDictList() {
-            return this.dictList;
-        }
-
-        public MoveResourceGroupResponseBodyResult setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public MoveResourceGroupResponseBodyResult setEsVersion(String esVersion) {
-            this.esVersion = esVersion;
-            return this;
-        }
-        public String getEsVersion() {
-            return this.esVersion;
-        }
-
-        public MoveResourceGroupResponseBodyResult setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public MoveResourceGroupResponseBodyResult setKibanaConfiguration(MoveResourceGroupResponseBodyResultKibanaConfiguration kibanaConfiguration) {
-            this.kibanaConfiguration = kibanaConfiguration;
-            return this;
-        }
-        public MoveResourceGroupResponseBodyResultKibanaConfiguration getKibanaConfiguration() {
-            return this.kibanaConfiguration;
-        }
-
-        public MoveResourceGroupResponseBodyResult setKibanaDomain(String kibanaDomain) {
-            this.kibanaDomain = kibanaDomain;
-            return this;
-        }
-        public String getKibanaDomain() {
-            return this.kibanaDomain;
-        }
-
-        public MoveResourceGroupResponseBodyResult setKibanaPort(Integer kibanaPort) {
-            this.kibanaPort = kibanaPort;
-            return this;
-        }
-        public Integer getKibanaPort() {
-            return this.kibanaPort;
-        }
-
-        public MoveResourceGroupResponseBodyResult setMasterConfiguration(MoveResourceGroupResponseBodyResultMasterConfiguration masterConfiguration) {
-            this.masterConfiguration = masterConfiguration;
-            return this;
-        }
-        public MoveResourceGroupResponseBodyResultMasterConfiguration getMasterConfiguration() {
-            return this.masterConfiguration;
-        }
-
-        public MoveResourceGroupResponseBodyResult setNetworkConfig(MoveResourceGroupResponseBodyResultNetworkConfig networkConfig) {
-            this.networkConfig = networkConfig;
-            return this;
-        }
-        public MoveResourceGroupResponseBodyResultNetworkConfig getNetworkConfig() {
-            return this.networkConfig;
         }
 
         public MoveResourceGroupResponseBodyResult setNodeAmount(Integer nodeAmount) {
@@ -491,22 +403,6 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             return this.nodeAmount;
         }
 
-        public MoveResourceGroupResponseBodyResult setNodeSpec(MoveResourceGroupResponseBodyResultNodeSpec nodeSpec) {
-            this.nodeSpec = nodeSpec;
-            return this;
-        }
-        public MoveResourceGroupResponseBodyResultNodeSpec getNodeSpec() {
-            return this.nodeSpec;
-        }
-
-        public MoveResourceGroupResponseBodyResult setPaymentType(String paymentType) {
-            this.paymentType = paymentType;
-            return this;
-        }
-        public String getPaymentType() {
-            return this.paymentType;
-        }
-
         public MoveResourceGroupResponseBodyResult setPublicDomain(String publicDomain) {
             this.publicDomain = publicDomain;
             return this;
@@ -515,12 +411,12 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             return this.publicDomain;
         }
 
-        public MoveResourceGroupResponseBodyResult setPublicPort(Integer publicPort) {
-            this.publicPort = publicPort;
+        public MoveResourceGroupResponseBodyResult setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
             return this;
         }
-        public Integer getPublicPort() {
-            return this.publicPort;
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
         public MoveResourceGroupResponseBodyResult setStatus(String status) {
@@ -531,12 +427,60 @@ public class MoveResourceGroupResponseBody extends TeaModel {
             return this.status;
         }
 
-        public MoveResourceGroupResponseBodyResult setSynonymsDicts(java.util.List<MoveResourceGroupResponseBodyResultSynonymsDicts> synonymsDicts) {
-            this.synonymsDicts = synonymsDicts;
+        public MoveResourceGroupResponseBodyResult setPublicPort(Integer publicPort) {
+            this.publicPort = publicPort;
             return this;
         }
-        public java.util.List<MoveResourceGroupResponseBodyResultSynonymsDicts> getSynonymsDicts() {
-            return this.synonymsDicts;
+        public Integer getPublicPort() {
+            return this.publicPort;
+        }
+
+        public MoveResourceGroupResponseBodyResult setKibanaPort(Integer kibanaPort) {
+            this.kibanaPort = kibanaPort;
+            return this;
+        }
+        public Integer getKibanaPort() {
+            return this.kibanaPort;
+        }
+
+        public MoveResourceGroupResponseBodyResult setPaymentType(String paymentType) {
+            this.paymentType = paymentType;
+            return this;
+        }
+        public String getPaymentType() {
+            return this.paymentType;
+        }
+
+        public MoveResourceGroupResponseBodyResult setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public MoveResourceGroupResponseBodyResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public MoveResourceGroupResponseBodyResult setEsVersion(String esVersion) {
+            this.esVersion = esVersion;
+            return this;
+        }
+        public String getEsVersion() {
+            return this.esVersion;
+        }
+
+        public MoveResourceGroupResponseBodyResult setKibanaDomain(String kibanaDomain) {
+            this.kibanaDomain = kibanaDomain;
+            return this;
+        }
+        public String getKibanaDomain() {
+            return this.kibanaDomain;
         }
 
         public MoveResourceGroupResponseBodyResult setUpdatedAt(String updatedAt) {
@@ -545,6 +489,62 @@ public class MoveResourceGroupResponseBody extends TeaModel {
         }
         public String getUpdatedAt() {
             return this.updatedAt;
+        }
+
+        public MoveResourceGroupResponseBodyResult setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public MoveResourceGroupResponseBodyResult setDictList(java.util.List<MoveResourceGroupResponseBodyResultDictList> dictList) {
+            this.dictList = dictList;
+            return this;
+        }
+        public java.util.List<MoveResourceGroupResponseBodyResultDictList> getDictList() {
+            return this.dictList;
+        }
+
+        public MoveResourceGroupResponseBodyResult setSynonymsDicts(java.util.List<MoveResourceGroupResponseBodyResultSynonymsDicts> synonymsDicts) {
+            this.synonymsDicts = synonymsDicts;
+            return this;
+        }
+        public java.util.List<MoveResourceGroupResponseBodyResultSynonymsDicts> getSynonymsDicts() {
+            return this.synonymsDicts;
+        }
+
+        public MoveResourceGroupResponseBodyResult setNodeSpec(MoveResourceGroupResponseBodyResultNodeSpec nodeSpec) {
+            this.nodeSpec = nodeSpec;
+            return this;
+        }
+        public MoveResourceGroupResponseBodyResultNodeSpec getNodeSpec() {
+            return this.nodeSpec;
+        }
+
+        public MoveResourceGroupResponseBodyResult setNetworkConfig(MoveResourceGroupResponseBodyResultNetworkConfig networkConfig) {
+            this.networkConfig = networkConfig;
+            return this;
+        }
+        public MoveResourceGroupResponseBodyResultNetworkConfig getNetworkConfig() {
+            return this.networkConfig;
+        }
+
+        public MoveResourceGroupResponseBodyResult setKibanaConfiguration(MoveResourceGroupResponseBodyResultKibanaConfiguration kibanaConfiguration) {
+            this.kibanaConfiguration = kibanaConfiguration;
+            return this;
+        }
+        public MoveResourceGroupResponseBodyResultKibanaConfiguration getKibanaConfiguration() {
+            return this.kibanaConfiguration;
+        }
+
+        public MoveResourceGroupResponseBodyResult setMasterConfiguration(MoveResourceGroupResponseBodyResultMasterConfiguration masterConfiguration) {
+            this.masterConfiguration = masterConfiguration;
+            return this;
+        }
+        public MoveResourceGroupResponseBodyResultMasterConfiguration getMasterConfiguration() {
+            return this.masterConfiguration;
         }
 
     }

@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListKibanaPluginsResponseBody extends TeaModel {
-    @NameInMap("Headers")
-    public ListKibanaPluginsResponseBodyHeaders headers;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Headers")
+    public ListKibanaPluginsResponseBodyHeaders headers;
 
     @NameInMap("Result")
     public java.util.List<ListKibanaPluginsResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListKibanaPluginsResponseBody setHeaders(ListKibanaPluginsResponseBodyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    public ListKibanaPluginsResponseBodyHeaders getHeaders() {
-        return this.headers;
-    }
-
     public ListKibanaPluginsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListKibanaPluginsResponseBody setHeaders(ListKibanaPluginsResponseBodyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ListKibanaPluginsResponseBodyHeaders getHeaders() {
+        return this.headers;
     }
 
     public ListKibanaPluginsResponseBody setResult(java.util.List<ListKibanaPluginsResponseBodyResult> result) {

@@ -7,20 +7,20 @@ public class ModifyWhiteIpsRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    @NameInMap("modifyMode")
-    public String modifyMode;
+    @NameInMap("nodeType")
+    public String nodeType;
 
     @NameInMap("networkType")
     public String networkType;
 
-    @NameInMap("nodeType")
-    public String nodeType;
-
-    @NameInMap("whiteIpGroup")
-    public ModifyWhiteIpsRequestWhiteIpGroup whiteIpGroup;
+    @NameInMap("modifyMode")
+    public String modifyMode;
 
     @NameInMap("whiteIpList")
     public java.util.List<String> whiteIpList;
+
+    @NameInMap("whiteIpGroup")
+    public ModifyWhiteIpsRequestWhiteIpGroup whiteIpGroup;
 
     public static ModifyWhiteIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyWhiteIpsRequest self = new ModifyWhiteIpsRequest();
@@ -35,12 +35,12 @@ public class ModifyWhiteIpsRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ModifyWhiteIpsRequest setModifyMode(String modifyMode) {
-        this.modifyMode = modifyMode;
+    public ModifyWhiteIpsRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
         return this;
     }
-    public String getModifyMode() {
-        return this.modifyMode;
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public ModifyWhiteIpsRequest setNetworkType(String networkType) {
@@ -51,20 +51,12 @@ public class ModifyWhiteIpsRequest extends TeaModel {
         return this.networkType;
     }
 
-    public ModifyWhiteIpsRequest setNodeType(String nodeType) {
-        this.nodeType = nodeType;
+    public ModifyWhiteIpsRequest setModifyMode(String modifyMode) {
+        this.modifyMode = modifyMode;
         return this;
     }
-    public String getNodeType() {
-        return this.nodeType;
-    }
-
-    public ModifyWhiteIpsRequest setWhiteIpGroup(ModifyWhiteIpsRequestWhiteIpGroup whiteIpGroup) {
-        this.whiteIpGroup = whiteIpGroup;
-        return this;
-    }
-    public ModifyWhiteIpsRequestWhiteIpGroup getWhiteIpGroup() {
-        return this.whiteIpGroup;
+    public String getModifyMode() {
+        return this.modifyMode;
     }
 
     public ModifyWhiteIpsRequest setWhiteIpList(java.util.List<String> whiteIpList) {
@@ -73,6 +65,14 @@ public class ModifyWhiteIpsRequest extends TeaModel {
     }
     public java.util.List<String> getWhiteIpList() {
         return this.whiteIpList;
+    }
+
+    public ModifyWhiteIpsRequest setWhiteIpGroup(ModifyWhiteIpsRequestWhiteIpGroup whiteIpGroup) {
+        this.whiteIpGroup = whiteIpGroup;
+        return this;
+    }
+    public ModifyWhiteIpsRequestWhiteIpGroup getWhiteIpGroup() {
+        return this.whiteIpGroup;
     }
 
     public static class ModifyWhiteIpsRequestWhiteIpGroup extends TeaModel {

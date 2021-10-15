@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDataStreamsResponseBody extends TeaModel {
-    @NameInMap("Headers")
-    public ListDataStreamsResponseBodyHeaders headers;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Headers")
+    public ListDataStreamsResponseBodyHeaders headers;
 
     @NameInMap("Result")
     public java.util.List<ListDataStreamsResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListDataStreamsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDataStreamsResponseBody setHeaders(ListDataStreamsResponseBodyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    public ListDataStreamsResponseBodyHeaders getHeaders() {
-        return this.headers;
-    }
-
     public ListDataStreamsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDataStreamsResponseBody setHeaders(ListDataStreamsResponseBodyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ListDataStreamsResponseBodyHeaders getHeaders() {
+        return this.headers;
     }
 
     public ListDataStreamsResponseBody setResult(java.util.List<ListDataStreamsResponseBodyResult> result) {
@@ -43,23 +43,15 @@ public class ListDataStreamsResponseBody extends TeaModel {
     }
 
     public static class ListDataStreamsResponseBodyHeaders extends TeaModel {
-        @NameInMap("X-Managed-Count")
-        public Integer xManagedCount;
-
         @NameInMap("X-Managed-StorageSize")
         public Long xManagedStorageSize;
+
+        @NameInMap("X-Managed-Count")
+        public Integer xManagedCount;
 
         public static ListDataStreamsResponseBodyHeaders build(java.util.Map<String, ?> map) throws Exception {
             ListDataStreamsResponseBodyHeaders self = new ListDataStreamsResponseBodyHeaders();
             return TeaModel.build(map, self);
-        }
-
-        public ListDataStreamsResponseBodyHeaders setXManagedCount(Integer xManagedCount) {
-            this.xManagedCount = xManagedCount;
-            return this;
-        }
-        public Integer getXManagedCount() {
-            return this.xManagedCount;
         }
 
         public ListDataStreamsResponseBodyHeaders setXManagedStorageSize(Long xManagedStorageSize) {
@@ -68,6 +60,14 @@ public class ListDataStreamsResponseBody extends TeaModel {
         }
         public Long getXManagedStorageSize() {
             return this.xManagedStorageSize;
+        }
+
+        public ListDataStreamsResponseBodyHeaders setXManagedCount(Integer xManagedCount) {
+            this.xManagedCount = xManagedCount;
+            return this;
+        }
+        public Integer getXManagedCount() {
+            return this.xManagedCount;
         }
 
     }

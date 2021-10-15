@@ -32,56 +32,24 @@ public class GetElastictaskResponseBody extends TeaModel {
     }
 
     public static class GetElastictaskResponseBodyResultElasticExpansionTask extends TeaModel {
-        @NameInMap("cronExpression")
-        public String cronExpression;
-
-        @NameInMap("elasticNodeCount")
-        public Integer elasticNodeCount;
+        @NameInMap("triggerType")
+        public String triggerType;
 
         @NameInMap("replicaCount")
         public Integer replicaCount;
 
+        @NameInMap("elasticNodeCount")
+        public Integer elasticNodeCount;
+
+        @NameInMap("cronExpression")
+        public String cronExpression;
+
         @NameInMap("targetIndices")
         public java.util.List<String> targetIndices;
-
-        @NameInMap("triggerType")
-        public String triggerType;
 
         public static GetElastictaskResponseBodyResultElasticExpansionTask build(java.util.Map<String, ?> map) throws Exception {
             GetElastictaskResponseBodyResultElasticExpansionTask self = new GetElastictaskResponseBodyResultElasticExpansionTask();
             return TeaModel.build(map, self);
-        }
-
-        public GetElastictaskResponseBodyResultElasticExpansionTask setCronExpression(String cronExpression) {
-            this.cronExpression = cronExpression;
-            return this;
-        }
-        public String getCronExpression() {
-            return this.cronExpression;
-        }
-
-        public GetElastictaskResponseBodyResultElasticExpansionTask setElasticNodeCount(Integer elasticNodeCount) {
-            this.elasticNodeCount = elasticNodeCount;
-            return this;
-        }
-        public Integer getElasticNodeCount() {
-            return this.elasticNodeCount;
-        }
-
-        public GetElastictaskResponseBodyResultElasticExpansionTask setReplicaCount(Integer replicaCount) {
-            this.replicaCount = replicaCount;
-            return this;
-        }
-        public Integer getReplicaCount() {
-            return this.replicaCount;
-        }
-
-        public GetElastictaskResponseBodyResultElasticExpansionTask setTargetIndices(java.util.List<String> targetIndices) {
-            this.targetIndices = targetIndices;
-            return this;
-        }
-        public java.util.List<String> getTargetIndices() {
-            return this.targetIndices;
         }
 
         public GetElastictaskResponseBodyResultElasticExpansionTask setTriggerType(String triggerType) {
@@ -92,30 +60,23 @@ public class GetElastictaskResponseBody extends TeaModel {
             return this.triggerType;
         }
 
-    }
-
-    public static class GetElastictaskResponseBodyResultElasticShrinkTask extends TeaModel {
-        @NameInMap("cronExpression")
-        public String cronExpression;
-
-        @NameInMap("elasticNodeCount")
-        public Integer elasticNodeCount;
-
-        @NameInMap("replicaCount")
-        public Integer replicaCount;
-
-        @NameInMap("targetIndices")
-        public java.util.List<String> targetIndices;
-
-        @NameInMap("triggerType")
-        public String triggerType;
-
-        public static GetElastictaskResponseBodyResultElasticShrinkTask build(java.util.Map<String, ?> map) throws Exception {
-            GetElastictaskResponseBodyResultElasticShrinkTask self = new GetElastictaskResponseBodyResultElasticShrinkTask();
-            return TeaModel.build(map, self);
+        public GetElastictaskResponseBodyResultElasticExpansionTask setReplicaCount(Integer replicaCount) {
+            this.replicaCount = replicaCount;
+            return this;
+        }
+        public Integer getReplicaCount() {
+            return this.replicaCount;
         }
 
-        public GetElastictaskResponseBodyResultElasticShrinkTask setCronExpression(String cronExpression) {
+        public GetElastictaskResponseBodyResultElasticExpansionTask setElasticNodeCount(Integer elasticNodeCount) {
+            this.elasticNodeCount = elasticNodeCount;
+            return this;
+        }
+        public Integer getElasticNodeCount() {
+            return this.elasticNodeCount;
+        }
+
+        public GetElastictaskResponseBodyResultElasticExpansionTask setCronExpression(String cronExpression) {
             this.cronExpression = cronExpression;
             return this;
         }
@@ -123,12 +84,43 @@ public class GetElastictaskResponseBody extends TeaModel {
             return this.cronExpression;
         }
 
-        public GetElastictaskResponseBodyResultElasticShrinkTask setElasticNodeCount(Integer elasticNodeCount) {
-            this.elasticNodeCount = elasticNodeCount;
+        public GetElastictaskResponseBodyResultElasticExpansionTask setTargetIndices(java.util.List<String> targetIndices) {
+            this.targetIndices = targetIndices;
             return this;
         }
-        public Integer getElasticNodeCount() {
-            return this.elasticNodeCount;
+        public java.util.List<String> getTargetIndices() {
+            return this.targetIndices;
+        }
+
+    }
+
+    public static class GetElastictaskResponseBodyResultElasticShrinkTask extends TeaModel {
+        @NameInMap("triggerType")
+        public String triggerType;
+
+        @NameInMap("replicaCount")
+        public Integer replicaCount;
+
+        @NameInMap("elasticNodeCount")
+        public Integer elasticNodeCount;
+
+        @NameInMap("cronExpression")
+        public String cronExpression;
+
+        @NameInMap("targetIndices")
+        public java.util.List<String> targetIndices;
+
+        public static GetElastictaskResponseBodyResultElasticShrinkTask build(java.util.Map<String, ?> map) throws Exception {
+            GetElastictaskResponseBodyResultElasticShrinkTask self = new GetElastictaskResponseBodyResultElasticShrinkTask();
+            return TeaModel.build(map, self);
+        }
+
+        public GetElastictaskResponseBodyResultElasticShrinkTask setTriggerType(String triggerType) {
+            this.triggerType = triggerType;
+            return this;
+        }
+        public String getTriggerType() {
+            return this.triggerType;
         }
 
         public GetElastictaskResponseBodyResultElasticShrinkTask setReplicaCount(Integer replicaCount) {
@@ -139,20 +131,28 @@ public class GetElastictaskResponseBody extends TeaModel {
             return this.replicaCount;
         }
 
+        public GetElastictaskResponseBodyResultElasticShrinkTask setElasticNodeCount(Integer elasticNodeCount) {
+            this.elasticNodeCount = elasticNodeCount;
+            return this;
+        }
+        public Integer getElasticNodeCount() {
+            return this.elasticNodeCount;
+        }
+
+        public GetElastictaskResponseBodyResultElasticShrinkTask setCronExpression(String cronExpression) {
+            this.cronExpression = cronExpression;
+            return this;
+        }
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
         public GetElastictaskResponseBodyResultElasticShrinkTask setTargetIndices(java.util.List<String> targetIndices) {
             this.targetIndices = targetIndices;
             return this;
         }
         public java.util.List<String> getTargetIndices() {
             return this.targetIndices;
-        }
-
-        public GetElastictaskResponseBodyResultElasticShrinkTask setTriggerType(String triggerType) {
-            this.triggerType = triggerType;
-            return this;
-        }
-        public String getTriggerType() {
-            return this.triggerType;
         }
 
     }

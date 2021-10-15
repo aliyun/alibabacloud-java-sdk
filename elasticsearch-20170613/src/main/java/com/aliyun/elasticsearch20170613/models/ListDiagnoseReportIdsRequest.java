@@ -4,20 +4,20 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseReportIdsRequest extends TeaModel {
-    @NameInMap("endTime")
-    public Long endTime;
-
     @NameInMap("lang")
     public String lang;
+
+    @NameInMap("startTime")
+    public Long startTime;
+
+    @NameInMap("endTime")
+    public Long endTime;
 
     @NameInMap("page")
     public Integer page;
 
     @NameInMap("size")
     public Integer size;
-
-    @NameInMap("startTime")
-    public Long startTime;
 
     @NameInMap("trigger")
     public String trigger;
@@ -27,20 +27,28 @@ public class ListDiagnoseReportIdsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDiagnoseReportIdsRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
     public ListDiagnoseReportIdsRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public ListDiagnoseReportIdsRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public ListDiagnoseReportIdsRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public ListDiagnoseReportIdsRequest setPage(Integer page) {
@@ -57,14 +65,6 @@ public class ListDiagnoseReportIdsRequest extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
-    }
-
-    public ListDiagnoseReportIdsRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
     }
 
     public ListDiagnoseReportIdsRequest setTrigger(String trigger) {

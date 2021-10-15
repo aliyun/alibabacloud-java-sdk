@@ -4,23 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ValidateConnectionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Result")
     public Boolean result;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ValidateConnectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ValidateConnectionResponseBody self = new ValidateConnectionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ValidateConnectionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ValidateConnectionResponseBody setResult(Boolean result) {
@@ -29,6 +21,14 @@ public class ValidateConnectionResponseBody extends TeaModel {
     }
     public Boolean getResult() {
         return this.result;
+    }
+
+    public ValidateConnectionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -13,11 +13,11 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Result")
-    public java.util.List<GetEmonMonitorDataResponseBodyResult> result;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Result")
+    public java.util.List<GetEmonMonitorDataResponseBodyResult> result;
 
     public static GetEmonMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetEmonMonitorDataResponseBody self = new GetEmonMonitorDataResponseBody();
@@ -48,20 +48,20 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetEmonMonitorDataResponseBody setResult(java.util.List<GetEmonMonitorDataResponseBodyResult> result) {
-        this.result = result;
-        return this;
-    }
-    public java.util.List<GetEmonMonitorDataResponseBodyResult> getResult() {
-        return this.result;
-    }
-
     public GetEmonMonitorDataResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetEmonMonitorDataResponseBody setResult(java.util.List<GetEmonMonitorDataResponseBodyResult> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.List<GetEmonMonitorDataResponseBodyResult> getResult() {
+        return this.result;
     }
 
     public static class GetEmonMonitorDataResponseBodyResult extends TeaModel {

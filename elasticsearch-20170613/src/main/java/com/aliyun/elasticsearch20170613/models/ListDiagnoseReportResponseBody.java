@@ -4,11 +4,11 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListDiagnoseReportResponseBody extends TeaModel {
-    @NameInMap("Headers")
-    public ListDiagnoseReportResponseBodyHeaders headers;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Headers")
+    public ListDiagnoseReportResponseBodyHeaders headers;
 
     @NameInMap("Result")
     public java.util.List<ListDiagnoseReportResponseBodyResult> result;
@@ -18,20 +18,20 @@ public class ListDiagnoseReportResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDiagnoseReportResponseBody setHeaders(ListDiagnoseReportResponseBodyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    public ListDiagnoseReportResponseBodyHeaders getHeaders() {
-        return this.headers;
-    }
-
     public ListDiagnoseReportResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDiagnoseReportResponseBody setHeaders(ListDiagnoseReportResponseBodyHeaders headers) {
+        this.headers = headers;
+        return this;
+    }
+    public ListDiagnoseReportResponseBodyHeaders getHeaders() {
+        return this.headers;
     }
 
     public ListDiagnoseReportResponseBody setResult(java.util.List<ListDiagnoseReportResponseBodyResult> result) {
