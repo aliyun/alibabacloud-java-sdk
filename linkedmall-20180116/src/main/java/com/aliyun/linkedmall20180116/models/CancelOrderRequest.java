@@ -4,17 +4,20 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CancelOrderRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("LmOrderId")
+    @Validation(required = true)
     public String lmOrderId;
-
-    @NameInMap("AccountType")
-    public String accountType;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
@@ -25,6 +28,14 @@ public class CancelOrderRequest extends TeaModel {
     public static CancelOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelOrderRequest self = new CancelOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CancelOrderRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public CancelOrderRequest setBizId(String bizId) {
@@ -49,14 +60,6 @@ public class CancelOrderRequest extends TeaModel {
     }
     public String getLmOrderId() {
         return this.lmOrderId;
-    }
-
-    public CancelOrderRequest setAccountType(String accountType) {
-        this.accountType = accountType;
-        return this;
-    }
-    public String getAccountType() {
-        return this.accountType;
     }
 
     public CancelOrderRequest setThirdPartyUserId(String thirdPartyUserId) {

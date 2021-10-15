@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAllCitiesRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ExtJson")

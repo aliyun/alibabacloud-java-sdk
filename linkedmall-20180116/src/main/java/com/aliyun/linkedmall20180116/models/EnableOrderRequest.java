@@ -4,33 +4,44 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class EnableOrderRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
-
-    @NameInMap("OutTradeId")
-    public String outTradeId;
-
-    @NameInMap("LmOrderId")
-    public String lmOrderId;
 
     @NameInMap("ExtJson")
     public String extJson;
 
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
+    @NameInMap("LmOrderId")
+    public String lmOrderId;
+
+    @NameInMap("OutTradeId")
+    @Validation(required = true)
+    public String outTradeId;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    @NameInMap("AccountType")
-    public String accountType;
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static EnableOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableOrderRequest self = new EnableOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EnableOrderRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public EnableOrderRequest setBizId(String bizId) {
@@ -49,12 +60,12 @@ public class EnableOrderRequest extends TeaModel {
         return this.bizUid;
     }
 
-    public EnableOrderRequest setOutTradeId(String outTradeId) {
-        this.outTradeId = outTradeId;
+    public EnableOrderRequest setExtJson(String extJson) {
+        this.extJson = extJson;
         return this;
     }
-    public String getOutTradeId() {
-        return this.outTradeId;
+    public String getExtJson() {
+        return this.extJson;
     }
 
     public EnableOrderRequest setLmOrderId(String lmOrderId) {
@@ -65,20 +76,12 @@ public class EnableOrderRequest extends TeaModel {
         return this.lmOrderId;
     }
 
-    public EnableOrderRequest setExtJson(String extJson) {
-        this.extJson = extJson;
+    public EnableOrderRequest setOutTradeId(String outTradeId) {
+        this.outTradeId = outTradeId;
         return this;
     }
-    public String getExtJson() {
-        return this.extJson;
-    }
-
-    public EnableOrderRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
-        return this;
-    }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
+    public String getOutTradeId() {
+        return this.outTradeId;
     }
 
     public EnableOrderRequest setThirdPartyUserId(String thirdPartyUserId) {
@@ -89,12 +92,12 @@ public class EnableOrderRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public EnableOrderRequest setAccountType(String accountType) {
-        this.accountType = accountType;
+    public EnableOrderRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
         return this;
     }
-    public String getAccountType() {
-        return this.accountType;
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

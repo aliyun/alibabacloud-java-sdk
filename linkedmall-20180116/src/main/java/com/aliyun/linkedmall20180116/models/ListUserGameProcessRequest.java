@@ -4,52 +4,40 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ListUserGameProcessRequest extends TeaModel {
-    @NameInMap("BizId")
-    public String bizId;
-
-    @NameInMap("ThirdPartyUserId")
-    public String thirdPartyUserId;
-
     @NameInMap("AccountType")
     public String accountType;
 
     @NameInMap("ActivityId")
     public String activityId;
 
+    @NameInMap("BizId")
+    @Validation(required = true)
+    public String bizId;
+
     @NameInMap("GameId")
     public String gameId;
+
+    @NameInMap("PageNumber")
+    @Validation(required = true)
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    @Validation(required = true)
+    public Integer pageSize;
 
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("ThirdPartyUserId")
+    @Validation(required = true)
+    public String thirdPartyUserId;
+
     @NameInMap("Type")
     public String type;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     public static ListUserGameProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUserGameProcessRequest self = new ListUserGameProcessRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListUserGameProcessRequest setBizId(String bizId) {
-        this.bizId = bizId;
-        return this;
-    }
-    public String getBizId() {
-        return this.bizId;
-    }
-
-    public ListUserGameProcessRequest setThirdPartyUserId(String thirdPartyUserId) {
-        this.thirdPartyUserId = thirdPartyUserId;
-        return this;
-    }
-    public String getThirdPartyUserId() {
-        return this.thirdPartyUserId;
     }
 
     public ListUserGameProcessRequest setAccountType(String accountType) {
@@ -68,6 +56,14 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.activityId;
     }
 
+    public ListUserGameProcessRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
+    }
+
     public ListUserGameProcessRequest setGameId(String gameId) {
         this.gameId = gameId;
         return this;
@@ -76,20 +72,12 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.gameId;
     }
 
-    public ListUserGameProcessRequest setStatus(String status) {
-        this.status = status;
+    public ListUserGameProcessRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public ListUserGameProcessRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListUserGameProcessRequest setPageSize(Integer pageSize) {
@@ -100,12 +88,28 @@ public class ListUserGameProcessRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListUserGameProcessRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListUserGameProcessRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ListUserGameProcessRequest setThirdPartyUserId(String thirdPartyUserId) {
+        this.thirdPartyUserId = thirdPartyUserId;
+        return this;
+    }
+    public String getThirdPartyUserId() {
+        return this.thirdPartyUserId;
+    }
+
+    public ListUserGameProcessRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

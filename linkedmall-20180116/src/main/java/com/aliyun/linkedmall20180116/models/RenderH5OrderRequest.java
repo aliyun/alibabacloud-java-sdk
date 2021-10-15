@@ -4,27 +4,36 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RenderH5OrderRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
     public String bizUid;
 
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
+    @NameInMap("BuyOrderRequestModel")
+    public String buyOrderRequestModel;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    @NameInMap("BuyOrderRequestModel")
-    public String buyOrderRequestModel;
-
-    @NameInMap("AccountType")
-    public String accountType;
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static RenderH5OrderRequest build(java.util.Map<String, ?> map) throws Exception {
         RenderH5OrderRequest self = new RenderH5OrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RenderH5OrderRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public RenderH5OrderRequest setBizId(String bizId) {
@@ -43,12 +52,12 @@ public class RenderH5OrderRequest extends TeaModel {
         return this.bizUid;
     }
 
-    public RenderH5OrderRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
+    public RenderH5OrderRequest setBuyOrderRequestModel(String buyOrderRequestModel) {
+        this.buyOrderRequestModel = buyOrderRequestModel;
         return this;
     }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
+    public String getBuyOrderRequestModel() {
+        return this.buyOrderRequestModel;
     }
 
     public RenderH5OrderRequest setThirdPartyUserId(String thirdPartyUserId) {
@@ -59,20 +68,12 @@ public class RenderH5OrderRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public RenderH5OrderRequest setBuyOrderRequestModel(String buyOrderRequestModel) {
-        this.buyOrderRequestModel = buyOrderRequestModel;
+    public RenderH5OrderRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
         return this;
     }
-    public String getBuyOrderRequestModel() {
-        return this.buyOrderRequestModel;
-    }
-
-    public RenderH5OrderRequest setAccountType(String accountType) {
-        this.accountType = accountType;
-        return this;
-    }
-    public String getAccountType() {
-        return this.accountType;
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

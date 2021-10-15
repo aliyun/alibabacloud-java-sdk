@@ -4,33 +4,57 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetSwitchUrlResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public GetSwitchUrlResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Url")
+    @Validation(required = true)
+    public String url;
 
     public static GetSwitchUrlResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSwitchUrlResponse self = new GetSwitchUrlResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSwitchUrlResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetSwitchUrlResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public GetSwitchUrlResponse setBody(GetSwitchUrlResponseBody body) {
-        this.body = body;
+    public GetSwitchUrlResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public GetSwitchUrlResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetSwitchUrlResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetSwitchUrlResponse setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }

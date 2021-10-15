@@ -4,33 +4,33 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class NotifyPayOrderStatusResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public NotifyPayOrderStatusResponseBody body;
+    public String message;
 
     public static NotifyPayOrderStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         NotifyPayOrderStatusResponse self = new NotifyPayOrderStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public NotifyPayOrderStatusResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public NotifyPayOrderStatusResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public NotifyPayOrderStatusResponse setBody(NotifyPayOrderStatusResponseBody body) {
-        this.body = body;
+    public NotifyPayOrderStatusResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public NotifyPayOrderStatusResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
     }
 
 }

@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class QueryMovieTicketsRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
-
-    @NameInMap("OrderId")
-    public String orderId;
 
     @NameInMap("ExtJson")
     public String extJson;
+
+    @NameInMap("OrderId")
+    @Validation(required = true)
+    public String orderId;
 
     public static QueryMovieTicketsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMovieTicketsRequest self = new QueryMovieTicketsRequest();
@@ -37,20 +40,20 @@ public class QueryMovieTicketsRequest extends TeaModel {
         return this.bizUid;
     }
 
-    public QueryMovieTicketsRequest setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
-    }
-
     public QueryMovieTicketsRequest setExtJson(String extJson) {
         this.extJson = extJson;
         return this;
     }
     public String getExtJson() {
         return this.extJson;
+    }
+
+    public QueryMovieTicketsRequest setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
 }

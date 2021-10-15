@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class QueryItemInventoryRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("DivisionCode")
+    @Validation(required = true)
     public String divisionCode;
 
     @NameInMap("Ip")
     public String ip;
 
     @NameInMap("ItemList")
+    @Validation(required = true)
     public java.util.List<QueryItemInventoryRequestItemList> itemList;
 
     public static QueryItemInventoryRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -54,26 +57,18 @@ public class QueryItemInventoryRequest extends TeaModel {
     }
 
     public static class QueryItemInventoryRequestItemList extends TeaModel {
-        @NameInMap("LmItemId")
-        public String lmItemId;
-
         @NameInMap("ItemId")
         public Long itemId;
 
+        @NameInMap("LmItemId")
+        public String lmItemId;
+
         @NameInMap("SkuIdList")
-        public java.util.List<Integer> skuIdList;
+        public java.util.List<Long> skuIdList;
 
         public static QueryItemInventoryRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             QueryItemInventoryRequestItemList self = new QueryItemInventoryRequestItemList();
             return TeaModel.build(map, self);
-        }
-
-        public QueryItemInventoryRequestItemList setLmItemId(String lmItemId) {
-            this.lmItemId = lmItemId;
-            return this;
-        }
-        public String getLmItemId() {
-            return this.lmItemId;
         }
 
         public QueryItemInventoryRequestItemList setItemId(Long itemId) {
@@ -84,11 +79,19 @@ public class QueryItemInventoryRequest extends TeaModel {
             return this.itemId;
         }
 
-        public QueryItemInventoryRequestItemList setSkuIdList(java.util.List<Integer> skuIdList) {
+        public QueryItemInventoryRequestItemList setLmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
+            return this;
+        }
+        public String getLmItemId() {
+            return this.lmItemId;
+        }
+
+        public QueryItemInventoryRequestItemList setSkuIdList(java.util.List<Long> skuIdList) {
             this.skuIdList = skuIdList;
             return this;
         }
-        public java.util.List<Integer> getSkuIdList() {
+        public java.util.List<Long> getSkuIdList() {
             return this.skuIdList;
         }
 

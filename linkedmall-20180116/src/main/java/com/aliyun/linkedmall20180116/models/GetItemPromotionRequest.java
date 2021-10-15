@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetItemPromotionRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ItemId")
+    @Validation(required = true)
     public Long itemId;
 
     @NameInMap("LmItemId")

@@ -4,17 +4,19 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ExecuteNodeRequest extends TeaModel {
-    @NameInMap("ProcessInstanceId")
-    public String processInstanceId;
-
-    @NameInMap("ProcessId")
-    public String processId;
+    @NameInMap("NodeId")
+    @Validation(required = true)
+    public String nodeId;
 
     @NameInMap("NodeInstanceId")
     public String nodeInstanceId;
 
-    @NameInMap("NodeId")
-    public String nodeId;
+    @NameInMap("ProcessId")
+    @Validation(required = true)
+    public String processId;
+
+    @NameInMap("ProcessInstanceId")
+    public String processInstanceId;
 
     @NameInMap("RequestData")
     public String requestData;
@@ -24,20 +26,12 @@ public class ExecuteNodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ExecuteNodeRequest setProcessInstanceId(String processInstanceId) {
-        this.processInstanceId = processInstanceId;
+    public ExecuteNodeRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
-    public String getProcessInstanceId() {
-        return this.processInstanceId;
-    }
-
-    public ExecuteNodeRequest setProcessId(String processId) {
-        this.processId = processId;
-        return this;
-    }
-    public String getProcessId() {
-        return this.processId;
+    public String getNodeId() {
+        return this.nodeId;
     }
 
     public ExecuteNodeRequest setNodeInstanceId(String nodeInstanceId) {
@@ -48,12 +42,20 @@ public class ExecuteNodeRequest extends TeaModel {
         return this.nodeInstanceId;
     }
 
-    public ExecuteNodeRequest setNodeId(String nodeId) {
-        this.nodeId = nodeId;
+    public ExecuteNodeRequest setProcessId(String processId) {
+        this.processId = processId;
         return this;
     }
-    public String getNodeId() {
-        return this.nodeId;
+    public String getProcessId() {
+        return this.processId;
+    }
+
+    public ExecuteNodeRequest setProcessInstanceId(String processInstanceId) {
+        this.processInstanceId = processInstanceId;
+        return this;
+    }
+    public String getProcessInstanceId() {
+        return this.processInstanceId;
     }
 
     public ExecuteNodeRequest setRequestData(String requestData) {

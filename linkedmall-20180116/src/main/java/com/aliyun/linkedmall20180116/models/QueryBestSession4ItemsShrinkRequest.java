@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class QueryBestSession4ItemsShrinkRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("LmItemIds")
-    public String lmItemIdsShrink;
 
     @NameInMap("ItemIds")
     public String itemIdsShrink;
+
+    @NameInMap("LmItemIds")
+    public String lmItemIdsShrink;
 
     public static QueryBestSession4ItemsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryBestSession4ItemsShrinkRequest self = new QueryBestSession4ItemsShrinkRequest();
@@ -26,20 +27,20 @@ public class QueryBestSession4ItemsShrinkRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryBestSession4ItemsShrinkRequest setLmItemIdsShrink(String lmItemIdsShrink) {
-        this.lmItemIdsShrink = lmItemIdsShrink;
-        return this;
-    }
-    public String getLmItemIdsShrink() {
-        return this.lmItemIdsShrink;
-    }
-
     public QueryBestSession4ItemsShrinkRequest setItemIdsShrink(String itemIdsShrink) {
         this.itemIdsShrink = itemIdsShrink;
         return this;
     }
     public String getItemIdsShrink() {
         return this.itemIdsShrink;
+    }
+
+    public QueryBestSession4ItemsShrinkRequest setLmItemIdsShrink(String lmItemIdsShrink) {
+        this.lmItemIdsShrink = lmItemIdsShrink;
+        return this;
+    }
+    public String getLmItemIdsShrink() {
+        return this.lmItemIdsShrink;
     }
 
 }

@@ -4,33 +4,54 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class InitApplyRefundRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
+    @NameInMap("BizClaimType")
+    @Validation(required = true)
+    public Integer bizClaimType;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
-    @NameInMap("SubLmOrderId")
-    public String subLmOrderId;
-
-    @NameInMap("BizClaimType")
-    public Integer bizClaimType;
-
     @NameInMap("GoodsStatus")
+    @Validation(required = true)
     public Integer goodsStatus;
 
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
+    @NameInMap("SubLmOrderId")
+    @Validation(required = true)
+    public String subLmOrderId;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    @NameInMap("AccountType")
-    public String accountType;
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static InitApplyRefundRequest build(java.util.Map<String, ?> map) throws Exception {
         InitApplyRefundRequest self = new InitApplyRefundRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InitApplyRefundRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    public InitApplyRefundRequest setBizClaimType(Integer bizClaimType) {
+        this.bizClaimType = bizClaimType;
+        return this;
+    }
+    public Integer getBizClaimType() {
+        return this.bizClaimType;
     }
 
     public InitApplyRefundRequest setBizId(String bizId) {
@@ -49,22 +70,6 @@ public class InitApplyRefundRequest extends TeaModel {
         return this.bizUid;
     }
 
-    public InitApplyRefundRequest setSubLmOrderId(String subLmOrderId) {
-        this.subLmOrderId = subLmOrderId;
-        return this;
-    }
-    public String getSubLmOrderId() {
-        return this.subLmOrderId;
-    }
-
-    public InitApplyRefundRequest setBizClaimType(Integer bizClaimType) {
-        this.bizClaimType = bizClaimType;
-        return this;
-    }
-    public Integer getBizClaimType() {
-        return this.bizClaimType;
-    }
-
     public InitApplyRefundRequest setGoodsStatus(Integer goodsStatus) {
         this.goodsStatus = goodsStatus;
         return this;
@@ -73,12 +78,12 @@ public class InitApplyRefundRequest extends TeaModel {
         return this.goodsStatus;
     }
 
-    public InitApplyRefundRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
+    public InitApplyRefundRequest setSubLmOrderId(String subLmOrderId) {
+        this.subLmOrderId = subLmOrderId;
         return this;
     }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
+    public String getSubLmOrderId() {
+        return this.subLmOrderId;
     }
 
     public InitApplyRefundRequest setThirdPartyUserId(String thirdPartyUserId) {
@@ -89,12 +94,12 @@ public class InitApplyRefundRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public InitApplyRefundRequest setAccountType(String accountType) {
-        this.accountType = accountType;
+    public InitApplyRefundRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
         return this;
     }
-    public String getAccountType() {
-        return this.accountType;
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

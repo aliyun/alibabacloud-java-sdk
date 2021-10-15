@@ -4,33 +4,49 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RefundOrderRequest extends TeaModel {
-    @NameInMap("OutRequestNo")
-    public String outRequestNo;
-
-    @NameInMap("OutTradeNo")
-    public String outTradeNo;
-
-    @NameInMap("TradeNo")
-    public String tradeNo;
-
-    @NameInMap("RefundReason")
-    public String refundReason;
-
-    @NameInMap("RefundAmount")
-    public String refundAmount;
-
-    @NameInMap("RefundRoyaltyParameters")
-    public String refundRoyaltyParameters;
-
     @NameInMap("ExtInfo")
     public String extInfo;
 
     @NameInMap("MerchantId")
     public String merchantId;
 
+    @NameInMap("OutRequestNo")
+    public String outRequestNo;
+
+    @NameInMap("OutTradeNo")
+    public String outTradeNo;
+
+    @NameInMap("RefundAmount")
+    public String refundAmount;
+
+    @NameInMap("RefundReason")
+    public String refundReason;
+
+    @NameInMap("RefundRoyaltyParameters")
+    public String refundRoyaltyParameters;
+
+    @NameInMap("TradeNo")
+    public String tradeNo;
+
     public static RefundOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         RefundOrderRequest self = new RefundOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RefundOrderRequest setExtInfo(String extInfo) {
+        this.extInfo = extInfo;
+        return this;
+    }
+    public String getExtInfo() {
+        return this.extInfo;
+    }
+
+    public RefundOrderRequest setMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
+    public String getMerchantId() {
+        return this.merchantId;
     }
 
     public RefundOrderRequest setOutRequestNo(String outRequestNo) {
@@ -49,12 +65,12 @@ public class RefundOrderRequest extends TeaModel {
         return this.outTradeNo;
     }
 
-    public RefundOrderRequest setTradeNo(String tradeNo) {
-        this.tradeNo = tradeNo;
+    public RefundOrderRequest setRefundAmount(String refundAmount) {
+        this.refundAmount = refundAmount;
         return this;
     }
-    public String getTradeNo() {
-        return this.tradeNo;
+    public String getRefundAmount() {
+        return this.refundAmount;
     }
 
     public RefundOrderRequest setRefundReason(String refundReason) {
@@ -65,14 +81,6 @@ public class RefundOrderRequest extends TeaModel {
         return this.refundReason;
     }
 
-    public RefundOrderRequest setRefundAmount(String refundAmount) {
-        this.refundAmount = refundAmount;
-        return this;
-    }
-    public String getRefundAmount() {
-        return this.refundAmount;
-    }
-
     public RefundOrderRequest setRefundRoyaltyParameters(String refundRoyaltyParameters) {
         this.refundRoyaltyParameters = refundRoyaltyParameters;
         return this;
@@ -81,20 +89,12 @@ public class RefundOrderRequest extends TeaModel {
         return this.refundRoyaltyParameters;
     }
 
-    public RefundOrderRequest setExtInfo(String extInfo) {
-        this.extInfo = extInfo;
+    public RefundOrderRequest setTradeNo(String tradeNo) {
+        this.tradeNo = tradeNo;
         return this;
     }
-    public String getExtInfo() {
-        return this.extInfo;
-    }
-
-    public RefundOrderRequest setMerchantId(String merchantId) {
-        this.merchantId = merchantId;
-        return this;
-    }
-    public String getMerchantId() {
-        return this.merchantId;
+    public String getTradeNo() {
+        return this.tradeNo;
     }
 
 }

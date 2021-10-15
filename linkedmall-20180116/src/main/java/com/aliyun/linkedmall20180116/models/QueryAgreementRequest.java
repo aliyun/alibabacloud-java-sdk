@@ -4,18 +4,26 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryAgreementRequest extends TeaModel {
+    @NameInMap("AgreementNo")
+    public String agreementNo;
+
     @NameInMap("ExternalAgreementNo")
     public String externalAgreementNo;
 
     @NameInMap("MerchantId")
     public String merchantId;
 
-    @NameInMap("AgreementNo")
-    public String agreementNo;
-
     public static QueryAgreementRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAgreementRequest self = new QueryAgreementRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAgreementRequest setAgreementNo(String agreementNo) {
+        this.agreementNo = agreementNo;
+        return this;
+    }
+    public String getAgreementNo() {
+        return this.agreementNo;
     }
 
     public QueryAgreementRequest setExternalAgreementNo(String externalAgreementNo) {
@@ -32,14 +40,6 @@ public class QueryAgreementRequest extends TeaModel {
     }
     public String getMerchantId() {
         return this.merchantId;
-    }
-
-    public QueryAgreementRequest setAgreementNo(String agreementNo) {
-        this.agreementNo = agreementNo;
-        return this;
-    }
-    public String getAgreementNo() {
-        return this.agreementNo;
     }
 
 }

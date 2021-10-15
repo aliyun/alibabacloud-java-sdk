@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefundPointRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("SellerId")
-    public String sellerId;
 
     @NameInMap("LmOrderId")
     public String lmOrderId;
@@ -16,11 +14,14 @@ public class RefundPointRequest extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
+    @NameInMap("SellerId")
+    public String sellerId;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
+
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static RefundPointRequest build(java.util.Map<String, ?> map) throws Exception {
         RefundPointRequest self = new RefundPointRequest();
@@ -33,14 +34,6 @@ public class RefundPointRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
-    }
-
-    public RefundPointRequest setSellerId(String sellerId) {
-        this.sellerId = sellerId;
-        return this;
-    }
-    public String getSellerId() {
-        return this.sellerId;
     }
 
     public RefundPointRequest setLmOrderId(String lmOrderId) {
@@ -59,12 +52,12 @@ public class RefundPointRequest extends TeaModel {
         return this.reason;
     }
 
-    public RefundPointRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
+    public RefundPointRequest setSellerId(String sellerId) {
+        this.sellerId = sellerId;
         return this;
     }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
+    public String getSellerId() {
+        return this.sellerId;
     }
 
     public RefundPointRequest setThirdPartyUserId(String thirdPartyUserId) {
@@ -73,6 +66,14 @@ public class RefundPointRequest extends TeaModel {
     }
     public String getThirdPartyUserId() {
         return this.thirdPartyUserId;
+    }
+
+    public RefundPointRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
+        return this;
+    }
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateMovieTicketOrderRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
-
-    @NameInMap("OutTradeId")
-    public String outTradeId;
-
-    @NameInMap("LockSeatAppKey")
-    public String lockSeatAppKey;
 
     @NameInMap("ExtJson")
     public String extJson;
+
+    @NameInMap("LockSeatAppKey")
+    @Validation(required = true)
+    public String lockSeatAppKey;
+
+    @NameInMap("OutTradeId")
+    public String outTradeId;
 
     public static CreateMovieTicketOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMovieTicketOrderRequest self = new CreateMovieTicketOrderRequest();
@@ -40,12 +43,12 @@ public class CreateMovieTicketOrderRequest extends TeaModel {
         return this.bizUid;
     }
 
-    public CreateMovieTicketOrderRequest setOutTradeId(String outTradeId) {
-        this.outTradeId = outTradeId;
+    public CreateMovieTicketOrderRequest setExtJson(String extJson) {
+        this.extJson = extJson;
         return this;
     }
-    public String getOutTradeId() {
-        return this.outTradeId;
+    public String getExtJson() {
+        return this.extJson;
     }
 
     public CreateMovieTicketOrderRequest setLockSeatAppKey(String lockSeatAppKey) {
@@ -56,12 +59,12 @@ public class CreateMovieTicketOrderRequest extends TeaModel {
         return this.lockSeatAppKey;
     }
 
-    public CreateMovieTicketOrderRequest setExtJson(String extJson) {
-        this.extJson = extJson;
+    public CreateMovieTicketOrderRequest setOutTradeId(String outTradeId) {
+        this.outTradeId = outTradeId;
         return this;
     }
-    public String getExtJson() {
-        return this.extJson;
+    public String getOutTradeId() {
+        return this.outTradeId;
     }
 
 }

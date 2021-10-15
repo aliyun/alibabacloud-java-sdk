@@ -4,33 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryOrderAndPaymentListRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
 
     @NameInMap("FilterOption")
     public String filterOption;
 
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
+    @NameInMap("PageNumber")
+    @Validation(required = true)
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    @Validation(required = true)
+    public Long pageSize;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    @NameInMap("AccountType")
-    public String accountType;
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static QueryOrderAndPaymentListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryOrderAndPaymentListRequest self = new QueryOrderAndPaymentListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryOrderAndPaymentListRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public QueryOrderAndPaymentListRequest setBizId(String bizId) {
@@ -49,12 +61,12 @@ public class QueryOrderAndPaymentListRequest extends TeaModel {
         return this.bizUid;
     }
 
-    public QueryOrderAndPaymentListRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
+    public QueryOrderAndPaymentListRequest setFilterOption(String filterOption) {
+        this.filterOption = filterOption;
         return this;
     }
-    public Long getPageSize() {
-        return this.pageSize;
+    public String getFilterOption() {
+        return this.filterOption;
     }
 
     public QueryOrderAndPaymentListRequest setPageNumber(Long pageNumber) {
@@ -65,20 +77,12 @@ public class QueryOrderAndPaymentListRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public QueryOrderAndPaymentListRequest setFilterOption(String filterOption) {
-        this.filterOption = filterOption;
+    public QueryOrderAndPaymentListRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getFilterOption() {
-        return this.filterOption;
-    }
-
-    public QueryOrderAndPaymentListRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
-        return this;
-    }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public QueryOrderAndPaymentListRequest setThirdPartyUserId(String thirdPartyUserId) {
@@ -89,12 +93,12 @@ public class QueryOrderAndPaymentListRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public QueryOrderAndPaymentListRequest setAccountType(String accountType) {
-        this.accountType = accountType;
+    public QueryOrderAndPaymentListRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
         return this;
     }
-    public String getAccountType() {
-        return this.accountType;
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

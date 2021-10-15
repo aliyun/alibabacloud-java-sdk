@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetSwitchUrlRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
+    @NameInMap("ThirdPartyUserId")
+    public String thirdPartyUserId;
+
     @NameInMap("Url")
+    @Validation(required = true)
     public String url;
 
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
-
-    @NameInMap("ThirdPartyUserId")
-    public String thirdPartyUserId;
 
     public static GetSwitchUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSwitchUrlRequest self = new GetSwitchUrlRequest();
@@ -40,6 +43,14 @@ public class GetSwitchUrlRequest extends TeaModel {
         return this.bizUid;
     }
 
+    public GetSwitchUrlRequest setThirdPartyUserId(String thirdPartyUserId) {
+        this.thirdPartyUserId = thirdPartyUserId;
+        return this;
+    }
+    public String getThirdPartyUserId() {
+        return this.thirdPartyUserId;
+    }
+
     public GetSwitchUrlRequest setUrl(String url) {
         this.url = url;
         return this;
@@ -54,14 +65,6 @@ public class GetSwitchUrlRequest extends TeaModel {
     }
     public Boolean getUseAnonymousTbAccount() {
         return this.useAnonymousTbAccount;
-    }
-
-    public GetSwitchUrlRequest setThirdPartyUserId(String thirdPartyUserId) {
-        this.thirdPartyUserId = thirdPartyUserId;
-        return this;
-    }
-    public String getThirdPartyUserId() {
-        return this.thirdPartyUserId;
     }
 
 }

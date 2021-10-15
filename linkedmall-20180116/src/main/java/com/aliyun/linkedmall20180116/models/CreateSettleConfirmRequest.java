@@ -3,31 +3,34 @@ package com.aliyun.linkedmall20180116.models;
 
 import com.aliyun.tea.*;
 
-public class SettleOrderRequest extends TeaModel {
+public class CreateSettleConfirmRequest extends TeaModel {
     @NameInMap("ExtInfo")
     public String extInfo;
 
     @NameInMap("MerchantId")
+    @Validation(required = true)
     public String merchantId;
 
     @NameInMap("OutRequestNo")
+    @Validation(required = true)
     public String outRequestNo;
 
     @NameInMap("OutTradeNo")
     public String outTradeNo;
 
-    @NameInMap("RoyaltyParameters")
-    public String royaltyParameters;
+    @NameInMap("SettleInfo")
+    @Validation(required = true)
+    public String settleInfo;
 
     @NameInMap("TradeNo")
     public String tradeNo;
 
-    public static SettleOrderRequest build(java.util.Map<String, ?> map) throws Exception {
-        SettleOrderRequest self = new SettleOrderRequest();
+    public static CreateSettleConfirmRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateSettleConfirmRequest self = new CreateSettleConfirmRequest();
         return TeaModel.build(map, self);
     }
 
-    public SettleOrderRequest setExtInfo(String extInfo) {
+    public CreateSettleConfirmRequest setExtInfo(String extInfo) {
         this.extInfo = extInfo;
         return this;
     }
@@ -35,7 +38,7 @@ public class SettleOrderRequest extends TeaModel {
         return this.extInfo;
     }
 
-    public SettleOrderRequest setMerchantId(String merchantId) {
+    public CreateSettleConfirmRequest setMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
     }
@@ -43,7 +46,7 @@ public class SettleOrderRequest extends TeaModel {
         return this.merchantId;
     }
 
-    public SettleOrderRequest setOutRequestNo(String outRequestNo) {
+    public CreateSettleConfirmRequest setOutRequestNo(String outRequestNo) {
         this.outRequestNo = outRequestNo;
         return this;
     }
@@ -51,7 +54,7 @@ public class SettleOrderRequest extends TeaModel {
         return this.outRequestNo;
     }
 
-    public SettleOrderRequest setOutTradeNo(String outTradeNo) {
+    public CreateSettleConfirmRequest setOutTradeNo(String outTradeNo) {
         this.outTradeNo = outTradeNo;
         return this;
     }
@@ -59,15 +62,15 @@ public class SettleOrderRequest extends TeaModel {
         return this.outTradeNo;
     }
 
-    public SettleOrderRequest setRoyaltyParameters(String royaltyParameters) {
-        this.royaltyParameters = royaltyParameters;
+    public CreateSettleConfirmRequest setSettleInfo(String settleInfo) {
+        this.settleInfo = settleInfo;
         return this;
     }
-    public String getRoyaltyParameters() {
-        return this.royaltyParameters;
+    public String getSettleInfo() {
+        return this.settleInfo;
     }
 
-    public SettleOrderRequest setTradeNo(String tradeNo) {
+    public CreateSettleConfirmRequest setTradeNo(String tradeNo) {
         this.tradeNo = tradeNo;
         return this;
     }

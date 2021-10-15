@@ -4,11 +4,18 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ModifyItemLimitRuleRequest extends TeaModel {
+    @NameInMap("BeginTime")
+    public Long beginTime;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
-    @NameInMap("SubBizCode")
-    public String subBizCode;
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    @NameInMap("ItemId")
+    public Long itemId;
 
     @NameInMap("LmActivityId")
     public Long lmActivityId;
@@ -16,27 +23,30 @@ public class ModifyItemLimitRuleRequest extends TeaModel {
     @NameInMap("LmItemId")
     public String lmItemId;
 
-    @NameInMap("ItemId")
-    public Long itemId;
-
-    @NameInMap("UpperNum")
-    public Integer upperNum;
-
     @NameInMap("RuleId")
+    @Validation(required = true)
     public Long ruleId;
 
     @NameInMap("RuleType")
     public Integer ruleType;
 
-    @NameInMap("BeginTime")
-    public Long beginTime;
+    @NameInMap("SubBizCode")
+    public String subBizCode;
 
-    @NameInMap("EndTime")
-    public Long endTime;
+    @NameInMap("UpperNum")
+    public Integer upperNum;
 
     public static ModifyItemLimitRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyItemLimitRuleRequest self = new ModifyItemLimitRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyItemLimitRuleRequest setBeginTime(Long beginTime) {
+        this.beginTime = beginTime;
+        return this;
+    }
+    public Long getBeginTime() {
+        return this.beginTime;
     }
 
     public ModifyItemLimitRuleRequest setBizId(String bizId) {
@@ -47,12 +57,20 @@ public class ModifyItemLimitRuleRequest extends TeaModel {
         return this.bizId;
     }
 
-    public ModifyItemLimitRuleRequest setSubBizCode(String subBizCode) {
-        this.subBizCode = subBizCode;
+    public ModifyItemLimitRuleRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getSubBizCode() {
-        return this.subBizCode;
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public ModifyItemLimitRuleRequest setItemId(Long itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    public Long getItemId() {
+        return this.itemId;
     }
 
     public ModifyItemLimitRuleRequest setLmActivityId(Long lmActivityId) {
@@ -71,22 +89,6 @@ public class ModifyItemLimitRuleRequest extends TeaModel {
         return this.lmItemId;
     }
 
-    public ModifyItemLimitRuleRequest setItemId(Long itemId) {
-        this.itemId = itemId;
-        return this;
-    }
-    public Long getItemId() {
-        return this.itemId;
-    }
-
-    public ModifyItemLimitRuleRequest setUpperNum(Integer upperNum) {
-        this.upperNum = upperNum;
-        return this;
-    }
-    public Integer getUpperNum() {
-        return this.upperNum;
-    }
-
     public ModifyItemLimitRuleRequest setRuleId(Long ruleId) {
         this.ruleId = ruleId;
         return this;
@@ -103,20 +105,20 @@ public class ModifyItemLimitRuleRequest extends TeaModel {
         return this.ruleType;
     }
 
-    public ModifyItemLimitRuleRequest setBeginTime(Long beginTime) {
-        this.beginTime = beginTime;
+    public ModifyItemLimitRuleRequest setSubBizCode(String subBizCode) {
+        this.subBizCode = subBizCode;
         return this;
     }
-    public Long getBeginTime() {
-        return this.beginTime;
+    public String getSubBizCode() {
+        return this.subBizCode;
     }
 
-    public ModifyItemLimitRuleRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
+    public ModifyItemLimitRuleRequest setUpperNum(Integer upperNum) {
+        this.upperNum = upperNum;
         return this;
     }
-    public Long getEndTime() {
-        return this.endTime;
+    public Integer getUpperNum() {
+        return this.upperNum;
     }
 
 }

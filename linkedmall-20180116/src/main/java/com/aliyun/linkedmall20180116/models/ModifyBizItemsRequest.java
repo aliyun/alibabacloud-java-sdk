@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyBizItemsRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
+
+    @NameInMap("ItemList")
+    @Validation(required = true)
+    public java.util.List<ModifyBizItemsRequestItemList> itemList;
 
     @NameInMap("SubBizId")
     public String subBizId;
-
-    @NameInMap("ItemList")
-    public java.util.List<ModifyBizItemsRequestItemList> itemList;
 
     public static ModifyBizItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBizItemsRequest self = new ModifyBizItemsRequest();
@@ -26,14 +28,6 @@ public class ModifyBizItemsRequest extends TeaModel {
         return this.bizId;
     }
 
-    public ModifyBizItemsRequest setSubBizId(String subBizId) {
-        this.subBizId = subBizId;
-        return this;
-    }
-    public String getSubBizId() {
-        return this.subBizId;
-    }
-
     public ModifyBizItemsRequest setItemList(java.util.List<ModifyBizItemsRequestItemList> itemList) {
         this.itemList = itemList;
         return this;
@@ -42,15 +36,17 @@ public class ModifyBizItemsRequest extends TeaModel {
         return this.itemList;
     }
 
+    public ModifyBizItemsRequest setSubBizId(String subBizId) {
+        this.subBizId = subBizId;
+        return this;
+    }
+    public String getSubBizId() {
+        return this.subBizId;
+    }
+
     public static class ModifyBizItemsRequestItemListSkuList extends TeaModel {
-        @NameInMap("StatusAction")
-        public Long statusAction;
-
-        @NameInMap("PriceCent")
-        public Long priceCent;
-
-        @NameInMap("SkuId")
-        public Long skuId;
+        @NameInMap("BenefitId")
+        public String benefitId;
 
         @NameInMap("Points")
         public Long points;
@@ -58,39 +54,29 @@ public class ModifyBizItemsRequest extends TeaModel {
         @NameInMap("PointsAmount")
         public Long pointsAmount;
 
-        @NameInMap("BenefitId")
-        public String benefitId;
+        @NameInMap("PriceCent")
+        public Long priceCent;
 
         @NameInMap("Quantity")
         public Integer quantity;
+
+        @NameInMap("SkuId")
+        public Long skuId;
+
+        @NameInMap("StatusAction")
+        public Long statusAction;
 
         public static ModifyBizItemsRequestItemListSkuList build(java.util.Map<String, ?> map) throws Exception {
             ModifyBizItemsRequestItemListSkuList self = new ModifyBizItemsRequestItemListSkuList();
             return TeaModel.build(map, self);
         }
 
-        public ModifyBizItemsRequestItemListSkuList setStatusAction(Long statusAction) {
-            this.statusAction = statusAction;
+        public ModifyBizItemsRequestItemListSkuList setBenefitId(String benefitId) {
+            this.benefitId = benefitId;
             return this;
         }
-        public Long getStatusAction() {
-            return this.statusAction;
-        }
-
-        public ModifyBizItemsRequestItemListSkuList setPriceCent(Long priceCent) {
-            this.priceCent = priceCent;
-            return this;
-        }
-        public Long getPriceCent() {
-            return this.priceCent;
-        }
-
-        public ModifyBizItemsRequestItemListSkuList setSkuId(Long skuId) {
-            this.skuId = skuId;
-            return this;
-        }
-        public Long getSkuId() {
-            return this.skuId;
+        public String getBenefitId() {
+            return this.benefitId;
         }
 
         public ModifyBizItemsRequestItemListSkuList setPoints(Long points) {
@@ -109,12 +95,12 @@ public class ModifyBizItemsRequest extends TeaModel {
             return this.pointsAmount;
         }
 
-        public ModifyBizItemsRequestItemListSkuList setBenefitId(String benefitId) {
-            this.benefitId = benefitId;
+        public ModifyBizItemsRequestItemListSkuList setPriceCent(Long priceCent) {
+            this.priceCent = priceCent;
             return this;
         }
-        public String getBenefitId() {
-            return this.benefitId;
+        public Long getPriceCent() {
+            return this.priceCent;
         }
 
         public ModifyBizItemsRequestItemListSkuList setQuantity(Integer quantity) {
@@ -125,14 +111,30 @@ public class ModifyBizItemsRequest extends TeaModel {
             return this.quantity;
         }
 
+        public ModifyBizItemsRequestItemListSkuList setSkuId(Long skuId) {
+            this.skuId = skuId;
+            return this;
+        }
+        public Long getSkuId() {
+            return this.skuId;
+        }
+
+        public ModifyBizItemsRequestItemListSkuList setStatusAction(Long statusAction) {
+            this.statusAction = statusAction;
+            return this;
+        }
+        public Long getStatusAction() {
+            return this.statusAction;
+        }
+
     }
 
     public static class ModifyBizItemsRequestItemList extends TeaModel {
-        @NameInMap("LmItemId")
-        public String lmItemId;
-
         @NameInMap("ItemId")
         public Long itemId;
+
+        @NameInMap("LmItemId")
+        public String lmItemId;
 
         @NameInMap("SkuList")
         public java.util.List<ModifyBizItemsRequestItemListSkuList> skuList;
@@ -142,20 +144,20 @@ public class ModifyBizItemsRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ModifyBizItemsRequestItemList setLmItemId(String lmItemId) {
-            this.lmItemId = lmItemId;
-            return this;
-        }
-        public String getLmItemId() {
-            return this.lmItemId;
-        }
-
         public ModifyBizItemsRequestItemList setItemId(Long itemId) {
             this.itemId = itemId;
             return this;
         }
         public Long getItemId() {
             return this.itemId;
+        }
+
+        public ModifyBizItemsRequestItemList setLmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
+            return this;
+        }
+        public String getLmItemId() {
+            return this.lmItemId;
         }
 
         public ModifyBizItemsRequestItemList setSkuList(java.util.List<ModifyBizItemsRequestItemListSkuList> skuList) {

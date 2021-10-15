@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class QueryBizItemsRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
+
+    @NameInMap("PageNumber")
+    @Validation(required = true)
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    @Validation(required = true)
+    public Integer pageSize;
 
     @NameInMap("SubBizId")
     public String subBizId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     @NameInMap("UserId")
     public String userId;
@@ -32,12 +35,12 @@ public class QueryBizItemsRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryBizItemsRequest setSubBizId(String subBizId) {
-        this.subBizId = subBizId;
+    public QueryBizItemsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getSubBizId() {
-        return this.subBizId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public QueryBizItemsRequest setPageSize(Integer pageSize) {
@@ -48,12 +51,12 @@ public class QueryBizItemsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryBizItemsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public QueryBizItemsRequest setSubBizId(String subBizId) {
+        this.subBizId = subBizId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getSubBizId() {
+        return this.subBizId;
     }
 
     public QueryBizItemsRequest setUserId(String userId) {

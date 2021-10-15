@@ -4,33 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class SubmitReturnGoodLogisticsResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public SubmitReturnGoodLogisticsResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     public static SubmitReturnGoodLogisticsResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitReturnGoodLogisticsResponse self = new SubmitReturnGoodLogisticsResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitReturnGoodLogisticsResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SubmitReturnGoodLogisticsResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public SubmitReturnGoodLogisticsResponse setBody(SubmitReturnGoodLogisticsResponseBody body) {
-        this.body = body;
+    public SubmitReturnGoodLogisticsResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public SubmitReturnGoodLogisticsResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public SubmitReturnGoodLogisticsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

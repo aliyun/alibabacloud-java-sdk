@@ -4,33 +4,57 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class BatchRegistAnonymousTbAccountResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("BatchId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String batchId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public BatchRegistAnonymousTbAccountResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     public static BatchRegistAnonymousTbAccountResponse build(java.util.Map<String, ?> map) throws Exception {
         BatchRegistAnonymousTbAccountResponse self = new BatchRegistAnonymousTbAccountResponse();
         return TeaModel.build(map, self);
     }
 
-    public BatchRegistAnonymousTbAccountResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public BatchRegistAnonymousTbAccountResponse setBatchId(String batchId) {
+        this.batchId = batchId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getBatchId() {
+        return this.batchId;
     }
 
-    public BatchRegistAnonymousTbAccountResponse setBody(BatchRegistAnonymousTbAccountResponseBody body) {
-        this.body = body;
+    public BatchRegistAnonymousTbAccountResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public BatchRegistAnonymousTbAccountResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public BatchRegistAnonymousTbAccountResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public BatchRegistAnonymousTbAccountResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

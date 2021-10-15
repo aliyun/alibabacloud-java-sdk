@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryMovieSchedulesRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("CinemaId")
+    @Validation(required = true)
     public Long cinemaId;
 
     @NameInMap("ExtJson")

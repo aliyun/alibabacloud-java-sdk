@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class QueryMessagesRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("Topic")
-    public String topic;
 
     @NameInMap("ExtJson")
     public String extJson;
+
+    @NameInMap("Topic")
+    @Validation(required = true)
+    public String topic;
 
     public static QueryMessagesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMessagesRequest self = new QueryMessagesRequest();
@@ -26,20 +28,20 @@ public class QueryMessagesRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryMessagesRequest setTopic(String topic) {
-        this.topic = topic;
-        return this;
-    }
-    public String getTopic() {
-        return this.topic;
-    }
-
     public QueryMessagesRequest setExtJson(String extJson) {
         this.extJson = extJson;
         return this;
     }
     public String getExtJson() {
         return this.extJson;
+    }
+
+    public QueryMessagesRequest setTopic(String topic) {
+        this.topic = topic;
+        return this;
+    }
+    public String getTopic() {
+        return this.topic;
     }
 
 }
