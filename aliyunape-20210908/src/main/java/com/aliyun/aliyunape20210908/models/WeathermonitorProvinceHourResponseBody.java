@@ -3,7 +3,7 @@ package com.aliyun.aliyunape20210908.models;
 
 import com.aliyun.tea.*;
 
-public class ExecuteResponseBody extends TeaModel {
+public class WeathermonitorProvinceHourResponseBody extends TeaModel {
     // code
     @NameInMap("Code")
     public String code;
@@ -28,12 +28,12 @@ public class ExecuteResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ExecuteResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ExecuteResponseBody self = new ExecuteResponseBody();
+    public static WeathermonitorProvinceHourResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        WeathermonitorProvinceHourResponseBody self = new WeathermonitorProvinceHourResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ExecuteResponseBody setCode(String code) {
+    public WeathermonitorProvinceHourResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -41,7 +41,7 @@ public class ExecuteResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ExecuteResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
+    public WeathermonitorProvinceHourResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
         this.data = data;
         return this;
     }
@@ -49,7 +49,7 @@ public class ExecuteResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ExecuteResponseBody setMessage(String message) {
+    public WeathermonitorProvinceHourResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -57,7 +57,7 @@ public class ExecuteResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ExecuteResponseBody setRequestId(String requestId) {
+    public WeathermonitorProvinceHourResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -65,7 +65,7 @@ public class ExecuteResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ExecuteResponseBody setRt(Long rt) {
+    public WeathermonitorProvinceHourResponseBody setRt(Long rt) {
         this.rt = rt;
         return this;
     }
@@ -73,7 +73,7 @@ public class ExecuteResponseBody extends TeaModel {
         return this.rt;
     }
 
-    public ExecuteResponseBody setSuccess(Boolean success) {
+    public WeathermonitorProvinceHourResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
