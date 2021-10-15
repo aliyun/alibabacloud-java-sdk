@@ -4,10 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListBindingsRequest extends TeaModel {
-    // A short description of struct
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -17,17 +13,13 @@ public class ListBindingsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    // A short description of struct
+    @NameInMap("ProjectName")
+    public String projectName;
+
     public static ListBindingsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListBindingsRequest self = new ListBindingsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListBindingsRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
     }
 
     public ListBindingsRequest setDatasetName(String datasetName) {
@@ -52,6 +44,14 @@ public class ListBindingsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListBindingsRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
 }

@@ -8,13 +8,13 @@ public class CroppingSuggestion extends TeaModel {
     @NameInMap("AspectRatio")
     public String aspectRatio;
 
-    // Confidence
-    @NameInMap("Confidence")
-    public Float confidence;
-
     // Boundary
     @NameInMap("Boundary")
     public Boundary boundary;
+
+    // Confidence
+    @NameInMap("Confidence")
+    public Float confidence;
 
     public static CroppingSuggestion build(java.util.Map<String, ?> map) throws Exception {
         CroppingSuggestion self = new CroppingSuggestion();
@@ -29,20 +29,20 @@ public class CroppingSuggestion extends TeaModel {
         return this.aspectRatio;
     }
 
-    public CroppingSuggestion setConfidence(Float confidence) {
-        this.confidence = confidence;
-        return this;
-    }
-    public Float getConfidence() {
-        return this.confidence;
-    }
-
     public CroppingSuggestion setBoundary(Boundary boundary) {
         this.boundary = boundary;
         return this;
     }
     public Boundary getBoundary() {
         return this.boundary;
+    }
+
+    public CroppingSuggestion setConfidence(Float confidence) {
+        this.confidence = confidence;
+        return this;
+    }
+    public Float getConfidence() {
+        return this.confidence;
     }
 
 }

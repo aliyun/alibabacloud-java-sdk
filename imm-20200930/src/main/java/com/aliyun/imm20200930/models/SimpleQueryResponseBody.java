@@ -4,6 +4,14 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SimpleQueryResponseBody extends TeaModel {
+    // 聚合字段的字段名
+    @NameInMap("Aggregations")
+    public java.util.List<SimpleQueryResponseBodyAggregations> aggregations;
+
+    // 文件列表
+    @NameInMap("Files")
+    public java.util.List<File> files;
+
     // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("NextToken")
     public String nextToken;
@@ -12,17 +20,25 @@ public class SimpleQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 文件列表
-    @NameInMap("Files")
-    public java.util.List<File> files;
-
-    // 聚合字段的字段名
-    @NameInMap("Aggregations")
-    public java.util.List<SimpleQueryResponseBodyAggregations> aggregations;
-
     public static SimpleQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SimpleQueryResponseBody self = new SimpleQueryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SimpleQueryResponseBody setAggregations(java.util.List<SimpleQueryResponseBodyAggregations> aggregations) {
+        this.aggregations = aggregations;
+        return this;
+    }
+    public java.util.List<SimpleQueryResponseBodyAggregations> getAggregations() {
+        return this.aggregations;
+    }
+
+    public SimpleQueryResponseBody setFiles(java.util.List<File> files) {
+        this.files = files;
+        return this;
+    }
+    public java.util.List<File> getFiles() {
+        return this.files;
     }
 
     public SimpleQueryResponseBody setNextToken(String nextToken) {
@@ -39,22 +55,6 @@ public class SimpleQueryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public SimpleQueryResponseBody setFiles(java.util.List<File> files) {
-        this.files = files;
-        return this;
-    }
-    public java.util.List<File> getFiles() {
-        return this.files;
-    }
-
-    public SimpleQueryResponseBody setAggregations(java.util.List<SimpleQueryResponseBodyAggregations> aggregations) {
-        this.aggregations = aggregations;
-        return this;
-    }
-    public java.util.List<SimpleQueryResponseBodyAggregations> getAggregations() {
-        return this.aggregations;
     }
 
     public static class SimpleQueryResponseBodyAggregationsGroups extends TeaModel {

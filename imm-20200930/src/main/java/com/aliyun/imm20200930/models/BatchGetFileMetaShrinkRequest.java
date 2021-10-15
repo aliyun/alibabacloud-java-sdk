@@ -4,11 +4,11 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchGetFileMetaShrinkRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("DatasetName")
     public String datasetName;
+
+    @NameInMap("ProjectName")
+    public String projectName;
 
     @NameInMap("URIs")
     public String URIsShrink;
@@ -18,20 +18,20 @@ public class BatchGetFileMetaShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public BatchGetFileMetaShrinkRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
     public BatchGetFileMetaShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public BatchGetFileMetaShrinkRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
     public BatchGetFileMetaShrinkRequest setURIsShrink(String URIsShrink) {

@@ -4,26 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchIndexFileMetaShrinkRequest extends TeaModel {
-    @NameInMap("ProjectName")
-    public String projectName;
-
     @NameInMap("DatasetName")
     public String datasetName;
 
     @NameInMap("Files")
     public String filesShrink;
 
+    @NameInMap("NotifyEndpoint")
+    public String notifyEndpoint;
+
+    @NameInMap("NotifyTopicName")
+    public String notifyTopicName;
+
+    @NameInMap("ProjectName")
+    public String projectName;
+
     public static BatchIndexFileMetaShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchIndexFileMetaShrinkRequest self = new BatchIndexFileMetaShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchIndexFileMetaShrinkRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
     }
 
     public BatchIndexFileMetaShrinkRequest setDatasetName(String datasetName) {
@@ -40,6 +38,30 @@ public class BatchIndexFileMetaShrinkRequest extends TeaModel {
     }
     public String getFilesShrink() {
         return this.filesShrink;
+    }
+
+    public BatchIndexFileMetaShrinkRequest setNotifyEndpoint(String notifyEndpoint) {
+        this.notifyEndpoint = notifyEndpoint;
+        return this;
+    }
+    public String getNotifyEndpoint() {
+        return this.notifyEndpoint;
+    }
+
+    public BatchIndexFileMetaShrinkRequest setNotifyTopicName(String notifyTopicName) {
+        this.notifyTopicName = notifyTopicName;
+        return this;
+    }
+    public String getNotifyTopicName() {
+        return this.notifyTopicName;
+    }
+
+    public BatchIndexFileMetaShrinkRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
 }

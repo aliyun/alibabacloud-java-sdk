@@ -4,28 +4,28 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    // Datasets
+    @NameInMap("Datasets")
+    public java.util.List<Dataset> datasets;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    // Datasets
-    @NameInMap("Datasets")
-    public java.util.List<Dataset> datasets;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListDatasetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDatasetsResponseBody self = new ListDatasetsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDatasetsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListDatasetsResponseBody setDatasets(java.util.List<Dataset> datasets) {
+        this.datasets = datasets;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<Dataset> getDatasets() {
+        return this.datasets;
     }
 
     public ListDatasetsResponseBody setNextToken(String nextToken) {
@@ -36,12 +36,12 @@ public class ListDatasetsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListDatasetsResponseBody setDatasets(java.util.List<Dataset> datasets) {
-        this.datasets = datasets;
+    public ListDatasetsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<Dataset> getDatasets() {
-        return this.datasets;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

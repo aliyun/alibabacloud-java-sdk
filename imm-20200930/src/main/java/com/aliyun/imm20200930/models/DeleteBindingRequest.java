@@ -4,12 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteBindingRequest extends TeaModel {
+    @NameInMap("DatasetName")
+    public String datasetName;
+
     // A short description of struct
     @NameInMap("ProjectName")
     public String projectName;
-
-    @NameInMap("DatasetName")
-    public String datasetName;
 
     @NameInMap("URI")
     public String URI;
@@ -19,20 +19,20 @@ public class DeleteBindingRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteBindingRequest setProjectName(String projectName) {
-        this.projectName = projectName;
-        return this;
-    }
-    public String getProjectName() {
-        return this.projectName;
-    }
-
     public DeleteBindingRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public DeleteBindingRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
     }
 
     public DeleteBindingRequest setURI(String URI) {

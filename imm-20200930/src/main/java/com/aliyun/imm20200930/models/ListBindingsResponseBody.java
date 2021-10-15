@@ -4,27 +4,27 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListBindingsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Bindings")
+    public java.util.List<Binding> bindings;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Bindings")
-    public java.util.List<Binding> bindings;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListBindingsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBindingsResponseBody self = new ListBindingsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListBindingsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListBindingsResponseBody setBindings(java.util.List<Binding> bindings) {
+        this.bindings = bindings;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<Binding> getBindings() {
+        return this.bindings;
     }
 
     public ListBindingsResponseBody setNextToken(String nextToken) {
@@ -35,12 +35,12 @@ public class ListBindingsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListBindingsResponseBody setBindings(java.util.List<Binding> bindings) {
-        this.bindings = bindings;
+    public ListBindingsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<Binding> getBindings() {
-        return this.bindings;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

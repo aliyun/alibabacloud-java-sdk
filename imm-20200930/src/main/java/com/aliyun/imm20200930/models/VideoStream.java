@@ -4,6 +4,58 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class VideoStream extends TeaModel {
+    // AverageFrameRate
+    @NameInMap("AverageFrameRate")
+    public Float averageFrameRate;
+
+    // Bitrate
+    @NameInMap("Bitrate")
+    public Long bitrate;
+
+    // CodecLongName
+    @NameInMap("CodecLongName")
+    public String codecLongName;
+
+    // CodecName
+    @NameInMap("CodecName")
+    public String codecName;
+
+    // CodecTag
+    @NameInMap("CodecTag")
+    public String codecTag;
+
+    // CodecTagString
+    @NameInMap("CodecTagString")
+    public String codecTagString;
+
+    // CodecTimeBase
+    @NameInMap("CodecTimeBase")
+    public String codecTimeBase;
+
+    // DisplayAspectRatio
+    @NameInMap("DisplayAspectRatio")
+    public String displayAspectRatio;
+
+    // Duration
+    @NameInMap("Duration")
+    public Float duration;
+
+    // FrameCount
+    @NameInMap("FrameCount")
+    public Long frameCount;
+
+    // FrameRate
+    @NameInMap("FrameRate")
+    public Float frameRate;
+
+    // HasBFrames
+    @NameInMap("HasBFrames")
+    public String hasBFrames;
+
+    // Height
+    @NameInMap("Height")
+    public Long height;
+
     // Index
     @NameInMap("Index")
     public Long index;
@@ -12,89 +64,141 @@ public class VideoStream extends TeaModel {
     @NameInMap("Language")
     public String language;
 
-    // CodecName
-    @NameInMap("CodecName")
-    public String codecName;
-
-    // CodecLongName
-    @NameInMap("CodecLongName")
-    public String codecLongName;
-
-    // Profile
-    @NameInMap("Profile")
-    public String profile;
-
-    // CodecTimeBase
-    @NameInMap("CodecTimeBase")
-    public String codecTimeBase;
-
-    // CodecTagString
-    @NameInMap("CodecTagString")
-    public String codecTagString;
-
-    // CodecTag
-    @NameInMap("CodecTag")
-    public String codecTag;
-
-    // Width
-    @NameInMap("Width")
-    public Long width;
-
-    // Height
-    @NameInMap("Height")
-    public Long height;
-
-    // HasBFrames
-    @NameInMap("HasBFrames")
-    public String hasBFrames;
-
-    // SampleAspectRatio
-    @NameInMap("SampleAspectRatio")
-    public String sampleAspectRatio;
-
-    // DisplayAspectRatio
-    @NameInMap("DisplayAspectRatio")
-    public String displayAspectRatio;
+    // Level
+    @NameInMap("Level")
+    public Long level;
 
     // PixelFormat
     @NameInMap("PixelFormat")
     public String pixelFormat;
 
-    // Level
-    @NameInMap("Level")
-    public Long level;
+    // Profile
+    @NameInMap("Profile")
+    public String profile;
 
-    // FrameRate
-    @NameInMap("FrameRate")
-    public Float frameRate;
-
-    // AverageFrameRate
-    @NameInMap("AverageFrameRate")
-    public Float averageFrameRate;
-
-    // TimeBase
-    @NameInMap("TimeBase")
-    public String timeBase;
+    // SampleAspectRatio
+    @NameInMap("SampleAspectRatio")
+    public String sampleAspectRatio;
 
     // StartTime
     @NameInMap("StartTime")
     public Float startTime;
 
-    // Duration
-    @NameInMap("Duration")
-    public Float duration;
+    // TimeBase
+    @NameInMap("TimeBase")
+    public String timeBase;
 
-    // Bitrate
-    @NameInMap("Bitrate")
-    public Long bitrate;
-
-    // FrameCount
-    @NameInMap("FrameCount")
-    public Long frameCount;
+    // Width
+    @NameInMap("Width")
+    public Long width;
 
     public static VideoStream build(java.util.Map<String, ?> map) throws Exception {
         VideoStream self = new VideoStream();
         return TeaModel.build(map, self);
+    }
+
+    public VideoStream setAverageFrameRate(Float averageFrameRate) {
+        this.averageFrameRate = averageFrameRate;
+        return this;
+    }
+    public Float getAverageFrameRate() {
+        return this.averageFrameRate;
+    }
+
+    public VideoStream setBitrate(Long bitrate) {
+        this.bitrate = bitrate;
+        return this;
+    }
+    public Long getBitrate() {
+        return this.bitrate;
+    }
+
+    public VideoStream setCodecLongName(String codecLongName) {
+        this.codecLongName = codecLongName;
+        return this;
+    }
+    public String getCodecLongName() {
+        return this.codecLongName;
+    }
+
+    public VideoStream setCodecName(String codecName) {
+        this.codecName = codecName;
+        return this;
+    }
+    public String getCodecName() {
+        return this.codecName;
+    }
+
+    public VideoStream setCodecTag(String codecTag) {
+        this.codecTag = codecTag;
+        return this;
+    }
+    public String getCodecTag() {
+        return this.codecTag;
+    }
+
+    public VideoStream setCodecTagString(String codecTagString) {
+        this.codecTagString = codecTagString;
+        return this;
+    }
+    public String getCodecTagString() {
+        return this.codecTagString;
+    }
+
+    public VideoStream setCodecTimeBase(String codecTimeBase) {
+        this.codecTimeBase = codecTimeBase;
+        return this;
+    }
+    public String getCodecTimeBase() {
+        return this.codecTimeBase;
+    }
+
+    public VideoStream setDisplayAspectRatio(String displayAspectRatio) {
+        this.displayAspectRatio = displayAspectRatio;
+        return this;
+    }
+    public String getDisplayAspectRatio() {
+        return this.displayAspectRatio;
+    }
+
+    public VideoStream setDuration(Float duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Float getDuration() {
+        return this.duration;
+    }
+
+    public VideoStream setFrameCount(Long frameCount) {
+        this.frameCount = frameCount;
+        return this;
+    }
+    public Long getFrameCount() {
+        return this.frameCount;
+    }
+
+    public VideoStream setFrameRate(Float frameRate) {
+        this.frameRate = frameRate;
+        return this;
+    }
+    public Float getFrameRate() {
+        return this.frameRate;
+    }
+
+    public VideoStream setHasBFrames(String hasBFrames) {
+        this.hasBFrames = hasBFrames;
+        return this;
+    }
+    public String getHasBFrames() {
+        return this.hasBFrames;
+    }
+
+    public VideoStream setHeight(Long height) {
+        this.height = height;
+        return this;
+    }
+    public Long getHeight() {
+        return this.height;
     }
 
     public VideoStream setIndex(Long index) {
@@ -113,92 +217,12 @@ public class VideoStream extends TeaModel {
         return this.language;
     }
 
-    public VideoStream setCodecName(String codecName) {
-        this.codecName = codecName;
+    public VideoStream setLevel(Long level) {
+        this.level = level;
         return this;
     }
-    public String getCodecName() {
-        return this.codecName;
-    }
-
-    public VideoStream setCodecLongName(String codecLongName) {
-        this.codecLongName = codecLongName;
-        return this;
-    }
-    public String getCodecLongName() {
-        return this.codecLongName;
-    }
-
-    public VideoStream setProfile(String profile) {
-        this.profile = profile;
-        return this;
-    }
-    public String getProfile() {
-        return this.profile;
-    }
-
-    public VideoStream setCodecTimeBase(String codecTimeBase) {
-        this.codecTimeBase = codecTimeBase;
-        return this;
-    }
-    public String getCodecTimeBase() {
-        return this.codecTimeBase;
-    }
-
-    public VideoStream setCodecTagString(String codecTagString) {
-        this.codecTagString = codecTagString;
-        return this;
-    }
-    public String getCodecTagString() {
-        return this.codecTagString;
-    }
-
-    public VideoStream setCodecTag(String codecTag) {
-        this.codecTag = codecTag;
-        return this;
-    }
-    public String getCodecTag() {
-        return this.codecTag;
-    }
-
-    public VideoStream setWidth(Long width) {
-        this.width = width;
-        return this;
-    }
-    public Long getWidth() {
-        return this.width;
-    }
-
-    public VideoStream setHeight(Long height) {
-        this.height = height;
-        return this;
-    }
-    public Long getHeight() {
-        return this.height;
-    }
-
-    public VideoStream setHasBFrames(String hasBFrames) {
-        this.hasBFrames = hasBFrames;
-        return this;
-    }
-    public String getHasBFrames() {
-        return this.hasBFrames;
-    }
-
-    public VideoStream setSampleAspectRatio(String sampleAspectRatio) {
-        this.sampleAspectRatio = sampleAspectRatio;
-        return this;
-    }
-    public String getSampleAspectRatio() {
-        return this.sampleAspectRatio;
-    }
-
-    public VideoStream setDisplayAspectRatio(String displayAspectRatio) {
-        this.displayAspectRatio = displayAspectRatio;
-        return this;
-    }
-    public String getDisplayAspectRatio() {
-        return this.displayAspectRatio;
+    public Long getLevel() {
+        return this.level;
     }
 
     public VideoStream setPixelFormat(String pixelFormat) {
@@ -209,36 +233,20 @@ public class VideoStream extends TeaModel {
         return this.pixelFormat;
     }
 
-    public VideoStream setLevel(Long level) {
-        this.level = level;
+    public VideoStream setProfile(String profile) {
+        this.profile = profile;
         return this;
     }
-    public Long getLevel() {
-        return this.level;
+    public String getProfile() {
+        return this.profile;
     }
 
-    public VideoStream setFrameRate(Float frameRate) {
-        this.frameRate = frameRate;
+    public VideoStream setSampleAspectRatio(String sampleAspectRatio) {
+        this.sampleAspectRatio = sampleAspectRatio;
         return this;
     }
-    public Float getFrameRate() {
-        return this.frameRate;
-    }
-
-    public VideoStream setAverageFrameRate(Float averageFrameRate) {
-        this.averageFrameRate = averageFrameRate;
-        return this;
-    }
-    public Float getAverageFrameRate() {
-        return this.averageFrameRate;
-    }
-
-    public VideoStream setTimeBase(String timeBase) {
-        this.timeBase = timeBase;
-        return this;
-    }
-    public String getTimeBase() {
-        return this.timeBase;
+    public String getSampleAspectRatio() {
+        return this.sampleAspectRatio;
     }
 
     public VideoStream setStartTime(Float startTime) {
@@ -249,28 +257,20 @@ public class VideoStream extends TeaModel {
         return this.startTime;
     }
 
-    public VideoStream setDuration(Float duration) {
-        this.duration = duration;
+    public VideoStream setTimeBase(String timeBase) {
+        this.timeBase = timeBase;
         return this;
     }
-    public Float getDuration() {
-        return this.duration;
+    public String getTimeBase() {
+        return this.timeBase;
     }
 
-    public VideoStream setBitrate(Long bitrate) {
-        this.bitrate = bitrate;
+    public VideoStream setWidth(Long width) {
+        this.width = width;
         return this;
     }
-    public Long getBitrate() {
-        return this.bitrate;
-    }
-
-    public VideoStream setFrameCount(Long frameCount) {
-        this.frameCount = frameCount;
-        return this;
-    }
-    public Long getFrameCount() {
-        return this.frameCount;
+    public Long getWidth() {
+        return this.width;
     }
 
 }

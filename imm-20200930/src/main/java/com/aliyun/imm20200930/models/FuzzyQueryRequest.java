@@ -4,21 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class FuzzyQueryRequest extends TeaModel {
-    // 标记当前开始读取的位置，置空表示从头开始
-    @NameInMap("NextToken")
-    public String nextToken;
+    // Dataset 名称
+    @NameInMap("DatasetName")
+    public String datasetName;
 
     // 本次读取的最大数据记录数量
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    // 标记当前开始读取的位置，置空表示从头开始
+    @NameInMap("NextToken")
+    public String nextToken;
+
     // 项目名称
     @NameInMap("ProjectName")
     public String projectName;
-
-    // Dataset 名称
-    @NameInMap("DatasetName")
-    public String datasetName;
 
     // 用于搜索的字符串
     @NameInMap("Query")
@@ -29,12 +29,12 @@ public class FuzzyQueryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public FuzzyQueryRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public FuzzyQueryRequest setDatasetName(String datasetName) {
+        this.datasetName = datasetName;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getDatasetName() {
+        return this.datasetName;
     }
 
     public FuzzyQueryRequest setMaxResults(Long maxResults) {
@@ -45,20 +45,20 @@ public class FuzzyQueryRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public FuzzyQueryRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public FuzzyQueryRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     public String getProjectName() {
         return this.projectName;
-    }
-
-    public FuzzyQueryRequest setDatasetName(String datasetName) {
-        this.datasetName = datasetName;
-        return this;
-    }
-    public String getDatasetName() {
-        return this.datasetName;
     }
 
     public FuzzyQueryRequest setQuery(String query) {

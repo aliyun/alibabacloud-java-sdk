@@ -4,14 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Face extends TeaModel {
-    // FaceId
-    @NameInMap("FaceId")
-    public String faceId;
-
-    // FaceConfidence
-    @NameInMap("FaceConfidence")
-    public Float faceConfidence;
-
     // Age
     @NameInMap("Age")
     public Long age;
@@ -20,13 +12,24 @@ public class Face extends TeaModel {
     @NameInMap("AgeConfidence")
     public Float ageConfidence;
 
-    // Gender
-    @NameInMap("Gender")
-    public String gender;
+    // Beard
+    @NameInMap("Beard")
+    public String beard;
 
-    // GenderConfidence
-    @NameInMap("GenderConfidence")
-    public Float genderConfidence;
+    // BeardConfidence
+    @NameInMap("BeardConfidence")
+    public Float beardConfidence;
+
+    @NameInMap("Boundary")
+    public Boundary boundary;
+
+    // EmbeddingsFloat32
+    @NameInMap("EmbeddingsFloat32")
+    public java.util.List<Float> embeddingsFloat32;
+
+    // EmbeddingsInt8
+    @NameInMap("EmbeddingsInt8")
+    public java.util.List<Integer> embeddingsInt8;
 
     // Emotion
     @NameInMap("Emotion")
@@ -40,45 +43,21 @@ public class Face extends TeaModel {
     @NameInMap("FaceClusterId")
     public String faceClusterId;
 
-    // Mouth
-    @NameInMap("Mouth")
-    public String mouth;
+    // FaceConfidence
+    @NameInMap("FaceConfidence")
+    public Float faceConfidence;
 
-    // MouthConfidence
-    @NameInMap("MouthConfidence")
-    public Float mouthConfidence;
+    // FaceId
+    @NameInMap("FaceId")
+    public String faceId;
 
-    // Beard
-    @NameInMap("Beard")
-    public String beard;
+    // Gender
+    @NameInMap("Gender")
+    public String gender;
 
-    // BeardConfidence
-    @NameInMap("BeardConfidence")
-    public Float beardConfidence;
-
-    // Hat
-    @NameInMap("Hat")
-    public String hat;
-
-    // HatConfidence
-    @NameInMap("HatConfidence")
-    public Float hatConfidence;
-
-    // Race
-    @NameInMap("Race")
-    public String race;
-
-    // RaceConfidence
-    @NameInMap("RaceConfidence")
-    public Float raceConfidence;
-
-    // Mask
-    @NameInMap("Mask")
-    public String mask;
-
-    // MaskConfidence
-    @NameInMap("MaskConfidence")
-    public Float maskConfidence;
+    // GenderConfidence
+    @NameInMap("GenderConfidence")
+    public Float genderConfidence;
 
     // Glasses
     @NameInMap("Glasses")
@@ -88,6 +67,17 @@ public class Face extends TeaModel {
     @NameInMap("GlassesConfidence")
     public Float glassesConfidence;
 
+    // Hat
+    @NameInMap("Hat")
+    public String hat;
+
+    // HatConfidence
+    @NameInMap("HatConfidence")
+    public Float hatConfidence;
+
+    @NameInMap("HeadPose")
+    public HeadPose headPose;
+
     // LeftEye
     @NameInMap("LeftEye")
     public String leftEye;
@@ -95,6 +85,30 @@ public class Face extends TeaModel {
     // LeftEyeConfidence
     @NameInMap("LeftEyeConfidence")
     public Float leftEyeConfidence;
+
+    // Mask
+    @NameInMap("Mask")
+    public String mask;
+
+    // MaskConfidence
+    @NameInMap("MaskConfidence")
+    public Float maskConfidence;
+
+    // Mouth
+    @NameInMap("Mouth")
+    public String mouth;
+
+    // MouthConfidence
+    @NameInMap("MouthConfidence")
+    public Float mouthConfidence;
+
+    // Race
+    @NameInMap("Race")
+    public String race;
+
+    // RaceConfidence
+    @NameInMap("RaceConfidence")
+    public Float raceConfidence;
 
     // RightEye
     @NameInMap("RightEye")
@@ -104,39 +118,9 @@ public class Face extends TeaModel {
     @NameInMap("RightEyeConfidence")
     public Float rightEyeConfidence;
 
-    @NameInMap("HeadPose")
-    public HeadPose headPose;
-
-    @NameInMap("Boundary")
-    public Boundary boundary;
-
-    // EmbeddingsFloat32
-    @NameInMap("EmbeddingsFloat32")
-    public java.util.List<Float> embeddingsFloat32;
-
-    // EmbeddingsInt8
-    @NameInMap("EmbeddingsInt8")
-    public java.util.List<Integer> embeddingsInt8;
-
     public static Face build(java.util.Map<String, ?> map) throws Exception {
         Face self = new Face();
         return TeaModel.build(map, self);
-    }
-
-    public Face setFaceId(String faceId) {
-        this.faceId = faceId;
-        return this;
-    }
-    public String getFaceId() {
-        return this.faceId;
-    }
-
-    public Face setFaceConfidence(Float faceConfidence) {
-        this.faceConfidence = faceConfidence;
-        return this;
-    }
-    public Float getFaceConfidence() {
-        return this.faceConfidence;
     }
 
     public Face setAge(Long age) {
@@ -155,20 +139,44 @@ public class Face extends TeaModel {
         return this.ageConfidence;
     }
 
-    public Face setGender(String gender) {
-        this.gender = gender;
+    public Face setBeard(String beard) {
+        this.beard = beard;
         return this;
     }
-    public String getGender() {
-        return this.gender;
+    public String getBeard() {
+        return this.beard;
     }
 
-    public Face setGenderConfidence(Float genderConfidence) {
-        this.genderConfidence = genderConfidence;
+    public Face setBeardConfidence(Float beardConfidence) {
+        this.beardConfidence = beardConfidence;
         return this;
     }
-    public Float getGenderConfidence() {
-        return this.genderConfidence;
+    public Float getBeardConfidence() {
+        return this.beardConfidence;
+    }
+
+    public Face setBoundary(Boundary boundary) {
+        this.boundary = boundary;
+        return this;
+    }
+    public Boundary getBoundary() {
+        return this.boundary;
+    }
+
+    public Face setEmbeddingsFloat32(java.util.List<Float> embeddingsFloat32) {
+        this.embeddingsFloat32 = embeddingsFloat32;
+        return this;
+    }
+    public java.util.List<Float> getEmbeddingsFloat32() {
+        return this.embeddingsFloat32;
+    }
+
+    public Face setEmbeddingsInt8(java.util.List<Integer> embeddingsInt8) {
+        this.embeddingsInt8 = embeddingsInt8;
+        return this;
+    }
+    public java.util.List<Integer> getEmbeddingsInt8() {
+        return this.embeddingsInt8;
     }
 
     public Face setEmotion(String emotion) {
@@ -195,84 +203,36 @@ public class Face extends TeaModel {
         return this.faceClusterId;
     }
 
-    public Face setMouth(String mouth) {
-        this.mouth = mouth;
+    public Face setFaceConfidence(Float faceConfidence) {
+        this.faceConfidence = faceConfidence;
         return this;
     }
-    public String getMouth() {
-        return this.mouth;
+    public Float getFaceConfidence() {
+        return this.faceConfidence;
     }
 
-    public Face setMouthConfidence(Float mouthConfidence) {
-        this.mouthConfidence = mouthConfidence;
+    public Face setFaceId(String faceId) {
+        this.faceId = faceId;
         return this;
     }
-    public Float getMouthConfidence() {
-        return this.mouthConfidence;
+    public String getFaceId() {
+        return this.faceId;
     }
 
-    public Face setBeard(String beard) {
-        this.beard = beard;
+    public Face setGender(String gender) {
+        this.gender = gender;
         return this;
     }
-    public String getBeard() {
-        return this.beard;
+    public String getGender() {
+        return this.gender;
     }
 
-    public Face setBeardConfidence(Float beardConfidence) {
-        this.beardConfidence = beardConfidence;
+    public Face setGenderConfidence(Float genderConfidence) {
+        this.genderConfidence = genderConfidence;
         return this;
     }
-    public Float getBeardConfidence() {
-        return this.beardConfidence;
-    }
-
-    public Face setHat(String hat) {
-        this.hat = hat;
-        return this;
-    }
-    public String getHat() {
-        return this.hat;
-    }
-
-    public Face setHatConfidence(Float hatConfidence) {
-        this.hatConfidence = hatConfidence;
-        return this;
-    }
-    public Float getHatConfidence() {
-        return this.hatConfidence;
-    }
-
-    public Face setRace(String race) {
-        this.race = race;
-        return this;
-    }
-    public String getRace() {
-        return this.race;
-    }
-
-    public Face setRaceConfidence(Float raceConfidence) {
-        this.raceConfidence = raceConfidence;
-        return this;
-    }
-    public Float getRaceConfidence() {
-        return this.raceConfidence;
-    }
-
-    public Face setMask(String mask) {
-        this.mask = mask;
-        return this;
-    }
-    public String getMask() {
-        return this.mask;
-    }
-
-    public Face setMaskConfidence(Float maskConfidence) {
-        this.maskConfidence = maskConfidence;
-        return this;
-    }
-    public Float getMaskConfidence() {
-        return this.maskConfidence;
+    public Float getGenderConfidence() {
+        return this.genderConfidence;
     }
 
     public Face setGlasses(String glasses) {
@@ -291,6 +251,30 @@ public class Face extends TeaModel {
         return this.glassesConfidence;
     }
 
+    public Face setHat(String hat) {
+        this.hat = hat;
+        return this;
+    }
+    public String getHat() {
+        return this.hat;
+    }
+
+    public Face setHatConfidence(Float hatConfidence) {
+        this.hatConfidence = hatConfidence;
+        return this;
+    }
+    public Float getHatConfidence() {
+        return this.hatConfidence;
+    }
+
+    public Face setHeadPose(HeadPose headPose) {
+        this.headPose = headPose;
+        return this;
+    }
+    public HeadPose getHeadPose() {
+        return this.headPose;
+    }
+
     public Face setLeftEye(String leftEye) {
         this.leftEye = leftEye;
         return this;
@@ -307,6 +291,54 @@ public class Face extends TeaModel {
         return this.leftEyeConfidence;
     }
 
+    public Face setMask(String mask) {
+        this.mask = mask;
+        return this;
+    }
+    public String getMask() {
+        return this.mask;
+    }
+
+    public Face setMaskConfidence(Float maskConfidence) {
+        this.maskConfidence = maskConfidence;
+        return this;
+    }
+    public Float getMaskConfidence() {
+        return this.maskConfidence;
+    }
+
+    public Face setMouth(String mouth) {
+        this.mouth = mouth;
+        return this;
+    }
+    public String getMouth() {
+        return this.mouth;
+    }
+
+    public Face setMouthConfidence(Float mouthConfidence) {
+        this.mouthConfidence = mouthConfidence;
+        return this;
+    }
+    public Float getMouthConfidence() {
+        return this.mouthConfidence;
+    }
+
+    public Face setRace(String race) {
+        this.race = race;
+        return this;
+    }
+    public String getRace() {
+        return this.race;
+    }
+
+    public Face setRaceConfidence(Float raceConfidence) {
+        this.raceConfidence = raceConfidence;
+        return this;
+    }
+    public Float getRaceConfidence() {
+        return this.raceConfidence;
+    }
+
     public Face setRightEye(String rightEye) {
         this.rightEye = rightEye;
         return this;
@@ -321,38 +353,6 @@ public class Face extends TeaModel {
     }
     public Float getRightEyeConfidence() {
         return this.rightEyeConfidence;
-    }
-
-    public Face setHeadPose(HeadPose headPose) {
-        this.headPose = headPose;
-        return this;
-    }
-    public HeadPose getHeadPose() {
-        return this.headPose;
-    }
-
-    public Face setBoundary(Boundary boundary) {
-        this.boundary = boundary;
-        return this;
-    }
-    public Boundary getBoundary() {
-        return this.boundary;
-    }
-
-    public Face setEmbeddingsFloat32(java.util.List<Float> embeddingsFloat32) {
-        this.embeddingsFloat32 = embeddingsFloat32;
-        return this;
-    }
-    public java.util.List<Float> getEmbeddingsFloat32() {
-        return this.embeddingsFloat32;
-    }
-
-    public Face setEmbeddingsInt8(java.util.List<Integer> embeddingsInt8) {
-        this.embeddingsInt8 = embeddingsInt8;
-        return this;
-    }
-    public java.util.List<Integer> getEmbeddingsInt8() {
-        return this.embeddingsInt8;
     }
 
 }
