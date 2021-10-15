@@ -558,6 +558,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("ListComponents", "2021-07-20", "HTTPS", "GET", "AK", "/api/v2/components", "json", req, runtime), new ListComponentsResponse());
     }
 
+    public ListWorkflowTaskLogsResponse listWorkflowTaskLogs(String stepName, String taskName, ListWorkflowTaskLogsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listWorkflowTaskLogsWithOptions(stepName, taskName, request, headers, runtime);
+    }
+
+    public ListWorkflowTaskLogsResponse listWorkflowTaskLogsWithOptions(String stepName, String taskName, ListWorkflowTaskLogsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        stepName = com.aliyun.openapiutil.Client.getEncodeParam(stepName);
+        taskName = com.aliyun.openapiutil.Client.getEncodeParam(taskName);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.xuid)) {
+            query.put("xuid", request.xuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowType)) {
+            query.put("workflowType", request.workflowType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("orderType", request.orderType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("ListWorkflowTaskLogs", "2021-07-20", "HTTPS", "GET", "AK", "/api/v2/workflows/steps/" + stepName + "/tasks/" + taskName + "/logs", "json", req, runtime), new ListWorkflowTaskLogsResponse());
+    }
+
     public AddProductVersionConfigResponse addProductVersionConfig(String uid, AddProductVersionConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -735,6 +773,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         return TeaModel.toModel(this.doROARequest("CreateEnvironment", "2021-07-20", "HTTPS", "POST", "AK", "/api/v2/environments", "json", req, runtime), new CreateEnvironmentResponse());
+    }
+
+    public GetWorkflowStatusResponse getWorkflowStatus(GetWorkflowStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkflowStatusWithOptions(request, headers, runtime);
+    }
+
+    public GetWorkflowStatusResponse getWorkflowStatusWithOptions(GetWorkflowStatusRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.xuid)) {
+            query.put("xuid", request.xuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowType)) {
+            query.put("workflowType", request.workflowType);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("GetWorkflowStatus", "2021-07-20", "HTTPS", "GET", "AK", "/api/v2/workflows/status", "json", req, runtime), new GetWorkflowStatusResponse());
     }
 
     public GetComponentResponse getComponent(String uid) throws Exception {
@@ -1434,6 +1496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.productVersionUID)) {
             body.put("productVersionUID", request.productVersionUID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oldProductVersionUID)) {
+            body.put("oldProductVersionUID", request.oldProductVersionUID);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

@@ -1,3 +1,6 @@
+2021-10-15 Version: v1.0.3
+- Add workflow related APIs.
+
 2021-10-11 Version: v1.0.2
 - The first openAPI version.
 

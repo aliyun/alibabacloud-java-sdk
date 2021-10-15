@@ -7,6 +7,9 @@ public class UpdateEnvironmentProductVersionRequest extends TeaModel {
     @NameInMap("productVersionUID")
     public String productVersionUID;
 
+    @NameInMap("oldProductVersionUID")
+    public String oldProductVersionUID;
+
     public static UpdateEnvironmentProductVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEnvironmentProductVersionRequest self = new UpdateEnvironmentProductVersionRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class UpdateEnvironmentProductVersionRequest extends TeaModel {
     }
     public String getProductVersionUID() {
         return this.productVersionUID;
+    }
+
+    public UpdateEnvironmentProductVersionRequest setOldProductVersionUID(String oldProductVersionUID) {
+        this.oldProductVersionUID = oldProductVersionUID;
+        return this;
+    }
+    public String getOldProductVersionUID() {
+        return this.oldProductVersionUID;
     }
 
 }
