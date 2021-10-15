@@ -12,11 +12,11 @@ public class FoundationVersion extends TeaModel {
     @NameInMap("documents")
     public String documents;
 
-    // name
+    // name，目前仅能是 “ADP 底座“
     @NameInMap("name")
     public String name;
 
-    // status
+    // status，ENUM:["Testing","Published","Deprecated"] Published 后，则全平台所有用户可见，请谨慎操作
     @NameInMap("status")
     public String status;
 
@@ -31,6 +31,10 @@ public class FoundationVersion extends TeaModel {
     // platforms
     @NameInMap("platforms")
     public java.util.List<Platform> platforms;
+
+    // the type of foundation version,ENUM:["trident","ack"]
+    @NameInMap("type")
+    public String type;
 
     public static FoundationVersion build(java.util.Map<String, ?> map) throws Exception {
         FoundationVersion self = new FoundationVersion();
@@ -91,6 +95,14 @@ public class FoundationVersion extends TeaModel {
     }
     public java.util.List<Platform> getPlatforms() {
         return this.platforms;
+    }
+
+    public FoundationVersion setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
