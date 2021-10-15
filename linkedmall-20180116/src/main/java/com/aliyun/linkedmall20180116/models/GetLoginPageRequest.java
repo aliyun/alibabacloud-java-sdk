@@ -5,19 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetLoginPageRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
-
-    @NameInMap("ThirdPartyUserId")
-    public String thirdPartyUserId;
+    @NameInMap("FailUrl")
+    public String failUrl;
 
     @NameInMap("TargetUrl")
     public String targetUrl;
 
-    @NameInMap("FailUrl")
-    public String failUrl;
+    @NameInMap("ThirdPartyUserId")
+    public String thirdPartyUserId;
+
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static GetLoginPageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLoginPageRequest self = new GetLoginPageRequest();
@@ -32,20 +33,12 @@ public class GetLoginPageRequest extends TeaModel {
         return this.bizId;
     }
 
-    public GetLoginPageRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
+    public GetLoginPageRequest setFailUrl(String failUrl) {
+        this.failUrl = failUrl;
         return this;
     }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
-    }
-
-    public GetLoginPageRequest setThirdPartyUserId(String thirdPartyUserId) {
-        this.thirdPartyUserId = thirdPartyUserId;
-        return this;
-    }
-    public String getThirdPartyUserId() {
-        return this.thirdPartyUserId;
+    public String getFailUrl() {
+        return this.failUrl;
     }
 
     public GetLoginPageRequest setTargetUrl(String targetUrl) {
@@ -56,12 +49,20 @@ public class GetLoginPageRequest extends TeaModel {
         return this.targetUrl;
     }
 
-    public GetLoginPageRequest setFailUrl(String failUrl) {
-        this.failUrl = failUrl;
+    public GetLoginPageRequest setThirdPartyUserId(String thirdPartyUserId) {
+        this.thirdPartyUserId = thirdPartyUserId;
         return this;
     }
-    public String getFailUrl() {
-        return this.failUrl;
+    public String getThirdPartyUserId() {
+        return this.thirdPartyUserId;
+    }
+
+    public GetLoginPageRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
+        return this;
+    }
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

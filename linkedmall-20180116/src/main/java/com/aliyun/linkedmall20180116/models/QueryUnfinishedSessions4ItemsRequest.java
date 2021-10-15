@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class QueryUnfinishedSessions4ItemsRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("LmItemIds")
-    public java.util.Map<String, ?> lmItemIds;
 
     @NameInMap("ItemIds")
     public java.util.Map<String, ?> itemIds;
+
+    @NameInMap("LmItemIds")
+    public java.util.Map<String, ?> lmItemIds;
 
     @NameInMap("QueryTime")
     public Long queryTime;
@@ -29,20 +30,20 @@ public class QueryUnfinishedSessions4ItemsRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryUnfinishedSessions4ItemsRequest setLmItemIds(java.util.Map<String, ?> lmItemIds) {
-        this.lmItemIds = lmItemIds;
-        return this;
-    }
-    public java.util.Map<String, ?> getLmItemIds() {
-        return this.lmItemIds;
-    }
-
     public QueryUnfinishedSessions4ItemsRequest setItemIds(java.util.Map<String, ?> itemIds) {
         this.itemIds = itemIds;
         return this;
     }
     public java.util.Map<String, ?> getItemIds() {
         return this.itemIds;
+    }
+
+    public QueryUnfinishedSessions4ItemsRequest setLmItemIds(java.util.Map<String, ?> lmItemIds) {
+        this.lmItemIds = lmItemIds;
+        return this;
+    }
+    public java.util.Map<String, ?> getLmItemIds() {
+        return this.lmItemIds;
     }
 
     public QueryUnfinishedSessions4ItemsRequest setQueryTime(Long queryTime) {

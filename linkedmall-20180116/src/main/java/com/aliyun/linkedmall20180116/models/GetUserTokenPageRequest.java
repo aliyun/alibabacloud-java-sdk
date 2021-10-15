@@ -4,25 +4,23 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetUserTokenPageRequest extends TeaModel {
-    // 业务ID
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
-    // 业务方用户ID
-    @NameInMap("ThirdPartyUserId")
-    public String thirdPartyUserId;
-
-    // 用户昵称
-    @NameInMap("UserNick")
-    public String userNick;
-
-    // 过期时间
     @NameInMap("ExpireSeconds")
+    @Validation(required = true)
     public Long expireSeconds;
 
-    // 扩展信息
     @NameInMap("ExtJson")
     public String extJson;
+
+    @NameInMap("ThirdPartyUserId")
+    @Validation(required = true)
+    public String thirdPartyUserId;
+
+    @NameInMap("UserNick")
+    public String userNick;
 
     public static GetUserTokenPageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserTokenPageRequest self = new GetUserTokenPageRequest();
@@ -35,22 +33,6 @@ public class GetUserTokenPageRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
-    }
-
-    public GetUserTokenPageRequest setThirdPartyUserId(String thirdPartyUserId) {
-        this.thirdPartyUserId = thirdPartyUserId;
-        return this;
-    }
-    public String getThirdPartyUserId() {
-        return this.thirdPartyUserId;
-    }
-
-    public GetUserTokenPageRequest setUserNick(String userNick) {
-        this.userNick = userNick;
-        return this;
-    }
-    public String getUserNick() {
-        return this.userNick;
     }
 
     public GetUserTokenPageRequest setExpireSeconds(Long expireSeconds) {
@@ -67,6 +49,22 @@ public class GetUserTokenPageRequest extends TeaModel {
     }
     public String getExtJson() {
         return this.extJson;
+    }
+
+    public GetUserTokenPageRequest setThirdPartyUserId(String thirdPartyUserId) {
+        this.thirdPartyUserId = thirdPartyUserId;
+        return this;
+    }
+    public String getThirdPartyUserId() {
+        return this.thirdPartyUserId;
+    }
+
+    public GetUserTokenPageRequest setUserNick(String userNick) {
+        this.userNick = userNick;
+        return this;
+    }
+    public String getUserNick() {
+        return this.userNick;
     }
 
 }

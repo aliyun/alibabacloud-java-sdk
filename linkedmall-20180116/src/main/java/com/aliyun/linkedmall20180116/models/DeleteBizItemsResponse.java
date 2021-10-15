@@ -4,33 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class DeleteBizItemsResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public DeleteBizItemsResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     public static DeleteBizItemsResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteBizItemsResponse self = new DeleteBizItemsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteBizItemsResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteBizItemsResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public DeleteBizItemsResponse setBody(DeleteBizItemsResponseBody body) {
-        this.body = body;
+    public DeleteBizItemsResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public DeleteBizItemsResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DeleteBizItemsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

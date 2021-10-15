@@ -5,16 +5,20 @@ import com.aliyun.tea.*;
 
 public class QueryActivityItemsRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
+    @NameInMap("LmActivityId")
+    @Validation(required = true)
+    public Long lmActivityId;
+
     @NameInMap("PageNumber")
+    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
-
-    @NameInMap("LmActivityId")
-    public Long lmActivityId;
 
     public static QueryActivityItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryActivityItemsRequest self = new QueryActivityItemsRequest();
@@ -27,6 +31,14 @@ public class QueryActivityItemsRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public QueryActivityItemsRequest setLmActivityId(Long lmActivityId) {
+        this.lmActivityId = lmActivityId;
+        return this;
+    }
+    public Long getLmActivityId() {
+        return this.lmActivityId;
     }
 
     public QueryActivityItemsRequest setPageNumber(Integer pageNumber) {
@@ -43,14 +55,6 @@ public class QueryActivityItemsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public QueryActivityItemsRequest setLmActivityId(Long lmActivityId) {
-        this.lmActivityId = lmActivityId;
-        return this;
-    }
-    public Long getLmActivityId() {
-        return this.lmActivityId;
     }
 
 }

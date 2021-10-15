@@ -5,25 +5,31 @@ import com.aliyun.tea.*;
 
 public class ReserveMovieSeatRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
-    @NameInMap("ScheduleId")
-    public Long scheduleId;
-
-    @NameInMap("SeatIds")
-    public String seatIds;
-
-    @NameInMap("SeatNames")
-    public String seatNames;
-
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
-
-    @NameInMap("Mobile")
-    public String mobile;
 
     @NameInMap("ExtJson")
     public String extJson;
+
+    @NameInMap("Mobile")
+    @Validation(required = true)
+    public String mobile;
+
+    @NameInMap("ScheduleId")
+    @Validation(required = true)
+    public Long scheduleId;
+
+    @NameInMap("SeatIds")
+    @Validation(required = true)
+    public String seatIds;
+
+    @NameInMap("SeatNames")
+    @Validation(required = true)
+    public String seatNames;
 
     public static ReserveMovieSeatRequest build(java.util.Map<String, ?> map) throws Exception {
         ReserveMovieSeatRequest self = new ReserveMovieSeatRequest();
@@ -36,6 +42,30 @@ public class ReserveMovieSeatRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
+    }
+
+    public ReserveMovieSeatRequest setBizUid(String bizUid) {
+        this.bizUid = bizUid;
+        return this;
+    }
+    public String getBizUid() {
+        return this.bizUid;
+    }
+
+    public ReserveMovieSeatRequest setExtJson(String extJson) {
+        this.extJson = extJson;
+        return this;
+    }
+    public String getExtJson() {
+        return this.extJson;
+    }
+
+    public ReserveMovieSeatRequest setMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    public String getMobile() {
+        return this.mobile;
     }
 
     public ReserveMovieSeatRequest setScheduleId(Long scheduleId) {
@@ -60,30 +90,6 @@ public class ReserveMovieSeatRequest extends TeaModel {
     }
     public String getSeatNames() {
         return this.seatNames;
-    }
-
-    public ReserveMovieSeatRequest setBizUid(String bizUid) {
-        this.bizUid = bizUid;
-        return this;
-    }
-    public String getBizUid() {
-        return this.bizUid;
-    }
-
-    public ReserveMovieSeatRequest setMobile(String mobile) {
-        this.mobile = mobile;
-        return this;
-    }
-    public String getMobile() {
-        return this.mobile;
-    }
-
-    public ReserveMovieSeatRequest setExtJson(String extJson) {
-        this.extJson = extJson;
-        return this;
-    }
-    public String getExtJson() {
-        return this.extJson;
     }
 
 }

@@ -4,7 +4,11 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryLogisticsRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
@@ -13,18 +17,23 @@ public class QueryLogisticsRequest extends TeaModel {
     @NameInMap("LmOrderId")
     public Long lmOrderId;
 
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
-
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    @NameInMap("AccountType")
-    public String accountType;
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static QueryLogisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryLogisticsRequest self = new QueryLogisticsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryLogisticsRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public QueryLogisticsRequest setBizId(String bizId) {
@@ -51,14 +60,6 @@ public class QueryLogisticsRequest extends TeaModel {
         return this.lmOrderId;
     }
 
-    public QueryLogisticsRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
-        return this;
-    }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
-    }
-
     public QueryLogisticsRequest setThirdPartyUserId(String thirdPartyUserId) {
         this.thirdPartyUserId = thirdPartyUserId;
         return this;
@@ -67,12 +68,12 @@ public class QueryLogisticsRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public QueryLogisticsRequest setAccountType(String accountType) {
-        this.accountType = accountType;
+    public QueryLogisticsRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
         return this;
     }
-    public String getAccountType() {
-        return this.accountType;
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

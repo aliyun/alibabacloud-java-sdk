@@ -4,33 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RepayOrderResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public RepayOrderResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     public static RepayOrderResponse build(java.util.Map<String, ?> map) throws Exception {
         RepayOrderResponse self = new RepayOrderResponse();
         return TeaModel.build(map, self);
     }
 
-    public RepayOrderResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public RepayOrderResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public RepayOrderResponse setBody(RepayOrderResponseBody body) {
-        this.body = body;
+    public RepayOrderResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public RepayOrderResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public RepayOrderResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

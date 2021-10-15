@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class RemoveMessagesRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("MessageIds")
-    public String messageIds;
 
     @NameInMap("ExtJson")
     public String extJson;
+
+    @NameInMap("MessageIds")
+    @Validation(required = true)
+    public String messageIds;
 
     public static RemoveMessagesRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveMessagesRequest self = new RemoveMessagesRequest();
@@ -26,20 +28,20 @@ public class RemoveMessagesRequest extends TeaModel {
         return this.bizId;
     }
 
-    public RemoveMessagesRequest setMessageIds(String messageIds) {
-        this.messageIds = messageIds;
-        return this;
-    }
-    public String getMessageIds() {
-        return this.messageIds;
-    }
-
     public RemoveMessagesRequest setExtJson(String extJson) {
         this.extJson = extJson;
         return this;
     }
     public String getExtJson() {
         return this.extJson;
+    }
+
+    public RemoveMessagesRequest setMessageIds(String messageIds) {
+        this.messageIds = messageIds;
+        return this;
+    }
+    public String getMessageIds() {
+        return this.messageIds;
     }
 
 }

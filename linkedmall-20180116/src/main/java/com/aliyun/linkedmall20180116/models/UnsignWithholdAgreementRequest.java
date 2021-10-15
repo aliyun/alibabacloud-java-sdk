@@ -4,8 +4,8 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class UnsignWithholdAgreementRequest extends TeaModel {
-    @NameInMap("OutRequestNo")
-    public String outRequestNo;
+    @NameInMap("AgreementNo")
+    public String agreementNo;
 
     @NameInMap("ExternalAgreementNo")
     public String externalAgreementNo;
@@ -13,20 +13,20 @@ public class UnsignWithholdAgreementRequest extends TeaModel {
     @NameInMap("MerchantId")
     public String merchantId;
 
-    @NameInMap("AgreementNo")
-    public String agreementNo;
+    @NameInMap("OutRequestNo")
+    public String outRequestNo;
 
     public static UnsignWithholdAgreementRequest build(java.util.Map<String, ?> map) throws Exception {
         UnsignWithholdAgreementRequest self = new UnsignWithholdAgreementRequest();
         return TeaModel.build(map, self);
     }
 
-    public UnsignWithholdAgreementRequest setOutRequestNo(String outRequestNo) {
-        this.outRequestNo = outRequestNo;
+    public UnsignWithholdAgreementRequest setAgreementNo(String agreementNo) {
+        this.agreementNo = agreementNo;
         return this;
     }
-    public String getOutRequestNo() {
-        return this.outRequestNo;
+    public String getAgreementNo() {
+        return this.agreementNo;
     }
 
     public UnsignWithholdAgreementRequest setExternalAgreementNo(String externalAgreementNo) {
@@ -45,12 +45,12 @@ public class UnsignWithholdAgreementRequest extends TeaModel {
         return this.merchantId;
     }
 
-    public UnsignWithholdAgreementRequest setAgreementNo(String agreementNo) {
-        this.agreementNo = agreementNo;
+    public UnsignWithholdAgreementRequest setOutRequestNo(String outRequestNo) {
+        this.outRequestNo = outRequestNo;
         return this;
     }
-    public String getAgreementNo() {
-        return this.agreementNo;
+    public String getOutRequestNo() {
+        return this.outRequestNo;
     }
 
 }

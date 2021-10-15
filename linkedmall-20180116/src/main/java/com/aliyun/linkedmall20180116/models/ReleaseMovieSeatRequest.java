@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class ReleaseMovieSeatRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
-    @NameInMap("LockSeatApplyKey")
-    public String lockSeatApplyKey;
-
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("ExtJson")
     public String extJson;
+
+    @NameInMap("LockSeatApplyKey")
+    @Validation(required = true)
+    public String lockSeatApplyKey;
 
     public static ReleaseMovieSeatRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseMovieSeatRequest self = new ReleaseMovieSeatRequest();
@@ -27,14 +30,6 @@ public class ReleaseMovieSeatRequest extends TeaModel {
     }
     public String getBizId() {
         return this.bizId;
-    }
-
-    public ReleaseMovieSeatRequest setLockSeatApplyKey(String lockSeatApplyKey) {
-        this.lockSeatApplyKey = lockSeatApplyKey;
-        return this;
-    }
-    public String getLockSeatApplyKey() {
-        return this.lockSeatApplyKey;
     }
 
     public ReleaseMovieSeatRequest setBizUid(String bizUid) {
@@ -51,6 +46,14 @@ public class ReleaseMovieSeatRequest extends TeaModel {
     }
     public String getExtJson() {
         return this.extJson;
+    }
+
+    public ReleaseMovieSeatRequest setLockSeatApplyKey(String lockSeatApplyKey) {
+        this.lockSeatApplyKey = lockSeatApplyKey;
+        return this;
+    }
+    public String getLockSeatApplyKey() {
+        return this.lockSeatApplyKey;
     }
 
 }

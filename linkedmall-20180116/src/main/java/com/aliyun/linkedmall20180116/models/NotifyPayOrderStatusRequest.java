@@ -4,11 +4,12 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class NotifyPayOrderStatusRequest extends TeaModel {
-    @NameInMap("ChannelId")
-    public String channelId;
+    @NameInMap("Amount")
+    public Long amount;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ChannelId")
+    @Validation(required = true)
+    public String channelId;
 
     @NameInMap("OperationDate")
     public String operationDate;
@@ -16,12 +17,21 @@ public class NotifyPayOrderStatusRequest extends TeaModel {
     @NameInMap("PayTypes")
     public String payTypes;
 
-    @NameInMap("Amount")
-    public Long amount;
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     public static NotifyPayOrderStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         NotifyPayOrderStatusRequest self = new NotifyPayOrderStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public NotifyPayOrderStatusRequest setAmount(Long amount) {
+        this.amount = amount;
+        return this;
+    }
+    public Long getAmount() {
+        return this.amount;
     }
 
     public NotifyPayOrderStatusRequest setChannelId(String channelId) {
@@ -30,14 +40,6 @@ public class NotifyPayOrderStatusRequest extends TeaModel {
     }
     public String getChannelId() {
         return this.channelId;
-    }
-
-    public NotifyPayOrderStatusRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public NotifyPayOrderStatusRequest setOperationDate(String operationDate) {
@@ -56,12 +58,12 @@ public class NotifyPayOrderStatusRequest extends TeaModel {
         return this.payTypes;
     }
 
-    public NotifyPayOrderStatusRequest setAmount(Long amount) {
-        this.amount = amount;
+    public NotifyPayOrderStatusRequest setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getAmount() {
-        return this.amount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

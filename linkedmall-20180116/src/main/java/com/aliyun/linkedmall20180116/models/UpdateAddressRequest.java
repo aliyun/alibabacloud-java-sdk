@@ -4,7 +4,12 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class UpdateAddressRequest extends TeaModel {
+    @NameInMap("AddressInfo")
+    @Validation(required = true)
+    public String addressInfo;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ThirdPartyUserId")
@@ -13,12 +18,17 @@ public class UpdateAddressRequest extends TeaModel {
     @NameInMap("UseAnonymousTbAccount")
     public Boolean useAnonymousTbAccount;
 
-    @NameInMap("AddressInfo")
-    public String addressInfo;
-
     public static UpdateAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAddressRequest self = new UpdateAddressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAddressRequest setAddressInfo(String addressInfo) {
+        this.addressInfo = addressInfo;
+        return this;
+    }
+    public String getAddressInfo() {
+        return this.addressInfo;
     }
 
     public UpdateAddressRequest setBizId(String bizId) {
@@ -43,14 +53,6 @@ public class UpdateAddressRequest extends TeaModel {
     }
     public Boolean getUseAnonymousTbAccount() {
         return this.useAnonymousTbAccount;
-    }
-
-    public UpdateAddressRequest setAddressInfo(String addressInfo) {
-        this.addressInfo = addressInfo;
-        return this;
-    }
-    public String getAddressInfo() {
-        return this.addressInfo;
     }
 
 }

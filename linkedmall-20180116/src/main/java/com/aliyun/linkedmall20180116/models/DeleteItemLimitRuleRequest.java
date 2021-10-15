@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteItemLimitRuleRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
-    @NameInMap("SubBizCode")
-    public String subBizCode;
+    @NameInMap("ItemId")
+    public Long itemId;
 
     @NameInMap("LmActivityId")
     public Long lmActivityId;
@@ -16,11 +17,12 @@ public class DeleteItemLimitRuleRequest extends TeaModel {
     @NameInMap("LmItemId")
     public String lmItemId;
 
-    @NameInMap("ItemId")
-    public Long itemId;
-
     @NameInMap("RuleId")
+    @Validation(required = true)
     public Long ruleId;
+
+    @NameInMap("SubBizCode")
+    public String subBizCode;
 
     public static DeleteItemLimitRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteItemLimitRuleRequest self = new DeleteItemLimitRuleRequest();
@@ -35,12 +37,12 @@ public class DeleteItemLimitRuleRequest extends TeaModel {
         return this.bizId;
     }
 
-    public DeleteItemLimitRuleRequest setSubBizCode(String subBizCode) {
-        this.subBizCode = subBizCode;
+    public DeleteItemLimitRuleRequest setItemId(Long itemId) {
+        this.itemId = itemId;
         return this;
     }
-    public String getSubBizCode() {
-        return this.subBizCode;
+    public Long getItemId() {
+        return this.itemId;
     }
 
     public DeleteItemLimitRuleRequest setLmActivityId(Long lmActivityId) {
@@ -59,20 +61,20 @@ public class DeleteItemLimitRuleRequest extends TeaModel {
         return this.lmItemId;
     }
 
-    public DeleteItemLimitRuleRequest setItemId(Long itemId) {
-        this.itemId = itemId;
-        return this;
-    }
-    public Long getItemId() {
-        return this.itemId;
-    }
-
     public DeleteItemLimitRuleRequest setRuleId(Long ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     public Long getRuleId() {
         return this.ruleId;
+    }
+
+    public DeleteItemLimitRuleRequest setSubBizCode(String subBizCode) {
+        this.subBizCode = subBizCode;
+        return this;
+    }
+    public String getSubBizCode() {
+        return this.subBizCode;
     }
 
 }

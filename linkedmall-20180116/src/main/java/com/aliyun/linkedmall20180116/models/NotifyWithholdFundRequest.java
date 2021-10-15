@@ -4,11 +4,12 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class NotifyWithholdFundRequest extends TeaModel {
-    @NameInMap("ChannelId")
-    public String channelId;
+    @NameInMap("Amount")
+    public Long amount;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ChannelId")
+    @Validation(required = true)
+    public String channelId;
 
     @NameInMap("OperationDate")
     public String operationDate;
@@ -16,15 +17,25 @@ public class NotifyWithholdFundRequest extends TeaModel {
     @NameInMap("PayTypes")
     public String payTypes;
 
-    @NameInMap("Amount")
-    public Long amount;
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     @NameInMap("TenantOrderId")
+    @Validation(required = true)
     public String tenantOrderId;
 
     public static NotifyWithholdFundRequest build(java.util.Map<String, ?> map) throws Exception {
         NotifyWithholdFundRequest self = new NotifyWithholdFundRequest();
         return TeaModel.build(map, self);
+    }
+
+    public NotifyWithholdFundRequest setAmount(Long amount) {
+        this.amount = amount;
+        return this;
+    }
+    public Long getAmount() {
+        return this.amount;
     }
 
     public NotifyWithholdFundRequest setChannelId(String channelId) {
@@ -33,14 +44,6 @@ public class NotifyWithholdFundRequest extends TeaModel {
     }
     public String getChannelId() {
         return this.channelId;
-    }
-
-    public NotifyWithholdFundRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public NotifyWithholdFundRequest setOperationDate(String operationDate) {
@@ -59,12 +62,12 @@ public class NotifyWithholdFundRequest extends TeaModel {
         return this.payTypes;
     }
 
-    public NotifyWithholdFundRequest setAmount(Long amount) {
-        this.amount = amount;
+    public NotifyWithholdFundRequest setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getAmount() {
-        return this.amount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public NotifyWithholdFundRequest setTenantOrderId(String tenantOrderId) {

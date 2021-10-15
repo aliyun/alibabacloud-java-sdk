@@ -4,27 +4,38 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ConfirmDisburseRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("LmOrderId")
+    @Validation(required = true)
     public String lmOrderId;
-
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    @NameInMap("AccountType")
-    public String accountType;
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static ConfirmDisburseRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfirmDisburseRequest self = new ConfirmDisburseRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ConfirmDisburseRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public ConfirmDisburseRequest setBizId(String bizId) {
@@ -51,14 +62,6 @@ public class ConfirmDisburseRequest extends TeaModel {
         return this.lmOrderId;
     }
 
-    public ConfirmDisburseRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
-        return this;
-    }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
-    }
-
     public ConfirmDisburseRequest setThirdPartyUserId(String thirdPartyUserId) {
         this.thirdPartyUserId = thirdPartyUserId;
         return this;
@@ -67,12 +70,12 @@ public class ConfirmDisburseRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public ConfirmDisburseRequest setAccountType(String accountType) {
-        this.accountType = accountType;
+    public ConfirmDisburseRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
         return this;
     }
-    public String getAccountType() {
-        return this.accountType;
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

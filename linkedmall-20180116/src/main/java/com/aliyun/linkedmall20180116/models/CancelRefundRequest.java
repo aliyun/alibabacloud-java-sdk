@@ -4,30 +4,42 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class CancelRefundRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
-    @NameInMap("SubLmOrderId")
-    public String subLmOrderId;
-
     @NameInMap("DisputeId")
+    @Validation(required = true)
     public Long disputeId;
 
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
+    @NameInMap("SubLmOrderId")
+    @Validation(required = true)
+    public String subLmOrderId;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    @NameInMap("AccountType")
-    public String accountType;
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static CancelRefundRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelRefundRequest self = new CancelRefundRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CancelRefundRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public CancelRefundRequest setBizId(String bizId) {
@@ -46,14 +58,6 @@ public class CancelRefundRequest extends TeaModel {
         return this.bizUid;
     }
 
-    public CancelRefundRequest setSubLmOrderId(String subLmOrderId) {
-        this.subLmOrderId = subLmOrderId;
-        return this;
-    }
-    public String getSubLmOrderId() {
-        return this.subLmOrderId;
-    }
-
     public CancelRefundRequest setDisputeId(Long disputeId) {
         this.disputeId = disputeId;
         return this;
@@ -62,12 +66,12 @@ public class CancelRefundRequest extends TeaModel {
         return this.disputeId;
     }
 
-    public CancelRefundRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
+    public CancelRefundRequest setSubLmOrderId(String subLmOrderId) {
+        this.subLmOrderId = subLmOrderId;
         return this;
     }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
+    public String getSubLmOrderId() {
+        return this.subLmOrderId;
     }
 
     public CancelRefundRequest setThirdPartyUserId(String thirdPartyUserId) {
@@ -78,12 +82,12 @@ public class CancelRefundRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public CancelRefundRequest setAccountType(String accountType) {
-        this.accountType = accountType;
+    public CancelRefundRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
         return this;
     }
-    public String getAccountType() {
-        return this.accountType;
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

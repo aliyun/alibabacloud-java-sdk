@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListItemActivitiesShrinkRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("LmItemIds")
-    public String lmItemIdsShrink;
 
     @NameInMap("ItemIds")
     public String itemIdsShrink;
+
+    @NameInMap("LmItemIds")
+    public String lmItemIdsShrink;
 
     public static ListItemActivitiesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListItemActivitiesShrinkRequest self = new ListItemActivitiesShrinkRequest();
@@ -26,20 +27,20 @@ public class ListItemActivitiesShrinkRequest extends TeaModel {
         return this.bizId;
     }
 
-    public ListItemActivitiesShrinkRequest setLmItemIdsShrink(String lmItemIdsShrink) {
-        this.lmItemIdsShrink = lmItemIdsShrink;
-        return this;
-    }
-    public String getLmItemIdsShrink() {
-        return this.lmItemIdsShrink;
-    }
-
     public ListItemActivitiesShrinkRequest setItemIdsShrink(String itemIdsShrink) {
         this.itemIdsShrink = itemIdsShrink;
         return this;
     }
     public String getItemIdsShrink() {
         return this.itemIdsShrink;
+    }
+
+    public ListItemActivitiesShrinkRequest setLmItemIdsShrink(String lmItemIdsShrink) {
+        this.lmItemIdsShrink = lmItemIdsShrink;
+        return this;
+    }
+    public String getLmItemIdsShrink() {
+        return this.lmItemIdsShrink;
     }
 
 }

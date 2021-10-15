@@ -4,23 +4,17 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryBatchRegistAnonymousTbAccountResultRequest extends TeaModel {
-    @NameInMap("BizId")
-    public String bizId;
-
     @NameInMap("BatchId")
+    @Validation(required = true)
     public String batchId;
+
+    @NameInMap("BizId")
+    @Validation(required = true)
+    public String bizId;
 
     public static QueryBatchRegistAnonymousTbAccountResultRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryBatchRegistAnonymousTbAccountResultRequest self = new QueryBatchRegistAnonymousTbAccountResultRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryBatchRegistAnonymousTbAccountResultRequest setBizId(String bizId) {
-        this.bizId = bizId;
-        return this;
-    }
-    public String getBizId() {
-        return this.bizId;
     }
 
     public QueryBatchRegistAnonymousTbAccountResultRequest setBatchId(String batchId) {
@@ -29,6 +23,14 @@ public class QueryBatchRegistAnonymousTbAccountResultRequest extends TeaModel {
     }
     public String getBatchId() {
         return this.batchId;
+    }
+
+    public QueryBatchRegistAnonymousTbAccountResultRequest setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
     }
 
 }

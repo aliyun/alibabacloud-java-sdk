@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class QueryBestSession4ItemsRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("LmItemIds")
-    public java.util.Map<String, ?> lmItemIds;
 
     @NameInMap("ItemIds")
     public java.util.Map<String, ?> itemIds;
+
+    @NameInMap("LmItemIds")
+    public java.util.Map<String, ?> lmItemIds;
 
     public static QueryBestSession4ItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryBestSession4ItemsRequest self = new QueryBestSession4ItemsRequest();
@@ -26,20 +27,20 @@ public class QueryBestSession4ItemsRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryBestSession4ItemsRequest setLmItemIds(java.util.Map<String, ?> lmItemIds) {
-        this.lmItemIds = lmItemIds;
-        return this;
-    }
-    public java.util.Map<String, ?> getLmItemIds() {
-        return this.lmItemIds;
-    }
-
     public QueryBestSession4ItemsRequest setItemIds(java.util.Map<String, ?> itemIds) {
         this.itemIds = itemIds;
         return this;
     }
     public java.util.Map<String, ?> getItemIds() {
         return this.itemIds;
+    }
+
+    public QueryBestSession4ItemsRequest setLmItemIds(java.util.Map<String, ?> lmItemIds) {
+        this.lmItemIds = lmItemIds;
+        return this;
+    }
+    public java.util.Map<String, ?> getLmItemIds() {
+        return this.lmItemIds;
     }
 
 }

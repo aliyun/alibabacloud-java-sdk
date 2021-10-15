@@ -4,33 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RegistAnonymousTbAccountResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public RegistAnonymousTbAccountResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     public static RegistAnonymousTbAccountResponse build(java.util.Map<String, ?> map) throws Exception {
         RegistAnonymousTbAccountResponse self = new RegistAnonymousTbAccountResponse();
         return TeaModel.build(map, self);
     }
 
-    public RegistAnonymousTbAccountResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public RegistAnonymousTbAccountResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public RegistAnonymousTbAccountResponse setBody(RegistAnonymousTbAccountResponseBody body) {
-        this.body = body;
+    public RegistAnonymousTbAccountResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public RegistAnonymousTbAccountResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public RegistAnonymousTbAccountResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

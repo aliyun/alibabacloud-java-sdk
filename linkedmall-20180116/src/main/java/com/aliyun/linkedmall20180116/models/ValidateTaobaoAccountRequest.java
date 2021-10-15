@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class ValidateTaobaoAccountRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("ExtJson")
     public String extJson;
 
-    @NameInMap("TbUserNick")
-    public String tbUserNick;
-
     @NameInMap("MobileNo")
     public String mobileNo;
+
+    @NameInMap("TbUserNick")
+    public String tbUserNick;
 
     public static ValidateTaobaoAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         ValidateTaobaoAccountRequest self = new ValidateTaobaoAccountRequest();
@@ -48,20 +50,20 @@ public class ValidateTaobaoAccountRequest extends TeaModel {
         return this.extJson;
     }
 
-    public ValidateTaobaoAccountRequest setTbUserNick(String tbUserNick) {
-        this.tbUserNick = tbUserNick;
-        return this;
-    }
-    public String getTbUserNick() {
-        return this.tbUserNick;
-    }
-
     public ValidateTaobaoAccountRequest setMobileNo(String mobileNo) {
         this.mobileNo = mobileNo;
         return this;
     }
     public String getMobileNo() {
         return this.mobileNo;
+    }
+
+    public ValidateTaobaoAccountRequest setTbUserNick(String tbUserNick) {
+        this.tbUserNick = tbUserNick;
+        return this;
+    }
+    public String getTbUserNick() {
+        return this.tbUserNick;
     }
 
 }

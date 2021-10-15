@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class ModifyOrderDeliveryAddressRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
+
+    @NameInMap("DeliveryAddress")
+    @Validation(required = true)
+    public String deliveryAddress;
 
     @NameInMap("ExtJson")
     public String extJson;
 
-    @NameInMap("DeliveryAddress")
-    public String deliveryAddress;
-
     @NameInMap("LmOrderId")
+    @Validation(required = true)
     public Long lmOrderId;
 
     public static ModifyOrderDeliveryAddressRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -29,20 +32,20 @@ public class ModifyOrderDeliveryAddressRequest extends TeaModel {
         return this.bizId;
     }
 
-    public ModifyOrderDeliveryAddressRequest setExtJson(String extJson) {
-        this.extJson = extJson;
-        return this;
-    }
-    public String getExtJson() {
-        return this.extJson;
-    }
-
     public ModifyOrderDeliveryAddressRequest setDeliveryAddress(String deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
         return this;
     }
     public String getDeliveryAddress() {
         return this.deliveryAddress;
+    }
+
+    public ModifyOrderDeliveryAddressRequest setExtJson(String extJson) {
+        this.extJson = extJson;
+        return this;
+    }
+    public String getExtJson() {
+        return this.extJson;
     }
 
     public ModifyOrderDeliveryAddressRequest setLmOrderId(Long lmOrderId) {

@@ -4,33 +4,89 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetCategoryChainResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public GetCategoryChainResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("CategoryList")
+    @Validation(required = true)
+    public java.util.List<GetCategoryChainResponseCategoryList> categoryList;
 
     public static GetCategoryChainResponse build(java.util.Map<String, ?> map) throws Exception {
         GetCategoryChainResponse self = new GetCategoryChainResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetCategoryChainResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetCategoryChainResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public GetCategoryChainResponse setBody(GetCategoryChainResponseBody body) {
-        this.body = body;
+    public GetCategoryChainResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public GetCategoryChainResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetCategoryChainResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetCategoryChainResponse setCategoryList(java.util.List<GetCategoryChainResponseCategoryList> categoryList) {
+        this.categoryList = categoryList;
+        return this;
+    }
+    public java.util.List<GetCategoryChainResponseCategoryList> getCategoryList() {
+        return this.categoryList;
+    }
+
+    public static class GetCategoryChainResponseCategoryList extends TeaModel {
+        @NameInMap("CategoryId")
+        @Validation(required = true)
+        public Long categoryId;
+
+        @NameInMap("Name")
+        @Validation(required = true)
+        public String name;
+
+        public static GetCategoryChainResponseCategoryList build(java.util.Map<String, ?> map) throws Exception {
+            GetCategoryChainResponseCategoryList self = new GetCategoryChainResponseCategoryList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCategoryChainResponseCategoryList setCategoryId(Long categoryId) {
+            this.categoryId = categoryId;
+            return this;
+        }
+        public Long getCategoryId() {
+            return this.categoryId;
+        }
+
+        public GetCategoryChainResponseCategoryList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
     }
 
 }

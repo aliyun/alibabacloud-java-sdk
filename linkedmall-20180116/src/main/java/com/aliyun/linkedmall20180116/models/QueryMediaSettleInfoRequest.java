@@ -4,11 +4,23 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaSettleInfoRequest extends TeaModel {
+    @NameInMap("ChannelId")
+    public String channelId;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("ExtInfo")
+    public String extInfo;
+
     @NameInMap("MediaName")
     public String mediaName;
 
-    @NameInMap("ChannelId")
-    public String channelId;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("SettleNo")
     public String settleNo;
@@ -16,21 +28,33 @@ public class QueryMediaSettleInfoRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("ExtInfo")
-    public String extInfo;
-
     public static QueryMediaSettleInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMediaSettleInfoRequest self = new QueryMediaSettleInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMediaSettleInfoRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
+    }
+
+    public QueryMediaSettleInfoRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public QueryMediaSettleInfoRequest setExtInfo(String extInfo) {
+        this.extInfo = extInfo;
+        return this;
+    }
+    public String getExtInfo() {
+        return this.extInfo;
     }
 
     public QueryMediaSettleInfoRequest setMediaName(String mediaName) {
@@ -41,12 +65,20 @@ public class QueryMediaSettleInfoRequest extends TeaModel {
         return this.mediaName;
     }
 
-    public QueryMediaSettleInfoRequest setChannelId(String channelId) {
-        this.channelId = channelId;
+    public QueryMediaSettleInfoRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getChannelId() {
-        return this.channelId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public QueryMediaSettleInfoRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public QueryMediaSettleInfoRequest setSettleNo(String settleNo) {
@@ -63,38 +95,6 @@ public class QueryMediaSettleInfoRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public QueryMediaSettleInfoRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public QueryMediaSettleInfoRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QueryMediaSettleInfoRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public QueryMediaSettleInfoRequest setExtInfo(String extInfo) {
-        this.extInfo = extInfo;
-        return this;
-    }
-    public String getExtInfo() {
-        return this.extInfo;
     }
 
 }

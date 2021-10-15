@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class QueryAllCinemasRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("CityCode")
+    @Validation(required = true)
     public Long cityCode;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
 
     @NameInMap("ExtJson")
     public String extJson;
+
+    @NameInMap("PageNumber")
+    @Validation(required = true)
+    public Long pageNumber;
 
     public static QueryAllCinemasRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAllCinemasRequest self = new QueryAllCinemasRequest();
@@ -37,20 +40,20 @@ public class QueryAllCinemasRequest extends TeaModel {
         return this.cityCode;
     }
 
-    public QueryAllCinemasRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
     public QueryAllCinemasRequest setExtJson(String extJson) {
         this.extJson = extJson;
         return this;
     }
     public String getExtJson() {
         return this.extJson;
+    }
+
+    public QueryAllCinemasRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
     }
 
 }

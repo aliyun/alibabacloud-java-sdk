@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class QueryAddressRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("Ip")
-    public String ip;
 
     @NameInMap("DivisionCode")
     public String divisionCode;
+
+    @NameInMap("Ip")
+    public String ip;
 
     public static QueryAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAddressRequest self = new QueryAddressRequest();
@@ -26,20 +27,20 @@ public class QueryAddressRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryAddressRequest setIp(String ip) {
-        this.ip = ip;
-        return this;
-    }
-    public String getIp() {
-        return this.ip;
-    }
-
     public QueryAddressRequest setDivisionCode(String divisionCode) {
         this.divisionCode = divisionCode;
         return this;
     }
     public String getDivisionCode() {
         return this.divisionCode;
+    }
+
+    public QueryAddressRequest setIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    public String getIp() {
+        return this.ip;
     }
 
 }

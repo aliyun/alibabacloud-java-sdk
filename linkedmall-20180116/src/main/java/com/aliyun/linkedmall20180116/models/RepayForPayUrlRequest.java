@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class RepayForPayUrlRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("LmOrderId")
+    @Validation(required = true)
     public Long lmOrderId;
-
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
+
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static RepayForPayUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         RepayForPayUrlRequest self = new RepayForPayUrlRequest();
@@ -48,20 +51,20 @@ public class RepayForPayUrlRequest extends TeaModel {
         return this.lmOrderId;
     }
 
-    public RepayForPayUrlRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
-        return this;
-    }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
-    }
-
     public RepayForPayUrlRequest setThirdPartyUserId(String thirdPartyUserId) {
         this.thirdPartyUserId = thirdPartyUserId;
         return this;
     }
     public String getThirdPartyUserId() {
         return this.thirdPartyUserId;
+    }
+
+    public RepayForPayUrlRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
+        return this;
+    }
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

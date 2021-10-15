@@ -4,27 +4,38 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class QueryRefundApplicationDetailRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("SubLmOrderId")
+    @Validation(required = true)
     public String subLmOrderId;
-
-    @NameInMap("UseAnonymousTbAccount")
-    public Boolean useAnonymousTbAccount;
 
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    @NameInMap("AccountType")
-    public String accountType;
+    @NameInMap("UseAnonymousTbAccount")
+    public Boolean useAnonymousTbAccount;
 
     public static QueryRefundApplicationDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRefundApplicationDetailRequest self = new QueryRefundApplicationDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryRefundApplicationDetailRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public QueryRefundApplicationDetailRequest setBizId(String bizId) {
@@ -51,14 +62,6 @@ public class QueryRefundApplicationDetailRequest extends TeaModel {
         return this.subLmOrderId;
     }
 
-    public QueryRefundApplicationDetailRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
-        this.useAnonymousTbAccount = useAnonymousTbAccount;
-        return this;
-    }
-    public Boolean getUseAnonymousTbAccount() {
-        return this.useAnonymousTbAccount;
-    }
-
     public QueryRefundApplicationDetailRequest setThirdPartyUserId(String thirdPartyUserId) {
         this.thirdPartyUserId = thirdPartyUserId;
         return this;
@@ -67,12 +70,12 @@ public class QueryRefundApplicationDetailRequest extends TeaModel {
         return this.thirdPartyUserId;
     }
 
-    public QueryRefundApplicationDetailRequest setAccountType(String accountType) {
-        this.accountType = accountType;
+    public QueryRefundApplicationDetailRequest setUseAnonymousTbAccount(Boolean useAnonymousTbAccount) {
+        this.useAnonymousTbAccount = useAnonymousTbAccount;
         return this;
     }
-    public String getAccountType() {
-        return this.accountType;
+    public Boolean getUseAnonymousTbAccount() {
+        return this.useAnonymousTbAccount;
     }
 
 }

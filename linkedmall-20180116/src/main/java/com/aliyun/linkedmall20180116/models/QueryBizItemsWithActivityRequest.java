@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class QueryBizItemsWithActivityRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("LmItemIds")
-    public java.util.Map<String, ?> lmItemIds;
 
     @NameInMap("ItemIds")
     public java.util.Map<String, ?> itemIds;
+
+    @NameInMap("LmItemIds")
+    public java.util.Map<String, ?> lmItemIds;
 
     public static QueryBizItemsWithActivityRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryBizItemsWithActivityRequest self = new QueryBizItemsWithActivityRequest();
@@ -26,20 +27,20 @@ public class QueryBizItemsWithActivityRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryBizItemsWithActivityRequest setLmItemIds(java.util.Map<String, ?> lmItemIds) {
-        this.lmItemIds = lmItemIds;
-        return this;
-    }
-    public java.util.Map<String, ?> getLmItemIds() {
-        return this.lmItemIds;
-    }
-
     public QueryBizItemsWithActivityRequest setItemIds(java.util.Map<String, ?> itemIds) {
         this.itemIds = itemIds;
         return this;
     }
     public java.util.Map<String, ?> getItemIds() {
         return this.itemIds;
+    }
+
+    public QueryBizItemsWithActivityRequest setLmItemIds(java.util.Map<String, ?> lmItemIds) {
+        this.lmItemIds = lmItemIds;
+        return this;
+    }
+    public java.util.Map<String, ?> getLmItemIds() {
+        return this.lmItemIds;
     }
 
 }

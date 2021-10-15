@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class QueryUnfinishedSessions4ItemsShrinkRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
-
-    @NameInMap("LmItemIds")
-    public String lmItemIdsShrink;
 
     @NameInMap("ItemIds")
     public String itemIdsShrink;
+
+    @NameInMap("LmItemIds")
+    public String lmItemIdsShrink;
 
     @NameInMap("QueryTime")
     public Long queryTime;
@@ -29,20 +30,20 @@ public class QueryUnfinishedSessions4ItemsShrinkRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryUnfinishedSessions4ItemsShrinkRequest setLmItemIdsShrink(String lmItemIdsShrink) {
-        this.lmItemIdsShrink = lmItemIdsShrink;
-        return this;
-    }
-    public String getLmItemIdsShrink() {
-        return this.lmItemIdsShrink;
-    }
-
     public QueryUnfinishedSessions4ItemsShrinkRequest setItemIdsShrink(String itemIdsShrink) {
         this.itemIdsShrink = itemIdsShrink;
         return this;
     }
     public String getItemIdsShrink() {
         return this.itemIdsShrink;
+    }
+
+    public QueryUnfinishedSessions4ItemsShrinkRequest setLmItemIdsShrink(String lmItemIdsShrink) {
+        this.lmItemIdsShrink = lmItemIdsShrink;
+        return this;
+    }
+    public String getLmItemIdsShrink() {
+        return this.lmItemIdsShrink;
     }
 
     public QueryUnfinishedSessions4ItemsShrinkRequest setQueryTime(Long queryTime) {

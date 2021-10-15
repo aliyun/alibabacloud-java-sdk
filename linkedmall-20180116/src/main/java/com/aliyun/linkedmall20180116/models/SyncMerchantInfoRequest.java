@@ -5,16 +5,17 @@ import com.aliyun.tea.*;
 
 public class SyncMerchantInfoRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("ItemList")
+    public String itemList;
 
     @NameInMap("SellerNick")
     public String sellerNick;
 
-    @NameInMap("ItemList")
-    public String itemList;
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("TimeStamp")
     public Long timeStamp;
@@ -32,12 +33,12 @@ public class SyncMerchantInfoRequest extends TeaModel {
         return this.bizId;
     }
 
-    public SyncMerchantInfoRequest setTaskId(String taskId) {
-        this.taskId = taskId;
+    public SyncMerchantInfoRequest setItemList(String itemList) {
+        this.itemList = itemList;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public String getItemList() {
+        return this.itemList;
     }
 
     public SyncMerchantInfoRequest setSellerNick(String sellerNick) {
@@ -48,12 +49,12 @@ public class SyncMerchantInfoRequest extends TeaModel {
         return this.sellerNick;
     }
 
-    public SyncMerchantInfoRequest setItemList(String itemList) {
-        this.itemList = itemList;
+    public SyncMerchantInfoRequest setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getItemList() {
-        return this.itemList;
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public SyncMerchantInfoRequest setTimeStamp(Long timeStamp) {
