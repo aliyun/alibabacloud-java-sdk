@@ -4,6 +4,12 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListSearchLogRequest extends TeaModel {
+    @NameInMap("type")
+    public String type;
+
+    @NameInMap("query")
+    public String query;
+
     @NameInMap("beginTime")
     public Long beginTime;
 
@@ -13,18 +19,28 @@ public class ListSearchLogRequest extends TeaModel {
     @NameInMap("page")
     public Integer page;
 
-    @NameInMap("query")
-    public String query;
-
     @NameInMap("size")
     public Integer size;
-
-    @NameInMap("type")
-    public String type;
 
     public static ListSearchLogRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSearchLogRequest self = new ListSearchLogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSearchLogRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public ListSearchLogRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public ListSearchLogRequest setBeginTime(Long beginTime) {
@@ -51,28 +67,12 @@ public class ListSearchLogRequest extends TeaModel {
         return this.page;
     }
 
-    public ListSearchLogRequest setQuery(String query) {
-        this.query = query;
-        return this;
-    }
-    public String getQuery() {
-        return this.query;
-    }
-
     public ListSearchLogRequest setSize(Integer size) {
         this.size = size;
         return this;
     }
     public Integer getSize() {
         return this.size;
-    }
-
-    public ListSearchLogRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
 }

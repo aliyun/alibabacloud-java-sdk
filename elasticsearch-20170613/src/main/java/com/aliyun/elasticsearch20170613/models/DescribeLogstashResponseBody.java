@@ -31,6 +31,47 @@ public class DescribeLogstashResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class DescribeLogstashResponseBodyResultEndpointList extends TeaModel {
+        @NameInMap("zoneId")
+        public String zoneId;
+
+        @NameInMap("port")
+        public String port;
+
+        @NameInMap("host")
+        public String host;
+
+        public static DescribeLogstashResponseBodyResultEndpointList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLogstashResponseBodyResultEndpointList self = new DescribeLogstashResponseBodyResultEndpointList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLogstashResponseBodyResultEndpointList setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeLogstashResponseBodyResultEndpointList setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribeLogstashResponseBodyResultEndpointList setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
+    }
+
     public static class DescribeLogstashResponseBodyResultTags extends TeaModel {
         @NameInMap("tagKey")
         public String tagKey;
@@ -91,100 +132,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeLogstashResponseBodyResultEndpointList extends TeaModel {
-        @NameInMap("zoneId")
-        public String zoneId;
-
-        @NameInMap("port")
-        public String port;
-
-        @NameInMap("host")
-        public String host;
-
-        public static DescribeLogstashResponseBodyResultEndpointList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLogstashResponseBodyResultEndpointList self = new DescribeLogstashResponseBodyResultEndpointList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLogstashResponseBodyResultEndpointList setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public DescribeLogstashResponseBodyResultEndpointList setPort(String port) {
-            this.port = port;
-            return this;
-        }
-        public String getPort() {
-            return this.port;
-        }
-
-        public DescribeLogstashResponseBodyResultEndpointList setHost(String host) {
-            this.host = host;
-            return this;
-        }
-        public String getHost() {
-            return this.host;
-        }
-
-    }
-
-    public static class DescribeLogstashResponseBodyResultNetworkConfig extends TeaModel {
-        @NameInMap("type")
-        public String type;
-
-        @NameInMap("vpcId")
-        public String vpcId;
-
-        @NameInMap("vsArea")
-        public String vsArea;
-
-        @NameInMap("vswitchId")
-        public String vswitchId;
-
-        public static DescribeLogstashResponseBodyResultNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLogstashResponseBodyResultNetworkConfig self = new DescribeLogstashResponseBodyResultNetworkConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLogstashResponseBodyResultNetworkConfig setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeLogstashResponseBodyResultNetworkConfig setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeLogstashResponseBodyResultNetworkConfig setVsArea(String vsArea) {
-            this.vsArea = vsArea;
-            return this;
-        }
-        public String getVsArea() {
-            return this.vsArea;
-        }
-
-        public DescribeLogstashResponseBodyResultNetworkConfig setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
-        }
-
-    }
-
     public static class DescribeLogstashResponseBodyResultNodeSpec extends TeaModel {
+        @NameInMap("spec")
+        public String spec;
+
         @NameInMap("disk")
         public Integer disk;
 
@@ -194,12 +145,17 @@ public class DescribeLogstashResponseBody extends TeaModel {
         @NameInMap("diskType")
         public String diskType;
 
-        @NameInMap("spec")
-        public String spec;
-
         public static DescribeLogstashResponseBodyResultNodeSpec build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogstashResponseBodyResultNodeSpec self = new DescribeLogstashResponseBodyResultNodeSpec();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLogstashResponseBodyResultNodeSpec setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
         }
 
         public DescribeLogstashResponseBodyResultNodeSpec setDisk(Integer disk) {
@@ -226,58 +182,84 @@ public class DescribeLogstashResponseBody extends TeaModel {
             return this.diskType;
         }
 
-        public DescribeLogstashResponseBodyResultNodeSpec setSpec(String spec) {
-            this.spec = spec;
+    }
+
+    public static class DescribeLogstashResponseBodyResultNetworkConfig extends TeaModel {
+        @NameInMap("vpcId")
+        public String vpcId;
+
+        @NameInMap("vsArea")
+        public String vsArea;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("vswitchId")
+        public String vswitchId;
+
+        public static DescribeLogstashResponseBodyResultNetworkConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLogstashResponseBodyResultNetworkConfig self = new DescribeLogstashResponseBodyResultNetworkConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLogstashResponseBodyResultNetworkConfig setVpcId(String vpcId) {
+            this.vpcId = vpcId;
             return this;
         }
-        public String getSpec() {
-            return this.spec;
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeLogstashResponseBodyResultNetworkConfig setVsArea(String vsArea) {
+            this.vsArea = vsArea;
+            return this;
+        }
+        public String getVsArea() {
+            return this.vsArea;
+        }
+
+        public DescribeLogstashResponseBodyResultNetworkConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeLogstashResponseBodyResultNetworkConfig setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }
 
     public static class DescribeLogstashResponseBodyResult extends TeaModel {
-        @NameInMap("ExtendConfigs")
-        public java.util.List<java.util.Map<String, ?>> extendConfigs;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("Tags")
-        public java.util.List<DescribeLogstashResponseBodyResultTags> tags;
-
-        @NameInMap("ZoneInfos")
-        public java.util.List<DescribeLogstashResponseBodyResultZoneInfos> zoneInfos;
-
         @NameInMap("config")
         public java.util.Map<String, ?> config;
-
-        @NameInMap("createdAt")
-        public String createdAt;
-
-        @NameInMap("description")
-        public String description;
-
-        @NameInMap("endpointList")
-        public java.util.List<DescribeLogstashResponseBodyResultEndpointList> endpointList;
-
-        @NameInMap("instanceId")
-        public String instanceId;
-
-        @NameInMap("networkConfig")
-        public DescribeLogstashResponseBodyResultNetworkConfig networkConfig;
-
-        @NameInMap("nodeAmount")
-        public Integer nodeAmount;
-
-        @NameInMap("nodeSpec")
-        public DescribeLogstashResponseBodyResultNodeSpec nodeSpec;
 
         @NameInMap("paymentType")
         public String paymentType;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("nodeAmount")
+        public Integer nodeAmount;
+
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("createdAt")
+        public String createdAt;
+
         @NameInMap("status")
         public String status;
+
+        @NameInMap("vpcInstanceId")
+        public String vpcInstanceId;
 
         @NameInMap("updatedAt")
         public String updatedAt;
@@ -285,44 +267,30 @@ public class DescribeLogstashResponseBody extends TeaModel {
         @NameInMap("version")
         public String version;
 
-        @NameInMap("vpcInstanceId")
-        public String vpcInstanceId;
+        @NameInMap("instanceId")
+        public String instanceId;
+
+        @NameInMap("endpointList")
+        public java.util.List<DescribeLogstashResponseBodyResultEndpointList> endpointList;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeLogstashResponseBodyResultTags> tags;
+
+        @NameInMap("ZoneInfos")
+        public java.util.List<DescribeLogstashResponseBodyResultZoneInfos> zoneInfos;
+
+        @NameInMap("ExtendConfigs")
+        public java.util.List<java.util.Map<String, ?>> extendConfigs;
+
+        @NameInMap("nodeSpec")
+        public DescribeLogstashResponseBodyResultNodeSpec nodeSpec;
+
+        @NameInMap("networkConfig")
+        public DescribeLogstashResponseBodyResultNetworkConfig networkConfig;
 
         public static DescribeLogstashResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogstashResponseBodyResult self = new DescribeLogstashResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLogstashResponseBodyResult setExtendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
-            this.extendConfigs = extendConfigs;
-            return this;
-        }
-        public java.util.List<java.util.Map<String, ?>> getExtendConfigs() {
-            return this.extendConfigs;
-        }
-
-        public DescribeLogstashResponseBodyResult setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public DescribeLogstashResponseBodyResult setTags(java.util.List<DescribeLogstashResponseBodyResultTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<DescribeLogstashResponseBodyResultTags> getTags() {
-            return this.tags;
-        }
-
-        public DescribeLogstashResponseBodyResult setZoneInfos(java.util.List<DescribeLogstashResponseBodyResultZoneInfos> zoneInfos) {
-            this.zoneInfos = zoneInfos;
-            return this;
-        }
-        public java.util.List<DescribeLogstashResponseBodyResultZoneInfos> getZoneInfos() {
-            return this.zoneInfos;
         }
 
         public DescribeLogstashResponseBodyResult setConfig(java.util.Map<String, ?> config) {
@@ -333,44 +301,20 @@ public class DescribeLogstashResponseBody extends TeaModel {
             return this.config;
         }
 
-        public DescribeLogstashResponseBodyResult setCreatedAt(String createdAt) {
-            this.createdAt = createdAt;
+        public DescribeLogstashResponseBodyResult setPaymentType(String paymentType) {
+            this.paymentType = paymentType;
             return this;
         }
-        public String getCreatedAt() {
-            return this.createdAt;
+        public String getPaymentType() {
+            return this.paymentType;
         }
 
-        public DescribeLogstashResponseBodyResult setDescription(String description) {
-            this.description = description;
+        public DescribeLogstashResponseBodyResult setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeLogstashResponseBodyResult setEndpointList(java.util.List<DescribeLogstashResponseBodyResultEndpointList> endpointList) {
-            this.endpointList = endpointList;
-            return this;
-        }
-        public java.util.List<DescribeLogstashResponseBodyResultEndpointList> getEndpointList() {
-            return this.endpointList;
-        }
-
-        public DescribeLogstashResponseBodyResult setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeLogstashResponseBodyResult setNetworkConfig(DescribeLogstashResponseBodyResultNetworkConfig networkConfig) {
-            this.networkConfig = networkConfig;
-            return this;
-        }
-        public DescribeLogstashResponseBodyResultNetworkConfig getNetworkConfig() {
-            return this.networkConfig;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeLogstashResponseBodyResult setNodeAmount(Integer nodeAmount) {
@@ -381,20 +325,20 @@ public class DescribeLogstashResponseBody extends TeaModel {
             return this.nodeAmount;
         }
 
-        public DescribeLogstashResponseBodyResult setNodeSpec(DescribeLogstashResponseBodyResultNodeSpec nodeSpec) {
-            this.nodeSpec = nodeSpec;
+        public DescribeLogstashResponseBodyResult setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public DescribeLogstashResponseBodyResultNodeSpec getNodeSpec() {
-            return this.nodeSpec;
+        public String getDescription() {
+            return this.description;
         }
 
-        public DescribeLogstashResponseBodyResult setPaymentType(String paymentType) {
-            this.paymentType = paymentType;
+        public DescribeLogstashResponseBodyResult setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
             return this;
         }
-        public String getPaymentType() {
-            return this.paymentType;
+        public String getCreatedAt() {
+            return this.createdAt;
         }
 
         public DescribeLogstashResponseBodyResult setStatus(String status) {
@@ -403,6 +347,14 @@ public class DescribeLogstashResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeLogstashResponseBodyResult setVpcInstanceId(String vpcInstanceId) {
+            this.vpcInstanceId = vpcInstanceId;
+            return this;
+        }
+        public String getVpcInstanceId() {
+            return this.vpcInstanceId;
         }
 
         public DescribeLogstashResponseBodyResult setUpdatedAt(String updatedAt) {
@@ -421,12 +373,60 @@ public class DescribeLogstashResponseBody extends TeaModel {
             return this.version;
         }
 
-        public DescribeLogstashResponseBodyResult setVpcInstanceId(String vpcInstanceId) {
-            this.vpcInstanceId = vpcInstanceId;
+        public DescribeLogstashResponseBodyResult setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public String getVpcInstanceId() {
-            return this.vpcInstanceId;
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeLogstashResponseBodyResult setEndpointList(java.util.List<DescribeLogstashResponseBodyResultEndpointList> endpointList) {
+            this.endpointList = endpointList;
+            return this;
+        }
+        public java.util.List<DescribeLogstashResponseBodyResultEndpointList> getEndpointList() {
+            return this.endpointList;
+        }
+
+        public DescribeLogstashResponseBodyResult setTags(java.util.List<DescribeLogstashResponseBodyResultTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeLogstashResponseBodyResultTags> getTags() {
+            return this.tags;
+        }
+
+        public DescribeLogstashResponseBodyResult setZoneInfos(java.util.List<DescribeLogstashResponseBodyResultZoneInfos> zoneInfos) {
+            this.zoneInfos = zoneInfos;
+            return this;
+        }
+        public java.util.List<DescribeLogstashResponseBodyResultZoneInfos> getZoneInfos() {
+            return this.zoneInfos;
+        }
+
+        public DescribeLogstashResponseBodyResult setExtendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
+            this.extendConfigs = extendConfigs;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getExtendConfigs() {
+            return this.extendConfigs;
+        }
+
+        public DescribeLogstashResponseBodyResult setNodeSpec(DescribeLogstashResponseBodyResultNodeSpec nodeSpec) {
+            this.nodeSpec = nodeSpec;
+            return this;
+        }
+        public DescribeLogstashResponseBodyResultNodeSpec getNodeSpec() {
+            return this.nodeSpec;
+        }
+
+        public DescribeLogstashResponseBodyResult setNetworkConfig(DescribeLogstashResponseBodyResultNetworkConfig networkConfig) {
+            this.networkConfig = networkConfig;
+            return this;
+        }
+        public DescribeLogstashResponseBodyResultNetworkConfig getNetworkConfig() {
+            return this.networkConfig;
         }
 
     }

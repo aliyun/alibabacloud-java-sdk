@@ -4,23 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class UpdateDescriptionRequest extends TeaModel {
-    @NameInMap("description")
-    public String description;
-
     @NameInMap("clientToken")
     public String clientToken;
+
+    @NameInMap("description")
+    public String description;
 
     public static UpdateDescriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDescriptionRequest self = new UpdateDescriptionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDescriptionRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public UpdateDescriptionRequest setClientToken(String clientToken) {
@@ -29,6 +21,14 @@ public class UpdateDescriptionRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateDescriptionRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
 }

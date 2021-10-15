@@ -32,29 +32,14 @@ public class DescribePipelineResponseBody extends TeaModel {
     }
 
     public static class DescribePipelineResponseBodyResult extends TeaModel {
-        @NameInMap("batchDelay")
-        public Integer batchDelay;
-
-        @NameInMap("batchSize")
-        public Integer batchSize;
-
-        @NameInMap("config")
-        public String config;
-
-        @NameInMap("description")
-        public String description;
-
-        @NameInMap("gmtCreatedTime")
-        public String gmtCreatedTime;
+        @NameInMap("pipelineId")
+        public String pipelineId;
 
         @NameInMap("gmtUpdateTime")
         public String gmtUpdateTime;
 
-        @NameInMap("pipelineId")
-        public String pipelineId;
-
-        @NameInMap("pipelineStatus")
-        public String pipelineStatus;
+        @NameInMap("queueType")
+        public String queueType;
 
         @NameInMap("queueCheckPointWrites")
         public Integer queueCheckPointWrites;
@@ -62,63 +47,30 @@ public class DescribePipelineResponseBody extends TeaModel {
         @NameInMap("queueMaxBytes")
         public Integer queueMaxBytes;
 
-        @NameInMap("queueType")
-        public String queueType;
+        @NameInMap("config")
+        public String config;
+
+        @NameInMap("batchDelay")
+        public Integer batchDelay;
 
         @NameInMap("workers")
         public Integer workers;
 
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("gmtCreatedTime")
+        public String gmtCreatedTime;
+
+        @NameInMap("batchSize")
+        public Integer batchSize;
+
+        @NameInMap("pipelineStatus")
+        public String pipelineStatus;
+
         public static DescribePipelineResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribePipelineResponseBodyResult self = new DescribePipelineResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePipelineResponseBodyResult setBatchDelay(Integer batchDelay) {
-            this.batchDelay = batchDelay;
-            return this;
-        }
-        public Integer getBatchDelay() {
-            return this.batchDelay;
-        }
-
-        public DescribePipelineResponseBodyResult setBatchSize(Integer batchSize) {
-            this.batchSize = batchSize;
-            return this;
-        }
-        public Integer getBatchSize() {
-            return this.batchSize;
-        }
-
-        public DescribePipelineResponseBodyResult setConfig(String config) {
-            this.config = config;
-            return this;
-        }
-        public String getConfig() {
-            return this.config;
-        }
-
-        public DescribePipelineResponseBodyResult setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribePipelineResponseBodyResult setGmtCreatedTime(String gmtCreatedTime) {
-            this.gmtCreatedTime = gmtCreatedTime;
-            return this;
-        }
-        public String getGmtCreatedTime() {
-            return this.gmtCreatedTime;
-        }
-
-        public DescribePipelineResponseBodyResult setGmtUpdateTime(String gmtUpdateTime) {
-            this.gmtUpdateTime = gmtUpdateTime;
-            return this;
-        }
-        public String getGmtUpdateTime() {
-            return this.gmtUpdateTime;
         }
 
         public DescribePipelineResponseBodyResult setPipelineId(String pipelineId) {
@@ -129,12 +81,20 @@ public class DescribePipelineResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public DescribePipelineResponseBodyResult setPipelineStatus(String pipelineStatus) {
-            this.pipelineStatus = pipelineStatus;
+        public DescribePipelineResponseBodyResult setGmtUpdateTime(String gmtUpdateTime) {
+            this.gmtUpdateTime = gmtUpdateTime;
             return this;
         }
-        public String getPipelineStatus() {
-            return this.pipelineStatus;
+        public String getGmtUpdateTime() {
+            return this.gmtUpdateTime;
+        }
+
+        public DescribePipelineResponseBodyResult setQueueType(String queueType) {
+            this.queueType = queueType;
+            return this;
+        }
+        public String getQueueType() {
+            return this.queueType;
         }
 
         public DescribePipelineResponseBodyResult setQueueCheckPointWrites(Integer queueCheckPointWrites) {
@@ -153,12 +113,20 @@ public class DescribePipelineResponseBody extends TeaModel {
             return this.queueMaxBytes;
         }
 
-        public DescribePipelineResponseBodyResult setQueueType(String queueType) {
-            this.queueType = queueType;
+        public DescribePipelineResponseBodyResult setConfig(String config) {
+            this.config = config;
             return this;
         }
-        public String getQueueType() {
-            return this.queueType;
+        public String getConfig() {
+            return this.config;
+        }
+
+        public DescribePipelineResponseBodyResult setBatchDelay(Integer batchDelay) {
+            this.batchDelay = batchDelay;
+            return this;
+        }
+        public Integer getBatchDelay() {
+            return this.batchDelay;
         }
 
         public DescribePipelineResponseBodyResult setWorkers(Integer workers) {
@@ -167,6 +135,38 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
         public Integer getWorkers() {
             return this.workers;
+        }
+
+        public DescribePipelineResponseBodyResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribePipelineResponseBodyResult setGmtCreatedTime(String gmtCreatedTime) {
+            this.gmtCreatedTime = gmtCreatedTime;
+            return this;
+        }
+        public String getGmtCreatedTime() {
+            return this.gmtCreatedTime;
+        }
+
+        public DescribePipelineResponseBodyResult setBatchSize(Integer batchSize) {
+            this.batchSize = batchSize;
+            return this;
+        }
+        public Integer getBatchSize() {
+            return this.batchSize;
+        }
+
+        public DescribePipelineResponseBodyResult setPipelineStatus(String pipelineStatus) {
+            this.pipelineStatus = pipelineStatus;
+            return this;
+        }
+        public String getPipelineStatus() {
+            return this.pipelineStatus;
         }
 
     }

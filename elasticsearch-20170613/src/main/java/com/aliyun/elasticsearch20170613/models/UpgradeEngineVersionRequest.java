@@ -10,11 +10,11 @@ public class UpgradeEngineVersionRequest extends TeaModel {
     @NameInMap("dryRun")
     public Boolean dryRun;
 
-    @NameInMap("type")
-    public String type;
-
     @NameInMap("version")
     public String version;
+
+    @NameInMap("type")
+    public String type;
 
     public static UpgradeEngineVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeEngineVersionRequest self = new UpgradeEngineVersionRequest();
@@ -37,20 +37,20 @@ public class UpgradeEngineVersionRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public UpgradeEngineVersionRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
     public UpgradeEngineVersionRequest setVersion(String version) {
         this.version = version;
         return this;
     }
     public String getVersion() {
         return this.version;
+    }
+
+    public UpgradeEngineVersionRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

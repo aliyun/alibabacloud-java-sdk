@@ -32,6 +32,9 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     }
 
     public static class CreateVpcEndpointResponseBodyResult extends TeaModel {
+        @NameInMap("serviceId")
+        public String serviceId;
+
         @NameInMap("endpointDomain")
         public String endpointDomain;
 
@@ -41,12 +44,17 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         @NameInMap("endpointName")
         public String endpointName;
 
-        @NameInMap("serviceId")
-        public String serviceId;
-
         public static CreateVpcEndpointResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateVpcEndpointResponseBodyResult self = new CreateVpcEndpointResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public CreateVpcEndpointResponseBodyResult setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
         }
 
         public CreateVpcEndpointResponseBodyResult setEndpointDomain(String endpointDomain) {
@@ -71,14 +79,6 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
         public String getEndpointName() {
             return this.endpointName;
-        }
-
-        public CreateVpcEndpointResponseBodyResult setServiceId(String serviceId) {
-            this.serviceId = serviceId;
-            return this;
-        }
-        public String getServiceId() {
-            return this.serviceId;
         }
 
     }

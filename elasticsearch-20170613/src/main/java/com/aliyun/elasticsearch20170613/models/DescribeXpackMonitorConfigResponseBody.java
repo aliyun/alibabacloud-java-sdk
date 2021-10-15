@@ -32,24 +32,40 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeXpackMonitorConfigResponseBodyResult extends TeaModel {
+        @NameInMap("userName")
+        public String userName;
+
+        @NameInMap("esInstanceId")
+        public String esInstanceId;
+
         @NameInMap("enable")
         public Boolean enable;
 
         @NameInMap("endpoints")
         public java.util.List<String> endpoints;
 
-        @NameInMap("esInstanceId")
-        public String esInstanceId;
-
         @NameInMap("pipelineIds")
         public java.util.List<String> pipelineIds;
-
-        @NameInMap("userName")
-        public String userName;
 
         public static DescribeXpackMonitorConfigResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeXpackMonitorConfigResponseBodyResult self = new DescribeXpackMonitorConfigResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeXpackMonitorConfigResponseBodyResult setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public DescribeXpackMonitorConfigResponseBodyResult setEsInstanceId(String esInstanceId) {
+            this.esInstanceId = esInstanceId;
+            return this;
+        }
+        public String getEsInstanceId() {
+            return this.esInstanceId;
         }
 
         public DescribeXpackMonitorConfigResponseBodyResult setEnable(Boolean enable) {
@@ -68,28 +84,12 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
             return this.endpoints;
         }
 
-        public DescribeXpackMonitorConfigResponseBodyResult setEsInstanceId(String esInstanceId) {
-            this.esInstanceId = esInstanceId;
-            return this;
-        }
-        public String getEsInstanceId() {
-            return this.esInstanceId;
-        }
-
         public DescribeXpackMonitorConfigResponseBodyResult setPipelineIds(java.util.List<String> pipelineIds) {
             this.pipelineIds = pipelineIds;
             return this;
         }
         public java.util.List<String> getPipelineIds() {
             return this.pipelineIds;
-        }
-
-        public DescribeXpackMonitorConfigResponseBodyResult setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
         }
 
     }

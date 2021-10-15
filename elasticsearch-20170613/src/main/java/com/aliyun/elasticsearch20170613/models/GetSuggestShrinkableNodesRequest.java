@@ -4,18 +4,26 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class GetSuggestShrinkableNodesRequest extends TeaModel {
+    @NameInMap("nodeType")
+    public String nodeType;
+
     @NameInMap("count")
     public Integer count;
 
     @NameInMap("ignoreStatus")
     public Boolean ignoreStatus;
 
-    @NameInMap("nodeType")
-    public String nodeType;
-
     public static GetSuggestShrinkableNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSuggestShrinkableNodesRequest self = new GetSuggestShrinkableNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetSuggestShrinkableNodesRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public GetSuggestShrinkableNodesRequest setCount(Integer count) {
@@ -32,14 +40,6 @@ public class GetSuggestShrinkableNodesRequest extends TeaModel {
     }
     public Boolean getIgnoreStatus() {
         return this.ignoreStatus;
-    }
-
-    public GetSuggestShrinkableNodesRequest setNodeType(String nodeType) {
-        this.nodeType = nodeType;
-        return this;
-    }
-    public String getNodeType() {
-        return this.nodeType;
     }
 
 }

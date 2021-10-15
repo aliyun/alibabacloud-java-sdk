@@ -4,20 +4,20 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    @NameInMap("NextToken")
-    public String nextToken;
-
     @NameInMap("Page")
     public Integer page;
 
-    @NameInMap("ResourceIds")
-    public String resourceIds;
+    @NameInMap("Size")
+    public Integer size;
 
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("Size")
-    public Integer size;
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("ResourceIds")
+    public String resourceIds;
 
     @NameInMap("Tags")
     public String tags;
@@ -25,14 +25,6 @@ public class ListTagResourcesRequest extends TeaModel {
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagResourcesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
     }
 
     public ListTagResourcesRequest setPage(Integer page) {
@@ -43,12 +35,12 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.page;
     }
 
-    public ListTagResourcesRequest setResourceIds(String resourceIds) {
-        this.resourceIds = resourceIds;
+    public ListTagResourcesRequest setSize(Integer size) {
+        this.size = size;
         return this;
     }
-    public String getResourceIds() {
-        return this.resourceIds;
+    public Integer getSize() {
+        return this.size;
     }
 
     public ListTagResourcesRequest setResourceType(String resourceType) {
@@ -59,12 +51,20 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public ListTagResourcesRequest setSize(Integer size) {
-        this.size = size;
+    public ListTagResourcesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public Integer getSize() {
-        return this.size;
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagResourcesRequest setResourceIds(String resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+    public String getResourceIds() {
+        return this.resourceIds;
     }
 
     public ListTagResourcesRequest setTags(String tags) {

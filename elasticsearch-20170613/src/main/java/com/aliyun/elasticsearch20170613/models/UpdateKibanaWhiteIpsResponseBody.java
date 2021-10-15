@@ -32,23 +32,15 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     }
 
     public static class UpdateKibanaWhiteIpsResponseBodyResult extends TeaModel {
-        @NameInMap("kibanaIPWhitelist")
-        public java.util.List<String> kibanaIPWhitelist;
-
         @NameInMap("kibanaPrivateIPWhitelist")
         public java.util.List<String> kibanaPrivateIPWhitelist;
+
+        @NameInMap("kibanaIPWhitelist")
+        public java.util.List<String> kibanaIPWhitelist;
 
         public static UpdateKibanaWhiteIpsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             UpdateKibanaWhiteIpsResponseBodyResult self = new UpdateKibanaWhiteIpsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateKibanaWhiteIpsResponseBodyResult setKibanaIPWhitelist(java.util.List<String> kibanaIPWhitelist) {
-            this.kibanaIPWhitelist = kibanaIPWhitelist;
-            return this;
-        }
-        public java.util.List<String> getKibanaIPWhitelist() {
-            return this.kibanaIPWhitelist;
         }
 
         public UpdateKibanaWhiteIpsResponseBodyResult setKibanaPrivateIPWhitelist(java.util.List<String> kibanaPrivateIPWhitelist) {
@@ -57,6 +49,14 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
         }
         public java.util.List<String> getKibanaPrivateIPWhitelist() {
             return this.kibanaPrivateIPWhitelist;
+        }
+
+        public UpdateKibanaWhiteIpsResponseBodyResult setKibanaIPWhitelist(java.util.List<String> kibanaIPWhitelist) {
+            this.kibanaIPWhitelist = kibanaIPWhitelist;
+            return this;
+        }
+        public java.util.List<String> getKibanaIPWhitelist() {
+            return this.kibanaIPWhitelist;
         }
 
     }

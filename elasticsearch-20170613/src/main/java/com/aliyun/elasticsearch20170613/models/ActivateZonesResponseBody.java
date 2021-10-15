@@ -4,23 +4,15 @@ package com.aliyun.elasticsearch20170613.models;
 import com.aliyun.tea.*;
 
 public class ActivateZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Result")
     public Boolean result;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ActivateZonesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ActivateZonesResponseBody self = new ActivateZonesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ActivateZonesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ActivateZonesResponseBody setResult(Boolean result) {
@@ -29,6 +21,14 @@ public class ActivateZonesResponseBody extends TeaModel {
     }
     public Boolean getResult() {
         return this.result;
+    }
+
+    public ActivateZonesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
