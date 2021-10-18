@@ -32,19 +32,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public CreateIceProjectResponse createIceProjectWithOptions(CreateIceProjectRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateIceProject", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new CreateIceProjectResponse());
-    }
-
-    public CreateIceProjectResponse createIceProject(CreateIceProjectRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createIceProjectWithOptions(request, runtime);
-    }
-
     public RemoveMemberResponse removeMemberWithOptions(RemoveMemberRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -56,6 +43,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveMemberResponse removeMember(RemoveMemberRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.removeMemberWithOptions(request, runtime);
+    }
+
+    public DeleteCommentResponse deleteCommentWithOptions(DeleteCommentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteComment", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteCommentResponse());
+    }
+
+    public DeleteCommentResponse deleteComment(DeleteCommentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteCommentWithOptions(request, runtime);
     }
 
     public ListApplyLinkMicUsersResponse listApplyLinkMicUsersWithOptions(ListApplyLinkMicUsersRequest request, RuntimeOptions runtime) throws Exception {
@@ -121,6 +121,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BanCommentResponse banComment(BanCommentRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.banCommentWithOptions(request, runtime);
+    }
+
+    public GetStandardRoomHttpsCertificateResponse getStandardRoomHttpsCertificateWithOptions(GetStandardRoomHttpsCertificateRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetStandardRoomHttpsCertificate", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new GetStandardRoomHttpsCertificateResponse());
+    }
+
+    public GetStandardRoomHttpsCertificateResponse getStandardRoomHttpsCertificate(GetStandardRoomHttpsCertificateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getStandardRoomHttpsCertificateWithOptions(request, runtime);
     }
 
     public ListLiveRoomsByIdResponse listLiveRoomsByIdWithOptions(ListLiveRoomsByIdRequest tmpReq, RuntimeOptions runtime) throws Exception {
@@ -194,6 +207,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAppTemplateWithOptions(request, runtime);
     }
 
+    public AttachStandardRoomHttpsCertificateResponse attachStandardRoomHttpsCertificateWithOptions(AttachStandardRoomHttpsCertificateRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AttachStandardRoomHttpsCertificate", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new AttachStandardRoomHttpsCertificateResponse());
+    }
+
+    public AttachStandardRoomHttpsCertificateResponse attachStandardRoomHttpsCertificate(AttachStandardRoomHttpsCertificateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.attachStandardRoomHttpsCertificateWithOptions(request, runtime);
+    }
+
     public UpdateAppTemplateConfigResponse updateAppTemplateConfigWithOptions(UpdateAppTemplateConfigRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateAppTemplateConfigShrinkRequest request = new UpdateAppTemplateConfigShrinkRequest();
@@ -237,19 +263,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateClassResponse updateClass(UpdateClassRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateClassWithOptions(request, runtime);
-    }
-
-    public RegisterIceOssMediaResponse registerIceOssMediaWithOptions(RegisterIceOssMediaRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("RegisterIceOssMedia", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new RegisterIceOssMediaResponse());
-    }
-
-    public RegisterIceOssMediaResponse registerIceOssMedia(RegisterIceOssMediaRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.registerIceOssMediaWithOptions(request, runtime);
     }
 
     public CreateConferenceResponse createConferenceWithOptions(CreateConferenceRequest request, RuntimeOptions runtime) throws Exception {

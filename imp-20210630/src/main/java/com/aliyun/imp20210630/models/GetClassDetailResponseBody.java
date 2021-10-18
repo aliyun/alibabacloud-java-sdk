@@ -4,7 +4,7 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class GetClassDetailResponseBody extends TeaModel {
-    // Id of the request
+    // 请求ID。
     @NameInMap("RequestId")
     public String requestId;
 
@@ -61,6 +61,26 @@ public class GetClassDetailResponseBody extends TeaModel {
         // 下课时间戳，毫秒。
         @NameInMap("EndTime")
         public Long endTime;
+
+        // 房间ID
+        @NameInMap("RoomId")
+        public String roomId;
+
+        // 直播的唯一标识ID。
+        @NameInMap("LiveId")
+        public String liveId;
+
+        // 连麦会议唯一标识。
+        @NameInMap("ConfId")
+        public String confId;
+
+        // 白板ID
+        @NameInMap("WhiteboardId")
+        public String whiteboardId;
+
+        // 白板录制ID
+        @NameInMap("WhiteboardRecordId")
+        public String whiteboardRecordId;
 
         public static GetClassDetailResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetClassDetailResponseBodyResult self = new GetClassDetailResponseBodyResult();
@@ -121,6 +141,46 @@ public class GetClassDetailResponseBody extends TeaModel {
         }
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        public GetClassDetailResponseBodyResult setRoomId(String roomId) {
+            this.roomId = roomId;
+            return this;
+        }
+        public String getRoomId() {
+            return this.roomId;
+        }
+
+        public GetClassDetailResponseBodyResult setLiveId(String liveId) {
+            this.liveId = liveId;
+            return this;
+        }
+        public String getLiveId() {
+            return this.liveId;
+        }
+
+        public GetClassDetailResponseBodyResult setConfId(String confId) {
+            this.confId = confId;
+            return this;
+        }
+        public String getConfId() {
+            return this.confId;
+        }
+
+        public GetClassDetailResponseBodyResult setWhiteboardId(String whiteboardId) {
+            this.whiteboardId = whiteboardId;
+            return this;
+        }
+        public String getWhiteboardId() {
+            return this.whiteboardId;
+        }
+
+        public GetClassDetailResponseBodyResult setWhiteboardRecordId(String whiteboardRecordId) {
+            this.whiteboardRecordId = whiteboardRecordId;
+            return this;
+        }
+        public String getWhiteboardRecordId() {
+            return this.whiteboardRecordId;
         }
 
     }
