@@ -4,14 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceVideoUrlResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("OutProtocol")
     public String outProtocol;
@@ -22,14 +22,6 @@ public class GetDeviceVideoUrlResponseBody extends TeaModel {
     public static GetDeviceVideoUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceVideoUrlResponseBody self = new GetDeviceVideoUrlResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDeviceVideoUrlResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public GetDeviceVideoUrlResponseBody setRequestId(String requestId) {
@@ -46,6 +38,14 @@ public class GetDeviceVideoUrlResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetDeviceVideoUrlResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetDeviceVideoUrlResponseBody setOutProtocol(String outProtocol) {

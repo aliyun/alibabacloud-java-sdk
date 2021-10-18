@@ -25,6 +25,9 @@ public class DescribeIpcsRequest extends TeaModel {
     @NameInMap("DeviceFilter")
     public String deviceFilter;
 
+    @NameInMap("DeviceStatus")
+    public String deviceStatus;
+
     public static DescribeIpcsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpcsRequest self = new DescribeIpcsRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class DescribeIpcsRequest extends TeaModel {
     }
     public String getDeviceFilter() {
         return this.deviceFilter;
+    }
+
+    public DescribeIpcsRequest setDeviceStatus(String deviceStatus) {
+        this.deviceStatus = deviceStatus;
+        return this;
+    }
+    public String getDeviceStatus() {
+        return this.deviceStatus;
     }
 
 }

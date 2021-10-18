@@ -8,13 +8,13 @@ public class ModifyDeviceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
     // 错误码描述
     @NameInMap("Message")
     public String message;
-
-    // 错误吗
-    @NameInMap("Code")
-    public String code;
 
     public static ModifyDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeviceResponseBody self = new ModifyDeviceResponseBody();
@@ -29,20 +29,20 @@ public class ModifyDeviceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyDeviceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ModifyDeviceResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ModifyDeviceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

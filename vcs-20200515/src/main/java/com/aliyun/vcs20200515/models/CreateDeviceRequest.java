@@ -88,6 +88,9 @@ public class CreateDeviceRequest extends TeaModel {
     @NameInMap("OSDTimeY")
     public String OSDTimeY;
 
+    @NameInMap("ActivateCode")
+    public String activateCode;
+
     public static CreateDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDeviceRequest self = new CreateDeviceRequest();
         return TeaModel.build(map, self);
@@ -315,6 +318,14 @@ public class CreateDeviceRequest extends TeaModel {
     }
     public String getOSDTimeY() {
         return this.OSDTimeY;
+    }
+
+    public CreateDeviceRequest setActivateCode(String activateCode) {
+        this.activateCode = activateCode;
+        return this;
+    }
+    public String getActivateCode() {
+        return this.activateCode;
     }
 
 }
