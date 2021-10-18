@@ -842,6 +842,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listMetricsWithOptions(request, runtime);
     }
 
+    public SearchTargetResponse searchTargetWithOptions(SearchTargetRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SearchTarget", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new SearchTargetResponse());
+    }
+
+    public SearchTargetResponse searchTarget(SearchTargetRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.searchTargetWithOptions(request, runtime);
+    }
+
     public DeleteNVRDeviceResponse deleteNVRDeviceWithOptions(DeleteNVRDeviceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1714,6 +1727,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAiotDevicesResponse describeAiotDevices(DescribeAiotDevicesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeAiotDevicesWithOptions(request, runtime);
+    }
+
+    public GetDeviceStatsResponse getDeviceStatsWithOptions(GetDeviceStatsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDeviceStats", "2020-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetDeviceStatsResponse());
+    }
+
+    public GetDeviceStatsResponse getDeviceStats(GetDeviceStatsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDeviceStatsWithOptions(request, runtime);
     }
 
     public AddAiotPersonTableResponse addAiotPersonTableWithOptions(AddAiotPersonTableRequest request, RuntimeOptions runtime) throws Exception {

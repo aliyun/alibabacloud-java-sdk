@@ -19,6 +19,9 @@ public class DescribeChannelsRequest extends TeaModel {
     @NameInMap("DeviceFilter")
     public String deviceFilter;
 
+    @NameInMap("DeviceStatus")
+    public String deviceStatus;
+
     public static DescribeChannelsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeChannelsRequest self = new DescribeChannelsRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribeChannelsRequest extends TeaModel {
     }
     public String getDeviceFilter() {
         return this.deviceFilter;
+    }
+
+    public DescribeChannelsRequest setDeviceStatus(String deviceStatus) {
+        this.deviceStatus = deviceStatus;
+        return this;
+    }
+    public String getDeviceStatus() {
+        return this.deviceStatus;
     }
 
 }

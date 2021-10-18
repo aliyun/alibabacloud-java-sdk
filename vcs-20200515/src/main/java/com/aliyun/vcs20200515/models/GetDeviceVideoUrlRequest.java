@@ -7,8 +7,11 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
-    @NameInMap("GbId")
-    public String gbId;
+    @NameInMap("DeviceId")
+    public String deviceId;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     @NameInMap("StartTime")
     public Long startTime;
@@ -16,14 +19,11 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
     @NameInMap("OutProtocol")
     public String outProtocol;
 
-    @NameInMap("StorageType")
-    public String storageType;
+    @NameInMap("GbId")
+    public String gbId;
 
     public static GetDeviceVideoUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceVideoUrlRequest self = new GetDeviceVideoUrlRequest();
@@ -38,12 +38,20 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
         return this.corpId;
     }
 
-    public GetDeviceVideoUrlRequest setGbId(String gbId) {
-        this.gbId = gbId;
+    public GetDeviceVideoUrlRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
-    public String getGbId() {
-        return this.gbId;
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    public GetDeviceVideoUrlRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public GetDeviceVideoUrlRequest setStartTime(Long startTime) {
@@ -62,14 +70,6 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
         return this.endTime;
     }
 
-    public GetDeviceVideoUrlRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
     public GetDeviceVideoUrlRequest setOutProtocol(String outProtocol) {
         this.outProtocol = outProtocol;
         return this;
@@ -78,12 +78,12 @@ public class GetDeviceVideoUrlRequest extends TeaModel {
         return this.outProtocol;
     }
 
-    public GetDeviceVideoUrlRequest setStorageType(String storageType) {
-        this.storageType = storageType;
+    public GetDeviceVideoUrlRequest setGbId(String gbId) {
+        this.gbId = gbId;
         return this;
     }
-    public String getStorageType() {
-        return this.storageType;
+    public String getGbId() {
+        return this.gbId;
     }
 
 }

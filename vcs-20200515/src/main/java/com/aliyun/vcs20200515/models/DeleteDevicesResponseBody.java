@@ -4,14 +4,14 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteDevicesResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Message")
     public String message;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Data")
     public java.util.List<DeleteDevicesResponseBodyData> data;
@@ -19,6 +19,14 @@ public class DeleteDevicesResponseBody extends TeaModel {
     public static DeleteDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteDevicesResponseBody self = new DeleteDevicesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDevicesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteDevicesResponseBody setCode(String code) {
@@ -37,14 +45,6 @@ public class DeleteDevicesResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteDevicesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DeleteDevicesResponseBody setData(java.util.List<DeleteDevicesResponseBodyData> data) {
         this.data = data;
         return this;
@@ -57,11 +57,11 @@ public class DeleteDevicesResponseBody extends TeaModel {
         @NameInMap("DeviceId")
         public String deviceId;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("Description")
+        public String description;
 
         public static DeleteDevicesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteDevicesResponseBodyData self = new DeleteDevicesResponseBodyData();
@@ -76,20 +76,20 @@ public class DeleteDevicesResponseBody extends TeaModel {
             return this.deviceId;
         }
 
-        public DeleteDevicesResponseBodyData setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public DeleteDevicesResponseBodyData setCode(String code) {
             this.code = code;
             return this;
         }
         public String getCode() {
             return this.code;
+        }
+
+        public DeleteDevicesResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
     }
