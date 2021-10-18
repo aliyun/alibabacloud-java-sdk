@@ -4,13 +4,13 @@ package com.aliyun.aliyunape20210908.models;
 import com.aliyun.tea.*;
 
 public class ExecuteRequest extends TeaModel {
-    // appName
-    @NameInMap("AppName")
-    public String appName;
+    // aliyunPk
+    @NameInMap("UserId")
+    public Long userId;
 
-    // source
-    @NameInMap("Channel")
-    public String channel;
+    // serviceParam
+    @NameInMap("ServiceParam")
+    public java.util.Map<String, String> serviceParam;
 
     // extendParam
     @NameInMap("ExtendParam")
@@ -20,37 +20,37 @@ public class ExecuteRequest extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
+    // appName
+    @NameInMap("AppName")
+    public String appName;
+
     // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // serviceParam
-    @NameInMap("ServiceParam")
-    public java.util.Map<String, String> serviceParam;
-
-    // aliyunPk
-    @NameInMap("UserId")
-    public Long userId;
+    // source
+    @NameInMap("Channel")
+    public String channel;
 
     public static ExecuteRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteRequest self = new ExecuteRequest();
         return TeaModel.build(map, self);
     }
 
-    public ExecuteRequest setAppName(String appName) {
-        this.appName = appName;
+    public ExecuteRequest setUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public Long getUserId() {
+        return this.userId;
     }
 
-    public ExecuteRequest setChannel(String channel) {
-        this.channel = channel;
+    public ExecuteRequest setServiceParam(java.util.Map<String, String> serviceParam) {
+        this.serviceParam = serviceParam;
         return this;
     }
-    public String getChannel() {
-        return this.channel;
+    public java.util.Map<String, String> getServiceParam() {
+        return this.serviceParam;
     }
 
     public ExecuteRequest setExtendParam(java.util.Map<String, String> extendParam) {
@@ -69,6 +69,14 @@ public class ExecuteRequest extends TeaModel {
         return this.orderId;
     }
 
+    public ExecuteRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
     public ExecuteRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -77,20 +85,12 @@ public class ExecuteRequest extends TeaModel {
         return this.requestId;
     }
 
-    public ExecuteRequest setServiceParam(java.util.Map<String, String> serviceParam) {
-        this.serviceParam = serviceParam;
+    public ExecuteRequest setChannel(String channel) {
+        this.channel = channel;
         return this;
     }
-    public java.util.Map<String, String> getServiceParam() {
-        return this.serviceParam;
-    }
-
-    public ExecuteRequest setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-    public Long getUserId() {
-        return this.userId;
+    public String getChannel() {
+        return this.channel;
     }
 
 }

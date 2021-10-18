@@ -3,7 +3,7 @@ package com.aliyun.aliyunape20210908.models;
 
 import com.aliyun.tea.*;
 
-public class WeathermonitorProvinceHourResponseBody extends TeaModel {
+public class WeathermonitorResponseBody extends TeaModel {
     // rt
     @NameInMap("Rt")
     public Long rt;
@@ -28,12 +28,12 @@ public class WeathermonitorProvinceHourResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static WeathermonitorProvinceHourResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        WeathermonitorProvinceHourResponseBody self = new WeathermonitorProvinceHourResponseBody();
+    public static WeathermonitorResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        WeathermonitorResponseBody self = new WeathermonitorResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public WeathermonitorProvinceHourResponseBody setRt(Long rt) {
+    public WeathermonitorResponseBody setRt(Long rt) {
         this.rt = rt;
         return this;
     }
@@ -41,7 +41,7 @@ public class WeathermonitorProvinceHourResponseBody extends TeaModel {
         return this.rt;
     }
 
-    public WeathermonitorProvinceHourResponseBody setMessage(String message) {
+    public WeathermonitorResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -49,7 +49,7 @@ public class WeathermonitorProvinceHourResponseBody extends TeaModel {
         return this.message;
     }
 
-    public WeathermonitorProvinceHourResponseBody setRequestId(String requestId) {
+    public WeathermonitorResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,7 +57,7 @@ public class WeathermonitorProvinceHourResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public WeathermonitorProvinceHourResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
+    public WeathermonitorResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
         this.data = data;
         return this;
     }
@@ -65,7 +65,7 @@ public class WeathermonitorProvinceHourResponseBody extends TeaModel {
         return this.data;
     }
 
-    public WeathermonitorProvinceHourResponseBody setCode(String code) {
+    public WeathermonitorResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -73,7 +73,7 @@ public class WeathermonitorProvinceHourResponseBody extends TeaModel {
         return this.code;
     }
 
-    public WeathermonitorProvinceHourResponseBody setSuccess(Boolean success) {
+    public WeathermonitorResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

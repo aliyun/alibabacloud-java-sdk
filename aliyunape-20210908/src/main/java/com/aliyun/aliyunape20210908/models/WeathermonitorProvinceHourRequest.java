@@ -4,13 +4,13 @@ package com.aliyun.aliyunape20210908.models;
 import com.aliyun.tea.*;
 
 public class WeathermonitorProvinceHourRequest extends TeaModel {
-    // appName
-    @NameInMap("AppName")
-    public String appName;
+    // UserId
+    @NameInMap("UserId")
+    public Long userId;
 
-    // 渠道名称
-    @NameInMap("Channel")
-    public String channel;
+    // 请求参数
+    @NameInMap("ServiceParam")
+    public java.util.Map<String, String> serviceParam;
 
     // 扩展参数
     @NameInMap("ExtendParam")
@@ -20,37 +20,37 @@ public class WeathermonitorProvinceHourRequest extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
+    // appName
+    @NameInMap("AppName")
+    public String appName;
+
     // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // 请求参数
-    @NameInMap("ServiceParam")
-    public java.util.Map<String, String> serviceParam;
-
-    // UserId
-    @NameInMap("UserId")
-    public Long userId;
+    // 渠道名称
+    @NameInMap("Channel")
+    public String channel;
 
     public static WeathermonitorProvinceHourRequest build(java.util.Map<String, ?> map) throws Exception {
         WeathermonitorProvinceHourRequest self = new WeathermonitorProvinceHourRequest();
         return TeaModel.build(map, self);
     }
 
-    public WeathermonitorProvinceHourRequest setAppName(String appName) {
-        this.appName = appName;
+    public WeathermonitorProvinceHourRequest setUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public Long getUserId() {
+        return this.userId;
     }
 
-    public WeathermonitorProvinceHourRequest setChannel(String channel) {
-        this.channel = channel;
+    public WeathermonitorProvinceHourRequest setServiceParam(java.util.Map<String, String> serviceParam) {
+        this.serviceParam = serviceParam;
         return this;
     }
-    public String getChannel() {
-        return this.channel;
+    public java.util.Map<String, String> getServiceParam() {
+        return this.serviceParam;
     }
 
     public WeathermonitorProvinceHourRequest setExtendParam(java.util.Map<String, String> extendParam) {
@@ -69,6 +69,14 @@ public class WeathermonitorProvinceHourRequest extends TeaModel {
         return this.orderId;
     }
 
+    public WeathermonitorProvinceHourRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
     public WeathermonitorProvinceHourRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -77,20 +85,12 @@ public class WeathermonitorProvinceHourRequest extends TeaModel {
         return this.requestId;
     }
 
-    public WeathermonitorProvinceHourRequest setServiceParam(java.util.Map<String, String> serviceParam) {
-        this.serviceParam = serviceParam;
+    public WeathermonitorProvinceHourRequest setChannel(String channel) {
+        this.channel = channel;
         return this;
     }
-    public java.util.Map<String, String> getServiceParam() {
-        return this.serviceParam;
-    }
-
-    public WeathermonitorProvinceHourRequest setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-    public Long getUserId() {
-        return this.userId;
+    public String getChannel() {
+        return this.channel;
     }
 
 }

@@ -4,13 +4,13 @@ package com.aliyun.aliyunape20210908.models;
 import com.aliyun.tea.*;
 
 public class ExecuteShrinkRequest extends TeaModel {
-    // appName
-    @NameInMap("AppName")
-    public String appName;
+    // aliyunPk
+    @NameInMap("UserId")
+    public Long userId;
 
-    // source
-    @NameInMap("Channel")
-    public String channel;
+    // serviceParam
+    @NameInMap("ServiceParam")
+    public String serviceParamShrink;
 
     // extendParam
     @NameInMap("ExtendParam")
@@ -20,37 +20,37 @@ public class ExecuteShrinkRequest extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
+    // appName
+    @NameInMap("AppName")
+    public String appName;
+
     // requestId
     @NameInMap("RequestId")
     public String requestId;
 
-    // serviceParam
-    @NameInMap("ServiceParam")
-    public String serviceParamShrink;
-
-    // aliyunPk
-    @NameInMap("UserId")
-    public Long userId;
+    // source
+    @NameInMap("Channel")
+    public String channel;
 
     public static ExecuteShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteShrinkRequest self = new ExecuteShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ExecuteShrinkRequest setAppName(String appName) {
-        this.appName = appName;
+    public ExecuteShrinkRequest setUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public Long getUserId() {
+        return this.userId;
     }
 
-    public ExecuteShrinkRequest setChannel(String channel) {
-        this.channel = channel;
+    public ExecuteShrinkRequest setServiceParamShrink(String serviceParamShrink) {
+        this.serviceParamShrink = serviceParamShrink;
         return this;
     }
-    public String getChannel() {
-        return this.channel;
+    public String getServiceParamShrink() {
+        return this.serviceParamShrink;
     }
 
     public ExecuteShrinkRequest setExtendParamShrink(String extendParamShrink) {
@@ -69,6 +69,14 @@ public class ExecuteShrinkRequest extends TeaModel {
         return this.orderId;
     }
 
+    public ExecuteShrinkRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
     public ExecuteShrinkRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -77,20 +85,12 @@ public class ExecuteShrinkRequest extends TeaModel {
         return this.requestId;
     }
 
-    public ExecuteShrinkRequest setServiceParamShrink(String serviceParamShrink) {
-        this.serviceParamShrink = serviceParamShrink;
+    public ExecuteShrinkRequest setChannel(String channel) {
+        this.channel = channel;
         return this;
     }
-    public String getServiceParamShrink() {
-        return this.serviceParamShrink;
-    }
-
-    public ExecuteShrinkRequest setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-    public Long getUserId() {
-        return this.userId;
+    public String getChannel() {
+        return this.channel;
     }
 
 }
