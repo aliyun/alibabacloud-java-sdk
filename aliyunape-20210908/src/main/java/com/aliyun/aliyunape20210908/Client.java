@@ -36,38 +36,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ExecuteShrinkRequest request = new ExecuteShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendParam)) {
-            request.extendParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendParam, "ExtendParam", "json");
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceParam)) {
             request.serviceParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceParam, "ServiceParam", "json");
         }
 
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AppName", request.appName);
-        query.put("Channel", request.channel);
-        query.put("ExtendParam", request.extendParamShrink);
-        query.put("OrderId", request.orderId);
-        query.put("RequestId", request.requestId);
-        query.put("ServiceParam", request.serviceParamShrink);
-        query.put("UserId", request.userId);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendParam)) {
+            request.extendParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendParam, "ExtendParam", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "Execute"),
-            new TeaPair("version", "2021-09-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteResponse());
+        return TeaModel.toModel(this.doRPCRequest("Execute", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new ExecuteResponse());
     }
 
     public ExecuteResponse execute(ExecuteRequest request) throws Exception {
@@ -79,42 +59,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         WeathermonitorProvinceHourShrinkRequest request = new WeathermonitorProvinceHourShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendParam)) {
-            request.extendParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendParam, "ExtendParam", "json");
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceParam)) {
             request.serviceParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceParam, "ServiceParam", "json");
         }
 
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("AppName", request.appName);
-        query.put("Channel", request.channel);
-        query.put("ExtendParam", request.extendParamShrink);
-        query.put("OrderId", request.orderId);
-        query.put("RequestId", request.requestId);
-        query.put("ServiceParam", request.serviceParamShrink);
-        query.put("UserId", request.userId);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendParam)) {
+            request.extendParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendParam, "ExtendParam", "json");
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "WeathermonitorProvinceHour"),
-            new TeaPair("version", "2021-09-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new WeathermonitorProvinceHourResponse());
+        return TeaModel.toModel(this.doRPCRequest("WeathermonitorProvinceHour", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new WeathermonitorProvinceHourResponse());
     }
 
     public WeathermonitorProvinceHourResponse weathermonitorProvinceHour(WeathermonitorProvinceHourRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.weathermonitorProvinceHourWithOptions(request, runtime);
+    }
+
+    public WeathermonitorResponse weathermonitorWithOptions(WeathermonitorRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("Weathermonitor", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new WeathermonitorResponse());
+    }
+
+    public WeathermonitorResponse weathermonitor(WeathermonitorRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.weathermonitorWithOptions(request, runtime);
+    }
+
+    public WeatherforecastTimeResponse weatherforecastTimeWithOptions(WeatherforecastTimeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("WeatherforecastTime", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new WeatherforecastTimeResponse());
+    }
+
+    public WeatherforecastTimeResponse weatherforecastTime(WeatherforecastTimeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.weatherforecastTimeWithOptions(request, runtime);
+    }
+
+    public StationDayResponse stationDayWithOptions(StationDayRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StationDay", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new StationDayResponse());
+    }
+
+    public StationDayResponse stationDay(StationDayRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.stationDayWithOptions(request, runtime);
+    }
+
+    public WeatherforecastResponse weatherforecastWithOptions(WeatherforecastRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("Weatherforecast", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new WeatherforecastResponse());
+    }
+
+    public WeatherforecastResponse weatherforecast(WeatherforecastRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.weatherforecastWithOptions(request, runtime);
+    }
+
+    public HistoricalResponse historicalWithOptions(HistoricalRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("Historical", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new HistoricalResponse());
+    }
+
+    public HistoricalResponse historical(HistoricalRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.historicalWithOptions(request, runtime);
     }
 }
