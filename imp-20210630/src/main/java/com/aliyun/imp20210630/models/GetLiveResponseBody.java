@@ -88,6 +88,38 @@ public class GetLiveResponseBody extends TeaModel {
 
     }
 
+    public static class GetLiveResponseBodyResultArtcInfo extends TeaModel {
+        // 源码地址
+        @NameInMap("ArtcUrl")
+        public String artcUrl;
+
+        // 原画转码地址
+        @NameInMap("ArtcH5Url")
+        public String artcH5Url;
+
+        public static GetLiveResponseBodyResultArtcInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetLiveResponseBodyResultArtcInfo self = new GetLiveResponseBodyResultArtcInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLiveResponseBodyResultArtcInfo setArtcUrl(String artcUrl) {
+            this.artcUrl = artcUrl;
+            return this;
+        }
+        public String getArtcUrl() {
+            return this.artcUrl;
+        }
+
+        public GetLiveResponseBodyResultArtcInfo setArtcH5Url(String artcH5Url) {
+            this.artcH5Url = artcH5Url;
+            return this;
+        }
+        public String getArtcH5Url() {
+            return this.artcH5Url;
+        }
+
+    }
+
     public static class GetLiveResponseBodyResult extends TeaModel {
         // 主播ID
         @NameInMap("AnchorId")
@@ -160,6 +192,14 @@ public class GetLiveResponseBody extends TeaModel {
         // 用户自定义数据存储
         @NameInMap("UserDefineField")
         public String userDefineField;
+
+        // hls播放地址
+        @NameInMap("HlsUrl")
+        public String hlsUrl;
+
+        // rts播流信息
+        @NameInMap("ArtcInfo")
+        public GetLiveResponseBodyResultArtcInfo artcInfo;
 
         public static GetLiveResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetLiveResponseBodyResult self = new GetLiveResponseBodyResult();
@@ -308,6 +348,22 @@ public class GetLiveResponseBody extends TeaModel {
         }
         public String getUserDefineField() {
             return this.userDefineField;
+        }
+
+        public GetLiveResponseBodyResult setHlsUrl(String hlsUrl) {
+            this.hlsUrl = hlsUrl;
+            return this;
+        }
+        public String getHlsUrl() {
+            return this.hlsUrl;
+        }
+
+        public GetLiveResponseBodyResult setArtcInfo(GetLiveResponseBodyResultArtcInfo artcInfo) {
+            this.artcInfo = artcInfo;
+            return this;
+        }
+        public GetLiveResponseBodyResultArtcInfo getArtcInfo() {
+            return this.artcInfo;
         }
 
     }
