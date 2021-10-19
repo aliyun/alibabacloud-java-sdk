@@ -15,10 +15,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String nextToken;
 
     @NameInMap("Instances")
-    public ListInstancesResponseBodyInstances instances;
-
-    @NameInMap("CreateTime")
-    public String createTime;
+    public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     public static ListInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesResponseBody self = new ListInstancesResponseBody();
@@ -49,20 +46,12 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListInstancesResponseBody setInstances(ListInstancesResponseBodyInstances instances) {
+    public ListInstancesResponseBody setInstances(java.util.List<ListInstancesResponseBodyInstances> instances) {
         this.instances = instances;
         return this;
     }
-    public ListInstancesResponseBodyInstances getInstances() {
+    public java.util.List<ListInstancesResponseBodyInstances> getInstances() {
         return this.instances;
-    }
-
-    public ListInstancesResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
@@ -103,6 +92,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
         @NameInMap("InstanceStatus")
         public String instanceStatus;
+
+        @NameInMap("CreateTime")
+        public String createTime;
 
         public static ListInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstances self = new ListInstancesResponseBodyInstances();
@@ -203,6 +195,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getInstanceStatus() {
             return this.instanceStatus;
+        }
+
+        public ListInstancesResponseBodyInstances setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
     }

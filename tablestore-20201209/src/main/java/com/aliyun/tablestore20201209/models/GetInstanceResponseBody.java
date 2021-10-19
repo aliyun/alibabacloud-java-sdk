@@ -11,10 +11,6 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    // 资源组id
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -76,14 +72,6 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
-    }
-
-    public GetInstanceResponseBody setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public GetInstanceResponseBody setRegionId(String regionId) {
