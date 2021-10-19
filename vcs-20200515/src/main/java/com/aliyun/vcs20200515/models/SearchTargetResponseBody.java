@@ -18,7 +18,7 @@ public class SearchTargetResponseBody extends TeaModel {
     public String message;
 
     @NameInMap("Data")
-    public java.util.List<SearchTargetResponseBodyData> data;
+    public SearchTargetResponseBodyData data;
 
     public static SearchTargetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchTargetResponseBody self = new SearchTargetResponseBody();
@@ -57,11 +57,11 @@ public class SearchTargetResponseBody extends TeaModel {
         return this.message;
     }
 
-    public SearchTargetResponseBody setData(java.util.List<SearchTargetResponseBodyData> data) {
+    public SearchTargetResponseBody setData(SearchTargetResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<SearchTargetResponseBodyData> getData() {
+    public SearchTargetResponseBodyData getData() {
         return this.data;
     }
 
