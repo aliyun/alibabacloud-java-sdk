@@ -4,12 +4,6 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMembersRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("CurrentPage")
     public String currentPage;
 
@@ -28,22 +22,6 @@ public class DescribeInstanceMembersRequest extends TeaModel {
     public static DescribeInstanceMembersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMembersRequest self = new DescribeInstanceMembersRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceMembersRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeInstanceMembersRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DescribeInstanceMembersRequest setCurrentPage(String currentPage) {

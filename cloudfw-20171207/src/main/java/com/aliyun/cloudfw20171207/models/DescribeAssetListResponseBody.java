@@ -43,6 +43,9 @@ public class DescribeAssetListResponseBody extends TeaModel {
     }
 
     public static class DescribeAssetListResponseBodyAssets extends TeaModel {
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
         @NameInMap("BindInstanceName")
         public String bindInstanceName;
 
@@ -100,6 +103,14 @@ public class DescribeAssetListResponseBody extends TeaModel {
         public static DescribeAssetListResponseBodyAssets build(java.util.Map<String, ?> map) throws Exception {
             DescribeAssetListResponseBodyAssets self = new DescribeAssetListResponseBodyAssets();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAssetListResponseBodyAssets setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public DescribeAssetListResponseBodyAssets setBindInstanceName(String bindInstanceName) {
