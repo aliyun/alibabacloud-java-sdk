@@ -1,3 +1,6 @@
+2021-10-19 Version: 1.0.4
+- Unirest java v5 for user.
+
 2021-10-13 Version: 1.0.3
 - Unirest java v3 for user.
 - Unirest python v1 for user.

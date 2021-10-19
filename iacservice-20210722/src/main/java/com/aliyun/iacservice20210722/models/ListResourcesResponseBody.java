@@ -4,25 +4,41 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesResponseBody extends TeaModel {
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
+
+    @NameInMap("totalCount")
+    public Integer totalCount;
+
     @NameInMap("pageNum")
     public Integer pageNum;
 
     @NameInMap("pageSize")
     public Integer pageSize;
 
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
     @NameInMap("resources")
     public java.util.List<ListResourcesResponseBodyResources> resources;
-
-    @NameInMap("totalCount")
-    public Integer totalCount;
 
     public static ListResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesResponseBody self = new ListResourcesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListResourcesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListResourcesResponseBody setPageNum(Integer pageNum) {
@@ -41,28 +57,12 @@ public class ListResourcesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public ListResourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListResourcesResponseBody setResources(java.util.List<ListResourcesResponseBodyResources> resources) {
         this.resources = resources;
         return this;
     }
     public java.util.List<ListResourcesResponseBodyResources> getResources() {
         return this.resources;
-    }
-
-    public ListResourcesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public static class ListResourcesResponseBodyResources extends TeaModel {

@@ -4,35 +4,35 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
-    @NameInMap("maxResults")
-    public Long maxResults;
+    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+    @NameInMap("totalCount")
+    public Long totalCount;
 
     // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("nextToken")
     public String nextToken;
 
-    @NameInMap("products")
-    public java.util.List<ListProductsResponseBodyProducts> products;
-
     // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
-    @NameInMap("totalCount")
-    public Long totalCount;
+    @NameInMap("maxResults")
+    public Long maxResults;
+
+    @NameInMap("products")
+    public java.util.List<ListProductsResponseBodyProducts> products;
 
     public static ListProductsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListProductsResponseBody self = new ListProductsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListProductsResponseBody setMaxResults(Long maxResults) {
-        this.maxResults = maxResults;
+    public ListProductsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getMaxResults() {
-        return this.maxResults;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public ListProductsResponseBody setNextToken(String nextToken) {
@@ -43,14 +43,6 @@ public class ListProductsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListProductsResponseBody setProducts(java.util.List<ListProductsResponseBodyProducts> products) {
-        this.products = products;
-        return this;
-    }
-    public java.util.List<ListProductsResponseBodyProducts> getProducts() {
-        return this.products;
-    }
-
     public ListProductsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -59,12 +51,20 @@ public class ListProductsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListProductsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public ListProductsResponseBody setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListProductsResponseBody setProducts(java.util.List<ListProductsResponseBodyProducts> products) {
+        this.products = products;
+        return this;
+    }
+    public java.util.List<ListProductsResponseBodyProducts> getProducts() {
+        return this.products;
     }
 
     public static class ListProductsResponseBodyProductsProductName extends TeaModel {

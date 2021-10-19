@@ -4,8 +4,9 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypesResponseBody extends TeaModel {
-    @NameInMap("maxResults")
-    public Long maxResults;
+    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+    @NameInMap("totalCount")
+    public Long totalCount;
 
     // 表示当前调用返回读取到的位置，空代表数据已经读取完毕
     @NameInMap("nextToken")
@@ -15,24 +16,23 @@ public class ListResourceTypesResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("maxResults")
+    public Long maxResults;
+
     @NameInMap("resourceTypes")
     public java.util.List<ListResourceTypesResponseBodyResourceTypes> resourceTypes;
-
-    // TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
-    @NameInMap("totalCount")
-    public Long totalCount;
 
     public static ListResourceTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListResourceTypesResponseBody self = new ListResourceTypesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListResourceTypesResponseBody setMaxResults(Long maxResults) {
-        this.maxResults = maxResults;
+    public ListResourceTypesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getMaxResults() {
-        return this.maxResults;
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public ListResourceTypesResponseBody setNextToken(String nextToken) {
@@ -51,20 +51,20 @@ public class ListResourceTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListResourceTypesResponseBody setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
     public ListResourceTypesResponseBody setResourceTypes(java.util.List<ListResourceTypesResponseBodyResourceTypes> resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     public java.util.List<ListResourceTypesResponseBodyResourceTypes> getResourceTypes() {
         return this.resourceTypes;
-    }
-
-    public ListResourceTypesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public static class ListResourceTypesResponseBodyResourceTypesInfo extends TeaModel {

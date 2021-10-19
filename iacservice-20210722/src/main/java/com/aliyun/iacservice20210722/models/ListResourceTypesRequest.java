@@ -4,26 +4,26 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypesRequest extends TeaModel {
-    @NameInMap("maxResults")
-    public Long maxResults;
+    @NameInMap("resourceTypeCodes")
+    public java.util.List<String> resourceTypeCodes;
 
     @NameInMap("nextToken")
     public String nextToken;
 
-    @NameInMap("resourceTypeCodes")
-    public java.util.List<String> resourceTypeCodes;
+    @NameInMap("maxResults")
+    public Long maxResults;
 
     public static ListResourceTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceTypesRequest self = new ListResourceTypesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListResourceTypesRequest setMaxResults(Long maxResults) {
-        this.maxResults = maxResults;
+    public ListResourceTypesRequest setResourceTypeCodes(java.util.List<String> resourceTypeCodes) {
+        this.resourceTypeCodes = resourceTypeCodes;
         return this;
     }
-    public Long getMaxResults() {
-        return this.maxResults;
+    public java.util.List<String> getResourceTypeCodes() {
+        return this.resourceTypeCodes;
     }
 
     public ListResourceTypesRequest setNextToken(String nextToken) {
@@ -34,12 +34,12 @@ public class ListResourceTypesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListResourceTypesRequest setResourceTypeCodes(java.util.List<String> resourceTypeCodes) {
-        this.resourceTypeCodes = resourceTypeCodes;
+    public ListResourceTypesRequest setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public java.util.List<String> getResourceTypeCodes() {
-        return this.resourceTypeCodes;
+    public Long getMaxResults() {
+        return this.maxResults;
     }
 
 }
