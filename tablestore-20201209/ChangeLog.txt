@@ -1,3 +1,6 @@
+2021-10-19 Version: 1.0.1
+- Tablestore init.
+
 2021-10-18 Version: 1.0.0
 - Tablestore init.
 
