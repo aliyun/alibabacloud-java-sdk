@@ -4,24 +4,16 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourcesResponseBody extends TeaModel {
-    @NameInMap("dataSources")
-    public java.util.List<ListDataSourcesResponseBodyDataSources> dataSources;
-
     // Id of the request
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("dataSources")
+    public java.util.List<ListDataSourcesResponseBodyDataSources> dataSources;
+
     public static ListDataSourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDataSourcesResponseBody self = new ListDataSourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDataSourcesResponseBody setDataSources(java.util.List<ListDataSourcesResponseBodyDataSources> dataSources) {
-        this.dataSources = dataSources;
-        return this;
-    }
-    public java.util.List<ListDataSourcesResponseBodyDataSources> getDataSources() {
-        return this.dataSources;
     }
 
     public ListDataSourcesResponseBody setRequestId(String requestId) {
@@ -30,6 +22,14 @@ public class ListDataSourcesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListDataSourcesResponseBody setDataSources(java.util.List<ListDataSourcesResponseBodyDataSources> dataSources) {
+        this.dataSources = dataSources;
+        return this;
+    }
+    public java.util.List<ListDataSourcesResponseBodyDataSources> getDataSources() {
+        return this.dataSources;
     }
 
     public static class ListDataSourcesResponseBodyDataSources extends TeaModel {

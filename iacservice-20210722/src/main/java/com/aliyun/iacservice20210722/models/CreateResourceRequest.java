@@ -4,23 +4,15 @@ package com.aliyun.iacservice20210722.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceRequest extends TeaModel {
-    @NameInMap("body")
-    public String body;
-
     @NameInMap("isAsync")
     public Boolean isAsync;
+
+    @NameInMap("body")
+    public String body;
 
     public static CreateResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceRequest self = new CreateResourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateResourceRequest setBody(String body) {
-        this.body = body;
-        return this;
-    }
-    public String getBody() {
-        return this.body;
     }
 
     public CreateResourceRequest setIsAsync(Boolean isAsync) {
@@ -29,6 +21,14 @@ public class CreateResourceRequest extends TeaModel {
     }
     public Boolean getIsAsync() {
         return this.isAsync;
+    }
+
+    public CreateResourceRequest setBody(String body) {
+        this.body = body;
+        return this;
+    }
+    public String getBody() {
+        return this.body;
     }
 
 }

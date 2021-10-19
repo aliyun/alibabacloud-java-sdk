@@ -33,8 +33,8 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTask extends TeaModel {
-        @NameInMap("failedReason")
-        public String failedReason;
+        @NameInMap("taskId")
+        public String taskId;
 
         @NameInMap("resourceId")
         public String resourceId;
@@ -42,20 +42,20 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
-        @NameInMap("taskId")
-        public String taskId;
+        @NameInMap("failedReason")
+        public String failedReason;
 
         public static GetTaskResponseBodyTask build(java.util.Map<String, ?> map) throws Exception {
             GetTaskResponseBodyTask self = new GetTaskResponseBodyTask();
             return TeaModel.build(map, self);
         }
 
-        public GetTaskResponseBodyTask setFailedReason(String failedReason) {
-            this.failedReason = failedReason;
+        public GetTaskResponseBodyTask setTaskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
-        public String getFailedReason() {
-            return this.failedReason;
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public GetTaskResponseBodyTask setResourceId(String resourceId) {
@@ -74,12 +74,12 @@ public class GetTaskResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetTaskResponseBodyTask setTaskId(String taskId) {
-            this.taskId = taskId;
+        public GetTaskResponseBodyTask setFailedReason(String failedReason) {
+            this.failedReason = failedReason;
             return this;
         }
-        public String getTaskId() {
-            return this.taskId;
+        public String getFailedReason() {
+            return this.failedReason;
         }
 
     }
