@@ -68,26 +68,44 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         @NameInMap("Direction")
         public String direction;
 
-        @NameInMap("DestinationGroupType")
-        public String destinationGroupType;
-
-        @NameInMap("HitLastTime")
-        public Long hitLastTime;
-
-        @NameInMap("Destination")
-        public String destination;
-
         @NameInMap("Order")
         public Integer order;
 
-        @NameInMap("DestPortGroup")
-        public String destPortGroup;
+        @NameInMap("SourceType")
+        public String sourceType;
 
         @NameInMap("ApplicationName")
         public String applicationName;
 
-        @NameInMap("SourceType")
-        public String sourceType;
+        @NameInMap("HitTimes")
+        public Long hitTimes;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("SourceGroupType")
+        public String sourceGroupType;
+
+        @NameInMap("DnsResultTime")
+        public Long dnsResultTime;
+
+        @NameInMap("DnsResult")
+        public String dnsResult;
+
+        @NameInMap("Proto")
+        public String proto;
+
+        @NameInMap("DestinationGroupType")
+        public String destinationGroupType;
+
+        @NameInMap("Destination")
+        public String destination;
+
+        @NameInMap("HitLastTime")
+        public Long hitLastTime;
+
+        @NameInMap("DestPortGroup")
+        public String destPortGroup;
 
         @NameInMap("AclUuid")
         public String aclUuid;
@@ -101,23 +119,11 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         @NameInMap("DestinationType")
         public String destinationType;
 
-        @NameInMap("HitTimes")
-        public Long hitTimes;
-
         @NameInMap("DestPort")
         public String destPort;
 
         @NameInMap("IpVersion")
         public Integer ipVersion;
-
-        @NameInMap("SourceGroupType")
-        public String sourceGroupType;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("DnsResultTime")
-        public Long dnsResultTime;
 
         @NameInMap("AclAction")
         public String aclAction;
@@ -125,14 +131,8 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         @NameInMap("Release")
         public String release;
 
-        @NameInMap("DnsResult")
-        public String dnsResult;
-
         @NameInMap("ApplicationId")
         public String applicationId;
-
-        @NameInMap("Proto")
-        public String proto;
 
         @NameInMap("DestinationGroupCidrs")
         public java.util.List<String> destinationGroupCidrs;
@@ -156,30 +156,6 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             return this.direction;
         }
 
-        public DescribeControlPolicyResponseBodyPolicys setDestinationGroupType(String destinationGroupType) {
-            this.destinationGroupType = destinationGroupType;
-            return this;
-        }
-        public String getDestinationGroupType() {
-            return this.destinationGroupType;
-        }
-
-        public DescribeControlPolicyResponseBodyPolicys setHitLastTime(Long hitLastTime) {
-            this.hitLastTime = hitLastTime;
-            return this;
-        }
-        public Long getHitLastTime() {
-            return this.hitLastTime;
-        }
-
-        public DescribeControlPolicyResponseBodyPolicys setDestination(String destination) {
-            this.destination = destination;
-            return this;
-        }
-        public String getDestination() {
-            return this.destination;
-        }
-
         public DescribeControlPolicyResponseBodyPolicys setOrder(Integer order) {
             this.order = order;
             return this;
@@ -188,12 +164,12 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             return this.order;
         }
 
-        public DescribeControlPolicyResponseBodyPolicys setDestPortGroup(String destPortGroup) {
-            this.destPortGroup = destPortGroup;
+        public DescribeControlPolicyResponseBodyPolicys setSourceType(String sourceType) {
+            this.sourceType = sourceType;
             return this;
         }
-        public String getDestPortGroup() {
-            return this.destPortGroup;
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         public DescribeControlPolicyResponseBodyPolicys setApplicationName(String applicationName) {
@@ -204,12 +180,84 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             return this.applicationName;
         }
 
-        public DescribeControlPolicyResponseBodyPolicys setSourceType(String sourceType) {
-            this.sourceType = sourceType;
+        public DescribeControlPolicyResponseBodyPolicys setHitTimes(Long hitTimes) {
+            this.hitTimes = hitTimes;
             return this;
         }
-        public String getSourceType() {
-            return this.sourceType;
+        public Long getHitTimes() {
+            return this.hitTimes;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setSourceGroupType(String sourceGroupType) {
+            this.sourceGroupType = sourceGroupType;
+            return this;
+        }
+        public String getSourceGroupType() {
+            return this.sourceGroupType;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setDnsResultTime(Long dnsResultTime) {
+            this.dnsResultTime = dnsResultTime;
+            return this;
+        }
+        public Long getDnsResultTime() {
+            return this.dnsResultTime;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setDnsResult(String dnsResult) {
+            this.dnsResult = dnsResult;
+            return this;
+        }
+        public String getDnsResult() {
+            return this.dnsResult;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setProto(String proto) {
+            this.proto = proto;
+            return this;
+        }
+        public String getProto() {
+            return this.proto;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setDestinationGroupType(String destinationGroupType) {
+            this.destinationGroupType = destinationGroupType;
+            return this;
+        }
+        public String getDestinationGroupType() {
+            return this.destinationGroupType;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setDestination(String destination) {
+            this.destination = destination;
+            return this;
+        }
+        public String getDestination() {
+            return this.destination;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setHitLastTime(Long hitLastTime) {
+            this.hitLastTime = hitLastTime;
+            return this;
+        }
+        public Long getHitLastTime() {
+            return this.hitLastTime;
+        }
+
+        public DescribeControlPolicyResponseBodyPolicys setDestPortGroup(String destPortGroup) {
+            this.destPortGroup = destPortGroup;
+            return this;
+        }
+        public String getDestPortGroup() {
+            return this.destPortGroup;
         }
 
         public DescribeControlPolicyResponseBodyPolicys setAclUuid(String aclUuid) {
@@ -244,14 +292,6 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             return this.destinationType;
         }
 
-        public DescribeControlPolicyResponseBodyPolicys setHitTimes(Long hitTimes) {
-            this.hitTimes = hitTimes;
-            return this;
-        }
-        public Long getHitTimes() {
-            return this.hitTimes;
-        }
-
         public DescribeControlPolicyResponseBodyPolicys setDestPort(String destPort) {
             this.destPort = destPort;
             return this;
@@ -266,30 +306,6 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         }
         public Integer getIpVersion() {
             return this.ipVersion;
-        }
-
-        public DescribeControlPolicyResponseBodyPolicys setSourceGroupType(String sourceGroupType) {
-            this.sourceGroupType = sourceGroupType;
-            return this;
-        }
-        public String getSourceGroupType() {
-            return this.sourceGroupType;
-        }
-
-        public DescribeControlPolicyResponseBodyPolicys setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeControlPolicyResponseBodyPolicys setDnsResultTime(Long dnsResultTime) {
-            this.dnsResultTime = dnsResultTime;
-            return this;
-        }
-        public Long getDnsResultTime() {
-            return this.dnsResultTime;
         }
 
         public DescribeControlPolicyResponseBodyPolicys setAclAction(String aclAction) {
@@ -308,28 +324,12 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             return this.release;
         }
 
-        public DescribeControlPolicyResponseBodyPolicys setDnsResult(String dnsResult) {
-            this.dnsResult = dnsResult;
-            return this;
-        }
-        public String getDnsResult() {
-            return this.dnsResult;
-        }
-
         public DescribeControlPolicyResponseBodyPolicys setApplicationId(String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
         public String getApplicationId() {
             return this.applicationId;
-        }
-
-        public DescribeControlPolicyResponseBodyPolicys setProto(String proto) {
-            this.proto = proto;
-            return this;
-        }
-        public String getProto() {
-            return this.proto;
         }
 
         public DescribeControlPolicyResponseBodyPolicys setDestinationGroupCidrs(java.util.List<String> destinationGroupCidrs) {

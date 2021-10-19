@@ -40,6 +40,9 @@ public class DescribeAssetListRequest extends TeaModel {
     @NameInMap("MemberUid")
     public Long memberUid;
 
+    @NameInMap("UserType")
+    public String userType;
+
     public static DescribeAssetListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAssetListRequest self = new DescribeAssetListRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class DescribeAssetListRequest extends TeaModel {
     }
     public Long getMemberUid() {
         return this.memberUid;
+    }
+
+    public DescribeAssetListRequest setUserType(String userType) {
+        this.userType = userType;
+        return this;
+    }
+    public String getUserType() {
+        return this.userType;
     }
 
 }

@@ -204,19 +204,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceMembersWithOptions(request, runtime);
     }
 
-    public DescribeInstanceRdAccountsResponse describeInstanceRdAccountsWithOptions(DescribeInstanceRdAccountsRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeInstanceRdAccounts", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeInstanceRdAccountsResponse());
-    }
-
-    public DescribeInstanceRdAccountsResponse describeInstanceRdAccounts(DescribeInstanceRdAccountsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeInstanceRdAccountsWithOptions(request, runtime);
-    }
-
     public DescribePolicyAdvancedConfigResponse describePolicyAdvancedConfigWithOptions(DescribePolicyAdvancedConfigRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -241,6 +228,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePolicyPriorUsedResponse describePolicyPriorUsed(DescribePolicyPriorUsedRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describePolicyPriorUsedWithOptions(request, runtime);
+    }
+
+    public DescribeRiskEventGroupResponse describeRiskEventGroupWithOptions(DescribeRiskEventGroupRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeRiskEventGroup", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeRiskEventGroupResponse());
+    }
+
+    public DescribeRiskEventGroupResponse describeRiskEventGroup(DescribeRiskEventGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeRiskEventGroupWithOptions(request, runtime);
     }
 
     public DescribeVpcFirewallAclGroupListResponse describeVpcFirewallAclGroupListWithOptions(DescribeVpcFirewallAclGroupListRequest request, RuntimeOptions runtime) throws Exception {
@@ -319,19 +319,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyControlPolicyPositionResponse modifyControlPolicyPosition(ModifyControlPolicyPositionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyControlPolicyPositionWithOptions(request, runtime);
-    }
-
-    public ModifyControlPolicyPriorityResponse modifyControlPolicyPriorityWithOptions(ModifyControlPolicyPriorityRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ModifyControlPolicyPriority", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyControlPolicyPriorityResponse());
-    }
-
-    public ModifyControlPolicyPriorityResponse modifyControlPolicyPriority(ModifyControlPolicyPriorityRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.modifyControlPolicyPriorityWithOptions(request, runtime);
     }
 
     public ModifyInstanceMemberAttributesResponse modifyInstanceMemberAttributesWithOptions(ModifyInstanceMemberAttributesRequest request, RuntimeOptions runtime) throws Exception {
