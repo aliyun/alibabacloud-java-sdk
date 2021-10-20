@@ -32,26 +32,18 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegionZonesZone extends TeaModel {
-        @NameInMap("LocalName")
-        public String localName;
-
         @NameInMap("ZoneId")
         public String zoneId;
 
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
+        @NameInMap("LocalName")
+        public String localName;
+
         public static DescribeRegionsResponseBodyRegionsRegionZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegionZonesZone self = new DescribeRegionsResponseBodyRegionsRegionZonesZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegionZonesZone setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
         }
 
         public DescribeRegionsResponseBodyRegionsRegionZonesZone setZoneId(String zoneId) {
@@ -68,6 +60,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public Boolean getVpcEnabled() {
             return this.vpcEnabled;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegionZonesZone setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
         }
 
     }
@@ -92,37 +92,21 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
-        @NameInMap("Zones")
-        public DescribeRegionsResponseBodyRegionsRegionZones zones;
+        @NameInMap("RegionEndpoint")
+        public String regionEndpoint;
 
         @NameInMap("LocalName")
         public String localName;
 
-        @NameInMap("RegionEndpoint")
-        public String regionEndpoint;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Zones")
+        public DescribeRegionsResponseBodyRegionsRegionZones zones;
 
         public static DescribeRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegion self = new DescribeRegionsResponseBodyRegionsRegion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegion setZones(DescribeRegionsResponseBodyRegionsRegionZones zones) {
-            this.zones = zones;
-            return this;
-        }
-        public DescribeRegionsResponseBodyRegionsRegionZones getZones() {
-            return this.zones;
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegion setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setRegionEndpoint(String regionEndpoint) {
@@ -133,12 +117,28 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.regionEndpoint;
         }
 
+        public DescribeRegionsResponseBodyRegionsRegion setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
         public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setZones(DescribeRegionsResponseBodyRegionsRegionZones zones) {
+            this.zones = zones;
+            return this;
+        }
+        public DescribeRegionsResponseBodyRegionsRegionZones getZones() {
+            return this.zones;
         }
 
     }

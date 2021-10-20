@@ -4,9 +4,6 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -22,14 +19,6 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     public static DescribeConnectionCountRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeConnectionCountRecordsResponseBody self = new DescribeConnectionCountRecordsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeConnectionCountRecordsResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeConnectionCountRecordsResponseBody setRequestId(String requestId) {
