@@ -201,6 +201,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Engine")
         public String engine;
 
+        @NameInMap("KmsId")
+        public String kmsId;
+
         public static DescribeDBClusterAttributeResponseBodyItemsDBCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterAttributeResponseBodyItemsDBCluster self = new DescribeDBClusterAttributeResponseBodyItemsDBCluster();
             return TeaModel.build(map, self);
@@ -524,6 +527,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getEngine() {
             return this.engine;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setKmsId(String kmsId) {
+            this.kmsId = kmsId;
+            return this;
+        }
+        public String getKmsId() {
+            return this.kmsId;
         }
 
     }

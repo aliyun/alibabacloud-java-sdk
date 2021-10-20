@@ -37,9 +37,6 @@ public class DescribeLoadTasksRecordsRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
-    @NameInMap("Range")
-    public String range;
-
     @NameInMap("State")
     public String state;
 
@@ -134,14 +131,6 @@ public class DescribeLoadTasksRecordsRequest extends TeaModel {
     }
     public String getOrder() {
         return this.order;
-    }
-
-    public DescribeLoadTasksRecordsRequest setRange(String range) {
-        this.range = range;
-        return this;
-    }
-    public String getRange() {
-        return this.range;
     }
 
     public DescribeLoadTasksRecordsRequest setState(String state) {
