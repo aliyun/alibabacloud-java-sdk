@@ -35,6 +35,9 @@ public class AddFaceResponseBody extends TeaModel {
         @NameInMap("FaceId")
         public String faceId;
 
+        @NameInMap("QualitieScore")
+        public Float qualitieScore;
+
         public static AddFaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             AddFaceResponseBodyData self = new AddFaceResponseBodyData();
             return TeaModel.build(map, self);
@@ -46,6 +49,14 @@ public class AddFaceResponseBody extends TeaModel {
         }
         public String getFaceId() {
             return this.faceId;
+        }
+
+        public AddFaceResponseBodyData setQualitieScore(Float qualitieScore) {
+            this.qualitieScore = qualitieScore;
+            return this;
+        }
+        public Float getQualitieScore() {
+            return this.qualitieScore;
         }
 
     }

@@ -164,6 +164,9 @@ public class SearchFaceResponseBody extends TeaModel {
         @NameInMap("Location")
         public SearchFaceResponseBodyDataMatchListLocation location;
 
+        @NameInMap("QualitieScore")
+        public Float qualitieScore;
+
         public static SearchFaceResponseBodyDataMatchList build(java.util.Map<String, ?> map) throws Exception {
             SearchFaceResponseBodyDataMatchList self = new SearchFaceResponseBodyDataMatchList();
             return TeaModel.build(map, self);
@@ -183,6 +186,14 @@ public class SearchFaceResponseBody extends TeaModel {
         }
         public SearchFaceResponseBodyDataMatchListLocation getLocation() {
             return this.location;
+        }
+
+        public SearchFaceResponseBodyDataMatchList setQualitieScore(Float qualitieScore) {
+            this.qualitieScore = qualitieScore;
+            return this;
+        }
+        public Float getQualitieScore() {
+            return this.qualitieScore;
         }
 
     }
