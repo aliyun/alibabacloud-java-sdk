@@ -20,11 +20,11 @@ public class WeatherforecastTimeRequest extends TeaModel {
     @NameInMap("Lon")
     public String lon;
 
-    // 20210809090000
+    // yyyymmddhh0000
     @NameInMap("CurHour")
     public String curHour;
 
-    // 纬度，范围为（15°N~59.95°N
+    // 纬度，范围为（15°N~59.95°N）
     @NameInMap("Lat")
     public String lat;
 
