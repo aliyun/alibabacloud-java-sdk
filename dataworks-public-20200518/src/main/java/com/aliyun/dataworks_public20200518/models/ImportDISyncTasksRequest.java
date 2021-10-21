@@ -10,8 +10,8 @@ public class ImportDISyncTasksRequest extends TeaModel {
     @NameInMap("TaskType")
     public String taskType;
 
-    @NameInMap("TaskContent")
-    public String taskContent;
+    @NameInMap("body")
+    public String body;
 
     @NameInMap("TaskParam")
     public String taskParam;
@@ -37,12 +37,12 @@ public class ImportDISyncTasksRequest extends TeaModel {
         return this.taskType;
     }
 
-    public ImportDISyncTasksRequest setTaskContent(String taskContent) {
-        this.taskContent = taskContent;
+    public ImportDISyncTasksRequest setBody(String body) {
+        this.body = body;
         return this;
     }
-    public String getTaskContent() {
-        return this.taskContent;
+    public String getBody() {
+        return this.body;
     }
 
     public ImportDISyncTasksRequest setTaskParam(String taskParam) {

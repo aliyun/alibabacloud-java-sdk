@@ -4,14 +4,14 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ExportDISyncTasksResponseBody extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("success")
     public Boolean success;
 
-    @NameInMap("RequestId")
+    @NameInMap("requestId")
     public String requestId;
 
-    @NameInMap("TaskDetail")
-    public ExportDISyncTasksResponseBodyTaskDetail taskDetail;
+    @NameInMap("data")
+    public ExportDISyncTasksResponseBodyData data;
 
     public static ExportDISyncTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExportDISyncTasksResponseBody self = new ExportDISyncTasksResponseBody();
@@ -34,24 +34,24 @@ public class ExportDISyncTasksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ExportDISyncTasksResponseBody setTaskDetail(ExportDISyncTasksResponseBodyTaskDetail taskDetail) {
-        this.taskDetail = taskDetail;
+    public ExportDISyncTasksResponseBody setData(ExportDISyncTasksResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public ExportDISyncTasksResponseBodyTaskDetail getTaskDetail() {
-        return this.taskDetail;
+    public ExportDISyncTasksResponseBodyData getData() {
+        return this.data;
     }
 
-    public static class ExportDISyncTasksResponseBodyTaskDetail extends TeaModel {
-        @NameInMap("RealTimeSolution")
+    public static class ExportDISyncTasksResponseBodyData extends TeaModel {
+        @NameInMap("realTimeSolution")
         public String realTimeSolution;
 
-        public static ExportDISyncTasksResponseBodyTaskDetail build(java.util.Map<String, ?> map) throws Exception {
-            ExportDISyncTasksResponseBodyTaskDetail self = new ExportDISyncTasksResponseBodyTaskDetail();
+        public static ExportDISyncTasksResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ExportDISyncTasksResponseBodyData self = new ExportDISyncTasksResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ExportDISyncTasksResponseBodyTaskDetail setRealTimeSolution(String realTimeSolution) {
+        public ExportDISyncTasksResponseBodyData setRealTimeSolution(String realTimeSolution) {
             this.realTimeSolution = realTimeSolution;
             return this;
         }
