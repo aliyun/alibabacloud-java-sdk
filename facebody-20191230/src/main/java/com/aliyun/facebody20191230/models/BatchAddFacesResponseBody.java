@@ -39,6 +39,9 @@ public class BatchAddFacesResponseBody extends TeaModel {
         @NameInMap("FaceId")
         public String faceId;
 
+        @NameInMap("QualitieScore")
+        public Float qualitieScore;
+
         public static BatchAddFacesResponseBodyDataInsertedFaces build(java.util.Map<String, ?> map) throws Exception {
             BatchAddFacesResponseBodyDataInsertedFaces self = new BatchAddFacesResponseBodyDataInsertedFaces();
             return TeaModel.build(map, self);
@@ -58,6 +61,14 @@ public class BatchAddFacesResponseBody extends TeaModel {
         }
         public String getFaceId() {
             return this.faceId;
+        }
+
+        public BatchAddFacesResponseBodyDataInsertedFaces setQualitieScore(Float qualitieScore) {
+            this.qualitieScore = qualitieScore;
+            return this;
+        }
+        public Float getQualitieScore() {
+            return this.qualitieScore;
         }
 
     }
