@@ -89,6 +89,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.importMessageWithOptions(request, runtime);
     }
 
+    public UnbindInterconnectionUidResponse unbindInterconnectionUidWithOptions(UnbindInterconnectionUidRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UnbindInterconnectionUidShrinkRequest request = new UnbindInterconnectionUidShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.requestParams))) {
+            request.requestParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.requestParams), "RequestParams", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UnbindInterconnectionUid", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new UnbindInterconnectionUidResponse());
+    }
+
+    public UnbindInterconnectionUidResponse unbindInterconnectionUid(UnbindInterconnectionUidRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.unbindInterconnectionUidWithOptions(request, runtime);
+    }
+
     public SilenceAllGroupMembersResponse silenceAllGroupMembersWithOptions(SilenceAllGroupMembersRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SilenceAllGroupMembersShrinkRequest request = new SilenceAllGroupMembersShrinkRequest();
@@ -706,6 +725,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMediaUploadUrlWithOptions(request, runtime);
     }
 
+    public BindInterconnectionUidResponse bindInterconnectionUidWithOptions(BindInterconnectionUidRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BindInterconnectionUidShrinkRequest request = new BindInterconnectionUidShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.requestParams))) {
+            request.requestParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.requestParams), "RequestParams", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BindInterconnectionUid", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new BindInterconnectionUidResponse());
+    }
+
+    public BindInterconnectionUidResponse bindInterconnectionUid(BindInterconnectionUidRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.bindInterconnectionUidWithOptions(request, runtime);
+    }
+
     public GetMediaUrlResponse getMediaUrlWithOptions(GetMediaUrlRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetMediaUrlShrinkRequest request = new GetMediaUrlShrinkRequest();
@@ -761,6 +799,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCallbackConfigResponse updateCallbackConfig(UpdateCallbackConfigRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateCallbackConfigWithOptions(request, runtime);
+    }
+
+    public BindInterconnectionCidResponse bindInterconnectionCidWithOptions(BindInterconnectionCidRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BindInterconnectionCidShrinkRequest request = new BindInterconnectionCidShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.requestParams))) {
+            request.requestParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.requestParams), "RequestParams", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BindInterconnectionCid", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new BindInterconnectionCidResponse());
+    }
+
+    public BindInterconnectionCidResponse bindInterconnectionCid(BindInterconnectionCidRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.bindInterconnectionCidWithOptions(request, runtime);
     }
 
     public InitTenantResponse initTenantWithOptions(InitTenantRequest request, RuntimeOptions runtime) throws Exception {
@@ -1019,6 +1076,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetLoginTokenResponse getLoginToken(GetLoginTokenRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getLoginTokenWithOptions(request, runtime);
+    }
+
+    public QueryInterconnectionCidMappingResponse queryInterconnectionCidMappingWithOptions(QueryInterconnectionCidMappingRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryInterconnectionCidMappingShrinkRequest request = new QueryInterconnectionCidMappingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.requestParams))) {
+            request.requestParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.requestParams), "RequestParams", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryInterconnectionCidMapping", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new QueryInterconnectionCidMappingResponse());
+    }
+
+    public QueryInterconnectionCidMappingResponse queryInterconnectionCidMapping(QueryInterconnectionCidMappingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryInterconnectionCidMappingWithOptions(request, runtime);
     }
 
     public DismissGroupResponse dismissGroupWithOptions(DismissGroupRequest tmpReq, RuntimeOptions runtime) throws Exception {
