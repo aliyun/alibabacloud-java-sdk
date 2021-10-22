@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aiccs20191015</artifactId>
-  <version>1.3.12</version>
+  <version>1.3.13</version>
   <packaging>jar</packaging>
   <name>aiccs20191015</name>
   <description>Alibaba Cloud aiccs (20191015) SDK for Java
