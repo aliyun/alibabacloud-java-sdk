@@ -72,6 +72,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startChatWorkWithOptions(request, runtime);
     }
 
+    public GetCallSoundRecordResponse getCallSoundRecordWithOptions(GetCallSoundRecordRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetCallSoundRecord", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetCallSoundRecordResponse());
+    }
+
+    public GetCallSoundRecordResponse getCallSoundRecord(GetCallSoundRecordRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getCallSoundRecordWithOptions(request, runtime);
+    }
+
     public DeleteAiOutboundTaskResponse deleteAiOutboundTaskWithOptions(DeleteAiOutboundTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1101,6 +1114,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAgentBasisStatusResponse getAgentBasisStatus(GetAgentBasisStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getAgentBasisStatusWithOptions(request, runtime);
+    }
+
+    public ListRobotNodeResponse listRobotNodeWithOptions(ListRobotNodeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListRobotNode", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new ListRobotNodeResponse());
+    }
+
+    public ListRobotNodeResponse listRobotNode(ListRobotNodeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listRobotNodeWithOptions(request, runtime);
+    }
+
+    public SmartOutboundResponse smartOutboundWithOptions(SmartOutboundRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SmartOutbound", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new SmartOutboundResponse());
+    }
+
+    public SmartOutboundResponse smartOutbound(SmartOutboundRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.smartOutboundWithOptions(request, runtime);
     }
 
     public GetQualityResultResponse getQualityResultWithOptions(GetQualityResultRequest request, RuntimeOptions runtime) throws Exception {
