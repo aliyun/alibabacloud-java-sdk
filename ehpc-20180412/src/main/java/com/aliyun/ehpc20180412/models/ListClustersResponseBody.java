@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class ListClustersResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Clusters")
-    public java.util.List<ListClustersResponseBodyClusters> clusters;
+    public ListClustersResponseBodyClusters clusters;
 
     public static ListClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListClustersResponseBody self = new ListClustersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListClustersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListClustersResponseBody setPageSize(Integer pageSize) {
@@ -56,38 +48,164 @@ public class ListClustersResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListClustersResponseBody setClusters(java.util.List<ListClustersResponseBodyClusters> clusters) {
+    public ListClustersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListClustersResponseBody setClusters(ListClustersResponseBodyClusters clusters) {
         this.clusters = clusters;
         return this;
     }
-    public java.util.List<ListClustersResponseBodyClusters> getClusters() {
+    public ListClustersResponseBodyClusters getClusters() {
         return this.clusters;
     }
 
-    public static class ListClustersResponseBodyClustersUsedResources extends TeaModel {
-        @NameInMap("Cpu")
-        public Integer cpu;
+    public static class ListClustersResponseBodyClustersClusterInfoSimpleManagers extends TeaModel {
+        @NameInMap("OperatingCount")
+        public Integer operatingCount;
 
+        @NameInMap("ExceptionCount")
+        public Integer exceptionCount;
+
+        @NameInMap("StoppedCount")
+        public Integer stoppedCount;
+
+        @NameInMap("Total")
+        public Integer total;
+
+        @NameInMap("NormalCount")
+        public Integer normalCount;
+
+        public static ListClustersResponseBodyClustersClusterInfoSimpleManagers build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersResponseBodyClustersClusterInfoSimpleManagers self = new ListClustersResponseBodyClustersClusterInfoSimpleManagers();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleManagers setOperatingCount(Integer operatingCount) {
+            this.operatingCount = operatingCount;
+            return this;
+        }
+        public Integer getOperatingCount() {
+            return this.operatingCount;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleManagers setExceptionCount(Integer exceptionCount) {
+            this.exceptionCount = exceptionCount;
+            return this;
+        }
+        public Integer getExceptionCount() {
+            return this.exceptionCount;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleManagers setStoppedCount(Integer stoppedCount) {
+            this.stoppedCount = stoppedCount;
+            return this;
+        }
+        public Integer getStoppedCount() {
+            return this.stoppedCount;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleManagers setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleManagers setNormalCount(Integer normalCount) {
+            this.normalCount = normalCount;
+            return this;
+        }
+        public Integer getNormalCount() {
+            return this.normalCount;
+        }
+
+    }
+
+    public static class ListClustersResponseBodyClustersClusterInfoSimpleComputes extends TeaModel {
+        @NameInMap("OperatingCount")
+        public Integer operatingCount;
+
+        @NameInMap("ExceptionCount")
+        public Integer exceptionCount;
+
+        @NameInMap("StoppedCount")
+        public Integer stoppedCount;
+
+        @NameInMap("Total")
+        public Integer total;
+
+        @NameInMap("NormalCount")
+        public Integer normalCount;
+
+        public static ListClustersResponseBodyClustersClusterInfoSimpleComputes build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersResponseBodyClustersClusterInfoSimpleComputes self = new ListClustersResponseBodyClustersClusterInfoSimpleComputes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleComputes setOperatingCount(Integer operatingCount) {
+            this.operatingCount = operatingCount;
+            return this;
+        }
+        public Integer getOperatingCount() {
+            return this.operatingCount;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleComputes setExceptionCount(Integer exceptionCount) {
+            this.exceptionCount = exceptionCount;
+            return this;
+        }
+        public Integer getExceptionCount() {
+            return this.exceptionCount;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleComputes setStoppedCount(Integer stoppedCount) {
+            this.stoppedCount = stoppedCount;
+            return this;
+        }
+        public Integer getStoppedCount() {
+            return this.stoppedCount;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleComputes setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleComputes setNormalCount(Integer normalCount) {
+            this.normalCount = normalCount;
+            return this;
+        }
+        public Integer getNormalCount() {
+            return this.normalCount;
+        }
+
+    }
+
+    public static class ListClustersResponseBodyClustersClusterInfoSimpleTotalResources extends TeaModel {
         @NameInMap("Gpu")
         public Integer gpu;
+
+        @NameInMap("Cpu")
+        public Integer cpu;
 
         @NameInMap("Memory")
         public Integer memory;
 
-        public static ListClustersResponseBodyClustersUsedResources build(java.util.Map<String, ?> map) throws Exception {
-            ListClustersResponseBodyClustersUsedResources self = new ListClustersResponseBodyClustersUsedResources();
+        public static ListClustersResponseBodyClustersClusterInfoSimpleTotalResources build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersResponseBodyClustersClusterInfoSimpleTotalResources self = new ListClustersResponseBodyClustersClusterInfoSimpleTotalResources();
             return TeaModel.build(map, self);
         }
 
-        public ListClustersResponseBodyClustersUsedResources setCpu(Integer cpu) {
-            this.cpu = cpu;
-            return this;
-        }
-        public Integer getCpu() {
-            return this.cpu;
-        }
-
-        public ListClustersResponseBodyClustersUsedResources setGpu(Integer gpu) {
+        public ListClustersResponseBodyClustersClusterInfoSimpleTotalResources setGpu(Integer gpu) {
             this.gpu = gpu;
             return this;
         }
@@ -95,7 +213,15 @@ public class ListClustersResponseBody extends TeaModel {
             return this.gpu;
         }
 
-        public ListClustersResponseBodyClustersUsedResources setMemory(Integer memory) {
+        public ListClustersResponseBodyClustersClusterInfoSimpleTotalResources setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleTotalResources setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
@@ -105,93 +231,22 @@ public class ListClustersResponseBody extends TeaModel {
 
     }
 
-    public static class ListClustersResponseBodyClustersManagers extends TeaModel {
-        @NameInMap("ExceptionCount")
-        public Integer exceptionCount;
-
-        @NameInMap("NormalCount")
-        public Integer normalCount;
-
-        @NameInMap("OperatingCount")
-        public Integer operatingCount;
-
-        @NameInMap("StoppedCount")
-        public Integer stoppedCount;
-
-        @NameInMap("Total")
-        public Integer total;
-
-        public static ListClustersResponseBodyClustersManagers build(java.util.Map<String, ?> map) throws Exception {
-            ListClustersResponseBodyClustersManagers self = new ListClustersResponseBodyClustersManagers();
-            return TeaModel.build(map, self);
-        }
-
-        public ListClustersResponseBodyClustersManagers setExceptionCount(Integer exceptionCount) {
-            this.exceptionCount = exceptionCount;
-            return this;
-        }
-        public Integer getExceptionCount() {
-            return this.exceptionCount;
-        }
-
-        public ListClustersResponseBodyClustersManagers setNormalCount(Integer normalCount) {
-            this.normalCount = normalCount;
-            return this;
-        }
-        public Integer getNormalCount() {
-            return this.normalCount;
-        }
-
-        public ListClustersResponseBodyClustersManagers setOperatingCount(Integer operatingCount) {
-            this.operatingCount = operatingCount;
-            return this;
-        }
-        public Integer getOperatingCount() {
-            return this.operatingCount;
-        }
-
-        public ListClustersResponseBodyClustersManagers setStoppedCount(Integer stoppedCount) {
-            this.stoppedCount = stoppedCount;
-            return this;
-        }
-        public Integer getStoppedCount() {
-            return this.stoppedCount;
-        }
-
-        public ListClustersResponseBodyClustersManagers setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-    }
-
-    public static class ListClustersResponseBodyClustersTotalResources extends TeaModel {
-        @NameInMap("Cpu")
-        public Integer cpu;
-
+    public static class ListClustersResponseBodyClustersClusterInfoSimpleUsedResources extends TeaModel {
         @NameInMap("Gpu")
         public Integer gpu;
+
+        @NameInMap("Cpu")
+        public Integer cpu;
 
         @NameInMap("Memory")
         public Integer memory;
 
-        public static ListClustersResponseBodyClustersTotalResources build(java.util.Map<String, ?> map) throws Exception {
-            ListClustersResponseBodyClustersTotalResources self = new ListClustersResponseBodyClustersTotalResources();
+        public static ListClustersResponseBodyClustersClusterInfoSimpleUsedResources build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersResponseBodyClustersClusterInfoSimpleUsedResources self = new ListClustersResponseBodyClustersClusterInfoSimpleUsedResources();
             return TeaModel.build(map, self);
         }
 
-        public ListClustersResponseBodyClustersTotalResources setCpu(Integer cpu) {
-            this.cpu = cpu;
-            return this;
-        }
-        public Integer getCpu() {
-            return this.cpu;
-        }
-
-        public ListClustersResponseBodyClustersTotalResources setGpu(Integer gpu) {
+        public ListClustersResponseBodyClustersClusterInfoSimpleUsedResources setGpu(Integer gpu) {
             this.gpu = gpu;
             return this;
         }
@@ -199,7 +254,15 @@ public class ListClustersResponseBody extends TeaModel {
             return this.gpu;
         }
 
-        public ListClustersResponseBodyClustersTotalResources setMemory(Integer memory) {
+        public ListClustersResponseBodyClustersClusterInfoSimpleUsedResources setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimpleUsedResources setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
@@ -209,70 +272,7 @@ public class ListClustersResponseBody extends TeaModel {
 
     }
 
-    public static class ListClustersResponseBodyClustersComputes extends TeaModel {
-        @NameInMap("ExceptionCount")
-        public Integer exceptionCount;
-
-        @NameInMap("NormalCount")
-        public Integer normalCount;
-
-        @NameInMap("OperatingCount")
-        public Integer operatingCount;
-
-        @NameInMap("StoppedCount")
-        public Integer stoppedCount;
-
-        @NameInMap("Total")
-        public Integer total;
-
-        public static ListClustersResponseBodyClustersComputes build(java.util.Map<String, ?> map) throws Exception {
-            ListClustersResponseBodyClustersComputes self = new ListClustersResponseBodyClustersComputes();
-            return TeaModel.build(map, self);
-        }
-
-        public ListClustersResponseBodyClustersComputes setExceptionCount(Integer exceptionCount) {
-            this.exceptionCount = exceptionCount;
-            return this;
-        }
-        public Integer getExceptionCount() {
-            return this.exceptionCount;
-        }
-
-        public ListClustersResponseBodyClustersComputes setNormalCount(Integer normalCount) {
-            this.normalCount = normalCount;
-            return this;
-        }
-        public Integer getNormalCount() {
-            return this.normalCount;
-        }
-
-        public ListClustersResponseBodyClustersComputes setOperatingCount(Integer operatingCount) {
-            this.operatingCount = operatingCount;
-            return this;
-        }
-        public Integer getOperatingCount() {
-            return this.operatingCount;
-        }
-
-        public ListClustersResponseBodyClustersComputes setStoppedCount(Integer stoppedCount) {
-            this.stoppedCount = stoppedCount;
-            return this;
-        }
-        public Integer getStoppedCount() {
-            return this.stoppedCount;
-        }
-
-        public ListClustersResponseBodyClustersComputes setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-    }
-
-    public static class ListClustersResponseBodyClusters extends TeaModel {
+    public static class ListClustersResponseBodyClustersClusterInfoSimple extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -282,8 +282,8 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("UsedResources")
-        public ListClustersResponseBodyClustersUsedResources usedResources;
+        @NameInMap("IsComputeEss")
+        public Boolean isComputeEss;
 
         @NameInMap("ComputeSpotStrategy")
         public String computeSpotStrategy;
@@ -315,11 +315,11 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("SchedulerType")
         public String schedulerType;
 
-        @NameInMap("NodeSuffix")
-        public String nodeSuffix;
-
         @NameInMap("DeployMode")
         public String deployMode;
+
+        @NameInMap("NodeSuffix")
+        public String nodeSuffix;
 
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
@@ -333,26 +333,17 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
-        @NameInMap("Managers")
-        public ListClustersResponseBodyClustersManagers managers;
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        @NameInMap("TotalResources")
-        public ListClustersResponseBodyClustersTotalResources totalResources;
-
         @NameInMap("ZoneId")
         public String zoneId;
-
-        @NameInMap("Computes")
-        public ListClustersResponseBodyClustersComputes computes;
 
         @NameInMap("LoginNodes")
         public String loginNodes;
@@ -366,12 +357,24 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("ClientVersion")
         public String clientVersion;
 
-        public static ListClustersResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
-            ListClustersResponseBodyClusters self = new ListClustersResponseBodyClusters();
+        @NameInMap("Managers")
+        public ListClustersResponseBodyClustersClusterInfoSimpleManagers managers;
+
+        @NameInMap("Computes")
+        public ListClustersResponseBodyClustersClusterInfoSimpleComputes computes;
+
+        @NameInMap("TotalResources")
+        public ListClustersResponseBodyClustersClusterInfoSimpleTotalResources totalResources;
+
+        @NameInMap("UsedResources")
+        public ListClustersResponseBodyClustersClusterInfoSimpleUsedResources usedResources;
+
+        public static ListClustersResponseBodyClustersClusterInfoSimple build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersResponseBodyClustersClusterInfoSimple self = new ListClustersResponseBodyClustersClusterInfoSimple();
             return TeaModel.build(map, self);
         }
 
-        public ListClustersResponseBodyClusters setVpcId(String vpcId) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -379,7 +382,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public ListClustersResponseBodyClusters setStatus(String status) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -387,7 +390,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListClustersResponseBodyClusters setCreateTime(String createTime) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -395,15 +398,15 @@ public class ListClustersResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListClustersResponseBodyClusters setUsedResources(ListClustersResponseBodyClustersUsedResources usedResources) {
-            this.usedResources = usedResources;
+        public ListClustersResponseBodyClustersClusterInfoSimple setIsComputeEss(Boolean isComputeEss) {
+            this.isComputeEss = isComputeEss;
             return this;
         }
-        public ListClustersResponseBodyClustersUsedResources getUsedResources() {
-            return this.usedResources;
+        public Boolean getIsComputeEss() {
+            return this.isComputeEss;
         }
 
-        public ListClustersResponseBodyClusters setComputeSpotStrategy(String computeSpotStrategy) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setComputeSpotStrategy(String computeSpotStrategy) {
             this.computeSpotStrategy = computeSpotStrategy;
             return this;
         }
@@ -411,7 +414,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.computeSpotStrategy;
         }
 
-        public ListClustersResponseBodyClusters setAccountType(String accountType) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setAccountType(String accountType) {
             this.accountType = accountType;
             return this;
         }
@@ -419,7 +422,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.accountType;
         }
 
-        public ListClustersResponseBodyClusters setCount(Integer count) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setCount(Integer count) {
             this.count = count;
             return this;
         }
@@ -427,7 +430,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.count;
         }
 
-        public ListClustersResponseBodyClusters setEhpcVersion(String ehpcVersion) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setEhpcVersion(String ehpcVersion) {
             this.ehpcVersion = ehpcVersion;
             return this;
         }
@@ -435,7 +438,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.ehpcVersion;
         }
 
-        public ListClustersResponseBodyClusters setDescription(String description) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -443,7 +446,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListClustersResponseBodyClusters setBaseOsTag(String baseOsTag) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setBaseOsTag(String baseOsTag) {
             this.baseOsTag = baseOsTag;
             return this;
         }
@@ -451,7 +454,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.baseOsTag;
         }
 
-        public ListClustersResponseBodyClusters setName(String name) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setName(String name) {
             this.name = name;
             return this;
         }
@@ -459,7 +462,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListClustersResponseBodyClusters setImageId(String imageId) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
@@ -467,7 +470,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public ListClustersResponseBodyClusters setComputeSpotPriceLimit(Float computeSpotPriceLimit) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setComputeSpotPriceLimit(Float computeSpotPriceLimit) {
             this.computeSpotPriceLimit = computeSpotPriceLimit;
             return this;
         }
@@ -475,7 +478,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.computeSpotPriceLimit;
         }
 
-        public ListClustersResponseBodyClusters setSchedulerType(String schedulerType) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setSchedulerType(String schedulerType) {
             this.schedulerType = schedulerType;
             return this;
         }
@@ -483,15 +486,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.schedulerType;
         }
 
-        public ListClustersResponseBodyClusters setNodeSuffix(String nodeSuffix) {
-            this.nodeSuffix = nodeSuffix;
-            return this;
-        }
-        public String getNodeSuffix() {
-            return this.nodeSuffix;
-        }
-
-        public ListClustersResponseBodyClusters setDeployMode(String deployMode) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setDeployMode(String deployMode) {
             this.deployMode = deployMode;
             return this;
         }
@@ -499,7 +494,15 @@ public class ListClustersResponseBody extends TeaModel {
             return this.deployMode;
         }
 
-        public ListClustersResponseBodyClusters setImageOwnerAlias(String imageOwnerAlias) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setNodeSuffix(String nodeSuffix) {
+            this.nodeSuffix = nodeSuffix;
+            return this;
+        }
+        public String getNodeSuffix() {
+            return this.nodeSuffix;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimple setImageOwnerAlias(String imageOwnerAlias) {
             this.imageOwnerAlias = imageOwnerAlias;
             return this;
         }
@@ -507,7 +510,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.imageOwnerAlias;
         }
 
-        public ListClustersResponseBodyClusters setOsTag(String osTag) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setOsTag(String osTag) {
             this.osTag = osTag;
             return this;
         }
@@ -515,7 +518,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.osTag;
         }
 
-        public ListClustersResponseBodyClusters setNodePrefix(String nodePrefix) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setNodePrefix(String nodePrefix) {
             this.nodePrefix = nodePrefix;
             return this;
         }
@@ -523,7 +526,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.nodePrefix;
         }
 
-        public ListClustersResponseBodyClusters setInstanceType(String instanceType) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -531,23 +534,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public ListClustersResponseBodyClusters setManagers(ListClustersResponseBodyClustersManagers managers) {
-            this.managers = managers;
-            return this;
-        }
-        public ListClustersResponseBodyClustersManagers getManagers() {
-            return this.managers;
-        }
-
-        public ListClustersResponseBodyClusters setInstanceChargeType(String instanceChargeType) {
-            this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-        public String getInstanceChargeType() {
-            return this.instanceChargeType;
-        }
-
-        public ListClustersResponseBodyClusters setRegionId(String regionId) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -555,7 +542,15 @@ public class ListClustersResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public ListClustersResponseBodyClusters setVSwitchId(String vSwitchId) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimple setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -563,15 +558,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public ListClustersResponseBodyClusters setTotalResources(ListClustersResponseBodyClustersTotalResources totalResources) {
-            this.totalResources = totalResources;
-            return this;
-        }
-        public ListClustersResponseBodyClustersTotalResources getTotalResources() {
-            return this.totalResources;
-        }
-
-        public ListClustersResponseBodyClusters setZoneId(String zoneId) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -579,15 +566,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public ListClustersResponseBodyClusters setComputes(ListClustersResponseBodyClustersComputes computes) {
-            this.computes = computes;
-            return this;
-        }
-        public ListClustersResponseBodyClustersComputes getComputes() {
-            return this.computes;
-        }
-
-        public ListClustersResponseBodyClusters setLoginNodes(String loginNodes) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setLoginNodes(String loginNodes) {
             this.loginNodes = loginNodes;
             return this;
         }
@@ -595,7 +574,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.loginNodes;
         }
 
-        public ListClustersResponseBodyClusters setId(String id) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setId(String id) {
             this.id = id;
             return this;
         }
@@ -603,7 +582,7 @@ public class ListClustersResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListClustersResponseBodyClusters setLocation(String location) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setLocation(String location) {
             this.location = location;
             return this;
         }
@@ -611,12 +590,63 @@ public class ListClustersResponseBody extends TeaModel {
             return this.location;
         }
 
-        public ListClustersResponseBodyClusters setClientVersion(String clientVersion) {
+        public ListClustersResponseBodyClustersClusterInfoSimple setClientVersion(String clientVersion) {
             this.clientVersion = clientVersion;
             return this;
         }
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimple setManagers(ListClustersResponseBodyClustersClusterInfoSimpleManagers managers) {
+            this.managers = managers;
+            return this;
+        }
+        public ListClustersResponseBodyClustersClusterInfoSimpleManagers getManagers() {
+            return this.managers;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimple setComputes(ListClustersResponseBodyClustersClusterInfoSimpleComputes computes) {
+            this.computes = computes;
+            return this;
+        }
+        public ListClustersResponseBodyClustersClusterInfoSimpleComputes getComputes() {
+            return this.computes;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimple setTotalResources(ListClustersResponseBodyClustersClusterInfoSimpleTotalResources totalResources) {
+            this.totalResources = totalResources;
+            return this;
+        }
+        public ListClustersResponseBodyClustersClusterInfoSimpleTotalResources getTotalResources() {
+            return this.totalResources;
+        }
+
+        public ListClustersResponseBodyClustersClusterInfoSimple setUsedResources(ListClustersResponseBodyClustersClusterInfoSimpleUsedResources usedResources) {
+            this.usedResources = usedResources;
+            return this;
+        }
+        public ListClustersResponseBodyClustersClusterInfoSimpleUsedResources getUsedResources() {
+            return this.usedResources;
+        }
+
+    }
+
+    public static class ListClustersResponseBodyClusters extends TeaModel {
+        @NameInMap("ClusterInfoSimple")
+        public java.util.List<ListClustersResponseBodyClustersClusterInfoSimple> clusterInfoSimple;
+
+        public static ListClustersResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersResponseBodyClusters self = new ListClustersResponseBodyClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClustersResponseBodyClusters setClusterInfoSimple(java.util.List<ListClustersResponseBodyClustersClusterInfoSimple> clusterInfoSimple) {
+            this.clusterInfoSimple = clusterInfoSimple;
+            return this;
+        }
+        public java.util.List<ListClustersResponseBodyClustersClusterInfoSimple> getClusterInfoSimple() {
+            return this.clusterInfoSimple;
         }
 
     }

@@ -10,6 +10,9 @@ public class DeleteNodesRequest extends TeaModel {
     @NameInMap("ReleaseInstance")
     public Boolean releaseInstance;
 
+    @NameInMap("Sync")
+    public Boolean sync;
+
     @NameInMap("Instance")
     public java.util.List<DeleteNodesRequestInstance> instance;
 
@@ -32,6 +35,14 @@ public class DeleteNodesRequest extends TeaModel {
     }
     public Boolean getReleaseInstance() {
         return this.releaseInstance;
+    }
+
+    public DeleteNodesRequest setSync(Boolean sync) {
+        this.sync = sync;
+        return this;
+    }
+    public Boolean getSync() {
+        return this.sync;
     }
 
     public DeleteNodesRequest setInstance(java.util.List<DeleteNodesRequestInstance> instance) {

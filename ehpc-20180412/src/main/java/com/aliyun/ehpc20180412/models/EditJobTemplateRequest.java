@@ -37,6 +37,27 @@ public class EditJobTemplateRequest extends TeaModel {
     @NameInMap("Variables")
     public String variables;
 
+    @NameInMap("Queue")
+    public String queue;
+
+    @NameInMap("ClockTime")
+    public String clockTime;
+
+    @NameInMap("Node")
+    public Integer node;
+
+    @NameInMap("Task")
+    public Integer task;
+
+    @NameInMap("Thread")
+    public Integer thread;
+
+    @NameInMap("Mem")
+    public String mem;
+
+    @NameInMap("Gpu")
+    public Integer gpu;
+
     public static EditJobTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         EditJobTemplateRequest self = new EditJobTemplateRequest();
         return TeaModel.build(map, self);
@@ -128,6 +149,62 @@ public class EditJobTemplateRequest extends TeaModel {
     }
     public String getVariables() {
         return this.variables;
+    }
+
+    public EditJobTemplateRequest setQueue(String queue) {
+        this.queue = queue;
+        return this;
+    }
+    public String getQueue() {
+        return this.queue;
+    }
+
+    public EditJobTemplateRequest setClockTime(String clockTime) {
+        this.clockTime = clockTime;
+        return this;
+    }
+    public String getClockTime() {
+        return this.clockTime;
+    }
+
+    public EditJobTemplateRequest setNode(Integer node) {
+        this.node = node;
+        return this;
+    }
+    public Integer getNode() {
+        return this.node;
+    }
+
+    public EditJobTemplateRequest setTask(Integer task) {
+        this.task = task;
+        return this;
+    }
+    public Integer getTask() {
+        return this.task;
+    }
+
+    public EditJobTemplateRequest setThread(Integer thread) {
+        this.thread = thread;
+        return this;
+    }
+    public Integer getThread() {
+        return this.thread;
+    }
+
+    public EditJobTemplateRequest setMem(String mem) {
+        this.mem = mem;
+        return this;
+    }
+    public String getMem() {
+        return this.mem;
+    }
+
+    public EditJobTemplateRequest setGpu(Integer gpu) {
+        this.gpu = gpu;
+        return this;
+    }
+    public Integer getGpu() {
+        return this.gpu;
     }
 
 }

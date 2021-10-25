@@ -4,32 +4,24 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ApplyNodesResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SatisfiedAmount")
     public Integer satisfiedAmount;
 
-    @NameInMap("InstanceIds")
-    public java.util.List<String> instanceIds;
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("Detail")
     public String detail;
 
+    @NameInMap("InstanceIds")
+    public ApplyNodesResponseBodyInstanceIds instanceIds;
+
     public static ApplyNodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ApplyNodesResponseBody self = new ApplyNodesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ApplyNodesResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
     }
 
     public ApplyNodesResponseBody setRequestId(String requestId) {
@@ -48,12 +40,12 @@ public class ApplyNodesResponseBody extends TeaModel {
         return this.satisfiedAmount;
     }
 
-    public ApplyNodesResponseBody setInstanceIds(java.util.List<String> instanceIds) {
-        this.instanceIds = instanceIds;
+    public ApplyNodesResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public java.util.List<String> getInstanceIds() {
-        return this.instanceIds;
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public ApplyNodesResponseBody setDetail(String detail) {
@@ -62,6 +54,33 @@ public class ApplyNodesResponseBody extends TeaModel {
     }
     public String getDetail() {
         return this.detail;
+    }
+
+    public ApplyNodesResponseBody setInstanceIds(ApplyNodesResponseBodyInstanceIds instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public ApplyNodesResponseBodyInstanceIds getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public static class ApplyNodesResponseBodyInstanceIds extends TeaModel {
+        @NameInMap("InstanceId")
+        public java.util.List<String> instanceId;
+
+        public static ApplyNodesResponseBodyInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            ApplyNodesResponseBodyInstanceIds self = new ApplyNodesResponseBodyInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyNodesResponseBodyInstanceIds setInstanceId(java.util.List<String> instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public java.util.List<String> getInstanceId() {
+            return this.instanceId;
+        }
+
     }
 
 }

@@ -1,3 +1,6 @@
+2021-10-25 Version: 1.14.8
+- Support Tag in ApplyNodes API.
+
 2020-12-29 Version: 1.0.1
 - AMP Version Change.
 

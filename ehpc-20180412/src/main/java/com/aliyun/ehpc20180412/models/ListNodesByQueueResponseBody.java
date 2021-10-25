@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListNodesByQueueResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class ListNodesByQueueResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Nodes")
-    public java.util.List<ListNodesByQueueResponseBodyNodes> nodes;
+    public ListNodesByQueueResponseBodyNodes nodes;
 
     public static ListNodesByQueueResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNodesByQueueResponseBody self = new ListNodesByQueueResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListNodesByQueueResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListNodesByQueueResponseBody setPageSize(Integer pageSize) {
@@ -56,38 +48,38 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListNodesByQueueResponseBody setNodes(java.util.List<ListNodesByQueueResponseBodyNodes> nodes) {
+    public ListNodesByQueueResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListNodesByQueueResponseBody setNodes(ListNodesByQueueResponseBodyNodes nodes) {
         this.nodes = nodes;
         return this;
     }
-    public java.util.List<ListNodesByQueueResponseBodyNodes> getNodes() {
+    public ListNodesByQueueResponseBodyNodes getNodes() {
         return this.nodes;
     }
 
-    public static class ListNodesByQueueResponseBodyNodesUsedResources extends TeaModel {
-        @NameInMap("Cpu")
-        public Integer cpu;
-
+    public static class ListNodesByQueueResponseBodyNodesNodeInfoTotalResources extends TeaModel {
         @NameInMap("Gpu")
         public Integer gpu;
+
+        @NameInMap("Cpu")
+        public Integer cpu;
 
         @NameInMap("Memory")
         public Integer memory;
 
-        public static ListNodesByQueueResponseBodyNodesUsedResources build(java.util.Map<String, ?> map) throws Exception {
-            ListNodesByQueueResponseBodyNodesUsedResources self = new ListNodesByQueueResponseBodyNodesUsedResources();
+        public static ListNodesByQueueResponseBodyNodesNodeInfoTotalResources build(java.util.Map<String, ?> map) throws Exception {
+            ListNodesByQueueResponseBodyNodesNodeInfoTotalResources self = new ListNodesByQueueResponseBodyNodesNodeInfoTotalResources();
             return TeaModel.build(map, self);
         }
 
-        public ListNodesByQueueResponseBodyNodesUsedResources setCpu(Integer cpu) {
-            this.cpu = cpu;
-            return this;
-        }
-        public Integer getCpu() {
-            return this.cpu;
-        }
-
-        public ListNodesByQueueResponseBodyNodesUsedResources setGpu(Integer gpu) {
+        public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources setGpu(Integer gpu) {
             this.gpu = gpu;
             return this;
         }
@@ -95,7 +87,15 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.gpu;
         }
 
-        public ListNodesByQueueResponseBodyNodesUsedResources setMemory(Integer memory) {
+        public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
@@ -105,30 +105,22 @@ public class ListNodesByQueueResponseBody extends TeaModel {
 
     }
 
-    public static class ListNodesByQueueResponseBodyNodesTotalResources extends TeaModel {
-        @NameInMap("Cpu")
-        public Integer cpu;
-
+    public static class ListNodesByQueueResponseBodyNodesNodeInfoUsedResources extends TeaModel {
         @NameInMap("Gpu")
         public Integer gpu;
+
+        @NameInMap("Cpu")
+        public Integer cpu;
 
         @NameInMap("Memory")
         public Integer memory;
 
-        public static ListNodesByQueueResponseBodyNodesTotalResources build(java.util.Map<String, ?> map) throws Exception {
-            ListNodesByQueueResponseBodyNodesTotalResources self = new ListNodesByQueueResponseBodyNodesTotalResources();
+        public static ListNodesByQueueResponseBodyNodesNodeInfoUsedResources build(java.util.Map<String, ?> map) throws Exception {
+            ListNodesByQueueResponseBodyNodesNodeInfoUsedResources self = new ListNodesByQueueResponseBodyNodesNodeInfoUsedResources();
             return TeaModel.build(map, self);
         }
 
-        public ListNodesByQueueResponseBodyNodesTotalResources setCpu(Integer cpu) {
-            this.cpu = cpu;
-            return this;
-        }
-        public Integer getCpu() {
-            return this.cpu;
-        }
-
-        public ListNodesByQueueResponseBodyNodesTotalResources setGpu(Integer gpu) {
+        public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources setGpu(Integer gpu) {
             this.gpu = gpu;
             return this;
         }
@@ -136,7 +128,15 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.gpu;
         }
 
-        public ListNodesByQueueResponseBodyNodesTotalResources setMemory(Integer memory) {
+        public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
@@ -146,12 +146,12 @@ public class ListNodesByQueueResponseBody extends TeaModel {
 
     }
 
-    public static class ListNodesByQueueResponseBodyNodes extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
+    public static class ListNodesByQueueResponseBodyNodesNodeInfo extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("HtEnabled")
         public Boolean htEnabled;
@@ -162,32 +162,26 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
-        @NameInMap("HostName")
-        public String hostName;
-
         @NameInMap("LockReason")
         public String lockReason;
 
-        @NameInMap("UsedResources")
-        public ListNodesByQueueResponseBodyNodesUsedResources usedResources;
-
-        @NameInMap("SpotStrategy")
-        public String spotStrategy;
+        @NameInMap("HostName")
+        public String hostName;
 
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
 
         @NameInMap("CreatedByEhpc")
         public Boolean createdByEhpc;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
-
-        @NameInMap("TotalResources")
-        public ListNodesByQueueResponseBodyNodesTotalResources totalResources;
 
         @NameInMap("IpAddress")
         public String ipAddress;
@@ -216,20 +210,18 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         @NameInMap("CreateMode")
         public String createMode;
 
-        public static ListNodesByQueueResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
-            ListNodesByQueueResponseBodyNodes self = new ListNodesByQueueResponseBodyNodes();
+        @NameInMap("TotalResources")
+        public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources totalResources;
+
+        @NameInMap("UsedResources")
+        public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources usedResources;
+
+        public static ListNodesByQueueResponseBodyNodesNodeInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListNodesByQueueResponseBodyNodesNodeInfo self = new ListNodesByQueueResponseBodyNodesNodeInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListNodesByQueueResponseBodyNodes setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListNodesByQueueResponseBodyNodes setVpcId(String vpcId) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -237,7 +229,15 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public ListNodesByQueueResponseBodyNodes setHtEnabled(Boolean htEnabled) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setHtEnabled(Boolean htEnabled) {
             this.htEnabled = htEnabled;
             return this;
         }
@@ -245,7 +245,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.htEnabled;
         }
 
-        public ListNodesByQueueResponseBodyNodes setExpired(Boolean expired) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setExpired(Boolean expired) {
             this.expired = expired;
             return this;
         }
@@ -253,7 +253,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.expired;
         }
 
-        public ListNodesByQueueResponseBodyNodes setImageOwnerAlias(String imageOwnerAlias) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setImageOwnerAlias(String imageOwnerAlias) {
             this.imageOwnerAlias = imageOwnerAlias;
             return this;
         }
@@ -261,15 +261,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.imageOwnerAlias;
         }
 
-        public ListNodesByQueueResponseBodyNodes setHostName(String hostName) {
-            this.hostName = hostName;
-            return this;
-        }
-        public String getHostName() {
-            return this.hostName;
-        }
-
-        public ListNodesByQueueResponseBodyNodes setLockReason(String lockReason) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setLockReason(String lockReason) {
             this.lockReason = lockReason;
             return this;
         }
@@ -277,23 +269,15 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.lockReason;
         }
 
-        public ListNodesByQueueResponseBodyNodes setUsedResources(ListNodesByQueueResponseBodyNodesUsedResources usedResources) {
-            this.usedResources = usedResources;
+        public ListNodesByQueueResponseBodyNodesNodeInfo setHostName(String hostName) {
+            this.hostName = hostName;
             return this;
         }
-        public ListNodesByQueueResponseBodyNodesUsedResources getUsedResources() {
-            return this.usedResources;
+        public String getHostName() {
+            return this.hostName;
         }
 
-        public ListNodesByQueueResponseBodyNodes setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
-        }
-
-        public ListNodesByQueueResponseBodyNodes setPublicIpAddress(String publicIpAddress) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setPublicIpAddress(String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
@@ -301,15 +285,15 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.publicIpAddress;
         }
 
-        public ListNodesByQueueResponseBodyNodes setRegionId(String regionId) {
-            this.regionId = regionId;
+        public ListNodesByQueueResponseBodyNodesNodeInfo setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getSpotStrategy() {
+            return this.spotStrategy;
         }
 
-        public ListNodesByQueueResponseBodyNodes setCreatedByEhpc(Boolean createdByEhpc) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setCreatedByEhpc(Boolean createdByEhpc) {
             this.createdByEhpc = createdByEhpc;
             return this;
         }
@@ -317,7 +301,15 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.createdByEhpc;
         }
 
-        public ListNodesByQueueResponseBodyNodes setVSwitchId(String vSwitchId) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -325,15 +317,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public ListNodesByQueueResponseBodyNodes setTotalResources(ListNodesByQueueResponseBodyNodesTotalResources totalResources) {
-            this.totalResources = totalResources;
-            return this;
-        }
-        public ListNodesByQueueResponseBodyNodesTotalResources getTotalResources() {
-            return this.totalResources;
-        }
-
-        public ListNodesByQueueResponseBodyNodes setIpAddress(String ipAddress) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setIpAddress(String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
@@ -341,7 +325,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.ipAddress;
         }
 
-        public ListNodesByQueueResponseBodyNodes setExpiredTime(String expiredTime) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
@@ -349,7 +333,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public ListNodesByQueueResponseBodyNodes setVersion(String version) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setVersion(String version) {
             this.version = version;
             return this;
         }
@@ -357,7 +341,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.version;
         }
 
-        public ListNodesByQueueResponseBodyNodes setZoneId(String zoneId) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -365,7 +349,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public ListNodesByQueueResponseBodyNodes setAddTime(String addTime) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setAddTime(String addTime) {
             this.addTime = addTime;
             return this;
         }
@@ -373,7 +357,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.addTime;
         }
 
-        public ListNodesByQueueResponseBodyNodes setImageId(String imageId) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
@@ -381,7 +365,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public ListNodesByQueueResponseBodyNodes setLocation(String location) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setLocation(String location) {
             this.location = location;
             return this;
         }
@@ -389,7 +373,7 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.location;
         }
 
-        public ListNodesByQueueResponseBodyNodes setId(String id) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setId(String id) {
             this.id = id;
             return this;
         }
@@ -397,12 +381,47 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListNodesByQueueResponseBodyNodes setCreateMode(String createMode) {
+        public ListNodesByQueueResponseBodyNodesNodeInfo setCreateMode(String createMode) {
             this.createMode = createMode;
             return this;
         }
         public String getCreateMode() {
             return this.createMode;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setTotalResources(ListNodesByQueueResponseBodyNodesNodeInfoTotalResources totalResources) {
+            this.totalResources = totalResources;
+            return this;
+        }
+        public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources getTotalResources() {
+            return this.totalResources;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setUsedResources(ListNodesByQueueResponseBodyNodesNodeInfoUsedResources usedResources) {
+            this.usedResources = usedResources;
+            return this;
+        }
+        public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources getUsedResources() {
+            return this.usedResources;
+        }
+
+    }
+
+    public static class ListNodesByQueueResponseBodyNodes extends TeaModel {
+        @NameInMap("NodeInfo")
+        public java.util.List<ListNodesByQueueResponseBodyNodesNodeInfo> nodeInfo;
+
+        public static ListNodesByQueueResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
+            ListNodesByQueueResponseBodyNodes self = new ListNodesByQueueResponseBodyNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNodesByQueueResponseBodyNodes setNodeInfo(java.util.List<ListNodesByQueueResponseBodyNodesNodeInfo> nodeInfo) {
+            this.nodeInfo = nodeInfo;
+            return this;
+        }
+        public java.util.List<ListNodesByQueueResponseBodyNodesNodeInfo> getNodeInfo() {
+            return this.nodeInfo;
         }
 
     }

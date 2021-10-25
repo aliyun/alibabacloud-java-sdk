@@ -3,16 +3,16 @@ package com.aliyun.ehpc20180412.models;
 
 import com.aliyun.tea.*;
 
-public class BindAccountToClusterUserResponseBody extends TeaModel {
+public class EcdDeleteDesktopsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static BindAccountToClusterUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        BindAccountToClusterUserResponseBody self = new BindAccountToClusterUserResponseBody();
+    public static EcdDeleteDesktopsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        EcdDeleteDesktopsResponseBody self = new EcdDeleteDesktopsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BindAccountToClusterUserResponseBody setRequestId(String requestId) {
+    public EcdDeleteDesktopsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -4,26 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("Prices")
-    public java.util.List<DescribePriceResponseBodyPrices> prices;
-
     @NameInMap("TotalTradePrice")
     public Float totalTradePrice;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Prices")
+    public DescribePriceResponseBodyPrices prices;
+
     public static DescribePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceResponseBody self = new DescribePriceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePriceResponseBody setPrices(java.util.List<DescribePriceResponseBodyPrices> prices) {
-        this.prices = prices;
-        return this;
-    }
-    public java.util.List<DescribePriceResponseBodyPrices> getPrices() {
-        return this.prices;
     }
 
     public DescribePriceResponseBody setTotalTradePrice(Float totalTradePrice) {
@@ -42,41 +34,33 @@ public class DescribePriceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribePriceResponseBodyPrices extends TeaModel {
-        @NameInMap("NodeType")
-        public String nodeType;
+    public DescribePriceResponseBody setPrices(DescribePriceResponseBodyPrices prices) {
+        this.prices = prices;
+        return this;
+    }
+    public DescribePriceResponseBodyPrices getPrices() {
+        return this.prices;
+    }
 
-        @NameInMap("TradePrice")
-        public Float tradePrice;
-
+    public static class DescribePriceResponseBodyPricesPriceInfo extends TeaModel {
         @NameInMap("OriginalPrice")
         public Float originalPrice;
+
+        @NameInMap("NodeType")
+        public String nodeType;
 
         @NameInMap("Currency")
         public String currency;
 
-        public static DescribePriceResponseBodyPrices build(java.util.Map<String, ?> map) throws Exception {
-            DescribePriceResponseBodyPrices self = new DescribePriceResponseBodyPrices();
+        @NameInMap("TradePrice")
+        public Float tradePrice;
+
+        public static DescribePriceResponseBodyPricesPriceInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyPricesPriceInfo self = new DescribePriceResponseBodyPricesPriceInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribePriceResponseBodyPrices setNodeType(String nodeType) {
-            this.nodeType = nodeType;
-            return this;
-        }
-        public String getNodeType() {
-            return this.nodeType;
-        }
-
-        public DescribePriceResponseBodyPrices setTradePrice(Float tradePrice) {
-            this.tradePrice = tradePrice;
-            return this;
-        }
-        public Float getTradePrice() {
-            return this.tradePrice;
-        }
-
-        public DescribePriceResponseBodyPrices setOriginalPrice(Float originalPrice) {
+        public DescribePriceResponseBodyPricesPriceInfo setOriginalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
             return this;
         }
@@ -84,12 +68,47 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.originalPrice;
         }
 
-        public DescribePriceResponseBodyPrices setCurrency(String currency) {
+        public DescribePriceResponseBodyPricesPriceInfo setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        public DescribePriceResponseBodyPricesPriceInfo setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
         public String getCurrency() {
             return this.currency;
+        }
+
+        public DescribePriceResponseBodyPricesPriceInfo setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
+    }
+
+    public static class DescribePriceResponseBodyPrices extends TeaModel {
+        @NameInMap("PriceInfo")
+        public java.util.List<DescribePriceResponseBodyPricesPriceInfo> priceInfo;
+
+        public static DescribePriceResponseBodyPrices build(java.util.Map<String, ?> map) throws Exception {
+            DescribePriceResponseBodyPrices self = new DescribePriceResponseBodyPrices();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePriceResponseBodyPrices setPriceInfo(java.util.List<DescribePriceResponseBodyPricesPriceInfo> priceInfo) {
+            this.priceInfo = priceInfo;
+            return this;
+        }
+        public java.util.List<DescribePriceResponseBodyPricesPriceInfo> getPriceInfo() {
+            return this.priceInfo;
         }
 
     }

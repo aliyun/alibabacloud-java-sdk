@@ -4,12 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeGWSInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    public java.util.List<DescribeGWSInstancesResponseBodyInstances> instances;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("Instances")
+    public DescribeGWSInstancesResponseBodyInstances instances;
+
     public static DescribeGWSInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGWSInstancesResponseBody self = new DescribeGWSInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGWSInstancesResponseBody setInstances(java.util.List<DescribeGWSInstancesResponseBodyInstances> instances) {
-        this.instances = instances;
-        return this;
-    }
-    public java.util.List<DescribeGWSInstancesResponseBodyInstances> getInstances() {
-        return this.instances;
-    }
-
-    public DescribeGWSInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeGWSInstancesResponseBody setPageSize(Integer pageSize) {
@@ -64,22 +48,38 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeGWSInstancesResponseBodyInstancesAppList extends TeaModel {
+    public DescribeGWSInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeGWSInstancesResponseBody setInstances(DescribeGWSInstancesResponseBodyInstances instances) {
+        this.instances = instances;
+        return this;
+    }
+    public DescribeGWSInstancesResponseBodyInstances getInstances() {
+        return this.instances;
+    }
+
+    public static class DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo extends TeaModel {
         @NameInMap("AppName")
         public String appName;
-
-        @NameInMap("AppPath")
-        public String appPath;
 
         @NameInMap("AppArgs")
         public String appArgs;
 
-        public static DescribeGWSInstancesResponseBodyInstancesAppList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGWSInstancesResponseBodyInstancesAppList self = new DescribeGWSInstancesResponseBodyInstancesAppList();
+        @NameInMap("AppPath")
+        public String appPath;
+
+        public static DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo self = new DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGWSInstancesResponseBodyInstancesAppList setAppName(String appName) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo setAppName(String appName) {
             this.appName = appName;
             return this;
         }
@@ -87,15 +87,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public DescribeGWSInstancesResponseBodyInstancesAppList setAppPath(String appPath) {
-            this.appPath = appPath;
-            return this;
-        }
-        public String getAppPath() {
-            return this.appPath;
-        }
-
-        public DescribeGWSInstancesResponseBodyInstancesAppList setAppArgs(String appArgs) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo setAppArgs(String appArgs) {
             this.appArgs = appArgs;
             return this;
         }
@@ -103,14 +95,38 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.appArgs;
         }
 
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo setAppPath(String appPath) {
+            this.appPath = appPath;
+            return this;
+        }
+        public String getAppPath() {
+            return this.appPath;
+        }
+
     }
 
-    public static class DescribeGWSInstancesResponseBodyInstances extends TeaModel {
+    public static class DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList extends TeaModel {
+        @NameInMap("AppInfo")
+        public java.util.List<DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo> appInfo;
+
+        public static DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList self = new DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList setAppInfo(java.util.List<DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo> appInfo) {
+            this.appInfo = appInfo;
+            return this;
+        }
+        public java.util.List<DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo> getAppInfo() {
+            return this.appInfo;
+        }
+
+    }
+
+    public static class DescribeGWSInstancesResponseBodyInstancesInstanceInfo extends TeaModel {
         @NameInMap("Status")
         public String status;
-
-        @NameInMap("AppList")
-        public java.util.List<DescribeGWSInstancesResponseBodyInstancesAppList> appList;
 
         @NameInMap("WorkMode")
         public String workMode;
@@ -136,12 +152,15 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
 
-        public static DescribeGWSInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGWSInstancesResponseBodyInstances self = new DescribeGWSInstancesResponseBodyInstances();
+        @NameInMap("AppList")
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList appList;
+
+        public static DescribeGWSInstancesResponseBodyInstancesInstanceInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGWSInstancesResponseBodyInstancesInstanceInfo self = new DescribeGWSInstancesResponseBodyInstancesInstanceInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGWSInstancesResponseBodyInstances setStatus(String status) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -149,15 +168,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeGWSInstancesResponseBodyInstances setAppList(java.util.List<DescribeGWSInstancesResponseBodyInstancesAppList> appList) {
-            this.appList = appList;
-            return this;
-        }
-        public java.util.List<DescribeGWSInstancesResponseBodyInstancesAppList> getAppList() {
-            return this.appList;
-        }
-
-        public DescribeGWSInstancesResponseBodyInstances setWorkMode(String workMode) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setWorkMode(String workMode) {
             this.workMode = workMode;
             return this;
         }
@@ -165,7 +176,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.workMode;
         }
 
-        public DescribeGWSInstancesResponseBodyInstances setExpireTime(String expireTime) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setExpireTime(String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
@@ -173,7 +184,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.expireTime;
         }
 
-        public DescribeGWSInstancesResponseBodyInstances setCreateTime(String createTime) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -181,7 +192,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeGWSInstancesResponseBodyInstances setInstanceId(String instanceId) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -189,7 +200,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeGWSInstancesResponseBodyInstances setName(String name) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setName(String name) {
             this.name = name;
             return this;
         }
@@ -197,7 +208,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeGWSInstancesResponseBodyInstances setInstanceType(String instanceType) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -205,7 +216,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeGWSInstancesResponseBodyInstances setUserName(String userName) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setUserName(String userName) {
             this.userName = userName;
             return this;
         }
@@ -213,12 +224,39 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
             return this.userName;
         }
 
-        public DescribeGWSInstancesResponseBodyInstances setClusterId(String clusterId) {
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfo setAppList(DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList appList) {
+            this.appList = appList;
+            return this;
+        }
+        public DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList getAppList() {
+            return this.appList;
+        }
+
+    }
+
+    public static class DescribeGWSInstancesResponseBodyInstances extends TeaModel {
+        @NameInMap("InstanceInfo")
+        public java.util.List<DescribeGWSInstancesResponseBodyInstancesInstanceInfo> instanceInfo;
+
+        public static DescribeGWSInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGWSInstancesResponseBodyInstances self = new DescribeGWSInstancesResponseBodyInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGWSInstancesResponseBodyInstances setInstanceInfo(java.util.List<DescribeGWSInstancesResponseBodyInstancesInstanceInfo> instanceInfo) {
+            this.instanceInfo = instanceInfo;
+            return this;
+        }
+        public java.util.List<DescribeGWSInstancesResponseBodyInstancesInstanceInfo> getInstanceInfo() {
+            return this.instanceInfo;
         }
 
     }

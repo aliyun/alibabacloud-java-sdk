@@ -28,6 +28,15 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
+    @NameInMap("HostNamePrefix")
+    public String hostNamePrefix;
+
+    @NameInMap("HostNameSuffix")
+    public String hostNameSuffix;
+
     public static ListNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodesRequest self = new ListNodesRequest();
         return TeaModel.build(map, self);
@@ -95,6 +104,30 @@ public class ListNodesRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public ListNodesRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public ListNodesRequest setHostNamePrefix(String hostNamePrefix) {
+        this.hostNamePrefix = hostNamePrefix;
+        return this;
+    }
+    public String getHostNamePrefix() {
+        return this.hostNamePrefix;
+    }
+
+    public ListNodesRequest setHostNameSuffix(String hostNameSuffix) {
+        this.hostNameSuffix = hostNameSuffix;
+        return this;
+    }
+    public String getHostNameSuffix() {
+        return this.hostNameSuffix;
     }
 
 }

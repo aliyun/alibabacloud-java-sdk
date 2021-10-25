@@ -100,6 +100,9 @@ public class CreateHybridClusterRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("MultiOs")
+    public Boolean multiOs;
+
     @NameInMap("Nodes")
     public java.util.List<CreateHybridClusterRequestNodes> nodes;
 
@@ -368,6 +371,14 @@ public class CreateHybridClusterRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateHybridClusterRequest setMultiOs(Boolean multiOs) {
+        this.multiOs = multiOs;
+        return this;
+    }
+    public Boolean getMultiOs() {
+        return this.multiOs;
     }
 
     public CreateHybridClusterRequest setNodes(java.util.List<CreateHybridClusterRequestNodes> nodes) {

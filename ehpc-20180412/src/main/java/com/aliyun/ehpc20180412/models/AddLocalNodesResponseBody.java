@@ -8,7 +8,7 @@ public class AddLocalNodesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("InstanceIds")
-    public java.util.List<String> instanceIds;
+    public AddLocalNodesResponseBodyInstanceIds instanceIds;
 
     public static AddLocalNodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddLocalNodesResponseBody self = new AddLocalNodesResponseBody();
@@ -23,12 +23,31 @@ public class AddLocalNodesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddLocalNodesResponseBody setInstanceIds(java.util.List<String> instanceIds) {
+    public AddLocalNodesResponseBody setInstanceIds(AddLocalNodesResponseBodyInstanceIds instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
-    public java.util.List<String> getInstanceIds() {
+    public AddLocalNodesResponseBodyInstanceIds getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public static class AddLocalNodesResponseBodyInstanceIds extends TeaModel {
+        @NameInMap("InstanceId")
+        public java.util.List<String> instanceId;
+
+        public static AddLocalNodesResponseBodyInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            AddLocalNodesResponseBodyInstanceIds self = new AddLocalNodesResponseBodyInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public AddLocalNodesResponseBodyInstanceIds setInstanceId(java.util.List<String> instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public java.util.List<String> getInstanceId() {
+            return this.instanceId;
+        }
+
     }
 
 }

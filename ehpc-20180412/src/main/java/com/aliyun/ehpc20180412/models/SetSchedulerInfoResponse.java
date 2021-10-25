@@ -3,21 +3,21 @@ package com.aliyun.ehpc20180412.models;
 
 import com.aliyun.tea.*;
 
-public class ListAccountMappingResponse extends TeaModel {
+public class SetSchedulerInfoResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ListAccountMappingResponseBody body;
+    public SetSchedulerInfoResponseBody body;
 
-    public static ListAccountMappingResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListAccountMappingResponse self = new ListAccountMappingResponse();
+    public static SetSchedulerInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        SetSchedulerInfoResponse self = new SetSchedulerInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListAccountMappingResponse setHeaders(java.util.Map<String, String> headers) {
+    public SetSchedulerInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ListAccountMappingResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListAccountMappingResponse setBody(ListAccountMappingResponseBody body) {
+    public SetSchedulerInfoResponse setBody(SetSchedulerInfoResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListAccountMappingResponseBody getBody() {
+    public SetSchedulerInfoResponseBody getBody() {
         return this.body;
     }
 

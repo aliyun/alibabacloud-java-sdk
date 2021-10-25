@@ -11,7 +11,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("InstanceTypeFamilies")
-    public java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamilies> instanceTypeFamilies;
+    public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
 
     public static ListAvailableEcsTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAvailableEcsTypesResponseBody self = new ListAvailableEcsTypesResponseBody();
@@ -34,15 +34,34 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAvailableEcsTypesResponseBody setInstanceTypeFamilies(java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamilies> instanceTypeFamilies) {
+    public ListAvailableEcsTypesResponseBody setInstanceTypeFamilies(ListAvailableEcsTypesResponseBodyInstanceTypeFamilies instanceTypeFamilies) {
         this.instanceTypeFamilies = instanceTypeFamilies;
         return this;
     }
-    public java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamilies> getInstanceTypeFamilies() {
+    public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies getInstanceTypeFamilies() {
         return this.instanceTypeFamilies;
     }
 
-    public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes extends TeaModel {
+    public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds extends TeaModel {
+        @NameInMap("ZoneId")
+        public java.util.List<String> zoneId;
+
+        public static ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds build(java.util.Map<String, ?> map) throws Exception {
+            ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds self = new ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds setZoneId(java.util.List<String> zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public java.util.List<String> getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -76,12 +95,15 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         @NameInMap("EniQuantity")
         public Integer eniQuantity;
 
-        public static ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes build(java.util.Map<String, ?> map) throws Exception {
-            ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes self = new ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes();
+        @NameInMap("ZoneIds")
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds zoneIds;
+
+        public static ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo self = new ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setStatus(String status) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -89,7 +111,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setInstanceTypeId(String instanceTypeId) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstanceTypeId(String instanceTypeId) {
             this.instanceTypeId = instanceTypeId;
             return this;
         }
@@ -97,7 +119,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.instanceTypeId;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setInstanceBandwidthRx(Integer instanceBandwidthRx) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstanceBandwidthRx(Integer instanceBandwidthRx) {
             this.instanceBandwidthRx = instanceBandwidthRx;
             return this;
         }
@@ -105,7 +127,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.instanceBandwidthRx;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setGPUSpec(String GPUSpec) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setGPUSpec(String GPUSpec) {
             this.GPUSpec = GPUSpec;
             return this;
         }
@@ -113,7 +135,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.GPUSpec;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setInstanceBandwidthTx(Integer instanceBandwidthTx) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstanceBandwidthTx(Integer instanceBandwidthTx) {
             this.instanceBandwidthTx = instanceBandwidthTx;
             return this;
         }
@@ -121,7 +143,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.instanceBandwidthTx;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setInstancePpsRx(Integer instancePpsRx) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstancePpsRx(Integer instancePpsRx) {
             this.instancePpsRx = instancePpsRx;
             return this;
         }
@@ -129,7 +151,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.instancePpsRx;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setInstancePpsTx(Integer instancePpsTx) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstancePpsTx(Integer instancePpsTx) {
             this.instancePpsTx = instancePpsTx;
             return this;
         }
@@ -137,7 +159,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.instancePpsTx;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setGPUAmount(Integer GPUAmount) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setGPUAmount(Integer GPUAmount) {
             this.GPUAmount = GPUAmount;
             return this;
         }
@@ -145,7 +167,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.GPUAmount;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setCpuCoreCount(Integer cpuCoreCount) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setCpuCoreCount(Integer cpuCoreCount) {
             this.cpuCoreCount = cpuCoreCount;
             return this;
         }
@@ -153,7 +175,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.cpuCoreCount;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setMemorySize(Integer memorySize) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setMemorySize(Integer memorySize) {
             this.memorySize = memorySize;
             return this;
         }
@@ -161,7 +183,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.memorySize;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes setEniQuantity(Integer eniQuantity) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setEniQuantity(Integer eniQuantity) {
             this.eniQuantity = eniQuantity;
             return this;
         }
@@ -169,24 +191,59 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.eniQuantity;
         }
 
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setZoneIds(ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds zoneIds) {
+            this.zoneIds = zoneIds;
+            return this;
+        }
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds getZoneIds() {
+            return this.zoneIds;
+        }
+
     }
 
-    public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamilies extends TeaModel {
+    public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes extends TeaModel {
+        @NameInMap("TypesInfo")
+        public java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo> typesInfo;
+
+        public static ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes build(java.util.Map<String, ?> map) throws Exception {
+            ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes self = new ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes setTypesInfo(java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo> typesInfo) {
+            this.typesInfo = typesInfo;
+            return this;
+        }
+        public java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo> getTypesInfo() {
+            return this.typesInfo;
+        }
+
+    }
+
+    public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo extends TeaModel {
+        @NameInMap("Generation")
+        public String generation;
+
         @NameInMap("InstanceTypeFamilyId")
         public String instanceTypeFamilyId;
 
         @NameInMap("Types")
-        public java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes> types;
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes types;
 
-        @NameInMap("Generation")
-        public String generation;
-
-        public static ListAvailableEcsTypesResponseBodyInstanceTypeFamilies build(java.util.Map<String, ?> map) throws Exception {
-            ListAvailableEcsTypesResponseBodyInstanceTypeFamilies self = new ListAvailableEcsTypesResponseBodyInstanceTypeFamilies();
+        public static ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo self = new ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies setInstanceTypeFamilyId(String instanceTypeFamilyId) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo setGeneration(String generation) {
+            this.generation = generation;
+            return this;
+        }
+        public String getGeneration() {
+            return this.generation;
+        }
+
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo setInstanceTypeFamilyId(String instanceTypeFamilyId) {
             this.instanceTypeFamilyId = instanceTypeFamilyId;
             return this;
         }
@@ -194,20 +251,31 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.instanceTypeFamilyId;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies setTypes(java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes> types) {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo setTypes(ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes types) {
             this.types = types;
             return this;
         }
-        public java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesTypes> getTypes() {
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypes getTypes() {
             return this.types;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies setGeneration(String generation) {
-            this.generation = generation;
+    }
+
+    public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamilies extends TeaModel {
+        @NameInMap("InstanceTypeFamilyInfo")
+        public java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo> instanceTypeFamilyInfo;
+
+        public static ListAvailableEcsTypesResponseBodyInstanceTypeFamilies build(java.util.Map<String, ?> map) throws Exception {
+            ListAvailableEcsTypesResponseBodyInstanceTypeFamilies self = new ListAvailableEcsTypesResponseBodyInstanceTypeFamilies();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies setInstanceTypeFamilyInfo(java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo> instanceTypeFamilyInfo) {
+            this.instanceTypeFamilyInfo = instanceTypeFamilyInfo;
             return this;
         }
-        public String getGeneration() {
-            return this.generation;
+        public java.util.List<ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo> getInstanceTypeFamilyInfo() {
+            return this.instanceTypeFamilyInfo;
         }
 
     }

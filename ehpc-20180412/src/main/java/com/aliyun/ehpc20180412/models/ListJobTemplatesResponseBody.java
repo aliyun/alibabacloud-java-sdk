@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListJobTemplatesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class ListJobTemplatesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Templates")
-    public java.util.List<ListJobTemplatesResponseBodyTemplates> templates;
+    public ListJobTemplatesResponseBodyTemplates templates;
 
     public static ListJobTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListJobTemplatesResponseBody self = new ListJobTemplatesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListJobTemplatesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListJobTemplatesResponseBody setPageSize(Integer pageSize) {
@@ -56,17 +48,25 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListJobTemplatesResponseBody setTemplates(java.util.List<ListJobTemplatesResponseBodyTemplates> templates) {
+    public ListJobTemplatesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListJobTemplatesResponseBody setTemplates(ListJobTemplatesResponseBodyTemplates templates) {
         this.templates = templates;
         return this;
     }
-    public java.util.List<ListJobTemplatesResponseBodyTemplates> getTemplates() {
+    public ListJobTemplatesResponseBodyTemplates getTemplates() {
         return this.templates;
     }
 
-    public static class ListJobTemplatesResponseBodyTemplates extends TeaModel {
-        @NameInMap("StdoutRedirectPath")
-        public String stdoutRedirectPath;
+    public static class ListJobTemplatesResponseBodyTemplatesJobTemplates extends TeaModel {
+        @NameInMap("Task")
+        public Integer task;
 
         @NameInMap("Variables")
         public String variables;
@@ -74,11 +74,38 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         @NameInMap("CommandLine")
         public String commandLine;
 
-        @NameInMap("PackagePath")
-        public String packagePath;
+        @NameInMap("Queue")
+        public String queue;
 
         @NameInMap("Priority")
         public Integer priority;
+
+        @NameInMap("Mem")
+        public String mem;
+
+        @NameInMap("Thread")
+        public Integer thread;
+
+        @NameInMap("ArrayRequest")
+        public String arrayRequest;
+
+        @NameInMap("StderrRedirectPath")
+        public String stderrRedirectPath;
+
+        @NameInMap("Node")
+        public Integer node;
+
+        @NameInMap("StdoutRedirectPath")
+        public String stdoutRedirectPath;
+
+        @NameInMap("Gpu")
+        public Integer gpu;
+
+        @NameInMap("PackagePath")
+        public String packagePath;
+
+        @NameInMap("ClockTime")
+        public String clockTime;
 
         @NameInMap("ReRunable")
         public Boolean reRunable;
@@ -86,32 +113,26 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("ArrayRequest")
-        public String arrayRequest;
-
         @NameInMap("Id")
         public String id;
-
-        @NameInMap("StderrRedirectPath")
-        public String stderrRedirectPath;
 
         @NameInMap("RunasUser")
         public String runasUser;
 
-        public static ListJobTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
-            ListJobTemplatesResponseBodyTemplates self = new ListJobTemplatesResponseBodyTemplates();
+        public static ListJobTemplatesResponseBodyTemplatesJobTemplates build(java.util.Map<String, ?> map) throws Exception {
+            ListJobTemplatesResponseBodyTemplatesJobTemplates self = new ListJobTemplatesResponseBodyTemplatesJobTemplates();
             return TeaModel.build(map, self);
         }
 
-        public ListJobTemplatesResponseBodyTemplates setStdoutRedirectPath(String stdoutRedirectPath) {
-            this.stdoutRedirectPath = stdoutRedirectPath;
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setTask(Integer task) {
+            this.task = task;
             return this;
         }
-        public String getStdoutRedirectPath() {
-            return this.stdoutRedirectPath;
+        public Integer getTask() {
+            return this.task;
         }
 
-        public ListJobTemplatesResponseBodyTemplates setVariables(String variables) {
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setVariables(String variables) {
             this.variables = variables;
             return this;
         }
@@ -119,7 +140,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             return this.variables;
         }
 
-        public ListJobTemplatesResponseBodyTemplates setCommandLine(String commandLine) {
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setCommandLine(String commandLine) {
             this.commandLine = commandLine;
             return this;
         }
@@ -127,15 +148,15 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             return this.commandLine;
         }
 
-        public ListJobTemplatesResponseBodyTemplates setPackagePath(String packagePath) {
-            this.packagePath = packagePath;
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setQueue(String queue) {
+            this.queue = queue;
             return this;
         }
-        public String getPackagePath() {
-            return this.packagePath;
+        public String getQueue() {
+            return this.queue;
         }
 
-        public ListJobTemplatesResponseBodyTemplates setPriority(Integer priority) {
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setPriority(Integer priority) {
             this.priority = priority;
             return this;
         }
@@ -143,23 +164,23 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public ListJobTemplatesResponseBodyTemplates setReRunable(Boolean reRunable) {
-            this.reRunable = reRunable;
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setMem(String mem) {
+            this.mem = mem;
             return this;
         }
-        public Boolean getReRunable() {
-            return this.reRunable;
+        public String getMem() {
+            return this.mem;
         }
 
-        public ListJobTemplatesResponseBodyTemplates setName(String name) {
-            this.name = name;
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setThread(Integer thread) {
+            this.thread = thread;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public Integer getThread() {
+            return this.thread;
         }
 
-        public ListJobTemplatesResponseBodyTemplates setArrayRequest(String arrayRequest) {
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setArrayRequest(String arrayRequest) {
             this.arrayRequest = arrayRequest;
             return this;
         }
@@ -167,15 +188,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             return this.arrayRequest;
         }
 
-        public ListJobTemplatesResponseBodyTemplates setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public ListJobTemplatesResponseBodyTemplates setStderrRedirectPath(String stderrRedirectPath) {
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setStderrRedirectPath(String stderrRedirectPath) {
             this.stderrRedirectPath = stderrRedirectPath;
             return this;
         }
@@ -183,12 +196,95 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             return this.stderrRedirectPath;
         }
 
-        public ListJobTemplatesResponseBodyTemplates setRunasUser(String runasUser) {
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setNode(Integer node) {
+            this.node = node;
+            return this;
+        }
+        public Integer getNode() {
+            return this.node;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setStdoutRedirectPath(String stdoutRedirectPath) {
+            this.stdoutRedirectPath = stdoutRedirectPath;
+            return this;
+        }
+        public String getStdoutRedirectPath() {
+            return this.stdoutRedirectPath;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setGpu(Integer gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+        public Integer getGpu() {
+            return this.gpu;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setPackagePath(String packagePath) {
+            this.packagePath = packagePath;
+            return this;
+        }
+        public String getPackagePath() {
+            return this.packagePath;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setClockTime(String clockTime) {
+            this.clockTime = clockTime;
+            return this;
+        }
+        public String getClockTime() {
+            return this.clockTime;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setReRunable(Boolean reRunable) {
+            this.reRunable = reRunable;
+            return this;
+        }
+        public Boolean getReRunable() {
+            return this.reRunable;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListJobTemplatesResponseBodyTemplatesJobTemplates setRunasUser(String runasUser) {
             this.runasUser = runasUser;
             return this;
         }
         public String getRunasUser() {
             return this.runasUser;
+        }
+
+    }
+
+    public static class ListJobTemplatesResponseBodyTemplates extends TeaModel {
+        @NameInMap("JobTemplates")
+        public java.util.List<ListJobTemplatesResponseBodyTemplatesJobTemplates> jobTemplates;
+
+        public static ListJobTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
+            ListJobTemplatesResponseBodyTemplates self = new ListJobTemplatesResponseBodyTemplates();
+            return TeaModel.build(map, self);
+        }
+
+        public ListJobTemplatesResponseBodyTemplates setJobTemplates(java.util.List<ListJobTemplatesResponseBodyTemplatesJobTemplates> jobTemplates) {
+            this.jobTemplates = jobTemplates;
+            return this;
+        }
+        public java.util.List<ListJobTemplatesResponseBodyTemplatesJobTemplates> getJobTemplates() {
+            return this.jobTemplates;
         }
 
     }

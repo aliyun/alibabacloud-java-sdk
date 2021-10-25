@@ -8,7 +8,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Images")
-    public java.util.List<ListCustomImagesResponseBodyImages> images;
+    public ListCustomImagesResponseBodyImages images;
 
     public static ListCustomImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCustomImagesResponseBody self = new ListCustomImagesResponseBody();
@@ -23,36 +23,49 @@ public class ListCustomImagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListCustomImagesResponseBody setImages(java.util.List<ListCustomImagesResponseBodyImages> images) {
+    public ListCustomImagesResponseBody setImages(ListCustomImagesResponseBodyImages images) {
         this.images = images;
         return this;
     }
-    public java.util.List<ListCustomImagesResponseBodyImages> getImages() {
+    public ListCustomImagesResponseBodyImages getImages() {
         return this.images;
     }
 
-    public static class ListCustomImagesResponseBodyImagesOsTag extends TeaModel {
-        @NameInMap("Version")
-        public String version;
-
-        @NameInMap("BaseOsTag")
-        public String baseOsTag;
-
+    public static class ListCustomImagesResponseBodyImagesImageInfoBaseOsTag extends TeaModel {
         @NameInMap("Platform")
         public String platform;
 
         @NameInMap("OsTag")
         public String osTag;
 
+        @NameInMap("Version")
+        public String version;
+
         @NameInMap("Architecture")
         public String architecture;
 
-        public static ListCustomImagesResponseBodyImagesOsTag build(java.util.Map<String, ?> map) throws Exception {
-            ListCustomImagesResponseBodyImagesOsTag self = new ListCustomImagesResponseBodyImagesOsTag();
+        public static ListCustomImagesResponseBodyImagesImageInfoBaseOsTag build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomImagesResponseBodyImagesImageInfoBaseOsTag self = new ListCustomImagesResponseBodyImagesImageInfoBaseOsTag();
             return TeaModel.build(map, self);
         }
 
-        public ListCustomImagesResponseBodyImagesOsTag setVersion(String version) {
+        public ListCustomImagesResponseBodyImagesImageInfoBaseOsTag setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfoBaseOsTag setOsTag(String osTag) {
+            this.osTag = osTag;
+            return this;
+        }
+        public String getOsTag() {
+            return this.osTag;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfoBaseOsTag setVersion(String version) {
             this.version = version;
             return this;
         }
@@ -60,7 +73,70 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.version;
         }
 
-        public ListCustomImagesResponseBodyImagesOsTag setBaseOsTag(String baseOsTag) {
+        public ListCustomImagesResponseBodyImagesImageInfoBaseOsTag setArchitecture(String architecture) {
+            this.architecture = architecture;
+            return this;
+        }
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+    }
+
+    public static class ListCustomImagesResponseBodyImagesImageInfoOsTag extends TeaModel {
+        @NameInMap("Platform")
+        public String platform;
+
+        @NameInMap("OsTag")
+        public String osTag;
+
+        @NameInMap("Version")
+        public String version;
+
+        @NameInMap("Architecture")
+        public String architecture;
+
+        @NameInMap("BaseOsTag")
+        public String baseOsTag;
+
+        public static ListCustomImagesResponseBodyImagesImageInfoOsTag build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomImagesResponseBodyImagesImageInfoOsTag self = new ListCustomImagesResponseBodyImagesImageInfoOsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfoOsTag setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfoOsTag setOsTag(String osTag) {
+            this.osTag = osTag;
+            return this;
+        }
+        public String getOsTag() {
+            return this.osTag;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfoOsTag setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfoOsTag setArchitecture(String architecture) {
+            this.architecture = architecture;
+            return this;
+        }
+        public String getArchitecture() {
+            return this.architecture;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfoOsTag setBaseOsTag(String baseOsTag) {
             this.baseOsTag = baseOsTag;
             return this;
         }
@@ -68,102 +144,14 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.baseOsTag;
         }
 
-        public ListCustomImagesResponseBodyImagesOsTag setPlatform(String platform) {
-            this.platform = platform;
-            return this;
-        }
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        public ListCustomImagesResponseBodyImagesOsTag setOsTag(String osTag) {
-            this.osTag = osTag;
-            return this;
-        }
-        public String getOsTag() {
-            return this.osTag;
-        }
-
-        public ListCustomImagesResponseBodyImagesOsTag setArchitecture(String architecture) {
-            this.architecture = architecture;
-            return this;
-        }
-        public String getArchitecture() {
-            return this.architecture;
-        }
-
     }
 
-    public static class ListCustomImagesResponseBodyImagesBaseOsTag extends TeaModel {
-        @NameInMap("Version")
-        public String version;
-
-        @NameInMap("Platform")
-        public String platform;
-
-        @NameInMap("OsTag")
-        public String osTag;
-
-        @NameInMap("Architecture")
-        public String architecture;
-
-        public static ListCustomImagesResponseBodyImagesBaseOsTag build(java.util.Map<String, ?> map) throws Exception {
-            ListCustomImagesResponseBodyImagesBaseOsTag self = new ListCustomImagesResponseBodyImagesBaseOsTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListCustomImagesResponseBodyImagesBaseOsTag setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public ListCustomImagesResponseBodyImagesBaseOsTag setPlatform(String platform) {
-            this.platform = platform;
-            return this;
-        }
-        public String getPlatform() {
-            return this.platform;
-        }
-
-        public ListCustomImagesResponseBodyImagesBaseOsTag setOsTag(String osTag) {
-            this.osTag = osTag;
-            return this;
-        }
-        public String getOsTag() {
-            return this.osTag;
-        }
-
-        public ListCustomImagesResponseBodyImagesBaseOsTag setArchitecture(String architecture) {
-            this.architecture = architecture;
-            return this;
-        }
-        public String getArchitecture() {
-            return this.architecture;
-        }
-
-    }
-
-    public static class ListCustomImagesResponseBodyImages extends TeaModel {
+    public static class ListCustomImagesResponseBodyImagesImageInfo extends TeaModel {
         @NameInMap("Status")
         public String status;
 
         @NameInMap("PostInstallScript")
         public String postInstallScript;
-
-        @NameInMap("ImageOwnerAlias")
-        public String imageOwnerAlias;
-
-        @NameInMap("OsTag")
-        public ListCustomImagesResponseBodyImagesOsTag osTag;
-
-        @NameInMap("SkuCode")
-        public String skuCode;
-
-        @NameInMap("PricingCycle")
-        public String pricingCycle;
 
         @NameInMap("Description")
         public String description;
@@ -171,27 +159,39 @@ public class ListCustomImagesResponseBody extends TeaModel {
         @NameInMap("Size")
         public Integer size;
 
-        @NameInMap("BaseOsTag")
-        public ListCustomImagesResponseBodyImagesBaseOsTag baseOsTag;
+        @NameInMap("ImageOwnerAlias")
+        public String imageOwnerAlias;
 
         @NameInMap("ImageName")
         public String imageName;
 
+        @NameInMap("SkuCode")
+        public String skuCode;
+
+        @NameInMap("PricingCycle")
+        public String pricingCycle;
+
         @NameInMap("ImageId")
         public String imageId;
-
-        @NameInMap("Uid")
-        public String uid;
 
         @NameInMap("ProductCode")
         public String productCode;
 
-        public static ListCustomImagesResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
-            ListCustomImagesResponseBodyImages self = new ListCustomImagesResponseBodyImages();
+        @NameInMap("Uid")
+        public String uid;
+
+        @NameInMap("BaseOsTag")
+        public ListCustomImagesResponseBodyImagesImageInfoBaseOsTag baseOsTag;
+
+        @NameInMap("OsTag")
+        public ListCustomImagesResponseBodyImagesImageInfoOsTag osTag;
+
+        public static ListCustomImagesResponseBodyImagesImageInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomImagesResponseBodyImagesImageInfo self = new ListCustomImagesResponseBodyImagesImageInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListCustomImagesResponseBodyImages setStatus(String status) {
+        public ListCustomImagesResponseBodyImagesImageInfo setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -199,7 +199,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListCustomImagesResponseBodyImages setPostInstallScript(String postInstallScript) {
+        public ListCustomImagesResponseBodyImagesImageInfo setPostInstallScript(String postInstallScript) {
             this.postInstallScript = postInstallScript;
             return this;
         }
@@ -207,39 +207,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.postInstallScript;
         }
 
-        public ListCustomImagesResponseBodyImages setImageOwnerAlias(String imageOwnerAlias) {
-            this.imageOwnerAlias = imageOwnerAlias;
-            return this;
-        }
-        public String getImageOwnerAlias() {
-            return this.imageOwnerAlias;
-        }
-
-        public ListCustomImagesResponseBodyImages setOsTag(ListCustomImagesResponseBodyImagesOsTag osTag) {
-            this.osTag = osTag;
-            return this;
-        }
-        public ListCustomImagesResponseBodyImagesOsTag getOsTag() {
-            return this.osTag;
-        }
-
-        public ListCustomImagesResponseBodyImages setSkuCode(String skuCode) {
-            this.skuCode = skuCode;
-            return this;
-        }
-        public String getSkuCode() {
-            return this.skuCode;
-        }
-
-        public ListCustomImagesResponseBodyImages setPricingCycle(String pricingCycle) {
-            this.pricingCycle = pricingCycle;
-            return this;
-        }
-        public String getPricingCycle() {
-            return this.pricingCycle;
-        }
-
-        public ListCustomImagesResponseBodyImages setDescription(String description) {
+        public ListCustomImagesResponseBodyImagesImageInfo setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -247,7 +215,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListCustomImagesResponseBodyImages setSize(Integer size) {
+        public ListCustomImagesResponseBodyImagesImageInfo setSize(Integer size) {
             this.size = size;
             return this;
         }
@@ -255,15 +223,15 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.size;
         }
 
-        public ListCustomImagesResponseBodyImages setBaseOsTag(ListCustomImagesResponseBodyImagesBaseOsTag baseOsTag) {
-            this.baseOsTag = baseOsTag;
+        public ListCustomImagesResponseBodyImagesImageInfo setImageOwnerAlias(String imageOwnerAlias) {
+            this.imageOwnerAlias = imageOwnerAlias;
             return this;
         }
-        public ListCustomImagesResponseBodyImagesBaseOsTag getBaseOsTag() {
-            return this.baseOsTag;
+        public String getImageOwnerAlias() {
+            return this.imageOwnerAlias;
         }
 
-        public ListCustomImagesResponseBodyImages setImageName(String imageName) {
+        public ListCustomImagesResponseBodyImagesImageInfo setImageName(String imageName) {
             this.imageName = imageName;
             return this;
         }
@@ -271,7 +239,23 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.imageName;
         }
 
-        public ListCustomImagesResponseBodyImages setImageId(String imageId) {
+        public ListCustomImagesResponseBodyImagesImageInfo setSkuCode(String skuCode) {
+            this.skuCode = skuCode;
+            return this;
+        }
+        public String getSkuCode() {
+            return this.skuCode;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfo setPricingCycle(String pricingCycle) {
+            this.pricingCycle = pricingCycle;
+            return this;
+        }
+        public String getPricingCycle() {
+            return this.pricingCycle;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfo setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
@@ -279,7 +263,15 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public ListCustomImagesResponseBodyImages setUid(String uid) {
+        public ListCustomImagesResponseBodyImagesImageInfo setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfo setUid(String uid) {
             this.uid = uid;
             return this;
         }
@@ -287,12 +279,39 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.uid;
         }
 
-        public ListCustomImagesResponseBodyImages setProductCode(String productCode) {
-            this.productCode = productCode;
+        public ListCustomImagesResponseBodyImagesImageInfo setBaseOsTag(ListCustomImagesResponseBodyImagesImageInfoBaseOsTag baseOsTag) {
+            this.baseOsTag = baseOsTag;
             return this;
         }
-        public String getProductCode() {
-            return this.productCode;
+        public ListCustomImagesResponseBodyImagesImageInfoBaseOsTag getBaseOsTag() {
+            return this.baseOsTag;
+        }
+
+        public ListCustomImagesResponseBodyImagesImageInfo setOsTag(ListCustomImagesResponseBodyImagesImageInfoOsTag osTag) {
+            this.osTag = osTag;
+            return this;
+        }
+        public ListCustomImagesResponseBodyImagesImageInfoOsTag getOsTag() {
+            return this.osTag;
+        }
+
+    }
+
+    public static class ListCustomImagesResponseBodyImages extends TeaModel {
+        @NameInMap("ImageInfo")
+        public java.util.List<ListCustomImagesResponseBodyImagesImageInfo> imageInfo;
+
+        public static ListCustomImagesResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomImagesResponseBodyImages self = new ListCustomImagesResponseBodyImages();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomImagesResponseBodyImages setImageInfo(java.util.List<ListCustomImagesResponseBodyImagesImageInfo> imageInfo) {
+            this.imageInfo = imageInfo;
+            return this;
+        }
+        public java.util.List<ListCustomImagesResponseBodyImagesImageInfo> getImageInfo() {
+            return this.imageInfo;
         }
 
     }

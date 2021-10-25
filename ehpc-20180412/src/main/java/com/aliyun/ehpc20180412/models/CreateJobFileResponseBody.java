@@ -7,9 +7,6 @@ public class CreateJobFileResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TemplateId")
-    public String templateId;
-
     public static CreateJobFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateJobFileResponseBody self = new CreateJobFileResponseBody();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class CreateJobFileResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateJobFileResponseBody setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
     }
 
 }

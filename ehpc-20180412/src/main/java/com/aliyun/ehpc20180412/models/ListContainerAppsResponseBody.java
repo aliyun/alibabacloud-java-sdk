@@ -4,12 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListContainerAppsResponseBody extends TeaModel {
-    @NameInMap("ContainerApps")
-    public java.util.List<ListContainerAppsResponseBodyContainerApps> containerApps;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class ListContainerAppsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("ContainerApps")
+    public ListContainerAppsResponseBodyContainerApps containerApps;
+
     public static ListContainerAppsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListContainerAppsResponseBody self = new ListContainerAppsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListContainerAppsResponseBody setContainerApps(java.util.List<ListContainerAppsResponseBodyContainerApps> containerApps) {
-        this.containerApps = containerApps;
-        return this;
-    }
-    public java.util.List<ListContainerAppsResponseBodyContainerApps> getContainerApps() {
-        return this.containerApps;
-    }
-
-    public ListContainerAppsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListContainerAppsResponseBody setPageSize(Integer pageSize) {
@@ -64,7 +48,23 @@ public class ListContainerAppsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class ListContainerAppsResponseBodyContainerApps extends TeaModel {
+    public ListContainerAppsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListContainerAppsResponseBody setContainerApps(ListContainerAppsResponseBodyContainerApps containerApps) {
+        this.containerApps = containerApps;
+        return this;
+    }
+    public ListContainerAppsResponseBodyContainerApps getContainerApps() {
+        return this.containerApps;
+    }
+
+    public static class ListContainerAppsResponseBodyContainerAppsContainerApps extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -86,12 +86,12 @@ public class ListContainerAppsResponseBody extends TeaModel {
         @NameInMap("Id")
         public String id;
 
-        public static ListContainerAppsResponseBodyContainerApps build(java.util.Map<String, ?> map) throws Exception {
-            ListContainerAppsResponseBodyContainerApps self = new ListContainerAppsResponseBodyContainerApps();
+        public static ListContainerAppsResponseBodyContainerAppsContainerApps build(java.util.Map<String, ?> map) throws Exception {
+            ListContainerAppsResponseBodyContainerAppsContainerApps self = new ListContainerAppsResponseBodyContainerAppsContainerApps();
             return TeaModel.build(map, self);
         }
 
-        public ListContainerAppsResponseBodyContainerApps setType(String type) {
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setType(String type) {
             this.type = type;
             return this;
         }
@@ -99,7 +99,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
             return this.type;
         }
 
-        public ListContainerAppsResponseBodyContainerApps setDescription(String description) {
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -107,7 +107,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListContainerAppsResponseBodyContainerApps setCreateTime(String createTime) {
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -115,7 +115,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListContainerAppsResponseBodyContainerApps setRepository(String repository) {
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setRepository(String repository) {
             this.repository = repository;
             return this;
         }
@@ -123,7 +123,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
             return this.repository;
         }
 
-        public ListContainerAppsResponseBodyContainerApps setImageTag(String imageTag) {
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setImageTag(String imageTag) {
             this.imageTag = imageTag;
             return this;
         }
@@ -131,7 +131,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
             return this.imageTag;
         }
 
-        public ListContainerAppsResponseBodyContainerApps setName(String name) {
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setName(String name) {
             this.name = name;
             return this;
         }
@@ -139,12 +139,31 @@ public class ListContainerAppsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListContainerAppsResponseBodyContainerApps setId(String id) {
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+    }
+
+    public static class ListContainerAppsResponseBodyContainerApps extends TeaModel {
+        @NameInMap("ContainerApps")
+        public java.util.List<ListContainerAppsResponseBodyContainerAppsContainerApps> containerApps;
+
+        public static ListContainerAppsResponseBodyContainerApps build(java.util.Map<String, ?> map) throws Exception {
+            ListContainerAppsResponseBodyContainerApps self = new ListContainerAppsResponseBodyContainerApps();
+            return TeaModel.build(map, self);
+        }
+
+        public ListContainerAppsResponseBodyContainerApps setContainerApps(java.util.List<ListContainerAppsResponseBodyContainerAppsContainerApps> containerApps) {
+            this.containerApps = containerApps;
+            return this;
+        }
+        public java.util.List<ListContainerAppsResponseBodyContainerAppsContainerApps> getContainerApps() {
+            return this.containerApps;
         }
 
     }

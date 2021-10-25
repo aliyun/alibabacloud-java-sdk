@@ -8,7 +8,7 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("SvgUrls")
-    public java.util.List<GetCloudMetricProfilingResponseBodySvgUrls> svgUrls;
+    public GetCloudMetricProfilingResponseBodySvgUrls svgUrls;
 
     public static GetCloudMetricProfilingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCloudMetricProfilingResponseBody self = new GetCloudMetricProfilingResponseBody();
@@ -23,20 +23,17 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetCloudMetricProfilingResponseBody setSvgUrls(java.util.List<GetCloudMetricProfilingResponseBodySvgUrls> svgUrls) {
+    public GetCloudMetricProfilingResponseBody setSvgUrls(GetCloudMetricProfilingResponseBodySvgUrls svgUrls) {
         this.svgUrls = svgUrls;
         return this;
     }
-    public java.util.List<GetCloudMetricProfilingResponseBodySvgUrls> getSvgUrls() {
+    public GetCloudMetricProfilingResponseBodySvgUrls getSvgUrls() {
         return this.svgUrls;
     }
 
-    public static class GetCloudMetricProfilingResponseBodySvgUrls extends TeaModel {
+    public static class GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo extends TeaModel {
         @NameInMap("Type")
         public String type;
-
-        @NameInMap("Size")
-        public Integer size;
 
         @NameInMap("Url")
         public String url;
@@ -44,12 +41,15 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        public static GetCloudMetricProfilingResponseBodySvgUrls build(java.util.Map<String, ?> map) throws Exception {
-            GetCloudMetricProfilingResponseBodySvgUrls self = new GetCloudMetricProfilingResponseBodySvgUrls();
+        @NameInMap("Size")
+        public Integer size;
+
+        public static GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo self = new GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetCloudMetricProfilingResponseBodySvgUrls setType(String type) {
+        public GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo setType(String type) {
             this.type = type;
             return this;
         }
@@ -57,15 +57,7 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
             return this.type;
         }
 
-        public GetCloudMetricProfilingResponseBodySvgUrls setSize(Integer size) {
-            this.size = size;
-            return this;
-        }
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public GetCloudMetricProfilingResponseBodySvgUrls setUrl(String url) {
+        public GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -73,12 +65,39 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
             return this.url;
         }
 
-        public GetCloudMetricProfilingResponseBodySvgUrls setName(String name) {
+        public GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+    }
+
+    public static class GetCloudMetricProfilingResponseBodySvgUrls extends TeaModel {
+        @NameInMap("SvgInfo")
+        public java.util.List<GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo> svgInfo;
+
+        public static GetCloudMetricProfilingResponseBodySvgUrls build(java.util.Map<String, ?> map) throws Exception {
+            GetCloudMetricProfilingResponseBodySvgUrls self = new GetCloudMetricProfilingResponseBodySvgUrls();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCloudMetricProfilingResponseBodySvgUrls setSvgInfo(java.util.List<GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo> svgInfo) {
+            this.svgInfo = svgInfo;
+            return this;
+        }
+        public java.util.List<GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo> getSvgInfo() {
+            return this.svgInfo;
         }
 
     }

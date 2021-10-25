@@ -4,29 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetIfEcsTypeSupportHtConfigResponseBody extends TeaModel {
-    @NameInMap("DefaultHtEnabled")
-    public Boolean defaultHtEnabled;
-
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("SupportHtConfig")
-    public Boolean supportHtConfig;
+    @NameInMap("DefaultHtEnabled")
+    public Boolean defaultHtEnabled;
 
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("SupportHtConfig")
+    public Boolean supportHtConfig;
+
     public static GetIfEcsTypeSupportHtConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetIfEcsTypeSupportHtConfigResponseBody self = new GetIfEcsTypeSupportHtConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetIfEcsTypeSupportHtConfigResponseBody setDefaultHtEnabled(Boolean defaultHtEnabled) {
-        this.defaultHtEnabled = defaultHtEnabled;
-        return this;
-    }
-    public Boolean getDefaultHtEnabled() {
-        return this.defaultHtEnabled;
     }
 
     public GetIfEcsTypeSupportHtConfigResponseBody setRequestId(String requestId) {
@@ -37,12 +29,12 @@ public class GetIfEcsTypeSupportHtConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetIfEcsTypeSupportHtConfigResponseBody setSupportHtConfig(Boolean supportHtConfig) {
-        this.supportHtConfig = supportHtConfig;
+    public GetIfEcsTypeSupportHtConfigResponseBody setDefaultHtEnabled(Boolean defaultHtEnabled) {
+        this.defaultHtEnabled = defaultHtEnabled;
         return this;
     }
-    public Boolean getSupportHtConfig() {
-        return this.supportHtConfig;
+    public Boolean getDefaultHtEnabled() {
+        return this.defaultHtEnabled;
     }
 
     public GetIfEcsTypeSupportHtConfigResponseBody setInstanceType(String instanceType) {
@@ -51,6 +43,14 @@ public class GetIfEcsTypeSupportHtConfigResponseBody extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public GetIfEcsTypeSupportHtConfigResponseBody setSupportHtConfig(Boolean supportHtConfig) {
+        this.supportHtConfig = supportHtConfig;
+        return this;
+    }
+    public Boolean getSupportHtConfig() {
+        return this.supportHtConfig;
     }
 
 }

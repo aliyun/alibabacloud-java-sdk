@@ -175,9 +175,6 @@ public class SetAutoScaleConfigRequest extends TeaModel {
     }
 
     public static class SetAutoScaleConfigRequestQueuesInstanceTypes extends TeaModel {
-        @NameInMap("HostNamePrefix")
-        public String hostNamePrefix;
-
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -196,14 +193,6 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         public static SetAutoScaleConfigRequestQueuesInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
             SetAutoScaleConfigRequestQueuesInstanceTypes self = new SetAutoScaleConfigRequestQueuesInstanceTypes();
             return TeaModel.build(map, self);
-        }
-
-        public SetAutoScaleConfigRequestQueuesInstanceTypes setHostNamePrefix(String hostNamePrefix) {
-            this.hostNamePrefix = hostNamePrefix;
-            return this;
-        }
-        public String getHostNamePrefix() {
-            return this.hostNamePrefix;
         }
 
         public SetAutoScaleConfigRequestQueuesInstanceTypes setVSwitchId(String vSwitchId) {
@@ -249,8 +238,29 @@ public class SetAutoScaleConfigRequest extends TeaModel {
     }
 
     public static class SetAutoScaleConfigRequestQueues extends TeaModel {
+        @NameInMap("QueueImageId")
+        public String queueImageId;
+
+        @NameInMap("SystemDiskCategory")
+        public String systemDiskCategory;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("HostNameSuffix")
+        public String hostNameSuffix;
+
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
+        @NameInMap("HostNamePrefix")
+        public String hostNamePrefix;
+
         @NameInMap("MinNodesInQueue")
         public Integer minNodesInQueue;
+
+        @NameInMap("SystemDiskSize")
+        public Integer systemDiskSize;
 
         @NameInMap("MaxNodesInQueue")
         public Integer maxNodesInQueue;
@@ -264,8 +274,8 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         @NameInMap("EnableAutoGrow")
         public Boolean enableAutoGrow;
 
-        @NameInMap("QueueImageId")
-        public String queueImageId;
+        @NameInMap("SystemDiskLevel")
+        public String systemDiskLevel;
 
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
@@ -273,15 +283,57 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         @NameInMap("InstanceTypes")
         public java.util.List<SetAutoScaleConfigRequestQueuesInstanceTypes> instanceTypes;
 
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("SpotStrategy")
-        public String spotStrategy;
-
         public static SetAutoScaleConfigRequestQueues build(java.util.Map<String, ?> map) throws Exception {
             SetAutoScaleConfigRequestQueues self = new SetAutoScaleConfigRequestQueues();
             return TeaModel.build(map, self);
+        }
+
+        public SetAutoScaleConfigRequestQueues setQueueImageId(String queueImageId) {
+            this.queueImageId = queueImageId;
+            return this;
+        }
+        public String getQueueImageId() {
+            return this.queueImageId;
+        }
+
+        public SetAutoScaleConfigRequestQueues setSystemDiskCategory(String systemDiskCategory) {
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        public SetAutoScaleConfigRequestQueues setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public SetAutoScaleConfigRequestQueues setHostNameSuffix(String hostNameSuffix) {
+            this.hostNameSuffix = hostNameSuffix;
+            return this;
+        }
+        public String getHostNameSuffix() {
+            return this.hostNameSuffix;
+        }
+
+        public SetAutoScaleConfigRequestQueues setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public SetAutoScaleConfigRequestQueues setHostNamePrefix(String hostNamePrefix) {
+            this.hostNamePrefix = hostNamePrefix;
+            return this;
+        }
+        public String getHostNamePrefix() {
+            return this.hostNamePrefix;
         }
 
         public SetAutoScaleConfigRequestQueues setMinNodesInQueue(Integer minNodesInQueue) {
@@ -290,6 +342,14 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         }
         public Integer getMinNodesInQueue() {
             return this.minNodesInQueue;
+        }
+
+        public SetAutoScaleConfigRequestQueues setSystemDiskSize(Integer systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
         public SetAutoScaleConfigRequestQueues setMaxNodesInQueue(Integer maxNodesInQueue) {
@@ -324,12 +384,12 @@ public class SetAutoScaleConfigRequest extends TeaModel {
             return this.enableAutoGrow;
         }
 
-        public SetAutoScaleConfigRequestQueues setQueueImageId(String queueImageId) {
-            this.queueImageId = queueImageId;
+        public SetAutoScaleConfigRequestQueues setSystemDiskLevel(String systemDiskLevel) {
+            this.systemDiskLevel = systemDiskLevel;
             return this;
         }
-        public String getQueueImageId() {
-            return this.queueImageId;
+        public String getSystemDiskLevel() {
+            return this.systemDiskLevel;
         }
 
         public SetAutoScaleConfigRequestQueues setSpotPriceLimit(Float spotPriceLimit) {
@@ -346,22 +406,6 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         }
         public java.util.List<SetAutoScaleConfigRequestQueuesInstanceTypes> getInstanceTypes() {
             return this.instanceTypes;
-        }
-
-        public SetAutoScaleConfigRequestQueues setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public SetAutoScaleConfigRequestQueues setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
         }
 
     }

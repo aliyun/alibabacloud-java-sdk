@@ -8,7 +8,7 @@ public class AddContainerAppResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("ContainerId")
-    public java.util.List<String> containerId;
+    public AddContainerAppResponseBodyContainerId containerId;
 
     public static AddContainerAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddContainerAppResponseBody self = new AddContainerAppResponseBody();
@@ -23,12 +23,31 @@ public class AddContainerAppResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddContainerAppResponseBody setContainerId(java.util.List<String> containerId) {
+    public AddContainerAppResponseBody setContainerId(AddContainerAppResponseBodyContainerId containerId) {
         this.containerId = containerId;
         return this;
     }
-    public java.util.List<String> getContainerId() {
+    public AddContainerAppResponseBodyContainerId getContainerId() {
         return this.containerId;
+    }
+
+    public static class AddContainerAppResponseBodyContainerId extends TeaModel {
+        @NameInMap("ContainerId")
+        public java.util.List<String> containerId;
+
+        public static AddContainerAppResponseBodyContainerId build(java.util.Map<String, ?> map) throws Exception {
+            AddContainerAppResponseBodyContainerId self = new AddContainerAppResponseBodyContainerId();
+            return TeaModel.build(map, self);
+        }
+
+        public AddContainerAppResponseBodyContainerId setContainerId(java.util.List<String> containerId) {
+            this.containerId = containerId;
+            return this;
+        }
+        public java.util.List<String> getContainerId() {
+            return this.containerId;
+        }
+
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListCloudMetricProfilingsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Profilings")
-    public java.util.List<ListCloudMetricProfilingsResponseBodyProfilings> profilings;
+    public ListCloudMetricProfilingsResponseBodyProfilings profilings;
 
     public static ListCloudMetricProfilingsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCloudMetricProfilingsResponseBody self = new ListCloudMetricProfilingsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListCloudMetricProfilingsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListCloudMetricProfilingsResponseBody setPageSize(Integer pageSize) {
@@ -56,15 +48,23 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListCloudMetricProfilingsResponseBody setProfilings(java.util.List<ListCloudMetricProfilingsResponseBodyProfilings> profilings) {
+    public ListCloudMetricProfilingsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListCloudMetricProfilingsResponseBody setProfilings(ListCloudMetricProfilingsResponseBodyProfilings profilings) {
         this.profilings = profilings;
         return this;
     }
-    public java.util.List<ListCloudMetricProfilingsResponseBodyProfilings> getProfilings() {
+    public ListCloudMetricProfilingsResponseBodyProfilings getProfilings() {
         return this.profilings;
     }
 
-    public static class ListCloudMetricProfilingsResponseBodyProfilings extends TeaModel {
+    public static class ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo extends TeaModel {
         @NameInMap("ProfilingId")
         public String profilingId;
 
@@ -86,12 +86,12 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
         @NameInMap("Freq")
         public Integer freq;
 
-        public static ListCloudMetricProfilingsResponseBodyProfilings build(java.util.Map<String, ?> map) throws Exception {
-            ListCloudMetricProfilingsResponseBodyProfilings self = new ListCloudMetricProfilingsResponseBodyProfilings();
+        public static ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo self = new ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListCloudMetricProfilingsResponseBodyProfilings setProfilingId(String profilingId) {
+        public ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo setProfilingId(String profilingId) {
             this.profilingId = profilingId;
             return this;
         }
@@ -99,7 +99,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             return this.profilingId;
         }
 
-        public ListCloudMetricProfilingsResponseBodyProfilings setTriggerTime(String triggerTime) {
+        public ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo setTriggerTime(String triggerTime) {
             this.triggerTime = triggerTime;
             return this;
         }
@@ -107,7 +107,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             return this.triggerTime;
         }
 
-        public ListCloudMetricProfilingsResponseBodyProfilings setPid(Integer pid) {
+        public ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo setPid(Integer pid) {
             this.pid = pid;
             return this;
         }
@@ -115,7 +115,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             return this.pid;
         }
 
-        public ListCloudMetricProfilingsResponseBodyProfilings setHostName(String hostName) {
+        public ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo setHostName(String hostName) {
             this.hostName = hostName;
             return this;
         }
@@ -123,7 +123,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             return this.hostName;
         }
 
-        public ListCloudMetricProfilingsResponseBodyProfilings setDuration(Integer duration) {
+        public ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo setDuration(Integer duration) {
             this.duration = duration;
             return this;
         }
@@ -131,7 +131,7 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public ListCloudMetricProfilingsResponseBodyProfilings setInstanceId(String instanceId) {
+        public ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -139,12 +139,31 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListCloudMetricProfilingsResponseBodyProfilings setFreq(Integer freq) {
+        public ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo setFreq(Integer freq) {
             this.freq = freq;
             return this;
         }
         public Integer getFreq() {
             return this.freq;
+        }
+
+    }
+
+    public static class ListCloudMetricProfilingsResponseBodyProfilings extends TeaModel {
+        @NameInMap("ProfilingInfo")
+        public java.util.List<ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo> profilingInfo;
+
+        public static ListCloudMetricProfilingsResponseBodyProfilings build(java.util.Map<String, ?> map) throws Exception {
+            ListCloudMetricProfilingsResponseBodyProfilings self = new ListCloudMetricProfilingsResponseBodyProfilings();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCloudMetricProfilingsResponseBodyProfilings setProfilingInfo(java.util.List<ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo> profilingInfo) {
+            this.profilingInfo = profilingInfo;
+            return this;
+        }
+        public java.util.List<ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo> getProfilingInfo() {
+            return this.profilingInfo;
         }
 
     }

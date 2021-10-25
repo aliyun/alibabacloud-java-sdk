@@ -4,11 +4,11 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetAccountingReportResponseBody extends TeaModel {
+    @NameInMap("TotalCoreTime")
+    public Integer totalCoreTime;
+
     @NameInMap("Metrics")
     public String metrics;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,15 +19,23 @@ public class GetAccountingReportResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("TotalCoreTime")
-    public Integer totalCoreTime;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Data")
-    public java.util.List<String> data;
+    public GetAccountingReportResponseBodyData data;
 
     public static GetAccountingReportResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAccountingReportResponseBody self = new GetAccountingReportResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAccountingReportResponseBody setTotalCoreTime(Integer totalCoreTime) {
+        this.totalCoreTime = totalCoreTime;
+        return this;
+    }
+    public Integer getTotalCoreTime() {
+        return this.totalCoreTime;
     }
 
     public GetAccountingReportResponseBody setMetrics(String metrics) {
@@ -36,14 +44,6 @@ public class GetAccountingReportResponseBody extends TeaModel {
     }
     public String getMetrics() {
         return this.metrics;
-    }
-
-    public GetAccountingReportResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public GetAccountingReportResponseBody setRequestId(String requestId) {
@@ -70,20 +70,39 @@ public class GetAccountingReportResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public GetAccountingReportResponseBody setTotalCoreTime(Integer totalCoreTime) {
-        this.totalCoreTime = totalCoreTime;
+    public GetAccountingReportResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getTotalCoreTime() {
-        return this.totalCoreTime;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
-    public GetAccountingReportResponseBody setData(java.util.List<String> data) {
+    public GetAccountingReportResponseBody setData(GetAccountingReportResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<String> getData() {
+    public GetAccountingReportResponseBodyData getData() {
         return this.data;
+    }
+
+    public static class GetAccountingReportResponseBodyData extends TeaModel {
+        @NameInMap("Data")
+        public java.util.List<String> data;
+
+        public static GetAccountingReportResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetAccountingReportResponseBodyData self = new GetAccountingReportResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAccountingReportResponseBodyData setData(java.util.List<String> data) {
+            this.data = data;
+            return this;
+        }
+        public java.util.List<String> getData() {
+            return this.data;
+        }
+
     }
 
 }

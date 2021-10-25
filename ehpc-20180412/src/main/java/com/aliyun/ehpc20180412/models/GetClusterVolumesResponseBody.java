@@ -4,34 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetClusterVolumesResponseBody extends TeaModel {
-    @NameInMap("Volumes")
-    public java.util.List<GetClusterVolumesResponseBodyVolumes> volumes;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Volumes")
+    public GetClusterVolumesResponseBodyVolumes volumes;
 
     public static GetClusterVolumesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetClusterVolumesResponseBody self = new GetClusterVolumesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetClusterVolumesResponseBody setVolumes(java.util.List<GetClusterVolumesResponseBodyVolumes> volumes) {
-        this.volumes = volumes;
-        return this;
-    }
-    public java.util.List<GetClusterVolumesResponseBodyVolumes> getVolumes() {
-        return this.volumes;
-    }
-
-    public GetClusterVolumesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetClusterVolumesResponseBody setRegionId(String regionId) {
@@ -42,16 +26,32 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public static class GetClusterVolumesResponseBodyVolumesRoles extends TeaModel {
+    public GetClusterVolumesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetClusterVolumesResponseBody setVolumes(GetClusterVolumesResponseBodyVolumes volumes) {
+        this.volumes = volumes;
+        return this;
+    }
+    public GetClusterVolumesResponseBodyVolumes getVolumes() {
+        return this.volumes;
+    }
+
+    public static class GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        public static GetClusterVolumesResponseBodyVolumesRoles build(java.util.Map<String, ?> map) throws Exception {
-            GetClusterVolumesResponseBodyVolumesRoles self = new GetClusterVolumesResponseBodyVolumesRoles();
+        public static GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo self = new GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetClusterVolumesResponseBodyVolumesRoles setName(String name) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo setName(String name) {
             this.name = name;
             return this;
         }
@@ -61,15 +61,31 @@ public class GetClusterVolumesResponseBody extends TeaModel {
 
     }
 
-    public static class GetClusterVolumesResponseBodyVolumes extends TeaModel {
+    public static class GetClusterVolumesResponseBodyVolumesVolumeInfoRoles extends TeaModel {
+        @NameInMap("RoleInfo")
+        public java.util.List<GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo> roleInfo;
+
+        public static GetClusterVolumesResponseBodyVolumesVolumeInfoRoles build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterVolumesResponseBodyVolumesVolumeInfoRoles self = new GetClusterVolumesResponseBodyVolumesVolumeInfoRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public GetClusterVolumesResponseBodyVolumesVolumeInfoRoles setRoleInfo(java.util.List<GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo> roleInfo) {
+            this.roleInfo = roleInfo;
+            return this;
+        }
+        public java.util.List<GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo> getRoleInfo() {
+            return this.roleInfo;
+        }
+
+    }
+
+    public static class GetClusterVolumesResponseBodyVolumesVolumeInfo extends TeaModel {
         @NameInMap("JobQueue")
         public String jobQueue;
 
         @NameInMap("VolumeId")
         public String volumeId;
-
-        @NameInMap("Roles")
-        public java.util.List<GetClusterVolumesResponseBodyVolumesRoles> roles;
 
         @NameInMap("RemoteDirectory")
         public String remoteDirectory;
@@ -92,12 +108,15 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
 
-        public static GetClusterVolumesResponseBodyVolumes build(java.util.Map<String, ?> map) throws Exception {
-            GetClusterVolumesResponseBodyVolumes self = new GetClusterVolumesResponseBodyVolumes();
+        @NameInMap("Roles")
+        public GetClusterVolumesResponseBodyVolumesVolumeInfoRoles roles;
+
+        public static GetClusterVolumesResponseBodyVolumesVolumeInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterVolumesResponseBodyVolumesVolumeInfo self = new GetClusterVolumesResponseBodyVolumesVolumeInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetClusterVolumesResponseBodyVolumes setJobQueue(String jobQueue) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setJobQueue(String jobQueue) {
             this.jobQueue = jobQueue;
             return this;
         }
@@ -105,7 +124,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.jobQueue;
         }
 
-        public GetClusterVolumesResponseBodyVolumes setVolumeId(String volumeId) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeId(String volumeId) {
             this.volumeId = volumeId;
             return this;
         }
@@ -113,15 +132,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.volumeId;
         }
 
-        public GetClusterVolumesResponseBodyVolumes setRoles(java.util.List<GetClusterVolumesResponseBodyVolumesRoles> roles) {
-            this.roles = roles;
-            return this;
-        }
-        public java.util.List<GetClusterVolumesResponseBodyVolumesRoles> getRoles() {
-            return this.roles;
-        }
-
-        public GetClusterVolumesResponseBodyVolumes setRemoteDirectory(String remoteDirectory) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setRemoteDirectory(String remoteDirectory) {
             this.remoteDirectory = remoteDirectory;
             return this;
         }
@@ -129,7 +140,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.remoteDirectory;
         }
 
-        public GetClusterVolumesResponseBodyVolumes setVolumeMountpoint(String volumeMountpoint) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeMountpoint(String volumeMountpoint) {
             this.volumeMountpoint = volumeMountpoint;
             return this;
         }
@@ -137,7 +148,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.volumeMountpoint;
         }
 
-        public GetClusterVolumesResponseBodyVolumes setLocalDirectory(String localDirectory) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setLocalDirectory(String localDirectory) {
             this.localDirectory = localDirectory;
             return this;
         }
@@ -145,7 +156,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.localDirectory;
         }
 
-        public GetClusterVolumesResponseBodyVolumes setVolumeType(String volumeType) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeType(String volumeType) {
             this.volumeType = volumeType;
             return this;
         }
@@ -153,7 +164,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.volumeType;
         }
 
-        public GetClusterVolumesResponseBodyVolumes setMustKeep(Boolean mustKeep) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setMustKeep(Boolean mustKeep) {
             this.mustKeep = mustKeep;
             return this;
         }
@@ -161,7 +172,7 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.mustKeep;
         }
 
-        public GetClusterVolumesResponseBodyVolumes setLocation(String location) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setLocation(String location) {
             this.location = location;
             return this;
         }
@@ -169,12 +180,39 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.location;
         }
 
-        public GetClusterVolumesResponseBodyVolumes setVolumeProtocol(String volumeProtocol) {
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeProtocol(String volumeProtocol) {
             this.volumeProtocol = volumeProtocol;
             return this;
         }
         public String getVolumeProtocol() {
             return this.volumeProtocol;
+        }
+
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setRoles(GetClusterVolumesResponseBodyVolumesVolumeInfoRoles roles) {
+            this.roles = roles;
+            return this;
+        }
+        public GetClusterVolumesResponseBodyVolumesVolumeInfoRoles getRoles() {
+            return this.roles;
+        }
+
+    }
+
+    public static class GetClusterVolumesResponseBodyVolumes extends TeaModel {
+        @NameInMap("VolumeInfo")
+        public java.util.List<GetClusterVolumesResponseBodyVolumesVolumeInfo> volumeInfo;
+
+        public static GetClusterVolumesResponseBodyVolumes build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterVolumesResponseBodyVolumes self = new GetClusterVolumesResponseBodyVolumes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetClusterVolumesResponseBodyVolumes setVolumeInfo(java.util.List<GetClusterVolumesResponseBodyVolumesVolumeInfo> volumeInfo) {
+            this.volumeInfo = volumeInfo;
+            return this;
+        }
+        public java.util.List<GetClusterVolumesResponseBodyVolumesVolumeInfo> getVolumeInfo() {
+            return this.volumeInfo;
         }
 
     }

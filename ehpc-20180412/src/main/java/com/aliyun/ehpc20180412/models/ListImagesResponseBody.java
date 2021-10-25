@@ -8,7 +8,7 @@ public class ListImagesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("OsTags")
-    public java.util.List<ListImagesResponseBodyOsTags> osTags;
+    public ListImagesResponseBodyOsTags osTags;
 
     public static ListImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListImagesResponseBody self = new ListImagesResponseBody();
@@ -23,15 +23,15 @@ public class ListImagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListImagesResponseBody setOsTags(java.util.List<ListImagesResponseBodyOsTags> osTags) {
+    public ListImagesResponseBody setOsTags(ListImagesResponseBodyOsTags osTags) {
         this.osTags = osTags;
         return this;
     }
-    public java.util.List<ListImagesResponseBodyOsTags> getOsTags() {
+    public ListImagesResponseBodyOsTags getOsTags() {
         return this.osTags;
     }
 
-    public static class ListImagesResponseBodyOsTags extends TeaModel {
+    public static class ListImagesResponseBodyOsTagsOsInfo extends TeaModel {
         @NameInMap("Version")
         public String version;
 
@@ -50,12 +50,12 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Architecture")
         public String architecture;
 
-        public static ListImagesResponseBodyOsTags build(java.util.Map<String, ?> map) throws Exception {
-            ListImagesResponseBodyOsTags self = new ListImagesResponseBodyOsTags();
+        public static ListImagesResponseBodyOsTagsOsInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyOsTagsOsInfo self = new ListImagesResponseBodyOsTagsOsInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListImagesResponseBodyOsTags setVersion(String version) {
+        public ListImagesResponseBodyOsTagsOsInfo setVersion(String version) {
             this.version = version;
             return this;
         }
@@ -63,7 +63,7 @@ public class ListImagesResponseBody extends TeaModel {
             return this.version;
         }
 
-        public ListImagesResponseBodyOsTags setBaseOsTag(String baseOsTag) {
+        public ListImagesResponseBodyOsTagsOsInfo setBaseOsTag(String baseOsTag) {
             this.baseOsTag = baseOsTag;
             return this;
         }
@@ -71,7 +71,7 @@ public class ListImagesResponseBody extends TeaModel {
             return this.baseOsTag;
         }
 
-        public ListImagesResponseBodyOsTags setPlatform(String platform) {
+        public ListImagesResponseBodyOsTagsOsInfo setPlatform(String platform) {
             this.platform = platform;
             return this;
         }
@@ -79,7 +79,7 @@ public class ListImagesResponseBody extends TeaModel {
             return this.platform;
         }
 
-        public ListImagesResponseBodyOsTags setOsTag(String osTag) {
+        public ListImagesResponseBodyOsTagsOsInfo setOsTag(String osTag) {
             this.osTag = osTag;
             return this;
         }
@@ -87,7 +87,7 @@ public class ListImagesResponseBody extends TeaModel {
             return this.osTag;
         }
 
-        public ListImagesResponseBodyOsTags setImageId(String imageId) {
+        public ListImagesResponseBodyOsTagsOsInfo setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
@@ -95,12 +95,31 @@ public class ListImagesResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public ListImagesResponseBodyOsTags setArchitecture(String architecture) {
+        public ListImagesResponseBodyOsTagsOsInfo setArchitecture(String architecture) {
             this.architecture = architecture;
             return this;
         }
         public String getArchitecture() {
             return this.architecture;
+        }
+
+    }
+
+    public static class ListImagesResponseBodyOsTags extends TeaModel {
+        @NameInMap("OsInfo")
+        public java.util.List<ListImagesResponseBodyOsTagsOsInfo> osInfo;
+
+        public static ListImagesResponseBodyOsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListImagesResponseBodyOsTags self = new ListImagesResponseBodyOsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListImagesResponseBodyOsTags setOsInfo(java.util.List<ListImagesResponseBodyOsTagsOsInfo> osInfo) {
+            this.osInfo = osInfo;
+            return this;
+        }
+        public java.util.List<ListImagesResponseBodyOsTagsOsInfo> getOsInfo() {
+            return this.osInfo;
         }
 
     }

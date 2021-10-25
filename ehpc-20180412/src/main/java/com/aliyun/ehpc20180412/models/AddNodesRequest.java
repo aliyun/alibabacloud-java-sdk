@@ -82,6 +82,15 @@ public class AddNodesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("SystemDiskLevel")
+    public String systemDiskLevel;
+
+    @NameInMap("MinCount")
+    public Integer minCount;
+
+    @NameInMap("Sync")
+    public Boolean sync;
+
     public static AddNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         AddNodesRequest self = new AddNodesRequest();
         return TeaModel.build(map, self);
@@ -293,6 +302,30 @@ public class AddNodesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AddNodesRequest setSystemDiskLevel(String systemDiskLevel) {
+        this.systemDiskLevel = systemDiskLevel;
+        return this;
+    }
+    public String getSystemDiskLevel() {
+        return this.systemDiskLevel;
+    }
+
+    public AddNodesRequest setMinCount(Integer minCount) {
+        this.minCount = minCount;
+        return this;
+    }
+    public Integer getMinCount() {
+        return this.minCount;
+    }
+
+    public AddNodesRequest setSync(Boolean sync) {
+        this.sync = sync;
+        return this;
+    }
+    public Boolean getSync() {
+        return this.sync;
     }
 
 }

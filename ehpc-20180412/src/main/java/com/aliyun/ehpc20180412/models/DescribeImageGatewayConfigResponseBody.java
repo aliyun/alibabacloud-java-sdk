@@ -31,12 +31,12 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
         return this.imagegw;
     }
 
-    public static class DescribeImageGatewayConfigResponseBodyImagegwLocations extends TeaModel {
-        @NameInMap("RemoteType")
-        public String remoteType;
-
+    public static class DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo extends TeaModel {
         @NameInMap("URL")
         public String URL;
+
+        @NameInMap("RemoteType")
+        public String remoteType;
 
         @NameInMap("Location")
         public String location;
@@ -44,20 +44,12 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
         @NameInMap("Authentication")
         public String authentication;
 
-        public static DescribeImageGatewayConfigResponseBodyImagegwLocations build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageGatewayConfigResponseBodyImagegwLocations self = new DescribeImageGatewayConfigResponseBodyImagegwLocations();
+        public static DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo self = new DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageGatewayConfigResponseBodyImagegwLocations setRemoteType(String remoteType) {
-            this.remoteType = remoteType;
-            return this;
-        }
-        public String getRemoteType() {
-            return this.remoteType;
-        }
-
-        public DescribeImageGatewayConfigResponseBodyImagegwLocations setURL(String URL) {
+        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setURL(String URL) {
             this.URL = URL;
             return this;
         }
@@ -65,7 +57,15 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             return this.URL;
         }
 
-        public DescribeImageGatewayConfigResponseBodyImagegwLocations setLocation(String location) {
+        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setRemoteType(String remoteType) {
+            this.remoteType = remoteType;
+            return this;
+        }
+        public String getRemoteType() {
+            return this.remoteType;
+        }
+
+        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setLocation(String location) {
             this.location = location;
             return this;
         }
@@ -73,7 +73,7 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             return this.location;
         }
 
-        public DescribeImageGatewayConfigResponseBodyImagegwLocations setAuthentication(String authentication) {
+        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setAuthentication(String authentication) {
             this.authentication = authentication;
             return this;
         }
@@ -83,10 +83,26 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeImageGatewayConfigResponseBodyImagegw extends TeaModel {
-        @NameInMap("Locations")
-        public java.util.List<DescribeImageGatewayConfigResponseBodyImagegwLocations> locations;
+    public static class DescribeImageGatewayConfigResponseBodyImagegwLocations extends TeaModel {
+        @NameInMap("LocationInfo")
+        public java.util.List<DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo> locationInfo;
 
+        public static DescribeImageGatewayConfigResponseBodyImagegwLocations build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageGatewayConfigResponseBodyImagegwLocations self = new DescribeImageGatewayConfigResponseBodyImagegwLocations();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageGatewayConfigResponseBodyImagegwLocations setLocationInfo(java.util.List<DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo> locationInfo) {
+            this.locationInfo = locationInfo;
+            return this;
+        }
+        public java.util.List<DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo> getLocationInfo() {
+            return this.locationInfo;
+        }
+
+    }
+
+    public static class DescribeImageGatewayConfigResponseBodyImagegw extends TeaModel {
         @NameInMap("UpdateDateTime")
         public String updateDateTime;
 
@@ -102,17 +118,12 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
         @NameInMap("PullUpdateTimeout")
         public Long pullUpdateTimeout;
 
+        @NameInMap("Locations")
+        public DescribeImageGatewayConfigResponseBodyImagegwLocations locations;
+
         public static DescribeImageGatewayConfigResponseBodyImagegw build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageGatewayConfigResponseBodyImagegw self = new DescribeImageGatewayConfigResponseBodyImagegw();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeImageGatewayConfigResponseBodyImagegw setLocations(java.util.List<DescribeImageGatewayConfigResponseBodyImagegwLocations> locations) {
-            this.locations = locations;
-            return this;
-        }
-        public java.util.List<DescribeImageGatewayConfigResponseBodyImagegwLocations> getLocations() {
-            return this.locations;
         }
 
         public DescribeImageGatewayConfigResponseBodyImagegw setUpdateDateTime(String updateDateTime) {
@@ -153,6 +164,14 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
         }
         public Long getPullUpdateTimeout() {
             return this.pullUpdateTimeout;
+        }
+
+        public DescribeImageGatewayConfigResponseBodyImagegw setLocations(DescribeImageGatewayConfigResponseBodyImagegwLocations locations) {
+            this.locations = locations;
+            return this;
+        }
+        public DescribeImageGatewayConfigResponseBodyImagegwLocations getLocations() {
+            return this.locations;
         }
 
     }
