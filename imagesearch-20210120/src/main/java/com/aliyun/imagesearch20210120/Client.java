@@ -42,6 +42,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public ImageCategoryResponse imageCategoryWithOptions(ImageCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ImageCategory", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new ImageCategoryResponse());
+    }
+
+    public ImageCategoryResponse imageCategory(ImageCategoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.imageCategoryWithOptions(request, runtime);
+    }
+
     public GeneralRecognitionResponse generalRecognitionWithOptions(GeneralRecognitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -127,6 +140,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         GeneralRecognitionResponse generalRecognitionResp = this.generalRecognitionWithOptions(generalRecognitionReq, runtime);
         return generalRecognitionResp;
+    }
+
+    public ImagePropertyResponse imagePropertyWithOptions(ImagePropertyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ImageProperty", "2021-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new ImagePropertyResponse());
+    }
+
+    public ImagePropertyResponse imageProperty(ImagePropertyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.imagePropertyWithOptions(request, runtime);
     }
 
     public ImageDuplicationResponse imageDuplicationWithOptions(ImageDuplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
