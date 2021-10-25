@@ -16,6 +16,12 @@ public class ListSensitiveColumnsDetailRequest extends TeaModel {
     @NameInMap("ColumnName")
     public String columnName;
 
+    @NameInMap("DbId")
+    public Long dbId;
+
+    @NameInMap("Logic")
+    public Boolean logic;
+
     public static ListSensitiveColumnsDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSensitiveColumnsDetailRequest self = new ListSensitiveColumnsDetailRequest();
         return TeaModel.build(map, self);
@@ -51,6 +57,22 @@ public class ListSensitiveColumnsDetailRequest extends TeaModel {
     }
     public String getColumnName() {
         return this.columnName;
+    }
+
+    public ListSensitiveColumnsDetailRequest setDbId(Long dbId) {
+        this.dbId = dbId;
+        return this;
+    }
+    public Long getDbId() {
+        return this.dbId;
+    }
+
+    public ListSensitiveColumnsDetailRequest setLogic(Boolean logic) {
+        this.logic = logic;
+        return this;
+    }
+    public Boolean getLogic() {
+        return this.logic;
     }
 
 }

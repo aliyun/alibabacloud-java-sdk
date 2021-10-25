@@ -102,6 +102,36 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyInstanceStandardGroup extends TeaModel {
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("GroupMode")
+        public String groupMode;
+
+        public static GetInstanceResponseBodyInstanceStandardGroup build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyInstanceStandardGroup self = new GetInstanceResponseBodyInstanceStandardGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyInstanceStandardGroup setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public GetInstanceResponseBodyInstanceStandardGroup setGroupMode(String groupMode) {
+            this.groupMode = groupMode;
+            return this;
+        }
+        public String getGroupMode() {
+            return this.groupMode;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyInstance extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
@@ -174,6 +204,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
         @NameInMap("EcsRegion")
         public String ecsRegion;
+
+        @NameInMap("StandardGroup")
+        public GetInstanceResponseBodyInstanceStandardGroup standardGroup;
 
         public static GetInstanceResponseBodyInstance build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyInstance self = new GetInstanceResponseBodyInstance();
@@ -370,6 +403,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getEcsRegion() {
             return this.ecsRegion;
+        }
+
+        public GetInstanceResponseBodyInstance setStandardGroup(GetInstanceResponseBodyInstanceStandardGroup standardGroup) {
+            this.standardGroup = standardGroup;
+            return this;
+        }
+        public GetInstanceResponseBodyInstanceStandardGroup getStandardGroup() {
+            return this.standardGroup;
         }
 
     }

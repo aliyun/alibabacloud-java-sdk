@@ -83,7 +83,7 @@ public class GetOpLogResponseBody extends TeaModel {
         public String database;
 
         @NameInMap("UserId")
-        public Long userId;
+        public String userId;
 
         @NameInMap("OpContent")
         public String opContent;
@@ -118,11 +118,11 @@ public class GetOpLogResponseBody extends TeaModel {
             return this.database;
         }
 
-        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setUserId(Long userId) {
+        public GetOpLogResponseBodyOpLogDetailsOpLogDetail setUserId(String userId) {
             this.userId = userId;
             return this;
         }
-        public Long getUserId() {
+        public String getUserId() {
             return this.userId;
         }
 
