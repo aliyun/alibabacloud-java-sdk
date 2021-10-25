@@ -25,6 +25,9 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("GeneralGroupName")
+    public String generalGroupName;
+
     public static AllocateInstancePublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateInstancePublicConnectionRequest self = new AllocateInstancePublicConnectionRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public AllocateInstancePublicConnectionRequest setGeneralGroupName(String generalGroupName) {
+        this.generalGroupName = generalGroupName;
+        return this;
+    }
+    public String getGeneralGroupName() {
+        return this.generalGroupName;
     }
 
 }

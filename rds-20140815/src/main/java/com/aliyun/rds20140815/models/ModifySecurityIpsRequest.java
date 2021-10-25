@@ -28,6 +28,9 @@ public class ModifySecurityIpsRequest extends TeaModel {
     @NameInMap("ModifyMode")
     public String modifyMode;
 
+    @NameInMap("FreshWhiteListReadins")
+    public String freshWhiteListReadins;
+
     public static ModifySecurityIpsRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityIpsRequest self = new ModifySecurityIpsRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ModifySecurityIpsRequest extends TeaModel {
     }
     public String getModifyMode() {
         return this.modifyMode;
+    }
+
+    public ModifySecurityIpsRequest setFreshWhiteListReadins(String freshWhiteListReadins) {
+        this.freshWhiteListReadins = freshWhiteListReadins;
+        return this;
+    }
+    public String getFreshWhiteListReadins() {
+        return this.freshWhiteListReadins;
     }
 
 }

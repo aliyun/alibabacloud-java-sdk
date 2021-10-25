@@ -196,6 +196,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        @NameInMap("Checksum")
+        public String checksum;
+
         @NameInMap("BackupDownloadLinkByDB")
         public DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB backupDownloadLinkByDB;
 
@@ -362,6 +365,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getDBInstanceId() {
             return this.DBInstanceId;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setChecksum(String checksum) {
+            this.checksum = checksum;
+            return this;
+        }
+        public String getChecksum() {
+            return this.checksum;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setBackupDownloadLinkByDB(DescribeBackupsResponseBodyItemsBackupBackupDownloadLinkByDB backupDownloadLinkByDB) {

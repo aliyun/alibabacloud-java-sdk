@@ -3,21 +3,21 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRegionInfosResponse extends TeaModel {
+public class ModifyDBInstanceMetricsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeRegionInfosResponseBody body;
+    public ModifyDBInstanceMetricsResponseBody body;
 
-    public static DescribeRegionInfosResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRegionInfosResponse self = new DescribeRegionInfosResponse();
+    public static ModifyDBInstanceMetricsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDBInstanceMetricsResponse self = new ModifyDBInstanceMetricsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionInfosResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyDBInstanceMetricsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeRegionInfosResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeRegionInfosResponse setBody(DescribeRegionInfosResponseBody body) {
+    public ModifyDBInstanceMetricsResponse setBody(ModifyDBInstanceMetricsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeRegionInfosResponseBody getBody() {
+    public ModifyDBInstanceMetricsResponseBody getBody() {
         return this.body;
     }
 

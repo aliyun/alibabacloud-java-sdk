@@ -28,6 +28,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("GeneralGroupName")
+    public String generalGroupName;
+
     public static ModifyDBInstanceConnectionStringRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConnectionStringRequest self = new ModifyDBInstanceConnectionStringRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setGeneralGroupName(String generalGroupName) {
+        this.generalGroupName = generalGroupName;
+        return this;
+    }
+    public String getGeneralGroupName() {
+        return this.generalGroupName;
     }
 
 }

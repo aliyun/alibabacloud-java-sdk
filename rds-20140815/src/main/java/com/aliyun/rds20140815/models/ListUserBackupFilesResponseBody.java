@@ -38,6 +38,9 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("FinishTime")
+        public String finishTime;
+
         @NameInMap("Comment")
         public String comment;
 
@@ -105,6 +108,14 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListUserBackupFilesResponseBodyRecords setFinishTime(String finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public String getFinishTime() {
+            return this.finishTime;
         }
 
         public ListUserBackupFilesResponseBodyRecords setComment(String comment) {

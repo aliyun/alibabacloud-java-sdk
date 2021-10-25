@@ -49,6 +49,16 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
+    @NameInMap("SwitchTime")
+    public String switchTime;
+
+    // 资源组名称
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("UsedTime")
+    public Long usedTime;
+
     public static ModifyDBInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSpecRequest self = new ModifyDBInstanceSpecRequest();
         return TeaModel.build(map, self);
@@ -172,6 +182,30 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public ModifyDBInstanceSpecRequest setSwitchTime(String switchTime) {
+        this.switchTime = switchTime;
+        return this;
+    }
+    public String getSwitchTime() {
+        return this.switchTime;
+    }
+
+    public ModifyDBInstanceSpecRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ModifyDBInstanceSpecRequest setUsedTime(Long usedTime) {
+        this.usedTime = usedTime;
+        return this;
+    }
+    public Long getUsedTime() {
+        return this.usedTime;
     }
 
 }
