@@ -16,23 +16,23 @@ public class HistoricalRequest extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // station全国（入参单一站点）
+    // 全国（入参单一站点）
     @NameInMap("Station")
     public String station;
 
-    // pageSize是	页面条数
+    // pageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // startTimeyyyymmddhh0000（当startTime为空时无数据产出，确认是否入参）
+    // startTime
     @NameInMap("StartTime")
-    public Integer startTime;
+    public String startTime;
 
-    // endTimeyyyymmddhh0000 （当endTime为空时无数据产出，确认是否入参）
+    // endTime
     @NameInMap("EndTime")
-    public Integer endTime;
+    public String endTime;
 
-    // pageNum页码数
+    // pageNum
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -81,19 +81,19 @@ public class HistoricalRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public HistoricalRequest setStartTime(Integer startTime) {
+    public HistoricalRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
-    public Integer getStartTime() {
+    public String getStartTime() {
         return this.startTime;
     }
 
-    public HistoricalRequest setEndTime(Integer endTime) {
+    public HistoricalRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
-    public Integer getEndTime() {
+    public String getEndTime() {
         return this.endTime;
     }
 
