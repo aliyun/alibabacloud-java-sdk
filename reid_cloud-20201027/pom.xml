@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>reid_cloud20201027</artifactId>
-  <version>2.0.5</version>
+  <version>2.0.6</version>
   <packaging>jar</packaging>
   <name>reid_cloud20201027</name>
   <description>Alibaba Cloud reid_cloud (20201027) SDK for Java
@@ -41,17 +41,17 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.12</version>
+      <version>0.2.13</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.3</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.11</version>
+      <version>0.1.12</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
