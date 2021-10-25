@@ -91,6 +91,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     public static DescribeDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesRequest self = new DescribeDBInstancesRequest();
         return TeaModel.build(map, self);
@@ -326,6 +332,22 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public String getConnectionString() {
         return this.connectionString;
+    }
+
+    public DescribeDBInstancesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public DescribeDBInstancesRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
 }

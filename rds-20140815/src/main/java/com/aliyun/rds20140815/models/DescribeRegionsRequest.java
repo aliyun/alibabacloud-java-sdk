@@ -7,6 +7,9 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsRequest self = new DescribeRegionsRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribeRegionsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeRegionsRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
 }

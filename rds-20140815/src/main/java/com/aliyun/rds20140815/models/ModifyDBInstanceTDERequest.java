@@ -31,6 +31,15 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("RoleArn")
     public String roleArn;
 
+    @NameInMap("Certificate")
+    public String certificate;
+
+    @NameInMap("PrivateKey")
+    public String privateKey;
+
+    @NameInMap("PassWord")
+    public String passWord;
+
     public static ModifyDBInstanceTDERequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceTDERequest self = new ModifyDBInstanceTDERequest();
         return TeaModel.build(map, self);
@@ -106,6 +115,30 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     }
     public String getRoleArn() {
         return this.roleArn;
+    }
+
+    public ModifyDBInstanceTDERequest setCertificate(String certificate) {
+        this.certificate = certificate;
+        return this;
+    }
+    public String getCertificate() {
+        return this.certificate;
+    }
+
+    public ModifyDBInstanceTDERequest setPrivateKey(String privateKey) {
+        this.privateKey = privateKey;
+        return this;
+    }
+    public String getPrivateKey() {
+        return this.privateKey;
+    }
+
+    public ModifyDBInstanceTDERequest setPassWord(String passWord) {
+        this.passWord = passWord;
+        return this;
+    }
+    public String getPassWord() {
+        return this.passWord;
     }
 
 }

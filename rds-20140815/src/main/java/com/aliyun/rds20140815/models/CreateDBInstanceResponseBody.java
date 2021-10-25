@@ -16,11 +16,17 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("Port")
     public String port;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -65,6 +71,14 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         return this.connectionString;
     }
 
+    public CreateDBInstanceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public CreateDBInstanceResponseBody setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
@@ -79,6 +93,14 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     }
     public String getPort() {
         return this.port;
+    }
+
+    public CreateDBInstanceResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public CreateDBInstanceResponseBody setDryRun(Boolean dryRun) {

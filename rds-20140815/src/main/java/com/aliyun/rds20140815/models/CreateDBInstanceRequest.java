@@ -130,6 +130,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("UserBackupId")
     public String userBackupId;
 
+    @NameInMap("Amount")
+    public Integer amount;
+
+    @NameInMap("CreateStrategy")
+    public String createStrategy;
+
     @NameInMap("Tag")
     public java.util.List<CreateDBInstanceRequestTag> tag;
 
@@ -472,6 +478,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getUserBackupId() {
         return this.userBackupId;
+    }
+
+    public CreateDBInstanceRequest setAmount(Integer amount) {
+        this.amount = amount;
+        return this;
+    }
+    public Integer getAmount() {
+        return this.amount;
+    }
+
+    public CreateDBInstanceRequest setCreateStrategy(String createStrategy) {
+        this.createStrategy = createStrategy;
+        return this;
+    }
+    public String getCreateStrategy() {
+        return this.createStrategy;
     }
 
     public CreateDBInstanceRequest setTag(java.util.List<CreateDBInstanceRequestTag> tag) {

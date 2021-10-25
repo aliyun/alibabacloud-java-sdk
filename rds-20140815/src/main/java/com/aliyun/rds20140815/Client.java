@@ -417,17 +417,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDiagnosticReportWithOptions(request, runtime);
     }
 
-    public CreateGdnInstanceResponse createGdnInstanceWithOptions(CreateGdnInstanceRequest request, RuntimeOptions runtime) throws Exception {
+    public CreateGADInstanceResponse createGADInstanceWithOptions(CreateGADInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateGdnInstance", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new CreateGdnInstanceResponse());
+        return TeaModel.toModel(this.doRPCRequest("CreateGADInstance", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new CreateGADInstanceResponse());
     }
 
-    public CreateGdnInstanceResponse createGdnInstance(CreateGdnInstanceRequest request) throws Exception {
+    public CreateGADInstanceResponse createGADInstance(CreateGADInstanceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.createGdnInstanceWithOptions(request, runtime);
+        return this.createGADInstanceWithOptions(request, runtime);
+    }
+
+    public CreateGadInstanceMemberResponse createGadInstanceMemberWithOptions(CreateGadInstanceMemberRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateGadInstanceMember", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new CreateGadInstanceMemberResponse());
+    }
+
+    public CreateGadInstanceMemberResponse createGadInstanceMember(CreateGadInstanceMemberRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createGadInstanceMemberWithOptions(request, runtime);
     }
 
     public CreateMigrateTaskResponse createMigrateTaskWithOptions(CreateMigrateTaskRequest request, RuntimeOptions runtime) throws Exception {
@@ -612,6 +625,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDedicatedHostGroupWithOptions(request, runtime);
     }
 
+    public DeleteGadInstanceResponse deleteGadInstanceWithOptions(DeleteGadInstanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteGadInstance", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteGadInstanceResponse());
+    }
+
+    public DeleteGadInstanceResponse deleteGadInstance(DeleteGadInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteGadInstanceWithOptions(request, runtime);
+    }
+
     public DeleteParameterGroupResponse deleteParameterGroupWithOptions(DeleteParameterGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -727,6 +753,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAvailableDedicatedHostZonesResponse describeAvailableDedicatedHostZones(DescribeAvailableDedicatedHostZonesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeAvailableDedicatedHostZonesWithOptions(request, runtime);
+    }
+
+    public DescribeAvailableMetricsResponse describeAvailableMetricsWithOptions(DescribeAvailableMetricsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeAvailableMetrics", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeAvailableMetricsResponse());
+    }
+
+    public DescribeAvailableMetricsResponse describeAvailableMetrics(DescribeAvailableMetricsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAvailableMetricsWithOptions(request, runtime);
     }
 
     public DescribeAvailableRecoveryTimeResponse describeAvailableRecoveryTimeWithOptions(DescribeAvailableRecoveryTimeRequest request, RuntimeOptions runtime) throws Exception {
@@ -987,6 +1026,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDBInstanceIpHostnameResponse describeDBInstanceIpHostname(DescribeDBInstanceIpHostnameRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeDBInstanceIpHostnameWithOptions(request, runtime);
+    }
+
+    public DescribeDBInstanceMetricsResponse describeDBInstanceMetricsWithOptions(DescribeDBInstanceMetricsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeDBInstanceMetrics", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeDBInstanceMetricsResponse());
+    }
+
+    public DescribeDBInstanceMetricsResponse describeDBInstanceMetrics(DescribeDBInstanceMetricsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDBInstanceMetricsWithOptions(request, runtime);
     }
 
     public DescribeDBInstanceMonitorResponse describeDBInstanceMonitorWithOptions(DescribeDBInstanceMonitorRequest request, RuntimeOptions runtime) throws Exception {
@@ -1302,6 +1354,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEventsWithOptions(request, runtime);
     }
 
+    public DescribeGadInstancesResponse describeGadInstancesWithOptions(DescribeGadInstancesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeGadInstances", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeGadInstancesResponse());
+    }
+
+    public DescribeGadInstancesResponse describeGadInstances(DescribeGadInstancesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeGadInstancesWithOptions(request, runtime);
+    }
+
     public DescribeHADiagnoseConfigResponse describeHADiagnoseConfigWithOptions(DescribeHADiagnoseConfigRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1575,19 +1640,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeReadDBInstanceDelayWithOptions(request, runtime);
     }
 
-    public DescribeRegionInfosResponse describeRegionInfosWithOptions(DescribeRegionInfosRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeRegionInfos", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeRegionInfosResponse());
-    }
-
-    public DescribeRegionInfosResponse describeRegionInfos(DescribeRegionInfosRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeRegionInfosWithOptions(request, runtime);
-    }
-
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1770,6 +1822,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTasksWithOptions(request, runtime);
     }
 
+    public DescribeUpgradeMajorVersionPrecheckTaskResponse describeUpgradeMajorVersionPrecheckTaskWithOptions(DescribeUpgradeMajorVersionPrecheckTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeUpgradeMajorVersionPrecheckTask", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUpgradeMajorVersionPrecheckTaskResponse());
+    }
+
+    public DescribeUpgradeMajorVersionPrecheckTaskResponse describeUpgradeMajorVersionPrecheckTask(DescribeUpgradeMajorVersionPrecheckTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeUpgradeMajorVersionPrecheckTaskWithOptions(request, runtime);
+    }
+
+    public DescribeUpgradeMajorVersionTasksResponse describeUpgradeMajorVersionTasksWithOptions(DescribeUpgradeMajorVersionTasksRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeUpgradeMajorVersionTasks", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUpgradeMajorVersionTasksResponse());
+    }
+
+    public DescribeUpgradeMajorVersionTasksResponse describeUpgradeMajorVersionTasks(DescribeUpgradeMajorVersionTasksRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeUpgradeMajorVersionTasksWithOptions(request, runtime);
+    }
+
+    public DescribeVSwitchesResponse describeVSwitchesWithOptions(DescribeVSwitchesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeVSwitches", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeVSwitchesResponse());
+    }
+
+    public DescribeVSwitchesResponse describeVSwitches(DescribeVSwitchesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeVSwitchesWithOptions(request, runtime);
+    }
+
     public DestroyDBInstanceResponse destroyDBInstanceWithOptions(DestroyDBInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1781,6 +1872,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DestroyDBInstanceResponse destroyDBInstance(DestroyDBInstanceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.destroyDBInstanceWithOptions(request, runtime);
+    }
+
+    public DetachGadInstanceMemberResponse detachGadInstanceMemberWithOptions(DetachGadInstanceMemberRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DetachGadInstanceMember", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new DetachGadInstanceMemberResponse());
+    }
+
+    public DetachGadInstanceMemberResponse detachGadInstanceMember(DetachGadInstanceMemberRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.detachGadInstanceMemberWithOptions(request, runtime);
     }
 
     public DropDedicatedHostUserResponse dropDedicatedHostUserWithOptions(DropDedicatedHostUserRequest request, RuntimeOptions runtime) throws Exception {
@@ -2119,6 +2223,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBInstanceMaintainTimeResponse modifyDBInstanceMaintainTime(ModifyDBInstanceMaintainTimeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyDBInstanceMaintainTimeWithOptions(request, runtime);
+    }
+
+    public ModifyDBInstanceMetricsResponse modifyDBInstanceMetricsWithOptions(ModifyDBInstanceMetricsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ModifyDBInstanceMetrics", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyDBInstanceMetricsResponse());
+    }
+
+    public ModifyDBInstanceMetricsResponse modifyDBInstanceMetrics(ModifyDBInstanceMetricsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyDBInstanceMetricsWithOptions(request, runtime);
     }
 
     public ModifyDBInstanceMonitorResponse modifyDBInstanceMonitorWithOptions(ModifyDBInstanceMonitorRequest request, RuntimeOptions runtime) throws Exception {
@@ -2912,6 +3029,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeDBInstanceKernelVersionResponse upgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.upgradeDBInstanceKernelVersionWithOptions(request, runtime);
+    }
+
+    public UpgradeDBInstanceMajorVersionResponse upgradeDBInstanceMajorVersionWithOptions(UpgradeDBInstanceMajorVersionRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpgradeDBInstanceMajorVersion", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpgradeDBInstanceMajorVersionResponse());
+    }
+
+    public UpgradeDBInstanceMajorVersionResponse upgradeDBInstanceMajorVersion(UpgradeDBInstanceMajorVersionRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.upgradeDBInstanceMajorVersionWithOptions(request, runtime);
+    }
+
+    public UpgradeDBInstanceMajorVersionPrecheckResponse upgradeDBInstanceMajorVersionPrecheckWithOptions(UpgradeDBInstanceMajorVersionPrecheckRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpgradeDBInstanceMajorVersionPrecheck", "2014-08-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpgradeDBInstanceMajorVersionPrecheckResponse());
+    }
+
+    public UpgradeDBInstanceMajorVersionPrecheckResponse upgradeDBInstanceMajorVersionPrecheck(UpgradeDBInstanceMajorVersionPrecheckRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.upgradeDBInstanceMajorVersionPrecheckWithOptions(request, runtime);
     }
 
     public UpgradeDBProxyInstanceKernelVersionResponse upgradeDBProxyInstanceKernelVersionWithOptions(UpgradeDBProxyInstanceKernelVersionRequest request, RuntimeOptions runtime) throws Exception {
