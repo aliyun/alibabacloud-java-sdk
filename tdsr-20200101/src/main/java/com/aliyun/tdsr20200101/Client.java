@@ -281,6 +281,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.saveHotspotTagWithOptions(request, runtime);
     }
 
+    public RecoveryOriginImageResponse recoveryOriginImageWithOptions(RecoveryOriginImageRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RecoveryOriginImage", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new RecoveryOriginImageResponse());
+    }
+
+    public RecoveryOriginImageResponse recoveryOriginImage(RecoveryOriginImageRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.recoveryOriginImageWithOptions(request, runtime);
+    }
+
     public DeleteProjectResponse deleteProjectWithOptions(DeleteProjectRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -344,6 +357,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConnDataResponse getConnData(GetConnDataRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getConnDataWithOptions(request, runtime);
+    }
+
+    public RollbackSubSceneResponse rollbackSubSceneWithOptions(RollbackSubSceneRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RollbackSubScene", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new RollbackSubSceneResponse());
+    }
+
+    public RollbackSubSceneResponse rollbackSubScene(RollbackSubSceneRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.rollbackSubSceneWithOptions(request, runtime);
     }
 
     public TempPreviewStatusResponse tempPreviewStatusWithOptions(TempPreviewStatusRequest request, RuntimeOptions runtime) throws Exception {
@@ -617,6 +643,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetHotspotSceneDataResponse getHotspotSceneData(GetHotspotSceneDataRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getHotspotSceneDataWithOptions(request, runtime);
+    }
+
+    public AddMosaicsResponse addMosaicsWithOptions(AddMosaicsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddMosaics", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new AddMosaicsResponse());
+    }
+
+    public AddMosaicsResponse addMosaics(AddMosaicsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addMosaicsWithOptions(request, runtime);
     }
 
     public ScenePublishResponse scenePublishWithOptions(ScenePublishRequest request, RuntimeOptions runtime) throws Exception {

@@ -166,6 +166,10 @@ public class ListSubSceneResponseBody extends TeaModel {
         @NameInMap("OriginUrl")
         public String originUrl;
 
+        // 2k基准图路径
+        @NameInMap("BaseImageUrl")
+        public String baseImageUrl;
+
         public static ListSubSceneResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
             ListSubSceneResponseBodyList self = new ListSubSceneResponseBodyList();
             return TeaModel.build(map, self);
@@ -265,6 +269,14 @@ public class ListSubSceneResponseBody extends TeaModel {
         }
         public String getOriginUrl() {
             return this.originUrl;
+        }
+
+        public ListSubSceneResponseBodyList setBaseImageUrl(String baseImageUrl) {
+            this.baseImageUrl = baseImageUrl;
+            return this;
+        }
+        public String getBaseImageUrl() {
+            return this.baseImageUrl;
         }
 
     }
