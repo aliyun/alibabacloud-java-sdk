@@ -7,7 +7,6 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -30,52 +29,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
-    }
-
-    public ExecuteResponse executeWithOptions(ExecuteRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ExecuteShrinkRequest request = new ExecuteShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceParam)) {
-            request.serviceParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceParam, "ServiceParam", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendParam)) {
-            request.extendParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendParam, "ExtendParam", "json");
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("Execute", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new ExecuteResponse());
-    }
-
-    public ExecuteResponse execute(ExecuteRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.executeWithOptions(request, runtime);
-    }
-
-    public WeathermonitorProvinceHourResponse weathermonitorProvinceHourWithOptions(WeathermonitorProvinceHourRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        WeathermonitorProvinceHourShrinkRequest request = new WeathermonitorProvinceHourShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceParam)) {
-            request.serviceParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceParam, "ServiceParam", "json");
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extendParam)) {
-            request.extendParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extendParam, "ExtendParam", "json");
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("WeathermonitorProvinceHour", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new WeathermonitorProvinceHourResponse());
-    }
-
-    public WeathermonitorProvinceHourResponse weathermonitorProvinceHour(WeathermonitorProvinceHourRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.weathermonitorProvinceHourWithOptions(request, runtime);
     }
 
     public WeathermonitorResponse weathermonitorWithOptions(WeathermonitorRequest request, RuntimeOptions runtime) throws Exception {
