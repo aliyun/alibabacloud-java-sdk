@@ -117,6 +117,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.extractFaceAttributeCROWithOptions(request, runtime);
     }
 
+    public CopyStoresResponse copyStoresWithOptions(CopyStoresRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CopyStores", "2020-10-27", "HTTPS", "POST", "AK", "json", req, runtime), new CopyStoresResponse());
+    }
+
+    public CopyStoresResponse copyStores(CopyStoresRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.copyStoresWithOptions(request, runtime);
+    }
+
     public GetAllStoreDataByTypeResponse getAllStoreDataByTypeWithOptions(RuntimeOptions runtime) throws Exception {
         OpenApiRequest req = new OpenApiRequest();
         return TeaModel.toModel(this.doRPCRequest("GetAllStoreDataByType", "2020-10-27", "HTTPS", "POST", "AK", "json", req, runtime), new GetAllStoreDataByTypeResponse());

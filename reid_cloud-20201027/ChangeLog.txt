@@ -1,3 +1,6 @@
+2021-10-25 Version: 2.0.6
+- Hsf to POP.
+
 2021-07-27 Version: 2.0.5
 - Hsf to POP.
 
