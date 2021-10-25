@@ -13,6 +13,9 @@ public class GrantUserPermissionRequest extends TeaModel {
     @NameInMap("DsType")
     public String dsType;
 
+    @NameInMap("InstanceId")
+    public Long instanceId;
+
     @NameInMap("DbId")
     public String dbId;
 
@@ -58,6 +61,14 @@ public class GrantUserPermissionRequest extends TeaModel {
     }
     public String getDsType() {
         return this.dsType;
+    }
+
+    public GrantUserPermissionRequest setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public Long getInstanceId() {
+        return this.instanceId;
     }
 
     public GrantUserPermissionRequest setDbId(String dbId) {

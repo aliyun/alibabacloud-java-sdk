@@ -25,6 +25,12 @@ public class ListSensitiveColumnsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("DbId")
+    public Long dbId;
+
+    @NameInMap("Logic")
+    public Boolean logic;
+
     public static ListSensitiveColumnsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSensitiveColumnsRequest self = new ListSensitiveColumnsRequest();
         return TeaModel.build(map, self);
@@ -84,6 +90,22 @@ public class ListSensitiveColumnsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSensitiveColumnsRequest setDbId(Long dbId) {
+        this.dbId = dbId;
+        return this;
+    }
+    public Long getDbId() {
+        return this.dbId;
+    }
+
+    public ListSensitiveColumnsRequest setLogic(Boolean logic) {
+        this.logic = logic;
+        return this;
+    }
+    public Boolean getLogic() {
+        return this.logic;
     }
 
 }

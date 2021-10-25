@@ -214,6 +214,12 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         @NameInMap("Alias")
         public String alias;
 
+        @NameInMap("Host")
+        public String host;
+
+        @NameInMap("Port")
+        public Long port;
+
         public static ListUserPermissionsResponseBodyUserPermissionsUserPermission build(java.util.Map<String, ?> map) throws Exception {
             ListUserPermissionsResponseBodyUserPermissionsUserPermission self = new ListUserPermissionsResponseBodyUserPermissionsUserPermission();
             return TeaModel.build(map, self);
@@ -337,6 +343,22 @@ public class ListUserPermissionsResponseBody extends TeaModel {
         }
         public String getAlias() {
             return this.alias;
+        }
+
+        public ListUserPermissionsResponseBodyUserPermissionsUserPermission setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
+        public ListUserPermissionsResponseBodyUserPermissionsUserPermission setPort(Long port) {
+            this.port = port;
+            return this;
+        }
+        public Long getPort() {
+            return this.port;
         }
 
     }

@@ -113,6 +113,36 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyInstanceListInstanceStandardGroup extends TeaModel {
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("GroupMode")
+        public String groupMode;
+
+        public static ListInstancesResponseBodyInstanceListInstanceStandardGroup build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstanceListInstanceStandardGroup self = new ListInstancesResponseBodyInstanceListInstanceStandardGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstanceListInstanceStandardGroup setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstanceStandardGroup setGroupMode(String groupMode) {
+            this.groupMode = groupMode;
+            return this;
+        }
+        public String getGroupMode() {
+            return this.groupMode;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstanceListInstance extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
@@ -185,6 +215,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
         @NameInMap("EcsRegion")
         public String ecsRegion;
+
+        @NameInMap("StandardGroup")
+        public ListInstancesResponseBodyInstanceListInstanceStandardGroup standardGroup;
 
         public static ListInstancesResponseBodyInstanceListInstance build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstanceListInstance self = new ListInstancesResponseBodyInstanceListInstance();
@@ -381,6 +414,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getEcsRegion() {
             return this.ecsRegion;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setStandardGroup(ListInstancesResponseBodyInstanceListInstanceStandardGroup standardGroup) {
+            this.standardGroup = standardGroup;
+            return this;
+        }
+        public ListInstancesResponseBodyInstanceListInstanceStandardGroup getStandardGroup() {
+            return this.standardGroup;
         }
 
     }

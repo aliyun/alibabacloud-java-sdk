@@ -16,6 +16,9 @@ public class ListUserPermissionsRequest extends TeaModel {
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    @NameInMap("SearchKey")
+    public String searchKey;
+
     @NameInMap("Logic")
     public Boolean logic;
 
@@ -66,6 +69,14 @@ public class ListUserPermissionsRequest extends TeaModel {
     }
     public String getDatabaseName() {
         return this.databaseName;
+    }
+
+    public ListUserPermissionsRequest setSearchKey(String searchKey) {
+        this.searchKey = searchKey;
+        return this;
+    }
+    public String getSearchKey() {
+        return this.searchKey;
     }
 
     public ListUserPermissionsRequest setLogic(Boolean logic) {
