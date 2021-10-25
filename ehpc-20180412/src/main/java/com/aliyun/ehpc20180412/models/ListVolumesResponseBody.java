@@ -4,12 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListVolumesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("Volumes")
-    public java.util.List<ListVolumesResponseBodyVolumes> volumes;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class ListVolumesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("Volumes")
+    public ListVolumesResponseBodyVolumes volumes;
+
     public static ListVolumesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVolumesResponseBody self = new ListVolumesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListVolumesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListVolumesResponseBody setVolumes(java.util.List<ListVolumesResponseBodyVolumes> volumes) {
-        this.volumes = volumes;
-        return this;
-    }
-    public java.util.List<ListVolumesResponseBodyVolumes> getVolumes() {
-        return this.volumes;
     }
 
     public ListVolumesResponseBody setPageSize(Integer pageSize) {
@@ -64,7 +48,23 @@ public class ListVolumesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class ListVolumesResponseBodyVolumesAdditionalVolumes extends TeaModel {
+    public ListVolumesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListVolumesResponseBody setVolumes(ListVolumesResponseBodyVolumes volumes) {
+        this.volumes = volumes;
+        return this;
+    }
+    public ListVolumesResponseBodyVolumes getVolumes() {
+        return this.volumes;
+    }
+
+    public static class ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo extends TeaModel {
         @NameInMap("JobQueue")
         public String jobQueue;
 
@@ -92,12 +92,12 @@ public class ListVolumesResponseBody extends TeaModel {
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
 
-        public static ListVolumesResponseBodyVolumesAdditionalVolumes build(java.util.Map<String, ?> map) throws Exception {
-            ListVolumesResponseBodyVolumesAdditionalVolumes self = new ListVolumesResponseBodyVolumesAdditionalVolumes();
+        public static ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo self = new ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListVolumesResponseBodyVolumesAdditionalVolumes setJobQueue(String jobQueue) {
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo setJobQueue(String jobQueue) {
             this.jobQueue = jobQueue;
             return this;
         }
@@ -105,7 +105,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.jobQueue;
         }
 
-        public ListVolumesResponseBodyVolumesAdditionalVolumes setVolumeId(String volumeId) {
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo setVolumeId(String volumeId) {
             this.volumeId = volumeId;
             return this;
         }
@@ -113,7 +113,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.volumeId;
         }
 
-        public ListVolumesResponseBodyVolumesAdditionalVolumes setRemoteDirectory(String remoteDirectory) {
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo setRemoteDirectory(String remoteDirectory) {
             this.remoteDirectory = remoteDirectory;
             return this;
         }
@@ -121,7 +121,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.remoteDirectory;
         }
 
-        public ListVolumesResponseBodyVolumesAdditionalVolumes setVolumeMountpoint(String volumeMountpoint) {
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo setVolumeMountpoint(String volumeMountpoint) {
             this.volumeMountpoint = volumeMountpoint;
             return this;
         }
@@ -129,7 +129,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.volumeMountpoint;
         }
 
-        public ListVolumesResponseBodyVolumesAdditionalVolumes setRole(String role) {
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo setRole(String role) {
             this.role = role;
             return this;
         }
@@ -137,7 +137,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.role;
         }
 
-        public ListVolumesResponseBodyVolumesAdditionalVolumes setLocalDirectory(String localDirectory) {
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo setLocalDirectory(String localDirectory) {
             this.localDirectory = localDirectory;
             return this;
         }
@@ -145,7 +145,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.localDirectory;
         }
 
-        public ListVolumesResponseBodyVolumesAdditionalVolumes setVolumeType(String volumeType) {
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo setVolumeType(String volumeType) {
             this.volumeType = volumeType;
             return this;
         }
@@ -153,7 +153,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.volumeType;
         }
 
-        public ListVolumesResponseBodyVolumesAdditionalVolumes setLocation(String location) {
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo setLocation(String location) {
             this.location = location;
             return this;
         }
@@ -161,7 +161,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.location;
         }
 
-        public ListVolumesResponseBodyVolumesAdditionalVolumes setVolumeProtocol(String volumeProtocol) {
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo setVolumeProtocol(String volumeProtocol) {
             this.volumeProtocol = volumeProtocol;
             return this;
         }
@@ -171,7 +171,26 @@ public class ListVolumesResponseBody extends TeaModel {
 
     }
 
-    public static class ListVolumesResponseBodyVolumes extends TeaModel {
+    public static class ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes extends TeaModel {
+        @NameInMap("VolumeInfo")
+        public java.util.List<ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo> volumeInfo;
+
+        public static ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes build(java.util.Map<String, ?> map) throws Exception {
+            ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes self = new ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes setVolumeInfo(java.util.List<ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo> volumeInfo) {
+            this.volumeInfo = volumeInfo;
+            return this;
+        }
+        public java.util.List<ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumesVolumeInfo> getVolumeInfo() {
+            return this.volumeInfo;
+        }
+
+    }
+
+    public static class ListVolumesResponseBodyVolumesVolumeInfo extends TeaModel {
         @NameInMap("VolumeId")
         public String volumeId;
 
@@ -183,9 +202,6 @@ public class ListVolumesResponseBody extends TeaModel {
 
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
-
-        @NameInMap("AdditionalVolumes")
-        public java.util.List<ListVolumesResponseBodyVolumesAdditionalVolumes> additionalVolumes;
 
         @NameInMap("VolumeType")
         public String volumeType;
@@ -199,12 +215,15 @@ public class ListVolumesResponseBody extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
 
-        public static ListVolumesResponseBodyVolumes build(java.util.Map<String, ?> map) throws Exception {
-            ListVolumesResponseBodyVolumes self = new ListVolumesResponseBodyVolumes();
+        @NameInMap("AdditionalVolumes")
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes additionalVolumes;
+
+        public static ListVolumesResponseBodyVolumesVolumeInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListVolumesResponseBodyVolumesVolumeInfo self = new ListVolumesResponseBodyVolumesVolumeInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListVolumesResponseBodyVolumes setVolumeId(String volumeId) {
+        public ListVolumesResponseBodyVolumesVolumeInfo setVolumeId(String volumeId) {
             this.volumeId = volumeId;
             return this;
         }
@@ -212,7 +231,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.volumeId;
         }
 
-        public ListVolumesResponseBodyVolumes setClusterName(String clusterName) {
+        public ListVolumesResponseBodyVolumesVolumeInfo setClusterName(String clusterName) {
             this.clusterName = clusterName;
             return this;
         }
@@ -220,7 +239,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.clusterName;
         }
 
-        public ListVolumesResponseBodyVolumes setRemoteDirectory(String remoteDirectory) {
+        public ListVolumesResponseBodyVolumesVolumeInfo setRemoteDirectory(String remoteDirectory) {
             this.remoteDirectory = remoteDirectory;
             return this;
         }
@@ -228,7 +247,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.remoteDirectory;
         }
 
-        public ListVolumesResponseBodyVolumes setVolumeMountpoint(String volumeMountpoint) {
+        public ListVolumesResponseBodyVolumesVolumeInfo setVolumeMountpoint(String volumeMountpoint) {
             this.volumeMountpoint = volumeMountpoint;
             return this;
         }
@@ -236,15 +255,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.volumeMountpoint;
         }
 
-        public ListVolumesResponseBodyVolumes setAdditionalVolumes(java.util.List<ListVolumesResponseBodyVolumesAdditionalVolumes> additionalVolumes) {
-            this.additionalVolumes = additionalVolumes;
-            return this;
-        }
-        public java.util.List<ListVolumesResponseBodyVolumesAdditionalVolumes> getAdditionalVolumes() {
-            return this.additionalVolumes;
-        }
-
-        public ListVolumesResponseBodyVolumes setVolumeType(String volumeType) {
+        public ListVolumesResponseBodyVolumesVolumeInfo setVolumeType(String volumeType) {
             this.volumeType = volumeType;
             return this;
         }
@@ -252,7 +263,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.volumeType;
         }
 
-        public ListVolumesResponseBodyVolumes setVolumeProtocol(String volumeProtocol) {
+        public ListVolumesResponseBodyVolumesVolumeInfo setVolumeProtocol(String volumeProtocol) {
             this.volumeProtocol = volumeProtocol;
             return this;
         }
@@ -260,7 +271,7 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.volumeProtocol;
         }
 
-        public ListVolumesResponseBodyVolumes setRegionId(String regionId) {
+        public ListVolumesResponseBodyVolumesVolumeInfo setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -268,12 +279,39 @@ public class ListVolumesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public ListVolumesResponseBodyVolumes setClusterId(String clusterId) {
+        public ListVolumesResponseBodyVolumesVolumeInfo setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        public ListVolumesResponseBodyVolumesVolumeInfo setAdditionalVolumes(ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes additionalVolumes) {
+            this.additionalVolumes = additionalVolumes;
+            return this;
+        }
+        public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes getAdditionalVolumes() {
+            return this.additionalVolumes;
+        }
+
+    }
+
+    public static class ListVolumesResponseBodyVolumes extends TeaModel {
+        @NameInMap("VolumeInfo")
+        public java.util.List<ListVolumesResponseBodyVolumesVolumeInfo> volumeInfo;
+
+        public static ListVolumesResponseBodyVolumes build(java.util.Map<String, ?> map) throws Exception {
+            ListVolumesResponseBodyVolumes self = new ListVolumesResponseBodyVolumes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVolumesResponseBodyVolumes setVolumeInfo(java.util.List<ListVolumesResponseBodyVolumesVolumeInfo> volumeInfo) {
+            this.volumeInfo = volumeInfo;
+            return this;
+        }
+        public java.util.List<ListVolumesResponseBodyVolumesVolumeInfo> getVolumeInfo() {
+            return this.volumeInfo;
         }
 
     }

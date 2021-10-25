@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerAppResponseBody extends TeaModel {
-    @NameInMap("ContainerAppInfo")
-    public DescribeContainerAppResponseBodyContainerAppInfo containerAppInfo;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ContainerAppInfo")
+    public DescribeContainerAppResponseBodyContainerAppInfo containerAppInfo;
 
     public static DescribeContainerAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeContainerAppResponseBody self = new DescribeContainerAppResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeContainerAppResponseBody setContainerAppInfo(DescribeContainerAppResponseBodyContainerAppInfo containerAppInfo) {
-        this.containerAppInfo = containerAppInfo;
-        return this;
-    }
-    public DescribeContainerAppResponseBodyContainerAppInfo getContainerAppInfo() {
-        return this.containerAppInfo;
     }
 
     public DescribeContainerAppResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeContainerAppResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeContainerAppResponseBody setContainerAppInfo(DescribeContainerAppResponseBodyContainerAppInfo containerAppInfo) {
+        this.containerAppInfo = containerAppInfo;
+        return this;
+    }
+    public DescribeContainerAppResponseBodyContainerAppInfo getContainerAppInfo() {
+        return this.containerAppInfo;
     }
 
     public static class DescribeContainerAppResponseBodyContainerAppInfo extends TeaModel {

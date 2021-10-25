@@ -60,6 +60,9 @@ public class DescribePriceRequest extends TeaModel {
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
+        @NameInMap("SystemDiskPerformanceLevel")
+        public String systemDiskPerformanceLevel;
+
         @NameInMap("NodeType")
         public String nodeType;
 
@@ -100,6 +103,14 @@ public class DescribePriceRequest extends TeaModel {
         }
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public DescribePriceRequestCommodities setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+            return this;
+        }
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
         }
 
         public DescribePriceRequestCommodities setNodeType(String nodeType) {

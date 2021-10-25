@@ -8,7 +8,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Softwares")
-    public java.util.List<ListSoftwaresResponseBodySoftwares> softwares;
+    public ListSoftwaresResponseBodySoftwares softwares;
 
     public static ListSoftwaresResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSoftwaresResponseBody self = new ListSoftwaresResponseBody();
@@ -23,20 +23,17 @@ public class ListSoftwaresResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListSoftwaresResponseBody setSoftwares(java.util.List<ListSoftwaresResponseBodySoftwares> softwares) {
+    public ListSoftwaresResponseBody setSoftwares(ListSoftwaresResponseBodySoftwares softwares) {
         this.softwares = softwares;
         return this;
     }
-    public java.util.List<ListSoftwaresResponseBodySoftwares> getSoftwares() {
+    public ListSoftwaresResponseBodySoftwares getSoftwares() {
         return this.softwares;
     }
 
-    public static class ListSoftwaresResponseBodySoftwaresApplications extends TeaModel {
+    public static class ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo extends TeaModel {
         @NameInMap("Required")
         public Boolean required;
-
-        @NameInMap("Version")
-        public String version;
 
         @NameInMap("Tag")
         public String tag;
@@ -44,12 +41,15 @@ public class ListSoftwaresResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        public static ListSoftwaresResponseBodySoftwaresApplications build(java.util.Map<String, ?> map) throws Exception {
-            ListSoftwaresResponseBodySoftwaresApplications self = new ListSoftwaresResponseBodySoftwaresApplications();
+        @NameInMap("Version")
+        public String version;
+
+        public static ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo self = new ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListSoftwaresResponseBodySoftwaresApplications setRequired(Boolean required) {
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo setRequired(Boolean required) {
             this.required = required;
             return this;
         }
@@ -57,15 +57,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             return this.required;
         }
 
-        public ListSoftwaresResponseBodySoftwaresApplications setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public ListSoftwaresResponseBodySoftwaresApplications setTag(String tag) {
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo setTag(String tag) {
             this.tag = tag;
             return this;
         }
@@ -73,7 +65,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             return this.tag;
         }
 
-        public ListSoftwaresResponseBodySoftwaresApplications setName(String name) {
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo setName(String name) {
             this.name = name;
             return this;
         }
@@ -81,9 +73,36 @@ public class ListSoftwaresResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
     }
 
-    public static class ListSoftwaresResponseBodySoftwares extends TeaModel {
+    public static class ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications extends TeaModel {
+        @NameInMap("ApplicationInfo")
+        public java.util.List<ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo> applicationInfo;
+
+        public static ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications build(java.util.Map<String, ?> map) throws Exception {
+            ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications self = new ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications setApplicationInfo(java.util.List<ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo> applicationInfo) {
+            this.applicationInfo = applicationInfo;
+            return this;
+        }
+        public java.util.List<ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo> getApplicationInfo() {
+            return this.applicationInfo;
+        }
+
+    }
+
+    public static class ListSoftwaresResponseBodySoftwaresSoftwareInfo extends TeaModel {
         @NameInMap("SchedulerType")
         public String schedulerType;
 
@@ -96,21 +115,21 @@ public class ListSoftwaresResponseBody extends TeaModel {
         @NameInMap("AccountVersion")
         public String accountVersion;
 
-        @NameInMap("Applications")
-        public java.util.List<ListSoftwaresResponseBodySoftwaresApplications> applications;
-
         @NameInMap("AccountType")
         public String accountType;
 
         @NameInMap("EhpcVersion")
         public String ehpcVersion;
 
-        public static ListSoftwaresResponseBodySoftwares build(java.util.Map<String, ?> map) throws Exception {
-            ListSoftwaresResponseBodySoftwares self = new ListSoftwaresResponseBodySoftwares();
+        @NameInMap("Applications")
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications applications;
+
+        public static ListSoftwaresResponseBodySoftwaresSoftwareInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListSoftwaresResponseBodySoftwaresSoftwareInfo self = new ListSoftwaresResponseBodySoftwaresSoftwareInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListSoftwaresResponseBodySoftwares setSchedulerType(String schedulerType) {
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfo setSchedulerType(String schedulerType) {
             this.schedulerType = schedulerType;
             return this;
         }
@@ -118,7 +137,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             return this.schedulerType;
         }
 
-        public ListSoftwaresResponseBodySoftwares setOsTag(String osTag) {
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfo setOsTag(String osTag) {
             this.osTag = osTag;
             return this;
         }
@@ -126,7 +145,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             return this.osTag;
         }
 
-        public ListSoftwaresResponseBodySoftwares setSchedulerVersion(String schedulerVersion) {
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfo setSchedulerVersion(String schedulerVersion) {
             this.schedulerVersion = schedulerVersion;
             return this;
         }
@@ -134,7 +153,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             return this.schedulerVersion;
         }
 
-        public ListSoftwaresResponseBodySoftwares setAccountVersion(String accountVersion) {
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfo setAccountVersion(String accountVersion) {
             this.accountVersion = accountVersion;
             return this;
         }
@@ -142,15 +161,7 @@ public class ListSoftwaresResponseBody extends TeaModel {
             return this.accountVersion;
         }
 
-        public ListSoftwaresResponseBodySoftwares setApplications(java.util.List<ListSoftwaresResponseBodySoftwaresApplications> applications) {
-            this.applications = applications;
-            return this;
-        }
-        public java.util.List<ListSoftwaresResponseBodySoftwaresApplications> getApplications() {
-            return this.applications;
-        }
-
-        public ListSoftwaresResponseBodySoftwares setAccountType(String accountType) {
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfo setAccountType(String accountType) {
             this.accountType = accountType;
             return this;
         }
@@ -158,12 +169,39 @@ public class ListSoftwaresResponseBody extends TeaModel {
             return this.accountType;
         }
 
-        public ListSoftwaresResponseBodySoftwares setEhpcVersion(String ehpcVersion) {
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfo setEhpcVersion(String ehpcVersion) {
             this.ehpcVersion = ehpcVersion;
             return this;
         }
         public String getEhpcVersion() {
             return this.ehpcVersion;
+        }
+
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfo setApplications(ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications applications) {
+            this.applications = applications;
+            return this;
+        }
+        public ListSoftwaresResponseBodySoftwaresSoftwareInfoApplications getApplications() {
+            return this.applications;
+        }
+
+    }
+
+    public static class ListSoftwaresResponseBodySoftwares extends TeaModel {
+        @NameInMap("SoftwareInfo")
+        public java.util.List<ListSoftwaresResponseBodySoftwaresSoftwareInfo> softwareInfo;
+
+        public static ListSoftwaresResponseBodySoftwares build(java.util.Map<String, ?> map) throws Exception {
+            ListSoftwaresResponseBodySoftwares self = new ListSoftwaresResponseBodySoftwares();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSoftwaresResponseBodySoftwares setSoftwareInfo(java.util.List<ListSoftwaresResponseBodySoftwaresSoftwareInfo> softwareInfo) {
+            this.softwareInfo = softwareInfo;
+            return this;
+        }
+        public java.util.List<ListSoftwaresResponseBodySoftwaresSoftwareInfo> getSoftwareInfo() {
+            return this.softwareInfo;
         }
 
     }

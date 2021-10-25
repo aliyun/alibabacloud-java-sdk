@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListClustersMetaResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class ListClustersMetaResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Clusters")
-    public java.util.List<ListClustersMetaResponseBodyClusters> clusters;
+    public ListClustersMetaResponseBodyClusters clusters;
 
     public static ListClustersMetaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListClustersMetaResponseBody self = new ListClustersMetaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListClustersMetaResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListClustersMetaResponseBody setPageSize(Integer pageSize) {
@@ -56,62 +48,65 @@ public class ListClustersMetaResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListClustersMetaResponseBody setClusters(java.util.List<ListClustersMetaResponseBodyClusters> clusters) {
+    public ListClustersMetaResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListClustersMetaResponseBody setClusters(ListClustersMetaResponseBodyClusters clusters) {
         this.clusters = clusters;
         return this;
     }
-    public java.util.List<ListClustersMetaResponseBodyClusters> getClusters() {
+    public ListClustersMetaResponseBodyClusters getClusters() {
         return this.clusters;
     }
 
-    public static class ListClustersMetaResponseBodyClusters extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
+    public static class ListClustersMetaResponseBodyClustersClusterInfoSimple extends TeaModel {
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         @NameInMap("SchedulerType")
         public String schedulerType;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("DeployMode")
         public String deployMode;
+
+        @NameInMap("IsComputeEss")
+        public Boolean isComputeEss;
 
         @NameInMap("OsTag")
         public String osTag;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("AccountType")
         public String accountType;
 
-        @NameInMap("Location")
-        public String location;
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("Location")
+        public String location;
+
         @NameInMap("ClientVersion")
         public String clientVersion;
 
-        public static ListClustersMetaResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
-            ListClustersMetaResponseBodyClusters self = new ListClustersMetaResponseBodyClusters();
+        public static ListClustersMetaResponseBodyClustersClusterInfoSimple build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersMetaResponseBodyClustersClusterInfoSimple self = new ListClustersMetaResponseBodyClustersClusterInfoSimple();
             return TeaModel.build(map, self);
         }
 
-        public ListClustersMetaResponseBodyClusters setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public ListClustersMetaResponseBodyClusters setStatus(String status) {
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -119,7 +114,15 @@ public class ListClustersMetaResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListClustersMetaResponseBodyClusters setSchedulerType(String schedulerType) {
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setSchedulerType(String schedulerType) {
             this.schedulerType = schedulerType;
             return this;
         }
@@ -127,15 +130,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             return this.schedulerType;
         }
 
-        public ListClustersMetaResponseBodyClusters setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListClustersMetaResponseBodyClusters setDeployMode(String deployMode) {
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setDeployMode(String deployMode) {
             this.deployMode = deployMode;
             return this;
         }
@@ -143,7 +138,15 @@ public class ListClustersMetaResponseBody extends TeaModel {
             return this.deployMode;
         }
 
-        public ListClustersMetaResponseBodyClusters setOsTag(String osTag) {
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setIsComputeEss(Boolean isComputeEss) {
+            this.isComputeEss = isComputeEss;
+            return this;
+        }
+        public Boolean getIsComputeEss() {
+            return this.isComputeEss;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setOsTag(String osTag) {
             this.osTag = osTag;
             return this;
         }
@@ -151,15 +154,7 @@ public class ListClustersMetaResponseBody extends TeaModel {
             return this.osTag;
         }
 
-        public ListClustersMetaResponseBodyClusters setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListClustersMetaResponseBodyClusters setAccountType(String accountType) {
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setAccountType(String accountType) {
             this.accountType = accountType;
             return this;
         }
@@ -167,15 +162,23 @@ public class ListClustersMetaResponseBody extends TeaModel {
             return this.accountType;
         }
 
-        public ListClustersMetaResponseBodyClusters setLocation(String location) {
-            this.location = location;
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getLocation() {
-            return this.location;
+        public String getDescription() {
+            return this.description;
         }
 
-        public ListClustersMetaResponseBodyClusters setId(String id) {
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setId(String id) {
             this.id = id;
             return this;
         }
@@ -183,12 +186,39 @@ public class ListClustersMetaResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListClustersMetaResponseBodyClusters setClientVersion(String clientVersion) {
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setClientVersion(String clientVersion) {
             this.clientVersion = clientVersion;
             return this;
         }
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+    }
+
+    public static class ListClustersMetaResponseBodyClusters extends TeaModel {
+        @NameInMap("ClusterInfoSimple")
+        public java.util.List<ListClustersMetaResponseBodyClustersClusterInfoSimple> clusterInfoSimple;
+
+        public static ListClustersMetaResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersMetaResponseBodyClusters self = new ListClustersMetaResponseBodyClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClustersMetaResponseBodyClusters setClusterInfoSimple(java.util.List<ListClustersMetaResponseBodyClustersClusterInfoSimple> clusterInfoSimple) {
+            this.clusterInfoSimple = clusterInfoSimple;
+            return this;
+        }
+        public java.util.List<ListClustersMetaResponseBodyClustersClusterInfoSimple> getClusterInfoSimple() {
+            return this.clusterInfoSimple;
         }
 
     }

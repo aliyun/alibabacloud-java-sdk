@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetHealthMonitorLogsResponseBody extends TeaModel {
-    @NameInMap("LogInfo")
-    public java.util.List<GetHealthMonitorLogsResponseBodyLogInfo> logInfo;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("LogInfo")
+    public GetHealthMonitorLogsResponseBodyLogInfo logInfo;
 
     public static GetHealthMonitorLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHealthMonitorLogsResponseBody self = new GetHealthMonitorLogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetHealthMonitorLogsResponseBody setLogInfo(java.util.List<GetHealthMonitorLogsResponseBodyLogInfo> logInfo) {
-        this.logInfo = logInfo;
-        return this;
-    }
-    public java.util.List<GetHealthMonitorLogsResponseBodyLogInfo> getLogInfo() {
-        return this.logInfo;
     }
 
     public GetHealthMonitorLogsResponseBody setRequestId(String requestId) {
@@ -31,7 +23,15 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetHealthMonitorLogsResponseBodyLogInfoCheckList extends TeaModel {
+    public GetHealthMonitorLogsResponseBody setLogInfo(GetHealthMonitorLogsResponseBodyLogInfo logInfo) {
+        this.logInfo = logInfo;
+        return this;
+    }
+    public GetHealthMonitorLogsResponseBodyLogInfo getLogInfo() {
+        return this.logInfo;
+    }
+
+    public static class GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList extends TeaModel {
         @NameInMap("CheckInfo")
         public String checkInfo;
 
@@ -44,12 +44,12 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
         @NameInMap("CheckName")
         public String checkName;
 
-        public static GetHealthMonitorLogsResponseBodyLogInfoCheckList build(java.util.Map<String, ?> map) throws Exception {
-            GetHealthMonitorLogsResponseBodyLogInfoCheckList self = new GetHealthMonitorLogsResponseBodyLogInfoCheckList();
+        public static GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList build(java.util.Map<String, ?> map) throws Exception {
+            GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList self = new GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList();
             return TeaModel.build(map, self);
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfoCheckList setCheckInfo(String checkInfo) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList setCheckInfo(String checkInfo) {
             this.checkInfo = checkInfo;
             return this;
         }
@@ -57,7 +57,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.checkInfo;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfoCheckList setCheckDescription(String checkDescription) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList setCheckDescription(String checkDescription) {
             this.checkDescription = checkDescription;
             return this;
         }
@@ -65,7 +65,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.checkDescription;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfoCheckList setCheckSolution(String checkSolution) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList setCheckSolution(String checkSolution) {
             this.checkSolution = checkSolution;
             return this;
         }
@@ -73,7 +73,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.checkSolution;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfoCheckList setCheckName(String checkName) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList setCheckName(String checkName) {
             this.checkName = checkName;
             return this;
         }
@@ -83,7 +83,26 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
 
     }
 
-    public static class GetHealthMonitorLogsResponseBodyLogInfo extends TeaModel {
+    public static class GetHealthMonitorLogsResponseBodyLogInfoLogsCheckList extends TeaModel {
+        @NameInMap("CheckList")
+        public java.util.List<GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList> checkList;
+
+        public static GetHealthMonitorLogsResponseBodyLogInfoLogsCheckList build(java.util.Map<String, ?> map) throws Exception {
+            GetHealthMonitorLogsResponseBodyLogInfoLogsCheckList self = new GetHealthMonitorLogsResponseBodyLogInfoLogsCheckList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetHealthMonitorLogsResponseBodyLogInfoLogsCheckList setCheckList(java.util.List<GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList> checkList) {
+            this.checkList = checkList;
+            return this;
+        }
+        public java.util.List<GetHealthMonitorLogsResponseBodyLogInfoLogsCheckListCheckList> getCheckList() {
+            return this.checkList;
+        }
+
+    }
+
+    public static class GetHealthMonitorLogsResponseBodyLogInfoLogs extends TeaModel {
         @NameInMap("Time")
         public Integer time;
 
@@ -95,9 +114,6 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
 
         @NameInMap("HealthId")
         public String healthId;
-
-        @NameInMap("CheckList")
-        public java.util.List<GetHealthMonitorLogsResponseBodyLogInfoCheckList> checkList;
 
         @NameInMap("SceneDescription")
         public String sceneDescription;
@@ -114,12 +130,15 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
         @NameInMap("Level")
         public String level;
 
-        public static GetHealthMonitorLogsResponseBodyLogInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetHealthMonitorLogsResponseBodyLogInfo self = new GetHealthMonitorLogsResponseBodyLogInfo();
+        @NameInMap("CheckList")
+        public GetHealthMonitorLogsResponseBodyLogInfoLogsCheckList checkList;
+
+        public static GetHealthMonitorLogsResponseBodyLogInfoLogs build(java.util.Map<String, ?> map) throws Exception {
+            GetHealthMonitorLogsResponseBodyLogInfoLogs self = new GetHealthMonitorLogsResponseBodyLogInfoLogs();
             return TeaModel.build(map, self);
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfo setTime(Integer time) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setTime(Integer time) {
             this.time = time;
             return this;
         }
@@ -127,7 +146,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.time;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfo setItemDescription(String itemDescription) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setItemDescription(String itemDescription) {
             this.itemDescription = itemDescription;
             return this;
         }
@@ -135,7 +154,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.itemDescription;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfo setItemName(String itemName) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setItemName(String itemName) {
             this.itemName = itemName;
             return this;
         }
@@ -143,7 +162,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.itemName;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfo setHealthId(String healthId) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setHealthId(String healthId) {
             this.healthId = healthId;
             return this;
         }
@@ -151,15 +170,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.healthId;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfo setCheckList(java.util.List<GetHealthMonitorLogsResponseBodyLogInfoCheckList> checkList) {
-            this.checkList = checkList;
-            return this;
-        }
-        public java.util.List<GetHealthMonitorLogsResponseBodyLogInfoCheckList> getCheckList() {
-            return this.checkList;
-        }
-
-        public GetHealthMonitorLogsResponseBodyLogInfo setSceneDescription(String sceneDescription) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setSceneDescription(String sceneDescription) {
             this.sceneDescription = sceneDescription;
             return this;
         }
@@ -167,7 +178,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.sceneDescription;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfo setHostName(String hostName) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setHostName(String hostName) {
             this.hostName = hostName;
             return this;
         }
@@ -175,7 +186,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.hostName;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfo setSceneName(String sceneName) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setSceneName(String sceneName) {
             this.sceneName = sceneName;
             return this;
         }
@@ -183,7 +194,7 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.sceneName;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfo setInstanceId(String instanceId) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -191,12 +202,39 @@ public class GetHealthMonitorLogsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetHealthMonitorLogsResponseBodyLogInfo setLevel(String level) {
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setLevel(String level) {
             this.level = level;
             return this;
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public GetHealthMonitorLogsResponseBodyLogInfoLogs setCheckList(GetHealthMonitorLogsResponseBodyLogInfoLogsCheckList checkList) {
+            this.checkList = checkList;
+            return this;
+        }
+        public GetHealthMonitorLogsResponseBodyLogInfoLogsCheckList getCheckList() {
+            return this.checkList;
+        }
+
+    }
+
+    public static class GetHealthMonitorLogsResponseBodyLogInfo extends TeaModel {
+        @NameInMap("Logs")
+        public java.util.List<GetHealthMonitorLogsResponseBodyLogInfoLogs> logs;
+
+        public static GetHealthMonitorLogsResponseBodyLogInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetHealthMonitorLogsResponseBodyLogInfo self = new GetHealthMonitorLogsResponseBodyLogInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetHealthMonitorLogsResponseBodyLogInfo setLogs(java.util.List<GetHealthMonitorLogsResponseBodyLogInfoLogs> logs) {
+            this.logs = logs;
+            return this;
+        }
+        public java.util.List<GetHealthMonitorLogsResponseBodyLogInfoLogs> getLogs() {
+            return this.logs;
         }
 
     }

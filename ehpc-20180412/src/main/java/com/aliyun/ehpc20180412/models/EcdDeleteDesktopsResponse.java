@@ -3,21 +3,21 @@ package com.aliyun.ehpc20180412.models;
 
 import com.aliyun.tea.*;
 
-public class BindAccountToClusterUserResponse extends TeaModel {
+public class EcdDeleteDesktopsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public BindAccountToClusterUserResponseBody body;
+    public EcdDeleteDesktopsResponseBody body;
 
-    public static BindAccountToClusterUserResponse build(java.util.Map<String, ?> map) throws Exception {
-        BindAccountToClusterUserResponse self = new BindAccountToClusterUserResponse();
+    public static EcdDeleteDesktopsResponse build(java.util.Map<String, ?> map) throws Exception {
+        EcdDeleteDesktopsResponse self = new EcdDeleteDesktopsResponse();
         return TeaModel.build(map, self);
     }
 
-    public BindAccountToClusterUserResponse setHeaders(java.util.Map<String, String> headers) {
+    public EcdDeleteDesktopsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class BindAccountToClusterUserResponse extends TeaModel {
         return this.headers;
     }
 
-    public BindAccountToClusterUserResponse setBody(BindAccountToClusterUserResponseBody body) {
+    public EcdDeleteDesktopsResponse setBody(EcdDeleteDesktopsResponseBody body) {
         this.body = body;
         return this;
     }
-    public BindAccountToClusterUserResponseBody getBody() {
+    public EcdDeleteDesktopsResponseBody getBody() {
         return this.body;
     }
 

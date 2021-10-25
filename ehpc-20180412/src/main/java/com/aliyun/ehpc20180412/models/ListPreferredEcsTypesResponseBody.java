@@ -4,26 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListPreferredEcsTypesResponseBody extends TeaModel {
-    @NameInMap("Series")
-    public java.util.List<ListPreferredEcsTypesResponseBodySeries> series;
-
     @NameInMap("SupportSpotInstance")
     public Boolean supportSpotInstance;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Series")
+    public ListPreferredEcsTypesResponseBodySeries series;
+
     public static ListPreferredEcsTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPreferredEcsTypesResponseBody self = new ListPreferredEcsTypesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPreferredEcsTypesResponseBody setSeries(java.util.List<ListPreferredEcsTypesResponseBodySeries> series) {
-        this.series = series;
-        return this;
-    }
-    public java.util.List<ListPreferredEcsTypesResponseBodySeries> getSeries() {
-        return this.series;
     }
 
     public ListPreferredEcsTypesResponseBody setSupportSpotInstance(Boolean supportSpotInstance) {
@@ -42,71 +34,128 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListPreferredEcsTypesResponseBodySeriesRoles extends TeaModel {
-        @NameInMap("Manager")
-        public java.util.List<String> manager;
+    public ListPreferredEcsTypesResponseBody setSeries(ListPreferredEcsTypesResponseBodySeries series) {
+        this.series = series;
+        return this;
+    }
+    public ListPreferredEcsTypesResponseBodySeries getSeries() {
+        return this.series;
+    }
 
-        @NameInMap("Compute")
-        public java.util.List<String> compute;
+    public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager extends TeaModel {
+        @NameInMap("InstanceTypeId")
+        public java.util.List<String> instanceTypeId;
 
-        @NameInMap("Login")
-        public java.util.List<String> login;
-
-        public static ListPreferredEcsTypesResponseBodySeriesRoles build(java.util.Map<String, ?> map) throws Exception {
-            ListPreferredEcsTypesResponseBodySeriesRoles self = new ListPreferredEcsTypesResponseBodySeriesRoles();
+        public static ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager build(java.util.Map<String, ?> map) throws Exception {
+            ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager self = new ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager();
             return TeaModel.build(map, self);
         }
 
-        public ListPreferredEcsTypesResponseBodySeriesRoles setManager(java.util.List<String> manager) {
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager setInstanceTypeId(java.util.List<String> instanceTypeId) {
+            this.instanceTypeId = instanceTypeId;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypeId() {
+            return this.instanceTypeId;
+        }
+
+    }
+
+    public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute extends TeaModel {
+        @NameInMap("InstanceTypeId")
+        public java.util.List<String> instanceTypeId;
+
+        public static ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute build(java.util.Map<String, ?> map) throws Exception {
+            ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute self = new ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute setInstanceTypeId(java.util.List<String> instanceTypeId) {
+            this.instanceTypeId = instanceTypeId;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypeId() {
+            return this.instanceTypeId;
+        }
+
+    }
+
+    public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin extends TeaModel {
+        @NameInMap("InstanceTypeId")
+        public java.util.List<String> instanceTypeId;
+
+        public static ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin build(java.util.Map<String, ?> map) throws Exception {
+            ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin self = new ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin setInstanceTypeId(java.util.List<String> instanceTypeId) {
+            this.instanceTypeId = instanceTypeId;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypeId() {
+            return this.instanceTypeId;
+        }
+
+    }
+
+    public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles extends TeaModel {
+        @NameInMap("Manager")
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager manager;
+
+        @NameInMap("Compute")
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute compute;
+
+        @NameInMap("Login")
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin login;
+
+        public static ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles build(java.util.Map<String, ?> map) throws Exception {
+            ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles self = new ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles setManager(ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager manager) {
             this.manager = manager;
             return this;
         }
-        public java.util.List<String> getManager() {
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager getManager() {
             return this.manager;
         }
 
-        public ListPreferredEcsTypesResponseBodySeriesRoles setCompute(java.util.List<String> compute) {
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles setCompute(ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute compute) {
             this.compute = compute;
             return this;
         }
-        public java.util.List<String> getCompute() {
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute getCompute() {
             return this.compute;
         }
 
-        public ListPreferredEcsTypesResponseBodySeriesRoles setLogin(java.util.List<String> login) {
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles setLogin(ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin login) {
             this.login = login;
             return this;
         }
-        public java.util.List<String> getLogin() {
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin getLogin() {
             return this.login;
         }
 
     }
 
-    public static class ListPreferredEcsTypesResponseBodySeries extends TeaModel {
-        @NameInMap("SeriesId")
-        public String seriesId;
-
+    public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfo extends TeaModel {
         @NameInMap("SeriesName")
         public String seriesName;
 
-        @NameInMap("Roles")
-        public ListPreferredEcsTypesResponseBodySeriesRoles roles;
+        @NameInMap("SeriesId")
+        public String seriesId;
 
-        public static ListPreferredEcsTypesResponseBodySeries build(java.util.Map<String, ?> map) throws Exception {
-            ListPreferredEcsTypesResponseBodySeries self = new ListPreferredEcsTypesResponseBodySeries();
+        @NameInMap("Roles")
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles roles;
+
+        public static ListPreferredEcsTypesResponseBodySeriesSeriesInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListPreferredEcsTypesResponseBodySeriesSeriesInfo self = new ListPreferredEcsTypesResponseBodySeriesSeriesInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListPreferredEcsTypesResponseBodySeries setSeriesId(String seriesId) {
-            this.seriesId = seriesId;
-            return this;
-        }
-        public String getSeriesId() {
-            return this.seriesId;
-        }
-
-        public ListPreferredEcsTypesResponseBodySeries setSeriesName(String seriesName) {
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfo setSeriesName(String seriesName) {
             this.seriesName = seriesName;
             return this;
         }
@@ -114,12 +163,39 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             return this.seriesName;
         }
 
-        public ListPreferredEcsTypesResponseBodySeries setRoles(ListPreferredEcsTypesResponseBodySeriesRoles roles) {
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfo setSeriesId(String seriesId) {
+            this.seriesId = seriesId;
+            return this;
+        }
+        public String getSeriesId() {
+            return this.seriesId;
+        }
+
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfo setRoles(ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles roles) {
             this.roles = roles;
             return this;
         }
-        public ListPreferredEcsTypesResponseBodySeriesRoles getRoles() {
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles getRoles() {
             return this.roles;
+        }
+
+    }
+
+    public static class ListPreferredEcsTypesResponseBodySeries extends TeaModel {
+        @NameInMap("SeriesInfo")
+        public java.util.List<ListPreferredEcsTypesResponseBodySeriesSeriesInfo> seriesInfo;
+
+        public static ListPreferredEcsTypesResponseBodySeries build(java.util.Map<String, ?> map) throws Exception {
+            ListPreferredEcsTypesResponseBodySeries self = new ListPreferredEcsTypesResponseBodySeries();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPreferredEcsTypesResponseBodySeries setSeriesInfo(java.util.List<ListPreferredEcsTypesResponseBodySeriesSeriesInfo> seriesInfo) {
+            this.seriesInfo = seriesInfo;
+            return this;
+        }
+        public java.util.List<ListPreferredEcsTypesResponseBodySeriesSeriesInfo> getSeriesInfo() {
+            return this.seriesInfo;
         }
 
     }

@@ -8,7 +8,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("MetricLogs")
-    public java.util.List<GetCloudMetricLogsResponseBodyMetricLogs> metricLogs;
+    public GetCloudMetricLogsResponseBodyMetricLogs metricLogs;
 
     public static GetCloudMetricLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCloudMetricLogsResponseBody self = new GetCloudMetricLogsResponseBody();
@@ -23,15 +23,15 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetCloudMetricLogsResponseBody setMetricLogs(java.util.List<GetCloudMetricLogsResponseBodyMetricLogs> metricLogs) {
+    public GetCloudMetricLogsResponseBody setMetricLogs(GetCloudMetricLogsResponseBodyMetricLogs metricLogs) {
         this.metricLogs = metricLogs;
         return this;
     }
-    public java.util.List<GetCloudMetricLogsResponseBodyMetricLogs> getMetricLogs() {
+    public GetCloudMetricLogsResponseBodyMetricLogs getMetricLogs() {
         return this.metricLogs;
     }
 
-    public static class GetCloudMetricLogsResponseBodyMetricLogs extends TeaModel {
+    public static class GetCloudMetricLogsResponseBodyMetricLogsMetricLog extends TeaModel {
         @NameInMap("Time")
         public Integer time;
 
@@ -50,12 +50,12 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static GetCloudMetricLogsResponseBodyMetricLogs build(java.util.Map<String, ?> map) throws Exception {
-            GetCloudMetricLogsResponseBodyMetricLogs self = new GetCloudMetricLogsResponseBodyMetricLogs();
+        public static GetCloudMetricLogsResponseBodyMetricLogsMetricLog build(java.util.Map<String, ?> map) throws Exception {
+            GetCloudMetricLogsResponseBodyMetricLogsMetricLog self = new GetCloudMetricLogsResponseBodyMetricLogsMetricLog();
             return TeaModel.build(map, self);
         }
 
-        public GetCloudMetricLogsResponseBodyMetricLogs setTime(Integer time) {
+        public GetCloudMetricLogsResponseBodyMetricLogsMetricLog setTime(Integer time) {
             this.time = time;
             return this;
         }
@@ -63,7 +63,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             return this.time;
         }
 
-        public GetCloudMetricLogsResponseBodyMetricLogs setDiskDevice(String diskDevice) {
+        public GetCloudMetricLogsResponseBodyMetricLogsMetricLog setDiskDevice(String diskDevice) {
             this.diskDevice = diskDevice;
             return this;
         }
@@ -71,7 +71,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             return this.diskDevice;
         }
 
-        public GetCloudMetricLogsResponseBodyMetricLogs setNetworkInterface(String networkInterface) {
+        public GetCloudMetricLogsResponseBodyMetricLogsMetricLog setNetworkInterface(String networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
@@ -79,7 +79,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             return this.networkInterface;
         }
 
-        public GetCloudMetricLogsResponseBodyMetricLogs setMetricData(String metricData) {
+        public GetCloudMetricLogsResponseBodyMetricLogsMetricLog setMetricData(String metricData) {
             this.metricData = metricData;
             return this;
         }
@@ -87,7 +87,7 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             return this.metricData;
         }
 
-        public GetCloudMetricLogsResponseBodyMetricLogs setHostname(String hostname) {
+        public GetCloudMetricLogsResponseBodyMetricLogsMetricLog setHostname(String hostname) {
             this.hostname = hostname;
             return this;
         }
@@ -95,12 +95,31 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
             return this.hostname;
         }
 
-        public GetCloudMetricLogsResponseBodyMetricLogs setInstanceId(String instanceId) {
+        public GetCloudMetricLogsResponseBodyMetricLogsMetricLog setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class GetCloudMetricLogsResponseBodyMetricLogs extends TeaModel {
+        @NameInMap("MetricLog")
+        public java.util.List<GetCloudMetricLogsResponseBodyMetricLogsMetricLog> metricLog;
+
+        public static GetCloudMetricLogsResponseBodyMetricLogs build(java.util.Map<String, ?> map) throws Exception {
+            GetCloudMetricLogsResponseBodyMetricLogs self = new GetCloudMetricLogsResponseBodyMetricLogs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCloudMetricLogsResponseBodyMetricLogs setMetricLog(java.util.List<GetCloudMetricLogsResponseBodyMetricLogsMetricLog> metricLog) {
+            this.metricLog = metricLog;
+            return this;
+        }
+        public java.util.List<GetCloudMetricLogsResponseBodyMetricLogsMetricLog> getMetricLog() {
+            return this.metricLog;
         }
 
     }

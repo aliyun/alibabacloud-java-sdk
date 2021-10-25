@@ -13,6 +13,9 @@ public class ListCustomImagesRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     public static ListCustomImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCustomImagesRequest self = new ListCustomImagesRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListCustomImagesRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public ListCustomImagesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class ListUsersResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Users")
-    public java.util.List<ListUsersResponseBodyUsers> users;
+    public ListUsersResponseBodyUsers users;
 
     public static ListUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUsersResponseBody self = new ListUsersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListUsersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListUsersResponseBody setPageSize(Integer pageSize) {
@@ -56,15 +48,23 @@ public class ListUsersResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListUsersResponseBody setUsers(java.util.List<ListUsersResponseBodyUsers> users) {
+    public ListUsersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListUsersResponseBody setUsers(ListUsersResponseBodyUsers users) {
         this.users = users;
         return this;
     }
-    public java.util.List<ListUsersResponseBodyUsers> getUsers() {
+    public ListUsersResponseBodyUsers getUsers() {
         return this.users;
     }
 
-    public static class ListUsersResponseBodyUsers extends TeaModel {
+    public static class ListUsersResponseBodyUsersUserInfo extends TeaModel {
         @NameInMap("Name")
         public String name;
 
@@ -74,12 +74,12 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("Group")
         public String group;
 
-        public static ListUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
-            ListUsersResponseBodyUsers self = new ListUsersResponseBodyUsers();
+        public static ListUsersResponseBodyUsersUserInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListUsersResponseBodyUsersUserInfo self = new ListUsersResponseBodyUsersUserInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListUsersResponseBodyUsers setName(String name) {
+        public ListUsersResponseBodyUsersUserInfo setName(String name) {
             this.name = name;
             return this;
         }
@@ -87,7 +87,7 @@ public class ListUsersResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListUsersResponseBodyUsers setAddTime(String addTime) {
+        public ListUsersResponseBodyUsersUserInfo setAddTime(String addTime) {
             this.addTime = addTime;
             return this;
         }
@@ -95,12 +95,31 @@ public class ListUsersResponseBody extends TeaModel {
             return this.addTime;
         }
 
-        public ListUsersResponseBodyUsers setGroup(String group) {
+        public ListUsersResponseBodyUsersUserInfo setGroup(String group) {
             this.group = group;
             return this;
         }
         public String getGroup() {
             return this.group;
+        }
+
+    }
+
+    public static class ListUsersResponseBodyUsers extends TeaModel {
+        @NameInMap("UserInfo")
+        public java.util.List<ListUsersResponseBodyUsersUserInfo> userInfo;
+
+        public static ListUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
+            ListUsersResponseBodyUsers self = new ListUsersResponseBodyUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUsersResponseBodyUsers setUserInfo(java.util.List<ListUsersResponseBodyUsersUserInfo> userInfo) {
+            this.userInfo = userInfo;
+            return this;
+        }
+        public java.util.List<ListUsersResponseBodyUsersUserInfo> getUserInfo() {
+            return this.userInfo;
         }
 
     }

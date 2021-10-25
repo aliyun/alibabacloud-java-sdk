@@ -61,11 +61,26 @@ public class ApplyNodesRequest extends TeaModel {
     @NameInMap("StrictSatisfiedTargetCapacity")
     public Boolean strictSatisfiedTargetCapacity;
 
+    @NameInMap("SystemDiskLevel")
+    public String systemDiskLevel;
+
+    @NameInMap("StrictResourceProvision")
+    public Boolean strictResourceProvision;
+
+    @NameInMap("Round")
+    public Integer round;
+
+    @NameInMap("Interval")
+    public Integer interval;
+
     @NameInMap("ZoneInfos")
     public java.util.List<ApplyNodesRequestZoneInfos> zoneInfos;
 
     @NameInMap("InstanceTypeModel")
     public java.util.List<ApplyNodesRequestInstanceTypeModel> instanceTypeModel;
+
+    @NameInMap("Tag")
+    public java.util.List<ApplyNodesRequestTag> tag;
 
     public static ApplyNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyNodesRequest self = new ApplyNodesRequest();
@@ -224,6 +239,38 @@ public class ApplyNodesRequest extends TeaModel {
         return this.strictSatisfiedTargetCapacity;
     }
 
+    public ApplyNodesRequest setSystemDiskLevel(String systemDiskLevel) {
+        this.systemDiskLevel = systemDiskLevel;
+        return this;
+    }
+    public String getSystemDiskLevel() {
+        return this.systemDiskLevel;
+    }
+
+    public ApplyNodesRequest setStrictResourceProvision(Boolean strictResourceProvision) {
+        this.strictResourceProvision = strictResourceProvision;
+        return this;
+    }
+    public Boolean getStrictResourceProvision() {
+        return this.strictResourceProvision;
+    }
+
+    public ApplyNodesRequest setRound(Integer round) {
+        this.round = round;
+        return this;
+    }
+    public Integer getRound() {
+        return this.round;
+    }
+
+    public ApplyNodesRequest setInterval(Integer interval) {
+        this.interval = interval;
+        return this;
+    }
+    public Integer getInterval() {
+        return this.interval;
+    }
+
     public ApplyNodesRequest setZoneInfos(java.util.List<ApplyNodesRequestZoneInfos> zoneInfos) {
         this.zoneInfos = zoneInfos;
         return this;
@@ -238,6 +285,14 @@ public class ApplyNodesRequest extends TeaModel {
     }
     public java.util.List<ApplyNodesRequestInstanceTypeModel> getInstanceTypeModel() {
         return this.instanceTypeModel;
+    }
+
+    public ApplyNodesRequest setTag(java.util.List<ApplyNodesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ApplyNodesRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class ApplyNodesRequestZoneInfos extends TeaModel {
@@ -307,6 +362,36 @@ public class ApplyNodesRequest extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+    }
+
+    public static class ApplyNodesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ApplyNodesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ApplyNodesRequestTag self = new ApplyNodesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyNodesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ApplyNodesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

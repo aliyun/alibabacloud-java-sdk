@@ -4,35 +4,27 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeGWSClustersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Clusters")
-    public java.util.List<DescribeGWSClustersResponseBodyClusters> clusters;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("CallerType")
     public String callerType;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("Clusters")
+    public DescribeGWSClustersResponseBodyClusters clusters;
+
     public static DescribeGWSClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGWSClustersResponseBody self = new DescribeGWSClustersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGWSClustersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeGWSClustersResponseBody setPageSize(Integer pageSize) {
@@ -43,14 +35,6 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeGWSClustersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeGWSClustersResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -59,12 +43,12 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeGWSClustersResponseBody setClusters(java.util.List<DescribeGWSClustersResponseBodyClusters> clusters) {
-        this.clusters = clusters;
+    public DescribeGWSClustersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<DescribeGWSClustersResponseBodyClusters> getClusters() {
-        return this.clusters;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeGWSClustersResponseBody setCallerType(String callerType) {
@@ -75,7 +59,23 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         return this.callerType;
     }
 
-    public static class DescribeGWSClustersResponseBodyClusters extends TeaModel {
+    public DescribeGWSClustersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeGWSClustersResponseBody setClusters(DescribeGWSClustersResponseBodyClusters clusters) {
+        this.clusters = clusters;
+        return this;
+    }
+    public DescribeGWSClustersResponseBodyClusters getClusters() {
+        return this.clusters;
+    }
+
+    public static class DescribeGWSClustersResponseBodyClustersClusterInfo extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -91,12 +91,12 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
 
-        public static DescribeGWSClustersResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGWSClustersResponseBodyClusters self = new DescribeGWSClustersResponseBodyClusters();
+        public static DescribeGWSClustersResponseBodyClustersClusterInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGWSClustersResponseBodyClustersClusterInfo self = new DescribeGWSClustersResponseBodyClustersClusterInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGWSClustersResponseBodyClusters setVpcId(String vpcId) {
+        public DescribeGWSClustersResponseBodyClustersClusterInfo setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -104,7 +104,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeGWSClustersResponseBodyClusters setStatus(String status) {
+        public DescribeGWSClustersResponseBodyClustersClusterInfo setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -112,7 +112,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeGWSClustersResponseBodyClusters setInstanceCount(Integer instanceCount) {
+        public DescribeGWSClustersResponseBodyClustersClusterInfo setInstanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
@@ -120,7 +120,7 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
             return this.instanceCount;
         }
 
-        public DescribeGWSClustersResponseBodyClusters setCreateTime(String createTime) {
+        public DescribeGWSClustersResponseBodyClustersClusterInfo setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -128,12 +128,31 @@ public class DescribeGWSClustersResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeGWSClustersResponseBodyClusters setClusterId(String clusterId) {
+        public DescribeGWSClustersResponseBodyClustersClusterInfo setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
         public String getClusterId() {
             return this.clusterId;
+        }
+
+    }
+
+    public static class DescribeGWSClustersResponseBodyClusters extends TeaModel {
+        @NameInMap("ClusterInfo")
+        public java.util.List<DescribeGWSClustersResponseBodyClustersClusterInfo> clusterInfo;
+
+        public static DescribeGWSClustersResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGWSClustersResponseBodyClusters self = new DescribeGWSClustersResponseBodyClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGWSClustersResponseBodyClusters setClusterInfo(java.util.List<DescribeGWSClustersResponseBodyClustersClusterInfo> clusterInfo) {
+            this.clusterInfo = clusterInfo;
+            return this;
+        }
+        public java.util.List<DescribeGWSClustersResponseBodyClustersClusterInfo> getClusterInfo() {
+            return this.clusterInfo;
         }
 
     }

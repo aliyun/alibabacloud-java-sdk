@@ -60,17 +60,17 @@ public class UpdateClusterVolumesRequest extends TeaModel {
         @NameInMap("Roles")
         public java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> roles;
 
-        @NameInMap("RemoteDirectory")
-        public String remoteDirectory;
-
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
-        @NameInMap("LocalDirectory")
-        public String localDirectory;
+        @NameInMap("RemoteDirectory")
+        public String remoteDirectory;
 
         @NameInMap("VolumeType")
         public String volumeType;
+
+        @NameInMap("LocalDirectory")
+        public String localDirectory;
 
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
@@ -107,14 +107,6 @@ public class UpdateClusterVolumesRequest extends TeaModel {
             return this.roles;
         }
 
-        public UpdateClusterVolumesRequestAdditionalVolumes setRemoteDirectory(String remoteDirectory) {
-            this.remoteDirectory = remoteDirectory;
-            return this;
-        }
-        public String getRemoteDirectory() {
-            return this.remoteDirectory;
-        }
-
         public UpdateClusterVolumesRequestAdditionalVolumes setVolumeMountpoint(String volumeMountpoint) {
             this.volumeMountpoint = volumeMountpoint;
             return this;
@@ -123,12 +115,12 @@ public class UpdateClusterVolumesRequest extends TeaModel {
             return this.volumeMountpoint;
         }
 
-        public UpdateClusterVolumesRequestAdditionalVolumes setLocalDirectory(String localDirectory) {
-            this.localDirectory = localDirectory;
+        public UpdateClusterVolumesRequestAdditionalVolumes setRemoteDirectory(String remoteDirectory) {
+            this.remoteDirectory = remoteDirectory;
             return this;
         }
-        public String getLocalDirectory() {
-            return this.localDirectory;
+        public String getRemoteDirectory() {
+            return this.remoteDirectory;
         }
 
         public UpdateClusterVolumesRequestAdditionalVolumes setVolumeType(String volumeType) {
@@ -137,6 +129,14 @@ public class UpdateClusterVolumesRequest extends TeaModel {
         }
         public String getVolumeType() {
             return this.volumeType;
+        }
+
+        public UpdateClusterVolumesRequestAdditionalVolumes setLocalDirectory(String localDirectory) {
+            this.localDirectory = localDirectory;
+            return this;
+        }
+        public String getLocalDirectory() {
+            return this.localDirectory;
         }
 
         public UpdateClusterVolumesRequestAdditionalVolumes setVolumeProtocol(String volumeProtocol) {

@@ -4,11 +4,11 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class CreateHybridClusterResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("ClusterId")
     public String clusterId;
@@ -18,20 +18,20 @@ public class CreateHybridClusterResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateHybridClusterResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public CreateHybridClusterResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateHybridClusterResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public CreateHybridClusterResponseBody setClusterId(String clusterId) {

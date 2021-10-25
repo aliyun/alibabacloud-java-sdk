@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterResponseBody extends TeaModel {
-    @NameInMap("ClusterInfo")
-    public DescribeClusterResponseBodyClusterInfo clusterInfo;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ClusterInfo")
+    public DescribeClusterResponseBodyClusterInfo clusterInfo;
 
     public static DescribeClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterResponseBody self = new DescribeClusterResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeClusterResponseBody setClusterInfo(DescribeClusterResponseBodyClusterInfo clusterInfo) {
-        this.clusterInfo = clusterInfo;
-        return this;
-    }
-    public DescribeClusterResponseBodyClusterInfo getClusterInfo() {
-        return this.clusterInfo;
     }
 
     public DescribeClusterResponseBody setRequestId(String requestId) {
@@ -31,19 +23,95 @@ public class DescribeClusterResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeClusterResponseBodyClusterInfoPostInstallScripts extends TeaModel {
-        @NameInMap("Args")
-        public String args;
+    public DescribeClusterResponseBody setClusterInfo(DescribeClusterResponseBodyClusterInfo clusterInfo) {
+        this.clusterInfo = clusterInfo;
+        return this;
+    }
+    public DescribeClusterResponseBodyClusterInfo getClusterInfo() {
+        return this.clusterInfo;
+    }
 
-        @NameInMap("Url")
-        public String url;
+    public static class DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo extends TeaModel {
+        @NameInMap("Tag")
+        public String tag;
 
-        public static DescribeClusterResponseBodyClusterInfoPostInstallScripts build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterResponseBodyClusterInfoPostInstallScripts self = new DescribeClusterResponseBodyClusterInfoPostInstallScripts();
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo self = new DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeClusterResponseBodyClusterInfoPostInstallScripts setArgs(String args) {
+        public DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+        public DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
+    public static class DescribeClusterResponseBodyClusterInfoApplications extends TeaModel {
+        @NameInMap("ApplicationInfo")
+        public java.util.List<DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo> applicationInfo;
+
+        public static DescribeClusterResponseBodyClusterInfoApplications build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResponseBodyClusterInfoApplications self = new DescribeClusterResponseBodyClusterInfoApplications();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterResponseBodyClusterInfoApplications setApplicationInfo(java.util.List<DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo> applicationInfo) {
+            this.applicationInfo = applicationInfo;
+            return this;
+        }
+        public java.util.List<DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo> getApplicationInfo() {
+            return this.applicationInfo;
+        }
+
+    }
+
+    public static class DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo extends TeaModel {
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Args")
+        public String args;
+
+        public static DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo self = new DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo setArgs(String args) {
             this.args = args;
             return this;
         }
@@ -51,12 +119,23 @@ public class DescribeClusterResponseBody extends TeaModel {
             return this.args;
         }
 
-        public DescribeClusterResponseBodyClusterInfoPostInstallScripts setUrl(String url) {
-            this.url = url;
+    }
+
+    public static class DescribeClusterResponseBodyClusterInfoPostInstallScripts extends TeaModel {
+        @NameInMap("PostInstallScriptInfo")
+        public java.util.List<DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo> postInstallScriptInfo;
+
+        public static DescribeClusterResponseBodyClusterInfoPostInstallScripts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterResponseBodyClusterInfoPostInstallScripts self = new DescribeClusterResponseBodyClusterInfoPostInstallScripts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterResponseBodyClusterInfoPostInstallScripts setPostInstallScriptInfo(java.util.List<DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo> postInstallScriptInfo) {
+            this.postInstallScriptInfo = postInstallScriptInfo;
             return this;
         }
-        public String getUrl() {
-            return this.url;
+        public java.util.List<DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo> getPostInstallScriptInfo() {
+            return this.postInstallScriptInfo;
         }
 
     }
@@ -192,47 +271,6 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeClusterResponseBodyClusterInfoApplications extends TeaModel {
-        @NameInMap("Version")
-        public String version;
-
-        @NameInMap("Tag")
-        public String tag;
-
-        @NameInMap("Name")
-        public String name;
-
-        public static DescribeClusterResponseBodyClusterInfoApplications build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterResponseBodyClusterInfoApplications self = new DescribeClusterResponseBodyClusterInfoApplications();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeClusterResponseBodyClusterInfoApplications setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public DescribeClusterResponseBodyClusterInfoApplications setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-        public DescribeClusterResponseBodyClusterInfoApplications setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
     public static class DescribeClusterResponseBodyClusterInfo extends TeaModel {
         @NameInMap("Status")
         public String status;
@@ -279,9 +317,6 @@ public class DescribeClusterResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
-        @NameInMap("PostInstallScripts")
-        public java.util.List<DescribeClusterResponseBodyClusterInfoPostInstallScripts> postInstallScripts;
-
         @NameInMap("SchedulerType")
         public String schedulerType;
 
@@ -291,14 +326,14 @@ public class DescribeClusterResponseBody extends TeaModel {
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
-        @NameInMap("RemoteDirectory")
-        public String remoteDirectory;
+        @NameInMap("OsTag")
+        public String osTag;
 
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
-        @NameInMap("OsTag")
-        public String osTag;
+        @NameInMap("RemoteDirectory")
+        public String remoteDirectory;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -306,14 +341,8 @@ public class DescribeClusterResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        @NameInMap("EcsInfo")
-        public DescribeClusterResponseBodyClusterInfoEcsInfo ecsInfo;
-
         @NameInMap("ImageName")
         public String imageName;
-
-        @NameInMap("Applications")
-        public java.util.List<DescribeClusterResponseBodyClusterInfoApplications> applications;
 
         @NameInMap("VolumeType")
         public String volumeType;
@@ -326,6 +355,15 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         @NameInMap("ClientVersion")
         public String clientVersion;
+
+        @NameInMap("Applications")
+        public DescribeClusterResponseBodyClusterInfoApplications applications;
+
+        @NameInMap("PostInstallScripts")
+        public DescribeClusterResponseBodyClusterInfoPostInstallScripts postInstallScripts;
+
+        @NameInMap("EcsInfo")
+        public DescribeClusterResponseBodyClusterInfoEcsInfo ecsInfo;
 
         public static DescribeClusterResponseBodyClusterInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterResponseBodyClusterInfo self = new DescribeClusterResponseBodyClusterInfo();
@@ -452,14 +490,6 @@ public class DescribeClusterResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public DescribeClusterResponseBodyClusterInfo setPostInstallScripts(java.util.List<DescribeClusterResponseBodyClusterInfoPostInstallScripts> postInstallScripts) {
-            this.postInstallScripts = postInstallScripts;
-            return this;
-        }
-        public java.util.List<DescribeClusterResponseBodyClusterInfoPostInstallScripts> getPostInstallScripts() {
-            return this.postInstallScripts;
-        }
-
         public DescribeClusterResponseBodyClusterInfo setSchedulerType(String schedulerType) {
             this.schedulerType = schedulerType;
             return this;
@@ -484,12 +514,12 @@ public class DescribeClusterResponseBody extends TeaModel {
             return this.imageOwnerAlias;
         }
 
-        public DescribeClusterResponseBodyClusterInfo setRemoteDirectory(String remoteDirectory) {
-            this.remoteDirectory = remoteDirectory;
+        public DescribeClusterResponseBodyClusterInfo setOsTag(String osTag) {
+            this.osTag = osTag;
             return this;
         }
-        public String getRemoteDirectory() {
-            return this.remoteDirectory;
+        public String getOsTag() {
+            return this.osTag;
         }
 
         public DescribeClusterResponseBodyClusterInfo setVolumeMountpoint(String volumeMountpoint) {
@@ -500,12 +530,12 @@ public class DescribeClusterResponseBody extends TeaModel {
             return this.volumeMountpoint;
         }
 
-        public DescribeClusterResponseBodyClusterInfo setOsTag(String osTag) {
-            this.osTag = osTag;
+        public DescribeClusterResponseBodyClusterInfo setRemoteDirectory(String remoteDirectory) {
+            this.remoteDirectory = remoteDirectory;
             return this;
         }
-        public String getOsTag() {
-            return this.osTag;
+        public String getRemoteDirectory() {
+            return this.remoteDirectory;
         }
 
         public DescribeClusterResponseBodyClusterInfo setRegionId(String regionId) {
@@ -524,28 +554,12 @@ public class DescribeClusterResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeClusterResponseBodyClusterInfo setEcsInfo(DescribeClusterResponseBodyClusterInfoEcsInfo ecsInfo) {
-            this.ecsInfo = ecsInfo;
-            return this;
-        }
-        public DescribeClusterResponseBodyClusterInfoEcsInfo getEcsInfo() {
-            return this.ecsInfo;
-        }
-
         public DescribeClusterResponseBodyClusterInfo setImageName(String imageName) {
             this.imageName = imageName;
             return this;
         }
         public String getImageName() {
             return this.imageName;
-        }
-
-        public DescribeClusterResponseBodyClusterInfo setApplications(java.util.List<DescribeClusterResponseBodyClusterInfoApplications> applications) {
-            this.applications = applications;
-            return this;
-        }
-        public java.util.List<DescribeClusterResponseBodyClusterInfoApplications> getApplications() {
-            return this.applications;
         }
 
         public DescribeClusterResponseBodyClusterInfo setVolumeType(String volumeType) {
@@ -578,6 +592,30 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
         public String getClientVersion() {
             return this.clientVersion;
+        }
+
+        public DescribeClusterResponseBodyClusterInfo setApplications(DescribeClusterResponseBodyClusterInfoApplications applications) {
+            this.applications = applications;
+            return this;
+        }
+        public DescribeClusterResponseBodyClusterInfoApplications getApplications() {
+            return this.applications;
+        }
+
+        public DescribeClusterResponseBodyClusterInfo setPostInstallScripts(DescribeClusterResponseBodyClusterInfoPostInstallScripts postInstallScripts) {
+            this.postInstallScripts = postInstallScripts;
+            return this;
+        }
+        public DescribeClusterResponseBodyClusterInfoPostInstallScripts getPostInstallScripts() {
+            return this.postInstallScripts;
+        }
+
+        public DescribeClusterResponseBodyClusterInfo setEcsInfo(DescribeClusterResponseBodyClusterInfoEcsInfo ecsInfo) {
+            this.ecsInfo = ecsInfo;
+            return this;
+        }
+        public DescribeClusterResponseBodyClusterInfoEcsInfo getEcsInfo() {
+            return this.ecsInfo;
         }
 
     }

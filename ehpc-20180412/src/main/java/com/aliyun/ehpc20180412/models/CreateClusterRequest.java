@@ -127,6 +127,15 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("WithoutElasticIp")
     public Boolean withoutElasticIp;
 
+    @NameInMap("SystemDiskLevel")
+    public String systemDiskLevel;
+
+    @NameInMap("IsComputeEss")
+    public Boolean isComputeEss;
+
+    @NameInMap("ClusterVersion")
+    public String clusterVersion;
+
     @NameInMap("Application")
     public java.util.List<CreateClusterRequestApplication> application;
 
@@ -469,6 +478,30 @@ public class CreateClusterRequest extends TeaModel {
         return this.withoutElasticIp;
     }
 
+    public CreateClusterRequest setSystemDiskLevel(String systemDiskLevel) {
+        this.systemDiskLevel = systemDiskLevel;
+        return this;
+    }
+    public String getSystemDiskLevel() {
+        return this.systemDiskLevel;
+    }
+
+    public CreateClusterRequest setIsComputeEss(Boolean isComputeEss) {
+        this.isComputeEss = isComputeEss;
+        return this;
+    }
+    public Boolean getIsComputeEss() {
+        return this.isComputeEss;
+    }
+
+    public CreateClusterRequest setClusterVersion(String clusterVersion) {
+        this.clusterVersion = clusterVersion;
+        return this;
+    }
+    public String getClusterVersion() {
+        return this.clusterVersion;
+    }
+
     public CreateClusterRequest setApplication(java.util.List<CreateClusterRequestApplication> application) {
         this.application = application;
         return this;
@@ -675,17 +708,17 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("Roles")
         public java.util.List<CreateClusterRequestAdditionalVolumesRoles> roles;
 
-        @NameInMap("RemoteDirectory")
-        public String remoteDirectory;
-
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
-        @NameInMap("LocalDirectory")
-        public String localDirectory;
+        @NameInMap("RemoteDirectory")
+        public String remoteDirectory;
 
         @NameInMap("VolumeType")
         public String volumeType;
+
+        @NameInMap("LocalDirectory")
+        public String localDirectory;
 
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
@@ -722,14 +755,6 @@ public class CreateClusterRequest extends TeaModel {
             return this.roles;
         }
 
-        public CreateClusterRequestAdditionalVolumes setRemoteDirectory(String remoteDirectory) {
-            this.remoteDirectory = remoteDirectory;
-            return this;
-        }
-        public String getRemoteDirectory() {
-            return this.remoteDirectory;
-        }
-
         public CreateClusterRequestAdditionalVolumes setVolumeMountpoint(String volumeMountpoint) {
             this.volumeMountpoint = volumeMountpoint;
             return this;
@@ -738,12 +763,12 @@ public class CreateClusterRequest extends TeaModel {
             return this.volumeMountpoint;
         }
 
-        public CreateClusterRequestAdditionalVolumes setLocalDirectory(String localDirectory) {
-            this.localDirectory = localDirectory;
+        public CreateClusterRequestAdditionalVolumes setRemoteDirectory(String remoteDirectory) {
+            this.remoteDirectory = remoteDirectory;
             return this;
         }
-        public String getLocalDirectory() {
-            return this.localDirectory;
+        public String getRemoteDirectory() {
+            return this.remoteDirectory;
         }
 
         public CreateClusterRequestAdditionalVolumes setVolumeType(String volumeType) {
@@ -752,6 +777,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public String getVolumeType() {
             return this.volumeType;
+        }
+
+        public CreateClusterRequestAdditionalVolumes setLocalDirectory(String localDirectory) {
+            this.localDirectory = localDirectory;
+            return this;
+        }
+        public String getLocalDirectory() {
+            return this.localDirectory;
         }
 
         public CreateClusterRequestAdditionalVolumes setVolumeProtocol(String volumeProtocol) {

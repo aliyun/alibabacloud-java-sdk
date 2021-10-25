@@ -4,12 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("Tasks")
-    public java.util.List<ListTasksResponseBodyTasks> tasks;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class ListTasksResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("Tasks")
+    public java.util.List<ListTasksResponseBodyTasks> tasks;
+
     public static ListTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTasksResponseBody self = new ListTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTasksResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListTasksResponseBody setTasks(java.util.List<ListTasksResponseBodyTasks> tasks) {
-        this.tasks = tasks;
-        return this;
-    }
-    public java.util.List<ListTasksResponseBodyTasks> getTasks() {
-        return this.tasks;
     }
 
     public ListTasksResponseBody setPageSize(Integer pageSize) {
@@ -62,6 +46,22 @@ public class ListTasksResponseBody extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public ListTasksResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListTasksResponseBody setTasks(java.util.List<ListTasksResponseBodyTasks> tasks) {
+        this.tasks = tasks;
+        return this;
+    }
+    public java.util.List<ListTasksResponseBodyTasks> getTasks() {
+        return this.tasks;
     }
 
     public static class ListTasksResponseBodyTasks extends TeaModel {

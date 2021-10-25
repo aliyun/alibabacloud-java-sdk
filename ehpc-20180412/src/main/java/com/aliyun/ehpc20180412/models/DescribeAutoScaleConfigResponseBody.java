@@ -4,23 +4,17 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoScaleConfigResponseBody extends TeaModel {
-    @NameInMap("ExtraNodesGrowRatio")
-    public Integer extraNodesGrowRatio;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("EnableAutoGrow")
-    public Boolean enableAutoGrow;
-
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     @NameInMap("MaxNodesInCluster")
     public Integer maxNodesInCluster;
 
-    @NameInMap("ShrinkIdleTimes")
-    public Integer shrinkIdleTimes;
+    @NameInMap("GrowTimeoutInMinutes")
+    public Integer growTimeoutInMinutes;
+
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("EnableAutoShrink")
     public Boolean enableAutoShrink;
@@ -28,17 +22,14 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
     @NameInMap("ClusterType")
     public String clusterType;
 
-    @NameInMap("GrowRatio")
-    public Integer growRatio;
+    @NameInMap("EnableAutoGrow")
+    public Boolean enableAutoGrow;
+
+    @NameInMap("ExcludeNodes")
+    public String excludeNodes;
 
     @NameInMap("GrowIntervalInMinutes")
     public Integer growIntervalInMinutes;
-
-    @NameInMap("Uid")
-    public String uid;
-
-    @NameInMap("GrowTimeoutInMinutes")
-    public Integer growTimeoutInMinutes;
 
     @NameInMap("ShrinkIntervalInMinutes")
     public Integer shrinkIntervalInMinutes;
@@ -46,47 +37,24 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
     @NameInMap("SpotPriceLimit")
     public String spotPriceLimit;
 
-    @NameInMap("ExcludeNodes")
-    public String excludeNodes;
+    @NameInMap("ShrinkIdleTimes")
+    public Integer shrinkIdleTimes;
 
-    @NameInMap("SpotStrategy")
-    public String spotStrategy;
+    @NameInMap("ExtraNodesGrowRatio")
+    public Integer extraNodesGrowRatio;
+
+    @NameInMap("GrowRatio")
+    public Integer growRatio;
+
+    @NameInMap("Uid")
+    public String uid;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     public static DescribeAutoScaleConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoScaleConfigResponseBody self = new DescribeAutoScaleConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAutoScaleConfigResponseBody setExtraNodesGrowRatio(Integer extraNodesGrowRatio) {
-        this.extraNodesGrowRatio = extraNodesGrowRatio;
-        return this;
-    }
-    public Integer getExtraNodesGrowRatio() {
-        return this.extraNodesGrowRatio;
-    }
-
-    public DescribeAutoScaleConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeAutoScaleConfigResponseBody setEnableAutoGrow(Boolean enableAutoGrow) {
-        this.enableAutoGrow = enableAutoGrow;
-        return this;
-    }
-    public Boolean getEnableAutoGrow() {
-        return this.enableAutoGrow;
-    }
-
-    public DescribeAutoScaleConfigResponseBody setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public DescribeAutoScaleConfigResponseBody setMaxNodesInCluster(Integer maxNodesInCluster) {
@@ -97,12 +65,28 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         return this.maxNodesInCluster;
     }
 
-    public DescribeAutoScaleConfigResponseBody setShrinkIdleTimes(Integer shrinkIdleTimes) {
-        this.shrinkIdleTimes = shrinkIdleTimes;
+    public DescribeAutoScaleConfigResponseBody setGrowTimeoutInMinutes(Integer growTimeoutInMinutes) {
+        this.growTimeoutInMinutes = growTimeoutInMinutes;
         return this;
     }
-    public Integer getShrinkIdleTimes() {
-        return this.shrinkIdleTimes;
+    public Integer getGrowTimeoutInMinutes() {
+        return this.growTimeoutInMinutes;
+    }
+
+    public DescribeAutoScaleConfigResponseBody setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    public DescribeAutoScaleConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeAutoScaleConfigResponseBody setEnableAutoShrink(Boolean enableAutoShrink) {
@@ -121,12 +105,20 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         return this.clusterType;
     }
 
-    public DescribeAutoScaleConfigResponseBody setGrowRatio(Integer growRatio) {
-        this.growRatio = growRatio;
+    public DescribeAutoScaleConfigResponseBody setEnableAutoGrow(Boolean enableAutoGrow) {
+        this.enableAutoGrow = enableAutoGrow;
         return this;
     }
-    public Integer getGrowRatio() {
-        return this.growRatio;
+    public Boolean getEnableAutoGrow() {
+        return this.enableAutoGrow;
+    }
+
+    public DescribeAutoScaleConfigResponseBody setExcludeNodes(String excludeNodes) {
+        this.excludeNodes = excludeNodes;
+        return this;
+    }
+    public String getExcludeNodes() {
+        return this.excludeNodes;
     }
 
     public DescribeAutoScaleConfigResponseBody setGrowIntervalInMinutes(Integer growIntervalInMinutes) {
@@ -135,22 +127,6 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
     }
     public Integer getGrowIntervalInMinutes() {
         return this.growIntervalInMinutes;
-    }
-
-    public DescribeAutoScaleConfigResponseBody setUid(String uid) {
-        this.uid = uid;
-        return this;
-    }
-    public String getUid() {
-        return this.uid;
-    }
-
-    public DescribeAutoScaleConfigResponseBody setGrowTimeoutInMinutes(Integer growTimeoutInMinutes) {
-        this.growTimeoutInMinutes = growTimeoutInMinutes;
-        return this;
-    }
-    public Integer getGrowTimeoutInMinutes() {
-        return this.growTimeoutInMinutes;
     }
 
     public DescribeAutoScaleConfigResponseBody setShrinkIntervalInMinutes(Integer shrinkIntervalInMinutes) {
@@ -169,20 +145,44 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
         return this.spotPriceLimit;
     }
 
-    public DescribeAutoScaleConfigResponseBody setExcludeNodes(String excludeNodes) {
-        this.excludeNodes = excludeNodes;
+    public DescribeAutoScaleConfigResponseBody setShrinkIdleTimes(Integer shrinkIdleTimes) {
+        this.shrinkIdleTimes = shrinkIdleTimes;
         return this;
     }
-    public String getExcludeNodes() {
-        return this.excludeNodes;
+    public Integer getShrinkIdleTimes() {
+        return this.shrinkIdleTimes;
     }
 
-    public DescribeAutoScaleConfigResponseBody setSpotStrategy(String spotStrategy) {
-        this.spotStrategy = spotStrategy;
+    public DescribeAutoScaleConfigResponseBody setExtraNodesGrowRatio(Integer extraNodesGrowRatio) {
+        this.extraNodesGrowRatio = extraNodesGrowRatio;
         return this;
     }
-    public String getSpotStrategy() {
-        return this.spotStrategy;
+    public Integer getExtraNodesGrowRatio() {
+        return this.extraNodesGrowRatio;
+    }
+
+    public DescribeAutoScaleConfigResponseBody setGrowRatio(Integer growRatio) {
+        this.growRatio = growRatio;
+        return this;
+    }
+    public Integer getGrowRatio() {
+        return this.growRatio;
+    }
+
+    public DescribeAutoScaleConfigResponseBody setUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    public String getUid() {
+        return this.uid;
+    }
+
+    public DescribeAutoScaleConfigResponseBody setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
 }
