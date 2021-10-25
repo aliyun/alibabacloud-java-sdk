@@ -46,6 +46,9 @@ public class CreateDbfsRequest extends TeaModel {
     @NameInMap("UsedScene")
     public String usedScene;
 
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     public static CreateDbfsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDbfsRequest self = new CreateDbfsRequest();
         return TeaModel.build(map, self);
@@ -161,6 +164,14 @@ public class CreateDbfsRequest extends TeaModel {
     }
     public String getUsedScene() {
         return this.usedScene;
+    }
+
+    public CreateDbfsRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
 }
