@@ -291,6 +291,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteLiveWithOptions(request, runtime);
     }
 
+    public ListCommentsResponse listCommentsWithOptions(ListCommentsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListComments", "2021-06-30", "HTTPS", "POST", "AK", "json", req, runtime), new ListCommentsResponse());
+    }
+
+    public ListCommentsResponse listComments(ListCommentsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listCommentsWithOptions(request, runtime);
+    }
+
     public GetLiveDomainStatusResponse getLiveDomainStatusWithOptions(GetLiveDomainStatusRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetLiveDomainStatusShrinkRequest request = new GetLiveDomainStatusShrinkRequest();
