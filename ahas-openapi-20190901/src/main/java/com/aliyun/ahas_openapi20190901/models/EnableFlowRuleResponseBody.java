@@ -4,24 +4,32 @@ package com.aliyun.ahas_openapi20190901.models;
 import com.aliyun.tea.*;
 
 public class EnableFlowRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public EnableFlowRuleResponseBodyData data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Data")
+    public EnableFlowRuleResponseBodyData data;
 
     public static EnableFlowRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EnableFlowRuleResponseBody self = new EnableFlowRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EnableFlowRuleResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public EnableFlowRuleResponseBody setMessage(String message) {
@@ -40,28 +48,20 @@ public class EnableFlowRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public EnableFlowRuleResponseBody setData(EnableFlowRuleResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public EnableFlowRuleResponseBodyData getData() {
-        return this.data;
-    }
-
-    public EnableFlowRuleResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public EnableFlowRuleResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public EnableFlowRuleResponseBody setData(EnableFlowRuleResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public EnableFlowRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public static class EnableFlowRuleResponseBodyData extends TeaModel {
@@ -74,11 +74,11 @@ public class EnableFlowRuleResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
-        @NameInMap("LimitOrigin")
-        public String limitOrigin;
-
         @NameInMap("StatDurationMs")
         public Integer statDurationMs;
+
+        @NameInMap("LimitOrigin")
+        public String limitOrigin;
 
         @NameInMap("ClusterThresholdType")
         public Integer clusterThresholdType;
@@ -89,20 +89,20 @@ public class EnableFlowRuleResponseBody extends TeaModel {
         @NameInMap("RelationStrategy")
         public Integer relationStrategy;
 
-        @NameInMap("AppName")
-        public String appName;
-
         @NameInMap("Resource")
         public String resource;
+
+        @NameInMap("AppName")
+        public String appName;
 
         @NameInMap("MaxQueueingTimeMs")
         public Integer maxQueueingTimeMs;
 
-        @NameInMap("ClusterEstimatedMaxQps")
-        public Float clusterEstimatedMaxQps;
-
         @NameInMap("ControlBehavior")
         public Integer controlBehavior;
+
+        @NameInMap("ClusterEstimatedMaxQps")
+        public Float clusterEstimatedMaxQps;
 
         @NameInMap("WarmUpPeriodSec")
         public Integer warmUpPeriodSec;
@@ -148,20 +148,20 @@ public class EnableFlowRuleResponseBody extends TeaModel {
             return this.namespace;
         }
 
-        public EnableFlowRuleResponseBodyData setLimitOrigin(String limitOrigin) {
-            this.limitOrigin = limitOrigin;
-            return this;
-        }
-        public String getLimitOrigin() {
-            return this.limitOrigin;
-        }
-
         public EnableFlowRuleResponseBodyData setStatDurationMs(Integer statDurationMs) {
             this.statDurationMs = statDurationMs;
             return this;
         }
         public Integer getStatDurationMs() {
             return this.statDurationMs;
+        }
+
+        public EnableFlowRuleResponseBodyData setLimitOrigin(String limitOrigin) {
+            this.limitOrigin = limitOrigin;
+            return this;
+        }
+        public String getLimitOrigin() {
+            return this.limitOrigin;
         }
 
         public EnableFlowRuleResponseBodyData setClusterThresholdType(Integer clusterThresholdType) {
@@ -188,20 +188,20 @@ public class EnableFlowRuleResponseBody extends TeaModel {
             return this.relationStrategy;
         }
 
-        public EnableFlowRuleResponseBodyData setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
         public EnableFlowRuleResponseBodyData setResource(String resource) {
             this.resource = resource;
             return this;
         }
         public String getResource() {
             return this.resource;
+        }
+
+        public EnableFlowRuleResponseBodyData setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
         }
 
         public EnableFlowRuleResponseBodyData setMaxQueueingTimeMs(Integer maxQueueingTimeMs) {
@@ -212,20 +212,20 @@ public class EnableFlowRuleResponseBody extends TeaModel {
             return this.maxQueueingTimeMs;
         }
 
-        public EnableFlowRuleResponseBodyData setClusterEstimatedMaxQps(Float clusterEstimatedMaxQps) {
-            this.clusterEstimatedMaxQps = clusterEstimatedMaxQps;
-            return this;
-        }
-        public Float getClusterEstimatedMaxQps() {
-            return this.clusterEstimatedMaxQps;
-        }
-
         public EnableFlowRuleResponseBodyData setControlBehavior(Integer controlBehavior) {
             this.controlBehavior = controlBehavior;
             return this;
         }
         public Integer getControlBehavior() {
             return this.controlBehavior;
+        }
+
+        public EnableFlowRuleResponseBodyData setClusterEstimatedMaxQps(Float clusterEstimatedMaxQps) {
+            this.clusterEstimatedMaxQps = clusterEstimatedMaxQps;
+            return this;
+        }
+        public Float getClusterEstimatedMaxQps() {
+            return this.clusterEstimatedMaxQps;
         }
 
         public EnableFlowRuleResponseBodyData setWarmUpPeriodSec(Integer warmUpPeriodSec) {

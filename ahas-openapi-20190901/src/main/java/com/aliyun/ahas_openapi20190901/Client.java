@@ -613,6 +613,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDegradeRulesOfAppWithOptions(request, runtime);
     }
 
+    public PageableQueryExperimentTaskByClusterIdResponse pageableQueryExperimentTaskByClusterIdWithOptions(PageableQueryExperimentTaskByClusterIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("PageableQueryExperimentTaskByClusterId", "2019-09-01", "HTTPS", "POST", "AK", "json", req, runtime), new PageableQueryExperimentTaskByClusterIdResponse());
+    }
+
+    public PageableQueryExperimentTaskByClusterIdResponse pageableQueryExperimentTaskByClusterId(PageableQueryExperimentTaskByClusterIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.pageableQueryExperimentTaskByClusterIdWithOptions(request, runtime);
+    }
+
     public ModifyFlowRuleResponse modifyFlowRuleWithOptions(ModifyFlowRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -743,19 +756,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.disableFlowRuleWithOptions(request, runtime);
     }
 
-    public DisableHotParamRuleResponse disableHotParamRuleWithOptions(DisableHotParamRuleRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DisableHotParamRule", "2019-09-01", "HTTPS", "POST", "AK", "json", req, runtime), new DisableHotParamRuleResponse());
-    }
-
-    public DisableHotParamRuleResponse disableHotParamRule(DisableHotParamRuleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.disableHotParamRuleWithOptions(request, runtime);
-    }
-
     public ListHotParamRulesOfAppResponse listHotParamRulesOfAppWithOptions(ListHotParamRulesOfAppRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -767,6 +767,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListHotParamRulesOfAppResponse listHotParamRulesOfApp(ListHotParamRulesOfAppRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listHotParamRulesOfAppWithOptions(request, runtime);
+    }
+
+    public DisableHotParamRuleResponse disableHotParamRuleWithOptions(DisableHotParamRuleRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DisableHotParamRule", "2019-09-01", "HTTPS", "POST", "AK", "json", req, runtime), new DisableHotParamRuleResponse());
+    }
+
+    public DisableHotParamRuleResponse disableHotParamRule(DisableHotParamRuleRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.disableHotParamRuleWithOptions(request, runtime);
     }
 
     public ListIsolationRulesOfResourceResponse listIsolationRulesOfResourceWithOptions(ListIsolationRulesOfResourceRequest request, RuntimeOptions runtime) throws Exception {

@@ -34,6 +34,9 @@ public class GetExperimentTaskResponseBody extends TeaModel {
     @NameInMap("Result")
     public String result;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     public static GetExperimentTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetExperimentTaskResponseBody self = new GetExperimentTaskResponseBody();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class GetExperimentTaskResponseBody extends TeaModel {
     }
     public String getResult() {
         return this.result;
+    }
+
+    public GetExperimentTaskResponseBody setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public static class GetExperimentTaskResponseBodyActivities extends TeaModel {

@@ -232,6 +232,9 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
         @NameInMap("Creator")
         public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksCreator creator;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         public static PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks build(java.util.Map<String, ?> map) throws Exception {
             PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks self = new PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks();
             return TeaModel.build(map, self);
@@ -323,6 +326,14 @@ public class PageableQueryExperimentTaskByExperimentIdResponseBody extends TeaMo
         }
         public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasksCreator getCreator() {
             return this.creator;
+        }
+
+        public PageableQueryExperimentTaskByExperimentIdResponseBodyExperimentTasks setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
     }
