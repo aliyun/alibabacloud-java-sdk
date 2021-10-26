@@ -12,6 +12,10 @@ public class CreateUserAuthenticateOptionsRequest extends TeaModel {
     @NameInMap("AuthenticatorType")
     public String authenticatorType;
 
+    // 用户id
+    @NameInMap("UserId")
+    public String userId;
+
     // 操作hash，用来和认证绑定
     @NameInMap("BindHashBase64")
     public String bindHashBase64;
@@ -27,10 +31,6 @@ public class CreateUserAuthenticateOptionsRequest extends TeaModel {
     // 服务端配置项，决定认证要求属性
     @NameInMap("ServerExtendParamsJson")
     public String serverExtendParamsJson;
-
-    // 用户id
-    @NameInMap("UserId")
-    public String userId;
 
     public static CreateUserAuthenticateOptionsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUserAuthenticateOptionsRequest self = new CreateUserAuthenticateOptionsRequest();
@@ -51,6 +51,14 @@ public class CreateUserAuthenticateOptionsRequest extends TeaModel {
     }
     public String getAuthenticatorType() {
         return this.authenticatorType;
+    }
+
+    public CreateUserAuthenticateOptionsRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public CreateUserAuthenticateOptionsRequest setBindHashBase64(String bindHashBase64) {
@@ -83,14 +91,6 @@ public class CreateUserAuthenticateOptionsRequest extends TeaModel {
     }
     public String getServerExtendParamsJson() {
         return this.serverExtendParamsJson;
-    }
-
-    public CreateUserAuthenticateOptionsRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
 }

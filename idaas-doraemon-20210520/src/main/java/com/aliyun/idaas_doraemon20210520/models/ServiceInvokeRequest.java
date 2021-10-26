@@ -4,12 +4,6 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ServiceInvokeRequest extends TeaModel {
-    @NameInMap("ApplicationExternalId")
-    public String applicationExternalId;
-
-    @NameInMap("DoraemonAction")
-    public String doraemonAction;
-
     @NameInMap("MobileExtendParamsJson")
     public String mobileExtendParamsJson;
 
@@ -22,6 +16,12 @@ public class ServiceInvokeRequest extends TeaModel {
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    @NameInMap("DoraemonAction")
+    public String doraemonAction;
+
+    @NameInMap("ApplicationExternalId")
+    public String applicationExternalId;
+
     @NameInMap("TestModel")
     public Boolean testModel;
 
@@ -31,22 +31,6 @@ public class ServiceInvokeRequest extends TeaModel {
     public static ServiceInvokeRequest build(java.util.Map<String, ?> map) throws Exception {
         ServiceInvokeRequest self = new ServiceInvokeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ServiceInvokeRequest setApplicationExternalId(String applicationExternalId) {
-        this.applicationExternalId = applicationExternalId;
-        return this;
-    }
-    public String getApplicationExternalId() {
-        return this.applicationExternalId;
-    }
-
-    public ServiceInvokeRequest setDoraemonAction(String doraemonAction) {
-        this.doraemonAction = doraemonAction;
-        return this;
-    }
-    public String getDoraemonAction() {
-        return this.doraemonAction;
     }
 
     public ServiceInvokeRequest setMobileExtendParamsJson(String mobileExtendParamsJson) {
@@ -79,6 +63,22 @@ public class ServiceInvokeRequest extends TeaModel {
     }
     public String getServiceCode() {
         return this.serviceCode;
+    }
+
+    public ServiceInvokeRequest setDoraemonAction(String doraemonAction) {
+        this.doraemonAction = doraemonAction;
+        return this;
+    }
+    public String getDoraemonAction() {
+        return this.doraemonAction;
+    }
+
+    public ServiceInvokeRequest setApplicationExternalId(String applicationExternalId) {
+        this.applicationExternalId = applicationExternalId;
+        return this;
+    }
+    public String getApplicationExternalId() {
+        return this.applicationExternalId;
     }
 
     public ServiceInvokeRequest setTestModel(Boolean testModel) {

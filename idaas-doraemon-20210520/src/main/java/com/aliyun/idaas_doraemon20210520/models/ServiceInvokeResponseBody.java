@@ -4,8 +4,8 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ServiceInvokeResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Data")
     public String data;
@@ -13,8 +13,8 @@ public class ServiceInvokeResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -24,12 +24,12 @@ public class ServiceInvokeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ServiceInvokeResponseBody setCode(String code) {
-        this.code = code;
+    public ServiceInvokeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ServiceInvokeResponseBody setData(String data) {
@@ -48,12 +48,12 @@ public class ServiceInvokeResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ServiceInvokeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ServiceInvokeResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public ServiceInvokeResponseBody setSuccess(Boolean success) {
