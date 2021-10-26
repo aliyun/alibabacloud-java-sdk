@@ -154,6 +154,69 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
 
+    public static class ListListenersResponseBodyListenersXForwardedForConfig extends TeaModel {
+        @NameInMap("XForwardedForGaIdEnabled")
+        public Boolean XForwardedForGaIdEnabled;
+
+        @NameInMap("XRealIpEnabled")
+        public Boolean XRealIpEnabled;
+
+        @NameInMap("XForwardedForGaApEnabled")
+        public Boolean XForwardedForGaApEnabled;
+
+        @NameInMap("XForwardedForProtoEnabled")
+        public Boolean XForwardedForProtoEnabled;
+
+        @NameInMap("XForwardedForPortEnabled")
+        public Boolean XForwardedForPortEnabled;
+
+        public static ListListenersResponseBodyListenersXForwardedForConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListListenersResponseBodyListenersXForwardedForConfig self = new ListListenersResponseBodyListenersXForwardedForConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListListenersResponseBodyListenersXForwardedForConfig setXForwardedForGaIdEnabled(Boolean XForwardedForGaIdEnabled) {
+            this.XForwardedForGaIdEnabled = XForwardedForGaIdEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForGaIdEnabled() {
+            return this.XForwardedForGaIdEnabled;
+        }
+
+        public ListListenersResponseBodyListenersXForwardedForConfig setXRealIpEnabled(Boolean XRealIpEnabled) {
+            this.XRealIpEnabled = XRealIpEnabled;
+            return this;
+        }
+        public Boolean getXRealIpEnabled() {
+            return this.XRealIpEnabled;
+        }
+
+        public ListListenersResponseBodyListenersXForwardedForConfig setXForwardedForGaApEnabled(Boolean XForwardedForGaApEnabled) {
+            this.XForwardedForGaApEnabled = XForwardedForGaApEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForGaApEnabled() {
+            return this.XForwardedForGaApEnabled;
+        }
+
+        public ListListenersResponseBodyListenersXForwardedForConfig setXForwardedForProtoEnabled(Boolean XForwardedForProtoEnabled) {
+            this.XForwardedForProtoEnabled = XForwardedForProtoEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForProtoEnabled() {
+            return this.XForwardedForProtoEnabled;
+        }
+
+        public ListListenersResponseBodyListenersXForwardedForConfig setXForwardedForPortEnabled(Boolean XForwardedForPortEnabled) {
+            this.XForwardedForPortEnabled = XForwardedForPortEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForPortEnabled() {
+            return this.XForwardedForPortEnabled;
+        }
+
+    }
+
     public static class ListListenersResponseBodyListeners extends TeaModel {
         @NameInMap("Certificates")
         public java.util.List<ListListenersResponseBodyListenersCertificates> certificates;
@@ -190,6 +253,12 @@ public class ListListenersResponseBody extends TeaModel {
 
         @NameInMap("AcceleratorId")
         public String acceleratorId;
+
+        @NameInMap("XForwardedForConfig")
+        public ListListenersResponseBodyListenersXForwardedForConfig XForwardedForConfig;
+
+        @NameInMap("SecurityPolicyId")
+        public String securityPolicyId;
 
         public static ListListenersResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersResponseBodyListeners self = new ListListenersResponseBodyListeners();
@@ -290,6 +359,22 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public String getAcceleratorId() {
             return this.acceleratorId;
+        }
+
+        public ListListenersResponseBodyListeners setXForwardedForConfig(ListListenersResponseBodyListenersXForwardedForConfig XForwardedForConfig) {
+            this.XForwardedForConfig = XForwardedForConfig;
+            return this;
+        }
+        public ListListenersResponseBodyListenersXForwardedForConfig getXForwardedForConfig() {
+            return this.XForwardedForConfig;
+        }
+
+        public ListListenersResponseBodyListeners setSecurityPolicyId(String securityPolicyId) {
+            this.securityPolicyId = securityPolicyId;
+            return this;
+        }
+        public String getSecurityPolicyId() {
+            return this.securityPolicyId;
         }
 
     }

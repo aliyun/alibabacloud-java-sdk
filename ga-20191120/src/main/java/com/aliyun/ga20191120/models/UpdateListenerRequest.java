@@ -37,6 +37,12 @@ public class UpdateListenerRequest extends TeaModel {
     @NameInMap("BackendPorts")
     public java.util.List<UpdateListenerRequestBackendPorts> backendPorts;
 
+    @NameInMap("XForwardedForConfig")
+    public UpdateListenerRequestXForwardedForConfig XForwardedForConfig;
+
+    @NameInMap("SecurityPolicyId")
+    public String securityPolicyId;
+
     public static UpdateListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateListenerRequest self = new UpdateListenerRequest();
         return TeaModel.build(map, self);
@@ -130,6 +136,22 @@ public class UpdateListenerRequest extends TeaModel {
         return this.backendPorts;
     }
 
+    public UpdateListenerRequest setXForwardedForConfig(UpdateListenerRequestXForwardedForConfig XForwardedForConfig) {
+        this.XForwardedForConfig = XForwardedForConfig;
+        return this;
+    }
+    public UpdateListenerRequestXForwardedForConfig getXForwardedForConfig() {
+        return this.XForwardedForConfig;
+    }
+
+    public UpdateListenerRequest setSecurityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+        return this;
+    }
+    public String getSecurityPolicyId() {
+        return this.securityPolicyId;
+    }
+
     public static class UpdateListenerRequestPortRanges extends TeaModel {
         @NameInMap("FromPort")
         public Integer fromPort;
@@ -205,6 +227,69 @@ public class UpdateListenerRequest extends TeaModel {
         }
         public Integer getToPort() {
             return this.toPort;
+        }
+
+    }
+
+    public static class UpdateListenerRequestXForwardedForConfig extends TeaModel {
+        @NameInMap("XForwardedForGaIdEnabled")
+        public Boolean XForwardedForGaIdEnabled;
+
+        @NameInMap("XForwardedForProtoEnabled")
+        public Boolean XForwardedForProtoEnabled;
+
+        @NameInMap("XForwardedForPortEnabled")
+        public Boolean XForwardedForPortEnabled;
+
+        @NameInMap("XRealIpEnabled")
+        public Boolean XRealIpEnabled;
+
+        @NameInMap("XForwardedForGaApEnabled")
+        public Boolean XForwardedForGaApEnabled;
+
+        public static UpdateListenerRequestXForwardedForConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateListenerRequestXForwardedForConfig self = new UpdateListenerRequestXForwardedForConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateListenerRequestXForwardedForConfig setXForwardedForGaIdEnabled(Boolean XForwardedForGaIdEnabled) {
+            this.XForwardedForGaIdEnabled = XForwardedForGaIdEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForGaIdEnabled() {
+            return this.XForwardedForGaIdEnabled;
+        }
+
+        public UpdateListenerRequestXForwardedForConfig setXForwardedForProtoEnabled(Boolean XForwardedForProtoEnabled) {
+            this.XForwardedForProtoEnabled = XForwardedForProtoEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForProtoEnabled() {
+            return this.XForwardedForProtoEnabled;
+        }
+
+        public UpdateListenerRequestXForwardedForConfig setXForwardedForPortEnabled(Boolean XForwardedForPortEnabled) {
+            this.XForwardedForPortEnabled = XForwardedForPortEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForPortEnabled() {
+            return this.XForwardedForPortEnabled;
+        }
+
+        public UpdateListenerRequestXForwardedForConfig setXRealIpEnabled(Boolean XRealIpEnabled) {
+            this.XRealIpEnabled = XRealIpEnabled;
+            return this;
+        }
+        public Boolean getXRealIpEnabled() {
+            return this.XRealIpEnabled;
+        }
+
+        public UpdateListenerRequestXForwardedForConfig setXForwardedForGaApEnabled(Boolean XForwardedForGaApEnabled) {
+            this.XForwardedForGaApEnabled = XForwardedForGaApEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForGaApEnabled() {
+            return this.XForwardedForGaApEnabled;
         }
 
     }
