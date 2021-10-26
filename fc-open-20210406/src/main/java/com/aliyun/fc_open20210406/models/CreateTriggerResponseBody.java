@@ -1,0 +1,130 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.fc_open20210406.models;
+
+import com.aliyun.tea.*;
+
+public class CreateTriggerResponseBody extends TeaModel {
+    // 创建时间
+    @NameInMap("createdTime")
+    public String createdTime;
+
+    @NameInMap("description")
+    public String description;
+
+    // 调用函数使用的RAM角色的ARN
+    @NameInMap("invocationRole")
+    public String invocationRole;
+
+    // 上次修改时间
+    @NameInMap("lastModifiedTime")
+    public String lastModifiedTime;
+
+    // service版本
+    @NameInMap("qualifier")
+    public String qualifier;
+
+    // event source的Aliyun Resource Name（ARN
+    @NameInMap("sourceArn")
+    public String sourceArn;
+
+    // trigger配置对象
+    @NameInMap("triggerConfig")
+    public String triggerConfig;
+
+    @NameInMap("triggerId")
+    public String triggerId;
+
+    // trigger名称
+    @NameInMap("triggerName")
+    public String triggerName;
+
+    // trigger类型，如 oss, log, tablestore, timer, http, cdn_events, mns_topic
+    @NameInMap("triggerType")
+    public String triggerType;
+
+    public static CreateTriggerResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateTriggerResponseBody self = new CreateTriggerResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateTriggerResponseBody setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+        return this;
+    }
+    public String getCreatedTime() {
+        return this.createdTime;
+    }
+
+    public CreateTriggerResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateTriggerResponseBody setInvocationRole(String invocationRole) {
+        this.invocationRole = invocationRole;
+        return this;
+    }
+    public String getInvocationRole() {
+        return this.invocationRole;
+    }
+
+    public CreateTriggerResponseBody setLastModifiedTime(String lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+        return this;
+    }
+    public String getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
+    public CreateTriggerResponseBody setQualifier(String qualifier) {
+        this.qualifier = qualifier;
+        return this;
+    }
+    public String getQualifier() {
+        return this.qualifier;
+    }
+
+    public CreateTriggerResponseBody setSourceArn(String sourceArn) {
+        this.sourceArn = sourceArn;
+        return this;
+    }
+    public String getSourceArn() {
+        return this.sourceArn;
+    }
+
+    public CreateTriggerResponseBody setTriggerConfig(String triggerConfig) {
+        this.triggerConfig = triggerConfig;
+        return this;
+    }
+    public String getTriggerConfig() {
+        return this.triggerConfig;
+    }
+
+    public CreateTriggerResponseBody setTriggerId(String triggerId) {
+        this.triggerId = triggerId;
+        return this;
+    }
+    public String getTriggerId() {
+        return this.triggerId;
+    }
+
+    public CreateTriggerResponseBody setTriggerName(String triggerName) {
+        this.triggerName = triggerName;
+        return this;
+    }
+    public String getTriggerName() {
+        return this.triggerName;
+    }
+
+    public CreateTriggerResponseBody setTriggerType(String triggerType) {
+        this.triggerType = triggerType;
+        return this;
+    }
+    public String getTriggerType() {
+        return this.triggerType;
+    }
+
+}
