@@ -1,3 +1,6 @@
+2021-10-26 Version: 1.0.4
+- Add api for agents By zhaiyao.
+
 2021-10-14 Version: 1.0.3
 - Add api for agents By zhaiyao.
 
