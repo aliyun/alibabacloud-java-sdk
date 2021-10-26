@@ -4,51 +4,27 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListAuthenticatorsResponseBody extends TeaModel {
-    @NameInMap("Authenticator")
-    public java.util.List<ListAuthenticatorsResponseBodyAuthenticator> authenticator;
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 读取到的位置
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    // 每页记录数量
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 查询结果数据总数
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    // 每页记录数量
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("Authenticator")
+    public java.util.List<ListAuthenticatorsResponseBodyAuthenticator> authenticator;
+
     public static ListAuthenticatorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAuthenticatorsResponseBody self = new ListAuthenticatorsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAuthenticatorsResponseBody setAuthenticator(java.util.List<ListAuthenticatorsResponseBodyAuthenticator> authenticator) {
-        this.authenticator = authenticator;
-        return this;
-    }
-    public java.util.List<ListAuthenticatorsResponseBodyAuthenticator> getAuthenticator() {
-        return this.authenticator;
-    }
-
-    public ListAuthenticatorsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListAuthenticatorsResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     public ListAuthenticatorsResponseBody setRequestId(String requestId) {
@@ -59,12 +35,36 @@ public class ListAuthenticatorsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListAuthenticatorsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
     public ListAuthenticatorsResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Long getTotalCount() {
         return this.totalCount;
+    }
+
+    public ListAuthenticatorsResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListAuthenticatorsResponseBody setAuthenticator(java.util.List<ListAuthenticatorsResponseBodyAuthenticator> authenticator) {
+        this.authenticator = authenticator;
+        return this;
+    }
+    public java.util.List<ListAuthenticatorsResponseBodyAuthenticator> getAuthenticator() {
+        return this.authenticator;
     }
 
     public static class ListAuthenticatorsResponseBodyAuthenticator extends TeaModel {

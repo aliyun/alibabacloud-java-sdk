@@ -4,8 +4,15 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListAuthenticationLogsResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("AuthenticationLogContent")
     public java.util.List<ListAuthenticationLogsResponseBodyAuthenticationLogContent> authenticationLogContent;
+
+    // 返回列表长度
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -13,16 +20,17 @@ public class ListAuthenticationLogsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 返回列表长度
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     public static ListAuthenticationLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAuthenticationLogsResponseBody self = new ListAuthenticationLogsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAuthenticationLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListAuthenticationLogsResponseBody setAuthenticationLogContent(java.util.List<ListAuthenticationLogsResponseBodyAuthenticationLogContent> authenticationLogContent) {
@@ -31,6 +39,14 @@ public class ListAuthenticationLogsResponseBody extends TeaModel {
     }
     public java.util.List<ListAuthenticationLogsResponseBodyAuthenticationLogContent> getAuthenticationLogContent() {
         return this.authenticationLogContent;
+    }
+
+    public ListAuthenticationLogsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public ListAuthenticationLogsResponseBody setPageNumber(Long pageNumber) {
@@ -47,22 +63,6 @@ public class ListAuthenticationLogsResponseBody extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public ListAuthenticationLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAuthenticationLogsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public static class ListAuthenticationLogsResponseBodyAuthenticationLogContent extends TeaModel {

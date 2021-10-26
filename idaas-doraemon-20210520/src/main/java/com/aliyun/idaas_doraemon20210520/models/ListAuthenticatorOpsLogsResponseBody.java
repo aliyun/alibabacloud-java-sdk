@@ -4,8 +4,15 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("AuthenticationLogContent")
     public java.util.List<ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent> authenticationLogContent;
+
+    // 返回列表长度
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -13,16 +20,17 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 返回列表长度
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     public static ListAuthenticatorOpsLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAuthenticatorOpsLogsResponseBody self = new ListAuthenticatorOpsLogsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAuthenticatorOpsLogsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListAuthenticatorOpsLogsResponseBody setAuthenticationLogContent(java.util.List<ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent> authenticationLogContent) {
@@ -31,6 +39,14 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
     }
     public java.util.List<ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent> getAuthenticationLogContent() {
         return this.authenticationLogContent;
+    }
+
+    public ListAuthenticatorOpsLogsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public ListAuthenticatorOpsLogsResponseBody setPageNumber(Long pageNumber) {
@@ -47,22 +63,6 @@ public class ListAuthenticatorOpsLogsResponseBody extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public ListAuthenticatorOpsLogsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAuthenticatorOpsLogsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public static class ListAuthenticatorOpsLogsResponseBodyAuthenticationLogContent extends TeaModel {

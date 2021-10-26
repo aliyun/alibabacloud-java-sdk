@@ -4,23 +4,15 @@ package com.aliyun.idaas_doraemon20210520.models;
 import com.aliyun.tea.*;
 
 public class GetAuthenticatorResponseBody extends TeaModel {
-    @NameInMap("Authenticator")
-    public GetAuthenticatorResponseBodyAuthenticator authenticator;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Authenticator")
+    public GetAuthenticatorResponseBodyAuthenticator authenticator;
 
     public static GetAuthenticatorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAuthenticatorResponseBody self = new GetAuthenticatorResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAuthenticatorResponseBody setAuthenticator(GetAuthenticatorResponseBodyAuthenticator authenticator) {
-        this.authenticator = authenticator;
-        return this;
-    }
-    public GetAuthenticatorResponseBodyAuthenticator getAuthenticator() {
-        return this.authenticator;
     }
 
     public GetAuthenticatorResponseBody setRequestId(String requestId) {
@@ -31,11 +23,15 @@ public class GetAuthenticatorResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetAuthenticatorResponseBodyAuthenticator extends TeaModel {
-        // 认证器名字
-        @NameInMap("AuthenticatorName")
-        public String authenticatorName;
+    public GetAuthenticatorResponseBody setAuthenticator(GetAuthenticatorResponseBodyAuthenticator authenticator) {
+        this.authenticator = authenticator;
+        return this;
+    }
+    public GetAuthenticatorResponseBodyAuthenticator getAuthenticator() {
+        return this.authenticator;
+    }
 
+    public static class GetAuthenticatorResponseBodyAuthenticator extends TeaModel {
         @NameInMap("AuthenticatorUuid")
         public String authenticatorUuid;
 
@@ -43,44 +39,40 @@ public class GetAuthenticatorResponseBody extends TeaModel {
         @NameInMap("CredentialId")
         public String credentialId;
 
-        @NameInMap("CustomAuthenticator")
-        public String customAuthenticator;
+        // 认证器类型
+        @NameInMap("Type")
+        public String type;
 
-        // 用户最后签名IP
-        @NameInMap("LastVerifySourceIp")
-        public String lastVerifySourceIp;
-
-        // 最后验证时间
-        @NameInMap("LastVerifyTime")
-        public Long lastVerifyTime;
-
-        // 用户最后签名userAgent
-        @NameInMap("LastVerifyUserAgent")
-        public String lastVerifyUserAgent;
-
-        // 用户注册IP
-        @NameInMap("RegisterSourceIp")
-        public String registerSourceIp;
+        // 认证器名字
+        @NameInMap("AuthenticatorName")
+        public String authenticatorName;
 
         // 注册时间
         @NameInMap("RegisterTime")
         public Long registerTime;
 
-        // 认证器类型
-        @NameInMap("Type")
-        public String type;
+        // 最后验证时间
+        @NameInMap("LastVerifyTime")
+        public Long lastVerifyTime;
+
+        // 用户注册IP
+        @NameInMap("RegisterSourceIp")
+        public String registerSourceIp;
+
+        // 用户最后签名IP
+        @NameInMap("LastVerifySourceIp")
+        public String lastVerifySourceIp;
+
+        // 用户最后签名userAgent
+        @NameInMap("LastVerifyUserAgent")
+        public String lastVerifyUserAgent;
+
+        @NameInMap("CustomAuthenticator")
+        public String customAuthenticator;
 
         public static GetAuthenticatorResponseBodyAuthenticator build(java.util.Map<String, ?> map) throws Exception {
             GetAuthenticatorResponseBodyAuthenticator self = new GetAuthenticatorResponseBodyAuthenticator();
             return TeaModel.build(map, self);
-        }
-
-        public GetAuthenticatorResponseBodyAuthenticator setAuthenticatorName(String authenticatorName) {
-            this.authenticatorName = authenticatorName;
-            return this;
-        }
-        public String getAuthenticatorName() {
-            return this.authenticatorName;
         }
 
         public GetAuthenticatorResponseBodyAuthenticator setAuthenticatorUuid(String authenticatorUuid) {
@@ -99,44 +91,20 @@ public class GetAuthenticatorResponseBody extends TeaModel {
             return this.credentialId;
         }
 
-        public GetAuthenticatorResponseBodyAuthenticator setCustomAuthenticator(String customAuthenticator) {
-            this.customAuthenticator = customAuthenticator;
+        public GetAuthenticatorResponseBodyAuthenticator setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getCustomAuthenticator() {
-            return this.customAuthenticator;
+        public String getType() {
+            return this.type;
         }
 
-        public GetAuthenticatorResponseBodyAuthenticator setLastVerifySourceIp(String lastVerifySourceIp) {
-            this.lastVerifySourceIp = lastVerifySourceIp;
+        public GetAuthenticatorResponseBodyAuthenticator setAuthenticatorName(String authenticatorName) {
+            this.authenticatorName = authenticatorName;
             return this;
         }
-        public String getLastVerifySourceIp() {
-            return this.lastVerifySourceIp;
-        }
-
-        public GetAuthenticatorResponseBodyAuthenticator setLastVerifyTime(Long lastVerifyTime) {
-            this.lastVerifyTime = lastVerifyTime;
-            return this;
-        }
-        public Long getLastVerifyTime() {
-            return this.lastVerifyTime;
-        }
-
-        public GetAuthenticatorResponseBodyAuthenticator setLastVerifyUserAgent(String lastVerifyUserAgent) {
-            this.lastVerifyUserAgent = lastVerifyUserAgent;
-            return this;
-        }
-        public String getLastVerifyUserAgent() {
-            return this.lastVerifyUserAgent;
-        }
-
-        public GetAuthenticatorResponseBodyAuthenticator setRegisterSourceIp(String registerSourceIp) {
-            this.registerSourceIp = registerSourceIp;
-            return this;
-        }
-        public String getRegisterSourceIp() {
-            return this.registerSourceIp;
+        public String getAuthenticatorName() {
+            return this.authenticatorName;
         }
 
         public GetAuthenticatorResponseBodyAuthenticator setRegisterTime(Long registerTime) {
@@ -147,12 +115,44 @@ public class GetAuthenticatorResponseBody extends TeaModel {
             return this.registerTime;
         }
 
-        public GetAuthenticatorResponseBodyAuthenticator setType(String type) {
-            this.type = type;
+        public GetAuthenticatorResponseBodyAuthenticator setLastVerifyTime(Long lastVerifyTime) {
+            this.lastVerifyTime = lastVerifyTime;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public Long getLastVerifyTime() {
+            return this.lastVerifyTime;
+        }
+
+        public GetAuthenticatorResponseBodyAuthenticator setRegisterSourceIp(String registerSourceIp) {
+            this.registerSourceIp = registerSourceIp;
+            return this;
+        }
+        public String getRegisterSourceIp() {
+            return this.registerSourceIp;
+        }
+
+        public GetAuthenticatorResponseBodyAuthenticator setLastVerifySourceIp(String lastVerifySourceIp) {
+            this.lastVerifySourceIp = lastVerifySourceIp;
+            return this;
+        }
+        public String getLastVerifySourceIp() {
+            return this.lastVerifySourceIp;
+        }
+
+        public GetAuthenticatorResponseBodyAuthenticator setLastVerifyUserAgent(String lastVerifyUserAgent) {
+            this.lastVerifyUserAgent = lastVerifyUserAgent;
+            return this;
+        }
+        public String getLastVerifyUserAgent() {
+            return this.lastVerifyUserAgent;
+        }
+
+        public GetAuthenticatorResponseBodyAuthenticator setCustomAuthenticator(String customAuthenticator) {
+            this.customAuthenticator = customAuthenticator;
+            return this;
+        }
+        public String getCustomAuthenticator() {
+            return this.customAuthenticator;
         }
 
     }
