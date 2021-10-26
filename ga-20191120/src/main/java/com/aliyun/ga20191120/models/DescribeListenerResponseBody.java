@@ -49,6 +49,12 @@ public class DescribeListenerResponseBody extends TeaModel {
     @NameInMap("ProxyProtocol")
     public Boolean proxyProtocol;
 
+    @NameInMap("XForwardedForConfig")
+    public DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig;
+
+    @NameInMap("SecurityPolicyId")
+    public String securityPolicyId;
+
     public static DescribeListenerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeListenerResponseBody self = new DescribeListenerResponseBody();
         return TeaModel.build(map, self);
@@ -174,6 +180,22 @@ public class DescribeListenerResponseBody extends TeaModel {
         return this.proxyProtocol;
     }
 
+    public DescribeListenerResponseBody setXForwardedForConfig(DescribeListenerResponseBodyXForwardedForConfig XForwardedForConfig) {
+        this.XForwardedForConfig = XForwardedForConfig;
+        return this;
+    }
+    public DescribeListenerResponseBodyXForwardedForConfig getXForwardedForConfig() {
+        return this.XForwardedForConfig;
+    }
+
+    public DescribeListenerResponseBody setSecurityPolicyId(String securityPolicyId) {
+        this.securityPolicyId = securityPolicyId;
+        return this;
+    }
+    public String getSecurityPolicyId() {
+        return this.securityPolicyId;
+    }
+
     public static class DescribeListenerResponseBodyPortRanges extends TeaModel {
         @NameInMap("FromPort")
         public Integer fromPort;
@@ -290,6 +312,69 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class DescribeListenerResponseBodyXForwardedForConfig extends TeaModel {
+        @NameInMap("XForwardedForGaIdEnabled")
+        public Boolean XForwardedForGaIdEnabled;
+
+        @NameInMap("XForwardedForGaApEnabled")
+        public Boolean XForwardedForGaApEnabled;
+
+        @NameInMap("XForwardedForProtoEnabled")
+        public Boolean XForwardedForProtoEnabled;
+
+        @NameInMap("XForwardedForPortEnabled")
+        public Boolean XForwardedForPortEnabled;
+
+        @NameInMap("XRealIpEnabled")
+        public Boolean XRealIpEnabled;
+
+        public static DescribeListenerResponseBodyXForwardedForConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeListenerResponseBodyXForwardedForConfig self = new DescribeListenerResponseBodyXForwardedForConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForGaIdEnabled(Boolean XForwardedForGaIdEnabled) {
+            this.XForwardedForGaIdEnabled = XForwardedForGaIdEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForGaIdEnabled() {
+            return this.XForwardedForGaIdEnabled;
+        }
+
+        public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForGaApEnabled(Boolean XForwardedForGaApEnabled) {
+            this.XForwardedForGaApEnabled = XForwardedForGaApEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForGaApEnabled() {
+            return this.XForwardedForGaApEnabled;
+        }
+
+        public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForProtoEnabled(Boolean XForwardedForProtoEnabled) {
+            this.XForwardedForProtoEnabled = XForwardedForProtoEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForProtoEnabled() {
+            return this.XForwardedForProtoEnabled;
+        }
+
+        public DescribeListenerResponseBodyXForwardedForConfig setXForwardedForPortEnabled(Boolean XForwardedForPortEnabled) {
+            this.XForwardedForPortEnabled = XForwardedForPortEnabled;
+            return this;
+        }
+        public Boolean getXForwardedForPortEnabled() {
+            return this.XForwardedForPortEnabled;
+        }
+
+        public DescribeListenerResponseBodyXForwardedForConfig setXRealIpEnabled(Boolean XRealIpEnabled) {
+            this.XRealIpEnabled = XRealIpEnabled;
+            return this;
+        }
+        public Boolean getXRealIpEnabled() {
+            return this.XRealIpEnabled;
         }
 
     }
