@@ -7,17 +7,14 @@ public class ModifySmsTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Remark")
+    public String remark;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("TemplateType")
-    public Integer templateType;
-
-    @NameInMap("TemplateName")
-    public String templateName;
 
     @NameInMap("TemplateCode")
     public String templateCode;
@@ -25,8 +22,11 @@ public class ModifySmsTemplateRequest extends TeaModel {
     @NameInMap("TemplateContent")
     public String templateContent;
 
-    @NameInMap("Remark")
-    public String remark;
+    @NameInMap("TemplateName")
+    public String templateName;
+
+    @NameInMap("TemplateType")
+    public Integer templateType;
 
     public static ModifySmsTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySmsTemplateRequest self = new ModifySmsTemplateRequest();
@@ -39,6 +39,14 @@ public class ModifySmsTemplateRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifySmsTemplateRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public ModifySmsTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,22 +65,6 @@ public class ModifySmsTemplateRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifySmsTemplateRequest setTemplateType(Integer templateType) {
-        this.templateType = templateType;
-        return this;
-    }
-    public Integer getTemplateType() {
-        return this.templateType;
-    }
-
-    public ModifySmsTemplateRequest setTemplateName(String templateName) {
-        this.templateName = templateName;
-        return this;
-    }
-    public String getTemplateName() {
-        return this.templateName;
-    }
-
     public ModifySmsTemplateRequest setTemplateCode(String templateCode) {
         this.templateCode = templateCode;
         return this;
@@ -89,12 +81,20 @@ public class ModifySmsTemplateRequest extends TeaModel {
         return this.templateContent;
     }
 
-    public ModifySmsTemplateRequest setRemark(String remark) {
-        this.remark = remark;
+    public ModifySmsTemplateRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
         return this;
     }
-    public String getRemark() {
-        return this.remark;
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public ModifySmsTemplateRequest setTemplateType(Integer templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public Integer getTemplateType() {
+        return this.templateType;
     }
 
 }

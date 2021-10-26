@@ -7,6 +7,7 @@ import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
 import com.aliyun.teaopenapi.*;
 import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
 import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
@@ -37,6 +38,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public AddShortUrlResponse addShortUrlWithOptions(AddShortUrlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new AddShortUrlResponse());
+    }
+
+    public AddShortUrlResponse addShortUrl(AddShortUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addShortUrlWithOptions(request, runtime);
+    }
+
     public AddSmsSignResponse addSmsSignWithOptions(AddSmsSignRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -61,6 +75,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddSmsTemplateResponse addSmsTemplate(AddSmsTemplateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.addSmsTemplateWithOptions(request, runtime);
+    }
+
+    public CreateCardSmsTemplateResponse createCardSmsTemplateWithOptions(CreateCardSmsTemplateRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCardSmsTemplateShrinkRequest request = new CreateCardSmsTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.template)) {
+            request.templateShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.template, "Template", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateCardSmsTemplate", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new CreateCardSmsTemplateResponse());
+    }
+
+    public CreateCardSmsTemplateResponse createCardSmsTemplate(CreateCardSmsTemplateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createCardSmsTemplateWithOptions(request, runtime);
+    }
+
+    public DeleteShortUrlResponse deleteShortUrlWithOptions(DeleteShortUrlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteShortUrlResponse());
+    }
+
+    public DeleteShortUrlResponse deleteShortUrl(DeleteShortUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteShortUrlWithOptions(request, runtime);
     }
 
     public DeleteSmsSignResponse deleteSmsSignWithOptions(DeleteSmsSignRequest request, RuntimeOptions runtime) throws Exception {
@@ -89,6 +135,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteSmsTemplateWithOptions(request, runtime);
     }
 
+    public GetMediaResourceIdResponse getMediaResourceIdWithOptions(GetMediaResourceIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetMediaResourceId", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new GetMediaResourceIdResponse());
+    }
+
+    public GetMediaResourceIdResponse getMediaResourceId(GetMediaResourceIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getMediaResourceIdWithOptions(request, runtime);
+    }
+
+    public GetOSSInfoForCardTemplateResponse getOSSInfoForCardTemplateWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("GetOSSInfoForCardTemplate", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new GetOSSInfoForCardTemplateResponse());
+    }
+
+    public GetOSSInfoForCardTemplateResponse getOSSInfoForCardTemplate() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getOSSInfoForCardTemplateWithOptions(runtime);
+    }
+
     public ModifySmsSignResponse modifySmsSignWithOptions(ModifySmsSignRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -115,6 +184,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifySmsTemplateWithOptions(request, runtime);
     }
 
+    public QueryCardSmsTemplateResponse queryCardSmsTemplateWithOptions(QueryCardSmsTemplateRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryCardSmsTemplate", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new QueryCardSmsTemplateResponse());
+    }
+
+    public QueryCardSmsTemplateResponse queryCardSmsTemplate(QueryCardSmsTemplateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryCardSmsTemplateWithOptions(request, runtime);
+    }
+
     public QuerySendDetailsResponse querySendDetailsWithOptions(QuerySendDetailsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -126,6 +208,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QuerySendDetailsResponse querySendDetails(QuerySendDetailsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.querySendDetailsWithOptions(request, runtime);
+    }
+
+    public QueryShortUrlResponse queryShortUrlWithOptions(QueryShortUrlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new QueryShortUrlResponse());
+    }
+
+    public QueryShortUrlResponse queryShortUrl(QueryShortUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryShortUrlWithOptions(request, runtime);
     }
 
     public QuerySmsSignResponse querySmsSignWithOptions(QuerySmsSignRequest request, RuntimeOptions runtime) throws Exception {
@@ -167,6 +262,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.sendBatchSmsWithOptions(request, runtime);
     }
 
+    public SendCardSmsResponse sendCardSmsWithOptions(SendCardSmsRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SendCardSmsShrinkRequest request = new SendCardSmsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cardObjects)) {
+            request.cardObjectsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cardObjects, "CardObjects", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SendCardSms", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new SendCardSmsResponse());
+    }
+
+    public SendCardSmsResponse sendCardSms(SendCardSmsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendCardSmsWithOptions(request, runtime);
+    }
+
     public SendMessageToGlobeResponse sendMessageToGlobeWithOptions(SendMessageToGlobeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -191,5 +305,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendSmsResponse sendSms(SendSmsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.sendSmsWithOptions(request, runtime);
+    }
+
+    public SendSmsSmartResponse sendSmsSmartWithOptions(SendSmsSmartRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SendSmsSmart", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new SendSmsSmartResponse());
+    }
+
+    public SendSmsSmartResponse sendSmsSmart(SendSmsSmartRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendSmsSmartWithOptions(request, runtime);
     }
 }

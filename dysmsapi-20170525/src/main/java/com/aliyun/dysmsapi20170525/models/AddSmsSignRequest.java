@@ -7,23 +7,23 @@ public class AddSmsSignRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Remark")
+    public String remark;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SignFileList")
+    public java.util.List<AddSmsSignRequestSignFileList> signFileList;
+
     @NameInMap("SignName")
     public String signName;
 
     @NameInMap("SignSource")
     public Integer signSource;
-
-    @NameInMap("Remark")
-    public String remark;
-
-    @NameInMap("SignFileList")
-    public java.util.List<AddSmsSignRequestSignFileList> signFileList;
 
     public static AddSmsSignRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSmsSignRequest self = new AddSmsSignRequest();
@@ -36,6 +36,14 @@ public class AddSmsSignRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AddSmsSignRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public AddSmsSignRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,6 +62,14 @@ public class AddSmsSignRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public AddSmsSignRequest setSignFileList(java.util.List<AddSmsSignRequestSignFileList> signFileList) {
+        this.signFileList = signFileList;
+        return this;
+    }
+    public java.util.List<AddSmsSignRequestSignFileList> getSignFileList() {
+        return this.signFileList;
+    }
+
     public AddSmsSignRequest setSignName(String signName) {
         this.signName = signName;
         return this;
@@ -68,22 +84,6 @@ public class AddSmsSignRequest extends TeaModel {
     }
     public Integer getSignSource() {
         return this.signSource;
-    }
-
-    public AddSmsSignRequest setRemark(String remark) {
-        this.remark = remark;
-        return this;
-    }
-    public String getRemark() {
-        return this.remark;
-    }
-
-    public AddSmsSignRequest setSignFileList(java.util.List<AddSmsSignRequestSignFileList> signFileList) {
-        this.signFileList = signFileList;
-        return this;
-    }
-    public java.util.List<AddSmsSignRequestSignFileList> getSignFileList() {
-        return this.signFileList;
     }
 
     public static class AddSmsSignRequestSignFileList extends TeaModel {
