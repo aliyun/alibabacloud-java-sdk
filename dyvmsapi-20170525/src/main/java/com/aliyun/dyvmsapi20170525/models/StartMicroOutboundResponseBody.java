@@ -4,17 +4,14 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class StartMicroOutboundResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("CustomerInfo")
     public String customerInfo;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InvokeCmdId")
     public String invokeCmdId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("InvokeCreateTime")
     public String invokeCreateTime;
@@ -22,9 +19,20 @@ public class StartMicroOutboundResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static StartMicroOutboundResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartMicroOutboundResponseBody self = new StartMicroOutboundResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public StartMicroOutboundResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public StartMicroOutboundResponseBody setCustomerInfo(String customerInfo) {
@@ -35,28 +43,12 @@ public class StartMicroOutboundResponseBody extends TeaModel {
         return this.customerInfo;
     }
 
-    public StartMicroOutboundResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public StartMicroOutboundResponseBody setInvokeCmdId(String invokeCmdId) {
         this.invokeCmdId = invokeCmdId;
         return this;
     }
     public String getInvokeCmdId() {
         return this.invokeCmdId;
-    }
-
-    public StartMicroOutboundResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public StartMicroOutboundResponseBody setInvokeCreateTime(String invokeCreateTime) {
@@ -73,6 +65,14 @@ public class StartMicroOutboundResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public StartMicroOutboundResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

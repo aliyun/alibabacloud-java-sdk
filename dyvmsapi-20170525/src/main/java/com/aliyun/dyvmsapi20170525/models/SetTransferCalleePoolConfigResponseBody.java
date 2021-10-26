@@ -7,11 +7,11 @@ public class SetTransferCalleePoolConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public Boolean data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,20 +29,20 @@ public class SetTransferCalleePoolConfigResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SetTransferCalleePoolConfigResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public SetTransferCalleePoolConfigResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
     public Boolean getData() {
         return this.data;
+    }
+
+    public SetTransferCalleePoolConfigResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public SetTransferCalleePoolConfigResponseBody setRequestId(String requestId) {

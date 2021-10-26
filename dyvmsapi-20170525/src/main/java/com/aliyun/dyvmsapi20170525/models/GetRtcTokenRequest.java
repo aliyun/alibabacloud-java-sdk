@@ -4,6 +4,12 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetRtcTokenRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
+    @NameInMap("IsCustomAccount")
+    public Boolean isCustomAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,15 +22,25 @@ public class GetRtcTokenRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
-    @NameInMap("IsCustomAccount")
-    public Boolean isCustomAccount;
-
     public static GetRtcTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRtcTokenRequest self = new GetRtcTokenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetRtcTokenRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    public GetRtcTokenRequest setIsCustomAccount(Boolean isCustomAccount) {
+        this.isCustomAccount = isCustomAccount;
+        return this;
+    }
+    public Boolean getIsCustomAccount() {
+        return this.isCustomAccount;
     }
 
     public GetRtcTokenRequest setOwnerId(Long ownerId) {
@@ -57,22 +73,6 @@ public class GetRtcTokenRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public GetRtcTokenRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
-    public GetRtcTokenRequest setIsCustomAccount(Boolean isCustomAccount) {
-        this.isCustomAccount = isCustomAccount;
-        return this;
-    }
-    public Boolean getIsCustomAccount() {
-        return this.isCustomAccount;
     }
 
 }

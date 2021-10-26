@@ -4,6 +4,12 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ReportVoipProblemsRequest extends TeaModel {
+    @NameInMap("ChannelId")
+    public String channelId;
+
+    @NameInMap("Desc")
+    public String desc;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,21 +19,31 @@ public class ReportVoipProblemsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ChannelId")
-    public String channelId;
+    @NameInMap("Title")
+    public String title;
 
     @NameInMap("VoipId")
     public String voipId;
 
-    @NameInMap("Title")
-    public String title;
-
-    @NameInMap("Desc")
-    public String desc;
-
     public static ReportVoipProblemsRequest build(java.util.Map<String, ?> map) throws Exception {
         ReportVoipProblemsRequest self = new ReportVoipProblemsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReportVoipProblemsRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
+    }
+
+    public ReportVoipProblemsRequest setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
     }
 
     public ReportVoipProblemsRequest setOwnerId(Long ownerId) {
@@ -54,22 +70,6 @@ public class ReportVoipProblemsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ReportVoipProblemsRequest setChannelId(String channelId) {
-        this.channelId = channelId;
-        return this;
-    }
-    public String getChannelId() {
-        return this.channelId;
-    }
-
-    public ReportVoipProblemsRequest setVoipId(String voipId) {
-        this.voipId = voipId;
-        return this;
-    }
-    public String getVoipId() {
-        return this.voipId;
-    }
-
     public ReportVoipProblemsRequest setTitle(String title) {
         this.title = title;
         return this;
@@ -78,12 +78,12 @@ public class ReportVoipProblemsRequest extends TeaModel {
         return this.title;
     }
 
-    public ReportVoipProblemsRequest setDesc(String desc) {
-        this.desc = desc;
+    public ReportVoipProblemsRequest setVoipId(String voipId) {
+        this.voipId = voipId;
         return this;
     }
-    public String getDesc() {
-        return this.desc;
+    public String getVoipId() {
+        return this.voipId;
     }
 
 }

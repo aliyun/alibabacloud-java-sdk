@@ -7,14 +7,14 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListHotlineTransferRegisterFileResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListHotlineTransferRegisterFileResponseBodyData data;
 
     public static ListHotlineTransferRegisterFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHotlineTransferRegisterFileResponseBody self = new ListHotlineTransferRegisterFileResponseBody();
@@ -27,6 +27,14 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListHotlineTransferRegisterFileResponseBody setData(ListHotlineTransferRegisterFileResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListHotlineTransferRegisterFileResponseBodyData getData() {
+        return this.data;
     }
 
     public ListHotlineTransferRegisterFileResponseBody setMessage(String message) {
@@ -45,35 +53,27 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListHotlineTransferRegisterFileResponseBody setData(ListHotlineTransferRegisterFileResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListHotlineTransferRegisterFileResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListHotlineTransferRegisterFileResponseBodyDataValues extends TeaModel {
-        @NameInMap("MngOpMail")
-        public String mngOpMail;
-
-        @NameInMap("MngOpName")
-        public String mngOpName;
+        @NameInMap("Agree")
+        public String agree;
 
         @NameInMap("CorpName")
         public String corpName;
 
-        @NameInMap("Agree")
-        public String agree;
-
-        @NameInMap("MngOpMobile")
-        public String mngOpMobile;
+        @NameInMap("HotlineNumber")
+        public String hotlineNumber;
 
         @NameInMap("MngOpIdentityCard")
         public String mngOpIdentityCard;
 
-        @NameInMap("HotlineNumber")
-        public String hotlineNumber;
+        @NameInMap("MngOpMail")
+        public String mngOpMail;
+
+        @NameInMap("MngOpMobile")
+        public String mngOpMobile;
+
+        @NameInMap("MngOpName")
+        public String mngOpName;
 
         @NameInMap("QualificationId")
         public String qualificationId;
@@ -86,20 +86,12 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListHotlineTransferRegisterFileResponseBodyDataValues setMngOpMail(String mngOpMail) {
-            this.mngOpMail = mngOpMail;
+        public ListHotlineTransferRegisterFileResponseBodyDataValues setAgree(String agree) {
+            this.agree = agree;
             return this;
         }
-        public String getMngOpMail() {
-            return this.mngOpMail;
-        }
-
-        public ListHotlineTransferRegisterFileResponseBodyDataValues setMngOpName(String mngOpName) {
-            this.mngOpName = mngOpName;
-            return this;
-        }
-        public String getMngOpName() {
-            return this.mngOpName;
+        public String getAgree() {
+            return this.agree;
         }
 
         public ListHotlineTransferRegisterFileResponseBodyDataValues setCorpName(String corpName) {
@@ -110,20 +102,12 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             return this.corpName;
         }
 
-        public ListHotlineTransferRegisterFileResponseBodyDataValues setAgree(String agree) {
-            this.agree = agree;
+        public ListHotlineTransferRegisterFileResponseBodyDataValues setHotlineNumber(String hotlineNumber) {
+            this.hotlineNumber = hotlineNumber;
             return this;
         }
-        public String getAgree() {
-            return this.agree;
-        }
-
-        public ListHotlineTransferRegisterFileResponseBodyDataValues setMngOpMobile(String mngOpMobile) {
-            this.mngOpMobile = mngOpMobile;
-            return this;
-        }
-        public String getMngOpMobile() {
-            return this.mngOpMobile;
+        public String getHotlineNumber() {
+            return this.hotlineNumber;
         }
 
         public ListHotlineTransferRegisterFileResponseBodyDataValues setMngOpIdentityCard(String mngOpIdentityCard) {
@@ -134,12 +118,28 @@ public class ListHotlineTransferRegisterFileResponseBody extends TeaModel {
             return this.mngOpIdentityCard;
         }
 
-        public ListHotlineTransferRegisterFileResponseBodyDataValues setHotlineNumber(String hotlineNumber) {
-            this.hotlineNumber = hotlineNumber;
+        public ListHotlineTransferRegisterFileResponseBodyDataValues setMngOpMail(String mngOpMail) {
+            this.mngOpMail = mngOpMail;
             return this;
         }
-        public String getHotlineNumber() {
-            return this.hotlineNumber;
+        public String getMngOpMail() {
+            return this.mngOpMail;
+        }
+
+        public ListHotlineTransferRegisterFileResponseBodyDataValues setMngOpMobile(String mngOpMobile) {
+            this.mngOpMobile = mngOpMobile;
+            return this;
+        }
+        public String getMngOpMobile() {
+            return this.mngOpMobile;
+        }
+
+        public ListHotlineTransferRegisterFileResponseBodyDataValues setMngOpName(String mngOpName) {
+            this.mngOpName = mngOpName;
+            return this;
+        }
+        public String getMngOpName() {
+            return this.mngOpName;
         }
 
         public ListHotlineTransferRegisterFileResponseBodyDataValues setQualificationId(String qualificationId) {

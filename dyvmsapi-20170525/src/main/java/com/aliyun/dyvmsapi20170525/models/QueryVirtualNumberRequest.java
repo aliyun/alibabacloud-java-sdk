@@ -7,20 +7,20 @@ public class QueryVirtualNumberRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     @NameInMap("PageNo")
     public Integer pageNo;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("ProdCode")
+    public String prodCode;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("RouteType")
     public Integer routeType;
@@ -38,30 +38,6 @@ public class QueryVirtualNumberRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public QueryVirtualNumberRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public QueryVirtualNumberRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public QueryVirtualNumberRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
-    }
-
     public QueryVirtualNumberRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
@@ -76,6 +52,30 @@ public class QueryVirtualNumberRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryVirtualNumberRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
+    }
+
+    public QueryVirtualNumberRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryVirtualNumberRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public QueryVirtualNumberRequest setRouteType(Integer routeType) {

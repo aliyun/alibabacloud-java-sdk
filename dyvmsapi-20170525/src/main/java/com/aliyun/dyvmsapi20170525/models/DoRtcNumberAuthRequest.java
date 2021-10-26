@@ -7,14 +7,14 @@ public class DoRtcNumberAuthRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PhoneNumber")
+    public String phoneNumber;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("PhoneNumber")
-    public String phoneNumber;
 
     public static DoRtcNumberAuthRequest build(java.util.Map<String, ?> map) throws Exception {
         DoRtcNumberAuthRequest self = new DoRtcNumberAuthRequest();
@@ -27,6 +27,14 @@ public class DoRtcNumberAuthRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DoRtcNumberAuthRequest setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    public String getPhoneNumber() {
+        return this.phoneNumber;
     }
 
     public DoRtcNumberAuthRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -43,14 +51,6 @@ public class DoRtcNumberAuthRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DoRtcNumberAuthRequest setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-        return this;
-    }
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
 }

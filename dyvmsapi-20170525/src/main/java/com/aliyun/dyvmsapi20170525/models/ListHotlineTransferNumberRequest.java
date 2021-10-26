@@ -4,17 +4,11 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineTransferNumberRequest extends TeaModel {
+    @NameInMap("HotlineNumber")
+    public String hotlineNumber;
+
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("QualificationId")
-    public String qualificationId;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -22,12 +16,26 @@ public class ListHotlineTransferNumberRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("HotlineNumber")
-    public String hotlineNumber;
+    @NameInMap("QualificationId")
+    public String qualificationId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ListHotlineTransferNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHotlineTransferNumberRequest self = new ListHotlineTransferNumberRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListHotlineTransferNumberRequest setHotlineNumber(String hotlineNumber) {
+        this.hotlineNumber = hotlineNumber;
+        return this;
+    }
+    public String getHotlineNumber() {
+        return this.hotlineNumber;
     }
 
     public ListHotlineTransferNumberRequest setOwnerId(Long ownerId) {
@@ -36,30 +44,6 @@ public class ListHotlineTransferNumberRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public ListHotlineTransferNumberRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ListHotlineTransferNumberRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ListHotlineTransferNumberRequest setQualificationId(String qualificationId) {
-        this.qualificationId = qualificationId;
-        return this;
-    }
-    public String getQualificationId() {
-        return this.qualificationId;
     }
 
     public ListHotlineTransferNumberRequest setPageNo(Integer pageNo) {
@@ -78,12 +62,28 @@ public class ListHotlineTransferNumberRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListHotlineTransferNumberRequest setHotlineNumber(String hotlineNumber) {
-        this.hotlineNumber = hotlineNumber;
+    public ListHotlineTransferNumberRequest setQualificationId(String qualificationId) {
+        this.qualificationId = qualificationId;
         return this;
     }
-    public String getHotlineNumber() {
-        return this.hotlineNumber;
+    public String getQualificationId() {
+        return this.qualificationId;
+    }
+
+    public ListHotlineTransferNumberRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ListHotlineTransferNumberRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

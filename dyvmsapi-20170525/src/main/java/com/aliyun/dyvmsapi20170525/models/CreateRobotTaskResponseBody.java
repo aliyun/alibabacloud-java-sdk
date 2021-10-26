@@ -7,11 +7,11 @@ public class CreateRobotTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public String data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,20 +29,20 @@ public class CreateRobotTaskResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateRobotTaskResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public CreateRobotTaskResponseBody setData(String data) {
         this.data = data;
         return this;
     }
     public String getData() {
         return this.data;
+    }
+
+    public CreateRobotTaskResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public CreateRobotTaskResponseBody setRequestId(String requestId) {

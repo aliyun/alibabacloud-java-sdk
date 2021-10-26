@@ -4,6 +4,9 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRobotTaskDetailRequest extends TeaModel {
+    @NameInMap("Id")
+    public Long id;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class QueryRobotTaskDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Id")
-    public Long id;
-
     public static QueryRobotTaskDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRobotTaskDetailRequest self = new QueryRobotTaskDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryRobotTaskDetailRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public QueryRobotTaskDetailRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class QueryRobotTaskDetailRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryRobotTaskDetailRequest setId(Long id) {
-        this.id = id;
-        return this;
-    }
-    public Long getId() {
-        return this.id;
     }
 
 }

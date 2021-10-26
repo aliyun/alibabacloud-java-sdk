@@ -7,23 +7,17 @@ public class QueryVirtualNumberRelationRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     @NameInMap("PageNo")
     public Integer pageNo;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RouteType")
-    public Integer routeType;
+    @NameInMap("PhoneNum")
+    public String phoneNum;
+
+    @NameInMap("ProdCode")
+    public String prodCode;
 
     @NameInMap("QualificationId")
     public Long qualificationId;
@@ -31,14 +25,20 @@ public class QueryVirtualNumberRelationRequest extends TeaModel {
     @NameInMap("RegionNameCity")
     public String regionNameCity;
 
-    @NameInMap("SpecId")
-    public Long specId;
-
     @NameInMap("RelatedNum")
     public String relatedNum;
 
-    @NameInMap("PhoneNum")
-    public String phoneNum;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RouteType")
+    public Integer routeType;
+
+    @NameInMap("SpecId")
+    public Long specId;
 
     public static QueryVirtualNumberRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryVirtualNumberRelationRequest self = new QueryVirtualNumberRelationRequest();
@@ -51,30 +51,6 @@ public class QueryVirtualNumberRelationRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public QueryVirtualNumberRelationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public QueryVirtualNumberRelationRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public QueryVirtualNumberRelationRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
     public QueryVirtualNumberRelationRequest setPageNo(Integer pageNo) {
@@ -93,12 +69,20 @@ public class QueryVirtualNumberRelationRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryVirtualNumberRelationRequest setRouteType(Integer routeType) {
-        this.routeType = routeType;
+    public QueryVirtualNumberRelationRequest setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
         return this;
     }
-    public Integer getRouteType() {
-        return this.routeType;
+    public String getPhoneNum() {
+        return this.phoneNum;
+    }
+
+    public QueryVirtualNumberRelationRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
     }
 
     public QueryVirtualNumberRelationRequest setQualificationId(Long qualificationId) {
@@ -117,14 +101,6 @@ public class QueryVirtualNumberRelationRequest extends TeaModel {
         return this.regionNameCity;
     }
 
-    public QueryVirtualNumberRelationRequest setSpecId(Long specId) {
-        this.specId = specId;
-        return this;
-    }
-    public Long getSpecId() {
-        return this.specId;
-    }
-
     public QueryVirtualNumberRelationRequest setRelatedNum(String relatedNum) {
         this.relatedNum = relatedNum;
         return this;
@@ -133,12 +109,36 @@ public class QueryVirtualNumberRelationRequest extends TeaModel {
         return this.relatedNum;
     }
 
-    public QueryVirtualNumberRelationRequest setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
+    public QueryVirtualNumberRelationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public String getPhoneNum() {
-        return this.phoneNum;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryVirtualNumberRelationRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public QueryVirtualNumberRelationRequest setRouteType(Integer routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    public Integer getRouteType() {
+        return this.routeType;
+    }
+
+    public QueryVirtualNumberRelationRequest setSpecId(Long specId) {
+        this.specId = specId;
+        return this;
+    }
+    public Long getSpecId() {
+        return this.specId;
     }
 
 }

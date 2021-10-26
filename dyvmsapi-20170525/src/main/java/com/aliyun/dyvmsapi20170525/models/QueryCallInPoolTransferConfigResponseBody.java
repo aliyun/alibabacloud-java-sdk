@@ -7,14 +7,14 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public QueryCallInPoolTransferConfigResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public QueryCallInPoolTransferConfigResponseBodyData data;
 
     public static QueryCallInPoolTransferConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCallInPoolTransferConfigResponseBody self = new QueryCallInPoolTransferConfigResponseBody();
@@ -27,6 +27,14 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QueryCallInPoolTransferConfigResponseBody setData(QueryCallInPoolTransferConfigResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryCallInPoolTransferConfigResponseBodyData getData() {
+        return this.data;
     }
 
     public QueryCallInPoolTransferConfigResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public QueryCallInPoolTransferConfigResponseBody setData(QueryCallInPoolTransferConfigResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryCallInPoolTransferConfigResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryCallInPoolTransferConfigResponseBodyDataDetails extends TeaModel {
@@ -73,29 +73,21 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
     }
 
     public static class QueryCallInPoolTransferConfigResponseBodyData extends TeaModel {
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
-
         @NameInMap("CalledRouteMode")
         public String calledRouteMode;
-
-        @NameInMap("TransferTimeout")
-        public String transferTimeout;
 
         @NameInMap("Details")
         public java.util.List<QueryCallInPoolTransferConfigResponseBodyDataDetails> details;
 
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        @NameInMap("TransferTimeout")
+        public String transferTimeout;
+
         public static QueryCallInPoolTransferConfigResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryCallInPoolTransferConfigResponseBodyData self = new QueryCallInPoolTransferConfigResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCallInPoolTransferConfigResponseBodyData setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
         }
 
         public QueryCallInPoolTransferConfigResponseBodyData setCalledRouteMode(String calledRouteMode) {
@@ -106,20 +98,28 @@ public class QueryCallInPoolTransferConfigResponseBody extends TeaModel {
             return this.calledRouteMode;
         }
 
-        public QueryCallInPoolTransferConfigResponseBodyData setTransferTimeout(String transferTimeout) {
-            this.transferTimeout = transferTimeout;
-            return this;
-        }
-        public String getTransferTimeout() {
-            return this.transferTimeout;
-        }
-
         public QueryCallInPoolTransferConfigResponseBodyData setDetails(java.util.List<QueryCallInPoolTransferConfigResponseBodyDataDetails> details) {
             this.details = details;
             return this;
         }
         public java.util.List<QueryCallInPoolTransferConfigResponseBodyDataDetails> getDetails() {
             return this.details;
+        }
+
+        public QueryCallInPoolTransferConfigResponseBodyData setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public QueryCallInPoolTransferConfigResponseBodyData setTransferTimeout(String transferTimeout) {
+            this.transferTimeout = transferTimeout;
+            return this;
+        }
+        public String getTransferTimeout() {
+            return this.transferTimeout;
         }
 
     }

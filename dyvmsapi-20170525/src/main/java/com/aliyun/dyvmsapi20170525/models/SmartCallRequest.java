@@ -4,47 +4,32 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SmartCallRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("ActionCodeBreak")
+    public Boolean actionCodeBreak;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("ActionCodeTimeBreak")
+    public Integer actionCodeTimeBreak;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("CalledShowNumber")
-    public String calledShowNumber;
-
-    @NameInMap("CalledNumber")
-    public String calledNumber;
-
-    @NameInMap("VoiceCode")
-    public String voiceCode;
-
-    @NameInMap("RecordFlag")
-    public Boolean recordFlag;
-
-    @NameInMap("Volume")
-    public Integer volume;
-
-    @NameInMap("Speed")
-    public Integer speed;
+    @NameInMap("AsrBaseId")
+    public String asrBaseId;
 
     @NameInMap("AsrModelId")
     public String asrModelId;
 
-    @NameInMap("PauseTime")
-    public Integer pauseTime;
+    @NameInMap("BackgroundFileCode")
+    public String backgroundFileCode;
 
-    @NameInMap("MuteTime")
-    public Integer muteTime;
+    @NameInMap("BackgroundSpeed")
+    public Integer backgroundSpeed;
 
-    @NameInMap("ActionCodeBreak")
-    public Boolean actionCodeBreak;
+    @NameInMap("BackgroundVolume")
+    public Integer backgroundVolume;
 
-    @NameInMap("OutId")
-    public String outId;
+    @NameInMap("CalledNumber")
+    public String calledNumber;
+
+    @NameInMap("CalledShowNumber")
+    public String calledShowNumber;
 
     @NameInMap("DynamicId")
     public String dynamicId;
@@ -52,14 +37,44 @@ public class SmartCallRequest extends TeaModel {
     @NameInMap("EarlyMediaAsr")
     public Boolean earlyMediaAsr;
 
-    @NameInMap("VoiceCodeParam")
-    public String voiceCodeParam;
+    @NameInMap("EnableITN")
+    public Boolean enableITN;
+
+    @NameInMap("MuteTime")
+    public Integer muteTime;
+
+    @NameInMap("OutId")
+    public String outId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PauseTime")
+    public Integer pauseTime;
+
+    @NameInMap("RecordFlag")
+    public Boolean recordFlag;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("SessionTimeout")
     public Integer sessionTimeout;
 
-    @NameInMap("ActionCodeTimeBreak")
-    public Integer actionCodeTimeBreak;
+    @NameInMap("Speed")
+    public Integer speed;
+
+    @NameInMap("StreamAsr")
+    public Integer streamAsr;
+
+    @NameInMap("TtsConf")
+    public Boolean ttsConf;
+
+    @NameInMap("TtsSpeed")
+    public Integer ttsSpeed;
 
     @NameInMap("TtsStyle")
     public String ttsStyle;
@@ -67,117 +82,18 @@ public class SmartCallRequest extends TeaModel {
     @NameInMap("TtsVolume")
     public Integer ttsVolume;
 
-    @NameInMap("TtsSpeed")
-    public Integer ttsSpeed;
+    @NameInMap("VoiceCode")
+    public String voiceCode;
 
-    @NameInMap("TtsConf")
-    public Boolean ttsConf;
+    @NameInMap("VoiceCodeParam")
+    public String voiceCodeParam;
 
-    @NameInMap("AsrBaseId")
-    public String asrBaseId;
-
-    @NameInMap("StreamAsr")
-    public Integer streamAsr;
+    @NameInMap("Volume")
+    public Integer volume;
 
     public static SmartCallRequest build(java.util.Map<String, ?> map) throws Exception {
         SmartCallRequest self = new SmartCallRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SmartCallRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SmartCallRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public SmartCallRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public SmartCallRequest setCalledShowNumber(String calledShowNumber) {
-        this.calledShowNumber = calledShowNumber;
-        return this;
-    }
-    public String getCalledShowNumber() {
-        return this.calledShowNumber;
-    }
-
-    public SmartCallRequest setCalledNumber(String calledNumber) {
-        this.calledNumber = calledNumber;
-        return this;
-    }
-    public String getCalledNumber() {
-        return this.calledNumber;
-    }
-
-    public SmartCallRequest setVoiceCode(String voiceCode) {
-        this.voiceCode = voiceCode;
-        return this;
-    }
-    public String getVoiceCode() {
-        return this.voiceCode;
-    }
-
-    public SmartCallRequest setRecordFlag(Boolean recordFlag) {
-        this.recordFlag = recordFlag;
-        return this;
-    }
-    public Boolean getRecordFlag() {
-        return this.recordFlag;
-    }
-
-    public SmartCallRequest setVolume(Integer volume) {
-        this.volume = volume;
-        return this;
-    }
-    public Integer getVolume() {
-        return this.volume;
-    }
-
-    public SmartCallRequest setSpeed(Integer speed) {
-        this.speed = speed;
-        return this;
-    }
-    public Integer getSpeed() {
-        return this.speed;
-    }
-
-    public SmartCallRequest setAsrModelId(String asrModelId) {
-        this.asrModelId = asrModelId;
-        return this;
-    }
-    public String getAsrModelId() {
-        return this.asrModelId;
-    }
-
-    public SmartCallRequest setPauseTime(Integer pauseTime) {
-        this.pauseTime = pauseTime;
-        return this;
-    }
-    public Integer getPauseTime() {
-        return this.pauseTime;
-    }
-
-    public SmartCallRequest setMuteTime(Integer muteTime) {
-        this.muteTime = muteTime;
-        return this;
-    }
-    public Integer getMuteTime() {
-        return this.muteTime;
     }
 
     public SmartCallRequest setActionCodeBreak(Boolean actionCodeBreak) {
@@ -188,12 +104,68 @@ public class SmartCallRequest extends TeaModel {
         return this.actionCodeBreak;
     }
 
-    public SmartCallRequest setOutId(String outId) {
-        this.outId = outId;
+    public SmartCallRequest setActionCodeTimeBreak(Integer actionCodeTimeBreak) {
+        this.actionCodeTimeBreak = actionCodeTimeBreak;
         return this;
     }
-    public String getOutId() {
-        return this.outId;
+    public Integer getActionCodeTimeBreak() {
+        return this.actionCodeTimeBreak;
+    }
+
+    public SmartCallRequest setAsrBaseId(String asrBaseId) {
+        this.asrBaseId = asrBaseId;
+        return this;
+    }
+    public String getAsrBaseId() {
+        return this.asrBaseId;
+    }
+
+    public SmartCallRequest setAsrModelId(String asrModelId) {
+        this.asrModelId = asrModelId;
+        return this;
+    }
+    public String getAsrModelId() {
+        return this.asrModelId;
+    }
+
+    public SmartCallRequest setBackgroundFileCode(String backgroundFileCode) {
+        this.backgroundFileCode = backgroundFileCode;
+        return this;
+    }
+    public String getBackgroundFileCode() {
+        return this.backgroundFileCode;
+    }
+
+    public SmartCallRequest setBackgroundSpeed(Integer backgroundSpeed) {
+        this.backgroundSpeed = backgroundSpeed;
+        return this;
+    }
+    public Integer getBackgroundSpeed() {
+        return this.backgroundSpeed;
+    }
+
+    public SmartCallRequest setBackgroundVolume(Integer backgroundVolume) {
+        this.backgroundVolume = backgroundVolume;
+        return this;
+    }
+    public Integer getBackgroundVolume() {
+        return this.backgroundVolume;
+    }
+
+    public SmartCallRequest setCalledNumber(String calledNumber) {
+        this.calledNumber = calledNumber;
+        return this;
+    }
+    public String getCalledNumber() {
+        return this.calledNumber;
+    }
+
+    public SmartCallRequest setCalledShowNumber(String calledShowNumber) {
+        this.calledShowNumber = calledShowNumber;
+        return this;
+    }
+    public String getCalledShowNumber() {
+        return this.calledShowNumber;
     }
 
     public SmartCallRequest setDynamicId(String dynamicId) {
@@ -212,12 +184,68 @@ public class SmartCallRequest extends TeaModel {
         return this.earlyMediaAsr;
     }
 
-    public SmartCallRequest setVoiceCodeParam(String voiceCodeParam) {
-        this.voiceCodeParam = voiceCodeParam;
+    public SmartCallRequest setEnableITN(Boolean enableITN) {
+        this.enableITN = enableITN;
         return this;
     }
-    public String getVoiceCodeParam() {
-        return this.voiceCodeParam;
+    public Boolean getEnableITN() {
+        return this.enableITN;
+    }
+
+    public SmartCallRequest setMuteTime(Integer muteTime) {
+        this.muteTime = muteTime;
+        return this;
+    }
+    public Integer getMuteTime() {
+        return this.muteTime;
+    }
+
+    public SmartCallRequest setOutId(String outId) {
+        this.outId = outId;
+        return this;
+    }
+    public String getOutId() {
+        return this.outId;
+    }
+
+    public SmartCallRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SmartCallRequest setPauseTime(Integer pauseTime) {
+        this.pauseTime = pauseTime;
+        return this;
+    }
+    public Integer getPauseTime() {
+        return this.pauseTime;
+    }
+
+    public SmartCallRequest setRecordFlag(Boolean recordFlag) {
+        this.recordFlag = recordFlag;
+        return this;
+    }
+    public Boolean getRecordFlag() {
+        return this.recordFlag;
+    }
+
+    public SmartCallRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SmartCallRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public SmartCallRequest setSessionTimeout(Integer sessionTimeout) {
@@ -228,12 +256,36 @@ public class SmartCallRequest extends TeaModel {
         return this.sessionTimeout;
     }
 
-    public SmartCallRequest setActionCodeTimeBreak(Integer actionCodeTimeBreak) {
-        this.actionCodeTimeBreak = actionCodeTimeBreak;
+    public SmartCallRequest setSpeed(Integer speed) {
+        this.speed = speed;
         return this;
     }
-    public Integer getActionCodeTimeBreak() {
-        return this.actionCodeTimeBreak;
+    public Integer getSpeed() {
+        return this.speed;
+    }
+
+    public SmartCallRequest setStreamAsr(Integer streamAsr) {
+        this.streamAsr = streamAsr;
+        return this;
+    }
+    public Integer getStreamAsr() {
+        return this.streamAsr;
+    }
+
+    public SmartCallRequest setTtsConf(Boolean ttsConf) {
+        this.ttsConf = ttsConf;
+        return this;
+    }
+    public Boolean getTtsConf() {
+        return this.ttsConf;
+    }
+
+    public SmartCallRequest setTtsSpeed(Integer ttsSpeed) {
+        this.ttsSpeed = ttsSpeed;
+        return this;
+    }
+    public Integer getTtsSpeed() {
+        return this.ttsSpeed;
     }
 
     public SmartCallRequest setTtsStyle(String ttsStyle) {
@@ -252,36 +304,28 @@ public class SmartCallRequest extends TeaModel {
         return this.ttsVolume;
     }
 
-    public SmartCallRequest setTtsSpeed(Integer ttsSpeed) {
-        this.ttsSpeed = ttsSpeed;
+    public SmartCallRequest setVoiceCode(String voiceCode) {
+        this.voiceCode = voiceCode;
         return this;
     }
-    public Integer getTtsSpeed() {
-        return this.ttsSpeed;
+    public String getVoiceCode() {
+        return this.voiceCode;
     }
 
-    public SmartCallRequest setTtsConf(Boolean ttsConf) {
-        this.ttsConf = ttsConf;
+    public SmartCallRequest setVoiceCodeParam(String voiceCodeParam) {
+        this.voiceCodeParam = voiceCodeParam;
         return this;
     }
-    public Boolean getTtsConf() {
-        return this.ttsConf;
+    public String getVoiceCodeParam() {
+        return this.voiceCodeParam;
     }
 
-    public SmartCallRequest setAsrBaseId(String asrBaseId) {
-        this.asrBaseId = asrBaseId;
+    public SmartCallRequest setVolume(Integer volume) {
+        this.volume = volume;
         return this;
     }
-    public String getAsrBaseId() {
-        return this.asrBaseId;
-    }
-
-    public SmartCallRequest setStreamAsr(Integer streamAsr) {
-        this.streamAsr = streamAsr;
-        return this;
-    }
-    public Integer getStreamAsr() {
-        return this.streamAsr;
+    public Integer getVolume() {
+        return this.volume;
     }
 
 }

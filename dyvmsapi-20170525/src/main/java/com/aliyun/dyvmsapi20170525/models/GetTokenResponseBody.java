@@ -10,14 +10,14 @@ public class GetTokenResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Token")
-    public String token;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Token")
+    public String token;
 
     public static GetTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTokenResponseBody self = new GetTokenResponseBody();
@@ -40,14 +40,6 @@ public class GetTokenResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetTokenResponseBody setToken(String token) {
-        this.token = token;
-        return this;
-    }
-    public String getToken() {
-        return this.token;
-    }
-
     public GetTokenResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -62,6 +54,14 @@ public class GetTokenResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetTokenResponseBody setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
 }

@@ -7,20 +7,20 @@ public class ListCallTaskResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
+    @NameInMap("Data")
+    public java.util.List<ListCallTaskResponseBodyData> data;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Total")
     public Long total;
-
-    @NameInMap("Data")
-    public java.util.List<ListCallTaskResponseBodyData> data;
 
     public static ListCallTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCallTaskResponseBody self = new ListCallTaskResponseBody();
@@ -35,12 +35,12 @@ public class ListCallTaskResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListCallTaskResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
+    public ListCallTaskResponseBody setData(java.util.List<ListCallTaskResponseBodyData> data) {
+        this.data = data;
         return this;
     }
-    public Long getPageSize() {
-        return this.pageSize;
+    public java.util.List<ListCallTaskResponseBodyData> getData() {
+        return this.data;
     }
 
     public ListCallTaskResponseBody setPageNumber(Long pageNumber) {
@@ -49,6 +49,14 @@ public class ListCallTaskResponseBody extends TeaModel {
     }
     public Long getPageNumber() {
         return this.pageNumber;
+    }
+
+    public ListCallTaskResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public ListCallTaskResponseBody setRequestId(String requestId) {
@@ -67,17 +75,18 @@ public class ListCallTaskResponseBody extends TeaModel {
         return this.total;
     }
 
-    public ListCallTaskResponseBody setData(java.util.List<ListCallTaskResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListCallTaskResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class ListCallTaskResponseBodyData extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("BizType")
+        public String bizType;
+
+        @NameInMap("CompleteTime")
+        public String completeTime;
+
+        @NameInMap("CompletedCount")
+        public Long completedCount;
+
+        @NameInMap("CompletedRate")
+        public Integer completedRate;
 
         @NameInMap("Data")
         public String data;
@@ -85,53 +94,68 @@ public class ListCallTaskResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
-        @NameInMap("TaskName")
-        public String taskName;
+        @NameInMap("FireTime")
+        public String fireTime;
 
-        @NameInMap("CompletedCount")
-        public Long completedCount;
-
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
-        @NameInMap("TemplateName")
-        public String templateName;
-
-        @NameInMap("StopTime")
-        public String stopTime;
-
-        @NameInMap("BizType")
-        public String bizType;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Resource")
         public String resource;
 
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StopTime")
+        public String stopTime;
+
+        @NameInMap("TaskName")
+        public String taskName;
+
         @NameInMap("TemplateCode")
         public String templateCode;
 
-        @NameInMap("FireTime")
-        public String fireTime;
+        @NameInMap("TemplateName")
+        public String templateName;
 
-        @NameInMap("CompleteTime")
-        public String completeTime;
-
-        @NameInMap("CompletedRate")
-        public Integer completedRate;
-
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         public static ListCallTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListCallTaskResponseBodyData self = new ListCallTaskResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListCallTaskResponseBodyData setStatus(String status) {
-            this.status = status;
+        public ListCallTaskResponseBodyData setBizType(String bizType) {
+            this.bizType = bizType;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getBizType() {
+            return this.bizType;
+        }
+
+        public ListCallTaskResponseBodyData setCompleteTime(String completeTime) {
+            this.completeTime = completeTime;
+            return this;
+        }
+        public String getCompleteTime() {
+            return this.completeTime;
+        }
+
+        public ListCallTaskResponseBodyData setCompletedCount(Long completedCount) {
+            this.completedCount = completedCount;
+            return this;
+        }
+        public Long getCompletedCount() {
+            return this.completedCount;
+        }
+
+        public ListCallTaskResponseBodyData setCompletedRate(Integer completedRate) {
+            this.completedRate = completedRate;
+            return this;
+        }
+        public Integer getCompletedRate() {
+            return this.completedRate;
         }
 
         public ListCallTaskResponseBodyData setData(String data) {
@@ -150,52 +174,20 @@ public class ListCallTaskResponseBody extends TeaModel {
             return this.dataType;
         }
 
-        public ListCallTaskResponseBodyData setTaskName(String taskName) {
-            this.taskName = taskName;
+        public ListCallTaskResponseBodyData setFireTime(String fireTime) {
+            this.fireTime = fireTime;
             return this;
         }
-        public String getTaskName() {
-            return this.taskName;
+        public String getFireTime() {
+            return this.fireTime;
         }
 
-        public ListCallTaskResponseBodyData setCompletedCount(Long completedCount) {
-            this.completedCount = completedCount;
+        public ListCallTaskResponseBodyData setId(Long id) {
+            this.id = id;
             return this;
         }
-        public Long getCompletedCount() {
-            return this.completedCount;
-        }
-
-        public ListCallTaskResponseBodyData setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
-        }
-
-        public ListCallTaskResponseBodyData setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public ListCallTaskResponseBodyData setStopTime(String stopTime) {
-            this.stopTime = stopTime;
-            return this;
-        }
-        public String getStopTime() {
-            return this.stopTime;
-        }
-
-        public ListCallTaskResponseBodyData setBizType(String bizType) {
-            this.bizType = bizType;
-            return this;
-        }
-        public String getBizType() {
-            return this.bizType;
+        public Long getId() {
+            return this.id;
         }
 
         public ListCallTaskResponseBodyData setResource(String resource) {
@@ -206,6 +198,30 @@ public class ListCallTaskResponseBody extends TeaModel {
             return this.resource;
         }
 
+        public ListCallTaskResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListCallTaskResponseBodyData setStopTime(String stopTime) {
+            this.stopTime = stopTime;
+            return this;
+        }
+        public String getStopTime() {
+            return this.stopTime;
+        }
+
+        public ListCallTaskResponseBodyData setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
         public ListCallTaskResponseBodyData setTemplateCode(String templateCode) {
             this.templateCode = templateCode;
             return this;
@@ -214,36 +230,20 @@ public class ListCallTaskResponseBody extends TeaModel {
             return this.templateCode;
         }
 
-        public ListCallTaskResponseBodyData setFireTime(String fireTime) {
-            this.fireTime = fireTime;
+        public ListCallTaskResponseBodyData setTemplateName(String templateName) {
+            this.templateName = templateName;
             return this;
         }
-        public String getFireTime() {
-            return this.fireTime;
+        public String getTemplateName() {
+            return this.templateName;
         }
 
-        public ListCallTaskResponseBodyData setCompleteTime(String completeTime) {
-            this.completeTime = completeTime;
+        public ListCallTaskResponseBodyData setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public String getCompleteTime() {
-            return this.completeTime;
-        }
-
-        public ListCallTaskResponseBodyData setCompletedRate(Integer completedRate) {
-            this.completedRate = completedRate;
-            return this;
-        }
-        public Integer getCompletedRate() {
-            return this.completedRate;
-        }
-
-        public ListCallTaskResponseBodyData setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

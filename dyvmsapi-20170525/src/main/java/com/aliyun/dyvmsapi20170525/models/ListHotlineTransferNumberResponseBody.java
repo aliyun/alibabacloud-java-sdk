@@ -7,14 +7,14 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public ListHotlineTransferNumberResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public ListHotlineTransferNumberResponseBodyData data;
 
     public static ListHotlineTransferNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHotlineTransferNumberResponseBody self = new ListHotlineTransferNumberResponseBody();
@@ -27,6 +27,14 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListHotlineTransferNumberResponseBody setData(ListHotlineTransferNumberResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListHotlineTransferNumberResponseBodyData getData() {
+        return this.data;
     }
 
     public ListHotlineTransferNumberResponseBody setMessage(String message) {
@@ -45,29 +53,21 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListHotlineTransferNumberResponseBody setData(ListHotlineTransferNumberResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListHotlineTransferNumberResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class ListHotlineTransferNumberResponseBodyDataValues extends TeaModel {
-        @NameInMap("PhoneNumber")
-        public String phoneNumber;
-
-        @NameInMap("NumberOwnerName")
-        public String numberOwnerName;
-
-        @NameInMap("QualificationId")
-        public String qualificationId;
-
         @NameInMap("HotlineNumber")
         public String hotlineNumber;
 
         @NameInMap("IdentityCard")
         public String identityCard;
+
+        @NameInMap("NumberOwnerName")
+        public String numberOwnerName;
+
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
+
+        @NameInMap("QualificationId")
+        public String qualificationId;
 
         @NameInMap("ResUniqueCode")
         public String resUniqueCode;
@@ -75,30 +75,6 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         public static ListHotlineTransferNumberResponseBodyDataValues build(java.util.Map<String, ?> map) throws Exception {
             ListHotlineTransferNumberResponseBodyDataValues self = new ListHotlineTransferNumberResponseBodyDataValues();
             return TeaModel.build(map, self);
-        }
-
-        public ListHotlineTransferNumberResponseBodyDataValues setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
-            return this;
-        }
-        public String getPhoneNumber() {
-            return this.phoneNumber;
-        }
-
-        public ListHotlineTransferNumberResponseBodyDataValues setNumberOwnerName(String numberOwnerName) {
-            this.numberOwnerName = numberOwnerName;
-            return this;
-        }
-        public String getNumberOwnerName() {
-            return this.numberOwnerName;
-        }
-
-        public ListHotlineTransferNumberResponseBodyDataValues setQualificationId(String qualificationId) {
-            this.qualificationId = qualificationId;
-            return this;
-        }
-        public String getQualificationId() {
-            return this.qualificationId;
         }
 
         public ListHotlineTransferNumberResponseBodyDataValues setHotlineNumber(String hotlineNumber) {
@@ -115,6 +91,30 @@ public class ListHotlineTransferNumberResponseBody extends TeaModel {
         }
         public String getIdentityCard() {
             return this.identityCard;
+        }
+
+        public ListHotlineTransferNumberResponseBodyDataValues setNumberOwnerName(String numberOwnerName) {
+            this.numberOwnerName = numberOwnerName;
+            return this;
+        }
+        public String getNumberOwnerName() {
+            return this.numberOwnerName;
+        }
+
+        public ListHotlineTransferNumberResponseBodyDataValues setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public ListHotlineTransferNumberResponseBodyDataValues setQualificationId(String qualificationId) {
+            this.qualificationId = qualificationId;
+            return this;
+        }
+        public String getQualificationId() {
+            return this.qualificationId;
         }
 
         public ListHotlineTransferNumberResponseBodyDataValues setResUniqueCode(String resUniqueCode) {

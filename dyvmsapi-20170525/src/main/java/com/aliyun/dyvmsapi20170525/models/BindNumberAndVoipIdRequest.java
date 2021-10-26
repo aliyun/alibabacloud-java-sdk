@@ -7,14 +7,14 @@ public class BindNumberAndVoipIdRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PhoneNumber")
+    public String phoneNumber;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("PhoneNumber")
-    public String phoneNumber;
 
     @NameInMap("VoipId")
     public String voipId;
@@ -32,6 +32,14 @@ public class BindNumberAndVoipIdRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public BindNumberAndVoipIdRequest setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
     public BindNumberAndVoipIdRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -46,14 +54,6 @@ public class BindNumberAndVoipIdRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public BindNumberAndVoipIdRequest setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-        return this;
-    }
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
     public BindNumberAndVoipIdRequest setVoipId(String voipId) {

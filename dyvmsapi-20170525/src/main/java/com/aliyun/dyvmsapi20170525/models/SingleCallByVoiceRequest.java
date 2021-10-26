@@ -4,8 +4,20 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SingleCallByVoiceRequest extends TeaModel {
+    @NameInMap("CalledNumber")
+    public String calledNumber;
+
+    @NameInMap("CalledShowNumber")
+    public String calledShowNumber;
+
+    @NameInMap("OutId")
+    public String outId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PlayTimes")
+    public Integer playTimes;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,30 +25,42 @@ public class SingleCallByVoiceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CalledShowNumber")
-    public String calledShowNumber;
-
-    @NameInMap("CalledNumber")
-    public String calledNumber;
+    @NameInMap("Speed")
+    public Integer speed;
 
     @NameInMap("VoiceCode")
     public String voiceCode;
 
-    @NameInMap("PlayTimes")
-    public Integer playTimes;
-
     @NameInMap("Volume")
     public Integer volume;
-
-    @NameInMap("Speed")
-    public Integer speed;
-
-    @NameInMap("OutId")
-    public String outId;
 
     public static SingleCallByVoiceRequest build(java.util.Map<String, ?> map) throws Exception {
         SingleCallByVoiceRequest self = new SingleCallByVoiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SingleCallByVoiceRequest setCalledNumber(String calledNumber) {
+        this.calledNumber = calledNumber;
+        return this;
+    }
+    public String getCalledNumber() {
+        return this.calledNumber;
+    }
+
+    public SingleCallByVoiceRequest setCalledShowNumber(String calledShowNumber) {
+        this.calledShowNumber = calledShowNumber;
+        return this;
+    }
+    public String getCalledShowNumber() {
+        return this.calledShowNumber;
+    }
+
+    public SingleCallByVoiceRequest setOutId(String outId) {
+        this.outId = outId;
+        return this;
+    }
+    public String getOutId() {
+        return this.outId;
     }
 
     public SingleCallByVoiceRequest setOwnerId(Long ownerId) {
@@ -45,6 +69,14 @@ public class SingleCallByVoiceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SingleCallByVoiceRequest setPlayTimes(Integer playTimes) {
+        this.playTimes = playTimes;
+        return this;
+    }
+    public Integer getPlayTimes() {
+        return this.playTimes;
     }
 
     public SingleCallByVoiceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -63,20 +95,12 @@ public class SingleCallByVoiceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SingleCallByVoiceRequest setCalledShowNumber(String calledShowNumber) {
-        this.calledShowNumber = calledShowNumber;
+    public SingleCallByVoiceRequest setSpeed(Integer speed) {
+        this.speed = speed;
         return this;
     }
-    public String getCalledShowNumber() {
-        return this.calledShowNumber;
-    }
-
-    public SingleCallByVoiceRequest setCalledNumber(String calledNumber) {
-        this.calledNumber = calledNumber;
-        return this;
-    }
-    public String getCalledNumber() {
-        return this.calledNumber;
+    public Integer getSpeed() {
+        return this.speed;
     }
 
     public SingleCallByVoiceRequest setVoiceCode(String voiceCode) {
@@ -87,36 +111,12 @@ public class SingleCallByVoiceRequest extends TeaModel {
         return this.voiceCode;
     }
 
-    public SingleCallByVoiceRequest setPlayTimes(Integer playTimes) {
-        this.playTimes = playTimes;
-        return this;
-    }
-    public Integer getPlayTimes() {
-        return this.playTimes;
-    }
-
     public SingleCallByVoiceRequest setVolume(Integer volume) {
         this.volume = volume;
         return this;
     }
     public Integer getVolume() {
         return this.volume;
-    }
-
-    public SingleCallByVoiceRequest setSpeed(Integer speed) {
-        this.speed = speed;
-        return this;
-    }
-    public Integer getSpeed() {
-        return this.speed;
-    }
-
-    public SingleCallByVoiceRequest setOutId(String outId) {
-        this.outId = outId;
-        return this;
-    }
-    public String getOutId() {
-        return this.outId;
     }
 
 }

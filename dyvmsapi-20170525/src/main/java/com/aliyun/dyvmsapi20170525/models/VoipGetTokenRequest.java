@@ -4,6 +4,12 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class VoipGetTokenRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
+    @NameInMap("IsCustomAccount")
+    public Boolean isCustomAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,15 +22,25 @@ public class VoipGetTokenRequest extends TeaModel {
     @NameInMap("VoipId")
     public String voipId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
-    @NameInMap("IsCustomAccount")
-    public Boolean isCustomAccount;
-
     public static VoipGetTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         VoipGetTokenRequest self = new VoipGetTokenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public VoipGetTokenRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
+    }
+
+    public VoipGetTokenRequest setIsCustomAccount(Boolean isCustomAccount) {
+        this.isCustomAccount = isCustomAccount;
+        return this;
+    }
+    public Boolean getIsCustomAccount() {
+        return this.isCustomAccount;
     }
 
     public VoipGetTokenRequest setOwnerId(Long ownerId) {
@@ -57,22 +73,6 @@ public class VoipGetTokenRequest extends TeaModel {
     }
     public String getVoipId() {
         return this.voipId;
-    }
-
-    public VoipGetTokenRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
-    public VoipGetTokenRequest setIsCustomAccount(Boolean isCustomAccount) {
-        this.isCustomAccount = isCustomAccount;
-        return this;
-    }
-    public Boolean getIsCustomAccount() {
-        return this.isCustomAccount;
     }
 
 }

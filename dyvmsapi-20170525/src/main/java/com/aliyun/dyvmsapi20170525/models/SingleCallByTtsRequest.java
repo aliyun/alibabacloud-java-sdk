@@ -4,8 +4,20 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SingleCallByTtsRequest extends TeaModel {
+    @NameInMap("CalledNumber")
+    public String calledNumber;
+
+    @NameInMap("CalledShowNumber")
+    public String calledShowNumber;
+
+    @NameInMap("OutId")
+    public String outId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PlayTimes")
+    public Integer playTimes;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,11 +25,8 @@ public class SingleCallByTtsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CalledShowNumber")
-    public String calledShowNumber;
-
-    @NameInMap("CalledNumber")
-    public String calledNumber;
+    @NameInMap("Speed")
+    public Integer speed;
 
     @NameInMap("TtsCode")
     public String ttsCode;
@@ -25,21 +34,36 @@ public class SingleCallByTtsRequest extends TeaModel {
     @NameInMap("TtsParam")
     public String ttsParam;
 
-    @NameInMap("PlayTimes")
-    public Integer playTimes;
-
     @NameInMap("Volume")
     public Integer volume;
-
-    @NameInMap("Speed")
-    public Integer speed;
-
-    @NameInMap("OutId")
-    public String outId;
 
     public static SingleCallByTtsRequest build(java.util.Map<String, ?> map) throws Exception {
         SingleCallByTtsRequest self = new SingleCallByTtsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SingleCallByTtsRequest setCalledNumber(String calledNumber) {
+        this.calledNumber = calledNumber;
+        return this;
+    }
+    public String getCalledNumber() {
+        return this.calledNumber;
+    }
+
+    public SingleCallByTtsRequest setCalledShowNumber(String calledShowNumber) {
+        this.calledShowNumber = calledShowNumber;
+        return this;
+    }
+    public String getCalledShowNumber() {
+        return this.calledShowNumber;
+    }
+
+    public SingleCallByTtsRequest setOutId(String outId) {
+        this.outId = outId;
+        return this;
+    }
+    public String getOutId() {
+        return this.outId;
     }
 
     public SingleCallByTtsRequest setOwnerId(Long ownerId) {
@@ -48,6 +72,14 @@ public class SingleCallByTtsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SingleCallByTtsRequest setPlayTimes(Integer playTimes) {
+        this.playTimes = playTimes;
+        return this;
+    }
+    public Integer getPlayTimes() {
+        return this.playTimes;
     }
 
     public SingleCallByTtsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -66,20 +98,12 @@ public class SingleCallByTtsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SingleCallByTtsRequest setCalledShowNumber(String calledShowNumber) {
-        this.calledShowNumber = calledShowNumber;
+    public SingleCallByTtsRequest setSpeed(Integer speed) {
+        this.speed = speed;
         return this;
     }
-    public String getCalledShowNumber() {
-        return this.calledShowNumber;
-    }
-
-    public SingleCallByTtsRequest setCalledNumber(String calledNumber) {
-        this.calledNumber = calledNumber;
-        return this;
-    }
-    public String getCalledNumber() {
-        return this.calledNumber;
+    public Integer getSpeed() {
+        return this.speed;
     }
 
     public SingleCallByTtsRequest setTtsCode(String ttsCode) {
@@ -98,36 +122,12 @@ public class SingleCallByTtsRequest extends TeaModel {
         return this.ttsParam;
     }
 
-    public SingleCallByTtsRequest setPlayTimes(Integer playTimes) {
-        this.playTimes = playTimes;
-        return this;
-    }
-    public Integer getPlayTimes() {
-        return this.playTimes;
-    }
-
     public SingleCallByTtsRequest setVolume(Integer volume) {
         this.volume = volume;
         return this;
     }
     public Integer getVolume() {
         return this.volume;
-    }
-
-    public SingleCallByTtsRequest setSpeed(Integer speed) {
-        this.speed = speed;
-        return this;
-    }
-    public Integer getSpeed() {
-        return this.speed;
-    }
-
-    public SingleCallByTtsRequest setOutId(String outId) {
-        this.outId = outId;
-        return this;
-    }
-    public String getOutId() {
-        return this.outId;
     }
 
 }

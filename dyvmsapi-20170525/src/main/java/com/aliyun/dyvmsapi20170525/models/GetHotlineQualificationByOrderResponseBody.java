@@ -7,14 +7,14 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetHotlineQualificationByOrderResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public GetHotlineQualificationByOrderResponseBodyData data;
 
     public static GetHotlineQualificationByOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineQualificationByOrderResponseBody self = new GetHotlineQualificationByOrderResponseBody();
@@ -27,6 +27,14 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetHotlineQualificationByOrderResponseBody setData(GetHotlineQualificationByOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetHotlineQualificationByOrderResponseBodyData getData() {
+        return this.data;
     }
 
     public GetHotlineQualificationByOrderResponseBody setMessage(String message) {
@@ -45,35 +53,27 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetHotlineQualificationByOrderResponseBody setData(GetHotlineQualificationByOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetHotlineQualificationByOrderResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetHotlineQualificationByOrderResponseBodyData extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("OrderId")
+        public String orderId;
 
         @NameInMap("QualificationId")
         public String qualificationId;
 
-        @NameInMap("OrderId")
-        public String orderId;
+        @NameInMap("Status")
+        public String status;
 
         public static GetHotlineQualificationByOrderResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetHotlineQualificationByOrderResponseBodyData self = new GetHotlineQualificationByOrderResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetHotlineQualificationByOrderResponseBodyData setStatus(String status) {
-            this.status = status;
+        public GetHotlineQualificationByOrderResponseBodyData setOrderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getOrderId() {
+            return this.orderId;
         }
 
         public GetHotlineQualificationByOrderResponseBodyData setQualificationId(String qualificationId) {
@@ -84,12 +84,12 @@ public class GetHotlineQualificationByOrderResponseBody extends TeaModel {
             return this.qualificationId;
         }
 
-        public GetHotlineQualificationByOrderResponseBodyData setOrderId(String orderId) {
-            this.orderId = orderId;
+        public GetHotlineQualificationByOrderResponseBodyData setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getOrderId() {
-            return this.orderId;
+        public String getStatus() {
+            return this.status;
         }
 
     }

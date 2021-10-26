@@ -4,6 +4,9 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ExecuteCallTaskRequest extends TeaModel {
+    @NameInMap("FireTime")
+    public String fireTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +16,23 @@ public class ExecuteCallTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TaskId")
-    public Long taskId;
-
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("FireTime")
-    public String fireTime;
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static ExecuteCallTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteCallTaskRequest self = new ExecuteCallTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExecuteCallTaskRequest setFireTime(String fireTime) {
+        this.fireTime = fireTime;
+        return this;
+    }
+    public String getFireTime() {
+        return this.fireTime;
     }
 
     public ExecuteCallTaskRequest setOwnerId(Long ownerId) {
@@ -51,14 +59,6 @@ public class ExecuteCallTaskRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ExecuteCallTaskRequest setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
-    }
-
     public ExecuteCallTaskRequest setStatus(String status) {
         this.status = status;
         return this;
@@ -67,12 +67,12 @@ public class ExecuteCallTaskRequest extends TeaModel {
         return this.status;
     }
 
-    public ExecuteCallTaskRequest setFireTime(String fireTime) {
-        this.fireTime = fireTime;
+    public ExecuteCallTaskRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public String getFireTime() {
-        return this.fireTime;
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

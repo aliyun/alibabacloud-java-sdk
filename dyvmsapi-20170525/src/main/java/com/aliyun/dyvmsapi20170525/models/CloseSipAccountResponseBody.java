@@ -7,11 +7,11 @@ public class CloseSipAccountResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public Boolean data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,20 +29,20 @@ public class CloseSipAccountResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CloseSipAccountResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public CloseSipAccountResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
     public Boolean getData() {
         return this.data;
+    }
+
+    public CloseSipAccountResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public CloseSipAccountResponseBody setRequestId(String requestId) {

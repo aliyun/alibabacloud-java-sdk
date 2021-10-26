@@ -4,32 +4,26 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateRobotTaskRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("TaskName")
-    public String taskName;
-
-    @NameInMap("DialogId")
-    public Long dialogId;
+    @NameInMap("Caller")
+    public String caller;
 
     @NameInMap("CorpName")
     public String corpName;
 
-    @NameInMap("Caller")
-    public String caller;
+    @NameInMap("DialogId")
+    public Long dialogId;
+
+    @NameInMap("IsSelfLine")
+    public Boolean isSelfLine;
 
     @NameInMap("NumberStatusIdent")
     public Boolean numberStatusIdent;
 
-    @NameInMap("RetryType")
-    public Integer retryType;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("RecallInterval")
+    public Integer recallInterval;
 
     @NameInMap("RecallStateCodes")
     public String recallStateCodes;
@@ -37,63 +31,21 @@ public class CreateRobotTaskRequest extends TeaModel {
     @NameInMap("RecallTimes")
     public Integer recallTimes;
 
-    @NameInMap("RecallInterval")
-    public Integer recallInterval;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
 
-    @NameInMap("IsSelfLine")
-    public Boolean isSelfLine;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RetryType")
+    public Integer retryType;
+
+    @NameInMap("TaskName")
+    public String taskName;
 
     public static CreateRobotTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRobotTaskRequest self = new CreateRobotTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateRobotTaskRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public CreateRobotTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public CreateRobotTaskRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateRobotTaskRequest setTaskName(String taskName) {
-        this.taskName = taskName;
-        return this;
-    }
-    public String getTaskName() {
-        return this.taskName;
-    }
-
-    public CreateRobotTaskRequest setDialogId(Long dialogId) {
-        this.dialogId = dialogId;
-        return this;
-    }
-    public Long getDialogId() {
-        return this.dialogId;
-    }
-
-    public CreateRobotTaskRequest setCorpName(String corpName) {
-        this.corpName = corpName;
-        return this;
-    }
-    public String getCorpName() {
-        return this.corpName;
     }
 
     public CreateRobotTaskRequest setCaller(String caller) {
@@ -104,6 +56,30 @@ public class CreateRobotTaskRequest extends TeaModel {
         return this.caller;
     }
 
+    public CreateRobotTaskRequest setCorpName(String corpName) {
+        this.corpName = corpName;
+        return this;
+    }
+    public String getCorpName() {
+        return this.corpName;
+    }
+
+    public CreateRobotTaskRequest setDialogId(Long dialogId) {
+        this.dialogId = dialogId;
+        return this;
+    }
+    public Long getDialogId() {
+        return this.dialogId;
+    }
+
+    public CreateRobotTaskRequest setIsSelfLine(Boolean isSelfLine) {
+        this.isSelfLine = isSelfLine;
+        return this;
+    }
+    public Boolean getIsSelfLine() {
+        return this.isSelfLine;
+    }
+
     public CreateRobotTaskRequest setNumberStatusIdent(Boolean numberStatusIdent) {
         this.numberStatusIdent = numberStatusIdent;
         return this;
@@ -112,12 +88,20 @@ public class CreateRobotTaskRequest extends TeaModel {
         return this.numberStatusIdent;
     }
 
-    public CreateRobotTaskRequest setRetryType(Integer retryType) {
-        this.retryType = retryType;
+    public CreateRobotTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public Integer getRetryType() {
-        return this.retryType;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateRobotTaskRequest setRecallInterval(Integer recallInterval) {
+        this.recallInterval = recallInterval;
+        return this;
+    }
+    public Integer getRecallInterval() {
+        return this.recallInterval;
     }
 
     public CreateRobotTaskRequest setRecallStateCodes(String recallStateCodes) {
@@ -136,20 +120,36 @@ public class CreateRobotTaskRequest extends TeaModel {
         return this.recallTimes;
     }
 
-    public CreateRobotTaskRequest setRecallInterval(Integer recallInterval) {
-        this.recallInterval = recallInterval;
+    public CreateRobotTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
-    public Integer getRecallInterval() {
-        return this.recallInterval;
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
     }
 
-    public CreateRobotTaskRequest setIsSelfLine(Boolean isSelfLine) {
-        this.isSelfLine = isSelfLine;
+    public CreateRobotTaskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public Boolean getIsSelfLine() {
-        return this.isSelfLine;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateRobotTaskRequest setRetryType(Integer retryType) {
+        this.retryType = retryType;
+        return this;
+    }
+    public Integer getRetryType() {
+        return this.retryType;
+    }
+
+    public CreateRobotTaskRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
     }
 
 }
