@@ -4,24 +4,32 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("Tasks")
+    public java.util.List<ListTasksResponseBodyTasks> tasks;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("Tasks")
-    public java.util.List<ListTasksResponseBodyTasks> tasks;
-
     public static ListTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTasksResponseBody self = new ListTasksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTasksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListTasksResponseBody setPageSize(Integer pageSize) {
@@ -40,12 +48,12 @@ public class ListTasksResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTasksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListTasksResponseBody setTasks(java.util.List<ListTasksResponseBodyTasks> tasks) {
+        this.tasks = tasks;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public java.util.List<ListTasksResponseBodyTasks> getTasks() {
+        return this.tasks;
     }
 
     public ListTasksResponseBody setTotalCount(Integer totalCount) {
@@ -56,17 +64,27 @@ public class ListTasksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListTasksResponseBody setTasks(java.util.List<ListTasksResponseBodyTasks> tasks) {
-        this.tasks = tasks;
-        return this;
-    }
-    public java.util.List<ListTasksResponseBodyTasks> getTasks() {
-        return this.tasks;
-    }
-
     public static class ListTasksResponseBodyTasks extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("CurrentStep")
+        public Integer currentStep;
+
+        @NameInMap("Errors")
+        public String errors;
+
+        @NameInMap("Request")
+        public String request;
+
+        @NameInMap("Result")
+        public String result;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("TaskId")
+        public String taskId;
 
         @NameInMap("TaskType")
         public String taskType;
@@ -74,27 +92,49 @@ public class ListTasksResponseBody extends TeaModel {
         @NameInMap("TotalSteps")
         public Integer totalSteps;
 
-        @NameInMap("CurrentStep")
-        public Integer currentStep;
-
-        @NameInMap("Result")
-        public String result;
-
-        @NameInMap("Errors")
-        public String errors;
-
-        @NameInMap("TaskId")
-        public String taskId;
-
-        @NameInMap("Request")
-        public String request;
-
-        @NameInMap("ClusterId")
-        public String clusterId;
-
         public static ListTasksResponseBodyTasks build(java.util.Map<String, ?> map) throws Exception {
             ListTasksResponseBodyTasks self = new ListTasksResponseBodyTasks();
             return TeaModel.build(map, self);
+        }
+
+        public ListTasksResponseBodyTasks setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public ListTasksResponseBodyTasks setCurrentStep(Integer currentStep) {
+            this.currentStep = currentStep;
+            return this;
+        }
+        public Integer getCurrentStep() {
+            return this.currentStep;
+        }
+
+        public ListTasksResponseBodyTasks setErrors(String errors) {
+            this.errors = errors;
+            return this;
+        }
+        public String getErrors() {
+            return this.errors;
+        }
+
+        public ListTasksResponseBodyTasks setRequest(String request) {
+            this.request = request;
+            return this;
+        }
+        public String getRequest() {
+            return this.request;
+        }
+
+        public ListTasksResponseBodyTasks setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
         }
 
         public ListTasksResponseBodyTasks setStatus(String status) {
@@ -103,6 +143,14 @@ public class ListTasksResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListTasksResponseBodyTasks setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public ListTasksResponseBodyTasks setTaskType(String taskType) {
@@ -119,54 +167,6 @@ public class ListTasksResponseBody extends TeaModel {
         }
         public Integer getTotalSteps() {
             return this.totalSteps;
-        }
-
-        public ListTasksResponseBodyTasks setCurrentStep(Integer currentStep) {
-            this.currentStep = currentStep;
-            return this;
-        }
-        public Integer getCurrentStep() {
-            return this.currentStep;
-        }
-
-        public ListTasksResponseBodyTasks setResult(String result) {
-            this.result = result;
-            return this;
-        }
-        public String getResult() {
-            return this.result;
-        }
-
-        public ListTasksResponseBodyTasks setErrors(String errors) {
-            this.errors = errors;
-            return this;
-        }
-        public String getErrors() {
-            return this.errors;
-        }
-
-        public ListTasksResponseBodyTasks setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        public ListTasksResponseBodyTasks setRequest(String request) {
-            this.request = request;
-            return this;
-        }
-        public String getRequest() {
-            return this.request;
-        }
-
-        public ListTasksResponseBodyTasks setClusterId(String clusterId) {
-            this.clusterId = clusterId;
-            return this;
-        }
-        public String getClusterId() {
-            return this.clusterId;
         }
 
     }

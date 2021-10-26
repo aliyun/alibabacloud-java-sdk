@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddContainerAppResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ContainerId")
     public AddContainerAppResponseBodyContainerId containerId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AddContainerAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddContainerAppResponseBody self = new AddContainerAppResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddContainerAppResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddContainerAppResponseBody setContainerId(AddContainerAppResponseBodyContainerId containerId) {
@@ -29,6 +21,14 @@ public class AddContainerAppResponseBody extends TeaModel {
     }
     public AddContainerAppResponseBodyContainerId getContainerId() {
         return this.containerId;
+    }
+
+    public AddContainerAppResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AddContainerAppResponseBodyContainerId extends TeaModel {

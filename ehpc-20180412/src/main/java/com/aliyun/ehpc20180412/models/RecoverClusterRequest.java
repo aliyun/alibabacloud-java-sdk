@@ -4,46 +4,30 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class RecoverClusterRequest extends TeaModel {
-    @NameInMap("ClusterId")
-    public String clusterId;
-
-    @NameInMap("OsTag")
-    public String osTag;
-
     @NameInMap("AccountType")
     public String accountType;
-
-    @NameInMap("SchedulerType")
-    public String schedulerType;
-
-    @NameInMap("ImageOwnerAlias")
-    public String imageOwnerAlias;
-
-    @NameInMap("ImageId")
-    public String imageId;
 
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("ImageOwnerAlias")
+    public String imageOwnerAlias;
+
+    @NameInMap("OsTag")
+    public String osTag;
+
+    @NameInMap("SchedulerType")
+    public String schedulerType;
+
     public static RecoverClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         RecoverClusterRequest self = new RecoverClusterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RecoverClusterRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
-    }
-
-    public RecoverClusterRequest setOsTag(String osTag) {
-        this.osTag = osTag;
-        return this;
-    }
-    public String getOsTag() {
-        return this.osTag;
     }
 
     public RecoverClusterRequest setAccountType(String accountType) {
@@ -54,20 +38,20 @@ public class RecoverClusterRequest extends TeaModel {
         return this.accountType;
     }
 
-    public RecoverClusterRequest setSchedulerType(String schedulerType) {
-        this.schedulerType = schedulerType;
+    public RecoverClusterRequest setClientVersion(String clientVersion) {
+        this.clientVersion = clientVersion;
         return this;
     }
-    public String getSchedulerType() {
-        return this.schedulerType;
+    public String getClientVersion() {
+        return this.clientVersion;
     }
 
-    public RecoverClusterRequest setImageOwnerAlias(String imageOwnerAlias) {
-        this.imageOwnerAlias = imageOwnerAlias;
+    public RecoverClusterRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
-    public String getImageOwnerAlias() {
-        return this.imageOwnerAlias;
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public RecoverClusterRequest setImageId(String imageId) {
@@ -78,12 +62,28 @@ public class RecoverClusterRequest extends TeaModel {
         return this.imageId;
     }
 
-    public RecoverClusterRequest setClientVersion(String clientVersion) {
-        this.clientVersion = clientVersion;
+    public RecoverClusterRequest setImageOwnerAlias(String imageOwnerAlias) {
+        this.imageOwnerAlias = imageOwnerAlias;
         return this;
     }
-    public String getClientVersion() {
-        return this.clientVersion;
+    public String getImageOwnerAlias() {
+        return this.imageOwnerAlias;
+    }
+
+    public RecoverClusterRequest setOsTag(String osTag) {
+        this.osTag = osTag;
+        return this;
+    }
+    public String getOsTag() {
+        return this.osTag;
+    }
+
+    public RecoverClusterRequest setSchedulerType(String schedulerType) {
+        this.schedulerType = schedulerType;
+        return this;
+    }
+    public String getSchedulerType() {
+        return this.schedulerType;
     }
 
 }

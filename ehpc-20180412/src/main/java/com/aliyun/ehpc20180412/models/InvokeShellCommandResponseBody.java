@@ -7,11 +7,11 @@ public class InvokeShellCommandResponseBody extends TeaModel {
     @NameInMap("CommandId")
     public String commandId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceIds")
     public InvokeShellCommandResponseBodyInstanceIds instanceIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static InvokeShellCommandResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InvokeShellCommandResponseBody self = new InvokeShellCommandResponseBody();
@@ -26,20 +26,20 @@ public class InvokeShellCommandResponseBody extends TeaModel {
         return this.commandId;
     }
 
-    public InvokeShellCommandResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public InvokeShellCommandResponseBody setInstanceIds(InvokeShellCommandResponseBodyInstanceIds instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
     public InvokeShellCommandResponseBodyInstanceIds getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public InvokeShellCommandResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class InvokeShellCommandResponseBodyInstanceIds extends TeaModel {

@@ -4,11 +4,11 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetSchedulerInfoRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClusterId")
     public String clusterId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("Scheduler")
     public java.util.List<GetSchedulerInfoRequestScheduler> scheduler;
@@ -18,20 +18,20 @@ public class GetSchedulerInfoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetSchedulerInfoRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public GetSchedulerInfoRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public GetSchedulerInfoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetSchedulerInfoRequest setScheduler(java.util.List<GetSchedulerInfoRequestScheduler> scheduler) {

@@ -7,11 +7,11 @@ public class SetQueueRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("QueueName")
-    public String queueName;
-
     @NameInMap("Node")
     public java.util.List<SetQueueRequestNode> node;
+
+    @NameInMap("QueueName")
+    public String queueName;
 
     public static SetQueueRequest build(java.util.Map<String, ?> map) throws Exception {
         SetQueueRequest self = new SetQueueRequest();
@@ -26,20 +26,20 @@ public class SetQueueRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public SetQueueRequest setQueueName(String queueName) {
-        this.queueName = queueName;
-        return this;
-    }
-    public String getQueueName() {
-        return this.queueName;
-    }
-
     public SetQueueRequest setNode(java.util.List<SetQueueRequestNode> node) {
         this.node = node;
         return this;
     }
     public java.util.List<SetQueueRequestNode> getNode() {
         return this.node;
+    }
+
+    public SetQueueRequest setQueueName(String queueName) {
+        this.queueName = queueName;
+        return this;
+    }
+    public String getQueueName() {
+        return this.queueName;
     }
 
     public static class SetQueueRequestNode extends TeaModel {

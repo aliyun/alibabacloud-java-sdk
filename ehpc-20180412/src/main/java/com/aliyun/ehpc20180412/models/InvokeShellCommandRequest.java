@@ -10,14 +10,14 @@ public class InvokeShellCommandRequest extends TeaModel {
     @NameInMap("Command")
     public String command;
 
-    @NameInMap("WorkingDir")
-    public String workingDir;
+    @NameInMap("Instance")
+    public java.util.List<InvokeShellCommandRequestInstance> instance;
 
     @NameInMap("Timeout")
     public Integer timeout;
 
-    @NameInMap("Instance")
-    public java.util.List<InvokeShellCommandRequestInstance> instance;
+    @NameInMap("WorkingDir")
+    public String workingDir;
 
     public static InvokeShellCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeShellCommandRequest self = new InvokeShellCommandRequest();
@@ -40,12 +40,12 @@ public class InvokeShellCommandRequest extends TeaModel {
         return this.command;
     }
 
-    public InvokeShellCommandRequest setWorkingDir(String workingDir) {
-        this.workingDir = workingDir;
+    public InvokeShellCommandRequest setInstance(java.util.List<InvokeShellCommandRequestInstance> instance) {
+        this.instance = instance;
         return this;
     }
-    public String getWorkingDir() {
-        return this.workingDir;
+    public java.util.List<InvokeShellCommandRequestInstance> getInstance() {
+        return this.instance;
     }
 
     public InvokeShellCommandRequest setTimeout(Integer timeout) {
@@ -56,12 +56,12 @@ public class InvokeShellCommandRequest extends TeaModel {
         return this.timeout;
     }
 
-    public InvokeShellCommandRequest setInstance(java.util.List<InvokeShellCommandRequestInstance> instance) {
-        this.instance = instance;
+    public InvokeShellCommandRequest setWorkingDir(String workingDir) {
+        this.workingDir = workingDir;
         return this;
     }
-    public java.util.List<InvokeShellCommandRequestInstance> getInstance() {
-        return this.instance;
+    public String getWorkingDir() {
+        return this.workingDir;
     }
 
     public static class InvokeShellCommandRequestInstance extends TeaModel {

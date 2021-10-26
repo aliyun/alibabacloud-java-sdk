@@ -4,11 +4,11 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeGWSClusterPolicyResponseBody extends TeaModel {
-    @NameInMap("Watermark")
-    public String watermark;
-
     @NameInMap("Clipboard")
     public String clipboard;
+
+    @NameInMap("LocalDrive")
+    public String localDrive;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,20 +16,12 @@ public class DescribeGWSClusterPolicyResponseBody extends TeaModel {
     @NameInMap("UsbRedirect")
     public String usbRedirect;
 
-    @NameInMap("LocalDrive")
-    public String localDrive;
+    @NameInMap("Watermark")
+    public String watermark;
 
     public static DescribeGWSClusterPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGWSClusterPolicyResponseBody self = new DescribeGWSClusterPolicyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGWSClusterPolicyResponseBody setWatermark(String watermark) {
-        this.watermark = watermark;
-        return this;
-    }
-    public String getWatermark() {
-        return this.watermark;
     }
 
     public DescribeGWSClusterPolicyResponseBody setClipboard(String clipboard) {
@@ -38,6 +30,14 @@ public class DescribeGWSClusterPolicyResponseBody extends TeaModel {
     }
     public String getClipboard() {
         return this.clipboard;
+    }
+
+    public DescribeGWSClusterPolicyResponseBody setLocalDrive(String localDrive) {
+        this.localDrive = localDrive;
+        return this;
+    }
+    public String getLocalDrive() {
+        return this.localDrive;
     }
 
     public DescribeGWSClusterPolicyResponseBody setRequestId(String requestId) {
@@ -56,12 +56,12 @@ public class DescribeGWSClusterPolicyResponseBody extends TeaModel {
         return this.usbRedirect;
     }
 
-    public DescribeGWSClusterPolicyResponseBody setLocalDrive(String localDrive) {
-        this.localDrive = localDrive;
+    public DescribeGWSClusterPolicyResponseBody setWatermark(String watermark) {
+        this.watermark = watermark;
         return this;
     }
-    public String getLocalDrive() {
-        return this.localDrive;
+    public String getWatermark() {
+        return this.watermark;
     }
 
 }

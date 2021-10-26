@@ -7,14 +7,14 @@ public class ModifyVisualServicePasswdRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("Passwd")
+    public String passwd;
+
     @NameInMap("RunasUser")
     public String runasUser;
 
     @NameInMap("RunasUserPassword")
     public String runasUserPassword;
-
-    @NameInMap("Passwd")
-    public String passwd;
 
     public static ModifyVisualServicePasswdRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVisualServicePasswdRequest self = new ModifyVisualServicePasswdRequest();
@@ -27,6 +27,14 @@ public class ModifyVisualServicePasswdRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public ModifyVisualServicePasswdRequest setPasswd(String passwd) {
+        this.passwd = passwd;
+        return this;
+    }
+    public String getPasswd() {
+        return this.passwd;
     }
 
     public ModifyVisualServicePasswdRequest setRunasUser(String runasUser) {
@@ -43,14 +51,6 @@ public class ModifyVisualServicePasswdRequest extends TeaModel {
     }
     public String getRunasUserPassword() {
         return this.runasUserPassword;
-    }
-
-    public ModifyVisualServicePasswdRequest setPasswd(String passwd) {
-        this.passwd = passwd;
-        return this;
-    }
-    public String getPasswd() {
-        return this.passwd;
     }
 
 }

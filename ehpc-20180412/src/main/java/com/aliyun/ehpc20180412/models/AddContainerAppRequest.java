@@ -4,11 +4,8 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddContainerAppRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Repository")
-    public String repository;
+    @NameInMap("ContainerType")
+    public String containerType;
 
     @NameInMap("Description")
     public String description;
@@ -16,28 +13,23 @@ public class AddContainerAppRequest extends TeaModel {
     @NameInMap("ImageTag")
     public String imageTag;
 
-    @NameInMap("ContainerType")
-    public String containerType;
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("Repository")
+    public String repository;
 
     public static AddContainerAppRequest build(java.util.Map<String, ?> map) throws Exception {
         AddContainerAppRequest self = new AddContainerAppRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddContainerAppRequest setName(String name) {
-        this.name = name;
+    public AddContainerAppRequest setContainerType(String containerType) {
+        this.containerType = containerType;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public AddContainerAppRequest setRepository(String repository) {
-        this.repository = repository;
-        return this;
-    }
-    public String getRepository() {
-        return this.repository;
+    public String getContainerType() {
+        return this.containerType;
     }
 
     public AddContainerAppRequest setDescription(String description) {
@@ -56,12 +48,20 @@ public class AddContainerAppRequest extends TeaModel {
         return this.imageTag;
     }
 
-    public AddContainerAppRequest setContainerType(String containerType) {
-        this.containerType = containerType;
+    public AddContainerAppRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getContainerType() {
-        return this.containerType;
+    public String getName() {
+        return this.name;
+    }
+
+    public AddContainerAppRequest setRepository(String repository) {
+        this.repository = repository;
+        return this;
+    }
+    public String getRepository() {
+        return this.repository;
     }
 
 }

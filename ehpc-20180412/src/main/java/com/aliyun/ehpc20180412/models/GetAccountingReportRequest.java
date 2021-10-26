@@ -7,29 +7,29 @@ public class GetAccountingReportRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("StartTime")
-    public Integer startTime;
+    @NameInMap("Dim")
+    public String dim;
 
     @NameInMap("EndTime")
     public Integer endTime;
 
-    @NameInMap("ReportType")
-    public String reportType;
-
     @NameInMap("FilterValue")
     public String filterValue;
-
-    @NameInMap("Dim")
-    public String dim;
 
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("ReportType")
+    public String reportType;
+
+    @NameInMap("StartTime")
+    public Integer startTime;
 
     public static GetAccountingReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAccountingReportRequest self = new GetAccountingReportRequest();
@@ -44,12 +44,12 @@ public class GetAccountingReportRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public GetAccountingReportRequest setStartTime(Integer startTime) {
-        this.startTime = startTime;
+    public GetAccountingReportRequest setDim(String dim) {
+        this.dim = dim;
         return this;
     }
-    public Integer getStartTime() {
-        return this.startTime;
+    public String getDim() {
+        return this.dim;
     }
 
     public GetAccountingReportRequest setEndTime(Integer endTime) {
@@ -60,28 +60,12 @@ public class GetAccountingReportRequest extends TeaModel {
         return this.endTime;
     }
 
-    public GetAccountingReportRequest setReportType(String reportType) {
-        this.reportType = reportType;
-        return this;
-    }
-    public String getReportType() {
-        return this.reportType;
-    }
-
     public GetAccountingReportRequest setFilterValue(String filterValue) {
         this.filterValue = filterValue;
         return this;
     }
     public String getFilterValue() {
         return this.filterValue;
-    }
-
-    public GetAccountingReportRequest setDim(String dim) {
-        this.dim = dim;
-        return this;
-    }
-    public String getDim() {
-        return this.dim;
     }
 
     public GetAccountingReportRequest setJobId(String jobId) {
@@ -92,6 +76,14 @@ public class GetAccountingReportRequest extends TeaModel {
         return this.jobId;
     }
 
+    public GetAccountingReportRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public GetAccountingReportRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -100,12 +92,20 @@ public class GetAccountingReportRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetAccountingReportRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public GetAccountingReportRequest setReportType(String reportType) {
+        this.reportType = reportType;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getReportType() {
+        return this.reportType;
+    }
+
+    public GetAccountingReportRequest setStartTime(Integer startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Integer getStartTime() {
+        return this.startTime;
     }
 
 }

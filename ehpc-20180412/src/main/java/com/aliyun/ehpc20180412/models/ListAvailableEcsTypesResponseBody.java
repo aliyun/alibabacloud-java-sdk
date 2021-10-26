@@ -4,26 +4,26 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableEcsTypesResponseBody extends TeaModel {
-    @NameInMap("SupportSpotInstance")
-    public Boolean supportSpotInstance;
+    @NameInMap("InstanceTypeFamilies")
+    public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InstanceTypeFamilies")
-    public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
+    @NameInMap("SupportSpotInstance")
+    public Boolean supportSpotInstance;
 
     public static ListAvailableEcsTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAvailableEcsTypesResponseBody self = new ListAvailableEcsTypesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListAvailableEcsTypesResponseBody setSupportSpotInstance(Boolean supportSpotInstance) {
-        this.supportSpotInstance = supportSpotInstance;
+    public ListAvailableEcsTypesResponseBody setInstanceTypeFamilies(ListAvailableEcsTypesResponseBodyInstanceTypeFamilies instanceTypeFamilies) {
+        this.instanceTypeFamilies = instanceTypeFamilies;
         return this;
     }
-    public Boolean getSupportSpotInstance() {
-        return this.supportSpotInstance;
+    public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies getInstanceTypeFamilies() {
+        return this.instanceTypeFamilies;
     }
 
     public ListAvailableEcsTypesResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAvailableEcsTypesResponseBody setInstanceTypeFamilies(ListAvailableEcsTypesResponseBodyInstanceTypeFamilies instanceTypeFamilies) {
-        this.instanceTypeFamilies = instanceTypeFamilies;
+    public ListAvailableEcsTypesResponseBody setSupportSpotInstance(Boolean supportSpotInstance) {
+        this.supportSpotInstance = supportSpotInstance;
         return this;
     }
-    public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies getInstanceTypeFamilies() {
-        return this.instanceTypeFamilies;
+    public Boolean getSupportSpotInstance() {
+        return this.supportSpotInstance;
     }
 
     public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds extends TeaModel {
@@ -62,17 +62,20 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
     }
 
     public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CpuCoreCount")
+        public Integer cpuCoreCount;
 
-        @NameInMap("InstanceTypeId")
-        public String instanceTypeId;
+        @NameInMap("EniQuantity")
+        public Integer eniQuantity;
 
-        @NameInMap("InstanceBandwidthRx")
-        public Integer instanceBandwidthRx;
+        @NameInMap("GPUAmount")
+        public Integer GPUAmount;
 
         @NameInMap("GPUSpec")
         public String GPUSpec;
+
+        @NameInMap("InstanceBandwidthRx")
+        public Integer instanceBandwidthRx;
 
         @NameInMap("InstanceBandwidthTx")
         public Integer instanceBandwidthTx;
@@ -83,17 +86,14 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         @NameInMap("InstancePpsTx")
         public Integer instancePpsTx;
 
-        @NameInMap("GPUAmount")
-        public Integer GPUAmount;
-
-        @NameInMap("CpuCoreCount")
-        public Integer cpuCoreCount;
+        @NameInMap("InstanceTypeId")
+        public String instanceTypeId;
 
         @NameInMap("MemorySize")
         public Integer memorySize;
 
-        @NameInMap("EniQuantity")
-        public Integer eniQuantity;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("ZoneIds")
         public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds zoneIds;
@@ -103,28 +103,28 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setStatus(String status) {
-            this.status = status;
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setCpuCoreCount(Integer cpuCoreCount) {
+            this.cpuCoreCount = cpuCoreCount;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public Integer getCpuCoreCount() {
+            return this.cpuCoreCount;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstanceTypeId(String instanceTypeId) {
-            this.instanceTypeId = instanceTypeId;
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setEniQuantity(Integer eniQuantity) {
+            this.eniQuantity = eniQuantity;
             return this;
         }
-        public String getInstanceTypeId() {
-            return this.instanceTypeId;
+        public Integer getEniQuantity() {
+            return this.eniQuantity;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstanceBandwidthRx(Integer instanceBandwidthRx) {
-            this.instanceBandwidthRx = instanceBandwidthRx;
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setGPUAmount(Integer GPUAmount) {
+            this.GPUAmount = GPUAmount;
             return this;
         }
-        public Integer getInstanceBandwidthRx() {
-            return this.instanceBandwidthRx;
+        public Integer getGPUAmount() {
+            return this.GPUAmount;
         }
 
         public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setGPUSpec(String GPUSpec) {
@@ -133,6 +133,14 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         }
         public String getGPUSpec() {
             return this.GPUSpec;
+        }
+
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstanceBandwidthRx(Integer instanceBandwidthRx) {
+            this.instanceBandwidthRx = instanceBandwidthRx;
+            return this;
+        }
+        public Integer getInstanceBandwidthRx() {
+            return this.instanceBandwidthRx;
         }
 
         public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstanceBandwidthTx(Integer instanceBandwidthTx) {
@@ -159,20 +167,12 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.instancePpsTx;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setGPUAmount(Integer GPUAmount) {
-            this.GPUAmount = GPUAmount;
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setInstanceTypeId(String instanceTypeId) {
+            this.instanceTypeId = instanceTypeId;
             return this;
         }
-        public Integer getGPUAmount() {
-            return this.GPUAmount;
-        }
-
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setCpuCoreCount(Integer cpuCoreCount) {
-            this.cpuCoreCount = cpuCoreCount;
-            return this;
-        }
-        public Integer getCpuCoreCount() {
-            return this.cpuCoreCount;
+        public String getInstanceTypeId() {
+            return this.instanceTypeId;
         }
 
         public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setMemorySize(Integer memorySize) {
@@ -183,12 +183,12 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
             return this.memorySize;
         }
 
-        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setEniQuantity(Integer eniQuantity) {
-            this.eniQuantity = eniQuantity;
+        public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public Integer getEniQuantity() {
-            return this.eniQuantity;
+        public String getStatus() {
+            return this.status;
         }
 
         public ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo setZoneIds(ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfoZoneIds zoneIds) {

@@ -4,24 +4,40 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
+    @NameInMap("FileSystemList")
+    public ListFileSystemWithMountTargetsResponseBodyFileSystemList fileSystemList;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("FileSystemList")
-    public ListFileSystemWithMountTargetsResponseBodyFileSystemList fileSystemList;
 
     public static ListFileSystemWithMountTargetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFileSystemWithMountTargetsResponseBody self = new ListFileSystemWithMountTargetsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListFileSystemWithMountTargetsResponseBody setFileSystemList(ListFileSystemWithMountTargetsResponseBodyFileSystemList fileSystemList) {
+        this.fileSystemList = fileSystemList;
+        return this;
+    }
+    public ListFileSystemWithMountTargetsResponseBodyFileSystemList getFileSystemList() {
+        return this.fileSystemList;
+    }
+
+    public ListFileSystemWithMountTargetsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListFileSystemWithMountTargetsResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListFileSystemWithMountTargetsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public ListFileSystemWithMountTargetsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,12 +64,97 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListFileSystemWithMountTargetsResponseBody setFileSystemList(ListFileSystemWithMountTargetsResponseBodyFileSystemList fileSystemList) {
-        this.fileSystemList = fileSystemList;
-        return this;
+    public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets extends TeaModel {
+        @NameInMap("AccessGroup")
+        public String accessGroup;
+
+        @NameInMap("MountTargetDomain")
+        public String mountTargetDomain;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VswId")
+        public String vswId;
+
+        public static ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets build(java.util.Map<String, ?> map) throws Exception {
+            ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets self = new ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setAccessGroup(String accessGroup) {
+            this.accessGroup = accessGroup;
+            return this;
+        }
+        public String getAccessGroup() {
+            return this.accessGroup;
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setMountTargetDomain(String mountTargetDomain) {
+            this.mountTargetDomain = mountTargetDomain;
+            return this;
+        }
+        public String getMountTargetDomain() {
+            return this.mountTargetDomain;
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setVswId(String vswId) {
+            this.vswId = vswId;
+            return this;
+        }
+        public String getVswId() {
+            return this.vswId;
+        }
+
     }
-    public ListFileSystemWithMountTargetsResponseBodyFileSystemList getFileSystemList() {
-        return this.fileSystemList;
+
+    public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList extends TeaModel {
+        @NameInMap("MountTargets")
+        public java.util.List<ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets> mountTargets;
+
+        public static ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList build(java.util.Map<String, ?> map) throws Exception {
+            ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList self = new ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList setMountTargets(java.util.List<ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets> mountTargets) {
+            this.mountTargets = mountTargets;
+            return this;
+        }
+        public java.util.List<ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets> getMountTargets() {
+            return this.mountTargets;
+        }
+
     }
 
     public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsPackageListPackages extends TeaModel {
@@ -102,102 +195,9 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
 
     }
 
-    public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("MountTargetDomain")
-        public String mountTargetDomain;
-
-        @NameInMap("AccessGroup")
-        public String accessGroup;
-
-        @NameInMap("VswId")
-        public String vswId;
-
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        public static ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets build(java.util.Map<String, ?> map) throws Exception {
-            ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets self = new ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets();
-            return TeaModel.build(map, self);
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setMountTargetDomain(String mountTargetDomain) {
-            this.mountTargetDomain = mountTargetDomain;
-            return this;
-        }
-        public String getMountTargetDomain() {
-            return this.mountTargetDomain;
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setAccessGroup(String accessGroup) {
-            this.accessGroup = accessGroup;
-            return this;
-        }
-        public String getAccessGroup() {
-            return this.accessGroup;
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setVswId(String vswId) {
-            this.vswId = vswId;
-            return this;
-        }
-        public String getVswId() {
-            return this.vswId;
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets setNetworkType(String networkType) {
-            this.networkType = networkType;
-            return this;
-        }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-    }
-
-    public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList extends TeaModel {
-        @NameInMap("MountTargets")
-        public java.util.List<ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets> mountTargets;
-
-        public static ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList build(java.util.Map<String, ?> map) throws Exception {
-            ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList self = new ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList setMountTargets(java.util.List<ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets> mountTargets) {
-            this.mountTargets = mountTargets;
-            return this;
-        }
-        public java.util.List<ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets> getMountTargets() {
-            return this.mountTargets;
-        }
-
-    }
-
     public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("BandWidth")
+        public Integer bandWidth;
 
         @NameInMap("Capacity")
         public Integer capacity;
@@ -205,14 +205,11 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("StorageType")
-        public String storageType;
+        @NameInMap("Destription")
+        public String destription;
 
-        @NameInMap("BandWidth")
-        public Integer bandWidth;
-
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("EncryptType")
+        public Integer encryptType;
 
         @NameInMap("FileSystemId")
         public String fileSystemId;
@@ -223,32 +220,35 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         @NameInMap("MeteredSize")
         public Integer meteredSize;
 
-        @NameInMap("EncryptType")
-        public Integer encryptType;
-
-        @NameInMap("ProtocolType")
-        public String protocolType;
-
-        @NameInMap("Destription")
-        public String destription;
+        @NameInMap("MountTargetList")
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList mountTargetList;
 
         @NameInMap("PackageList")
         public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsPackageList packageList;
 
-        @NameInMap("MountTargetList")
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList mountTargetList;
+        @NameInMap("ProtocolType")
+        public String protocolType;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StorageType")
+        public String storageType;
 
         public static ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems build(java.util.Map<String, ?> map) throws Exception {
             ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems self = new ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems();
             return TeaModel.build(map, self);
         }
 
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setStatus(String status) {
-            this.status = status;
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setBandWidth(Integer bandWidth) {
+            this.bandWidth = bandWidth;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public Integer getBandWidth() {
+            return this.bandWidth;
         }
 
         public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setCapacity(Integer capacity) {
@@ -267,28 +267,20 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setStorageType(String storageType) {
-            this.storageType = storageType;
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setDestription(String destription) {
+            this.destription = destription;
             return this;
         }
-        public String getStorageType() {
-            return this.storageType;
+        public String getDestription() {
+            return this.destription;
         }
 
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setBandWidth(Integer bandWidth) {
-            this.bandWidth = bandWidth;
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setEncryptType(Integer encryptType) {
+            this.encryptType = encryptType;
             return this;
         }
-        public Integer getBandWidth() {
-            return this.bandWidth;
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
+        public Integer getEncryptType() {
+            return this.encryptType;
         }
 
         public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setFileSystemId(String fileSystemId) {
@@ -315,28 +307,12 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             return this.meteredSize;
         }
 
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setEncryptType(Integer encryptType) {
-            this.encryptType = encryptType;
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setMountTargetList(ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList mountTargetList) {
+            this.mountTargetList = mountTargetList;
             return this;
         }
-        public Integer getEncryptType() {
-            return this.encryptType;
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setProtocolType(String protocolType) {
-            this.protocolType = protocolType;
-            return this;
-        }
-        public String getProtocolType() {
-            return this.protocolType;
-        }
-
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setDestription(String destription) {
-            this.destription = destription;
-            return this;
-        }
-        public String getDestription() {
-            return this.destription;
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList getMountTargetList() {
+            return this.mountTargetList;
         }
 
         public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setPackageList(ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsPackageList packageList) {
@@ -347,12 +323,36 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
             return this.packageList;
         }
 
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setMountTargetList(ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList mountTargetList) {
-            this.mountTargetList = mountTargetList;
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
             return this;
         }
-        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList getMountTargetList() {
-            return this.mountTargetList;
+        public String getProtocolType() {
+            return this.protocolType;
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
     }

@@ -32,26 +32,26 @@ public class AddUsersRequest extends TeaModel {
     }
 
     public static class AddUsersRequestUser extends TeaModel {
-        @NameInMap("Password")
-        public String password;
+        @NameInMap("Group")
+        public String group;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Group")
-        public String group;
+        @NameInMap("Password")
+        public String password;
 
         public static AddUsersRequestUser build(java.util.Map<String, ?> map) throws Exception {
             AddUsersRequestUser self = new AddUsersRequestUser();
             return TeaModel.build(map, self);
         }
 
-        public AddUsersRequestUser setPassword(String password) {
-            this.password = password;
+        public AddUsersRequestUser setGroup(String group) {
+            this.group = group;
             return this;
         }
-        public String getPassword() {
-            return this.password;
+        public String getGroup() {
+            return this.group;
         }
 
         public AddUsersRequestUser setName(String name) {
@@ -62,12 +62,12 @@ public class AddUsersRequest extends TeaModel {
             return this.name;
         }
 
-        public AddUsersRequestUser setGroup(String group) {
-            this.group = group;
+        public AddUsersRequestUser setPassword(String password) {
+            this.password = password;
             return this;
         }
-        public String getGroup() {
-            return this.group;
+        public String getPassword() {
+            return this.password;
         }
 
     }

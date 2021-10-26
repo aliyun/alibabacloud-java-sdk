@@ -4,23 +4,20 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ApplyNodesRequest extends TeaModel {
+    @NameInMap("AllocatePublicAddress")
+    public Boolean allocatePublicAddress;
+
     @NameInMap("ClusterId")
     public String clusterId;
-
-    @NameInMap("ImageId")
-    public String imageId;
-
-    @NameInMap("ComputeSpotStrategy")
-    public String computeSpotStrategy;
 
     @NameInMap("ComputeSpotPriceLimit")
     public Float computeSpotPriceLimit;
 
-    @NameInMap("SystemDiskType")
-    public String systemDiskType;
+    @NameInMap("ComputeSpotStrategy")
+    public String computeSpotStrategy;
 
-    @NameInMap("SystemDiskSize")
-    public Integer systemDiskSize;
+    @NameInMap("Cores")
+    public Integer cores;
 
     @NameInMap("HostNamePrefix")
     public String hostNamePrefix;
@@ -28,8 +25,14 @@ public class ApplyNodesRequest extends TeaModel {
     @NameInMap("HostNameSuffix")
     public String hostNameSuffix;
 
-    @NameInMap("AllocatePublicAddress")
-    public Boolean allocatePublicAddress;
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("InstanceFamilyLevel")
+    public String instanceFamilyLevel;
+
+    @NameInMap("InstanceTypeModel")
+    public java.util.List<ApplyNodesRequestInstanceTypeModel> instanceTypeModel;
 
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -40,23 +43,23 @@ public class ApplyNodesRequest extends TeaModel {
     @NameInMap("InternetMaxBandWidthOut")
     public Integer internetMaxBandWidthOut;
 
-    @NameInMap("Cores")
-    public Integer cores;
+    @NameInMap("Interval")
+    public Integer interval;
 
     @NameInMap("Memory")
     public Integer memory;
 
-    @NameInMap("InstanceFamilyLevel")
-    public String instanceFamilyLevel;
-
-    @NameInMap("TargetCapacity")
-    public Integer targetCapacity;
+    @NameInMap("PriorityStrategy")
+    public String priorityStrategy;
 
     @NameInMap("ResourceAmountType")
     public String resourceAmountType;
 
-    @NameInMap("PriorityStrategy")
-    public String priorityStrategy;
+    @NameInMap("Round")
+    public Integer round;
+
+    @NameInMap("StrictResourceProvision")
+    public Boolean strictResourceProvision;
 
     @NameInMap("StrictSatisfiedTargetCapacity")
     public Boolean strictSatisfiedTargetCapacity;
@@ -64,27 +67,32 @@ public class ApplyNodesRequest extends TeaModel {
     @NameInMap("SystemDiskLevel")
     public String systemDiskLevel;
 
-    @NameInMap("StrictResourceProvision")
-    public Boolean strictResourceProvision;
+    @NameInMap("SystemDiskSize")
+    public Integer systemDiskSize;
 
-    @NameInMap("Round")
-    public Integer round;
-
-    @NameInMap("Interval")
-    public Integer interval;
-
-    @NameInMap("ZoneInfos")
-    public java.util.List<ApplyNodesRequestZoneInfos> zoneInfos;
-
-    @NameInMap("InstanceTypeModel")
-    public java.util.List<ApplyNodesRequestInstanceTypeModel> instanceTypeModel;
+    @NameInMap("SystemDiskType")
+    public String systemDiskType;
 
     @NameInMap("Tag")
     public java.util.List<ApplyNodesRequestTag> tag;
 
+    @NameInMap("TargetCapacity")
+    public Integer targetCapacity;
+
+    @NameInMap("ZoneInfos")
+    public java.util.List<ApplyNodesRequestZoneInfos> zoneInfos;
+
     public static ApplyNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyNodesRequest self = new ApplyNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ApplyNodesRequest setAllocatePublicAddress(Boolean allocatePublicAddress) {
+        this.allocatePublicAddress = allocatePublicAddress;
+        return this;
+    }
+    public Boolean getAllocatePublicAddress() {
+        return this.allocatePublicAddress;
     }
 
     public ApplyNodesRequest setClusterId(String clusterId) {
@@ -95,12 +103,12 @@ public class ApplyNodesRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ApplyNodesRequest setImageId(String imageId) {
-        this.imageId = imageId;
+    public ApplyNodesRequest setComputeSpotPriceLimit(Float computeSpotPriceLimit) {
+        this.computeSpotPriceLimit = computeSpotPriceLimit;
         return this;
     }
-    public String getImageId() {
-        return this.imageId;
+    public Float getComputeSpotPriceLimit() {
+        return this.computeSpotPriceLimit;
     }
 
     public ApplyNodesRequest setComputeSpotStrategy(String computeSpotStrategy) {
@@ -111,28 +119,12 @@ public class ApplyNodesRequest extends TeaModel {
         return this.computeSpotStrategy;
     }
 
-    public ApplyNodesRequest setComputeSpotPriceLimit(Float computeSpotPriceLimit) {
-        this.computeSpotPriceLimit = computeSpotPriceLimit;
+    public ApplyNodesRequest setCores(Integer cores) {
+        this.cores = cores;
         return this;
     }
-    public Float getComputeSpotPriceLimit() {
-        return this.computeSpotPriceLimit;
-    }
-
-    public ApplyNodesRequest setSystemDiskType(String systemDiskType) {
-        this.systemDiskType = systemDiskType;
-        return this;
-    }
-    public String getSystemDiskType() {
-        return this.systemDiskType;
-    }
-
-    public ApplyNodesRequest setSystemDiskSize(Integer systemDiskSize) {
-        this.systemDiskSize = systemDiskSize;
-        return this;
-    }
-    public Integer getSystemDiskSize() {
-        return this.systemDiskSize;
+    public Integer getCores() {
+        return this.cores;
     }
 
     public ApplyNodesRequest setHostNamePrefix(String hostNamePrefix) {
@@ -151,12 +143,28 @@ public class ApplyNodesRequest extends TeaModel {
         return this.hostNameSuffix;
     }
 
-    public ApplyNodesRequest setAllocatePublicAddress(Boolean allocatePublicAddress) {
-        this.allocatePublicAddress = allocatePublicAddress;
+    public ApplyNodesRequest setImageId(String imageId) {
+        this.imageId = imageId;
         return this;
     }
-    public Boolean getAllocatePublicAddress() {
-        return this.allocatePublicAddress;
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public ApplyNodesRequest setInstanceFamilyLevel(String instanceFamilyLevel) {
+        this.instanceFamilyLevel = instanceFamilyLevel;
+        return this;
+    }
+    public String getInstanceFamilyLevel() {
+        return this.instanceFamilyLevel;
+    }
+
+    public ApplyNodesRequest setInstanceTypeModel(java.util.List<ApplyNodesRequestInstanceTypeModel> instanceTypeModel) {
+        this.instanceTypeModel = instanceTypeModel;
+        return this;
+    }
+    public java.util.List<ApplyNodesRequestInstanceTypeModel> getInstanceTypeModel() {
+        return this.instanceTypeModel;
     }
 
     public ApplyNodesRequest setInternetChargeType(String internetChargeType) {
@@ -183,12 +191,12 @@ public class ApplyNodesRequest extends TeaModel {
         return this.internetMaxBandWidthOut;
     }
 
-    public ApplyNodesRequest setCores(Integer cores) {
-        this.cores = cores;
+    public ApplyNodesRequest setInterval(Integer interval) {
+        this.interval = interval;
         return this;
     }
-    public Integer getCores() {
-        return this.cores;
+    public Integer getInterval() {
+        return this.interval;
     }
 
     public ApplyNodesRequest setMemory(Integer memory) {
@@ -199,20 +207,12 @@ public class ApplyNodesRequest extends TeaModel {
         return this.memory;
     }
 
-    public ApplyNodesRequest setInstanceFamilyLevel(String instanceFamilyLevel) {
-        this.instanceFamilyLevel = instanceFamilyLevel;
+    public ApplyNodesRequest setPriorityStrategy(String priorityStrategy) {
+        this.priorityStrategy = priorityStrategy;
         return this;
     }
-    public String getInstanceFamilyLevel() {
-        return this.instanceFamilyLevel;
-    }
-
-    public ApplyNodesRequest setTargetCapacity(Integer targetCapacity) {
-        this.targetCapacity = targetCapacity;
-        return this;
-    }
-    public Integer getTargetCapacity() {
-        return this.targetCapacity;
+    public String getPriorityStrategy() {
+        return this.priorityStrategy;
     }
 
     public ApplyNodesRequest setResourceAmountType(String resourceAmountType) {
@@ -223,12 +223,20 @@ public class ApplyNodesRequest extends TeaModel {
         return this.resourceAmountType;
     }
 
-    public ApplyNodesRequest setPriorityStrategy(String priorityStrategy) {
-        this.priorityStrategy = priorityStrategy;
+    public ApplyNodesRequest setRound(Integer round) {
+        this.round = round;
         return this;
     }
-    public String getPriorityStrategy() {
-        return this.priorityStrategy;
+    public Integer getRound() {
+        return this.round;
+    }
+
+    public ApplyNodesRequest setStrictResourceProvision(Boolean strictResourceProvision) {
+        this.strictResourceProvision = strictResourceProvision;
+        return this;
+    }
+    public Boolean getStrictResourceProvision() {
+        return this.strictResourceProvision;
     }
 
     public ApplyNodesRequest setStrictSatisfiedTargetCapacity(Boolean strictSatisfiedTargetCapacity) {
@@ -247,44 +255,20 @@ public class ApplyNodesRequest extends TeaModel {
         return this.systemDiskLevel;
     }
 
-    public ApplyNodesRequest setStrictResourceProvision(Boolean strictResourceProvision) {
-        this.strictResourceProvision = strictResourceProvision;
+    public ApplyNodesRequest setSystemDiskSize(Integer systemDiskSize) {
+        this.systemDiskSize = systemDiskSize;
         return this;
     }
-    public Boolean getStrictResourceProvision() {
-        return this.strictResourceProvision;
+    public Integer getSystemDiskSize() {
+        return this.systemDiskSize;
     }
 
-    public ApplyNodesRequest setRound(Integer round) {
-        this.round = round;
+    public ApplyNodesRequest setSystemDiskType(String systemDiskType) {
+        this.systemDiskType = systemDiskType;
         return this;
     }
-    public Integer getRound() {
-        return this.round;
-    }
-
-    public ApplyNodesRequest setInterval(Integer interval) {
-        this.interval = interval;
-        return this;
-    }
-    public Integer getInterval() {
-        return this.interval;
-    }
-
-    public ApplyNodesRequest setZoneInfos(java.util.List<ApplyNodesRequestZoneInfos> zoneInfos) {
-        this.zoneInfos = zoneInfos;
-        return this;
-    }
-    public java.util.List<ApplyNodesRequestZoneInfos> getZoneInfos() {
-        return this.zoneInfos;
-    }
-
-    public ApplyNodesRequest setInstanceTypeModel(java.util.List<ApplyNodesRequestInstanceTypeModel> instanceTypeModel) {
-        this.instanceTypeModel = instanceTypeModel;
-        return this;
-    }
-    public java.util.List<ApplyNodesRequestInstanceTypeModel> getInstanceTypeModel() {
-        return this.instanceTypeModel;
+    public String getSystemDiskType() {
+        return this.systemDiskType;
     }
 
     public ApplyNodesRequest setTag(java.util.List<ApplyNodesRequestTag> tag) {
@@ -295,49 +279,43 @@ public class ApplyNodesRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class ApplyNodesRequestZoneInfos extends TeaModel {
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
+    public ApplyNodesRequest setTargetCapacity(Integer targetCapacity) {
+        this.targetCapacity = targetCapacity;
+        return this;
+    }
+    public Integer getTargetCapacity() {
+        return this.targetCapacity;
+    }
 
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        public static ApplyNodesRequestZoneInfos build(java.util.Map<String, ?> map) throws Exception {
-            ApplyNodesRequestZoneInfos self = new ApplyNodesRequestZoneInfos();
-            return TeaModel.build(map, self);
-        }
-
-        public ApplyNodesRequestZoneInfos setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public ApplyNodesRequestZoneInfos setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
+    public ApplyNodesRequest setZoneInfos(java.util.List<ApplyNodesRequestZoneInfos> zoneInfos) {
+        this.zoneInfos = zoneInfos;
+        return this;
+    }
+    public java.util.List<ApplyNodesRequestZoneInfos> getZoneInfos() {
+        return this.zoneInfos;
     }
 
     public static class ApplyNodesRequestInstanceTypeModel extends TeaModel {
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("MaxPrice")
         public Float maxPrice;
 
         @NameInMap("TargetImageId")
         public String targetImageId;
 
-        @NameInMap("InstanceType")
-        public String instanceType;
-
         public static ApplyNodesRequestInstanceTypeModel build(java.util.Map<String, ?> map) throws Exception {
             ApplyNodesRequestInstanceTypeModel self = new ApplyNodesRequestInstanceTypeModel();
             return TeaModel.build(map, self);
+        }
+
+        public ApplyNodesRequestInstanceTypeModel setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public ApplyNodesRequestInstanceTypeModel setMaxPrice(Float maxPrice) {
@@ -354,14 +332,6 @@ public class ApplyNodesRequest extends TeaModel {
         }
         public String getTargetImageId() {
             return this.targetImageId;
-        }
-
-        public ApplyNodesRequestInstanceTypeModel setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
         }
 
     }
@@ -392,6 +362,36 @@ public class ApplyNodesRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class ApplyNodesRequestZoneInfos extends TeaModel {
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static ApplyNodesRequestZoneInfos build(java.util.Map<String, ?> map) throws Exception {
+            ApplyNodesRequestZoneInfos self = new ApplyNodesRequestZoneInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyNodesRequestZoneInfos setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public ApplyNodesRequestZoneInfos setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

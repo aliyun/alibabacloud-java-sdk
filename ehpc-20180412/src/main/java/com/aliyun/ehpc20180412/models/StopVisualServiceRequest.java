@@ -4,11 +4,11 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class StopVisualServiceRequest extends TeaModel {
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     @NameInMap("CidrIp")
     public String cidrIp;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     @NameInMap("Port")
     public Integer port;
@@ -18,20 +18,20 @@ public class StopVisualServiceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public StopVisualServiceRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
-    }
-
     public StopVisualServiceRequest setCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
     }
     public String getCidrIp() {
         return this.cidrIp;
+    }
+
+    public StopVisualServiceRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public StopVisualServiceRequest setPort(Integer port) {

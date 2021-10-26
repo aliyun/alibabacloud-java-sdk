@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerAppResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ContainerAppInfo")
     public DescribeContainerAppResponseBodyContainerAppInfo containerAppInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeContainerAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeContainerAppResponseBody self = new DescribeContainerAppResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeContainerAppResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeContainerAppResponseBody setContainerAppInfo(DescribeContainerAppResponseBodyContainerAppInfo containerAppInfo) {
@@ -31,18 +23,23 @@ public class DescribeContainerAppResponseBody extends TeaModel {
         return this.containerAppInfo;
     }
 
+    public DescribeContainerAppResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeContainerAppResponseBodyContainerAppInfo extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("Repository")
-        public String repository;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("ImageTag")
         public String imageTag;
@@ -50,28 +47,15 @@ public class DescribeContainerAppResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("Repository")
+        public String repository;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeContainerAppResponseBodyContainerAppInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeContainerAppResponseBodyContainerAppInfo self = new DescribeContainerAppResponseBodyContainerAppInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeContainerAppResponseBodyContainerAppInfo setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeContainerAppResponseBodyContainerAppInfo setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public DescribeContainerAppResponseBodyContainerAppInfo setCreateTime(String createTime) {
@@ -82,12 +66,20 @@ public class DescribeContainerAppResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeContainerAppResponseBodyContainerAppInfo setRepository(String repository) {
-            this.repository = repository;
+        public DescribeContainerAppResponseBodyContainerAppInfo setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getRepository() {
-            return this.repository;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeContainerAppResponseBodyContainerAppInfo setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public DescribeContainerAppResponseBodyContainerAppInfo setImageTag(String imageTag) {
@@ -106,12 +98,20 @@ public class DescribeContainerAppResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerAppResponseBodyContainerAppInfo setId(String id) {
-            this.id = id;
+        public DescribeContainerAppResponseBodyContainerAppInfo setRepository(String repository) {
+            this.repository = repository;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getRepository() {
+            return this.repository;
+        }
+
+        public DescribeContainerAppResponseBodyContainerAppInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

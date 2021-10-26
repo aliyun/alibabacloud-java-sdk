@@ -7,17 +7,17 @@ public class GetHealthMonitorLogsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("StartTime")
-    public Integer startTime;
+    @NameInMap("EnableReverse")
+    public Boolean enableReverse;
 
     @NameInMap("EndTime")
     public Integer endTime;
 
-    @NameInMap("EnableReverse")
-    public Boolean enableReverse;
-
     @NameInMap("Filter")
     public String filter;
+
+    @NameInMap("StartTime")
+    public Integer startTime;
 
     public static GetHealthMonitorLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHealthMonitorLogsRequest self = new GetHealthMonitorLogsRequest();
@@ -32,12 +32,12 @@ public class GetHealthMonitorLogsRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public GetHealthMonitorLogsRequest setStartTime(Integer startTime) {
-        this.startTime = startTime;
+    public GetHealthMonitorLogsRequest setEnableReverse(Boolean enableReverse) {
+        this.enableReverse = enableReverse;
         return this;
     }
-    public Integer getStartTime() {
-        return this.startTime;
+    public Boolean getEnableReverse() {
+        return this.enableReverse;
     }
 
     public GetHealthMonitorLogsRequest setEndTime(Integer endTime) {
@@ -48,20 +48,20 @@ public class GetHealthMonitorLogsRequest extends TeaModel {
         return this.endTime;
     }
 
-    public GetHealthMonitorLogsRequest setEnableReverse(Boolean enableReverse) {
-        this.enableReverse = enableReverse;
-        return this;
-    }
-    public Boolean getEnableReverse() {
-        return this.enableReverse;
-    }
-
     public GetHealthMonitorLogsRequest setFilter(String filter) {
         this.filter = filter;
         return this;
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public GetHealthMonitorLogsRequest setStartTime(Integer startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Integer getStartTime() {
+        return this.startTime;
     }
 
 }

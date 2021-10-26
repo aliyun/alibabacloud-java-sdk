@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListNodesNoPagingResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Nodes")
     public ListNodesNoPagingResponseBodyNodes nodes;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListNodesNoPagingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNodesNoPagingResponseBody self = new ListNodesNoPagingResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListNodesNoPagingResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListNodesNoPagingResponseBody setNodes(ListNodesNoPagingResponseBodyNodes nodes) {
@@ -31,33 +23,33 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
         return this.nodes;
     }
 
-    public static class ListNodesNoPagingResponseBodyNodesNodeInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public ListNodesNoPagingResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListNodesNoPagingResponseBodyNodesNodeInfo extends TeaModel {
         @NameInMap("HostName")
         public String hostName;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("ImageId")
-        public String imageId;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Status")
+        public String status;
+
         public static ListNodesNoPagingResponseBodyNodesNodeInfo build(java.util.Map<String, ?> map) throws Exception {
             ListNodesNoPagingResponseBodyNodesNodeInfo self = new ListNodesNoPagingResponseBodyNodesNodeInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListNodesNoPagingResponseBodyNodesNodeInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListNodesNoPagingResponseBodyNodesNodeInfo setHostName(String hostName) {
@@ -68,12 +60,12 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             return this.hostName;
         }
 
-        public ListNodesNoPagingResponseBodyNodesNodeInfo setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
+        public ListNodesNoPagingResponseBodyNodesNodeInfo setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getInstanceType() {
-            return this.instanceType;
+        public String getId() {
+            return this.id;
         }
 
         public ListNodesNoPagingResponseBodyNodesNodeInfo setImageId(String imageId) {
@@ -84,12 +76,20 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public ListNodesNoPagingResponseBodyNodesNodeInfo setId(String id) {
-            this.id = id;
+        public ListNodesNoPagingResponseBodyNodesNodeInfo setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public ListNodesNoPagingResponseBodyNodesNodeInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

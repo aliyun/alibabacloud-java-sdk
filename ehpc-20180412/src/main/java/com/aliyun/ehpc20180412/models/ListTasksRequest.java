@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
+    @NameInMap("Archived")
+    public Boolean archived;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -16,12 +19,17 @@ public class ListTasksRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
-    @NameInMap("Archived")
-    public Boolean archived;
-
     public static ListTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTasksRequest self = new ListTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTasksRequest setArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
+    public Boolean getArchived() {
+        return this.archived;
     }
 
     public ListTasksRequest setClusterId(String clusterId) {
@@ -54,14 +62,6 @@ public class ListTasksRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public ListTasksRequest setArchived(Boolean archived) {
-        this.archived = archived;
-        return this;
-    }
-    public Boolean getArchived() {
-        return this.archived;
     }
 
 }

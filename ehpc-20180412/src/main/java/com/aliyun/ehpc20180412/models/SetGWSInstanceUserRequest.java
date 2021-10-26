@@ -7,11 +7,11 @@ public class SetGWSInstanceUserRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("UserUid")
-    public String userUid;
-
     @NameInMap("UserName")
     public String userName;
+
+    @NameInMap("UserUid")
+    public String userUid;
 
     public static SetGWSInstanceUserRequest build(java.util.Map<String, ?> map) throws Exception {
         SetGWSInstanceUserRequest self = new SetGWSInstanceUserRequest();
@@ -26,20 +26,20 @@ public class SetGWSInstanceUserRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public SetGWSInstanceUserRequest setUserUid(String userUid) {
-        this.userUid = userUid;
-        return this;
-    }
-    public String getUserUid() {
-        return this.userUid;
-    }
-
     public SetGWSInstanceUserRequest setUserName(String userName) {
         this.userName = userName;
         return this;
     }
     public String getUserName() {
         return this.userName;
+    }
+
+    public SetGWSInstanceUserRequest setUserUid(String userUid) {
+        this.userUid = userUid;
+        return this;
+    }
+    public String getUserUid() {
+        return this.userUid;
     }
 
 }

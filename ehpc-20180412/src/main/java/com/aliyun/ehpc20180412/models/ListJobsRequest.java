@@ -10,17 +10,17 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("Owner")
     public String owner;
 
-    @NameInMap("State")
-    public String state;
-
-    @NameInMap("Rerunable")
-    public String rerunable;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Rerunable")
+    public String rerunable;
+
+    @NameInMap("State")
+    public String state;
 
     public static ListJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobsRequest self = new ListJobsRequest();
@@ -43,22 +43,6 @@ public class ListJobsRequest extends TeaModel {
         return this.owner;
     }
 
-    public ListJobsRequest setState(String state) {
-        this.state = state;
-        return this;
-    }
-    public String getState() {
-        return this.state;
-    }
-
-    public ListJobsRequest setRerunable(String rerunable) {
-        this.rerunable = rerunable;
-        return this;
-    }
-    public String getRerunable() {
-        return this.rerunable;
-    }
-
     public ListJobsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -73,6 +57,22 @@ public class ListJobsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListJobsRequest setRerunable(String rerunable) {
+        this.rerunable = rerunable;
+        return this;
+    }
+    public String getRerunable() {
+        return this.rerunable;
+    }
+
+    public ListJobsRequest setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
     }
 
 }

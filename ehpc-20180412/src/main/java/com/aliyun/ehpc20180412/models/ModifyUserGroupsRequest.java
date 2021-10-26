@@ -32,23 +32,15 @@ public class ModifyUserGroupsRequest extends TeaModel {
     }
 
     public static class ModifyUserGroupsRequestUser extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Group")
         public String group;
+
+        @NameInMap("Name")
+        public String name;
 
         public static ModifyUserGroupsRequestUser build(java.util.Map<String, ?> map) throws Exception {
             ModifyUserGroupsRequestUser self = new ModifyUserGroupsRequestUser();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyUserGroupsRequestUser setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ModifyUserGroupsRequestUser setGroup(String group) {
@@ -57,6 +49,14 @@ public class ModifyUserGroupsRequest extends TeaModel {
         }
         public String getGroup() {
             return this.group;
+        }
+
+        public ModifyUserGroupsRequestUser setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

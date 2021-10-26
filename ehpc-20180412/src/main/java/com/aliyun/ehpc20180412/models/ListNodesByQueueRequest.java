@@ -7,14 +7,14 @@ public class ListNodesByQueueRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("QueueName")
-    public String queueName;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("QueueName")
+    public String queueName;
 
     public static ListNodesByQueueRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodesByQueueRequest self = new ListNodesByQueueRequest();
@@ -27,14 +27,6 @@ public class ListNodesByQueueRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public ListNodesByQueueRequest setQueueName(String queueName) {
-        this.queueName = queueName;
-        return this;
-    }
-    public String getQueueName() {
-        return this.queueName;
     }
 
     public ListNodesByQueueRequest setPageNumber(Integer pageNumber) {
@@ -51,6 +43,14 @@ public class ListNodesByQueueRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListNodesByQueueRequest setQueueName(String queueName) {
+        this.queueName = queueName;
+        return this;
+    }
+    public String getQueueName() {
+        return this.queueName;
     }
 
 }

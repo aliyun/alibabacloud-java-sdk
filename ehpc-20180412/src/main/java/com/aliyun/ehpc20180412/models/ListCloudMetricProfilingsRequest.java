@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListCloudMetricProfilingsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
@@ -16,17 +13,12 @@ public class ListCloudMetricProfilingsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListCloudMetricProfilingsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCloudMetricProfilingsRequest self = new ListCloudMetricProfilingsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListCloudMetricProfilingsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListCloudMetricProfilingsRequest setClusterId(String clusterId) {
@@ -51,6 +43,14 @@ public class ListCloudMetricProfilingsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListCloudMetricProfilingsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -16,11 +16,11 @@ public class DescribeGWSInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("UserUid")
-    public Long userUid;
-
     @NameInMap("UserName")
     public String userName;
+
+    @NameInMap("UserUid")
+    public Long userUid;
 
     public static DescribeGWSInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGWSInstancesRequest self = new DescribeGWSInstancesRequest();
@@ -59,20 +59,20 @@ public class DescribeGWSInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeGWSInstancesRequest setUserUid(Long userUid) {
-        this.userUid = userUid;
-        return this;
-    }
-    public Long getUserUid() {
-        return this.userUid;
-    }
-
     public DescribeGWSInstancesRequest setUserName(String userName) {
         this.userName = userName;
         return this;
     }
     public String getUserName() {
         return this.userName;
+    }
+
+    public DescribeGWSInstancesRequest setUserUid(Long userUid) {
+        this.userUid = userUid;
+        return this;
+    }
+    public Long getUserUid() {
+        return this.userUid;
     }
 
 }

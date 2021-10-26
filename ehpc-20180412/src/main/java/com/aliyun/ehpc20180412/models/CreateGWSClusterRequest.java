@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class CreateGWSClusterRequest extends TeaModel {
-    @NameInMap("VpcId")
-    public String vpcId;
-
     @NameInMap("ClusterType")
     public String clusterType;
 
@@ -16,17 +13,12 @@ public class CreateGWSClusterRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static CreateGWSClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGWSClusterRequest self = new CreateGWSClusterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateGWSClusterRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
     }
 
     public CreateGWSClusterRequest setClusterType(String clusterType) {
@@ -51,6 +43,14 @@ public class CreateGWSClusterRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public CreateGWSClusterRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

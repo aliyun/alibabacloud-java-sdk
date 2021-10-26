@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ImageInfo")
     public DescribeImageResponseBodyImageInfo imageInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageResponseBody self = new DescribeImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeImageResponseBody setImageInfo(DescribeImageResponseBodyImageInfo imageInfo) {
@@ -31,55 +23,47 @@ public class DescribeImageResponseBody extends TeaModel {
         return this.imageInfo;
     }
 
+    public DescribeImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeImageResponseBodyImageInfo extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("UpdateDateTime")
-        public String updateDateTime;
+        @NameInMap("ImageId")
+        public String imageId;
 
         @NameInMap("Repository")
         public String repository;
 
-        @NameInMap("Tag")
-        public String tag;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("System")
         public String system;
 
-        @NameInMap("ImageId")
-        public String imageId;
+        @NameInMap("Tag")
+        public String tag;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("UpdateDateTime")
+        public String updateDateTime;
 
         public static DescribeImageResponseBodyImageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageResponseBodyImageInfo self = new DescribeImageResponseBodyImageInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageResponseBodyImageInfo setType(String type) {
-            this.type = type;
+        public DescribeImageResponseBodyImageInfo setImageId(String imageId) {
+            this.imageId = imageId;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeImageResponseBodyImageInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeImageResponseBodyImageInfo setUpdateDateTime(String updateDateTime) {
-            this.updateDateTime = updateDateTime;
-            return this;
-        }
-        public String getUpdateDateTime() {
-            return this.updateDateTime;
+        public String getImageId() {
+            return this.imageId;
         }
 
         public DescribeImageResponseBodyImageInfo setRepository(String repository) {
@@ -90,12 +74,12 @@ public class DescribeImageResponseBody extends TeaModel {
             return this.repository;
         }
 
-        public DescribeImageResponseBodyImageInfo setTag(String tag) {
-            this.tag = tag;
+        public DescribeImageResponseBodyImageInfo setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getTag() {
-            return this.tag;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeImageResponseBodyImageInfo setSystem(String system) {
@@ -106,12 +90,28 @@ public class DescribeImageResponseBody extends TeaModel {
             return this.system;
         }
 
-        public DescribeImageResponseBodyImageInfo setImageId(String imageId) {
-            this.imageId = imageId;
+        public DescribeImageResponseBodyImageInfo setTag(String tag) {
+            this.tag = tag;
             return this;
         }
-        public String getImageId() {
-            return this.imageId;
+        public String getTag() {
+            return this.tag;
+        }
+
+        public DescribeImageResponseBodyImageInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeImageResponseBodyImageInfo setUpdateDateTime(String updateDateTime) {
+            this.updateDateTime = updateDateTime;
+            return this;
+        }
+        public String getUpdateDateTime() {
+            return this.updateDateTime;
         }
 
     }

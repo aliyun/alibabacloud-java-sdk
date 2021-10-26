@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClientRequest extends TeaModel {
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     @NameInMap("ClientVersion")
     public String clientVersion;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     public static UpgradeClientRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeClientRequest self = new UpgradeClientRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradeClientRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public UpgradeClientRequest setClientVersion(String clientVersion) {
@@ -29,6 +21,14 @@ public class UpgradeClientRequest extends TeaModel {
     }
     public String getClientVersion() {
         return this.clientVersion;
+    }
+
+    public UpgradeClientRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
 }

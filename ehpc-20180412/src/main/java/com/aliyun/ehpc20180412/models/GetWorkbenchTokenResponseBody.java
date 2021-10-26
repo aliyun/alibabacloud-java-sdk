@@ -32,17 +32,17 @@ public class GetWorkbenchTokenResponseBody extends TeaModel {
     }
 
     public static class GetWorkbenchTokenResponseBodyRootInstanceLoginView extends TeaModel {
-        @NameInMap("defaultViewUrl")
-        public String defaultViewUrl;
-
-        @NameInMap("rdpViewUrl")
-        public String rdpViewUrl;
-
         @NameInMap("baseViewUrl")
         public String baseViewUrl;
 
+        @NameInMap("defaultViewUrl")
+        public String defaultViewUrl;
+
         @NameInMap("fileTreeViewUrl")
         public String fileTreeViewUrl;
+
+        @NameInMap("rdpViewUrl")
+        public String rdpViewUrl;
 
         @NameInMap("terminalViewUrl")
         public String terminalViewUrl;
@@ -55,22 +55,6 @@ public class GetWorkbenchTokenResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetWorkbenchTokenResponseBodyRootInstanceLoginView setDefaultViewUrl(String defaultViewUrl) {
-            this.defaultViewUrl = defaultViewUrl;
-            return this;
-        }
-        public String getDefaultViewUrl() {
-            return this.defaultViewUrl;
-        }
-
-        public GetWorkbenchTokenResponseBodyRootInstanceLoginView setRdpViewUrl(String rdpViewUrl) {
-            this.rdpViewUrl = rdpViewUrl;
-            return this;
-        }
-        public String getRdpViewUrl() {
-            return this.rdpViewUrl;
-        }
-
         public GetWorkbenchTokenResponseBodyRootInstanceLoginView setBaseViewUrl(String baseViewUrl) {
             this.baseViewUrl = baseViewUrl;
             return this;
@@ -79,12 +63,28 @@ public class GetWorkbenchTokenResponseBody extends TeaModel {
             return this.baseViewUrl;
         }
 
+        public GetWorkbenchTokenResponseBodyRootInstanceLoginView setDefaultViewUrl(String defaultViewUrl) {
+            this.defaultViewUrl = defaultViewUrl;
+            return this;
+        }
+        public String getDefaultViewUrl() {
+            return this.defaultViewUrl;
+        }
+
         public GetWorkbenchTokenResponseBodyRootInstanceLoginView setFileTreeViewUrl(String fileTreeViewUrl) {
             this.fileTreeViewUrl = fileTreeViewUrl;
             return this;
         }
         public String getFileTreeViewUrl() {
             return this.fileTreeViewUrl;
+        }
+
+        public GetWorkbenchTokenResponseBodyRootInstanceLoginView setRdpViewUrl(String rdpViewUrl) {
+            this.rdpViewUrl = rdpViewUrl;
+            return this;
+        }
+        public String getRdpViewUrl() {
+            return this.rdpViewUrl;
         }
 
         public GetWorkbenchTokenResponseBodyRootInstanceLoginView setTerminalViewUrl(String terminalViewUrl) {

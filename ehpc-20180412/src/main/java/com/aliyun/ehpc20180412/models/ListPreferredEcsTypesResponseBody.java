@@ -4,26 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListPreferredEcsTypesResponseBody extends TeaModel {
-    @NameInMap("SupportSpotInstance")
-    public Boolean supportSpotInstance;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Series")
     public ListPreferredEcsTypesResponseBodySeries series;
 
+    @NameInMap("SupportSpotInstance")
+    public Boolean supportSpotInstance;
+
     public static ListPreferredEcsTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPreferredEcsTypesResponseBody self = new ListPreferredEcsTypesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPreferredEcsTypesResponseBody setSupportSpotInstance(Boolean supportSpotInstance) {
-        this.supportSpotInstance = supportSpotInstance;
-        return this;
-    }
-    public Boolean getSupportSpotInstance() {
-        return this.supportSpotInstance;
     }
 
     public ListPreferredEcsTypesResponseBody setRequestId(String requestId) {
@@ -42,23 +34,12 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         return this.series;
     }
 
-    public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager extends TeaModel {
-        @NameInMap("InstanceTypeId")
-        public java.util.List<String> instanceTypeId;
-
-        public static ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager build(java.util.Map<String, ?> map) throws Exception {
-            ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager self = new ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager();
-            return TeaModel.build(map, self);
-        }
-
-        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager setInstanceTypeId(java.util.List<String> instanceTypeId) {
-            this.instanceTypeId = instanceTypeId;
-            return this;
-        }
-        public java.util.List<String> getInstanceTypeId() {
-            return this.instanceTypeId;
-        }
-
+    public ListPreferredEcsTypesResponseBody setSupportSpotInstance(Boolean supportSpotInstance) {
+        this.supportSpotInstance = supportSpotInstance;
+        return this;
+    }
+    public Boolean getSupportSpotInstance() {
+        return this.supportSpotInstance;
     }
 
     public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute extends TeaModel {
@@ -99,27 +80,38 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
 
     }
 
-    public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles extends TeaModel {
-        @NameInMap("Manager")
-        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager manager;
+    public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager extends TeaModel {
+        @NameInMap("InstanceTypeId")
+        public java.util.List<String> instanceTypeId;
 
+        public static ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager build(java.util.Map<String, ?> map) throws Exception {
+            ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager self = new ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager setInstanceTypeId(java.util.List<String> instanceTypeId) {
+            this.instanceTypeId = instanceTypeId;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypeId() {
+            return this.instanceTypeId;
+        }
+
+    }
+
+    public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles extends TeaModel {
         @NameInMap("Compute")
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute compute;
 
         @NameInMap("Login")
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesLogin login;
 
+        @NameInMap("Manager")
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager manager;
+
         public static ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles build(java.util.Map<String, ?> map) throws Exception {
             ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles self = new ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles();
             return TeaModel.build(map, self);
-        }
-
-        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles setManager(ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager manager) {
-            this.manager = manager;
-            return this;
-        }
-        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager getManager() {
-            return this.manager;
         }
 
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles setCompute(ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesCompute compute) {
@@ -138,29 +130,37 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             return this.login;
         }
 
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles setManager(ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager manager) {
+            this.manager = manager;
+            return this;
+        }
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRolesManager getManager() {
+            return this.manager;
+        }
+
     }
 
     public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfo extends TeaModel {
-        @NameInMap("SeriesName")
-        public String seriesName;
+        @NameInMap("Roles")
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles roles;
 
         @NameInMap("SeriesId")
         public String seriesId;
 
-        @NameInMap("Roles")
-        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles roles;
+        @NameInMap("SeriesName")
+        public String seriesName;
 
         public static ListPreferredEcsTypesResponseBodySeriesSeriesInfo build(java.util.Map<String, ?> map) throws Exception {
             ListPreferredEcsTypesResponseBodySeriesSeriesInfo self = new ListPreferredEcsTypesResponseBodySeriesSeriesInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListPreferredEcsTypesResponseBodySeriesSeriesInfo setSeriesName(String seriesName) {
-            this.seriesName = seriesName;
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfo setRoles(ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles roles) {
+            this.roles = roles;
             return this;
         }
-        public String getSeriesName() {
-            return this.seriesName;
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles getRoles() {
+            return this.roles;
         }
 
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfo setSeriesId(String seriesId) {
@@ -171,12 +171,12 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
             return this.seriesId;
         }
 
-        public ListPreferredEcsTypesResponseBodySeriesSeriesInfo setRoles(ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles roles) {
-            this.roles = roles;
+        public ListPreferredEcsTypesResponseBodySeriesSeriesInfo setSeriesName(String seriesName) {
+            this.seriesName = seriesName;
             return this;
         }
-        public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles getRoles() {
-            return this.roles;
+        public String getSeriesName() {
+            return this.seriesName;
         }
 
     }

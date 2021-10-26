@@ -4,26 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetCloudMetricProfilingRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("ProfilingId")
     public String profilingId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static GetCloudMetricProfilingRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCloudMetricProfilingRequest self = new GetCloudMetricProfilingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetCloudMetricProfilingRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetCloudMetricProfilingRequest setClusterId(String clusterId) {
@@ -40,6 +32,14 @@ public class GetCloudMetricProfilingRequest extends TeaModel {
     }
     public String getProfilingId() {
         return this.profilingId;
+    }
+
+    public GetCloudMetricProfilingRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

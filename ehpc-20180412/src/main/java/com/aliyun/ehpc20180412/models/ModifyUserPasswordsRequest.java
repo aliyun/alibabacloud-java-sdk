@@ -32,23 +32,15 @@ public class ModifyUserPasswordsRequest extends TeaModel {
     }
 
     public static class ModifyUserPasswordsRequestUser extends TeaModel {
-        @NameInMap("Password")
-        public String password;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Password")
+        public String password;
 
         public static ModifyUserPasswordsRequestUser build(java.util.Map<String, ?> map) throws Exception {
             ModifyUserPasswordsRequestUser self = new ModifyUserPasswordsRequestUser();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyUserPasswordsRequestUser setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
         }
 
         public ModifyUserPasswordsRequestUser setName(String name) {
@@ -57,6 +49,14 @@ public class ModifyUserPasswordsRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ModifyUserPasswordsRequestUser setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
         }
 
     }

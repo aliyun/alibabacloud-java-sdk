@@ -4,26 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityGroupsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SecurityGroups")
     public ListSecurityGroupsResponseBodySecurityGroups securityGroups;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListSecurityGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSecurityGroupsResponseBody self = new ListSecurityGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSecurityGroupsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public ListSecurityGroupsResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class ListSecurityGroupsResponseBody extends TeaModel {
     }
     public ListSecurityGroupsResponseBodySecurityGroups getSecurityGroups() {
         return this.securityGroups;
+    }
+
+    public ListSecurityGroupsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListSecurityGroupsResponseBodySecurityGroups extends TeaModel {
