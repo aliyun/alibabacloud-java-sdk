@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudapi20160714.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeApiGroupVpcWhitelistRequest extends TeaModel {
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("GroupId")
+    public String groupId;
+
+    public static DescribeApiGroupVpcWhitelistRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeApiGroupVpcWhitelistRequest self = new DescribeApiGroupVpcWhitelistRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeApiGroupVpcWhitelistRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeApiGroupVpcWhitelistRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+}

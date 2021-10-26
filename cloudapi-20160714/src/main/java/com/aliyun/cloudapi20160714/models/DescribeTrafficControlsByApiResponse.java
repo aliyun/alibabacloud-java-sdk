@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudapi20160714.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeTrafficControlsByApiResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeTrafficControlsByApiResponseBody body;
+
+    public static DescribeTrafficControlsByApiResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeTrafficControlsByApiResponse self = new DescribeTrafficControlsByApiResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeTrafficControlsByApiResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeTrafficControlsByApiResponse setBody(DescribeTrafficControlsByApiResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeTrafficControlsByApiResponseBody getBody() {
+        return this.body;
+    }
+
+}

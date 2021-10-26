@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudapi20160714.models;
+
+import com.aliyun.tea.*;
+
+public class ResetAppSecretResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ResetAppSecretResponseBody body;
+
+    public static ResetAppSecretResponse build(java.util.Map<String, ?> map) throws Exception {
+        ResetAppSecretResponse self = new ResetAppSecretResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ResetAppSecretResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ResetAppSecretResponse setBody(ResetAppSecretResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ResetAppSecretResponseBody getBody() {
+        return this.body;
+    }
+
+}
