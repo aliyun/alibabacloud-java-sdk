@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OsTags")
     public ListImagesResponseBodyOsTags osTags;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListImagesResponseBody self = new ListImagesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListImagesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListImagesResponseBody setOsTags(ListImagesResponseBodyOsTags osTags) {
@@ -31,36 +23,44 @@ public class ListImagesResponseBody extends TeaModel {
         return this.osTags;
     }
 
+    public ListImagesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListImagesResponseBodyOsTagsOsInfo extends TeaModel {
-        @NameInMap("Version")
-        public String version;
+        @NameInMap("Architecture")
+        public String architecture;
 
         @NameInMap("BaseOsTag")
         public String baseOsTag;
 
-        @NameInMap("Platform")
-        public String platform;
+        @NameInMap("ImageId")
+        public String imageId;
 
         @NameInMap("OsTag")
         public String osTag;
 
-        @NameInMap("ImageId")
-        public String imageId;
+        @NameInMap("Platform")
+        public String platform;
 
-        @NameInMap("Architecture")
-        public String architecture;
+        @NameInMap("Version")
+        public String version;
 
         public static ListImagesResponseBodyOsTagsOsInfo build(java.util.Map<String, ?> map) throws Exception {
             ListImagesResponseBodyOsTagsOsInfo self = new ListImagesResponseBodyOsTagsOsInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListImagesResponseBodyOsTagsOsInfo setVersion(String version) {
-            this.version = version;
+        public ListImagesResponseBodyOsTagsOsInfo setArchitecture(String architecture) {
+            this.architecture = architecture;
             return this;
         }
-        public String getVersion() {
-            return this.version;
+        public String getArchitecture() {
+            return this.architecture;
         }
 
         public ListImagesResponseBodyOsTagsOsInfo setBaseOsTag(String baseOsTag) {
@@ -71,12 +71,12 @@ public class ListImagesResponseBody extends TeaModel {
             return this.baseOsTag;
         }
 
-        public ListImagesResponseBodyOsTagsOsInfo setPlatform(String platform) {
-            this.platform = platform;
+        public ListImagesResponseBodyOsTagsOsInfo setImageId(String imageId) {
+            this.imageId = imageId;
             return this;
         }
-        public String getPlatform() {
-            return this.platform;
+        public String getImageId() {
+            return this.imageId;
         }
 
         public ListImagesResponseBodyOsTagsOsInfo setOsTag(String osTag) {
@@ -87,20 +87,20 @@ public class ListImagesResponseBody extends TeaModel {
             return this.osTag;
         }
 
-        public ListImagesResponseBodyOsTagsOsInfo setImageId(String imageId) {
-            this.imageId = imageId;
+        public ListImagesResponseBodyOsTagsOsInfo setPlatform(String platform) {
+            this.platform = platform;
             return this;
         }
-        public String getImageId() {
-            return this.imageId;
+        public String getPlatform() {
+            return this.platform;
         }
 
-        public ListImagesResponseBodyOsTagsOsInfo setArchitecture(String architecture) {
-            this.architecture = architecture;
+        public ListImagesResponseBodyOsTagsOsInfo setVersion(String version) {
+            this.version = version;
             return this;
         }
-        public String getArchitecture() {
-            return this.architecture;
+        public String getVersion() {
+            return this.version;
         }
 
     }

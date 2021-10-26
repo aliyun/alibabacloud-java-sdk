@@ -4,24 +4,40 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListClustersMetaResponseBody extends TeaModel {
+    @NameInMap("Clusters")
+    public ListClustersMetaResponseBodyClusters clusters;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Clusters")
-    public ListClustersMetaResponseBodyClusters clusters;
 
     public static ListClustersMetaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListClustersMetaResponseBody self = new ListClustersMetaResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListClustersMetaResponseBody setClusters(ListClustersMetaResponseBodyClusters clusters) {
+        this.clusters = clusters;
+        return this;
+    }
+    public ListClustersMetaResponseBodyClusters getClusters() {
+        return this.clusters;
+    }
+
+    public ListClustersMetaResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListClustersMetaResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class ListClustersMetaResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListClustersMetaResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public ListClustersMetaResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,54 +64,126 @@ public class ListClustersMetaResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListClustersMetaResponseBody setClusters(ListClustersMetaResponseBodyClusters clusters) {
-        this.clusters = clusters;
-        return this;
-    }
-    public ListClustersMetaResponseBodyClusters getClusters() {
-        return this.clusters;
-    }
-
     public static class ListClustersMetaResponseBodyClustersClusterInfoSimple extends TeaModel {
+        @NameInMap("AccountType")
+        public String accountType;
+
+        @NameInMap("ClientVersion")
+        public String clientVersion;
+
+        @NameInMap("DeployMode")
+        public String deployMode;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("IsComputeEss")
+        public Boolean isComputeEss;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("OsTag")
+        public String osTag;
+
+        @NameInMap("SchedulerType")
+        public String schedulerType;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("VpcId")
         public String vpcId;
 
-        @NameInMap("SchedulerType")
-        public String schedulerType;
-
-        @NameInMap("DeployMode")
-        public String deployMode;
-
-        @NameInMap("IsComputeEss")
-        public Boolean isComputeEss;
-
-        @NameInMap("OsTag")
-        public String osTag;
-
-        @NameInMap("AccountType")
-        public String accountType;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("ClientVersion")
-        public String clientVersion;
-
         public static ListClustersMetaResponseBodyClustersClusterInfoSimple build(java.util.Map<String, ?> map) throws Exception {
             ListClustersMetaResponseBodyClustersClusterInfoSimple self = new ListClustersMetaResponseBodyClustersClusterInfoSimple();
             return TeaModel.build(map, self);
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setClientVersion(String clientVersion) {
+            this.clientVersion = clientVersion;
+            return this;
+        }
+        public String getClientVersion() {
+            return this.clientVersion;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setDeployMode(String deployMode) {
+            this.deployMode = deployMode;
+            return this;
+        }
+        public String getDeployMode() {
+            return this.deployMode;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setIsComputeEss(Boolean isComputeEss) {
+            this.isComputeEss = isComputeEss;
+            return this;
+        }
+        public Boolean getIsComputeEss() {
+            return this.isComputeEss;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setOsTag(String osTag) {
+            this.osTag = osTag;
+            return this;
+        }
+        public String getOsTag() {
+            return this.osTag;
+        }
+
+        public ListClustersMetaResponseBodyClustersClusterInfoSimple setSchedulerType(String schedulerType) {
+            this.schedulerType = schedulerType;
+            return this;
+        }
+        public String getSchedulerType() {
+            return this.schedulerType;
         }
 
         public ListClustersMetaResponseBodyClustersClusterInfoSimple setStatus(String status) {
@@ -120,86 +200,6 @@ public class ListClustersMetaResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setSchedulerType(String schedulerType) {
-            this.schedulerType = schedulerType;
-            return this;
-        }
-        public String getSchedulerType() {
-            return this.schedulerType;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setDeployMode(String deployMode) {
-            this.deployMode = deployMode;
-            return this;
-        }
-        public String getDeployMode() {
-            return this.deployMode;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setIsComputeEss(Boolean isComputeEss) {
-            this.isComputeEss = isComputeEss;
-            return this;
-        }
-        public Boolean getIsComputeEss() {
-            return this.isComputeEss;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setOsTag(String osTag) {
-            this.osTag = osTag;
-            return this;
-        }
-        public String getOsTag() {
-            return this.osTag;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setAccountType(String accountType) {
-            this.accountType = accountType;
-            return this;
-        }
-        public String getAccountType() {
-            return this.accountType;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public ListClustersMetaResponseBodyClustersClusterInfoSimple setClientVersion(String clientVersion) {
-            this.clientVersion = clientVersion;
-            return this;
-        }
-        public String getClientVersion() {
-            return this.clientVersion;
         }
 
     }

@@ -10,6 +10,9 @@ public class ListInvocationResultsRequest extends TeaModel {
     @NameInMap("CommandId")
     public String commandId;
 
+    @NameInMap("Instance")
+    public java.util.List<ListInvocationResultsRequestInstance> instance;
+
     @NameInMap("InvokeRecordStatus")
     public String invokeRecordStatus;
 
@@ -18,9 +21,6 @@ public class ListInvocationResultsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("Instance")
-    public java.util.List<ListInvocationResultsRequestInstance> instance;
 
     public static ListInvocationResultsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInvocationResultsRequest self = new ListInvocationResultsRequest();
@@ -41,6 +41,14 @@ public class ListInvocationResultsRequest extends TeaModel {
     }
     public String getCommandId() {
         return this.commandId;
+    }
+
+    public ListInvocationResultsRequest setInstance(java.util.List<ListInvocationResultsRequestInstance> instance) {
+        this.instance = instance;
+        return this;
+    }
+    public java.util.List<ListInvocationResultsRequestInstance> getInstance() {
+        return this.instance;
     }
 
     public ListInvocationResultsRequest setInvokeRecordStatus(String invokeRecordStatus) {
@@ -65,14 +73,6 @@ public class ListInvocationResultsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListInvocationResultsRequest setInstance(java.util.List<ListInvocationResultsRequestInstance> instance) {
-        this.instance = instance;
-        return this;
-    }
-    public java.util.List<ListInvocationResultsRequestInstance> getInstance() {
-        return this.instance;
     }
 
     public static class ListInvocationResultsRequestInstance extends TeaModel {

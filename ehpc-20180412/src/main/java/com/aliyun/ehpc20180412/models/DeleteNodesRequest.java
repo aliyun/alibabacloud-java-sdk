@@ -7,14 +7,14 @@ public class DeleteNodesRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("Instance")
+    public java.util.List<DeleteNodesRequestInstance> instance;
+
     @NameInMap("ReleaseInstance")
     public Boolean releaseInstance;
 
     @NameInMap("Sync")
     public Boolean sync;
-
-    @NameInMap("Instance")
-    public java.util.List<DeleteNodesRequestInstance> instance;
 
     public static DeleteNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteNodesRequest self = new DeleteNodesRequest();
@@ -27,6 +27,14 @@ public class DeleteNodesRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DeleteNodesRequest setInstance(java.util.List<DeleteNodesRequestInstance> instance) {
+        this.instance = instance;
+        return this;
+    }
+    public java.util.List<DeleteNodesRequestInstance> getInstance() {
+        return this.instance;
     }
 
     public DeleteNodesRequest setReleaseInstance(Boolean releaseInstance) {
@@ -43,14 +51,6 @@ public class DeleteNodesRequest extends TeaModel {
     }
     public Boolean getSync() {
         return this.sync;
-    }
-
-    public DeleteNodesRequest setInstance(java.util.List<DeleteNodesRequestInstance> instance) {
-        this.instance = instance;
-        return this;
-    }
-    public java.util.List<DeleteNodesRequestInstance> getInstance() {
-        return this.instance;
     }
 
     public static class DeleteNodesRequestInstance extends TeaModel {

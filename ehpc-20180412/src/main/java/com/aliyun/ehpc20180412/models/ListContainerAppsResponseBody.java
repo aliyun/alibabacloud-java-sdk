@@ -4,24 +4,40 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListContainerAppsResponseBody extends TeaModel {
+    @NameInMap("ContainerApps")
+    public ListContainerAppsResponseBodyContainerApps containerApps;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("ContainerApps")
-    public ListContainerAppsResponseBodyContainerApps containerApps;
 
     public static ListContainerAppsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListContainerAppsResponseBody self = new ListContainerAppsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListContainerAppsResponseBody setContainerApps(ListContainerAppsResponseBodyContainerApps containerApps) {
+        this.containerApps = containerApps;
+        return this;
+    }
+    public ListContainerAppsResponseBodyContainerApps getContainerApps() {
+        return this.containerApps;
+    }
+
+    public ListContainerAppsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListContainerAppsResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class ListContainerAppsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListContainerAppsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public ListContainerAppsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,26 +64,15 @@ public class ListContainerAppsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListContainerAppsResponseBody setContainerApps(ListContainerAppsResponseBodyContainerApps containerApps) {
-        this.containerApps = containerApps;
-        return this;
-    }
-    public ListContainerAppsResponseBodyContainerApps getContainerApps() {
-        return this.containerApps;
-    }
-
     public static class ListContainerAppsResponseBodyContainerAppsContainerApps extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("Repository")
-        public String repository;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("ImageTag")
         public String imageTag;
@@ -83,28 +80,15 @@ public class ListContainerAppsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("Repository")
+        public String repository;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ListContainerAppsResponseBodyContainerAppsContainerApps build(java.util.Map<String, ?> map) throws Exception {
             ListContainerAppsResponseBodyContainerAppsContainerApps self = new ListContainerAppsResponseBodyContainerAppsContainerApps();
             return TeaModel.build(map, self);
-        }
-
-        public ListContainerAppsResponseBodyContainerAppsContainerApps setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListContainerAppsResponseBodyContainerAppsContainerApps setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public ListContainerAppsResponseBodyContainerAppsContainerApps setCreateTime(String createTime) {
@@ -115,12 +99,20 @@ public class ListContainerAppsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListContainerAppsResponseBodyContainerAppsContainerApps setRepository(String repository) {
-            this.repository = repository;
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getRepository() {
-            return this.repository;
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public ListContainerAppsResponseBodyContainerAppsContainerApps setImageTag(String imageTag) {
@@ -139,12 +131,20 @@ public class ListContainerAppsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListContainerAppsResponseBodyContainerAppsContainerApps setId(String id) {
-            this.id = id;
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setRepository(String repository) {
+            this.repository = repository;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getRepository() {
+            return this.repository;
+        }
+
+        public ListContainerAppsResponseBodyContainerAppsContainerApps setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

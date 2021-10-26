@@ -7,14 +7,14 @@ public class DescribeImageRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("Repository")
-    public String repository;
+    @NameInMap("ContainerType")
+    public String containerType;
 
     @NameInMap("ImageTag")
     public String imageTag;
 
-    @NameInMap("ContainerType")
-    public String containerType;
+    @NameInMap("Repository")
+    public String repository;
 
     public static DescribeImageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageRequest self = new DescribeImageRequest();
@@ -29,12 +29,12 @@ public class DescribeImageRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public DescribeImageRequest setRepository(String repository) {
-        this.repository = repository;
+    public DescribeImageRequest setContainerType(String containerType) {
+        this.containerType = containerType;
         return this;
     }
-    public String getRepository() {
-        return this.repository;
+    public String getContainerType() {
+        return this.containerType;
     }
 
     public DescribeImageRequest setImageTag(String imageTag) {
@@ -45,12 +45,12 @@ public class DescribeImageRequest extends TeaModel {
         return this.imageTag;
     }
 
-    public DescribeImageRequest setContainerType(String containerType) {
-        this.containerType = containerType;
+    public DescribeImageRequest setRepository(String repository) {
+        this.repository = repository;
         return this;
     }
-    public String getContainerType() {
-        return this.containerType;
+    public String getRepository() {
+        return this.repository;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -22,6 +22,14 @@ public class ListUsersResponseBody extends TeaModel {
     public static ListUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUsersResponseBody self = new ListUsersResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListUsersResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListUsersResponseBody setPageSize(Integer pageSize) {
@@ -38,14 +46,6 @@ public class ListUsersResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ListUsersResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public ListUsersResponseBody setTotalCount(Integer totalCount) {
@@ -65,26 +65,18 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUsersUserInfo extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("AddTime")
         public String addTime;
 
         @NameInMap("Group")
         public String group;
 
+        @NameInMap("Name")
+        public String name;
+
         public static ListUsersResponseBodyUsersUserInfo build(java.util.Map<String, ?> map) throws Exception {
             ListUsersResponseBodyUsersUserInfo self = new ListUsersResponseBodyUsersUserInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListUsersResponseBodyUsersUserInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ListUsersResponseBodyUsersUserInfo setAddTime(String addTime) {
@@ -101,6 +93,14 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public String getGroup() {
             return this.group;
+        }
+
+        public ListUsersResponseBodyUsersUserInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

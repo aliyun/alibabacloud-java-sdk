@@ -7,77 +7,77 @@ public class CreateHybridClusterRequest extends TeaModel {
     @NameInMap("EcsOrder")
     public CreateHybridClusterRequestEcsOrder ecsOrder;
 
-    @NameInMap("ZoneId")
-    public String zoneId;
+    @NameInMap("Application")
+    public java.util.List<CreateHybridClusterRequestApplication> application;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("EhpcVersion")
-    public String ehpcVersion;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("ClientVersion")
     public String clientVersion;
 
-    @NameInMap("OsTag")
-    public String osTag;
+    @NameInMap("ComputeSpotPriceLimit")
+    public Float computeSpotPriceLimit;
+
+    @NameInMap("ComputeSpotStrategy")
+    public String computeSpotStrategy;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Domain")
     public String domain;
 
-    @NameInMap("Location")
-    public String location;
+    @NameInMap("EhpcVersion")
+    public String ehpcVersion;
 
-    @NameInMap("SecurityGroupId")
-    public String securityGroupId;
+    @NameInMap("ImageId")
+    public String imageId;
 
-    @NameInMap("SecurityGroupName")
-    public String securityGroupName;
+    @NameInMap("ImageOwnerAlias")
+    public String imageOwnerAlias;
 
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("VolumeType")
-    public String volumeType;
-
-    @NameInMap("VolumeId")
-    public String volumeId;
-
-    @NameInMap("VolumeProtocol")
-    public String volumeProtocol;
-
-    @NameInMap("VolumeMountpoint")
-    public String volumeMountpoint;
-
-    @NameInMap("RemoteDirectory")
-    public String remoteDirectory;
-
-    @NameInMap("OnPremiseVolumeProtocol")
-    public String onPremiseVolumeProtocol;
-
-    @NameInMap("OnPremiseVolumeMountPoint")
-    public String onPremiseVolumeMountPoint;
-
-    @NameInMap("OnPremiseVolumeRemotePath")
-    public String onPremiseVolumeRemotePath;
-
-    @NameInMap("OnPremiseVolumeLocalPath")
-    public String onPremiseVolumeLocalPath;
-
-    @NameInMap("Password")
-    public String password;
+    @NameInMap("JobQueue")
+    public String jobQueue;
 
     @NameInMap("KeyPairName")
     public String keyPairName;
 
-    @NameInMap("JobQueue")
-    public String jobQueue;
+    @NameInMap("Location")
+    public String location;
+
+    @NameInMap("MultiOs")
+    public Boolean multiOs;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("Nodes")
+    public java.util.List<CreateHybridClusterRequestNodes> nodes;
+
+    @NameInMap("OnPremiseVolumeLocalPath")
+    public String onPremiseVolumeLocalPath;
+
+    @NameInMap("OnPremiseVolumeMountPoint")
+    public String onPremiseVolumeMountPoint;
+
+    @NameInMap("OnPremiseVolumeProtocol")
+    public String onPremiseVolumeProtocol;
+
+    @NameInMap("OnPremiseVolumeRemotePath")
+    public String onPremiseVolumeRemotePath;
+
+    @NameInMap("OsTag")
+    public String osTag;
+
+    @NameInMap("Password")
+    public String password;
+
+    @NameInMap("PostInstallScript")
+    public java.util.List<CreateHybridClusterRequestPostInstallScript> postInstallScript;
+
+    @NameInMap("RemoteDirectory")
+    public String remoteDirectory;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -85,32 +85,32 @@ public class CreateHybridClusterRequest extends TeaModel {
     @NameInMap("SchedulerPreInstall")
     public Boolean schedulerPreInstall;
 
-    @NameInMap("ComputeSpotStrategy")
-    public String computeSpotStrategy;
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
 
-    @NameInMap("ComputeSpotPriceLimit")
-    public Float computeSpotPriceLimit;
+    @NameInMap("SecurityGroupName")
+    public String securityGroupName;
 
-    @NameInMap("ImageOwnerAlias")
-    public String imageOwnerAlias;
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
 
-    @NameInMap("ImageId")
-    public String imageId;
+    @NameInMap("VolumeId")
+    public String volumeId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("VolumeMountpoint")
+    public String volumeMountpoint;
 
-    @NameInMap("MultiOs")
-    public Boolean multiOs;
+    @NameInMap("VolumeProtocol")
+    public String volumeProtocol;
 
-    @NameInMap("Nodes")
-    public java.util.List<CreateHybridClusterRequestNodes> nodes;
+    @NameInMap("VolumeType")
+    public String volumeType;
 
-    @NameInMap("Application")
-    public java.util.List<CreateHybridClusterRequestApplication> application;
+    @NameInMap("VpcId")
+    public String vpcId;
 
-    @NameInMap("PostInstallScript")
-    public java.util.List<CreateHybridClusterRequestPostInstallScript> postInstallScript;
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateHybridClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHybridClusterRequest self = new CreateHybridClusterRequest();
@@ -125,36 +125,20 @@ public class CreateHybridClusterRequest extends TeaModel {
         return this.ecsOrder;
     }
 
-    public CreateHybridClusterRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
+    public CreateHybridClusterRequest setApplication(java.util.List<CreateHybridClusterRequestApplication> application) {
+        this.application = application;
         return this;
     }
-    public String getZoneId() {
-        return this.zoneId;
+    public java.util.List<CreateHybridClusterRequestApplication> getApplication() {
+        return this.application;
     }
 
-    public CreateHybridClusterRequest setName(String name) {
-        this.name = name;
+    public CreateHybridClusterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateHybridClusterRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateHybridClusterRequest setEhpcVersion(String ehpcVersion) {
-        this.ehpcVersion = ehpcVersion;
-        return this;
-    }
-    public String getEhpcVersion() {
-        return this.ehpcVersion;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateHybridClusterRequest setClientVersion(String clientVersion) {
@@ -165,12 +149,28 @@ public class CreateHybridClusterRequest extends TeaModel {
         return this.clientVersion;
     }
 
-    public CreateHybridClusterRequest setOsTag(String osTag) {
-        this.osTag = osTag;
+    public CreateHybridClusterRequest setComputeSpotPriceLimit(Float computeSpotPriceLimit) {
+        this.computeSpotPriceLimit = computeSpotPriceLimit;
         return this;
     }
-    public String getOsTag() {
-        return this.osTag;
+    public Float getComputeSpotPriceLimit() {
+        return this.computeSpotPriceLimit;
+    }
+
+    public CreateHybridClusterRequest setComputeSpotStrategy(String computeSpotStrategy) {
+        this.computeSpotStrategy = computeSpotStrategy;
+        return this;
+    }
+    public String getComputeSpotStrategy() {
+        return this.computeSpotStrategy;
+    }
+
+    public CreateHybridClusterRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateHybridClusterRequest setDomain(String domain) {
@@ -181,124 +181,36 @@ public class CreateHybridClusterRequest extends TeaModel {
         return this.domain;
     }
 
-    public CreateHybridClusterRequest setLocation(String location) {
-        this.location = location;
+    public CreateHybridClusterRequest setEhpcVersion(String ehpcVersion) {
+        this.ehpcVersion = ehpcVersion;
         return this;
     }
-    public String getLocation() {
-        return this.location;
+    public String getEhpcVersion() {
+        return this.ehpcVersion;
     }
 
-    public CreateHybridClusterRequest setSecurityGroupId(String securityGroupId) {
-        this.securityGroupId = securityGroupId;
+    public CreateHybridClusterRequest setImageId(String imageId) {
+        this.imageId = imageId;
         return this;
     }
-    public String getSecurityGroupId() {
-        return this.securityGroupId;
+    public String getImageId() {
+        return this.imageId;
     }
 
-    public CreateHybridClusterRequest setSecurityGroupName(String securityGroupName) {
-        this.securityGroupName = securityGroupName;
+    public CreateHybridClusterRequest setImageOwnerAlias(String imageOwnerAlias) {
+        this.imageOwnerAlias = imageOwnerAlias;
         return this;
     }
-    public String getSecurityGroupName() {
-        return this.securityGroupName;
+    public String getImageOwnerAlias() {
+        return this.imageOwnerAlias;
     }
 
-    public CreateHybridClusterRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
+    public CreateHybridClusterRequest setJobQueue(String jobQueue) {
+        this.jobQueue = jobQueue;
         return this;
     }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateHybridClusterRequest setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public CreateHybridClusterRequest setVolumeType(String volumeType) {
-        this.volumeType = volumeType;
-        return this;
-    }
-    public String getVolumeType() {
-        return this.volumeType;
-    }
-
-    public CreateHybridClusterRequest setVolumeId(String volumeId) {
-        this.volumeId = volumeId;
-        return this;
-    }
-    public String getVolumeId() {
-        return this.volumeId;
-    }
-
-    public CreateHybridClusterRequest setVolumeProtocol(String volumeProtocol) {
-        this.volumeProtocol = volumeProtocol;
-        return this;
-    }
-    public String getVolumeProtocol() {
-        return this.volumeProtocol;
-    }
-
-    public CreateHybridClusterRequest setVolumeMountpoint(String volumeMountpoint) {
-        this.volumeMountpoint = volumeMountpoint;
-        return this;
-    }
-    public String getVolumeMountpoint() {
-        return this.volumeMountpoint;
-    }
-
-    public CreateHybridClusterRequest setRemoteDirectory(String remoteDirectory) {
-        this.remoteDirectory = remoteDirectory;
-        return this;
-    }
-    public String getRemoteDirectory() {
-        return this.remoteDirectory;
-    }
-
-    public CreateHybridClusterRequest setOnPremiseVolumeProtocol(String onPremiseVolumeProtocol) {
-        this.onPremiseVolumeProtocol = onPremiseVolumeProtocol;
-        return this;
-    }
-    public String getOnPremiseVolumeProtocol() {
-        return this.onPremiseVolumeProtocol;
-    }
-
-    public CreateHybridClusterRequest setOnPremiseVolumeMountPoint(String onPremiseVolumeMountPoint) {
-        this.onPremiseVolumeMountPoint = onPremiseVolumeMountPoint;
-        return this;
-    }
-    public String getOnPremiseVolumeMountPoint() {
-        return this.onPremiseVolumeMountPoint;
-    }
-
-    public CreateHybridClusterRequest setOnPremiseVolumeRemotePath(String onPremiseVolumeRemotePath) {
-        this.onPremiseVolumeRemotePath = onPremiseVolumeRemotePath;
-        return this;
-    }
-    public String getOnPremiseVolumeRemotePath() {
-        return this.onPremiseVolumeRemotePath;
-    }
-
-    public CreateHybridClusterRequest setOnPremiseVolumeLocalPath(String onPremiseVolumeLocalPath) {
-        this.onPremiseVolumeLocalPath = onPremiseVolumeLocalPath;
-        return this;
-    }
-    public String getOnPremiseVolumeLocalPath() {
-        return this.onPremiseVolumeLocalPath;
-    }
-
-    public CreateHybridClusterRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
+    public String getJobQueue() {
+        return this.jobQueue;
     }
 
     public CreateHybridClusterRequest setKeyPairName(String keyPairName) {
@@ -309,12 +221,100 @@ public class CreateHybridClusterRequest extends TeaModel {
         return this.keyPairName;
     }
 
-    public CreateHybridClusterRequest setJobQueue(String jobQueue) {
-        this.jobQueue = jobQueue;
+    public CreateHybridClusterRequest setLocation(String location) {
+        this.location = location;
         return this;
     }
-    public String getJobQueue() {
-        return this.jobQueue;
+    public String getLocation() {
+        return this.location;
+    }
+
+    public CreateHybridClusterRequest setMultiOs(Boolean multiOs) {
+        this.multiOs = multiOs;
+        return this;
+    }
+    public Boolean getMultiOs() {
+        return this.multiOs;
+    }
+
+    public CreateHybridClusterRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateHybridClusterRequest setNodes(java.util.List<CreateHybridClusterRequestNodes> nodes) {
+        this.nodes = nodes;
+        return this;
+    }
+    public java.util.List<CreateHybridClusterRequestNodes> getNodes() {
+        return this.nodes;
+    }
+
+    public CreateHybridClusterRequest setOnPremiseVolumeLocalPath(String onPremiseVolumeLocalPath) {
+        this.onPremiseVolumeLocalPath = onPremiseVolumeLocalPath;
+        return this;
+    }
+    public String getOnPremiseVolumeLocalPath() {
+        return this.onPremiseVolumeLocalPath;
+    }
+
+    public CreateHybridClusterRequest setOnPremiseVolumeMountPoint(String onPremiseVolumeMountPoint) {
+        this.onPremiseVolumeMountPoint = onPremiseVolumeMountPoint;
+        return this;
+    }
+    public String getOnPremiseVolumeMountPoint() {
+        return this.onPremiseVolumeMountPoint;
+    }
+
+    public CreateHybridClusterRequest setOnPremiseVolumeProtocol(String onPremiseVolumeProtocol) {
+        this.onPremiseVolumeProtocol = onPremiseVolumeProtocol;
+        return this;
+    }
+    public String getOnPremiseVolumeProtocol() {
+        return this.onPremiseVolumeProtocol;
+    }
+
+    public CreateHybridClusterRequest setOnPremiseVolumeRemotePath(String onPremiseVolumeRemotePath) {
+        this.onPremiseVolumeRemotePath = onPremiseVolumeRemotePath;
+        return this;
+    }
+    public String getOnPremiseVolumeRemotePath() {
+        return this.onPremiseVolumeRemotePath;
+    }
+
+    public CreateHybridClusterRequest setOsTag(String osTag) {
+        this.osTag = osTag;
+        return this;
+    }
+    public String getOsTag() {
+        return this.osTag;
+    }
+
+    public CreateHybridClusterRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public CreateHybridClusterRequest setPostInstallScript(java.util.List<CreateHybridClusterRequestPostInstallScript> postInstallScript) {
+        this.postInstallScript = postInstallScript;
+        return this;
+    }
+    public java.util.List<CreateHybridClusterRequestPostInstallScript> getPostInstallScript() {
+        return this.postInstallScript;
+    }
+
+    public CreateHybridClusterRequest setRemoteDirectory(String remoteDirectory) {
+        this.remoteDirectory = remoteDirectory;
+        return this;
+    }
+    public String getRemoteDirectory() {
+        return this.remoteDirectory;
     }
 
     public CreateHybridClusterRequest setResourceGroupId(String resourceGroupId) {
@@ -333,76 +333,76 @@ public class CreateHybridClusterRequest extends TeaModel {
         return this.schedulerPreInstall;
     }
 
-    public CreateHybridClusterRequest setComputeSpotStrategy(String computeSpotStrategy) {
-        this.computeSpotStrategy = computeSpotStrategy;
+    public CreateHybridClusterRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
         return this;
     }
-    public String getComputeSpotStrategy() {
-        return this.computeSpotStrategy;
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
-    public CreateHybridClusterRequest setComputeSpotPriceLimit(Float computeSpotPriceLimit) {
-        this.computeSpotPriceLimit = computeSpotPriceLimit;
+    public CreateHybridClusterRequest setSecurityGroupName(String securityGroupName) {
+        this.securityGroupName = securityGroupName;
         return this;
     }
-    public Float getComputeSpotPriceLimit() {
-        return this.computeSpotPriceLimit;
+    public String getSecurityGroupName() {
+        return this.securityGroupName;
     }
 
-    public CreateHybridClusterRequest setImageOwnerAlias(String imageOwnerAlias) {
-        this.imageOwnerAlias = imageOwnerAlias;
+    public CreateHybridClusterRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
         return this;
     }
-    public String getImageOwnerAlias() {
-        return this.imageOwnerAlias;
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
-    public CreateHybridClusterRequest setImageId(String imageId) {
-        this.imageId = imageId;
+    public CreateHybridClusterRequest setVolumeId(String volumeId) {
+        this.volumeId = volumeId;
         return this;
     }
-    public String getImageId() {
-        return this.imageId;
+    public String getVolumeId() {
+        return this.volumeId;
     }
 
-    public CreateHybridClusterRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateHybridClusterRequest setVolumeMountpoint(String volumeMountpoint) {
+        this.volumeMountpoint = volumeMountpoint;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getVolumeMountpoint() {
+        return this.volumeMountpoint;
     }
 
-    public CreateHybridClusterRequest setMultiOs(Boolean multiOs) {
-        this.multiOs = multiOs;
+    public CreateHybridClusterRequest setVolumeProtocol(String volumeProtocol) {
+        this.volumeProtocol = volumeProtocol;
         return this;
     }
-    public Boolean getMultiOs() {
-        return this.multiOs;
+    public String getVolumeProtocol() {
+        return this.volumeProtocol;
     }
 
-    public CreateHybridClusterRequest setNodes(java.util.List<CreateHybridClusterRequestNodes> nodes) {
-        this.nodes = nodes;
+    public CreateHybridClusterRequest setVolumeType(String volumeType) {
+        this.volumeType = volumeType;
         return this;
     }
-    public java.util.List<CreateHybridClusterRequestNodes> getNodes() {
-        return this.nodes;
+    public String getVolumeType() {
+        return this.volumeType;
     }
 
-    public CreateHybridClusterRequest setApplication(java.util.List<CreateHybridClusterRequestApplication> application) {
-        this.application = application;
+    public CreateHybridClusterRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public java.util.List<CreateHybridClusterRequestApplication> getApplication() {
-        return this.application;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
-    public CreateHybridClusterRequest setPostInstallScript(java.util.List<CreateHybridClusterRequestPostInstallScript> postInstallScript) {
-        this.postInstallScript = postInstallScript;
+    public CreateHybridClusterRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
-    public java.util.List<CreateHybridClusterRequestPostInstallScript> getPostInstallScript() {
-        return this.postInstallScript;
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     public static class CreateHybridClusterRequestEcsOrderCompute extends TeaModel {
@@ -444,69 +444,6 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     }
 
-    public static class CreateHybridClusterRequestNodes extends TeaModel {
-        @NameInMap("SchedulerType")
-        public String schedulerType;
-
-        @NameInMap("IpAddress")
-        public String ipAddress;
-
-        @NameInMap("HostName")
-        public String hostName;
-
-        @NameInMap("Role")
-        public String role;
-
-        @NameInMap("AccountType")
-        public String accountType;
-
-        public static CreateHybridClusterRequestNodes build(java.util.Map<String, ?> map) throws Exception {
-            CreateHybridClusterRequestNodes self = new CreateHybridClusterRequestNodes();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateHybridClusterRequestNodes setSchedulerType(String schedulerType) {
-            this.schedulerType = schedulerType;
-            return this;
-        }
-        public String getSchedulerType() {
-            return this.schedulerType;
-        }
-
-        public CreateHybridClusterRequestNodes setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
-        }
-
-        public CreateHybridClusterRequestNodes setHostName(String hostName) {
-            this.hostName = hostName;
-            return this;
-        }
-        public String getHostName() {
-            return this.hostName;
-        }
-
-        public CreateHybridClusterRequestNodes setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
-        }
-
-        public CreateHybridClusterRequestNodes setAccountType(String accountType) {
-            this.accountType = accountType;
-            return this;
-        }
-        public String getAccountType() {
-            return this.accountType;
-        }
-
-    }
-
     public static class CreateHybridClusterRequestApplication extends TeaModel {
         @NameInMap("Tag")
         public String tag;
@@ -522,6 +459,69 @@ public class CreateHybridClusterRequest extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+    }
+
+    public static class CreateHybridClusterRequestNodes extends TeaModel {
+        @NameInMap("AccountType")
+        public String accountType;
+
+        @NameInMap("HostName")
+        public String hostName;
+
+        @NameInMap("IpAddress")
+        public String ipAddress;
+
+        @NameInMap("Role")
+        public String role;
+
+        @NameInMap("SchedulerType")
+        public String schedulerType;
+
+        public static CreateHybridClusterRequestNodes build(java.util.Map<String, ?> map) throws Exception {
+            CreateHybridClusterRequestNodes self = new CreateHybridClusterRequestNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHybridClusterRequestNodes setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
+        }
+
+        public CreateHybridClusterRequestNodes setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public CreateHybridClusterRequestNodes setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
+        public CreateHybridClusterRequestNodes setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public CreateHybridClusterRequestNodes setSchedulerType(String schedulerType) {
+            this.schedulerType = schedulerType;
+            return this;
+        }
+        public String getSchedulerType() {
+            return this.schedulerType;
         }
 
     }

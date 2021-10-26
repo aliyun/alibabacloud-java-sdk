@@ -4,37 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableEcsTypesRequest extends TeaModel {
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("SpotStrategy")
-    public String spotStrategy;
-
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     @NameInMap("ShowSoldOut")
     public Boolean showSoldOut;
 
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
+
     public static ListAvailableEcsTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAvailableEcsTypesRequest self = new ListAvailableEcsTypesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAvailableEcsTypesRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public ListAvailableEcsTypesRequest setSpotStrategy(String spotStrategy) {
-        this.spotStrategy = spotStrategy;
-        return this;
-    }
-    public String getSpotStrategy() {
-        return this.spotStrategy;
     }
 
     public ListAvailableEcsTypesRequest setInstanceChargeType(String instanceChargeType) {
@@ -51,6 +35,22 @@ public class ListAvailableEcsTypesRequest extends TeaModel {
     }
     public Boolean getShowSoldOut() {
         return this.showSoldOut;
+    }
+
+    public ListAvailableEcsTypesRequest setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    public ListAvailableEcsTypesRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

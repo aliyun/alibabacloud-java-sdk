@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Message")
     public DescribeJobResponseBodyMessage message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeJobResponseBody self = new DescribeJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeJobResponseBody setMessage(DescribeJobResponseBodyMessage message) {
@@ -29,6 +21,14 @@ public class DescribeJobResponseBody extends TeaModel {
     }
     public DescribeJobResponseBodyMessage getMessage() {
         return this.message;
+    }
+
+    public DescribeJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeJobResponseBodyMessage extends TeaModel {

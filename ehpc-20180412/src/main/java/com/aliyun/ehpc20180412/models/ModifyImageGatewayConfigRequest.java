@@ -7,26 +7,26 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    @NameInMap("DBType")
-    public String DBType;
-
-    @NameInMap("DBUsername")
-    public String DBUsername;
-
     @NameInMap("DBPassword")
     public String DBPassword;
 
     @NameInMap("DBServerInfo")
     public String DBServerInfo;
 
+    @NameInMap("DBType")
+    public String DBType;
+
+    @NameInMap("DBUsername")
+    public String DBUsername;
+
     @NameInMap("DefaultRepoLocation")
     public String defaultRepoLocation;
 
-    @NameInMap("PullUpdateTimeout")
-    public Integer pullUpdateTimeout;
-
     @NameInMap("ImageExpirationTimeout")
     public String imageExpirationTimeout;
+
+    @NameInMap("PullUpdateTimeout")
+    public Integer pullUpdateTimeout;
 
     @NameInMap("Repo")
     public java.util.List<ModifyImageGatewayConfigRequestRepo> repo;
@@ -42,22 +42,6 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
-    }
-
-    public ModifyImageGatewayConfigRequest setDBType(String DBType) {
-        this.DBType = DBType;
-        return this;
-    }
-    public String getDBType() {
-        return this.DBType;
-    }
-
-    public ModifyImageGatewayConfigRequest setDBUsername(String DBUsername) {
-        this.DBUsername = DBUsername;
-        return this;
-    }
-    public String getDBUsername() {
-        return this.DBUsername;
     }
 
     public ModifyImageGatewayConfigRequest setDBPassword(String DBPassword) {
@@ -76,6 +60,22 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
         return this.DBServerInfo;
     }
 
+    public ModifyImageGatewayConfigRequest setDBType(String DBType) {
+        this.DBType = DBType;
+        return this;
+    }
+    public String getDBType() {
+        return this.DBType;
+    }
+
+    public ModifyImageGatewayConfigRequest setDBUsername(String DBUsername) {
+        this.DBUsername = DBUsername;
+        return this;
+    }
+    public String getDBUsername() {
+        return this.DBUsername;
+    }
+
     public ModifyImageGatewayConfigRequest setDefaultRepoLocation(String defaultRepoLocation) {
         this.defaultRepoLocation = defaultRepoLocation;
         return this;
@@ -84,20 +84,20 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
         return this.defaultRepoLocation;
     }
 
-    public ModifyImageGatewayConfigRequest setPullUpdateTimeout(Integer pullUpdateTimeout) {
-        this.pullUpdateTimeout = pullUpdateTimeout;
-        return this;
-    }
-    public Integer getPullUpdateTimeout() {
-        return this.pullUpdateTimeout;
-    }
-
     public ModifyImageGatewayConfigRequest setImageExpirationTimeout(String imageExpirationTimeout) {
         this.imageExpirationTimeout = imageExpirationTimeout;
         return this;
     }
     public String getImageExpirationTimeout() {
         return this.imageExpirationTimeout;
+    }
+
+    public ModifyImageGatewayConfigRequest setPullUpdateTimeout(Integer pullUpdateTimeout) {
+        this.pullUpdateTimeout = pullUpdateTimeout;
+        return this;
+    }
+    public Integer getPullUpdateTimeout() {
+        return this.pullUpdateTimeout;
     }
 
     public ModifyImageGatewayConfigRequest setRepo(java.util.List<ModifyImageGatewayConfigRequestRepo> repo) {
@@ -112,11 +112,11 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
         @NameInMap("Auth")
         public String auth;
 
-        @NameInMap("URL")
-        public String URL;
-
         @NameInMap("Location")
         public String location;
+
+        @NameInMap("URL")
+        public String URL;
 
         public static ModifyImageGatewayConfigRequestRepo build(java.util.Map<String, ?> map) throws Exception {
             ModifyImageGatewayConfigRequestRepo self = new ModifyImageGatewayConfigRequestRepo();
@@ -131,20 +131,20 @@ public class ModifyImageGatewayConfigRequest extends TeaModel {
             return this.auth;
         }
 
-        public ModifyImageGatewayConfigRequestRepo setURL(String URL) {
-            this.URL = URL;
-            return this;
-        }
-        public String getURL() {
-            return this.URL;
-        }
-
         public ModifyImageGatewayConfigRequestRepo setLocation(String location) {
             this.location = location;
             return this;
         }
         public String getLocation() {
             return this.location;
+        }
+
+        public ModifyImageGatewayConfigRequestRepo setURL(String URL) {
+            this.URL = URL;
+            return this;
+        }
+        public String getURL() {
+            return this.URL;
         }
 
     }

@@ -4,29 +4,26 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class CreateGWSInstanceRequest extends TeaModel {
+    @NameInMap("AllocatePublicAddress")
+    public Boolean allocatePublicAddress;
+
+    @NameInMap("AppList")
+    public String appList;
+
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("ImageId")
     public String imageId;
 
-    @NameInMap("SystemDiskSize")
-    public Integer systemDiskSize;
-
-    @NameInMap("SystemDiskCategory")
-    public String systemDiskCategory;
-
-    @NameInMap("InstanceType")
-    public String instanceType;
-
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
-    @NameInMap("WorkMode")
-    public String workMode;
-
-    @NameInMap("AllocatePublicAddress")
-    public Boolean allocatePublicAddress;
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -46,18 +43,45 @@ public class CreateGWSInstanceRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
-    @NameInMap("AutoRenew")
-    public Boolean autoRenew;
+    @NameInMap("SystemDiskCategory")
+    public String systemDiskCategory;
 
-    @NameInMap("AppList")
-    public String appList;
+    @NameInMap("SystemDiskSize")
+    public Integer systemDiskSize;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("WorkMode")
+    public String workMode;
+
     public static CreateGWSInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGWSInstanceRequest self = new CreateGWSInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGWSInstanceRequest setAllocatePublicAddress(Boolean allocatePublicAddress) {
+        this.allocatePublicAddress = allocatePublicAddress;
+        return this;
+    }
+    public Boolean getAllocatePublicAddress() {
+        return this.allocatePublicAddress;
+    }
+
+    public CreateGWSInstanceRequest setAppList(String appList) {
+        this.appList = appList;
+        return this;
+    }
+    public String getAppList() {
+        return this.appList;
+    }
+
+    public CreateGWSInstanceRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public CreateGWSInstanceRequest setClusterId(String clusterId) {
@@ -76,30 +100,6 @@ public class CreateGWSInstanceRequest extends TeaModel {
         return this.imageId;
     }
 
-    public CreateGWSInstanceRequest setSystemDiskSize(Integer systemDiskSize) {
-        this.systemDiskSize = systemDiskSize;
-        return this;
-    }
-    public Integer getSystemDiskSize() {
-        return this.systemDiskSize;
-    }
-
-    public CreateGWSInstanceRequest setSystemDiskCategory(String systemDiskCategory) {
-        this.systemDiskCategory = systemDiskCategory;
-        return this;
-    }
-    public String getSystemDiskCategory() {
-        return this.systemDiskCategory;
-    }
-
-    public CreateGWSInstanceRequest setInstanceType(String instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public String getInstanceType() {
-        return this.instanceType;
-    }
-
     public CreateGWSInstanceRequest setInstanceChargeType(String instanceChargeType) {
         this.instanceChargeType = instanceChargeType;
         return this;
@@ -108,20 +108,12 @@ public class CreateGWSInstanceRequest extends TeaModel {
         return this.instanceChargeType;
     }
 
-    public CreateGWSInstanceRequest setWorkMode(String workMode) {
-        this.workMode = workMode;
+    public CreateGWSInstanceRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
-    public String getWorkMode() {
-        return this.workMode;
-    }
-
-    public CreateGWSInstanceRequest setAllocatePublicAddress(Boolean allocatePublicAddress) {
-        this.allocatePublicAddress = allocatePublicAddress;
-        return this;
-    }
-    public Boolean getAllocatePublicAddress() {
-        return this.allocatePublicAddress;
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public CreateGWSInstanceRequest setInternetChargeType(String internetChargeType) {
@@ -172,20 +164,20 @@ public class CreateGWSInstanceRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public CreateGWSInstanceRequest setAutoRenew(Boolean autoRenew) {
-        this.autoRenew = autoRenew;
+    public CreateGWSInstanceRequest setSystemDiskCategory(String systemDiskCategory) {
+        this.systemDiskCategory = systemDiskCategory;
         return this;
     }
-    public Boolean getAutoRenew() {
-        return this.autoRenew;
+    public String getSystemDiskCategory() {
+        return this.systemDiskCategory;
     }
 
-    public CreateGWSInstanceRequest setAppList(String appList) {
-        this.appList = appList;
+    public CreateGWSInstanceRequest setSystemDiskSize(Integer systemDiskSize) {
+        this.systemDiskSize = systemDiskSize;
         return this;
     }
-    public String getAppList() {
-        return this.appList;
+    public Integer getSystemDiskSize() {
+        return this.systemDiskSize;
     }
 
     public CreateGWSInstanceRequest setVSwitchId(String vSwitchId) {
@@ -194,6 +186,14 @@ public class CreateGWSInstanceRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public CreateGWSInstanceRequest setWorkMode(String workMode) {
+        this.workMode = workMode;
+        return this;
+    }
+    public String getWorkMode() {
+        return this.workMode;
     }
 
 }

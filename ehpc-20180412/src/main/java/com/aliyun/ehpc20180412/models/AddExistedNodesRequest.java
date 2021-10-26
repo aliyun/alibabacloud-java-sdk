@@ -4,17 +4,14 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddExistedNodesRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("ClusterId")
     public String clusterId;
 
     @NameInMap("ImageId")
     public String imageId;
-
-    @NameInMap("JobQueue")
-    public String jobQueue;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
@@ -22,9 +19,20 @@ public class AddExistedNodesRequest extends TeaModel {
     @NameInMap("Instance")
     public java.util.List<AddExistedNodesRequestInstance> instance;
 
+    @NameInMap("JobQueue")
+    public String jobQueue;
+
     public static AddExistedNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         AddExistedNodesRequest self = new AddExistedNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddExistedNodesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public AddExistedNodesRequest setClusterId(String clusterId) {
@@ -43,22 +51,6 @@ public class AddExistedNodesRequest extends TeaModel {
         return this.imageId;
     }
 
-    public AddExistedNodesRequest setJobQueue(String jobQueue) {
-        this.jobQueue = jobQueue;
-        return this;
-    }
-    public String getJobQueue() {
-        return this.jobQueue;
-    }
-
-    public AddExistedNodesRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
     public AddExistedNodesRequest setImageOwnerAlias(String imageOwnerAlias) {
         this.imageOwnerAlias = imageOwnerAlias;
         return this;
@@ -73,6 +65,14 @@ public class AddExistedNodesRequest extends TeaModel {
     }
     public java.util.List<AddExistedNodesRequestInstance> getInstance() {
         return this.instance;
+    }
+
+    public AddExistedNodesRequest setJobQueue(String jobQueue) {
+        this.jobQueue = jobQueue;
+        return this;
+    }
+    public String getJobQueue() {
+        return this.jobQueue;
     }
 
     public static class AddExistedNodesRequestInstance extends TeaModel {

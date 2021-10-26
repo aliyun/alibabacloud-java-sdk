@@ -7,20 +7,20 @@ public class DescribeImagePriceResponseBody extends TeaModel {
     @NameInMap("Amount")
     public Integer amount;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DiscountPrice")
     public Float discountPrice;
 
-    @NameInMap("TradePrice")
-    public Float tradePrice;
+    @NameInMap("ImageId")
+    public String imageId;
 
     @NameInMap("OriginalPrice")
     public Float originalPrice;
 
-    @NameInMap("ImageId")
-    public String imageId;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TradePrice")
+    public Float tradePrice;
 
     public static DescribeImagePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagePriceResponseBody self = new DescribeImagePriceResponseBody();
@@ -35,14 +35,6 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         return this.amount;
     }
 
-    public DescribeImagePriceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeImagePriceResponseBody setDiscountPrice(Float discountPrice) {
         this.discountPrice = discountPrice;
         return this;
@@ -51,12 +43,12 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         return this.discountPrice;
     }
 
-    public DescribeImagePriceResponseBody setTradePrice(Float tradePrice) {
-        this.tradePrice = tradePrice;
+    public DescribeImagePriceResponseBody setImageId(String imageId) {
+        this.imageId = imageId;
         return this;
     }
-    public Float getTradePrice() {
-        return this.tradePrice;
+    public String getImageId() {
+        return this.imageId;
     }
 
     public DescribeImagePriceResponseBody setOriginalPrice(Float originalPrice) {
@@ -67,12 +59,20 @@ public class DescribeImagePriceResponseBody extends TeaModel {
         return this.originalPrice;
     }
 
-    public DescribeImagePriceResponseBody setImageId(String imageId) {
-        this.imageId = imageId;
+    public DescribeImagePriceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getImageId() {
-        return this.imageId;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeImagePriceResponseBody setTradePrice(Float tradePrice) {
+        this.tradePrice = tradePrice;
+        return this;
+    }
+    public Float getTradePrice() {
+        return this.tradePrice;
     }
 
 }

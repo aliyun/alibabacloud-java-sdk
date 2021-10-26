@@ -4,18 +4,26 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskId")
     public String taskId;
 
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     public static CreateClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateClusterResponseBody self = new CreateClusterResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateClusterResponseBody setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public CreateClusterResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class CreateClusterResponseBody extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public CreateClusterResponseBody setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
 }

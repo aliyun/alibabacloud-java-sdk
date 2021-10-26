@@ -4,183 +4,63 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetAutoScaleConfigResponseBody extends TeaModel {
-    @NameInMap("MaxNodesInCluster")
-    public Integer maxNodesInCluster;
-
-    @NameInMap("GrowTimeoutInMinutes")
-    public Integer growTimeoutInMinutes;
-
-    @NameInMap("SpotStrategy")
-    public String spotStrategy;
-
-    @NameInMap("EnableAutoShrink")
-    public Boolean enableAutoShrink;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("EnableAutoGrow")
-    public Boolean enableAutoGrow;
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     @NameInMap("ClusterType")
     public String clusterType;
 
+    @NameInMap("EnableAutoGrow")
+    public Boolean enableAutoGrow;
+
+    @NameInMap("EnableAutoShrink")
+    public Boolean enableAutoShrink;
+
     @NameInMap("ExcludeNodes")
     public String excludeNodes;
-
-    @NameInMap("ShrinkIntervalInMinutes")
-    public Integer shrinkIntervalInMinutes;
-
-    @NameInMap("GrowIntervalInMinutes")
-    public Integer growIntervalInMinutes;
-
-    @NameInMap("SpotPriceLimit")
-    public Float spotPriceLimit;
 
     @NameInMap("ExtraNodesGrowRatio")
     public Integer extraNodesGrowRatio;
 
-    @NameInMap("ShrinkIdleTimes")
-    public Integer shrinkIdleTimes;
-
-    @NameInMap("ImageId")
-    public String imageId;
+    @NameInMap("GrowIntervalInMinutes")
+    public Integer growIntervalInMinutes;
 
     @NameInMap("GrowRatio")
     public Integer growRatio;
 
-    @NameInMap("ClusterId")
-    public String clusterId;
+    @NameInMap("GrowTimeoutInMinutes")
+    public Integer growTimeoutInMinutes;
 
-    @NameInMap("Uid")
-    public String uid;
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("MaxNodesInCluster")
+    public Integer maxNodesInCluster;
 
     @NameInMap("Queues")
     public GetAutoScaleConfigResponseBodyQueues queues;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ShrinkIdleTimes")
+    public Integer shrinkIdleTimes;
+
+    @NameInMap("ShrinkIntervalInMinutes")
+    public Integer shrinkIntervalInMinutes;
+
+    @NameInMap("SpotPriceLimit")
+    public Float spotPriceLimit;
+
+    @NameInMap("SpotStrategy")
+    public String spotStrategy;
+
+    @NameInMap("Uid")
+    public String uid;
+
     public static GetAutoScaleConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAutoScaleConfigResponseBody self = new GetAutoScaleConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAutoScaleConfigResponseBody setMaxNodesInCluster(Integer maxNodesInCluster) {
-        this.maxNodesInCluster = maxNodesInCluster;
-        return this;
-    }
-    public Integer getMaxNodesInCluster() {
-        return this.maxNodesInCluster;
-    }
-
-    public GetAutoScaleConfigResponseBody setGrowTimeoutInMinutes(Integer growTimeoutInMinutes) {
-        this.growTimeoutInMinutes = growTimeoutInMinutes;
-        return this;
-    }
-    public Integer getGrowTimeoutInMinutes() {
-        return this.growTimeoutInMinutes;
-    }
-
-    public GetAutoScaleConfigResponseBody setSpotStrategy(String spotStrategy) {
-        this.spotStrategy = spotStrategy;
-        return this;
-    }
-    public String getSpotStrategy() {
-        return this.spotStrategy;
-    }
-
-    public GetAutoScaleConfigResponseBody setEnableAutoShrink(Boolean enableAutoShrink) {
-        this.enableAutoShrink = enableAutoShrink;
-        return this;
-    }
-    public Boolean getEnableAutoShrink() {
-        return this.enableAutoShrink;
-    }
-
-    public GetAutoScaleConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetAutoScaleConfigResponseBody setEnableAutoGrow(Boolean enableAutoGrow) {
-        this.enableAutoGrow = enableAutoGrow;
-        return this;
-    }
-    public Boolean getEnableAutoGrow() {
-        return this.enableAutoGrow;
-    }
-
-    public GetAutoScaleConfigResponseBody setClusterType(String clusterType) {
-        this.clusterType = clusterType;
-        return this;
-    }
-    public String getClusterType() {
-        return this.clusterType;
-    }
-
-    public GetAutoScaleConfigResponseBody setExcludeNodes(String excludeNodes) {
-        this.excludeNodes = excludeNodes;
-        return this;
-    }
-    public String getExcludeNodes() {
-        return this.excludeNodes;
-    }
-
-    public GetAutoScaleConfigResponseBody setShrinkIntervalInMinutes(Integer shrinkIntervalInMinutes) {
-        this.shrinkIntervalInMinutes = shrinkIntervalInMinutes;
-        return this;
-    }
-    public Integer getShrinkIntervalInMinutes() {
-        return this.shrinkIntervalInMinutes;
-    }
-
-    public GetAutoScaleConfigResponseBody setGrowIntervalInMinutes(Integer growIntervalInMinutes) {
-        this.growIntervalInMinutes = growIntervalInMinutes;
-        return this;
-    }
-    public Integer getGrowIntervalInMinutes() {
-        return this.growIntervalInMinutes;
-    }
-
-    public GetAutoScaleConfigResponseBody setSpotPriceLimit(Float spotPriceLimit) {
-        this.spotPriceLimit = spotPriceLimit;
-        return this;
-    }
-    public Float getSpotPriceLimit() {
-        return this.spotPriceLimit;
-    }
-
-    public GetAutoScaleConfigResponseBody setExtraNodesGrowRatio(Integer extraNodesGrowRatio) {
-        this.extraNodesGrowRatio = extraNodesGrowRatio;
-        return this;
-    }
-    public Integer getExtraNodesGrowRatio() {
-        return this.extraNodesGrowRatio;
-    }
-
-    public GetAutoScaleConfigResponseBody setShrinkIdleTimes(Integer shrinkIdleTimes) {
-        this.shrinkIdleTimes = shrinkIdleTimes;
-        return this;
-    }
-    public Integer getShrinkIdleTimes() {
-        return this.shrinkIdleTimes;
-    }
-
-    public GetAutoScaleConfigResponseBody setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    public GetAutoScaleConfigResponseBody setGrowRatio(Integer growRatio) {
-        this.growRatio = growRatio;
-        return this;
-    }
-    public Integer getGrowRatio() {
-        return this.growRatio;
     }
 
     public GetAutoScaleConfigResponseBody setClusterId(String clusterId) {
@@ -191,12 +71,84 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         return this.clusterId;
     }
 
-    public GetAutoScaleConfigResponseBody setUid(String uid) {
-        this.uid = uid;
+    public GetAutoScaleConfigResponseBody setClusterType(String clusterType) {
+        this.clusterType = clusterType;
         return this;
     }
-    public String getUid() {
-        return this.uid;
+    public String getClusterType() {
+        return this.clusterType;
+    }
+
+    public GetAutoScaleConfigResponseBody setEnableAutoGrow(Boolean enableAutoGrow) {
+        this.enableAutoGrow = enableAutoGrow;
+        return this;
+    }
+    public Boolean getEnableAutoGrow() {
+        return this.enableAutoGrow;
+    }
+
+    public GetAutoScaleConfigResponseBody setEnableAutoShrink(Boolean enableAutoShrink) {
+        this.enableAutoShrink = enableAutoShrink;
+        return this;
+    }
+    public Boolean getEnableAutoShrink() {
+        return this.enableAutoShrink;
+    }
+
+    public GetAutoScaleConfigResponseBody setExcludeNodes(String excludeNodes) {
+        this.excludeNodes = excludeNodes;
+        return this;
+    }
+    public String getExcludeNodes() {
+        return this.excludeNodes;
+    }
+
+    public GetAutoScaleConfigResponseBody setExtraNodesGrowRatio(Integer extraNodesGrowRatio) {
+        this.extraNodesGrowRatio = extraNodesGrowRatio;
+        return this;
+    }
+    public Integer getExtraNodesGrowRatio() {
+        return this.extraNodesGrowRatio;
+    }
+
+    public GetAutoScaleConfigResponseBody setGrowIntervalInMinutes(Integer growIntervalInMinutes) {
+        this.growIntervalInMinutes = growIntervalInMinutes;
+        return this;
+    }
+    public Integer getGrowIntervalInMinutes() {
+        return this.growIntervalInMinutes;
+    }
+
+    public GetAutoScaleConfigResponseBody setGrowRatio(Integer growRatio) {
+        this.growRatio = growRatio;
+        return this;
+    }
+    public Integer getGrowRatio() {
+        return this.growRatio;
+    }
+
+    public GetAutoScaleConfigResponseBody setGrowTimeoutInMinutes(Integer growTimeoutInMinutes) {
+        this.growTimeoutInMinutes = growTimeoutInMinutes;
+        return this;
+    }
+    public Integer getGrowTimeoutInMinutes() {
+        return this.growTimeoutInMinutes;
+    }
+
+    public GetAutoScaleConfigResponseBody setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public GetAutoScaleConfigResponseBody setMaxNodesInCluster(Integer maxNodesInCluster) {
+        this.maxNodesInCluster = maxNodesInCluster;
+        return this;
+    }
+    public Integer getMaxNodesInCluster() {
+        return this.maxNodesInCluster;
     }
 
     public GetAutoScaleConfigResponseBody setQueues(GetAutoScaleConfigResponseBodyQueues queues) {
@@ -207,24 +159,72 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         return this.queues;
     }
 
+    public GetAutoScaleConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetAutoScaleConfigResponseBody setShrinkIdleTimes(Integer shrinkIdleTimes) {
+        this.shrinkIdleTimes = shrinkIdleTimes;
+        return this;
+    }
+    public Integer getShrinkIdleTimes() {
+        return this.shrinkIdleTimes;
+    }
+
+    public GetAutoScaleConfigResponseBody setShrinkIntervalInMinutes(Integer shrinkIntervalInMinutes) {
+        this.shrinkIntervalInMinutes = shrinkIntervalInMinutes;
+        return this;
+    }
+    public Integer getShrinkIntervalInMinutes() {
+        return this.shrinkIntervalInMinutes;
+    }
+
+    public GetAutoScaleConfigResponseBody setSpotPriceLimit(Float spotPriceLimit) {
+        this.spotPriceLimit = spotPriceLimit;
+        return this;
+    }
+    public Float getSpotPriceLimit() {
+        return this.spotPriceLimit;
+    }
+
+    public GetAutoScaleConfigResponseBody setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    public GetAutoScaleConfigResponseBody setUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    public String getUid() {
+        return this.uid;
+    }
+
     public static class GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo extends TeaModel {
         @NameInMap("HostNamePrefix")
         public String hostNamePrefix;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("SpotPriceLimit")
+        public Float spotPriceLimit;
+
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         @NameInMap("ZoneId")
         public String zoneId;
-
-        @NameInMap("SpotPriceLimit")
-        public Float spotPriceLimit;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("SpotStrategy")
-        public String spotStrategy;
 
         public static GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo build(java.util.Map<String, ?> map) throws Exception {
             GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo self = new GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo();
@@ -237,6 +237,30 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
         public String getHostNamePrefix() {
             return this.hostNamePrefix;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo setSpotPriceLimit(Float spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public Float getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
         }
 
         public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo setVSwitchId(String vSwitchId) {
@@ -253,30 +277,6 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo setSpotPriceLimit(Float spotPriceLimit) {
-            this.spotPriceLimit = spotPriceLimit;
-            return this;
-        }
-        public Float getSpotPriceLimit() {
-            return this.spotPriceLimit;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypesInstanceTypeInfo setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
         }
 
     }
@@ -301,44 +301,35 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
     }
 
     public static class GetAutoScaleConfigResponseBodyQueuesQueueInfo extends TeaModel {
-        @NameInMap("QueueImageId")
-        public String queueImageId;
-
-        @NameInMap("SystemDiskCategory")
-        public String systemDiskCategory;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("HostNameSuffix")
-        public String hostNameSuffix;
-
-        @NameInMap("SpotStrategy")
-        public String spotStrategy;
-
-        @NameInMap("MinNodesInQueue")
-        public Integer minNodesInQueue;
-
-        @NameInMap("HostNamePrefix")
-        public String hostNamePrefix;
-
-        @NameInMap("SystemDiskSize")
-        public Integer systemDiskSize;
-
-        @NameInMap("MaxNodesInQueue")
-        public Integer maxNodesInQueue;
+        @NameInMap("EnableAutoGrow")
+        public Boolean enableAutoGrow;
 
         @NameInMap("EnableAutoShrink")
         public Boolean enableAutoShrink;
 
+        @NameInMap("HostNamePrefix")
+        public String hostNamePrefix;
+
+        @NameInMap("HostNameSuffix")
+        public String hostNameSuffix;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("InstanceTypes")
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypes instanceTypes;
+
+        @NameInMap("MaxNodesInQueue")
+        public Integer maxNodesInQueue;
+
+        @NameInMap("MinNodesInQueue")
+        public Integer minNodesInQueue;
+
+        @NameInMap("QueueImageId")
+        public String queueImageId;
+
         @NameInMap("QueueName")
         public String queueName;
-
-        @NameInMap("EnableAutoGrow")
-        public Boolean enableAutoGrow;
-
-        @NameInMap("SystemDiskLevel")
-        public String systemDiskLevel;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -346,100 +337,21 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
-        @NameInMap("InstanceTypes")
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypes instanceTypes;
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
+        @NameInMap("SystemDiskCategory")
+        public String systemDiskCategory;
+
+        @NameInMap("SystemDiskLevel")
+        public String systemDiskLevel;
+
+        @NameInMap("SystemDiskSize")
+        public Integer systemDiskSize;
 
         public static GetAutoScaleConfigResponseBodyQueuesQueueInfo build(java.util.Map<String, ?> map) throws Exception {
             GetAutoScaleConfigResponseBodyQueuesQueueInfo self = new GetAutoScaleConfigResponseBodyQueuesQueueInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setQueueImageId(String queueImageId) {
-            this.queueImageId = queueImageId;
-            return this;
-        }
-        public String getQueueImageId() {
-            return this.queueImageId;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setSystemDiskCategory(String systemDiskCategory) {
-            this.systemDiskCategory = systemDiskCategory;
-            return this;
-        }
-        public String getSystemDiskCategory() {
-            return this.systemDiskCategory;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setHostNameSuffix(String hostNameSuffix) {
-            this.hostNameSuffix = hostNameSuffix;
-            return this;
-        }
-        public String getHostNameSuffix() {
-            return this.hostNameSuffix;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setMinNodesInQueue(Integer minNodesInQueue) {
-            this.minNodesInQueue = minNodesInQueue;
-            return this;
-        }
-        public Integer getMinNodesInQueue() {
-            return this.minNodesInQueue;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setHostNamePrefix(String hostNamePrefix) {
-            this.hostNamePrefix = hostNamePrefix;
-            return this;
-        }
-        public String getHostNamePrefix() {
-            return this.hostNamePrefix;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setSystemDiskSize(Integer systemDiskSize) {
-            this.systemDiskSize = systemDiskSize;
-            return this;
-        }
-        public Integer getSystemDiskSize() {
-            return this.systemDiskSize;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setMaxNodesInQueue(Integer maxNodesInQueue) {
-            this.maxNodesInQueue = maxNodesInQueue;
-            return this;
-        }
-        public Integer getMaxNodesInQueue() {
-            return this.maxNodesInQueue;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setEnableAutoShrink(Boolean enableAutoShrink) {
-            this.enableAutoShrink = enableAutoShrink;
-            return this;
-        }
-        public Boolean getEnableAutoShrink() {
-            return this.enableAutoShrink;
-        }
-
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setQueueName(String queueName) {
-            this.queueName = queueName;
-            return this;
-        }
-        public String getQueueName() {
-            return this.queueName;
         }
 
         public GetAutoScaleConfigResponseBodyQueuesQueueInfo setEnableAutoGrow(Boolean enableAutoGrow) {
@@ -450,12 +362,76 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             return this.enableAutoGrow;
         }
 
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setSystemDiskLevel(String systemDiskLevel) {
-            this.systemDiskLevel = systemDiskLevel;
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setEnableAutoShrink(Boolean enableAutoShrink) {
+            this.enableAutoShrink = enableAutoShrink;
             return this;
         }
-        public String getSystemDiskLevel() {
-            return this.systemDiskLevel;
+        public Boolean getEnableAutoShrink() {
+            return this.enableAutoShrink;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setHostNamePrefix(String hostNamePrefix) {
+            this.hostNamePrefix = hostNamePrefix;
+            return this;
+        }
+        public String getHostNamePrefix() {
+            return this.hostNamePrefix;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setHostNameSuffix(String hostNameSuffix) {
+            this.hostNameSuffix = hostNameSuffix;
+            return this;
+        }
+        public String getHostNameSuffix() {
+            return this.hostNameSuffix;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setInstanceTypes(GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypes instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypes getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setMaxNodesInQueue(Integer maxNodesInQueue) {
+            this.maxNodesInQueue = maxNodesInQueue;
+            return this;
+        }
+        public Integer getMaxNodesInQueue() {
+            return this.maxNodesInQueue;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setMinNodesInQueue(Integer minNodesInQueue) {
+            this.minNodesInQueue = minNodesInQueue;
+            return this;
+        }
+        public Integer getMinNodesInQueue() {
+            return this.minNodesInQueue;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setQueueImageId(String queueImageId) {
+            this.queueImageId = queueImageId;
+            return this;
+        }
+        public String getQueueImageId() {
+            return this.queueImageId;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setQueueName(String queueName) {
+            this.queueName = queueName;
+            return this;
+        }
+        public String getQueueName() {
+            return this.queueName;
         }
 
         public GetAutoScaleConfigResponseBodyQueuesQueueInfo setResourceGroupId(String resourceGroupId) {
@@ -474,12 +450,36 @@ public class GetAutoScaleConfigResponseBody extends TeaModel {
             return this.spotPriceLimit;
         }
 
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setInstanceTypes(GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypes instanceTypes) {
-            this.instanceTypes = instanceTypes;
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
             return this;
         }
-        public GetAutoScaleConfigResponseBodyQueuesQueueInfoInstanceTypes getInstanceTypes() {
-            return this.instanceTypes;
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setSystemDiskCategory(String systemDiskCategory) {
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setSystemDiskLevel(String systemDiskLevel) {
+            this.systemDiskLevel = systemDiskLevel;
+            return this;
+        }
+        public String getSystemDiskLevel() {
+            return this.systemDiskLevel;
+        }
+
+        public GetAutoScaleConfigResponseBodyQueuesQueueInfo setSystemDiskSize(Integer systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
     }

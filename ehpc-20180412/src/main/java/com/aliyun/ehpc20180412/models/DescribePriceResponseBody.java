@@ -4,34 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("TotalTradePrice")
-    public Float totalTradePrice;
+    @NameInMap("Prices")
+    public DescribePriceResponseBodyPrices prices;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Prices")
-    public DescribePriceResponseBodyPrices prices;
+    @NameInMap("TotalTradePrice")
+    public Float totalTradePrice;
 
     public static DescribePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceResponseBody self = new DescribePriceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePriceResponseBody setTotalTradePrice(Float totalTradePrice) {
-        this.totalTradePrice = totalTradePrice;
-        return this;
-    }
-    public Float getTotalTradePrice() {
-        return this.totalTradePrice;
-    }
-
-    public DescribePriceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribePriceResponseBody setPrices(DescribePriceResponseBodyPrices prices) {
@@ -42,15 +26,31 @@ public class DescribePriceResponseBody extends TeaModel {
         return this.prices;
     }
 
+    public DescribePriceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribePriceResponseBody setTotalTradePrice(Float totalTradePrice) {
+        this.totalTradePrice = totalTradePrice;
+        return this;
+    }
+    public Float getTotalTradePrice() {
+        return this.totalTradePrice;
+    }
+
     public static class DescribePriceResponseBodyPricesPriceInfo extends TeaModel {
-        @NameInMap("OriginalPrice")
-        public Float originalPrice;
+        @NameInMap("Currency")
+        public String currency;
 
         @NameInMap("NodeType")
         public String nodeType;
 
-        @NameInMap("Currency")
-        public String currency;
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
 
         @NameInMap("TradePrice")
         public Float tradePrice;
@@ -60,12 +60,12 @@ public class DescribePriceResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribePriceResponseBodyPricesPriceInfo setOriginalPrice(Float originalPrice) {
-            this.originalPrice = originalPrice;
+        public DescribePriceResponseBodyPricesPriceInfo setCurrency(String currency) {
+            this.currency = currency;
             return this;
         }
-        public Float getOriginalPrice() {
-            return this.originalPrice;
+        public String getCurrency() {
+            return this.currency;
         }
 
         public DescribePriceResponseBodyPricesPriceInfo setNodeType(String nodeType) {
@@ -76,12 +76,12 @@ public class DescribePriceResponseBody extends TeaModel {
             return this.nodeType;
         }
 
-        public DescribePriceResponseBodyPricesPriceInfo setCurrency(String currency) {
-            this.currency = currency;
+        public DescribePriceResponseBodyPricesPriceInfo setOriginalPrice(Float originalPrice) {
+            this.originalPrice = originalPrice;
             return this;
         }
-        public String getCurrency() {
-            return this.currency;
+        public Float getOriginalPrice() {
+            return this.originalPrice;
         }
 
         public DescribePriceResponseBodyPricesPriceInfo setTradePrice(Float tradePrice) {

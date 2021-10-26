@@ -7,14 +7,14 @@ public class CreateJobFileRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("Content")
+    public String content;
+
     @NameInMap("RunasUser")
     public String runasUser;
 
     @NameInMap("RunasUserPassword")
     public String runasUserPassword;
-
-    @NameInMap("Content")
-    public String content;
 
     @NameInMap("TargetFile")
     public String targetFile;
@@ -32,6 +32,14 @@ public class CreateJobFileRequest extends TeaModel {
         return this.clusterId;
     }
 
+    public CreateJobFileRequest setContent(String content) {
+        this.content = content;
+        return this;
+    }
+    public String getContent() {
+        return this.content;
+    }
+
     public CreateJobFileRequest setRunasUser(String runasUser) {
         this.runasUser = runasUser;
         return this;
@@ -46,14 +54,6 @@ public class CreateJobFileRequest extends TeaModel {
     }
     public String getRunasUserPassword() {
         return this.runasUserPassword;
-    }
-
-    public CreateJobFileRequest setContent(String content) {
-        this.content = content;
-        return this;
-    }
-    public String getContent() {
-        return this.content;
     }
 
     public CreateJobFileRequest setTargetFile(String targetFile) {

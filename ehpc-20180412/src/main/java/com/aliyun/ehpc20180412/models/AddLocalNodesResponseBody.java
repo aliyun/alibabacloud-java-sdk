@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddLocalNodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceIds")
     public AddLocalNodesResponseBodyInstanceIds instanceIds;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AddLocalNodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddLocalNodesResponseBody self = new AddLocalNodesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AddLocalNodesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public AddLocalNodesResponseBody setInstanceIds(AddLocalNodesResponseBodyInstanceIds instanceIds) {
@@ -29,6 +21,14 @@ public class AddLocalNodesResponseBody extends TeaModel {
     }
     public AddLocalNodesResponseBodyInstanceIds getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public AddLocalNodesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class AddLocalNodesResponseBodyInstanceIds extends TeaModel {

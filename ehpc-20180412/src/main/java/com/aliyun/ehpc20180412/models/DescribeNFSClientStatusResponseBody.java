@@ -4,26 +4,18 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeNFSClientStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeNFSClientStatusResponseBodyResult result;
 
+    @NameInMap("Status")
+    public String status;
+
     public static DescribeNFSClientStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNFSClientStatusResponseBody self = new DescribeNFSClientStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeNFSClientStatusResponseBody setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
     }
 
     public DescribeNFSClientStatusResponseBody setRequestId(String requestId) {
@@ -42,27 +34,35 @@ public class DescribeNFSClientStatusResponseBody extends TeaModel {
         return this.result;
     }
 
+    public DescribeNFSClientStatusResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
     public static class DescribeNFSClientStatusResponseBodyResult extends TeaModel {
-        @NameInMap("Output")
-        public String output;
+        @NameInMap("ExitCode")
+        public Integer exitCode;
 
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
-        @NameInMap("ExitCode")
-        public Integer exitCode;
+        @NameInMap("Output")
+        public String output;
 
         public static DescribeNFSClientStatusResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeNFSClientStatusResponseBodyResult self = new DescribeNFSClientStatusResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNFSClientStatusResponseBodyResult setOutput(String output) {
-            this.output = output;
+        public DescribeNFSClientStatusResponseBodyResult setExitCode(Integer exitCode) {
+            this.exitCode = exitCode;
             return this;
         }
-        public String getOutput() {
-            return this.output;
+        public Integer getExitCode() {
+            return this.exitCode;
         }
 
         public DescribeNFSClientStatusResponseBodyResult setInvokeRecordStatus(String invokeRecordStatus) {
@@ -73,12 +73,12 @@ public class DescribeNFSClientStatusResponseBody extends TeaModel {
             return this.invokeRecordStatus;
         }
 
-        public DescribeNFSClientStatusResponseBodyResult setExitCode(Integer exitCode) {
-            this.exitCode = exitCode;
+        public DescribeNFSClientStatusResponseBodyResult setOutput(String output) {
+            this.output = output;
             return this;
         }
-        public Integer getExitCode() {
-            return this.exitCode;
+        public String getOutput() {
+            return this.output;
         }
 
     }

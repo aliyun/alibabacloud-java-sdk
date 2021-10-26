@@ -4,26 +4,26 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddNodesResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("InstanceIds")
+    public AddNodesResponseBodyInstanceIds instanceIds;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InstanceIds")
-    public AddNodesResponseBodyInstanceIds instanceIds;
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static AddNodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddNodesResponseBody self = new AddNodesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddNodesResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
+    public AddNodesResponseBody setInstanceIds(AddNodesResponseBodyInstanceIds instanceIds) {
+        this.instanceIds = instanceIds;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public AddNodesResponseBodyInstanceIds getInstanceIds() {
+        return this.instanceIds;
     }
 
     public AddNodesResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class AddNodesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddNodesResponseBody setInstanceIds(AddNodesResponseBodyInstanceIds instanceIds) {
-        this.instanceIds = instanceIds;
+    public AddNodesResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public AddNodesResponseBodyInstanceIds getInstanceIds() {
-        return this.instanceIds;
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public static class AddNodesResponseBodyInstanceIds extends TeaModel {

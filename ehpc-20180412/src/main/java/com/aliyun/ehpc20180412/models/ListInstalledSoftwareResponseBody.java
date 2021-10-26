@@ -35,14 +35,14 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
         @NameInMap("SoftwareId")
         public String softwareId;
 
+        @NameInMap("SoftwareName")
+        public String softwareName;
+
         @NameInMap("SoftwareStatus")
         public String softwareStatus;
 
         @NameInMap("SoftwareVersion")
         public String softwareVersion;
-
-        @NameInMap("SoftwareName")
-        public String softwareName;
 
         public static ListInstalledSoftwareResponseBodySoftwareListSoftwareList build(java.util.Map<String, ?> map) throws Exception {
             ListInstalledSoftwareResponseBodySoftwareListSoftwareList self = new ListInstalledSoftwareResponseBodySoftwareListSoftwareList();
@@ -55,6 +55,14 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
         }
         public String getSoftwareId() {
             return this.softwareId;
+        }
+
+        public ListInstalledSoftwareResponseBodySoftwareListSoftwareList setSoftwareName(String softwareName) {
+            this.softwareName = softwareName;
+            return this;
+        }
+        public String getSoftwareName() {
+            return this.softwareName;
         }
 
         public ListInstalledSoftwareResponseBodySoftwareListSoftwareList setSoftwareStatus(String softwareStatus) {
@@ -71,14 +79,6 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
         }
         public String getSoftwareVersion() {
             return this.softwareVersion;
-        }
-
-        public ListInstalledSoftwareResponseBodySoftwareListSoftwareList setSoftwareName(String softwareName) {
-            this.softwareName = softwareName;
-            return this;
-        }
-        public String getSoftwareName() {
-            return this.softwareName;
         }
 
     }

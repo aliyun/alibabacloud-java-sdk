@@ -32,37 +32,21 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
     }
 
     public static class GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Url")
-        public String url;
-
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Size")
         public Integer size;
 
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Url")
+        public String url;
+
         public static GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo build(java.util.Map<String, ?> map) throws Exception {
             GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo self = new GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
         }
 
         public GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo setName(String name) {
@@ -79,6 +63,22 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
+        }
+
+        public GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }

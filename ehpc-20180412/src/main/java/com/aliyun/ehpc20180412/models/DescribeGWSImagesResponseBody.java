@@ -4,24 +4,40 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeGWSImagesResponseBody extends TeaModel {
+    @NameInMap("Images")
+    public DescribeGWSImagesResponseBodyImages images;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Images")
-    public DescribeGWSImagesResponseBodyImages images;
 
     public static DescribeGWSImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGWSImagesResponseBody self = new DescribeGWSImagesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGWSImagesResponseBody setImages(DescribeGWSImagesResponseBodyImages images) {
+        this.images = images;
+        return this;
+    }
+    public DescribeGWSImagesResponseBodyImages getImages() {
+        return this.images;
+    }
+
+    public DescribeGWSImagesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeGWSImagesResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class DescribeGWSImagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeGWSImagesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public DescribeGWSImagesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,20 +64,18 @@ public class DescribeGWSImagesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeGWSImagesResponseBody setImages(DescribeGWSImagesResponseBodyImages images) {
-        this.images = images;
-        return this;
-    }
-    public DescribeGWSImagesResponseBodyImages getImages() {
-        return this.images;
-    }
-
     public static class DescribeGWSImagesResponseBodyImagesImageInfo extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ImageId")
+        public String imageId;
 
         @NameInMap("ImageType")
         public String imageType;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Progress")
         public String progress;
@@ -77,26 +83,28 @@ public class DescribeGWSImagesResponseBody extends TeaModel {
         @NameInMap("Size")
         public Integer size;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("ImageId")
-        public String imageId;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeGWSImagesResponseBodyImagesImageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeGWSImagesResponseBodyImagesImageInfo self = new DescribeGWSImagesResponseBodyImagesImageInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGWSImagesResponseBodyImagesImageInfo setStatus(String status) {
-            this.status = status;
+        public DescribeGWSImagesResponseBodyImagesImageInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeGWSImagesResponseBodyImagesImageInfo setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
         }
 
         public DescribeGWSImagesResponseBodyImagesImageInfo setImageType(String imageType) {
@@ -105,6 +113,14 @@ public class DescribeGWSImagesResponseBody extends TeaModel {
         }
         public String getImageType() {
             return this.imageType;
+        }
+
+        public DescribeGWSImagesResponseBodyImagesImageInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeGWSImagesResponseBodyImagesImageInfo setProgress(String progress) {
@@ -123,28 +139,12 @@ public class DescribeGWSImagesResponseBody extends TeaModel {
             return this.size;
         }
 
-        public DescribeGWSImagesResponseBodyImagesImageInfo setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public DescribeGWSImagesResponseBodyImagesImageInfo setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public DescribeGWSImagesResponseBodyImagesImageInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeGWSImagesResponseBodyImagesImageInfo setImageId(String imageId) {
-            this.imageId = imageId;
-            return this;
-        }
-        public String getImageId() {
-            return this.imageId;
+        public String getStatus() {
+            return this.status;
         }
 
     }

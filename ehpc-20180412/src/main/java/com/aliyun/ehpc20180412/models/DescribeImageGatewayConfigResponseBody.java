@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageGatewayConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Imagegw")
     public DescribeImageGatewayConfigResponseBodyImagegw imagegw;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeImageGatewayConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageGatewayConfigResponseBody self = new DescribeImageGatewayConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImageGatewayConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeImageGatewayConfigResponseBody setImagegw(DescribeImageGatewayConfigResponseBodyImagegw imagegw) {
@@ -31,38 +23,38 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
         return this.imagegw;
     }
 
-    public static class DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo extends TeaModel {
-        @NameInMap("URL")
-        public String URL;
+    public DescribeImageGatewayConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("RemoteType")
-        public String remoteType;
+    public static class DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo extends TeaModel {
+        @NameInMap("Authentication")
+        public String authentication;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Authentication")
-        public String authentication;
+        @NameInMap("RemoteType")
+        public String remoteType;
+
+        @NameInMap("URL")
+        public String URL;
 
         public static DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo self = new DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setURL(String URL) {
-            this.URL = URL;
+        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setAuthentication(String authentication) {
+            this.authentication = authentication;
             return this;
         }
-        public String getURL() {
-            return this.URL;
-        }
-
-        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setRemoteType(String remoteType) {
-            this.remoteType = remoteType;
-            return this;
-        }
-        public String getRemoteType() {
-            return this.remoteType;
+        public String getAuthentication() {
+            return this.authentication;
         }
 
         public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setLocation(String location) {
@@ -73,12 +65,20 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             return this.location;
         }
 
-        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setAuthentication(String authentication) {
-            this.authentication = authentication;
+        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setRemoteType(String remoteType) {
+            this.remoteType = remoteType;
             return this;
         }
-        public String getAuthentication() {
-            return this.authentication;
+        public String getRemoteType() {
+            return this.remoteType;
+        }
+
+        public DescribeImageGatewayConfigResponseBodyImagegwLocationsLocationInfo setURL(String URL) {
+            this.URL = URL;
+            return this;
+        }
+        public String getURL() {
+            return this.URL;
         }
 
     }
@@ -103,51 +103,27 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeImageGatewayConfigResponseBodyImagegw extends TeaModel {
-        @NameInMap("UpdateDateTime")
-        public String updateDateTime;
+        @NameInMap("DefaultImageLocation")
+        public String defaultImageLocation;
 
         @NameInMap("ImageExpirationTimeout")
         public String imageExpirationTimeout;
 
+        @NameInMap("Locations")
+        public DescribeImageGatewayConfigResponseBodyImagegwLocations locations;
+
         @NameInMap("MongoDBURI")
         public String mongoDBURI;
-
-        @NameInMap("DefaultImageLocation")
-        public String defaultImageLocation;
 
         @NameInMap("PullUpdateTimeout")
         public Long pullUpdateTimeout;
 
-        @NameInMap("Locations")
-        public DescribeImageGatewayConfigResponseBodyImagegwLocations locations;
+        @NameInMap("UpdateDateTime")
+        public String updateDateTime;
 
         public static DescribeImageGatewayConfigResponseBodyImagegw build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageGatewayConfigResponseBodyImagegw self = new DescribeImageGatewayConfigResponseBodyImagegw();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeImageGatewayConfigResponseBodyImagegw setUpdateDateTime(String updateDateTime) {
-            this.updateDateTime = updateDateTime;
-            return this;
-        }
-        public String getUpdateDateTime() {
-            return this.updateDateTime;
-        }
-
-        public DescribeImageGatewayConfigResponseBodyImagegw setImageExpirationTimeout(String imageExpirationTimeout) {
-            this.imageExpirationTimeout = imageExpirationTimeout;
-            return this;
-        }
-        public String getImageExpirationTimeout() {
-            return this.imageExpirationTimeout;
-        }
-
-        public DescribeImageGatewayConfigResponseBodyImagegw setMongoDBURI(String mongoDBURI) {
-            this.mongoDBURI = mongoDBURI;
-            return this;
-        }
-        public String getMongoDBURI() {
-            return this.mongoDBURI;
         }
 
         public DescribeImageGatewayConfigResponseBodyImagegw setDefaultImageLocation(String defaultImageLocation) {
@@ -158,12 +134,12 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
             return this.defaultImageLocation;
         }
 
-        public DescribeImageGatewayConfigResponseBodyImagegw setPullUpdateTimeout(Long pullUpdateTimeout) {
-            this.pullUpdateTimeout = pullUpdateTimeout;
+        public DescribeImageGatewayConfigResponseBodyImagegw setImageExpirationTimeout(String imageExpirationTimeout) {
+            this.imageExpirationTimeout = imageExpirationTimeout;
             return this;
         }
-        public Long getPullUpdateTimeout() {
-            return this.pullUpdateTimeout;
+        public String getImageExpirationTimeout() {
+            return this.imageExpirationTimeout;
         }
 
         public DescribeImageGatewayConfigResponseBodyImagegw setLocations(DescribeImageGatewayConfigResponseBodyImagegwLocations locations) {
@@ -172,6 +148,30 @@ public class DescribeImageGatewayConfigResponseBody extends TeaModel {
         }
         public DescribeImageGatewayConfigResponseBodyImagegwLocations getLocations() {
             return this.locations;
+        }
+
+        public DescribeImageGatewayConfigResponseBodyImagegw setMongoDBURI(String mongoDBURI) {
+            this.mongoDBURI = mongoDBURI;
+            return this;
+        }
+        public String getMongoDBURI() {
+            return this.mongoDBURI;
+        }
+
+        public DescribeImageGatewayConfigResponseBodyImagegw setPullUpdateTimeout(Long pullUpdateTimeout) {
+            this.pullUpdateTimeout = pullUpdateTimeout;
+            return this;
+        }
+        public Long getPullUpdateTimeout() {
+            return this.pullUpdateTimeout;
+        }
+
+        public DescribeImageGatewayConfigResponseBodyImagegw setUpdateDateTime(String updateDateTime) {
+            this.updateDateTime = updateDateTime;
+            return this;
+        }
+        public String getUpdateDateTime() {
+            return this.updateDateTime;
         }
 
     }

@@ -4,24 +4,40 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListNodesByQueueResponseBody extends TeaModel {
+    @NameInMap("Nodes")
+    public ListNodesByQueueResponseBodyNodes nodes;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("Nodes")
-    public ListNodesByQueueResponseBodyNodes nodes;
 
     public static ListNodesByQueueResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNodesByQueueResponseBody self = new ListNodesByQueueResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListNodesByQueueResponseBody setNodes(ListNodesByQueueResponseBodyNodes nodes) {
+        this.nodes = nodes;
+        return this;
+    }
+    public ListNodesByQueueResponseBodyNodes getNodes() {
+        return this.nodes;
+    }
+
+    public ListNodesByQueueResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListNodesByQueueResponseBody setPageSize(Integer pageSize) {
@@ -40,14 +56,6 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListNodesByQueueResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public ListNodesByQueueResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,20 +64,12 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListNodesByQueueResponseBody setNodes(ListNodesByQueueResponseBodyNodes nodes) {
-        this.nodes = nodes;
-        return this;
-    }
-    public ListNodesByQueueResponseBodyNodes getNodes() {
-        return this.nodes;
-    }
-
     public static class ListNodesByQueueResponseBodyNodesNodeInfoTotalResources extends TeaModel {
-        @NameInMap("Gpu")
-        public Integer gpu;
-
         @NameInMap("Cpu")
         public Integer cpu;
+
+        @NameInMap("Gpu")
+        public Integer gpu;
 
         @NameInMap("Memory")
         public Integer memory;
@@ -79,20 +79,20 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources setGpu(Integer gpu) {
-            this.gpu = gpu;
-            return this;
-        }
-        public Integer getGpu() {
-            return this.gpu;
-        }
-
         public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources setGpu(Integer gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+        public Integer getGpu() {
+            return this.gpu;
         }
 
         public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources setMemory(Integer memory) {
@@ -106,11 +106,11 @@ public class ListNodesByQueueResponseBody extends TeaModel {
     }
 
     public static class ListNodesByQueueResponseBodyNodesNodeInfoUsedResources extends TeaModel {
-        @NameInMap("Gpu")
-        public Integer gpu;
-
         @NameInMap("Cpu")
         public Integer cpu;
+
+        @NameInMap("Gpu")
+        public Integer gpu;
 
         @NameInMap("Memory")
         public Integer memory;
@@ -120,20 +120,20 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources setGpu(Integer gpu) {
-            this.gpu = gpu;
-            return this;
-        }
-        public Integer getGpu() {
-            return this.gpu;
-        }
-
         public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources setGpu(Integer gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+        public Integer getGpu() {
+            return this.gpu;
         }
 
         public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources setMemory(Integer memory) {
@@ -147,68 +147,56 @@ public class ListNodesByQueueResponseBody extends TeaModel {
     }
 
     public static class ListNodesByQueueResponseBodyNodesNodeInfo extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("AddTime")
+        public String addTime;
 
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("HtEnabled")
-        public Boolean htEnabled;
-
-        @NameInMap("Expired")
-        public Boolean expired;
-
-        @NameInMap("ImageOwnerAlias")
-        public String imageOwnerAlias;
-
-        @NameInMap("LockReason")
-        public String lockReason;
-
-        @NameInMap("HostName")
-        public String hostName;
-
-        @NameInMap("PublicIpAddress")
-        public String publicIpAddress;
-
-        @NameInMap("SpotStrategy")
-        public String spotStrategy;
+        @NameInMap("CreateMode")
+        public String createMode;
 
         @NameInMap("CreatedByEhpc")
         public Boolean createdByEhpc;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("IpAddress")
-        public String ipAddress;
+        @NameInMap("Expired")
+        public Boolean expired;
 
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        @NameInMap("Version")
-        public String version;
+        @NameInMap("HostName")
+        public String hostName;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("AddTime")
-        public String addTime;
-
-        @NameInMap("ImageId")
-        public String imageId;
-
-        @NameInMap("Location")
-        public String location;
+        @NameInMap("HtEnabled")
+        public Boolean htEnabled;
 
         @NameInMap("Id")
         public String id;
 
-        @NameInMap("CreateMode")
-        public String createMode;
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("ImageOwnerAlias")
+        public String imageOwnerAlias;
+
+        @NameInMap("IpAddress")
+        public String ipAddress;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("LockReason")
+        public String lockReason;
+
+        @NameInMap("PublicIpAddress")
+        public String publicIpAddress;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("TotalResources")
         public ListNodesByQueueResponseBodyNodesNodeInfoTotalResources totalResources;
@@ -216,137 +204,21 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         @NameInMap("UsedResources")
         public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources usedResources;
 
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("Version")
+        public String version;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static ListNodesByQueueResponseBodyNodesNodeInfo build(java.util.Map<String, ?> map) throws Exception {
             ListNodesByQueueResponseBodyNodesNodeInfo self = new ListNodesByQueueResponseBodyNodesNodeInfo();
             return TeaModel.build(map, self);
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setHtEnabled(Boolean htEnabled) {
-            this.htEnabled = htEnabled;
-            return this;
-        }
-        public Boolean getHtEnabled() {
-            return this.htEnabled;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setExpired(Boolean expired) {
-            this.expired = expired;
-            return this;
-        }
-        public Boolean getExpired() {
-            return this.expired;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setImageOwnerAlias(String imageOwnerAlias) {
-            this.imageOwnerAlias = imageOwnerAlias;
-            return this;
-        }
-        public String getImageOwnerAlias() {
-            return this.imageOwnerAlias;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setLockReason(String lockReason) {
-            this.lockReason = lockReason;
-            return this;
-        }
-        public String getLockReason() {
-            return this.lockReason;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setHostName(String hostName) {
-            this.hostName = hostName;
-            return this;
-        }
-        public String getHostName() {
-            return this.hostName;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setPublicIpAddress(String publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
-            return this;
-        }
-        public String getPublicIpAddress() {
-            return this.publicIpAddress;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setSpotStrategy(String spotStrategy) {
-            this.spotStrategy = spotStrategy;
-            return this;
-        }
-        public String getSpotStrategy() {
-            return this.spotStrategy;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setCreatedByEhpc(Boolean createdByEhpc) {
-            this.createdByEhpc = createdByEhpc;
-            return this;
-        }
-        public Boolean getCreatedByEhpc() {
-            return this.createdByEhpc;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setExpiredTime(String expiredTime) {
-            this.expiredTime = expiredTime;
-            return this;
-        }
-        public String getExpiredTime() {
-            return this.expiredTime;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public ListNodesByQueueResponseBodyNodesNodeInfo setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public ListNodesByQueueResponseBodyNodesNodeInfo setAddTime(String addTime) {
@@ -357,20 +229,52 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.addTime;
         }
 
-        public ListNodesByQueueResponseBodyNodesNodeInfo setImageId(String imageId) {
-            this.imageId = imageId;
+        public ListNodesByQueueResponseBodyNodesNodeInfo setCreateMode(String createMode) {
+            this.createMode = createMode;
             return this;
         }
-        public String getImageId() {
-            return this.imageId;
+        public String getCreateMode() {
+            return this.createMode;
         }
 
-        public ListNodesByQueueResponseBodyNodesNodeInfo setLocation(String location) {
-            this.location = location;
+        public ListNodesByQueueResponseBodyNodesNodeInfo setCreatedByEhpc(Boolean createdByEhpc) {
+            this.createdByEhpc = createdByEhpc;
             return this;
         }
-        public String getLocation() {
-            return this.location;
+        public Boolean getCreatedByEhpc() {
+            return this.createdByEhpc;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setExpired(Boolean expired) {
+            this.expired = expired;
+            return this;
+        }
+        public Boolean getExpired() {
+            return this.expired;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setHtEnabled(Boolean htEnabled) {
+            this.htEnabled = htEnabled;
+            return this;
+        }
+        public Boolean getHtEnabled() {
+            return this.htEnabled;
         }
 
         public ListNodesByQueueResponseBodyNodesNodeInfo setId(String id) {
@@ -381,12 +285,76 @@ public class ListNodesByQueueResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListNodesByQueueResponseBodyNodesNodeInfo setCreateMode(String createMode) {
-            this.createMode = createMode;
+        public ListNodesByQueueResponseBodyNodesNodeInfo setImageId(String imageId) {
+            this.imageId = imageId;
             return this;
         }
-        public String getCreateMode() {
-            return this.createMode;
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setImageOwnerAlias(String imageOwnerAlias) {
+            this.imageOwnerAlias = imageOwnerAlias;
+            return this;
+        }
+        public String getImageOwnerAlias() {
+            return this.imageOwnerAlias;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setPublicIpAddress(String publicIpAddress) {
+            this.publicIpAddress = publicIpAddress;
+            return this;
+        }
+        public String getPublicIpAddress() {
+            return this.publicIpAddress;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListNodesByQueueResponseBodyNodesNodeInfo setTotalResources(ListNodesByQueueResponseBodyNodesNodeInfoTotalResources totalResources) {
@@ -403,6 +371,38 @@ public class ListNodesByQueueResponseBody extends TeaModel {
         }
         public ListNodesByQueueResponseBodyNodesNodeInfoUsedResources getUsedResources() {
             return this.usedResources;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public ListNodesByQueueResponseBodyNodesNodeInfo setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

@@ -84,32 +84,32 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         @NameInMap("JobQueue")
         public String jobQueue;
 
-        @NameInMap("VolumeId")
-        public String volumeId;
-
-        @NameInMap("RemoteDirectory")
-        public String remoteDirectory;
-
-        @NameInMap("VolumeMountpoint")
-        public String volumeMountpoint;
-
         @NameInMap("LocalDirectory")
         public String localDirectory;
-
-        @NameInMap("VolumeType")
-        public String volumeType;
-
-        @NameInMap("MustKeep")
-        public Boolean mustKeep;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("VolumeProtocol")
-        public String volumeProtocol;
+        @NameInMap("MustKeep")
+        public Boolean mustKeep;
+
+        @NameInMap("RemoteDirectory")
+        public String remoteDirectory;
 
         @NameInMap("Roles")
         public GetClusterVolumesResponseBodyVolumesVolumeInfoRoles roles;
+
+        @NameInMap("VolumeId")
+        public String volumeId;
+
+        @NameInMap("VolumeMountpoint")
+        public String volumeMountpoint;
+
+        @NameInMap("VolumeProtocol")
+        public String volumeProtocol;
+
+        @NameInMap("VolumeType")
+        public String volumeType;
 
         public static GetClusterVolumesResponseBodyVolumesVolumeInfo build(java.util.Map<String, ?> map) throws Exception {
             GetClusterVolumesResponseBodyVolumesVolumeInfo self = new GetClusterVolumesResponseBodyVolumesVolumeInfo();
@@ -124,52 +124,12 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.jobQueue;
         }
 
-        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeId(String volumeId) {
-            this.volumeId = volumeId;
-            return this;
-        }
-        public String getVolumeId() {
-            return this.volumeId;
-        }
-
-        public GetClusterVolumesResponseBodyVolumesVolumeInfo setRemoteDirectory(String remoteDirectory) {
-            this.remoteDirectory = remoteDirectory;
-            return this;
-        }
-        public String getRemoteDirectory() {
-            return this.remoteDirectory;
-        }
-
-        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeMountpoint(String volumeMountpoint) {
-            this.volumeMountpoint = volumeMountpoint;
-            return this;
-        }
-        public String getVolumeMountpoint() {
-            return this.volumeMountpoint;
-        }
-
         public GetClusterVolumesResponseBodyVolumesVolumeInfo setLocalDirectory(String localDirectory) {
             this.localDirectory = localDirectory;
             return this;
         }
         public String getLocalDirectory() {
             return this.localDirectory;
-        }
-
-        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeType(String volumeType) {
-            this.volumeType = volumeType;
-            return this;
-        }
-        public String getVolumeType() {
-            return this.volumeType;
-        }
-
-        public GetClusterVolumesResponseBodyVolumesVolumeInfo setMustKeep(Boolean mustKeep) {
-            this.mustKeep = mustKeep;
-            return this;
-        }
-        public Boolean getMustKeep() {
-            return this.mustKeep;
         }
 
         public GetClusterVolumesResponseBodyVolumesVolumeInfo setLocation(String location) {
@@ -180,12 +140,20 @@ public class GetClusterVolumesResponseBody extends TeaModel {
             return this.location;
         }
 
-        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeProtocol(String volumeProtocol) {
-            this.volumeProtocol = volumeProtocol;
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setMustKeep(Boolean mustKeep) {
+            this.mustKeep = mustKeep;
             return this;
         }
-        public String getVolumeProtocol() {
-            return this.volumeProtocol;
+        public Boolean getMustKeep() {
+            return this.mustKeep;
+        }
+
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setRemoteDirectory(String remoteDirectory) {
+            this.remoteDirectory = remoteDirectory;
+            return this;
+        }
+        public String getRemoteDirectory() {
+            return this.remoteDirectory;
         }
 
         public GetClusterVolumesResponseBodyVolumesVolumeInfo setRoles(GetClusterVolumesResponseBodyVolumesVolumeInfoRoles roles) {
@@ -194,6 +162,38 @@ public class GetClusterVolumesResponseBody extends TeaModel {
         }
         public GetClusterVolumesResponseBodyVolumesVolumeInfoRoles getRoles() {
             return this.roles;
+        }
+
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeId(String volumeId) {
+            this.volumeId = volumeId;
+            return this;
+        }
+        public String getVolumeId() {
+            return this.volumeId;
+        }
+
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeMountpoint(String volumeMountpoint) {
+            this.volumeMountpoint = volumeMountpoint;
+            return this;
+        }
+        public String getVolumeMountpoint() {
+            return this.volumeMountpoint;
+        }
+
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeProtocol(String volumeProtocol) {
+            this.volumeProtocol = volumeProtocol;
+            return this;
+        }
+        public String getVolumeProtocol() {
+            return this.volumeProtocol;
+        }
+
+        public GetClusterVolumesResponseBodyVolumesVolumeInfo setVolumeType(String volumeType) {
+            this.volumeType = volumeType;
+            return this;
+        }
+        public String getVolumeType() {
+            return this.volumeType;
         }
 
     }

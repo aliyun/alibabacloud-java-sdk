@@ -4,23 +4,15 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class UpdateClusterVolumesRequest extends TeaModel {
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     @NameInMap("AdditionalVolumes")
     public java.util.List<UpdateClusterVolumesRequestAdditionalVolumes> additionalVolumes;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     public static UpdateClusterVolumesRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClusterVolumesRequest self = new UpdateClusterVolumesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateClusterVolumesRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public UpdateClusterVolumesRequest setAdditionalVolumes(java.util.List<UpdateClusterVolumesRequestAdditionalVolumes> additionalVolumes) {
@@ -29,6 +21,14 @@ public class UpdateClusterVolumesRequest extends TeaModel {
     }
     public java.util.List<UpdateClusterVolumesRequestAdditionalVolumes> getAdditionalVolumes() {
         return this.additionalVolumes;
+    }
+
+    public UpdateClusterVolumesRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public static class UpdateClusterVolumesRequestAdditionalVolumesRoles extends TeaModel {
@@ -54,29 +54,29 @@ public class UpdateClusterVolumesRequest extends TeaModel {
         @NameInMap("JobQueue")
         public String jobQueue;
 
-        @NameInMap("VolumeId")
-        public String volumeId;
+        @NameInMap("LocalDirectory")
+        public String localDirectory;
 
-        @NameInMap("Roles")
-        public java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> roles;
-
-        @NameInMap("VolumeMountpoint")
-        public String volumeMountpoint;
+        @NameInMap("Location")
+        public String location;
 
         @NameInMap("RemoteDirectory")
         public String remoteDirectory;
 
-        @NameInMap("VolumeType")
-        public String volumeType;
+        @NameInMap("Roles")
+        public java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> roles;
 
-        @NameInMap("LocalDirectory")
-        public String localDirectory;
+        @NameInMap("VolumeId")
+        public String volumeId;
+
+        @NameInMap("VolumeMountpoint")
+        public String volumeMountpoint;
 
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
 
-        @NameInMap("Location")
-        public String location;
+        @NameInMap("VolumeType")
+        public String volumeType;
 
         public static UpdateClusterVolumesRequestAdditionalVolumes build(java.util.Map<String, ?> map) throws Exception {
             UpdateClusterVolumesRequestAdditionalVolumes self = new UpdateClusterVolumesRequestAdditionalVolumes();
@@ -91,28 +91,20 @@ public class UpdateClusterVolumesRequest extends TeaModel {
             return this.jobQueue;
         }
 
-        public UpdateClusterVolumesRequestAdditionalVolumes setVolumeId(String volumeId) {
-            this.volumeId = volumeId;
+        public UpdateClusterVolumesRequestAdditionalVolumes setLocalDirectory(String localDirectory) {
+            this.localDirectory = localDirectory;
             return this;
         }
-        public String getVolumeId() {
-            return this.volumeId;
+        public String getLocalDirectory() {
+            return this.localDirectory;
         }
 
-        public UpdateClusterVolumesRequestAdditionalVolumes setRoles(java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> roles) {
-            this.roles = roles;
+        public UpdateClusterVolumesRequestAdditionalVolumes setLocation(String location) {
+            this.location = location;
             return this;
         }
-        public java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> getRoles() {
-            return this.roles;
-        }
-
-        public UpdateClusterVolumesRequestAdditionalVolumes setVolumeMountpoint(String volumeMountpoint) {
-            this.volumeMountpoint = volumeMountpoint;
-            return this;
-        }
-        public String getVolumeMountpoint() {
-            return this.volumeMountpoint;
+        public String getLocation() {
+            return this.location;
         }
 
         public UpdateClusterVolumesRequestAdditionalVolumes setRemoteDirectory(String remoteDirectory) {
@@ -123,20 +115,28 @@ public class UpdateClusterVolumesRequest extends TeaModel {
             return this.remoteDirectory;
         }
 
-        public UpdateClusterVolumesRequestAdditionalVolumes setVolumeType(String volumeType) {
-            this.volumeType = volumeType;
+        public UpdateClusterVolumesRequestAdditionalVolumes setRoles(java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> roles) {
+            this.roles = roles;
             return this;
         }
-        public String getVolumeType() {
-            return this.volumeType;
+        public java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> getRoles() {
+            return this.roles;
         }
 
-        public UpdateClusterVolumesRequestAdditionalVolumes setLocalDirectory(String localDirectory) {
-            this.localDirectory = localDirectory;
+        public UpdateClusterVolumesRequestAdditionalVolumes setVolumeId(String volumeId) {
+            this.volumeId = volumeId;
             return this;
         }
-        public String getLocalDirectory() {
-            return this.localDirectory;
+        public String getVolumeId() {
+            return this.volumeId;
+        }
+
+        public UpdateClusterVolumesRequestAdditionalVolumes setVolumeMountpoint(String volumeMountpoint) {
+            this.volumeMountpoint = volumeMountpoint;
+            return this;
+        }
+        public String getVolumeMountpoint() {
+            return this.volumeMountpoint;
         }
 
         public UpdateClusterVolumesRequestAdditionalVolumes setVolumeProtocol(String volumeProtocol) {
@@ -147,12 +147,12 @@ public class UpdateClusterVolumesRequest extends TeaModel {
             return this.volumeProtocol;
         }
 
-        public UpdateClusterVolumesRequestAdditionalVolumes setLocation(String location) {
-            this.location = location;
+        public UpdateClusterVolumesRequestAdditionalVolumes setVolumeType(String volumeType) {
+            this.volumeType = volumeType;
             return this;
         }
-        public String getLocation() {
-            return this.location;
+        public String getVolumeType() {
+            return this.volumeType;
         }
 
     }

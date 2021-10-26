@@ -4,29 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListInvocationStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CommandId")
     public String commandId;
-
-    @NameInMap("InvokeStatus")
-    public String invokeStatus;
 
     @NameInMap("InvokeInstances")
     public ListInvocationStatusResponseBodyInvokeInstances invokeInstances;
 
+    @NameInMap("InvokeStatus")
+    public String invokeStatus;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static ListInvocationStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInvocationStatusResponseBody self = new ListInvocationStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListInvocationStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListInvocationStatusResponseBody setCommandId(String commandId) {
@@ -37,14 +29,6 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         return this.commandId;
     }
 
-    public ListInvocationStatusResponseBody setInvokeStatus(String invokeStatus) {
-        this.invokeStatus = invokeStatus;
-        return this;
-    }
-    public String getInvokeStatus() {
-        return this.invokeStatus;
-    }
-
     public ListInvocationStatusResponseBody setInvokeInstances(ListInvocationStatusResponseBodyInvokeInstances invokeInstances) {
         this.invokeInstances = invokeInstances;
         return this;
@@ -53,24 +37,32 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         return this.invokeInstances;
     }
 
-    public static class ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance extends TeaModel {
-        @NameInMap("InstanceInvokeStatus")
-        public String instanceInvokeStatus;
+    public ListInvocationStatusResponseBody setInvokeStatus(String invokeStatus) {
+        this.invokeStatus = invokeStatus;
+        return this;
+    }
+    public String getInvokeStatus() {
+        return this.invokeStatus;
+    }
 
+    public ListInvocationStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceInvokeStatus")
+        public String instanceInvokeStatus;
 
         public static ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance build(java.util.Map<String, ?> map) throws Exception {
             ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance self = new ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance();
             return TeaModel.build(map, self);
-        }
-
-        public ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance setInstanceInvokeStatus(String instanceInvokeStatus) {
-            this.instanceInvokeStatus = instanceInvokeStatus;
-            return this;
-        }
-        public String getInstanceInvokeStatus() {
-            return this.instanceInvokeStatus;
         }
 
         public ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance setInstanceId(String instanceId) {
@@ -79,6 +71,14 @@ public class ListInvocationStatusResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance setInstanceInvokeStatus(String instanceInvokeStatus) {
+            this.instanceInvokeStatus = instanceInvokeStatus;
+            return this;
+        }
+        public String getInstanceInvokeStatus() {
+            return this.instanceInvokeStatus;
         }
 
     }
