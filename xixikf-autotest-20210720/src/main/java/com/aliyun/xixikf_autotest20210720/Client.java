@@ -36,18 +36,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CommerIn"),
-            new TeaPair("version", "2021-07-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CommerInResponse());
+        return TeaModel.toModel(this.doRPCRequest("CommerIn", "2021-07-20", "HTTPS", "POST", "AK", "json", req, runtime), new CommerInResponse());
     }
 
     public CommerInResponse commerIn(CommerInRequest request) throws Exception {
@@ -60,18 +49,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CommerOut"),
-            new TeaPair("version", "2021-07-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CommerOutResponse());
+        return TeaModel.toModel(this.doRPCRequest("CommerOut", "2021-07-20", "HTTPS", "POST", "AK", "json", req, runtime), new CommerOutResponse());
     }
 
     public CommerOutResponse commerOut(CommerOutRequest request) throws Exception {
