@@ -7,11 +7,11 @@ public class SubmitHotlineTransferRegisterResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public Long data;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -29,20 +29,20 @@ public class SubmitHotlineTransferRegisterResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SubmitHotlineTransferRegisterResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public SubmitHotlineTransferRegisterResponseBody setData(Long data) {
         this.data = data;
         return this;
     }
     public Long getData() {
         return this.data;
+    }
+
+    public SubmitHotlineTransferRegisterResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public SubmitHotlineTransferRegisterResponseBody setRequestId(String requestId) {

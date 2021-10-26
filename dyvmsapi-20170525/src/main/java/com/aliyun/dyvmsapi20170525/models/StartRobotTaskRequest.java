@@ -13,11 +13,11 @@ public class StartRobotTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TaskId")
-    public Long taskId;
-
     @NameInMap("ScheduleTime")
     public String scheduleTime;
+
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static StartRobotTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         StartRobotTaskRequest self = new StartRobotTaskRequest();
@@ -48,20 +48,20 @@ public class StartRobotTaskRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public StartRobotTaskRequest setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
-    }
-
     public StartRobotTaskRequest setScheduleTime(String scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
     }
     public String getScheduleTime() {
         return this.scheduleTime;
+    }
+
+    public StartRobotTaskRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

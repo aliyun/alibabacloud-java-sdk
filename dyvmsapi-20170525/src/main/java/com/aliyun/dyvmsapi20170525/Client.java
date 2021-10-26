@@ -252,6 +252,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.executeCallTaskWithOptions(request, runtime);
     }
 
+    public GetCallInfoResponse getCallInfoWithOptions(GetCallInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetCallInfo", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new GetCallInfoResponse());
+    }
+
+    public GetCallInfoResponse getCallInfo(GetCallInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getCallInfoWithOptions(request, runtime);
+    }
+
     public GetHotlineQualificationByOrderResponse getHotlineQualificationByOrderWithOptions(GetHotlineQualificationByOrderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

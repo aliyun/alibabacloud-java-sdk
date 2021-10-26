@@ -10,11 +10,11 @@ public class ListOrderedNumbersResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Numbers")
     public java.util.List<String> numbers;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListOrderedNumbersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOrderedNumbersResponseBody self = new ListOrderedNumbersResponseBody();
@@ -37,20 +37,20 @@ public class ListOrderedNumbersResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListOrderedNumbersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public ListOrderedNumbersResponseBody setNumbers(java.util.List<String> numbers) {
         this.numbers = numbers;
         return this;
     }
     public java.util.List<String> getNumbers() {
         return this.numbers;
+    }
+
+    public ListOrderedNumbersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

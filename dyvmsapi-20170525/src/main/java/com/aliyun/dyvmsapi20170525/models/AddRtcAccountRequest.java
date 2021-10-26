@@ -4,6 +4,9 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddRtcAccountRequest extends TeaModel {
+    @NameInMap("DeviceId")
+    public String deviceId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,12 +16,17 @@ public class AddRtcAccountRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DeviceId")
-    public String deviceId;
-
     public static AddRtcAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         AddRtcAccountRequest self = new AddRtcAccountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddRtcAccountRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public AddRtcAccountRequest setOwnerId(Long ownerId) {
@@ -43,14 +51,6 @@ public class AddRtcAccountRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AddRtcAccountRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
     }
 
 }

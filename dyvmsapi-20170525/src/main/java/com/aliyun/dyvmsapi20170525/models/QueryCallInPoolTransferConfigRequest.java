@@ -7,14 +7,14 @@ public class QueryCallInPoolTransferConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PhoneNumber")
+    public String phoneNumber;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("PhoneNumber")
-    public String phoneNumber;
 
     public static QueryCallInPoolTransferConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCallInPoolTransferConfigRequest self = new QueryCallInPoolTransferConfigRequest();
@@ -27,6 +27,14 @@ public class QueryCallInPoolTransferConfigRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public QueryCallInPoolTransferConfigRequest setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    public String getPhoneNumber() {
+        return this.phoneNumber;
     }
 
     public QueryCallInPoolTransferConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -43,14 +51,6 @@ public class QueryCallInPoolTransferConfigRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public QueryCallInPoolTransferConfigRequest setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-        return this;
-    }
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
 }

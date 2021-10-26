@@ -4,6 +4,12 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class UploadRobotTaskCalledFileRequest extends TeaModel {
+    @NameInMap("CalledNumber")
+    public String calledNumber;
+
+    @NameInMap("Id")
+    public Long id;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -12,12 +18,6 @@ public class UploadRobotTaskCalledFileRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("Id")
-    public Long id;
-
-    @NameInMap("CalledNumber")
-    public String calledNumber;
 
     @NameInMap("TtsParam")
     public String ttsParam;
@@ -28,6 +28,22 @@ public class UploadRobotTaskCalledFileRequest extends TeaModel {
     public static UploadRobotTaskCalledFileRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadRobotTaskCalledFileRequest self = new UploadRobotTaskCalledFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UploadRobotTaskCalledFileRequest setCalledNumber(String calledNumber) {
+        this.calledNumber = calledNumber;
+        return this;
+    }
+    public String getCalledNumber() {
+        return this.calledNumber;
+    }
+
+    public UploadRobotTaskCalledFileRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
     public UploadRobotTaskCalledFileRequest setOwnerId(Long ownerId) {
@@ -52,22 +68,6 @@ public class UploadRobotTaskCalledFileRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UploadRobotTaskCalledFileRequest setId(Long id) {
-        this.id = id;
-        return this;
-    }
-    public Long getId() {
-        return this.id;
-    }
-
-    public UploadRobotTaskCalledFileRequest setCalledNumber(String calledNumber) {
-        this.calledNumber = calledNumber;
-        return this;
-    }
-    public String getCalledNumber() {
-        return this.calledNumber;
     }
 
     public UploadRobotTaskCalledFileRequest setTtsParam(String ttsParam) {

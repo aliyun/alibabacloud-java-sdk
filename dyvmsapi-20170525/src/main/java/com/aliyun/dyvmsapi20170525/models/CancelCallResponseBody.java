@@ -4,9 +4,6 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CancelCallResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public Boolean status;
-
     @NameInMap("Code")
     public String code;
 
@@ -16,17 +13,12 @@ public class CancelCallResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Status")
+    public Boolean status;
+
     public static CancelCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CancelCallResponseBody self = new CancelCallResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CancelCallResponseBody setStatus(Boolean status) {
-        this.status = status;
-        return this;
-    }
-    public Boolean getStatus() {
-        return this.status;
     }
 
     public CancelCallResponseBody setCode(String code) {
@@ -51,6 +43,14 @@ public class CancelCallResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CancelCallResponseBody setStatus(Boolean status) {
+        this.status = status;
+        return this;
+    }
+    public Boolean getStatus() {
+        return this.status;
     }
 
 }

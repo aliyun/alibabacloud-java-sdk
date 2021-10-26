@@ -4,29 +4,11 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRobotTaskCallListRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("CallResult")
+    public String callResult;
 
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("TaskId")
-    public String taskId;
-
-    @NameInMap("DurationFrom")
-    public String durationFrom;
-
-    @NameInMap("DurationTo")
-    public String durationTo;
+    @NameInMap("Called")
+    public String called;
 
     @NameInMap("DialogCountFrom")
     public String dialogCountFrom;
@@ -34,82 +16,52 @@ public class QueryRobotTaskCallListRequest extends TeaModel {
     @NameInMap("DialogCountTo")
     public String dialogCountTo;
 
+    @NameInMap("DurationFrom")
+    public String durationFrom;
+
+    @NameInMap("DurationTo")
+    public String durationTo;
+
     @NameInMap("HangupDirection")
     public String hangupDirection;
 
-    @NameInMap("CallResult")
-    public String callResult;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("Called")
-    public String called;
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static QueryRobotTaskCallListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRobotTaskCallListRequest self = new QueryRobotTaskCallListRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryRobotTaskCallListRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public QueryRobotTaskCallListRequest setCallResult(String callResult) {
+        this.callResult = callResult;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getCallResult() {
+        return this.callResult;
     }
 
-    public QueryRobotTaskCallListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
+    public QueryRobotTaskCallListRequest setCalled(String called) {
+        this.called = called;
         return this;
     }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public QueryRobotTaskCallListRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public QueryRobotTaskCallListRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Integer getPageNo() {
-        return this.pageNo;
-    }
-
-    public QueryRobotTaskCallListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public QueryRobotTaskCallListRequest setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public QueryRobotTaskCallListRequest setDurationFrom(String durationFrom) {
-        this.durationFrom = durationFrom;
-        return this;
-    }
-    public String getDurationFrom() {
-        return this.durationFrom;
-    }
-
-    public QueryRobotTaskCallListRequest setDurationTo(String durationTo) {
-        this.durationTo = durationTo;
-        return this;
-    }
-    public String getDurationTo() {
-        return this.durationTo;
+    public String getCalled() {
+        return this.called;
     }
 
     public QueryRobotTaskCallListRequest setDialogCountFrom(String dialogCountFrom) {
@@ -128,6 +80,22 @@ public class QueryRobotTaskCallListRequest extends TeaModel {
         return this.dialogCountTo;
     }
 
+    public QueryRobotTaskCallListRequest setDurationFrom(String durationFrom) {
+        this.durationFrom = durationFrom;
+        return this;
+    }
+    public String getDurationFrom() {
+        return this.durationFrom;
+    }
+
+    public QueryRobotTaskCallListRequest setDurationTo(String durationTo) {
+        this.durationTo = durationTo;
+        return this;
+    }
+    public String getDurationTo() {
+        return this.durationTo;
+    }
+
     public QueryRobotTaskCallListRequest setHangupDirection(String hangupDirection) {
         this.hangupDirection = hangupDirection;
         return this;
@@ -136,20 +104,52 @@ public class QueryRobotTaskCallListRequest extends TeaModel {
         return this.hangupDirection;
     }
 
-    public QueryRobotTaskCallListRequest setCallResult(String callResult) {
-        this.callResult = callResult;
+    public QueryRobotTaskCallListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getCallResult() {
-        return this.callResult;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
-    public QueryRobotTaskCallListRequest setCalled(String called) {
-        this.called = called;
+    public QueryRobotTaskCallListRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
         return this;
     }
-    public String getCalled() {
-        return this.called;
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    public QueryRobotTaskCallListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public QueryRobotTaskCallListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryRobotTaskCallListRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public QueryRobotTaskCallListRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

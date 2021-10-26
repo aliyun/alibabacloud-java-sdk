@@ -3,10 +3,7 @@ package com.aliyun.dyvmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class VoipAddAccountRequest extends TeaModel {
-    @NameInMap("DeviceId")
-    public String deviceId;
-
+public class GetCallInfoRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,20 +13,15 @@ public class VoipAddAccountRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static VoipAddAccountRequest build(java.util.Map<String, ?> map) throws Exception {
-        VoipAddAccountRequest self = new VoipAddAccountRequest();
+    @NameInMap("RtcId")
+    public String rtcId;
+
+    public static GetCallInfoRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetCallInfoRequest self = new GetCallInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public VoipAddAccountRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
-    public VoipAddAccountRequest setOwnerId(Long ownerId) {
+    public GetCallInfoRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -37,7 +29,7 @@ public class VoipAddAccountRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public VoipAddAccountRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public GetCallInfoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -45,12 +37,20 @@ public class VoipAddAccountRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public VoipAddAccountRequest setResourceOwnerId(Long resourceOwnerId) {
+    public GetCallInfoRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public GetCallInfoRequest setRtcId(String rtcId) {
+        this.rtcId = rtcId;
+        return this;
+    }
+    public String getRtcId() {
+        return this.rtcId;
     }
 
 }

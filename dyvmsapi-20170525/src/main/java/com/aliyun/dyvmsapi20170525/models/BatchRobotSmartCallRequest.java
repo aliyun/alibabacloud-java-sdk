@@ -4,6 +4,24 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class BatchRobotSmartCallRequest extends TeaModel {
+    @NameInMap("CalledNumber")
+    public String calledNumber;
+
+    @NameInMap("CalledShowNumber")
+    public String calledShowNumber;
+
+    @NameInMap("CorpName")
+    public String corpName;
+
+    @NameInMap("DialogId")
+    public String dialogId;
+
+    @NameInMap("EarlyMediaAsr")
+    public Boolean earlyMediaAsr;
+
+    @NameInMap("IsSelfLine")
+    public Boolean isSelfLine;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,29 +31,14 @@ public class BatchRobotSmartCallRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CalledShowNumber")
-    public String calledShowNumber;
-
-    @NameInMap("CorpName")
-    public String corpName;
-
-    @NameInMap("CalledNumber")
-    public String calledNumber;
-
-    @NameInMap("DialogId")
-    public String dialogId;
-
-    @NameInMap("EarlyMediaAsr")
-    public Boolean earlyMediaAsr;
-
-    @NameInMap("TaskName")
-    public String taskName;
+    @NameInMap("ScheduleCall")
+    public Boolean scheduleCall;
 
     @NameInMap("ScheduleTime")
     public Long scheduleTime;
 
-    @NameInMap("ScheduleCall")
-    public Boolean scheduleCall;
+    @NameInMap("TaskName")
+    public String taskName;
 
     @NameInMap("TtsParam")
     public String ttsParam;
@@ -43,12 +46,57 @@ public class BatchRobotSmartCallRequest extends TeaModel {
     @NameInMap("TtsParamHead")
     public String ttsParamHead;
 
-    @NameInMap("IsSelfLine")
-    public Boolean isSelfLine;
-
     public static BatchRobotSmartCallRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchRobotSmartCallRequest self = new BatchRobotSmartCallRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchRobotSmartCallRequest setCalledNumber(String calledNumber) {
+        this.calledNumber = calledNumber;
+        return this;
+    }
+    public String getCalledNumber() {
+        return this.calledNumber;
+    }
+
+    public BatchRobotSmartCallRequest setCalledShowNumber(String calledShowNumber) {
+        this.calledShowNumber = calledShowNumber;
+        return this;
+    }
+    public String getCalledShowNumber() {
+        return this.calledShowNumber;
+    }
+
+    public BatchRobotSmartCallRequest setCorpName(String corpName) {
+        this.corpName = corpName;
+        return this;
+    }
+    public String getCorpName() {
+        return this.corpName;
+    }
+
+    public BatchRobotSmartCallRequest setDialogId(String dialogId) {
+        this.dialogId = dialogId;
+        return this;
+    }
+    public String getDialogId() {
+        return this.dialogId;
+    }
+
+    public BatchRobotSmartCallRequest setEarlyMediaAsr(Boolean earlyMediaAsr) {
+        this.earlyMediaAsr = earlyMediaAsr;
+        return this;
+    }
+    public Boolean getEarlyMediaAsr() {
+        return this.earlyMediaAsr;
+    }
+
+    public BatchRobotSmartCallRequest setIsSelfLine(Boolean isSelfLine) {
+        this.isSelfLine = isSelfLine;
+        return this;
+    }
+    public Boolean getIsSelfLine() {
+        return this.isSelfLine;
     }
 
     public BatchRobotSmartCallRequest setOwnerId(Long ownerId) {
@@ -75,52 +123,12 @@ public class BatchRobotSmartCallRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public BatchRobotSmartCallRequest setCalledShowNumber(String calledShowNumber) {
-        this.calledShowNumber = calledShowNumber;
+    public BatchRobotSmartCallRequest setScheduleCall(Boolean scheduleCall) {
+        this.scheduleCall = scheduleCall;
         return this;
     }
-    public String getCalledShowNumber() {
-        return this.calledShowNumber;
-    }
-
-    public BatchRobotSmartCallRequest setCorpName(String corpName) {
-        this.corpName = corpName;
-        return this;
-    }
-    public String getCorpName() {
-        return this.corpName;
-    }
-
-    public BatchRobotSmartCallRequest setCalledNumber(String calledNumber) {
-        this.calledNumber = calledNumber;
-        return this;
-    }
-    public String getCalledNumber() {
-        return this.calledNumber;
-    }
-
-    public BatchRobotSmartCallRequest setDialogId(String dialogId) {
-        this.dialogId = dialogId;
-        return this;
-    }
-    public String getDialogId() {
-        return this.dialogId;
-    }
-
-    public BatchRobotSmartCallRequest setEarlyMediaAsr(Boolean earlyMediaAsr) {
-        this.earlyMediaAsr = earlyMediaAsr;
-        return this;
-    }
-    public Boolean getEarlyMediaAsr() {
-        return this.earlyMediaAsr;
-    }
-
-    public BatchRobotSmartCallRequest setTaskName(String taskName) {
-        this.taskName = taskName;
-        return this;
-    }
-    public String getTaskName() {
-        return this.taskName;
+    public Boolean getScheduleCall() {
+        return this.scheduleCall;
     }
 
     public BatchRobotSmartCallRequest setScheduleTime(Long scheduleTime) {
@@ -131,12 +139,12 @@ public class BatchRobotSmartCallRequest extends TeaModel {
         return this.scheduleTime;
     }
 
-    public BatchRobotSmartCallRequest setScheduleCall(Boolean scheduleCall) {
-        this.scheduleCall = scheduleCall;
+    public BatchRobotSmartCallRequest setTaskName(String taskName) {
+        this.taskName = taskName;
         return this;
     }
-    public Boolean getScheduleCall() {
-        return this.scheduleCall;
+    public String getTaskName() {
+        return this.taskName;
     }
 
     public BatchRobotSmartCallRequest setTtsParam(String ttsParam) {
@@ -153,14 +161,6 @@ public class BatchRobotSmartCallRequest extends TeaModel {
     }
     public String getTtsParamHead() {
         return this.ttsParamHead;
-    }
-
-    public BatchRobotSmartCallRequest setIsSelfLine(Boolean isSelfLine) {
-        this.isSelfLine = isSelfLine;
-        return this;
-    }
-    public Boolean getIsSelfLine() {
-        return this.isSelfLine;
     }
 
 }

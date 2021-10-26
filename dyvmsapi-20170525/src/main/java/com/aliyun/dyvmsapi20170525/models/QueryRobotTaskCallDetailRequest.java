@@ -4,8 +4,14 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRobotTaskCallDetailRequest extends TeaModel {
+    @NameInMap("Callee")
+    public String callee;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("QueryDate")
+    public Long queryDate;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,17 @@ public class QueryRobotTaskCallDetailRequest extends TeaModel {
     @NameInMap("TaskId")
     public Long taskId;
 
-    @NameInMap("Callee")
-    public String callee;
-
-    @NameInMap("QueryDate")
-    public Long queryDate;
-
     public static QueryRobotTaskCallDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRobotTaskCallDetailRequest self = new QueryRobotTaskCallDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryRobotTaskCallDetailRequest setCallee(String callee) {
+        this.callee = callee;
+        return this;
+    }
+    public String getCallee() {
+        return this.callee;
     }
 
     public QueryRobotTaskCallDetailRequest setOwnerId(Long ownerId) {
@@ -33,6 +41,14 @@ public class QueryRobotTaskCallDetailRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public QueryRobotTaskCallDetailRequest setQueryDate(Long queryDate) {
+        this.queryDate = queryDate;
+        return this;
+    }
+    public Long getQueryDate() {
+        return this.queryDate;
     }
 
     public QueryRobotTaskCallDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,22 +73,6 @@ public class QueryRobotTaskCallDetailRequest extends TeaModel {
     }
     public Long getTaskId() {
         return this.taskId;
-    }
-
-    public QueryRobotTaskCallDetailRequest setCallee(String callee) {
-        this.callee = callee;
-        return this;
-    }
-    public String getCallee() {
-        return this.callee;
-    }
-
-    public QueryRobotTaskCallDetailRequest setQueryDate(Long queryDate) {
-        this.queryDate = queryDate;
-        return this;
-    }
-    public Long getQueryDate() {
-        return this.queryDate;
     }
 
 }

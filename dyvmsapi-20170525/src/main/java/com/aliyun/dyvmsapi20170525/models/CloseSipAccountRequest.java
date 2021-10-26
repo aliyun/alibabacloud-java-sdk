@@ -7,14 +7,14 @@ public class CloseSipAccountRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PartnerId")
+    public Long partnerId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("PartnerId")
-    public Long partnerId;
 
     @NameInMap("SipAccountID")
     public String sipAccountID;
@@ -32,6 +32,14 @@ public class CloseSipAccountRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public CloseSipAccountRequest setPartnerId(Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+    }
+    public Long getPartnerId() {
+        return this.partnerId;
+    }
+
     public CloseSipAccountRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -46,14 +54,6 @@ public class CloseSipAccountRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CloseSipAccountRequest setPartnerId(Long partnerId) {
-        this.partnerId = partnerId;
-        return this;
-    }
-    public Long getPartnerId() {
-        return this.partnerId;
     }
 
     public CloseSipAccountRequest setSipAccountID(String sipAccountID) {

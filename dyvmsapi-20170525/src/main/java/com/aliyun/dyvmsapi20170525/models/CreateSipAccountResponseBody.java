@@ -7,14 +7,14 @@ public class CreateSipAccountResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CreateSipAccountResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public CreateSipAccountResponseBodyData data;
 
     public static CreateSipAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSipAccountResponseBody self = new CreateSipAccountResponseBody();
@@ -27,6 +27,14 @@ public class CreateSipAccountResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateSipAccountResponseBody setData(CreateSipAccountResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateSipAccountResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateSipAccountResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class CreateSipAccountResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateSipAccountResponseBody setData(CreateSipAccountResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateSipAccountResponseBodyData getData() {
-        return this.data;
     }
 
     public static class CreateSipAccountResponseBodyData extends TeaModel {

@@ -4,8 +4,17 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SmartCallOperateRequest extends TeaModel {
+    @NameInMap("CallId")
+    public String callId;
+
+    @NameInMap("Command")
+    public String command;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Param")
+    public String param;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,42 +22,9 @@ public class SmartCallOperateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CallId")
-    public String callId;
-
-    @NameInMap("Command")
-    public String command;
-
-    @NameInMap("Param")
-    public String param;
-
     public static SmartCallOperateRequest build(java.util.Map<String, ?> map) throws Exception {
         SmartCallOperateRequest self = new SmartCallOperateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SmartCallOperateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SmartCallOperateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public SmartCallOperateRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public SmartCallOperateRequest setCallId(String callId) {
@@ -67,12 +43,36 @@ public class SmartCallOperateRequest extends TeaModel {
         return this.command;
     }
 
+    public SmartCallOperateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public SmartCallOperateRequest setParam(String param) {
         this.param = param;
         return this;
     }
     public String getParam() {
         return this.param;
+    }
+
+    public SmartCallOperateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SmartCallOperateRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

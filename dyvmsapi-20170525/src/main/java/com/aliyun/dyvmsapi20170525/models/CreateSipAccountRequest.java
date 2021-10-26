@@ -4,8 +4,14 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateSipAccountRequest extends TeaModel {
+    @NameInMap("BusinessKey")
+    public String businessKey;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PartnerId")
+    public Long partnerId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,15 +19,17 @@ public class CreateSipAccountRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PartnerId")
-    public Long partnerId;
-
-    @NameInMap("BusinessKey")
-    public String businessKey;
-
     public static CreateSipAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSipAccountRequest self = new CreateSipAccountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSipAccountRequest setBusinessKey(String businessKey) {
+        this.businessKey = businessKey;
+        return this;
+    }
+    public String getBusinessKey() {
+        return this.businessKey;
     }
 
     public CreateSipAccountRequest setOwnerId(Long ownerId) {
@@ -30,6 +38,14 @@ public class CreateSipAccountRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateSipAccountRequest setPartnerId(Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+    }
+    public Long getPartnerId() {
+        return this.partnerId;
     }
 
     public CreateSipAccountRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -46,22 +62,6 @@ public class CreateSipAccountRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateSipAccountRequest setPartnerId(Long partnerId) {
-        this.partnerId = partnerId;
-        return this;
-    }
-    public Long getPartnerId() {
-        return this.partnerId;
-    }
-
-    public CreateSipAccountRequest setBusinessKey(String businessKey) {
-        this.businessKey = businessKey;
-        return this;
-    }
-    public String getBusinessKey() {
-        return this.businessKey;
     }
 
 }

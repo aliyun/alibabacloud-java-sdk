@@ -4,23 +4,11 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryCallInTransferRecordRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("PhoneNumber")
-    public String phoneNumber;
-
     @NameInMap("CallInCaller")
     public String callInCaller;
 
-    @NameInMap("QueryDate")
-    public String queryDate;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNo")
     public Long pageNo;
@@ -28,41 +16,21 @@ public class QueryCallInTransferRecordRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("PhoneNumber")
+    public String phoneNumber;
+
+    @NameInMap("QueryDate")
+    public String queryDate;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static QueryCallInTransferRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCallInTransferRecordRequest self = new QueryCallInTransferRecordRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryCallInTransferRecordRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public QueryCallInTransferRecordRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public QueryCallInTransferRecordRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public QueryCallInTransferRecordRequest setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-        return this;
-    }
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
     public QueryCallInTransferRecordRequest setCallInCaller(String callInCaller) {
@@ -73,12 +41,12 @@ public class QueryCallInTransferRecordRequest extends TeaModel {
         return this.callInCaller;
     }
 
-    public QueryCallInTransferRecordRequest setQueryDate(String queryDate) {
-        this.queryDate = queryDate;
+    public QueryCallInTransferRecordRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getQueryDate() {
-        return this.queryDate;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QueryCallInTransferRecordRequest setPageNo(Long pageNo) {
@@ -95,6 +63,38 @@ public class QueryCallInTransferRecordRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryCallInTransferRecordRequest setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    public QueryCallInTransferRecordRequest setQueryDate(String queryDate) {
+        this.queryDate = queryDate;
+        return this;
+    }
+    public String getQueryDate() {
+        return this.queryDate;
+    }
+
+    public QueryCallInTransferRecordRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryCallInTransferRecordRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -7,14 +7,14 @@ public class UnbindNumberAndVoipIdRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PhoneNumber")
+    public String phoneNumber;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("PhoneNumber")
-    public String phoneNumber;
 
     @NameInMap("VoipId")
     public String voipId;
@@ -32,6 +32,14 @@ public class UnbindNumberAndVoipIdRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public UnbindNumberAndVoipIdRequest setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
     public UnbindNumberAndVoipIdRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -46,14 +54,6 @@ public class UnbindNumberAndVoipIdRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UnbindNumberAndVoipIdRequest setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-        return this;
-    }
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
     public UnbindNumberAndVoipIdRequest setVoipId(String voipId) {

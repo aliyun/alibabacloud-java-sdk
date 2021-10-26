@@ -4,23 +4,11 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListCallTaskDetailRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("TaskId")
-    public Long taskId;
-
     @NameInMap("CalledNum")
     public String calledNum;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -28,9 +16,29 @@ public class ListCallTaskDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("TaskId")
+    public Long taskId;
+
     public static ListCallTaskDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCallTaskDetailRequest self = new ListCallTaskDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListCallTaskDetailRequest setCalledNum(String calledNum) {
+        this.calledNum = calledNum;
+        return this;
+    }
+    public String getCalledNum() {
+        return this.calledNum;
     }
 
     public ListCallTaskDetailRequest setOwnerId(Long ownerId) {
@@ -39,6 +47,22 @@ public class ListCallTaskDetailRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ListCallTaskDetailRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListCallTaskDetailRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListCallTaskDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,22 +81,6 @@ public class ListCallTaskDetailRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ListCallTaskDetailRequest setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
-    }
-
-    public ListCallTaskDetailRequest setCalledNum(String calledNum) {
-        this.calledNum = calledNum;
-        return this;
-    }
-    public String getCalledNum() {
-        return this.calledNum;
-    }
-
     public ListCallTaskDetailRequest setStatus(String status) {
         this.status = status;
         return this;
@@ -81,20 +89,12 @@ public class ListCallTaskDetailRequest extends TeaModel {
         return this.status;
     }
 
-    public ListCallTaskDetailRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListCallTaskDetailRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListCallTaskDetailRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

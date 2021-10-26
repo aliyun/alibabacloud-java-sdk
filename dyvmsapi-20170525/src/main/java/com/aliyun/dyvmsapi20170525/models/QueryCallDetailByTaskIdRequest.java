@@ -4,8 +4,14 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryCallDetailByTaskIdRequest extends TeaModel {
+    @NameInMap("Callee")
+    public String callee;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("QueryDate")
+    public Long queryDate;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -16,15 +22,17 @@ public class QueryCallDetailByTaskIdRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
-    @NameInMap("QueryDate")
-    public Long queryDate;
-
-    @NameInMap("Callee")
-    public String callee;
-
     public static QueryCallDetailByTaskIdRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCallDetailByTaskIdRequest self = new QueryCallDetailByTaskIdRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCallDetailByTaskIdRequest setCallee(String callee) {
+        this.callee = callee;
+        return this;
+    }
+    public String getCallee() {
+        return this.callee;
     }
 
     public QueryCallDetailByTaskIdRequest setOwnerId(Long ownerId) {
@@ -33,6 +41,14 @@ public class QueryCallDetailByTaskIdRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public QueryCallDetailByTaskIdRequest setQueryDate(Long queryDate) {
+        this.queryDate = queryDate;
+        return this;
+    }
+    public Long getQueryDate() {
+        return this.queryDate;
     }
 
     public QueryCallDetailByTaskIdRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,22 +73,6 @@ public class QueryCallDetailByTaskIdRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public QueryCallDetailByTaskIdRequest setQueryDate(Long queryDate) {
-        this.queryDate = queryDate;
-        return this;
-    }
-    public Long getQueryDate() {
-        return this.queryDate;
-    }
-
-    public QueryCallDetailByTaskIdRequest setCallee(String callee) {
-        this.callee = callee;
-        return this;
-    }
-    public String getCallee() {
-        return this.callee;
     }
 
 }

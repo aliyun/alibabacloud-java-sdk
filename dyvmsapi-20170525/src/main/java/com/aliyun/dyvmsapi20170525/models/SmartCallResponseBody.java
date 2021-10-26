@@ -4,6 +4,9 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SmartCallResponseBody extends TeaModel {
+    @NameInMap("CallId")
+    public String callId;
+
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +16,17 @@ public class SmartCallResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("CallId")
-    public String callId;
-
     public static SmartCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SmartCallResponseBody self = new SmartCallResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SmartCallResponseBody setCallId(String callId) {
+        this.callId = callId;
+        return this;
+    }
+    public String getCallId() {
+        return this.callId;
     }
 
     public SmartCallResponseBody setCode(String code) {
@@ -43,14 +51,6 @@ public class SmartCallResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public SmartCallResponseBody setCallId(String callId) {
-        this.callId = callId;
-        return this;
-    }
-    public String getCallId() {
-        return this.callId;
     }
 
 }
