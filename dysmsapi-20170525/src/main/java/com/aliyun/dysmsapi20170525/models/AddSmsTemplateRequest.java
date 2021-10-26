@@ -7,23 +7,23 @@ public class AddSmsTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("Remark")
+    public String remark;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TemplateType")
-    public Integer templateType;
+    @NameInMap("TemplateContent")
+    public String templateContent;
 
     @NameInMap("TemplateName")
     public String templateName;
 
-    @NameInMap("TemplateContent")
-    public String templateContent;
-
-    @NameInMap("Remark")
-    public String remark;
+    @NameInMap("TemplateType")
+    public Integer templateType;
 
     public static AddSmsTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSmsTemplateRequest self = new AddSmsTemplateRequest();
@@ -36,6 +36,14 @@ public class AddSmsTemplateRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AddSmsTemplateRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public AddSmsTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -54,12 +62,12 @@ public class AddSmsTemplateRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public AddSmsTemplateRequest setTemplateType(Integer templateType) {
-        this.templateType = templateType;
+    public AddSmsTemplateRequest setTemplateContent(String templateContent) {
+        this.templateContent = templateContent;
         return this;
     }
-    public Integer getTemplateType() {
-        return this.templateType;
+    public String getTemplateContent() {
+        return this.templateContent;
     }
 
     public AddSmsTemplateRequest setTemplateName(String templateName) {
@@ -70,20 +78,12 @@ public class AddSmsTemplateRequest extends TeaModel {
         return this.templateName;
     }
 
-    public AddSmsTemplateRequest setTemplateContent(String templateContent) {
-        this.templateContent = templateContent;
+    public AddSmsTemplateRequest setTemplateType(Integer templateType) {
+        this.templateType = templateType;
         return this;
     }
-    public String getTemplateContent() {
-        return this.templateContent;
-    }
-
-    public AddSmsTemplateRequest setRemark(String remark) {
-        this.remark = remark;
-        return this;
-    }
-    public String getRemark() {
-        return this.remark;
+    public Integer getTemplateType() {
+        return this.templateType;
     }
 
 }

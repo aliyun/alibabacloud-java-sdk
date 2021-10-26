@@ -7,26 +7,26 @@ public class SendBatchSmsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PhoneNumberJson")
+    public String phoneNumberJson;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PhoneNumberJson")
-    public String phoneNumberJson;
-
     @NameInMap("SignNameJson")
     public String signNameJson;
+
+    @NameInMap("SmsUpExtendCodeJson")
+    public String smsUpExtendCodeJson;
 
     @NameInMap("TemplateCode")
     public String templateCode;
 
     @NameInMap("TemplateParamJson")
     public String templateParamJson;
-
-    @NameInMap("SmsUpExtendCodeJson")
-    public String smsUpExtendCodeJson;
 
     public static SendBatchSmsRequest build(java.util.Map<String, ?> map) throws Exception {
         SendBatchSmsRequest self = new SendBatchSmsRequest();
@@ -39,6 +39,14 @@ public class SendBatchSmsRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SendBatchSmsRequest setPhoneNumberJson(String phoneNumberJson) {
+        this.phoneNumberJson = phoneNumberJson;
+        return this;
+    }
+    public String getPhoneNumberJson() {
+        return this.phoneNumberJson;
     }
 
     public SendBatchSmsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -57,20 +65,20 @@ public class SendBatchSmsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SendBatchSmsRequest setPhoneNumberJson(String phoneNumberJson) {
-        this.phoneNumberJson = phoneNumberJson;
-        return this;
-    }
-    public String getPhoneNumberJson() {
-        return this.phoneNumberJson;
-    }
-
     public SendBatchSmsRequest setSignNameJson(String signNameJson) {
         this.signNameJson = signNameJson;
         return this;
     }
     public String getSignNameJson() {
         return this.signNameJson;
+    }
+
+    public SendBatchSmsRequest setSmsUpExtendCodeJson(String smsUpExtendCodeJson) {
+        this.smsUpExtendCodeJson = smsUpExtendCodeJson;
+        return this;
+    }
+    public String getSmsUpExtendCodeJson() {
+        return this.smsUpExtendCodeJson;
     }
 
     public SendBatchSmsRequest setTemplateCode(String templateCode) {
@@ -87,14 +95,6 @@ public class SendBatchSmsRequest extends TeaModel {
     }
     public String getTemplateParamJson() {
         return this.templateParamJson;
-    }
-
-    public SendBatchSmsRequest setSmsUpExtendCodeJson(String smsUpExtendCodeJson) {
-        this.smsUpExtendCodeJson = smsUpExtendCodeJson;
-        return this;
-    }
-    public String getSmsUpExtendCodeJson() {
-        return this.smsUpExtendCodeJson;
     }
 
 }

@@ -13,11 +13,11 @@ public class QuerySendDetailsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public String totalCount;
-
     @NameInMap("SmsSendDetailDTOs")
     public QuerySendDetailsResponseBodySmsSendDetailDTOs smsSendDetailDTOs;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     public static QuerySendDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySendDetailsResponseBody self = new QuerySendDetailsResponseBody();
@@ -48,14 +48,6 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QuerySendDetailsResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
-    }
-
     public QuerySendDetailsResponseBody setSmsSendDetailDTOs(QuerySendDetailsResponseBodySmsSendDetailDTOs smsSendDetailDTOs) {
         this.smsSendDetailDTOs = smsSendDetailDTOs;
         return this;
@@ -64,15 +56,26 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         return this.smsSendDetailDTOs;
     }
 
+    public QuerySendDetailsResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
         @NameInMap("ErrCode")
         public String errCode;
 
-        @NameInMap("TemplateCode")
-        public String templateCode;
-
         @NameInMap("OutId")
         public String outId;
+
+        @NameInMap("PhoneNum")
+        public String phoneNum;
 
         @NameInMap("ReceiveDate")
         public String receiveDate;
@@ -80,18 +83,23 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         @NameInMap("SendDate")
         public String sendDate;
 
-        @NameInMap("PhoneNum")
-        public String phoneNum;
-
-        @NameInMap("Content")
-        public String content;
-
         @NameInMap("SendStatus")
         public Long sendStatus;
+
+        @NameInMap("TemplateCode")
+        public String templateCode;
 
         public static QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO build(java.util.Map<String, ?> map) throws Exception {
             QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO self = new QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO();
             return TeaModel.build(map, self);
+        }
+
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
         }
 
         public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setErrCode(String errCode) {
@@ -102,20 +110,20 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             return this.errCode;
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setTemplateCode(String templateCode) {
-            this.templateCode = templateCode;
-            return this;
-        }
-        public String getTemplateCode() {
-            return this.templateCode;
-        }
-
         public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setOutId(String outId) {
             this.outId = outId;
             return this;
         }
         public String getOutId() {
             return this.outId;
+        }
+
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setPhoneNum(String phoneNum) {
+            this.phoneNum = phoneNum;
+            return this;
+        }
+        public String getPhoneNum() {
+            return this.phoneNum;
         }
 
         public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setReceiveDate(String receiveDate) {
@@ -134,28 +142,20 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             return this.sendDate;
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setPhoneNum(String phoneNum) {
-            this.phoneNum = phoneNum;
-            return this;
-        }
-        public String getPhoneNum() {
-            return this.phoneNum;
-        }
-
-        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
         public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setSendStatus(Long sendStatus) {
             this.sendStatus = sendStatus;
             return this;
         }
         public Long getSendStatus() {
             return this.sendStatus;
+        }
+
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setTemplateCode(String templateCode) {
+            this.templateCode = templateCode;
+            return this;
+        }
+        public String getTemplateCode() {
+            return this.templateCode;
         }
 
     }

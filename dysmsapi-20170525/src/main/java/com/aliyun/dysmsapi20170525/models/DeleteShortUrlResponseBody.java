@@ -3,10 +3,7 @@ package com.aliyun.dysmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class SendBatchSmsResponseBody extends TeaModel {
-    @NameInMap("BizId")
-    public String bizId;
-
+public class DeleteShortUrlResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -16,20 +13,12 @@ public class SendBatchSmsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static SendBatchSmsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SendBatchSmsResponseBody self = new SendBatchSmsResponseBody();
+    public static DeleteShortUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteShortUrlResponseBody self = new DeleteShortUrlResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SendBatchSmsResponseBody setBizId(String bizId) {
-        this.bizId = bizId;
-        return this;
-    }
-    public String getBizId() {
-        return this.bizId;
-    }
-
-    public SendBatchSmsResponseBody setCode(String code) {
+    public DeleteShortUrlResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -37,7 +26,7 @@ public class SendBatchSmsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SendBatchSmsResponseBody setMessage(String message) {
+    public DeleteShortUrlResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -45,7 +34,7 @@ public class SendBatchSmsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public SendBatchSmsResponseBody setRequestId(String requestId) {
+    public DeleteShortUrlResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
