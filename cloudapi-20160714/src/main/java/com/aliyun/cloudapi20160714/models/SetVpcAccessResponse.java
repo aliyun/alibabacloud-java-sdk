@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudapi20160714.models;
+
+import com.aliyun.tea.*;
+
+public class SetVpcAccessResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SetVpcAccessResponseBody body;
+
+    public static SetVpcAccessResponse build(java.util.Map<String, ?> map) throws Exception {
+        SetVpcAccessResponse self = new SetVpcAccessResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public SetVpcAccessResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SetVpcAccessResponse setBody(SetVpcAccessResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SetVpcAccessResponseBody getBody() {
+        return this.body;
+    }
+
+}

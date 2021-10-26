@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudapi20160714.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeAuthorizedAppsResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeAuthorizedAppsResponseBody body;
+
+    public static DescribeAuthorizedAppsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeAuthorizedAppsResponse self = new DescribeAuthorizedAppsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeAuthorizedAppsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeAuthorizedAppsResponse setBody(DescribeAuthorizedAppsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeAuthorizedAppsResponseBody getBody() {
+        return this.body;
+    }
+
+}

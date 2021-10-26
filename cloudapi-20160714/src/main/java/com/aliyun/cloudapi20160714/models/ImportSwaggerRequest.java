@@ -1,0 +1,78 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudapi20160714.models;
+
+import com.aliyun.tea.*;
+
+public class ImportSwaggerRequest extends TeaModel {
+    @NameInMap("Overwrite")
+    public Boolean overwrite;
+
+    @NameInMap("GlobalCondition")
+    public java.util.Map<String, ?> globalCondition;
+
+    @NameInMap("DataFormat")
+    public String dataFormat;
+
+    @NameInMap("Data")
+    public String data;
+
+    @NameInMap("GroupId")
+    public String groupId;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    public static ImportSwaggerRequest build(java.util.Map<String, ?> map) throws Exception {
+        ImportSwaggerRequest self = new ImportSwaggerRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ImportSwaggerRequest setOverwrite(Boolean overwrite) {
+        this.overwrite = overwrite;
+        return this;
+    }
+    public Boolean getOverwrite() {
+        return this.overwrite;
+    }
+
+    public ImportSwaggerRequest setGlobalCondition(java.util.Map<String, ?> globalCondition) {
+        this.globalCondition = globalCondition;
+        return this;
+    }
+    public java.util.Map<String, ?> getGlobalCondition() {
+        return this.globalCondition;
+    }
+
+    public ImportSwaggerRequest setDataFormat(String dataFormat) {
+        this.dataFormat = dataFormat;
+        return this;
+    }
+    public String getDataFormat() {
+        return this.dataFormat;
+    }
+
+    public ImportSwaggerRequest setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public ImportSwaggerRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public ImportSwaggerRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+}
