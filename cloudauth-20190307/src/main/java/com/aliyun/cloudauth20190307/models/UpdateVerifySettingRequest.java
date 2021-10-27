@@ -8,7 +8,6 @@ public class UpdateVerifySettingRequest extends TeaModel {
     public String bizName;
 
     @NameInMap("BizType")
-    @Validation(required = true)
     public String bizType;
 
     @NameInMap("GuideStep")

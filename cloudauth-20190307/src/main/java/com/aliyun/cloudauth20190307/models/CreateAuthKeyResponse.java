@@ -4,33 +4,33 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthKeyResponse extends TeaModel {
-    @NameInMap("AuthKey")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String authKey;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public CreateAuthKeyResponseBody body;
 
     public static CreateAuthKeyResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAuthKeyResponse self = new CreateAuthKeyResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateAuthKeyResponse setAuthKey(String authKey) {
-        this.authKey = authKey;
+    public CreateAuthKeyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getAuthKey() {
-        return this.authKey;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateAuthKeyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateAuthKeyResponse setBody(CreateAuthKeyResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public CreateAuthKeyResponseBody getBody() {
+        return this.body;
     }
 
 }

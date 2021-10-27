@@ -11,7 +11,6 @@ public class DescribeWhitelistRequest extends TeaModel {
     public String bizType;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("IdCardNum")
@@ -21,7 +20,6 @@ public class DescribeWhitelistRequest extends TeaModel {
     public String lang;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("SourceIp")

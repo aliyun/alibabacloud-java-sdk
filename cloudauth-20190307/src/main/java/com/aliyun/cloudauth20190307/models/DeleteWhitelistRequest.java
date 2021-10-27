@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteWhitelistRequest extends TeaModel {
     @NameInMap("Ids")
-    @Validation(required = true)
     public String ids;
 
     @NameInMap("Lang")

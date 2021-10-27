@@ -8,7 +8,6 @@ public class DescribeSdkUrlRequest extends TeaModel {
     public Boolean debug;
 
     @NameInMap("Id")
-    @Validation(required = true)
     public Long id;
 
     public static DescribeSdkUrlRequest build(java.util.Map<String, ?> map) throws Exception {

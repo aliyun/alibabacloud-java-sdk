@@ -17,14 +17,12 @@ public class CreateWhitelistSettingRequest extends TeaModel {
     public Long sceneId;
 
     @NameInMap("ServiceCode")
-    @Validation(required = true)
     public String serviceCode;
 
     @NameInMap("SourceIp")
     public String sourceIp;
 
     @NameInMap("ValidDay")
-    @Validation(required = true)
     public Integer validDay;
 
     public static CreateWhitelistSettingRequest build(java.util.Map<String, ?> map) throws Exception {

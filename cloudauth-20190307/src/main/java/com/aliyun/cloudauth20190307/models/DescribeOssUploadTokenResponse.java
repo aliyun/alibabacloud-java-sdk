@@ -4,125 +4,33 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssUploadTokenResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OssUploadToken")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeOssUploadTokenResponseOssUploadToken ossUploadToken;
+    public DescribeOssUploadTokenResponseBody body;
 
     public static DescribeOssUploadTokenResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeOssUploadTokenResponse self = new DescribeOssUploadTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeOssUploadTokenResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeOssUploadTokenResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeOssUploadTokenResponse setOssUploadToken(DescribeOssUploadTokenResponseOssUploadToken ossUploadToken) {
-        this.ossUploadToken = ossUploadToken;
+    public DescribeOssUploadTokenResponse setBody(DescribeOssUploadTokenResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeOssUploadTokenResponseOssUploadToken getOssUploadToken() {
-        return this.ossUploadToken;
-    }
-
-    public static class DescribeOssUploadTokenResponseOssUploadToken extends TeaModel {
-        @NameInMap("Bucket")
-        @Validation(required = true)
-        public String bucket;
-
-        @NameInMap("EndPoint")
-        @Validation(required = true)
-        public String endPoint;
-
-        @NameInMap("Expired")
-        @Validation(required = true)
-        public Long expired;
-
-        @NameInMap("Key")
-        @Validation(required = true)
-        public String key;
-
-        @NameInMap("Path")
-        @Validation(required = true)
-        public String path;
-
-        @NameInMap("Secret")
-        @Validation(required = true)
-        public String secret;
-
-        @NameInMap("Token")
-        @Validation(required = true)
-        public String token;
-
-        public static DescribeOssUploadTokenResponseOssUploadToken build(java.util.Map<String, ?> map) throws Exception {
-            DescribeOssUploadTokenResponseOssUploadToken self = new DescribeOssUploadTokenResponseOssUploadToken();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeOssUploadTokenResponseOssUploadToken setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        public DescribeOssUploadTokenResponseOssUploadToken setEndPoint(String endPoint) {
-            this.endPoint = endPoint;
-            return this;
-        }
-        public String getEndPoint() {
-            return this.endPoint;
-        }
-
-        public DescribeOssUploadTokenResponseOssUploadToken setExpired(Long expired) {
-            this.expired = expired;
-            return this;
-        }
-        public Long getExpired() {
-            return this.expired;
-        }
-
-        public DescribeOssUploadTokenResponseOssUploadToken setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeOssUploadTokenResponseOssUploadToken setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
-        public DescribeOssUploadTokenResponseOssUploadToken setSecret(String secret) {
-            this.secret = secret;
-            return this;
-        }
-        public String getSecret() {
-            return this.secret;
-        }
-
-        public DescribeOssUploadTokenResponseOssUploadToken setToken(String token) {
-            this.token = token;
-            return this;
-        }
-        public String getToken() {
-            return this.token;
-        }
-
+    public DescribeOssUploadTokenResponseBody getBody() {
+        return this.body;
     }
 
 }

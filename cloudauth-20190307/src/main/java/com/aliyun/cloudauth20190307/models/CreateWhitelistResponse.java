@@ -4,21 +4,33 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateWhitelistResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CreateWhitelistResponseBody body;
 
     public static CreateWhitelistResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateWhitelistResponse self = new CreateWhitelistResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateWhitelistResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateWhitelistResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateWhitelistResponse setBody(CreateWhitelistResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateWhitelistResponseBody getBody() {
+        return this.body;
     }
 
 }

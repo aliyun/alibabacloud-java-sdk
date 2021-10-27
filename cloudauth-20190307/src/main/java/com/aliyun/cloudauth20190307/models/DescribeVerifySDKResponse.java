@@ -4,33 +4,33 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeVerifySDKResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SdkUrl")
+    @NameInMap("body")
     @Validation(required = true)
-    public String sdkUrl;
+    public DescribeVerifySDKResponseBody body;
 
     public static DescribeVerifySDKResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeVerifySDKResponse self = new DescribeVerifySDKResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVerifySDKResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeVerifySDKResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeVerifySDKResponse setSdkUrl(String sdkUrl) {
-        this.sdkUrl = sdkUrl;
+    public DescribeVerifySDKResponse setBody(DescribeVerifySDKResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getSdkUrl() {
-        return this.sdkUrl;
+    public DescribeVerifySDKResponseBody getBody() {
+        return this.body;
     }
 
 }
