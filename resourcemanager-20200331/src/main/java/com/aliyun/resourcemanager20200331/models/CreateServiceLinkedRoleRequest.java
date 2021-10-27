@@ -4,26 +4,18 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleRequest extends TeaModel {
-    @NameInMap("ServiceName")
-    public String serviceName;
-
     @NameInMap("CustomSuffix")
     public String customSuffix;
 
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ServiceName")
+    public String serviceName;
+
     public static CreateServiceLinkedRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceLinkedRoleRequest self = new CreateServiceLinkedRoleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateServiceLinkedRoleRequest setServiceName(String serviceName) {
-        this.serviceName = serviceName;
-        return this;
-    }
-    public String getServiceName() {
-        return this.serviceName;
     }
 
     public CreateServiceLinkedRoleRequest setCustomSuffix(String customSuffix) {
@@ -40,6 +32,14 @@ public class CreateServiceLinkedRoleRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateServiceLinkedRoleRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
     }
 
 }

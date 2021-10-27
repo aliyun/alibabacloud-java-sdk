@@ -32,23 +32,15 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     public static class GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("Status")
+        public String status;
 
         public static GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus build(java.util.Map<String, ?> map) throws Exception {
             GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus self = new GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus();
             return TeaModel.build(map, self);
-        }
-
-        public GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus setRegionId(String regionId) {
@@ -57,6 +49,14 @@ public class GetResourceGroupResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
@@ -81,54 +81,30 @@ public class GetResourceGroupResponseBody extends TeaModel {
     }
 
     public static class GetResourceGroupResponseBodyResourceGroup extends TeaModel {
-        @NameInMap("DisplayName")
-        public String displayName;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("RegionStatuses")
-        public GetResourceGroupResponseBodyResourceGroupRegionStatuses regionStatuses;
-
         @NameInMap("AccountId")
         public String accountId;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("DisplayName")
+        public String displayName;
+
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("RegionStatuses")
+        public GetResourceGroupResponseBodyResourceGroupRegionStatuses regionStatuses;
+
+        @NameInMap("Status")
+        public String status;
 
         public static GetResourceGroupResponseBodyResourceGroup build(java.util.Map<String, ?> map) throws Exception {
             GetResourceGroupResponseBodyResourceGroup self = new GetResourceGroupResponseBodyResourceGroup();
             return TeaModel.build(map, self);
-        }
-
-        public GetResourceGroupResponseBodyResourceGroup setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
-        public GetResourceGroupResponseBodyResourceGroup setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetResourceGroupResponseBodyResourceGroup setRegionStatuses(GetResourceGroupResponseBodyResourceGroupRegionStatuses regionStatuses) {
-            this.regionStatuses = regionStatuses;
-            return this;
-        }
-        public GetResourceGroupResponseBodyResourceGroupRegionStatuses getRegionStatuses() {
-            return this.regionStatuses;
         }
 
         public GetResourceGroupResponseBodyResourceGroup setAccountId(String accountId) {
@@ -139,14 +115,6 @@ public class GetResourceGroupResponseBody extends TeaModel {
             return this.accountId;
         }
 
-        public GetResourceGroupResponseBodyResourceGroup setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public GetResourceGroupResponseBodyResourceGroup setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
@@ -155,12 +123,44 @@ public class GetResourceGroupResponseBody extends TeaModel {
             return this.createDate;
         }
 
+        public GetResourceGroupResponseBodyResourceGroup setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
         public GetResourceGroupResponseBodyResourceGroup setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public GetResourceGroupResponseBodyResourceGroup setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetResourceGroupResponseBodyResourceGroup setRegionStatuses(GetResourceGroupResponseBodyResourceGroupRegionStatuses regionStatuses) {
+            this.regionStatuses = regionStatuses;
+            return this;
+        }
+        public GetResourceGroupResponseBodyResourceGroupRegionStatuses getRegionStatuses() {
+            return this.regionStatuses;
+        }
+
+        public GetResourceGroupResponseBodyResourceGroup setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

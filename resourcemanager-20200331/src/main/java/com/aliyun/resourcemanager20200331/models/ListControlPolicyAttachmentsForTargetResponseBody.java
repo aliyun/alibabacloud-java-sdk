@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ControlPolicyAttachments")
     public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachments controlPolicyAttachments;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListControlPolicyAttachmentsForTargetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListControlPolicyAttachmentsForTargetResponseBody self = new ListControlPolicyAttachmentsForTargetResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListControlPolicyAttachmentsForTargetResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListControlPolicyAttachmentsForTargetResponseBody setControlPolicyAttachments(ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachments controlPolicyAttachments) {
@@ -31,21 +23,29 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         return this.controlPolicyAttachments;
     }
 
+    public ListControlPolicyAttachmentsForTargetResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment extends TeaModel {
+        @NameInMap("AttachDate")
+        public String attachDate;
+
         @NameInMap("Description")
         public String description;
 
         @NameInMap("EffectScope")
         public String effectScope;
 
-        @NameInMap("PolicyName")
-        public String policyName;
-
         @NameInMap("PolicyId")
         public String policyId;
 
-        @NameInMap("AttachDate")
-        public String attachDate;
+        @NameInMap("PolicyName")
+        public String policyName;
 
         @NameInMap("PolicyType")
         public String policyType;
@@ -53,6 +53,14 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
         public static ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment build(java.util.Map<String, ?> map) throws Exception {
             ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment self = new ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment();
             return TeaModel.build(map, self);
+        }
+
+        public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment setAttachDate(String attachDate) {
+            this.attachDate = attachDate;
+            return this;
+        }
+        public String getAttachDate() {
+            return this.attachDate;
         }
 
         public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment setDescription(String description) {
@@ -71,14 +79,6 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             return this.effectScope;
         }
 
-        public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment setPolicyName(String policyName) {
-            this.policyName = policyName;
-            return this;
-        }
-        public String getPolicyName() {
-            return this.policyName;
-        }
-
         public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment setPolicyId(String policyId) {
             this.policyId = policyId;
             return this;
@@ -87,12 +87,12 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
             return this.policyId;
         }
 
-        public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment setAttachDate(String attachDate) {
-            this.attachDate = attachDate;
+        public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment setPolicyName(String policyName) {
+            this.policyName = policyName;
             return this;
         }
-        public String getAttachDate() {
-            return this.attachDate;
+        public String getPolicyName() {
+            return this.policyName;
         }
 
         public ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment setPolicyType(String policyType) {

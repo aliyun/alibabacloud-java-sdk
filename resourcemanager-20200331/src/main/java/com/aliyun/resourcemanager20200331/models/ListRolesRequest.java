@@ -4,18 +4,26 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListRolesRequest extends TeaModel {
+    @NameInMap("Language")
+    public String language;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Language")
-    public String language;
-
     public static ListRolesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRolesRequest self = new ListRolesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRolesRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public ListRolesRequest setPageNumber(Integer pageNumber) {
@@ -32,14 +40,6 @@ public class ListRolesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public ListRolesRequest setLanguage(String language) {
-        this.language = language;
-        return this;
-    }
-    public String getLanguage() {
-        return this.language;
     }
 
 }

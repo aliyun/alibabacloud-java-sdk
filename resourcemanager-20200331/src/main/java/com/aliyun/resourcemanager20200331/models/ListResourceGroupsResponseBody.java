@@ -4,48 +4,24 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ResourceGroups")
     public ListResourceGroupsResponseBodyResourceGroups resourceGroups;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListResourceGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListResourceGroupsResponseBody self = new ListResourceGroupsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListResourceGroupsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListResourceGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListResourceGroupsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public ListResourceGroupsResponseBody setPageNumber(Integer pageNumber) {
@@ -56,6 +32,22 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public ListResourceGroupsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListResourceGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListResourceGroupsResponseBody setResourceGroups(ListResourceGroupsResponseBodyResourceGroups resourceGroups) {
         this.resourceGroups = resourceGroups;
         return this;
@@ -64,44 +56,36 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         return this.resourceGroups;
     }
 
+    public ListResourceGroupsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListResourceGroupsResponseBodyResourceGroupsResourceGroup extends TeaModel {
-        @NameInMap("DisplayName")
-        public String displayName;
-
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("AccountId")
         public String accountId;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("DisplayName")
+        public String displayName;
+
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Status")
+        public String status;
 
         public static ListResourceGroupsResponseBodyResourceGroupsResourceGroup build(java.util.Map<String, ?> map) throws Exception {
             ListResourceGroupsResponseBodyResourceGroupsResourceGroup self = new ListResourceGroupsResponseBodyResourceGroupsResourceGroup();
             return TeaModel.build(map, self);
-        }
-
-        public ListResourceGroupsResponseBodyResourceGroupsResourceGroup setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
-        public ListResourceGroupsResponseBodyResourceGroupsResourceGroup setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListResourceGroupsResponseBodyResourceGroupsResourceGroup setAccountId(String accountId) {
@@ -112,14 +96,6 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             return this.accountId;
         }
 
-        public ListResourceGroupsResponseBodyResourceGroupsResourceGroup setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public ListResourceGroupsResponseBodyResourceGroupsResourceGroup setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
@@ -128,12 +104,36 @@ public class ListResourceGroupsResponseBody extends TeaModel {
             return this.createDate;
         }
 
+        public ListResourceGroupsResponseBodyResourceGroupsResourceGroup setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
         public ListResourceGroupsResponseBodyResourceGroupsResourceGroup setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public ListResourceGroupsResponseBodyResourceGroupsResourceGroup setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListResourceGroupsResponseBodyResourceGroupsResourceGroup setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

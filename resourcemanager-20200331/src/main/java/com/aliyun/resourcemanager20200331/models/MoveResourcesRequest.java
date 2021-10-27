@@ -32,14 +32,14 @@ public class MoveResourcesRequest extends TeaModel {
     }
 
     public static class MoveResourcesRequestResources extends TeaModel {
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ResourceId")
         public String resourceId;
 
         @NameInMap("ResourceType")
         public String resourceType;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         @NameInMap("Service")
         public String service;
@@ -47,6 +47,14 @@ public class MoveResourcesRequest extends TeaModel {
         public static MoveResourcesRequestResources build(java.util.Map<String, ?> map) throws Exception {
             MoveResourcesRequestResources self = new MoveResourcesRequestResources();
             return TeaModel.build(map, self);
+        }
+
+        public MoveResourcesRequestResources setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public MoveResourcesRequestResources setResourceId(String resourceId) {
@@ -63,14 +71,6 @@ public class MoveResourcesRequest extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
-        }
-
-        public MoveResourcesRequestResources setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public MoveResourcesRequestResources setService(String service) {

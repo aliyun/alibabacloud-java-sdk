@@ -4,40 +4,24 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class AttachPolicyRequest extends TeaModel {
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("PolicyName")
+    public String policyName;
 
     @NameInMap("PolicyType")
     public String policyType;
 
-    @NameInMap("PolicyName")
-    public String policyName;
+    @NameInMap("PrincipalName")
+    public String principalName;
 
     @NameInMap("PrincipalType")
     public String principalType;
 
-    @NameInMap("PrincipalName")
-    public String principalName;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static AttachPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachPolicyRequest self = new AttachPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AttachPolicyRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public AttachPolicyRequest setPolicyType(String policyType) {
-        this.policyType = policyType;
-        return this;
-    }
-    public String getPolicyType() {
-        return this.policyType;
     }
 
     public AttachPolicyRequest setPolicyName(String policyName) {
@@ -48,12 +32,12 @@ public class AttachPolicyRequest extends TeaModel {
         return this.policyName;
     }
 
-    public AttachPolicyRequest setPrincipalType(String principalType) {
-        this.principalType = principalType;
+    public AttachPolicyRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
         return this;
     }
-    public String getPrincipalType() {
-        return this.principalType;
+    public String getPolicyType() {
+        return this.policyType;
     }
 
     public AttachPolicyRequest setPrincipalName(String principalName) {
@@ -62,6 +46,22 @@ public class AttachPolicyRequest extends TeaModel {
     }
     public String getPrincipalName() {
         return this.principalName;
+    }
+
+    public AttachPolicyRequest setPrincipalType(String principalType) {
+        this.principalType = principalType;
+        return this;
+    }
+    public String getPrincipalType() {
+        return this.principalType;
+    }
+
+    public AttachPolicyRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

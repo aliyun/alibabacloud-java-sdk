@@ -4,18 +4,26 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetPayerForAccountResponseBody extends TeaModel {
+    @NameInMap("PayerAccountId")
+    public String payerAccountId;
+
     @NameInMap("PayerAccountName")
     public String payerAccountName;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PayerAccountId")
-    public String payerAccountId;
-
     public static GetPayerForAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPayerForAccountResponseBody self = new GetPayerForAccountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetPayerForAccountResponseBody setPayerAccountId(String payerAccountId) {
+        this.payerAccountId = payerAccountId;
+        return this;
+    }
+    public String getPayerAccountId() {
+        return this.payerAccountId;
     }
 
     public GetPayerForAccountResponseBody setPayerAccountName(String payerAccountName) {
@@ -32,14 +40,6 @@ public class GetPayerForAccountResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetPayerForAccountResponseBody setPayerAccountId(String payerAccountId) {
-        this.payerAccountId = payerAccountId;
-        return this;
-    }
-    public String getPayerAccountId() {
-        return this.payerAccountId;
     }
 
 }

@@ -4,56 +4,24 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListTrustedServiceStatusResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("EnabledServicePrincipals")
+    public ListTrustedServiceStatusResponseBodyEnabledServicePrincipals enabledServicePrincipals;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("EnabledServicePrincipals")
-    public ListTrustedServiceStatusResponseBodyEnabledServicePrincipals enabledServicePrincipals;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListTrustedServiceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTrustedServiceStatusResponseBody self = new ListTrustedServiceStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTrustedServiceStatusResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListTrustedServiceStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListTrustedServiceStatusResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListTrustedServiceStatusResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public ListTrustedServiceStatusResponseBody setEnabledServicePrincipals(ListTrustedServiceStatusResponseBodyEnabledServicePrincipals enabledServicePrincipals) {
@@ -64,24 +32,48 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         return this.enabledServicePrincipals;
     }
 
-    public static class ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal extends TeaModel {
-        @NameInMap("ServicePrincipal")
-        public String servicePrincipal;
+    public ListTrustedServiceStatusResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
 
+    public ListTrustedServiceStatusResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListTrustedServiceStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListTrustedServiceStatusResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal extends TeaModel {
         @NameInMap("EnableTime")
         public String enableTime;
+
+        @NameInMap("ServicePrincipal")
+        public String servicePrincipal;
 
         public static ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal build(java.util.Map<String, ?> map) throws Exception {
             ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal self = new ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal();
             return TeaModel.build(map, self);
-        }
-
-        public ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal setServicePrincipal(String servicePrincipal) {
-            this.servicePrincipal = servicePrincipal;
-            return this;
-        }
-        public String getServicePrincipal() {
-            return this.servicePrincipal;
         }
 
         public ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal setEnableTime(String enableTime) {
@@ -90,6 +82,14 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
         }
         public String getEnableTime() {
             return this.enableTime;
+        }
+
+        public ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal setServicePrincipal(String servicePrincipal) {
+            this.servicePrincipal = servicePrincipal;
+            return this;
+        }
+        public String getServicePrincipal() {
+            return this.servicePrincipal;
         }
 
     }

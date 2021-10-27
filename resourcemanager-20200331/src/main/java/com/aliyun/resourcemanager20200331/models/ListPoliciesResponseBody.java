@@ -4,8 +4,11 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("Policies")
     public ListPoliciesResponseBodyPolicies policies;
@@ -13,23 +16,28 @@ public class ListPoliciesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListPoliciesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPoliciesResponseBody self = new ListPoliciesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListPoliciesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListPoliciesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListPoliciesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListPoliciesResponseBody setPolicies(ListPoliciesResponseBodyPolicies policies) {
@@ -48,47 +56,55 @@ public class ListPoliciesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListPoliciesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListPoliciesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListPoliciesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListPoliciesResponseBodyPoliciesPolicy extends TeaModel {
+        @NameInMap("AttachmentCount")
+        public Integer attachmentCount;
+
+        @NameInMap("CreateDate")
+        public String createDate;
+
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("UpdateDate")
-        public String updateDate;
-
-        @NameInMap("AttachmentCount")
-        public Integer attachmentCount;
-
         @NameInMap("PolicyName")
         public String policyName;
-
-        @NameInMap("CreateDate")
-        public String createDate;
 
         @NameInMap("PolicyType")
         public String policyType;
 
+        @NameInMap("UpdateDate")
+        public String updateDate;
+
         public static ListPoliciesResponseBodyPoliciesPolicy build(java.util.Map<String, ?> map) throws Exception {
             ListPoliciesResponseBodyPoliciesPolicy self = new ListPoliciesResponseBodyPoliciesPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public ListPoliciesResponseBodyPoliciesPolicy setAttachmentCount(Integer attachmentCount) {
+            this.attachmentCount = attachmentCount;
+            return this;
+        }
+        public Integer getAttachmentCount() {
+            return this.attachmentCount;
+        }
+
+        public ListPoliciesResponseBodyPoliciesPolicy setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public ListPoliciesResponseBodyPoliciesPolicy setDefaultVersion(String defaultVersion) {
@@ -107,22 +123,6 @@ public class ListPoliciesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListPoliciesResponseBodyPoliciesPolicy setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
-            return this;
-        }
-        public String getUpdateDate() {
-            return this.updateDate;
-        }
-
-        public ListPoliciesResponseBodyPoliciesPolicy setAttachmentCount(Integer attachmentCount) {
-            this.attachmentCount = attachmentCount;
-            return this;
-        }
-        public Integer getAttachmentCount() {
-            return this.attachmentCount;
-        }
-
         public ListPoliciesResponseBodyPoliciesPolicy setPolicyName(String policyName) {
             this.policyName = policyName;
             return this;
@@ -131,20 +131,20 @@ public class ListPoliciesResponseBody extends TeaModel {
             return this.policyName;
         }
 
-        public ListPoliciesResponseBodyPoliciesPolicy setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
-        }
-
         public ListPoliciesResponseBodyPoliciesPolicy setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+        public ListPoliciesResponseBodyPoliciesPolicy setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

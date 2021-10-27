@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreateFolderRequest extends TeaModel {
-    @NameInMap("ParentFolderId")
-    public String parentFolderId;
-
     @NameInMap("FolderName")
     public String folderName;
+
+    @NameInMap("ParentFolderId")
+    public String parentFolderId;
 
     public static CreateFolderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFolderRequest self = new CreateFolderRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFolderRequest setParentFolderId(String parentFolderId) {
-        this.parentFolderId = parentFolderId;
-        return this;
-    }
-    public String getParentFolderId() {
-        return this.parentFolderId;
     }
 
     public CreateFolderRequest setFolderName(String folderName) {
@@ -29,6 +21,14 @@ public class CreateFolderRequest extends TeaModel {
     }
     public String getFolderName() {
         return this.folderName;
+    }
+
+    public CreateFolderRequest setParentFolderId(String parentFolderId) {
+        this.parentFolderId = parentFolderId;
+        return this;
+    }
+    public String getParentFolderId() {
+        return this.parentFolderId;
     }
 
 }

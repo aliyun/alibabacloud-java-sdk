@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListPolicyVersionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PolicyVersions")
     public ListPolicyVersionsResponseBodyPolicyVersions policyVersions;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListPolicyVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPolicyVersionsResponseBody self = new ListPolicyVersionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListPolicyVersionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListPolicyVersionsResponseBody setPolicyVersions(ListPolicyVersionsResponseBodyPolicyVersions policyVersions) {
@@ -31,19 +23,35 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         return this.policyVersions;
     }
 
+    public ListPolicyVersionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion extends TeaModel {
+        @NameInMap("CreateDate")
+        public String createDate;
+
         @NameInMap("IsDefaultVersion")
         public Boolean isDefaultVersion;
 
         @NameInMap("VersionId")
         public String versionId;
 
-        @NameInMap("CreateDate")
-        public String createDate;
-
         public static ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion build(java.util.Map<String, ?> map) throws Exception {
             ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion self = new ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion();
             return TeaModel.build(map, self);
+        }
+
+        public ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion setIsDefaultVersion(Boolean isDefaultVersion) {
@@ -60,14 +68,6 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         }
         public String getVersionId() {
             return this.versionId;
-        }
-
-        public ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
         }
 
     }

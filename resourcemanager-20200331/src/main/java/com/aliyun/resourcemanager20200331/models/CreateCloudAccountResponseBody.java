@@ -32,11 +32,11 @@ public class CreateCloudAccountResponseBody extends TeaModel {
     }
 
     public static class CreateCloudAccountResponseBodyAccount extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AccountId")
+        public String accountId;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("DisplayName")
         public String displayName;
@@ -44,43 +44,43 @@ public class CreateCloudAccountResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
-        @NameInMap("ResourceDirectoryId")
-        public String resourceDirectoryId;
-
-        @NameInMap("RecordId")
-        public String recordId;
-
-        @NameInMap("AccountId")
-        public String accountId;
-
         @NameInMap("JoinMethod")
         public String joinMethod;
 
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        @NameInMap("AccountName")
-        public String accountName;
+        @NameInMap("RecordId")
+        public String recordId;
+
+        @NameInMap("ResourceDirectoryId")
+        public String resourceDirectoryId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         public static CreateCloudAccountResponseBodyAccount build(java.util.Map<String, ?> map) throws Exception {
             CreateCloudAccountResponseBodyAccount self = new CreateCloudAccountResponseBodyAccount();
             return TeaModel.build(map, self);
         }
 
-        public CreateCloudAccountResponseBodyAccount setStatus(String status) {
-            this.status = status;
+        public CreateCloudAccountResponseBodyAccount setAccountId(String accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getAccountId() {
+            return this.accountId;
         }
 
-        public CreateCloudAccountResponseBodyAccount setType(String type) {
-            this.type = type;
+        public CreateCloudAccountResponseBodyAccount setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public CreateCloudAccountResponseBodyAccount setDisplayName(String displayName) {
@@ -99,30 +99,6 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             return this.folderId;
         }
 
-        public CreateCloudAccountResponseBodyAccount setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
-            return this;
-        }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
-        }
-
-        public CreateCloudAccountResponseBodyAccount setRecordId(String recordId) {
-            this.recordId = recordId;
-            return this;
-        }
-        public String getRecordId() {
-            return this.recordId;
-        }
-
-        public CreateCloudAccountResponseBodyAccount setAccountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public String getAccountId() {
-            return this.accountId;
-        }
-
         public CreateCloudAccountResponseBodyAccount setJoinMethod(String joinMethod) {
             this.joinMethod = joinMethod;
             return this;
@@ -139,12 +115,36 @@ public class CreateCloudAccountResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
-        public CreateCloudAccountResponseBodyAccount setAccountName(String accountName) {
-            this.accountName = accountName;
+        public CreateCloudAccountResponseBodyAccount setRecordId(String recordId) {
+            this.recordId = recordId;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getRecordId() {
+            return this.recordId;
+        }
+
+        public CreateCloudAccountResponseBodyAccount setResourceDirectoryId(String resourceDirectoryId) {
+            this.resourceDirectoryId = resourceDirectoryId;
+            return this;
+        }
+        public String getResourceDirectoryId() {
+            return this.resourceDirectoryId;
+        }
+
+        public CreateCloudAccountResponseBodyAccount setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public CreateCloudAccountResponseBodyAccount setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
