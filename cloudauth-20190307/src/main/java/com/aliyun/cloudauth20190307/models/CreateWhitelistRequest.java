@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateWhitelistRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizType")
     public String bizType;
 
     @NameInMap("IdCardNum")
-    @Validation(required = true)
     public String idCardNum;
 
     @NameInMap("Lang")
@@ -22,7 +20,6 @@ public class CreateWhitelistRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("ValidDay")
-    @Validation(required = true)
     public String validDay;
 
     public static CreateWhitelistRequest build(java.util.Map<String, ?> map) throws Exception {

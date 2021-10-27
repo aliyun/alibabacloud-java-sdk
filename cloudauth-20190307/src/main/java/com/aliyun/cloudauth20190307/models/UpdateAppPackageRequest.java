@@ -11,7 +11,6 @@ public class UpdateAppPackageRequest extends TeaModel {
     public Long id;
 
     @NameInMap("PackageUrl")
-    @Validation(required = true)
     public String packageUrl;
 
     @NameInMap("Platform")

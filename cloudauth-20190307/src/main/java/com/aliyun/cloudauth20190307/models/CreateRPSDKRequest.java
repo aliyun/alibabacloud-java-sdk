@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateRPSDKRequest extends TeaModel {
     @NameInMap("AppUrl")
-    @Validation(required = true)
     public String appUrl;
 
     @NameInMap("Lang")

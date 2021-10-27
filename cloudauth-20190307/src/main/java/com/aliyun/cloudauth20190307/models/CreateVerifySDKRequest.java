@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateVerifySDKRequest extends TeaModel {
     @NameInMap("AppUrl")
-    @Validation(required = true)
     public String appUrl;
 
     @NameInMap("Platform")

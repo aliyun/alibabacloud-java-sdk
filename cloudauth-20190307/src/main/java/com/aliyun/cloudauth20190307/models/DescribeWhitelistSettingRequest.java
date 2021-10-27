@@ -11,21 +11,18 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String certifyId;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("SceneId")
     public Long sceneId;
 
     @NameInMap("ServiceCode")
-    @Validation(required = true)
     public String serviceCode;
 
     @NameInMap("SourceIp")

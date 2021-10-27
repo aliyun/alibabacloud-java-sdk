@@ -11,7 +11,6 @@ public class DescribeVerifyRecordsRequest extends TeaModel {
     public String bizType;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("EndDate")
@@ -21,7 +20,6 @@ public class DescribeVerifyRecordsRequest extends TeaModel {
     public String idCardNum;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("QueryId")

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyTokenRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizType")
-    @Validation(required = true)
     public String bizType;
 
     @NameInMap("CallbackSeed")

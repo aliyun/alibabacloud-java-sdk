@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteWhitelistSettingRequest extends TeaModel {
     @NameInMap("Ids")
-    @Validation(required = true)
     public String ids;
 
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("ServiceCode")
-    @Validation(required = true)
     public String serviceCode;
 
     @NameInMap("SourceIp")

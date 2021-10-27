@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateFaceConfigRequest extends TeaModel {
     @NameInMap("BizName")
-    @Validation(required = true)
     public String bizName;
 
     @NameInMap("BizType")
-    @Validation(required = true)
     public String bizType;
 
     @NameInMap("Lang")
