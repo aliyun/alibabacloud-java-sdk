@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleResponseBody extends TeaModel {
-    @NameInMap("Role")
-    public CreateServiceLinkedRoleResponseBodyRole role;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Role")
+    public CreateServiceLinkedRoleResponseBodyRole role;
 
     public static CreateServiceLinkedRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceLinkedRoleResponseBody self = new CreateServiceLinkedRoleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateServiceLinkedRoleResponseBody setRole(CreateServiceLinkedRoleResponseBodyRole role) {
-        this.role = role;
-        return this;
-    }
-    public CreateServiceLinkedRoleResponseBodyRole getRole() {
-        return this.role;
     }
 
     public CreateServiceLinkedRoleResponseBody setRequestId(String requestId) {
@@ -31,74 +23,42 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateServiceLinkedRoleResponseBody setRole(CreateServiceLinkedRoleResponseBodyRole role) {
+        this.role = role;
+        return this;
+    }
+    public CreateServiceLinkedRoleResponseBodyRole getRole() {
+        return this.role;
+    }
+
     public static class CreateServiceLinkedRoleResponseBodyRole extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
         @NameInMap("AssumeRolePolicyDocument")
         public String assumeRolePolicyDocument;
-
-        @NameInMap("RolePrincipalName")
-        public String rolePrincipalName;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("RoleName")
-        public String roleName;
 
         @NameInMap("CreateDate")
         public String createDate;
 
-        @NameInMap("Arn")
-        public String arn;
-
-        @NameInMap("RoleId")
-        public String roleId;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("IsServiceLinkedRole")
         public Boolean isServiceLinkedRole;
 
+        @NameInMap("RoleId")
+        public String roleId;
+
+        @NameInMap("RoleName")
+        public String roleName;
+
+        @NameInMap("RolePrincipalName")
+        public String rolePrincipalName;
+
         public static CreateServiceLinkedRoleResponseBodyRole build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceLinkedRoleResponseBodyRole self = new CreateServiceLinkedRoleResponseBodyRole();
             return TeaModel.build(map, self);
-        }
-
-        public CreateServiceLinkedRoleResponseBodyRole setAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
-            this.assumeRolePolicyDocument = assumeRolePolicyDocument;
-            return this;
-        }
-        public String getAssumeRolePolicyDocument() {
-            return this.assumeRolePolicyDocument;
-        }
-
-        public CreateServiceLinkedRoleResponseBodyRole setRolePrincipalName(String rolePrincipalName) {
-            this.rolePrincipalName = rolePrincipalName;
-            return this;
-        }
-        public String getRolePrincipalName() {
-            return this.rolePrincipalName;
-        }
-
-        public CreateServiceLinkedRoleResponseBodyRole setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public CreateServiceLinkedRoleResponseBodyRole setRoleName(String roleName) {
-            this.roleName = roleName;
-            return this;
-        }
-        public String getRoleName() {
-            return this.roleName;
-        }
-
-        public CreateServiceLinkedRoleResponseBodyRole setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
         }
 
         public CreateServiceLinkedRoleResponseBodyRole setArn(String arn) {
@@ -109,12 +69,28 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             return this.arn;
         }
 
-        public CreateServiceLinkedRoleResponseBodyRole setRoleId(String roleId) {
-            this.roleId = roleId;
+        public CreateServiceLinkedRoleResponseBodyRole setAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
+            this.assumeRolePolicyDocument = assumeRolePolicyDocument;
             return this;
         }
-        public String getRoleId() {
-            return this.roleId;
+        public String getAssumeRolePolicyDocument() {
+            return this.assumeRolePolicyDocument;
+        }
+
+        public CreateServiceLinkedRoleResponseBodyRole setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
+        public CreateServiceLinkedRoleResponseBodyRole setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public CreateServiceLinkedRoleResponseBodyRole setIsServiceLinkedRole(Boolean isServiceLinkedRole) {
@@ -123,6 +99,30 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         }
         public Boolean getIsServiceLinkedRole() {
             return this.isServiceLinkedRole;
+        }
+
+        public CreateServiceLinkedRoleResponseBodyRole setRoleId(String roleId) {
+            this.roleId = roleId;
+            return this;
+        }
+        public String getRoleId() {
+            return this.roleId;
+        }
+
+        public CreateServiceLinkedRoleResponseBodyRole setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public CreateServiceLinkedRoleResponseBodyRole setRolePrincipalName(String rolePrincipalName) {
+            this.rolePrincipalName = rolePrincipalName;
+            return this;
+        }
+        public String getRolePrincipalName() {
+            return this.rolePrincipalName;
         }
 
     }

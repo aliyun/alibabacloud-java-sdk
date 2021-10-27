@@ -4,26 +4,26 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("Reason")
+    public GetServiceLinkedRoleDeletionStatusResponseBodyReason reason;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Reason")
-    public GetServiceLinkedRoleDeletionStatusResponseBodyReason reason;
+    @NameInMap("Status")
+    public String status;
 
     public static GetServiceLinkedRoleDeletionStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceLinkedRoleDeletionStatusResponseBody self = new GetServiceLinkedRoleDeletionStatusResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetServiceLinkedRoleDeletionStatusResponseBody setStatus(String status) {
-        this.status = status;
+    public GetServiceLinkedRoleDeletionStatusResponseBody setReason(GetServiceLinkedRoleDeletionStatusResponseBodyReason reason) {
+        this.reason = reason;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public GetServiceLinkedRoleDeletionStatusResponseBodyReason getReason() {
+        return this.reason;
     }
 
     public GetServiceLinkedRoleDeletionStatusResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetServiceLinkedRoleDeletionStatusResponseBody setReason(GetServiceLinkedRoleDeletionStatusResponseBodyReason reason) {
-        this.reason = reason;
+    public GetServiceLinkedRoleDeletionStatusResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public GetServiceLinkedRoleDeletionStatusResponseBodyReason getReason() {
-        return this.reason;
+    public String getStatus() {
+        return this.status;
     }
 
     public static class GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsageResources extends TeaModel {

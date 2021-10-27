@@ -32,32 +32,24 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
     }
 
     public static class UpdateResourceGroupResponseBodyResourceGroup extends TeaModel {
-        @NameInMap("DisplayName")
-        public String displayName;
-
         @NameInMap("AccountId")
         public String accountId;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("DisplayName")
+        public String displayName;
+
         @NameInMap("Id")
         public String id;
+
+        @NameInMap("Name")
+        public String name;
 
         public static UpdateResourceGroupResponseBodyResourceGroup build(java.util.Map<String, ?> map) throws Exception {
             UpdateResourceGroupResponseBodyResourceGroup self = new UpdateResourceGroupResponseBodyResourceGroup();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateResourceGroupResponseBodyResourceGroup setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
         }
 
         public UpdateResourceGroupResponseBodyResourceGroup setAccountId(String accountId) {
@@ -68,14 +60,6 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             return this.accountId;
         }
 
-        public UpdateResourceGroupResponseBodyResourceGroup setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public UpdateResourceGroupResponseBodyResourceGroup setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
@@ -84,12 +68,28 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
             return this.createDate;
         }
 
+        public UpdateResourceGroupResponseBodyResourceGroup setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
         public UpdateResourceGroupResponseBodyResourceGroup setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+        public UpdateResourceGroupResponseBodyResourceGroup setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

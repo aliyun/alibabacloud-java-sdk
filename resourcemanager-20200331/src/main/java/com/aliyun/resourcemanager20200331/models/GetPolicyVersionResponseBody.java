@@ -32,6 +32,9 @@ public class GetPolicyVersionResponseBody extends TeaModel {
     }
 
     public static class GetPolicyVersionResponseBodyPolicyVersion extends TeaModel {
+        @NameInMap("CreateDate")
+        public String createDate;
+
         @NameInMap("IsDefaultVersion")
         public Boolean isDefaultVersion;
 
@@ -41,12 +44,17 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         @NameInMap("VersionId")
         public String versionId;
 
-        @NameInMap("CreateDate")
-        public String createDate;
-
         public static GetPolicyVersionResponseBodyPolicyVersion build(java.util.Map<String, ?> map) throws Exception {
             GetPolicyVersionResponseBodyPolicyVersion self = new GetPolicyVersionResponseBodyPolicyVersion();
             return TeaModel.build(map, self);
+        }
+
+        public GetPolicyVersionResponseBodyPolicyVersion setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public GetPolicyVersionResponseBodyPolicyVersion setIsDefaultVersion(Boolean isDefaultVersion) {
@@ -71,14 +79,6 @@ public class GetPolicyVersionResponseBody extends TeaModel {
         }
         public String getVersionId() {
             return this.versionId;
-        }
-
-        public GetPolicyVersionResponseBodyPolicyVersion setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
         }
 
     }

@@ -4,48 +4,24 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TargetAttachments")
     public ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachments targetAttachments;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListTargetAttachmentsForControlPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTargetAttachmentsForControlPolicyResponseBody self = new ListTargetAttachmentsForControlPolicyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTargetAttachmentsForControlPolicyResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListTargetAttachmentsForControlPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListTargetAttachmentsForControlPolicyResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public ListTargetAttachmentsForControlPolicyResponseBody setPageNumber(Integer pageNumber) {
@@ -56,6 +32,22 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         return this.pageNumber;
     }
 
+    public ListTargetAttachmentsForControlPolicyResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListTargetAttachmentsForControlPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListTargetAttachmentsForControlPolicyResponseBody setTargetAttachments(ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachments targetAttachments) {
         this.targetAttachments = targetAttachments;
         return this;
@@ -64,15 +56,23 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         return this.targetAttachments;
     }
 
+    public ListTargetAttachmentsForControlPolicyResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment extends TeaModel {
+        @NameInMap("AttachDate")
+        public String attachDate;
+
         @NameInMap("TargetId")
         public String targetId;
 
         @NameInMap("TargetName")
         public String targetName;
-
-        @NameInMap("AttachDate")
-        public String attachDate;
 
         @NameInMap("TargetType")
         public String targetType;
@@ -80,6 +80,14 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         public static ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment build(java.util.Map<String, ?> map) throws Exception {
             ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment self = new ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment();
             return TeaModel.build(map, self);
+        }
+
+        public ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment setAttachDate(String attachDate) {
+            this.attachDate = attachDate;
+            return this;
+        }
+        public String getAttachDate() {
+            return this.attachDate;
         }
 
         public ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment setTargetId(String targetId) {
@@ -96,14 +104,6 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
         }
         public String getTargetName() {
             return this.targetName;
-        }
-
-        public ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment setAttachDate(String attachDate) {
-            this.attachDate = attachDate;
-            return this;
-        }
-        public String getAttachDate() {
-            return this.attachDate;
         }
 
         public ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment setTargetType(String targetType) {

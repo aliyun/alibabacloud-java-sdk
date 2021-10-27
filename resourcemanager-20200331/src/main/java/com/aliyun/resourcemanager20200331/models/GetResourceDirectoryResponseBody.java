@@ -32,11 +32,8 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
     }
 
     public static class GetResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
-        @NameInMap("RootFolderId")
-        public String rootFolderId;
-
-        @NameInMap("ResourceDirectoryId")
-        public String resourceDirectoryId;
+        @NameInMap("ControlPolicyStatus")
+        public String controlPolicyStatus;
 
         @NameInMap("CreateTime")
         public String createTime;
@@ -47,31 +44,26 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
-        @NameInMap("ControlPolicyStatus")
-        public String controlPolicyStatus;
-
         @NameInMap("MemberDeletionStatus")
         public String memberDeletionStatus;
+
+        @NameInMap("ResourceDirectoryId")
+        public String resourceDirectoryId;
+
+        @NameInMap("RootFolderId")
+        public String rootFolderId;
 
         public static GetResourceDirectoryResponseBodyResourceDirectory build(java.util.Map<String, ?> map) throws Exception {
             GetResourceDirectoryResponseBodyResourceDirectory self = new GetResourceDirectoryResponseBodyResourceDirectory();
             return TeaModel.build(map, self);
         }
 
-        public GetResourceDirectoryResponseBodyResourceDirectory setRootFolderId(String rootFolderId) {
-            this.rootFolderId = rootFolderId;
+        public GetResourceDirectoryResponseBodyResourceDirectory setControlPolicyStatus(String controlPolicyStatus) {
+            this.controlPolicyStatus = controlPolicyStatus;
             return this;
         }
-        public String getRootFolderId() {
-            return this.rootFolderId;
-        }
-
-        public GetResourceDirectoryResponseBodyResourceDirectory setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
-            return this;
-        }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
+        public String getControlPolicyStatus() {
+            return this.controlPolicyStatus;
         }
 
         public GetResourceDirectoryResponseBodyResourceDirectory setCreateTime(String createTime) {
@@ -98,20 +90,28 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
             return this.masterAccountName;
         }
 
-        public GetResourceDirectoryResponseBodyResourceDirectory setControlPolicyStatus(String controlPolicyStatus) {
-            this.controlPolicyStatus = controlPolicyStatus;
-            return this;
-        }
-        public String getControlPolicyStatus() {
-            return this.controlPolicyStatus;
-        }
-
         public GetResourceDirectoryResponseBodyResourceDirectory setMemberDeletionStatus(String memberDeletionStatus) {
             this.memberDeletionStatus = memberDeletionStatus;
             return this;
         }
         public String getMemberDeletionStatus() {
             return this.memberDeletionStatus;
+        }
+
+        public GetResourceDirectoryResponseBodyResourceDirectory setResourceDirectoryId(String resourceDirectoryId) {
+            this.resourceDirectoryId = resourceDirectoryId;
+            return this;
+        }
+        public String getResourceDirectoryId() {
+            return this.resourceDirectoryId;
+        }
+
+        public GetResourceDirectoryResponseBodyResourceDirectory setRootFolderId(String rootFolderId) {
+            this.rootFolderId = rootFolderId;
+            return this;
+        }
+        public String getRootFolderId() {
+            return this.rootFolderId;
         }
 
     }

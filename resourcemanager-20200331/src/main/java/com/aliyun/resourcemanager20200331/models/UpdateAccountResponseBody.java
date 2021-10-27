@@ -32,11 +32,11 @@ public class UpdateAccountResponseBody extends TeaModel {
     }
 
     public static class UpdateAccountResponseBodyAccount extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AccountId")
+        public String accountId;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("DisplayName")
         public String displayName;
@@ -44,43 +44,43 @@ public class UpdateAccountResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
-        @NameInMap("ResourceDirectoryId")
-        public String resourceDirectoryId;
+        @NameInMap("JoinMethod")
+        public String joinMethod;
 
         @NameInMap("JoinTime")
         public String joinTime;
 
-        @NameInMap("AccountId")
-        public String accountId;
-
-        @NameInMap("JoinMethod")
-        public String joinMethod;
-
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        @NameInMap("AccountName")
-        public String accountName;
+        @NameInMap("ResourceDirectoryId")
+        public String resourceDirectoryId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         public static UpdateAccountResponseBodyAccount build(java.util.Map<String, ?> map) throws Exception {
             UpdateAccountResponseBodyAccount self = new UpdateAccountResponseBodyAccount();
             return TeaModel.build(map, self);
         }
 
-        public UpdateAccountResponseBodyAccount setStatus(String status) {
-            this.status = status;
+        public UpdateAccountResponseBodyAccount setAccountId(String accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getAccountId() {
+            return this.accountId;
         }
 
-        public UpdateAccountResponseBodyAccount setType(String type) {
-            this.type = type;
+        public UpdateAccountResponseBodyAccount setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public UpdateAccountResponseBodyAccount setDisplayName(String displayName) {
@@ -99,12 +99,12 @@ public class UpdateAccountResponseBody extends TeaModel {
             return this.folderId;
         }
 
-        public UpdateAccountResponseBodyAccount setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
+        public UpdateAccountResponseBodyAccount setJoinMethod(String joinMethod) {
+            this.joinMethod = joinMethod;
             return this;
         }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
+        public String getJoinMethod() {
+            return this.joinMethod;
         }
 
         public UpdateAccountResponseBodyAccount setJoinTime(String joinTime) {
@@ -115,22 +115,6 @@ public class UpdateAccountResponseBody extends TeaModel {
             return this.joinTime;
         }
 
-        public UpdateAccountResponseBodyAccount setAccountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public String getAccountId() {
-            return this.accountId;
-        }
-
-        public UpdateAccountResponseBodyAccount setJoinMethod(String joinMethod) {
-            this.joinMethod = joinMethod;
-            return this;
-        }
-        public String getJoinMethod() {
-            return this.joinMethod;
-        }
-
         public UpdateAccountResponseBodyAccount setModifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
             return this;
@@ -139,12 +123,28 @@ public class UpdateAccountResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
-        public UpdateAccountResponseBodyAccount setAccountName(String accountName) {
-            this.accountName = accountName;
+        public UpdateAccountResponseBodyAccount setResourceDirectoryId(String resourceDirectoryId) {
+            this.resourceDirectoryId = resourceDirectoryId;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getResourceDirectoryId() {
+            return this.resourceDirectoryId;
+        }
+
+        public UpdateAccountResponseBodyAccount setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public UpdateAccountResponseBodyAccount setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

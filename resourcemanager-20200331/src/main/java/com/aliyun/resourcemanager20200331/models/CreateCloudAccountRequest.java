@@ -7,11 +7,11 @@ public class CreateCloudAccountRequest extends TeaModel {
     @NameInMap("DisplayName")
     public String displayName;
 
-    @NameInMap("ParentFolderId")
-    public String parentFolderId;
-
     @NameInMap("Email")
     public String email;
+
+    @NameInMap("ParentFolderId")
+    public String parentFolderId;
 
     @NameInMap("PayerAccountId")
     public String payerAccountId;
@@ -29,20 +29,20 @@ public class CreateCloudAccountRequest extends TeaModel {
         return this.displayName;
     }
 
-    public CreateCloudAccountRequest setParentFolderId(String parentFolderId) {
-        this.parentFolderId = parentFolderId;
-        return this;
-    }
-    public String getParentFolderId() {
-        return this.parentFolderId;
-    }
-
     public CreateCloudAccountRequest setEmail(String email) {
         this.email = email;
         return this;
     }
     public String getEmail() {
         return this.email;
+    }
+
+    public CreateCloudAccountRequest setParentFolderId(String parentFolderId) {
+        this.parentFolderId = parentFolderId;
+        return this;
+    }
+    public String getParentFolderId() {
+        return this.parentFolderId;
     }
 
     public CreateCloudAccountRequest setPayerAccountId(String payerAccountId) {

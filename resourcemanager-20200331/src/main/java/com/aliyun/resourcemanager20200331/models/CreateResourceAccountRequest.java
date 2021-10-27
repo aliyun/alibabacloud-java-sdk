@@ -4,6 +4,9 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceAccountRequest extends TeaModel {
+    @NameInMap("AccountNamePrefix")
+    public String accountNamePrefix;
+
     @NameInMap("DisplayName")
     public String displayName;
 
@@ -13,12 +16,17 @@ public class CreateResourceAccountRequest extends TeaModel {
     @NameInMap("PayerAccountId")
     public String payerAccountId;
 
-    @NameInMap("AccountNamePrefix")
-    public String accountNamePrefix;
-
     public static CreateResourceAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResourceAccountRequest self = new CreateResourceAccountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateResourceAccountRequest setAccountNamePrefix(String accountNamePrefix) {
+        this.accountNamePrefix = accountNamePrefix;
+        return this;
+    }
+    public String getAccountNamePrefix() {
+        return this.accountNamePrefix;
     }
 
     public CreateResourceAccountRequest setDisplayName(String displayName) {
@@ -43,14 +51,6 @@ public class CreateResourceAccountRequest extends TeaModel {
     }
     public String getPayerAccountId() {
         return this.payerAccountId;
-    }
-
-    public CreateResourceAccountRequest setAccountNamePrefix(String accountNamePrefix) {
-        this.accountNamePrefix = accountNamePrefix;
-        return this;
-    }
-    public String getAccountNamePrefix() {
-        return this.accountNamePrefix;
     }
 
 }

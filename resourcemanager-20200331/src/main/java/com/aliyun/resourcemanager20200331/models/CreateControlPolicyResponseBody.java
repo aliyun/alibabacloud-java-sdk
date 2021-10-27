@@ -32,8 +32,11 @@ public class CreateControlPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateControlPolicyResponseBodyControlPolicy extends TeaModel {
-        @NameInMap("UpdateDate")
-        public String updateDate;
+        @NameInMap("AttachmentCount")
+        public String attachmentCount;
+
+        @NameInMap("CreateDate")
+        public String createDate;
 
         @NameInMap("Description")
         public String description;
@@ -41,32 +44,37 @@ public class CreateControlPolicyResponseBody extends TeaModel {
         @NameInMap("EffectScope")
         public String effectScope;
 
-        @NameInMap("AttachmentCount")
-        public String attachmentCount;
+        @NameInMap("PolicyId")
+        public String policyId;
 
         @NameInMap("PolicyName")
         public String policyName;
 
-        @NameInMap("PolicyId")
-        public String policyId;
-
-        @NameInMap("CreateDate")
-        public String createDate;
-
         @NameInMap("PolicyType")
         public String policyType;
+
+        @NameInMap("UpdateDate")
+        public String updateDate;
 
         public static CreateControlPolicyResponseBodyControlPolicy build(java.util.Map<String, ?> map) throws Exception {
             CreateControlPolicyResponseBodyControlPolicy self = new CreateControlPolicyResponseBodyControlPolicy();
             return TeaModel.build(map, self);
         }
 
-        public CreateControlPolicyResponseBodyControlPolicy setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
+        public CreateControlPolicyResponseBodyControlPolicy setAttachmentCount(String attachmentCount) {
+            this.attachmentCount = attachmentCount;
             return this;
         }
-        public String getUpdateDate() {
-            return this.updateDate;
+        public String getAttachmentCount() {
+            return this.attachmentCount;
+        }
+
+        public CreateControlPolicyResponseBodyControlPolicy setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public CreateControlPolicyResponseBodyControlPolicy setDescription(String description) {
@@ -85,12 +93,12 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             return this.effectScope;
         }
 
-        public CreateControlPolicyResponseBodyControlPolicy setAttachmentCount(String attachmentCount) {
-            this.attachmentCount = attachmentCount;
+        public CreateControlPolicyResponseBodyControlPolicy setPolicyId(String policyId) {
+            this.policyId = policyId;
             return this;
         }
-        public String getAttachmentCount() {
-            return this.attachmentCount;
+        public String getPolicyId() {
+            return this.policyId;
         }
 
         public CreateControlPolicyResponseBodyControlPolicy setPolicyName(String policyName) {
@@ -101,28 +109,20 @@ public class CreateControlPolicyResponseBody extends TeaModel {
             return this.policyName;
         }
 
-        public CreateControlPolicyResponseBodyControlPolicy setPolicyId(String policyId) {
-            this.policyId = policyId;
-            return this;
-        }
-        public String getPolicyId() {
-            return this.policyId;
-        }
-
-        public CreateControlPolicyResponseBodyControlPolicy setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
-        }
-
         public CreateControlPolicyResponseBodyControlPolicy setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+        public CreateControlPolicyResponseBodyControlPolicy setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

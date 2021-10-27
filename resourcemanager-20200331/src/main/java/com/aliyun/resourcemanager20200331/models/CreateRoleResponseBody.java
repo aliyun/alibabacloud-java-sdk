@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CreateRoleResponseBody extends TeaModel {
-    @NameInMap("Role")
-    public CreateRoleResponseBodyRole role;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Role")
+    public CreateRoleResponseBodyRole role;
 
     public static CreateRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRoleResponseBody self = new CreateRoleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateRoleResponseBody setRole(CreateRoleResponseBodyRole role) {
-        this.role = role;
-        return this;
-    }
-    public CreateRoleResponseBodyRole getRole() {
-        return this.role;
     }
 
     public CreateRoleResponseBody setRequestId(String requestId) {
@@ -31,12 +23,23 @@ public class CreateRoleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public CreateRoleResponseBody setRole(CreateRoleResponseBodyRole role) {
+        this.role = role;
+        return this;
+    }
+    public CreateRoleResponseBodyRole getRole() {
+        return this.role;
+    }
+
     public static class CreateRoleResponseBodyRole extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
         @NameInMap("AssumeRolePolicyDocument")
         public String assumeRolePolicyDocument;
 
-        @NameInMap("RolePrincipalName")
-        public String rolePrincipalName;
+        @NameInMap("CreateDate")
+        public String createDate;
 
         @NameInMap("Description")
         public String description;
@@ -44,21 +47,26 @@ public class CreateRoleResponseBody extends TeaModel {
         @NameInMap("MaxSessionDuration")
         public Long maxSessionDuration;
 
+        @NameInMap("RoleId")
+        public String roleId;
+
         @NameInMap("RoleName")
         public String roleName;
 
-        @NameInMap("CreateDate")
-        public String createDate;
-
-        @NameInMap("Arn")
-        public String arn;
-
-        @NameInMap("RoleId")
-        public String roleId;
+        @NameInMap("RolePrincipalName")
+        public String rolePrincipalName;
 
         public static CreateRoleResponseBodyRole build(java.util.Map<String, ?> map) throws Exception {
             CreateRoleResponseBodyRole self = new CreateRoleResponseBodyRole();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRoleResponseBodyRole setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
         }
 
         public CreateRoleResponseBodyRole setAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
@@ -69,12 +77,12 @@ public class CreateRoleResponseBody extends TeaModel {
             return this.assumeRolePolicyDocument;
         }
 
-        public CreateRoleResponseBodyRole setRolePrincipalName(String rolePrincipalName) {
-            this.rolePrincipalName = rolePrincipalName;
+        public CreateRoleResponseBodyRole setCreateDate(String createDate) {
+            this.createDate = createDate;
             return this;
         }
-        public String getRolePrincipalName() {
-            return this.rolePrincipalName;
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public CreateRoleResponseBodyRole setDescription(String description) {
@@ -93,6 +101,14 @@ public class CreateRoleResponseBody extends TeaModel {
             return this.maxSessionDuration;
         }
 
+        public CreateRoleResponseBodyRole setRoleId(String roleId) {
+            this.roleId = roleId;
+            return this;
+        }
+        public String getRoleId() {
+            return this.roleId;
+        }
+
         public CreateRoleResponseBodyRole setRoleName(String roleName) {
             this.roleName = roleName;
             return this;
@@ -101,28 +117,12 @@ public class CreateRoleResponseBody extends TeaModel {
             return this.roleName;
         }
 
-        public CreateRoleResponseBodyRole setCreateDate(String createDate) {
-            this.createDate = createDate;
+        public CreateRoleResponseBodyRole setRolePrincipalName(String rolePrincipalName) {
+            this.rolePrincipalName = rolePrincipalName;
             return this;
         }
-        public String getCreateDate() {
-            return this.createDate;
-        }
-
-        public CreateRoleResponseBodyRole setArn(String arn) {
-            this.arn = arn;
-            return this;
-        }
-        public String getArn() {
-            return this.arn;
-        }
-
-        public CreateRoleResponseBodyRole setRoleId(String roleId) {
-            this.roleId = roleId;
-            return this;
-        }
-        public String getRoleId() {
-            return this.roleId;
+        public String getRolePrincipalName() {
+            return this.rolePrincipalName;
         }
 
     }

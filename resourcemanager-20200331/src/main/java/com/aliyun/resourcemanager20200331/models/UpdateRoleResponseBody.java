@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class UpdateRoleResponseBody extends TeaModel {
-    @NameInMap("Role")
-    public UpdateRoleResponseBodyRole role;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Role")
+    public UpdateRoleResponseBodyRole role;
 
     public static UpdateRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateRoleResponseBody self = new UpdateRoleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateRoleResponseBody setRole(UpdateRoleResponseBodyRole role) {
-        this.role = role;
-        return this;
-    }
-    public UpdateRoleResponseBodyRole getRole() {
-        return this.role;
     }
 
     public UpdateRoleResponseBody setRequestId(String requestId) {
@@ -31,37 +23,53 @@ public class UpdateRoleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public UpdateRoleResponseBody setRole(UpdateRoleResponseBodyRole role) {
+        this.role = role;
+        return this;
+    }
+    public UpdateRoleResponseBodyRole getRole() {
+        return this.role;
+    }
+
     public static class UpdateRoleResponseBodyRole extends TeaModel {
+        @NameInMap("Arn")
+        public String arn;
+
         @NameInMap("AssumeRolePolicyDocument")
         public String assumeRolePolicyDocument;
-
-        @NameInMap("RolePrincipalName")
-        public String rolePrincipalName;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("UpdateDate")
-        public String updateDate;
-
-        @NameInMap("MaxSessionDuration")
-        public Long maxSessionDuration;
-
-        @NameInMap("RoleName")
-        public String roleName;
 
         @NameInMap("CreateDate")
         public String createDate;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("MaxSessionDuration")
+        public Long maxSessionDuration;
+
         @NameInMap("RoleId")
         public String roleId;
 
-        @NameInMap("Arn")
-        public String arn;
+        @NameInMap("RoleName")
+        public String roleName;
+
+        @NameInMap("RolePrincipalName")
+        public String rolePrincipalName;
+
+        @NameInMap("UpdateDate")
+        public String updateDate;
 
         public static UpdateRoleResponseBodyRole build(java.util.Map<String, ?> map) throws Exception {
             UpdateRoleResponseBodyRole self = new UpdateRoleResponseBodyRole();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateRoleResponseBodyRole setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
         }
 
         public UpdateRoleResponseBodyRole setAssumeRolePolicyDocument(String assumeRolePolicyDocument) {
@@ -72,12 +80,12 @@ public class UpdateRoleResponseBody extends TeaModel {
             return this.assumeRolePolicyDocument;
         }
 
-        public UpdateRoleResponseBodyRole setRolePrincipalName(String rolePrincipalName) {
-            this.rolePrincipalName = rolePrincipalName;
+        public UpdateRoleResponseBodyRole setCreateDate(String createDate) {
+            this.createDate = createDate;
             return this;
         }
-        public String getRolePrincipalName() {
-            return this.rolePrincipalName;
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public UpdateRoleResponseBodyRole setDescription(String description) {
@@ -88,36 +96,12 @@ public class UpdateRoleResponseBody extends TeaModel {
             return this.description;
         }
 
-        public UpdateRoleResponseBodyRole setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
-            return this;
-        }
-        public String getUpdateDate() {
-            return this.updateDate;
-        }
-
         public UpdateRoleResponseBodyRole setMaxSessionDuration(Long maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
         public Long getMaxSessionDuration() {
             return this.maxSessionDuration;
-        }
-
-        public UpdateRoleResponseBodyRole setRoleName(String roleName) {
-            this.roleName = roleName;
-            return this;
-        }
-        public String getRoleName() {
-            return this.roleName;
-        }
-
-        public UpdateRoleResponseBodyRole setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
         }
 
         public UpdateRoleResponseBodyRole setRoleId(String roleId) {
@@ -128,12 +112,28 @@ public class UpdateRoleResponseBody extends TeaModel {
             return this.roleId;
         }
 
-        public UpdateRoleResponseBodyRole setArn(String arn) {
-            this.arn = arn;
+        public UpdateRoleResponseBodyRole setRoleName(String roleName) {
+            this.roleName = roleName;
             return this;
         }
-        public String getArn() {
-            return this.arn;
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public UpdateRoleResponseBodyRole setRolePrincipalName(String rolePrincipalName) {
+            this.rolePrincipalName = rolePrincipalName;
+            return this;
+        }
+        public String getRolePrincipalName() {
+            return this.rolePrincipalName;
+        }
+
+        public UpdateRoleResponseBodyRole setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

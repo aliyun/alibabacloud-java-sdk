@@ -32,12 +32,6 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
     }
 
     public static class InitResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
-        @NameInMap("RootFolderId")
-        public String rootFolderId;
-
-        @NameInMap("ResourceDirectoryId")
-        public String resourceDirectoryId;
-
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -47,25 +41,15 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
+        @NameInMap("ResourceDirectoryId")
+        public String resourceDirectoryId;
+
+        @NameInMap("RootFolderId")
+        public String rootFolderId;
+
         public static InitResourceDirectoryResponseBodyResourceDirectory build(java.util.Map<String, ?> map) throws Exception {
             InitResourceDirectoryResponseBodyResourceDirectory self = new InitResourceDirectoryResponseBodyResourceDirectory();
             return TeaModel.build(map, self);
-        }
-
-        public InitResourceDirectoryResponseBodyResourceDirectory setRootFolderId(String rootFolderId) {
-            this.rootFolderId = rootFolderId;
-            return this;
-        }
-        public String getRootFolderId() {
-            return this.rootFolderId;
-        }
-
-        public InitResourceDirectoryResponseBodyResourceDirectory setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
-            return this;
-        }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
         }
 
         public InitResourceDirectoryResponseBodyResourceDirectory setCreateTime(String createTime) {
@@ -90,6 +74,22 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
         }
         public String getMasterAccountName() {
             return this.masterAccountName;
+        }
+
+        public InitResourceDirectoryResponseBodyResourceDirectory setResourceDirectoryId(String resourceDirectoryId) {
+            this.resourceDirectoryId = resourceDirectoryId;
+            return this;
+        }
+        public String getResourceDirectoryId() {
+            return this.resourceDirectoryId;
+        }
+
+        public InitResourceDirectoryResponseBodyResourceDirectory setRootFolderId(String rootFolderId) {
+            this.rootFolderId = rootFolderId;
+            return this;
+        }
+        public String getRootFolderId() {
+            return this.rootFolderId;
         }
 
     }

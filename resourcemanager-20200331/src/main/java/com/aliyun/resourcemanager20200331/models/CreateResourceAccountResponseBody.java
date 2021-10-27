@@ -32,11 +32,11 @@ public class CreateResourceAccountResponseBody extends TeaModel {
     }
 
     public static class CreateResourceAccountResponseBodyAccount extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AccountId")
+        public String accountId;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("DisplayName")
         public String displayName;
@@ -44,43 +44,43 @@ public class CreateResourceAccountResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
-        @NameInMap("ResourceDirectoryId")
-        public String resourceDirectoryId;
+        @NameInMap("JoinMethod")
+        public String joinMethod;
 
         @NameInMap("JoinTime")
         public String joinTime;
 
-        @NameInMap("AccountId")
-        public String accountId;
-
-        @NameInMap("JoinMethod")
-        public String joinMethod;
-
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        @NameInMap("AccountName")
-        public String accountName;
+        @NameInMap("ResourceDirectoryId")
+        public String resourceDirectoryId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         public static CreateResourceAccountResponseBodyAccount build(java.util.Map<String, ?> map) throws Exception {
             CreateResourceAccountResponseBodyAccount self = new CreateResourceAccountResponseBodyAccount();
             return TeaModel.build(map, self);
         }
 
-        public CreateResourceAccountResponseBodyAccount setStatus(String status) {
-            this.status = status;
+        public CreateResourceAccountResponseBodyAccount setAccountId(String accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getAccountId() {
+            return this.accountId;
         }
 
-        public CreateResourceAccountResponseBodyAccount setType(String type) {
-            this.type = type;
+        public CreateResourceAccountResponseBodyAccount setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public CreateResourceAccountResponseBodyAccount setDisplayName(String displayName) {
@@ -99,12 +99,12 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             return this.folderId;
         }
 
-        public CreateResourceAccountResponseBodyAccount setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
+        public CreateResourceAccountResponseBodyAccount setJoinMethod(String joinMethod) {
+            this.joinMethod = joinMethod;
             return this;
         }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
+        public String getJoinMethod() {
+            return this.joinMethod;
         }
 
         public CreateResourceAccountResponseBodyAccount setJoinTime(String joinTime) {
@@ -115,22 +115,6 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             return this.joinTime;
         }
 
-        public CreateResourceAccountResponseBodyAccount setAccountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public String getAccountId() {
-            return this.accountId;
-        }
-
-        public CreateResourceAccountResponseBodyAccount setJoinMethod(String joinMethod) {
-            this.joinMethod = joinMethod;
-            return this;
-        }
-        public String getJoinMethod() {
-            return this.joinMethod;
-        }
-
         public CreateResourceAccountResponseBodyAccount setModifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
             return this;
@@ -139,12 +123,28 @@ public class CreateResourceAccountResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
-        public CreateResourceAccountResponseBodyAccount setAccountName(String accountName) {
-            this.accountName = accountName;
+        public CreateResourceAccountResponseBodyAccount setResourceDirectoryId(String resourceDirectoryId) {
+            this.resourceDirectoryId = resourceDirectoryId;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getResourceDirectoryId() {
+            return this.resourceDirectoryId;
+        }
+
+        public CreateResourceAccountResponseBodyAccount setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public CreateResourceAccountResponseBodyAccount setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

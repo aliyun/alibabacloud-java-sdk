@@ -32,11 +32,14 @@ public class GetPolicyResponseBody extends TeaModel {
     }
 
     public static class GetPolicyResponseBodyPolicy extends TeaModel {
+        @NameInMap("AttachmentCount")
+        public Integer attachmentCount;
+
+        @NameInMap("CreateDate")
+        public String createDate;
+
         @NameInMap("DefaultVersion")
         public String defaultVersion;
-
-        @NameInMap("UpdateDate")
-        public String updateDate;
 
         @NameInMap("Description")
         public String description;
@@ -44,21 +47,34 @@ public class GetPolicyResponseBody extends TeaModel {
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
-        @NameInMap("AttachmentCount")
-        public Integer attachmentCount;
-
         @NameInMap("PolicyName")
         public String policyName;
-
-        @NameInMap("CreateDate")
-        public String createDate;
 
         @NameInMap("PolicyType")
         public String policyType;
 
+        @NameInMap("UpdateDate")
+        public String updateDate;
+
         public static GetPolicyResponseBodyPolicy build(java.util.Map<String, ?> map) throws Exception {
             GetPolicyResponseBodyPolicy self = new GetPolicyResponseBodyPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public GetPolicyResponseBodyPolicy setAttachmentCount(Integer attachmentCount) {
+            this.attachmentCount = attachmentCount;
+            return this;
+        }
+        public Integer getAttachmentCount() {
+            return this.attachmentCount;
+        }
+
+        public GetPolicyResponseBodyPolicy setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
         }
 
         public GetPolicyResponseBodyPolicy setDefaultVersion(String defaultVersion) {
@@ -67,14 +83,6 @@ public class GetPolicyResponseBody extends TeaModel {
         }
         public String getDefaultVersion() {
             return this.defaultVersion;
-        }
-
-        public GetPolicyResponseBodyPolicy setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
-            return this;
-        }
-        public String getUpdateDate() {
-            return this.updateDate;
         }
 
         public GetPolicyResponseBodyPolicy setDescription(String description) {
@@ -93,14 +101,6 @@ public class GetPolicyResponseBody extends TeaModel {
             return this.policyDocument;
         }
 
-        public GetPolicyResponseBodyPolicy setAttachmentCount(Integer attachmentCount) {
-            this.attachmentCount = attachmentCount;
-            return this;
-        }
-        public Integer getAttachmentCount() {
-            return this.attachmentCount;
-        }
-
         public GetPolicyResponseBodyPolicy setPolicyName(String policyName) {
             this.policyName = policyName;
             return this;
@@ -109,20 +109,20 @@ public class GetPolicyResponseBody extends TeaModel {
             return this.policyName;
         }
 
-        public GetPolicyResponseBodyPolicy setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
-        }
-
         public GetPolicyResponseBodyPolicy setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+        public GetPolicyResponseBodyPolicy setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
         }
 
     }

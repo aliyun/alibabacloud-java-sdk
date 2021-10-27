@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CancelHandshakeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Handshake")
     public CancelHandshakeResponseBodyHandshake handshake;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CancelHandshakeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CancelHandshakeResponseBody self = new CancelHandshakeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CancelHandshakeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CancelHandshakeResponseBody setHandshake(CancelHandshakeResponseBodyHandshake handshake) {
@@ -31,24 +23,23 @@ public class CancelHandshakeResponseBody extends TeaModel {
         return this.handshake;
     }
 
+    public CancelHandshakeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class CancelHandshakeResponseBodyHandshake extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        @NameInMap("ResourceDirectoryId")
-        public String resourceDirectoryId;
-
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("Note")
-        public String note;
-
-        @NameInMap("TargetEntity")
-        public String targetEntity;
+        @NameInMap("HandshakeId")
+        public String handshakeId;
 
         @NameInMap("MasterAccountId")
         public String masterAccountId;
@@ -59,39 +50,24 @@ public class CancelHandshakeResponseBody extends TeaModel {
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        @NameInMap("Note")
+        public String note;
+
+        @NameInMap("ResourceDirectoryId")
+        public String resourceDirectoryId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TargetEntity")
+        public String targetEntity;
+
         @NameInMap("TargetType")
         public String targetType;
-
-        @NameInMap("HandshakeId")
-        public String handshakeId;
 
         public static CancelHandshakeResponseBodyHandshake build(java.util.Map<String, ?> map) throws Exception {
             CancelHandshakeResponseBodyHandshake self = new CancelHandshakeResponseBodyHandshake();
             return TeaModel.build(map, self);
-        }
-
-        public CancelHandshakeResponseBodyHandshake setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public CancelHandshakeResponseBodyHandshake setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public CancelHandshakeResponseBodyHandshake setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
-            return this;
-        }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
         }
 
         public CancelHandshakeResponseBodyHandshake setCreateTime(String createTime) {
@@ -102,20 +78,20 @@ public class CancelHandshakeResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public CancelHandshakeResponseBodyHandshake setNote(String note) {
-            this.note = note;
+        public CancelHandshakeResponseBodyHandshake setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
             return this;
         }
-        public String getNote() {
-            return this.note;
+        public String getExpireTime() {
+            return this.expireTime;
         }
 
-        public CancelHandshakeResponseBodyHandshake setTargetEntity(String targetEntity) {
-            this.targetEntity = targetEntity;
+        public CancelHandshakeResponseBodyHandshake setHandshakeId(String handshakeId) {
+            this.handshakeId = handshakeId;
             return this;
         }
-        public String getTargetEntity() {
-            return this.targetEntity;
+        public String getHandshakeId() {
+            return this.handshakeId;
         }
 
         public CancelHandshakeResponseBodyHandshake setMasterAccountId(String masterAccountId) {
@@ -142,20 +118,44 @@ public class CancelHandshakeResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
+        public CancelHandshakeResponseBodyHandshake setNote(String note) {
+            this.note = note;
+            return this;
+        }
+        public String getNote() {
+            return this.note;
+        }
+
+        public CancelHandshakeResponseBodyHandshake setResourceDirectoryId(String resourceDirectoryId) {
+            this.resourceDirectoryId = resourceDirectoryId;
+            return this;
+        }
+        public String getResourceDirectoryId() {
+            return this.resourceDirectoryId;
+        }
+
+        public CancelHandshakeResponseBodyHandshake setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public CancelHandshakeResponseBodyHandshake setTargetEntity(String targetEntity) {
+            this.targetEntity = targetEntity;
+            return this;
+        }
+        public String getTargetEntity() {
+            return this.targetEntity;
+        }
+
         public CancelHandshakeResponseBodyHandshake setTargetType(String targetType) {
             this.targetType = targetType;
             return this;
         }
         public String getTargetType() {
             return this.targetType;
-        }
-
-        public CancelHandshakeResponseBodyHandshake setHandshakeId(String handshakeId) {
-            this.handshakeId = handshakeId;
-            return this;
-        }
-        public String getHandshakeId() {
-            return this.handshakeId;
         }
 
     }

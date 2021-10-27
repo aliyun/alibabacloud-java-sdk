@@ -4,11 +4,11 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetPolicyVersionRequest extends TeaModel {
-    @NameInMap("PolicyType")
-    public String policyType;
-
     @NameInMap("PolicyName")
     public String policyName;
+
+    @NameInMap("PolicyType")
+    public String policyType;
 
     @NameInMap("VersionId")
     public String versionId;
@@ -18,20 +18,20 @@ public class GetPolicyVersionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetPolicyVersionRequest setPolicyType(String policyType) {
-        this.policyType = policyType;
-        return this;
-    }
-    public String getPolicyType() {
-        return this.policyType;
-    }
-
     public GetPolicyVersionRequest setPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     public String getPolicyName() {
         return this.policyName;
+    }
+
+    public GetPolicyVersionRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
     }
 
     public GetPolicyVersionRequest setVersionId(String versionId) {

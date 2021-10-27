@@ -4,56 +4,24 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListAccountsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Accounts")
+    public ListAccountsResponseBodyAccounts accounts;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("Accounts")
-    public ListAccountsResponseBodyAccounts accounts;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListAccountsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAccountsResponseBody self = new ListAccountsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAccountsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListAccountsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAccountsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListAccountsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public ListAccountsResponseBody setAccounts(ListAccountsResponseBodyAccounts accounts) {
@@ -64,12 +32,41 @@ public class ListAccountsResponseBody extends TeaModel {
         return this.accounts;
     }
 
-    public static class ListAccountsResponseBodyAccountsAccount extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public ListAccountsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
 
-        @NameInMap("Type")
-        public String type;
+    public ListAccountsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListAccountsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListAccountsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListAccountsResponseBodyAccountsAccount extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
 
         @NameInMap("DisplayName")
         public String displayName;
@@ -77,40 +74,35 @@ public class ListAccountsResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
-        @NameInMap("ResourceDirectoryId")
-        public String resourceDirectoryId;
+        @NameInMap("JoinMethod")
+        public String joinMethod;
 
         @NameInMap("JoinTime")
         public String joinTime;
 
-        @NameInMap("AccountId")
-        public String accountId;
-
-        @NameInMap("JoinMethod")
-        public String joinMethod;
-
         @NameInMap("ModifyTime")
         public String modifyTime;
+
+        @NameInMap("ResourceDirectoryId")
+        public String resourceDirectoryId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ListAccountsResponseBodyAccountsAccount build(java.util.Map<String, ?> map) throws Exception {
             ListAccountsResponseBodyAccountsAccount self = new ListAccountsResponseBodyAccountsAccount();
             return TeaModel.build(map, self);
         }
 
-        public ListAccountsResponseBodyAccountsAccount setStatus(String status) {
-            this.status = status;
+        public ListAccountsResponseBodyAccountsAccount setAccountId(String accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListAccountsResponseBodyAccountsAccount setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public ListAccountsResponseBodyAccountsAccount setDisplayName(String displayName) {
@@ -129,12 +121,12 @@ public class ListAccountsResponseBody extends TeaModel {
             return this.folderId;
         }
 
-        public ListAccountsResponseBodyAccountsAccount setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
+        public ListAccountsResponseBodyAccountsAccount setJoinMethod(String joinMethod) {
+            this.joinMethod = joinMethod;
             return this;
         }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
+        public String getJoinMethod() {
+            return this.joinMethod;
         }
 
         public ListAccountsResponseBodyAccountsAccount setJoinTime(String joinTime) {
@@ -145,28 +137,36 @@ public class ListAccountsResponseBody extends TeaModel {
             return this.joinTime;
         }
 
-        public ListAccountsResponseBodyAccountsAccount setAccountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public String getAccountId() {
-            return this.accountId;
-        }
-
-        public ListAccountsResponseBodyAccountsAccount setJoinMethod(String joinMethod) {
-            this.joinMethod = joinMethod;
-            return this;
-        }
-        public String getJoinMethod() {
-            return this.joinMethod;
-        }
-
         public ListAccountsResponseBodyAccountsAccount setModifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
             return this;
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public ListAccountsResponseBodyAccountsAccount setResourceDirectoryId(String resourceDirectoryId) {
+            this.resourceDirectoryId = resourceDirectoryId;
+            return this;
+        }
+        public String getResourceDirectoryId() {
+            return this.resourceDirectoryId;
+        }
+
+        public ListAccountsResponseBodyAccountsAccount setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListAccountsResponseBodyAccountsAccount setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

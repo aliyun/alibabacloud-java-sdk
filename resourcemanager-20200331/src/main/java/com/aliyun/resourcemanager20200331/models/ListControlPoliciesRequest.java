@@ -4,8 +4,8 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListControlPoliciesRequest extends TeaModel {
-    @NameInMap("PolicyType")
-    public String policyType;
+    @NameInMap("Language")
+    public String language;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,20 +13,20 @@ public class ListControlPoliciesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Language")
-    public String language;
+    @NameInMap("PolicyType")
+    public String policyType;
 
     public static ListControlPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListControlPoliciesRequest self = new ListControlPoliciesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListControlPoliciesRequest setPolicyType(String policyType) {
-        this.policyType = policyType;
+    public ListControlPoliciesRequest setLanguage(String language) {
+        this.language = language;
         return this;
     }
-    public String getPolicyType() {
-        return this.policyType;
+    public String getLanguage() {
+        return this.language;
     }
 
     public ListControlPoliciesRequest setPageNumber(Integer pageNumber) {
@@ -45,12 +45,12 @@ public class ListControlPoliciesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListControlPoliciesRequest setLanguage(String language) {
-        this.language = language;
+    public ListControlPoliciesRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
         return this;
     }
-    public String getLanguage() {
-        return this.language;
+    public String getPolicyType() {
+        return this.policyType;
     }
 
 }

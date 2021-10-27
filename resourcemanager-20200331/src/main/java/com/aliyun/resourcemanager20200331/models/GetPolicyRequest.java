@@ -4,18 +4,26 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetPolicyRequest extends TeaModel {
+    @NameInMap("Language")
+    public String language;
+
     @NameInMap("PolicyName")
     public String policyName;
 
     @NameInMap("PolicyType")
     public String policyType;
 
-    @NameInMap("Language")
-    public String language;
-
     public static GetPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPolicyRequest self = new GetPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetPolicyRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public GetPolicyRequest setPolicyName(String policyName) {
@@ -32,14 +40,6 @@ public class GetPolicyRequest extends TeaModel {
     }
     public String getPolicyType() {
         return this.policyType;
-    }
-
-    public GetPolicyRequest setLanguage(String language) {
-        this.language = language;
-        return this;
-    }
-    public String getLanguage() {
-        return this.language;
     }
 
 }

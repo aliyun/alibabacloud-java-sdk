@@ -32,11 +32,11 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
     }
 
     public static class PromoteResourceAccountResponseBodyAccount extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AccountId")
+        public String accountId;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("DisplayName")
         public String displayName;
@@ -44,46 +44,46 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
-        @NameInMap("ResourceDirectoryId")
-        public String resourceDirectoryId;
-
-        @NameInMap("RecordId")
-        public String recordId;
+        @NameInMap("JoinMethod")
+        public String joinMethod;
 
         @NameInMap("JoinTime")
         public String joinTime;
 
-        @NameInMap("AccountId")
-        public String accountId;
-
-        @NameInMap("JoinMethod")
-        public String joinMethod;
-
-        @NameInMap("AccountName")
-        public String accountName;
-
         @NameInMap("ModifyTime")
         public String modifyTime;
+
+        @NameInMap("RecordId")
+        public String recordId;
+
+        @NameInMap("ResourceDirectoryId")
+        public String resourceDirectoryId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
 
         public static PromoteResourceAccountResponseBodyAccount build(java.util.Map<String, ?> map) throws Exception {
             PromoteResourceAccountResponseBodyAccount self = new PromoteResourceAccountResponseBodyAccount();
             return TeaModel.build(map, self);
         }
 
-        public PromoteResourceAccountResponseBodyAccount setStatus(String status) {
-            this.status = status;
+        public PromoteResourceAccountResponseBodyAccount setAccountId(String accountId) {
+            this.accountId = accountId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getAccountId() {
+            return this.accountId;
         }
 
-        public PromoteResourceAccountResponseBodyAccount setType(String type) {
-            this.type = type;
+        public PromoteResourceAccountResponseBodyAccount setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public PromoteResourceAccountResponseBodyAccount setDisplayName(String displayName) {
@@ -102,20 +102,12 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
             return this.folderId;
         }
 
-        public PromoteResourceAccountResponseBodyAccount setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
+        public PromoteResourceAccountResponseBodyAccount setJoinMethod(String joinMethod) {
+            this.joinMethod = joinMethod;
             return this;
         }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
-        }
-
-        public PromoteResourceAccountResponseBodyAccount setRecordId(String recordId) {
-            this.recordId = recordId;
-            return this;
-        }
-        public String getRecordId() {
-            return this.recordId;
+        public String getJoinMethod() {
+            return this.joinMethod;
         }
 
         public PromoteResourceAccountResponseBodyAccount setJoinTime(String joinTime) {
@@ -126,36 +118,44 @@ public class PromoteResourceAccountResponseBody extends TeaModel {
             return this.joinTime;
         }
 
-        public PromoteResourceAccountResponseBodyAccount setAccountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
-        public String getAccountId() {
-            return this.accountId;
-        }
-
-        public PromoteResourceAccountResponseBodyAccount setJoinMethod(String joinMethod) {
-            this.joinMethod = joinMethod;
-            return this;
-        }
-        public String getJoinMethod() {
-            return this.joinMethod;
-        }
-
-        public PromoteResourceAccountResponseBodyAccount setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
-        }
-
         public PromoteResourceAccountResponseBodyAccount setModifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
             return this;
         }
         public String getModifyTime() {
             return this.modifyTime;
+        }
+
+        public PromoteResourceAccountResponseBodyAccount setRecordId(String recordId) {
+            this.recordId = recordId;
+            return this;
+        }
+        public String getRecordId() {
+            return this.recordId;
+        }
+
+        public PromoteResourceAccountResponseBodyAccount setResourceDirectoryId(String resourceDirectoryId) {
+            this.resourceDirectoryId = resourceDirectoryId;
+            return this;
+        }
+        public String getResourceDirectoryId() {
+            return this.resourceDirectoryId;
+        }
+
+        public PromoteResourceAccountResponseBodyAccount setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public PromoteResourceAccountResponseBodyAccount setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

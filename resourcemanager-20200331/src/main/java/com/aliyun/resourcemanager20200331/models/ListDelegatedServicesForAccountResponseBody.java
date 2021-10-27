@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DelegatedServices")
     public ListDelegatedServicesForAccountResponseBodyDelegatedServices delegatedServices;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListDelegatedServicesForAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDelegatedServicesForAccountResponseBody self = new ListDelegatedServicesForAccountResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDelegatedServicesForAccountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListDelegatedServicesForAccountResponseBody setDelegatedServices(ListDelegatedServicesForAccountResponseBodyDelegatedServices delegatedServices) {
@@ -29,6 +21,14 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     }
     public ListDelegatedServicesForAccountResponseBodyDelegatedServices getDelegatedServices() {
         return this.delegatedServices;
+    }
+
+    public ListDelegatedServicesForAccountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService extends TeaModel {

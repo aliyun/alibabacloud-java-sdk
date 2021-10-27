@@ -4,23 +4,15 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DeletionTaskId")
     public String deletionTaskId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DeleteServiceLinkedRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteServiceLinkedRoleResponseBody self = new DeleteServiceLinkedRoleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteServiceLinkedRoleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DeleteServiceLinkedRoleResponseBody setDeletionTaskId(String deletionTaskId) {
@@ -29,6 +21,14 @@ public class DeleteServiceLinkedRoleResponseBody extends TeaModel {
     }
     public String getDeletionTaskId() {
         return this.deletionTaskId;
+    }
+
+    public DeleteServiceLinkedRoleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
