@@ -4,11 +4,8 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateSuperAccountRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
+    @NameInMap("AccountDescription")
+    public String accountDescription;
 
     @NameInMap("AccountName")
     public String accountName;
@@ -16,28 +13,23 @@ public class CreateSuperAccountRequest extends TeaModel {
     @NameInMap("AccountPassword")
     public String accountPassword;
 
-    @NameInMap("AccountDescription")
-    public String accountDescription;
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static CreateSuperAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSuperAccountRequest self = new CreateSuperAccountRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateSuperAccountRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateSuperAccountRequest setAccountDescription(String accountDescription) {
+        this.accountDescription = accountDescription;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateSuperAccountRequest setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
+    public String getAccountDescription() {
+        return this.accountDescription;
     }
 
     public CreateSuperAccountRequest setAccountName(String accountName) {
@@ -56,12 +48,20 @@ public class CreateSuperAccountRequest extends TeaModel {
         return this.accountPassword;
     }
 
-    public CreateSuperAccountRequest setAccountDescription(String accountDescription) {
-        this.accountDescription = accountDescription;
+    public CreateSuperAccountRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
         return this;
     }
-    public String getAccountDescription() {
-        return this.accountDescription;
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public CreateSuperAccountRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

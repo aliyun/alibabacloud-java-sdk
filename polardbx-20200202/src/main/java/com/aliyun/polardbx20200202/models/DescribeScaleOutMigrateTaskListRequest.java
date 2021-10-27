@@ -4,6 +4,12 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeScaleOutMigrateTaskListRequest extends TeaModel {
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class DescribeScaleOutMigrateTaskListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeScaleOutMigrateTaskListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScaleOutMigrateTaskListRequest self = new DescribeScaleOutMigrateTaskListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeScaleOutMigrateTaskListRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public DescribeScaleOutMigrateTaskListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeScaleOutMigrateTaskListRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class DescribeScaleOutMigrateTaskListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeScaleOutMigrateTaskListRequest setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
-    }
-
-    public DescribeScaleOutMigrateTaskListRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
 }

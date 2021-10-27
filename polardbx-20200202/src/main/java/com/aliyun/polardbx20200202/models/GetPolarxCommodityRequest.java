@@ -4,26 +4,18 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class GetPolarxCommodityRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     @NameInMap("OrderType")
     public String orderType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static GetPolarxCommodityRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPolarxCommodityRequest self = new GetPolarxCommodityRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetPolarxCommodityRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public GetPolarxCommodityRequest setDBInstanceName(String DBInstanceName) {
@@ -40,6 +32,14 @@ public class GetPolarxCommodityRequest extends TeaModel {
     }
     public String getOrderType() {
         return this.orderType;
+    }
+
+    public GetPolarxCommodityRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

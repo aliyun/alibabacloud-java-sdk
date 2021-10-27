@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDistributeTableListResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public DescribeDistributeTableListResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public DescribeDistributeTableListResponseBodyData data;
-
     public static DescribeDistributeTableListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDistributeTableListResponseBody self = new DescribeDistributeTableListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDistributeTableListResponseBody setData(DescribeDistributeTableListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeDistributeTableListResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeDistributeTableListResponseBody setMessage(String message) {
@@ -45,15 +53,10 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeDistributeTableListResponseBody setData(DescribeDistributeTableListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeDistributeTableListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeDistributeTableListResponseBodyDataTables extends TeaModel {
+        @NameInMap("DbKey")
+        public String dbKey;
+
         @NameInMap("TableName")
         public String tableName;
 
@@ -63,12 +66,17 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         @NameInMap("TbKey")
         public String tbKey;
 
-        @NameInMap("DbKey")
-        public String dbKey;
-
         public static DescribeDistributeTableListResponseBodyDataTables build(java.util.Map<String, ?> map) throws Exception {
             DescribeDistributeTableListResponseBodyDataTables self = new DescribeDistributeTableListResponseBodyDataTables();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDistributeTableListResponseBodyDataTables setDbKey(String dbKey) {
+            this.dbKey = dbKey;
+            return this;
+        }
+        public String getDbKey() {
+            return this.dbKey;
         }
 
         public DescribeDistributeTableListResponseBodyDataTables setTableName(String tableName) {
@@ -93,14 +101,6 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
         }
         public String getTbKey() {
             return this.tbKey;
-        }
-
-        public DescribeDistributeTableListResponseBodyDataTables setDbKey(String dbKey) {
-            this.dbKey = dbKey;
-            return this;
-        }
-        public String getDbKey() {
-            return this.dbKey;
         }
 
     }

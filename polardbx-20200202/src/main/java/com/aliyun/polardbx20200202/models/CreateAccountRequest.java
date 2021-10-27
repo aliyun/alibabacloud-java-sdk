@@ -4,11 +4,8 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
+    @NameInMap("AccountDescription")
+    public String accountDescription;
 
     @NameInMap("AccountName")
     public String accountName;
@@ -16,14 +13,17 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("AccountPassword")
     public String accountPassword;
 
-    @NameInMap("DBName")
-    public String DBName;
-
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
-    @NameInMap("AccountDescription")
-    public String accountDescription;
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
+    @NameInMap("DBName")
+    public String DBName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SecurityAccountName")
     public String securityAccountName;
@@ -36,20 +36,12 @@ public class CreateAccountRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateAccountRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateAccountRequest setAccountDescription(String accountDescription) {
+        this.accountDescription = accountDescription;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateAccountRequest setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
+    public String getAccountDescription() {
+        return this.accountDescription;
     }
 
     public CreateAccountRequest setAccountName(String accountName) {
@@ -68,14 +60,6 @@ public class CreateAccountRequest extends TeaModel {
         return this.accountPassword;
     }
 
-    public CreateAccountRequest setDBName(String DBName) {
-        this.DBName = DBName;
-        return this;
-    }
-    public String getDBName() {
-        return this.DBName;
-    }
-
     public CreateAccountRequest setAccountPrivilege(String accountPrivilege) {
         this.accountPrivilege = accountPrivilege;
         return this;
@@ -84,12 +68,28 @@ public class CreateAccountRequest extends TeaModel {
         return this.accountPrivilege;
     }
 
-    public CreateAccountRequest setAccountDescription(String accountDescription) {
-        this.accountDescription = accountDescription;
+    public CreateAccountRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
         return this;
     }
-    public String getAccountDescription() {
-        return this.accountDescription;
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public CreateAccountRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    public CreateAccountRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateAccountRequest setSecurityAccountName(String securityAccountName) {

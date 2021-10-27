@@ -4,8 +4,20 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstancePublicConnectionRequest extends TeaModel {
+    @NameInMap("CurrentConnectionString")
+    public String currentConnectionString;
+
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,21 +25,33 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
-
-    @NameInMap("CurrentConnectionString")
-    public String currentConnectionString;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static ReleaseInstancePublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseInstancePublicConnectionRequest self = new ReleaseInstancePublicConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReleaseInstancePublicConnectionRequest setCurrentConnectionString(String currentConnectionString) {
+        this.currentConnectionString = currentConnectionString;
+        return this;
+    }
+    public String getCurrentConnectionString() {
+        return this.currentConnectionString;
+    }
+
+    public ReleaseInstancePublicConnectionRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public ReleaseInstancePublicConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ReleaseInstancePublicConnectionRequest setOwnerId(Long ownerId) {
@@ -36,6 +60,14 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ReleaseInstancePublicConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ReleaseInstancePublicConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -52,38 +84,6 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ReleaseInstancePublicConnectionRequest setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
-    }
-
-    public ReleaseInstancePublicConnectionRequest setCurrentConnectionString(String currentConnectionString) {
-        this.currentConnectionString = currentConnectionString;
-        return this;
-    }
-    public String getCurrentConnectionString() {
-        return this.currentConnectionString;
-    }
-
-    public ReleaseInstancePublicConnectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ReleaseInstancePublicConnectionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

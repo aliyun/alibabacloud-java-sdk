@@ -4,23 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDEResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeDBInstanceTDEResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBInstanceTDEResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceTDEResponseBody self = new DescribeDBInstanceTDEResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstanceTDEResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDBInstanceTDEResponseBody setData(DescribeDBInstanceTDEResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     }
     public DescribeDBInstanceTDEResponseBodyData getData() {
         return this.data;
+    }
+
+    public DescribeDBInstanceTDEResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDBInstanceTDEResponseBodyData extends TeaModel {

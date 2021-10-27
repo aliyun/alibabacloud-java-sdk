@@ -4,26 +4,26 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreatePolarxInstanceResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public CreatePolarxInstanceResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreatePolarxInstanceResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CreatePolarxInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreatePolarxInstanceResponseBody self = new CreatePolarxInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreatePolarxInstanceResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreatePolarxInstanceResponseBody setData(CreatePolarxInstanceResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public CreatePolarxInstanceResponseBodyData getData() {
+        return this.data;
     }
 
     public CreatePolarxInstanceResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class CreatePolarxInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreatePolarxInstanceResponseBody setData(CreatePolarxInstanceResponseBodyData data) {
-        this.data = data;
+    public CreatePolarxInstanceResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreatePolarxInstanceResponseBodyData getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class CreatePolarxInstanceResponseBodyDataDrdsInstanceIdList extends TeaModel {
@@ -62,23 +62,15 @@ public class CreatePolarxInstanceResponseBody extends TeaModel {
     }
 
     public static class CreatePolarxInstanceResponseBodyData extends TeaModel {
-        @NameInMap("OrderId")
-        public Long orderId;
-
         @NameInMap("DrdsInstanceIdList")
         public CreatePolarxInstanceResponseBodyDataDrdsInstanceIdList drdsInstanceIdList;
+
+        @NameInMap("OrderId")
+        public Long orderId;
 
         public static CreatePolarxInstanceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreatePolarxInstanceResponseBodyData self = new CreatePolarxInstanceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public CreatePolarxInstanceResponseBodyData setOrderId(Long orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public Long getOrderId() {
-            return this.orderId;
         }
 
         public CreatePolarxInstanceResponseBodyData setDrdsInstanceIdList(CreatePolarxInstanceResponseBodyDataDrdsInstanceIdList drdsInstanceIdList) {
@@ -87,6 +79,14 @@ public class CreatePolarxInstanceResponseBody extends TeaModel {
         }
         public CreatePolarxInstanceResponseBodyDataDrdsInstanceIdList getDrdsInstanceIdList() {
             return this.drdsInstanceIdList;
+        }
+
+        public CreatePolarxInstanceResponseBodyData setOrderId(Long orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public Long getOrderId() {
+            return this.orderId;
         }
 
     }

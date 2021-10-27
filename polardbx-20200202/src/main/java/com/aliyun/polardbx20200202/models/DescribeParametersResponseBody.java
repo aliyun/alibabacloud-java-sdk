@@ -4,23 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeParametersResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeParametersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParametersResponseBody self = new DescribeParametersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeParametersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeParametersResponseBody setData(DescribeParametersResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
     public DescribeParametersResponseBodyData getData() {
         return this.data;
+    }
+
+    public DescribeParametersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeParametersResponseBodyDataConfigParameters extends TeaModel {
@@ -114,14 +114,14 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyData extends TeaModel {
-        @NameInMap("EngineVersion")
-        public String engineVersion;
+        @NameInMap("ConfigParameters")
+        public java.util.List<DescribeParametersResponseBodyDataConfigParameters> configParameters;
 
         @NameInMap("Engine")
         public String engine;
 
-        @NameInMap("ConfigParameters")
-        public java.util.List<DescribeParametersResponseBodyDataConfigParameters> configParameters;
+        @NameInMap("EngineVersion")
+        public String engineVersion;
 
         @NameInMap("RunningParameters")
         public java.util.List<DescribeParametersResponseBodyDataRunningParameters> runningParameters;
@@ -131,12 +131,12 @@ public class DescribeParametersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeParametersResponseBodyData setEngineVersion(String engineVersion) {
-            this.engineVersion = engineVersion;
+        public DescribeParametersResponseBodyData setConfigParameters(java.util.List<DescribeParametersResponseBodyDataConfigParameters> configParameters) {
+            this.configParameters = configParameters;
             return this;
         }
-        public String getEngineVersion() {
-            return this.engineVersion;
+        public java.util.List<DescribeParametersResponseBodyDataConfigParameters> getConfigParameters() {
+            return this.configParameters;
         }
 
         public DescribeParametersResponseBodyData setEngine(String engine) {
@@ -147,12 +147,12 @@ public class DescribeParametersResponseBody extends TeaModel {
             return this.engine;
         }
 
-        public DescribeParametersResponseBodyData setConfigParameters(java.util.List<DescribeParametersResponseBodyDataConfigParameters> configParameters) {
-            this.configParameters = configParameters;
+        public DescribeParametersResponseBodyData setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
             return this;
         }
-        public java.util.List<DescribeParametersResponseBodyDataConfigParameters> getConfigParameters() {
-            return this.configParameters;
+        public String getEngineVersion() {
+            return this.engineVersion;
         }
 
         public DescribeParametersResponseBodyData setRunningParameters(java.util.List<DescribeParametersResponseBodyDataRunningParameters> runningParameters) {

@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountListResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<DescribeAccountListResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class DescribeAccountListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public java.util.List<DescribeAccountListResponseBodyData> data;
-
     public static DescribeAccountListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountListResponseBody self = new DescribeAccountListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAccountListResponseBody setData(java.util.List<DescribeAccountListResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<DescribeAccountListResponseBodyData> getData() {
+        return this.data;
     }
 
     public DescribeAccountListResponseBody setMessage(String message) {
@@ -45,26 +53,12 @@ public class DescribeAccountListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeAccountListResponseBody setData(java.util.List<DescribeAccountListResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeAccountListResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class DescribeAccountListResponseBodyData extends TeaModel {
-        @NameInMap("GmtCreated")
-        public String gmtCreated;
-
-        @NameInMap("DBInstanceName")
-        public String DBInstanceName;
-
         @NameInMap("AccountDescription")
         public String accountDescription;
 
-        @NameInMap("DBName")
-        public String DBName;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
@@ -72,28 +66,18 @@ public class DescribeAccountListResponseBody extends TeaModel {
         @NameInMap("AccountType")
         public String accountType;
 
-        @NameInMap("AccountName")
-        public String accountName;
+        @NameInMap("DBInstanceName")
+        public String DBInstanceName;
+
+        @NameInMap("DBName")
+        public String DBName;
+
+        @NameInMap("GmtCreated")
+        public String gmtCreated;
 
         public static DescribeAccountListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountListResponseBodyData self = new DescribeAccountListResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAccountListResponseBodyData setGmtCreated(String gmtCreated) {
-            this.gmtCreated = gmtCreated;
-            return this;
-        }
-        public String getGmtCreated() {
-            return this.gmtCreated;
-        }
-
-        public DescribeAccountListResponseBodyData setDBInstanceName(String DBInstanceName) {
-            this.DBInstanceName = DBInstanceName;
-            return this;
-        }
-        public String getDBInstanceName() {
-            return this.DBInstanceName;
         }
 
         public DescribeAccountListResponseBodyData setAccountDescription(String accountDescription) {
@@ -104,12 +88,12 @@ public class DescribeAccountListResponseBody extends TeaModel {
             return this.accountDescription;
         }
 
-        public DescribeAccountListResponseBodyData setDBName(String DBName) {
-            this.DBName = DBName;
+        public DescribeAccountListResponseBodyData setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getDBName() {
-            return this.DBName;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public DescribeAccountListResponseBodyData setAccountPrivilege(String accountPrivilege) {
@@ -128,12 +112,28 @@ public class DescribeAccountListResponseBody extends TeaModel {
             return this.accountType;
         }
 
-        public DescribeAccountListResponseBodyData setAccountName(String accountName) {
-            this.accountName = accountName;
+        public DescribeAccountListResponseBodyData setDBInstanceName(String DBInstanceName) {
+            this.DBInstanceName = DBInstanceName;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getDBInstanceName() {
+            return this.DBInstanceName;
+        }
+
+        public DescribeAccountListResponseBodyData setDBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        public DescribeAccountListResponseBodyData setGmtCreated(String gmtCreated) {
+            this.gmtCreated = gmtCreated;
+            return this;
+        }
+        public String getGmtCreated() {
+            return this.gmtCreated;
         }
 
     }

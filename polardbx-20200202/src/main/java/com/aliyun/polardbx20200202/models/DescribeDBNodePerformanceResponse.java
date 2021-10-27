@@ -3,21 +3,21 @@ package com.aliyun.polardbx20200202.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSqlAuditInfoResponse extends TeaModel {
+public class DescribeDBNodePerformanceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeSqlAuditInfoResponseBody body;
+    public DescribeDBNodePerformanceResponseBody body;
 
-    public static DescribeSqlAuditInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSqlAuditInfoResponse self = new DescribeSqlAuditInfoResponse();
+    public static DescribeDBNodePerformanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBNodePerformanceResponse self = new DescribeDBNodePerformanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSqlAuditInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeDBNodePerformanceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeSqlAuditInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeSqlAuditInfoResponse setBody(DescribeSqlAuditInfoResponseBody body) {
+    public DescribeDBNodePerformanceResponse setBody(DescribeDBNodePerformanceResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeSqlAuditInfoResponseBody getBody() {
+    public DescribeDBNodePerformanceResponseBody getBody() {
         return this.body;
     }
 

@@ -4,14 +4,14 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdateDBInstanceSSLRequest extends TeaModel {
-    @NameInMap("EnableSSL")
-    public Boolean enableSSL;
-
     @NameInMap("CertCommonName")
     public String certCommonName;
 
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
+
+    @NameInMap("EnableSSL")
+    public Boolean enableSSL;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -19,14 +19,6 @@ public class UpdateDBInstanceSSLRequest extends TeaModel {
     public static UpdateDBInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDBInstanceSSLRequest self = new UpdateDBInstanceSSLRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDBInstanceSSLRequest setEnableSSL(Boolean enableSSL) {
-        this.enableSSL = enableSSL;
-        return this;
-    }
-    public Boolean getEnableSSL() {
-        return this.enableSSL;
     }
 
     public UpdateDBInstanceSSLRequest setCertCommonName(String certCommonName) {
@@ -43,6 +35,14 @@ public class UpdateDBInstanceSSLRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public UpdateDBInstanceSSLRequest setEnableSSL(Boolean enableSSL) {
+        this.enableSSL = enableSSL;
+        return this;
+    }
+    public Boolean getEnableSSL() {
+        return this.enableSSL;
     }
 
     public UpdateDBInstanceSSLRequest setRegionId(String regionId) {
