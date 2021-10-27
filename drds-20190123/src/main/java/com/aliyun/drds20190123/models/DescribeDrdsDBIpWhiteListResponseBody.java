@@ -4,26 +4,26 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("IpWhiteList")
+    public DescribeDrdsDBIpWhiteListResponseBodyIpWhiteList ipWhiteList;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("IpWhiteList")
-    public DescribeDrdsDBIpWhiteListResponseBodyIpWhiteList ipWhiteList;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeDrdsDBIpWhiteListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsDBIpWhiteListResponseBody self = new DescribeDrdsDBIpWhiteListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsDBIpWhiteListResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeDrdsDBIpWhiteListResponseBody setIpWhiteList(DescribeDrdsDBIpWhiteListResponseBodyIpWhiteList ipWhiteList) {
+        this.ipWhiteList = ipWhiteList;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public DescribeDrdsDBIpWhiteListResponseBodyIpWhiteList getIpWhiteList() {
+        return this.ipWhiteList;
     }
 
     public DescribeDrdsDBIpWhiteListResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeDrdsDBIpWhiteListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDrdsDBIpWhiteListResponseBody setIpWhiteList(DescribeDrdsDBIpWhiteListResponseBodyIpWhiteList ipWhiteList) {
-        this.ipWhiteList = ipWhiteList;
+    public DescribeDrdsDBIpWhiteListResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeDrdsDBIpWhiteListResponseBodyIpWhiteList getIpWhiteList() {
-        return this.ipWhiteList;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeDrdsDBIpWhiteListResponseBodyIpWhiteList extends TeaModel {

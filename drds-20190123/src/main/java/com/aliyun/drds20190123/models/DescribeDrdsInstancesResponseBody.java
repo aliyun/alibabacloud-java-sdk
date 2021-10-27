@@ -4,8 +4,8 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Instances")
+    public DescribeDrdsInstancesResponseBodyInstances instances;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,23 +13,23 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Total")
     public Integer total;
-
-    @NameInMap("Instances")
-    public DescribeDrdsInstancesResponseBodyInstances instances;
 
     public static DescribeDrdsInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsInstancesResponseBody self = new DescribeDrdsInstancesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDrdsInstancesResponseBody setInstances(DescribeDrdsInstancesResponseBodyInstances instances) {
+        this.instances = instances;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DescribeDrdsInstancesResponseBodyInstances getInstances() {
+        return this.instances;
     }
 
     public DescribeDrdsInstancesResponseBody setPageNumber(Integer pageNumber) {
@@ -48,6 +48,14 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeDrdsInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeDrdsInstancesResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
@@ -56,57 +64,52 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         return this.total;
     }
 
-    public DescribeDrdsInstancesResponseBody setInstances(DescribeDrdsInstancesResponseBodyInstances instances) {
-        this.instances = instances;
-        return this;
-    }
-    public DescribeDrdsInstancesResponseBodyInstances getInstances() {
-        return this.instances;
+    public static class DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds extends TeaModel {
+        @NameInMap("ReadOnlyDBInstanceId")
+        public java.util.List<String> readOnlyDBInstanceId;
+
+        public static DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds self = new DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds setReadOnlyDBInstanceId(java.util.List<String> readOnlyDBInstanceId) {
+            this.readOnlyDBInstanceId = readOnlyDBInstanceId;
+            return this;
+        }
+        public java.util.List<String> getReadOnlyDBInstanceId() {
+            return this.readOnlyDBInstanceId;
+        }
+
     }
 
     public static class DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("VswitchId")
-        public String vswitchId;
+        @NameInMap("IP")
+        public String IP;
 
         @NameInMap("Port")
         public String port;
 
-        @NameInMap("IP")
-        public String IP;
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("VswitchId")
+        public String vswitchId;
 
         public static DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip self = new DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setIP(String IP) {
+            this.IP = IP;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setVswitchId(String vswitchId) {
-            this.vswitchId = vswitchId;
-            return this;
-        }
-        public String getVswitchId() {
-            return this.vswitchId;
+        public String getIP() {
+            return this.IP;
         }
 
         public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setPort(String port) {
@@ -117,12 +120,28 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setIP(String IP) {
-            this.IP = IP;
+        public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getIP() {
-            return this.IP;
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }
@@ -146,79 +165,15 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds extends TeaModel {
-        @NameInMap("ReadOnlyDBInstanceId")
-        public java.util.List<String> readOnlyDBInstanceId;
-
-        public static DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds self = new DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds setReadOnlyDBInstanceId(java.util.List<String> readOnlyDBInstanceId) {
-            this.readOnlyDBInstanceId = readOnlyDBInstanceId;
-            return this;
-        }
-        public java.util.List<String> getReadOnlyDBInstanceId() {
-            return this.readOnlyDBInstanceId;
-        }
-
-    }
-
     public static class DescribeDrdsInstancesResponseBodyInstancesInstance extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Type")
-        public String type;
-
         @NameInMap("CommodityCode")
         public String commodityCode;
-
-        @NameInMap("MachineType")
-        public String machineType;
 
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("VersionAction")
-        public String versionAction;
-
-        @NameInMap("InstanceSeries")
-        public String instanceSeries;
-
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("ProductVersion")
-        public String productVersion;
-
-        @NameInMap("InstanceSpec")
-        public String instanceSpec;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("VpcCloudInstanceId")
-        public String vpcCloudInstanceId;
-
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("Version")
-        public Long version;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        @NameInMap("ZoneId")
-        public String zoneId;
 
         @NameInMap("DrdsInstanceId")
         public String drdsInstanceId;
@@ -226,48 +181,69 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
         @NameInMap("ExpireDate")
         public Long expireDate;
 
+        @NameInMap("InstRole")
+        public String instRole;
+
+        @NameInMap("InstanceSeries")
+        public String instanceSeries;
+
+        @NameInMap("InstanceSpec")
+        public String instanceSpec;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("MachineType")
+        public String machineType;
+
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
+
+        @NameInMap("NetworkType")
+        public String networkType;
 
         @NameInMap("OrderInstanceId")
         public String orderInstanceId;
 
-        @NameInMap("InstRole")
-        public String instRole;
-
-        @NameInMap("Vips")
-        public DescribeDrdsInstancesResponseBodyInstancesInstanceVips vips;
+        @NameInMap("ProductVersion")
+        public String productVersion;
 
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Version")
+        public Long version;
+
+        @NameInMap("VersionAction")
+        public String versionAction;
+
+        @NameInMap("Vips")
+        public DescribeDrdsInstancesResponseBodyInstancesInstanceVips vips;
+
+        @NameInMap("VpcCloudInstanceId")
+        public String vpcCloudInstanceId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeDrdsInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsInstancesResponseBodyInstancesInstance self = new DescribeDrdsInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public DescribeDrdsInstancesResponseBodyInstancesInstance setCommodityCode(String commodityCode) {
@@ -278,14 +254,6 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             return this.commodityCode;
         }
 
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setMachineType(String machineType) {
-            this.machineType = machineType;
-            return this;
-        }
-        public String getMachineType() {
-            return this.machineType;
-        }
-
         public DescribeDrdsInstancesResponseBodyInstancesInstance setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -294,100 +262,12 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setVersionAction(String versionAction) {
-            this.versionAction = versionAction;
-            return this;
-        }
-        public String getVersionAction() {
-            return this.versionAction;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setInstanceSeries(String instanceSeries) {
-            this.instanceSeries = instanceSeries;
-            return this;
-        }
-        public String getInstanceSeries() {
-            return this.instanceSeries;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setNetworkType(String networkType) {
-            this.networkType = networkType;
-            return this;
-        }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setProductVersion(String productVersion) {
-            this.productVersion = productVersion;
-            return this;
-        }
-        public String getProductVersion() {
-            return this.productVersion;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setInstanceSpec(String instanceSpec) {
-            this.instanceSpec = instanceSpec;
-            return this;
-        }
-        public String getInstanceSpec() {
-            return this.instanceSpec;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setVpcCloudInstanceId(String vpcCloudInstanceId) {
-            this.vpcCloudInstanceId = vpcCloudInstanceId;
-            return this;
-        }
-        public String getVpcCloudInstanceId() {
-            return this.vpcCloudInstanceId;
-        }
-
         public DescribeDrdsInstancesResponseBodyInstancesInstance setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setVersion(Long version) {
-            this.version = version;
-            return this;
-        }
-        public Long getVersion() {
-            return this.version;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeDrdsInstancesResponseBodyInstancesInstance setDrdsInstanceId(String drdsInstanceId) {
@@ -406,12 +286,60 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             return this.expireDate;
         }
 
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setInstRole(String instRole) {
+            this.instRole = instRole;
+            return this;
+        }
+        public String getInstRole() {
+            return this.instRole;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setInstanceSeries(String instanceSeries) {
+            this.instanceSeries = instanceSeries;
+            return this;
+        }
+        public String getInstanceSeries() {
+            return this.instanceSeries;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setInstanceSpec(String instanceSpec) {
+            this.instanceSpec = instanceSpec;
+            return this;
+        }
+        public String getInstanceSpec() {
+            return this.instanceSpec;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setMachineType(String machineType) {
+            this.machineType = machineType;
+            return this;
+        }
+        public String getMachineType() {
+            return this.machineType;
+        }
+
         public DescribeDrdsInstancesResponseBodyInstancesInstance setMasterInstanceId(String masterInstanceId) {
             this.masterInstanceId = masterInstanceId;
             return this;
         }
         public String getMasterInstanceId() {
             return this.masterInstanceId;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         public DescribeDrdsInstancesResponseBodyInstancesInstance setOrderInstanceId(String orderInstanceId) {
@@ -422,12 +350,68 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             return this.orderInstanceId;
         }
 
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setInstRole(String instRole) {
-            this.instRole = instRole;
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setProductVersion(String productVersion) {
+            this.productVersion = productVersion;
             return this;
         }
-        public String getInstRole() {
-            return this.instRole;
+        public String getProductVersion() {
+            return this.productVersion;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setReadOnlyDBInstanceIds(DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
+            this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
+            return this;
+        }
+        public DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds getReadOnlyDBInstanceIds() {
+            return this.readOnlyDBInstanceIds;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setVersion(Long version) {
+            this.version = version;
+            return this;
+        }
+        public Long getVersion() {
+            return this.version;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setVersionAction(String versionAction) {
+            this.versionAction = versionAction;
+            return this;
+        }
+        public String getVersionAction() {
+            return this.versionAction;
         }
 
         public DescribeDrdsInstancesResponseBodyInstancesInstance setVips(DescribeDrdsInstancesResponseBodyInstancesInstanceVips vips) {
@@ -438,12 +422,28 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
             return this.vips;
         }
 
-        public DescribeDrdsInstancesResponseBodyInstancesInstance setReadOnlyDBInstanceIds(DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
-            this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setVpcCloudInstanceId(String vpcCloudInstanceId) {
+            this.vpcCloudInstanceId = vpcCloudInstanceId;
             return this;
         }
-        public DescribeDrdsInstancesResponseBodyInstancesInstanceReadOnlyDBInstanceIds getReadOnlyDBInstanceIds() {
-            return this.readOnlyDBInstanceIds;
+        public String getVpcCloudInstanceId() {
+            return this.vpcCloudInstanceId;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeDrdsInstancesResponseBodyInstancesInstance setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

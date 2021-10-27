@@ -4,11 +4,11 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsTasksResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Tasks")
     public DescribeDrdsTasksResponseBodyTasks tasks;
@@ -18,20 +18,20 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsTasksResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public DescribeDrdsTasksResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDrdsTasksResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DescribeDrdsTasksResponseBody setTasks(DescribeDrdsTasksResponseBodyTasks tasks) {
@@ -43,26 +43,18 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsTasksResponseBodyTasksTask extends TeaModel {
-        @NameInMap("State")
-        public String state;
-
         @NameInMap("Content")
         public String content;
 
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("State")
+        public String state;
+
         public static DescribeDrdsTasksResponseBodyTasksTask build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsTasksResponseBodyTasksTask self = new DescribeDrdsTasksResponseBodyTasksTask();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsTasksResponseBodyTasksTask setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public DescribeDrdsTasksResponseBodyTasksTask setContent(String content) {
@@ -79,6 +71,14 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeDrdsTasksResponseBodyTasksTask setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

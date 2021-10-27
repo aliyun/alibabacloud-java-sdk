@@ -4,35 +4,27 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceDbMonitorRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("Key")
-    public String key;
-
-    @NameInMap("StartTime")
-    public Long startTime;
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("Key")
+    public String key;
+
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static DescribeDrdsInstanceDbMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsInstanceDbMonitorRequest self = new DescribeDrdsInstanceDbMonitorRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsInstanceDbMonitorRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public DescribeDrdsInstanceDbMonitorRequest setDbName(String dbName) {
@@ -43,20 +35,12 @@ public class DescribeDrdsInstanceDbMonitorRequest extends TeaModel {
         return this.dbName;
     }
 
-    public DescribeDrdsInstanceDbMonitorRequest setKey(String key) {
-        this.key = key;
+    public DescribeDrdsInstanceDbMonitorRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public String getKey() {
-        return this.key;
-    }
-
-    public DescribeDrdsInstanceDbMonitorRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
     public DescribeDrdsInstanceDbMonitorRequest setEndTime(Long endTime) {
@@ -67,12 +51,28 @@ public class DescribeDrdsInstanceDbMonitorRequest extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDrdsInstanceDbMonitorRequest setKey(String key) {
+        this.key = key;
+        return this;
+    }
+    public String getKey() {
+        return this.key;
+    }
+
     public DescribeDrdsInstanceDbMonitorRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDrdsInstanceDbMonitorRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

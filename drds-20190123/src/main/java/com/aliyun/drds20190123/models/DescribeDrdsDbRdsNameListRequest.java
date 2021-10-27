@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDbRdsNameListRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("DbName")
     public String dbName;
+
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     public static DescribeDrdsDbRdsNameListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsDbRdsNameListRequest self = new DescribeDrdsDbRdsNameListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsDbRdsNameListRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public DescribeDrdsDbRdsNameListRequest setDbName(String dbName) {
@@ -29,6 +21,14 @@ public class DescribeDrdsDbRdsNameListRequest extends TeaModel {
     }
     public String getDbName() {
         return this.dbName;
+    }
+
+    public DescribeDrdsDbRdsNameListRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
 }

@@ -4,26 +4,26 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDBClusterRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
+    @NameInMap("DbInstanceId")
+    public String dbInstanceId;
 
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("DbInstanceId")
-    public String dbInstanceId;
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     public static DescribeDrdsDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsDBClusterRequest self = new DescribeDrdsDBClusterRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsDBClusterRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
+    public DescribeDrdsDBClusterRequest setDbInstanceId(String dbInstanceId) {
+        this.dbInstanceId = dbInstanceId;
         return this;
     }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
+    public String getDbInstanceId() {
+        return this.dbInstanceId;
     }
 
     public DescribeDrdsDBClusterRequest setDbName(String dbName) {
@@ -34,12 +34,12 @@ public class DescribeDrdsDBClusterRequest extends TeaModel {
         return this.dbName;
     }
 
-    public DescribeDrdsDBClusterRequest setDbInstanceId(String dbInstanceId) {
-        this.dbInstanceId = dbInstanceId;
+    public DescribeDrdsDBClusterRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public String getDbInstanceId() {
-        return this.dbInstanceId;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
 }

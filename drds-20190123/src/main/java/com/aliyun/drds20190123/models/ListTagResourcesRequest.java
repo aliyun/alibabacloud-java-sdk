@@ -4,40 +4,24 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
-
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Tag")
-    public java.util.List<ListTagResourcesRequestTag> tag;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("Tag")
+    public java.util.List<ListTagResourcesRequestTag> tag;
+
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagResourcesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListTagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     public ListTagResourcesRequest setNextToken(String nextToken) {
@@ -48,12 +32,12 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
-        this.tag = tag;
+    public ListTagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<ListTagResourcesRequestTag> getTag() {
-        return this.tag;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
@@ -62,6 +46,22 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public java.util.List<String> getResourceId() {
         return this.resourceId;
+    }
+
+    public ListTagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListTagResourcesRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

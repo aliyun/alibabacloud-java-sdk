@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsSuperAccountInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DbInstances")
     public DescribeRdsSuperAccountInstancesResponseBodyDbInstances dbInstances;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRdsSuperAccountInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRdsSuperAccountInstancesResponseBody self = new DescribeRdsSuperAccountInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRdsSuperAccountInstancesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRdsSuperAccountInstancesResponseBody setDbInstances(DescribeRdsSuperAccountInstancesResponseBodyDbInstances dbInstances) {
@@ -29,6 +21,14 @@ public class DescribeRdsSuperAccountInstancesResponseBody extends TeaModel {
     }
     public DescribeRdsSuperAccountInstancesResponseBodyDbInstances getDbInstances() {
         return this.dbInstances;
+    }
+
+    public DescribeRdsSuperAccountInstancesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeRdsSuperAccountInstancesResponseBodyDbInstances extends TeaModel {

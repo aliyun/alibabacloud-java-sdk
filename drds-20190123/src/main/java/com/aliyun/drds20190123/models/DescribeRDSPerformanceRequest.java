@@ -4,27 +4,35 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRDSPerformanceRequest extends TeaModel {
+    @NameInMap("DbInstType")
+    public String dbInstType;
+
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
-
-    @NameInMap("RdsInstanceId")
-    public String rdsInstanceId;
-
-    @NameInMap("Keys")
-    public String keys;
-
-    @NameInMap("StartTime")
-    public Long startTime;
 
     @NameInMap("EndTime")
     public Long endTime;
 
-    @NameInMap("DbInstType")
-    public String dbInstType;
+    @NameInMap("Keys")
+    public String keys;
+
+    @NameInMap("RdsInstanceId")
+    public String rdsInstanceId;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static DescribeRDSPerformanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRDSPerformanceRequest self = new DescribeRDSPerformanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRDSPerformanceRequest setDbInstType(String dbInstType) {
+        this.dbInstType = dbInstType;
+        return this;
+    }
+    public String getDbInstType() {
+        return this.dbInstType;
     }
 
     public DescribeRDSPerformanceRequest setDrdsInstanceId(String drdsInstanceId) {
@@ -35,12 +43,12 @@ public class DescribeRDSPerformanceRequest extends TeaModel {
         return this.drdsInstanceId;
     }
 
-    public DescribeRDSPerformanceRequest setRdsInstanceId(String rdsInstanceId) {
-        this.rdsInstanceId = rdsInstanceId;
+    public DescribeRDSPerformanceRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getRdsInstanceId() {
-        return this.rdsInstanceId;
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public DescribeRDSPerformanceRequest setKeys(String keys) {
@@ -51,28 +59,20 @@ public class DescribeRDSPerformanceRequest extends TeaModel {
         return this.keys;
     }
 
+    public DescribeRDSPerformanceRequest setRdsInstanceId(String rdsInstanceId) {
+        this.rdsInstanceId = rdsInstanceId;
+        return this;
+    }
+    public String getRdsInstanceId() {
+        return this.rdsInstanceId;
+    }
+
     public DescribeRDSPerformanceRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     public Long getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeRDSPerformanceRequest setEndTime(Long endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public Long getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeRDSPerformanceRequest setDbInstType(String dbInstType) {
-        this.dbInstType = dbInstType;
-        return this;
-    }
-    public String getDbInstType() {
-        return this.dbInstType;
     }
 
 }

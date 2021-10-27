@@ -4,67 +4,27 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Items")
+    public DescribeDrdsSlowSqlsResponseBodyItems items;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Total")
-    public Integer total;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Items")
-    public DescribeDrdsSlowSqlsResponseBodyItems items;
+    @NameInMap("Total")
+    public Integer total;
 
     public static DescribeDrdsSlowSqlsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsSlowSqlsResponseBody self = new DescribeDrdsSlowSqlsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsSlowSqlsResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDrdsSlowSqlsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeDrdsSlowSqlsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDrdsSlowSqlsResponseBody setTotal(Integer total) {
-        this.total = total;
-        return this;
-    }
-    public Integer getTotal() {
-        return this.total;
-    }
-
-    public DescribeDrdsSlowSqlsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeDrdsSlowSqlsResponseBody setItems(DescribeDrdsSlowSqlsResponseBodyItems items) {
@@ -75,15 +35,49 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         return this.items;
     }
 
-    public static class DescribeDrdsSlowSqlsResponseBodyItemsItem extends TeaModel {
-        @NameInMap("SendTime")
-        public Long sendTime;
+    public DescribeDrdsSlowSqlsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
 
+    public DescribeDrdsSlowSqlsResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDrdsSlowSqlsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDrdsSlowSqlsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeDrdsSlowSqlsResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
+    }
+
+    public static class DescribeDrdsSlowSqlsResponseBodyItemsItem extends TeaModel {
         @NameInMap("Host")
         public String host;
-
-        @NameInMap("Sql")
-        public String sql;
 
         @NameInMap("ResponseTime")
         public Long responseTime;
@@ -91,17 +85,15 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         @NameInMap("Schema")
         public String schema;
 
+        @NameInMap("SendTime")
+        public Long sendTime;
+
+        @NameInMap("Sql")
+        public String sql;
+
         public static DescribeDrdsSlowSqlsResponseBodyItemsItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsSlowSqlsResponseBodyItemsItem self = new DescribeDrdsSlowSqlsResponseBodyItemsItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsSlowSqlsResponseBodyItemsItem setSendTime(Long sendTime) {
-            this.sendTime = sendTime;
-            return this;
-        }
-        public Long getSendTime() {
-            return this.sendTime;
         }
 
         public DescribeDrdsSlowSqlsResponseBodyItemsItem setHost(String host) {
@@ -110,14 +102,6 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
         public String getHost() {
             return this.host;
-        }
-
-        public DescribeDrdsSlowSqlsResponseBodyItemsItem setSql(String sql) {
-            this.sql = sql;
-            return this;
-        }
-        public String getSql() {
-            return this.sql;
         }
 
         public DescribeDrdsSlowSqlsResponseBodyItemsItem setResponseTime(Long responseTime) {
@@ -134,6 +118,22 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
         }
         public String getSchema() {
             return this.schema;
+        }
+
+        public DescribeDrdsSlowSqlsResponseBodyItemsItem setSendTime(Long sendTime) {
+            this.sendTime = sendTime;
+            return this;
+        }
+        public Long getSendTime() {
+            return this.sendTime;
+        }
+
+        public DescribeDrdsSlowSqlsResponseBodyItemsItem setSql(String sql) {
+            this.sql = sql;
+            return this;
+        }
+        public String getSql() {
+            return this.sql;
         }
 
     }

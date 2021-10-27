@@ -4,34 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public DescribeDrdsInstanceVersionResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public DescribeDrdsInstanceVersionResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeDrdsInstanceVersionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsInstanceVersionResponseBody self = new DescribeDrdsInstanceVersionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsInstanceVersionResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeDrdsInstanceVersionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDrdsInstanceVersionResponseBody setData(DescribeDrdsInstanceVersionResponseBodyData data) {
@@ -42,24 +26,32 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class DescribeDrdsInstanceVersionResponseBodyData extends TeaModel {
-        @NameInMap("NewestVersion")
-        public String newestVersion;
+    public DescribeDrdsInstanceVersionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public DescribeDrdsInstanceVersionResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class DescribeDrdsInstanceVersionResponseBodyData extends TeaModel {
         @NameInMap("InstanceVersion")
         public String instanceVersion;
+
+        @NameInMap("NewestVersion")
+        public String newestVersion;
 
         public static DescribeDrdsInstanceVersionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsInstanceVersionResponseBodyData self = new DescribeDrdsInstanceVersionResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsInstanceVersionResponseBodyData setNewestVersion(String newestVersion) {
-            this.newestVersion = newestVersion;
-            return this;
-        }
-        public String getNewestVersion() {
-            return this.newestVersion;
         }
 
         public DescribeDrdsInstanceVersionResponseBodyData setInstanceVersion(String instanceVersion) {
@@ -68,6 +60,14 @@ public class DescribeDrdsInstanceVersionResponseBody extends TeaModel {
         }
         public String getInstanceVersion() {
             return this.instanceVersion;
+        }
+
+        public DescribeDrdsInstanceVersionResponseBodyData setNewestVersion(String newestVersion) {
+            this.newestVersion = newestVersion;
+            return this;
+        }
+        public String getNewestVersion() {
+            return this.newestVersion;
         }
 
     }

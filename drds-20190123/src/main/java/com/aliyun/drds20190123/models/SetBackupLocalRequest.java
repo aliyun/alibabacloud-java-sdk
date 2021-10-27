@@ -7,14 +7,14 @@ public class SetBackupLocalRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    @NameInMap("HighSpaceUsageProtection")
+    public String highSpaceUsageProtection;
+
     @NameInMap("LocalLogRetentionHours")
     public String localLogRetentionHours;
 
     @NameInMap("LocalLogRetentionSpace")
     public String localLogRetentionSpace;
-
-    @NameInMap("HighSpaceUsageProtection")
-    public String highSpaceUsageProtection;
 
     public static SetBackupLocalRequest build(java.util.Map<String, ?> map) throws Exception {
         SetBackupLocalRequest self = new SetBackupLocalRequest();
@@ -27,6 +27,14 @@ public class SetBackupLocalRequest extends TeaModel {
     }
     public String getDrdsInstanceId() {
         return this.drdsInstanceId;
+    }
+
+    public SetBackupLocalRequest setHighSpaceUsageProtection(String highSpaceUsageProtection) {
+        this.highSpaceUsageProtection = highSpaceUsageProtection;
+        return this;
+    }
+    public String getHighSpaceUsageProtection() {
+        return this.highSpaceUsageProtection;
     }
 
     public SetBackupLocalRequest setLocalLogRetentionHours(String localLogRetentionHours) {
@@ -43,14 +51,6 @@ public class SetBackupLocalRequest extends TeaModel {
     }
     public String getLocalLogRetentionSpace() {
         return this.localLogRetentionSpace;
-    }
-
-    public SetBackupLocalRequest setHighSpaceUsageProtection(String highSpaceUsageProtection) {
-        this.highSpaceUsageProtection = highSpaceUsageProtection;
-        return this;
-    }
-    public String getHighSpaceUsageProtection() {
-        return this.highSpaceUsageProtection;
     }
 
 }

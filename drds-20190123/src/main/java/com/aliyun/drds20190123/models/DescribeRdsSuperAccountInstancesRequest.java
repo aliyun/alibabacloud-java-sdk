@@ -4,11 +4,11 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsSuperAccountInstancesRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("DbInstType")
     public String dbInstType;
+
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     @NameInMap("RdsInstance")
     public java.util.List<String> rdsInstance;
@@ -18,20 +18,20 @@ public class DescribeRdsSuperAccountInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeRdsSuperAccountInstancesRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
-    }
-
     public DescribeRdsSuperAccountInstancesRequest setDbInstType(String dbInstType) {
         this.dbInstType = dbInstType;
         return this;
     }
     public String getDbInstType() {
         return this.dbInstType;
+    }
+
+    public DescribeRdsSuperAccountInstancesRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
     public DescribeRdsSuperAccountInstancesRequest setRdsInstance(java.util.List<String> rdsInstance) {

@@ -4,14 +4,14 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateShardTaskRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DbName")
+    public String dbName;
 
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
-    @NameInMap("DbName")
-    public String dbName;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SourceTableName")
     public String sourceTableName;
@@ -27,12 +27,12 @@ public class CreateShardTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateShardTaskRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateShardTaskRequest setDbName(String dbName) {
+        this.dbName = dbName;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDbName() {
+        return this.dbName;
     }
 
     public CreateShardTaskRequest setDrdsInstanceId(String drdsInstanceId) {
@@ -43,12 +43,12 @@ public class CreateShardTaskRequest extends TeaModel {
         return this.drdsInstanceId;
     }
 
-    public CreateShardTaskRequest setDbName(String dbName) {
-        this.dbName = dbName;
+    public CreateShardTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDbName() {
-        return this.dbName;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateShardTaskRequest setSourceTableName(String sourceTableName) {

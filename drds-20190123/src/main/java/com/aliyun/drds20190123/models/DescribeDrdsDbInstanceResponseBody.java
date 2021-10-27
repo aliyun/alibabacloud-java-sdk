@@ -4,34 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("DbInstance")
+    public DescribeDrdsDbInstanceResponseBodyDbInstance dbInstance;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DbInstance")
-    public DescribeDrdsDbInstanceResponseBodyDbInstance dbInstance;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeDrdsDbInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsDbInstanceResponseBody self = new DescribeDrdsDbInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsDbInstanceResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeDrdsDbInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDrdsDbInstanceResponseBody setDbInstance(DescribeDrdsDbInstanceResponseBodyDbInstance dbInstance) {
@@ -42,119 +26,71 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
         return this.dbInstance;
     }
 
+    public DescribeDrdsDbInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDrdsDbInstanceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance extends TeaModel {
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("PayType")
-        public String payType;
-
-        @NameInMap("VersionAction")
-        public Integer versionAction;
-
-        @NameInMap("DBInstanceStatus")
-        public String DBInstanceStatus;
-
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        @NameInMap("Port")
-        public Integer port;
-
-        @NameInMap("EngineVersion")
-        public String engineVersion;
-
-        @NameInMap("DmInstanceId")
-        public String dmInstanceId;
-
         @NameInMap("ConnectUrl")
         public String connectUrl;
-
-        @NameInMap("ReadWeight")
-        public Integer readWeight;
-
-        @NameInMap("RdsInstType")
-        public String rdsInstType;
-
-        @NameInMap("RemainDays")
-        public String remainDays;
 
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        @NameInMap("DBInstanceStatus")
+        public String DBInstanceStatus;
+
         @NameInMap("DbInstType")
         public String dbInstType;
+
+        @NameInMap("DmInstanceId")
+        public String dmInstanceId;
 
         @NameInMap("Engine")
         public String engine;
 
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("RdsInstType")
+        public String rdsInstType;
+
+        @NameInMap("ReadWeight")
+        public Integer readWeight;
+
+        @NameInMap("RemainDays")
+        public String remainDays;
+
+        @NameInMap("VersionAction")
+        public Integer versionAction;
+
         public static DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance self = new DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setVersionAction(Integer versionAction) {
-            this.versionAction = versionAction;
-            return this;
-        }
-        public Integer getVersionAction() {
-            return this.versionAction;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setDBInstanceStatus(String DBInstanceStatus) {
-            this.DBInstanceStatus = DBInstanceStatus;
-            return this;
-        }
-        public String getDBInstanceStatus() {
-            return this.DBInstanceStatus;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setNetworkType(String networkType) {
-            this.networkType = networkType;
-            return this;
-        }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setEngineVersion(String engineVersion) {
-            this.engineVersion = engineVersion;
-            return this;
-        }
-        public String getEngineVersion() {
-            return this.engineVersion;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setDmInstanceId(String dmInstanceId) {
-            this.dmInstanceId = dmInstanceId;
-            return this;
-        }
-        public String getDmInstanceId() {
-            return this.dmInstanceId;
         }
 
         public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setConnectUrl(String connectUrl) {
@@ -165,36 +101,20 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             return this.connectUrl;
         }
 
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setReadWeight(Integer readWeight) {
-            this.readWeight = readWeight;
-            return this;
-        }
-        public Integer getReadWeight() {
-            return this.readWeight;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setRdsInstType(String rdsInstType) {
-            this.rdsInstType = rdsInstType;
-            return this;
-        }
-        public String getRdsInstType() {
-            return this.rdsInstType;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setRemainDays(String remainDays) {
-            this.remainDays = remainDays;
-            return this;
-        }
-        public String getRemainDays() {
-            return this.remainDays;
-        }
-
         public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setDBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
             return this;
         }
         public String getDBInstanceId() {
             return this.DBInstanceId;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setDBInstanceStatus(String DBInstanceStatus) {
+            this.DBInstanceStatus = DBInstanceStatus;
+            return this;
+        }
+        public String getDBInstanceStatus() {
+            return this.DBInstanceStatus;
         }
 
         public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setDbInstType(String dbInstType) {
@@ -205,12 +125,92 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             return this.dbInstType;
         }
 
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setDmInstanceId(String dmInstanceId) {
+            this.dmInstanceId = dmInstanceId;
+            return this;
+        }
+        public String getDmInstanceId() {
+            return this.dmInstanceId;
+        }
+
         public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setEngine(String engine) {
             this.engine = engine;
             return this;
         }
         public String getEngine() {
             return this.engine;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setRdsInstType(String rdsInstType) {
+            this.rdsInstType = rdsInstType;
+            return this;
+        }
+        public String getRdsInstType() {
+            return this.rdsInstType;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setReadWeight(Integer readWeight) {
+            this.readWeight = readWeight;
+            return this;
+        }
+        public Integer getReadWeight() {
+            return this.readWeight;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setRemainDays(String remainDays) {
+            this.remainDays = remainDays;
+            return this;
+        }
+        public String getRemainDays() {
+            return this.remainDays;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance setVersionAction(Integer versionAction) {
+            this.versionAction = versionAction;
+            return this;
+        }
+        public Integer getVersionAction() {
+            return this.versionAction;
         }
 
     }
@@ -235,110 +235,54 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsDbInstanceResponseBodyDbInstance extends TeaModel {
-        @NameInMap("ExpireTime")
-        public String expireTime;
-
-        @NameInMap("PayType")
-        public String payType;
-
-        @NameInMap("DBInstanceStatus")
-        public String DBInstanceStatus;
-
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        @NameInMap("Port")
-        public Integer port;
-
-        @NameInMap("EngineVersion")
-        public String engineVersion;
-
-        @NameInMap("DmInstanceId")
-        public String dmInstanceId;
-
         @NameInMap("ConnectUrl")
         public String connectUrl;
-
-        @NameInMap("ReadWeight")
-        public Integer readWeight;
-
-        @NameInMap("RdsInstType")
-        public String rdsInstType;
-
-        @NameInMap("RemainDays")
-        public String remainDays;
 
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        @NameInMap("DBInstanceStatus")
+        public String DBInstanceStatus;
+
         @NameInMap("DbInstType")
         public String dbInstType;
+
+        @NameInMap("DmInstanceId")
+        public String dmInstanceId;
 
         @NameInMap("Engine")
         public String engine;
 
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
+        @NameInMap("ExpireTime")
+        public String expireTime;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("PayType")
+        public String payType;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("RdsInstType")
+        public String rdsInstType;
+
         @NameInMap("ReadOnlyInstances")
         public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstances readOnlyInstances;
+
+        @NameInMap("ReadWeight")
+        public Integer readWeight;
+
+        @NameInMap("RemainDays")
+        public String remainDays;
 
         public static DescribeDrdsDbInstanceResponseBodyDbInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsDbInstanceResponseBodyDbInstance self = new DescribeDrdsDbInstanceResponseBodyDbInstance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setExpireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-        public String getExpireTime() {
-            return this.expireTime;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setDBInstanceStatus(String DBInstanceStatus) {
-            this.DBInstanceStatus = DBInstanceStatus;
-            return this;
-        }
-        public String getDBInstanceStatus() {
-            return this.DBInstanceStatus;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setNetworkType(String networkType) {
-            this.networkType = networkType;
-            return this;
-        }
-        public String getNetworkType() {
-            return this.networkType;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setEngineVersion(String engineVersion) {
-            this.engineVersion = engineVersion;
-            return this;
-        }
-        public String getEngineVersion() {
-            return this.engineVersion;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setDmInstanceId(String dmInstanceId) {
-            this.dmInstanceId = dmInstanceId;
-            return this;
-        }
-        public String getDmInstanceId() {
-            return this.dmInstanceId;
         }
 
         public DescribeDrdsDbInstanceResponseBodyDbInstance setConnectUrl(String connectUrl) {
@@ -349,36 +293,20 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             return this.connectUrl;
         }
 
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setReadWeight(Integer readWeight) {
-            this.readWeight = readWeight;
-            return this;
-        }
-        public Integer getReadWeight() {
-            return this.readWeight;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setRdsInstType(String rdsInstType) {
-            this.rdsInstType = rdsInstType;
-            return this;
-        }
-        public String getRdsInstType() {
-            return this.rdsInstType;
-        }
-
-        public DescribeDrdsDbInstanceResponseBodyDbInstance setRemainDays(String remainDays) {
-            this.remainDays = remainDays;
-            return this;
-        }
-        public String getRemainDays() {
-            return this.remainDays;
-        }
-
         public DescribeDrdsDbInstanceResponseBodyDbInstance setDBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
             return this;
         }
         public String getDBInstanceId() {
             return this.DBInstanceId;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setDBInstanceStatus(String DBInstanceStatus) {
+            this.DBInstanceStatus = DBInstanceStatus;
+            return this;
+        }
+        public String getDBInstanceStatus() {
+            return this.DBInstanceStatus;
         }
 
         public DescribeDrdsDbInstanceResponseBodyDbInstance setDbInstType(String dbInstType) {
@@ -389,6 +317,14 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             return this.dbInstType;
         }
 
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setDmInstanceId(String dmInstanceId) {
+            this.dmInstanceId = dmInstanceId;
+            return this;
+        }
+        public String getDmInstanceId() {
+            return this.dmInstanceId;
+        }
+
         public DescribeDrdsDbInstanceResponseBodyDbInstance setEngine(String engine) {
             this.engine = engine;
             return this;
@@ -397,12 +333,76 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
             return this.engine;
         }
 
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setRdsInstType(String rdsInstType) {
+            this.rdsInstType = rdsInstType;
+            return this;
+        }
+        public String getRdsInstType() {
+            return this.rdsInstType;
+        }
+
         public DescribeDrdsDbInstanceResponseBodyDbInstance setReadOnlyInstances(DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstances readOnlyInstances) {
             this.readOnlyInstances = readOnlyInstances;
             return this;
         }
         public DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstances getReadOnlyInstances() {
             return this.readOnlyInstances;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setReadWeight(Integer readWeight) {
+            this.readWeight = readWeight;
+            return this;
+        }
+        public Integer getReadWeight() {
+            return this.readWeight;
+        }
+
+        public DescribeDrdsDbInstanceResponseBodyDbInstance setRemainDays(String remainDays) {
+            this.remainDays = remainDays;
+            return this;
+        }
+        public String getRemainDays() {
+            return this.remainDays;
         }
 
     }

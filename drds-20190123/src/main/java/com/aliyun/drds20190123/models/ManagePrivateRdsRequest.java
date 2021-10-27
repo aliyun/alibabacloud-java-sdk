@@ -4,40 +4,24 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ManagePrivateRdsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
 
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
-    @NameInMap("DBInstanceId")
-    public String DBInstanceId;
+    @NameInMap("Params")
+    public String params;
 
     @NameInMap("RdsAction")
     public String rdsAction;
 
-    @NameInMap("Params")
-    public String params;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ManagePrivateRdsRequest build(java.util.Map<String, ?> map) throws Exception {
         ManagePrivateRdsRequest self = new ManagePrivateRdsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ManagePrivateRdsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ManagePrivateRdsRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public ManagePrivateRdsRequest setDBInstanceId(String DBInstanceId) {
@@ -48,12 +32,12 @@ public class ManagePrivateRdsRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public ManagePrivateRdsRequest setRdsAction(String rdsAction) {
-        this.rdsAction = rdsAction;
+    public ManagePrivateRdsRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public String getRdsAction() {
-        return this.rdsAction;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
     public ManagePrivateRdsRequest setParams(String params) {
@@ -62,6 +46,22 @@ public class ManagePrivateRdsRequest extends TeaModel {
     }
     public String getParams() {
         return this.params;
+    }
+
+    public ManagePrivateRdsRequest setRdsAction(String rdsAction) {
+        this.rdsAction = rdsAction;
+        return this;
+    }
+    public String getRdsAction() {
+        return this.rdsAction;
+    }
+
+    public ManagePrivateRdsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

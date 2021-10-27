@@ -4,14 +4,14 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstancesRequest extends TeaModel {
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("Description")
     public String description;
 
     @NameInMap("Expired")
     public Boolean expired;
+
+    @NameInMap("Mix")
+    public Boolean mix;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -19,32 +19,24 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
+    @NameInMap("ProductVersion")
+    public String productVersion;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Mix")
-    public Boolean mix;
-
-    @NameInMap("ProductVersion")
-    public String productVersion;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeDrdsInstancesRequestTag> tag;
 
+    @NameInMap("Type")
+    public String type;
+
     public static DescribeDrdsInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsInstancesRequest self = new DescribeDrdsInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsInstancesRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public DescribeDrdsInstancesRequest setDescription(String description) {
@@ -63,6 +55,14 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
         return this.expired;
     }
 
+    public DescribeDrdsInstancesRequest setMix(Boolean mix) {
+        this.mix = mix;
+        return this;
+    }
+    public Boolean getMix() {
+        return this.mix;
+    }
+
     public DescribeDrdsInstancesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -79,12 +79,12 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDrdsInstancesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
+    public DescribeDrdsInstancesRequest setProductVersion(String productVersion) {
+        this.productVersion = productVersion;
         return this;
     }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getProductVersion() {
+        return this.productVersion;
     }
 
     public DescribeDrdsInstancesRequest setRegionId(String regionId) {
@@ -95,20 +95,12 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeDrdsInstancesRequest setMix(Boolean mix) {
-        this.mix = mix;
+    public DescribeDrdsInstancesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public Boolean getMix() {
-        return this.mix;
-    }
-
-    public DescribeDrdsInstancesRequest setProductVersion(String productVersion) {
-        this.productVersion = productVersion;
-        return this;
-    }
-    public String getProductVersion() {
-        return this.productVersion;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDrdsInstancesRequest setTag(java.util.List<DescribeDrdsInstancesRequestTag> tag) {
@@ -117,6 +109,14 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
     }
     public java.util.List<DescribeDrdsInstancesRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeDrdsInstancesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public static class DescribeDrdsInstancesRequestTag extends TeaModel {

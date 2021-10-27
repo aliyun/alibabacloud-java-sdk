@@ -4,26 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsPerformanceSummaryRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     @NameInMap("RdsInstanceId")
     public java.util.List<String> rdsInstanceId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeRdsPerformanceSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRdsPerformanceSummaryRequest self = new DescribeRdsPerformanceSummaryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRdsPerformanceSummaryRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeRdsPerformanceSummaryRequest setDrdsInstanceId(String drdsInstanceId) {
@@ -40,6 +32,14 @@ public class DescribeRdsPerformanceSummaryRequest extends TeaModel {
     }
     public java.util.List<String> getRdsInstanceId() {
         return this.rdsInstanceId;
+    }
+
+    public DescribeRdsPerformanceSummaryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

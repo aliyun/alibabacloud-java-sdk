@@ -4,11 +4,11 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribePreCheckResultRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("TaskId")
     public String taskId;
@@ -18,20 +18,20 @@ public class DescribePreCheckResultRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribePreCheckResultRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public DescribePreCheckResultRequest setDrdsInstanceId(String drdsInstanceId) {
         this.drdsInstanceId = drdsInstanceId;
         return this;
     }
     public String getDrdsInstanceId() {
         return this.drdsInstanceId;
+    }
+
+    public DescribePreCheckResultRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribePreCheckResultRequest setTaskId(String taskId) {

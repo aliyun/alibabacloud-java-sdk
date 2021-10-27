@@ -4,17 +4,17 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SetupTableRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
+    @NameInMap("AllowFullTableScan")
+    public Boolean allowFullTableScan;
 
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("AllowFullTableScan")
-    public Boolean allowFullTableScan;
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("TableName")
     public java.util.List<String> tableName;
@@ -24,20 +24,12 @@ public class SetupTableRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SetupTableRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public SetupTableRequest setAllowFullTableScan(Boolean allowFullTableScan) {
+        this.allowFullTableScan = allowFullTableScan;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public SetupTableRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
+    public Boolean getAllowFullTableScan() {
+        return this.allowFullTableScan;
     }
 
     public SetupTableRequest setDbName(String dbName) {
@@ -48,12 +40,20 @@ public class SetupTableRequest extends TeaModel {
         return this.dbName;
     }
 
-    public SetupTableRequest setAllowFullTableScan(Boolean allowFullTableScan) {
-        this.allowFullTableScan = allowFullTableScan;
+    public SetupTableRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public Boolean getAllowFullTableScan() {
-        return this.allowFullTableScan;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
+    }
+
+    public SetupTableRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SetupTableRequest setTableName(java.util.List<String> tableName) {

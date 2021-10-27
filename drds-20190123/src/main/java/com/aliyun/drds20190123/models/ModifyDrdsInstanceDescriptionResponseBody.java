@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ModifyDrdsInstanceDescriptionResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ModifyDrdsInstanceDescriptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyDrdsInstanceDescriptionResponseBody self = new ModifyDrdsInstanceDescriptionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDrdsInstanceDescriptionResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public ModifyDrdsInstanceDescriptionResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class ModifyDrdsInstanceDescriptionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyDrdsInstanceDescriptionResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

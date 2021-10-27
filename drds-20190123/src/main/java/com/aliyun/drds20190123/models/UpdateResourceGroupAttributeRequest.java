@@ -4,26 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourceGroupAttributeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static UpdateResourceGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateResourceGroupAttributeRequest self = new UpdateResourceGroupAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateResourceGroupAttributeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpdateResourceGroupAttributeRequest setDrdsInstanceId(String drdsInstanceId) {
@@ -40,6 +32,14 @@ public class UpdateResourceGroupAttributeRequest extends TeaModel {
     }
     public String getNewResourceGroupId() {
         return this.newResourceGroupId;
+    }
+
+    public UpdateResourceGroupAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

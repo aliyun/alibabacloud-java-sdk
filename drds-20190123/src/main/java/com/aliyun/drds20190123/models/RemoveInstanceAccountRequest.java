@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class RemoveInstanceAccountRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("AccountName")
     public String accountName;
+
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     public static RemoveInstanceAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveInstanceAccountRequest self = new RemoveInstanceAccountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveInstanceAccountRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public RemoveInstanceAccountRequest setAccountName(String accountName) {
@@ -29,6 +21,14 @@ public class RemoveInstanceAccountRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public RemoveInstanceAccountRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
 }

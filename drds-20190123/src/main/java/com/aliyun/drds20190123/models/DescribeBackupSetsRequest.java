@@ -7,11 +7,11 @@ public class DescribeBackupSetsRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeBackupSetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupSetsRequest self = new DescribeBackupSetsRequest();
@@ -26,20 +26,20 @@ public class DescribeBackupSetsRequest extends TeaModel {
         return this.drdsInstanceId;
     }
 
-    public DescribeBackupSetsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeBackupSetsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeBackupSetsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

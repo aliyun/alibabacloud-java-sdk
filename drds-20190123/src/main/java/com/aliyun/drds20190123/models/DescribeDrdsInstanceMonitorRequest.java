@@ -7,20 +7,20 @@ public class DescribeDrdsInstanceMonitorRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
-    @NameInMap("Key")
-    public String key;
-
-    @NameInMap("StartTime")
-    public Long startTime;
-
     @NameInMap("EndTime")
     public Long endTime;
+
+    @NameInMap("Key")
+    public String key;
 
     @NameInMap("PeriodMultiple")
     public Integer periodMultiple;
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static DescribeDrdsInstanceMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsInstanceMonitorRequest self = new DescribeDrdsInstanceMonitorRequest();
@@ -35,28 +35,20 @@ public class DescribeDrdsInstanceMonitorRequest extends TeaModel {
         return this.drdsInstanceId;
     }
 
-    public DescribeDrdsInstanceMonitorRequest setKey(String key) {
-        this.key = key;
-        return this;
-    }
-    public String getKey() {
-        return this.key;
-    }
-
-    public DescribeDrdsInstanceMonitorRequest setStartTime(Long startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDrdsInstanceMonitorRequest setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDrdsInstanceMonitorRequest setKey(String key) {
+        this.key = key;
+        return this;
+    }
+    public String getKey() {
+        return this.key;
     }
 
     public DescribeDrdsInstanceMonitorRequest setPeriodMultiple(Integer periodMultiple) {
@@ -73,6 +65,14 @@ public class DescribeDrdsInstanceMonitorRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDrdsInstanceMonitorRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

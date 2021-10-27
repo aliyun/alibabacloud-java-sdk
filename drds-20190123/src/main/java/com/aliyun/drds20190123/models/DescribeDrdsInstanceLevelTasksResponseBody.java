@@ -4,11 +4,11 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Tasks")
     public DescribeDrdsInstanceLevelTasksResponseBodyTasks tasks;
@@ -18,20 +18,20 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsInstanceLevelTasksResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public DescribeDrdsInstanceLevelTasksResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDrdsInstanceLevelTasksResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DescribeDrdsInstanceLevelTasksResponseBody setTasks(DescribeDrdsInstanceLevelTasksResponseBodyTasks tasks) {
@@ -43,66 +43,42 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeDrdsInstanceLevelTasksResponseBodyTasksTask extends TeaModel {
-        @NameInMap("TaskType")
-        public Integer taskType;
-
-        @NameInMap("TaskPhase")
-        public String taskPhase;
-
-        @NameInMap("Progress")
-        public Integer progress;
-
         @NameInMap("AllowCancel")
         public Boolean allowCancel;
-
-        @NameInMap("TaskStatus")
-        public Integer taskStatus;
-
-        @NameInMap("ShowProgress")
-        public Boolean showProgress;
-
-        @NameInMap("TaskName")
-        public String taskName;
-
-        @NameInMap("ProgressDescription")
-        public String progressDescription;
-
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
-
-        @NameInMap("TargetId")
-        public Long targetId;
 
         @NameInMap("ErrMsg")
         public String errMsg;
 
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        @NameInMap("Progress")
+        public Integer progress;
+
+        @NameInMap("ProgressDescription")
+        public String progressDescription;
+
+        @NameInMap("ShowProgress")
+        public Boolean showProgress;
+
+        @NameInMap("TargetId")
+        public Long targetId;
+
+        @NameInMap("TaskName")
+        public String taskName;
+
+        @NameInMap("TaskPhase")
+        public String taskPhase;
+
+        @NameInMap("TaskStatus")
+        public Integer taskStatus;
+
+        @NameInMap("TaskType")
+        public Integer taskType;
+
         public static DescribeDrdsInstanceLevelTasksResponseBodyTasksTask build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsInstanceLevelTasksResponseBodyTasksTask self = new DescribeDrdsInstanceLevelTasksResponseBodyTasksTask();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setTaskType(Integer taskType) {
-            this.taskType = taskType;
-            return this;
-        }
-        public Integer getTaskType() {
-            return this.taskType;
-        }
-
-        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setTaskPhase(String taskPhase) {
-            this.taskPhase = taskPhase;
-            return this;
-        }
-        public String getTaskPhase() {
-            return this.taskPhase;
-        }
-
-        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setProgress(Integer progress) {
-            this.progress = progress;
-            return this;
-        }
-        public Integer getProgress() {
-            return this.progress;
         }
 
         public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setAllowCancel(Boolean allowCancel) {
@@ -113,36 +89,12 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             return this.allowCancel;
         }
 
-        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setTaskStatus(Integer taskStatus) {
-            this.taskStatus = taskStatus;
+        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setErrMsg(String errMsg) {
+            this.errMsg = errMsg;
             return this;
         }
-        public Integer getTaskStatus() {
-            return this.taskStatus;
-        }
-
-        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setShowProgress(Boolean showProgress) {
-            this.showProgress = showProgress;
-            return this;
-        }
-        public Boolean getShowProgress() {
-            return this.showProgress;
-        }
-
-        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setProgressDescription(String progressDescription) {
-            this.progressDescription = progressDescription;
-            return this;
-        }
-        public String getProgressDescription() {
-            return this.progressDescription;
+        public String getErrMsg() {
+            return this.errMsg;
         }
 
         public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setGmtCreate(Long gmtCreate) {
@@ -153,6 +105,30 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setProgress(Integer progress) {
+            this.progress = progress;
+            return this;
+        }
+        public Integer getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setProgressDescription(String progressDescription) {
+            this.progressDescription = progressDescription;
+            return this;
+        }
+        public String getProgressDescription() {
+            return this.progressDescription;
+        }
+
+        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setShowProgress(Boolean showProgress) {
+            this.showProgress = showProgress;
+            return this;
+        }
+        public Boolean getShowProgress() {
+            return this.showProgress;
+        }
+
         public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setTargetId(Long targetId) {
             this.targetId = targetId;
             return this;
@@ -161,12 +137,36 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
             return this.targetId;
         }
 
-        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setErrMsg(String errMsg) {
-            this.errMsg = errMsg;
+        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setTaskName(String taskName) {
+            this.taskName = taskName;
             return this;
         }
-        public String getErrMsg() {
-            return this.errMsg;
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setTaskPhase(String taskPhase) {
+            this.taskPhase = taskPhase;
+            return this;
+        }
+        public String getTaskPhase() {
+            return this.taskPhase;
+        }
+
+        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setTaskStatus(Integer taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+        public Integer getTaskStatus() {
+            return this.taskStatus;
+        }
+
+        public DescribeDrdsInstanceLevelTasksResponseBodyTasksTask setTaskType(Integer taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public Integer getTaskType() {
+            return this.taskType;
         }
 
     }

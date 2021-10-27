@@ -4,47 +4,17 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateDrdsInstanceRequest extends TeaModel {
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ZoneId")
-    public String zoneId;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("Quantity")
-    public Integer quantity;
-
-    @NameInMap("InstanceSeries")
-    public String instanceSeries;
-
-    @NameInMap("Specification")
-    public String specification;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("PayType")
-    public String payType;
-
-    @NameInMap("VpcId")
-    public String vpcId;
-
-    @NameInMap("VswitchId")
-    public String vswitchId;
-
-    @NameInMap("isHa")
-    public Boolean isHa;
-
-    @NameInMap("PricingCycle")
-    public String pricingCycle;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Duration")
     public Integer duration;
+
+    @NameInMap("InstanceSeries")
+    public String instanceSeries;
 
     @NameInMap("IsAutoRenew")
     public Boolean isAutoRenew;
@@ -55,68 +25,42 @@ public class CreateDrdsInstanceRequest extends TeaModel {
     @NameInMap("MySQLVersion")
     public Integer mySQLVersion;
 
+    @NameInMap("PayType")
+    public String payType;
+
+    @NameInMap("PricingCycle")
+    public String pricingCycle;
+
+    @NameInMap("Quantity")
+    public Integer quantity;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("Specification")
+    public String specification;
+
+    @NameInMap("Type")
+    public String type;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
+    @NameInMap("VswitchId")
+    public String vswitchId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
+
+    @NameInMap("isHa")
+    public Boolean isHa;
 
     public static CreateDrdsInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDrdsInstanceRequest self = new CreateDrdsInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDrdsInstanceRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateDrdsInstanceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDrdsInstanceRequest setZoneId(String zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateDrdsInstanceRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public CreateDrdsInstanceRequest setQuantity(Integer quantity) {
-        this.quantity = quantity;
-        return this;
-    }
-    public Integer getQuantity() {
-        return this.quantity;
-    }
-
-    public CreateDrdsInstanceRequest setInstanceSeries(String instanceSeries) {
-        this.instanceSeries = instanceSeries;
-        return this;
-    }
-    public String getInstanceSeries() {
-        return this.instanceSeries;
-    }
-
-    public CreateDrdsInstanceRequest setSpecification(String specification) {
-        this.specification = specification;
-        return this;
-    }
-    public String getSpecification() {
-        return this.specification;
     }
 
     public CreateDrdsInstanceRequest setClientToken(String clientToken) {
@@ -127,44 +71,12 @@ public class CreateDrdsInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateDrdsInstanceRequest setPayType(String payType) {
-        this.payType = payType;
+    public CreateDrdsInstanceRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getPayType() {
-        return this.payType;
-    }
-
-    public CreateDrdsInstanceRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateDrdsInstanceRequest setVswitchId(String vswitchId) {
-        this.vswitchId = vswitchId;
-        return this;
-    }
-    public String getVswitchId() {
-        return this.vswitchId;
-    }
-
-    public CreateDrdsInstanceRequest setIsHa(Boolean isHa) {
-        this.isHa = isHa;
-        return this;
-    }
-    public Boolean getIsHa() {
-        return this.isHa;
-    }
-
-    public CreateDrdsInstanceRequest setPricingCycle(String pricingCycle) {
-        this.pricingCycle = pricingCycle;
-        return this;
-    }
-    public String getPricingCycle() {
-        return this.pricingCycle;
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateDrdsInstanceRequest setDuration(Integer duration) {
@@ -173,6 +85,14 @@ public class CreateDrdsInstanceRequest extends TeaModel {
     }
     public Integer getDuration() {
         return this.duration;
+    }
+
+    public CreateDrdsInstanceRequest setInstanceSeries(String instanceSeries) {
+        this.instanceSeries = instanceSeries;
+        return this;
+    }
+    public String getInstanceSeries() {
+        return this.instanceSeries;
     }
 
     public CreateDrdsInstanceRequest setIsAutoRenew(Boolean isAutoRenew) {
@@ -199,12 +119,92 @@ public class CreateDrdsInstanceRequest extends TeaModel {
         return this.mySQLVersion;
     }
 
+    public CreateDrdsInstanceRequest setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public CreateDrdsInstanceRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
+    }
+
+    public CreateDrdsInstanceRequest setQuantity(Integer quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+    public Integer getQuantity() {
+        return this.quantity;
+    }
+
+    public CreateDrdsInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public CreateDrdsInstanceRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateDrdsInstanceRequest setSpecification(String specification) {
+        this.specification = specification;
+        return this;
+    }
+    public String getSpecification() {
+        return this.specification;
+    }
+
+    public CreateDrdsInstanceRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public CreateDrdsInstanceRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateDrdsInstanceRequest setVswitchId(String vswitchId) {
+        this.vswitchId = vswitchId;
+        return this;
+    }
+    public String getVswitchId() {
+        return this.vswitchId;
+    }
+
+    public CreateDrdsInstanceRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public CreateDrdsInstanceRequest setIsHa(Boolean isHa) {
+        this.isHa = isHa;
+        return this;
+    }
+    public Boolean getIsHa() {
+        return this.isHa;
     }
 
 }

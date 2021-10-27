@@ -4,34 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribePreCheckResultResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("PreCheckResult")
+    public DescribePreCheckResultResponseBodyPreCheckResult preCheckResult;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PreCheckResult")
-    public DescribePreCheckResultResponseBodyPreCheckResult preCheckResult;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribePreCheckResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePreCheckResultResponseBody self = new DescribePreCheckResultResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePreCheckResultResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribePreCheckResultResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribePreCheckResultResponseBody setPreCheckResult(DescribePreCheckResultResponseBodyPreCheckResult preCheckResult) {
@@ -42,18 +26,34 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         return this.preCheckResult;
     }
 
+    public DescribePreCheckResultResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribePreCheckResultResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems extends TeaModel {
         @NameInMap("ErrorMsgCode")
         public String errorMsgCode;
+
+        @NameInMap("ErrorMsgParams")
+        public java.util.List<String> errorMsgParams;
 
         @NameInMap("PreCheckItemName")
         public String preCheckItemName;
 
         @NameInMap("State")
         public String state;
-
-        @NameInMap("ErrorMsgParams")
-        public java.util.List<String> errorMsgParams;
 
         public static DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems build(java.util.Map<String, ?> map) throws Exception {
             DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems self = new DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems();
@@ -66,6 +66,14 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         }
         public String getErrorMsgCode() {
             return this.errorMsgCode;
+        }
+
+        public DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems setErrorMsgParams(java.util.List<String> errorMsgParams) {
+            this.errorMsgParams = errorMsgParams;
+            return this;
+        }
+        public java.util.List<String> getErrorMsgParams() {
+            return this.errorMsgParams;
         }
 
         public DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems setPreCheckItemName(String preCheckItemName) {
@@ -82,14 +90,6 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems setErrorMsgParams(java.util.List<String> errorMsgParams) {
-            this.errorMsgParams = errorMsgParams;
-            return this;
-        }
-        public java.util.List<String> getErrorMsgParams() {
-            return this.errorMsgParams;
         }
 
     }

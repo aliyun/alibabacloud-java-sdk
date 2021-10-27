@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class RemoveDrdsDbRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("DbName")
     public String dbName;
+
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     public static RemoveDrdsDbRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveDrdsDbRequest self = new RemoveDrdsDbRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveDrdsDbRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public RemoveDrdsDbRequest setDbName(String dbName) {
@@ -29,6 +21,14 @@ public class RemoveDrdsDbRequest extends TeaModel {
     }
     public String getDbName() {
         return this.dbName;
+    }
+
+    public RemoveDrdsDbRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
 }

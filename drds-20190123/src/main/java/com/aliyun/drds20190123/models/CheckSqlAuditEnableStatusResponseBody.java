@@ -4,11 +4,11 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
-    @NameInMap("Status")
-    public String status;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("Success")
     public Boolean success;
@@ -18,20 +18,20 @@ public class CheckSqlAuditEnableStatusResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CheckSqlAuditEnableStatusResponseBody setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
     public CheckSqlAuditEnableStatusResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CheckSqlAuditEnableStatusResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public CheckSqlAuditEnableStatusResponseBody setSuccess(Boolean success) {

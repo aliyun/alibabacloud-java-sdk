@@ -4,26 +4,26 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDbRdsNameListResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("InstanceNameList")
+    public DescribeDrdsDbRdsNameListResponseBodyInstanceNameList instanceNameList;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InstanceNameList")
-    public DescribeDrdsDbRdsNameListResponseBodyInstanceNameList instanceNameList;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeDrdsDbRdsNameListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsDbRdsNameListResponseBody self = new DescribeDrdsDbRdsNameListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsDbRdsNameListResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeDrdsDbRdsNameListResponseBody setInstanceNameList(DescribeDrdsDbRdsNameListResponseBodyInstanceNameList instanceNameList) {
+        this.instanceNameList = instanceNameList;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public DescribeDrdsDbRdsNameListResponseBodyInstanceNameList getInstanceNameList() {
+        return this.instanceNameList;
     }
 
     public DescribeDrdsDbRdsNameListResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeDrdsDbRdsNameListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDrdsDbRdsNameListResponseBody setInstanceNameList(DescribeDrdsDbRdsNameListResponseBodyInstanceNameList instanceNameList) {
-        this.instanceNameList = instanceNameList;
+    public DescribeDrdsDbRdsNameListResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeDrdsDbRdsNameListResponseBodyInstanceNameList getInstanceNameList() {
-        return this.instanceNameList;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeDrdsDbRdsNameListResponseBodyInstanceNameList extends TeaModel {

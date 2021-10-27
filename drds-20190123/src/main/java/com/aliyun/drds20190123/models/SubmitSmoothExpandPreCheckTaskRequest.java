@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmoothExpandPreCheckTaskRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("DbName")
     public String dbName;
+
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     public static SubmitSmoothExpandPreCheckTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmoothExpandPreCheckTaskRequest self = new SubmitSmoothExpandPreCheckTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitSmoothExpandPreCheckTaskRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public SubmitSmoothExpandPreCheckTaskRequest setDbName(String dbName) {
@@ -29,6 +21,14 @@ public class SubmitSmoothExpandPreCheckTaskRequest extends TeaModel {
     }
     public String getDbName() {
         return this.dbName;
+    }
+
+    public SubmitSmoothExpandPreCheckTaskRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
 }

@@ -4,17 +4,14 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitHotExpandTaskRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("TaskName")
-    public String taskName;
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
-    @NameInMap("TaskDesc")
-    public String taskDesc;
+    @NameInMap("ExtendedMapping")
+    public java.util.List<SubmitHotExpandTaskRequestExtendedMapping> extendedMapping;
 
     @NameInMap("InstanceDbMapping")
     public java.util.List<SubmitHotExpandTaskRequestInstanceDbMapping> instanceDbMapping;
@@ -25,20 +22,15 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
     @NameInMap("SupperAccountMapping")
     public java.util.List<SubmitHotExpandTaskRequestSupperAccountMapping> supperAccountMapping;
 
-    @NameInMap("ExtendedMapping")
-    public java.util.List<SubmitHotExpandTaskRequestExtendedMapping> extendedMapping;
+    @NameInMap("TaskDesc")
+    public String taskDesc;
+
+    @NameInMap("TaskName")
+    public String taskName;
 
     public static SubmitHotExpandTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitHotExpandTaskRequest self = new SubmitHotExpandTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitHotExpandTaskRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public SubmitHotExpandTaskRequest setDbName(String dbName) {
@@ -49,20 +41,20 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
         return this.dbName;
     }
 
-    public SubmitHotExpandTaskRequest setTaskName(String taskName) {
-        this.taskName = taskName;
+    public SubmitHotExpandTaskRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public String getTaskName() {
-        return this.taskName;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
-    public SubmitHotExpandTaskRequest setTaskDesc(String taskDesc) {
-        this.taskDesc = taskDesc;
+    public SubmitHotExpandTaskRequest setExtendedMapping(java.util.List<SubmitHotExpandTaskRequestExtendedMapping> extendedMapping) {
+        this.extendedMapping = extendedMapping;
         return this;
     }
-    public String getTaskDesc() {
-        return this.taskDesc;
+    public java.util.List<SubmitHotExpandTaskRequestExtendedMapping> getExtendedMapping() {
+        return this.extendedMapping;
     }
 
     public SubmitHotExpandTaskRequest setInstanceDbMapping(java.util.List<SubmitHotExpandTaskRequestInstanceDbMapping> instanceDbMapping) {
@@ -89,12 +81,50 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
         return this.supperAccountMapping;
     }
 
-    public SubmitHotExpandTaskRequest setExtendedMapping(java.util.List<SubmitHotExpandTaskRequestExtendedMapping> extendedMapping) {
-        this.extendedMapping = extendedMapping;
+    public SubmitHotExpandTaskRequest setTaskDesc(String taskDesc) {
+        this.taskDesc = taskDesc;
         return this;
     }
-    public java.util.List<SubmitHotExpandTaskRequestExtendedMapping> getExtendedMapping() {
-        return this.extendedMapping;
+    public String getTaskDesc() {
+        return this.taskDesc;
+    }
+
+    public SubmitHotExpandTaskRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public static class SubmitHotExpandTaskRequestExtendedMapping extends TeaModel {
+        @NameInMap("SrcDb")
+        public String srcDb;
+
+        @NameInMap("SrcInstanceId")
+        public String srcInstanceId;
+
+        public static SubmitHotExpandTaskRequestExtendedMapping build(java.util.Map<String, ?> map) throws Exception {
+            SubmitHotExpandTaskRequestExtendedMapping self = new SubmitHotExpandTaskRequestExtendedMapping();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitHotExpandTaskRequestExtendedMapping setSrcDb(String srcDb) {
+            this.srcDb = srcDb;
+            return this;
+        }
+        public String getSrcDb() {
+            return this.srcDb;
+        }
+
+        public SubmitHotExpandTaskRequestExtendedMapping setSrcInstanceId(String srcInstanceId) {
+            this.srcInstanceId = srcInstanceId;
+            return this;
+        }
+        public String getSrcInstanceId() {
+            return this.srcInstanceId;
+        }
+
     }
 
     public static class SubmitHotExpandTaskRequestInstanceDbMapping extends TeaModel {
@@ -128,70 +158,30 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
     }
 
     public static class SubmitHotExpandTaskRequestMapping extends TeaModel {
+        @NameInMap("DbShardColumn")
+        public String dbShardColumn;
+
         @NameInMap("HotDbName")
         public String hotDbName;
-
-        @NameInMap("ShardTbValue")
-        public String shardTbValue;
 
         @NameInMap("HotTableName")
         public String hotTableName;
 
+        @NameInMap("LogicTable")
+        public String logicTable;
+
         @NameInMap("ShardDbValue")
         public String shardDbValue;
+
+        @NameInMap("ShardTbValue")
+        public String shardTbValue;
 
         @NameInMap("TbShardColumn")
         public String tbShardColumn;
 
-        @NameInMap("DbShardColumn")
-        public String dbShardColumn;
-
-        @NameInMap("LogicTable")
-        public String logicTable;
-
         public static SubmitHotExpandTaskRequestMapping build(java.util.Map<String, ?> map) throws Exception {
             SubmitHotExpandTaskRequestMapping self = new SubmitHotExpandTaskRequestMapping();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitHotExpandTaskRequestMapping setHotDbName(String hotDbName) {
-            this.hotDbName = hotDbName;
-            return this;
-        }
-        public String getHotDbName() {
-            return this.hotDbName;
-        }
-
-        public SubmitHotExpandTaskRequestMapping setShardTbValue(String shardTbValue) {
-            this.shardTbValue = shardTbValue;
-            return this;
-        }
-        public String getShardTbValue() {
-            return this.shardTbValue;
-        }
-
-        public SubmitHotExpandTaskRequestMapping setHotTableName(String hotTableName) {
-            this.hotTableName = hotTableName;
-            return this;
-        }
-        public String getHotTableName() {
-            return this.hotTableName;
-        }
-
-        public SubmitHotExpandTaskRequestMapping setShardDbValue(String shardDbValue) {
-            this.shardDbValue = shardDbValue;
-            return this;
-        }
-        public String getShardDbValue() {
-            return this.shardDbValue;
-        }
-
-        public SubmitHotExpandTaskRequestMapping setTbShardColumn(String tbShardColumn) {
-            this.tbShardColumn = tbShardColumn;
-            return this;
-        }
-        public String getTbShardColumn() {
-            return this.tbShardColumn;
         }
 
         public SubmitHotExpandTaskRequestMapping setDbShardColumn(String dbShardColumn) {
@@ -202,12 +192,52 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
             return this.dbShardColumn;
         }
 
+        public SubmitHotExpandTaskRequestMapping setHotDbName(String hotDbName) {
+            this.hotDbName = hotDbName;
+            return this;
+        }
+        public String getHotDbName() {
+            return this.hotDbName;
+        }
+
+        public SubmitHotExpandTaskRequestMapping setHotTableName(String hotTableName) {
+            this.hotTableName = hotTableName;
+            return this;
+        }
+        public String getHotTableName() {
+            return this.hotTableName;
+        }
+
         public SubmitHotExpandTaskRequestMapping setLogicTable(String logicTable) {
             this.logicTable = logicTable;
             return this;
         }
         public String getLogicTable() {
             return this.logicTable;
+        }
+
+        public SubmitHotExpandTaskRequestMapping setShardDbValue(String shardDbValue) {
+            this.shardDbValue = shardDbValue;
+            return this;
+        }
+        public String getShardDbValue() {
+            return this.shardDbValue;
+        }
+
+        public SubmitHotExpandTaskRequestMapping setShardTbValue(String shardTbValue) {
+            this.shardTbValue = shardTbValue;
+            return this;
+        }
+        public String getShardTbValue() {
+            return this.shardTbValue;
+        }
+
+        public SubmitHotExpandTaskRequestMapping setTbShardColumn(String tbShardColumn) {
+            this.tbShardColumn = tbShardColumn;
+            return this;
+        }
+        public String getTbShardColumn() {
+            return this.tbShardColumn;
         }
 
     }
@@ -249,36 +279,6 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
         }
         public String getSupperPassword() {
             return this.supperPassword;
-        }
-
-    }
-
-    public static class SubmitHotExpandTaskRequestExtendedMapping extends TeaModel {
-        @NameInMap("SrcDb")
-        public String srcDb;
-
-        @NameInMap("SrcInstanceId")
-        public String srcInstanceId;
-
-        public static SubmitHotExpandTaskRequestExtendedMapping build(java.util.Map<String, ?> map) throws Exception {
-            SubmitHotExpandTaskRequestExtendedMapping self = new SubmitHotExpandTaskRequestExtendedMapping();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitHotExpandTaskRequestExtendedMapping setSrcDb(String srcDb) {
-            this.srcDb = srcDb;
-            return this;
-        }
-        public String getSrcDb() {
-            return this.srcDb;
-        }
-
-        public SubmitHotExpandTaskRequestExtendedMapping setSrcInstanceId(String srcInstanceId) {
-            this.srcInstanceId = srcInstanceId;
-            return this;
-        }
-        public String getSrcInstanceId() {
-            return this.srcInstanceId;
         }
 
     }

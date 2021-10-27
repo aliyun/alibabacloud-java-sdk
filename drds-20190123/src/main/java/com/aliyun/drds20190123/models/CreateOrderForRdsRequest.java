@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderForRdsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Params")
     public String params;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static CreateOrderForRdsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderForRdsRequest self = new CreateOrderForRdsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateOrderForRdsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public CreateOrderForRdsRequest setParams(String params) {
@@ -29,6 +21,14 @@ public class CreateOrderForRdsRequest extends TeaModel {
     }
     public String getParams() {
         return this.params;
+    }
+
+    public CreateOrderForRdsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

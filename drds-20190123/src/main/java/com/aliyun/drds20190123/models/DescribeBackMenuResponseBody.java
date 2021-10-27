@@ -4,34 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackMenuResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("List")
+    public DescribeBackMenuResponseBodyList list;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("List")
-    public DescribeBackMenuResponseBodyList list;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeBackMenuResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackMenuResponseBody self = new DescribeBackMenuResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackMenuResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeBackMenuResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeBackMenuResponseBody setList(DescribeBackMenuResponseBodyList list) {
@@ -42,24 +26,32 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         return this.list;
     }
 
-    public static class DescribeBackMenuResponseBodyListList extends TeaModel {
-        @NameInMap("Support")
-        public Boolean support;
+    public DescribeBackMenuResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public DescribeBackMenuResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class DescribeBackMenuResponseBodyListList extends TeaModel {
         @NameInMap("MenuName")
         public String menuName;
+
+        @NameInMap("Support")
+        public Boolean support;
 
         public static DescribeBackMenuResponseBodyListList build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackMenuResponseBodyListList self = new DescribeBackMenuResponseBodyListList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackMenuResponseBodyListList setSupport(Boolean support) {
-            this.support = support;
-            return this;
-        }
-        public Boolean getSupport() {
-            return this.support;
         }
 
         public DescribeBackMenuResponseBodyListList setMenuName(String menuName) {
@@ -68,6 +60,14 @@ public class DescribeBackMenuResponseBody extends TeaModel {
         }
         public String getMenuName() {
             return this.menuName;
+        }
+
+        public DescribeBackMenuResponseBodyListList setSupport(Boolean support) {
+            this.support = support;
+            return this;
+        }
+        public Boolean getSupport() {
+            return this.support;
         }
 
     }

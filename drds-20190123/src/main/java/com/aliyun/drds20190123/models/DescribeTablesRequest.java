@@ -4,20 +4,20 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeTablesRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("Query")
-    public String query;
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Query")
+    public String query;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -27,12 +27,12 @@ public class DescribeTablesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeTablesRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
+    public DescribeTablesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeTablesRequest setDbName(String dbName) {
@@ -43,12 +43,12 @@ public class DescribeTablesRequest extends TeaModel {
         return this.dbName;
     }
 
-    public DescribeTablesRequest setQuery(String query) {
-        this.query = query;
+    public DescribeTablesRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public String getQuery() {
-        return this.query;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
     public DescribeTablesRequest setPageSize(Integer pageSize) {
@@ -59,12 +59,12 @@ public class DescribeTablesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeTablesRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeTablesRequest setQuery(String query) {
+        this.query = query;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getQuery() {
+        return this.query;
     }
 
     public DescribeTablesRequest setRegionId(String regionId) {
