@@ -4,23 +4,15 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FlowId")
     public String flowId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowResponseBody self = new CreateFlowResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFlowResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateFlowResponseBody setFlowId(String flowId) {
@@ -29,6 +21,14 @@ public class CreateFlowResponseBody extends TeaModel {
     }
     public String getFlowId() {
         return this.flowId;
+    }
+
+    public CreateFlowResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

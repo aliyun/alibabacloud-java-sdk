@@ -43,11 +43,17 @@ public class ListVersionsResponseBody extends TeaModel {
     }
 
     public static class ListVersionsResponseBodyVersions extends TeaModel {
-        @NameInMap("VersionId")
-        public String versionId;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("FlowId")
         public String flowId;
+
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        @NameInMap("VersionId")
+        public String versionId;
 
         @NameInMap("VersionName")
         public Integer versionName;
@@ -55,23 +61,17 @@ public class ListVersionsResponseBody extends TeaModel {
         @NameInMap("VersionStatus")
         public Integer versionStatus;
 
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("UpdateTime")
-        public String updateTime;
-
         public static ListVersionsResponseBodyVersions build(java.util.Map<String, ?> map) throws Exception {
             ListVersionsResponseBodyVersions self = new ListVersionsResponseBodyVersions();
             return TeaModel.build(map, self);
         }
 
-        public ListVersionsResponseBodyVersions setVersionId(String versionId) {
-            this.versionId = versionId;
+        public ListVersionsResponseBodyVersions setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getVersionId() {
-            return this.versionId;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListVersionsResponseBodyVersions setFlowId(String flowId) {
@@ -80,6 +80,22 @@ public class ListVersionsResponseBody extends TeaModel {
         }
         public String getFlowId() {
             return this.flowId;
+        }
+
+        public ListVersionsResponseBodyVersions setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public ListVersionsResponseBodyVersions setVersionId(String versionId) {
+            this.versionId = versionId;
+            return this;
+        }
+        public String getVersionId() {
+            return this.versionId;
         }
 
         public ListVersionsResponseBodyVersions setVersionName(Integer versionName) {
@@ -96,22 +112,6 @@ public class ListVersionsResponseBody extends TeaModel {
         }
         public Integer getVersionStatus() {
             return this.versionStatus;
-        }
-
-        public ListVersionsResponseBodyVersions setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListVersionsResponseBodyVersions setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
         }
 
     }

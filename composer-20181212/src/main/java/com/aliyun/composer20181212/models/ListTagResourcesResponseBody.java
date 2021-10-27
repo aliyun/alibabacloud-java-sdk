@@ -4,29 +4,21 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListTagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesResponseBody self = new ListTagResourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagResourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListTagResourcesResponseBody setNextToken(String nextToken) {
@@ -37,12 +29,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListTagResourcesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListTagResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListTagResourcesResponseBody setTagResources(java.util.List<ListTagResourcesResponseBodyTagResources> tagResources) {
@@ -53,38 +45,30 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return this.tagResources;
     }
 
+    public ListTagResourcesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("ResourceId")
         public String resourceId;
 
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
         public static ListTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesResponseBodyTagResources self = new ListTagResourcesResponseBodyTagResources();
             return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public ListTagResourcesResponseBodyTagResources setResourceId(String resourceId) {
@@ -101,6 +85,22 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public ListTagResourcesResponseBodyTagResources setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListTagResourcesResponseBodyTagResources setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

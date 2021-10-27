@@ -4,11 +4,9 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class GetVersionRequest extends TeaModel {
-    // 工作流 ID
     @NameInMap("FlowId")
     public String flowId;
 
-    // 工作流版本 ID
     @NameInMap("VersionId")
     public String versionId;
 
