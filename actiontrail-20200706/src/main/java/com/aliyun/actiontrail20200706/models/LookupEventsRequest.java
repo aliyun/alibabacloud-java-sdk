@@ -4,14 +4,8 @@ package com.aliyun.actiontrail20200706.models;
 import com.aliyun.tea.*;
 
 public class LookupEventsRequest extends TeaModel {
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public String maxResults;
-
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("Direction")
+    public String direction;
 
     @NameInMap("EndTime")
     public String endTime;
@@ -19,36 +13,26 @@ public class LookupEventsRequest extends TeaModel {
     @NameInMap("LookupAttribute")
     public java.util.List<LookupEventsRequestLookupAttribute> lookupAttribute;
 
-    @NameInMap("Direction")
-    public String direction;
+    @NameInMap("MaxResults")
+    public String maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static LookupEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         LookupEventsRequest self = new LookupEventsRequest();
         return TeaModel.build(map, self);
     }
 
-    public LookupEventsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public LookupEventsRequest setDirection(String direction) {
+        this.direction = direction;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public LookupEventsRequest setMaxResults(String maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public String getMaxResults() {
-        return this.maxResults;
-    }
-
-    public LookupEventsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
+    public String getDirection() {
+        return this.direction;
     }
 
     public LookupEventsRequest setEndTime(String endTime) {
@@ -67,12 +51,28 @@ public class LookupEventsRequest extends TeaModel {
         return this.lookupAttribute;
     }
 
-    public LookupEventsRequest setDirection(String direction) {
-        this.direction = direction;
+    public LookupEventsRequest setMaxResults(String maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public String getDirection() {
-        return this.direction;
+    public String getMaxResults() {
+        return this.maxResults;
+    }
+
+    public LookupEventsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public LookupEventsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static class LookupEventsRequestLookupAttribute extends TeaModel {

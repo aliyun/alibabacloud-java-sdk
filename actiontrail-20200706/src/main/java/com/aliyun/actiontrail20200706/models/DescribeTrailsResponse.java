@@ -3,21 +3,21 @@ package com.aliyun.actiontrail20200706.models;
 
 import com.aliyun.tea.*;
 
-public class LookupEventsResponse extends TeaModel {
+public class DescribeTrailsResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public LookupEventsResponseBody body;
+    public DescribeTrailsResponseBody body;
 
-    public static LookupEventsResponse build(java.util.Map<String, ?> map) throws Exception {
-        LookupEventsResponse self = new LookupEventsResponse();
+    public static DescribeTrailsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeTrailsResponse self = new DescribeTrailsResponse();
         return TeaModel.build(map, self);
     }
 
-    public LookupEventsResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeTrailsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class LookupEventsResponse extends TeaModel {
         return this.headers;
     }
 
-    public LookupEventsResponse setBody(LookupEventsResponseBody body) {
+    public DescribeTrailsResponse setBody(DescribeTrailsResponseBody body) {
         this.body = body;
         return this;
     }
-    public LookupEventsResponseBody getBody() {
+    public DescribeTrailsResponseBody getBody() {
         return this.body;
     }
 
