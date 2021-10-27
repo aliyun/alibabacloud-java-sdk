@@ -4,34 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeShardTaskInfoResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public DescribeShardTaskInfoResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public DescribeShardTaskInfoResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeShardTaskInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeShardTaskInfoResponseBody self = new DescribeShardTaskInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeShardTaskInfoResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeShardTaskInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeShardTaskInfoResponseBody setData(DescribeShardTaskInfoResponseBodyData data) {
@@ -42,57 +26,41 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DescribeShardTaskInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeShardTaskInfoResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeShardTaskInfoResponseBodyDataFull extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
+        @NameInMap("Expired")
+        public Integer expired;
 
         @NameInMap("Progress")
         public Integer progress;
 
-        @NameInMap("Tps")
-        public Integer tps;
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("Total")
         public Integer total;
 
-        @NameInMap("Expired")
-        public Integer expired;
+        @NameInMap("Tps")
+        public Integer tps;
 
         public static DescribeShardTaskInfoResponseBodyDataFull build(java.util.Map<String, ?> map) throws Exception {
             DescribeShardTaskInfoResponseBodyDataFull self = new DescribeShardTaskInfoResponseBodyDataFull();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataFull setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataFull setProgress(Integer progress) {
-            this.progress = progress;
-            return this;
-        }
-        public Integer getProgress() {
-            return this.progress;
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataFull setTps(Integer tps) {
-            this.tps = tps;
-            return this;
-        }
-        public Integer getTps() {
-            return this.tps;
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataFull setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
         }
 
         public DescribeShardTaskInfoResponseBodyDataFull setExpired(Integer expired) {
@@ -103,38 +71,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.expired;
         }
 
-    }
-
-    public static class DescribeShardTaskInfoResponseBodyDataFullCheck extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Progress")
-        public Integer progress;
-
-        @NameInMap("Tps")
-        public Integer tps;
-
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("Expired")
-        public Integer expired;
-
-        public static DescribeShardTaskInfoResponseBodyDataFullCheck build(java.util.Map<String, ?> map) throws Exception {
-            DescribeShardTaskInfoResponseBodyDataFullCheck self = new DescribeShardTaskInfoResponseBodyDataFullCheck();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataFullCheck setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataFullCheck setProgress(Integer progress) {
+        public DescribeShardTaskInfoResponseBodyDataFull setProgress(Integer progress) {
             this.progress = progress;
             return this;
         }
@@ -142,7 +79,23 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeShardTaskInfoResponseBodyDataFullCheck setTps(Integer tps) {
+        public DescribeShardTaskInfoResponseBodyDataFull setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeShardTaskInfoResponseBodyDataFull setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
+        public DescribeShardTaskInfoResponseBodyDataFull setTps(Integer tps) {
             this.tps = tps;
             return this;
         }
@@ -150,12 +103,27 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.tps;
         }
 
-        public DescribeShardTaskInfoResponseBodyDataFullCheck setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
+    }
+
+    public static class DescribeShardTaskInfoResponseBodyDataFullCheck extends TeaModel {
+        @NameInMap("Expired")
+        public Integer expired;
+
+        @NameInMap("Progress")
+        public Integer progress;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Total")
+        public Integer total;
+
+        @NameInMap("Tps")
+        public Integer tps;
+
+        public static DescribeShardTaskInfoResponseBodyDataFullCheck build(java.util.Map<String, ?> map) throws Exception {
+            DescribeShardTaskInfoResponseBodyDataFullCheck self = new DescribeShardTaskInfoResponseBodyDataFullCheck();
+            return TeaModel.build(map, self);
         }
 
         public DescribeShardTaskInfoResponseBodyDataFullCheck setExpired(Integer expired) {
@@ -166,38 +134,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.expired;
         }
 
-    }
-
-    public static class DescribeShardTaskInfoResponseBodyDataFullRevise extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Progress")
-        public Integer progress;
-
-        @NameInMap("Tps")
-        public Integer tps;
-
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("Expired")
-        public Integer expired;
-
-        public static DescribeShardTaskInfoResponseBodyDataFullRevise build(java.util.Map<String, ?> map) throws Exception {
-            DescribeShardTaskInfoResponseBodyDataFullRevise self = new DescribeShardTaskInfoResponseBodyDataFullRevise();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataFullRevise setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataFullRevise setProgress(Integer progress) {
+        public DescribeShardTaskInfoResponseBodyDataFullCheck setProgress(Integer progress) {
             this.progress = progress;
             return this;
         }
@@ -205,7 +142,23 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeShardTaskInfoResponseBodyDataFullRevise setTps(Integer tps) {
+        public DescribeShardTaskInfoResponseBodyDataFullCheck setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeShardTaskInfoResponseBodyDataFullCheck setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
+        public DescribeShardTaskInfoResponseBodyDataFullCheck setTps(Integer tps) {
             this.tps = tps;
             return this;
         }
@@ -213,12 +166,27 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.tps;
         }
 
-        public DescribeShardTaskInfoResponseBodyDataFullRevise setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
+    }
+
+    public static class DescribeShardTaskInfoResponseBodyDataFullRevise extends TeaModel {
+        @NameInMap("Expired")
+        public Integer expired;
+
+        @NameInMap("Progress")
+        public Integer progress;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Total")
+        public Integer total;
+
+        @NameInMap("Tps")
+        public Integer tps;
+
+        public static DescribeShardTaskInfoResponseBodyDataFullRevise build(java.util.Map<String, ?> map) throws Exception {
+            DescribeShardTaskInfoResponseBodyDataFullRevise self = new DescribeShardTaskInfoResponseBodyDataFullRevise();
+            return TeaModel.build(map, self);
         }
 
         public DescribeShardTaskInfoResponseBodyDataFullRevise setExpired(Integer expired) {
@@ -229,38 +197,7 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.expired;
         }
 
-    }
-
-    public static class DescribeShardTaskInfoResponseBodyDataReview extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Progress")
-        public Integer progress;
-
-        @NameInMap("Tps")
-        public Integer tps;
-
-        @NameInMap("Total")
-        public Integer total;
-
-        @NameInMap("Expired")
-        public Integer expired;
-
-        public static DescribeShardTaskInfoResponseBodyDataReview build(java.util.Map<String, ?> map) throws Exception {
-            DescribeShardTaskInfoResponseBodyDataReview self = new DescribeShardTaskInfoResponseBodyDataReview();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataReview setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeShardTaskInfoResponseBodyDataReview setProgress(Integer progress) {
+        public DescribeShardTaskInfoResponseBodyDataFullRevise setProgress(Integer progress) {
             this.progress = progress;
             return this;
         }
@@ -268,15 +205,15 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeShardTaskInfoResponseBodyDataReview setTps(Integer tps) {
-            this.tps = tps;
+        public DescribeShardTaskInfoResponseBodyDataFullRevise setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public Integer getTps() {
-            return this.tps;
+        public String getStartTime() {
+            return this.startTime;
         }
 
-        public DescribeShardTaskInfoResponseBodyDataReview setTotal(Integer total) {
+        public DescribeShardTaskInfoResponseBodyDataFullRevise setTotal(Integer total) {
             this.total = total;
             return this;
         }
@@ -284,12 +221,12 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.total;
         }
 
-        public DescribeShardTaskInfoResponseBodyDataReview setExpired(Integer expired) {
-            this.expired = expired;
+        public DescribeShardTaskInfoResponseBodyDataFullRevise setTps(Integer tps) {
+            this.tps = tps;
             return this;
         }
-        public Integer getExpired() {
-            return this.expired;
+        public Integer getTps() {
+            return this.tps;
         }
 
     }
@@ -335,24 +272,72 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeShardTaskInfoResponseBodyData extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Stage")
-        public String stage;
+    public static class DescribeShardTaskInfoResponseBodyDataReview extends TeaModel {
+        @NameInMap("Expired")
+        public Integer expired;
 
         @NameInMap("Progress")
-        public String progress;
+        public Integer progress;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Total")
+        public Integer total;
+
+        @NameInMap("Tps")
+        public Integer tps;
+
+        public static DescribeShardTaskInfoResponseBodyDataReview build(java.util.Map<String, ?> map) throws Exception {
+            DescribeShardTaskInfoResponseBodyDataReview self = new DescribeShardTaskInfoResponseBodyDataReview();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeShardTaskInfoResponseBodyDataReview setExpired(Integer expired) {
+            this.expired = expired;
+            return this;
+        }
+        public Integer getExpired() {
+            return this.expired;
+        }
+
+        public DescribeShardTaskInfoResponseBodyDataReview setProgress(Integer progress) {
+            this.progress = progress;
+            return this;
+        }
+        public Integer getProgress() {
+            return this.progress;
+        }
+
+        public DescribeShardTaskInfoResponseBodyDataReview setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeShardTaskInfoResponseBodyDataReview setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
+        public DescribeShardTaskInfoResponseBodyDataReview setTps(Integer tps) {
+            this.tps = tps;
+            return this;
+        }
+        public Integer getTps() {
+            return this.tps;
+        }
+
+    }
+
+    public static class DescribeShardTaskInfoResponseBodyData extends TeaModel {
         @NameInMap("Expired")
         public String expired;
-
-        @NameInMap("TargetTableName")
-        public String targetTableName;
-
-        @NameInMap("SourceTableName")
-        public String sourceTableName;
 
         @NameInMap("Full")
         public DescribeShardTaskInfoResponseBodyDataFull full;
@@ -363,39 +348,30 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         @NameInMap("FullRevise")
         public DescribeShardTaskInfoResponseBodyDataFullRevise fullRevise;
 
+        @NameInMap("Increment")
+        public DescribeShardTaskInfoResponseBodyDataIncrement increment;
+
+        @NameInMap("Progress")
+        public String progress;
+
         @NameInMap("Review")
         public DescribeShardTaskInfoResponseBodyDataReview review;
 
-        @NameInMap("Increment")
-        public DescribeShardTaskInfoResponseBodyDataIncrement increment;
+        @NameInMap("SourceTableName")
+        public String sourceTableName;
+
+        @NameInMap("Stage")
+        public String stage;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TargetTableName")
+        public String targetTableName;
 
         public static DescribeShardTaskInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeShardTaskInfoResponseBodyData self = new DescribeShardTaskInfoResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeShardTaskInfoResponseBodyData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeShardTaskInfoResponseBodyData setStage(String stage) {
-            this.stage = stage;
-            return this;
-        }
-        public String getStage() {
-            return this.stage;
-        }
-
-        public DescribeShardTaskInfoResponseBodyData setProgress(String progress) {
-            this.progress = progress;
-            return this;
-        }
-        public String getProgress() {
-            return this.progress;
         }
 
         public DescribeShardTaskInfoResponseBodyData setExpired(String expired) {
@@ -404,22 +380,6 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
         }
         public String getExpired() {
             return this.expired;
-        }
-
-        public DescribeShardTaskInfoResponseBodyData setTargetTableName(String targetTableName) {
-            this.targetTableName = targetTableName;
-            return this;
-        }
-        public String getTargetTableName() {
-            return this.targetTableName;
-        }
-
-        public DescribeShardTaskInfoResponseBodyData setSourceTableName(String sourceTableName) {
-            this.sourceTableName = sourceTableName;
-            return this;
-        }
-        public String getSourceTableName() {
-            return this.sourceTableName;
         }
 
         public DescribeShardTaskInfoResponseBodyData setFull(DescribeShardTaskInfoResponseBodyDataFull full) {
@@ -446,6 +406,22 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.fullRevise;
         }
 
+        public DescribeShardTaskInfoResponseBodyData setIncrement(DescribeShardTaskInfoResponseBodyDataIncrement increment) {
+            this.increment = increment;
+            return this;
+        }
+        public DescribeShardTaskInfoResponseBodyDataIncrement getIncrement() {
+            return this.increment;
+        }
+
+        public DescribeShardTaskInfoResponseBodyData setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
         public DescribeShardTaskInfoResponseBodyData setReview(DescribeShardTaskInfoResponseBodyDataReview review) {
             this.review = review;
             return this;
@@ -454,12 +430,36 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
             return this.review;
         }
 
-        public DescribeShardTaskInfoResponseBodyData setIncrement(DescribeShardTaskInfoResponseBodyDataIncrement increment) {
-            this.increment = increment;
+        public DescribeShardTaskInfoResponseBodyData setSourceTableName(String sourceTableName) {
+            this.sourceTableName = sourceTableName;
             return this;
         }
-        public DescribeShardTaskInfoResponseBodyDataIncrement getIncrement() {
-            return this.increment;
+        public String getSourceTableName() {
+            return this.sourceTableName;
+        }
+
+        public DescribeShardTaskInfoResponseBodyData setStage(String stage) {
+            this.stage = stage;
+            return this;
+        }
+        public String getStage() {
+            return this.stage;
+        }
+
+        public DescribeShardTaskInfoResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeShardTaskInfoResponseBodyData setTargetTableName(String targetTableName) {
+            this.targetTableName = targetTableName;
+            return this;
+        }
+        public String getTargetTableName() {
+            return this.targetTableName;
         }
 
     }

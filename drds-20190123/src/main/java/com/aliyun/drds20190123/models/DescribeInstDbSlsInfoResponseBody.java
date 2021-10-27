@@ -4,26 +4,26 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("AuditInfo")
+    public DescribeInstDbSlsInfoResponseBodyAuditInfo auditInfo;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AuditInfo")
-    public DescribeInstDbSlsInfoResponseBodyAuditInfo auditInfo;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeInstDbSlsInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstDbSlsInfoResponseBody self = new DescribeInstDbSlsInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstDbSlsInfoResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeInstDbSlsInfoResponseBody setAuditInfo(DescribeInstDbSlsInfoResponseBodyAuditInfo auditInfo) {
+        this.auditInfo = auditInfo;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public DescribeInstDbSlsInfoResponseBodyAuditInfo getAuditInfo() {
+        return this.auditInfo;
     }
 
     public DescribeInstDbSlsInfoResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstDbSlsInfoResponseBody setAuditInfo(DescribeInstDbSlsInfoResponseBodyAuditInfo auditInfo) {
-        this.auditInfo = auditInfo;
+    public DescribeInstDbSlsInfoResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeInstDbSlsInfoResponseBodyAuditInfo getAuditInfo() {
-        return this.auditInfo;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeInstDbSlsInfoResponseBodyAuditInfo extends TeaModel {

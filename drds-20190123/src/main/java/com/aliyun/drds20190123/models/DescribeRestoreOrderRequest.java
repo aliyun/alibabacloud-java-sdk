@@ -4,59 +4,27 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreOrderRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
-    @NameInMap("PreferredBackupTime")
-    public String preferredBackupTime;
-
-    @NameInMap("BackupMode")
-    public String backupMode;
-
-    @NameInMap("BackupLevel")
-    public String backupLevel;
-
     @NameInMap("BackupDbNames")
     public String backupDbNames;
 
     @NameInMap("BackupId")
     public String backupId;
 
+    @NameInMap("BackupLevel")
+    public String backupLevel;
+
+    @NameInMap("BackupMode")
+    public String backupMode;
+
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
+
+    @NameInMap("PreferredBackupTime")
+    public String preferredBackupTime;
+
     public static DescribeRestoreOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRestoreOrderRequest self = new DescribeRestoreOrderRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRestoreOrderRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
-    }
-
-    public DescribeRestoreOrderRequest setPreferredBackupTime(String preferredBackupTime) {
-        this.preferredBackupTime = preferredBackupTime;
-        return this;
-    }
-    public String getPreferredBackupTime() {
-        return this.preferredBackupTime;
-    }
-
-    public DescribeRestoreOrderRequest setBackupMode(String backupMode) {
-        this.backupMode = backupMode;
-        return this;
-    }
-    public String getBackupMode() {
-        return this.backupMode;
-    }
-
-    public DescribeRestoreOrderRequest setBackupLevel(String backupLevel) {
-        this.backupLevel = backupLevel;
-        return this;
-    }
-    public String getBackupLevel() {
-        return this.backupLevel;
     }
 
     public DescribeRestoreOrderRequest setBackupDbNames(String backupDbNames) {
@@ -73,6 +41,38 @@ public class DescribeRestoreOrderRequest extends TeaModel {
     }
     public String getBackupId() {
         return this.backupId;
+    }
+
+    public DescribeRestoreOrderRequest setBackupLevel(String backupLevel) {
+        this.backupLevel = backupLevel;
+        return this;
+    }
+    public String getBackupLevel() {
+        return this.backupLevel;
+    }
+
+    public DescribeRestoreOrderRequest setBackupMode(String backupMode) {
+        this.backupMode = backupMode;
+        return this;
+    }
+    public String getBackupMode() {
+        return this.backupMode;
+    }
+
+    public DescribeRestoreOrderRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
+    }
+
+    public DescribeRestoreOrderRequest setPreferredBackupTime(String preferredBackupTime) {
+        this.preferredBackupTime = preferredBackupTime;
+        return this;
+    }
+    public String getPreferredBackupTime() {
+        return this.preferredBackupTime;
     }
 
 }

@@ -4,26 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTimesResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("RestoreTime")
     public DescribeBackupTimesResponseBodyRestoreTime restoreTime;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeBackupTimesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupTimesResponseBody self = new DescribeBackupTimesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBackupTimesResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeBackupTimesResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
     }
     public DescribeBackupTimesResponseBodyRestoreTime getRestoreTime() {
         return this.restoreTime;
+    }
+
+    public DescribeBackupTimesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeBackupTimesResponseBodyRestoreTime extends TeaModel {

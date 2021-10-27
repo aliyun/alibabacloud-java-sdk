@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ModifyDrdsInstanceDescriptionRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     public static ModifyDrdsInstanceDescriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDrdsInstanceDescriptionRequest self = new ModifyDrdsInstanceDescriptionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDrdsInstanceDescriptionRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public ModifyDrdsInstanceDescriptionRequest setDescription(String description) {
@@ -29,6 +21,14 @@ public class ModifyDrdsInstanceDescriptionRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyDrdsInstanceDescriptionRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
 }

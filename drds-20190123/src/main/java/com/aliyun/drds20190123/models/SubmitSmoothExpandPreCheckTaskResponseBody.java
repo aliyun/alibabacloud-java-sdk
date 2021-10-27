@@ -10,11 +10,11 @@ public class SubmitSmoothExpandPreCheckTaskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TaskId")
-    public Long taskId;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static SubmitSmoothExpandPreCheckTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmoothExpandPreCheckTaskResponseBody self = new SubmitSmoothExpandPreCheckTaskResponseBody();
@@ -37,20 +37,20 @@ public class SubmitSmoothExpandPreCheckTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SubmitSmoothExpandPreCheckTaskResponseBody setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
-    }
-
     public SubmitSmoothExpandPreCheckTaskResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public SubmitSmoothExpandPreCheckTaskResponseBody setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

@@ -4,26 +4,26 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAccountsResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("InstanceAccounts")
+    public DescribeInstanceAccountsResponseBodyInstanceAccounts instanceAccounts;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InstanceAccounts")
-    public DescribeInstanceAccountsResponseBodyInstanceAccounts instanceAccounts;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeInstanceAccountsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAccountsResponseBody self = new DescribeInstanceAccountsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceAccountsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeInstanceAccountsResponseBody setInstanceAccounts(DescribeInstanceAccountsResponseBodyInstanceAccounts instanceAccounts) {
+        this.instanceAccounts = instanceAccounts;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public DescribeInstanceAccountsResponseBodyInstanceAccounts getInstanceAccounts() {
+        return this.instanceAccounts;
     }
 
     public DescribeInstanceAccountsResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstanceAccountsResponseBody setInstanceAccounts(DescribeInstanceAccountsResponseBodyInstanceAccounts instanceAccounts) {
-        this.instanceAccounts = instanceAccounts;
+    public DescribeInstanceAccountsResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeInstanceAccountsResponseBodyInstanceAccounts getInstanceAccounts() {
-        return this.instanceAccounts;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivilegesDbPrivilege extends TeaModel {
@@ -92,48 +92,24 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount extends TeaModel {
-        @NameInMap("Host")
-        public String host;
-
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("AccountType")
         public Integer accountType;
 
-        @NameInMap("AccountName")
-        public String accountName;
-
         @NameInMap("DbPrivileges")
         public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivileges dbPrivileges;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Host")
+        public String host;
 
         public static DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount self = new DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount setHost(String host) {
-            this.host = host;
-            return this;
-        }
-        public String getHost() {
-            return this.host;
-        }
-
-        public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount setAccountType(Integer accountType) {
-            this.accountType = accountType;
-            return this;
-        }
-        public Integer getAccountType() {
-            return this.accountType;
         }
 
         public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount setAccountName(String accountName) {
@@ -144,12 +120,36 @@ public class DescribeInstanceAccountsResponseBody extends TeaModel {
             return this.accountName;
         }
 
+        public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount setAccountType(Integer accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public Integer getAccountType() {
+            return this.accountType;
+        }
+
         public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount setDbPrivileges(DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivileges dbPrivileges) {
             this.dbPrivileges = dbPrivileges;
             return this;
         }
         public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccountDbPrivileges getDbPrivileges() {
             return this.dbPrivileges;
+        }
+
+        public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeInstanceAccountsResponseBodyInstanceAccountsInstanceAccount setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
         }
 
     }

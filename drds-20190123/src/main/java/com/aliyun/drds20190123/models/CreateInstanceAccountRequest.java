@@ -4,29 +4,21 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceAccountRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("AccountName")
     public String accountName;
-
-    @NameInMap("Password")
-    public String password;
 
     @NameInMap("DbPrivilege")
     public java.util.List<CreateInstanceAccountRequestDbPrivilege> dbPrivilege;
 
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
+
+    @NameInMap("Password")
+    public String password;
+
     public static CreateInstanceAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceAccountRequest self = new CreateInstanceAccountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateInstanceAccountRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public CreateInstanceAccountRequest setAccountName(String accountName) {
@@ -37,20 +29,28 @@ public class CreateInstanceAccountRequest extends TeaModel {
         return this.accountName;
     }
 
-    public CreateInstanceAccountRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
-    }
-
     public CreateInstanceAccountRequest setDbPrivilege(java.util.List<CreateInstanceAccountRequestDbPrivilege> dbPrivilege) {
         this.dbPrivilege = dbPrivilege;
         return this;
     }
     public java.util.List<CreateInstanceAccountRequestDbPrivilege> getDbPrivilege() {
         return this.dbPrivilege;
+    }
+
+    public CreateInstanceAccountRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
+    }
+
+    public CreateInstanceAccountRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
     }
 
     public static class CreateInstanceAccountRequestDbPrivilege extends TeaModel {

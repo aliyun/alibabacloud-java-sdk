@@ -4,23 +4,23 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeShardTaskListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("Query")
-    public String query;
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Query")
+    public String query;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("TaskType")
     public String taskType;
@@ -30,20 +30,12 @@ public class DescribeShardTaskListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeShardTaskListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeShardTaskListRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeShardTaskListRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeShardTaskListRequest setDbName(String dbName) {
@@ -54,12 +46,12 @@ public class DescribeShardTaskListRequest extends TeaModel {
         return this.dbName;
     }
 
-    public DescribeShardTaskListRequest setQuery(String query) {
-        this.query = query;
+    public DescribeShardTaskListRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public String getQuery() {
-        return this.query;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
     public DescribeShardTaskListRequest setPageSize(Integer pageSize) {
@@ -70,12 +62,20 @@ public class DescribeShardTaskListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeShardTaskListRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeShardTaskListRequest setQuery(String query) {
+        this.query = query;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getQuery() {
+        return this.query;
+    }
+
+    public DescribeShardTaskListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeShardTaskListRequest setTaskType(String taskType) {

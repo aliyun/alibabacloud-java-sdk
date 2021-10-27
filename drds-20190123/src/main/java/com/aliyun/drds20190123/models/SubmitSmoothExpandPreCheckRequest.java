@@ -4,26 +4,26 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmoothExpandPreCheckRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
+    @NameInMap("DbInstType")
+    public String dbInstType;
 
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("DbInstType")
-    public String dbInstType;
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     public static SubmitSmoothExpandPreCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmoothExpandPreCheckRequest self = new SubmitSmoothExpandPreCheckRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitSmoothExpandPreCheckRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
+    public SubmitSmoothExpandPreCheckRequest setDbInstType(String dbInstType) {
+        this.dbInstType = dbInstType;
         return this;
     }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
+    public String getDbInstType() {
+        return this.dbInstType;
     }
 
     public SubmitSmoothExpandPreCheckRequest setDbName(String dbName) {
@@ -34,12 +34,12 @@ public class SubmitSmoothExpandPreCheckRequest extends TeaModel {
         return this.dbName;
     }
 
-    public SubmitSmoothExpandPreCheckRequest setDbInstType(String dbInstType) {
-        this.dbInstType = dbInstType;
+    public SubmitSmoothExpandPreCheckRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public String getDbInstType() {
-        return this.dbInstType;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
 }

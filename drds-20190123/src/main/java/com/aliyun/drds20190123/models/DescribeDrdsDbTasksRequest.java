@@ -4,11 +4,11 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDbTasksRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("DbName")
     public String dbName;
+
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     @NameInMap("TaskType")
     public String taskType;
@@ -18,20 +18,20 @@ public class DescribeDrdsDbTasksRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsDbTasksRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
-    }
-
     public DescribeDrdsDbTasksRequest setDbName(String dbName) {
         this.dbName = dbName;
         return this;
     }
     public String getDbName() {
         return this.dbName;
+    }
+
+    public DescribeDrdsDbTasksRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
     public DescribeDrdsDbTasksRequest setTaskType(String taskType) {

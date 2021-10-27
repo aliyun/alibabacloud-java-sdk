@@ -4,26 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ShardingDbs")
     public DescribeDrdsShardingDbsResponseBodyShardingDbs shardingDbs;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeDrdsShardingDbsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsShardingDbsResponseBody self = new DescribeDrdsShardingDbsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsShardingDbsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeDrdsShardingDbsResponseBody setRequestId(String requestId) {
@@ -42,113 +34,57 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         return this.shardingDbs;
     }
 
+    public DescribeDrdsShardingDbsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb extends TeaModel {
-        @NameInMap("MinPoolSize")
-        public Integer minPoolSize;
-
-        @NameInMap("MaxPoolSize")
-        public Integer maxPoolSize;
-
-        @NameInMap("DbInstanceId")
-        public String dbInstanceId;
+        @NameInMap("BlockingTimeout")
+        public Integer blockingTimeout;
 
         @NameInMap("ConnectUrl")
         public String connectUrl;
 
-        @NameInMap("GroupName")
-        public String groupName;
-
-        @NameInMap("DbType")
-        public String dbType;
-
-        @NameInMap("IdleTimeOut")
-        public Integer idleTimeOut;
-
-        @NameInMap("ShardingDbName")
-        public String shardingDbName;
-
-        @NameInMap("BlockingTimeout")
-        public Integer blockingTimeout;
-
-        @NameInMap("PreparedStatementCacheSize")
-        public Integer preparedStatementCacheSize;
-
         @NameInMap("ConnectionProperties")
         public String connectionProperties;
 
-        @NameInMap("UserName")
-        public String userName;
+        @NameInMap("DbInstanceId")
+        public String dbInstanceId;
 
         @NameInMap("DbStatus")
         public String dbStatus;
 
+        @NameInMap("DbType")
+        public String dbType;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("IdleTimeOut")
+        public Integer idleTimeOut;
+
+        @NameInMap("MaxPoolSize")
+        public Integer maxPoolSize;
+
+        @NameInMap("MinPoolSize")
+        public Integer minPoolSize;
+
+        @NameInMap("PreparedStatementCacheSize")
+        public Integer preparedStatementCacheSize;
+
+        @NameInMap("ShardingDbName")
+        public String shardingDbName;
+
+        @NameInMap("UserName")
+        public String userName;
+
         public static DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb self = new DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setMinPoolSize(Integer minPoolSize) {
-            this.minPoolSize = minPoolSize;
-            return this;
-        }
-        public Integer getMinPoolSize() {
-            return this.minPoolSize;
-        }
-
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setMaxPoolSize(Integer maxPoolSize) {
-            this.maxPoolSize = maxPoolSize;
-            return this;
-        }
-        public Integer getMaxPoolSize() {
-            return this.maxPoolSize;
-        }
-
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setDbInstanceId(String dbInstanceId) {
-            this.dbInstanceId = dbInstanceId;
-            return this;
-        }
-        public String getDbInstanceId() {
-            return this.dbInstanceId;
-        }
-
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setConnectUrl(String connectUrl) {
-            this.connectUrl = connectUrl;
-            return this;
-        }
-        public String getConnectUrl() {
-            return this.connectUrl;
-        }
-
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setGroupName(String groupName) {
-            this.groupName = groupName;
-            return this;
-        }
-        public String getGroupName() {
-            return this.groupName;
-        }
-
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setDbType(String dbType) {
-            this.dbType = dbType;
-            return this;
-        }
-        public String getDbType() {
-            return this.dbType;
-        }
-
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setIdleTimeOut(Integer idleTimeOut) {
-            this.idleTimeOut = idleTimeOut;
-            return this;
-        }
-        public Integer getIdleTimeOut() {
-            return this.idleTimeOut;
-        }
-
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setShardingDbName(String shardingDbName) {
-            this.shardingDbName = shardingDbName;
-            return this;
-        }
-        public String getShardingDbName() {
-            return this.shardingDbName;
         }
 
         public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setBlockingTimeout(Integer blockingTimeout) {
@@ -159,12 +95,12 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             return this.blockingTimeout;
         }
 
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setPreparedStatementCacheSize(Integer preparedStatementCacheSize) {
-            this.preparedStatementCacheSize = preparedStatementCacheSize;
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setConnectUrl(String connectUrl) {
+            this.connectUrl = connectUrl;
             return this;
         }
-        public Integer getPreparedStatementCacheSize() {
-            return this.preparedStatementCacheSize;
+        public String getConnectUrl() {
+            return this.connectUrl;
         }
 
         public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setConnectionProperties(String connectionProperties) {
@@ -175,12 +111,12 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
             return this.connectionProperties;
         }
 
-        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setUserName(String userName) {
-            this.userName = userName;
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setDbInstanceId(String dbInstanceId) {
+            this.dbInstanceId = dbInstanceId;
             return this;
         }
-        public String getUserName() {
-            return this.userName;
+        public String getDbInstanceId() {
+            return this.dbInstanceId;
         }
 
         public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setDbStatus(String dbStatus) {
@@ -189,6 +125,70 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
         }
         public String getDbStatus() {
             return this.dbStatus;
+        }
+
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setDbType(String dbType) {
+            this.dbType = dbType;
+            return this;
+        }
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setIdleTimeOut(Integer idleTimeOut) {
+            this.idleTimeOut = idleTimeOut;
+            return this;
+        }
+        public Integer getIdleTimeOut() {
+            return this.idleTimeOut;
+        }
+
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setMaxPoolSize(Integer maxPoolSize) {
+            this.maxPoolSize = maxPoolSize;
+            return this;
+        }
+        public Integer getMaxPoolSize() {
+            return this.maxPoolSize;
+        }
+
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setMinPoolSize(Integer minPoolSize) {
+            this.minPoolSize = minPoolSize;
+            return this;
+        }
+        public Integer getMinPoolSize() {
+            return this.minPoolSize;
+        }
+
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setPreparedStatementCacheSize(Integer preparedStatementCacheSize) {
+            this.preparedStatementCacheSize = preparedStatementCacheSize;
+            return this;
+        }
+        public Integer getPreparedStatementCacheSize() {
+            return this.preparedStatementCacheSize;
+        }
+
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setShardingDbName(String shardingDbName) {
+            this.shardingDbName = shardingDbName;
+            return this;
+        }
+        public String getShardingDbName() {
+            return this.shardingDbName;
+        }
+
+        public DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

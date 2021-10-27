@@ -4,26 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public DescribeInstanceSwitchAzoneResponseBodyResult result;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static DescribeInstanceSwitchAzoneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceSwitchAzoneResponseBody self = new DescribeInstanceSwitchAzoneResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceSwitchAzoneResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DescribeInstanceSwitchAzoneResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
     }
     public DescribeInstanceSwitchAzoneResponseBodyResult getResult() {
         return this.result;
+    }
+
+    public DescribeInstanceSwitchAzoneResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeInstanceSwitchAzoneResponseBodyResultTargetAzones extends TeaModel {
@@ -65,11 +65,11 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
         @NameInMap("OriginAzoneId")
         public String originAzoneId;
 
-        @NameInMap("SwitchAble")
-        public Boolean switchAble;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("SwitchAble")
+        public Boolean switchAble;
 
         @NameInMap("TargetAzones")
         public DescribeInstanceSwitchAzoneResponseBodyResultTargetAzones targetAzones;
@@ -87,20 +87,20 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
             return this.originAzoneId;
         }
 
-        public DescribeInstanceSwitchAzoneResponseBodyResult setSwitchAble(Boolean switchAble) {
-            this.switchAble = switchAble;
-            return this;
-        }
-        public Boolean getSwitchAble() {
-            return this.switchAble;
-        }
-
         public DescribeInstanceSwitchAzoneResponseBodyResult setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeInstanceSwitchAzoneResponseBodyResult setSwitchAble(Boolean switchAble) {
+            this.switchAble = switchAble;
+            return this;
+        }
+        public Boolean getSwitchAble() {
+            return this.switchAble;
         }
 
         public DescribeInstanceSwitchAzoneResponseBodyResult setTargetAzones(DescribeInstanceSwitchAzoneResponseBodyResultTargetAzones targetAzones) {

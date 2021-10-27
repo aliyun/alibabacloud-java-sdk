@@ -4,6 +4,9 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeHotDbListResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public DescribeHotDbListResponseBodyData data;
+
     @NameInMap("Msg")
     public String msg;
 
@@ -13,12 +16,17 @@ public class DescribeHotDbListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public DescribeHotDbListResponseBodyData data;
-
     public static DescribeHotDbListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHotDbListResponseBody self = new DescribeHotDbListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeHotDbListResponseBody setData(DescribeHotDbListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeHotDbListResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeHotDbListResponseBody setMsg(String msg) {
@@ -45,14 +53,6 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeHotDbListResponseBody setData(DescribeHotDbListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeHotDbListResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class DescribeHotDbListResponseBodyDataListInstanceDbHotDbList extends TeaModel {
         @NameInMap("data")
         public java.util.List<String> data;
@@ -73,23 +73,15 @@ public class DescribeHotDbListResponseBody extends TeaModel {
     }
 
     public static class DescribeHotDbListResponseBodyDataListInstanceDb extends TeaModel {
-        @NameInMap("InstanceName")
-        public String instanceName;
-
         @NameInMap("HotDbList")
         public DescribeHotDbListResponseBodyDataListInstanceDbHotDbList hotDbList;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
 
         public static DescribeHotDbListResponseBodyDataListInstanceDb build(java.util.Map<String, ?> map) throws Exception {
             DescribeHotDbListResponseBodyDataListInstanceDb self = new DescribeHotDbListResponseBodyDataListInstanceDb();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeHotDbListResponseBodyDataListInstanceDb setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
         }
 
         public DescribeHotDbListResponseBodyDataListInstanceDb setHotDbList(DescribeHotDbListResponseBodyDataListInstanceDbHotDbList hotDbList) {
@@ -98,6 +90,14 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         }
         public DescribeHotDbListResponseBodyDataListInstanceDbHotDbList getHotDbList() {
             return this.hotDbList;
+        }
+
+        public DescribeHotDbListResponseBodyDataListInstanceDb setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
     }
@@ -122,23 +122,15 @@ public class DescribeHotDbListResponseBody extends TeaModel {
     }
 
     public static class DescribeHotDbListResponseBodyData extends TeaModel {
-        @NameInMap("RandomCode")
-        public String randomCode;
-
         @NameInMap("List")
         public DescribeHotDbListResponseBodyDataList list;
+
+        @NameInMap("RandomCode")
+        public String randomCode;
 
         public static DescribeHotDbListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeHotDbListResponseBodyData self = new DescribeHotDbListResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeHotDbListResponseBodyData setRandomCode(String randomCode) {
-            this.randomCode = randomCode;
-            return this;
-        }
-        public String getRandomCode() {
-            return this.randomCode;
         }
 
         public DescribeHotDbListResponseBodyData setList(DescribeHotDbListResponseBodyDataList list) {
@@ -147,6 +139,14 @@ public class DescribeHotDbListResponseBody extends TeaModel {
         }
         public DescribeHotDbListResponseBodyDataList getList() {
             return this.list;
+        }
+
+        public DescribeHotDbListResponseBodyData setRandomCode(String randomCode) {
+            this.randomCode = randomCode;
+            return this;
+        }
+        public String getRandomCode() {
+            return this.randomCode;
         }
 
     }

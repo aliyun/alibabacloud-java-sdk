@@ -4,35 +4,35 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableListByTypeResponseBody extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("List")
+    public java.util.List<DescribeTableListByTypeResponseBodyList> list;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Total")
-    public Integer total;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("List")
-    public java.util.List<DescribeTableListByTypeResponseBodyList> list;
+    @NameInMap("Total")
+    public Integer total;
 
     public static DescribeTableListByTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTableListByTypeResponseBody self = new DescribeTableListByTypeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTableListByTypeResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeTableListByTypeResponseBody setList(java.util.List<DescribeTableListByTypeResponseBodyList> list) {
+        this.list = list;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public java.util.List<DescribeTableListByTypeResponseBodyList> getList() {
+        return this.list;
     }
 
     public DescribeTableListByTypeResponseBody setPageNumber(Integer pageNumber) {
@@ -43,20 +43,20 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeTableListByTypeResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeTableListByTypeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeTableListByTypeResponseBody setTotal(Integer total) {
-        this.total = total;
-        return this;
-    }
-    public Integer getTotal() {
-        return this.total;
     }
 
     public DescribeTableListByTypeResponseBody setSuccess(Boolean success) {
@@ -67,12 +67,12 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeTableListByTypeResponseBody setList(java.util.List<DescribeTableListByTypeResponseBodyList> list) {
-        this.list = list;
+    public DescribeTableListByTypeResponseBody setTotal(Integer total) {
+        this.total = total;
         return this;
     }
-    public java.util.List<DescribeTableListByTypeResponseBodyList> getList() {
-        return this.list;
+    public Integer getTotal() {
+        return this.total;
     }
 
     public static class DescribeTableListByTypeResponseBodyList extends TeaModel {

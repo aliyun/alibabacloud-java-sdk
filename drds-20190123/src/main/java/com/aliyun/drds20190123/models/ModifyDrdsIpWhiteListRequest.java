@@ -4,11 +4,17 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ModifyDrdsIpWhiteListRequest extends TeaModel {
+    @NameInMap("DbName")
+    public String dbName;
+
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
-    @NameInMap("DbName")
-    public String dbName;
+    @NameInMap("GroupAttribute")
+    public String groupAttribute;
+
+    @NameInMap("GroupName")
+    public String groupName;
 
     @NameInMap("IpWhiteList")
     public String ipWhiteList;
@@ -16,15 +22,17 @@ public class ModifyDrdsIpWhiteListRequest extends TeaModel {
     @NameInMap("Mode")
     public Boolean mode;
 
-    @NameInMap("GroupName")
-    public String groupName;
-
-    @NameInMap("GroupAttribute")
-    public String groupAttribute;
-
     public static ModifyDrdsIpWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDrdsIpWhiteListRequest self = new ModifyDrdsIpWhiteListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDrdsIpWhiteListRequest setDbName(String dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+    public String getDbName() {
+        return this.dbName;
     }
 
     public ModifyDrdsIpWhiteListRequest setDrdsInstanceId(String drdsInstanceId) {
@@ -35,12 +43,20 @@ public class ModifyDrdsIpWhiteListRequest extends TeaModel {
         return this.drdsInstanceId;
     }
 
-    public ModifyDrdsIpWhiteListRequest setDbName(String dbName) {
-        this.dbName = dbName;
+    public ModifyDrdsIpWhiteListRequest setGroupAttribute(String groupAttribute) {
+        this.groupAttribute = groupAttribute;
         return this;
     }
-    public String getDbName() {
-        return this.dbName;
+    public String getGroupAttribute() {
+        return this.groupAttribute;
+    }
+
+    public ModifyDrdsIpWhiteListRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
     }
 
     public ModifyDrdsIpWhiteListRequest setIpWhiteList(String ipWhiteList) {
@@ -57,22 +73,6 @@ public class ModifyDrdsIpWhiteListRequest extends TeaModel {
     }
     public Boolean getMode() {
         return this.mode;
-    }
-
-    public ModifyDrdsIpWhiteListRequest setGroupName(String groupName) {
-        this.groupName = groupName;
-        return this;
-    }
-    public String getGroupName() {
-        return this.groupName;
-    }
-
-    public ModifyDrdsIpWhiteListRequest setGroupAttribute(String groupAttribute) {
-        this.groupAttribute = groupAttribute;
-        return this;
-    }
-    public String getGroupAttribute() {
-        return this.groupAttribute;
     }
 
 }

@@ -4,11 +4,11 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ModifyRdsReadWeightRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("DbName")
     public String dbName;
+
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     @NameInMap("InstanceNames")
     public String instanceNames;
@@ -21,20 +21,20 @@ public class ModifyRdsReadWeightRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyRdsReadWeightRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
-    }
-
     public ModifyRdsReadWeightRequest setDbName(String dbName) {
         this.dbName = dbName;
         return this;
     }
     public String getDbName() {
         return this.dbName;
+    }
+
+    public ModifyRdsReadWeightRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
     public ModifyRdsReadWeightRequest setInstanceNames(String instanceNames) {

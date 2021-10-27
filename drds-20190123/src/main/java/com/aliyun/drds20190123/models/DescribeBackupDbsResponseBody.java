@@ -4,26 +4,26 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDbsResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("DbNames")
+    public DescribeBackupDbsResponseBodyDbNames dbNames;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DbNames")
-    public DescribeBackupDbsResponseBodyDbNames dbNames;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeBackupDbsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupDbsResponseBody self = new DescribeBackupDbsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupDbsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeBackupDbsResponseBody setDbNames(DescribeBackupDbsResponseBodyDbNames dbNames) {
+        this.dbNames = dbNames;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public DescribeBackupDbsResponseBodyDbNames getDbNames() {
+        return this.dbNames;
     }
 
     public DescribeBackupDbsResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeBackupDbsResponseBody setDbNames(DescribeBackupDbsResponseBodyDbNames dbNames) {
-        this.dbNames = dbNames;
+    public DescribeBackupDbsResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeBackupDbsResponseBodyDbNames getDbNames() {
-        return this.dbNames;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeBackupDbsResponseBodyDbNames extends TeaModel {

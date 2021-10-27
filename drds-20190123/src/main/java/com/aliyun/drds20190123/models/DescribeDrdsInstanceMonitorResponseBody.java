@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public java.util.List<DescribeDrdsInstanceMonitorResponseBodyData> data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDrdsInstanceMonitorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsInstanceMonitorResponseBody self = new DescribeDrdsInstanceMonitorResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsInstanceMonitorResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDrdsInstanceMonitorResponseBody setData(java.util.List<DescribeDrdsInstanceMonitorResponseBodyData> data) {
@@ -29,6 +21,14 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
     }
     public java.util.List<DescribeDrdsInstanceMonitorResponseBodyData> getData() {
         return this.data;
+    }
+
+    public DescribeDrdsInstanceMonitorResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeDrdsInstanceMonitorResponseBodyDataValues extends TeaModel {
@@ -65,11 +65,11 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("Unit")
-        public String unit;
-
         @NameInMap("NodeNum")
         public Integer nodeNum;
+
+        @NameInMap("Unit")
+        public String unit;
 
         @NameInMap("Values")
         public java.util.List<DescribeDrdsInstanceMonitorResponseBodyDataValues> values;
@@ -87,20 +87,20 @@ public class DescribeDrdsInstanceMonitorResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeDrdsInstanceMonitorResponseBodyData setUnit(String unit) {
-            this.unit = unit;
-            return this;
-        }
-        public String getUnit() {
-            return this.unit;
-        }
-
         public DescribeDrdsInstanceMonitorResponseBodyData setNodeNum(Integer nodeNum) {
             this.nodeNum = nodeNum;
             return this;
         }
         public Integer getNodeNum() {
             return this.nodeNum;
+        }
+
+        public DescribeDrdsInstanceMonitorResponseBodyData setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
         public DescribeDrdsInstanceMonitorResponseBodyData setValues(java.util.List<DescribeDrdsInstanceMonitorResponseBodyDataValues> values) {

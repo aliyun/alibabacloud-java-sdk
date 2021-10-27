@@ -4,23 +4,23 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableListByTypeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("Query")
-    public String query;
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Query")
+    public String query;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("TableType")
     public String tableType;
@@ -30,20 +30,12 @@ public class DescribeTableListByTypeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeTableListByTypeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeTableListByTypeRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeTableListByTypeRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeTableListByTypeRequest setDbName(String dbName) {
@@ -54,12 +46,12 @@ public class DescribeTableListByTypeRequest extends TeaModel {
         return this.dbName;
     }
 
-    public DescribeTableListByTypeRequest setQuery(String query) {
-        this.query = query;
+    public DescribeTableListByTypeRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public String getQuery() {
-        return this.query;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
     public DescribeTableListByTypeRequest setPageSize(Integer pageSize) {
@@ -70,12 +62,20 @@ public class DescribeTableListByTypeRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeTableListByTypeRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeTableListByTypeRequest setQuery(String query) {
+        this.query = query;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getQuery() {
+        return this.query;
+    }
+
+    public DescribeTableListByTypeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeTableListByTypeRequest setTableType(String tableType) {

@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceNetworkResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static UpdateInstanceNetworkResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceNetworkResponseBody self = new UpdateInstanceNetworkResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateInstanceNetworkResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public UpdateInstanceNetworkResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class UpdateInstanceNetworkResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateInstanceNetworkResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

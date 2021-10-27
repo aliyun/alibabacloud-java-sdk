@@ -4,26 +4,26 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public java.util.List<DescribeDrdsInstanceDbMonitorResponseBodyData> data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<DescribeDrdsInstanceDbMonitorResponseBodyData> data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeDrdsInstanceDbMonitorResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsInstanceDbMonitorResponseBody self = new DescribeDrdsInstanceDbMonitorResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsInstanceDbMonitorResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeDrdsInstanceDbMonitorResponseBody setData(java.util.List<DescribeDrdsInstanceDbMonitorResponseBodyData> data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.List<DescribeDrdsInstanceDbMonitorResponseBodyData> getData() {
+        return this.data;
     }
 
     public DescribeDrdsInstanceDbMonitorResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDrdsInstanceDbMonitorResponseBody setData(java.util.List<DescribeDrdsInstanceDbMonitorResponseBodyData> data) {
-        this.data = data;
+    public DescribeDrdsInstanceDbMonitorResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public java.util.List<DescribeDrdsInstanceDbMonitorResponseBodyData> getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeDrdsInstanceDbMonitorResponseBodyDataValues extends TeaModel {

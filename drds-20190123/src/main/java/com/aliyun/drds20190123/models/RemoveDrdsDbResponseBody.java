@@ -4,23 +4,15 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class RemoveDrdsDbResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static RemoveDrdsDbResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveDrdsDbResponseBody self = new RemoveDrdsDbResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveDrdsDbResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public RemoveDrdsDbResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class RemoveDrdsDbResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public RemoveDrdsDbResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

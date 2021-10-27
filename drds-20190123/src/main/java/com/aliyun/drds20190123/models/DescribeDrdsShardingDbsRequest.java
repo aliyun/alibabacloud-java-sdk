@@ -4,26 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsShardingDbsRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
-
     @NameInMap("DbName")
     public String dbName;
 
     @NameInMap("DbNamePattern")
     public String dbNamePattern;
 
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
+
     public static DescribeDrdsShardingDbsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsShardingDbsRequest self = new DescribeDrdsShardingDbsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsShardingDbsRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
-        return this;
-    }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
     }
 
     public DescribeDrdsShardingDbsRequest setDbName(String dbName) {
@@ -40,6 +32,14 @@ public class DescribeDrdsShardingDbsRequest extends TeaModel {
     }
     public String getDbNamePattern() {
         return this.dbNamePattern;
+    }
+
+    public DescribeDrdsShardingDbsRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
 }

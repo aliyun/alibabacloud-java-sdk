@@ -4,14 +4,14 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitHotExpandPreCheckTaskRequest extends TeaModel {
-    @NameInMap("DrdsInstanceId")
-    public String drdsInstanceId;
+    @NameInMap("DbInstType")
+    public String dbInstType;
 
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("DbInstType")
-    public String dbInstType;
+    @NameInMap("DrdsInstanceId")
+    public String drdsInstanceId;
 
     @NameInMap("TableList")
     public java.util.List<String> tableList;
@@ -21,12 +21,12 @@ public class SubmitHotExpandPreCheckTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SubmitHotExpandPreCheckTaskRequest setDrdsInstanceId(String drdsInstanceId) {
-        this.drdsInstanceId = drdsInstanceId;
+    public SubmitHotExpandPreCheckTaskRequest setDbInstType(String dbInstType) {
+        this.dbInstType = dbInstType;
         return this;
     }
-    public String getDrdsInstanceId() {
-        return this.drdsInstanceId;
+    public String getDbInstType() {
+        return this.dbInstType;
     }
 
     public SubmitHotExpandPreCheckTaskRequest setDbName(String dbName) {
@@ -37,12 +37,12 @@ public class SubmitHotExpandPreCheckTaskRequest extends TeaModel {
         return this.dbName;
     }
 
-    public SubmitHotExpandPreCheckTaskRequest setDbInstType(String dbInstType) {
-        this.dbInstType = dbInstType;
+    public SubmitHotExpandPreCheckTaskRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
         return this;
     }
-    public String getDbInstType() {
-        return this.dbInstType;
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
     }
 
     public SubmitHotExpandPreCheckTaskRequest setTableList(java.util.List<String> tableList) {

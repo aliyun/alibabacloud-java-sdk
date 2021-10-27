@@ -4,11 +4,11 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("VpcInfos")
     public DescribeInstanceSwitchNetworkResponseBodyVpcInfos vpcInfos;
@@ -18,20 +18,20 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceSwitchNetworkResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public DescribeInstanceSwitchNetworkResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeInstanceSwitchNetworkResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DescribeInstanceSwitchNetworkResponseBody setVpcInfos(DescribeInstanceSwitchNetworkResponseBodyVpcInfos vpcInfos) {
@@ -43,17 +43,17 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo extends TeaModel {
-        @NameInMap("VpcId")
-        public String vpcId;
+        @NameInMap("AzoneId")
+        public String azoneId;
 
         @NameInMap("DrdsSupported")
         public Boolean drdsSupported;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
         @NameInMap("VswitchId")
         public String vswitchId;
-
-        @NameInMap("AzoneId")
-        public String azoneId;
 
         @NameInMap("VswitchName")
         public String vswitchName;
@@ -63,12 +63,12 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo setVpcId(String vpcId) {
-            this.vpcId = vpcId;
+        public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo setAzoneId(String azoneId) {
+            this.azoneId = azoneId;
             return this;
         }
-        public String getVpcId() {
-            return this.vpcId;
+        public String getAzoneId() {
+            return this.azoneId;
         }
 
         public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo setDrdsSupported(Boolean drdsSupported) {
@@ -79,20 +79,20 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
             return this.drdsSupported;
         }
 
+        public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo setVswitchId(String vswitchId) {
             this.vswitchId = vswitchId;
             return this;
         }
         public String getVswitchId() {
             return this.vswitchId;
-        }
-
-        public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo setAzoneId(String azoneId) {
-            this.azoneId = azoneId;
-            return this;
-        }
-        public String getAzoneId() {
-            return this.azoneId;
         }
 
         public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo setVswitchName(String vswitchName) {
@@ -125,14 +125,14 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo extends TeaModel {
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("VpcId")
         public String vpcId;
 
         @NameInMap("VpcName")
         public String vpcName;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         @NameInMap("VswitchInfos")
         public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfos vswitchInfos;
@@ -140,6 +140,14 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         public static DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo self = new DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo setVpcId(String vpcId) {
@@ -156,14 +164,6 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
         }
         public String getVpcName() {
             return this.vpcName;
-        }
-
-        public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo setVswitchInfos(DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfos vswitchInfos) {

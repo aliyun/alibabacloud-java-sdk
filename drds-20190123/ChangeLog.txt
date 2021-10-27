@@ -1,3 +1,6 @@
+2021-10-27 Version: 1.0.2
+- Fix some problem.
+
 2021-05-14 Version: 1.0.1
 - Support Private RDS management through OpenAPI.
 - ManagePrivateRds to do RDS information query and some management.

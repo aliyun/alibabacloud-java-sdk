@@ -4,34 +4,18 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public DescribeDrdsSqlAuditStatusResponseBodyData data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public DescribeDrdsSqlAuditStatusResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeDrdsSqlAuditStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsSqlAuditStatusResponseBody self = new DescribeDrdsSqlAuditStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDrdsSqlAuditStatusResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeDrdsSqlAuditStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDrdsSqlAuditStatusResponseBody setData(DescribeDrdsSqlAuditStatusResponseBodyData data) {
@@ -42,18 +26,28 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class DescribeDrdsSqlAuditStatusResponseBodyDataData extends TeaModel {
-        @NameInMap("ExtraSlsLogStore")
-        public String extraSlsLogStore;
+    public DescribeDrdsSqlAuditStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public DescribeDrdsSqlAuditStatusResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class DescribeDrdsSqlAuditStatusResponseBodyDataData extends TeaModel {
         @NameInMap("DbName")
         public String dbName;
 
         @NameInMap("Detailed")
         public String detailed;
-
-        @NameInMap("ExtraWriteEnabled")
-        public Boolean extraWriteEnabled;
 
         @NameInMap("Enabled")
         public String enabled;
@@ -61,20 +55,18 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
         @NameInMap("ExtraAliUid")
         public Long extraAliUid;
 
+        @NameInMap("ExtraSlsLogStore")
+        public String extraSlsLogStore;
+
         @NameInMap("ExtraSlsProject")
         public String extraSlsProject;
+
+        @NameInMap("ExtraWriteEnabled")
+        public Boolean extraWriteEnabled;
 
         public static DescribeDrdsSqlAuditStatusResponseBodyDataData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDrdsSqlAuditStatusResponseBodyDataData self = new DescribeDrdsSqlAuditStatusResponseBodyDataData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsSqlAuditStatusResponseBodyDataData setExtraSlsLogStore(String extraSlsLogStore) {
-            this.extraSlsLogStore = extraSlsLogStore;
-            return this;
-        }
-        public String getExtraSlsLogStore() {
-            return this.extraSlsLogStore;
         }
 
         public DescribeDrdsSqlAuditStatusResponseBodyDataData setDbName(String dbName) {
@@ -93,14 +85,6 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             return this.detailed;
         }
 
-        public DescribeDrdsSqlAuditStatusResponseBodyDataData setExtraWriteEnabled(Boolean extraWriteEnabled) {
-            this.extraWriteEnabled = extraWriteEnabled;
-            return this;
-        }
-        public Boolean getExtraWriteEnabled() {
-            return this.extraWriteEnabled;
-        }
-
         public DescribeDrdsSqlAuditStatusResponseBodyDataData setEnabled(String enabled) {
             this.enabled = enabled;
             return this;
@@ -117,12 +101,28 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
             return this.extraAliUid;
         }
 
+        public DescribeDrdsSqlAuditStatusResponseBodyDataData setExtraSlsLogStore(String extraSlsLogStore) {
+            this.extraSlsLogStore = extraSlsLogStore;
+            return this;
+        }
+        public String getExtraSlsLogStore() {
+            return this.extraSlsLogStore;
+        }
+
         public DescribeDrdsSqlAuditStatusResponseBodyDataData setExtraSlsProject(String extraSlsProject) {
             this.extraSlsProject = extraSlsProject;
             return this;
         }
         public String getExtraSlsProject() {
             return this.extraSlsProject;
+        }
+
+        public DescribeDrdsSqlAuditStatusResponseBodyDataData setExtraWriteEnabled(Boolean extraWriteEnabled) {
+            this.extraWriteEnabled = extraWriteEnabled;
+            return this;
+        }
+        public Boolean getExtraWriteEnabled() {
+            return this.extraWriteEnabled;
         }
 
     }

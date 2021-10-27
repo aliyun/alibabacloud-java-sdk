@@ -4,8 +4,8 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SetupDrdsParamsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("Data")
+    public java.util.List<SetupDrdsParamsRequestData> data;
 
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
@@ -13,20 +13,20 @@ public class SetupDrdsParamsRequest extends TeaModel {
     @NameInMap("ParamLevel")
     public String paramLevel;
 
-    @NameInMap("Data")
-    public java.util.List<SetupDrdsParamsRequestData> data;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static SetupDrdsParamsRequest build(java.util.Map<String, ?> map) throws Exception {
         SetupDrdsParamsRequest self = new SetupDrdsParamsRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetupDrdsParamsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public SetupDrdsParamsRequest setData(java.util.List<SetupDrdsParamsRequestData> data) {
+        this.data = data;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List<SetupDrdsParamsRequestData> getData() {
+        return this.data;
     }
 
     public SetupDrdsParamsRequest setDrdsInstanceId(String drdsInstanceId) {
@@ -45,17 +45,20 @@ public class SetupDrdsParamsRequest extends TeaModel {
         return this.paramLevel;
     }
 
-    public SetupDrdsParamsRequest setData(java.util.List<SetupDrdsParamsRequestData> data) {
-        this.data = data;
+    public SetupDrdsParamsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public java.util.List<SetupDrdsParamsRequestData> getData() {
-        return this.data;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public static class SetupDrdsParamsRequestData extends TeaModel {
         @NameInMap("DbName")
         public String dbName;
+
+        @NameInMap("ParamRanges")
+        public String paramRanges;
 
         @NameInMap("ParamType")
         public String paramType;
@@ -65,9 +68,6 @@ public class SetupDrdsParamsRequest extends TeaModel {
 
         @NameInMap("ParamVariableName")
         public String paramVariableName;
-
-        @NameInMap("ParamRanges")
-        public String paramRanges;
 
         public static SetupDrdsParamsRequestData build(java.util.Map<String, ?> map) throws Exception {
             SetupDrdsParamsRequestData self = new SetupDrdsParamsRequestData();
@@ -80,6 +80,14 @@ public class SetupDrdsParamsRequest extends TeaModel {
         }
         public String getDbName() {
             return this.dbName;
+        }
+
+        public SetupDrdsParamsRequestData setParamRanges(String paramRanges) {
+            this.paramRanges = paramRanges;
+            return this;
+        }
+        public String getParamRanges() {
+            return this.paramRanges;
         }
 
         public SetupDrdsParamsRequestData setParamType(String paramType) {
@@ -104,14 +112,6 @@ public class SetupDrdsParamsRequest extends TeaModel {
         }
         public String getParamVariableName() {
             return this.paramVariableName;
-        }
-
-        public SetupDrdsParamsRequestData setParamRanges(String paramRanges) {
-            this.paramRanges = paramRanges;
-            return this;
-        }
-        public String getParamRanges() {
-            return this.paramRanges;
         }
 
     }

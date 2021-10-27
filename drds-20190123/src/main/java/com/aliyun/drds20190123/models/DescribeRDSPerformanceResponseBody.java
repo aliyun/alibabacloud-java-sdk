@@ -4,26 +4,26 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRDSPerformanceResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public java.util.List<DescribeRDSPerformanceResponseBodyData> data;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public java.util.List<DescribeRDSPerformanceResponseBodyData> data;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static DescribeRDSPerformanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRDSPerformanceResponseBody self = new DescribeRDSPerformanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRDSPerformanceResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeRDSPerformanceResponseBody setData(java.util.List<DescribeRDSPerformanceResponseBodyData> data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.List<DescribeRDSPerformanceResponseBodyData> getData() {
+        return this.data;
     }
 
     public DescribeRDSPerformanceResponseBody setRequestId(String requestId) {
@@ -34,12 +34,12 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeRDSPerformanceResponseBody setData(java.util.List<DescribeRDSPerformanceResponseBodyData> data) {
-        this.data = data;
+    public DescribeRDSPerformanceResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public java.util.List<DescribeRDSPerformanceResponseBodyData> getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class DescribeRDSPerformanceResponseBodyDataValues extends TeaModel {
@@ -79,11 +79,11 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
         @NameInMap("NodeName")
         public String nodeName;
 
-        @NameInMap("Unit")
-        public String unit;
-
         @NameInMap("NodeNum")
         public Integer nodeNum;
+
+        @NameInMap("Unit")
+        public String unit;
 
         @NameInMap("Values")
         public java.util.List<DescribeRDSPerformanceResponseBodyDataValues> values;
@@ -109,20 +109,20 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
             return this.nodeName;
         }
 
-        public DescribeRDSPerformanceResponseBodyData setUnit(String unit) {
-            this.unit = unit;
-            return this;
-        }
-        public String getUnit() {
-            return this.unit;
-        }
-
         public DescribeRDSPerformanceResponseBodyData setNodeNum(Integer nodeNum) {
             this.nodeNum = nodeNum;
             return this;
         }
         public Integer getNodeNum() {
             return this.nodeNum;
+        }
+
+        public DescribeRDSPerformanceResponseBodyData setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
         public DescribeRDSPerformanceResponseBodyData setValues(java.util.List<DescribeRDSPerformanceResponseBodyDataValues> values) {
