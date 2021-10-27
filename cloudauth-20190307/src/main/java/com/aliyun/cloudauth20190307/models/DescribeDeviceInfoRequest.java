@@ -4,8 +4,8 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceInfoRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("BizType")
+    public String bizType;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -13,29 +13,29 @@ public class DescribeDeviceInfoRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
-    @NameInMap("BizType")
-    public String bizType;
-
-    @NameInMap("UserDeviceId")
-    public String userDeviceId;
+    @NameInMap("ExpiredEndDay")
+    public String expiredEndDay;
 
     @NameInMap("ExpiredStartDay")
     public String expiredStartDay;
 
-    @NameInMap("ExpiredEndDay")
-    public String expiredEndDay;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("UserDeviceId")
+    public String userDeviceId;
 
     public static DescribeDeviceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeviceInfoRequest self = new DescribeDeviceInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDeviceInfoRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeDeviceInfoRequest setBizType(String bizType) {
+        this.bizType = bizType;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getBizType() {
+        return this.bizType;
     }
 
     public DescribeDeviceInfoRequest setCurrentPage(Integer currentPage) {
@@ -54,20 +54,12 @@ public class DescribeDeviceInfoRequest extends TeaModel {
         return this.deviceId;
     }
 
-    public DescribeDeviceInfoRequest setBizType(String bizType) {
-        this.bizType = bizType;
+    public DescribeDeviceInfoRequest setExpiredEndDay(String expiredEndDay) {
+        this.expiredEndDay = expiredEndDay;
         return this;
     }
-    public String getBizType() {
-        return this.bizType;
-    }
-
-    public DescribeDeviceInfoRequest setUserDeviceId(String userDeviceId) {
-        this.userDeviceId = userDeviceId;
-        return this;
-    }
-    public String getUserDeviceId() {
-        return this.userDeviceId;
+    public String getExpiredEndDay() {
+        return this.expiredEndDay;
     }
 
     public DescribeDeviceInfoRequest setExpiredStartDay(String expiredStartDay) {
@@ -78,12 +70,20 @@ public class DescribeDeviceInfoRequest extends TeaModel {
         return this.expiredStartDay;
     }
 
-    public DescribeDeviceInfoRequest setExpiredEndDay(String expiredEndDay) {
-        this.expiredEndDay = expiredEndDay;
+    public DescribeDeviceInfoRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getExpiredEndDay() {
-        return this.expiredEndDay;
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDeviceInfoRequest setUserDeviceId(String userDeviceId) {
+        this.userDeviceId = userDeviceId;
+        return this;
+    }
+    public String getUserDeviceId() {
+        return this.userDeviceId;
     }
 
 }

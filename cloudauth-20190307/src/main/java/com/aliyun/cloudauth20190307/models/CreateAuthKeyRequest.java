@@ -4,21 +4,29 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthKeyRequest extends TeaModel {
+    @NameInMap("AuthYears")
+    public Integer authYears;
+
     @NameInMap("BizType")
     public String bizType;
-
-    @NameInMap("UserDeviceId")
-    public String userDeviceId;
 
     @NameInMap("Test")
     public Boolean test;
 
-    @NameInMap("AuthYears")
-    public Integer authYears;
+    @NameInMap("UserDeviceId")
+    public String userDeviceId;
 
     public static CreateAuthKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAuthKeyRequest self = new CreateAuthKeyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAuthKeyRequest setAuthYears(Integer authYears) {
+        this.authYears = authYears;
+        return this;
+    }
+    public Integer getAuthYears() {
+        return this.authYears;
     }
 
     public CreateAuthKeyRequest setBizType(String bizType) {
@@ -29,14 +37,6 @@ public class CreateAuthKeyRequest extends TeaModel {
         return this.bizType;
     }
 
-    public CreateAuthKeyRequest setUserDeviceId(String userDeviceId) {
-        this.userDeviceId = userDeviceId;
-        return this;
-    }
-    public String getUserDeviceId() {
-        return this.userDeviceId;
-    }
-
     public CreateAuthKeyRequest setTest(Boolean test) {
         this.test = test;
         return this;
@@ -45,12 +45,12 @@ public class CreateAuthKeyRequest extends TeaModel {
         return this.test;
     }
 
-    public CreateAuthKeyRequest setAuthYears(Integer authYears) {
-        this.authYears = authYears;
+    public CreateAuthKeyRequest setUserDeviceId(String userDeviceId) {
+        this.userDeviceId = userDeviceId;
         return this;
     }
-    public Integer getAuthYears() {
-        return this.authYears;
+    public String getUserDeviceId() {
+        return this.userDeviceId;
     }
 
 }

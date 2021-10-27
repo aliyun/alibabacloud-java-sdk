@@ -7,13 +7,13 @@ public class DescribeVerifyUsageRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
-    @NameInMap("StartDate")
-    @Validation(required = true)
-    public String startDate;
-
     @NameInMap("EndDate")
     @Validation(required = true)
     public String endDate;
+
+    @NameInMap("StartDate")
+    @Validation(required = true)
+    public String startDate;
 
     public static DescribeVerifyUsageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVerifyUsageRequest self = new DescribeVerifyUsageRequest();
@@ -28,20 +28,20 @@ public class DescribeVerifyUsageRequest extends TeaModel {
         return this.bizType;
     }
 
-    public DescribeVerifyUsageRequest setStartDate(String startDate) {
-        this.startDate = startDate;
-        return this;
-    }
-    public String getStartDate() {
-        return this.startDate;
-    }
-
     public DescribeVerifyUsageRequest setEndDate(String endDate) {
         this.endDate = endDate;
         return this;
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public DescribeVerifyUsageRequest setStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    public String getStartDate() {
+        return this.startDate;
     }
 
 }

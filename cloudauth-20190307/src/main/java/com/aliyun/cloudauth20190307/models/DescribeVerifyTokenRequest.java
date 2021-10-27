@@ -4,43 +4,43 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeVerifyTokenRequest extends TeaModel {
-    @NameInMap("IdCardBackImageUrl")
-    public String idCardBackImageUrl;
+    @NameInMap("BizId")
+    @Validation(required = true)
+    public String bizId;
 
     @NameInMap("BizType")
     @Validation(required = true)
     public String bizType;
 
-    @NameInMap("FailedRedirectUrl")
-    public String failedRedirectUrl;
+    @NameInMap("CallbackSeed")
+    public String callbackSeed;
+
+    @NameInMap("CallbackUrl")
+    public String callbackUrl;
 
     @NameInMap("FaceRetainedImageUrl")
     public String faceRetainedImageUrl;
 
-    @NameInMap("CallbackSeed")
-    public String callbackSeed;
+    @NameInMap("FailedRedirectUrl")
+    public String failedRedirectUrl;
+
+    @NameInMap("IdCardBackImageUrl")
+    public String idCardBackImageUrl;
 
     @NameInMap("IdCardFrontImageUrl")
     public String idCardFrontImageUrl;
 
-    @NameInMap("UserId")
-    public String userId;
-
-    @NameInMap("BizId")
-    @Validation(required = true)
-    public String bizId;
+    @NameInMap("IdCardNumber")
+    public String idCardNumber;
 
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("IdCardNumber")
-    public String idCardNumber;
-
     @NameInMap("PassedRedirectUrl")
     public String passedRedirectUrl;
 
-    @NameInMap("CallbackUrl")
-    public String callbackUrl;
+    @NameInMap("UserId")
+    public String userId;
 
     @NameInMap("UserIp")
     public String userIp;
@@ -56,12 +56,12 @@ public class DescribeVerifyTokenRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVerifyTokenRequest setIdCardBackImageUrl(String idCardBackImageUrl) {
-        this.idCardBackImageUrl = idCardBackImageUrl;
+    public DescribeVerifyTokenRequest setBizId(String bizId) {
+        this.bizId = bizId;
         return this;
     }
-    public String getIdCardBackImageUrl() {
-        return this.idCardBackImageUrl;
+    public String getBizId() {
+        return this.bizId;
     }
 
     public DescribeVerifyTokenRequest setBizType(String bizType) {
@@ -72,12 +72,20 @@ public class DescribeVerifyTokenRequest extends TeaModel {
         return this.bizType;
     }
 
-    public DescribeVerifyTokenRequest setFailedRedirectUrl(String failedRedirectUrl) {
-        this.failedRedirectUrl = failedRedirectUrl;
+    public DescribeVerifyTokenRequest setCallbackSeed(String callbackSeed) {
+        this.callbackSeed = callbackSeed;
         return this;
     }
-    public String getFailedRedirectUrl() {
-        return this.failedRedirectUrl;
+    public String getCallbackSeed() {
+        return this.callbackSeed;
+    }
+
+    public DescribeVerifyTokenRequest setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
+        return this;
+    }
+    public String getCallbackUrl() {
+        return this.callbackUrl;
     }
 
     public DescribeVerifyTokenRequest setFaceRetainedImageUrl(String faceRetainedImageUrl) {
@@ -88,12 +96,20 @@ public class DescribeVerifyTokenRequest extends TeaModel {
         return this.faceRetainedImageUrl;
     }
 
-    public DescribeVerifyTokenRequest setCallbackSeed(String callbackSeed) {
-        this.callbackSeed = callbackSeed;
+    public DescribeVerifyTokenRequest setFailedRedirectUrl(String failedRedirectUrl) {
+        this.failedRedirectUrl = failedRedirectUrl;
         return this;
     }
-    public String getCallbackSeed() {
-        return this.callbackSeed;
+    public String getFailedRedirectUrl() {
+        return this.failedRedirectUrl;
+    }
+
+    public DescribeVerifyTokenRequest setIdCardBackImageUrl(String idCardBackImageUrl) {
+        this.idCardBackImageUrl = idCardBackImageUrl;
+        return this;
+    }
+    public String getIdCardBackImageUrl() {
+        return this.idCardBackImageUrl;
     }
 
     public DescribeVerifyTokenRequest setIdCardFrontImageUrl(String idCardFrontImageUrl) {
@@ -104,20 +120,12 @@ public class DescribeVerifyTokenRequest extends TeaModel {
         return this.idCardFrontImageUrl;
     }
 
-    public DescribeVerifyTokenRequest setUserId(String userId) {
-        this.userId = userId;
+    public DescribeVerifyTokenRequest setIdCardNumber(String idCardNumber) {
+        this.idCardNumber = idCardNumber;
         return this;
     }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public DescribeVerifyTokenRequest setBizId(String bizId) {
-        this.bizId = bizId;
-        return this;
-    }
-    public String getBizId() {
-        return this.bizId;
+    public String getIdCardNumber() {
+        return this.idCardNumber;
     }
 
     public DescribeVerifyTokenRequest setName(String name) {
@@ -128,14 +136,6 @@ public class DescribeVerifyTokenRequest extends TeaModel {
         return this.name;
     }
 
-    public DescribeVerifyTokenRequest setIdCardNumber(String idCardNumber) {
-        this.idCardNumber = idCardNumber;
-        return this;
-    }
-    public String getIdCardNumber() {
-        return this.idCardNumber;
-    }
-
     public DescribeVerifyTokenRequest setPassedRedirectUrl(String passedRedirectUrl) {
         this.passedRedirectUrl = passedRedirectUrl;
         return this;
@@ -144,12 +144,12 @@ public class DescribeVerifyTokenRequest extends TeaModel {
         return this.passedRedirectUrl;
     }
 
-    public DescribeVerifyTokenRequest setCallbackUrl(String callbackUrl) {
-        this.callbackUrl = callbackUrl;
+    public DescribeVerifyTokenRequest setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
-    public String getCallbackUrl() {
-        return this.callbackUrl;
+    public String getUserId() {
+        return this.userId;
     }
 
     public DescribeVerifyTokenRequest setUserIp(String userIp) {

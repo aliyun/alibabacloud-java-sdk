@@ -4,18 +4,6 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class VerifyMaterialResponse extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("VerifyToken")
-    @Validation(required = true)
-    public String verifyToken;
-
-    @NameInMap("VerifyStatus")
-    @Validation(required = true)
-    public Integer verifyStatus;
-
     @NameInMap("AuthorityComparisionScore")
     @Validation(required = true)
     public Float authorityComparisionScore;
@@ -24,6 +12,18 @@ public class VerifyMaterialResponse extends TeaModel {
     @Validation(required = true)
     public Float idCardFaceComparisonScore;
 
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("VerifyStatus")
+    @Validation(required = true)
+    public Integer verifyStatus;
+
+    @NameInMap("VerifyToken")
+    @Validation(required = true)
+    public String verifyToken;
+
     @NameInMap("Material")
     @Validation(required = true)
     public VerifyMaterialResponseMaterial material;
@@ -31,30 +31,6 @@ public class VerifyMaterialResponse extends TeaModel {
     public static VerifyMaterialResponse build(java.util.Map<String, ?> map) throws Exception {
         VerifyMaterialResponse self = new VerifyMaterialResponse();
         return TeaModel.build(map, self);
-    }
-
-    public VerifyMaterialResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public VerifyMaterialResponse setVerifyToken(String verifyToken) {
-        this.verifyToken = verifyToken;
-        return this;
-    }
-    public String getVerifyToken() {
-        return this.verifyToken;
-    }
-
-    public VerifyMaterialResponse setVerifyStatus(Integer verifyStatus) {
-        this.verifyStatus = verifyStatus;
-        return this;
-    }
-    public Integer getVerifyStatus() {
-        return this.verifyStatus;
     }
 
     public VerifyMaterialResponse setAuthorityComparisionScore(Float authorityComparisionScore) {
@@ -73,6 +49,30 @@ public class VerifyMaterialResponse extends TeaModel {
         return this.idCardFaceComparisonScore;
     }
 
+    public VerifyMaterialResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public VerifyMaterialResponse setVerifyStatus(Integer verifyStatus) {
+        this.verifyStatus = verifyStatus;
+        return this;
+    }
+    public Integer getVerifyStatus() {
+        return this.verifyStatus;
+    }
+
+    public VerifyMaterialResponse setVerifyToken(String verifyToken) {
+        this.verifyToken = verifyToken;
+        return this;
+    }
+    public String getVerifyToken() {
+        return this.verifyToken;
+    }
+
     public VerifyMaterialResponse setMaterial(VerifyMaterialResponseMaterial material) {
         this.material = material;
         return this;
@@ -82,17 +82,21 @@ public class VerifyMaterialResponse extends TeaModel {
     }
 
     public static class VerifyMaterialResponseMaterialIdCardInfo extends TeaModel {
-        @NameInMap("Number")
-        @Validation(required = true)
-        public String number;
-
         @NameInMap("Address")
         @Validation(required = true)
         public String address;
 
-        @NameInMap("Nationality")
+        @NameInMap("Authority")
         @Validation(required = true)
-        public String nationality;
+        public String authority;
+
+        @NameInMap("BackImageUrl")
+        @Validation(required = true)
+        public String backImageUrl;
+
+        @NameInMap("Birth")
+        @Validation(required = true)
+        public String birth;
 
         @NameInMap("EndDate")
         @Validation(required = true)
@@ -102,21 +106,17 @@ public class VerifyMaterialResponse extends TeaModel {
         @Validation(required = true)
         public String frontImageUrl;
 
-        @NameInMap("Authority")
-        @Validation(required = true)
-        public String authority;
-
         @NameInMap("Name")
         @Validation(required = true)
         public String name;
 
-        @NameInMap("Birth")
+        @NameInMap("Nationality")
         @Validation(required = true)
-        public String birth;
+        public String nationality;
 
-        @NameInMap("BackImageUrl")
+        @NameInMap("Number")
         @Validation(required = true)
-        public String backImageUrl;
+        public String number;
 
         @NameInMap("StartDate")
         @Validation(required = true)
@@ -127,14 +127,6 @@ public class VerifyMaterialResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public VerifyMaterialResponseMaterialIdCardInfo setNumber(String number) {
-            this.number = number;
-            return this;
-        }
-        public String getNumber() {
-            return this.number;
-        }
-
         public VerifyMaterialResponseMaterialIdCardInfo setAddress(String address) {
             this.address = address;
             return this;
@@ -143,12 +135,28 @@ public class VerifyMaterialResponse extends TeaModel {
             return this.address;
         }
 
-        public VerifyMaterialResponseMaterialIdCardInfo setNationality(String nationality) {
-            this.nationality = nationality;
+        public VerifyMaterialResponseMaterialIdCardInfo setAuthority(String authority) {
+            this.authority = authority;
             return this;
         }
-        public String getNationality() {
-            return this.nationality;
+        public String getAuthority() {
+            return this.authority;
+        }
+
+        public VerifyMaterialResponseMaterialIdCardInfo setBackImageUrl(String backImageUrl) {
+            this.backImageUrl = backImageUrl;
+            return this;
+        }
+        public String getBackImageUrl() {
+            return this.backImageUrl;
+        }
+
+        public VerifyMaterialResponseMaterialIdCardInfo setBirth(String birth) {
+            this.birth = birth;
+            return this;
+        }
+        public String getBirth() {
+            return this.birth;
         }
 
         public VerifyMaterialResponseMaterialIdCardInfo setEndDate(String endDate) {
@@ -167,14 +175,6 @@ public class VerifyMaterialResponse extends TeaModel {
             return this.frontImageUrl;
         }
 
-        public VerifyMaterialResponseMaterialIdCardInfo setAuthority(String authority) {
-            this.authority = authority;
-            return this;
-        }
-        public String getAuthority() {
-            return this.authority;
-        }
-
         public VerifyMaterialResponseMaterialIdCardInfo setName(String name) {
             this.name = name;
             return this;
@@ -183,20 +183,20 @@ public class VerifyMaterialResponse extends TeaModel {
             return this.name;
         }
 
-        public VerifyMaterialResponseMaterialIdCardInfo setBirth(String birth) {
-            this.birth = birth;
+        public VerifyMaterialResponseMaterialIdCardInfo setNationality(String nationality) {
+            this.nationality = nationality;
             return this;
         }
-        public String getBirth() {
-            return this.birth;
+        public String getNationality() {
+            return this.nationality;
         }
 
-        public VerifyMaterialResponseMaterialIdCardInfo setBackImageUrl(String backImageUrl) {
-            this.backImageUrl = backImageUrl;
+        public VerifyMaterialResponseMaterialIdCardInfo setNumber(String number) {
+            this.number = number;
             return this;
         }
-        public String getBackImageUrl() {
-            return this.backImageUrl;
+        public String getNumber() {
+            return this.number;
         }
 
         public VerifyMaterialResponseMaterialIdCardInfo setStartDate(String startDate) {
@@ -210,9 +210,21 @@ public class VerifyMaterialResponse extends TeaModel {
     }
 
     public static class VerifyMaterialResponseMaterial extends TeaModel {
+        @NameInMap("FaceGlobalUrl")
+        @Validation(required = true)
+        public String faceGlobalUrl;
+
         @NameInMap("FaceImageUrl")
         @Validation(required = true)
         public String faceImageUrl;
+
+        @NameInMap("FaceMask")
+        @Validation(required = true)
+        public String faceMask;
+
+        @NameInMap("FaceQuality")
+        @Validation(required = true)
+        public String faceQuality;
 
         @NameInMap("IdCardName")
         @Validation(required = true)
@@ -221,18 +233,6 @@ public class VerifyMaterialResponse extends TeaModel {
         @NameInMap("IdCardNumber")
         @Validation(required = true)
         public String idCardNumber;
-
-        @NameInMap("FaceQuality")
-        @Validation(required = true)
-        public String faceQuality;
-
-        @NameInMap("FaceGlobalUrl")
-        @Validation(required = true)
-        public String faceGlobalUrl;
-
-        @NameInMap("FaceMask")
-        @Validation(required = true)
-        public String faceMask;
 
         @NameInMap("IdCardInfo")
         @Validation(required = true)
@@ -243,12 +243,36 @@ public class VerifyMaterialResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public VerifyMaterialResponseMaterial setFaceGlobalUrl(String faceGlobalUrl) {
+            this.faceGlobalUrl = faceGlobalUrl;
+            return this;
+        }
+        public String getFaceGlobalUrl() {
+            return this.faceGlobalUrl;
+        }
+
         public VerifyMaterialResponseMaterial setFaceImageUrl(String faceImageUrl) {
             this.faceImageUrl = faceImageUrl;
             return this;
         }
         public String getFaceImageUrl() {
             return this.faceImageUrl;
+        }
+
+        public VerifyMaterialResponseMaterial setFaceMask(String faceMask) {
+            this.faceMask = faceMask;
+            return this;
+        }
+        public String getFaceMask() {
+            return this.faceMask;
+        }
+
+        public VerifyMaterialResponseMaterial setFaceQuality(String faceQuality) {
+            this.faceQuality = faceQuality;
+            return this;
+        }
+        public String getFaceQuality() {
+            return this.faceQuality;
         }
 
         public VerifyMaterialResponseMaterial setIdCardName(String idCardName) {
@@ -265,30 +289,6 @@ public class VerifyMaterialResponse extends TeaModel {
         }
         public String getIdCardNumber() {
             return this.idCardNumber;
-        }
-
-        public VerifyMaterialResponseMaterial setFaceQuality(String faceQuality) {
-            this.faceQuality = faceQuality;
-            return this;
-        }
-        public String getFaceQuality() {
-            return this.faceQuality;
-        }
-
-        public VerifyMaterialResponseMaterial setFaceGlobalUrl(String faceGlobalUrl) {
-            this.faceGlobalUrl = faceGlobalUrl;
-            return this;
-        }
-        public String getFaceGlobalUrl() {
-            return this.faceGlobalUrl;
-        }
-
-        public VerifyMaterialResponseMaterial setFaceMask(String faceMask) {
-            this.faceMask = faceMask;
-            return this;
-        }
-        public String getFaceMask() {
-            return this.faceMask;
         }
 
         public VerifyMaterialResponseMaterial setIdCardInfo(VerifyMaterialResponseMaterialIdCardInfo idCardInfo) {

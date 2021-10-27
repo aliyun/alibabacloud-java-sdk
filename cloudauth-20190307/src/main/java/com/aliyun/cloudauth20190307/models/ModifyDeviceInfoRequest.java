@@ -4,15 +4,12 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeviceInfoRequest extends TeaModel {
+    @NameInMap("BizType")
+    public String bizType;
+
     @NameInMap("DeviceId")
     @Validation(required = true)
     public String deviceId;
-
-    @NameInMap("UserDeviceId")
-    public String userDeviceId;
-
-    @NameInMap("BizType")
-    public String bizType;
 
     @NameInMap("Duration")
     public String duration;
@@ -20,25 +17,12 @@ public class ModifyDeviceInfoRequest extends TeaModel {
     @NameInMap("ExpiredDay")
     public String expiredDay;
 
+    @NameInMap("UserDeviceId")
+    public String userDeviceId;
+
     public static ModifyDeviceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeviceInfoRequest self = new ModifyDeviceInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDeviceInfoRequest setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
-        return this;
-    }
-    public String getDeviceId() {
-        return this.deviceId;
-    }
-
-    public ModifyDeviceInfoRequest setUserDeviceId(String userDeviceId) {
-        this.userDeviceId = userDeviceId;
-        return this;
-    }
-    public String getUserDeviceId() {
-        return this.userDeviceId;
     }
 
     public ModifyDeviceInfoRequest setBizType(String bizType) {
@@ -47,6 +31,14 @@ public class ModifyDeviceInfoRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public ModifyDeviceInfoRequest setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    public String getDeviceId() {
+        return this.deviceId;
     }
 
     public ModifyDeviceInfoRequest setDuration(String duration) {
@@ -63,6 +55,14 @@ public class ModifyDeviceInfoRequest extends TeaModel {
     }
     public String getExpiredDay() {
         return this.expiredDay;
+    }
+
+    public ModifyDeviceInfoRequest setUserDeviceId(String userDeviceId) {
+        this.userDeviceId = userDeviceId;
+        return this;
+    }
+    public String getUserDeviceId() {
+        return this.userDeviceId;
     }
 
 }

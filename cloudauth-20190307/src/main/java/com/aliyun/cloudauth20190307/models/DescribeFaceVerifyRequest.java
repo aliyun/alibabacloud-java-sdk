@@ -4,26 +4,18 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaceVerifyRequest extends TeaModel {
-    @NameInMap("SceneId")
-    public Long sceneId;
-
     @NameInMap("CertifyId")
     public String certifyId;
 
     @NameInMap("PictureReturnType")
     public String pictureReturnType;
 
+    @NameInMap("SceneId")
+    public Long sceneId;
+
     public static DescribeFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFaceVerifyRequest self = new DescribeFaceVerifyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFaceVerifyRequest setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
-        return this;
-    }
-    public Long getSceneId() {
-        return this.sceneId;
     }
 
     public DescribeFaceVerifyRequest setCertifyId(String certifyId) {
@@ -40,6 +32,14 @@ public class DescribeFaceVerifyRequest extends TeaModel {
     }
     public String getPictureReturnType() {
         return this.pictureReturnType;
+    }
+
+    public DescribeFaceVerifyRequest setSceneId(Long sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public Long getSceneId() {
+        return this.sceneId;
     }
 
 }

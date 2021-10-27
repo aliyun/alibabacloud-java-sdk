@@ -4,44 +4,41 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class ContrastFaceVerifyRequest extends TeaModel {
-    @NameInMap("SceneId")
-    public Long sceneId;
-
-    @NameInMap("OuterOrderNo")
-    public String outerOrderNo;
-
-    @NameInMap("ProductCode")
-    public String productCode;
-
-    @NameInMap("CertType")
-    public String certType;
-
     @NameInMap("CertName")
     public String certName;
 
     @NameInMap("CertNo")
     public String certNo;
 
-    @NameInMap("FaceContrastPicture")
-    public String faceContrastPicture;
+    @NameInMap("CertType")
+    public String certType;
+
+    @NameInMap("CertifyId")
+    public String certifyId;
+
+    @NameInMap("Crop")
+    public String crop;
 
     @NameInMap("DeviceToken")
     public String deviceToken;
 
-    @NameInMap("Mobile")
-    public String mobile;
+    @NameInMap("FaceContrastFile")
+    public String faceContrastFile;
 
-    @NameInMap("Ip")
-    public String ip;
-
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("FaceContrastPicture")
+    public String faceContrastPicture;
 
     @NameInMap("FaceContrastPictureUrl")
     public String faceContrastPictureUrl;
 
-    @NameInMap("CertifyId")
-    public String certifyId;
+    @NameInMap("Ip")
+    public String ip;
+
+    @NameInMap("Mobile")
+    public String mobile;
+
+    @NameInMap("Model")
+    public String model;
 
     @NameInMap("OssBucketName")
     public String ossBucketName;
@@ -49,50 +46,21 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     @NameInMap("OssObjectName")
     public String ossObjectName;
 
-    @NameInMap("Model")
-    public String model;
+    @NameInMap("OuterOrderNo")
+    public String outerOrderNo;
 
-    @NameInMap("FaceContrastFile")
-    public String faceContrastFile;
+    @NameInMap("ProductCode")
+    public String productCode;
 
-    @NameInMap("Crop")
-    public String crop;
+    @NameInMap("SceneId")
+    public Long sceneId;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static ContrastFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         ContrastFaceVerifyRequest self = new ContrastFaceVerifyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ContrastFaceVerifyRequest setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
-        return this;
-    }
-    public Long getSceneId() {
-        return this.sceneId;
-    }
-
-    public ContrastFaceVerifyRequest setOuterOrderNo(String outerOrderNo) {
-        this.outerOrderNo = outerOrderNo;
-        return this;
-    }
-    public String getOuterOrderNo() {
-        return this.outerOrderNo;
-    }
-
-    public ContrastFaceVerifyRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
-    }
-
-    public ContrastFaceVerifyRequest setCertType(String certType) {
-        this.certType = certType;
-        return this;
-    }
-    public String getCertType() {
-        return this.certType;
     }
 
     public ContrastFaceVerifyRequest setCertName(String certName) {
@@ -111,12 +79,28 @@ public class ContrastFaceVerifyRequest extends TeaModel {
         return this.certNo;
     }
 
-    public ContrastFaceVerifyRequest setFaceContrastPicture(String faceContrastPicture) {
-        this.faceContrastPicture = faceContrastPicture;
+    public ContrastFaceVerifyRequest setCertType(String certType) {
+        this.certType = certType;
         return this;
     }
-    public String getFaceContrastPicture() {
-        return this.faceContrastPicture;
+    public String getCertType() {
+        return this.certType;
+    }
+
+    public ContrastFaceVerifyRequest setCertifyId(String certifyId) {
+        this.certifyId = certifyId;
+        return this;
+    }
+    public String getCertifyId() {
+        return this.certifyId;
+    }
+
+    public ContrastFaceVerifyRequest setCrop(String crop) {
+        this.crop = crop;
+        return this;
+    }
+    public String getCrop() {
+        return this.crop;
     }
 
     public ContrastFaceVerifyRequest setDeviceToken(String deviceToken) {
@@ -127,28 +111,20 @@ public class ContrastFaceVerifyRequest extends TeaModel {
         return this.deviceToken;
     }
 
-    public ContrastFaceVerifyRequest setMobile(String mobile) {
-        this.mobile = mobile;
+    public ContrastFaceVerifyRequest setFaceContrastFile(String faceContrastFile) {
+        this.faceContrastFile = faceContrastFile;
         return this;
     }
-    public String getMobile() {
-        return this.mobile;
+    public String getFaceContrastFile() {
+        return this.faceContrastFile;
     }
 
-    public ContrastFaceVerifyRequest setIp(String ip) {
-        this.ip = ip;
+    public ContrastFaceVerifyRequest setFaceContrastPicture(String faceContrastPicture) {
+        this.faceContrastPicture = faceContrastPicture;
         return this;
     }
-    public String getIp() {
-        return this.ip;
-    }
-
-    public ContrastFaceVerifyRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
+    public String getFaceContrastPicture() {
+        return this.faceContrastPicture;
     }
 
     public ContrastFaceVerifyRequest setFaceContrastPictureUrl(String faceContrastPictureUrl) {
@@ -159,12 +135,28 @@ public class ContrastFaceVerifyRequest extends TeaModel {
         return this.faceContrastPictureUrl;
     }
 
-    public ContrastFaceVerifyRequest setCertifyId(String certifyId) {
-        this.certifyId = certifyId;
+    public ContrastFaceVerifyRequest setIp(String ip) {
+        this.ip = ip;
         return this;
     }
-    public String getCertifyId() {
-        return this.certifyId;
+    public String getIp() {
+        return this.ip;
+    }
+
+    public ContrastFaceVerifyRequest setMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    public String getMobile() {
+        return this.mobile;
+    }
+
+    public ContrastFaceVerifyRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
     }
 
     public ContrastFaceVerifyRequest setOssBucketName(String ossBucketName) {
@@ -183,28 +175,36 @@ public class ContrastFaceVerifyRequest extends TeaModel {
         return this.ossObjectName;
     }
 
-    public ContrastFaceVerifyRequest setModel(String model) {
-        this.model = model;
+    public ContrastFaceVerifyRequest setOuterOrderNo(String outerOrderNo) {
+        this.outerOrderNo = outerOrderNo;
         return this;
     }
-    public String getModel() {
-        return this.model;
+    public String getOuterOrderNo() {
+        return this.outerOrderNo;
     }
 
-    public ContrastFaceVerifyRequest setFaceContrastFile(String faceContrastFile) {
-        this.faceContrastFile = faceContrastFile;
+    public ContrastFaceVerifyRequest setProductCode(String productCode) {
+        this.productCode = productCode;
         return this;
     }
-    public String getFaceContrastFile() {
-        return this.faceContrastFile;
+    public String getProductCode() {
+        return this.productCode;
     }
 
-    public ContrastFaceVerifyRequest setCrop(String crop) {
-        this.crop = crop;
+    public ContrastFaceVerifyRequest setSceneId(Long sceneId) {
+        this.sceneId = sceneId;
         return this;
     }
-    public String getCrop() {
-        return this.crop;
+    public Long getSceneId() {
+        return this.sceneId;
+    }
+
+    public ContrastFaceVerifyRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

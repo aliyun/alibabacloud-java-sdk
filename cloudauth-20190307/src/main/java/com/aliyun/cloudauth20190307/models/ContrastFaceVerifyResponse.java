@@ -62,21 +62,21 @@ public class ContrastFaceVerifyResponse extends TeaModel {
         @Validation(required = true)
         public String certifyId;
 
-        @NameInMap("SubCode")
+        @NameInMap("IdentityInfo")
         @Validation(required = true)
-        public String subCode;
+        public String identityInfo;
 
         @NameInMap("MaterialInfo")
         @Validation(required = true)
         public String materialInfo;
 
-        @NameInMap("IdentityInfo")
-        @Validation(required = true)
-        public String identityInfo;
-
         @NameInMap("Passed")
         @Validation(required = true)
         public String passed;
+
+        @NameInMap("SubCode")
+        @Validation(required = true)
+        public String subCode;
 
         public static ContrastFaceVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
             ContrastFaceVerifyResponseResultObject self = new ContrastFaceVerifyResponseResultObject();
@@ -91,12 +91,12 @@ public class ContrastFaceVerifyResponse extends TeaModel {
             return this.certifyId;
         }
 
-        public ContrastFaceVerifyResponseResultObject setSubCode(String subCode) {
-            this.subCode = subCode;
+        public ContrastFaceVerifyResponseResultObject setIdentityInfo(String identityInfo) {
+            this.identityInfo = identityInfo;
             return this;
         }
-        public String getSubCode() {
-            return this.subCode;
+        public String getIdentityInfo() {
+            return this.identityInfo;
         }
 
         public ContrastFaceVerifyResponseResultObject setMaterialInfo(String materialInfo) {
@@ -107,20 +107,20 @@ public class ContrastFaceVerifyResponse extends TeaModel {
             return this.materialInfo;
         }
 
-        public ContrastFaceVerifyResponseResultObject setIdentityInfo(String identityInfo) {
-            this.identityInfo = identityInfo;
-            return this;
-        }
-        public String getIdentityInfo() {
-            return this.identityInfo;
-        }
-
         public ContrastFaceVerifyResponseResultObject setPassed(String passed) {
             this.passed = passed;
             return this;
         }
         public String getPassed() {
             return this.passed;
+        }
+
+        public ContrastFaceVerifyResponseResultObject setSubCode(String subCode) {
+            this.subCode = subCode;
+            return this;
+        }
+        public String getSubCode() {
+            return this.subCode;
         }
 
     }

@@ -4,17 +4,17 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("CurrentPage")
     @Validation(required = true)
-    public String requestId;
+    public Integer currentPage;
 
     @NameInMap("PageSize")
     @Validation(required = true)
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public Integer currentPage;
+    public String requestId;
 
     @NameInMap("TotalCount")
     @Validation(required = true)
@@ -29,12 +29,12 @@ public class DescribeDeviceInfoResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDeviceInfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDeviceInfoResponse setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeDeviceInfoResponse setPageSize(Integer pageSize) {
@@ -45,12 +45,12 @@ public class DescribeDeviceInfoResponse extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDeviceInfoResponse setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeDeviceInfoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDeviceInfoResponse setTotalCount(Integer totalCount) {
@@ -70,53 +70,29 @@ public class DescribeDeviceInfoResponse extends TeaModel {
     }
 
     public static class DescribeDeviceInfoResponseDeviceInfoListDeviceInfo extends TeaModel {
-        @NameInMap("DeviceId")
+        @NameInMap("BeginDay")
         @Validation(required = true)
-        public String deviceId;
-
-        @NameInMap("UserDeviceId")
-        @Validation(required = true)
-        public String userDeviceId;
+        public String beginDay;
 
         @NameInMap("BizType")
         @Validation(required = true)
         public String bizType;
 
-        @NameInMap("BeginDay")
+        @NameInMap("DeviceId")
         @Validation(required = true)
-        public String beginDay;
+        public String deviceId;
 
         @NameInMap("ExpiredDay")
         @Validation(required = true)
         public String expiredDay;
 
+        @NameInMap("UserDeviceId")
+        @Validation(required = true)
+        public String userDeviceId;
+
         public static DescribeDeviceInfoResponseDeviceInfoListDeviceInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeviceInfoResponseDeviceInfoListDeviceInfo self = new DescribeDeviceInfoResponseDeviceInfoListDeviceInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDeviceInfoResponseDeviceInfoListDeviceInfo setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public DescribeDeviceInfoResponseDeviceInfoListDeviceInfo setUserDeviceId(String userDeviceId) {
-            this.userDeviceId = userDeviceId;
-            return this;
-        }
-        public String getUserDeviceId() {
-            return this.userDeviceId;
-        }
-
-        public DescribeDeviceInfoResponseDeviceInfoListDeviceInfo setBizType(String bizType) {
-            this.bizType = bizType;
-            return this;
-        }
-        public String getBizType() {
-            return this.bizType;
         }
 
         public DescribeDeviceInfoResponseDeviceInfoListDeviceInfo setBeginDay(String beginDay) {
@@ -127,12 +103,36 @@ public class DescribeDeviceInfoResponse extends TeaModel {
             return this.beginDay;
         }
 
+        public DescribeDeviceInfoResponseDeviceInfoListDeviceInfo setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
+        }
+
+        public DescribeDeviceInfoResponseDeviceInfoListDeviceInfo setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
         public DescribeDeviceInfoResponseDeviceInfoListDeviceInfo setExpiredDay(String expiredDay) {
             this.expiredDay = expiredDay;
             return this;
         }
         public String getExpiredDay() {
             return this.expiredDay;
+        }
+
+        public DescribeDeviceInfoResponseDeviceInfoListDeviceInfo setUserDeviceId(String userDeviceId) {
+            this.userDeviceId = userDeviceId;
+            return this;
+        }
+        public String getUserDeviceId() {
+            return this.userDeviceId;
         }
 
     }

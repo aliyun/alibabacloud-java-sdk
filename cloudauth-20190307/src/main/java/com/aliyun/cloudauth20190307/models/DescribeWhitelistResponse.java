@@ -4,14 +4,6 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeWhitelistResponse extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("TotalCount")
-    @Validation(required = true)
-    public Integer totalCount;
-
     @NameInMap("CurrentPage")
     @Validation(required = true)
     public Integer currentPage;
@@ -20,6 +12,14 @@ public class DescribeWhitelistResponse extends TeaModel {
     @Validation(required = true)
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    @Validation(required = true)
+    public Integer totalCount;
+
     @NameInMap("Items")
     @Validation(required = true)
     public java.util.List<DescribeWhitelistResponseItems> items;
@@ -27,22 +27,6 @@ public class DescribeWhitelistResponse extends TeaModel {
     public static DescribeWhitelistResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeWhitelistResponse self = new DescribeWhitelistResponse();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeWhitelistResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeWhitelistResponse setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeWhitelistResponse setCurrentPage(Integer currentPage) {
@@ -61,6 +45,22 @@ public class DescribeWhitelistResponse extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeWhitelistResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeWhitelistResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeWhitelistResponse setItems(java.util.List<DescribeWhitelistResponseItems> items) {
         this.items = items;
         return this;
@@ -70,37 +70,17 @@ public class DescribeWhitelistResponse extends TeaModel {
     }
 
     public static class DescribeWhitelistResponseItems extends TeaModel {
-        @NameInMap("Id")
+        @NameInMap("BizId")
         @Validation(required = true)
-        public Long id;
-
-        @NameInMap("Uid")
-        @Validation(required = true)
-        public Long uid;
+        public String bizId;
 
         @NameInMap("BizType")
         @Validation(required = true)
         public String bizType;
 
-        @NameInMap("StartDate")
-        @Validation(required = true)
-        public Long startDate;
-
         @NameInMap("EndDate")
         @Validation(required = true)
         public Long endDate;
-
-        @NameInMap("IdCardNum")
-        @Validation(required = true)
-        public String idCardNum;
-
-        @NameInMap("BizId")
-        @Validation(required = true)
-        public String bizId;
-
-        @NameInMap("Valid")
-        @Validation(required = true)
-        public Integer valid;
 
         @NameInMap("GmtCreate")
         @Validation(required = true)
@@ -110,57 +90,29 @@ public class DescribeWhitelistResponse extends TeaModel {
         @Validation(required = true)
         public Long gmtModified;
 
+        @NameInMap("Id")
+        @Validation(required = true)
+        public Long id;
+
+        @NameInMap("IdCardNum")
+        @Validation(required = true)
+        public String idCardNum;
+
+        @NameInMap("StartDate")
+        @Validation(required = true)
+        public Long startDate;
+
+        @NameInMap("Uid")
+        @Validation(required = true)
+        public Long uid;
+
+        @NameInMap("Valid")
+        @Validation(required = true)
+        public Integer valid;
+
         public static DescribeWhitelistResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeWhitelistResponseItems self = new DescribeWhitelistResponseItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeWhitelistResponseItems setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public DescribeWhitelistResponseItems setUid(Long uid) {
-            this.uid = uid;
-            return this;
-        }
-        public Long getUid() {
-            return this.uid;
-        }
-
-        public DescribeWhitelistResponseItems setBizType(String bizType) {
-            this.bizType = bizType;
-            return this;
-        }
-        public String getBizType() {
-            return this.bizType;
-        }
-
-        public DescribeWhitelistResponseItems setStartDate(Long startDate) {
-            this.startDate = startDate;
-            return this;
-        }
-        public Long getStartDate() {
-            return this.startDate;
-        }
-
-        public DescribeWhitelistResponseItems setEndDate(Long endDate) {
-            this.endDate = endDate;
-            return this;
-        }
-        public Long getEndDate() {
-            return this.endDate;
-        }
-
-        public DescribeWhitelistResponseItems setIdCardNum(String idCardNum) {
-            this.idCardNum = idCardNum;
-            return this;
-        }
-        public String getIdCardNum() {
-            return this.idCardNum;
         }
 
         public DescribeWhitelistResponseItems setBizId(String bizId) {
@@ -171,12 +123,20 @@ public class DescribeWhitelistResponse extends TeaModel {
             return this.bizId;
         }
 
-        public DescribeWhitelistResponseItems setValid(Integer valid) {
-            this.valid = valid;
+        public DescribeWhitelistResponseItems setBizType(String bizType) {
+            this.bizType = bizType;
             return this;
         }
-        public Integer getValid() {
-            return this.valid;
+        public String getBizType() {
+            return this.bizType;
+        }
+
+        public DescribeWhitelistResponseItems setEndDate(Long endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public Long getEndDate() {
+            return this.endDate;
         }
 
         public DescribeWhitelistResponseItems setGmtCreate(Long gmtCreate) {
@@ -193,6 +153,46 @@ public class DescribeWhitelistResponse extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeWhitelistResponseItems setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeWhitelistResponseItems setIdCardNum(String idCardNum) {
+            this.idCardNum = idCardNum;
+            return this;
+        }
+        public String getIdCardNum() {
+            return this.idCardNum;
+        }
+
+        public DescribeWhitelistResponseItems setStartDate(Long startDate) {
+            this.startDate = startDate;
+            return this;
+        }
+        public Long getStartDate() {
+            return this.startDate;
+        }
+
+        public DescribeWhitelistResponseItems setUid(Long uid) {
+            this.uid = uid;
+            return this;
+        }
+        public Long getUid() {
+            return this.uid;
+        }
+
+        public DescribeWhitelistResponseItems setValid(Integer valid) {
+            this.valid = valid;
+            return this;
+        }
+        public Integer getValid() {
+            return this.valid;
         }
 
     }

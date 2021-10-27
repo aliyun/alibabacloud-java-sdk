@@ -54,17 +54,17 @@ public class DescribeVerifyUsageResponse extends TeaModel {
         @Validation(required = true)
         public String date;
 
-        @NameInMap("TotalCount")
+        @NameInMap("FailCount")
         @Validation(required = true)
-        public Long totalCount;
+        public Long failCount;
 
         @NameInMap("PassCount")
         @Validation(required = true)
         public Long passCount;
 
-        @NameInMap("FailCount")
+        @NameInMap("TotalCount")
         @Validation(required = true)
-        public Long failCount;
+        public Long totalCount;
 
         public static DescribeVerifyUsageResponseVerifyUsageList build(java.util.Map<String, ?> map) throws Exception {
             DescribeVerifyUsageResponseVerifyUsageList self = new DescribeVerifyUsageResponseVerifyUsageList();
@@ -87,12 +87,12 @@ public class DescribeVerifyUsageResponse extends TeaModel {
             return this.date;
         }
 
-        public DescribeVerifyUsageResponseVerifyUsageList setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
+        public DescribeVerifyUsageResponseVerifyUsageList setFailCount(Long failCount) {
+            this.failCount = failCount;
             return this;
         }
-        public Long getTotalCount() {
-            return this.totalCount;
+        public Long getFailCount() {
+            return this.failCount;
         }
 
         public DescribeVerifyUsageResponseVerifyUsageList setPassCount(Long passCount) {
@@ -103,12 +103,12 @@ public class DescribeVerifyUsageResponse extends TeaModel {
             return this.passCount;
         }
 
-        public DescribeVerifyUsageResponseVerifyUsageList setFailCount(Long failCount) {
-            this.failCount = failCount;
+        public DescribeVerifyUsageResponseVerifyUsageList setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public Long getFailCount() {
-            return this.failCount;
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

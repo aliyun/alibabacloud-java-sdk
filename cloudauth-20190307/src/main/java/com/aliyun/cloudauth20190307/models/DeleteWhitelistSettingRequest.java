@@ -4,8 +4,9 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DeleteWhitelistSettingRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Ids")
+    @Validation(required = true)
+    public String ids;
 
     @NameInMap("Lang")
     public String lang;
@@ -14,21 +15,20 @@ public class DeleteWhitelistSettingRequest extends TeaModel {
     @Validation(required = true)
     public String serviceCode;
 
-    @NameInMap("Ids")
-    @Validation(required = true)
-    public String ids;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DeleteWhitelistSettingRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteWhitelistSettingRequest self = new DeleteWhitelistSettingRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteWhitelistSettingRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DeleteWhitelistSettingRequest setIds(String ids) {
+        this.ids = ids;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getIds() {
+        return this.ids;
     }
 
     public DeleteWhitelistSettingRequest setLang(String lang) {
@@ -47,12 +47,12 @@ public class DeleteWhitelistSettingRequest extends TeaModel {
         return this.serviceCode;
     }
 
-    public DeleteWhitelistSettingRequest setIds(String ids) {
-        this.ids = ids;
+    public DeleteWhitelistSettingRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getIds() {
-        return this.ids;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }
