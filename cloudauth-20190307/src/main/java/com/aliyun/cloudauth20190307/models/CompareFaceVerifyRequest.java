@@ -4,8 +4,8 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CompareFaceVerifyRequest extends TeaModel {
-    @NameInMap("SceneId")
-    public Long sceneId;
+    @NameInMap("Crop")
+    public String crop;
 
     @NameInMap("OuterOrderNo")
     public String outerOrderNo;
@@ -13,14 +13,17 @@ public class CompareFaceVerifyRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("SceneId")
+    public Long sceneId;
+
+    @NameInMap("SourceCertifyId")
+    public String sourceCertifyId;
+
     @NameInMap("SourceFaceContrastPicture")
     public String sourceFaceContrastPicture;
 
     @NameInMap("SourceFaceContrastPictureUrl")
     public String sourceFaceContrastPictureUrl;
-
-    @NameInMap("SourceCertifyId")
-    public String sourceCertifyId;
 
     @NameInMap("SourceOssBucketName")
     public String sourceOssBucketName;
@@ -28,14 +31,14 @@ public class CompareFaceVerifyRequest extends TeaModel {
     @NameInMap("SourceOssObjectName")
     public String sourceOssObjectName;
 
+    @NameInMap("TargetCertifyId")
+    public String targetCertifyId;
+
     @NameInMap("TargetFaceContrastPicture")
     public String targetFaceContrastPicture;
 
     @NameInMap("TargetFaceContrastPictureUrl")
     public String targetFaceContrastPictureUrl;
-
-    @NameInMap("TargetCertifyId")
-    public String targetCertifyId;
 
     @NameInMap("TargetOssBucketName")
     public String targetOssBucketName;
@@ -43,20 +46,17 @@ public class CompareFaceVerifyRequest extends TeaModel {
     @NameInMap("TargetOssObjectName")
     public String targetOssObjectName;
 
-    @NameInMap("Crop")
-    public String crop;
-
     public static CompareFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         CompareFaceVerifyRequest self = new CompareFaceVerifyRequest();
         return TeaModel.build(map, self);
     }
 
-    public CompareFaceVerifyRequest setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
+    public CompareFaceVerifyRequest setCrop(String crop) {
+        this.crop = crop;
         return this;
     }
-    public Long getSceneId() {
-        return this.sceneId;
+    public String getCrop() {
+        return this.crop;
     }
 
     public CompareFaceVerifyRequest setOuterOrderNo(String outerOrderNo) {
@@ -75,6 +75,22 @@ public class CompareFaceVerifyRequest extends TeaModel {
         return this.productCode;
     }
 
+    public CompareFaceVerifyRequest setSceneId(Long sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public Long getSceneId() {
+        return this.sceneId;
+    }
+
+    public CompareFaceVerifyRequest setSourceCertifyId(String sourceCertifyId) {
+        this.sourceCertifyId = sourceCertifyId;
+        return this;
+    }
+    public String getSourceCertifyId() {
+        return this.sourceCertifyId;
+    }
+
     public CompareFaceVerifyRequest setSourceFaceContrastPicture(String sourceFaceContrastPicture) {
         this.sourceFaceContrastPicture = sourceFaceContrastPicture;
         return this;
@@ -89,14 +105,6 @@ public class CompareFaceVerifyRequest extends TeaModel {
     }
     public String getSourceFaceContrastPictureUrl() {
         return this.sourceFaceContrastPictureUrl;
-    }
-
-    public CompareFaceVerifyRequest setSourceCertifyId(String sourceCertifyId) {
-        this.sourceCertifyId = sourceCertifyId;
-        return this;
-    }
-    public String getSourceCertifyId() {
-        return this.sourceCertifyId;
     }
 
     public CompareFaceVerifyRequest setSourceOssBucketName(String sourceOssBucketName) {
@@ -115,6 +123,14 @@ public class CompareFaceVerifyRequest extends TeaModel {
         return this.sourceOssObjectName;
     }
 
+    public CompareFaceVerifyRequest setTargetCertifyId(String targetCertifyId) {
+        this.targetCertifyId = targetCertifyId;
+        return this;
+    }
+    public String getTargetCertifyId() {
+        return this.targetCertifyId;
+    }
+
     public CompareFaceVerifyRequest setTargetFaceContrastPicture(String targetFaceContrastPicture) {
         this.targetFaceContrastPicture = targetFaceContrastPicture;
         return this;
@@ -131,14 +147,6 @@ public class CompareFaceVerifyRequest extends TeaModel {
         return this.targetFaceContrastPictureUrl;
     }
 
-    public CompareFaceVerifyRequest setTargetCertifyId(String targetCertifyId) {
-        this.targetCertifyId = targetCertifyId;
-        return this;
-    }
-    public String getTargetCertifyId() {
-        return this.targetCertifyId;
-    }
-
     public CompareFaceVerifyRequest setTargetOssBucketName(String targetOssBucketName) {
         this.targetOssBucketName = targetOssBucketName;
         return this;
@@ -153,14 +161,6 @@ public class CompareFaceVerifyRequest extends TeaModel {
     }
     public String getTargetOssObjectName() {
         return this.targetOssObjectName;
-    }
-
-    public CompareFaceVerifyRequest setCrop(String crop) {
-        this.crop = crop;
-        return this;
-    }
-    public String getCrop() {
-        return this.crop;
     }
 
 }

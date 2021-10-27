@@ -4,17 +4,17 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class UpdateVerifySettingResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("BizName")
     @Validation(required = true)
-    public String requestId;
+    public String bizName;
 
     @NameInMap("BizType")
     @Validation(required = true)
     public String bizType;
 
-    @NameInMap("BizName")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public String bizName;
+    public String requestId;
 
     @NameInMap("Solution")
     @Validation(required = true)
@@ -29,12 +29,12 @@ public class UpdateVerifySettingResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateVerifySettingResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateVerifySettingResponse setBizName(String bizName) {
+        this.bizName = bizName;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getBizName() {
+        return this.bizName;
     }
 
     public UpdateVerifySettingResponse setBizType(String bizType) {
@@ -45,12 +45,12 @@ public class UpdateVerifySettingResponse extends TeaModel {
         return this.bizType;
     }
 
-    public UpdateVerifySettingResponse setBizName(String bizName) {
-        this.bizName = bizName;
+    public UpdateVerifySettingResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getBizName() {
-        return this.bizName;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public UpdateVerifySettingResponse setSolution(String solution) {

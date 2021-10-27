@@ -4,17 +4,11 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class InitFaceVerifyRequest extends TeaModel {
-    @NameInMap("SceneId")
-    public Long sceneId;
+    @NameInMap("CallbackToken")
+    public String callbackToken;
 
-    @NameInMap("OuterOrderNo")
-    public String outerOrderNo;
-
-    @NameInMap("ProductCode")
-    public String productCode;
-
-    @NameInMap("CertType")
-    public String certType;
+    @NameInMap("CallbackUrl")
+    public String callbackUrl;
 
     @NameInMap("CertName")
     public String certName;
@@ -22,11 +16,26 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("CertNo")
     public String certNo;
 
-    @NameInMap("ReturnUrl")
-    public String returnUrl;
+    @NameInMap("CertType")
+    public String certType;
+
+    @NameInMap("CertifyId")
+    public String certifyId;
+
+    @NameInMap("CertifyUrlType")
+    public String certifyUrlType;
+
+    @NameInMap("Crop")
+    public String crop;
 
     @NameInMap("FaceContrastPicture")
     public String faceContrastPicture;
+
+    @NameInMap("FaceContrastPictureUrl")
+    public String faceContrastPictureUrl;
+
+    @NameInMap("Ip")
+    public String ip;
 
     @NameInMap("MetaInfo")
     public String metaInfo;
@@ -34,17 +43,8 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("Mobile")
     public String mobile;
 
-    @NameInMap("Ip")
-    public String ip;
-
-    @NameInMap("UserId")
-    public String userId;
-
-    @NameInMap("FaceContrastPictureUrl")
-    public String faceContrastPictureUrl;
-
-    @NameInMap("CertifyId")
-    public String certifyId;
+    @NameInMap("Model")
+    public String model;
 
     @NameInMap("OssBucketName")
     public String ossBucketName;
@@ -52,53 +52,40 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("OssObjectName")
     public String ossObjectName;
 
-    @NameInMap("Model")
-    public String model;
+    @NameInMap("OuterOrderNo")
+    public String outerOrderNo;
 
-    @NameInMap("CallbackUrl")
-    public String callbackUrl;
+    @NameInMap("ProductCode")
+    public String productCode;
 
-    @NameInMap("CallbackToken")
-    public String callbackToken;
+    @NameInMap("ReturnUrl")
+    public String returnUrl;
 
-    @NameInMap("Crop")
-    public String crop;
+    @NameInMap("SceneId")
+    public Long sceneId;
+
+    @NameInMap("UserId")
+    public String userId;
 
     public static InitFaceVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         InitFaceVerifyRequest self = new InitFaceVerifyRequest();
         return TeaModel.build(map, self);
     }
 
-    public InitFaceVerifyRequest setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
+    public InitFaceVerifyRequest setCallbackToken(String callbackToken) {
+        this.callbackToken = callbackToken;
         return this;
     }
-    public Long getSceneId() {
-        return this.sceneId;
+    public String getCallbackToken() {
+        return this.callbackToken;
     }
 
-    public InitFaceVerifyRequest setOuterOrderNo(String outerOrderNo) {
-        this.outerOrderNo = outerOrderNo;
+    public InitFaceVerifyRequest setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
         return this;
     }
-    public String getOuterOrderNo() {
-        return this.outerOrderNo;
-    }
-
-    public InitFaceVerifyRequest setProductCode(String productCode) {
-        this.productCode = productCode;
-        return this;
-    }
-    public String getProductCode() {
-        return this.productCode;
-    }
-
-    public InitFaceVerifyRequest setCertType(String certType) {
-        this.certType = certType;
-        return this;
-    }
-    public String getCertType() {
-        return this.certType;
+    public String getCallbackUrl() {
+        return this.callbackUrl;
     }
 
     public InitFaceVerifyRequest setCertName(String certName) {
@@ -117,12 +104,36 @@ public class InitFaceVerifyRequest extends TeaModel {
         return this.certNo;
     }
 
-    public InitFaceVerifyRequest setReturnUrl(String returnUrl) {
-        this.returnUrl = returnUrl;
+    public InitFaceVerifyRequest setCertType(String certType) {
+        this.certType = certType;
         return this;
     }
-    public String getReturnUrl() {
-        return this.returnUrl;
+    public String getCertType() {
+        return this.certType;
+    }
+
+    public InitFaceVerifyRequest setCertifyId(String certifyId) {
+        this.certifyId = certifyId;
+        return this;
+    }
+    public String getCertifyId() {
+        return this.certifyId;
+    }
+
+    public InitFaceVerifyRequest setCertifyUrlType(String certifyUrlType) {
+        this.certifyUrlType = certifyUrlType;
+        return this;
+    }
+    public String getCertifyUrlType() {
+        return this.certifyUrlType;
+    }
+
+    public InitFaceVerifyRequest setCrop(String crop) {
+        this.crop = crop;
+        return this;
+    }
+    public String getCrop() {
+        return this.crop;
     }
 
     public InitFaceVerifyRequest setFaceContrastPicture(String faceContrastPicture) {
@@ -131,6 +142,22 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getFaceContrastPicture() {
         return this.faceContrastPicture;
+    }
+
+    public InitFaceVerifyRequest setFaceContrastPictureUrl(String faceContrastPictureUrl) {
+        this.faceContrastPictureUrl = faceContrastPictureUrl;
+        return this;
+    }
+    public String getFaceContrastPictureUrl() {
+        return this.faceContrastPictureUrl;
+    }
+
+    public InitFaceVerifyRequest setIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    public String getIp() {
+        return this.ip;
     }
 
     public InitFaceVerifyRequest setMetaInfo(String metaInfo) {
@@ -149,36 +176,12 @@ public class InitFaceVerifyRequest extends TeaModel {
         return this.mobile;
     }
 
-    public InitFaceVerifyRequest setIp(String ip) {
-        this.ip = ip;
+    public InitFaceVerifyRequest setModel(String model) {
+        this.model = model;
         return this;
     }
-    public String getIp() {
-        return this.ip;
-    }
-
-    public InitFaceVerifyRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public InitFaceVerifyRequest setFaceContrastPictureUrl(String faceContrastPictureUrl) {
-        this.faceContrastPictureUrl = faceContrastPictureUrl;
-        return this;
-    }
-    public String getFaceContrastPictureUrl() {
-        return this.faceContrastPictureUrl;
-    }
-
-    public InitFaceVerifyRequest setCertifyId(String certifyId) {
-        this.certifyId = certifyId;
-        return this;
-    }
-    public String getCertifyId() {
-        return this.certifyId;
+    public String getModel() {
+        return this.model;
     }
 
     public InitFaceVerifyRequest setOssBucketName(String ossBucketName) {
@@ -197,36 +200,44 @@ public class InitFaceVerifyRequest extends TeaModel {
         return this.ossObjectName;
     }
 
-    public InitFaceVerifyRequest setModel(String model) {
-        this.model = model;
+    public InitFaceVerifyRequest setOuterOrderNo(String outerOrderNo) {
+        this.outerOrderNo = outerOrderNo;
         return this;
     }
-    public String getModel() {
-        return this.model;
+    public String getOuterOrderNo() {
+        return this.outerOrderNo;
     }
 
-    public InitFaceVerifyRequest setCallbackUrl(String callbackUrl) {
-        this.callbackUrl = callbackUrl;
+    public InitFaceVerifyRequest setProductCode(String productCode) {
+        this.productCode = productCode;
         return this;
     }
-    public String getCallbackUrl() {
-        return this.callbackUrl;
+    public String getProductCode() {
+        return this.productCode;
     }
 
-    public InitFaceVerifyRequest setCallbackToken(String callbackToken) {
-        this.callbackToken = callbackToken;
+    public InitFaceVerifyRequest setReturnUrl(String returnUrl) {
+        this.returnUrl = returnUrl;
         return this;
     }
-    public String getCallbackToken() {
-        return this.callbackToken;
+    public String getReturnUrl() {
+        return this.returnUrl;
     }
 
-    public InitFaceVerifyRequest setCrop(String crop) {
-        this.crop = crop;
+    public InitFaceVerifyRequest setSceneId(Long sceneId) {
+        this.sceneId = sceneId;
         return this;
     }
-    public String getCrop() {
-        return this.crop;
+    public Long getSceneId() {
+        return this.sceneId;
+    }
+
+    public InitFaceVerifyRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

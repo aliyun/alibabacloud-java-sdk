@@ -4,14 +4,6 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DetectFaceAttributesResponse extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
     @NameInMap("Code")
     @Validation(required = true)
     public String code;
@@ -20,6 +12,14 @@ public class DetectFaceAttributesResponse extends TeaModel {
     @Validation(required = true)
     public String message;
 
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
+
     @NameInMap("Data")
     @Validation(required = true)
     public DetectFaceAttributesResponseData data;
@@ -27,22 +27,6 @@ public class DetectFaceAttributesResponse extends TeaModel {
     public static DetectFaceAttributesResponse build(java.util.Map<String, ?> map) throws Exception {
         DetectFaceAttributesResponse self = new DetectFaceAttributesResponse();
         return TeaModel.build(map, self);
-    }
-
-    public DetectFaceAttributesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DetectFaceAttributesResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public DetectFaceAttributesResponse setCode(String code) {
@@ -61,100 +45,28 @@ public class DetectFaceAttributesResponse extends TeaModel {
         return this.message;
     }
 
+    public DetectFaceAttributesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DetectFaceAttributesResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public DetectFaceAttributesResponse setData(DetectFaceAttributesResponseData data) {
         this.data = data;
         return this;
     }
     public DetectFaceAttributesResponseData getData() {
         return this.data;
-    }
-
-    public static class DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect extends TeaModel {
-        @NameInMap("Top")
-        @Validation(required = true)
-        public Integer top;
-
-        @NameInMap("Left")
-        @Validation(required = true)
-        public Integer left;
-
-        @NameInMap("Width")
-        @Validation(required = true)
-        public Integer width;
-
-        @NameInMap("Height")
-        @Validation(required = true)
-        public Integer height;
-
-        public static DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect build(java.util.Map<String, ?> map) throws Exception {
-            DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect self = new DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect setTop(Integer top) {
-            this.top = top;
-            return this;
-        }
-        public Integer getTop() {
-            return this.top;
-        }
-
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
-        }
-
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
-    }
-
-    public static class DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling extends TeaModel {
-        @NameInMap("Value")
-        @Validation(required = true)
-        public Float value;
-
-        @NameInMap("Threshold")
-        @Validation(required = true)
-        public Float threshold;
-
-        public static DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling build(java.util.Map<String, ?> map) throws Exception {
-            DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling self = new DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling setValue(Float value) {
-            this.value = value;
-            return this;
-        }
-        public Float getValue() {
-            return this.value;
-        }
-
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling setThreshold(Float threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public Float getThreshold() {
-            return this.threshold;
-        }
-
     }
 
     public static class DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesHeadpose extends TeaModel {
@@ -201,15 +113,39 @@ public class DetectFaceAttributesResponse extends TeaModel {
 
     }
 
+    public static class DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling extends TeaModel {
+        @NameInMap("Threshold")
+        @Validation(required = true)
+        public Float threshold;
+
+        @NameInMap("Value")
+        @Validation(required = true)
+        public Float value;
+
+        public static DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling build(java.util.Map<String, ?> map) throws Exception {
+            DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling self = new DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling();
+            return TeaModel.build(map, self);
+        }
+
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling setThreshold(Float threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Float getThreshold() {
+            return this.threshold;
+        }
+
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling setValue(Float value) {
+            this.value = value;
+            return this;
+        }
+        public Float getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes extends TeaModel {
-        @NameInMap("Glasses")
-        @Validation(required = true)
-        public String glasses;
-
-        @NameInMap("Facetype")
-        @Validation(required = true)
-        public String facetype;
-
         @NameInMap("Blur")
         @Validation(required = true)
         public Float blur;
@@ -217,6 +153,14 @@ public class DetectFaceAttributesResponse extends TeaModel {
         @NameInMap("Facequal")
         @Validation(required = true)
         public Float facequal;
+
+        @NameInMap("Facetype")
+        @Validation(required = true)
+        public String facetype;
+
+        @NameInMap("Glasses")
+        @Validation(required = true)
+        public String glasses;
 
         @NameInMap("Integrity")
         @Validation(required = true)
@@ -226,33 +170,17 @@ public class DetectFaceAttributesResponse extends TeaModel {
         @Validation(required = true)
         public String respirator;
 
-        @NameInMap("Smiling")
-        @Validation(required = true)
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling smiling;
-
         @NameInMap("Headpose")
         @Validation(required = true)
         public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesHeadpose headpose;
 
+        @NameInMap("Smiling")
+        @Validation(required = true)
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling smiling;
+
         public static DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes build(java.util.Map<String, ?> map) throws Exception {
             DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes self = new DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes();
             return TeaModel.build(map, self);
-        }
-
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes setGlasses(String glasses) {
-            this.glasses = glasses;
-            return this;
-        }
-        public String getGlasses() {
-            return this.glasses;
-        }
-
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes setFacetype(String facetype) {
-            this.facetype = facetype;
-            return this;
-        }
-        public String getFacetype() {
-            return this.facetype;
         }
 
         public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes setBlur(Float blur) {
@@ -271,6 +199,22 @@ public class DetectFaceAttributesResponse extends TeaModel {
             return this.facequal;
         }
 
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes setFacetype(String facetype) {
+            this.facetype = facetype;
+            return this;
+        }
+        public String getFacetype() {
+            return this.facetype;
+        }
+
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes setGlasses(String glasses) {
+            this.glasses = glasses;
+            return this;
+        }
+        public String getGlasses() {
+            return this.glasses;
+        }
+
         public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes setIntegrity(Integer integrity) {
             this.integrity = integrity;
             return this;
@@ -287,14 +231,6 @@ public class DetectFaceAttributesResponse extends TeaModel {
             return this.respirator;
         }
 
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes setSmiling(DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling smiling) {
-            this.smiling = smiling;
-            return this;
-        }
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling getSmiling() {
-            return this.smiling;
-        }
-
         public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes setHeadpose(DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesHeadpose headpose) {
             this.headpose = headpose;
             return this;
@@ -303,28 +239,84 @@ public class DetectFaceAttributesResponse extends TeaModel {
             return this.headpose;
         }
 
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes setSmiling(DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling smiling) {
+            this.smiling = smiling;
+            return this;
+        }
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributesSmiling getSmiling() {
+            return this.smiling;
+        }
+
+    }
+
+    public static class DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect extends TeaModel {
+        @NameInMap("Height")
+        @Validation(required = true)
+        public Integer height;
+
+        @NameInMap("Left")
+        @Validation(required = true)
+        public Integer left;
+
+        @NameInMap("Top")
+        @Validation(required = true)
+        public Integer top;
+
+        @NameInMap("Width")
+        @Validation(required = true)
+        public Integer width;
+
+        public static DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect build(java.util.Map<String, ?> map) throws Exception {
+            DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect self = new DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect();
+            return TeaModel.build(map, self);
+        }
+
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
+        }
+
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect setTop(Integer top) {
+            this.top = top;
+            return this;
+        }
+        public Integer getTop() {
+            return this.top;
+        }
+
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
     }
 
     public static class DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfo extends TeaModel {
-        @NameInMap("FaceRect")
-        @Validation(required = true)
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect faceRect;
-
         @NameInMap("FaceAttributes")
         @Validation(required = true)
         public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes faceAttributes;
 
+        @NameInMap("FaceRect")
+        @Validation(required = true)
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect faceRect;
+
         public static DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfo build(java.util.Map<String, ?> map) throws Exception {
             DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfo self = new DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfo setFaceRect(DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect faceRect) {
-            this.faceRect = faceRect;
-            return this;
-        }
-        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect getFaceRect() {
-            return this.faceRect;
         }
 
         public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfo setFaceAttributes(DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes faceAttributes) {
@@ -333,6 +325,14 @@ public class DetectFaceAttributesResponse extends TeaModel {
         }
         public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceAttributes getFaceAttributes() {
             return this.faceAttributes;
+        }
+
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfo setFaceRect(DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect faceRect) {
+            this.faceRect = faceRect;
+            return this;
+        }
+        public DetectFaceAttributesResponseDataFaceInfosFaceAttributesDetectInfoFaceRect getFaceRect() {
+            return this.faceRect;
         }
 
     }
@@ -358,13 +358,13 @@ public class DetectFaceAttributesResponse extends TeaModel {
     }
 
     public static class DetectFaceAttributesResponseData extends TeaModel {
-        @NameInMap("ImgWidth")
-        @Validation(required = true)
-        public Integer imgWidth;
-
         @NameInMap("ImgHeight")
         @Validation(required = true)
         public Integer imgHeight;
+
+        @NameInMap("ImgWidth")
+        @Validation(required = true)
+        public Integer imgWidth;
 
         @NameInMap("FaceInfos")
         @Validation(required = true)
@@ -375,20 +375,20 @@ public class DetectFaceAttributesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DetectFaceAttributesResponseData setImgWidth(Integer imgWidth) {
-            this.imgWidth = imgWidth;
-            return this;
-        }
-        public Integer getImgWidth() {
-            return this.imgWidth;
-        }
-
         public DetectFaceAttributesResponseData setImgHeight(Integer imgHeight) {
             this.imgHeight = imgHeight;
             return this;
         }
         public Integer getImgHeight() {
             return this.imgHeight;
+        }
+
+        public DetectFaceAttributesResponseData setImgWidth(Integer imgWidth) {
+            this.imgWidth = imgWidth;
+            return this;
+        }
+        public Integer getImgWidth() {
+            return this.imgWidth;
         }
 
         public DetectFaceAttributesResponseData setFaceInfos(DetectFaceAttributesResponseDataFaceInfos faceInfos) {

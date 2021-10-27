@@ -4,11 +4,11 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppInfoRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("Platform")
     public String platform;
@@ -18,20 +18,20 @@ public class DescribeAppInfoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAppInfoRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public DescribeAppInfoRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeAppInfoRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeAppInfoRequest setPlatform(String platform) {

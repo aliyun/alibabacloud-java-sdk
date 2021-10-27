@@ -4,17 +4,17 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("CurrentPage")
     @Validation(required = true)
-    public String requestId;
+    public Integer currentPage;
 
     @NameInMap("PageSize")
     @Validation(required = true)
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public Integer currentPage;
+    public String requestId;
 
     @NameInMap("TotalCount")
     @Validation(required = true)
@@ -29,12 +29,12 @@ public class DescribeAppInfoResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAppInfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeAppInfoResponse setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeAppInfoResponse setPageSize(Integer pageSize) {
@@ -45,12 +45,12 @@ public class DescribeAppInfoResponse extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeAppInfoResponse setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeAppInfoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeAppInfoResponse setTotalCount(Integer totalCount) {
@@ -67,26 +67,6 @@ public class DescribeAppInfoResponse extends TeaModel {
     }
     public java.util.List<DescribeAppInfoResponseAppInfoList> getAppInfoList() {
         return this.appInfoList;
-    }
-
-    public static class DescribeAppInfoResponseAppInfoListPackageInfo extends TeaModel {
-        @NameInMap("Version")
-        @Validation(required = true)
-        public String version;
-
-        public static DescribeAppInfoResponseAppInfoListPackageInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAppInfoResponseAppInfoListPackageInfo self = new DescribeAppInfoResponseAppInfoListPackageInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAppInfoResponseAppInfoListPackageInfo setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
     }
 
     public static class DescribeAppInfoResponseAppInfoListDebugPackageInfo extends TeaModel {
@@ -109,7 +89,35 @@ public class DescribeAppInfoResponse extends TeaModel {
 
     }
 
+    public static class DescribeAppInfoResponseAppInfoListPackageInfo extends TeaModel {
+        @NameInMap("Version")
+        @Validation(required = true)
+        public String version;
+
+        public static DescribeAppInfoResponseAppInfoListPackageInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppInfoResponseAppInfoListPackageInfo self = new DescribeAppInfoResponseAppInfoListPackageInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppInfoResponseAppInfoListPackageInfo setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class DescribeAppInfoResponseAppInfoList extends TeaModel {
+        @NameInMap("EndDate")
+        @Validation(required = true)
+        public String endDate;
+
+        @NameInMap("Icon")
+        @Validation(required = true)
+        public String icon;
+
         @NameInMap("Id")
         @Validation(required = true)
         public Long id;
@@ -122,33 +130,41 @@ public class DescribeAppInfoResponse extends TeaModel {
         @Validation(required = true)
         public String packageName;
 
-        @NameInMap("Icon")
-        @Validation(required = true)
-        public String icon;
-
         @NameInMap("StartDate")
         @Validation(required = true)
         public String startDate;
-
-        @NameInMap("EndDate")
-        @Validation(required = true)
-        public String endDate;
 
         @NameInMap("Type")
         @Validation(required = true)
         public Integer type;
 
-        @NameInMap("PackageInfo")
-        @Validation(required = true)
-        public DescribeAppInfoResponseAppInfoListPackageInfo packageInfo;
-
         @NameInMap("DebugPackageInfo")
         @Validation(required = true)
         public DescribeAppInfoResponseAppInfoListDebugPackageInfo debugPackageInfo;
 
+        @NameInMap("PackageInfo")
+        @Validation(required = true)
+        public DescribeAppInfoResponseAppInfoListPackageInfo packageInfo;
+
         public static DescribeAppInfoResponseAppInfoList build(java.util.Map<String, ?> map) throws Exception {
             DescribeAppInfoResponseAppInfoList self = new DescribeAppInfoResponseAppInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAppInfoResponseAppInfoList setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        public DescribeAppInfoResponseAppInfoList setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
         }
 
         public DescribeAppInfoResponseAppInfoList setId(Long id) {
@@ -175,28 +191,12 @@ public class DescribeAppInfoResponse extends TeaModel {
             return this.packageName;
         }
 
-        public DescribeAppInfoResponseAppInfoList setIcon(String icon) {
-            this.icon = icon;
-            return this;
-        }
-        public String getIcon() {
-            return this.icon;
-        }
-
         public DescribeAppInfoResponseAppInfoList setStartDate(String startDate) {
             this.startDate = startDate;
             return this;
         }
         public String getStartDate() {
             return this.startDate;
-        }
-
-        public DescribeAppInfoResponseAppInfoList setEndDate(String endDate) {
-            this.endDate = endDate;
-            return this;
-        }
-        public String getEndDate() {
-            return this.endDate;
         }
 
         public DescribeAppInfoResponseAppInfoList setType(Integer type) {
@@ -207,20 +207,20 @@ public class DescribeAppInfoResponse extends TeaModel {
             return this.type;
         }
 
-        public DescribeAppInfoResponseAppInfoList setPackageInfo(DescribeAppInfoResponseAppInfoListPackageInfo packageInfo) {
-            this.packageInfo = packageInfo;
-            return this;
-        }
-        public DescribeAppInfoResponseAppInfoListPackageInfo getPackageInfo() {
-            return this.packageInfo;
-        }
-
         public DescribeAppInfoResponseAppInfoList setDebugPackageInfo(DescribeAppInfoResponseAppInfoListDebugPackageInfo debugPackageInfo) {
             this.debugPackageInfo = debugPackageInfo;
             return this;
         }
         public DescribeAppInfoResponseAppInfoListDebugPackageInfo getDebugPackageInfo() {
             return this.debugPackageInfo;
+        }
+
+        public DescribeAppInfoResponseAppInfoList setPackageInfo(DescribeAppInfoResponseAppInfoListPackageInfo packageInfo) {
+            this.packageInfo = packageInfo;
+            return this;
+        }
+        public DescribeAppInfoResponseAppInfoListPackageInfo getPackageInfo() {
+            return this.packageInfo;
         }
 
     }

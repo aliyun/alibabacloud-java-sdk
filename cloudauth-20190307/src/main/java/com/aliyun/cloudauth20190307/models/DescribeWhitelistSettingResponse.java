@@ -4,14 +4,6 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeWhitelistSettingResponse extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("TotalCount")
-    @Validation(required = true)
-    public Integer totalCount;
-
     @NameInMap("CurrentPage")
     @Validation(required = true)
     public Integer currentPage;
@@ -20,6 +12,14 @@ public class DescribeWhitelistSettingResponse extends TeaModel {
     @Validation(required = true)
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    @Validation(required = true)
+    public Integer totalCount;
+
     @NameInMap("Items")
     @Validation(required = true)
     public java.util.List<DescribeWhitelistSettingResponseItems> items;
@@ -27,22 +27,6 @@ public class DescribeWhitelistSettingResponse extends TeaModel {
     public static DescribeWhitelistSettingResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeWhitelistSettingResponse self = new DescribeWhitelistSettingResponse();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeWhitelistSettingResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeWhitelistSettingResponse setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeWhitelistSettingResponse setCurrentPage(Integer currentPage) {
@@ -61,6 +45,22 @@ public class DescribeWhitelistSettingResponse extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeWhitelistSettingResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeWhitelistSettingResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeWhitelistSettingResponse setItems(java.util.List<DescribeWhitelistSettingResponseItems> items) {
         this.items = items;
         return this;
@@ -70,22 +70,6 @@ public class DescribeWhitelistSettingResponse extends TeaModel {
     }
 
     public static class DescribeWhitelistSettingResponseItems extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
-        public Long id;
-
-        @NameInMap("SceneId")
-        @Validation(required = true)
-        public Long sceneId;
-
-        @NameInMap("ValidStartDate")
-        @Validation(required = true)
-        public String validStartDate;
-
-        @NameInMap("ValidEndDate")
-        @Validation(required = true)
-        public String validEndDate;
-
         @NameInMap("CertNo")
         @Validation(required = true)
         public String certNo;
@@ -93,10 +77,6 @@ public class DescribeWhitelistSettingResponse extends TeaModel {
         @NameInMap("CertifyId")
         @Validation(required = true)
         public String certifyId;
-
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
 
         @NameInMap("GmtCreate")
         @Validation(required = true)
@@ -106,41 +86,29 @@ public class DescribeWhitelistSettingResponse extends TeaModel {
         @Validation(required = true)
         public String gmtModified;
 
+        @NameInMap("Id")
+        @Validation(required = true)
+        public Long id;
+
+        @NameInMap("SceneId")
+        @Validation(required = true)
+        public Long sceneId;
+
+        @NameInMap("Status")
+        @Validation(required = true)
+        public String status;
+
+        @NameInMap("ValidEndDate")
+        @Validation(required = true)
+        public String validEndDate;
+
+        @NameInMap("ValidStartDate")
+        @Validation(required = true)
+        public String validStartDate;
+
         public static DescribeWhitelistSettingResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeWhitelistSettingResponseItems self = new DescribeWhitelistSettingResponseItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeWhitelistSettingResponseItems setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public DescribeWhitelistSettingResponseItems setSceneId(Long sceneId) {
-            this.sceneId = sceneId;
-            return this;
-        }
-        public Long getSceneId() {
-            return this.sceneId;
-        }
-
-        public DescribeWhitelistSettingResponseItems setValidStartDate(String validStartDate) {
-            this.validStartDate = validStartDate;
-            return this;
-        }
-        public String getValidStartDate() {
-            return this.validStartDate;
-        }
-
-        public DescribeWhitelistSettingResponseItems setValidEndDate(String validEndDate) {
-            this.validEndDate = validEndDate;
-            return this;
-        }
-        public String getValidEndDate() {
-            return this.validEndDate;
         }
 
         public DescribeWhitelistSettingResponseItems setCertNo(String certNo) {
@@ -159,14 +127,6 @@ public class DescribeWhitelistSettingResponse extends TeaModel {
             return this.certifyId;
         }
 
-        public DescribeWhitelistSettingResponseItems setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public DescribeWhitelistSettingResponseItems setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -181,6 +141,46 @@ public class DescribeWhitelistSettingResponse extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeWhitelistSettingResponseItems setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeWhitelistSettingResponseItems setSceneId(Long sceneId) {
+            this.sceneId = sceneId;
+            return this;
+        }
+        public Long getSceneId() {
+            return this.sceneId;
+        }
+
+        public DescribeWhitelistSettingResponseItems setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeWhitelistSettingResponseItems setValidEndDate(String validEndDate) {
+            this.validEndDate = validEndDate;
+            return this;
+        }
+        public String getValidEndDate() {
+            return this.validEndDate;
+        }
+
+        public DescribeWhitelistSettingResponseItems setValidStartDate(String validStartDate) {
+            this.validStartDate = validStartDate;
+            return this;
+        }
+        public String getValidStartDate() {
+            return this.validStartDate;
         }
 
     }

@@ -42,21 +42,21 @@ public class DescribeOssUploadTokenResponse extends TeaModel {
         @Validation(required = true)
         public String endPoint;
 
-        @NameInMap("Path")
-        @Validation(required = true)
-        public String path;
-
         @NameInMap("Expired")
         @Validation(required = true)
         public Long expired;
 
-        @NameInMap("Secret")
-        @Validation(required = true)
-        public String secret;
-
         @NameInMap("Key")
         @Validation(required = true)
         public String key;
+
+        @NameInMap("Path")
+        @Validation(required = true)
+        public String path;
+
+        @NameInMap("Secret")
+        @Validation(required = true)
+        public String secret;
 
         @NameInMap("Token")
         @Validation(required = true)
@@ -83,14 +83,6 @@ public class DescribeOssUploadTokenResponse extends TeaModel {
             return this.endPoint;
         }
 
-        public DescribeOssUploadTokenResponseOssUploadToken setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
         public DescribeOssUploadTokenResponseOssUploadToken setExpired(Long expired) {
             this.expired = expired;
             return this;
@@ -99,20 +91,28 @@ public class DescribeOssUploadTokenResponse extends TeaModel {
             return this.expired;
         }
 
-        public DescribeOssUploadTokenResponseOssUploadToken setSecret(String secret) {
-            this.secret = secret;
-            return this;
-        }
-        public String getSecret() {
-            return this.secret;
-        }
-
         public DescribeOssUploadTokenResponseOssUploadToken setKey(String key) {
             this.key = key;
             return this;
         }
         public String getKey() {
             return this.key;
+        }
+
+        public DescribeOssUploadTokenResponseOssUploadToken setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public DescribeOssUploadTokenResponseOssUploadToken setSecret(String secret) {
+            this.secret = secret;
+            return this;
+        }
+        public String getSecret() {
+            return this.secret;
         }
 
         public DescribeOssUploadTokenResponseOssUploadToken setToken(String token) {

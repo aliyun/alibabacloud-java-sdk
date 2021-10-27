@@ -66,21 +66,21 @@ public class DescribeVerifyTokenResponse extends TeaModel {
         @Validation(required = true)
         public String endPoint;
 
-        @NameInMap("Path")
-        @Validation(required = true)
-        public String path;
-
         @NameInMap("Expired")
         @Validation(required = true)
         public Long expired;
 
-        @NameInMap("Secret")
-        @Validation(required = true)
-        public String secret;
-
         @NameInMap("Key")
         @Validation(required = true)
         public String key;
+
+        @NameInMap("Path")
+        @Validation(required = true)
+        public String path;
+
+        @NameInMap("Secret")
+        @Validation(required = true)
+        public String secret;
 
         @NameInMap("Token")
         @Validation(required = true)
@@ -107,14 +107,6 @@ public class DescribeVerifyTokenResponse extends TeaModel {
             return this.endPoint;
         }
 
-        public DescribeVerifyTokenResponseOssUploadToken setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
         public DescribeVerifyTokenResponseOssUploadToken setExpired(Long expired) {
             this.expired = expired;
             return this;
@@ -123,20 +115,28 @@ public class DescribeVerifyTokenResponse extends TeaModel {
             return this.expired;
         }
 
-        public DescribeVerifyTokenResponseOssUploadToken setSecret(String secret) {
-            this.secret = secret;
-            return this;
-        }
-        public String getSecret() {
-            return this.secret;
-        }
-
         public DescribeVerifyTokenResponseOssUploadToken setKey(String key) {
             this.key = key;
             return this;
         }
         public String getKey() {
             return this.key;
+        }
+
+        public DescribeVerifyTokenResponseOssUploadToken setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public DescribeVerifyTokenResponseOssUploadToken setSecret(String secret) {
+            this.secret = secret;
+            return this;
+        }
+        public String getSecret() {
+            return this.secret;
         }
 
         public DescribeVerifyTokenResponseOssUploadToken setToken(String token) {

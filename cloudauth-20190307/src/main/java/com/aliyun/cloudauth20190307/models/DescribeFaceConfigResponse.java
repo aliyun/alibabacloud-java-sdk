@@ -34,13 +34,13 @@ public class DescribeFaceConfigResponse extends TeaModel {
     }
 
     public static class DescribeFaceConfigResponseItems extends TeaModel {
-        @NameInMap("BizType")
-        @Validation(required = true)
-        public String bizType;
-
         @NameInMap("BizName")
         @Validation(required = true)
         public String bizName;
+
+        @NameInMap("BizType")
+        @Validation(required = true)
+        public String bizType;
 
         @NameInMap("GmtUpdated")
         @Validation(required = true)
@@ -51,20 +51,20 @@ public class DescribeFaceConfigResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeFaceConfigResponseItems setBizType(String bizType) {
-            this.bizType = bizType;
-            return this;
-        }
-        public String getBizType() {
-            return this.bizType;
-        }
-
         public DescribeFaceConfigResponseItems setBizName(String bizName) {
             this.bizName = bizName;
             return this;
         }
         public String getBizName() {
             return this.bizName;
+        }
+
+        public DescribeFaceConfigResponseItems setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
         }
 
         public DescribeFaceConfigResponseItems setGmtUpdated(Long gmtUpdated) {

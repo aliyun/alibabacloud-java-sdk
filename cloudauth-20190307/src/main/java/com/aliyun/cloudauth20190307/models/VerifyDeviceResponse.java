@@ -4,10 +4,6 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class VerifyDeviceResponse extends TeaModel {
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("Code")
     @Validation(required = true)
     public String code;
@@ -16,6 +12,10 @@ public class VerifyDeviceResponse extends TeaModel {
     @Validation(required = true)
     public String message;
 
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
     @NameInMap("ResultObject")
     @Validation(required = true)
     public VerifyDeviceResponseResultObject resultObject;
@@ -23,14 +23,6 @@ public class VerifyDeviceResponse extends TeaModel {
     public static VerifyDeviceResponse build(java.util.Map<String, ?> map) throws Exception {
         VerifyDeviceResponse self = new VerifyDeviceResponse();
         return TeaModel.build(map, self);
-    }
-
-    public VerifyDeviceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public VerifyDeviceResponse setCode(String code) {
@@ -49,6 +41,14 @@ public class VerifyDeviceResponse extends TeaModel {
         return this.message;
     }
 
+    public VerifyDeviceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public VerifyDeviceResponse setResultObject(VerifyDeviceResponseResultObject resultObject) {
         this.resultObject = resultObject;
         return this;
@@ -58,9 +58,13 @@ public class VerifyDeviceResponse extends TeaModel {
     }
 
     public static class VerifyDeviceResponseResultObject extends TeaModel {
-        @NameInMap("ValidationRetCode")
+        @NameInMap("ExtParams")
         @Validation(required = true)
-        public String validationRetCode;
+        public String extParams;
+
+        @NameInMap("HasNext")
+        @Validation(required = true)
+        public String hasNext;
 
         @NameInMap("ProductRetCode")
         @Validation(required = true)
@@ -74,25 +78,29 @@ public class VerifyDeviceResponse extends TeaModel {
         @Validation(required = true)
         public String retMessageSub;
 
-        @NameInMap("HasNext")
+        @NameInMap("ValidationRetCode")
         @Validation(required = true)
-        public String hasNext;
-
-        @NameInMap("ExtParams")
-        @Validation(required = true)
-        public String extParams;
+        public String validationRetCode;
 
         public static VerifyDeviceResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
             VerifyDeviceResponseResultObject self = new VerifyDeviceResponseResultObject();
             return TeaModel.build(map, self);
         }
 
-        public VerifyDeviceResponseResultObject setValidationRetCode(String validationRetCode) {
-            this.validationRetCode = validationRetCode;
+        public VerifyDeviceResponseResultObject setExtParams(String extParams) {
+            this.extParams = extParams;
             return this;
         }
-        public String getValidationRetCode() {
-            return this.validationRetCode;
+        public String getExtParams() {
+            return this.extParams;
+        }
+
+        public VerifyDeviceResponseResultObject setHasNext(String hasNext) {
+            this.hasNext = hasNext;
+            return this;
+        }
+        public String getHasNext() {
+            return this.hasNext;
         }
 
         public VerifyDeviceResponseResultObject setProductRetCode(String productRetCode) {
@@ -119,20 +127,12 @@ public class VerifyDeviceResponse extends TeaModel {
             return this.retMessageSub;
         }
 
-        public VerifyDeviceResponseResultObject setHasNext(String hasNext) {
-            this.hasNext = hasNext;
+        public VerifyDeviceResponseResultObject setValidationRetCode(String validationRetCode) {
+            this.validationRetCode = validationRetCode;
             return this;
         }
-        public String getHasNext() {
-            return this.hasNext;
-        }
-
-        public VerifyDeviceResponseResultObject setExtParams(String extParams) {
-            this.extParams = extParams;
-            return this;
-        }
-        public String getExtParams() {
-            return this.extParams;
+        public String getValidationRetCode() {
+            return this.validationRetCode;
         }
 
     }

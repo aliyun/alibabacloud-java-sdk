@@ -4,39 +4,31 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateFaceConfigRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("BizName")
+    @Validation(required = true)
+    public String bizName;
 
     @NameInMap("BizType")
     @Validation(required = true)
     public String bizType;
 
-    @NameInMap("BizName")
-    @Validation(required = true)
-    public String bizName;
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static CreateFaceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFaceConfigRequest self = new CreateFaceConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateFaceConfigRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public CreateFaceConfigRequest setBizName(String bizName) {
+        this.bizName = bizName;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public CreateFaceConfigRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
+    public String getBizName() {
+        return this.bizName;
     }
 
     public CreateFaceConfigRequest setBizType(String bizType) {
@@ -47,12 +39,20 @@ public class CreateFaceConfigRequest extends TeaModel {
         return this.bizType;
     }
 
-    public CreateFaceConfigRequest setBizName(String bizName) {
-        this.bizName = bizName;
+    public CreateFaceConfigRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getBizName() {
-        return this.bizName;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public CreateFaceConfigRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

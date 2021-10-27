@@ -34,13 +34,13 @@ public class DescribeVerifySettingResponse extends TeaModel {
     }
 
     public static class DescribeVerifySettingResponseVerifySettingList extends TeaModel {
-        @NameInMap("BizType")
-        @Validation(required = true)
-        public String bizType;
-
         @NameInMap("BizName")
         @Validation(required = true)
         public String bizName;
+
+        @NameInMap("BizType")
+        @Validation(required = true)
+        public String bizType;
 
         @NameInMap("Solution")
         @Validation(required = true)
@@ -55,20 +55,20 @@ public class DescribeVerifySettingResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeVerifySettingResponseVerifySettingList setBizType(String bizType) {
-            this.bizType = bizType;
-            return this;
-        }
-        public String getBizType() {
-            return this.bizType;
-        }
-
         public DescribeVerifySettingResponseVerifySettingList setBizName(String bizName) {
             this.bizName = bizName;
             return this;
         }
         public String getBizName() {
             return this.bizName;
+        }
+
+        public DescribeVerifySettingResponseVerifySettingList setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
         }
 
         public DescribeVerifySettingResponseVerifySettingList setSolution(String solution) {

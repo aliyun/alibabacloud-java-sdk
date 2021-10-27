@@ -4,31 +4,31 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class VerifyMaterialRequest extends TeaModel {
-    @NameInMap("IdCardBackImageUrl")
-    public String idCardBackImageUrl;
-
-    @NameInMap("FaceImageUrl")
+    @NameInMap("BizId")
     @Validation(required = true)
-    public String faceImageUrl;
+    public String bizId;
 
     @NameInMap("BizType")
     @Validation(required = true)
     public String bizType;
 
-    @NameInMap("BizId")
+    @NameInMap("FaceImageUrl")
     @Validation(required = true)
-    public String bizId;
+    public String faceImageUrl;
 
-    @NameInMap("Name")
-    @Validation(required = true)
-    public String name;
+    @NameInMap("IdCardBackImageUrl")
+    public String idCardBackImageUrl;
+
+    @NameInMap("IdCardFrontImageUrl")
+    public String idCardFrontImageUrl;
 
     @NameInMap("IdCardNumber")
     @Validation(required = true)
     public String idCardNumber;
 
-    @NameInMap("IdCardFrontImageUrl")
-    public String idCardFrontImageUrl;
+    @NameInMap("Name")
+    @Validation(required = true)
+    public String name;
 
     @NameInMap("UserId")
     public String userId;
@@ -36,30 +36,6 @@ public class VerifyMaterialRequest extends TeaModel {
     public static VerifyMaterialRequest build(java.util.Map<String, ?> map) throws Exception {
         VerifyMaterialRequest self = new VerifyMaterialRequest();
         return TeaModel.build(map, self);
-    }
-
-    public VerifyMaterialRequest setIdCardBackImageUrl(String idCardBackImageUrl) {
-        this.idCardBackImageUrl = idCardBackImageUrl;
-        return this;
-    }
-    public String getIdCardBackImageUrl() {
-        return this.idCardBackImageUrl;
-    }
-
-    public VerifyMaterialRequest setFaceImageUrl(String faceImageUrl) {
-        this.faceImageUrl = faceImageUrl;
-        return this;
-    }
-    public String getFaceImageUrl() {
-        return this.faceImageUrl;
-    }
-
-    public VerifyMaterialRequest setBizType(String bizType) {
-        this.bizType = bizType;
-        return this;
-    }
-    public String getBizType() {
-        return this.bizType;
     }
 
     public VerifyMaterialRequest setBizId(String bizId) {
@@ -70,12 +46,36 @@ public class VerifyMaterialRequest extends TeaModel {
         return this.bizId;
     }
 
-    public VerifyMaterialRequest setName(String name) {
-        this.name = name;
+    public VerifyMaterialRequest setBizType(String bizType) {
+        this.bizType = bizType;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    public VerifyMaterialRequest setFaceImageUrl(String faceImageUrl) {
+        this.faceImageUrl = faceImageUrl;
+        return this;
+    }
+    public String getFaceImageUrl() {
+        return this.faceImageUrl;
+    }
+
+    public VerifyMaterialRequest setIdCardBackImageUrl(String idCardBackImageUrl) {
+        this.idCardBackImageUrl = idCardBackImageUrl;
+        return this;
+    }
+    public String getIdCardBackImageUrl() {
+        return this.idCardBackImageUrl;
+    }
+
+    public VerifyMaterialRequest setIdCardFrontImageUrl(String idCardFrontImageUrl) {
+        this.idCardFrontImageUrl = idCardFrontImageUrl;
+        return this;
+    }
+    public String getIdCardFrontImageUrl() {
+        return this.idCardFrontImageUrl;
     }
 
     public VerifyMaterialRequest setIdCardNumber(String idCardNumber) {
@@ -86,12 +86,12 @@ public class VerifyMaterialRequest extends TeaModel {
         return this.idCardNumber;
     }
 
-    public VerifyMaterialRequest setIdCardFrontImageUrl(String idCardFrontImageUrl) {
-        this.idCardFrontImageUrl = idCardFrontImageUrl;
+    public VerifyMaterialRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getIdCardFrontImageUrl() {
-        return this.idCardFrontImageUrl;
+    public String getName() {
+        return this.name;
     }
 
     public VerifyMaterialRequest setUserId(String userId) {

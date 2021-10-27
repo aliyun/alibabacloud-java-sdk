@@ -4,11 +4,11 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeRPSDKRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("TaskId")
     @Validation(required = true)
@@ -19,20 +19,20 @@ public class DescribeRPSDKRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeRPSDKRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public DescribeRPSDKRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeRPSDKRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public DescribeRPSDKRequest setTaskId(String taskId) {

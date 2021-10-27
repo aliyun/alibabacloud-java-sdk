@@ -4,6 +4,9 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppPackageRequest extends TeaModel {
+    @NameInMap("Debug")
+    public Boolean debug;
+
     @NameInMap("Id")
     public Long id;
 
@@ -14,12 +17,17 @@ public class UpdateAppPackageRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
-    @NameInMap("Debug")
-    public Boolean debug;
-
     public static UpdateAppPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppPackageRequest self = new UpdateAppPackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAppPackageRequest setDebug(Boolean debug) {
+        this.debug = debug;
+        return this;
+    }
+    public Boolean getDebug() {
+        return this.debug;
     }
 
     public UpdateAppPackageRequest setId(Long id) {
@@ -44,14 +52,6 @@ public class UpdateAppPackageRequest extends TeaModel {
     }
     public String getPlatform() {
         return this.platform;
-    }
-
-    public UpdateAppPackageRequest setDebug(Boolean debug) {
-        this.debug = debug;
-        return this;
-    }
-    public Boolean getDebug() {
-        return this.debug;
     }
 
 }

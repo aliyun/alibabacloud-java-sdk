@@ -4,15 +4,12 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class UpdateVerifySettingRequest extends TeaModel {
-    @NameInMap("BizType")
-    @Validation(required = true)
-    public String bizType;
-
     @NameInMap("BizName")
     public String bizName;
 
-    @NameInMap("Solution")
-    public String solution;
+    @NameInMap("BizType")
+    @Validation(required = true)
+    public String bizType;
 
     @NameInMap("GuideStep")
     public Boolean guideStep;
@@ -23,17 +20,12 @@ public class UpdateVerifySettingRequest extends TeaModel {
     @NameInMap("ResultStep")
     public Boolean resultStep;
 
+    @NameInMap("Solution")
+    public String solution;
+
     public static UpdateVerifySettingRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateVerifySettingRequest self = new UpdateVerifySettingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateVerifySettingRequest setBizType(String bizType) {
-        this.bizType = bizType;
-        return this;
-    }
-    public String getBizType() {
-        return this.bizType;
     }
 
     public UpdateVerifySettingRequest setBizName(String bizName) {
@@ -44,12 +36,12 @@ public class UpdateVerifySettingRequest extends TeaModel {
         return this.bizName;
     }
 
-    public UpdateVerifySettingRequest setSolution(String solution) {
-        this.solution = solution;
+    public UpdateVerifySettingRequest setBizType(String bizType) {
+        this.bizType = bizType;
         return this;
     }
-    public String getSolution() {
-        return this.solution;
+    public String getBizType() {
+        return this.bizType;
     }
 
     public UpdateVerifySettingRequest setGuideStep(Boolean guideStep) {
@@ -74,6 +66,14 @@ public class UpdateVerifySettingRequest extends TeaModel {
     }
     public Boolean getResultStep() {
         return this.resultStep;
+    }
+
+    public UpdateVerifySettingRequest setSolution(String solution) {
+        this.solution = solution;
+        return this;
+    }
+    public String getSolution() {
+        return this.solution;
     }
 
 }

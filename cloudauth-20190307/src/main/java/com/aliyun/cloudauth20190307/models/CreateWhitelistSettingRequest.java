@@ -4,24 +4,24 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateWhitelistSettingRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("CertNo")
+    public String certNo;
+
+    @NameInMap("CertifyId")
+    public String certifyId;
 
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("SceneId")
+    public Long sceneId;
 
     @NameInMap("ServiceCode")
     @Validation(required = true)
     public String serviceCode;
 
-    @NameInMap("SceneId")
-    public Long sceneId;
-
-    @NameInMap("CertifyId")
-    public String certifyId;
-
-    @NameInMap("CertNo")
-    public String certNo;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("ValidDay")
     @Validation(required = true)
@@ -32,36 +32,12 @@ public class CreateWhitelistSettingRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateWhitelistSettingRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public CreateWhitelistSettingRequest setCertNo(String certNo) {
+        this.certNo = certNo;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public CreateWhitelistSettingRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public CreateWhitelistSettingRequest setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-        return this;
-    }
-    public String getServiceCode() {
-        return this.serviceCode;
-    }
-
-    public CreateWhitelistSettingRequest setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
-        return this;
-    }
-    public Long getSceneId() {
-        return this.sceneId;
+    public String getCertNo() {
+        return this.certNo;
     }
 
     public CreateWhitelistSettingRequest setCertifyId(String certifyId) {
@@ -72,12 +48,36 @@ public class CreateWhitelistSettingRequest extends TeaModel {
         return this.certifyId;
     }
 
-    public CreateWhitelistSettingRequest setCertNo(String certNo) {
-        this.certNo = certNo;
+    public CreateWhitelistSettingRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getCertNo() {
-        return this.certNo;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public CreateWhitelistSettingRequest setSceneId(Long sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public Long getSceneId() {
+        return this.sceneId;
+    }
+
+    public CreateWhitelistSettingRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
+    public CreateWhitelistSettingRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public CreateWhitelistSettingRequest setValidDay(Integer validDay) {

@@ -62,13 +62,13 @@ public class CompareFaceVerifyResponse extends TeaModel {
         @Validation(required = true)
         public String certifyId;
 
-        @NameInMap("VerifyScore")
-        @Validation(required = true)
-        public Float verifyScore;
-
         @NameInMap("Passed")
         @Validation(required = true)
         public String passed;
+
+        @NameInMap("VerifyScore")
+        @Validation(required = true)
+        public Float verifyScore;
 
         public static CompareFaceVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
             CompareFaceVerifyResponseResultObject self = new CompareFaceVerifyResponseResultObject();
@@ -83,20 +83,20 @@ public class CompareFaceVerifyResponse extends TeaModel {
             return this.certifyId;
         }
 
-        public CompareFaceVerifyResponseResultObject setVerifyScore(Float verifyScore) {
-            this.verifyScore = verifyScore;
-            return this;
-        }
-        public Float getVerifyScore() {
-            return this.verifyScore;
-        }
-
         public CompareFaceVerifyResponseResultObject setPassed(String passed) {
             this.passed = passed;
             return this;
         }
         public String getPassed() {
             return this.passed;
+        }
+
+        public CompareFaceVerifyResponseResultObject setVerifyScore(Float verifyScore) {
+            this.verifyScore = verifyScore;
+            return this;
+        }
+        public Float getVerifyScore() {
+            return this.verifyScore;
         }
 
     }

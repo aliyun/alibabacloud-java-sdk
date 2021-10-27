@@ -58,53 +58,29 @@ public class DescribeFaceVerifyResponse extends TeaModel {
     }
 
     public static class DescribeFaceVerifyResponseResultObject extends TeaModel {
-        @NameInMap("SubCode")
+        @NameInMap("DeviceToken")
         @Validation(required = true)
-        public String subCode;
-
-        @NameInMap("MaterialInfo")
-        @Validation(required = true)
-        public String materialInfo;
+        public String deviceToken;
 
         @NameInMap("IdentityInfo")
         @Validation(required = true)
         public String identityInfo;
 
-        @NameInMap("DeviceToken")
+        @NameInMap("MaterialInfo")
         @Validation(required = true)
-        public String deviceToken;
+        public String materialInfo;
 
         @NameInMap("Passed")
         @Validation(required = true)
         public String passed;
 
+        @NameInMap("SubCode")
+        @Validation(required = true)
+        public String subCode;
+
         public static DescribeFaceVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
             DescribeFaceVerifyResponseResultObject self = new DescribeFaceVerifyResponseResultObject();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeFaceVerifyResponseResultObject setSubCode(String subCode) {
-            this.subCode = subCode;
-            return this;
-        }
-        public String getSubCode() {
-            return this.subCode;
-        }
-
-        public DescribeFaceVerifyResponseResultObject setMaterialInfo(String materialInfo) {
-            this.materialInfo = materialInfo;
-            return this;
-        }
-        public String getMaterialInfo() {
-            return this.materialInfo;
-        }
-
-        public DescribeFaceVerifyResponseResultObject setIdentityInfo(String identityInfo) {
-            this.identityInfo = identityInfo;
-            return this;
-        }
-        public String getIdentityInfo() {
-            return this.identityInfo;
         }
 
         public DescribeFaceVerifyResponseResultObject setDeviceToken(String deviceToken) {
@@ -115,12 +91,36 @@ public class DescribeFaceVerifyResponse extends TeaModel {
             return this.deviceToken;
         }
 
+        public DescribeFaceVerifyResponseResultObject setIdentityInfo(String identityInfo) {
+            this.identityInfo = identityInfo;
+            return this;
+        }
+        public String getIdentityInfo() {
+            return this.identityInfo;
+        }
+
+        public DescribeFaceVerifyResponseResultObject setMaterialInfo(String materialInfo) {
+            this.materialInfo = materialInfo;
+            return this;
+        }
+        public String getMaterialInfo() {
+            return this.materialInfo;
+        }
+
         public DescribeFaceVerifyResponseResultObject setPassed(String passed) {
             this.passed = passed;
             return this;
         }
         public String getPassed() {
             return this.passed;
+        }
+
+        public DescribeFaceVerifyResponseResultObject setSubCode(String subCode) {
+            this.subCode = subCode;
+            return this;
+        }
+        public String getSubCode() {
+            return this.subCode;
         }
 
     }

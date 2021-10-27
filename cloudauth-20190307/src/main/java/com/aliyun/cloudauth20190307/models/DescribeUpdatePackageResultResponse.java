@@ -33,26 +33,6 @@ public class DescribeUpdatePackageResultResponse extends TeaModel {
         return this.appInfo;
     }
 
-    public static class DescribeUpdatePackageResultResponseAppInfoPackageInfo extends TeaModel {
-        @NameInMap("Version")
-        @Validation(required = true)
-        public String version;
-
-        public static DescribeUpdatePackageResultResponseAppInfoPackageInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeUpdatePackageResultResponseAppInfoPackageInfo self = new DescribeUpdatePackageResultResponseAppInfoPackageInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeUpdatePackageResultResponseAppInfoPackageInfo setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-    }
-
     public static class DescribeUpdatePackageResultResponseAppInfoDebugPackageInfo extends TeaModel {
         @NameInMap("Version")
         @Validation(required = true)
@@ -73,7 +53,35 @@ public class DescribeUpdatePackageResultResponse extends TeaModel {
 
     }
 
+    public static class DescribeUpdatePackageResultResponseAppInfoPackageInfo extends TeaModel {
+        @NameInMap("Version")
+        @Validation(required = true)
+        public String version;
+
+        public static DescribeUpdatePackageResultResponseAppInfoPackageInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUpdatePackageResultResponseAppInfoPackageInfo self = new DescribeUpdatePackageResultResponseAppInfoPackageInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUpdatePackageResultResponseAppInfoPackageInfo setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class DescribeUpdatePackageResultResponseAppInfo extends TeaModel {
+        @NameInMap("EndDate")
+        @Validation(required = true)
+        public String endDate;
+
+        @NameInMap("Icon")
+        @Validation(required = true)
+        public String icon;
+
         @NameInMap("Id")
         @Validation(required = true)
         public Long id;
@@ -86,33 +94,41 @@ public class DescribeUpdatePackageResultResponse extends TeaModel {
         @Validation(required = true)
         public String packageName;
 
-        @NameInMap("Icon")
-        @Validation(required = true)
-        public String icon;
-
         @NameInMap("StartDate")
         @Validation(required = true)
         public String startDate;
-
-        @NameInMap("EndDate")
-        @Validation(required = true)
-        public String endDate;
 
         @NameInMap("Type")
         @Validation(required = true)
         public Integer type;
 
-        @NameInMap("PackageInfo")
-        @Validation(required = true)
-        public DescribeUpdatePackageResultResponseAppInfoPackageInfo packageInfo;
-
         @NameInMap("DebugPackageInfo")
         @Validation(required = true)
         public DescribeUpdatePackageResultResponseAppInfoDebugPackageInfo debugPackageInfo;
 
+        @NameInMap("PackageInfo")
+        @Validation(required = true)
+        public DescribeUpdatePackageResultResponseAppInfoPackageInfo packageInfo;
+
         public static DescribeUpdatePackageResultResponseAppInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeUpdatePackageResultResponseAppInfo self = new DescribeUpdatePackageResultResponseAppInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeUpdatePackageResultResponseAppInfo setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        public DescribeUpdatePackageResultResponseAppInfo setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
         }
 
         public DescribeUpdatePackageResultResponseAppInfo setId(Long id) {
@@ -139,28 +155,12 @@ public class DescribeUpdatePackageResultResponse extends TeaModel {
             return this.packageName;
         }
 
-        public DescribeUpdatePackageResultResponseAppInfo setIcon(String icon) {
-            this.icon = icon;
-            return this;
-        }
-        public String getIcon() {
-            return this.icon;
-        }
-
         public DescribeUpdatePackageResultResponseAppInfo setStartDate(String startDate) {
             this.startDate = startDate;
             return this;
         }
         public String getStartDate() {
             return this.startDate;
-        }
-
-        public DescribeUpdatePackageResultResponseAppInfo setEndDate(String endDate) {
-            this.endDate = endDate;
-            return this;
-        }
-        public String getEndDate() {
-            return this.endDate;
         }
 
         public DescribeUpdatePackageResultResponseAppInfo setType(Integer type) {
@@ -171,20 +171,20 @@ public class DescribeUpdatePackageResultResponse extends TeaModel {
             return this.type;
         }
 
-        public DescribeUpdatePackageResultResponseAppInfo setPackageInfo(DescribeUpdatePackageResultResponseAppInfoPackageInfo packageInfo) {
-            this.packageInfo = packageInfo;
-            return this;
-        }
-        public DescribeUpdatePackageResultResponseAppInfoPackageInfo getPackageInfo() {
-            return this.packageInfo;
-        }
-
         public DescribeUpdatePackageResultResponseAppInfo setDebugPackageInfo(DescribeUpdatePackageResultResponseAppInfoDebugPackageInfo debugPackageInfo) {
             this.debugPackageInfo = debugPackageInfo;
             return this;
         }
         public DescribeUpdatePackageResultResponseAppInfoDebugPackageInfo getDebugPackageInfo() {
             return this.debugPackageInfo;
+        }
+
+        public DescribeUpdatePackageResultResponseAppInfo setPackageInfo(DescribeUpdatePackageResultResponseAppInfoPackageInfo packageInfo) {
+            this.packageInfo = packageInfo;
+            return this;
+        }
+        public DescribeUpdatePackageResultResponseAppInfoPackageInfo getPackageInfo() {
+            return this.packageInfo;
         }
 
     }

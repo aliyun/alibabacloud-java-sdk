@@ -4,89 +4,41 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeVerifyRecordsRequest extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("BizId")
+    public String bizId;
 
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
+    @NameInMap("BizType")
+    public String bizType;
 
     @NameInMap("CurrentPage")
     @Validation(required = true)
     public Integer currentPage;
 
-    @NameInMap("BizType")
-    public String bizType;
-
-    @NameInMap("StartDate")
-    public String startDate;
-
     @NameInMap("EndDate")
     public String endDate;
-
-    @NameInMap("BizId")
-    public String bizId;
 
     @NameInMap("IdCardNum")
     public String idCardNum;
 
-    @NameInMap("StatusList")
-    public String statusList;
+    @NameInMap("PageSize")
+    @Validation(required = true)
+    public Integer pageSize;
 
     @NameInMap("QueryId")
     public String queryId;
 
+    @NameInMap("StartDate")
+    public String startDate;
+
+    @NameInMap("StatusList")
+    public String statusList;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeVerifyRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVerifyRecordsRequest self = new DescribeVerifyRecordsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVerifyRecordsRequest setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeVerifyRecordsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeVerifyRecordsRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public DescribeVerifyRecordsRequest setBizType(String bizType) {
-        this.bizType = bizType;
-        return this;
-    }
-    public String getBizType() {
-        return this.bizType;
-    }
-
-    public DescribeVerifyRecordsRequest setStartDate(String startDate) {
-        this.startDate = startDate;
-        return this;
-    }
-    public String getStartDate() {
-        return this.startDate;
-    }
-
-    public DescribeVerifyRecordsRequest setEndDate(String endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public String getEndDate() {
-        return this.endDate;
     }
 
     public DescribeVerifyRecordsRequest setBizId(String bizId) {
@@ -97,12 +49,60 @@ public class DescribeVerifyRecordsRequest extends TeaModel {
         return this.bizId;
     }
 
+    public DescribeVerifyRecordsRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    public DescribeVerifyRecordsRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeVerifyRecordsRequest setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
+    }
+
     public DescribeVerifyRecordsRequest setIdCardNum(String idCardNum) {
         this.idCardNum = idCardNum;
         return this;
     }
     public String getIdCardNum() {
         return this.idCardNum;
+    }
+
+    public DescribeVerifyRecordsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeVerifyRecordsRequest setQueryId(String queryId) {
+        this.queryId = queryId;
+        return this;
+    }
+    public String getQueryId() {
+        return this.queryId;
+    }
+
+    public DescribeVerifyRecordsRequest setStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    public String getStartDate() {
+        return this.startDate;
     }
 
     public DescribeVerifyRecordsRequest setStatusList(String statusList) {
@@ -113,12 +113,12 @@ public class DescribeVerifyRecordsRequest extends TeaModel {
         return this.statusList;
     }
 
-    public DescribeVerifyRecordsRequest setQueryId(String queryId) {
-        this.queryId = queryId;
+    public DescribeVerifyRecordsRequest setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public String getQueryId() {
-        return this.queryId;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
 }

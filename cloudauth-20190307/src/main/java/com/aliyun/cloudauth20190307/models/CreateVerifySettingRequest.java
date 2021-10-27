@@ -4,17 +4,13 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateVerifySettingRequest extends TeaModel {
-    @NameInMap("BizType")
-    @Validation(required = true)
-    public String bizType;
-
     @NameInMap("BizName")
     @Validation(required = true)
     public String bizName;
 
-    @NameInMap("Solution")
+    @NameInMap("BizType")
     @Validation(required = true)
-    public String solution;
+    public String bizType;
 
     @NameInMap("GuideStep")
     public Boolean guideStep;
@@ -25,17 +21,13 @@ public class CreateVerifySettingRequest extends TeaModel {
     @NameInMap("ResultStep")
     public Boolean resultStep;
 
+    @NameInMap("Solution")
+    @Validation(required = true)
+    public String solution;
+
     public static CreateVerifySettingRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVerifySettingRequest self = new CreateVerifySettingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateVerifySettingRequest setBizType(String bizType) {
-        this.bizType = bizType;
-        return this;
-    }
-    public String getBizType() {
-        return this.bizType;
     }
 
     public CreateVerifySettingRequest setBizName(String bizName) {
@@ -46,12 +38,12 @@ public class CreateVerifySettingRequest extends TeaModel {
         return this.bizName;
     }
 
-    public CreateVerifySettingRequest setSolution(String solution) {
-        this.solution = solution;
+    public CreateVerifySettingRequest setBizType(String bizType) {
+        this.bizType = bizType;
         return this;
     }
-    public String getSolution() {
-        return this.solution;
+    public String getBizType() {
+        return this.bizType;
     }
 
     public CreateVerifySettingRequest setGuideStep(Boolean guideStep) {
@@ -76,6 +68,14 @@ public class CreateVerifySettingRequest extends TeaModel {
     }
     public Boolean getResultStep() {
         return this.resultStep;
+    }
+
+    public CreateVerifySettingRequest setSolution(String solution) {
+        this.solution = solution;
+        return this;
+    }
+    public String getSolution() {
+        return this.solution;
     }
 
 }

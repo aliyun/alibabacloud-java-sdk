@@ -4,25 +4,17 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaceUsageRequest extends TeaModel {
-    @NameInMap("StartDate")
-    @Validation(required = true)
-    public String startDate;
-
     @NameInMap("EndDate")
     @Validation(required = true)
     public String endDate;
 
+    @NameInMap("StartDate")
+    @Validation(required = true)
+    public String startDate;
+
     public static DescribeFaceUsageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFaceUsageRequest self = new DescribeFaceUsageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFaceUsageRequest setStartDate(String startDate) {
-        this.startDate = startDate;
-        return this;
-    }
-    public String getStartDate() {
-        return this.startDate;
     }
 
     public DescribeFaceUsageRequest setEndDate(String endDate) {
@@ -31,6 +23,14 @@ public class DescribeFaceUsageRequest extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public DescribeFaceUsageRequest setStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    public String getStartDate() {
+        return this.startDate;
     }
 
 }
