@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityIpsResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public DescribeSecurityIpsResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public DescribeSecurityIpsResponseBodyData data;
-
     public static DescribeSecurityIpsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityIpsResponseBody self = new DescribeSecurityIpsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSecurityIpsResponseBody setData(DescribeSecurityIpsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeSecurityIpsResponseBodyData getData() {
+        return this.data;
     }
 
     public DescribeSecurityIpsResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DescribeSecurityIpsResponseBody setData(DescribeSecurityIpsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public DescribeSecurityIpsResponseBodyData getData() {
-        return this.data;
     }
 
     public static class DescribeSecurityIpsResponseBodyDataGroupItems extends TeaModel {

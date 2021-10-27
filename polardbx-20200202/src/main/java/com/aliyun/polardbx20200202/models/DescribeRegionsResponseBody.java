@@ -7,20 +7,20 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
+    @NameInMap("ErrorCode")
+    public Integer errorCode;
+
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("Regions")
+    public DescribeRegionsResponseBodyRegions regions;
 
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrorCode")
-    public Integer errorCode;
-
-    @NameInMap("Regions")
-    public DescribeRegionsResponseBodyRegions regions;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
@@ -35,12 +35,28 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.code;
     }
 
+    public DescribeRegionsResponseBody setErrorCode(Integer errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public Integer getErrorCode() {
+        return this.errorCode;
+    }
+
     public DescribeRegionsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeRegionsResponseBody setRegions(DescribeRegionsResponseBodyRegions regions) {
+        this.regions = regions;
+        return this;
+    }
+    public DescribeRegionsResponseBodyRegions getRegions() {
+        return this.regions;
     }
 
     public DescribeRegionsResponseBody setRequestId(String requestId) {
@@ -59,40 +75,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeRegionsResponseBody setErrorCode(Integer errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public Integer getErrorCode() {
-        return this.errorCode;
-    }
-
-    public DescribeRegionsResponseBody setRegions(DescribeRegionsResponseBodyRegions regions) {
-        this.regions = regions;
-        return this;
-    }
-    public DescribeRegionsResponseBodyRegions getRegions() {
-        return this.regions;
-    }
-
     public static class DescribeRegionsResponseBodyRegionsRegionZonesZone extends TeaModel {
-        @NameInMap("ZoneId")
-        public String zoneId;
-
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static DescribeRegionsResponseBodyRegionsRegionZonesZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegionZonesZone self = new DescribeRegionsResponseBodyRegionsRegionZonesZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegionZonesZone setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
         }
 
         public DescribeRegionsResponseBodyRegionsRegionZonesZone setVpcEnabled(Boolean vpcEnabled) {
@@ -101,6 +93,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public Boolean getVpcEnabled() {
             return this.vpcEnabled;
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegionZonesZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
@@ -125,14 +125,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("SupportPolarx10")
         public Boolean supportPolarx10;
 
         @NameInMap("SupportPolarx20")
         public Boolean supportPolarx20;
-
-        @NameInMap("RegionId")
-        public String regionId;
 
         @NameInMap("Zones")
         public DescribeRegionsResponseBodyRegionsRegionZones zones;
@@ -140,6 +140,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public static DescribeRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsRegion self = new DescribeRegionsResponseBodyRegionsRegion();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setSupportPolarx10(Boolean supportPolarx10) {
@@ -156,14 +164,6 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public Boolean getSupportPolarx20() {
             return this.supportPolarx20;
-        }
-
-        public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeRegionsResponseBodyRegionsRegion setZones(DescribeRegionsResponseBodyRegionsRegionZones zones) {

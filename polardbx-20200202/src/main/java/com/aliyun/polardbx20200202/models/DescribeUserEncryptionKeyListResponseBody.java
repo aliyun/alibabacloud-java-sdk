@@ -4,23 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeUserEncryptionKeyListResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeUserEncryptionKeyListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserEncryptionKeyListResponseBody self = new DescribeUserEncryptionKeyListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUserEncryptionKeyListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeUserEncryptionKeyListResponseBody setData(DescribeUserEncryptionKeyListResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     }
     public DescribeUserEncryptionKeyListResponseBodyData getData() {
         return this.data;
+    }
+
+    public DescribeUserEncryptionKeyListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeUserEncryptionKeyListResponseBodyData extends TeaModel {

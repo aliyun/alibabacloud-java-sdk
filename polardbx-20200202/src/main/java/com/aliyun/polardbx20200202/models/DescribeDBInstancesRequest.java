@@ -4,26 +4,18 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesRequest self = new DescribeDBInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeDBInstancesRequest setPageNumber(Integer pageNumber) {
@@ -40,6 +32,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDBInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

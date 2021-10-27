@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<DescribeBackupPolicyResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public java.util.List<DescribeBackupPolicyResponseBodyData> data;
-
     public static DescribeBackupPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyResponseBody self = new DescribeBackupPolicyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBackupPolicyResponseBody setData(java.util.List<DescribeBackupPolicyResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<DescribeBackupPolicyResponseBodyData> getData() {
+        return this.data;
     }
 
     public DescribeBackupPolicyResponseBody setMessage(String message) {
@@ -45,38 +53,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeBackupPolicyResponseBody setData(java.util.List<DescribeBackupPolicyResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<DescribeBackupPolicyResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class DescribeBackupPolicyResponseBodyData extends TeaModel {
-        @NameInMap("LogLocalRetentionSpace")
-        public Integer logLocalRetentionSpace;
-
-        @NameInMap("DBInstanceName")
-        public String DBInstanceName;
-
-        @NameInMap("BackupWay")
-        public String backupWay;
-
         @NameInMap("BackupPeriod")
         public String backupPeriod;
-
-        @NameInMap("ForceCleanOnHighSpaceUsage")
-        public Integer forceCleanOnHighSpaceUsage;
-
-        @NameInMap("BackupType")
-        public String backupType;
-
-        @NameInMap("LocalLogRetention")
-        public Integer localLogRetention;
-
-        @NameInMap("RemoveLogRetention")
-        public Integer removeLogRetention;
 
         @NameInMap("BackupPlanBegin")
         public String backupPlanBegin;
@@ -84,36 +63,33 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         @NameInMap("BackupSetRetention")
         public Integer backupSetRetention;
 
+        @NameInMap("BackupType")
+        public String backupType;
+
+        @NameInMap("BackupWay")
+        public String backupWay;
+
+        @NameInMap("DBInstanceName")
+        public String DBInstanceName;
+
+        @NameInMap("ForceCleanOnHighSpaceUsage")
+        public Integer forceCleanOnHighSpaceUsage;
+
         @NameInMap("IsEnabled")
         public Integer isEnabled;
+
+        @NameInMap("LocalLogRetention")
+        public Integer localLogRetention;
+
+        @NameInMap("LogLocalRetentionSpace")
+        public Integer logLocalRetentionSpace;
+
+        @NameInMap("RemoveLogRetention")
+        public Integer removeLogRetention;
 
         public static DescribeBackupPolicyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupPolicyResponseBodyData self = new DescribeBackupPolicyResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupPolicyResponseBodyData setLogLocalRetentionSpace(Integer logLocalRetentionSpace) {
-            this.logLocalRetentionSpace = logLocalRetentionSpace;
-            return this;
-        }
-        public Integer getLogLocalRetentionSpace() {
-            return this.logLocalRetentionSpace;
-        }
-
-        public DescribeBackupPolicyResponseBodyData setDBInstanceName(String DBInstanceName) {
-            this.DBInstanceName = DBInstanceName;
-            return this;
-        }
-        public String getDBInstanceName() {
-            return this.DBInstanceName;
-        }
-
-        public DescribeBackupPolicyResponseBodyData setBackupWay(String backupWay) {
-            this.backupWay = backupWay;
-            return this;
-        }
-        public String getBackupWay() {
-            return this.backupWay;
         }
 
         public DescribeBackupPolicyResponseBodyData setBackupPeriod(String backupPeriod) {
@@ -122,38 +98,6 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
         public String getBackupPeriod() {
             return this.backupPeriod;
-        }
-
-        public DescribeBackupPolicyResponseBodyData setForceCleanOnHighSpaceUsage(Integer forceCleanOnHighSpaceUsage) {
-            this.forceCleanOnHighSpaceUsage = forceCleanOnHighSpaceUsage;
-            return this;
-        }
-        public Integer getForceCleanOnHighSpaceUsage() {
-            return this.forceCleanOnHighSpaceUsage;
-        }
-
-        public DescribeBackupPolicyResponseBodyData setBackupType(String backupType) {
-            this.backupType = backupType;
-            return this;
-        }
-        public String getBackupType() {
-            return this.backupType;
-        }
-
-        public DescribeBackupPolicyResponseBodyData setLocalLogRetention(Integer localLogRetention) {
-            this.localLogRetention = localLogRetention;
-            return this;
-        }
-        public Integer getLocalLogRetention() {
-            return this.localLogRetention;
-        }
-
-        public DescribeBackupPolicyResponseBodyData setRemoveLogRetention(Integer removeLogRetention) {
-            this.removeLogRetention = removeLogRetention;
-            return this;
-        }
-        public Integer getRemoveLogRetention() {
-            return this.removeLogRetention;
         }
 
         public DescribeBackupPolicyResponseBodyData setBackupPlanBegin(String backupPlanBegin) {
@@ -172,12 +116,68 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             return this.backupSetRetention;
         }
 
+        public DescribeBackupPolicyResponseBodyData setBackupType(String backupType) {
+            this.backupType = backupType;
+            return this;
+        }
+        public String getBackupType() {
+            return this.backupType;
+        }
+
+        public DescribeBackupPolicyResponseBodyData setBackupWay(String backupWay) {
+            this.backupWay = backupWay;
+            return this;
+        }
+        public String getBackupWay() {
+            return this.backupWay;
+        }
+
+        public DescribeBackupPolicyResponseBodyData setDBInstanceName(String DBInstanceName) {
+            this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+        public String getDBInstanceName() {
+            return this.DBInstanceName;
+        }
+
+        public DescribeBackupPolicyResponseBodyData setForceCleanOnHighSpaceUsage(Integer forceCleanOnHighSpaceUsage) {
+            this.forceCleanOnHighSpaceUsage = forceCleanOnHighSpaceUsage;
+            return this;
+        }
+        public Integer getForceCleanOnHighSpaceUsage() {
+            return this.forceCleanOnHighSpaceUsage;
+        }
+
         public DescribeBackupPolicyResponseBodyData setIsEnabled(Integer isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
         public Integer getIsEnabled() {
             return this.isEnabled;
+        }
+
+        public DescribeBackupPolicyResponseBodyData setLocalLogRetention(Integer localLogRetention) {
+            this.localLogRetention = localLogRetention;
+            return this;
+        }
+        public Integer getLocalLogRetention() {
+            return this.localLogRetention;
+        }
+
+        public DescribeBackupPolicyResponseBodyData setLogLocalRetentionSpace(Integer logLocalRetentionSpace) {
+            this.logLocalRetentionSpace = logLocalRetentionSpace;
+            return this;
+        }
+        public Integer getLogLocalRetentionSpace() {
+            return this.logLocalRetentionSpace;
+        }
+
+        public DescribeBackupPolicyResponseBodyData setRemoveLogRetention(Integer removeLogRetention) {
+            this.removeLogRetention = removeLogRetention;
+            return this;
+        }
+        public Integer getRemoveLogRetention() {
+            return this.removeLogRetention;
         }
 
     }

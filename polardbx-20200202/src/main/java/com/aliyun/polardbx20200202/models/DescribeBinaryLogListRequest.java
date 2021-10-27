@@ -4,8 +4,11 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeBinaryLogListRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -13,26 +16,31 @@ public class DescribeBinaryLogListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     public static DescribeBinaryLogListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBinaryLogListRequest self = new DescribeBinaryLogListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBinaryLogListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeBinaryLogListRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public DescribeBinaryLogListRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeBinaryLogListRequest setPageNumber(Integer pageNumber) {
@@ -51,12 +59,12 @@ public class DescribeBinaryLogListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeBinaryLogListRequest setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
+    public DescribeBinaryLogListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeBinaryLogListRequest setStartTime(String startTime) {
@@ -65,14 +73,6 @@ public class DescribeBinaryLogListRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribeBinaryLogListRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
 }

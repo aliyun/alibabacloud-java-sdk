@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public java.util.List<CreateBackupResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class CreateBackupResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Data")
-    public java.util.List<CreateBackupResponseBodyData> data;
-
     public static CreateBackupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateBackupResponseBody self = new CreateBackupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateBackupResponseBody setData(java.util.List<CreateBackupResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<CreateBackupResponseBodyData> getData() {
+        return this.data;
     }
 
     public CreateBackupResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class CreateBackupResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateBackupResponseBody setData(java.util.List<CreateBackupResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<CreateBackupResponseBodyData> getData() {
-        return this.data;
     }
 
     public static class CreateBackupResponseBodyData extends TeaModel {

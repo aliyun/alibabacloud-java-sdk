@@ -4,29 +4,21 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
-    @NameInMap("UpgradeTime")
-    public String upgradeTime;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    @NameInMap("UpgradeTime")
+    public String upgradeTime;
+
     public static UpgradeDBInstanceKernelVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceKernelVersionRequest self = new UpgradeDBInstanceKernelVersionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradeDBInstanceKernelVersionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public UpgradeDBInstanceKernelVersionRequest setDBInstanceName(String DBInstanceName) {
@@ -37,12 +29,12 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
         return this.DBInstanceName;
     }
 
-    public UpgradeDBInstanceKernelVersionRequest setUpgradeTime(String upgradeTime) {
-        this.upgradeTime = upgradeTime;
+    public UpgradeDBInstanceKernelVersionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getUpgradeTime() {
-        return this.upgradeTime;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public UpgradeDBInstanceKernelVersionRequest setSwitchTime(String switchTime) {
@@ -51,6 +43,14 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     }
     public String getSwitchTime() {
         return this.switchTime;
+    }
+
+    public UpgradeDBInstanceKernelVersionRequest setUpgradeTime(String upgradeTime) {
+        this.upgradeTime = upgradeTime;
+        return this;
+    }
+    public String getUpgradeTime() {
+        return this.upgradeTime;
     }
 
 }

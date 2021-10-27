@@ -4,12 +4,6 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdateBackupPolicyRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
-
     @NameInMap("BackupPeriod")
     public String backupPeriod;
 
@@ -25,6 +19,9 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     @NameInMap("BackupWay")
     public String backupWay;
 
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
     @NameInMap("ForceCleanOnHighSpaceUsage")
     public Integer forceCleanOnHighSpaceUsage;
 
@@ -34,31 +31,18 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     @NameInMap("LocalLogRetention")
     public Integer localLogRetention;
 
-    @NameInMap("RemoveLogRetention")
-    public Integer removeLogRetention;
-
     @NameInMap("LogLocalRetentionSpace")
     public Integer logLocalRetentionSpace;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("RemoveLogRetention")
+    public Integer removeLogRetention;
 
     public static UpdateBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateBackupPolicyRequest self = new UpdateBackupPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateBackupPolicyRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public UpdateBackupPolicyRequest setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
     }
 
     public UpdateBackupPolicyRequest setBackupPeriod(String backupPeriod) {
@@ -101,6 +85,14 @@ public class UpdateBackupPolicyRequest extends TeaModel {
         return this.backupWay;
     }
 
+    public UpdateBackupPolicyRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
     public UpdateBackupPolicyRequest setForceCleanOnHighSpaceUsage(Integer forceCleanOnHighSpaceUsage) {
         this.forceCleanOnHighSpaceUsage = forceCleanOnHighSpaceUsage;
         return this;
@@ -125,20 +117,28 @@ public class UpdateBackupPolicyRequest extends TeaModel {
         return this.localLogRetention;
     }
 
-    public UpdateBackupPolicyRequest setRemoveLogRetention(Integer removeLogRetention) {
-        this.removeLogRetention = removeLogRetention;
-        return this;
-    }
-    public Integer getRemoveLogRetention() {
-        return this.removeLogRetention;
-    }
-
     public UpdateBackupPolicyRequest setLogLocalRetentionSpace(Integer logLocalRetentionSpace) {
         this.logLocalRetentionSpace = logLocalRetentionSpace;
         return this;
     }
     public Integer getLogLocalRetentionSpace() {
         return this.logLocalRetentionSpace;
+    }
+
+    public UpdateBackupPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UpdateBackupPolicyRequest setRemoveLogRetention(Integer removeLogRetention) {
+        this.removeLogRetention = removeLogRetention;
+        return this;
+    }
+    public Integer getRemoveLogRetention() {
+        return this.removeLogRetention;
     }
 
 }

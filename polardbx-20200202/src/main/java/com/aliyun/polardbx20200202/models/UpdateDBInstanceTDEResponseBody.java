@@ -4,23 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdateDBInstanceTDEResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public UpdateDBInstanceTDEResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static UpdateDBInstanceTDEResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateDBInstanceTDEResponseBody self = new UpdateDBInstanceTDEResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDBInstanceTDEResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public UpdateDBInstanceTDEResponseBody setData(UpdateDBInstanceTDEResponseBodyData data) {
@@ -29,6 +21,14 @@ public class UpdateDBInstanceTDEResponseBody extends TeaModel {
     }
     public UpdateDBInstanceTDEResponseBodyData getData() {
         return this.data;
+    }
+
+    public UpdateDBInstanceTDEResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class UpdateDBInstanceTDEResponseBodyData extends TeaModel {

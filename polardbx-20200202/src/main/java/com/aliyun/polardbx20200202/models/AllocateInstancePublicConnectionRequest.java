@@ -4,8 +4,23 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
+    @NameInMap("ConnectionStringPrefix")
+    public String connectionStringPrefix;
+
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Port")
+    public String port;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,24 +28,33 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
-
-    @NameInMap("ConnectionStringPrefix")
-    public String connectionStringPrefix;
-
-    @NameInMap("Port")
-    public String port;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static AllocateInstancePublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateInstancePublicConnectionRequest self = new AllocateInstancePublicConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AllocateInstancePublicConnectionRequest setConnectionStringPrefix(String connectionStringPrefix) {
+        this.connectionStringPrefix = connectionStringPrefix;
+        return this;
+    }
+    public String getConnectionStringPrefix() {
+        return this.connectionStringPrefix;
+    }
+
+    public AllocateInstancePublicConnectionRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public AllocateInstancePublicConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AllocateInstancePublicConnectionRequest setOwnerId(Long ownerId) {
@@ -39,6 +63,22 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public AllocateInstancePublicConnectionRequest setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
+    }
+
+    public AllocateInstancePublicConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AllocateInstancePublicConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -55,46 +95,6 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public AllocateInstancePublicConnectionRequest setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
-    }
-
-    public AllocateInstancePublicConnectionRequest setConnectionStringPrefix(String connectionStringPrefix) {
-        this.connectionStringPrefix = connectionStringPrefix;
-        return this;
-    }
-    public String getConnectionStringPrefix() {
-        return this.connectionStringPrefix;
-    }
-
-    public AllocateInstancePublicConnectionRequest setPort(String port) {
-        this.port = port;
-        return this;
-    }
-    public String getPort() {
-        return this.port;
-    }
-
-    public AllocateInstancePublicConnectionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public AllocateInstancePublicConnectionRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

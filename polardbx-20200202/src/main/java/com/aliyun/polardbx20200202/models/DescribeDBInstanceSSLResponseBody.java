@@ -4,23 +4,15 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DescribeDBInstanceSSLResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDBInstanceSSLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceSSLResponseBody self = new DescribeDBInstanceSSLResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDBInstanceSSLResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDBInstanceSSLResponseBody setData(DescribeDBInstanceSSLResponseBodyData data) {
@@ -31,19 +23,35 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DescribeDBInstanceSSLResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeDBInstanceSSLResponseBodyData extends TeaModel {
+        @NameInMap("CertCommonName")
+        public String certCommonName;
+
         @NameInMap("SSLEnabled")
         public Boolean SSLEnabled;
 
         @NameInMap("SSLExpiredTime")
         public String SSLExpiredTime;
 
-        @NameInMap("CertCommonName")
-        public String certCommonName;
-
         public static DescribeDBInstanceSSLResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceSSLResponseBodyData self = new DescribeDBInstanceSSLResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceSSLResponseBodyData setCertCommonName(String certCommonName) {
+            this.certCommonName = certCommonName;
+            return this;
+        }
+        public String getCertCommonName() {
+            return this.certCommonName;
         }
 
         public DescribeDBInstanceSSLResponseBodyData setSSLEnabled(Boolean SSLEnabled) {
@@ -60,14 +68,6 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
         public String getSSLExpiredTime() {
             return this.SSLExpiredTime;
-        }
-
-        public DescribeDBInstanceSSLResponseBodyData setCertCommonName(String certCommonName) {
-            this.certCommonName = certCommonName;
-            return this;
-        }
-        public String getCertCommonName() {
-            return this.certCommonName;
         }
 
     }

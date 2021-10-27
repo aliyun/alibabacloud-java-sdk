@@ -4,11 +4,11 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
-
     @NameInMap("AccountName")
     public String accountName;
+
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -24,20 +24,20 @@ public class DeleteAccountRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteAccountRequest setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
-    }
-
     public DeleteAccountRequest setAccountName(String accountName) {
         this.accountName = accountName;
         return this;
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public DeleteAccountRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
     }
 
     public DeleteAccountRequest setRegionId(String regionId) {

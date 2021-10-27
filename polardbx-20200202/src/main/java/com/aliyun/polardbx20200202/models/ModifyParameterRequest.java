@@ -4,8 +4,8 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class ModifyParameterRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -16,20 +16,20 @@ public class ModifyParameterRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ModifyParameterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyParameterRequest self = new ModifyParameterRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyParameterRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ModifyParameterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public ModifyParameterRequest setDBInstanceId(String DBInstanceId) {
@@ -56,12 +56,12 @@ public class ModifyParameterRequest extends TeaModel {
         return this.parameters;
     }
 
-    public ModifyParameterRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public ModifyParameterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,8 +4,8 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -13,20 +13,20 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     @NameInMap("DbInstanceNodeCount")
     public String dbInstanceNodeCount;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static UpdatePolarDBXInstanceNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePolarDBXInstanceNodeRequest self = new UpdatePolarDBXInstanceNodeRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePolarDBXInstanceNodeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public UpdatePolarDBXInstanceNodeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdatePolarDBXInstanceNodeRequest setDBInstanceName(String DBInstanceName) {
@@ -45,12 +45,12 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
         return this.dbInstanceNodeCount;
     }
 
-    public UpdatePolarDBXInstanceNodeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public UpdatePolarDBXInstanceNodeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

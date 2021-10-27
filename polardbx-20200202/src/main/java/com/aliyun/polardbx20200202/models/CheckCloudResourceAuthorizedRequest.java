@@ -4,11 +4,11 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CheckCloudResourceAuthorizedRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RoleArn")
     public String roleArn;
@@ -18,20 +18,20 @@ public class CheckCloudResourceAuthorizedRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CheckCloudResourceAuthorizedRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public CheckCloudResourceAuthorizedRequest setDBInstanceName(String DBInstanceName) {
         this.DBInstanceName = DBInstanceName;
         return this;
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public CheckCloudResourceAuthorizedRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CheckCloudResourceAuthorizedRequest setRoleArn(String roleArn) {

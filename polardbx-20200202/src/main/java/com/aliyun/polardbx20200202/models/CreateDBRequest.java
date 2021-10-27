@@ -4,26 +4,26 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class CreateDBRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("DBInstanceName")
-    public String DBInstanceName;
-
     @NameInMap("AccountName")
     public String accountName;
-
-    @NameInMap("Charset")
-    public String charset;
-
-    @NameInMap("DbName")
-    public String dbName;
 
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
+    @NameInMap("Charset")
+    public String charset;
+
+    @NameInMap("DBInstanceName")
+    public String DBInstanceName;
+
     @NameInMap("DbDescription")
     public String dbDescription;
+
+    @NameInMap("DbName")
+    public String dbName;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("SecurityAccountName")
     public String securityAccountName;
@@ -36,44 +36,12 @@ public class CreateDBRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateDBRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public CreateDBRequest setDBInstanceName(String DBInstanceName) {
-        this.DBInstanceName = DBInstanceName;
-        return this;
-    }
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
-    }
-
     public CreateDBRequest setAccountName(String accountName) {
         this.accountName = accountName;
         return this;
     }
     public String getAccountName() {
         return this.accountName;
-    }
-
-    public CreateDBRequest setCharset(String charset) {
-        this.charset = charset;
-        return this;
-    }
-    public String getCharset() {
-        return this.charset;
-    }
-
-    public CreateDBRequest setDbName(String dbName) {
-        this.dbName = dbName;
-        return this;
-    }
-    public String getDbName() {
-        return this.dbName;
     }
 
     public CreateDBRequest setAccountPrivilege(String accountPrivilege) {
@@ -84,12 +52,44 @@ public class CreateDBRequest extends TeaModel {
         return this.accountPrivilege;
     }
 
+    public CreateDBRequest setCharset(String charset) {
+        this.charset = charset;
+        return this;
+    }
+    public String getCharset() {
+        return this.charset;
+    }
+
+    public CreateDBRequest setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
     public CreateDBRequest setDbDescription(String dbDescription) {
         this.dbDescription = dbDescription;
         return this;
     }
     public String getDbDescription() {
         return this.dbDescription;
+    }
+
+    public CreateDBRequest setDbName(String dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+    public String getDbName() {
+        return this.dbName;
+    }
+
+    public CreateDBRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateDBRequest setSecurityAccountName(String securityAccountName) {
