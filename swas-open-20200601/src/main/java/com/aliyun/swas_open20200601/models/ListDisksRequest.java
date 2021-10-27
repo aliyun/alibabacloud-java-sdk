@@ -4,40 +4,24 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListDisksRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DiskIds")
+    public String diskIds;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("DiskIds")
-    public String diskIds;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ListDisksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDisksRequest self = new ListDisksRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDisksRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListDisksRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public ListDisksRequest setDiskIds(String diskIds) {
@@ -48,12 +32,12 @@ public class ListDisksRequest extends TeaModel {
         return this.diskIds;
     }
 
-    public ListDisksRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public ListDisksRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public ListDisksRequest setPageNumber(Integer pageNumber) {
@@ -62,6 +46,22 @@ public class ListDisksRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public ListDisksRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListDisksRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

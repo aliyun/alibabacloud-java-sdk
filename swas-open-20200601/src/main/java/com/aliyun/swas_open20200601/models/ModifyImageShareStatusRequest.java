@@ -3,25 +3,25 @@ package com.aliyun.swas_open20200601.models;
 
 import com.aliyun.tea.*;
 
-public class ResetSystemRequest extends TeaModel {
+public class ModifyImageShareStatusRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("ImageId")
     public String imageId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Operation")
+    public String operation;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    public static ResetSystemRequest build(java.util.Map<String, ?> map) throws Exception {
-        ResetSystemRequest self = new ResetSystemRequest();
+    public static ModifyImageShareStatusRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyImageShareStatusRequest self = new ModifyImageShareStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public ResetSystemRequest setClientToken(String clientToken) {
+    public ModifyImageShareStatusRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -29,7 +29,7 @@ public class ResetSystemRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ResetSystemRequest setImageId(String imageId) {
+    public ModifyImageShareStatusRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
@@ -37,15 +37,15 @@ public class ResetSystemRequest extends TeaModel {
         return this.imageId;
     }
 
-    public ResetSystemRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ModifyImageShareStatusRequest setOperation(String operation) {
+        this.operation = operation;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getOperation() {
+        return this.operation;
     }
 
-    public ResetSystemRequest setRegionId(String regionId) {
+    public ModifyImageShareStatusRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

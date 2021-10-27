@@ -4,26 +4,18 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ImageIds")
     public String imageIds;
 
     @NameInMap("ImageType")
     public String imageType;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ListImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImagesRequest self = new ListImagesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListImagesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ListImagesRequest setImageIds(String imageIds) {
@@ -40,6 +32,14 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getImageType() {
         return this.imageType;
+    }
+
+    public ListImagesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

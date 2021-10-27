@@ -3,25 +3,22 @@ package com.aliyun.swas_open20200601.models;
 
 import com.aliyun.tea.*;
 
-public class ResetSystemRequest extends TeaModel {
+public class DeleteCustomImageRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("ImageId")
     public String imageId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("RegionId")
     public String regionId;
 
-    public static ResetSystemRequest build(java.util.Map<String, ?> map) throws Exception {
-        ResetSystemRequest self = new ResetSystemRequest();
+    public static DeleteCustomImageRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteCustomImageRequest self = new DeleteCustomImageRequest();
         return TeaModel.build(map, self);
     }
 
-    public ResetSystemRequest setClientToken(String clientToken) {
+    public DeleteCustomImageRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -29,7 +26,7 @@ public class ResetSystemRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ResetSystemRequest setImageId(String imageId) {
+    public DeleteCustomImageRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
@@ -37,15 +34,7 @@ public class ResetSystemRequest extends TeaModel {
         return this.imageId;
     }
 
-    public ResetSystemRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ResetSystemRequest setRegionId(String regionId) {
+    public DeleteCustomImageRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
