@@ -38,33 +38,33 @@ public class CreateClassResponseBody extends TeaModel {
         @NameInMap("ClassId")
         public String classId;
 
-        // 课堂标题。
-        @NameInMap("Title")
-        public String title;
-
-        // 创建人ID。
-        @NameInMap("CreateUserId")
-        public String createUserId;
+        // 连麦会议唯一标识。
+        @NameInMap("ConfId")
+        public String confId;
 
         // 创建人昵称。
         @NameInMap("CreateNickname")
         public String createNickname;
 
-        // 课堂状态，0:未开始 1:上课中 2:已下课。
-        @NameInMap("Status")
-        public Integer status;
-
-        // 房间ID
-        @NameInMap("RoomId")
-        public String roomId;
+        // 创建人ID。
+        @NameInMap("CreateUserId")
+        public String createUserId;
 
         // 直播的唯一标识ID。
         @NameInMap("LiveId")
         public String liveId;
 
-        // 连麦会议唯一标识。
-        @NameInMap("ConfId")
-        public String confId;
+        // 房间ID
+        @NameInMap("RoomId")
+        public String roomId;
+
+        // 课堂状态，0:未开始 1:上课中 2:已下课。
+        @NameInMap("Status")
+        public Integer status;
+
+        // 课堂标题。
+        @NameInMap("Title")
+        public String title;
 
         // 白板ID
         @NameInMap("WhiteboardId")
@@ -87,20 +87,12 @@ public class CreateClassResponseBody extends TeaModel {
             return this.classId;
         }
 
-        public CreateClassResponseBodyResult setTitle(String title) {
-            this.title = title;
+        public CreateClassResponseBodyResult setConfId(String confId) {
+            this.confId = confId;
             return this;
         }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public CreateClassResponseBodyResult setCreateUserId(String createUserId) {
-            this.createUserId = createUserId;
-            return this;
-        }
-        public String getCreateUserId() {
-            return this.createUserId;
+        public String getConfId() {
+            return this.confId;
         }
 
         public CreateClassResponseBodyResult setCreateNickname(String createNickname) {
@@ -111,20 +103,12 @@ public class CreateClassResponseBody extends TeaModel {
             return this.createNickname;
         }
 
-        public CreateClassResponseBodyResult setStatus(Integer status) {
-            this.status = status;
+        public CreateClassResponseBodyResult setCreateUserId(String createUserId) {
+            this.createUserId = createUserId;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public CreateClassResponseBodyResult setRoomId(String roomId) {
-            this.roomId = roomId;
-            return this;
-        }
-        public String getRoomId() {
-            return this.roomId;
+        public String getCreateUserId() {
+            return this.createUserId;
         }
 
         public CreateClassResponseBodyResult setLiveId(String liveId) {
@@ -135,12 +119,28 @@ public class CreateClassResponseBody extends TeaModel {
             return this.liveId;
         }
 
-        public CreateClassResponseBodyResult setConfId(String confId) {
-            this.confId = confId;
+        public CreateClassResponseBodyResult setRoomId(String roomId) {
+            this.roomId = roomId;
             return this;
         }
-        public String getConfId() {
-            return this.confId;
+        public String getRoomId() {
+            return this.roomId;
+        }
+
+        public CreateClassResponseBodyResult setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public CreateClassResponseBodyResult setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
         public CreateClassResponseBodyResult setWhiteboardId(String whiteboardId) {

@@ -8,6 +8,14 @@ public class BanCommentRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    // 禁言时长（秒）
+    @NameInMap("BanCommentTime")
+    public Long banCommentTime;
+
+    // 被禁言的用户在房间内的唯一标识
+    @NameInMap("BanCommentUser")
+    public String banCommentUser;
+
     // 房间唯一标识，由调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -15,14 +23,6 @@ public class BanCommentRequest extends TeaModel {
     // 用户在房间内的唯一标识
     @NameInMap("UserId")
     public String userId;
-
-    // 被禁言的用户在房间内的唯一标识
-    @NameInMap("BanCommentUser")
-    public String banCommentUser;
-
-    // 禁言时长（秒）
-    @NameInMap("BanCommentTime")
-    public Long banCommentTime;
 
     public static BanCommentRequest build(java.util.Map<String, ?> map) throws Exception {
         BanCommentRequest self = new BanCommentRequest();
@@ -35,6 +35,22 @@ public class BanCommentRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public BanCommentRequest setBanCommentTime(Long banCommentTime) {
+        this.banCommentTime = banCommentTime;
+        return this;
+    }
+    public Long getBanCommentTime() {
+        return this.banCommentTime;
+    }
+
+    public BanCommentRequest setBanCommentUser(String banCommentUser) {
+        this.banCommentUser = banCommentUser;
+        return this;
+    }
+    public String getBanCommentUser() {
+        return this.banCommentUser;
     }
 
     public BanCommentRequest setRoomId(String roomId) {
@@ -51,22 +67,6 @@ public class BanCommentRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public BanCommentRequest setBanCommentUser(String banCommentUser) {
-        this.banCommentUser = banCommentUser;
-        return this;
-    }
-    public String getBanCommentUser() {
-        return this.banCommentUser;
-    }
-
-    public BanCommentRequest setBanCommentTime(Long banCommentTime) {
-        this.banCommentTime = banCommentTime;
-        return this;
-    }
-    public Long getBanCommentTime() {
-        return this.banCommentTime;
     }
 
 }

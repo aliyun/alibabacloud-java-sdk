@@ -34,13 +34,25 @@ public class ListAppsResponseBody extends TeaModel {
     }
 
     public static class ListAppsResponseBodyResultAppInfoList extends TeaModel {
+        // 应用配置状态
+        @NameInMap("AppConfigStatus")
+        public String appConfigStatus;
+
         // 应用唯一标识符
         @NameInMap("AppId")
         public String appId;
 
+        // 应用Key
+        @NameInMap("AppKey")
+        public String appKey;
+
         // 应用名称
         @NameInMap("AppName")
         public String appName;
+
+        // 应用状态
+        @NameInMap("AppStatus")
+        public String appStatus;
 
         // 模板唯一标识
         @NameInMap("AppTemplateId")
@@ -50,17 +62,9 @@ public class ListAppsResponseBody extends TeaModel {
         @NameInMap("AppTemplateName")
         public String appTemplateName;
 
-        // 应用Key
-        @NameInMap("AppKey")
-        public String appKey;
-
-        // 应用状态
-        @NameInMap("AppStatus")
-        public String appStatus;
-
-        // 应用配置状态
-        @NameInMap("AppConfigStatus")
-        public String appConfigStatus;
+        // 应用组件列表
+        @NameInMap("ComponentList")
+        public java.util.List<String> componentList;
 
         // 应用创建时间
         @NameInMap("CreateTime")
@@ -74,13 +78,17 @@ public class ListAppsResponseBody extends TeaModel {
         @NameInMap("StandardRoomInfo")
         public String standardRoomInfo;
 
-        // 应用组件列表
-        @NameInMap("ComponentList")
-        public java.util.List<String> componentList;
-
         public static ListAppsResponseBodyResultAppInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListAppsResponseBodyResultAppInfoList self = new ListAppsResponseBodyResultAppInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public ListAppsResponseBodyResultAppInfoList setAppConfigStatus(String appConfigStatus) {
+            this.appConfigStatus = appConfigStatus;
+            return this;
+        }
+        public String getAppConfigStatus() {
+            return this.appConfigStatus;
         }
 
         public ListAppsResponseBodyResultAppInfoList setAppId(String appId) {
@@ -91,12 +99,28 @@ public class ListAppsResponseBody extends TeaModel {
             return this.appId;
         }
 
+        public ListAppsResponseBodyResultAppInfoList setAppKey(String appKey) {
+            this.appKey = appKey;
+            return this;
+        }
+        public String getAppKey() {
+            return this.appKey;
+        }
+
         public ListAppsResponseBodyResultAppInfoList setAppName(String appName) {
             this.appName = appName;
             return this;
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public ListAppsResponseBodyResultAppInfoList setAppStatus(String appStatus) {
+            this.appStatus = appStatus;
+            return this;
+        }
+        public String getAppStatus() {
+            return this.appStatus;
         }
 
         public ListAppsResponseBodyResultAppInfoList setAppTemplateId(String appTemplateId) {
@@ -115,28 +139,12 @@ public class ListAppsResponseBody extends TeaModel {
             return this.appTemplateName;
         }
 
-        public ListAppsResponseBodyResultAppInfoList setAppKey(String appKey) {
-            this.appKey = appKey;
+        public ListAppsResponseBodyResultAppInfoList setComponentList(java.util.List<String> componentList) {
+            this.componentList = componentList;
             return this;
         }
-        public String getAppKey() {
-            return this.appKey;
-        }
-
-        public ListAppsResponseBodyResultAppInfoList setAppStatus(String appStatus) {
-            this.appStatus = appStatus;
-            return this;
-        }
-        public String getAppStatus() {
-            return this.appStatus;
-        }
-
-        public ListAppsResponseBodyResultAppInfoList setAppConfigStatus(String appConfigStatus) {
-            this.appConfigStatus = appConfigStatus;
-            return this;
-        }
-        public String getAppConfigStatus() {
-            return this.appConfigStatus;
+        public java.util.List<String> getComponentList() {
+            return this.componentList;
         }
 
         public ListAppsResponseBodyResultAppInfoList setCreateTime(String createTime) {
@@ -163,40 +171,32 @@ public class ListAppsResponseBody extends TeaModel {
             return this.standardRoomInfo;
         }
 
-        public ListAppsResponseBodyResultAppInfoList setComponentList(java.util.List<String> componentList) {
-            this.componentList = componentList;
-            return this;
-        }
-        public java.util.List<String> getComponentList() {
-            return this.componentList;
-        }
-
     }
 
     public static class ListAppsResponseBodyResult extends TeaModel {
-        // 总条目数
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        // App信息列表
+        @NameInMap("AppInfoList")
+        public java.util.List<ListAppsResponseBodyResultAppInfoList> appInfoList;
 
         // 总页数
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // App信息列表
-        @NameInMap("AppInfoList")
-        public java.util.List<ListAppsResponseBodyResultAppInfoList> appInfoList;
+        // 总条目数
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListAppsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListAppsResponseBodyResult self = new ListAppsResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public ListAppsResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public ListAppsResponseBodyResult setAppInfoList(java.util.List<ListAppsResponseBodyResultAppInfoList> appInfoList) {
+            this.appInfoList = appInfoList;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public java.util.List<ListAppsResponseBodyResultAppInfoList> getAppInfoList() {
+            return this.appInfoList;
         }
 
         public ListAppsResponseBodyResult setPageTotal(Integer pageTotal) {
@@ -207,12 +207,12 @@ public class ListAppsResponseBody extends TeaModel {
             return this.pageTotal;
         }
 
-        public ListAppsResponseBodyResult setAppInfoList(java.util.List<ListAppsResponseBodyResultAppInfoList> appInfoList) {
-            this.appInfoList = appInfoList;
+        public ListAppsResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public java.util.List<ListAppsResponseBodyResultAppInfoList> getAppInfoList() {
-            return this.appInfoList;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

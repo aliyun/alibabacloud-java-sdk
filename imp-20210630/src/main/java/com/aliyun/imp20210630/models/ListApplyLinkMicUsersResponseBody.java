@@ -42,13 +42,13 @@ public class ListApplyLinkMicUsersResponseBody extends TeaModel {
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        // 该会议的申请连麦成员总数。
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         // 改会议的申请连麦成员总页数。
         @NameInMap("PageTotal")
         public Integer pageTotal;
+
+        // 该会议的申请连麦成员总数。
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListApplyLinkMicUsersResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListApplyLinkMicUsersResponseBodyResult self = new ListApplyLinkMicUsersResponseBodyResult();
@@ -71,20 +71,20 @@ public class ListApplyLinkMicUsersResponseBody extends TeaModel {
             return this.hasMore;
         }
 
-        public ListApplyLinkMicUsersResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
         public ListApplyLinkMicUsersResponseBodyResult setPageTotal(Integer pageTotal) {
             this.pageTotal = pageTotal;
             return this;
         }
         public Integer getPageTotal() {
             return this.pageTotal;
+        }
+
+        public ListApplyLinkMicUsersResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

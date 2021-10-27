@@ -8,13 +8,13 @@ public class SendCustomMessageToAllRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 房间唯一标识，由调用CreateRoom返回。
-    @NameInMap("RoomId")
-    public String roomId;
-
     // 消息体内容。
     @NameInMap("Body")
     public String body;
+
+    // 房间唯一标识，由调用CreateRoom返回。
+    @NameInMap("RoomId")
+    public String roomId;
 
     public static SendCustomMessageToAllRequest build(java.util.Map<String, ?> map) throws Exception {
         SendCustomMessageToAllRequest self = new SendCustomMessageToAllRequest();
@@ -29,20 +29,20 @@ public class SendCustomMessageToAllRequest extends TeaModel {
         return this.appId;
     }
 
-    public SendCustomMessageToAllRequest setRoomId(String roomId) {
-        this.roomId = roomId;
-        return this;
-    }
-    public String getRoomId() {
-        return this.roomId;
-    }
-
     public SendCustomMessageToAllRequest setBody(String body) {
         this.body = body;
         return this;
     }
     public String getBody() {
         return this.body;
+    }
+
+    public SendCustomMessageToAllRequest setRoomId(String roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+    public String getRoomId() {
+        return this.roomId;
     }
 
 }

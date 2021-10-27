@@ -8,25 +8,25 @@ public class ListRoomLivesRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    // 拉取在这个时间戳之前创建的直播，单位毫秒，不传则默认拉取最新创建的。
+    @NameInMap("QueryTimestamp")
+    public Long queryTimestamp;
+
     // 房间ID，最大长度36个字符。
     @NameInMap("RoomId")
     public String roomId;
 
-    // 直播状态筛选条件，0-直播 1-下播，不传则返回全部状态
-    @NameInMap("Status")
-    public Integer status;
-
-    // 拉取在这个时间戳之前创建的直播，单位毫秒，不传则默认拉取最新创建的。
-    @NameInMap("QueryTimestamp")
-    public Long queryTimestamp;
+    // 房间ID列表，可指定多个房间id，过滤优先级高于RoomId。
+    @NameInMap("RoomIdList")
+    public java.util.List<String> roomIdList;
 
     // 拉取直播数量。
     @NameInMap("Size")
     public Integer size;
 
-    // 房间ID列表，可指定多个房间id，过滤优先级高于RoomId。
-    @NameInMap("RoomIdList")
-    public java.util.List<String> roomIdList;
+    // 直播状态筛选条件，0-直播 1-下播，不传则返回全部状态
+    @NameInMap("Status")
+    public Integer status;
 
     public static ListRoomLivesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRoomLivesRequest self = new ListRoomLivesRequest();
@@ -41,6 +41,14 @@ public class ListRoomLivesRequest extends TeaModel {
         return this.appId;
     }
 
+    public ListRoomLivesRequest setQueryTimestamp(Long queryTimestamp) {
+        this.queryTimestamp = queryTimestamp;
+        return this;
+    }
+    public Long getQueryTimestamp() {
+        return this.queryTimestamp;
+    }
+
     public ListRoomLivesRequest setRoomId(String roomId) {
         this.roomId = roomId;
         return this;
@@ -49,20 +57,12 @@ public class ListRoomLivesRequest extends TeaModel {
         return this.roomId;
     }
 
-    public ListRoomLivesRequest setStatus(Integer status) {
-        this.status = status;
+    public ListRoomLivesRequest setRoomIdList(java.util.List<String> roomIdList) {
+        this.roomIdList = roomIdList;
         return this;
     }
-    public Integer getStatus() {
-        return this.status;
-    }
-
-    public ListRoomLivesRequest setQueryTimestamp(Long queryTimestamp) {
-        this.queryTimestamp = queryTimestamp;
-        return this;
-    }
-    public Long getQueryTimestamp() {
-        return this.queryTimestamp;
+    public java.util.List<String> getRoomIdList() {
+        return this.roomIdList;
     }
 
     public ListRoomLivesRequest setSize(Integer size) {
@@ -73,12 +73,12 @@ public class ListRoomLivesRequest extends TeaModel {
         return this.size;
     }
 
-    public ListRoomLivesRequest setRoomIdList(java.util.List<String> roomIdList) {
-        this.roomIdList = roomIdList;
+    public ListRoomLivesRequest setStatus(Integer status) {
+        this.status = status;
         return this;
     }
-    public java.util.List<String> getRoomIdList() {
-        return this.roomIdList;
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

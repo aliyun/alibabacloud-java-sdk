@@ -8,17 +8,17 @@ public class CreateAppTemplateRequest extends TeaModel {
     @NameInMap("AppTemplateName")
     public String appTemplateName;
 
-    // 应用模板场景，电商business，课堂classroom
-    @NameInMap("Scene")
-    public String scene;
+    // 组件列表
+    @NameInMap("ComponentList")
+    public java.util.List<String> componentList;
 
     // 集成方式（一体化SDK：paasSDK，样板间：standardRoom）
     @NameInMap("IntegrationMode")
     public String integrationMode;
 
-    // 组件列表
-    @NameInMap("ComponentList")
-    public java.util.List<String> componentList;
+    // 应用模板场景，电商business，课堂classroom
+    @NameInMap("Scene")
+    public String scene;
 
     public static CreateAppTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppTemplateRequest self = new CreateAppTemplateRequest();
@@ -33,12 +33,12 @@ public class CreateAppTemplateRequest extends TeaModel {
         return this.appTemplateName;
     }
 
-    public CreateAppTemplateRequest setScene(String scene) {
-        this.scene = scene;
+    public CreateAppTemplateRequest setComponentList(java.util.List<String> componentList) {
+        this.componentList = componentList;
         return this;
     }
-    public String getScene() {
-        return this.scene;
+    public java.util.List<String> getComponentList() {
+        return this.componentList;
     }
 
     public CreateAppTemplateRequest setIntegrationMode(String integrationMode) {
@@ -49,12 +49,12 @@ public class CreateAppTemplateRequest extends TeaModel {
         return this.integrationMode;
     }
 
-    public CreateAppTemplateRequest setComponentList(java.util.List<String> componentList) {
-        this.componentList = componentList;
+    public CreateAppTemplateRequest setScene(String scene) {
+        this.scene = scene;
         return this;
     }
-    public java.util.List<String> getComponentList() {
-        return this.componentList;
+    public String getScene() {
+        return this.scene;
     }
 
 }

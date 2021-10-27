@@ -32,6 +32,38 @@ public class GetLiveResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class GetLiveResponseBodyResultArtcInfo extends TeaModel {
+        // 原画转码地址
+        @NameInMap("ArtcH5Url")
+        public String artcH5Url;
+
+        // 源码地址
+        @NameInMap("ArtcUrl")
+        public String artcUrl;
+
+        public static GetLiveResponseBodyResultArtcInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetLiveResponseBodyResultArtcInfo self = new GetLiveResponseBodyResultArtcInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLiveResponseBodyResultArtcInfo setArtcH5Url(String artcH5Url) {
+            this.artcH5Url = artcH5Url;
+            return this;
+        }
+        public String getArtcH5Url() {
+            return this.artcH5Url;
+        }
+
+        public GetLiveResponseBodyResultArtcInfo setArtcUrl(String artcUrl) {
+            this.artcUrl = artcUrl;
+            return this;
+        }
+        public String getArtcUrl() {
+            return this.artcUrl;
+        }
+
+    }
+
     public static class GetLiveResponseBodyResultPlayUrlInfoList extends TeaModel {
         // 直播拉取分辨率 -1:lld 1:lsd 2:lhd 3:lud
         @NameInMap("CodeLevel")
@@ -88,118 +120,86 @@ public class GetLiveResponseBody extends TeaModel {
 
     }
 
-    public static class GetLiveResponseBodyResultArtcInfo extends TeaModel {
-        // 源码地址
-        @NameInMap("ArtcUrl")
-        public String artcUrl;
-
-        // 原画转码地址
-        @NameInMap("ArtcH5Url")
-        public String artcH5Url;
-
-        public static GetLiveResponseBodyResultArtcInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetLiveResponseBodyResultArtcInfo self = new GetLiveResponseBodyResultArtcInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public GetLiveResponseBodyResultArtcInfo setArtcUrl(String artcUrl) {
-            this.artcUrl = artcUrl;
-            return this;
-        }
-        public String getArtcUrl() {
-            return this.artcUrl;
-        }
-
-        public GetLiveResponseBodyResultArtcInfo setArtcH5Url(String artcH5Url) {
-            this.artcH5Url = artcH5Url;
-            return this;
-        }
-        public String getArtcH5Url() {
-            return this.artcH5Url;
-        }
-
-    }
-
     public static class GetLiveResponseBodyResult extends TeaModel {
         // 主播ID
         @NameInMap("AnchorId")
         public String anchorId;
 
-        // 直播资源的唯一标识ID
-        @NameInMap("LiveId")
-        public String liveId;
-
-        // 直播标题
-        @NameInMap("Title")
-        public String title;
-
-        // 直播回放地址
-        @NameInMap("PlaybackUrl")
-        public String playbackUrl;
-
-        // 直播创建时间（毫秒ms）
-        @NameInMap("CreateTime")
-        public Long createTime;
-
-        // 直播结束时间（毫秒ms）
-        @NameInMap("EndTime")
-        public Long endTime;
-
-        // 直播持续时间（毫秒ms）
-        @NameInMap("Duration")
-        public Long duration;
-
-        // 直播推流地址
-        @NameInMap("PushUrl")
-        public String pushUrl;
-
-        // 直播拉流地址
-        @NameInMap("LiveUrl")
-        public String liveUrl;
-
-        // 直播状态：Created-已创建，未开播，Living-直播中，End-直播结束
-        @NameInMap("Status")
-        public String status;
-
-        // 直播简介
-        @NameInMap("Introduction")
-        public String introduction;
-
-        // 房间id
-        @NameInMap("RoomId")
-        public String roomId;
-
         // 租户名
         @NameInMap("AppId")
         public String appId;
 
-        // 创建直播用户
-        @NameInMap("UserId")
-        public String userId;
+        // rts播流信息
+        @NameInMap("ArtcInfo")
+        public GetLiveResponseBodyResultArtcInfo artcInfo;
 
         // 直播推送分辨率 -1:lld 1:lsd 2:lhd 3:lud
         @NameInMap("CodeLevel")
         public Integer codeLevel;
 
-        // 多分辨率多协议播放信息
-        @NameInMap("PlayUrlInfoList")
-        public java.util.List<GetLiveResponseBodyResultPlayUrlInfoList> playUrlInfoList;
-
         // 封面图片
         @NameInMap("CoverUrl")
         public String coverUrl;
 
-        // 用户自定义数据存储
-        @NameInMap("UserDefineField")
-        public String userDefineField;
+        // 直播创建时间（毫秒ms）
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        // 直播持续时间（毫秒ms）
+        @NameInMap("Duration")
+        public Long duration;
+
+        // 直播结束时间（毫秒ms）
+        @NameInMap("EndTime")
+        public Long endTime;
 
         // hls播放地址
         @NameInMap("HlsUrl")
         public String hlsUrl;
 
-        // rts播流信息
-        @NameInMap("ArtcInfo")
-        public GetLiveResponseBodyResultArtcInfo artcInfo;
+        // 直播简介
+        @NameInMap("Introduction")
+        public String introduction;
+
+        // 直播资源的唯一标识ID
+        @NameInMap("LiveId")
+        public String liveId;
+
+        // 直播拉流地址
+        @NameInMap("LiveUrl")
+        public String liveUrl;
+
+        // 多分辨率多协议播放信息
+        @NameInMap("PlayUrlInfoList")
+        public java.util.List<GetLiveResponseBodyResultPlayUrlInfoList> playUrlInfoList;
+
+        // 直播回放地址
+        @NameInMap("PlaybackUrl")
+        public String playbackUrl;
+
+        // 直播推流地址
+        @NameInMap("PushUrl")
+        public String pushUrl;
+
+        // 房间id
+        @NameInMap("RoomId")
+        public String roomId;
+
+        // 直播状态：Created-已创建，未开播，Living-直播中，End-直播结束
+        @NameInMap("Status")
+        public String status;
+
+        // 直播标题
+        @NameInMap("Title")
+        public String title;
+
+        // 用户自定义数据存储
+        @NameInMap("UserDefineField")
+        public String userDefineField;
+
+        // 创建直播用户
+        @NameInMap("UserId")
+        public String userId;
 
         public static GetLiveResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetLiveResponseBodyResult self = new GetLiveResponseBodyResult();
@@ -214,94 +214,6 @@ public class GetLiveResponseBody extends TeaModel {
             return this.anchorId;
         }
 
-        public GetLiveResponseBodyResult setLiveId(String liveId) {
-            this.liveId = liveId;
-            return this;
-        }
-        public String getLiveId() {
-            return this.liveId;
-        }
-
-        public GetLiveResponseBodyResult setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public GetLiveResponseBodyResult setPlaybackUrl(String playbackUrl) {
-            this.playbackUrl = playbackUrl;
-            return this;
-        }
-        public String getPlaybackUrl() {
-            return this.playbackUrl;
-        }
-
-        public GetLiveResponseBodyResult setCreateTime(Long createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public Long getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetLiveResponseBodyResult setEndTime(Long endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public Long getEndTime() {
-            return this.endTime;
-        }
-
-        public GetLiveResponseBodyResult setDuration(Long duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Long getDuration() {
-            return this.duration;
-        }
-
-        public GetLiveResponseBodyResult setPushUrl(String pushUrl) {
-            this.pushUrl = pushUrl;
-            return this;
-        }
-        public String getPushUrl() {
-            return this.pushUrl;
-        }
-
-        public GetLiveResponseBodyResult setLiveUrl(String liveUrl) {
-            this.liveUrl = liveUrl;
-            return this;
-        }
-        public String getLiveUrl() {
-            return this.liveUrl;
-        }
-
-        public GetLiveResponseBodyResult setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetLiveResponseBodyResult setIntroduction(String introduction) {
-            this.introduction = introduction;
-            return this;
-        }
-        public String getIntroduction() {
-            return this.introduction;
-        }
-
-        public GetLiveResponseBodyResult setRoomId(String roomId) {
-            this.roomId = roomId;
-            return this;
-        }
-        public String getRoomId() {
-            return this.roomId;
-        }
-
         public GetLiveResponseBodyResult setAppId(String appId) {
             this.appId = appId;
             return this;
@@ -310,12 +222,12 @@ public class GetLiveResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public GetLiveResponseBodyResult setUserId(String userId) {
-            this.userId = userId;
+        public GetLiveResponseBodyResult setArtcInfo(GetLiveResponseBodyResultArtcInfo artcInfo) {
+            this.artcInfo = artcInfo;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public GetLiveResponseBodyResultArtcInfo getArtcInfo() {
+            return this.artcInfo;
         }
 
         public GetLiveResponseBodyResult setCodeLevel(Integer codeLevel) {
@@ -326,14 +238,6 @@ public class GetLiveResponseBody extends TeaModel {
             return this.codeLevel;
         }
 
-        public GetLiveResponseBodyResult setPlayUrlInfoList(java.util.List<GetLiveResponseBodyResultPlayUrlInfoList> playUrlInfoList) {
-            this.playUrlInfoList = playUrlInfoList;
-            return this;
-        }
-        public java.util.List<GetLiveResponseBodyResultPlayUrlInfoList> getPlayUrlInfoList() {
-            return this.playUrlInfoList;
-        }
-
         public GetLiveResponseBodyResult setCoverUrl(String coverUrl) {
             this.coverUrl = coverUrl;
             return this;
@@ -342,12 +246,28 @@ public class GetLiveResponseBody extends TeaModel {
             return this.coverUrl;
         }
 
-        public GetLiveResponseBodyResult setUserDefineField(String userDefineField) {
-            this.userDefineField = userDefineField;
+        public GetLiveResponseBodyResult setCreateTime(Long createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getUserDefineField() {
-            return this.userDefineField;
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetLiveResponseBodyResult setDuration(Long duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        public GetLiveResponseBodyResult setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         public GetLiveResponseBodyResult setHlsUrl(String hlsUrl) {
@@ -358,12 +278,92 @@ public class GetLiveResponseBody extends TeaModel {
             return this.hlsUrl;
         }
 
-        public GetLiveResponseBodyResult setArtcInfo(GetLiveResponseBodyResultArtcInfo artcInfo) {
-            this.artcInfo = artcInfo;
+        public GetLiveResponseBodyResult setIntroduction(String introduction) {
+            this.introduction = introduction;
             return this;
         }
-        public GetLiveResponseBodyResultArtcInfo getArtcInfo() {
-            return this.artcInfo;
+        public String getIntroduction() {
+            return this.introduction;
+        }
+
+        public GetLiveResponseBodyResult setLiveId(String liveId) {
+            this.liveId = liveId;
+            return this;
+        }
+        public String getLiveId() {
+            return this.liveId;
+        }
+
+        public GetLiveResponseBodyResult setLiveUrl(String liveUrl) {
+            this.liveUrl = liveUrl;
+            return this;
+        }
+        public String getLiveUrl() {
+            return this.liveUrl;
+        }
+
+        public GetLiveResponseBodyResult setPlayUrlInfoList(java.util.List<GetLiveResponseBodyResultPlayUrlInfoList> playUrlInfoList) {
+            this.playUrlInfoList = playUrlInfoList;
+            return this;
+        }
+        public java.util.List<GetLiveResponseBodyResultPlayUrlInfoList> getPlayUrlInfoList() {
+            return this.playUrlInfoList;
+        }
+
+        public GetLiveResponseBodyResult setPlaybackUrl(String playbackUrl) {
+            this.playbackUrl = playbackUrl;
+            return this;
+        }
+        public String getPlaybackUrl() {
+            return this.playbackUrl;
+        }
+
+        public GetLiveResponseBodyResult setPushUrl(String pushUrl) {
+            this.pushUrl = pushUrl;
+            return this;
+        }
+        public String getPushUrl() {
+            return this.pushUrl;
+        }
+
+        public GetLiveResponseBodyResult setRoomId(String roomId) {
+            this.roomId = roomId;
+            return this;
+        }
+        public String getRoomId() {
+            return this.roomId;
+        }
+
+        public GetLiveResponseBodyResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetLiveResponseBodyResult setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public GetLiveResponseBodyResult setUserDefineField(String userDefineField) {
+            this.userDefineField = userDefineField;
+            return this;
+        }
+        public String getUserDefineField() {
+            return this.userDefineField;
+        }
+
+        public GetLiveResponseBodyResult setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }

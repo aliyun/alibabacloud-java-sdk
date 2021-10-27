@@ -34,14 +34,6 @@ public class GetRoomResponseBody extends TeaModel {
     }
 
     public static class GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList extends TeaModel {
-        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
-        @NameInMap("PluginType")
-        public String pluginType;
-
-        // 插件实例唯一标识。
-        @NameInMap("PluginId")
-        public String pluginId;
-
         // 插件实例创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
@@ -50,25 +42,17 @@ public class GetRoomResponseBody extends TeaModel {
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
+        // 插件实例唯一标识。
+        @NameInMap("PluginId")
+        public String pluginId;
+
+        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
+        @NameInMap("PluginType")
+        public String pluginType;
+
         public static GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList build(java.util.Map<String, ?> map) throws Exception {
             GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList self = new GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList();
             return TeaModel.build(map, self);
-        }
-
-        public GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList setPluginType(String pluginType) {
-            this.pluginType = pluginType;
-            return this;
-        }
-        public String getPluginType() {
-            return this.pluginType;
-        }
-
-        public GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList setPluginId(String pluginId) {
-            this.pluginId = pluginId;
-            return this;
-        }
-        public String getPluginId() {
-            return this.pluginId;
         }
 
         public GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList setCreateTime(Long createTime) {
@@ -87,32 +71,40 @@ public class GetRoomResponseBody extends TeaModel {
             return this.extension;
         }
 
+        public GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList setPluginId(String pluginId) {
+            this.pluginId = pluginId;
+            return this;
+        }
+        public String getPluginId() {
+            return this.pluginId;
+        }
+
+        public GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList setPluginType(String pluginType) {
+            this.pluginType = pluginType;
+            return this;
+        }
+        public String getPluginType() {
+            return this.pluginType;
+        }
+
     }
 
     public static class GetRoomResponseBodyResultRoomInfo extends TeaModel {
-        // 房间唯一标识。
-        @NameInMap("RoomId")
-        public String roomId;
-
-        // 房间标题。
-        @NameInMap("Title")
-        public String title;
+        // 应用唯一标识，由6位小写字母、数字组成。
+        @NameInMap("AppId")
+        public String appId;
 
         // 房间创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
 
+        // 房间拓展字段。
+        @NameInMap("Extension")
+        public java.util.Map<String, String> extension;
+
         // 房间公告。
         @NameInMap("Notice")
         public String notice;
-
-        // 房主用户id。
-        @NameInMap("RoomOwnerId")
-        public String roomOwnerId;
-
-        // 访问用户数。
-        @NameInMap("Uv")
-        public Long uv;
 
         // 在线用户数。
         @NameInMap("OnlineCount")
@@ -122,41 +114,41 @@ public class GetRoomResponseBody extends TeaModel {
         @NameInMap("PluginInstanceInfoList")
         public java.util.List<GetRoomResponseBodyResultRoomInfoPluginInstanceInfoList> pluginInstanceInfoList;
 
-        // 应用唯一标识，由6位小写字母、数字组成。
-        @NameInMap("AppId")
-        public String appId;
+        // 访问用户人次。
+        @NameInMap("Pv")
+        public Long pv;
+
+        // 房间唯一标识。
+        @NameInMap("RoomId")
+        public String roomId;
+
+        // 房主用户id。
+        @NameInMap("RoomOwnerId")
+        public String roomOwnerId;
 
         // 创建房间使用的模板id。
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 房间拓展字段。
-        @NameInMap("Extension")
-        public java.util.Map<String, String> extension;
+        // 房间标题。
+        @NameInMap("Title")
+        public String title;
 
-        // 访问用户人次。
-        @NameInMap("Pv")
-        public Long pv;
+        // 访问用户数。
+        @NameInMap("Uv")
+        public Long uv;
 
         public static GetRoomResponseBodyResultRoomInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRoomResponseBodyResultRoomInfo self = new GetRoomResponseBodyResultRoomInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetRoomResponseBodyResultRoomInfo setRoomId(String roomId) {
-            this.roomId = roomId;
+        public GetRoomResponseBodyResultRoomInfo setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public String getRoomId() {
-            return this.roomId;
-        }
-
-        public GetRoomResponseBodyResultRoomInfo setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
+        public String getAppId() {
+            return this.appId;
         }
 
         public GetRoomResponseBodyResultRoomInfo setCreateTime(Long createTime) {
@@ -167,28 +159,20 @@ public class GetRoomResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public GetRoomResponseBodyResultRoomInfo setExtension(java.util.Map<String, String> extension) {
+            this.extension = extension;
+            return this;
+        }
+        public java.util.Map<String, String> getExtension() {
+            return this.extension;
+        }
+
         public GetRoomResponseBodyResultRoomInfo setNotice(String notice) {
             this.notice = notice;
             return this;
         }
         public String getNotice() {
             return this.notice;
-        }
-
-        public GetRoomResponseBodyResultRoomInfo setRoomOwnerId(String roomOwnerId) {
-            this.roomOwnerId = roomOwnerId;
-            return this;
-        }
-        public String getRoomOwnerId() {
-            return this.roomOwnerId;
-        }
-
-        public GetRoomResponseBodyResultRoomInfo setUv(Long uv) {
-            this.uv = uv;
-            return this;
-        }
-        public Long getUv() {
-            return this.uv;
         }
 
         public GetRoomResponseBodyResultRoomInfo setOnlineCount(Long onlineCount) {
@@ -207,12 +191,28 @@ public class GetRoomResponseBody extends TeaModel {
             return this.pluginInstanceInfoList;
         }
 
-        public GetRoomResponseBodyResultRoomInfo setAppId(String appId) {
-            this.appId = appId;
+        public GetRoomResponseBodyResultRoomInfo setPv(Long pv) {
+            this.pv = pv;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
+        public Long getPv() {
+            return this.pv;
+        }
+
+        public GetRoomResponseBodyResultRoomInfo setRoomId(String roomId) {
+            this.roomId = roomId;
+            return this;
+        }
+        public String getRoomId() {
+            return this.roomId;
+        }
+
+        public GetRoomResponseBodyResultRoomInfo setRoomOwnerId(String roomOwnerId) {
+            this.roomOwnerId = roomOwnerId;
+            return this;
+        }
+        public String getRoomOwnerId() {
+            return this.roomOwnerId;
         }
 
         public GetRoomResponseBodyResultRoomInfo setTemplateId(String templateId) {
@@ -223,20 +223,20 @@ public class GetRoomResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public GetRoomResponseBodyResultRoomInfo setExtension(java.util.Map<String, String> extension) {
-            this.extension = extension;
+        public GetRoomResponseBodyResultRoomInfo setTitle(String title) {
+            this.title = title;
             return this;
         }
-        public java.util.Map<String, String> getExtension() {
-            return this.extension;
+        public String getTitle() {
+            return this.title;
         }
 
-        public GetRoomResponseBodyResultRoomInfo setPv(Long pv) {
-            this.pv = pv;
+        public GetRoomResponseBodyResultRoomInfo setUv(Long uv) {
+            this.uv = uv;
             return this;
         }
-        public Long getPv() {
-            return this.pv;
+        public Long getUv() {
+            return this.uv;
         }
 
     }

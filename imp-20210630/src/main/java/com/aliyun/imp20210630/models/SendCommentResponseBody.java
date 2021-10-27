@@ -38,6 +38,18 @@ public class SendCommentResponseBody extends TeaModel {
         @NameInMap("CommentId")
         public String commentId;
 
+        // 弹幕的内容。
+        @NameInMap("Content")
+        public String content;
+
+        // 弹幕的创建时间，Unix时间戳，单位：毫秒。
+        @NameInMap("CreateAt")
+        public Long createAt;
+
+        // 扩展字段。
+        @NameInMap("Extension")
+        public java.util.Map<String, String> extension;
+
         // 弹幕的发送者ID标识。
         @NameInMap("SenderId")
         public String senderId;
@@ -45,18 +57,6 @@ public class SendCommentResponseBody extends TeaModel {
         // 弹幕发送者的昵称。
         @NameInMap("SenderNick")
         public String senderNick;
-
-        // 弹幕的创建时间，Unix时间戳，单位：毫秒。
-        @NameInMap("CreateAt")
-        public Long createAt;
-
-        // 弹幕的内容。
-        @NameInMap("Content")
-        public String content;
-
-        // 扩展字段。
-        @NameInMap("Extension")
-        public java.util.Map<String, String> extension;
 
         public static SendCommentResponseBodyResultCommentVO build(java.util.Map<String, ?> map) throws Exception {
             SendCommentResponseBodyResultCommentVO self = new SendCommentResponseBodyResultCommentVO();
@@ -69,6 +69,30 @@ public class SendCommentResponseBody extends TeaModel {
         }
         public String getCommentId() {
             return this.commentId;
+        }
+
+        public SendCommentResponseBodyResultCommentVO setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public SendCommentResponseBodyResultCommentVO setCreateAt(Long createAt) {
+            this.createAt = createAt;
+            return this;
+        }
+        public Long getCreateAt() {
+            return this.createAt;
+        }
+
+        public SendCommentResponseBodyResultCommentVO setExtension(java.util.Map<String, String> extension) {
+            this.extension = extension;
+            return this;
+        }
+        public java.util.Map<String, String> getExtension() {
+            return this.extension;
         }
 
         public SendCommentResponseBodyResultCommentVO setSenderId(String senderId) {
@@ -85,30 +109,6 @@ public class SendCommentResponseBody extends TeaModel {
         }
         public String getSenderNick() {
             return this.senderNick;
-        }
-
-        public SendCommentResponseBodyResultCommentVO setCreateAt(Long createAt) {
-            this.createAt = createAt;
-            return this;
-        }
-        public Long getCreateAt() {
-            return this.createAt;
-        }
-
-        public SendCommentResponseBodyResultCommentVO setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public SendCommentResponseBodyResultCommentVO setExtension(java.util.Map<String, String> extension) {
-            this.extension = extension;
-            return this;
-        }
-        public java.util.Map<String, String> getExtension() {
-            return this.extension;
         }
 
     }

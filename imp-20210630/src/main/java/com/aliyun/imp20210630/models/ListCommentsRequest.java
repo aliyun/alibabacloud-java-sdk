@@ -8,14 +8,6 @@ public class ListCommentsRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 房间的唯一标识，在调用CreateRoom时返回。
-    @NameInMap("RoomId")
-    public String roomId;
-
-    // 操作人用户ID，表示谁执行了查询弹幕消息列表的操作。
-    @NameInMap("UserId")
-    public String userId;
-
     // 查询弹幕消息列表的分页页数。应该从1开始，每次分页拉取时递增。
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -24,9 +16,17 @@ public class ListCommentsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 房间的唯一标识，在调用CreateRoom时返回。
+    @NameInMap("RoomId")
+    public String roomId;
+
     // 查询弹幕消息列表的排序方式。取值仅限0和1，其中0表示按照弹幕消息创建时间递增的顺序拉取，1表示按照弹幕消息创建时间递减的时间拉取。
     @NameInMap("SortType")
     public Integer sortType;
+
+    // 操作人用户ID，表示谁执行了查询弹幕消息列表的操作。
+    @NameInMap("UserId")
+    public String userId;
 
     public static ListCommentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCommentsRequest self = new ListCommentsRequest();
@@ -39,22 +39,6 @@ public class ListCommentsRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public ListCommentsRequest setRoomId(String roomId) {
-        this.roomId = roomId;
-        return this;
-    }
-    public String getRoomId() {
-        return this.roomId;
-    }
-
-    public ListCommentsRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public ListCommentsRequest setPageNum(Integer pageNum) {
@@ -73,12 +57,28 @@ public class ListCommentsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListCommentsRequest setRoomId(String roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+    public String getRoomId() {
+        return this.roomId;
+    }
+
     public ListCommentsRequest setSortType(Integer sortType) {
         this.sortType = sortType;
         return this;
     }
     public Integer getSortType() {
         return this.sortType;
+    }
+
+    public ListCommentsRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

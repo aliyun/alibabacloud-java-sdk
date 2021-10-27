@@ -34,26 +34,6 @@ public class ListRoomLivesResponseBody extends TeaModel {
     }
 
     public static class ListRoomLivesResponseBodyResultLiveList extends TeaModel {
-        // 房间唯一标识。
-        @NameInMap("RoomId")
-        public String roomId;
-
-        // 房间标题。
-        @NameInMap("Title")
-        public String title;
-
-        // 房主用户id。
-        @NameInMap("RoomOwnerId")
-        public String roomOwnerId;
-
-        // 房间公告。
-        @NameInMap("Notice")
-        public String notice;
-
-        // 用户访问数。
-        @NameInMap("Uv")
-        public Long uv;
-
         // 应用唯一标识，由6位小写字母、数字组成。
         @NameInMap("AppId")
         public String appId;
@@ -66,61 +46,41 @@ public class ListRoomLivesResponseBody extends TeaModel {
         @NameInMap("LiveId")
         public String liveId;
 
-        // 直播状态，0-在播 1-不在播。
-        @NameInMap("Status")
-        public Integer status;
-
-        // 用户访问人次。
-        @NameInMap("Pv")
-        public Long pv;
+        // 房间公告。
+        @NameInMap("Notice")
+        public String notice;
 
         // 在线用户数。
         @NameInMap("OnlineCount")
         public Long onlineCount;
 
+        // 用户访问人次。
+        @NameInMap("Pv")
+        public Long pv;
+
+        // 房间唯一标识。
+        @NameInMap("RoomId")
+        public String roomId;
+
+        // 房主用户id。
+        @NameInMap("RoomOwnerId")
+        public String roomOwnerId;
+
+        // 直播状态，0-在播 1-不在播。
+        @NameInMap("Status")
+        public Integer status;
+
+        // 房间标题。
+        @NameInMap("Title")
+        public String title;
+
+        // 用户访问数。
+        @NameInMap("Uv")
+        public Long uv;
+
         public static ListRoomLivesResponseBodyResultLiveList build(java.util.Map<String, ?> map) throws Exception {
             ListRoomLivesResponseBodyResultLiveList self = new ListRoomLivesResponseBodyResultLiveList();
             return TeaModel.build(map, self);
-        }
-
-        public ListRoomLivesResponseBodyResultLiveList setRoomId(String roomId) {
-            this.roomId = roomId;
-            return this;
-        }
-        public String getRoomId() {
-            return this.roomId;
-        }
-
-        public ListRoomLivesResponseBodyResultLiveList setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public ListRoomLivesResponseBodyResultLiveList setRoomOwnerId(String roomOwnerId) {
-            this.roomOwnerId = roomOwnerId;
-            return this;
-        }
-        public String getRoomOwnerId() {
-            return this.roomOwnerId;
-        }
-
-        public ListRoomLivesResponseBodyResultLiveList setNotice(String notice) {
-            this.notice = notice;
-            return this;
-        }
-        public String getNotice() {
-            return this.notice;
-        }
-
-        public ListRoomLivesResponseBodyResultLiveList setUv(Long uv) {
-            this.uv = uv;
-            return this;
-        }
-        public Long getUv() {
-            return this.uv;
         }
 
         public ListRoomLivesResponseBodyResultLiveList setAppId(String appId) {
@@ -147,12 +107,20 @@ public class ListRoomLivesResponseBody extends TeaModel {
             return this.liveId;
         }
 
-        public ListRoomLivesResponseBodyResultLiveList setStatus(Integer status) {
-            this.status = status;
+        public ListRoomLivesResponseBodyResultLiveList setNotice(String notice) {
+            this.notice = notice;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getNotice() {
+            return this.notice;
+        }
+
+        public ListRoomLivesResponseBodyResultLiveList setOnlineCount(Long onlineCount) {
+            this.onlineCount = onlineCount;
+            return this;
+        }
+        public Long getOnlineCount() {
+            return this.onlineCount;
         }
 
         public ListRoomLivesResponseBodyResultLiveList setPv(Long pv) {
@@ -163,12 +131,44 @@ public class ListRoomLivesResponseBody extends TeaModel {
             return this.pv;
         }
 
-        public ListRoomLivesResponseBodyResultLiveList setOnlineCount(Long onlineCount) {
-            this.onlineCount = onlineCount;
+        public ListRoomLivesResponseBodyResultLiveList setRoomId(String roomId) {
+            this.roomId = roomId;
             return this;
         }
-        public Long getOnlineCount() {
-            return this.onlineCount;
+        public String getRoomId() {
+            return this.roomId;
+        }
+
+        public ListRoomLivesResponseBodyResultLiveList setRoomOwnerId(String roomOwnerId) {
+            this.roomOwnerId = roomOwnerId;
+            return this;
+        }
+        public String getRoomOwnerId() {
+            return this.roomOwnerId;
+        }
+
+        public ListRoomLivesResponseBodyResultLiveList setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListRoomLivesResponseBodyResultLiveList setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public ListRoomLivesResponseBodyResultLiveList setUv(Long uv) {
+            this.uv = uv;
+            return this;
+        }
+        public Long getUv() {
+            return this.uv;
         }
 
     }

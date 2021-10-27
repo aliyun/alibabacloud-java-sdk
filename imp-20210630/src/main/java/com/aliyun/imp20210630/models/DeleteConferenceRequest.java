@@ -8,6 +8,10 @@ public class DeleteConferenceRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    // 会议资源的唯一标识ID
+    @NameInMap("ConferenceId")
+    public String conferenceId;
+
     // 房间ID，最大长度36位
     @NameInMap("RoomId")
     public String roomId;
@@ -15,10 +19,6 @@ public class DeleteConferenceRequest extends TeaModel {
     // 创建会议用户ID
     @NameInMap("UserId")
     public String userId;
-
-    // 会议资源的唯一标识ID
-    @NameInMap("ConferenceId")
-    public String conferenceId;
 
     public static DeleteConferenceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteConferenceRequest self = new DeleteConferenceRequest();
@@ -31,6 +31,14 @@ public class DeleteConferenceRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DeleteConferenceRequest setConferenceId(String conferenceId) {
+        this.conferenceId = conferenceId;
+        return this;
+    }
+    public String getConferenceId() {
+        return this.conferenceId;
     }
 
     public DeleteConferenceRequest setRoomId(String roomId) {
@@ -47,14 +55,6 @@ public class DeleteConferenceRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public DeleteConferenceRequest setConferenceId(String conferenceId) {
-        this.conferenceId = conferenceId;
-        return this;
-    }
-    public String getConferenceId() {
-        return this.conferenceId;
     }
 
 }

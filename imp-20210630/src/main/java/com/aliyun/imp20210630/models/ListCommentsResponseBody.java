@@ -38,13 +38,25 @@ public class ListCommentsResponseBody extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
-        // 房间ID。
-        @NameInMap("RoomId")
-        public String roomId;
-
         // 弹幕消息的唯一ID标识。
         @NameInMap("CommentId")
         public String commentId;
+
+        // 弹幕消息的内容。
+        @NameInMap("Content")
+        public String content;
+
+        // 弹幕消息的创建时间，Unix时间戳，单位：毫秒。
+        @NameInMap("CreateAt")
+        public Long createAt;
+
+        // 扩展字段。
+        @NameInMap("Extension")
+        public java.util.Map<String, String> extension;
+
+        // 房间ID。
+        @NameInMap("RoomId")
+        public String roomId;
 
         // 弹幕消息的发送者ID标识。
         @NameInMap("SenderId")
@@ -53,18 +65,6 @@ public class ListCommentsResponseBody extends TeaModel {
         // 弹幕消息发送者的昵称。
         @NameInMap("SenderNick")
         public String senderNick;
-
-        // 弹幕消息的创建时间，Unix时间戳，单位：毫秒。
-        @NameInMap("CreateAt")
-        public Long createAt;
-
-        // 弹幕消息的内容。
-        @NameInMap("Content")
-        public String content;
-
-        // 扩展字段。
-        @NameInMap("Extension")
-        public java.util.Map<String, String> extension;
 
         public static ListCommentsResponseBodyResultCommentVOList build(java.util.Map<String, ?> map) throws Exception {
             ListCommentsResponseBodyResultCommentVOList self = new ListCommentsResponseBodyResultCommentVOList();
@@ -79,20 +79,44 @@ public class ListCommentsResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public ListCommentsResponseBodyResultCommentVOList setRoomId(String roomId) {
-            this.roomId = roomId;
-            return this;
-        }
-        public String getRoomId() {
-            return this.roomId;
-        }
-
         public ListCommentsResponseBodyResultCommentVOList setCommentId(String commentId) {
             this.commentId = commentId;
             return this;
         }
         public String getCommentId() {
             return this.commentId;
+        }
+
+        public ListCommentsResponseBodyResultCommentVOList setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public ListCommentsResponseBodyResultCommentVOList setCreateAt(Long createAt) {
+            this.createAt = createAt;
+            return this;
+        }
+        public Long getCreateAt() {
+            return this.createAt;
+        }
+
+        public ListCommentsResponseBodyResultCommentVOList setExtension(java.util.Map<String, String> extension) {
+            this.extension = extension;
+            return this;
+        }
+        public java.util.Map<String, String> getExtension() {
+            return this.extension;
+        }
+
+        public ListCommentsResponseBodyResultCommentVOList setRoomId(String roomId) {
+            this.roomId = roomId;
+            return this;
+        }
+        public String getRoomId() {
+            return this.roomId;
         }
 
         public ListCommentsResponseBodyResultCommentVOList setSenderId(String senderId) {
@@ -111,30 +135,6 @@ public class ListCommentsResponseBody extends TeaModel {
             return this.senderNick;
         }
 
-        public ListCommentsResponseBodyResultCommentVOList setCreateAt(Long createAt) {
-            this.createAt = createAt;
-            return this;
-        }
-        public Long getCreateAt() {
-            return this.createAt;
-        }
-
-        public ListCommentsResponseBodyResultCommentVOList setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public ListCommentsResponseBodyResultCommentVOList setExtension(java.util.Map<String, String> extension) {
-            this.extension = extension;
-            return this;
-        }
-        public java.util.Map<String, String> getExtension() {
-            return this.extension;
-        }
-
     }
 
     public static class ListCommentsResponseBodyResult extends TeaModel {
@@ -146,13 +146,13 @@ public class ListCommentsResponseBody extends TeaModel {
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        // 弹幕消息的总数。
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         // 分页查询弹幕消息列表的总页数。
         @NameInMap("PageTotal")
         public Integer pageTotal;
+
+        // 弹幕消息的总数。
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListCommentsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListCommentsResponseBodyResult self = new ListCommentsResponseBodyResult();
@@ -175,20 +175,20 @@ public class ListCommentsResponseBody extends TeaModel {
             return this.hasMore;
         }
 
-        public ListCommentsResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
         public ListCommentsResponseBodyResult setPageTotal(Integer pageTotal) {
             this.pageTotal = pageTotal;
             return this;
         }
         public Integer getPageTotal() {
             return this.pageTotal;
+        }
+
+        public ListCommentsResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

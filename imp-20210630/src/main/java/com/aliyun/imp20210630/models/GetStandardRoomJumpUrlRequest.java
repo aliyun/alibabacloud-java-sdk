@@ -8,25 +8,25 @@ public class GetStandardRoomJumpUrlRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 用户UserId,在AppId下单独唯一
-    @NameInMap("UserId")
-    public String userId;
-
     // 终端设备类型,通过控制台创建和查询
     @NameInMap("AppKey")
     public String appKey;
 
-    // 平台：win, mac, android, ios, web
-    @NameInMap("Platform")
-    public String platform;
+    // 资源ID：根据业务类型来定，比如直播ID，课堂ID等
+    @NameInMap("BizId")
+    public String bizId;
 
     // 业务类型：互动直播live，互动课堂class
     @NameInMap("BizType")
     public String bizType;
 
-    // 资源ID：根据业务类型来定，比如直播ID，课堂ID等
-    @NameInMap("BizId")
-    public String bizId;
+    // 平台：win, mac, android, ios, web
+    @NameInMap("Platform")
+    public String platform;
+
+    // 用户UserId,在AppId下单独唯一
+    @NameInMap("UserId")
+    public String userId;
 
     // 用户昵称
     @NameInMap("UserNick")
@@ -45,14 +45,6 @@ public class GetStandardRoomJumpUrlRequest extends TeaModel {
         return this.appId;
     }
 
-    public GetStandardRoomJumpUrlRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public GetStandardRoomJumpUrlRequest setAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -61,12 +53,12 @@ public class GetStandardRoomJumpUrlRequest extends TeaModel {
         return this.appKey;
     }
 
-    public GetStandardRoomJumpUrlRequest setPlatform(String platform) {
-        this.platform = platform;
+    public GetStandardRoomJumpUrlRequest setBizId(String bizId) {
+        this.bizId = bizId;
         return this;
     }
-    public String getPlatform() {
-        return this.platform;
+    public String getBizId() {
+        return this.bizId;
     }
 
     public GetStandardRoomJumpUrlRequest setBizType(String bizType) {
@@ -77,12 +69,20 @@ public class GetStandardRoomJumpUrlRequest extends TeaModel {
         return this.bizType;
     }
 
-    public GetStandardRoomJumpUrlRequest setBizId(String bizId) {
-        this.bizId = bizId;
+    public GetStandardRoomJumpUrlRequest setPlatform(String platform) {
+        this.platform = platform;
         return this;
     }
-    public String getBizId() {
-        return this.bizId;
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    public GetStandardRoomJumpUrlRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
     public GetStandardRoomJumpUrlRequest setUserNick(String userNick) {

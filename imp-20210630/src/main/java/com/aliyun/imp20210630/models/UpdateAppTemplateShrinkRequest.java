@@ -3,7 +3,7 @@ package com.aliyun.imp20210630.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateAppTemplateRequest extends TeaModel {
+public class UpdateAppTemplateShrinkRequest extends TeaModel {
     // 应用模板唯一标识
     @NameInMap("AppTemplateId")
     public String appTemplateId;
@@ -14,14 +14,14 @@ public class UpdateAppTemplateRequest extends TeaModel {
 
     // 组件列表
     @NameInMap("ComponentList")
-    public java.util.List<String> componentList;
+    public String componentListShrink;
 
-    public static UpdateAppTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateAppTemplateRequest self = new UpdateAppTemplateRequest();
+    public static UpdateAppTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAppTemplateShrinkRequest self = new UpdateAppTemplateShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAppTemplateRequest setAppTemplateId(String appTemplateId) {
+    public UpdateAppTemplateShrinkRequest setAppTemplateId(String appTemplateId) {
         this.appTemplateId = appTemplateId;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateAppTemplateRequest extends TeaModel {
         return this.appTemplateId;
     }
 
-    public UpdateAppTemplateRequest setAppTemplateName(String appTemplateName) {
+    public UpdateAppTemplateShrinkRequest setAppTemplateName(String appTemplateName) {
         this.appTemplateName = appTemplateName;
         return this;
     }
@@ -37,12 +37,12 @@ public class UpdateAppTemplateRequest extends TeaModel {
         return this.appTemplateName;
     }
 
-    public UpdateAppTemplateRequest setComponentList(java.util.List<String> componentList) {
-        this.componentList = componentList;
+    public UpdateAppTemplateShrinkRequest setComponentListShrink(String componentListShrink) {
+        this.componentListShrink = componentListShrink;
         return this;
     }
-    public java.util.List<String> getComponentList() {
-        return this.componentList;
+    public String getComponentListShrink() {
+        return this.componentListShrink;
     }
 
 }

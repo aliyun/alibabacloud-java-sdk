@@ -8,10 +8,6 @@ public class GetAuthTokenRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 用户UserId,在AppId下单独唯一
-    @NameInMap("UserId")
-    public String userId;
-
     // 终端设备类型,通过控制台创建和查询
     @NameInMap("AppKey")
     public String appKey;
@@ -19,6 +15,10 @@ public class GetAuthTokenRequest extends TeaModel {
     // 终端设备ID
     @NameInMap("DeviceId")
     public String deviceId;
+
+    // 用户UserId,在AppId下单独唯一
+    @NameInMap("UserId")
+    public String userId;
 
     public static GetAuthTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAuthTokenRequest self = new GetAuthTokenRequest();
@@ -31,14 +31,6 @@ public class GetAuthTokenRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public GetAuthTokenRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public GetAuthTokenRequest setAppKey(String appKey) {
@@ -55,6 +47,14 @@ public class GetAuthTokenRequest extends TeaModel {
     }
     public String getDeviceId() {
         return this.deviceId;
+    }
+
+    public GetAuthTokenRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

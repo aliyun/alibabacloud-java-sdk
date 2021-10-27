@@ -8,10 +8,6 @@ public class SendCustomMessageToUsersRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 房间唯一标识，由调用CreateRoom返回。
-    @NameInMap("RoomId")
-    public String roomId;
-
     // 消息体内容。
     @NameInMap("Body")
     public String body;
@@ -19,6 +15,10 @@ public class SendCustomMessageToUsersRequest extends TeaModel {
     // 消息指定的接收人ID列表。
     @NameInMap("ReceiverList")
     public java.util.List<String> receiverList;
+
+    // 房间唯一标识，由调用CreateRoom返回。
+    @NameInMap("RoomId")
+    public String roomId;
 
     public static SendCustomMessageToUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         SendCustomMessageToUsersRequest self = new SendCustomMessageToUsersRequest();
@@ -31,14 +31,6 @@ public class SendCustomMessageToUsersRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public SendCustomMessageToUsersRequest setRoomId(String roomId) {
-        this.roomId = roomId;
-        return this;
-    }
-    public String getRoomId() {
-        return this.roomId;
     }
 
     public SendCustomMessageToUsersRequest setBody(String body) {
@@ -55,6 +47,14 @@ public class SendCustomMessageToUsersRequest extends TeaModel {
     }
     public java.util.List<String> getReceiverList() {
         return this.receiverList;
+    }
+
+    public SendCustomMessageToUsersRequest setRoomId(String roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+    public String getRoomId() {
+        return this.roomId;
     }
 
 }

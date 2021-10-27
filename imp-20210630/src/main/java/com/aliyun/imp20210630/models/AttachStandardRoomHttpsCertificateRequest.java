@@ -8,17 +8,17 @@ public class AttachStandardRoomHttpsCertificateRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 使用证书的确切域名
-    @NameInMap("DomainName")
-    public String domainName;
+    // NGINX格式证书私钥
+    @NameInMap("CertificatePrivateKey")
+    public String certificatePrivateKey;
 
     // NGINX格式证书公钥
     @NameInMap("CertificatePublicKey")
     public String certificatePublicKey;
 
-    // NGINX格式证书私钥
-    @NameInMap("CertificatePrivateKey")
-    public String certificatePrivateKey;
+    // 使用证书的确切域名
+    @NameInMap("DomainName")
+    public String domainName;
 
     public static AttachStandardRoomHttpsCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachStandardRoomHttpsCertificateRequest self = new AttachStandardRoomHttpsCertificateRequest();
@@ -33,12 +33,12 @@ public class AttachStandardRoomHttpsCertificateRequest extends TeaModel {
         return this.appId;
     }
 
-    public AttachStandardRoomHttpsCertificateRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public AttachStandardRoomHttpsCertificateRequest setCertificatePrivateKey(String certificatePrivateKey) {
+        this.certificatePrivateKey = certificatePrivateKey;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getCertificatePrivateKey() {
+        return this.certificatePrivateKey;
     }
 
     public AttachStandardRoomHttpsCertificateRequest setCertificatePublicKey(String certificatePublicKey) {
@@ -49,12 +49,12 @@ public class AttachStandardRoomHttpsCertificateRequest extends TeaModel {
         return this.certificatePublicKey;
     }
 
-    public AttachStandardRoomHttpsCertificateRequest setCertificatePrivateKey(String certificatePrivateKey) {
-        this.certificatePrivateKey = certificatePrivateKey;
+    public AttachStandardRoomHttpsCertificateRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public String getCertificatePrivateKey() {
-        return this.certificatePrivateKey;
+    public String getDomainName() {
+        return this.domainName;
     }
 
 }

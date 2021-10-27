@@ -66,56 +66,48 @@ public class GetAppTemplateResponseBody extends TeaModel {
     }
 
     public static class GetAppTemplateResponseBodyResult extends TeaModel {
-        // 应用模板名称
-        @NameInMap("AppTemplateName")
-        public String appTemplateName;
-
         // 应用模板创建者
         @NameInMap("AppTemplateCreator")
         public String appTemplateCreator;
 
-        // 应用模板使用状态
-        @NameInMap("Status")
-        public String status;
+        // 应用模板名称
+        @NameInMap("AppTemplateName")
+        public String appTemplateName;
 
         // 组件列表
         @NameInMap("ComponentList")
         public java.util.List<String> componentList;
 
-        // 创建时间
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("SdkInfo")
-        public String sdkInfo;
-
         // 配置列表
         @NameInMap("ConfigList")
         public java.util.List<GetAppTemplateResponseBodyResultConfigList> configList;
 
-        // 应用模板场景，电商business，课堂classroom
-        @NameInMap("Scene")
-        public String scene;
+        // 创建时间
+        @NameInMap("CreateTime")
+        public String createTime;
 
         // 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
         @NameInMap("IntegrationMode")
         public String integrationMode;
 
+        // 应用模板场景，电商business，课堂classroom
+        @NameInMap("Scene")
+        public String scene;
+
+        @NameInMap("SdkInfo")
+        public String sdkInfo;
+
         // 样板间信息
         @NameInMap("StandardRoomInfo")
         public String standardRoomInfo;
 
+        // 应用模板使用状态
+        @NameInMap("Status")
+        public String status;
+
         public static GetAppTemplateResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetAppTemplateResponseBodyResult self = new GetAppTemplateResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetAppTemplateResponseBodyResult setAppTemplateName(String appTemplateName) {
-            this.appTemplateName = appTemplateName;
-            return this;
-        }
-        public String getAppTemplateName() {
-            return this.appTemplateName;
         }
 
         public GetAppTemplateResponseBodyResult setAppTemplateCreator(String appTemplateCreator) {
@@ -126,12 +118,12 @@ public class GetAppTemplateResponseBody extends TeaModel {
             return this.appTemplateCreator;
         }
 
-        public GetAppTemplateResponseBodyResult setStatus(String status) {
-            this.status = status;
+        public GetAppTemplateResponseBodyResult setAppTemplateName(String appTemplateName) {
+            this.appTemplateName = appTemplateName;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getAppTemplateName() {
+            return this.appTemplateName;
         }
 
         public GetAppTemplateResponseBodyResult setComponentList(java.util.List<String> componentList) {
@@ -142,22 +134,6 @@ public class GetAppTemplateResponseBody extends TeaModel {
             return this.componentList;
         }
 
-        public GetAppTemplateResponseBodyResult setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public GetAppTemplateResponseBodyResult setSdkInfo(String sdkInfo) {
-            this.sdkInfo = sdkInfo;
-            return this;
-        }
-        public String getSdkInfo() {
-            return this.sdkInfo;
-        }
-
         public GetAppTemplateResponseBodyResult setConfigList(java.util.List<GetAppTemplateResponseBodyResultConfigList> configList) {
             this.configList = configList;
             return this;
@@ -166,12 +142,12 @@ public class GetAppTemplateResponseBody extends TeaModel {
             return this.configList;
         }
 
-        public GetAppTemplateResponseBodyResult setScene(String scene) {
-            this.scene = scene;
+        public GetAppTemplateResponseBodyResult setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getScene() {
-            return this.scene;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetAppTemplateResponseBodyResult setIntegrationMode(String integrationMode) {
@@ -182,12 +158,36 @@ public class GetAppTemplateResponseBody extends TeaModel {
             return this.integrationMode;
         }
 
+        public GetAppTemplateResponseBodyResult setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public GetAppTemplateResponseBodyResult setSdkInfo(String sdkInfo) {
+            this.sdkInfo = sdkInfo;
+            return this;
+        }
+        public String getSdkInfo() {
+            return this.sdkInfo;
+        }
+
         public GetAppTemplateResponseBodyResult setStandardRoomInfo(String standardRoomInfo) {
             this.standardRoomInfo = standardRoomInfo;
             return this;
         }
         public String getStandardRoomInfo() {
             return this.standardRoomInfo;
+        }
+
+        public GetAppTemplateResponseBodyResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

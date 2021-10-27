@@ -12,17 +12,17 @@ public class UpdateClassRequest extends TeaModel {
     @NameInMap("ClassId")
     public String classId;
 
-    // 课堂标题，1~32个字符。
-    @NameInMap("Title")
-    public String title;
+    // 创建人用户昵称，1~32个字符。
+    @NameInMap("CreateNickname")
+    public String createNickname;
 
     // 创建人用户ID，仅支持中英文数字，下划线，中划线，1~36个字符。
     @NameInMap("CreateUserId")
     public String createUserId;
 
-    // 创建人用户昵称，1~32个字符。
-    @NameInMap("CreateNickname")
-    public String createNickname;
+    // 课堂标题，1~32个字符。
+    @NameInMap("Title")
+    public String title;
 
     public static UpdateClassRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateClassRequest self = new UpdateClassRequest();
@@ -45,12 +45,12 @@ public class UpdateClassRequest extends TeaModel {
         return this.classId;
     }
 
-    public UpdateClassRequest setTitle(String title) {
-        this.title = title;
+    public UpdateClassRequest setCreateNickname(String createNickname) {
+        this.createNickname = createNickname;
         return this;
     }
-    public String getTitle() {
-        return this.title;
+    public String getCreateNickname() {
+        return this.createNickname;
     }
 
     public UpdateClassRequest setCreateUserId(String createUserId) {
@@ -61,12 +61,12 @@ public class UpdateClassRequest extends TeaModel {
         return this.createUserId;
     }
 
-    public UpdateClassRequest setCreateNickname(String createNickname) {
-        this.createNickname = createNickname;
+    public UpdateClassRequest setTitle(String title) {
+        this.title = title;
         return this;
     }
-    public String getCreateNickname() {
-        return this.createNickname;
+    public String getTitle() {
+        return this.title;
     }
 
 }

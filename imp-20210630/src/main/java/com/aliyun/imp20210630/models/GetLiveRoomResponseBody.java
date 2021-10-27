@@ -33,15 +33,39 @@ public class GetLiveRoomResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class GetLiveRoomResponseBodyResultArtcInfo extends TeaModel {
+        // RTS转码流地址，推荐web端使用。
+        @NameInMap("ArtcH5Url")
+        public String artcH5Url;
+
+        // RTS原码流地址，推荐移动端使用。
+        @NameInMap("ArtcUrl")
+        public String artcUrl;
+
+        public static GetLiveRoomResponseBodyResultArtcInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetLiveRoomResponseBodyResultArtcInfo self = new GetLiveRoomResponseBodyResultArtcInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetLiveRoomResponseBodyResultArtcInfo setArtcH5Url(String artcH5Url) {
+            this.artcH5Url = artcH5Url;
+            return this;
+        }
+        public String getArtcH5Url() {
+            return this.artcH5Url;
+        }
+
+        public GetLiveRoomResponseBodyResultArtcInfo setArtcUrl(String artcUrl) {
+            this.artcUrl = artcUrl;
+            return this;
+        }
+        public String getArtcUrl() {
+            return this.artcUrl;
+        }
+
+    }
+
     public static class GetLiveRoomResponseBodyResultPluginInstanceInfoList extends TeaModel {
-        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
-        @NameInMap("PluginType")
-        public String pluginType;
-
-        // 插件实例唯一标识。
-        @NameInMap("PluginId")
-        public String pluginId;
-
         // 插件实例创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
@@ -50,25 +74,17 @@ public class GetLiveRoomResponseBody extends TeaModel {
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
+        // 插件实例唯一标识。
+        @NameInMap("PluginId")
+        public String pluginId;
+
+        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
+        @NameInMap("PluginType")
+        public String pluginType;
+
         public static GetLiveRoomResponseBodyResultPluginInstanceInfoList build(java.util.Map<String, ?> map) throws Exception {
             GetLiveRoomResponseBodyResultPluginInstanceInfoList self = new GetLiveRoomResponseBodyResultPluginInstanceInfoList();
             return TeaModel.build(map, self);
-        }
-
-        public GetLiveRoomResponseBodyResultPluginInstanceInfoList setPluginType(String pluginType) {
-            this.pluginType = pluginType;
-            return this;
-        }
-        public String getPluginType() {
-            return this.pluginType;
-        }
-
-        public GetLiveRoomResponseBodyResultPluginInstanceInfoList setPluginId(String pluginId) {
-            this.pluginId = pluginId;
-            return this;
-        }
-        public String getPluginId() {
-            return this.pluginId;
         }
 
         public GetLiveRoomResponseBodyResultPluginInstanceInfoList setCreateTime(Long createTime) {
@@ -87,56 +103,48 @@ public class GetLiveRoomResponseBody extends TeaModel {
             return this.extension;
         }
 
+        public GetLiveRoomResponseBodyResultPluginInstanceInfoList setPluginId(String pluginId) {
+            this.pluginId = pluginId;
+            return this;
+        }
+        public String getPluginId() {
+            return this.pluginId;
+        }
+
+        public GetLiveRoomResponseBodyResultPluginInstanceInfoList setPluginType(String pluginType) {
+            this.pluginType = pluginType;
+            return this;
+        }
+        public String getPluginType() {
+            return this.pluginType;
+        }
+
     }
 
     public static class GetLiveRoomResponseBodyResult extends TeaModel {
+        // 主播ID。
+        @NameInMap("AnchorId")
+        public String anchorId;
+
+        // 主播昵称
+        @NameInMap("AnchorNick")
+        public String anchorNick;
+
         // 应用ID。
         @NameInMap("AppId")
         public String appId;
 
-        // 直播ID。
-        @NameInMap("LiveId")
-        public String liveId;
-
-        // 直播状态，0-在播 1-下播。
-        @NameInMap("Status")
-        public Integer status;
-
-        // 房间ID。
-        @NameInMap("RoomId")
-        public String roomId;
+        // RTS低延迟播流信息。
+        @NameInMap("ArtcInfo")
+        public GetLiveRoomResponseBodyResultArtcInfo artcInfo;
 
         // 聊天ID。
         @NameInMap("ChatId")
         public String chatId;
 
-        // 标题。
-        @NameInMap("Title")
-        public String title;
-
-        // 公告。
-        @NameInMap("Notice")
-        public String notice;
-
         // 封面。
         @NameInMap("CoverUrl")
         public String coverUrl;
-
-        // 主播ID。
-        @NameInMap("AnchorId")
-        public String anchorId;
-
-        // 访问用户数。
-        @NameInMap("Uv")
-        public Long uv;
-
-        // 在线用户数。
-        @NameInMap("OnlineCount")
-        public Long onlineCount;
-
-        // 直播回放地址。
-        @NameInMap("PlaybackUrl")
-        public String playbackUrl;
 
         // 直播创建时间，单位：毫秒。
         @NameInMap("CreateTime")
@@ -146,97 +154,69 @@ public class GetLiveRoomResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
-        // 直播推流地址。
-        @NameInMap("PushUrl")
-        public String pushUrl;
+        // 直播拓展字段。
+        @NameInMap("Extension")
+        public java.util.Map<String, String> extension;
+
+        // 原画HLS播放地址。
+        @NameInMap("HlsUrl")
+        public String hlsUrl;
+
+        // 直播ID。
+        @NameInMap("LiveId")
+        public String liveId;
 
         // 直播拉流地址。
         @NameInMap("LiveUrl")
         public String liveUrl;
 
+        // 公告。
+        @NameInMap("Notice")
+        public String notice;
+
+        // 在线用户数。
+        @NameInMap("OnlineCount")
+        public Long onlineCount;
+
+        // 直播回放地址。
+        @NameInMap("PlaybackUrl")
+        public String playbackUrl;
+
         // 活跃插件列表。
         @NameInMap("PluginInstanceInfoList")
         public java.util.List<GetLiveRoomResponseBodyResultPluginInstanceInfoList> pluginInstanceInfoList;
 
-        // 直播拓展字段。
-        @NameInMap("Extension")
-        public java.util.Map<String, String> extension;
+        // 直播推流地址。
+        @NameInMap("PushUrl")
+        public String pushUrl;
 
         // 访问用户人次。
         @NameInMap("Pv")
         public Long pv;
 
-        // 主播昵称
-        @NameInMap("AnchorNick")
-        public String anchorNick;
+        // 房间ID。
+        @NameInMap("RoomId")
+        public String roomId;
+
+        // 直播开始时间，单位：毫秒。
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        // 直播状态，0-在播 1-下播。
+        @NameInMap("Status")
+        public Integer status;
+
+        // 标题。
+        @NameInMap("Title")
+        public String title;
+
+        // 访问用户数。
+        @NameInMap("Uv")
+        public Long uv;
 
         public static GetLiveRoomResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetLiveRoomResponseBodyResult self = new GetLiveRoomResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetLiveRoomResponseBodyResult setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public GetLiveRoomResponseBodyResult setLiveId(String liveId) {
-            this.liveId = liveId;
-            return this;
-        }
-        public String getLiveId() {
-            return this.liveId;
-        }
-
-        public GetLiveRoomResponseBodyResult setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public GetLiveRoomResponseBodyResult setRoomId(String roomId) {
-            this.roomId = roomId;
-            return this;
-        }
-        public String getRoomId() {
-            return this.roomId;
-        }
-
-        public GetLiveRoomResponseBodyResult setChatId(String chatId) {
-            this.chatId = chatId;
-            return this;
-        }
-        public String getChatId() {
-            return this.chatId;
-        }
-
-        public GetLiveRoomResponseBodyResult setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public GetLiveRoomResponseBodyResult setNotice(String notice) {
-            this.notice = notice;
-            return this;
-        }
-        public String getNotice() {
-            return this.notice;
-        }
-
-        public GetLiveRoomResponseBodyResult setCoverUrl(String coverUrl) {
-            this.coverUrl = coverUrl;
-            return this;
-        }
-        public String getCoverUrl() {
-            return this.coverUrl;
         }
 
         public GetLiveRoomResponseBodyResult setAnchorId(String anchorId) {
@@ -247,28 +227,44 @@ public class GetLiveRoomResponseBody extends TeaModel {
             return this.anchorId;
         }
 
-        public GetLiveRoomResponseBodyResult setUv(Long uv) {
-            this.uv = uv;
+        public GetLiveRoomResponseBodyResult setAnchorNick(String anchorNick) {
+            this.anchorNick = anchorNick;
             return this;
         }
-        public Long getUv() {
-            return this.uv;
+        public String getAnchorNick() {
+            return this.anchorNick;
         }
 
-        public GetLiveRoomResponseBodyResult setOnlineCount(Long onlineCount) {
-            this.onlineCount = onlineCount;
+        public GetLiveRoomResponseBodyResult setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public Long getOnlineCount() {
-            return this.onlineCount;
+        public String getAppId() {
+            return this.appId;
         }
 
-        public GetLiveRoomResponseBodyResult setPlaybackUrl(String playbackUrl) {
-            this.playbackUrl = playbackUrl;
+        public GetLiveRoomResponseBodyResult setArtcInfo(GetLiveRoomResponseBodyResultArtcInfo artcInfo) {
+            this.artcInfo = artcInfo;
             return this;
         }
-        public String getPlaybackUrl() {
-            return this.playbackUrl;
+        public GetLiveRoomResponseBodyResultArtcInfo getArtcInfo() {
+            return this.artcInfo;
+        }
+
+        public GetLiveRoomResponseBodyResult setChatId(String chatId) {
+            this.chatId = chatId;
+            return this;
+        }
+        public String getChatId() {
+            return this.chatId;
+        }
+
+        public GetLiveRoomResponseBodyResult setCoverUrl(String coverUrl) {
+            this.coverUrl = coverUrl;
+            return this;
+        }
+        public String getCoverUrl() {
+            return this.coverUrl;
         }
 
         public GetLiveRoomResponseBodyResult setCreateTime(Long createTime) {
@@ -287,12 +283,28 @@ public class GetLiveRoomResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public GetLiveRoomResponseBodyResult setPushUrl(String pushUrl) {
-            this.pushUrl = pushUrl;
+        public GetLiveRoomResponseBodyResult setExtension(java.util.Map<String, String> extension) {
+            this.extension = extension;
             return this;
         }
-        public String getPushUrl() {
-            return this.pushUrl;
+        public java.util.Map<String, String> getExtension() {
+            return this.extension;
+        }
+
+        public GetLiveRoomResponseBodyResult setHlsUrl(String hlsUrl) {
+            this.hlsUrl = hlsUrl;
+            return this;
+        }
+        public String getHlsUrl() {
+            return this.hlsUrl;
+        }
+
+        public GetLiveRoomResponseBodyResult setLiveId(String liveId) {
+            this.liveId = liveId;
+            return this;
+        }
+        public String getLiveId() {
+            return this.liveId;
         }
 
         public GetLiveRoomResponseBodyResult setLiveUrl(String liveUrl) {
@@ -303,6 +315,30 @@ public class GetLiveRoomResponseBody extends TeaModel {
             return this.liveUrl;
         }
 
+        public GetLiveRoomResponseBodyResult setNotice(String notice) {
+            this.notice = notice;
+            return this;
+        }
+        public String getNotice() {
+            return this.notice;
+        }
+
+        public GetLiveRoomResponseBodyResult setOnlineCount(Long onlineCount) {
+            this.onlineCount = onlineCount;
+            return this;
+        }
+        public Long getOnlineCount() {
+            return this.onlineCount;
+        }
+
+        public GetLiveRoomResponseBodyResult setPlaybackUrl(String playbackUrl) {
+            this.playbackUrl = playbackUrl;
+            return this;
+        }
+        public String getPlaybackUrl() {
+            return this.playbackUrl;
+        }
+
         public GetLiveRoomResponseBodyResult setPluginInstanceInfoList(java.util.List<GetLiveRoomResponseBodyResultPluginInstanceInfoList> pluginInstanceInfoList) {
             this.pluginInstanceInfoList = pluginInstanceInfoList;
             return this;
@@ -311,12 +347,12 @@ public class GetLiveRoomResponseBody extends TeaModel {
             return this.pluginInstanceInfoList;
         }
 
-        public GetLiveRoomResponseBodyResult setExtension(java.util.Map<String, String> extension) {
-            this.extension = extension;
+        public GetLiveRoomResponseBodyResult setPushUrl(String pushUrl) {
+            this.pushUrl = pushUrl;
             return this;
         }
-        public java.util.Map<String, String> getExtension() {
-            return this.extension;
+        public String getPushUrl() {
+            return this.pushUrl;
         }
 
         public GetLiveRoomResponseBodyResult setPv(Long pv) {
@@ -327,12 +363,44 @@ public class GetLiveRoomResponseBody extends TeaModel {
             return this.pv;
         }
 
-        public GetLiveRoomResponseBodyResult setAnchorNick(String anchorNick) {
-            this.anchorNick = anchorNick;
+        public GetLiveRoomResponseBodyResult setRoomId(String roomId) {
+            this.roomId = roomId;
             return this;
         }
-        public String getAnchorNick() {
-            return this.anchorNick;
+        public String getRoomId() {
+            return this.roomId;
+        }
+
+        public GetLiveRoomResponseBodyResult setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public GetLiveRoomResponseBodyResult setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public GetLiveRoomResponseBodyResult setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public GetLiveRoomResponseBodyResult setUv(Long uv) {
+            this.uv = uv;
+            return this;
+        }
+        public Long getUv() {
+            return this.uv;
         }
 
     }

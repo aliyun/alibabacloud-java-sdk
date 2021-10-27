@@ -8,13 +8,13 @@ public class AddMemberRequest extends TeaModel {
     @NameInMap("ConferenceId")
     public String conferenceId;
 
-    // 被邀请用户ID
-    @NameInMap("ToUserId")
-    public String toUserId;
-
     // 邀请者用户ID
     @NameInMap("FromUserId")
     public String fromUserId;
+
+    // 被邀请用户ID
+    @NameInMap("ToUserId")
+    public String toUserId;
 
     public static AddMemberRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMemberRequest self = new AddMemberRequest();
@@ -29,20 +29,20 @@ public class AddMemberRequest extends TeaModel {
         return this.conferenceId;
     }
 
-    public AddMemberRequest setToUserId(String toUserId) {
-        this.toUserId = toUserId;
-        return this;
-    }
-    public String getToUserId() {
-        return this.toUserId;
-    }
-
     public AddMemberRequest setFromUserId(String fromUserId) {
         this.fromUserId = fromUserId;
         return this;
     }
     public String getFromUserId() {
         return this.fromUserId;
+    }
+
+    public AddMemberRequest setToUserId(String toUserId) {
+        this.toUserId = toUserId;
+        return this;
+    }
+    public String getToUserId() {
+        return this.toUserId;
     }
 
 }

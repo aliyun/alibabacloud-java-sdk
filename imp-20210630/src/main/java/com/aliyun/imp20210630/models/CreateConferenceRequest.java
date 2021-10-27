@@ -12,13 +12,13 @@ public class CreateConferenceRequest extends TeaModel {
     @NameInMap("RoomId")
     public String roomId;
 
-    // 创建会议用户。
-    @NameInMap("UserId")
-    public String userId;
-
     // 会议标题，支持中英文，最大长度256位。
     @NameInMap("Title")
     public String title;
+
+    // 创建会议用户。
+    @NameInMap("UserId")
+    public String userId;
 
     public static CreateConferenceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConferenceRequest self = new CreateConferenceRequest();
@@ -41,20 +41,20 @@ public class CreateConferenceRequest extends TeaModel {
         return this.roomId;
     }
 
-    public CreateConferenceRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
     public CreateConferenceRequest setTitle(String title) {
         this.title = title;
         return this;
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public CreateConferenceRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

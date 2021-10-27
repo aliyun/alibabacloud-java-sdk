@@ -3,7 +3,7 @@ package com.aliyun.imp20210630.models;
 
 import com.aliyun.tea.*;
 
-public class CreateLiveRoomRequest extends TeaModel {
+public class UpdateLiveRoomShrinkRequest extends TeaModel {
     // 主播id，仅支持英文和数字，最大长度36位。
     @NameInMap("AnchorId")
     public String anchorId;
@@ -22,7 +22,11 @@ public class CreateLiveRoomRequest extends TeaModel {
 
     // 拓展字段，按需传递，需要额外记录的房间属性。
     @NameInMap("Extension")
-    public java.util.Map<String, String> extension;
+    public String extensionShrink;
+
+    // 直播ID。
+    @NameInMap("LiveId")
+    public String liveId;
 
     // 公告，支持中英文，最大长度256位。
     @NameInMap("Notice")
@@ -36,12 +40,12 @@ public class CreateLiveRoomRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
-    public static CreateLiveRoomRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateLiveRoomRequest self = new CreateLiveRoomRequest();
+    public static UpdateLiveRoomShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateLiveRoomShrinkRequest self = new UpdateLiveRoomShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateLiveRoomRequest setAnchorId(String anchorId) {
+    public UpdateLiveRoomShrinkRequest setAnchorId(String anchorId) {
         this.anchorId = anchorId;
         return this;
     }
@@ -49,7 +53,7 @@ public class CreateLiveRoomRequest extends TeaModel {
         return this.anchorId;
     }
 
-    public CreateLiveRoomRequest setAnchorNick(String anchorNick) {
+    public UpdateLiveRoomShrinkRequest setAnchorNick(String anchorNick) {
         this.anchorNick = anchorNick;
         return this;
     }
@@ -57,7 +61,7 @@ public class CreateLiveRoomRequest extends TeaModel {
         return this.anchorNick;
     }
 
-    public CreateLiveRoomRequest setAppId(String appId) {
+    public UpdateLiveRoomShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -65,7 +69,7 @@ public class CreateLiveRoomRequest extends TeaModel {
         return this.appId;
     }
 
-    public CreateLiveRoomRequest setCoverUrl(String coverUrl) {
+    public UpdateLiveRoomShrinkRequest setCoverUrl(String coverUrl) {
         this.coverUrl = coverUrl;
         return this;
     }
@@ -73,15 +77,23 @@ public class CreateLiveRoomRequest extends TeaModel {
         return this.coverUrl;
     }
 
-    public CreateLiveRoomRequest setExtension(java.util.Map<String, String> extension) {
-        this.extension = extension;
+    public UpdateLiveRoomShrinkRequest setExtensionShrink(String extensionShrink) {
+        this.extensionShrink = extensionShrink;
         return this;
     }
-    public java.util.Map<String, String> getExtension() {
-        return this.extension;
+    public String getExtensionShrink() {
+        return this.extensionShrink;
     }
 
-    public CreateLiveRoomRequest setNotice(String notice) {
+    public UpdateLiveRoomShrinkRequest setLiveId(String liveId) {
+        this.liveId = liveId;
+        return this;
+    }
+    public String getLiveId() {
+        return this.liveId;
+    }
+
+    public UpdateLiveRoomShrinkRequest setNotice(String notice) {
         this.notice = notice;
         return this;
     }
@@ -89,7 +101,7 @@ public class CreateLiveRoomRequest extends TeaModel {
         return this.notice;
     }
 
-    public CreateLiveRoomRequest setTitle(String title) {
+    public UpdateLiveRoomShrinkRequest setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -97,7 +109,7 @@ public class CreateLiveRoomRequest extends TeaModel {
         return this.title;
     }
 
-    public CreateLiveRoomRequest setUserId(String userId) {
+    public UpdateLiveRoomShrinkRequest setUserId(String userId) {
         this.userId = userId;
         return this;
     }

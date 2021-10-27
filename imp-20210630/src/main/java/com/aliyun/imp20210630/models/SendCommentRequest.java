@@ -8,14 +8,6 @@ public class SendCommentRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    // 直播间唯一标识，在调用CreateRoom返回。
-    @NameInMap("RoomId")
-    public String roomId;
-
-    // 弹幕发送者的用户ID，最大长度不超过32个字节。
-    @NameInMap("SenderId")
-    public String senderId;
-
     // 发送的文本内容。最大的长度不超过256个字节。
     @NameInMap("Content")
     public String content;
@@ -23,6 +15,14 @@ public class SendCommentRequest extends TeaModel {
     // 扩展字段，服务端仅做透传。
     @NameInMap("Extension")
     public java.util.Map<String, String> extension;
+
+    // 直播间唯一标识，在调用CreateRoom返回。
+    @NameInMap("RoomId")
+    public String roomId;
+
+    // 弹幕发送者的用户ID，最大长度不超过32个字节。
+    @NameInMap("SenderId")
+    public String senderId;
 
     public static SendCommentRequest build(java.util.Map<String, ?> map) throws Exception {
         SendCommentRequest self = new SendCommentRequest();
@@ -35,22 +35,6 @@ public class SendCommentRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public SendCommentRequest setRoomId(String roomId) {
-        this.roomId = roomId;
-        return this;
-    }
-    public String getRoomId() {
-        return this.roomId;
-    }
-
-    public SendCommentRequest setSenderId(String senderId) {
-        this.senderId = senderId;
-        return this;
-    }
-    public String getSenderId() {
-        return this.senderId;
     }
 
     public SendCommentRequest setContent(String content) {
@@ -67,6 +51,22 @@ public class SendCommentRequest extends TeaModel {
     }
     public java.util.Map<String, String> getExtension() {
         return this.extension;
+    }
+
+    public SendCommentRequest setRoomId(String roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+    public String getRoomId() {
+        return this.roomId;
+    }
+
+    public SendCommentRequest setSenderId(String senderId) {
+        this.senderId = senderId;
+        return this;
+    }
+    public String getSenderId() {
+        return this.senderId;
     }
 
 }

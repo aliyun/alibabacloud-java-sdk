@@ -4,17 +4,17 @@ package com.aliyun.imp20210630.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveRoomShrinkRequest extends TeaModel {
+    // 主播id，仅支持英文和数字，最大长度36位。
+    @NameInMap("AnchorId")
+    public String anchorId;
+
+    // 主播昵称。
+    @NameInMap("AnchorNick")
+    public String anchorNick;
+
     // 应用唯一标识，由6位小写字母、数字组成。
     @NameInMap("AppId")
     public String appId;
-
-    // 标题，支持中英文，最大长度32位。
-    @NameInMap("Title")
-    public String title;
-
-    // 公告，支持中英文，最大长度256位。
-    @NameInMap("Notice")
-    public String notice;
 
     // 封面，支持图片地址链接格式
     @NameInMap("CoverUrl")
@@ -24,17 +24,37 @@ public class CreateLiveRoomShrinkRequest extends TeaModel {
     @NameInMap("Extension")
     public String extensionShrink;
 
-    // 主播id，仅支持英文和数字，最大长度36位。
-    @NameInMap("AnchorId")
-    public String anchorId;
+    // 公告，支持中英文，最大长度256位。
+    @NameInMap("Notice")
+    public String notice;
 
-    // 主播昵称。
-    @NameInMap("AnchorNick")
-    public String anchorNick;
+    // 标题，支持中英文，最大长度32位。
+    @NameInMap("Title")
+    public String title;
+
+    // 操作人ID。
+    @NameInMap("UserId")
+    public String userId;
 
     public static CreateLiveRoomShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveRoomShrinkRequest self = new CreateLiveRoomShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLiveRoomShrinkRequest setAnchorId(String anchorId) {
+        this.anchorId = anchorId;
+        return this;
+    }
+    public String getAnchorId() {
+        return this.anchorId;
+    }
+
+    public CreateLiveRoomShrinkRequest setAnchorNick(String anchorNick) {
+        this.anchorNick = anchorNick;
+        return this;
+    }
+    public String getAnchorNick() {
+        return this.anchorNick;
     }
 
     public CreateLiveRoomShrinkRequest setAppId(String appId) {
@@ -43,22 +63,6 @@ public class CreateLiveRoomShrinkRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public CreateLiveRoomShrinkRequest setTitle(String title) {
-        this.title = title;
-        return this;
-    }
-    public String getTitle() {
-        return this.title;
-    }
-
-    public CreateLiveRoomShrinkRequest setNotice(String notice) {
-        this.notice = notice;
-        return this;
-    }
-    public String getNotice() {
-        return this.notice;
     }
 
     public CreateLiveRoomShrinkRequest setCoverUrl(String coverUrl) {
@@ -77,20 +81,28 @@ public class CreateLiveRoomShrinkRequest extends TeaModel {
         return this.extensionShrink;
     }
 
-    public CreateLiveRoomShrinkRequest setAnchorId(String anchorId) {
-        this.anchorId = anchorId;
+    public CreateLiveRoomShrinkRequest setNotice(String notice) {
+        this.notice = notice;
         return this;
     }
-    public String getAnchorId() {
-        return this.anchorId;
+    public String getNotice() {
+        return this.notice;
     }
 
-    public CreateLiveRoomShrinkRequest setAnchorNick(String anchorNick) {
-        this.anchorNick = anchorNick;
+    public CreateLiveRoomShrinkRequest setTitle(String title) {
+        this.title = title;
         return this;
     }
-    public String getAnchorNick() {
-        return this.anchorNick;
+    public String getTitle() {
+        return this.title;
+    }
+
+    public CreateLiveRoomShrinkRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }
