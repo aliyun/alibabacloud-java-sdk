@@ -4,43 +4,33 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class GetVersionResponseBody extends TeaModel {
-    // 创建时间
     @NameInMap("CreateTime")
     public String createTime;
 
-    // 工作流定义
     @NameInMap("Definition")
     public String definition;
 
-    // 工作流 ID
     @NameInMap("FlowId")
     public String flowId;
 
-    // 地域 ID
     @NameInMap("RegionId")
     public String regionId;
 
-    // 请求 ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 更新时间
     @NameInMap("UpdateTime")
     public String updateTime;
 
-    // 版本描述
     @NameInMap("VersionDescription")
     public String versionDescription;
 
-    // 版本 ID
     @NameInMap("VersionId")
     public String versionId;
 
-    // 版本名称
     @NameInMap("VersionName")
     public String versionName;
 
-    // 版本状态
     @NameInMap("VersionStatus")
     public String versionStatus;
 

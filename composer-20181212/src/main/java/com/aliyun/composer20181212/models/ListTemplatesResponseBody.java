@@ -7,11 +7,11 @@ public class ListTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesResponseBody self = new ListTemplatesResponseBody();
@@ -26,14 +26,6 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTemplatesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public ListTemplatesResponseBody setTemplates(java.util.List<ListTemplatesResponseBodyTemplates> templates) {
         this.templates = templates;
         return this;
@@ -42,27 +34,38 @@ public class ListTemplatesResponseBody extends TeaModel {
         return this.templates;
     }
 
-    public static class ListTemplatesResponseBodyTemplates extends TeaModel {
-        @NameInMap("TemplateId")
-        public String templateId;
+    public ListTemplatesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
-        @NameInMap("TemplateName")
-        public String templateName;
+    public static class ListTemplatesResponseBodyTemplates extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("TemplateConnector")
+        public String templateConnector;
+
+        @NameInMap("TemplateCreator")
+        public String templateCreator;
 
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
-        @NameInMap("TemplateTag")
-        public String templateTag;
+        @NameInMap("TemplateId")
+        public String templateId;
 
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("TemplateLocale")
+        public String templateLocale;
 
-        @NameInMap("UpdateTime")
-        public String updateTime;
+        @NameInMap("TemplateName")
+        public String templateName;
 
-        @NameInMap("TemplateConnector")
-        public String templateConnector;
+        @NameInMap("TemplateOverview")
+        public String templateOverview;
 
         @NameInMap("TemplateSummary")
         public String templateSummary;
@@ -70,53 +73,18 @@ public class ListTemplatesResponseBody extends TeaModel {
         @NameInMap("TemplateSummaryEn")
         public String templateSummaryEn;
 
-        @NameInMap("TemplateLocale")
-        public String templateLocale;
+        @NameInMap("TemplateTag")
+        public String templateTag;
 
         @NameInMap("TemplateVersion")
         public Integer templateVersion;
 
-        @NameInMap("TemplateCreator")
-        public String templateCreator;
-
-        @NameInMap("TemplateOverview")
-        public String templateOverview;
+        @NameInMap("UpdateTime")
+        public String updateTime;
 
         public static ListTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
             ListTemplatesResponseBodyTemplates self = new ListTemplatesResponseBodyTemplates();
             return TeaModel.build(map, self);
-        }
-
-        public ListTemplatesResponseBodyTemplates setTemplateId(String templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public String getTemplateId() {
-            return this.templateId;
-        }
-
-        public ListTemplatesResponseBodyTemplates setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public ListTemplatesResponseBodyTemplates setTemplateDescription(String templateDescription) {
-            this.templateDescription = templateDescription;
-            return this;
-        }
-        public String getTemplateDescription() {
-            return this.templateDescription;
-        }
-
-        public ListTemplatesResponseBodyTemplates setTemplateTag(String templateTag) {
-            this.templateTag = templateTag;
-            return this;
-        }
-        public String getTemplateTag() {
-            return this.templateTag;
         }
 
         public ListTemplatesResponseBodyTemplates setCreateTime(String createTime) {
@@ -127,20 +95,60 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListTemplatesResponseBodyTemplates setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
         public ListTemplatesResponseBodyTemplates setTemplateConnector(String templateConnector) {
             this.templateConnector = templateConnector;
             return this;
         }
         public String getTemplateConnector() {
             return this.templateConnector;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTemplateCreator(String templateCreator) {
+            this.templateCreator = templateCreator;
+            return this;
+        }
+        public String getTemplateCreator() {
+            return this.templateCreator;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTemplateDescription(String templateDescription) {
+            this.templateDescription = templateDescription;
+            return this;
+        }
+        public String getTemplateDescription() {
+            return this.templateDescription;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTemplateLocale(String templateLocale) {
+            this.templateLocale = templateLocale;
+            return this;
+        }
+        public String getTemplateLocale() {
+            return this.templateLocale;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTemplateOverview(String templateOverview) {
+            this.templateOverview = templateOverview;
+            return this;
+        }
+        public String getTemplateOverview() {
+            return this.templateOverview;
         }
 
         public ListTemplatesResponseBodyTemplates setTemplateSummary(String templateSummary) {
@@ -159,12 +167,12 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.templateSummaryEn;
         }
 
-        public ListTemplatesResponseBodyTemplates setTemplateLocale(String templateLocale) {
-            this.templateLocale = templateLocale;
+        public ListTemplatesResponseBodyTemplates setTemplateTag(String templateTag) {
+            this.templateTag = templateTag;
             return this;
         }
-        public String getTemplateLocale() {
-            return this.templateLocale;
+        public String getTemplateTag() {
+            return this.templateTag;
         }
 
         public ListTemplatesResponseBodyTemplates setTemplateVersion(Integer templateVersion) {
@@ -175,20 +183,12 @@ public class ListTemplatesResponseBody extends TeaModel {
             return this.templateVersion;
         }
 
-        public ListTemplatesResponseBodyTemplates setTemplateCreator(String templateCreator) {
-            this.templateCreator = templateCreator;
+        public ListTemplatesResponseBodyTemplates setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
             return this;
         }
-        public String getTemplateCreator() {
-            return this.templateCreator;
-        }
-
-        public ListTemplatesResponseBodyTemplates setTemplateOverview(String templateOverview) {
-            this.templateOverview = templateOverview;
-            return this;
-        }
-        public String getTemplateOverview() {
-            return this.templateOverview;
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
     }

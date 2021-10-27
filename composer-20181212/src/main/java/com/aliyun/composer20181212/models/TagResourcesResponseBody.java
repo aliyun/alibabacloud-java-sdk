@@ -32,37 +32,21 @@ public class TagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("ResourceId")
         public String resourceId;
 
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
         public static ListTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesResponseBodyTagResources self = new ListTagResourcesResponseBodyTagResources();
             return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public ListTagResourcesResponseBodyTagResources setResourceId(String resourceId) {
@@ -79,6 +63,22 @@ public class TagResourcesResponseBody extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public ListTagResourcesResponseBodyTagResources setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListTagResourcesResponseBodyTagResources setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

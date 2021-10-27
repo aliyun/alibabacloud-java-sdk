@@ -4,21 +4,37 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class UpdateFlowRequest extends TeaModel {
+    @NameInMap("Definition")
+    public String definition;
+
+    @NameInMap("FlowDescription")
+    public String flowDescription;
+
     @NameInMap("FlowId")
     public String flowId;
 
     @NameInMap("FlowName")
     public String flowName;
 
-    @NameInMap("FlowDescription")
-    public String flowDescription;
-
-    @NameInMap("Definition")
-    public String definition;
-
     public static UpdateFlowRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFlowRequest self = new UpdateFlowRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateFlowRequest setDefinition(String definition) {
+        this.definition = definition;
+        return this;
+    }
+    public String getDefinition() {
+        return this.definition;
+    }
+
+    public UpdateFlowRequest setFlowDescription(String flowDescription) {
+        this.flowDescription = flowDescription;
+        return this;
+    }
+    public String getFlowDescription() {
+        return this.flowDescription;
     }
 
     public UpdateFlowRequest setFlowId(String flowId) {
@@ -35,22 +51,6 @@ public class UpdateFlowRequest extends TeaModel {
     }
     public String getFlowName() {
         return this.flowName;
-    }
-
-    public UpdateFlowRequest setFlowDescription(String flowDescription) {
-        this.flowDescription = flowDescription;
-        return this;
-    }
-    public String getFlowDescription() {
-        return this.flowDescription;
-    }
-
-    public UpdateFlowRequest setDefinition(String definition) {
-        this.definition = definition;
-        return this;
-    }
-    public String getDefinition() {
-        return this.definition;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class DisableFlowResponseBody extends TeaModel {
+    @NameInMap("FlowStatus")
+    public String flowStatus;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("FlowStatus")
-    public String flowStatus;
-
     public static DisableFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DisableFlowResponseBody self = new DisableFlowResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DisableFlowResponseBody setFlowStatus(String flowStatus) {
+        this.flowStatus = flowStatus;
+        return this;
+    }
+    public String getFlowStatus() {
+        return this.flowStatus;
     }
 
     public DisableFlowResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class DisableFlowResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DisableFlowResponseBody setFlowStatus(String flowStatus) {
-        this.flowStatus = flowStatus;
-        return this;
-    }
-    public String getFlowStatus() {
-        return this.flowStatus;
     }
 
 }

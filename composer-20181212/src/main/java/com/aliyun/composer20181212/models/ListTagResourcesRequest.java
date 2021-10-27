@@ -4,48 +4,32 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
-
-    @NameInMap("Tag")
-    public java.util.List<ListTagResourcesRequestTag> tag;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("Tag")
+    public java.util.List<ListTagResourcesRequestTag> tag;
 
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListTagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
+    public ListTagResourcesRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
-    }
-
-    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<ListTagResourcesRequestTag> getTag() {
-        return this.tag;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListTagResourcesRequest setNextToken(String nextToken) {
@@ -56,12 +40,28 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListTagResourcesRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
+    }
+
+    public ListTagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListTagResourcesRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

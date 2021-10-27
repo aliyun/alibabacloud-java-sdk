@@ -4,23 +4,18 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class GroupInvokeFlowResponseBody extends TeaModel {
-    // 当前批次
     @NameInMap("CurrentCount")
     public Integer currentCount;
 
-    // 执行 ID
     @NameInMap("GroupInvocationId")
     public String groupInvocationId;
 
-    // 请求 ID
     @NameInMap("RequestId")
     public String requestId;
 
-    // 状态
     @NameInMap("Status")
     public String status;
 
-    // 调用是否成功
     @NameInMap("Success")
     public Boolean success;
 
