@@ -34,9 +34,21 @@ public class GetAppResponseBody extends TeaModel {
     }
 
     public static class GetAppResponseBodyResult extends TeaModel {
+        // 应用配置状态
+        @NameInMap("AppConfigStatus")
+        public String appConfigStatus;
+
+        // 应用Key
+        @NameInMap("AppKey")
+        public String appKey;
+
         // 应用名称
         @NameInMap("AppName")
         public String appName;
+
+        // 应用状态
+        @NameInMap("AppStatus")
+        public String appStatus;
 
         // 模板唯一标识
         @NameInMap("AppTemplateId")
@@ -46,17 +58,9 @@ public class GetAppResponseBody extends TeaModel {
         @NameInMap("AppTemplateName")
         public String appTemplateName;
 
-        // 应用状态
-        @NameInMap("AppStatus")
-        public String appStatus;
-
-        // 应用配置状态
-        @NameInMap("AppConfigStatus")
-        public String appConfigStatus;
-
-        // 应用Key
-        @NameInMap("AppKey")
-        public String appKey;
+        // 组件列表。
+        @NameInMap("ComponentList")
+        public java.util.List<String> componentList;
 
         // 创建时间
         @NameInMap("CreateTime")
@@ -70,13 +74,25 @@ public class GetAppResponseBody extends TeaModel {
         @NameInMap("StandardRoomInfo")
         public String standardRoomInfo;
 
-        // 组件列表。
-        @NameInMap("ComponentList")
-        public java.util.List<String> componentList;
-
         public static GetAppResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetAppResponseBodyResult self = new GetAppResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetAppResponseBodyResult setAppConfigStatus(String appConfigStatus) {
+            this.appConfigStatus = appConfigStatus;
+            return this;
+        }
+        public String getAppConfigStatus() {
+            return this.appConfigStatus;
+        }
+
+        public GetAppResponseBodyResult setAppKey(String appKey) {
+            this.appKey = appKey;
+            return this;
+        }
+        public String getAppKey() {
+            return this.appKey;
         }
 
         public GetAppResponseBodyResult setAppName(String appName) {
@@ -85,6 +101,14 @@ public class GetAppResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public GetAppResponseBodyResult setAppStatus(String appStatus) {
+            this.appStatus = appStatus;
+            return this;
+        }
+        public String getAppStatus() {
+            return this.appStatus;
         }
 
         public GetAppResponseBodyResult setAppTemplateId(String appTemplateId) {
@@ -103,28 +127,12 @@ public class GetAppResponseBody extends TeaModel {
             return this.appTemplateName;
         }
 
-        public GetAppResponseBodyResult setAppStatus(String appStatus) {
-            this.appStatus = appStatus;
+        public GetAppResponseBodyResult setComponentList(java.util.List<String> componentList) {
+            this.componentList = componentList;
             return this;
         }
-        public String getAppStatus() {
-            return this.appStatus;
-        }
-
-        public GetAppResponseBodyResult setAppConfigStatus(String appConfigStatus) {
-            this.appConfigStatus = appConfigStatus;
-            return this;
-        }
-        public String getAppConfigStatus() {
-            return this.appConfigStatus;
-        }
-
-        public GetAppResponseBodyResult setAppKey(String appKey) {
-            this.appKey = appKey;
-            return this;
-        }
-        public String getAppKey() {
-            return this.appKey;
+        public java.util.List<String> getComponentList() {
+            return this.componentList;
         }
 
         public GetAppResponseBodyResult setCreateTime(String createTime) {
@@ -149,14 +157,6 @@ public class GetAppResponseBody extends TeaModel {
         }
         public String getStandardRoomInfo() {
             return this.standardRoomInfo;
-        }
-
-        public GetAppResponseBodyResult setComponentList(java.util.List<String> componentList) {
-            this.componentList = componentList;
-            return this;
-        }
-        public java.util.List<String> getComponentList() {
-            return this.componentList;
         }
 
     }

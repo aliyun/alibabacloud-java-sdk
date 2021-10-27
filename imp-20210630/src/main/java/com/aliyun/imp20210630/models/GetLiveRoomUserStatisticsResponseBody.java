@@ -66,21 +66,21 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetLiveRoomUserStatisticsResponseBodyResult extends TeaModel {
+        // 是否还有下一页。
+        @NameInMap("HasMore")
+        public Boolean hasMore;
+
         // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
-
-        // 用户总数
-        @NameInMap("TotalCount")
-        public Integer totalCount;
 
         // 用户总页数。
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // 是否还有下一页。
-        @NameInMap("HasMore")
-        public Boolean hasMore;
+        // 用户总数
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         // 用户观看数据列表。
         @NameInMap("UserStatisticsList")
@@ -91,20 +91,20 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetLiveRoomUserStatisticsResponseBodyResult setHasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
+            return this;
+        }
+        public Boolean getHasMore() {
+            return this.hasMore;
+        }
+
         public GetLiveRoomUserStatisticsResponseBodyResult setLiveId(String liveId) {
             this.liveId = liveId;
             return this;
         }
         public String getLiveId() {
             return this.liveId;
-        }
-
-        public GetLiveRoomUserStatisticsResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
         }
 
         public GetLiveRoomUserStatisticsResponseBodyResult setPageTotal(Integer pageTotal) {
@@ -115,12 +115,12 @@ public class GetLiveRoomUserStatisticsResponseBody extends TeaModel {
             return this.pageTotal;
         }
 
-        public GetLiveRoomUserStatisticsResponseBodyResult setHasMore(Boolean hasMore) {
-            this.hasMore = hasMore;
+        public GetLiveRoomUserStatisticsResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public Boolean getHasMore() {
-            return this.hasMore;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
         public GetLiveRoomUserStatisticsResponseBodyResult setUserStatisticsList(java.util.List<GetLiveRoomUserStatisticsResponseBodyResultUserStatisticsList> userStatisticsList) {

@@ -8,6 +8,10 @@ public class StopLiveRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    // 直播资源的唯一标识ID
+    @NameInMap("LiveId")
+    public String liveId;
+
     // 房间ID，最大长度36位
     @NameInMap("RoomId")
     public String roomId;
@@ -15,10 +19,6 @@ public class StopLiveRequest extends TeaModel {
     // 创建直播用户ID
     @NameInMap("UserId")
     public String userId;
-
-    // 直播资源的唯一标识ID
-    @NameInMap("LiveId")
-    public String liveId;
 
     public static StopLiveRequest build(java.util.Map<String, ?> map) throws Exception {
         StopLiveRequest self = new StopLiveRequest();
@@ -31,6 +31,14 @@ public class StopLiveRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public StopLiveRequest setLiveId(String liveId) {
+        this.liveId = liveId;
+        return this;
+    }
+    public String getLiveId() {
+        return this.liveId;
     }
 
     public StopLiveRequest setRoomId(String roomId) {
@@ -47,14 +55,6 @@ public class StopLiveRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public StopLiveRequest setLiveId(String liveId) {
-        this.liveId = liveId;
-        return this;
-    }
-    public String getLiveId() {
-        return this.liveId;
     }
 
 }

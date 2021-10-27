@@ -34,13 +34,13 @@ public class GetLiveDomainStatusResponseBody extends TeaModel {
     }
 
     public static class GetLiveDomainStatusResponseBodyResultLiveDomainInfoList extends TeaModel {
-        // 直播域名
-        @NameInMap("Domain")
-        public String domain;
-
         // 直播域名CNAME
         @NameInMap("Cname")
         public String cname;
+
+        // 直播域名
+        @NameInMap("Domain")
+        public String domain;
 
         // 直播域名状态
         @NameInMap("Status")
@@ -51,20 +51,20 @@ public class GetLiveDomainStatusResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetLiveDomainStatusResponseBodyResultLiveDomainInfoList setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
         public GetLiveDomainStatusResponseBodyResultLiveDomainInfoList setCname(String cname) {
             this.cname = cname;
             return this;
         }
         public String getCname() {
             return this.cname;
+        }
+
+        public GetLiveDomainStatusResponseBodyResultLiveDomainInfoList setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public GetLiveDomainStatusResponseBodyResultLiveDomainInfoList setStatus(String status) {

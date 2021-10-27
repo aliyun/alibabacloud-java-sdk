@@ -8,6 +8,10 @@ public class CancelBanCommentRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    // 取消禁言的用户唯一标识
+    @NameInMap("BanCommentUser")
+    public String banCommentUser;
+
     // 房间唯一标识，由调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -15,10 +19,6 @@ public class CancelBanCommentRequest extends TeaModel {
     // 用户在房间内的唯一标识
     @NameInMap("UserId")
     public String userId;
-
-    // 取消禁言的用户唯一标识
-    @NameInMap("BanCommentUser")
-    public String banCommentUser;
 
     public static CancelBanCommentRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelBanCommentRequest self = new CancelBanCommentRequest();
@@ -31,6 +31,14 @@ public class CancelBanCommentRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public CancelBanCommentRequest setBanCommentUser(String banCommentUser) {
+        this.banCommentUser = banCommentUser;
+        return this;
+    }
+    public String getBanCommentUser() {
+        return this.banCommentUser;
     }
 
     public CancelBanCommentRequest setRoomId(String roomId) {
@@ -47,14 +55,6 @@ public class CancelBanCommentRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public CancelBanCommentRequest setBanCommentUser(String banCommentUser) {
-        this.banCommentUser = banCommentUser;
-        return this;
-    }
-    public String getBanCommentUser() {
-        return this.banCommentUser;
     }
 
 }

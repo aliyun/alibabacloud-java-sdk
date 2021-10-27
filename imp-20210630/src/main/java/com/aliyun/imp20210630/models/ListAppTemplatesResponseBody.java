@@ -66,6 +66,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListAppTemplatesResponseBodyResultAppTemplateInfoList extends TeaModel {
+        // 应用模板创建者
+        @NameInMap("AppTemplateCreator")
+        public String appTemplateCreator;
+
         // 应用模板唯一标识
         @NameInMap("AppTemplateId")
         public String appTemplateId;
@@ -74,45 +78,49 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         @NameInMap("AppTemplateName")
         public String appTemplateName;
 
-        // 应用模板创建者
-        @NameInMap("AppTemplateCreator")
-        public String appTemplateCreator;
-
-        // 应用模板使用状态
-        @NameInMap("Status")
-        public String status;
-
         // 组件列表
         @NameInMap("ComponentList")
         public java.util.List<String> componentList;
-
-        // 创建时间
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        // SDK信息
-        @NameInMap("SdkInfo")
-        public String sdkInfo;
 
         // 配置列表
         @NameInMap("ConfigList")
         public java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoListConfigList> configList;
 
-        // 应用模板场景，电商business，课堂classroom
-        @NameInMap("Scene")
-        public String scene;
+        // 创建时间
+        @NameInMap("CreateTime")
+        public String createTime;
 
         // 集成方式：- 一体化SDK：paasSDK - 样板间：standardRoom
         @NameInMap("IntegrationMode")
         public String integrationMode;
 
+        // 应用模板场景，电商business，课堂classroom
+        @NameInMap("Scene")
+        public String scene;
+
+        // SDK信息
+        @NameInMap("SdkInfo")
+        public String sdkInfo;
+
         // 样板间信息
         @NameInMap("StandardRoomInfo")
         public String standardRoomInfo;
 
+        // 应用模板使用状态
+        @NameInMap("Status")
+        public String status;
+
         public static ListAppTemplatesResponseBodyResultAppTemplateInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListAppTemplatesResponseBodyResultAppTemplateInfoList self = new ListAppTemplatesResponseBodyResultAppTemplateInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setAppTemplateCreator(String appTemplateCreator) {
+            this.appTemplateCreator = appTemplateCreator;
+            return this;
+        }
+        public String getAppTemplateCreator() {
+            return this.appTemplateCreator;
         }
 
         public ListAppTemplatesResponseBodyResultAppTemplateInfoList setAppTemplateId(String appTemplateId) {
@@ -131,44 +139,12 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             return this.appTemplateName;
         }
 
-        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setAppTemplateCreator(String appTemplateCreator) {
-            this.appTemplateCreator = appTemplateCreator;
-            return this;
-        }
-        public String getAppTemplateCreator() {
-            return this.appTemplateCreator;
-        }
-
-        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public ListAppTemplatesResponseBodyResultAppTemplateInfoList setComponentList(java.util.List<String> componentList) {
             this.componentList = componentList;
             return this;
         }
         public java.util.List<String> getComponentList() {
             return this.componentList;
-        }
-
-        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setSdkInfo(String sdkInfo) {
-            this.sdkInfo = sdkInfo;
-            return this;
-        }
-        public String getSdkInfo() {
-            return this.sdkInfo;
         }
 
         public ListAppTemplatesResponseBodyResultAppTemplateInfoList setConfigList(java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoListConfigList> configList) {
@@ -179,12 +155,12 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             return this.configList;
         }
 
-        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setScene(String scene) {
-            this.scene = scene;
+        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getScene() {
-            return this.scene;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListAppTemplatesResponseBodyResultAppTemplateInfoList setIntegrationMode(String integrationMode) {
@@ -195,6 +171,22 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             return this.integrationMode;
         }
 
+        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
+        }
+
+        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setSdkInfo(String sdkInfo) {
+            this.sdkInfo = sdkInfo;
+            return this;
+        }
+        public String getSdkInfo() {
+            return this.sdkInfo;
+        }
+
         public ListAppTemplatesResponseBodyResultAppTemplateInfoList setStandardRoomInfo(String standardRoomInfo) {
             this.standardRoomInfo = standardRoomInfo;
             return this;
@@ -203,32 +195,40 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             return this.standardRoomInfo;
         }
 
+        public ListAppTemplatesResponseBodyResultAppTemplateInfoList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class ListAppTemplatesResponseBodyResult extends TeaModel {
-        // 总条目数
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        // 应用模板信息列表
+        @NameInMap("AppTemplateInfoList")
+        public java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoList> appTemplateInfoList;
 
         // 总页数
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // 应用模板信息列表
-        @NameInMap("AppTemplateInfoList")
-        public java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoList> appTemplateInfoList;
+        // 总条目数
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListAppTemplatesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListAppTemplatesResponseBodyResult self = new ListAppTemplatesResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public ListAppTemplatesResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public ListAppTemplatesResponseBodyResult setAppTemplateInfoList(java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoList> appTemplateInfoList) {
+            this.appTemplateInfoList = appTemplateInfoList;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoList> getAppTemplateInfoList() {
+            return this.appTemplateInfoList;
         }
 
         public ListAppTemplatesResponseBodyResult setPageTotal(Integer pageTotal) {
@@ -239,12 +239,12 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             return this.pageTotal;
         }
 
-        public ListAppTemplatesResponseBodyResult setAppTemplateInfoList(java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoList> appTemplateInfoList) {
-            this.appTemplateInfoList = appTemplateInfoList;
+        public ListAppTemplatesResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public java.util.List<ListAppTemplatesResponseBodyResultAppTemplateInfoList> getAppTemplateInfoList() {
-            return this.appTemplateInfoList;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

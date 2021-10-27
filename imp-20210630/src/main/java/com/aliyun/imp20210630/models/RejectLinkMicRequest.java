@@ -8,13 +8,13 @@ public class RejectLinkMicRequest extends TeaModel {
     @NameInMap("ConferenceId")
     public String conferenceId;
 
-    // 被同意用户ID
-    @NameInMap("ToUserId")
-    public String toUserId;
-
     // 同意者用户ID
     @NameInMap("FromUserId")
     public String fromUserId;
+
+    // 被同意用户ID
+    @NameInMap("ToUserId")
+    public String toUserId;
 
     public static RejectLinkMicRequest build(java.util.Map<String, ?> map) throws Exception {
         RejectLinkMicRequest self = new RejectLinkMicRequest();
@@ -29,20 +29,20 @@ public class RejectLinkMicRequest extends TeaModel {
         return this.conferenceId;
     }
 
-    public RejectLinkMicRequest setToUserId(String toUserId) {
-        this.toUserId = toUserId;
-        return this;
-    }
-    public String getToUserId() {
-        return this.toUserId;
-    }
-
     public RejectLinkMicRequest setFromUserId(String fromUserId) {
         this.fromUserId = fromUserId;
         return this;
     }
     public String getFromUserId() {
         return this.fromUserId;
+    }
+
+    public RejectLinkMicRequest setToUserId(String toUserId) {
+        this.toUserId = toUserId;
+        return this;
+    }
+    public String getToUserId() {
+        return this.toUserId;
     }
 
 }

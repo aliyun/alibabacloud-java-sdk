@@ -34,25 +34,17 @@ public class ListConferenceUsersResponseBody extends TeaModel {
     }
 
     public static class ListConferenceUsersResponseBodyResultConferenceUserList extends TeaModel {
-        // 用户ID。
-        @NameInMap("UserId")
-        public String userId;
-
         // 用户状态。
         @NameInMap("Status")
         public String status;
 
+        // 用户ID。
+        @NameInMap("UserId")
+        public String userId;
+
         public static ListConferenceUsersResponseBodyResultConferenceUserList build(java.util.Map<String, ?> map) throws Exception {
             ListConferenceUsersResponseBodyResultConferenceUserList self = new ListConferenceUsersResponseBodyResultConferenceUserList();
             return TeaModel.build(map, self);
-        }
-
-        public ListConferenceUsersResponseBodyResultConferenceUserList setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public ListConferenceUsersResponseBodyResultConferenceUserList setStatus(String status) {
@@ -61,6 +53,14 @@ public class ListConferenceUsersResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListConferenceUsersResponseBodyResultConferenceUserList setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }
@@ -74,13 +74,13 @@ public class ListConferenceUsersResponseBody extends TeaModel {
         @NameInMap("HasMore")
         public Boolean hasMore;
 
-        // 总条目数
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         // 总页数
         @NameInMap("PageTotal")
         public Integer pageTotal;
+
+        // 总条目数
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListConferenceUsersResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListConferenceUsersResponseBodyResult self = new ListConferenceUsersResponseBodyResult();
@@ -103,20 +103,20 @@ public class ListConferenceUsersResponseBody extends TeaModel {
             return this.hasMore;
         }
 
-        public ListConferenceUsersResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
         public ListConferenceUsersResponseBodyResult setPageTotal(Integer pageTotal) {
             this.pageTotal = pageTotal;
             return this;
         }
         public Integer getPageTotal() {
             return this.pageTotal;
+        }
+
+        public ListConferenceUsersResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

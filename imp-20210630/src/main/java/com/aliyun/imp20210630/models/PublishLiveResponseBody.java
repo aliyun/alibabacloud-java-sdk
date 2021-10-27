@@ -33,37 +33,29 @@ public class PublishLiveResponseBody extends TeaModel {
     }
 
     public static class PublishLiveResponseBodyResult extends TeaModel {
-        // 直播资源的唯一标识ID
-        @NameInMap("LiveId")
-        public String liveId;
-
         // 主播ID
         @NameInMap("AnchorId")
         public String anchorId;
 
-        // 直播状态：Created-已创建未开播，Living-直播中，End-直播结束
-        @NameInMap("Status")
-        public String status;
-
-        // 直播推流地址
-        @NameInMap("PushUrl")
-        public String pushUrl;
+        // 直播资源的唯一标识ID
+        @NameInMap("LiveId")
+        public String liveId;
 
         // 直播拉流地址
         @NameInMap("LiveUrl")
         public String liveUrl;
 
+        // 直播推流地址
+        @NameInMap("PushUrl")
+        public String pushUrl;
+
+        // 直播状态：Created-已创建未开播，Living-直播中，End-直播结束
+        @NameInMap("Status")
+        public String status;
+
         public static PublishLiveResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             PublishLiveResponseBodyResult self = new PublishLiveResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public PublishLiveResponseBodyResult setLiveId(String liveId) {
-            this.liveId = liveId;
-            return this;
-        }
-        public String getLiveId() {
-            return this.liveId;
         }
 
         public PublishLiveResponseBodyResult setAnchorId(String anchorId) {
@@ -74,12 +66,20 @@ public class PublishLiveResponseBody extends TeaModel {
             return this.anchorId;
         }
 
-        public PublishLiveResponseBodyResult setStatus(String status) {
-            this.status = status;
+        public PublishLiveResponseBodyResult setLiveId(String liveId) {
+            this.liveId = liveId;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getLiveId() {
+            return this.liveId;
+        }
+
+        public PublishLiveResponseBodyResult setLiveUrl(String liveUrl) {
+            this.liveUrl = liveUrl;
+            return this;
+        }
+        public String getLiveUrl() {
+            return this.liveUrl;
         }
 
         public PublishLiveResponseBodyResult setPushUrl(String pushUrl) {
@@ -90,12 +90,12 @@ public class PublishLiveResponseBody extends TeaModel {
             return this.pushUrl;
         }
 
-        public PublishLiveResponseBodyResult setLiveUrl(String liveUrl) {
-            this.liveUrl = liveUrl;
+        public PublishLiveResponseBodyResult setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getLiveUrl() {
-            return this.liveUrl;
+        public String getStatus() {
+            return this.status;
         }
 
     }

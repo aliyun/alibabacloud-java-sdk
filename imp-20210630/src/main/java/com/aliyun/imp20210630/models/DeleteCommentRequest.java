@@ -8,6 +8,10 @@ public class DeleteCommentRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    // 需要删除的弹幕id列表
+    @NameInMap("CommentIdList")
+    public java.util.List<String> commentIdList;
+
     // 直播间唯一标识，在调用CreateRoom返回。
     @NameInMap("RoomId")
     public String roomId;
@@ -15,10 +19,6 @@ public class DeleteCommentRequest extends TeaModel {
     // 删除的操作人ID。
     @NameInMap("UserId")
     public String userId;
-
-    // 需要删除的弹幕id列表
-    @NameInMap("CommentIdList")
-    public java.util.List<String> commentIdList;
 
     public static DeleteCommentRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCommentRequest self = new DeleteCommentRequest();
@@ -31,6 +31,14 @@ public class DeleteCommentRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DeleteCommentRequest setCommentIdList(java.util.List<String> commentIdList) {
+        this.commentIdList = commentIdList;
+        return this;
+    }
+    public java.util.List<String> getCommentIdList() {
+        return this.commentIdList;
     }
 
     public DeleteCommentRequest setRoomId(String roomId) {
@@ -47,14 +55,6 @@ public class DeleteCommentRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public DeleteCommentRequest setCommentIdList(java.util.List<String> commentIdList) {
-        this.commentIdList = commentIdList;
-        return this;
-    }
-    public java.util.List<String> getCommentIdList() {
-        return this.commentIdList;
     }
 
 }

@@ -8,13 +8,13 @@ public class AgreeLinkMicRequest extends TeaModel {
     @NameInMap("ConferenceId")
     public String conferenceId;
 
-    // 被同意用户ID
-    @NameInMap("ToUserId")
-    public String toUserId;
-
     // 同意者用户ID
     @NameInMap("FromUserId")
     public String fromUserId;
+
+    // 被同意用户ID
+    @NameInMap("ToUserId")
+    public String toUserId;
 
     public static AgreeLinkMicRequest build(java.util.Map<String, ?> map) throws Exception {
         AgreeLinkMicRequest self = new AgreeLinkMicRequest();
@@ -29,20 +29,20 @@ public class AgreeLinkMicRequest extends TeaModel {
         return this.conferenceId;
     }
 
-    public AgreeLinkMicRequest setToUserId(String toUserId) {
-        this.toUserId = toUserId;
-        return this;
-    }
-    public String getToUserId() {
-        return this.toUserId;
-    }
-
     public AgreeLinkMicRequest setFromUserId(String fromUserId) {
         this.fromUserId = fromUserId;
         return this;
     }
     public String getFromUserId() {
         return this.fromUserId;
+    }
+
+    public AgreeLinkMicRequest setToUserId(String toUserId) {
+        this.toUserId = toUserId;
+        return this;
+    }
+    public String getToUserId() {
+        return this.toUserId;
     }
 
 }

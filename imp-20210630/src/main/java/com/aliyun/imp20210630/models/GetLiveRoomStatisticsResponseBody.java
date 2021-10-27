@@ -34,9 +34,25 @@ public class GetLiveRoomStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetLiveRoomStatisticsResponseBodyResult extends TeaModel {
+        // 直播结束时间，单位：毫秒。
+        @NameInMap("EndTime")
+        public Long endTime;
+
         // 直播ID。
         @NameInMap("LiveId")
         public String liveId;
+
+        // 互动消息数。
+        @NameInMap("MessageCount")
+        public Long messageCount;
+
+        // 访问用户人次。
+        @NameInMap("Pv")
+        public Long pv;
+
+        // 直播开始时间，单位：毫秒。
+        @NameInMap("StartTime")
+        public Long startTime;
 
         // 直播状态，0-已创建 1-直播中 2-已关闭。
         @NameInMap("Status")
@@ -45,22 +61,6 @@ public class GetLiveRoomStatisticsResponseBody extends TeaModel {
         // 访问用户数。
         @NameInMap("Uv")
         public Long uv;
-
-        // 访问用户人次。
-        @NameInMap("Pv")
-        public Long pv;
-
-        // 互动消息数。
-        @NameInMap("MessageCount")
-        public Long messageCount;
-
-        // 直播开始时间，单位：毫秒。
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        // 直播结束时间，单位：毫秒。
-        @NameInMap("EndTime")
-        public Long endTime;
 
         // 总观看时长，单位：毫秒。
         @NameInMap("WatchLiveTime")
@@ -71,12 +71,44 @@ public class GetLiveRoomStatisticsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetLiveRoomStatisticsResponseBodyResult setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
         public GetLiveRoomStatisticsResponseBodyResult setLiveId(String liveId) {
             this.liveId = liveId;
             return this;
         }
         public String getLiveId() {
             return this.liveId;
+        }
+
+        public GetLiveRoomStatisticsResponseBodyResult setMessageCount(Long messageCount) {
+            this.messageCount = messageCount;
+            return this;
+        }
+        public Long getMessageCount() {
+            return this.messageCount;
+        }
+
+        public GetLiveRoomStatisticsResponseBodyResult setPv(Long pv) {
+            this.pv = pv;
+            return this;
+        }
+        public Long getPv() {
+            return this.pv;
+        }
+
+        public GetLiveRoomStatisticsResponseBodyResult setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
         public GetLiveRoomStatisticsResponseBodyResult setStatus(Integer status) {
@@ -93,38 +125,6 @@ public class GetLiveRoomStatisticsResponseBody extends TeaModel {
         }
         public Long getUv() {
             return this.uv;
-        }
-
-        public GetLiveRoomStatisticsResponseBodyResult setPv(Long pv) {
-            this.pv = pv;
-            return this;
-        }
-        public Long getPv() {
-            return this.pv;
-        }
-
-        public GetLiveRoomStatisticsResponseBodyResult setMessageCount(Long messageCount) {
-            this.messageCount = messageCount;
-            return this;
-        }
-        public Long getMessageCount() {
-            return this.messageCount;
-        }
-
-        public GetLiveRoomStatisticsResponseBodyResult setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public GetLiveRoomStatisticsResponseBodyResult setEndTime(Long endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public Long getEndTime() {
-            return this.endTime;
         }
 
         public GetLiveRoomStatisticsResponseBodyResult setWatchLiveTime(Long watchLiveTime) {

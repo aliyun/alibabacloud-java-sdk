@@ -34,14 +34,6 @@ public class ListRoomsResponseBody extends TeaModel {
     }
 
     public static class ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList extends TeaModel {
-        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
-        @NameInMap("PluginType")
-        public String pluginType;
-
-        // 插件实例唯一标识。
-        @NameInMap("PluginId")
-        public String pluginId;
-
         // 插件实例创建时间戳，单位：毫秒。
         @NameInMap("CreateTime")
         public Long createTime;
@@ -50,25 +42,17 @@ public class ListRoomsResponseBody extends TeaModel {
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
+        // 插件实例唯一标识。
+        @NameInMap("PluginId")
+        public String pluginId;
+
+        // 插件唯一标识，取值：live-直播，wb-白板，chat-聊天，rtc。
+        @NameInMap("PluginType")
+        public String pluginType;
+
         public static ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList self = new ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList();
             return TeaModel.build(map, self);
-        }
-
-        public ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList setPluginType(String pluginType) {
-            this.pluginType = pluginType;
-            return this;
-        }
-        public String getPluginType() {
-            return this.pluginType;
-        }
-
-        public ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList setPluginId(String pluginId) {
-            this.pluginId = pluginId;
-            return this;
-        }
-        public String getPluginId() {
-            return this.pluginId;
         }
 
         public ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList setCreateTime(Long createTime) {
@@ -87,28 +71,40 @@ public class ListRoomsResponseBody extends TeaModel {
             return this.extension;
         }
 
+        public ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList setPluginId(String pluginId) {
+            this.pluginId = pluginId;
+            return this;
+        }
+        public String getPluginId() {
+            return this.pluginId;
+        }
+
+        public ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList setPluginType(String pluginType) {
+            this.pluginType = pluginType;
+            return this;
+        }
+        public String getPluginType() {
+            return this.pluginType;
+        }
+
     }
 
     public static class ListRoomsResponseBodyResultRoomInfoList extends TeaModel {
-        // 房间唯一标识。
-        @NameInMap("RoomId")
-        public String roomId;
+        // 应用唯一标识，由6位小写字母、数字组成。
+        @NameInMap("AppId")
+        public String appId;
 
-        // 房间标题。
-        @NameInMap("Title")
-        public String title;
+        // 房间创建时间戳，单位：毫秒。
+        @NameInMap("CreateTime")
+        public String createTime;
 
-        // 房主用户id。
-        @NameInMap("RoomOwnerId")
-        public String roomOwnerId;
+        // 房间拓展字段。
+        @NameInMap("Extension")
+        public java.util.Map<String, String> extension;
 
         // 房间公告。
         @NameInMap("Notice")
         public String notice;
-
-        // 用户访问数。
-        @NameInMap("Uv")
-        public Long uv;
 
         // 用户在线数。
         @NameInMap("OnlineCount")
@@ -118,49 +114,53 @@ public class ListRoomsResponseBody extends TeaModel {
         @NameInMap("PluginInstanceInfoList")
         public java.util.List<ListRoomsResponseBodyResultRoomInfoListPluginInstanceInfoList> pluginInstanceInfoList;
 
-        // 房间创建时间戳，单位：毫秒。
-        @NameInMap("CreateTime")
-        public String createTime;
+        // 房间唯一标识。
+        @NameInMap("RoomId")
+        public String roomId;
 
-        // 应用唯一标识，由6位小写字母、数字组成。
-        @NameInMap("AppId")
-        public String appId;
+        // 房主用户id。
+        @NameInMap("RoomOwnerId")
+        public String roomOwnerId;
 
         // 创建房间使用的模板id。
         @NameInMap("TemplateId")
         public String templateId;
 
-        // 房间拓展字段。
-        @NameInMap("Extension")
-        public java.util.Map<String, String> extension;
+        // 房间标题。
+        @NameInMap("Title")
+        public String title;
+
+        // 用户访问数。
+        @NameInMap("Uv")
+        public Long uv;
 
         public static ListRoomsResponseBodyResultRoomInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListRoomsResponseBodyResultRoomInfoList self = new ListRoomsResponseBodyResultRoomInfoList();
             return TeaModel.build(map, self);
         }
 
-        public ListRoomsResponseBodyResultRoomInfoList setRoomId(String roomId) {
-            this.roomId = roomId;
+        public ListRoomsResponseBodyResultRoomInfoList setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public String getRoomId() {
-            return this.roomId;
+        public String getAppId() {
+            return this.appId;
         }
 
-        public ListRoomsResponseBodyResultRoomInfoList setTitle(String title) {
-            this.title = title;
+        public ListRoomsResponseBodyResultRoomInfoList setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getTitle() {
-            return this.title;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
-        public ListRoomsResponseBodyResultRoomInfoList setRoomOwnerId(String roomOwnerId) {
-            this.roomOwnerId = roomOwnerId;
+        public ListRoomsResponseBodyResultRoomInfoList setExtension(java.util.Map<String, String> extension) {
+            this.extension = extension;
             return this;
         }
-        public String getRoomOwnerId() {
-            return this.roomOwnerId;
+        public java.util.Map<String, String> getExtension() {
+            return this.extension;
         }
 
         public ListRoomsResponseBodyResultRoomInfoList setNotice(String notice) {
@@ -169,14 +169,6 @@ public class ListRoomsResponseBody extends TeaModel {
         }
         public String getNotice() {
             return this.notice;
-        }
-
-        public ListRoomsResponseBodyResultRoomInfoList setUv(Long uv) {
-            this.uv = uv;
-            return this;
-        }
-        public Long getUv() {
-            return this.uv;
         }
 
         public ListRoomsResponseBodyResultRoomInfoList setOnlineCount(Long onlineCount) {
@@ -195,20 +187,20 @@ public class ListRoomsResponseBody extends TeaModel {
             return this.pluginInstanceInfoList;
         }
 
-        public ListRoomsResponseBodyResultRoomInfoList setCreateTime(String createTime) {
-            this.createTime = createTime;
+        public ListRoomsResponseBodyResultRoomInfoList setRoomId(String roomId) {
+            this.roomId = roomId;
             return this;
         }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getRoomId() {
+            return this.roomId;
         }
 
-        public ListRoomsResponseBodyResultRoomInfoList setAppId(String appId) {
-            this.appId = appId;
+        public ListRoomsResponseBodyResultRoomInfoList setRoomOwnerId(String roomOwnerId) {
+            this.roomOwnerId = roomOwnerId;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
+        public String getRoomOwnerId() {
+            return this.roomOwnerId;
         }
 
         public ListRoomsResponseBodyResultRoomInfoList setTemplateId(String templateId) {
@@ -219,52 +211,44 @@ public class ListRoomsResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public ListRoomsResponseBodyResultRoomInfoList setExtension(java.util.Map<String, String> extension) {
-            this.extension = extension;
+        public ListRoomsResponseBodyResultRoomInfoList setTitle(String title) {
+            this.title = title;
             return this;
         }
-        public java.util.Map<String, String> getExtension() {
-            return this.extension;
+        public String getTitle() {
+            return this.title;
+        }
+
+        public ListRoomsResponseBodyResultRoomInfoList setUv(Long uv) {
+            this.uv = uv;
+            return this;
+        }
+        public Long getUv() {
+            return this.uv;
         }
 
     }
 
     public static class ListRoomsResponseBodyResult extends TeaModel {
-        // 该应用的房间总数。
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        // 是否还有下一页房间列表。
+        @NameInMap("HasMore")
+        public Boolean hasMore;
 
         // 该应用的房间总页数。
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
-        // 是否还有下一页房间列表。
-        @NameInMap("HasMore")
-        public Boolean hasMore;
-
         // 房间列表信息。
         @NameInMap("RoomInfoList")
         public java.util.List<ListRoomsResponseBodyResultRoomInfoList> roomInfoList;
 
+        // 该应用的房间总数。
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
         public static ListRoomsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListRoomsResponseBodyResult self = new ListRoomsResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListRoomsResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-        public ListRoomsResponseBodyResult setPageTotal(Integer pageTotal) {
-            this.pageTotal = pageTotal;
-            return this;
-        }
-        public Integer getPageTotal() {
-            return this.pageTotal;
         }
 
         public ListRoomsResponseBodyResult setHasMore(Boolean hasMore) {
@@ -275,12 +259,28 @@ public class ListRoomsResponseBody extends TeaModel {
             return this.hasMore;
         }
 
+        public ListRoomsResponseBodyResult setPageTotal(Integer pageTotal) {
+            this.pageTotal = pageTotal;
+            return this;
+        }
+        public Integer getPageTotal() {
+            return this.pageTotal;
+        }
+
         public ListRoomsResponseBodyResult setRoomInfoList(java.util.List<ListRoomsResponseBodyResultRoomInfoList> roomInfoList) {
             this.roomInfoList = roomInfoList;
             return this;
         }
         public java.util.List<ListRoomsResponseBodyResultRoomInfoList> getRoomInfoList() {
             return this.roomInfoList;
+        }
+
+        public ListRoomsResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

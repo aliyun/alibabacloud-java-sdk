@@ -38,13 +38,13 @@ public class GetStandardRoomHttpsCertificateResponseBody extends TeaModel {
         @NameInMap("CertificateName")
         public String certificateName;
 
-        // 使用证书的确切域名
-        @NameInMap("DomainName")
-        public String domainName;
-
         // 证书创建时间
         @NameInMap("CreateTime")
         public String createTime;
+
+        // 使用证书的确切域名
+        @NameInMap("DomainName")
+        public String domainName;
 
         // 证书过期时间
         @NameInMap("ExpireTime")
@@ -63,20 +63,20 @@ public class GetStandardRoomHttpsCertificateResponseBody extends TeaModel {
             return this.certificateName;
         }
 
-        public GetStandardRoomHttpsCertificateResponseBodyResult setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
         public GetStandardRoomHttpsCertificateResponseBodyResult setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetStandardRoomHttpsCertificateResponseBodyResult setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
         public GetStandardRoomHttpsCertificateResponseBodyResult setExpireTime(String expireTime) {
