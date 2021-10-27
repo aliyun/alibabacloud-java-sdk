@@ -3,27 +3,27 @@ package com.aliyun.swas_open20200601.models;
 
 import com.aliyun.tea.*;
 
-public class ListPlansResponseBody extends TeaModel {
+public class ListInstancePlansModificationResponseBody extends TeaModel {
     @NameInMap("Plans")
-    public java.util.List<ListPlansResponseBodyPlans> plans;
+    public java.util.List<ListInstancePlansModificationResponseBodyPlans> plans;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ListPlansResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListPlansResponseBody self = new ListPlansResponseBody();
+    public static ListInstancePlansModificationResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListInstancePlansModificationResponseBody self = new ListInstancePlansModificationResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListPlansResponseBody setPlans(java.util.List<ListPlansResponseBodyPlans> plans) {
+    public ListInstancePlansModificationResponseBody setPlans(java.util.List<ListInstancePlansModificationResponseBodyPlans> plans) {
         this.plans = plans;
         return this;
     }
-    public java.util.List<ListPlansResponseBodyPlans> getPlans() {
+    public java.util.List<ListInstancePlansModificationResponseBodyPlans> getPlans() {
         return this.plans;
     }
 
-    public ListPlansResponseBody setRequestId(String requestId) {
+    public ListInstancePlansModificationResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -31,7 +31,7 @@ public class ListPlansResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListPlansResponseBodyPlans extends TeaModel {
+    public static class ListInstancePlansModificationResponseBodyPlans extends TeaModel {
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
@@ -62,12 +62,12 @@ public class ListPlansResponseBody extends TeaModel {
         @NameInMap("SupportPlatform")
         public String supportPlatform;
 
-        public static ListPlansResponseBodyPlans build(java.util.Map<String, ?> map) throws Exception {
-            ListPlansResponseBodyPlans self = new ListPlansResponseBodyPlans();
+        public static ListInstancePlansModificationResponseBodyPlans build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancePlansModificationResponseBodyPlans self = new ListInstancePlansModificationResponseBodyPlans();
             return TeaModel.build(map, self);
         }
 
-        public ListPlansResponseBodyPlans setBandwidth(Integer bandwidth) {
+        public ListInstancePlansModificationResponseBodyPlans setBandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
@@ -75,7 +75,7 @@ public class ListPlansResponseBody extends TeaModel {
             return this.bandwidth;
         }
 
-        public ListPlansResponseBodyPlans setCore(Integer core) {
+        public ListInstancePlansModificationResponseBodyPlans setCore(Integer core) {
             this.core = core;
             return this;
         }
@@ -83,7 +83,7 @@ public class ListPlansResponseBody extends TeaModel {
             return this.core;
         }
 
-        public ListPlansResponseBodyPlans setCurrency(String currency) {
+        public ListInstancePlansModificationResponseBodyPlans setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -91,7 +91,7 @@ public class ListPlansResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public ListPlansResponseBodyPlans setDiskSize(Integer diskSize) {
+        public ListInstancePlansModificationResponseBodyPlans setDiskSize(Integer diskSize) {
             this.diskSize = diskSize;
             return this;
         }
@@ -99,7 +99,7 @@ public class ListPlansResponseBody extends TeaModel {
             return this.diskSize;
         }
 
-        public ListPlansResponseBodyPlans setDiskType(String diskType) {
+        public ListInstancePlansModificationResponseBodyPlans setDiskType(String diskType) {
             this.diskType = diskType;
             return this;
         }
@@ -107,7 +107,7 @@ public class ListPlansResponseBody extends TeaModel {
             return this.diskType;
         }
 
-        public ListPlansResponseBodyPlans setFlow(Integer flow) {
+        public ListInstancePlansModificationResponseBodyPlans setFlow(Integer flow) {
             this.flow = flow;
             return this;
         }
@@ -115,7 +115,7 @@ public class ListPlansResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public ListPlansResponseBodyPlans setMemory(Integer memory) {
+        public ListInstancePlansModificationResponseBodyPlans setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
@@ -123,7 +123,7 @@ public class ListPlansResponseBody extends TeaModel {
             return this.memory;
         }
 
-        public ListPlansResponseBodyPlans setOriginPrice(Double originPrice) {
+        public ListInstancePlansModificationResponseBodyPlans setOriginPrice(Double originPrice) {
             this.originPrice = originPrice;
             return this;
         }
@@ -131,7 +131,7 @@ public class ListPlansResponseBody extends TeaModel {
             return this.originPrice;
         }
 
-        public ListPlansResponseBodyPlans setPlanId(String planId) {
+        public ListInstancePlansModificationResponseBodyPlans setPlanId(String planId) {
             this.planId = planId;
             return this;
         }
@@ -139,7 +139,7 @@ public class ListPlansResponseBody extends TeaModel {
             return this.planId;
         }
 
-        public ListPlansResponseBodyPlans setSupportPlatform(String supportPlatform) {
+        public ListInstancePlansModificationResponseBodyPlans setSupportPlatform(String supportPlatform) {
             this.supportPlatform = supportPlatform;
             return this;
         }

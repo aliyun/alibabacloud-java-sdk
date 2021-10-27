@@ -4,18 +4,26 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static StartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceRequest self = new StartInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public StartInstanceRequest setInstanceId(String instanceId) {
@@ -32,14 +40,6 @@ public class StartInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public StartInstanceRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

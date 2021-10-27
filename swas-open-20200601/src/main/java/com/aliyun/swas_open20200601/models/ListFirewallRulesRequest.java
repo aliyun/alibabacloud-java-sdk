@@ -7,14 +7,14 @@ public class ListFirewallRulesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ListFirewallRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFirewallRulesRequest self = new ListFirewallRulesRequest();
@@ -29,12 +29,12 @@ public class ListFirewallRulesRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListFirewallRulesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public ListFirewallRulesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListFirewallRulesRequest setPageSize(Integer pageSize) {
@@ -45,12 +45,12 @@ public class ListFirewallRulesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListFirewallRulesRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListFirewallRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

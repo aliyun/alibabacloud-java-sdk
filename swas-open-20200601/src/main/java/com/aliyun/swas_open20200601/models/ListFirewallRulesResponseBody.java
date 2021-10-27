@@ -4,56 +4,24 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListFirewallRulesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("FirewallRules")
+    public java.util.List<ListFirewallRulesResponseBodyFirewallRules> firewallRules;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("FirewallRules")
-    public java.util.List<ListFirewallRulesResponseBodyFirewallRules> firewallRules;
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListFirewallRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFirewallRulesResponseBody self = new ListFirewallRulesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListFirewallRulesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListFirewallRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListFirewallRulesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListFirewallRulesResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public ListFirewallRulesResponseBody setFirewallRules(java.util.List<ListFirewallRulesResponseBodyFirewallRules> firewallRules) {
@@ -64,12 +32,44 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         return this.firewallRules;
     }
 
-    public static class ListFirewallRulesResponseBodyFirewallRules extends TeaModel {
-        @NameInMap("Remark")
-        public String remark;
+    public ListFirewallRulesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
 
+    public ListFirewallRulesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListFirewallRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListFirewallRulesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListFirewallRulesResponseBodyFirewallRules extends TeaModel {
         @NameInMap("Port")
         public String port;
+
+        @NameInMap("Remark")
+        public String remark;
 
         @NameInMap("RuleId")
         public String ruleId;
@@ -82,20 +82,20 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListFirewallRulesResponseBodyFirewallRules setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
-        }
-
         public ListFirewallRulesResponseBodyFirewallRules setPort(String port) {
             this.port = port;
             return this;
         }
         public String getPort() {
             return this.port;
+        }
+
+        public ListFirewallRulesResponseBodyFirewallRules setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public ListFirewallRulesResponseBodyFirewallRules setRuleId(String ruleId) {

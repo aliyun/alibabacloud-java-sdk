@@ -31,6 +31,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CreateCustomImageResponse createCustomImageWithOptions(CreateCustomImageRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateCustomImage", "2020-06-01", "HTTPS", "POST", "AK", "json", req, runtime), new CreateCustomImageResponse());
+    }
+
+    public CreateCustomImageResponse createCustomImage(CreateCustomImageRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createCustomImageWithOptions(request, runtime);
+    }
+
     public CreateFirewallRuleResponse createFirewallRuleWithOptions(CreateFirewallRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -68,6 +81,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSnapshotResponse createSnapshot(CreateSnapshotRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createSnapshotWithOptions(request, runtime);
+    }
+
+    public DeleteCustomImageResponse deleteCustomImageWithOptions(DeleteCustomImageRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteCustomImage", "2020-06-01", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteCustomImageResponse());
+    }
+
+    public DeleteCustomImageResponse deleteCustomImage(DeleteCustomImageRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteCustomImageWithOptions(request, runtime);
     }
 
     public DeleteFirewallRuleResponse deleteFirewallRuleWithOptions(DeleteFirewallRuleRequest request, RuntimeOptions runtime) throws Exception {
@@ -135,6 +161,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listImagesWithOptions(request, runtime);
     }
 
+    public ListInstancePlansModificationResponse listInstancePlansModificationWithOptions(ListInstancePlansModificationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListInstancePlansModification", "2020-06-01", "HTTPS", "POST", "AK", "json", req, runtime), new ListInstancePlansModificationResponse());
+    }
+
+    public ListInstancePlansModificationResponse listInstancePlansModification(ListInstancePlansModificationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listInstancePlansModificationWithOptions(request, runtime);
+    }
+
     public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -146,6 +185,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listInstancesWithOptions(request, runtime);
+    }
+
+    public ListInstancesTrafficPackagesResponse listInstancesTrafficPackagesWithOptions(ListInstancesTrafficPackagesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListInstancesTrafficPackages", "2020-06-01", "HTTPS", "POST", "AK", "json", req, runtime), new ListInstancesTrafficPackagesResponse());
+    }
+
+    public ListInstancesTrafficPackagesResponse listInstancesTrafficPackages(ListInstancesTrafficPackagesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listInstancesTrafficPackagesWithOptions(request, runtime);
     }
 
     public ListPlansResponse listPlansWithOptions(ListPlansRequest request, RuntimeOptions runtime) throws Exception {
@@ -182,6 +234,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSnapshotsResponse listSnapshots(ListSnapshotsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.listSnapshotsWithOptions(request, runtime);
+    }
+
+    public ModifyImageShareStatusResponse modifyImageShareStatusWithOptions(ModifyImageShareStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ModifyImageShareStatus", "2020-06-01", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyImageShareStatusResponse());
+    }
+
+    public ModifyImageShareStatusResponse modifyImageShareStatus(ModifyImageShareStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyImageShareStatusWithOptions(request, runtime);
     }
 
     public RebootInstanceResponse rebootInstanceWithOptions(RebootInstanceRequest request, RuntimeOptions runtime) throws Exception {

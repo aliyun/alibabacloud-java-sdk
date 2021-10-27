@@ -4,6 +4,9 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DeleteFirewallRuleRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,12 +16,17 @@ public class DeleteFirewallRuleRequest extends TeaModel {
     @NameInMap("RuleId")
     public String ruleId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static DeleteFirewallRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteFirewallRuleRequest self = new DeleteFirewallRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteFirewallRuleRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DeleteFirewallRuleRequest setInstanceId(String instanceId) {
@@ -43,14 +51,6 @@ public class DeleteFirewallRuleRequest extends TeaModel {
     }
     public String getRuleId() {
         return this.ruleId;
-    }
-
-    public DeleteFirewallRuleRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

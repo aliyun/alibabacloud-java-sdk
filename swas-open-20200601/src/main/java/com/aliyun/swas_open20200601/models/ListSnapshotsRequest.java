@@ -4,43 +4,27 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("DiskId")
+    public String diskId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("DiskId")
-    public String diskId;
-
-    @NameInMap("SnapshotIds")
-    public String snapshotIds;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("SnapshotIds")
+    public String snapshotIds;
 
     public static ListSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSnapshotsRequest self = new ListSnapshotsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListSnapshotsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListSnapshotsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public ListSnapshotsRequest setDiskId(String diskId) {
@@ -51,12 +35,20 @@ public class ListSnapshotsRequest extends TeaModel {
         return this.diskId;
     }
 
-    public ListSnapshotsRequest setSnapshotIds(String snapshotIds) {
-        this.snapshotIds = snapshotIds;
+    public ListSnapshotsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public String getSnapshotIds() {
-        return this.snapshotIds;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ListSnapshotsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public ListSnapshotsRequest setPageSize(Integer pageSize) {
@@ -67,12 +59,20 @@ public class ListSnapshotsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListSnapshotsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public ListSnapshotsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListSnapshotsRequest setSnapshotIds(String snapshotIds) {
+        this.snapshotIds = snapshotIds;
+        return this;
+    }
+    public String getSnapshotIds() {
+        return this.snapshotIds;
     }
 
 }
