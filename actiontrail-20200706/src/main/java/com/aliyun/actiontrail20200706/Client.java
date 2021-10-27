@@ -3,10 +3,16 @@ package com.aliyun.actiontrail20200706;
 
 import com.aliyun.tea.*;
 import com.aliyun.actiontrail20200706.models.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.teaopenapi.*;
+import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
+import com.aliyun.endpointutil.*;
 
-public class Client extends com.aliyun.tearpc.Client {
+public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(com.aliyun.tearpc.models.Config config) throws Exception {
+    public Client(Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
@@ -48,36 +54,6 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
-    public ListDeliveryHistoryJobsResponse listDeliveryHistoryJobsWithOptions(ListDeliveryHistoryJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("ListDeliveryHistoryJobs", "HTTPS", "POST", "2020-07-06", "AK", null, TeaModel.buildMap(request), runtime), new ListDeliveryHistoryJobsResponse());
-    }
-
-    public ListDeliveryHistoryJobsResponse listDeliveryHistoryJobs(ListDeliveryHistoryJobsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDeliveryHistoryJobsWithOptions(request, runtime);
-    }
-
-    public CreateDeliveryHistoryJobResponse createDeliveryHistoryJobWithOptions(CreateDeliveryHistoryJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("CreateDeliveryHistoryJob", "HTTPS", "POST", "2020-07-06", "AK", null, TeaModel.buildMap(request), runtime), new CreateDeliveryHistoryJobResponse());
-    }
-
-    public CreateDeliveryHistoryJobResponse createDeliveryHistoryJob(CreateDeliveryHistoryJobRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDeliveryHistoryJobWithOptions(request, runtime);
-    }
-
-    public LookupEventsResponse lookupEventsWithOptions(LookupEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("LookupEvents", "HTTPS", "POST", "2020-07-06", "AK", null, TeaModel.buildMap(request), runtime), new LookupEventsResponse());
-    }
-
-    public LookupEventsResponse lookupEvents(LookupEventsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.lookupEventsWithOptions(request, runtime);
-    }
-
     public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
         if (!com.aliyun.teautil.Common.empty(endpoint)) {
             return endpoint;
@@ -88,5 +64,175 @@ public class Client extends com.aliyun.tearpc.Client {
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
+    }
+
+    public CreateDeliveryHistoryJobResponse createDeliveryHistoryJobWithOptions(CreateDeliveryHistoryJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateDeliveryHistoryJob", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new CreateDeliveryHistoryJobResponse());
+    }
+
+    public CreateDeliveryHistoryJobResponse createDeliveryHistoryJob(CreateDeliveryHistoryJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createDeliveryHistoryJobWithOptions(request, runtime);
+    }
+
+    public CreateTrailResponse createTrailWithOptions(CreateTrailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateTrail", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new CreateTrailResponse());
+    }
+
+    public CreateTrailResponse createTrail(CreateTrailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createTrailWithOptions(request, runtime);
+    }
+
+    public DeleteDeliveryHistoryJobResponse deleteDeliveryHistoryJobWithOptions(DeleteDeliveryHistoryJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteDeliveryHistoryJob", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteDeliveryHistoryJobResponse());
+    }
+
+    public DeleteDeliveryHistoryJobResponse deleteDeliveryHistoryJob(DeleteDeliveryHistoryJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteDeliveryHistoryJobWithOptions(request, runtime);
+    }
+
+    public DeleteTrailResponse deleteTrailWithOptions(DeleteTrailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteTrail", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteTrailResponse());
+    }
+
+    public DeleteTrailResponse deleteTrail(DeleteTrailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteTrailWithOptions(request, runtime);
+    }
+
+    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeRegions", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeRegionsResponse());
+    }
+
+    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeRegionsWithOptions(request, runtime);
+    }
+
+    public DescribeTrailsResponse describeTrailsWithOptions(DescribeTrailsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeTrails", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeTrailsResponse());
+    }
+
+    public DescribeTrailsResponse describeTrails(DescribeTrailsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeTrailsWithOptions(request, runtime);
+    }
+
+    public GetDeliveryHistoryJobResponse getDeliveryHistoryJobWithOptions(GetDeliveryHistoryJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDeliveryHistoryJob", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new GetDeliveryHistoryJobResponse());
+    }
+
+    public GetDeliveryHistoryJobResponse getDeliveryHistoryJob(GetDeliveryHistoryJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDeliveryHistoryJobWithOptions(request, runtime);
+    }
+
+    public GetTrailStatusResponse getTrailStatusWithOptions(GetTrailStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetTrailStatus", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new GetTrailStatusResponse());
+    }
+
+    public GetTrailStatusResponse getTrailStatus(GetTrailStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getTrailStatusWithOptions(request, runtime);
+    }
+
+    public ListDeliveryHistoryJobsResponse listDeliveryHistoryJobsWithOptions(ListDeliveryHistoryJobsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListDeliveryHistoryJobs", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new ListDeliveryHistoryJobsResponse());
+    }
+
+    public ListDeliveryHistoryJobsResponse listDeliveryHistoryJobs(ListDeliveryHistoryJobsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listDeliveryHistoryJobsWithOptions(request, runtime);
+    }
+
+    public LookupEventsResponse lookupEventsWithOptions(LookupEventsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("LookupEvents", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new LookupEventsResponse());
+    }
+
+    public LookupEventsResponse lookupEvents(LookupEventsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.lookupEventsWithOptions(request, runtime);
+    }
+
+    public StartLoggingResponse startLoggingWithOptions(StartLoggingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StartLogging", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new StartLoggingResponse());
+    }
+
+    public StartLoggingResponse startLogging(StartLoggingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startLoggingWithOptions(request, runtime);
+    }
+
+    public StopLoggingResponse stopLoggingWithOptions(StopLoggingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StopLogging", "2020-07-06", "HTTPS", "GET", "AK", "json", req, runtime), new StopLoggingResponse());
+    }
+
+    public StopLoggingResponse stopLogging(StopLoggingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.stopLoggingWithOptions(request, runtime);
+    }
+
+    public UpdateTrailResponse updateTrailWithOptions(UpdateTrailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateTrail", "2020-07-06", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateTrailResponse());
+    }
+
+    public UpdateTrailResponse updateTrail(UpdateTrailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateTrailWithOptions(request, runtime);
     }
 }
