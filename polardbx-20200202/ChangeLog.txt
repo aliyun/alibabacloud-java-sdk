@@ -1,3 +1,6 @@
+2021-10-27 Version: 2.0.2
+- Support DescribeDBInstanceAttribute add VpcInstanceId in ConnAddrs.
+
 2021-10-27 Version: 2.0.1
 - Fix some problem.
 
