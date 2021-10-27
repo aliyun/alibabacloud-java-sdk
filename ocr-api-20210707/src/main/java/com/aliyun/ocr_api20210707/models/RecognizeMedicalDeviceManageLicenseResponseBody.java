@@ -4,37 +4,21 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeMedicalDeviceManageLicenseResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public String data;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeMedicalDeviceManageLicenseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeMedicalDeviceManageLicenseResponseBody self = new RecognizeMedicalDeviceManageLicenseResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeMedicalDeviceManageLicenseResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public RecognizeMedicalDeviceManageLicenseResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
     public RecognizeMedicalDeviceManageLicenseResponseBody setCode(String code) {
@@ -45,12 +29,28 @@ public class RecognizeMedicalDeviceManageLicenseResponseBody extends TeaModel {
         return this.code;
     }
 
+    public RecognizeMedicalDeviceManageLicenseResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
     public RecognizeMedicalDeviceManageLicenseResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public RecognizeMedicalDeviceManageLicenseResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
