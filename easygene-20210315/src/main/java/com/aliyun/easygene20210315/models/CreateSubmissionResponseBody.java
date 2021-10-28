@@ -4,33 +4,25 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateSubmissionResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 工作空间
-    @NameInMap("Workspace")
-    public String workspace;
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 投递ID
     @NameInMap("SubmissionId")
     public String submissionId;
 
+    // 工作空间
+    @NameInMap("Workspace")
+    public String workspace;
+
     public static CreateSubmissionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSubmissionResponseBody self = new CreateSubmissionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateSubmissionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateSubmissionResponseBody setHostId(String hostId) {
@@ -41,12 +33,12 @@ public class CreateSubmissionResponseBody extends TeaModel {
         return this.hostId;
     }
 
-    public CreateSubmissionResponseBody setWorkspace(String workspace) {
-        this.workspace = workspace;
+    public CreateSubmissionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getWorkspace() {
-        return this.workspace;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateSubmissionResponseBody setSubmissionId(String submissionId) {
@@ -55,6 +47,14 @@ public class CreateSubmissionResponseBody extends TeaModel {
     }
     public String getSubmissionId() {
         return this.submissionId;
+    }
+
+    public CreateSubmissionResponseBody setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

@@ -4,13 +4,17 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetAppResponseBody extends TeaModel {
-    // 工作流名称
-    @NameInMap("WorkflowName")
-    public String workflowName;
-
     // 应用名称
     @NameInMap("AppName")
     public String appName;
+
+    // 实体类型
+    @NameInMap("AppType")
+    public String appType;
+
+    // 参考输入
+    @NameInMap("Configs")
+    public java.util.List<GetAppResponseBodyConfigs> configs;
 
     // 创建时间
     @NameInMap("CreateTime")
@@ -19,6 +23,10 @@ public class GetAppResponseBody extends TeaModel {
     // 应用定义
     @NameInMap("Definition")
     public String definition;
+
+    // 依赖应用
+    @NameInMap("Dependencies")
+    public java.util.List<GetAppResponseBodyDependencies> dependencies;
 
     // 应用简要描述
     @NameInMap("Description")
@@ -56,6 +64,10 @@ public class GetAppResponseBody extends TeaModel {
     @NameInMap("Outputs")
     public java.util.List<GetAppResponseBodyOutputs> outputs;
 
+    // 主WDL路径
+    @NameInMap("Path")
+    public String path;
+
     // 请求ID
     @NameInMap("RequestId")
     public String requestId;
@@ -76,53 +88,25 @@ public class GetAppResponseBody extends TeaModel {
     @NameInMap("Scope")
     public String scope;
 
+    // 应用来源
+    @NameInMap("Source")
+    public String source;
+
     // 应用URL
     @NameInMap("URL")
     public String URL;
+
+    // 工作流名称
+    @NameInMap("WorkflowName")
+    public String workflowName;
 
     // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
 
-    // 应用来源
-    @NameInMap("Source")
-    public String source;
-
-    // 命名空间
-    @NameInMap("Namespace")
-    public String namespace;
-
-    // 应用原名
-    @NameInMap("AppOrigName")
-    public String appOrigName;
-
-    // 实体类型
-    @NameInMap("AppType")
-    public String appType;
-
-    // 依赖应用
-    @NameInMap("Dependencies")
-    public java.util.List<GetAppResponseBodyDependencies> dependencies;
-
-    // 参考输入
-    @NameInMap("Configs")
-    public java.util.List<GetAppResponseBodyConfigs> configs;
-
-    // 主WDL路径
-    @NameInMap("Path")
-    public String path;
-
     public static GetAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAppResponseBody self = new GetAppResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAppResponseBody setWorkflowName(String workflowName) {
-        this.workflowName = workflowName;
-        return this;
-    }
-    public String getWorkflowName() {
-        return this.workflowName;
     }
 
     public GetAppResponseBody setAppName(String appName) {
@@ -131,6 +115,22 @@ public class GetAppResponseBody extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public GetAppResponseBody setAppType(String appType) {
+        this.appType = appType;
+        return this;
+    }
+    public String getAppType() {
+        return this.appType;
+    }
+
+    public GetAppResponseBody setConfigs(java.util.List<GetAppResponseBodyConfigs> configs) {
+        this.configs = configs;
+        return this;
+    }
+    public java.util.List<GetAppResponseBodyConfigs> getConfigs() {
+        return this.configs;
     }
 
     public GetAppResponseBody setCreateTime(String createTime) {
@@ -147,6 +147,14 @@ public class GetAppResponseBody extends TeaModel {
     }
     public String getDefinition() {
         return this.definition;
+    }
+
+    public GetAppResponseBody setDependencies(java.util.List<GetAppResponseBodyDependencies> dependencies) {
+        this.dependencies = dependencies;
+        return this;
+    }
+    public java.util.List<GetAppResponseBodyDependencies> getDependencies() {
+        return this.dependencies;
     }
 
     public GetAppResponseBody setDescription(String description) {
@@ -221,6 +229,14 @@ public class GetAppResponseBody extends TeaModel {
         return this.outputs;
     }
 
+    public GetAppResponseBody setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
+    }
+
     public GetAppResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -261,12 +277,28 @@ public class GetAppResponseBody extends TeaModel {
         return this.scope;
     }
 
+    public GetAppResponseBody setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
     public GetAppResponseBody setURL(String URL) {
         this.URL = URL;
         return this;
     }
     public String getURL() {
         return this.URL;
+    }
+
+    public GetAppResponseBody setWorkflowName(String workflowName) {
+        this.workflowName = workflowName;
+        return this;
+    }
+    public String getWorkflowName() {
+        return this.workflowName;
     }
 
     public GetAppResponseBody setWorkspace(String workspace) {
@@ -277,87 +309,124 @@ public class GetAppResponseBody extends TeaModel {
         return this.workspace;
     }
 
-    public GetAppResponseBody setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
+    public static class GetAppResponseBodyConfigs extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Path")
+        public String path;
+
+        public static GetAppResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
+            GetAppResponseBodyConfigs self = new GetAppResponseBodyConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAppResponseBodyConfigs setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public GetAppResponseBodyConfigs setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
     }
 
-    public GetAppResponseBody setNamespace(String namespace) {
-        this.namespace = namespace;
-        return this;
-    }
-    public String getNamespace() {
-        return this.namespace;
-    }
+    public static class GetAppResponseBodyDependencies extends TeaModel {
+        // wdl内容
+        @NameInMap("Content")
+        public String content;
 
-    public GetAppResponseBody setAppOrigName(String appOrigName) {
-        this.appOrigName = appOrigName;
-        return this;
-    }
-    public String getAppOrigName() {
-        return this.appOrigName;
-    }
+        // 依赖路径
+        @NameInMap("Path")
+        public String path;
 
-    public GetAppResponseBody setAppType(String appType) {
-        this.appType = appType;
-        return this;
-    }
-    public String getAppType() {
-        return this.appType;
-    }
+        public static GetAppResponseBodyDependencies build(java.util.Map<String, ?> map) throws Exception {
+            GetAppResponseBodyDependencies self = new GetAppResponseBodyDependencies();
+            return TeaModel.build(map, self);
+        }
 
-    public GetAppResponseBody setDependencies(java.util.List<GetAppResponseBodyDependencies> dependencies) {
-        this.dependencies = dependencies;
-        return this;
-    }
-    public java.util.List<GetAppResponseBodyDependencies> getDependencies() {
-        return this.dependencies;
-    }
+        public GetAppResponseBodyDependencies setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
 
-    public GetAppResponseBody setConfigs(java.util.List<GetAppResponseBodyConfigs> configs) {
-        this.configs = configs;
-        return this;
-    }
-    public java.util.List<GetAppResponseBodyConfigs> getConfigs() {
-        return this.configs;
-    }
+        public GetAppResponseBodyDependencies setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
 
-    public GetAppResponseBody setPath(String path) {
-        this.path = path;
-        return this;
-    }
-    public String getPath() {
-        return this.path;
     }
 
     public static class GetAppResponseBodyInputs extends TeaModel {
-        @NameInMap("TaskName")
-        public String taskName;
-
-        @NameInMap("VariableName")
-        public String variableName;
-
-        @NameInMap("VariableType")
-        public String variableType;
-
-        @NameInMap("VariableValue")
-        public String variableValue;
-
-        @NameInMap("Required")
-        public Boolean required;
-
+        // 帮助
         @NameInMap("Help")
         public String help;
 
+        // 是否必须
+        @NameInMap("Required")
+        public Boolean required;
+
+        // 步骤顺序
         @NameInMap("StepOrder")
         public Long stepOrder;
+
+        // 任务名称
+        @NameInMap("TaskName")
+        public String taskName;
+
+        // 变量名称
+        @NameInMap("VariableName")
+        public String variableName;
+
+        // 变量类型
+        @NameInMap("VariableType")
+        public String variableType;
+
+        // 变量值
+        @NameInMap("VariableValue")
+        public String variableValue;
 
         public static GetAppResponseBodyInputs build(java.util.Map<String, ?> map) throws Exception {
             GetAppResponseBodyInputs self = new GetAppResponseBodyInputs();
             return TeaModel.build(map, self);
+        }
+
+        public GetAppResponseBodyInputs setHelp(String help) {
+            this.help = help;
+            return this;
+        }
+        public String getHelp() {
+            return this.help;
+        }
+
+        public GetAppResponseBodyInputs setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public GetAppResponseBodyInputs setStepOrder(Long stepOrder) {
+            this.stepOrder = stepOrder;
+            return this;
+        }
+        public Long getStepOrder() {
+            return this.stepOrder;
         }
 
         public GetAppResponseBodyInputs setTaskName(String taskName) {
@@ -392,15 +461,43 @@ public class GetAppResponseBody extends TeaModel {
             return this.variableValue;
         }
 
-        public GetAppResponseBodyInputs setRequired(Boolean required) {
-            this.required = required;
-            return this;
-        }
-        public Boolean getRequired() {
-            return this.required;
+    }
+
+    public static class GetAppResponseBodyOutputs extends TeaModel {
+        // 帮助信息
+        @NameInMap("Help")
+        public String help;
+
+        // 是否必须
+        @NameInMap("Required")
+        public Boolean required;
+
+        // 步骤编号
+        @NameInMap("StepOrder")
+        public Long stepOrder;
+
+        // 任务名称
+        @NameInMap("TaskName")
+        public String taskName;
+
+        // 参数名称
+        @NameInMap("VariableName")
+        public String variableName;
+
+        // 参数类型
+        @NameInMap("VariableType")
+        public String variableType;
+
+        // 参数值
+        @NameInMap("VariableValue")
+        public String variableValue;
+
+        public static GetAppResponseBodyOutputs build(java.util.Map<String, ?> map) throws Exception {
+            GetAppResponseBodyOutputs self = new GetAppResponseBodyOutputs();
+            return TeaModel.build(map, self);
         }
 
-        public GetAppResponseBodyInputs setHelp(String help) {
+        public GetAppResponseBodyOutputs setHelp(String help) {
             this.help = help;
             return this;
         }
@@ -408,41 +505,20 @@ public class GetAppResponseBody extends TeaModel {
             return this.help;
         }
 
-        public GetAppResponseBodyInputs setStepOrder(Long stepOrder) {
+        public GetAppResponseBodyOutputs setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public GetAppResponseBodyOutputs setStepOrder(Long stepOrder) {
             this.stepOrder = stepOrder;
             return this;
         }
         public Long getStepOrder() {
             return this.stepOrder;
-        }
-
-    }
-
-    public static class GetAppResponseBodyOutputs extends TeaModel {
-        @NameInMap("TaskName")
-        public String taskName;
-
-        @NameInMap("VariableName")
-        public String variableName;
-
-        @NameInMap("VariableType")
-        public String variableType;
-
-        @NameInMap("VariableValue")
-        public String variableValue;
-
-        @NameInMap("Required")
-        public Boolean required;
-
-        @NameInMap("Help")
-        public String help;
-
-        @NameInMap("StepOrder")
-        public Long stepOrder;
-
-        public static GetAppResponseBodyOutputs build(java.util.Map<String, ?> map) throws Exception {
-            GetAppResponseBodyOutputs self = new GetAppResponseBodyOutputs();
-            return TeaModel.build(map, self);
         }
 
         public GetAppResponseBodyOutputs setTaskName(String taskName) {
@@ -477,30 +553,6 @@ public class GetAppResponseBody extends TeaModel {
             return this.variableValue;
         }
 
-        public GetAppResponseBodyOutputs setRequired(Boolean required) {
-            this.required = required;
-            return this;
-        }
-        public Boolean getRequired() {
-            return this.required;
-        }
-
-        public GetAppResponseBodyOutputs setHelp(String help) {
-            this.help = help;
-            return this;
-        }
-        public String getHelp() {
-            return this.help;
-        }
-
-        public GetAppResponseBodyOutputs setStepOrder(Long stepOrder) {
-            this.stepOrder = stepOrder;
-            return this;
-        }
-        public Long getStepOrder() {
-            return this.stepOrder;
-        }
-
     }
 
     public static class GetAppResponseBodyRevisions extends TeaModel {
@@ -512,7 +564,7 @@ public class GetAppResponseBody extends TeaModel {
         @NameInMap("Revision")
         public String revision;
 
-        // 版本描述
+        // 应用当前版本修改
         @NameInMap("RevisionComment")
         public String revisionComment;
 
@@ -543,68 +595,6 @@ public class GetAppResponseBody extends TeaModel {
         }
         public String getRevisionComment() {
             return this.revisionComment;
-        }
-
-    }
-
-    public static class GetAppResponseBodyDependencies extends TeaModel {
-        // 依赖路径
-        @NameInMap("Path")
-        public String path;
-
-        // wdl内容
-        @NameInMap("Content")
-        public String content;
-
-        public static GetAppResponseBodyDependencies build(java.util.Map<String, ?> map) throws Exception {
-            GetAppResponseBodyDependencies self = new GetAppResponseBodyDependencies();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAppResponseBodyDependencies setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
-        public GetAppResponseBodyDependencies setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-    }
-
-    public static class GetAppResponseBodyConfigs extends TeaModel {
-        @NameInMap("Path")
-        public String path;
-
-        @NameInMap("Content")
-        public String content;
-
-        public static GetAppResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
-            GetAppResponseBodyConfigs self = new GetAppResponseBodyConfigs();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAppResponseBodyConfigs setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
-        public GetAppResponseBodyConfigs setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
         }
 
     }

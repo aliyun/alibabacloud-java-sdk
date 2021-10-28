@@ -82,9 +82,17 @@ public class ListAppsResponseBody extends TeaModel {
     }
 
     public static class ListAppsResponseBodyApps extends TeaModel {
+        // 默认版本
+        @NameInMap("AppDefaultVersion")
+        public String appDefaultVersion;
+
         // 应用名称
         @NameInMap("AppName")
         public String appName;
+
+        // 应用类型
+        @NameInMap("AppType")
+        public String appType;
 
         // 创建时间
         @NameInMap("CreateTime")
@@ -94,9 +102,9 @@ public class ListAppsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        // 应用类型
-        @NameInMap("AppType")
-        public String appType;
+        // 标签
+        @NameInMap("Labels")
+        public java.util.Map<String, String> labels;
 
         // 应用描述语言
         @NameInMap("Language")
@@ -106,33 +114,25 @@ public class ListAppsResponseBody extends TeaModel {
         @NameInMap("Scope")
         public String scope;
 
-        // 应用所在工作空间
-        @NameInMap("Workspace")
-        public String workspace;
-
         // 应用来源
         @NameInMap("Source")
         public String source;
 
-        // 命名空间
-        @NameInMap("Namespace")
-        public String namespace;
-
-        // 应用原名
-        @NameInMap("AppOrigName")
-        public String appOrigName;
-
-        // 默认版本
-        @NameInMap("AppDefaultVersion")
-        public String appDefaultVersion;
-
-        // 标签
-        @NameInMap("Labels")
-        public java.util.Map<String, String> labels;
+        // 应用所在工作空间
+        @NameInMap("Workspace")
+        public String workspace;
 
         public static ListAppsResponseBodyApps build(java.util.Map<String, ?> map) throws Exception {
             ListAppsResponseBodyApps self = new ListAppsResponseBodyApps();
             return TeaModel.build(map, self);
+        }
+
+        public ListAppsResponseBodyApps setAppDefaultVersion(String appDefaultVersion) {
+            this.appDefaultVersion = appDefaultVersion;
+            return this;
+        }
+        public String getAppDefaultVersion() {
+            return this.appDefaultVersion;
         }
 
         public ListAppsResponseBodyApps setAppName(String appName) {
@@ -141,6 +141,14 @@ public class ListAppsResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public ListAppsResponseBodyApps setAppType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+        public String getAppType() {
+            return this.appType;
         }
 
         public ListAppsResponseBodyApps setCreateTime(String createTime) {
@@ -159,12 +167,12 @@ public class ListAppsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListAppsResponseBodyApps setAppType(String appType) {
-            this.appType = appType;
+        public ListAppsResponseBodyApps setLabels(java.util.Map<String, String> labels) {
+            this.labels = labels;
             return this;
         }
-        public String getAppType() {
-            return this.appType;
+        public java.util.Map<String, String> getLabels() {
+            return this.labels;
         }
 
         public ListAppsResponseBodyApps setLanguage(String language) {
@@ -183,14 +191,6 @@ public class ListAppsResponseBody extends TeaModel {
             return this.scope;
         }
 
-        public ListAppsResponseBodyApps setWorkspace(String workspace) {
-            this.workspace = workspace;
-            return this;
-        }
-        public String getWorkspace() {
-            return this.workspace;
-        }
-
         public ListAppsResponseBodyApps setSource(String source) {
             this.source = source;
             return this;
@@ -199,36 +199,12 @@ public class ListAppsResponseBody extends TeaModel {
             return this.source;
         }
 
-        public ListAppsResponseBodyApps setNamespace(String namespace) {
-            this.namespace = namespace;
+        public ListAppsResponseBodyApps setWorkspace(String workspace) {
+            this.workspace = workspace;
             return this;
         }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public ListAppsResponseBodyApps setAppOrigName(String appOrigName) {
-            this.appOrigName = appOrigName;
-            return this;
-        }
-        public String getAppOrigName() {
-            return this.appOrigName;
-        }
-
-        public ListAppsResponseBodyApps setAppDefaultVersion(String appDefaultVersion) {
-            this.appDefaultVersion = appDefaultVersion;
-            return this;
-        }
-        public String getAppDefaultVersion() {
-            return this.appDefaultVersion;
-        }
-
-        public ListAppsResponseBodyApps setLabels(java.util.Map<String, String> labels) {
-            this.labels = labels;
-            return this;
-        }
-        public java.util.Map<String, String> getLabels() {
-            return this.labels;
+        public String getWorkspace() {
+            return this.workspace;
         }
 
     }

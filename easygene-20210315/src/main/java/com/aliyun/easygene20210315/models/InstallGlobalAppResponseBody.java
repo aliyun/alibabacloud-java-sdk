@@ -8,21 +8,21 @@ public class InstallGlobalAppResponseBody extends TeaModel {
     @NameInMap("HostId")
     public String hostId;
 
-    // 请求 ID
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 安装后应用名
     @NameInMap("InstalledAppName")
     public String installedAppName;
 
-    // 工作空间
-    @NameInMap("Workspace")
-    public String workspace;
-
     // 区域名
     @NameInMap("RegionId")
     public String regionId;
+
+    // 请求 ID
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 工作空间
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static InstallGlobalAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InstallGlobalAppResponseBody self = new InstallGlobalAppResponseBody();
@@ -37,14 +37,6 @@ public class InstallGlobalAppResponseBody extends TeaModel {
         return this.hostId;
     }
 
-    public InstallGlobalAppResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public InstallGlobalAppResponseBody setInstalledAppName(String installedAppName) {
         this.installedAppName = installedAppName;
         return this;
@@ -53,20 +45,28 @@ public class InstallGlobalAppResponseBody extends TeaModel {
         return this.installedAppName;
     }
 
-    public InstallGlobalAppResponseBody setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
     public InstallGlobalAppResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public InstallGlobalAppResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public InstallGlobalAppResponseBody setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

@@ -4,10 +4,6 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListSubmissionsResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 主机ID
     @NameInMap("HostId")
     public String hostId;
@@ -20,25 +16,21 @@ public class ListSubmissionsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 返回个数
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 投递列表
     @NameInMap("Submissions")
     public java.util.List<ListSubmissionsResponseBodySubmissions> submissions;
 
+    // 返回个数
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListSubmissionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSubmissionsResponseBody self = new ListSubmissionsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSubmissionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListSubmissionsResponseBody setHostId(String hostId) {
@@ -65,12 +57,12 @@ public class ListSubmissionsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListSubmissionsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListSubmissionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListSubmissionsResponseBody setSubmissions(java.util.List<ListSubmissionsResponseBodySubmissions> submissions) {
@@ -81,39 +73,70 @@ public class ListSubmissionsResponseBody extends TeaModel {
         return this.submissions;
     }
 
+    public ListSubmissionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListSubmissionsResponseBodySubmissionsRunStats extends TeaModel {
-        @NameInMap("Submitted")
-        public Long submitted;
+        // 已取消数量
+        @NameInMap("Aborted")
+        public Long aborted;
 
-        @NameInMap("Pending")
-        public Long pending;
-
-        @NameInMap("Running")
-        public Long running;
-
-        @NameInMap("Succeeded")
-        public Long succeeded;
-
-        @NameInMap("Failed")
-        public Long failed;
-
+        // 取消中数量
         @NameInMap("Aborting")
         public Long aborting;
 
-        @NameInMap("Aborted")
-        public Long aborted;
+        // 已失败数量
+        @NameInMap("Failed")
+        public Long failed;
+
+        // 等待中数量
+        @NameInMap("Pending")
+        public Long pending;
+
+        // 运行中数量
+        @NameInMap("Running")
+        public Long running;
+
+        // 已提交数量
+        @NameInMap("Submitted")
+        public Long submitted;
+
+        // 已成功数量
+        @NameInMap("Succeeded")
+        public Long succeeded;
 
         public static ListSubmissionsResponseBodySubmissionsRunStats build(java.util.Map<String, ?> map) throws Exception {
             ListSubmissionsResponseBodySubmissionsRunStats self = new ListSubmissionsResponseBodySubmissionsRunStats();
             return TeaModel.build(map, self);
         }
 
-        public ListSubmissionsResponseBodySubmissionsRunStats setSubmitted(Long submitted) {
-            this.submitted = submitted;
+        public ListSubmissionsResponseBodySubmissionsRunStats setAborted(Long aborted) {
+            this.aborted = aborted;
             return this;
         }
-        public Long getSubmitted() {
-            return this.submitted;
+        public Long getAborted() {
+            return this.aborted;
+        }
+
+        public ListSubmissionsResponseBodySubmissionsRunStats setAborting(Long aborting) {
+            this.aborting = aborting;
+            return this;
+        }
+        public Long getAborting() {
+            return this.aborting;
+        }
+
+        public ListSubmissionsResponseBodySubmissionsRunStats setFailed(Long failed) {
+            this.failed = failed;
+            return this;
+        }
+        public Long getFailed() {
+            return this.failed;
         }
 
         public ListSubmissionsResponseBodySubmissionsRunStats setPending(Long pending) {
@@ -132,6 +155,14 @@ public class ListSubmissionsResponseBody extends TeaModel {
             return this.running;
         }
 
+        public ListSubmissionsResponseBodySubmissionsRunStats setSubmitted(Long submitted) {
+            this.submitted = submitted;
+            return this;
+        }
+        public Long getSubmitted() {
+            return this.submitted;
+        }
+
         public ListSubmissionsResponseBodySubmissionsRunStats setSucceeded(Long succeeded) {
             this.succeeded = succeeded;
             return this;
@@ -140,52 +171,12 @@ public class ListSubmissionsResponseBody extends TeaModel {
             return this.succeeded;
         }
 
-        public ListSubmissionsResponseBodySubmissionsRunStats setFailed(Long failed) {
-            this.failed = failed;
-            return this;
-        }
-        public Long getFailed() {
-            return this.failed;
-        }
-
-        public ListSubmissionsResponseBodySubmissionsRunStats setAborting(Long aborting) {
-            this.aborting = aborting;
-            return this;
-        }
-        public Long getAborting() {
-            return this.aborting;
-        }
-
-        public ListSubmissionsResponseBodySubmissionsRunStats setAborted(Long aborted) {
-            this.aborted = aborted;
-            return this;
-        }
-        public Long getAborted() {
-            return this.aborted;
-        }
-
     }
 
     public static class ListSubmissionsResponseBodySubmissions extends TeaModel {
-        // 提交ID
-        @NameInMap("Workspace")
-        public String workspace;
-
-        // 提交ID
-        @NameInMap("SubmissionId")
-        public String submissionId;
-
-        // 任务状态
-        @NameInMap("Status")
-        public String status;
-
         // 提交时间
         @NameInMap("CreateTime")
         public String createTime;
-
-        // 开始时间
-        @NameInMap("StartTime")
-        public String startTime;
 
         // 结束时间
         @NameInMap("EndTime")
@@ -198,33 +189,25 @@ public class ListSubmissionsResponseBody extends TeaModel {
         @NameInMap("RunStats")
         public ListSubmissionsResponseBodySubmissionsRunStats runStats;
 
+        // 开始时间
+        @NameInMap("StartTime")
+        public String startTime;
+
+        // 任务状态
+        @NameInMap("Status")
+        public String status;
+
+        // 提交ID
+        @NameInMap("SubmissionId")
+        public String submissionId;
+
+        // 工作空间名字
+        @NameInMap("Workspace")
+        public String workspace;
+
         public static ListSubmissionsResponseBodySubmissions build(java.util.Map<String, ?> map) throws Exception {
             ListSubmissionsResponseBodySubmissions self = new ListSubmissionsResponseBodySubmissions();
             return TeaModel.build(map, self);
-        }
-
-        public ListSubmissionsResponseBodySubmissions setWorkspace(String workspace) {
-            this.workspace = workspace;
-            return this;
-        }
-        public String getWorkspace() {
-            return this.workspace;
-        }
-
-        public ListSubmissionsResponseBodySubmissions setSubmissionId(String submissionId) {
-            this.submissionId = submissionId;
-            return this;
-        }
-        public String getSubmissionId() {
-            return this.submissionId;
-        }
-
-        public ListSubmissionsResponseBodySubmissions setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListSubmissionsResponseBodySubmissions setCreateTime(String createTime) {
@@ -233,14 +216,6 @@ public class ListSubmissionsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public ListSubmissionsResponseBodySubmissions setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public ListSubmissionsResponseBodySubmissions setEndTime(String endTime) {
@@ -265,6 +240,38 @@ public class ListSubmissionsResponseBody extends TeaModel {
         }
         public ListSubmissionsResponseBodySubmissionsRunStats getRunStats() {
             return this.runStats;
+        }
+
+        public ListSubmissionsResponseBodySubmissions setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public ListSubmissionsResponseBodySubmissions setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListSubmissionsResponseBodySubmissions setSubmissionId(String submissionId) {
+            this.submissionId = submissionId;
+            return this;
+        }
+        public String getSubmissionId() {
+            return this.submissionId;
+        }
+
+        public ListSubmissionsResponseBodySubmissions setWorkspace(String workspace) {
+            this.workspace = workspace;
+            return this;
+        }
+        public String getWorkspace() {
+            return this.workspace;
         }
 
     }

@@ -4,9 +4,13 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateResponseBody extends TeaModel {
-    // 应用模板名称
-    @NameInMap("TemplateName")
-    public String templateName;
+    // 应用的名称
+    @NameInMap("AppName")
+    public String appName;
+
+    // 应用的版本
+    @NameInMap("AppRevision")
+    public String appRevision;
 
     // 创建时间
     @NameInMap("CreateTime")
@@ -16,21 +20,13 @@ public class GetTemplateResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    // 应用的名称
-    @NameInMap("AppName")
-    public String appName;
-
-    // 应用的版本
-    @NameInMap("Revision")
-    public String revision;
-
     // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
     // 应用输入
-    @NameInMap("Inputs")
-    public java.util.List<GetTemplateResponseBodyInputs> inputs;
+    @NameInMap("InputsExpression")
+    public java.util.List<GetTemplateResponseBodyInputsExpression> inputsExpression;
 
     // 应用标签
     @NameInMap("Labels")
@@ -41,36 +37,48 @@ public class GetTemplateResponseBody extends TeaModel {
     public String lastModifiedTime;
 
     // 应用的输出参数
-    @NameInMap("Outputs")
-    public java.util.List<GetTemplateResponseBodyOutputs> outputs;
+    @NameInMap("OutputsExpression")
+    public java.util.List<GetTemplateResponseBodyOutputsExpression> outputsExpression;
 
     // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
+    // 实体类型
+    @NameInMap("RootEntity")
+    public String rootEntity;
+
     // 应用来源
     @NameInMap("Source")
     public String source;
 
+    // 应用模板名称
+    @NameInMap("TemplateName")
+    public String templateName;
+
     // 工作空间名称
     @NameInMap("Workspace")
     public String workspace;
-
-    // 实体类型
-    @NameInMap("RootEntity")
-    public String rootEntity;
 
     public static GetTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateResponseBody self = new GetTemplateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetTemplateResponseBody setTemplateName(String templateName) {
-        this.templateName = templateName;
+    public GetTemplateResponseBody setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public String getTemplateName() {
-        return this.templateName;
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public GetTemplateResponseBody setAppRevision(String appRevision) {
+        this.appRevision = appRevision;
+        return this;
+    }
+    public String getAppRevision() {
+        return this.appRevision;
     }
 
     public GetTemplateResponseBody setCreateTime(String createTime) {
@@ -89,22 +97,6 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.description;
     }
 
-    public GetTemplateResponseBody setAppName(String appName) {
-        this.appName = appName;
-        return this;
-    }
-    public String getAppName() {
-        return this.appName;
-    }
-
-    public GetTemplateResponseBody setRevision(String revision) {
-        this.revision = revision;
-        return this;
-    }
-    public String getRevision() {
-        return this.revision;
-    }
-
     public GetTemplateResponseBody setHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -113,12 +105,12 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.hostId;
     }
 
-    public GetTemplateResponseBody setInputs(java.util.List<GetTemplateResponseBodyInputs> inputs) {
-        this.inputs = inputs;
+    public GetTemplateResponseBody setInputsExpression(java.util.List<GetTemplateResponseBodyInputsExpression> inputsExpression) {
+        this.inputsExpression = inputsExpression;
         return this;
     }
-    public java.util.List<GetTemplateResponseBodyInputs> getInputs() {
-        return this.inputs;
+    public java.util.List<GetTemplateResponseBodyInputsExpression> getInputsExpression() {
+        return this.inputsExpression;
     }
 
     public GetTemplateResponseBody setLabels(java.util.Map<String, String> labels) {
@@ -137,12 +129,12 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.lastModifiedTime;
     }
 
-    public GetTemplateResponseBody setOutputs(java.util.List<GetTemplateResponseBodyOutputs> outputs) {
-        this.outputs = outputs;
+    public GetTemplateResponseBody setOutputsExpression(java.util.List<GetTemplateResponseBodyOutputsExpression> outputsExpression) {
+        this.outputsExpression = outputsExpression;
         return this;
     }
-    public java.util.List<GetTemplateResponseBodyOutputs> getOutputs() {
-        return this.outputs;
+    public java.util.List<GetTemplateResponseBodyOutputsExpression> getOutputsExpression() {
+        return this.outputsExpression;
     }
 
     public GetTemplateResponseBody setRequestId(String requestId) {
@@ -153,12 +145,28 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetTemplateResponseBody setRootEntity(String rootEntity) {
+        this.rootEntity = rootEntity;
+        return this;
+    }
+    public String getRootEntity() {
+        return this.rootEntity;
+    }
+
     public GetTemplateResponseBody setSource(String source) {
         this.source = source;
         return this;
     }
     public String getSource() {
         return this.source;
+    }
+
+    public GetTemplateResponseBody setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     public GetTemplateResponseBody setWorkspace(String workspace) {
@@ -169,15 +177,19 @@ public class GetTemplateResponseBody extends TeaModel {
         return this.workspace;
     }
 
-    public GetTemplateResponseBody setRootEntity(String rootEntity) {
-        this.rootEntity = rootEntity;
-        return this;
-    }
-    public String getRootEntity() {
-        return this.rootEntity;
-    }
+    public static class GetTemplateResponseBodyInputsExpression extends TeaModel {
+        // 帮助信息
+        @NameInMap("Help")
+        public String help;
 
-    public static class GetTemplateResponseBodyInputs extends TeaModel {
+        // 是否必须参数
+        @NameInMap("Required")
+        public Boolean required;
+
+        // 步骤顺序
+        @NameInMap("StepOrder")
+        public Long stepOrder;
+
         // 任务名称
         @NameInMap("TaskName")
         public String taskName;
@@ -194,64 +206,12 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("VariableValue")
         public String variableValue;
 
-        // 是否必须参数
-        @NameInMap("Required")
-        public Boolean required;
-
-        // 帮助信息
-        @NameInMap("Help")
-        public String help;
-
-        // 步骤顺序
-        @NameInMap("StepOrder")
-        public Long stepOrder;
-
-        public static GetTemplateResponseBodyInputs build(java.util.Map<String, ?> map) throws Exception {
-            GetTemplateResponseBodyInputs self = new GetTemplateResponseBodyInputs();
+        public static GetTemplateResponseBodyInputsExpression build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateResponseBodyInputsExpression self = new GetTemplateResponseBodyInputsExpression();
             return TeaModel.build(map, self);
         }
 
-        public GetTemplateResponseBodyInputs setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public GetTemplateResponseBodyInputs setVariableName(String variableName) {
-            this.variableName = variableName;
-            return this;
-        }
-        public String getVariableName() {
-            return this.variableName;
-        }
-
-        public GetTemplateResponseBodyInputs setVariableType(String variableType) {
-            this.variableType = variableType;
-            return this;
-        }
-        public String getVariableType() {
-            return this.variableType;
-        }
-
-        public GetTemplateResponseBodyInputs setVariableValue(String variableValue) {
-            this.variableValue = variableValue;
-            return this;
-        }
-        public String getVariableValue() {
-            return this.variableValue;
-        }
-
-        public GetTemplateResponseBodyInputs setRequired(Boolean required) {
-            this.required = required;
-            return this;
-        }
-        public Boolean getRequired() {
-            return this.required;
-        }
-
-        public GetTemplateResponseBodyInputs setHelp(String help) {
+        public GetTemplateResponseBodyInputsExpression setHelp(String help) {
             this.help = help;
             return this;
         }
@@ -259,7 +219,15 @@ public class GetTemplateResponseBody extends TeaModel {
             return this.help;
         }
 
-        public GetTemplateResponseBodyInputs setStepOrder(Long stepOrder) {
+        public GetTemplateResponseBodyInputsExpression setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public GetTemplateResponseBodyInputsExpression setStepOrder(Long stepOrder) {
             this.stepOrder = stepOrder;
             return this;
         }
@@ -267,9 +235,53 @@ public class GetTemplateResponseBody extends TeaModel {
             return this.stepOrder;
         }
 
+        public GetTemplateResponseBodyInputsExpression setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public GetTemplateResponseBodyInputsExpression setVariableName(String variableName) {
+            this.variableName = variableName;
+            return this;
+        }
+        public String getVariableName() {
+            return this.variableName;
+        }
+
+        public GetTemplateResponseBodyInputsExpression setVariableType(String variableType) {
+            this.variableType = variableType;
+            return this;
+        }
+        public String getVariableType() {
+            return this.variableType;
+        }
+
+        public GetTemplateResponseBodyInputsExpression setVariableValue(String variableValue) {
+            this.variableValue = variableValue;
+            return this;
+        }
+        public String getVariableValue() {
+            return this.variableValue;
+        }
+
     }
 
-    public static class GetTemplateResponseBodyOutputs extends TeaModel {
+    public static class GetTemplateResponseBodyOutputsExpression extends TeaModel {
+        // 帮助信息
+        @NameInMap("Help")
+        public String help;
+
+        // 是否必须参数
+        @NameInMap("Required")
+        public Boolean required;
+
+        // 步骤顺序
+        @NameInMap("StepOrder")
+        public Long stepOrder;
+
         // 任务名称
         @NameInMap("TaskName")
         public String taskName;
@@ -286,64 +298,12 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("VariableValue")
         public String variableValue;
 
-        // 是否必须参数
-        @NameInMap("Required")
-        public Boolean required;
-
-        // 帮助信息
-        @NameInMap("Help")
-        public String help;
-
-        // 步骤顺序
-        @NameInMap("StepOrder")
-        public Long stepOrder;
-
-        public static GetTemplateResponseBodyOutputs build(java.util.Map<String, ?> map) throws Exception {
-            GetTemplateResponseBodyOutputs self = new GetTemplateResponseBodyOutputs();
+        public static GetTemplateResponseBodyOutputsExpression build(java.util.Map<String, ?> map) throws Exception {
+            GetTemplateResponseBodyOutputsExpression self = new GetTemplateResponseBodyOutputsExpression();
             return TeaModel.build(map, self);
         }
 
-        public GetTemplateResponseBodyOutputs setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public GetTemplateResponseBodyOutputs setVariableName(String variableName) {
-            this.variableName = variableName;
-            return this;
-        }
-        public String getVariableName() {
-            return this.variableName;
-        }
-
-        public GetTemplateResponseBodyOutputs setVariableType(String variableType) {
-            this.variableType = variableType;
-            return this;
-        }
-        public String getVariableType() {
-            return this.variableType;
-        }
-
-        public GetTemplateResponseBodyOutputs setVariableValue(String variableValue) {
-            this.variableValue = variableValue;
-            return this;
-        }
-        public String getVariableValue() {
-            return this.variableValue;
-        }
-
-        public GetTemplateResponseBodyOutputs setRequired(Boolean required) {
-            this.required = required;
-            return this;
-        }
-        public Boolean getRequired() {
-            return this.required;
-        }
-
-        public GetTemplateResponseBodyOutputs setHelp(String help) {
+        public GetTemplateResponseBodyOutputsExpression setHelp(String help) {
             this.help = help;
             return this;
         }
@@ -351,12 +311,52 @@ public class GetTemplateResponseBody extends TeaModel {
             return this.help;
         }
 
-        public GetTemplateResponseBodyOutputs setStepOrder(Long stepOrder) {
+        public GetTemplateResponseBodyOutputsExpression setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public GetTemplateResponseBodyOutputsExpression setStepOrder(Long stepOrder) {
             this.stepOrder = stepOrder;
             return this;
         }
         public Long getStepOrder() {
             return this.stepOrder;
+        }
+
+        public GetTemplateResponseBodyOutputsExpression setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public GetTemplateResponseBodyOutputsExpression setVariableName(String variableName) {
+            this.variableName = variableName;
+            return this;
+        }
+        public String getVariableName() {
+            return this.variableName;
+        }
+
+        public GetTemplateResponseBodyOutputsExpression setVariableType(String variableType) {
+            this.variableType = variableType;
+            return this;
+        }
+        public String getVariableType() {
+            return this.variableType;
+        }
+
+        public GetTemplateResponseBodyOutputsExpression setVariableValue(String variableValue) {
+            this.variableValue = variableValue;
+            return this;
+        }
+        public String getVariableValue() {
+            return this.variableValue;
         }
 
     }

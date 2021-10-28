@@ -4,28 +4,17 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetRunRequest extends TeaModel {
-    // 工作空间名字
-    @NameInMap("Workspace")
-    public String workspace;
-
     // 任务ID
     @NameInMap("RunId")
     public String runId;
 
-    @NameInMap("Attributes")
-    public String attributes;
+    // 工作空间名字
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static GetRunRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRunRequest self = new GetRunRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetRunRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
     }
 
     public GetRunRequest setRunId(String runId) {
@@ -36,12 +25,12 @@ public class GetRunRequest extends TeaModel {
         return this.runId;
     }
 
-    public GetRunRequest setAttributes(String attributes) {
-        this.attributes = attributes;
+    public GetRunRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
-    public String getAttributes() {
-        return this.attributes;
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

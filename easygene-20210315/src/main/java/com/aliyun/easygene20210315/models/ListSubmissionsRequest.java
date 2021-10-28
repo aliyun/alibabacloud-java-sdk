@@ -4,65 +4,45 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListSubmissionsRequest extends TeaModel {
-    // 工作空间
-    @NameInMap("Workspace")
-    public String workspace;
+    // 逆序
+    @NameInMap("IsReversed")
+    public Boolean isReversed;
 
-    // 状态
-    @NameInMap("Status")
-    public String status;
+    // 最大返回数目
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    // Next Token
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    // 排序依据
+    @NameInMap("OrderBy")
+    public String orderBy;
 
     // 搜索ID
     @NameInMap("Search")
     public String search;
 
-    @NameInMap("NextToken")
-    public String nextToken;
+    // 状态
+    @NameInMap("Status")
+    public String status;
 
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    @NameInMap("OrderBy")
-    public String orderBy;
-
-    @NameInMap("IsReversed")
-    public Boolean isReversed;
+    // 工作空间
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static ListSubmissionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSubmissionsRequest self = new ListSubmissionsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListSubmissionsRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
+    public ListSubmissionsRequest setIsReversed(Boolean isReversed) {
+        this.isReversed = isReversed;
         return this;
     }
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
-    public ListSubmissionsRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public ListSubmissionsRequest setSearch(String search) {
-        this.search = search;
-        return this;
-    }
-    public String getSearch() {
-        return this.search;
-    }
-
-    public ListSubmissionsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
+    public Boolean getIsReversed() {
+        return this.isReversed;
     }
 
     public ListSubmissionsRequest setMaxResults(Integer maxResults) {
@@ -73,6 +53,14 @@ public class ListSubmissionsRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public ListSubmissionsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public ListSubmissionsRequest setOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -81,12 +69,28 @@ public class ListSubmissionsRequest extends TeaModel {
         return this.orderBy;
     }
 
-    public ListSubmissionsRequest setIsReversed(Boolean isReversed) {
-        this.isReversed = isReversed;
+    public ListSubmissionsRequest setSearch(String search) {
+        this.search = search;
         return this;
     }
-    public Boolean getIsReversed() {
-        return this.isReversed;
+    public String getSearch() {
+        return this.search;
+    }
+
+    public ListSubmissionsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ListSubmissionsRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

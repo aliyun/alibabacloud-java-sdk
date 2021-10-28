@@ -4,14 +4,6 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetGlobalAppRequest extends TeaModel {
-    // 查询字段信息
-    @NameInMap("Attributes")
-    public String attributes;
-
-    // 命名空间
-    @NameInMap("NamespaceName")
-    public String namespaceName;
-
     // 应用名称
     @NameInMap("AppName")
     public String appName;
@@ -20,29 +12,21 @@ public class GetGlobalAppRequest extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
+    // 查询字段信息：appVersions，regionIds，dag
+    @NameInMap("Attributes")
+    public java.util.List<String> attributes;
+
     // 应用可用区域
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("Location")
+    public String location;
+
+    // 命名空间
+    @NameInMap("NamespaceName")
+    public String namespaceName;
 
     public static GetGlobalAppRequest build(java.util.Map<String, ?> map) throws Exception {
         GetGlobalAppRequest self = new GetGlobalAppRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetGlobalAppRequest setAttributes(String attributes) {
-        this.attributes = attributes;
-        return this;
-    }
-    public String getAttributes() {
-        return this.attributes;
-    }
-
-    public GetGlobalAppRequest setNamespaceName(String namespaceName) {
-        this.namespaceName = namespaceName;
-        return this;
-    }
-    public String getNamespaceName() {
-        return this.namespaceName;
     }
 
     public GetGlobalAppRequest setAppName(String appName) {
@@ -61,12 +45,28 @@ public class GetGlobalAppRequest extends TeaModel {
         return this.appVersion;
     }
 
-    public GetGlobalAppRequest setRegion(String region) {
-        this.region = region;
+    public GetGlobalAppRequest setAttributes(java.util.List<String> attributes) {
+        this.attributes = attributes;
         return this;
     }
-    public String getRegion() {
-        return this.region;
+    public java.util.List<String> getAttributes() {
+        return this.attributes;
+    }
+
+    public GetGlobalAppRequest setLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    public String getLocation() {
+        return this.location;
+    }
+
+    public GetGlobalAppRequest setNamespaceName(String namespaceName) {
+        this.namespaceName = namespaceName;
+        return this;
+    }
+    public String getNamespaceName() {
+        return this.namespaceName;
     }
 
 }

@@ -4,73 +4,49 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateShrinkRequest extends TeaModel {
-    // 工作空间名称
-    @NameInMap("Workspace")
-    public String workspace;
-
-    // 应用模板名称
-    @NameInMap("TemplateName")
-    public String templateName;
-
-    // 应用模板描述
-    @NameInMap("Description")
-    public String description;
-
     // 应用的名称
     @NameInMap("AppName")
     public String appName;
 
     // 应用的版本
-    @NameInMap("Revision")
-    public String revision;
-
-    // 根实体类型
-    @NameInMap("RootEntity")
-    public String rootEntity;
-
-    // 应用的输入
-    @NameInMap("Inputs")
-    public String inputsShrink;
-
-    // 应用的输出
-    @NameInMap("Outputs")
-    public String outputsShrink;
-
-    // 应用标签
-    @NameInMap("Labels")
-    public String labels;
+    @NameInMap("AppRevision")
+    public String appRevision;
 
     // 幂等Token
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 应用模板描述
+    @NameInMap("Description")
+    public String description;
+
+    // 应用的输入
+    @NameInMap("InputsExpression")
+    public String inputsExpressionShrink;
+
+    // 应用标签
+    @NameInMap("Labels")
+    public String labels;
+
+    // 应用的输出
+    @NameInMap("OutputsExpression")
+    public String outputsExpressionShrink;
+
+    // 根实体类型
+    @NameInMap("RootEntity")
+    public String rootEntity;
+
+    // 应用模板名称
+    @NameInMap("TemplateName")
+    public String templateName;
+
+    // 工作空间名称
+    @NameInMap("Workspace")
+    public String workspace;
+
     public static CreateTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateShrinkRequest self = new CreateTemplateShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTemplateShrinkRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
-    public CreateTemplateShrinkRequest setTemplateName(String templateName) {
-        this.templateName = templateName;
-        return this;
-    }
-    public String getTemplateName() {
-        return this.templateName;
-    }
-
-    public CreateTemplateShrinkRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateTemplateShrinkRequest setAppName(String appName) {
@@ -81,36 +57,36 @@ public class CreateTemplateShrinkRequest extends TeaModel {
         return this.appName;
     }
 
-    public CreateTemplateShrinkRequest setRevision(String revision) {
-        this.revision = revision;
+    public CreateTemplateShrinkRequest setAppRevision(String appRevision) {
+        this.appRevision = appRevision;
         return this;
     }
-    public String getRevision() {
-        return this.revision;
+    public String getAppRevision() {
+        return this.appRevision;
     }
 
-    public CreateTemplateShrinkRequest setRootEntity(String rootEntity) {
-        this.rootEntity = rootEntity;
+    public CreateTemplateShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getRootEntity() {
-        return this.rootEntity;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
-    public CreateTemplateShrinkRequest setInputsShrink(String inputsShrink) {
-        this.inputsShrink = inputsShrink;
+    public CreateTemplateShrinkRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getInputsShrink() {
-        return this.inputsShrink;
+    public String getDescription() {
+        return this.description;
     }
 
-    public CreateTemplateShrinkRequest setOutputsShrink(String outputsShrink) {
-        this.outputsShrink = outputsShrink;
+    public CreateTemplateShrinkRequest setInputsExpressionShrink(String inputsExpressionShrink) {
+        this.inputsExpressionShrink = inputsExpressionShrink;
         return this;
     }
-    public String getOutputsShrink() {
-        return this.outputsShrink;
+    public String getInputsExpressionShrink() {
+        return this.inputsExpressionShrink;
     }
 
     public CreateTemplateShrinkRequest setLabels(String labels) {
@@ -121,12 +97,36 @@ public class CreateTemplateShrinkRequest extends TeaModel {
         return this.labels;
     }
 
-    public CreateTemplateShrinkRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
+    public CreateTemplateShrinkRequest setOutputsExpressionShrink(String outputsExpressionShrink) {
+        this.outputsExpressionShrink = outputsExpressionShrink;
         return this;
     }
-    public String getClientToken() {
-        return this.clientToken;
+    public String getOutputsExpressionShrink() {
+        return this.outputsExpressionShrink;
+    }
+
+    public CreateTemplateShrinkRequest setRootEntity(String rootEntity) {
+        this.rootEntity = rootEntity;
+        return this;
+    }
+    public String getRootEntity() {
+        return this.rootEntity;
+    }
+
+    public CreateTemplateShrinkRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public CreateTemplateShrinkRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

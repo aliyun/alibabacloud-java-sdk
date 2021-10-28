@@ -4,53 +4,37 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateShrinkRequest extends TeaModel {
-    // 工作空间名称
-    @NameInMap("Workspace")
-    public String workspace;
-
-    // 应用模板名称
-    @NameInMap("TemplateName")
-    public String templateName;
-
-    // 工作空间描述
+    // 应用模板描述
     @NameInMap("Description")
     public String description;
+
+    // 应用的输入
+    @NameInMap("InputsExpression")
+    public String inputsExpressionShrink;
+
+    // 应用模板标签
+    @NameInMap("Labels")
+    public String labels;
+
+    // 应用的输出
+    @NameInMap("OutputsExpression")
+    public String outputsExpressionShrink;
 
     // 实体类型
     @NameInMap("RootEntity")
     public String rootEntity;
 
-    // 应用的输入
-    @NameInMap("Inputs")
-    public String inputsShrink;
+    // 应用模板名称
+    @NameInMap("TemplateName")
+    public String templateName;
 
-    // 应用的输出
-    @NameInMap("Outputs")
-    public String outputsShrink;
-
-    // 工作空间标签
-    @NameInMap("Labels")
-    public String labels;
+    // 工作空间名称
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static UpdateTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateShrinkRequest self = new UpdateTemplateShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTemplateShrinkRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
-    public UpdateTemplateShrinkRequest setTemplateName(String templateName) {
-        this.templateName = templateName;
-        return this;
-    }
-    public String getTemplateName() {
-        return this.templateName;
     }
 
     public UpdateTemplateShrinkRequest setDescription(String description) {
@@ -61,28 +45,12 @@ public class UpdateTemplateShrinkRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateTemplateShrinkRequest setRootEntity(String rootEntity) {
-        this.rootEntity = rootEntity;
+    public UpdateTemplateShrinkRequest setInputsExpressionShrink(String inputsExpressionShrink) {
+        this.inputsExpressionShrink = inputsExpressionShrink;
         return this;
     }
-    public String getRootEntity() {
-        return this.rootEntity;
-    }
-
-    public UpdateTemplateShrinkRequest setInputsShrink(String inputsShrink) {
-        this.inputsShrink = inputsShrink;
-        return this;
-    }
-    public String getInputsShrink() {
-        return this.inputsShrink;
-    }
-
-    public UpdateTemplateShrinkRequest setOutputsShrink(String outputsShrink) {
-        this.outputsShrink = outputsShrink;
-        return this;
-    }
-    public String getOutputsShrink() {
-        return this.outputsShrink;
+    public String getInputsExpressionShrink() {
+        return this.inputsExpressionShrink;
     }
 
     public UpdateTemplateShrinkRequest setLabels(String labels) {
@@ -91,6 +59,38 @@ public class UpdateTemplateShrinkRequest extends TeaModel {
     }
     public String getLabels() {
         return this.labels;
+    }
+
+    public UpdateTemplateShrinkRequest setOutputsExpressionShrink(String outputsExpressionShrink) {
+        this.outputsExpressionShrink = outputsExpressionShrink;
+        return this;
+    }
+    public String getOutputsExpressionShrink() {
+        return this.outputsExpressionShrink;
+    }
+
+    public UpdateTemplateShrinkRequest setRootEntity(String rootEntity) {
+        this.rootEntity = rootEntity;
+        return this;
+    }
+    public String getRootEntity() {
+        return this.rootEntity;
+    }
+
+    public UpdateTemplateShrinkRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public UpdateTemplateShrinkRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

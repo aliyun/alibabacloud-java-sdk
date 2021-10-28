@@ -12,25 +12,29 @@ public class ListPublicDatasetEntityItemsRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
-    // 实体名中搜索的关键字
-    @NameInMap("Search")
-    public String search;
+    // 是否反转
+    @NameInMap("IsReversed")
+    public Boolean isReversed;
+
+    // 公共数据集所在区域
+    @NameInMap("Location")
+    public String location;
+
+    // 分页数量
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    // 翻页Token用来标记当前开始读取的位置，置空表示从头开始
+    @NameInMap("NextToken")
+    public String nextToken;
 
     // 排序字段
     @NameInMap("OrderBy")
     public String orderBy;
 
-    // 是否反转
-    @NameInMap("IsReversed")
-    public Boolean isReversed;
-
-    // 翻页Token
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    // 分页数量
-    @NameInMap("MaxResults")
-    public Integer maxResults;
+    // 实体名中搜索的关键字
+    @NameInMap("Search")
+    public String search;
 
     public static ListPublicDatasetEntityItemsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPublicDatasetEntityItemsRequest self = new ListPublicDatasetEntityItemsRequest();
@@ -53,28 +57,28 @@ public class ListPublicDatasetEntityItemsRequest extends TeaModel {
         return this.entityType;
     }
 
-    public ListPublicDatasetEntityItemsRequest setSearch(String search) {
-        this.search = search;
-        return this;
-    }
-    public String getSearch() {
-        return this.search;
-    }
-
-    public ListPublicDatasetEntityItemsRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
-        return this;
-    }
-    public String getOrderBy() {
-        return this.orderBy;
-    }
-
     public ListPublicDatasetEntityItemsRequest setIsReversed(Boolean isReversed) {
         this.isReversed = isReversed;
         return this;
     }
     public Boolean getIsReversed() {
         return this.isReversed;
+    }
+
+    public ListPublicDatasetEntityItemsRequest setLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    public String getLocation() {
+        return this.location;
+    }
+
+    public ListPublicDatasetEntityItemsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListPublicDatasetEntityItemsRequest setNextToken(String nextToken) {
@@ -85,12 +89,20 @@ public class ListPublicDatasetEntityItemsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListPublicDatasetEntityItemsRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
+    public ListPublicDatasetEntityItemsRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
         return this;
     }
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    public ListPublicDatasetEntityItemsRequest setSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    public String getSearch() {
+        return this.search;
     }
 
 }

@@ -4,15 +4,15 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetSubmissionResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
-    // 投递列表
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 投递详情
     @NameInMap("Submission")
     public GetSubmissionResponseBodySubmission submission;
 
@@ -21,20 +21,20 @@ public class GetSubmissionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetSubmissionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetSubmissionResponseBody setHostId(String hostId) {
         this.hostId = hostId;
         return this;
     }
     public String getHostId() {
         return this.hostId;
+    }
+
+    public GetSubmissionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetSubmissionResponseBody setSubmission(GetSubmissionResponseBodySubmission submission) {
@@ -46,38 +46,61 @@ public class GetSubmissionResponseBody extends TeaModel {
     }
 
     public static class GetSubmissionResponseBodySubmissionRunStats extends TeaModel {
-        @NameInMap("Submitted")
-        public Long submitted;
+        // 已取消数量
+        @NameInMap("Aborted")
+        public Long aborted;
 
-        @NameInMap("Pending")
-        public Long pending;
-
-        @NameInMap("Running")
-        public Long running;
-
-        @NameInMap("Succeeded")
-        public Long succeeded;
-
-        @NameInMap("Failed")
-        public Long failed;
-
+        // 取消中数量
         @NameInMap("Aborting")
         public Long aborting;
 
-        @NameInMap("Aborted")
-        public Long aborted;
+        // 已失败数量
+        @NameInMap("Failed")
+        public Long failed;
+
+        // 等待中数量
+        @NameInMap("Pending")
+        public Long pending;
+
+        // 运行中数量
+        @NameInMap("Running")
+        public Long running;
+
+        // 已提交数量
+        @NameInMap("Submitted")
+        public Long submitted;
+
+        // 已成功数量
+        @NameInMap("Succeeded")
+        public Long succeeded;
 
         public static GetSubmissionResponseBodySubmissionRunStats build(java.util.Map<String, ?> map) throws Exception {
             GetSubmissionResponseBodySubmissionRunStats self = new GetSubmissionResponseBodySubmissionRunStats();
             return TeaModel.build(map, self);
         }
 
-        public GetSubmissionResponseBodySubmissionRunStats setSubmitted(Long submitted) {
-            this.submitted = submitted;
+        public GetSubmissionResponseBodySubmissionRunStats setAborted(Long aborted) {
+            this.aborted = aborted;
             return this;
         }
-        public Long getSubmitted() {
-            return this.submitted;
+        public Long getAborted() {
+            return this.aborted;
+        }
+
+        public GetSubmissionResponseBodySubmissionRunStats setAborting(Long aborting) {
+            this.aborting = aborting;
+            return this;
+        }
+        public Long getAborting() {
+            return this.aborting;
+        }
+
+        public GetSubmissionResponseBodySubmissionRunStats setFailed(Long failed) {
+            this.failed = failed;
+            return this;
+        }
+        public Long getFailed() {
+            return this.failed;
         }
 
         public GetSubmissionResponseBodySubmissionRunStats setPending(Long pending) {
@@ -96,6 +119,14 @@ public class GetSubmissionResponseBody extends TeaModel {
             return this.running;
         }
 
+        public GetSubmissionResponseBodySubmissionRunStats setSubmitted(Long submitted) {
+            this.submitted = submitted;
+            return this;
+        }
+        public Long getSubmitted() {
+            return this.submitted;
+        }
+
         public GetSubmissionResponseBodySubmissionRunStats setSucceeded(Long succeeded) {
             this.succeeded = succeeded;
             return this;
@@ -104,52 +135,12 @@ public class GetSubmissionResponseBody extends TeaModel {
             return this.succeeded;
         }
 
-        public GetSubmissionResponseBodySubmissionRunStats setFailed(Long failed) {
-            this.failed = failed;
-            return this;
-        }
-        public Long getFailed() {
-            return this.failed;
-        }
-
-        public GetSubmissionResponseBodySubmissionRunStats setAborting(Long aborting) {
-            this.aborting = aborting;
-            return this;
-        }
-        public Long getAborting() {
-            return this.aborting;
-        }
-
-        public GetSubmissionResponseBodySubmissionRunStats setAborted(Long aborted) {
-            this.aborted = aborted;
-            return this;
-        }
-        public Long getAborted() {
-            return this.aborted;
-        }
-
     }
 
     public static class GetSubmissionResponseBodySubmission extends TeaModel {
-        // 提交ID
-        @NameInMap("Workspace")
-        public String workspace;
-
-        // 提交ID
-        @NameInMap("SubmissionId")
-        public String submissionId;
-
-        // 任务状态
-        @NameInMap("Status")
-        public String status;
-
         // 提交时间
         @NameInMap("CreateTime")
         public String createTime;
-
-        // 开始时间
-        @NameInMap("StartTime")
-        public String startTime;
 
         // 结束时间
         @NameInMap("EndTime")
@@ -162,33 +153,25 @@ public class GetSubmissionResponseBody extends TeaModel {
         @NameInMap("RunStats")
         public GetSubmissionResponseBodySubmissionRunStats runStats;
 
+        // 开始时间
+        @NameInMap("StartTime")
+        public String startTime;
+
+        // 任务状态
+        @NameInMap("Status")
+        public String status;
+
+        // 提交ID
+        @NameInMap("SubmissionId")
+        public String submissionId;
+
+        // 提交ID
+        @NameInMap("Workspace")
+        public String workspace;
+
         public static GetSubmissionResponseBodySubmission build(java.util.Map<String, ?> map) throws Exception {
             GetSubmissionResponseBodySubmission self = new GetSubmissionResponseBodySubmission();
             return TeaModel.build(map, self);
-        }
-
-        public GetSubmissionResponseBodySubmission setWorkspace(String workspace) {
-            this.workspace = workspace;
-            return this;
-        }
-        public String getWorkspace() {
-            return this.workspace;
-        }
-
-        public GetSubmissionResponseBodySubmission setSubmissionId(String submissionId) {
-            this.submissionId = submissionId;
-            return this;
-        }
-        public String getSubmissionId() {
-            return this.submissionId;
-        }
-
-        public GetSubmissionResponseBodySubmission setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public GetSubmissionResponseBodySubmission setCreateTime(String createTime) {
@@ -197,14 +180,6 @@ public class GetSubmissionResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
-        }
-
-        public GetSubmissionResponseBodySubmission setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public GetSubmissionResponseBodySubmission setEndTime(String endTime) {
@@ -229,6 +204,38 @@ public class GetSubmissionResponseBody extends TeaModel {
         }
         public GetSubmissionResponseBodySubmissionRunStats getRunStats() {
             return this.runStats;
+        }
+
+        public GetSubmissionResponseBodySubmission setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public GetSubmissionResponseBodySubmission setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetSubmissionResponseBodySubmission setSubmissionId(String submissionId) {
+            this.submissionId = submissionId;
+            return this;
+        }
+        public String getSubmissionId() {
+            return this.submissionId;
+        }
+
+        public GetSubmissionResponseBodySubmission setWorkspace(String workspace) {
+            this.workspace = workspace;
+            return this;
+        }
+        public String getWorkspace() {
+            return this.workspace;
         }
 
     }
