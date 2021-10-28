@@ -4,13 +4,25 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneNumberShrinkRequest extends TeaModel {
-    // 用户信息
+    // 设备标识信息
+    @NameInMap("DeviceInfo")
+    public String deviceInfoShrink;
+
+    // 用户标识信息
     @NameInMap("UserInfo")
     public String userInfoShrink;
 
     public static GetPhoneNumberShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPhoneNumberShrinkRequest self = new GetPhoneNumberShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetPhoneNumberShrinkRequest setDeviceInfoShrink(String deviceInfoShrink) {
+        this.deviceInfoShrink = deviceInfoShrink;
+        return this;
+    }
+    public String getDeviceInfoShrink() {
+        return this.deviceInfoShrink;
     }
 
     public GetPhoneNumberShrinkRequest setUserInfoShrink(String userInfoShrink) {
