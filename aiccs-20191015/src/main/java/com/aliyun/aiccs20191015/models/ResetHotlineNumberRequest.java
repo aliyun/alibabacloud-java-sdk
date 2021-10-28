@@ -4,14 +4,6 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ResetHotlineNumberRequest extends TeaModel {
-    // 实例id
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    // 号码
-    @NameInMap("HotlineNumber")
-    public String hotlineNumber;
-
     // 号码描述
     @NameInMap("Description")
     public String description;
@@ -20,21 +12,13 @@ public class ResetHotlineNumberRequest extends TeaModel {
     @NameInMap("EnableInbound")
     public Boolean enableInbound;
 
-    // 入呼ivr流程id
-    @NameInMap("InboundFlowId")
-    public Long inboundFlowId;
+    // 是否开启入呼满意度
+    @NameInMap("EnableInboundEvaluation")
+    public Boolean enableInboundEvaluation;
 
     // 是否用于外呼
     @NameInMap("EnableOutbound")
     public Boolean enableOutbound;
-
-    // 外呼是否对所有部门生效
-    @NameInMap("OutboundAllDepart")
-    public Boolean outboundAllDepart;
-
-    // 是否开启入呼满意度
-    @NameInMap("EnableInboundEvaluation")
-    public Boolean enableInboundEvaluation;
 
     // 是否开启外呼满意度
     @NameInMap("EnableOutboundEvaluation")
@@ -44,6 +28,22 @@ public class ResetHotlineNumberRequest extends TeaModel {
     @NameInMap("EvaluationLevel")
     public Integer evaluationLevel;
 
+    // 号码
+    @NameInMap("HotlineNumber")
+    public String hotlineNumber;
+
+    // 入呼ivr流程id
+    @NameInMap("InboundFlowId")
+    public Long inboundFlowId;
+
+    // 实例id
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    // 外呼是否对所有部门生效
+    @NameInMap("OutboundAllDepart")
+    public Boolean outboundAllDepart;
+
     // 外呼生效范围
     @NameInMap("OutboundRangeList")
     public java.util.List<ResetHotlineNumberRequestOutboundRangeList> outboundRangeList;
@@ -51,22 +51,6 @@ public class ResetHotlineNumberRequest extends TeaModel {
     public static ResetHotlineNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetHotlineNumberRequest self = new ResetHotlineNumberRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ResetHotlineNumberRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ResetHotlineNumberRequest setHotlineNumber(String hotlineNumber) {
-        this.hotlineNumber = hotlineNumber;
-        return this;
-    }
-    public String getHotlineNumber() {
-        return this.hotlineNumber;
     }
 
     public ResetHotlineNumberRequest setDescription(String description) {
@@ -85,12 +69,12 @@ public class ResetHotlineNumberRequest extends TeaModel {
         return this.enableInbound;
     }
 
-    public ResetHotlineNumberRequest setInboundFlowId(Long inboundFlowId) {
-        this.inboundFlowId = inboundFlowId;
+    public ResetHotlineNumberRequest setEnableInboundEvaluation(Boolean enableInboundEvaluation) {
+        this.enableInboundEvaluation = enableInboundEvaluation;
         return this;
     }
-    public Long getInboundFlowId() {
-        return this.inboundFlowId;
+    public Boolean getEnableInboundEvaluation() {
+        return this.enableInboundEvaluation;
     }
 
     public ResetHotlineNumberRequest setEnableOutbound(Boolean enableOutbound) {
@@ -99,22 +83,6 @@ public class ResetHotlineNumberRequest extends TeaModel {
     }
     public Boolean getEnableOutbound() {
         return this.enableOutbound;
-    }
-
-    public ResetHotlineNumberRequest setOutboundAllDepart(Boolean outboundAllDepart) {
-        this.outboundAllDepart = outboundAllDepart;
-        return this;
-    }
-    public Boolean getOutboundAllDepart() {
-        return this.outboundAllDepart;
-    }
-
-    public ResetHotlineNumberRequest setEnableInboundEvaluation(Boolean enableInboundEvaluation) {
-        this.enableInboundEvaluation = enableInboundEvaluation;
-        return this;
-    }
-    public Boolean getEnableInboundEvaluation() {
-        return this.enableInboundEvaluation;
     }
 
     public ResetHotlineNumberRequest setEnableOutboundEvaluation(Boolean enableOutboundEvaluation) {
@@ -131,6 +99,38 @@ public class ResetHotlineNumberRequest extends TeaModel {
     }
     public Integer getEvaluationLevel() {
         return this.evaluationLevel;
+    }
+
+    public ResetHotlineNumberRequest setHotlineNumber(String hotlineNumber) {
+        this.hotlineNumber = hotlineNumber;
+        return this;
+    }
+    public String getHotlineNumber() {
+        return this.hotlineNumber;
+    }
+
+    public ResetHotlineNumberRequest setInboundFlowId(Long inboundFlowId) {
+        this.inboundFlowId = inboundFlowId;
+        return this;
+    }
+    public Long getInboundFlowId() {
+        return this.inboundFlowId;
+    }
+
+    public ResetHotlineNumberRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ResetHotlineNumberRequest setOutboundAllDepart(Boolean outboundAllDepart) {
+        this.outboundAllDepart = outboundAllDepart;
+        return this;
+    }
+    public Boolean getOutboundAllDepart() {
+        return this.outboundAllDepart;
     }
 
     public ResetHotlineNumberRequest setOutboundRangeList(java.util.List<ResetHotlineNumberRequestOutboundRangeList> outboundRangeList) {

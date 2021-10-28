@@ -4,6 +4,12 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetRecordUrlResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetRecordUrlResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,15 +17,25 @@ public class GetRecordUrlResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public GetRecordUrlResponseBodyData data;
-
     public static GetRecordUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRecordUrlResponseBody self = new GetRecordUrlResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetRecordUrlResponseBody setData(GetRecordUrlResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetRecordUrlResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetRecordUrlResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetRecordUrlResponseBody setRequestId(String requestId) {
@@ -36,22 +52,6 @@ public class GetRecordUrlResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetRecordUrlResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetRecordUrlResponseBody setData(GetRecordUrlResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetRecordUrlResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetRecordUrlResponseBodyData extends TeaModel {

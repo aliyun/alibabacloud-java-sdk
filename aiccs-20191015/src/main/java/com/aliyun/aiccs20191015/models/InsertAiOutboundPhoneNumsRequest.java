@@ -4,14 +4,6 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class InsertAiOutboundPhoneNumsRequest extends TeaModel {
-    // 实例ID
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    // 任务id
-    @NameInMap("TaskId")
-    public Long taskId;
-
     // 任务批次号（不填则导入到默认批次）
     @NameInMap("BatchVersion")
     public Integer batchVersion;
@@ -20,25 +12,17 @@ public class InsertAiOutboundPhoneNumsRequest extends TeaModel {
     @NameInMap("Details")
     public java.util.List<InsertAiOutboundPhoneNumsRequestDetails> details;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    // 任务id
+    @NameInMap("TaskId")
+    public Long taskId;
+
     public static InsertAiOutboundPhoneNumsRequest build(java.util.Map<String, ?> map) throws Exception {
         InsertAiOutboundPhoneNumsRequest self = new InsertAiOutboundPhoneNumsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public InsertAiOutboundPhoneNumsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public InsertAiOutboundPhoneNumsRequest setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
     }
 
     public InsertAiOutboundPhoneNumsRequest setBatchVersion(Integer batchVersion) {
@@ -55,6 +39,22 @@ public class InsertAiOutboundPhoneNumsRequest extends TeaModel {
     }
     public java.util.List<InsertAiOutboundPhoneNumsRequestDetails> getDetails() {
         return this.details;
+    }
+
+    public InsertAiOutboundPhoneNumsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public InsertAiOutboundPhoneNumsRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
     public static class InsertAiOutboundPhoneNumsRequestDetails extends TeaModel {

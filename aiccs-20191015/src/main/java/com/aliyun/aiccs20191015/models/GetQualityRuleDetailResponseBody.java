@@ -7,6 +7,9 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetQualityRuleDetailResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public GetQualityRuleDetailResponseBodyData data;
 
     public static GetQualityRuleDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetQualityRuleDetailResponseBody self = new GetQualityRuleDetailResponseBody();
@@ -30,6 +30,14 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetQualityRuleDetailResponseBody setData(GetQualityRuleDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetQualityRuleDetailResponseBodyData getData() {
+        return this.data;
     }
 
     public GetQualityRuleDetailResponseBody setMessage(String message) {
@@ -56,17 +64,9 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetQualityRuleDetailResponseBody setData(GetQualityRuleDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetQualityRuleDetailResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetQualityRuleDetailResponseBodyData extends TeaModel {
-        @NameInMap("RuleTag")
-        public Integer ruleTag;
+        @NameInMap("KeyWords")
+        public java.util.List<String> keyWords;
 
         @NameInMap("MatchType")
         public Integer matchType;
@@ -80,20 +80,20 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
         @NameInMap("RuleId")
         public Long ruleId;
 
-        @NameInMap("KeyWords")
-        public java.util.List<String> keyWords;
+        @NameInMap("RuleTag")
+        public Integer ruleTag;
 
         public static GetQualityRuleDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityRuleDetailResponseBodyData self = new GetQualityRuleDetailResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetQualityRuleDetailResponseBodyData setRuleTag(Integer ruleTag) {
-            this.ruleTag = ruleTag;
+        public GetQualityRuleDetailResponseBodyData setKeyWords(java.util.List<String> keyWords) {
+            this.keyWords = keyWords;
             return this;
         }
-        public Integer getRuleTag() {
-            return this.ruleTag;
+        public java.util.List<String> getKeyWords() {
+            return this.keyWords;
         }
 
         public GetQualityRuleDetailResponseBodyData setMatchType(Integer matchType) {
@@ -128,12 +128,12 @@ public class GetQualityRuleDetailResponseBody extends TeaModel {
             return this.ruleId;
         }
 
-        public GetQualityRuleDetailResponseBodyData setKeyWords(java.util.List<String> keyWords) {
-            this.keyWords = keyWords;
+        public GetQualityRuleDetailResponseBodyData setRuleTag(Integer ruleTag) {
+            this.ruleTag = ruleTag;
             return this;
         }
-        public java.util.List<String> getKeyWords() {
-            return this.keyWords;
+        public Integer getRuleTag() {
+            return this.ruleTag;
         }
 
     }

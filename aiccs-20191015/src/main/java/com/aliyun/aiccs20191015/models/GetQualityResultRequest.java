@@ -4,6 +4,15 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityResultRequest extends TeaModel {
+    @NameInMap("ChannelType")
+    public String channelType;
+
+    @NameInMap("GroupIds")
+    public java.util.List<Long> groupIds;
+
+    @NameInMap("HitStatus")
+    public Integer hitStatus;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,30 +22,45 @@ public class GetQualityResultRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("TouchStartTime")
-    public String touchStartTime;
-
-    @NameInMap("TouchEndTime")
-    public String touchEndTime;
-
-    @NameInMap("ChannelType")
-    public String channelType;
-
-    @NameInMap("HitStatus")
-    public Integer hitStatus;
-
-    @NameInMap("GroupIds")
-    public java.util.List<Long> groupIds;
+    @NameInMap("ProjectIds")
+    public java.util.List<Long> projectIds;
 
     @NameInMap("QualityRuleIds")
     public java.util.List<Long> qualityRuleIds;
 
-    @NameInMap("ProjectIds")
-    public java.util.List<Long> projectIds;
+    @NameInMap("TouchEndTime")
+    public String touchEndTime;
+
+    @NameInMap("TouchStartTime")
+    public String touchStartTime;
 
     public static GetQualityResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetQualityResultRequest self = new GetQualityResultRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetQualityResultRequest setChannelType(String channelType) {
+        this.channelType = channelType;
+        return this;
+    }
+    public String getChannelType() {
+        return this.channelType;
+    }
+
+    public GetQualityResultRequest setGroupIds(java.util.List<Long> groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
+    public java.util.List<Long> getGroupIds() {
+        return this.groupIds;
+    }
+
+    public GetQualityResultRequest setHitStatus(Integer hitStatus) {
+        this.hitStatus = hitStatus;
+        return this;
+    }
+    public Integer getHitStatus() {
+        return this.hitStatus;
     }
 
     public GetQualityResultRequest setInstanceId(String instanceId) {
@@ -63,44 +87,12 @@ public class GetQualityResultRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetQualityResultRequest setTouchStartTime(String touchStartTime) {
-        this.touchStartTime = touchStartTime;
+    public GetQualityResultRequest setProjectIds(java.util.List<Long> projectIds) {
+        this.projectIds = projectIds;
         return this;
     }
-    public String getTouchStartTime() {
-        return this.touchStartTime;
-    }
-
-    public GetQualityResultRequest setTouchEndTime(String touchEndTime) {
-        this.touchEndTime = touchEndTime;
-        return this;
-    }
-    public String getTouchEndTime() {
-        return this.touchEndTime;
-    }
-
-    public GetQualityResultRequest setChannelType(String channelType) {
-        this.channelType = channelType;
-        return this;
-    }
-    public String getChannelType() {
-        return this.channelType;
-    }
-
-    public GetQualityResultRequest setHitStatus(Integer hitStatus) {
-        this.hitStatus = hitStatus;
-        return this;
-    }
-    public Integer getHitStatus() {
-        return this.hitStatus;
-    }
-
-    public GetQualityResultRequest setGroupIds(java.util.List<Long> groupIds) {
-        this.groupIds = groupIds;
-        return this;
-    }
-    public java.util.List<Long> getGroupIds() {
-        return this.groupIds;
+    public java.util.List<Long> getProjectIds() {
+        return this.projectIds;
     }
 
     public GetQualityResultRequest setQualityRuleIds(java.util.List<Long> qualityRuleIds) {
@@ -111,12 +103,20 @@ public class GetQualityResultRequest extends TeaModel {
         return this.qualityRuleIds;
     }
 
-    public GetQualityResultRequest setProjectIds(java.util.List<Long> projectIds) {
-        this.projectIds = projectIds;
+    public GetQualityResultRequest setTouchEndTime(String touchEndTime) {
+        this.touchEndTime = touchEndTime;
         return this;
     }
-    public java.util.List<Long> getProjectIds() {
-        return this.projectIds;
+    public String getTouchEndTime() {
+        return this.touchEndTime;
+    }
+
+    public GetQualityResultRequest setTouchStartTime(String touchStartTime) {
+        this.touchStartTime = touchStartTime;
+        return this;
+    }
+    public String getTouchStartTime() {
+        return this.touchStartTime;
     }
 
 }

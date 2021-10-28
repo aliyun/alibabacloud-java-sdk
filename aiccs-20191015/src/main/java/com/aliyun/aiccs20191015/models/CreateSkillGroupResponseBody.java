@@ -4,17 +4,17 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class CreateSkillGroupResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public Long data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public Long data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     public static CreateSkillGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSkillGroupResponseBody self = new CreateSkillGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSkillGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateSkillGroupResponseBody setData(Long data) {
+        this.data = data;
+        return this;
+    }
+    public Long getData() {
+        return this.data;
     }
 
     public CreateSkillGroupResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class CreateSkillGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateSkillGroupResponseBody setData(Long data) {
-        this.data = data;
-        return this;
-    }
-    public Long getData() {
-        return this.data;
-    }
-
-    public CreateSkillGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CreateSkillGroupResponseBody setSuccess(Boolean success) {

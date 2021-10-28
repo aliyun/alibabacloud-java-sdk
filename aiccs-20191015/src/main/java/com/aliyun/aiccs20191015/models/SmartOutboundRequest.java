@@ -7,17 +7,17 @@ public class SmartOutboundRequest extends TeaModel {
     @NameInMap("AppKey")
     public String appKey;
 
+    @NameInMap("Called")
+    public String called;
+
+    @NameInMap("Calling")
+    public String calling;
+
     @NameInMap("TemplateId")
     public Long templateId;
 
     @NameInMap("TenantId")
     public Long tenantId;
-
-    @NameInMap("Calling")
-    public String calling;
-
-    @NameInMap("Called")
-    public String called;
 
     public static SmartOutboundRequest build(java.util.Map<String, ?> map) throws Exception {
         SmartOutboundRequest self = new SmartOutboundRequest();
@@ -30,6 +30,22 @@ public class SmartOutboundRequest extends TeaModel {
     }
     public String getAppKey() {
         return this.appKey;
+    }
+
+    public SmartOutboundRequest setCalled(String called) {
+        this.called = called;
+        return this;
+    }
+    public String getCalled() {
+        return this.called;
+    }
+
+    public SmartOutboundRequest setCalling(String calling) {
+        this.calling = calling;
+        return this;
+    }
+    public String getCalling() {
+        return this.calling;
     }
 
     public SmartOutboundRequest setTemplateId(Long templateId) {
@@ -46,22 +62,6 @@ public class SmartOutboundRequest extends TeaModel {
     }
     public Long getTenantId() {
         return this.tenantId;
-    }
-
-    public SmartOutboundRequest setCalling(String calling) {
-        this.calling = calling;
-        return this;
-    }
-    public String getCalling() {
-        return this.calling;
-    }
-
-    public SmartOutboundRequest setCalled(String called) {
-        this.called = called;
-        return this;
-    }
-    public String getCalled() {
-        return this.called;
     }
 
 }

@@ -7,6 +7,9 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetHotlineCallActionResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public GetHotlineCallActionResponseBodyData data;
 
     public static GetHotlineCallActionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineCallActionResponseBody self = new GetHotlineCallActionResponseBody();
@@ -30,6 +30,14 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetHotlineCallActionResponseBody setData(GetHotlineCallActionResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetHotlineCallActionResponseBodyData getData() {
+        return this.data;
     }
 
     public GetHotlineCallActionResponseBody setMessage(String message) {
@@ -56,41 +64,9 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetHotlineCallActionResponseBody setData(GetHotlineCallActionResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetHotlineCallActionResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetHotlineCallActionResponseBodyData extends TeaModel {
-        @NameInMap("TouchId")
-        public Long touchId;
-
-        @NameInMap("DepId")
-        public Long depId;
-
-        @NameInMap("ServicerName")
-        public String servicerName;
-
-        @NameInMap("MemberName")
-        public String memberName;
-
-        @NameInMap("ChannelType")
-        public Long channelType;
-
-        @NameInMap("SubTouchId")
-        public Long subTouchId;
-
-        @NameInMap("CalloutName")
-        public String calloutName;
-
         @NameInMap("ActionId")
         public Long actionId;
-
-        @NameInMap("ServicerId")
-        public Long servicerId;
 
         @NameInMap("BuId")
         public Long buId;
@@ -98,11 +74,20 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         @NameInMap("CalloutId")
         public Long calloutId;
 
+        @NameInMap("CalloutName")
+        public String calloutName;
+
         @NameInMap("CaseId")
         public Long caseId;
 
         @NameInMap("ChannelId")
         public String channelId;
+
+        @NameInMap("ChannelType")
+        public Long channelType;
+
+        @NameInMap("DepId")
+        public Long depId;
 
         @NameInMap("IsTransfer")
         public String isTransfer;
@@ -110,71 +95,30 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         @NameInMap("MemberId")
         public Long memberId;
 
+        @NameInMap("MemberList")
+        public String memberList;
+
+        @NameInMap("MemberName")
+        public String memberName;
+
+        @NameInMap("ServicerId")
+        public Long servicerId;
+
+        @NameInMap("ServicerName")
+        public String servicerName;
+
+        @NameInMap("SubTouchId")
+        public Long subTouchId;
+
         @NameInMap("TaskId")
         public Long taskId;
 
-        @NameInMap("MemberList")
-        public String memberList;
+        @NameInMap("TouchId")
+        public Long touchId;
 
         public static GetHotlineCallActionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetHotlineCallActionResponseBodyData self = new GetHotlineCallActionResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetHotlineCallActionResponseBodyData setTouchId(Long touchId) {
-            this.touchId = touchId;
-            return this;
-        }
-        public Long getTouchId() {
-            return this.touchId;
-        }
-
-        public GetHotlineCallActionResponseBodyData setDepId(Long depId) {
-            this.depId = depId;
-            return this;
-        }
-        public Long getDepId() {
-            return this.depId;
-        }
-
-        public GetHotlineCallActionResponseBodyData setServicerName(String servicerName) {
-            this.servicerName = servicerName;
-            return this;
-        }
-        public String getServicerName() {
-            return this.servicerName;
-        }
-
-        public GetHotlineCallActionResponseBodyData setMemberName(String memberName) {
-            this.memberName = memberName;
-            return this;
-        }
-        public String getMemberName() {
-            return this.memberName;
-        }
-
-        public GetHotlineCallActionResponseBodyData setChannelType(Long channelType) {
-            this.channelType = channelType;
-            return this;
-        }
-        public Long getChannelType() {
-            return this.channelType;
-        }
-
-        public GetHotlineCallActionResponseBodyData setSubTouchId(Long subTouchId) {
-            this.subTouchId = subTouchId;
-            return this;
-        }
-        public Long getSubTouchId() {
-            return this.subTouchId;
-        }
-
-        public GetHotlineCallActionResponseBodyData setCalloutName(String calloutName) {
-            this.calloutName = calloutName;
-            return this;
-        }
-        public String getCalloutName() {
-            return this.calloutName;
         }
 
         public GetHotlineCallActionResponseBodyData setActionId(Long actionId) {
@@ -183,14 +127,6 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         }
         public Long getActionId() {
             return this.actionId;
-        }
-
-        public GetHotlineCallActionResponseBodyData setServicerId(Long servicerId) {
-            this.servicerId = servicerId;
-            return this;
-        }
-        public Long getServicerId() {
-            return this.servicerId;
         }
 
         public GetHotlineCallActionResponseBodyData setBuId(Long buId) {
@@ -209,6 +145,14 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             return this.calloutId;
         }
 
+        public GetHotlineCallActionResponseBodyData setCalloutName(String calloutName) {
+            this.calloutName = calloutName;
+            return this;
+        }
+        public String getCalloutName() {
+            return this.calloutName;
+        }
+
         public GetHotlineCallActionResponseBodyData setCaseId(Long caseId) {
             this.caseId = caseId;
             return this;
@@ -223,6 +167,22 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
         }
         public String getChannelId() {
             return this.channelId;
+        }
+
+        public GetHotlineCallActionResponseBodyData setChannelType(Long channelType) {
+            this.channelType = channelType;
+            return this;
+        }
+        public Long getChannelType() {
+            return this.channelType;
+        }
+
+        public GetHotlineCallActionResponseBodyData setDepId(Long depId) {
+            this.depId = depId;
+            return this;
+        }
+        public Long getDepId() {
+            return this.depId;
         }
 
         public GetHotlineCallActionResponseBodyData setIsTransfer(String isTransfer) {
@@ -241,6 +201,46 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             return this.memberId;
         }
 
+        public GetHotlineCallActionResponseBodyData setMemberList(String memberList) {
+            this.memberList = memberList;
+            return this;
+        }
+        public String getMemberList() {
+            return this.memberList;
+        }
+
+        public GetHotlineCallActionResponseBodyData setMemberName(String memberName) {
+            this.memberName = memberName;
+            return this;
+        }
+        public String getMemberName() {
+            return this.memberName;
+        }
+
+        public GetHotlineCallActionResponseBodyData setServicerId(Long servicerId) {
+            this.servicerId = servicerId;
+            return this;
+        }
+        public Long getServicerId() {
+            return this.servicerId;
+        }
+
+        public GetHotlineCallActionResponseBodyData setServicerName(String servicerName) {
+            this.servicerName = servicerName;
+            return this;
+        }
+        public String getServicerName() {
+            return this.servicerName;
+        }
+
+        public GetHotlineCallActionResponseBodyData setSubTouchId(Long subTouchId) {
+            this.subTouchId = subTouchId;
+            return this;
+        }
+        public Long getSubTouchId() {
+            return this.subTouchId;
+        }
+
         public GetHotlineCallActionResponseBodyData setTaskId(Long taskId) {
             this.taskId = taskId;
             return this;
@@ -249,12 +249,12 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public GetHotlineCallActionResponseBodyData setMemberList(String memberList) {
-            this.memberList = memberList;
+        public GetHotlineCallActionResponseBodyData setTouchId(Long touchId) {
+            this.touchId = touchId;
             return this;
         }
-        public String getMemberList() {
-            return this.memberList;
+        public Long getTouchId() {
+            return this.touchId;
         }
 
     }

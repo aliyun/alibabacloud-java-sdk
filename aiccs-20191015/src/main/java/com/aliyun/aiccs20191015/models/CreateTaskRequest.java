@@ -4,6 +4,15 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
+    @NameInMap("CallString")
+    public String callString;
+
+    @NameInMap("CallStringType")
+    public String callStringType;
+
+    @NameInMap("Caller")
+    public String caller;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,26 +22,11 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TaskName")
-    public String taskName;
-
-    @NameInMap("RobotId")
-    public String robotId;
-
-    @NameInMap("Caller")
-    public String caller;
-
-    @NameInMap("CallString")
-    public String callString;
-
-    @NameInMap("CallStringType")
-    public String callStringType;
+    @NameInMap("RetryCount")
+    public Integer retryCount;
 
     @NameInMap("RetryFlag")
     public Integer retryFlag;
-
-    @NameInMap("RetryCount")
-    public Integer retryCount;
 
     @NameInMap("RetryInterval")
     public Integer retryInterval;
@@ -40,21 +34,51 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("RetryStatusCode")
     public String retryStatusCode;
 
-    @NameInMap("StartNow")
-    public Boolean startNow;
-
-    @NameInMap("WorkTimeList")
-    public String workTimeList;
-
-    @NameInMap("WorkDay")
-    public String workDay;
+    @NameInMap("RobotId")
+    public String robotId;
 
     @NameInMap("SeatCount")
     public String seatCount;
 
+    @NameInMap("StartNow")
+    public Boolean startNow;
+
+    @NameInMap("TaskName")
+    public String taskName;
+
+    @NameInMap("WorkDay")
+    public String workDay;
+
+    @NameInMap("WorkTimeList")
+    public String workTimeList;
+
     public static CreateTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskRequest self = new CreateTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTaskRequest setCallString(String callString) {
+        this.callString = callString;
+        return this;
+    }
+    public String getCallString() {
+        return this.callString;
+    }
+
+    public CreateTaskRequest setCallStringType(String callStringType) {
+        this.callStringType = callStringType;
+        return this;
+    }
+    public String getCallStringType() {
+        return this.callStringType;
+    }
+
+    public CreateTaskRequest setCaller(String caller) {
+        this.caller = caller;
+        return this;
+    }
+    public String getCaller() {
+        return this.caller;
     }
 
     public CreateTaskRequest setOwnerId(Long ownerId) {
@@ -81,44 +105,12 @@ public class CreateTaskRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateTaskRequest setTaskName(String taskName) {
-        this.taskName = taskName;
+    public CreateTaskRequest setRetryCount(Integer retryCount) {
+        this.retryCount = retryCount;
         return this;
     }
-    public String getTaskName() {
-        return this.taskName;
-    }
-
-    public CreateTaskRequest setRobotId(String robotId) {
-        this.robotId = robotId;
-        return this;
-    }
-    public String getRobotId() {
-        return this.robotId;
-    }
-
-    public CreateTaskRequest setCaller(String caller) {
-        this.caller = caller;
-        return this;
-    }
-    public String getCaller() {
-        return this.caller;
-    }
-
-    public CreateTaskRequest setCallString(String callString) {
-        this.callString = callString;
-        return this;
-    }
-    public String getCallString() {
-        return this.callString;
-    }
-
-    public CreateTaskRequest setCallStringType(String callStringType) {
-        this.callStringType = callStringType;
-        return this;
-    }
-    public String getCallStringType() {
-        return this.callStringType;
+    public Integer getRetryCount() {
+        return this.retryCount;
     }
 
     public CreateTaskRequest setRetryFlag(Integer retryFlag) {
@@ -127,14 +119,6 @@ public class CreateTaskRequest extends TeaModel {
     }
     public Integer getRetryFlag() {
         return this.retryFlag;
-    }
-
-    public CreateTaskRequest setRetryCount(Integer retryCount) {
-        this.retryCount = retryCount;
-        return this;
-    }
-    public Integer getRetryCount() {
-        return this.retryCount;
     }
 
     public CreateTaskRequest setRetryInterval(Integer retryInterval) {
@@ -153,6 +137,22 @@ public class CreateTaskRequest extends TeaModel {
         return this.retryStatusCode;
     }
 
+    public CreateTaskRequest setRobotId(String robotId) {
+        this.robotId = robotId;
+        return this;
+    }
+    public String getRobotId() {
+        return this.robotId;
+    }
+
+    public CreateTaskRequest setSeatCount(String seatCount) {
+        this.seatCount = seatCount;
+        return this;
+    }
+    public String getSeatCount() {
+        return this.seatCount;
+    }
+
     public CreateTaskRequest setStartNow(Boolean startNow) {
         this.startNow = startNow;
         return this;
@@ -161,12 +161,12 @@ public class CreateTaskRequest extends TeaModel {
         return this.startNow;
     }
 
-    public CreateTaskRequest setWorkTimeList(String workTimeList) {
-        this.workTimeList = workTimeList;
+    public CreateTaskRequest setTaskName(String taskName) {
+        this.taskName = taskName;
         return this;
     }
-    public String getWorkTimeList() {
-        return this.workTimeList;
+    public String getTaskName() {
+        return this.taskName;
     }
 
     public CreateTaskRequest setWorkDay(String workDay) {
@@ -177,12 +177,12 @@ public class CreateTaskRequest extends TeaModel {
         return this.workDay;
     }
 
-    public CreateTaskRequest setSeatCount(String seatCount) {
-        this.seatCount = seatCount;
+    public CreateTaskRequest setWorkTimeList(String workTimeList) {
+        this.workTimeList = workTimeList;
         return this;
     }
-    public String getSeatCount() {
-        return this.seatCount;
+    public String getWorkTimeList() {
+        return this.workTimeList;
     }
 
 }

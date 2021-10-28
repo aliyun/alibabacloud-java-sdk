@@ -4,18 +4,26 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineRecordRequest extends TeaModel {
+    @NameInMap("CallId")
+    public String callId;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("CallId")
-    public String callId;
-
     public static ListHotlineRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHotlineRecordRequest self = new ListHotlineRecordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListHotlineRecordRequest setCallId(String callId) {
+        this.callId = callId;
+        return this;
+    }
+    public String getCallId() {
+        return this.callId;
     }
 
     public ListHotlineRecordRequest setClientToken(String clientToken) {
@@ -32,14 +40,6 @@ public class ListHotlineRecordRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListHotlineRecordRequest setCallId(String callId) {
-        this.callId = callId;
-        return this;
-    }
-    public String getCallId() {
-        return this.callId;
     }
 
 }

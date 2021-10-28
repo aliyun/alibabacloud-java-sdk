@@ -7,11 +7,11 @@ public class ChangeQualityProjectStatusRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Status")
-    public Integer status;
-
     @NameInMap("ProjectId")
     public Long projectId;
+
+    @NameInMap("Status")
+    public Integer status;
 
     public static ChangeQualityProjectStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeQualityProjectStatusRequest self = new ChangeQualityProjectStatusRequest();
@@ -26,20 +26,20 @@ public class ChangeQualityProjectStatusRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ChangeQualityProjectStatusRequest setStatus(Integer status) {
-        this.status = status;
-        return this;
-    }
-    public Integer getStatus() {
-        return this.status;
-    }
-
     public ChangeQualityProjectStatusRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public ChangeQualityProjectStatusRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

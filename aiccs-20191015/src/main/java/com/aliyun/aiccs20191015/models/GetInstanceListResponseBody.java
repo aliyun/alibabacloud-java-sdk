@@ -4,8 +4,23 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("CommodityInstances")
+    public java.util.List<GetInstanceListResponseBodyCommodityInstances> commodityInstances;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,27 +28,28 @@ public class GetInstanceListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("CommodityInstances")
-    public java.util.List<GetInstanceListResponseBodyCommodityInstances> commodityInstances;
 
     public static GetInstanceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceListResponseBody self = new GetInstanceListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetInstanceListResponseBody setCommodityInstances(java.util.List<GetInstanceListResponseBodyCommodityInstances> commodityInstances) {
+        this.commodityInstances = commodityInstances;
+        return this;
+    }
+    public java.util.List<GetInstanceListResponseBodyCommodityInstances> getCommodityInstances() {
+        return this.commodityInstances;
     }
 
     public GetInstanceListResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -42,6 +58,30 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public GetInstanceListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetInstanceListResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public GetInstanceListResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public GetInstanceListResponseBody setRequestId(String requestId) {
@@ -60,38 +100,6 @@ public class GetInstanceListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetInstanceListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetInstanceListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetInstanceListResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public GetInstanceListResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
     public GetInstanceListResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -100,32 +108,16 @@ public class GetInstanceListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public GetInstanceListResponseBody setCommodityInstances(java.util.List<GetInstanceListResponseBodyCommodityInstances> commodityInstances) {
-        this.commodityInstances = commodityInstances;
-        return this;
-    }
-    public java.util.List<GetInstanceListResponseBodyCommodityInstances> getCommodityInstances() {
-        return this.commodityInstances;
-    }
-
     public static class GetInstanceListResponseBodyCommodityInstances extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Name")
+        public String name;
 
         public static GetInstanceListResponseBodyCommodityInstances build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceListResponseBodyCommodityInstances self = new GetInstanceListResponseBodyCommodityInstances();
             return TeaModel.build(map, self);
-        }
-
-        public GetInstanceListResponseBodyCommodityInstances setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public GetInstanceListResponseBodyCommodityInstances setInstanceId(String instanceId) {
@@ -134,6 +126,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetInstanceListResponseBodyCommodityInstances setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

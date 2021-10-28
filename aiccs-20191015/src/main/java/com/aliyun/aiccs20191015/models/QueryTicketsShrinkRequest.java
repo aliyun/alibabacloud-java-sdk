@@ -4,23 +4,14 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketsShrinkRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("CaseId")
     public Long caseId;
-
-    @NameInMap("CaseType")
-    public Integer caseType;
 
     @NameInMap("CaseStatus")
     public Integer caseStatus;
 
-    @NameInMap("SrType")
-    public Long srType;
-
-    @NameInMap("TaskStatus")
-    public Integer taskStatus;
+    @NameInMap("CaseType")
+    public Integer caseType;
 
     @NameInMap("ChannelId")
     public String channelId;
@@ -28,8 +19,8 @@ public class QueryTicketsShrinkRequest extends TeaModel {
     @NameInMap("ChannelType")
     public Integer channelType;
 
-    @NameInMap("TouchId")
-    public Long touchId;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("DealId")
     public Long dealId;
@@ -37,23 +28,24 @@ public class QueryTicketsShrinkRequest extends TeaModel {
     @NameInMap("Extra")
     public String extraShrink;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("SrType")
+    public Long srType;
+
+    @NameInMap("TaskStatus")
+    public Integer taskStatus;
+
+    @NameInMap("TouchId")
+    public Long touchId;
 
     public static QueryTicketsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTicketsShrinkRequest self = new QueryTicketsShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryTicketsShrinkRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public QueryTicketsShrinkRequest setCaseId(Long caseId) {
@@ -64,14 +56,6 @@ public class QueryTicketsShrinkRequest extends TeaModel {
         return this.caseId;
     }
 
-    public QueryTicketsShrinkRequest setCaseType(Integer caseType) {
-        this.caseType = caseType;
-        return this;
-    }
-    public Integer getCaseType() {
-        return this.caseType;
-    }
-
     public QueryTicketsShrinkRequest setCaseStatus(Integer caseStatus) {
         this.caseStatus = caseStatus;
         return this;
@@ -80,20 +64,12 @@ public class QueryTicketsShrinkRequest extends TeaModel {
         return this.caseStatus;
     }
 
-    public QueryTicketsShrinkRequest setSrType(Long srType) {
-        this.srType = srType;
+    public QueryTicketsShrinkRequest setCaseType(Integer caseType) {
+        this.caseType = caseType;
         return this;
     }
-    public Long getSrType() {
-        return this.srType;
-    }
-
-    public QueryTicketsShrinkRequest setTaskStatus(Integer taskStatus) {
-        this.taskStatus = taskStatus;
-        return this;
-    }
-    public Integer getTaskStatus() {
-        return this.taskStatus;
+    public Integer getCaseType() {
+        return this.caseType;
     }
 
     public QueryTicketsShrinkRequest setChannelId(String channelId) {
@@ -112,12 +88,12 @@ public class QueryTicketsShrinkRequest extends TeaModel {
         return this.channelType;
     }
 
-    public QueryTicketsShrinkRequest setTouchId(Long touchId) {
-        this.touchId = touchId;
+    public QueryTicketsShrinkRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public Long getTouchId() {
-        return this.touchId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public QueryTicketsShrinkRequest setDealId(Long dealId) {
@@ -136,6 +112,14 @@ public class QueryTicketsShrinkRequest extends TeaModel {
         return this.extraShrink;
     }
 
+    public QueryTicketsShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public QueryTicketsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -144,12 +128,28 @@ public class QueryTicketsShrinkRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public QueryTicketsShrinkRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public QueryTicketsShrinkRequest setSrType(Long srType) {
+        this.srType = srType;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public Long getSrType() {
+        return this.srType;
+    }
+
+    public QueryTicketsShrinkRequest setTaskStatus(Integer taskStatus) {
+        this.taskStatus = taskStatus;
+        return this;
+    }
+    public Integer getTaskStatus() {
+        return this.taskStatus;
+    }
+
+    public QueryTicketsShrinkRequest setTouchId(Long touchId) {
+        this.touchId = touchId;
+        return this;
+    }
+    public Long getTouchId() {
+        return this.touchId;
     }
 
 }

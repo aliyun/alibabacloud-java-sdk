@@ -8,6 +8,14 @@ public class GetQualityProjectListRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // PageNo
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    // PageSize
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     // 质检项ID
     @NameInMap("ProjectId")
     public Long projectId;
@@ -19,14 +27,6 @@ public class GetQualityProjectListRequest extends TeaModel {
     // 质检项状态
     @NameInMap("Status")
     public Integer status;
-
-    // PageNo
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    // PageSize
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     // 质检频率
     @NameInMap("checkFreqType")
@@ -43,6 +43,22 @@ public class GetQualityProjectListRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetQualityProjectListRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    public GetQualityProjectListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public GetQualityProjectListRequest setProjectId(Long projectId) {
@@ -67,22 +83,6 @@ public class GetQualityProjectListRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
-    }
-
-    public GetQualityProjectListRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Integer getPageNo() {
-        return this.pageNo;
-    }
-
-    public GetQualityProjectListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public GetQualityProjectListRequest setCheckFreqType(Long checkFreqType) {

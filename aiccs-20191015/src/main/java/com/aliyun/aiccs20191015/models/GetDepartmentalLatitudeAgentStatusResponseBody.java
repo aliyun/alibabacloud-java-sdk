@@ -4,6 +4,14 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetDepartmentalLatitudeAgentStatusResponseBody extends TeaModel {
+    // 错误编码
+    @NameInMap("Code")
+    public String code;
+
+    // 数据
+    @NameInMap("Data")
+    public GetDepartmentalLatitudeAgentStatusResponseBodyData data;
+
     // 错误描述
     @NameInMap("Message")
     public String message;
@@ -12,14 +20,6 @@ public class GetDepartmentalLatitudeAgentStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // 数据
-    @NameInMap("Data")
-    public GetDepartmentalLatitudeAgentStatusResponseBodyData data;
-
-    // 错误编码
-    @NameInMap("Code")
-    public String code;
-
     // 接口调用是否成功
     @NameInMap("Success")
     public Boolean success;
@@ -27,6 +27,22 @@ public class GetDepartmentalLatitudeAgentStatusResponseBody extends TeaModel {
     public static GetDepartmentalLatitudeAgentStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDepartmentalLatitudeAgentStatusResponseBody self = new GetDepartmentalLatitudeAgentStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetDepartmentalLatitudeAgentStatusResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetDepartmentalLatitudeAgentStatusResponseBody setData(GetDepartmentalLatitudeAgentStatusResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetDepartmentalLatitudeAgentStatusResponseBodyData getData() {
+        return this.data;
     }
 
     public GetDepartmentalLatitudeAgentStatusResponseBody setMessage(String message) {
@@ -43,22 +59,6 @@ public class GetDepartmentalLatitudeAgentStatusResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetDepartmentalLatitudeAgentStatusResponseBody setData(GetDepartmentalLatitudeAgentStatusResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetDepartmentalLatitudeAgentStatusResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetDepartmentalLatitudeAgentStatusResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetDepartmentalLatitudeAgentStatusResponseBody setSuccess(Boolean success) {
@@ -78,13 +78,13 @@ public class GetDepartmentalLatitudeAgentStatusResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // 总共记录数
-        @NameInMap("TotalNum")
-        public Integer totalNum;
-
         // 信息为list<map>类型的json字符串
         @NameInMap("Rows")
         public String rows;
+
+        // 总共记录数
+        @NameInMap("TotalNum")
+        public Integer totalNum;
 
         public static GetDepartmentalLatitudeAgentStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDepartmentalLatitudeAgentStatusResponseBodyData self = new GetDepartmentalLatitudeAgentStatusResponseBodyData();
@@ -107,20 +107,20 @@ public class GetDepartmentalLatitudeAgentStatusResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public GetDepartmentalLatitudeAgentStatusResponseBodyData setTotalNum(Integer totalNum) {
-            this.totalNum = totalNum;
-            return this;
-        }
-        public Integer getTotalNum() {
-            return this.totalNum;
-        }
-
         public GetDepartmentalLatitudeAgentStatusResponseBodyData setRows(String rows) {
             this.rows = rows;
             return this;
         }
         public String getRows() {
             return this.rows;
+        }
+
+        public GetDepartmentalLatitudeAgentStatusResponseBodyData setTotalNum(Integer totalNum) {
+            this.totalNum = totalNum;
+            return this;
+        }
+        public Integer getTotalNum() {
+            return this.totalNum;
         }
 
     }

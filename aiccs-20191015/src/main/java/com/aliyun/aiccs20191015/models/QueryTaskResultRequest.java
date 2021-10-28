@@ -12,10 +12,6 @@ public class QueryTaskResultRequest extends TeaModel {
     @NameInMap("Operator")
     public String operator;
 
-    // token
-    @NameInMap("Token")
-    public String token;
-
     // param1
     @NameInMap("Param1")
     public String param1;
@@ -23,6 +19,10 @@ public class QueryTaskResultRequest extends TeaModel {
     // requestId
     @NameInMap("RequestId")
     public String requestId;
+
+    // token
+    @NameInMap("Token")
+    public String token;
 
     public static QueryTaskResultRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskResultRequest self = new QueryTaskResultRequest();
@@ -45,14 +45,6 @@ public class QueryTaskResultRequest extends TeaModel {
         return this.operator;
     }
 
-    public QueryTaskResultRequest setToken(String token) {
-        this.token = token;
-        return this;
-    }
-    public String getToken() {
-        return this.token;
-    }
-
     public QueryTaskResultRequest setParam1(String param1) {
         this.param1 = param1;
         return this;
@@ -67,6 +59,14 @@ public class QueryTaskResultRequest extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QueryTaskResultRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
 }

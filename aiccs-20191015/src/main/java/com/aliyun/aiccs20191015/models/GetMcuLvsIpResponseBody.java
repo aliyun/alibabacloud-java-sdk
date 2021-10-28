@@ -4,6 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetMcuLvsIpResponseBody extends TeaModel {
+    // error code
+    @NameInMap("Code")
+    public String code;
+
+    // result data
+    @NameInMap("Data")
+    public String data;
+
+    // error message
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -12,21 +24,33 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // error code
-    @NameInMap("Code")
-    public String code;
-
-    // error message
-    @NameInMap("Message")
-    public String message;
-
-    // result data
-    @NameInMap("Data")
-    public String data;
-
     public static GetMcuLvsIpResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMcuLvsIpResponseBody self = new GetMcuLvsIpResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMcuLvsIpResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetMcuLvsIpResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public GetMcuLvsIpResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetMcuLvsIpResponseBody setRequestId(String requestId) {
@@ -43,30 +67,6 @@ public class GetMcuLvsIpResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetMcuLvsIpResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetMcuLvsIpResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetMcuLvsIpResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
 }

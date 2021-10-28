@@ -4,43 +4,27 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class AnswerCallRequest extends TeaModel {
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("AccountName")
     public String accountName;
 
     @NameInMap("CallId")
     public String callId;
 
-    @NameInMap("JobId")
-    public String jobId;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     @NameInMap("ConnectionId")
     public String connectionId;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("JobId")
+    public String jobId;
+
     public static AnswerCallRequest build(java.util.Map<String, ?> map) throws Exception {
         AnswerCallRequest self = new AnswerCallRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AnswerCallRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    public AnswerCallRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public AnswerCallRequest setAccountName(String accountName) {
@@ -59,12 +43,12 @@ public class AnswerCallRequest extends TeaModel {
         return this.callId;
     }
 
-    public AnswerCallRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public AnswerCallRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public AnswerCallRequest setConnectionId(String connectionId) {
@@ -73,6 +57,22 @@ public class AnswerCallRequest extends TeaModel {
     }
     public String getConnectionId() {
         return this.connectionId;
+    }
+
+    public AnswerCallRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public AnswerCallRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }

@@ -4,6 +4,21 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class EditQualityProjectRequest extends TeaModel {
+    @NameInMap("AnalysisIds")
+    public java.util.List<Long> analysisIds;
+
+    @NameInMap("ChannelTouchType")
+    public java.util.List<Integer> channelTouchType;
+
+    @NameInMap("CheckFreqType")
+    public Integer checkFreqType;
+
+    @NameInMap("DepList")
+    public java.util.List<Long> depList;
+
+    @NameInMap("GroupList")
+    public java.util.List<Long> groupList;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,39 +28,64 @@ public class EditQualityProjectRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
-    @NameInMap("CheckFreqType")
-    public Integer checkFreqType;
-
     @NameInMap("ProjectVersion")
     public Integer projectVersion;
 
     @NameInMap("ScopeType")
     public Integer scopeType;
 
-    @NameInMap("TimeRangeStart")
-    public String timeRangeStart;
+    @NameInMap("ServicerList")
+    public java.util.List<String> servicerList;
 
     @NameInMap("TimeRangeEnd")
     public String timeRangeEnd;
 
-    @NameInMap("AnalysisIds")
-    public java.util.List<Long> analysisIds;
-
-    @NameInMap("DepList")
-    public java.util.List<Long> depList;
-
-    @NameInMap("GroupList")
-    public java.util.List<Long> groupList;
-
-    @NameInMap("ServicerList")
-    public java.util.List<String> servicerList;
-
-    @NameInMap("ChannelTouchType")
-    public java.util.List<Integer> channelTouchType;
+    @NameInMap("TimeRangeStart")
+    public String timeRangeStart;
 
     public static EditQualityProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         EditQualityProjectRequest self = new EditQualityProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EditQualityProjectRequest setAnalysisIds(java.util.List<Long> analysisIds) {
+        this.analysisIds = analysisIds;
+        return this;
+    }
+    public java.util.List<Long> getAnalysisIds() {
+        return this.analysisIds;
+    }
+
+    public EditQualityProjectRequest setChannelTouchType(java.util.List<Integer> channelTouchType) {
+        this.channelTouchType = channelTouchType;
+        return this;
+    }
+    public java.util.List<Integer> getChannelTouchType() {
+        return this.channelTouchType;
+    }
+
+    public EditQualityProjectRequest setCheckFreqType(Integer checkFreqType) {
+        this.checkFreqType = checkFreqType;
+        return this;
+    }
+    public Integer getCheckFreqType() {
+        return this.checkFreqType;
+    }
+
+    public EditQualityProjectRequest setDepList(java.util.List<Long> depList) {
+        this.depList = depList;
+        return this;
+    }
+    public java.util.List<Long> getDepList() {
+        return this.depList;
+    }
+
+    public EditQualityProjectRequest setGroupList(java.util.List<Long> groupList) {
+        this.groupList = groupList;
+        return this;
+    }
+    public java.util.List<Long> getGroupList() {
+        return this.groupList;
     }
 
     public EditQualityProjectRequest setInstanceId(String instanceId) {
@@ -72,14 +112,6 @@ public class EditQualityProjectRequest extends TeaModel {
         return this.projectName;
     }
 
-    public EditQualityProjectRequest setCheckFreqType(Integer checkFreqType) {
-        this.checkFreqType = checkFreqType;
-        return this;
-    }
-    public Integer getCheckFreqType() {
-        return this.checkFreqType;
-    }
-
     public EditQualityProjectRequest setProjectVersion(Integer projectVersion) {
         this.projectVersion = projectVersion;
         return this;
@@ -96,12 +128,12 @@ public class EditQualityProjectRequest extends TeaModel {
         return this.scopeType;
     }
 
-    public EditQualityProjectRequest setTimeRangeStart(String timeRangeStart) {
-        this.timeRangeStart = timeRangeStart;
+    public EditQualityProjectRequest setServicerList(java.util.List<String> servicerList) {
+        this.servicerList = servicerList;
         return this;
     }
-    public String getTimeRangeStart() {
-        return this.timeRangeStart;
+    public java.util.List<String> getServicerList() {
+        return this.servicerList;
     }
 
     public EditQualityProjectRequest setTimeRangeEnd(String timeRangeEnd) {
@@ -112,44 +144,12 @@ public class EditQualityProjectRequest extends TeaModel {
         return this.timeRangeEnd;
     }
 
-    public EditQualityProjectRequest setAnalysisIds(java.util.List<Long> analysisIds) {
-        this.analysisIds = analysisIds;
+    public EditQualityProjectRequest setTimeRangeStart(String timeRangeStart) {
+        this.timeRangeStart = timeRangeStart;
         return this;
     }
-    public java.util.List<Long> getAnalysisIds() {
-        return this.analysisIds;
-    }
-
-    public EditQualityProjectRequest setDepList(java.util.List<Long> depList) {
-        this.depList = depList;
-        return this;
-    }
-    public java.util.List<Long> getDepList() {
-        return this.depList;
-    }
-
-    public EditQualityProjectRequest setGroupList(java.util.List<Long> groupList) {
-        this.groupList = groupList;
-        return this;
-    }
-    public java.util.List<Long> getGroupList() {
-        return this.groupList;
-    }
-
-    public EditQualityProjectRequest setServicerList(java.util.List<String> servicerList) {
-        this.servicerList = servicerList;
-        return this;
-    }
-    public java.util.List<String> getServicerList() {
-        return this.servicerList;
-    }
-
-    public EditQualityProjectRequest setChannelTouchType(java.util.List<Integer> channelTouchType) {
-        this.channelTouchType = channelTouchType;
-        return this;
-    }
-    public java.util.List<Integer> getChannelTouchType() {
-        return this.channelTouchType;
+    public String getTimeRangeStart() {
+        return this.timeRangeStart;
     }
 
 }

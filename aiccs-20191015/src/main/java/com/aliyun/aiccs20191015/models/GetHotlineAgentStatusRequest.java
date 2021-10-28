@@ -4,23 +4,15 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineAgentStatusRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("AccountName")
     public String accountName;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     public static GetHotlineAgentStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineAgentStatusRequest self = new GetHotlineAgentStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetHotlineAgentStatusRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public GetHotlineAgentStatusRequest setAccountName(String accountName) {
@@ -29,6 +21,14 @@ public class GetHotlineAgentStatusRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public GetHotlineAgentStatusRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

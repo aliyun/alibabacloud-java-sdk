@@ -4,15 +4,15 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class TerminateAiOutboundTaskResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Code")
-    public String code;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,12 +22,12 @@ public class TerminateAiOutboundTaskResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public TerminateAiOutboundTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public TerminateAiOutboundTaskResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public TerminateAiOutboundTaskResponseBody setMessage(String message) {
@@ -38,12 +38,12 @@ public class TerminateAiOutboundTaskResponseBody extends TeaModel {
         return this.message;
     }
 
-    public TerminateAiOutboundTaskResponseBody setCode(String code) {
-        this.code = code;
+    public TerminateAiOutboundTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public TerminateAiOutboundTaskResponseBody setSuccess(Boolean success) {

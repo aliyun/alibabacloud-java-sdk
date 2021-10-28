@@ -4,6 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class MakeDoubleCallResponseBody extends TeaModel {
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 返回数据
+    @NameInMap("Data")
+    public MakeDoubleCallResponseBodyData data;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -12,21 +24,33 @@ public class MakeDoubleCallResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
-    // 错误信息
-    @NameInMap("Message")
-    public String message;
-
-    // 返回数据
-    @NameInMap("Data")
-    public MakeDoubleCallResponseBodyData data;
-
     public static MakeDoubleCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MakeDoubleCallResponseBody self = new MakeDoubleCallResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public MakeDoubleCallResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public MakeDoubleCallResponseBody setData(MakeDoubleCallResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public MakeDoubleCallResponseBodyData getData() {
+        return this.data;
+    }
+
+    public MakeDoubleCallResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public MakeDoubleCallResponseBody setRequestId(String requestId) {
@@ -43,30 +67,6 @@ public class MakeDoubleCallResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public MakeDoubleCallResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public MakeDoubleCallResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public MakeDoubleCallResponseBody setData(MakeDoubleCallResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public MakeDoubleCallResponseBodyData getData() {
-        return this.data;
     }
 
     public static class MakeDoubleCallResponseBodyData extends TeaModel {

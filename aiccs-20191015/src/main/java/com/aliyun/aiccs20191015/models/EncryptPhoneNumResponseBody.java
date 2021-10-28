@@ -4,6 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class EncryptPhoneNumResponseBody extends TeaModel {
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 加密后密文
+    @NameInMap("Data")
+    public String data;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -12,21 +24,33 @@ public class EncryptPhoneNumResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
-    // 错误信息
-    @NameInMap("Message")
-    public String message;
-
-    // 加密后密文
-    @NameInMap("Data")
-    public String data;
-
     public static EncryptPhoneNumResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EncryptPhoneNumResponseBody self = new EncryptPhoneNumResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public EncryptPhoneNumResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public EncryptPhoneNumResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public EncryptPhoneNumResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public EncryptPhoneNumResponseBody setRequestId(String requestId) {
@@ -43,30 +67,6 @@ public class EncryptPhoneNumResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public EncryptPhoneNumResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public EncryptPhoneNumResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public EncryptPhoneNumResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
     }
 
 }

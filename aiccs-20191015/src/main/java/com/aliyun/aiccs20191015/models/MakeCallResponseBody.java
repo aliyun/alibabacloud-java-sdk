@@ -4,17 +4,17 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class MakeCallResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class MakeCallResponseBody extends TeaModel {
     public static MakeCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MakeCallResponseBody self = new MakeCallResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public MakeCallResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public MakeCallResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public MakeCallResponseBody setMessage(String message) {
@@ -38,22 +54,6 @@ public class MakeCallResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public MakeCallResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public MakeCallResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public MakeCallResponseBody setSuccess(Boolean success) {

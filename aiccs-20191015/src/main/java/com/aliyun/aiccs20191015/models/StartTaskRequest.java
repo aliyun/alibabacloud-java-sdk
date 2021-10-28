@@ -13,11 +13,11 @@ public class StartTaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TaskId")
-    public Long taskId;
-
     @NameInMap("StartNow")
     public Boolean startNow;
+
+    @NameInMap("TaskId")
+    public Long taskId;
 
     public static StartTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTaskRequest self = new StartTaskRequest();
@@ -48,20 +48,20 @@ public class StartTaskRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public StartTaskRequest setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
-    }
-
     public StartTaskRequest setStartNow(Boolean startNow) {
         this.startNow = startNow;
         return this;
     }
     public Boolean getStartNow() {
         return this.startNow;
+    }
+
+    public StartTaskRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

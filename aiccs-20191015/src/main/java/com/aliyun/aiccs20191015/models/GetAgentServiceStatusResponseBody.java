@@ -4,6 +4,14 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAgentServiceStatusResponseBody extends TeaModel {
+    // 错误编码
+    @NameInMap("Code")
+    public String code;
+
+    // data
+    @NameInMap("Data")
+    public GetAgentServiceStatusResponseBodyData data;
+
     // 错误描述
     @NameInMap("Message")
     public String message;
@@ -12,14 +20,6 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // data
-    @NameInMap("Data")
-    public GetAgentServiceStatusResponseBodyData data;
-
-    // 错误编码
-    @NameInMap("Code")
-    public String code;
-
     // 调用接口是否成功
     @NameInMap("Success")
     public Boolean success;
@@ -27,6 +27,22 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
     public static GetAgentServiceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAgentServiceStatusResponseBody self = new GetAgentServiceStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAgentServiceStatusResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetAgentServiceStatusResponseBody setData(GetAgentServiceStatusResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAgentServiceStatusResponseBodyData getData() {
+        return this.data;
     }
 
     public GetAgentServiceStatusResponseBody setMessage(String message) {
@@ -43,22 +59,6 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetAgentServiceStatusResponseBody setData(GetAgentServiceStatusResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAgentServiceStatusResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetAgentServiceStatusResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetAgentServiceStatusResponseBody setSuccess(Boolean success) {
@@ -78,13 +78,13 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Long pageSize;
 
-        // 总记录数
-        @NameInMap("TotalNum")
-        public Long totalNum;
-
         // 信息为list<map>类型的json字符串
         @NameInMap("Rows")
         public String rows;
+
+        // 总记录数
+        @NameInMap("TotalNum")
+        public Long totalNum;
 
         public static GetAgentServiceStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAgentServiceStatusResponseBodyData self = new GetAgentServiceStatusResponseBodyData();
@@ -107,20 +107,20 @@ public class GetAgentServiceStatusResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public GetAgentServiceStatusResponseBodyData setTotalNum(Long totalNum) {
-            this.totalNum = totalNum;
-            return this;
-        }
-        public Long getTotalNum() {
-            return this.totalNum;
-        }
-
         public GetAgentServiceStatusResponseBodyData setRows(String rows) {
             this.rows = rows;
             return this;
         }
         public String getRows() {
             return this.rows;
+        }
+
+        public GetAgentServiceStatusResponseBodyData setTotalNum(Long totalNum) {
+            this.totalNum = totalNum;
+            return this;
+        }
+        public Long getTotalNum() {
+            return this.totalNum;
         }
 
     }

@@ -4,18 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListRobotCallDialogResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public java.util.List<ListRobotCallDialogResponseBodyData> data;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -23,22 +23,6 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
     public static ListRobotCallDialogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRobotCallDialogResponseBody self = new ListRobotCallDialogResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRobotCallDialogResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListRobotCallDialogResponseBody setData(java.util.List<ListRobotCallDialogResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListRobotCallDialogResponseBodyData> getData() {
-        return this.data;
     }
 
     public ListRobotCallDialogResponseBody setCode(String code) {
@@ -49,12 +33,28 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListRobotCallDialogResponseBody setData(java.util.List<ListRobotCallDialogResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListRobotCallDialogResponseBodyData> getData() {
+        return this.data;
+    }
+
     public ListRobotCallDialogResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ListRobotCallDialogResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListRobotCallDialogResponseBody setSuccess(Boolean success) {
@@ -66,32 +66,24 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
     }
 
     public static class ListRobotCallDialogResponseBodyData extends TeaModel {
-        @NameInMap("Role")
-        public String role;
-
         @NameInMap("Content")
         public String content;
 
         @NameInMap("NodeType")
         public String nodeType;
 
-        @NameInMap("Time")
-        public String time;
+        @NameInMap("Role")
+        public String role;
 
         @NameInMap("Tag")
         public String tag;
 
+        @NameInMap("Time")
+        public String time;
+
         public static ListRobotCallDialogResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListRobotCallDialogResponseBodyData self = new ListRobotCallDialogResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public ListRobotCallDialogResponseBodyData setRole(String role) {
-            this.role = role;
-            return this;
-        }
-        public String getRole() {
-            return this.role;
         }
 
         public ListRobotCallDialogResponseBodyData setContent(String content) {
@@ -110,12 +102,12 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
             return this.nodeType;
         }
 
-        public ListRobotCallDialogResponseBodyData setTime(String time) {
-            this.time = time;
+        public ListRobotCallDialogResponseBodyData setRole(String role) {
+            this.role = role;
             return this;
         }
-        public String getTime() {
-            return this.time;
+        public String getRole() {
+            return this.role;
         }
 
         public ListRobotCallDialogResponseBodyData setTag(String tag) {
@@ -124,6 +116,14 @@ public class ListRobotCallDialogResponseBody extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public ListRobotCallDialogResponseBodyData setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
         }
 
     }

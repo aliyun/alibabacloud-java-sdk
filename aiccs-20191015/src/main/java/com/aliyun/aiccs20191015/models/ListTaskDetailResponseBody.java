@@ -4,18 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListTaskDetailResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public ListTaskDetailResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -23,22 +23,6 @@ public class ListTaskDetailResponseBody extends TeaModel {
     public static ListTaskDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTaskDetailResponseBody self = new ListTaskDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListTaskDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListTaskDetailResponseBody setData(ListTaskDetailResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ListTaskDetailResponseBodyData getData() {
-        return this.data;
     }
 
     public ListTaskDetailResponseBody setCode(String code) {
@@ -49,12 +33,28 @@ public class ListTaskDetailResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListTaskDetailResponseBody setData(ListTaskDetailResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListTaskDetailResponseBodyData getData() {
+        return this.data;
+    }
+
     public ListTaskDetailResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ListTaskDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListTaskDetailResponseBody setSuccess(Boolean success) {
@@ -66,29 +66,26 @@ public class ListTaskDetailResponseBody extends TeaModel {
     }
 
     public static class ListTaskDetailResponseBodyDataRecord extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("RetryCurTimes")
-        public Integer retryCurTimes;
-
         @NameInMap("Called")
         public String called;
 
         @NameInMap("Caller")
         public String caller;
 
+        @NameInMap("Direction")
+        public String direction;
+
         @NameInMap("Duration")
         public Integer duration;
+
+        @NameInMap("EndTime")
+        public String endTime;
 
         @NameInMap("Id")
         public Long id;
 
-        @NameInMap("StatusCode")
-        public String statusCode;
-
-        @NameInMap("StatusCodeDesc")
-        public String statusCodeDesc;
+        @NameInMap("RetryCurTimes")
+        public Integer retryCurTimes;
 
         @NameInMap("RetryTimes")
         public Integer retryTimes;
@@ -96,11 +93,14 @@ public class ListTaskDetailResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
 
-        @NameInMap("EndTime")
-        public String endTime;
+        @NameInMap("Status")
+        public String status;
 
-        @NameInMap("Direction")
-        public String direction;
+        @NameInMap("StatusCode")
+        public String statusCode;
+
+        @NameInMap("StatusCodeDesc")
+        public String statusCodeDesc;
 
         @NameInMap("Tags")
         public String tags;
@@ -108,22 +108,6 @@ public class ListTaskDetailResponseBody extends TeaModel {
         public static ListTaskDetailResponseBodyDataRecord build(java.util.Map<String, ?> map) throws Exception {
             ListTaskDetailResponseBodyDataRecord self = new ListTaskDetailResponseBodyDataRecord();
             return TeaModel.build(map, self);
-        }
-
-        public ListTaskDetailResponseBodyDataRecord setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListTaskDetailResponseBodyDataRecord setRetryCurTimes(Integer retryCurTimes) {
-            this.retryCurTimes = retryCurTimes;
-            return this;
-        }
-        public Integer getRetryCurTimes() {
-            return this.retryCurTimes;
         }
 
         public ListTaskDetailResponseBodyDataRecord setCalled(String called) {
@@ -142,12 +126,28 @@ public class ListTaskDetailResponseBody extends TeaModel {
             return this.caller;
         }
 
+        public ListTaskDetailResponseBodyDataRecord setDirection(String direction) {
+            this.direction = direction;
+            return this;
+        }
+        public String getDirection() {
+            return this.direction;
+        }
+
         public ListTaskDetailResponseBodyDataRecord setDuration(Integer duration) {
             this.duration = duration;
             return this;
         }
         public Integer getDuration() {
             return this.duration;
+        }
+
+        public ListTaskDetailResponseBodyDataRecord setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
         }
 
         public ListTaskDetailResponseBodyDataRecord setId(Long id) {
@@ -158,20 +158,12 @@ public class ListTaskDetailResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListTaskDetailResponseBodyDataRecord setStatusCode(String statusCode) {
-            this.statusCode = statusCode;
+        public ListTaskDetailResponseBodyDataRecord setRetryCurTimes(Integer retryCurTimes) {
+            this.retryCurTimes = retryCurTimes;
             return this;
         }
-        public String getStatusCode() {
-            return this.statusCode;
-        }
-
-        public ListTaskDetailResponseBodyDataRecord setStatusCodeDesc(String statusCodeDesc) {
-            this.statusCodeDesc = statusCodeDesc;
-            return this;
-        }
-        public String getStatusCodeDesc() {
-            return this.statusCodeDesc;
+        public Integer getRetryCurTimes() {
+            return this.retryCurTimes;
         }
 
         public ListTaskDetailResponseBodyDataRecord setRetryTimes(Integer retryTimes) {
@@ -190,20 +182,28 @@ public class ListTaskDetailResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public ListTaskDetailResponseBodyDataRecord setEndTime(String endTime) {
-            this.endTime = endTime;
+        public ListTaskDetailResponseBodyDataRecord setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getEndTime() {
-            return this.endTime;
+        public String getStatus() {
+            return this.status;
         }
 
-        public ListTaskDetailResponseBodyDataRecord setDirection(String direction) {
-            this.direction = direction;
+        public ListTaskDetailResponseBodyDataRecord setStatusCode(String statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
-        public String getDirection() {
-            return this.direction;
+        public String getStatusCode() {
+            return this.statusCode;
+        }
+
+        public ListTaskDetailResponseBodyDataRecord setStatusCodeDesc(String statusCodeDesc) {
+            this.statusCodeDesc = statusCodeDesc;
+            return this;
+        }
+        public String getStatusCodeDesc() {
+            return this.statusCodeDesc;
         }
 
         public ListTaskDetailResponseBodyDataRecord setTags(String tags) {
@@ -223,11 +223,11 @@ public class ListTaskDetailResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Long pageSize;
 
-        @NameInMap("Total")
-        public Long total;
-
         @NameInMap("Record")
         public java.util.List<ListTaskDetailResponseBodyDataRecord> record;
+
+        @NameInMap("Total")
+        public Long total;
 
         public static ListTaskDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListTaskDetailResponseBodyData self = new ListTaskDetailResponseBodyData();
@@ -250,20 +250,20 @@ public class ListTaskDetailResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public ListTaskDetailResponseBodyData setTotal(Long total) {
-            this.total = total;
-            return this;
-        }
-        public Long getTotal() {
-            return this.total;
-        }
-
         public ListTaskDetailResponseBodyData setRecord(java.util.List<ListTaskDetailResponseBodyDataRecord> record) {
             this.record = record;
             return this;
         }
         public java.util.List<ListTaskDetailResponseBodyDataRecord> getRecord() {
             return this.record;
+        }
+
+        public ListTaskDetailResponseBodyData setTotal(Long total) {
+            this.total = total;
+            return this;
+        }
+        public Long getTotal() {
+            return this.total;
         }
 
     }

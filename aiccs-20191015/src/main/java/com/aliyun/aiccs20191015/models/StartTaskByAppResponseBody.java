@@ -4,29 +4,25 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class StartTaskByAppResponseBody extends TeaModel {
-    // status
-    @NameInMap("Status")
-    public String status;
+    // buildId
+    @NameInMap("BuildId")
+    public String buildId;
 
     // message
     @NameInMap("Message")
     public String message;
 
-    // buildId
-    @NameInMap("BuildId")
-    public String buildId;
-
     // passNumber
     @NameInMap("PassNumber")
     public Long passNumber;
 
-    // totalNumber
-    @NameInMap("TotalNumber")
-    public Long totalNumber;
+    // requestId
+    @NameInMap("RequestId")
+    public String requestId;
 
-    // url
-    @NameInMap("Url")
-    public String url;
+    // status
+    @NameInMap("Status")
+    public String status;
 
     // success
     @NameInMap("Success")
@@ -36,29 +32,17 @@ public class StartTaskByAppResponseBody extends TeaModel {
     @NameInMap("TestSetRecordId")
     public Long testSetRecordId;
 
-    // requestId
-    @NameInMap("RequestId")
-    public String requestId;
+    // totalNumber
+    @NameInMap("TotalNumber")
+    public Long totalNumber;
+
+    // url
+    @NameInMap("Url")
+    public String url;
 
     public static StartTaskByAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartTaskByAppResponseBody self = new StartTaskByAppResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public StartTaskByAppResponseBody setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public StartTaskByAppResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public StartTaskByAppResponseBody setBuildId(String buildId) {
@@ -69,6 +53,14 @@ public class StartTaskByAppResponseBody extends TeaModel {
         return this.buildId;
     }
 
+    public StartTaskByAppResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public StartTaskByAppResponseBody setPassNumber(Long passNumber) {
         this.passNumber = passNumber;
         return this;
@@ -77,20 +69,20 @@ public class StartTaskByAppResponseBody extends TeaModel {
         return this.passNumber;
     }
 
-    public StartTaskByAppResponseBody setTotalNumber(Long totalNumber) {
-        this.totalNumber = totalNumber;
+    public StartTaskByAppResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getTotalNumber() {
-        return this.totalNumber;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public StartTaskByAppResponseBody setUrl(String url) {
-        this.url = url;
+    public StartTaskByAppResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getUrl() {
-        return this.url;
+    public String getStatus() {
+        return this.status;
     }
 
     public StartTaskByAppResponseBody setSuccess(Boolean success) {
@@ -109,12 +101,20 @@ public class StartTaskByAppResponseBody extends TeaModel {
         return this.testSetRecordId;
     }
 
-    public StartTaskByAppResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartTaskByAppResponseBody setTotalNumber(Long totalNumber) {
+        this.totalNumber = totalNumber;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getTotalNumber() {
+        return this.totalNumber;
+    }
+
+    public StartTaskByAppResponseBody setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }

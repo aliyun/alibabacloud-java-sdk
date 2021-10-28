@@ -4,6 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetRtcTokenResponseBody extends TeaModel {
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // data
+    @NameInMap("Data")
+    public GetRtcTokenResponseBodyData data;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -12,21 +24,33 @@ public class GetRtcTokenResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
-    // 错误信息
-    @NameInMap("Message")
-    public String message;
-
-    // data
-    @NameInMap("Data")
-    public GetRtcTokenResponseBodyData data;
-
     public static GetRtcTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRtcTokenResponseBody self = new GetRtcTokenResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetRtcTokenResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetRtcTokenResponseBody setData(GetRtcTokenResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetRtcTokenResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetRtcTokenResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetRtcTokenResponseBody setRequestId(String requestId) {
@@ -45,54 +69,30 @@ public class GetRtcTokenResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetRtcTokenResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetRtcTokenResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetRtcTokenResponseBody setData(GetRtcTokenResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetRtcTokenResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetRtcTokenResponseBodyData extends TeaModel {
-        // token信息
-        @NameInMap("Token")
-        public String token;
+        // 账号名
+        @NameInMap("AccountName")
+        public String accountName;
 
         // rtcId
         @NameInMap("RtcId")
         public String rtcId;
 
-        // 账号名
-        @NameInMap("AccountName")
-        public String accountName;
+        // token信息
+        @NameInMap("Token")
+        public String token;
 
         public static GetRtcTokenResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRtcTokenResponseBodyData self = new GetRtcTokenResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetRtcTokenResponseBodyData setToken(String token) {
-            this.token = token;
+        public GetRtcTokenResponseBodyData setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getToken() {
-            return this.token;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public GetRtcTokenResponseBodyData setRtcId(String rtcId) {
@@ -103,12 +103,12 @@ public class GetRtcTokenResponseBody extends TeaModel {
             return this.rtcId;
         }
 
-        public GetRtcTokenResponseBodyData setAccountName(String accountName) {
-            this.accountName = accountName;
+        public GetRtcTokenResponseBodyData setToken(String token) {
+            this.token = token;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getToken() {
+            return this.token;
         }
 
     }

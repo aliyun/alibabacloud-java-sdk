@@ -4,15 +4,15 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DeleteAiOutboundTaskResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Code")
-    public String code;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,12 +22,12 @@ public class DeleteAiOutboundTaskResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteAiOutboundTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteAiOutboundTaskResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public DeleteAiOutboundTaskResponseBody setMessage(String message) {
@@ -38,12 +38,12 @@ public class DeleteAiOutboundTaskResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteAiOutboundTaskResponseBody setCode(String code) {
-        this.code = code;
+    public DeleteAiOutboundTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteAiOutboundTaskResponseBody setSuccess(Boolean success) {

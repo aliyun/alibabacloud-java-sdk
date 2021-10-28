@@ -4,6 +4,14 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListHotlineRecordDetailResponseBody extends TeaModel {
+    // code
+    @NameInMap("Code")
+    public String code;
+
+    // httpStatusCode
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     // message
     @NameInMap("Message")
     public String message;
@@ -12,17 +20,9 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // httpStatusCode
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     // data
     @NameInMap("ResultData")
     public ListHotlineRecordDetailResponseBodyResultData resultData;
-
-    // code
-    @NameInMap("Code")
-    public String code;
 
     // success
     @NameInMap("Success")
@@ -31,6 +31,22 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
     public static ListHotlineRecordDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHotlineRecordDetailResponseBody self = new ListHotlineRecordDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListHotlineRecordDetailResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListHotlineRecordDetailResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListHotlineRecordDetailResponseBody setMessage(String message) {
@@ -49,28 +65,12 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListHotlineRecordDetailResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public ListHotlineRecordDetailResponseBody setResultData(ListHotlineRecordDetailResponseBodyResultData resultData) {
         this.resultData = resultData;
         return this;
     }
     public ListHotlineRecordDetailResponseBodyResultData getResultData() {
         return this.resultData;
-    }
-
-    public ListHotlineRecordDetailResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ListHotlineRecordDetailResponseBody setSuccess(Boolean success) {
@@ -82,13 +82,6 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
     }
 
     public static class ListHotlineRecordDetailResponseBodyResultDataData extends TeaModel {
-        @NameInMap("ServicerName")
-        public String servicerName;
-
-        // 热线开始时间
-        @NameInMap("StartTime")
-        public Long startTime;
-
         // 热线结束时间
         @NameInMap("EndTime")
         public Long endTime;
@@ -97,25 +90,16 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         @NameInMap("OssUrl")
         public String ossUrl;
 
+        @NameInMap("ServicerName")
+        public String servicerName;
+
+        // 热线开始时间
+        @NameInMap("StartTime")
+        public Long startTime;
+
         public static ListHotlineRecordDetailResponseBodyResultDataData build(java.util.Map<String, ?> map) throws Exception {
             ListHotlineRecordDetailResponseBodyResultDataData self = new ListHotlineRecordDetailResponseBodyResultDataData();
             return TeaModel.build(map, self);
-        }
-
-        public ListHotlineRecordDetailResponseBodyResultDataData setServicerName(String servicerName) {
-            this.servicerName = servicerName;
-            return this;
-        }
-        public String getServicerName() {
-            return this.servicerName;
-        }
-
-        public ListHotlineRecordDetailResponseBodyResultDataData setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
         }
 
         public ListHotlineRecordDetailResponseBodyResultDataData setEndTime(Long endTime) {
@@ -134,23 +118,39 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             return this.ossUrl;
         }
 
+        public ListHotlineRecordDetailResponseBodyResultDataData setServicerName(String servicerName) {
+            this.servicerName = servicerName;
+            return this;
+        }
+        public String getServicerName() {
+            return this.servicerName;
+        }
+
+        public ListHotlineRecordDetailResponseBodyResultDataData setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class ListHotlineRecordDetailResponseBodyResultData extends TeaModel {
         @NameInMap("CurrentPage")
         public Long currentPage;
 
-        @NameInMap("TotalResults")
-        public Long totalResults;
-
-        @NameInMap("TotalPage")
-        public Long totalPage;
+        @NameInMap("Data")
+        public java.util.List<ListHotlineRecordDetailResponseBodyResultDataData> data;
 
         @NameInMap("OnePageSize")
         public Long onePageSize;
 
-        @NameInMap("Data")
-        public java.util.List<ListHotlineRecordDetailResponseBodyResultDataData> data;
+        @NameInMap("TotalPage")
+        public Long totalPage;
+
+        @NameInMap("TotalResults")
+        public Long totalResults;
 
         public static ListHotlineRecordDetailResponseBodyResultData build(java.util.Map<String, ?> map) throws Exception {
             ListHotlineRecordDetailResponseBodyResultData self = new ListHotlineRecordDetailResponseBodyResultData();
@@ -165,20 +165,12 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public ListHotlineRecordDetailResponseBodyResultData setTotalResults(Long totalResults) {
-            this.totalResults = totalResults;
+        public ListHotlineRecordDetailResponseBodyResultData setData(java.util.List<ListHotlineRecordDetailResponseBodyResultDataData> data) {
+            this.data = data;
             return this;
         }
-        public Long getTotalResults() {
-            return this.totalResults;
-        }
-
-        public ListHotlineRecordDetailResponseBodyResultData setTotalPage(Long totalPage) {
-            this.totalPage = totalPage;
-            return this;
-        }
-        public Long getTotalPage() {
-            return this.totalPage;
+        public java.util.List<ListHotlineRecordDetailResponseBodyResultDataData> getData() {
+            return this.data;
         }
 
         public ListHotlineRecordDetailResponseBodyResultData setOnePageSize(Long onePageSize) {
@@ -189,12 +181,20 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             return this.onePageSize;
         }
 
-        public ListHotlineRecordDetailResponseBodyResultData setData(java.util.List<ListHotlineRecordDetailResponseBodyResultDataData> data) {
-            this.data = data;
+        public ListHotlineRecordDetailResponseBodyResultData setTotalPage(Long totalPage) {
+            this.totalPage = totalPage;
             return this;
         }
-        public java.util.List<ListHotlineRecordDetailResponseBodyResultDataData> getData() {
-            return this.data;
+        public Long getTotalPage() {
+            return this.totalPage;
+        }
+
+        public ListHotlineRecordDetailResponseBodyResultData setTotalResults(Long totalResults) {
+            this.totalResults = totalResults;
+            return this;
+        }
+        public Long getTotalResults() {
+            return this.totalResults;
         }
 
     }
