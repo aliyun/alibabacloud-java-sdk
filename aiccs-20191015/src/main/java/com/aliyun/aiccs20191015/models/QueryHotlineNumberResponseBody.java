@@ -4,6 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class QueryHotlineNumberResponseBody extends TeaModel {
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 返回结果数据
+    @NameInMap("Data")
+    public QueryHotlineNumberResponseBodyData data;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -12,21 +24,33 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
-    // 错误信息
-    @NameInMap("Message")
-    public String message;
-
-    // 返回结果数据
-    @NameInMap("Data")
-    public QueryHotlineNumberResponseBodyData data;
-
     public static QueryHotlineNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryHotlineNumberResponseBody self = new QueryHotlineNumberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryHotlineNumberResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryHotlineNumberResponseBody setData(QueryHotlineNumberResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryHotlineNumberResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryHotlineNumberResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryHotlineNumberResponseBody setRequestId(String requestId) {
@@ -43,30 +67,6 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryHotlineNumberResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryHotlineNumberResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryHotlineNumberResponseBody setData(QueryHotlineNumberResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryHotlineNumberResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeListGroupDOList extends TeaModel {
@@ -146,25 +146,21 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
     }
 
     public static class QueryHotlineNumberResponseBodyDataHotlineNumList extends TeaModel {
-        // 号码
-        @NameInMap("HotlineNumber")
-        public String hotlineNumber;
+        // 外呼针对所有部门生效
+        @NameInMap("CalloutAllDepartment")
+        public Boolean calloutAllDepartment;
+
+        // 外呼生效列表
+        @NameInMap("CalloutRangeList")
+        public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeList> calloutRangeList;
 
         // 号码描述
         @NameInMap("Description")
         public String description;
 
-        // 归属地
-        @NameInMap("Location")
-        public String location;
-
-        // 运营商
-        @NameInMap("Sp")
-        public String sp;
-
-        // 是否用于入呼
-        @NameInMap("InBoundEnabled")
-        public Boolean inBoundEnabled;
+        // 满意度状态
+        @NameInMap("EvaluationStatus")
+        public Integer evaluationStatus;
 
         // 入呼流程id
         @NameInMap("FlowId")
@@ -174,89 +170,29 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         @NameInMap("FlowName")
         public String flowName;
 
+        // 号码
+        @NameInMap("HotlineNumber")
+        public String hotlineNumber;
+
+        // 是否用于入呼
+        @NameInMap("InBoundEnabled")
+        public Boolean inBoundEnabled;
+
+        // 归属地
+        @NameInMap("Location")
+        public String location;
+
         // 是否用于外呼
         @NameInMap("OutboundEnabled")
         public Boolean outboundEnabled;
 
-        // 外呼针对所有部门生效
-        @NameInMap("CalloutAllDepartment")
-        public Boolean calloutAllDepartment;
-
-        // 外呼生效列表
-        @NameInMap("CalloutRangeList")
-        public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumListCalloutRangeList> calloutRangeList;
-
-        // 满意度状态
-        @NameInMap("EvaluationStatus")
-        public Integer evaluationStatus;
+        // 运营商
+        @NameInMap("Sp")
+        public String sp;
 
         public static QueryHotlineNumberResponseBodyDataHotlineNumList build(java.util.Map<String, ?> map) throws Exception {
             QueryHotlineNumberResponseBodyDataHotlineNumList self = new QueryHotlineNumberResponseBodyDataHotlineNumList();
             return TeaModel.build(map, self);
-        }
-
-        public QueryHotlineNumberResponseBodyDataHotlineNumList setHotlineNumber(String hotlineNumber) {
-            this.hotlineNumber = hotlineNumber;
-            return this;
-        }
-        public String getHotlineNumber() {
-            return this.hotlineNumber;
-        }
-
-        public QueryHotlineNumberResponseBodyDataHotlineNumList setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public QueryHotlineNumberResponseBodyDataHotlineNumList setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public QueryHotlineNumberResponseBodyDataHotlineNumList setSp(String sp) {
-            this.sp = sp;
-            return this;
-        }
-        public String getSp() {
-            return this.sp;
-        }
-
-        public QueryHotlineNumberResponseBodyDataHotlineNumList setInBoundEnabled(Boolean inBoundEnabled) {
-            this.inBoundEnabled = inBoundEnabled;
-            return this;
-        }
-        public Boolean getInBoundEnabled() {
-            return this.inBoundEnabled;
-        }
-
-        public QueryHotlineNumberResponseBodyDataHotlineNumList setFlowId(Long flowId) {
-            this.flowId = flowId;
-            return this;
-        }
-        public Long getFlowId() {
-            return this.flowId;
-        }
-
-        public QueryHotlineNumberResponseBodyDataHotlineNumList setFlowName(String flowName) {
-            this.flowName = flowName;
-            return this;
-        }
-        public String getFlowName() {
-            return this.flowName;
-        }
-
-        public QueryHotlineNumberResponseBodyDataHotlineNumList setOutboundEnabled(Boolean outboundEnabled) {
-            this.outboundEnabled = outboundEnabled;
-            return this;
-        }
-        public Boolean getOutboundEnabled() {
-            return this.outboundEnabled;
         }
 
         public QueryHotlineNumberResponseBodyDataHotlineNumList setCalloutAllDepartment(Boolean calloutAllDepartment) {
@@ -275,6 +211,14 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             return this.calloutRangeList;
         }
 
+        public QueryHotlineNumberResponseBodyDataHotlineNumList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public QueryHotlineNumberResponseBodyDataHotlineNumList setEvaluationStatus(Integer evaluationStatus) {
             this.evaluationStatus = evaluationStatus;
             return this;
@@ -283,36 +227,84 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             return this.evaluationStatus;
         }
 
+        public QueryHotlineNumberResponseBodyDataHotlineNumList setFlowId(Long flowId) {
+            this.flowId = flowId;
+            return this;
+        }
+        public Long getFlowId() {
+            return this.flowId;
+        }
+
+        public QueryHotlineNumberResponseBodyDataHotlineNumList setFlowName(String flowName) {
+            this.flowName = flowName;
+            return this;
+        }
+        public String getFlowName() {
+            return this.flowName;
+        }
+
+        public QueryHotlineNumberResponseBodyDataHotlineNumList setHotlineNumber(String hotlineNumber) {
+            this.hotlineNumber = hotlineNumber;
+            return this;
+        }
+        public String getHotlineNumber() {
+            return this.hotlineNumber;
+        }
+
+        public QueryHotlineNumberResponseBodyDataHotlineNumList setInBoundEnabled(Boolean inBoundEnabled) {
+            this.inBoundEnabled = inBoundEnabled;
+            return this;
+        }
+        public Boolean getInBoundEnabled() {
+            return this.inBoundEnabled;
+        }
+
+        public QueryHotlineNumberResponseBodyDataHotlineNumList setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public QueryHotlineNumberResponseBodyDataHotlineNumList setOutboundEnabled(Boolean outboundEnabled) {
+            this.outboundEnabled = outboundEnabled;
+            return this;
+        }
+        public Boolean getOutboundEnabled() {
+            return this.outboundEnabled;
+        }
+
+        public QueryHotlineNumberResponseBodyDataHotlineNumList setSp(String sp) {
+            this.sp = sp;
+            return this;
+        }
+        public String getSp() {
+            return this.sp;
+        }
+
     }
 
     public static class QueryHotlineNumberResponseBodyData extends TeaModel {
-        // 数据总量
-        @NameInMap("TotalCount")
-        public Long totalCount;
-
         // 当前页面
         @NameInMap("CurrentPage")
         public Long currentPage;
-
-        // 每页大小
-        @NameInMap("PageSize")
-        public Long pageSize;
 
         // 号码列表
         @NameInMap("HotlineNumList")
         public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumList> hotlineNumList;
 
+        // 每页大小
+        @NameInMap("PageSize")
+        public Long pageSize;
+
+        // 数据总量
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
         public static QueryHotlineNumberResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryHotlineNumberResponseBodyData self = new QueryHotlineNumberResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryHotlineNumberResponseBodyData setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
         }
 
         public QueryHotlineNumberResponseBodyData setCurrentPage(Long currentPage) {
@@ -323,6 +315,14 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             return this.currentPage;
         }
 
+        public QueryHotlineNumberResponseBodyData setHotlineNumList(java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumList> hotlineNumList) {
+            this.hotlineNumList = hotlineNumList;
+            return this;
+        }
+        public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumList> getHotlineNumList() {
+            return this.hotlineNumList;
+        }
+
         public QueryHotlineNumberResponseBodyData setPageSize(Long pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -331,12 +331,12 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public QueryHotlineNumberResponseBodyData setHotlineNumList(java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumList> hotlineNumList) {
-            this.hotlineNumList = hotlineNumList;
+        public QueryHotlineNumberResponseBodyData setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public java.util.List<QueryHotlineNumberResponseBodyDataHotlineNumList> getHotlineNumList() {
-            return this.hotlineNumList;
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

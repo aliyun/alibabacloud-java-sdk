@@ -4,8 +4,20 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class SendCcoSmartCallOperateRequest extends TeaModel {
+    @NameInMap("CallId")
+    public String callId;
+
+    @NameInMap("Command")
+    public String command;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("Param")
+    public String param;
+
+    @NameInMap("ProdCode")
+    public String prodCode;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,53 +25,9 @@ public class SendCcoSmartCallOperateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ProdCode")
-    public String prodCode;
-
-    @NameInMap("CallId")
-    public String callId;
-
-    @NameInMap("Command")
-    public String command;
-
-    @NameInMap("Param")
-    public String param;
-
     public static SendCcoSmartCallOperateRequest build(java.util.Map<String, ?> map) throws Exception {
         SendCcoSmartCallOperateRequest self = new SendCcoSmartCallOperateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SendCcoSmartCallOperateRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SendCcoSmartCallOperateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public SendCcoSmartCallOperateRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public SendCcoSmartCallOperateRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
     public SendCcoSmartCallOperateRequest setCallId(String callId) {
@@ -78,12 +46,44 @@ public class SendCcoSmartCallOperateRequest extends TeaModel {
         return this.command;
     }
 
+    public SendCcoSmartCallOperateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public SendCcoSmartCallOperateRequest setParam(String param) {
         this.param = param;
         return this;
     }
     public String getParam() {
         return this.param;
+    }
+
+    public SendCcoSmartCallOperateRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
+    }
+
+    public SendCcoSmartCallOperateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SendCcoSmartCallOperateRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,6 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAllDepartmentResponseBody extends TeaModel {
+    // code
+    @NameInMap("Code")
+    public String code;
+
+    // data
+    @NameInMap("Data")
+    public java.util.List<GetAllDepartmentResponseBodyData> data;
+
+    // httpStatusCode
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     // message
     @NameInMap("Message")
     public String message;
@@ -12,18 +24,6 @@ public class GetAllDepartmentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // httpStatusCode
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    // data
-    @NameInMap("Data")
-    public java.util.List<GetAllDepartmentResponseBodyData> data;
-
-    // code
-    @NameInMap("Code")
-    public String code;
-
     // success
     @NameInMap("Success")
     public Boolean success;
@@ -31,6 +31,30 @@ public class GetAllDepartmentResponseBody extends TeaModel {
     public static GetAllDepartmentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAllDepartmentResponseBody self = new GetAllDepartmentResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAllDepartmentResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetAllDepartmentResponseBody setData(java.util.List<GetAllDepartmentResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetAllDepartmentResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public GetAllDepartmentResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public GetAllDepartmentResponseBody setMessage(String message) {
@@ -47,30 +71,6 @@ public class GetAllDepartmentResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GetAllDepartmentResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public GetAllDepartmentResponseBody setData(java.util.List<GetAllDepartmentResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<GetAllDepartmentResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public GetAllDepartmentResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetAllDepartmentResponseBody setSuccess(Boolean success) {

@@ -4,29 +4,29 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class UpdateDepartmentRequest extends TeaModel {
-    // 实例id
-    @NameInMap("InstanceId")
-    public String instanceId;
+    // 部门id
+    @NameInMap("DepartmentId")
+    public Long departmentId;
 
     // 部门名称
     @NameInMap("DepartmentName")
     public String departmentName;
 
-    // 部门id
-    @NameInMap("DepartmentId")
-    public Long departmentId;
+    // 实例id
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     public static UpdateDepartmentRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDepartmentRequest self = new UpdateDepartmentRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDepartmentRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public UpdateDepartmentRequest setDepartmentId(Long departmentId) {
+        this.departmentId = departmentId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Long getDepartmentId() {
+        return this.departmentId;
     }
 
     public UpdateDepartmentRequest setDepartmentName(String departmentName) {
@@ -37,12 +37,12 @@ public class UpdateDepartmentRequest extends TeaModel {
         return this.departmentName;
     }
 
-    public UpdateDepartmentRequest setDepartmentId(Long departmentId) {
-        this.departmentId = departmentId;
+    public UpdateDepartmentRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Long getDepartmentId() {
-        return this.departmentId;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

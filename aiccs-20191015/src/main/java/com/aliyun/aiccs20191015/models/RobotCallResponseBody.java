@@ -4,21 +4,37 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class RobotCallResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("Code")
-    public String code;
-
     public static RobotCallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RobotCallResponseBody self = new RobotCallResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RobotCallResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public RobotCallResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public RobotCallResponseBody setMessage(String message) {
@@ -35,22 +51,6 @@ public class RobotCallResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public RobotCallResponseBody setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public RobotCallResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

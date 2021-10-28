@@ -4,117 +4,53 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class CreateAiOutboundTaskRequest extends TeaModel {
-    // 实例ID
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    // 任务类型（2:预测式外呼3:自动外呼）
-    @NameInMap("Type")
-    public Integer type;
-
-    // 任务名（1～15字符）
-    @NameInMap("Name")
-    public String name;
+    // 自动外呼的呼叫并发
+    @NameInMap("ConcurrentRate")
+    public Integer concurrentRate;
 
     // 任务描述（0～100字符）
     @NameInMap("Description")
     public String description;
 
-    // 外呼主叫号码
-    @NameInMap("OutboundNums")
-    public java.util.List<String> outboundNums;
-
-    // 被叫号码重复策略（0任务内去重，1不去重）
-    @NameInMap("NumRepeated")
-    public Integer numRepeated;
-
-    // 技能组id（预测式外呼）或者ivr id（自动外呼）
-    @NameInMap("HandlerId")
-    public Long handlerId;
-
     // 任务执行时间
     @NameInMap("ExecutionTime")
     public String executionTime;
-
-    // 自动外呼的呼叫并发
-    @NameInMap("ConcurrentRate")
-    public Integer concurrentRate;
-
-    // 失败重呼策略（为空则不重呼）
-    @NameInMap("RecallRule")
-    public CreateAiOutboundTaskRequestRecallRule recallRule;
 
     // 预测式外呼固定外呼比例（>=1）
     @NameInMap("ForecastCallRate")
     public Float forecastCallRate;
 
+    // 技能组id（预测式外呼）或者ivr id（自动外呼）
+    @NameInMap("HandlerId")
+    public Long handlerId;
+
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    // 任务名（1～15字符）
+    @NameInMap("Name")
+    public String name;
+
+    // 被叫号码重复策略（0任务内去重，1不去重）
+    @NameInMap("NumRepeated")
+    public Integer numRepeated;
+
+    // 外呼主叫号码
+    @NameInMap("OutboundNums")
+    public java.util.List<String> outboundNums;
+
+    // 失败重呼策略（为空则不重呼）
+    @NameInMap("RecallRule")
+    public CreateAiOutboundTaskRequestRecallRule recallRule;
+
+    // 任务类型（2:预测式外呼3:自动外呼）
+    @NameInMap("Type")
+    public Integer type;
+
     public static CreateAiOutboundTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAiOutboundTaskRequest self = new CreateAiOutboundTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAiOutboundTaskRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateAiOutboundTaskRequest setType(Integer type) {
-        this.type = type;
-        return this;
-    }
-    public Integer getType() {
-        return this.type;
-    }
-
-    public CreateAiOutboundTaskRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateAiOutboundTaskRequest setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public CreateAiOutboundTaskRequest setOutboundNums(java.util.List<String> outboundNums) {
-        this.outboundNums = outboundNums;
-        return this;
-    }
-    public java.util.List<String> getOutboundNums() {
-        return this.outboundNums;
-    }
-
-    public CreateAiOutboundTaskRequest setNumRepeated(Integer numRepeated) {
-        this.numRepeated = numRepeated;
-        return this;
-    }
-    public Integer getNumRepeated() {
-        return this.numRepeated;
-    }
-
-    public CreateAiOutboundTaskRequest setHandlerId(Long handlerId) {
-        this.handlerId = handlerId;
-        return this;
-    }
-    public Long getHandlerId() {
-        return this.handlerId;
-    }
-
-    public CreateAiOutboundTaskRequest setExecutionTime(String executionTime) {
-        this.executionTime = executionTime;
-        return this;
-    }
-    public String getExecutionTime() {
-        return this.executionTime;
     }
 
     public CreateAiOutboundTaskRequest setConcurrentRate(Integer concurrentRate) {
@@ -125,12 +61,20 @@ public class CreateAiOutboundTaskRequest extends TeaModel {
         return this.concurrentRate;
     }
 
-    public CreateAiOutboundTaskRequest setRecallRule(CreateAiOutboundTaskRequestRecallRule recallRule) {
-        this.recallRule = recallRule;
+    public CreateAiOutboundTaskRequest setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public CreateAiOutboundTaskRequestRecallRule getRecallRule() {
-        return this.recallRule;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateAiOutboundTaskRequest setExecutionTime(String executionTime) {
+        this.executionTime = executionTime;
+        return this;
+    }
+    public String getExecutionTime() {
+        return this.executionTime;
     }
 
     public CreateAiOutboundTaskRequest setForecastCallRate(Float forecastCallRate) {
@@ -139,6 +83,62 @@ public class CreateAiOutboundTaskRequest extends TeaModel {
     }
     public Float getForecastCallRate() {
         return this.forecastCallRate;
+    }
+
+    public CreateAiOutboundTaskRequest setHandlerId(Long handlerId) {
+        this.handlerId = handlerId;
+        return this;
+    }
+    public Long getHandlerId() {
+        return this.handlerId;
+    }
+
+    public CreateAiOutboundTaskRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateAiOutboundTaskRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateAiOutboundTaskRequest setNumRepeated(Integer numRepeated) {
+        this.numRepeated = numRepeated;
+        return this;
+    }
+    public Integer getNumRepeated() {
+        return this.numRepeated;
+    }
+
+    public CreateAiOutboundTaskRequest setOutboundNums(java.util.List<String> outboundNums) {
+        this.outboundNums = outboundNums;
+        return this;
+    }
+    public java.util.List<String> getOutboundNums() {
+        return this.outboundNums;
+    }
+
+    public CreateAiOutboundTaskRequest setRecallRule(CreateAiOutboundTaskRequestRecallRule recallRule) {
+        this.recallRule = recallRule;
+        return this;
+    }
+    public CreateAiOutboundTaskRequestRecallRule getRecallRule() {
+        return this.recallRule;
+    }
+
+    public CreateAiOutboundTaskRequest setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
     }
 
     public static class CreateAiOutboundTaskRequestRecallRule extends TeaModel {

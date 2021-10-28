@@ -7,8 +7,11 @@ public class DescribeRecordDataResponseBody extends TeaModel {
     @NameInMap("Acid")
     public String acid;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AgentId")
+    public String agentId;
+
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -16,11 +19,8 @@ public class DescribeRecordDataResponseBody extends TeaModel {
     @NameInMap("OssLink")
     public String ossLink;
 
-    @NameInMap("AgentId")
-    public String agentId;
-
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRecordDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordDataResponseBody self = new DescribeRecordDataResponseBody();
@@ -35,12 +35,20 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         return this.acid;
     }
 
-    public DescribeRecordDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeRecordDataResponseBody setAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    public DescribeRecordDataResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeRecordDataResponseBody setMessage(String message) {
@@ -59,20 +67,12 @@ public class DescribeRecordDataResponseBody extends TeaModel {
         return this.ossLink;
     }
 
-    public DescribeRecordDataResponseBody setAgentId(String agentId) {
-        this.agentId = agentId;
+    public DescribeRecordDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    public DescribeRecordDataResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

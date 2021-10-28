@@ -8,37 +8,37 @@ public class StartTaskByAppRequest extends TeaModel {
     @NameInMap("App")
     public String app;
 
-    // operator
-    @NameInMap("Operator")
-    public String operator;
-
-    // token
-    @NameInMap("Token")
-    public String token;
-
-    // envTypes
-    @NameInMap("EnvTypes")
-    public String envTypes;
+    // appId
+    @NameInMap("AppId")
+    public Integer appId;
 
     // appName
     @NameInMap("AppName")
     public String appName;
 
-    // appId
-    @NameInMap("AppId")
-    public Integer appId;
-
     // buildId
     @NameInMap("BuildId")
     public String buildId;
+
+    // envTypes
+    @NameInMap("EnvTypes")
+    public String envTypes;
+
+    // operator
+    @NameInMap("Operator")
+    public String operator;
+
+    // requestId
+    @NameInMap("RequestId")
+    public String requestId;
 
     // siteType
     @NameInMap("SiteType")
     public String siteType;
 
-    // requestId
-    @NameInMap("RequestId")
-    public String requestId;
+    // token
+    @NameInMap("Token")
+    public String token;
 
     public static StartTaskByAppRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTaskByAppRequest self = new StartTaskByAppRequest();
@@ -53,28 +53,12 @@ public class StartTaskByAppRequest extends TeaModel {
         return this.app;
     }
 
-    public StartTaskByAppRequest setOperator(String operator) {
-        this.operator = operator;
+    public StartTaskByAppRequest setAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
-    public String getOperator() {
-        return this.operator;
-    }
-
-    public StartTaskByAppRequest setToken(String token) {
-        this.token = token;
-        return this;
-    }
-    public String getToken() {
-        return this.token;
-    }
-
-    public StartTaskByAppRequest setEnvTypes(String envTypes) {
-        this.envTypes = envTypes;
-        return this;
-    }
-    public String getEnvTypes() {
-        return this.envTypes;
+    public Integer getAppId() {
+        return this.appId;
     }
 
     public StartTaskByAppRequest setAppName(String appName) {
@@ -85,20 +69,36 @@ public class StartTaskByAppRequest extends TeaModel {
         return this.appName;
     }
 
-    public StartTaskByAppRequest setAppId(Integer appId) {
-        this.appId = appId;
-        return this;
-    }
-    public Integer getAppId() {
-        return this.appId;
-    }
-
     public StartTaskByAppRequest setBuildId(String buildId) {
         this.buildId = buildId;
         return this;
     }
     public String getBuildId() {
         return this.buildId;
+    }
+
+    public StartTaskByAppRequest setEnvTypes(String envTypes) {
+        this.envTypes = envTypes;
+        return this;
+    }
+    public String getEnvTypes() {
+        return this.envTypes;
+    }
+
+    public StartTaskByAppRequest setOperator(String operator) {
+        this.operator = operator;
+        return this;
+    }
+    public String getOperator() {
+        return this.operator;
+    }
+
+    public StartTaskByAppRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public StartTaskByAppRequest setSiteType(String siteType) {
@@ -109,12 +109,12 @@ public class StartTaskByAppRequest extends TeaModel {
         return this.siteType;
     }
 
-    public StartTaskByAppRequest setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartTaskByAppRequest setToken(String token) {
+        this.token = token;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getToken() {
+        return this.token;
     }
 
 }

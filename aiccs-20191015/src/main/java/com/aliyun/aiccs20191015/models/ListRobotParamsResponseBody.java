@@ -4,18 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListRobotParamsResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public java.util.List<ListRobotParamsResponseBodyData> data;
 
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -23,22 +23,6 @@ public class ListRobotParamsResponseBody extends TeaModel {
     public static ListRobotParamsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRobotParamsResponseBody self = new ListRobotParamsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListRobotParamsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListRobotParamsResponseBody setData(java.util.List<ListRobotParamsResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListRobotParamsResponseBodyData> getData() {
-        return this.data;
     }
 
     public ListRobotParamsResponseBody setCode(String code) {
@@ -49,12 +33,28 @@ public class ListRobotParamsResponseBody extends TeaModel {
         return this.code;
     }
 
+    public ListRobotParamsResponseBody setData(java.util.List<ListRobotParamsResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListRobotParamsResponseBodyData> getData() {
+        return this.data;
+    }
+
     public ListRobotParamsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public ListRobotParamsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListRobotParamsResponseBody setSuccess(Boolean success) {

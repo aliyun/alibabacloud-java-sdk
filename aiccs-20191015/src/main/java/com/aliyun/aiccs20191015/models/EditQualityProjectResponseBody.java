@@ -7,6 +7,9 @@ public class EditQualityProjectResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<EditQualityProjectResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class EditQualityProjectResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public java.util.List<EditQualityProjectResponseBodyData> data;
 
     public static EditQualityProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         EditQualityProjectResponseBody self = new EditQualityProjectResponseBody();
@@ -30,6 +30,14 @@ public class EditQualityProjectResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public EditQualityProjectResponseBody setData(java.util.List<EditQualityProjectResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<EditQualityProjectResponseBodyData> getData() {
+        return this.data;
     }
 
     public EditQualityProjectResponseBody setMessage(String message) {
@@ -56,23 +64,15 @@ public class EditQualityProjectResponseBody extends TeaModel {
         return this.success;
     }
 
-    public EditQualityProjectResponseBody setData(java.util.List<EditQualityProjectResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<EditQualityProjectResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class EditQualityProjectResponseBodyData extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Version")
-        public Integer version;
-
         @NameInMap("ProjectId")
         public Long projectId;
+
+        @NameInMap("Version")
+        public Integer version;
 
         public static EditQualityProjectResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             EditQualityProjectResponseBodyData self = new EditQualityProjectResponseBodyData();
@@ -87,20 +87,20 @@ public class EditQualityProjectResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public EditQualityProjectResponseBodyData setVersion(Integer version) {
-            this.version = version;
-            return this;
-        }
-        public Integer getVersion() {
-            return this.version;
-        }
-
         public EditQualityProjectResponseBodyData setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
         public Long getProjectId() {
             return this.projectId;
+        }
+
+        public EditQualityProjectResponseBodyData setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
         }
 
     }

@@ -4,17 +4,17 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class MakeDoubleCallRequest extends TeaModel {
-    // 实例ID
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     // 账号名称
     @NameInMap("AccountName")
     public String accountName;
 
-    // 坐席手机号（需要通过坐席手机呼叫才需要填写）
-    @NameInMap("ServicerPhone")
-    public String servicerPhone;
+    // 业务携带数据（JsonString）
+    @NameInMap("BizData")
+    public String bizData;
+
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     // 用户手机号
     @NameInMap("MemberPhone")
@@ -24,21 +24,13 @@ public class MakeDoubleCallRequest extends TeaModel {
     @NameInMap("OutboundCallNumber")
     public String outboundCallNumber;
 
-    // 业务携带数据（JsonString）
-    @NameInMap("BizData")
-    public String bizData;
+    // 坐席手机号（需要通过坐席手机呼叫才需要填写）
+    @NameInMap("ServicerPhone")
+    public String servicerPhone;
 
     public static MakeDoubleCallRequest build(java.util.Map<String, ?> map) throws Exception {
         MakeDoubleCallRequest self = new MakeDoubleCallRequest();
         return TeaModel.build(map, self);
-    }
-
-    public MakeDoubleCallRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
     }
 
     public MakeDoubleCallRequest setAccountName(String accountName) {
@@ -49,12 +41,20 @@ public class MakeDoubleCallRequest extends TeaModel {
         return this.accountName;
     }
 
-    public MakeDoubleCallRequest setServicerPhone(String servicerPhone) {
-        this.servicerPhone = servicerPhone;
+    public MakeDoubleCallRequest setBizData(String bizData) {
+        this.bizData = bizData;
         return this;
     }
-    public String getServicerPhone() {
-        return this.servicerPhone;
+    public String getBizData() {
+        return this.bizData;
+    }
+
+    public MakeDoubleCallRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public MakeDoubleCallRequest setMemberPhone(String memberPhone) {
@@ -73,12 +73,12 @@ public class MakeDoubleCallRequest extends TeaModel {
         return this.outboundCallNumber;
     }
 
-    public MakeDoubleCallRequest setBizData(String bizData) {
-        this.bizData = bizData;
+    public MakeDoubleCallRequest setServicerPhone(String servicerPhone) {
+        this.servicerPhone = servicerPhone;
         return this;
     }
-    public String getBizData() {
-        return this.bizData;
+    public String getServicerPhone() {
+        return this.servicerPhone;
     }
 
 }

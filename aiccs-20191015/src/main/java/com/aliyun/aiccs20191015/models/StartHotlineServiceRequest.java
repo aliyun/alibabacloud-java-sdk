@@ -4,6 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class StartHotlineServiceRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     // js sdk中自动生成的鉴权token
     @NameInMap("ClientToken")
     public String clientToken;
@@ -11,12 +14,17 @@ public class StartHotlineServiceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
     public static StartHotlineServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartHotlineServiceRequest self = new StartHotlineServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartHotlineServiceRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public StartHotlineServiceRequest setClientToken(String clientToken) {
@@ -33,14 +41,6 @@ public class StartHotlineServiceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public StartHotlineServiceRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
 }

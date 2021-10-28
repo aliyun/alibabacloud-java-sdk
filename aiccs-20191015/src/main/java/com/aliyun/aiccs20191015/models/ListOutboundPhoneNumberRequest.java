@@ -4,18 +4,26 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListOutboundPhoneNumberRequest extends TeaModel {
+    @NameInMap("AccountName")
+    public String accountName;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("AccountName")
-    public String accountName;
-
     public static ListOutboundPhoneNumberRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOutboundPhoneNumberRequest self = new ListOutboundPhoneNumberRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListOutboundPhoneNumberRequest setAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    public String getAccountName() {
+        return this.accountName;
     }
 
     public ListOutboundPhoneNumberRequest setClientToken(String clientToken) {
@@ -32,14 +40,6 @@ public class ListOutboundPhoneNumberRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public ListOutboundPhoneNumberRequest setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-    public String getAccountName() {
-        return this.accountName;
     }
 
 }

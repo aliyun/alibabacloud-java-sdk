@@ -7,6 +7,9 @@ public class CreateQualityProjectResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public CreateQualityProjectResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class CreateQualityProjectResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public CreateQualityProjectResponseBodyData data;
 
     public static CreateQualityProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateQualityProjectResponseBody self = new CreateQualityProjectResponseBody();
@@ -30,6 +30,14 @@ public class CreateQualityProjectResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public CreateQualityProjectResponseBody setData(CreateQualityProjectResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateQualityProjectResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateQualityProjectResponseBody setMessage(String message) {
@@ -56,23 +64,15 @@ public class CreateQualityProjectResponseBody extends TeaModel {
         return this.success;
     }
 
-    public CreateQualityProjectResponseBody setData(CreateQualityProjectResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CreateQualityProjectResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class CreateQualityProjectResponseBodyData extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Version")
-        public Integer version;
-
         @NameInMap("ProjectId")
         public Long projectId;
+
+        @NameInMap("Version")
+        public Integer version;
 
         public static CreateQualityProjectResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateQualityProjectResponseBodyData self = new CreateQualityProjectResponseBodyData();
@@ -87,20 +87,20 @@ public class CreateQualityProjectResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public CreateQualityProjectResponseBodyData setVersion(Integer version) {
-            this.version = version;
-            return this;
-        }
-        public Integer getVersion() {
-            return this.version;
-        }
-
         public CreateQualityProjectResponseBodyData setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
         public Long getProjectId() {
             return this.projectId;
+        }
+
+        public CreateQualityProjectResponseBodyData setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
         }
 
     }

@@ -4,26 +4,26 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordDataRequest extends TeaModel {
+    @NameInMap("AccountId")
+    public String accountId;
+
+    @NameInMap("AccountType")
+    public String accountType;
+
+    @NameInMap("Acid")
+    public String acid;
+
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("ProdCode")
+    public String prodCode;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("ProdCode")
-    public String prodCode;
-
-    @NameInMap("AccountType")
-    public String accountType;
-
-    @NameInMap("AccountId")
-    public String accountId;
-
-    @NameInMap("Acid")
-    public String acid;
 
     @NameInMap("SecLevel")
     public Integer secLevel;
@@ -33,12 +33,44 @@ public class DescribeRecordDataRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRecordDataRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    public DescribeRecordDataRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    public DescribeRecordDataRequest setAcid(String acid) {
+        this.acid = acid;
+        return this;
+    }
+    public String getAcid() {
+        return this.acid;
+    }
+
     public DescribeRecordDataRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeRecordDataRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
     }
 
     public DescribeRecordDataRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -55,38 +87,6 @@ public class DescribeRecordDataRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeRecordDataRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
-    }
-
-    public DescribeRecordDataRequest setAccountType(String accountType) {
-        this.accountType = accountType;
-        return this;
-    }
-    public String getAccountType() {
-        return this.accountType;
-    }
-
-    public DescribeRecordDataRequest setAccountId(String accountId) {
-        this.accountId = accountId;
-        return this;
-    }
-    public String getAccountId() {
-        return this.accountId;
-    }
-
-    public DescribeRecordDataRequest setAcid(String acid) {
-        this.acid = acid;
-        return this;
-    }
-    public String getAcid() {
-        return this.acid;
     }
 
     public DescribeRecordDataRequest setSecLevel(Integer secLevel) {

@@ -4,11 +4,11 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetRecordUrlRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
     @NameInMap("Acid")
     public String acid;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("RecordType")
     public String recordType;
@@ -18,20 +18,20 @@ public class GetRecordUrlRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetRecordUrlRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
     public GetRecordUrlRequest setAcid(String acid) {
         this.acid = acid;
         return this;
     }
     public String getAcid() {
         return this.acid;
+    }
+
+    public GetRecordUrlRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public GetRecordUrlRequest setRecordType(String recordType) {

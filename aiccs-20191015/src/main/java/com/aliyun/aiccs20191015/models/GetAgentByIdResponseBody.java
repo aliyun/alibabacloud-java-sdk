@@ -7,6 +7,9 @@ public class GetAgentByIdResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public GetAgentByIdResponseBodyData data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class GetAgentByIdResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public GetAgentByIdResponseBodyData data;
 
     public static GetAgentByIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAgentByIdResponseBody self = new GetAgentByIdResponseBody();
@@ -30,6 +30,14 @@ public class GetAgentByIdResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GetAgentByIdResponseBody setData(GetAgentByIdResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetAgentByIdResponseBodyData getData() {
+        return this.data;
     }
 
     public GetAgentByIdResponseBody setMessage(String message) {
@@ -56,79 +64,31 @@ public class GetAgentByIdResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetAgentByIdResponseBody setData(GetAgentByIdResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetAgentByIdResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetAgentByIdResponseBodyData extends TeaModel {
-        @NameInMap("ShowName")
-        public String showName;
-
-        @NameInMap("ForeignKey")
-        public String foreignKey;
-
-        @NameInMap("ServicerType")
-        public Integer servicerType;
-
-        @NameInMap("RealName")
-        public String realName;
+        @NameInMap("AgentId")
+        public Integer agentId;
 
         @NameInMap("CreateUserName")
         public String createUserName;
 
-        @NameInMap("AgentId")
-        public Integer agentId;
+        @NameInMap("ForeignKey")
+        public String foreignKey;
 
         @NameInMap("ForeignNick")
         public String foreignNick;
 
+        @NameInMap("RealName")
+        public String realName;
+
+        @NameInMap("ServicerType")
+        public Integer servicerType;
+
+        @NameInMap("ShowName")
+        public String showName;
+
         public static GetAgentByIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAgentByIdResponseBodyData self = new GetAgentByIdResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetAgentByIdResponseBodyData setShowName(String showName) {
-            this.showName = showName;
-            return this;
-        }
-        public String getShowName() {
-            return this.showName;
-        }
-
-        public GetAgentByIdResponseBodyData setForeignKey(String foreignKey) {
-            this.foreignKey = foreignKey;
-            return this;
-        }
-        public String getForeignKey() {
-            return this.foreignKey;
-        }
-
-        public GetAgentByIdResponseBodyData setServicerType(Integer servicerType) {
-            this.servicerType = servicerType;
-            return this;
-        }
-        public Integer getServicerType() {
-            return this.servicerType;
-        }
-
-        public GetAgentByIdResponseBodyData setRealName(String realName) {
-            this.realName = realName;
-            return this;
-        }
-        public String getRealName() {
-            return this.realName;
-        }
-
-        public GetAgentByIdResponseBodyData setCreateUserName(String createUserName) {
-            this.createUserName = createUserName;
-            return this;
-        }
-        public String getCreateUserName() {
-            return this.createUserName;
         }
 
         public GetAgentByIdResponseBodyData setAgentId(Integer agentId) {
@@ -139,12 +99,52 @@ public class GetAgentByIdResponseBody extends TeaModel {
             return this.agentId;
         }
 
+        public GetAgentByIdResponseBodyData setCreateUserName(String createUserName) {
+            this.createUserName = createUserName;
+            return this;
+        }
+        public String getCreateUserName() {
+            return this.createUserName;
+        }
+
+        public GetAgentByIdResponseBodyData setForeignKey(String foreignKey) {
+            this.foreignKey = foreignKey;
+            return this;
+        }
+        public String getForeignKey() {
+            return this.foreignKey;
+        }
+
         public GetAgentByIdResponseBodyData setForeignNick(String foreignNick) {
             this.foreignNick = foreignNick;
             return this;
         }
         public String getForeignNick() {
             return this.foreignNick;
+        }
+
+        public GetAgentByIdResponseBodyData setRealName(String realName) {
+            this.realName = realName;
+            return this;
+        }
+        public String getRealName() {
+            return this.realName;
+        }
+
+        public GetAgentByIdResponseBodyData setServicerType(Integer servicerType) {
+            this.servicerType = servicerType;
+            return this;
+        }
+        public Integer getServicerType() {
+            return this.servicerType;
+        }
+
+        public GetAgentByIdResponseBodyData setShowName(String showName) {
+            this.showName = showName;
+            return this;
+        }
+        public String getShowName() {
+            return this.showName;
         }
 
     }

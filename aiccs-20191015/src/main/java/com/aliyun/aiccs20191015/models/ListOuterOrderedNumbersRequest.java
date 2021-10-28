@@ -7,14 +7,14 @@ public class ListOuterOrderedNumbersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ProdCode")
+    public String prodCode;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
-
-    @NameInMap("ProdCode")
-    public String prodCode;
 
     public static ListOuterOrderedNumbersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOuterOrderedNumbersRequest self = new ListOuterOrderedNumbersRequest();
@@ -27,6 +27,14 @@ public class ListOuterOrderedNumbersRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ListOuterOrderedNumbersRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
     }
 
     public ListOuterOrderedNumbersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
@@ -43,14 +51,6 @@ public class ListOuterOrderedNumbersRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ListOuterOrderedNumbersRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
 }

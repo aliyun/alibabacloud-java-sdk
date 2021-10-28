@@ -7,17 +7,17 @@ public class CreateQualityRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("KeyWords")
+    public java.util.List<String> keyWords;
+
+    @NameInMap("MatchType")
+    public Integer matchType;
+
     @NameInMap("Name")
     public String name;
 
     @NameInMap("RuleTag")
     public Integer ruleTag;
-
-    @NameInMap("MatchType")
-    public Integer matchType;
-
-    @NameInMap("KeyWords")
-    public java.util.List<String> keyWords;
 
     public static CreateQualityRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateQualityRuleRequest self = new CreateQualityRuleRequest();
@@ -30,6 +30,22 @@ public class CreateQualityRuleRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateQualityRuleRequest setKeyWords(java.util.List<String> keyWords) {
+        this.keyWords = keyWords;
+        return this;
+    }
+    public java.util.List<String> getKeyWords() {
+        return this.keyWords;
+    }
+
+    public CreateQualityRuleRequest setMatchType(Integer matchType) {
+        this.matchType = matchType;
+        return this;
+    }
+    public Integer getMatchType() {
+        return this.matchType;
     }
 
     public CreateQualityRuleRequest setName(String name) {
@@ -46,22 +62,6 @@ public class CreateQualityRuleRequest extends TeaModel {
     }
     public Integer getRuleTag() {
         return this.ruleTag;
-    }
-
-    public CreateQualityRuleRequest setMatchType(Integer matchType) {
-        this.matchType = matchType;
-        return this;
-    }
-    public Integer getMatchType() {
-        return this.matchType;
-    }
-
-    public CreateQualityRuleRequest setKeyWords(java.util.List<String> keyWords) {
-        this.keyWords = keyWords;
-        return this;
-    }
-    public java.util.List<String> getKeyWords() {
-        return this.keyWords;
     }
 
 }

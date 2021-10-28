@@ -7,6 +7,9 @@ public class BatchCreateQualityProjectsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("Data")
+    public java.util.List<BatchCreateQualityProjectsResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
@@ -15,9 +18,6 @@ public class BatchCreateQualityProjectsResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("Data")
-    public java.util.List<BatchCreateQualityProjectsResponseBodyData> data;
 
     public static BatchCreateQualityProjectsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchCreateQualityProjectsResponseBody self = new BatchCreateQualityProjectsResponseBody();
@@ -30,6 +30,14 @@ public class BatchCreateQualityProjectsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public BatchCreateQualityProjectsResponseBody setData(java.util.List<BatchCreateQualityProjectsResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<BatchCreateQualityProjectsResponseBodyData> getData() {
+        return this.data;
     }
 
     public BatchCreateQualityProjectsResponseBody setMessage(String message) {
@@ -56,23 +64,15 @@ public class BatchCreateQualityProjectsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public BatchCreateQualityProjectsResponseBody setData(java.util.List<BatchCreateQualityProjectsResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<BatchCreateQualityProjectsResponseBodyData> getData() {
-        return this.data;
-    }
-
     public static class BatchCreateQualityProjectsResponseBodyData extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("Version")
-        public Integer version;
-
         @NameInMap("ProjectId")
         public Long projectId;
+
+        @NameInMap("Version")
+        public Integer version;
 
         public static BatchCreateQualityProjectsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             BatchCreateQualityProjectsResponseBodyData self = new BatchCreateQualityProjectsResponseBodyData();
@@ -87,20 +87,20 @@ public class BatchCreateQualityProjectsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public BatchCreateQualityProjectsResponseBodyData setVersion(Integer version) {
-            this.version = version;
-            return this;
-        }
-        public Integer getVersion() {
-            return this.version;
-        }
-
         public BatchCreateQualityProjectsResponseBodyData setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
         public Long getProjectId() {
             return this.projectId;
+        }
+
+        public BatchCreateQualityProjectsResponseBodyData setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
         }
 
     }

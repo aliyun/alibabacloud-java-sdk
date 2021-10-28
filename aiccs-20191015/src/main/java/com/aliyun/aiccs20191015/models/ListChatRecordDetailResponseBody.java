@@ -4,6 +4,14 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListChatRecordDetailResponseBody extends TeaModel {
+    // code
+    @NameInMap("Code")
+    public String code;
+
+    // httpStatusCode
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
     // message
     @NameInMap("Message")
     public String message;
@@ -12,17 +20,9 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // httpStatusCode
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
     // data
     @NameInMap("ResultData")
     public ListChatRecordDetailResponseBodyResultData resultData;
-
-    // code
-    @NameInMap("Code")
-    public String code;
 
     // success
     @NameInMap("Success")
@@ -31,6 +31,22 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
     public static ListChatRecordDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListChatRecordDetailResponseBody self = new ListChatRecordDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListChatRecordDetailResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListChatRecordDetailResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public ListChatRecordDetailResponseBody setMessage(String message) {
@@ -49,28 +65,12 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListChatRecordDetailResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public ListChatRecordDetailResponseBody setResultData(ListChatRecordDetailResponseBodyResultData resultData) {
         this.resultData = resultData;
         return this;
     }
     public ListChatRecordDetailResponseBodyResultData getResultData() {
         return this.resultData;
-    }
-
-    public ListChatRecordDetailResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public ListChatRecordDetailResponseBody setSuccess(Boolean success) {
@@ -82,14 +82,8 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
     }
 
     public static class ListChatRecordDetailResponseBodyResultDataDataMessageList extends TeaModel {
-        @NameInMap("SenderName")
-        public String senderName;
-
         @NameInMap("Content")
         public String content;
-
-        @NameInMap("SenderType")
-        public Long senderType;
 
         @NameInMap("CreateTime")
         public Long createTime;
@@ -97,17 +91,15 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         @NameInMap("MsgType")
         public String msgType;
 
+        @NameInMap("SenderName")
+        public String senderName;
+
+        @NameInMap("SenderType")
+        public Long senderType;
+
         public static ListChatRecordDetailResponseBodyResultDataDataMessageList build(java.util.Map<String, ?> map) throws Exception {
             ListChatRecordDetailResponseBodyResultDataDataMessageList self = new ListChatRecordDetailResponseBodyResultDataDataMessageList();
             return TeaModel.build(map, self);
-        }
-
-        public ListChatRecordDetailResponseBodyResultDataDataMessageList setSenderName(String senderName) {
-            this.senderName = senderName;
-            return this;
-        }
-        public String getSenderName() {
-            return this.senderName;
         }
 
         public ListChatRecordDetailResponseBodyResultDataDataMessageList setContent(String content) {
@@ -116,14 +108,6 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
-        }
-
-        public ListChatRecordDetailResponseBodyResultDataDataMessageList setSenderType(Long senderType) {
-            this.senderType = senderType;
-            return this;
-        }
-        public Long getSenderType() {
-            return this.senderType;
         }
 
         public ListChatRecordDetailResponseBodyResultDataDataMessageList setCreateTime(Long createTime) {
@@ -142,16 +126,25 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             return this.msgType;
         }
 
+        public ListChatRecordDetailResponseBodyResultDataDataMessageList setSenderName(String senderName) {
+            this.senderName = senderName;
+            return this;
+        }
+        public String getSenderName() {
+            return this.senderName;
+        }
+
+        public ListChatRecordDetailResponseBodyResultDataDataMessageList setSenderType(Long senderType) {
+            this.senderType = senderType;
+            return this;
+        }
+        public Long getSenderType() {
+            return this.senderType;
+        }
+
     }
 
     public static class ListChatRecordDetailResponseBodyResultDataData extends TeaModel {
-        @NameInMap("ServicerName")
-        public String servicerName;
-
-        // 在线开始时间
-        @NameInMap("StartTime")
-        public Long startTime;
-
         // 在线结束时间
         @NameInMap("EndTime")
         public Long endTime;
@@ -160,25 +153,16 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         @NameInMap("MessageList")
         public java.util.List<ListChatRecordDetailResponseBodyResultDataDataMessageList> messageList;
 
+        @NameInMap("ServicerName")
+        public String servicerName;
+
+        // 在线开始时间
+        @NameInMap("StartTime")
+        public Long startTime;
+
         public static ListChatRecordDetailResponseBodyResultDataData build(java.util.Map<String, ?> map) throws Exception {
             ListChatRecordDetailResponseBodyResultDataData self = new ListChatRecordDetailResponseBodyResultDataData();
             return TeaModel.build(map, self);
-        }
-
-        public ListChatRecordDetailResponseBodyResultDataData setServicerName(String servicerName) {
-            this.servicerName = servicerName;
-            return this;
-        }
-        public String getServicerName() {
-            return this.servicerName;
-        }
-
-        public ListChatRecordDetailResponseBodyResultDataData setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
         }
 
         public ListChatRecordDetailResponseBodyResultDataData setEndTime(Long endTime) {
@@ -197,23 +181,39 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             return this.messageList;
         }
 
+        public ListChatRecordDetailResponseBodyResultDataData setServicerName(String servicerName) {
+            this.servicerName = servicerName;
+            return this;
+        }
+        public String getServicerName() {
+            return this.servicerName;
+        }
+
+        public ListChatRecordDetailResponseBodyResultDataData setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class ListChatRecordDetailResponseBodyResultData extends TeaModel {
         @NameInMap("CurrentPage")
         public Long currentPage;
 
-        @NameInMap("TotalResults")
-        public Long totalResults;
-
-        @NameInMap("TotalPage")
-        public Long totalPage;
+        @NameInMap("Data")
+        public java.util.List<ListChatRecordDetailResponseBodyResultDataData> data;
 
         @NameInMap("OnePageSize")
         public Long onePageSize;
 
-        @NameInMap("Data")
-        public java.util.List<ListChatRecordDetailResponseBodyResultDataData> data;
+        @NameInMap("TotalPage")
+        public Long totalPage;
+
+        @NameInMap("TotalResults")
+        public Long totalResults;
 
         public static ListChatRecordDetailResponseBodyResultData build(java.util.Map<String, ?> map) throws Exception {
             ListChatRecordDetailResponseBodyResultData self = new ListChatRecordDetailResponseBodyResultData();
@@ -228,20 +228,12 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public ListChatRecordDetailResponseBodyResultData setTotalResults(Long totalResults) {
-            this.totalResults = totalResults;
+        public ListChatRecordDetailResponseBodyResultData setData(java.util.List<ListChatRecordDetailResponseBodyResultDataData> data) {
+            this.data = data;
             return this;
         }
-        public Long getTotalResults() {
-            return this.totalResults;
-        }
-
-        public ListChatRecordDetailResponseBodyResultData setTotalPage(Long totalPage) {
-            this.totalPage = totalPage;
-            return this;
-        }
-        public Long getTotalPage() {
-            return this.totalPage;
+        public java.util.List<ListChatRecordDetailResponseBodyResultDataData> getData() {
+            return this.data;
         }
 
         public ListChatRecordDetailResponseBodyResultData setOnePageSize(Long onePageSize) {
@@ -252,12 +244,20 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             return this.onePageSize;
         }
 
-        public ListChatRecordDetailResponseBodyResultData setData(java.util.List<ListChatRecordDetailResponseBodyResultDataData> data) {
-            this.data = data;
+        public ListChatRecordDetailResponseBodyResultData setTotalPage(Long totalPage) {
+            this.totalPage = totalPage;
             return this;
         }
-        public java.util.List<ListChatRecordDetailResponseBodyResultDataData> getData() {
-            return this.data;
+        public Long getTotalPage() {
+            return this.totalPage;
+        }
+
+        public ListChatRecordDetailResponseBodyResultData setTotalResults(Long totalResults) {
+            this.totalResults = totalResults;
+            return this;
+        }
+        public Long getTotalResults() {
+            return this.totalResults;
         }
 
     }

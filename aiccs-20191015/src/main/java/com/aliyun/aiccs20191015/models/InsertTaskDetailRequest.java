@@ -4,26 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class InsertTaskDetailRequest extends TeaModel {
-    @NameInMap("OutboundTaskId")
-    public Long outboundTaskId;
-
     @NameInMap("CallInfos")
     public String callInfos;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("OutboundTaskId")
+    public Long outboundTaskId;
+
     public static InsertTaskDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         InsertTaskDetailRequest self = new InsertTaskDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public InsertTaskDetailRequest setOutboundTaskId(Long outboundTaskId) {
-        this.outboundTaskId = outboundTaskId;
-        return this;
-    }
-    public Long getOutboundTaskId() {
-        return this.outboundTaskId;
     }
 
     public InsertTaskDetailRequest setCallInfos(String callInfos) {
@@ -40,6 +32,14 @@ public class InsertTaskDetailRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public InsertTaskDetailRequest setOutboundTaskId(Long outboundTaskId) {
+        this.outboundTaskId = outboundTaskId;
+        return this;
+    }
+    public Long getOutboundTaskId() {
+        return this.outboundTaskId;
     }
 
 }

@@ -4,6 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetConfigNumListResponseBody extends TeaModel {
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 号码列表
+    @NameInMap("Data")
+    public java.util.List<String> data;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -12,21 +24,33 @@ public class GetConfigNumListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
-    // 错误信息
-    @NameInMap("Message")
-    public String message;
-
-    // 号码列表
-    @NameInMap("Data")
-    public java.util.List<String> data;
-
     public static GetConfigNumListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConfigNumListResponseBody self = new GetConfigNumListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetConfigNumListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetConfigNumListResponseBody setData(java.util.List<String> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<String> getData() {
+        return this.data;
+    }
+
+    public GetConfigNumListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetConfigNumListResponseBody setRequestId(String requestId) {
@@ -43,30 +67,6 @@ public class GetConfigNumListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetConfigNumListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetConfigNumListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetConfigNumListResponseBody setData(java.util.List<String> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<String> getData() {
-        return this.data;
     }
 
 }

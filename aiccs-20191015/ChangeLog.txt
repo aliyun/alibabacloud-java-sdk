@@ -1,3 +1,6 @@
+2021-10-28 Version: 1.3.14
+- Add ListRobotNode, GetCallSoundRecord.
+
 2021-10-22 Version: 1.3.13
 - Add ListRobotNode, GetCallSoundRecord.
 

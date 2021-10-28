@@ -7,20 +7,20 @@ public class ListTaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PageNo")
+    public Integer pageNo;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("TaskName")
-    public String taskName;
-
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("RobotName")
+    public String robotName;
 
     @NameInMap("Status")
     public String status;
@@ -28,8 +28,8 @@ public class ListTaskRequest extends TeaModel {
     @NameInMap("TaskId")
     public Long taskId;
 
-    @NameInMap("RobotName")
-    public String robotName;
+    @NameInMap("TaskName")
+    public String taskName;
 
     public static ListTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTaskRequest self = new ListTaskRequest();
@@ -42,30 +42,6 @@ public class ListTaskRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public ListTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public ListTaskRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ListTaskRequest setTaskName(String taskName) {
-        this.taskName = taskName;
-        return this;
-    }
-    public String getTaskName() {
-        return this.taskName;
     }
 
     public ListTaskRequest setPageNo(Integer pageNo) {
@@ -84,6 +60,30 @@ public class ListTaskRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ListTaskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ListTaskRequest setRobotName(String robotName) {
+        this.robotName = robotName;
+        return this;
+    }
+    public String getRobotName() {
+        return this.robotName;
+    }
+
     public ListTaskRequest setStatus(String status) {
         this.status = status;
         return this;
@@ -100,12 +100,12 @@ public class ListTaskRequest extends TeaModel {
         return this.taskId;
     }
 
-    public ListTaskRequest setRobotName(String robotName) {
-        this.robotName = robotName;
+    public ListTaskRequest setTaskName(String taskName) {
+        this.taskName = taskName;
         return this;
     }
-    public String getRobotName() {
-        return this.robotName;
+    public String getTaskName() {
+        return this.taskName;
     }
 
 }

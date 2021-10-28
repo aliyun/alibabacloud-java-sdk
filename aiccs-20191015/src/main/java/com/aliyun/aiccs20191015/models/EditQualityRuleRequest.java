@@ -7,20 +7,20 @@ public class EditQualityRuleRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("RuleTag")
-    public Integer ruleTag;
+    @NameInMap("KeyWords")
+    public java.util.List<String> keyWords;
 
     @NameInMap("MatchType")
     public Integer matchType;
 
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("QualityRuleId")
     public Long qualityRuleId;
 
-    @NameInMap("KeyWords")
-    public java.util.List<String> keyWords;
+    @NameInMap("RuleTag")
+    public Integer ruleTag;
 
     public static EditQualityRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         EditQualityRuleRequest self = new EditQualityRuleRequest();
@@ -35,20 +35,12 @@ public class EditQualityRuleRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public EditQualityRuleRequest setName(String name) {
-        this.name = name;
+    public EditQualityRuleRequest setKeyWords(java.util.List<String> keyWords) {
+        this.keyWords = keyWords;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public EditQualityRuleRequest setRuleTag(Integer ruleTag) {
-        this.ruleTag = ruleTag;
-        return this;
-    }
-    public Integer getRuleTag() {
-        return this.ruleTag;
+    public java.util.List<String> getKeyWords() {
+        return this.keyWords;
     }
 
     public EditQualityRuleRequest setMatchType(Integer matchType) {
@@ -59,6 +51,14 @@ public class EditQualityRuleRequest extends TeaModel {
         return this.matchType;
     }
 
+    public EditQualityRuleRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public EditQualityRuleRequest setQualityRuleId(Long qualityRuleId) {
         this.qualityRuleId = qualityRuleId;
         return this;
@@ -67,12 +67,12 @@ public class EditQualityRuleRequest extends TeaModel {
         return this.qualityRuleId;
     }
 
-    public EditQualityRuleRequest setKeyWords(java.util.List<String> keyWords) {
-        this.keyWords = keyWords;
+    public EditQualityRuleRequest setRuleTag(Integer ruleTag) {
+        this.ruleTag = ruleTag;
         return this;
     }
-    public java.util.List<String> getKeyWords() {
-        return this.keyWords;
+    public Integer getRuleTag() {
+        return this.ruleTag;
     }
 
 }

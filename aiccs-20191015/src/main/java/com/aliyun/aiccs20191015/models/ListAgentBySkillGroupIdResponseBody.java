@@ -4,17 +4,17 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public java.util.List<ListAgentBySkillGroupIdResponseBodyData> data;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Data")
-    public java.util.List<ListAgentBySkillGroupIdResponseBodyData> data;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,6 +22,22 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
     public static ListAgentBySkillGroupIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAgentBySkillGroupIdResponseBody self = new ListAgentBySkillGroupIdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAgentBySkillGroupIdResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListAgentBySkillGroupIdResponseBody setData(java.util.List<ListAgentBySkillGroupIdResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListAgentBySkillGroupIdResponseBodyData> getData() {
+        return this.data;
     }
 
     public ListAgentBySkillGroupIdResponseBody setMessage(String message) {
@@ -40,22 +56,6 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAgentBySkillGroupIdResponseBody setData(java.util.List<ListAgentBySkillGroupIdResponseBodyData> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<ListAgentBySkillGroupIdResponseBodyData> getData() {
-        return this.data;
-    }
-
-    public ListAgentBySkillGroupIdResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public ListAgentBySkillGroupIdResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,17 +65,17 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
     }
 
     public static class ListAgentBySkillGroupIdResponseBodyData extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("DisplayName")
-        public String displayName;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("AgentId")
         public Long agentId;
 
-        @NameInMap("AccountName")
-        public String accountName;
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        @NameInMap("Status")
+        public Integer status;
 
         @NameInMap("TenantId")
         public Long tenantId;
@@ -85,20 +85,12 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListAgentBySkillGroupIdResponseBodyData setStatus(Integer status) {
-            this.status = status;
+        public ListAgentBySkillGroupIdResponseBodyData setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListAgentBySkillGroupIdResponseBodyData setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
+        public String getAccountName() {
+            return this.accountName;
         }
 
         public ListAgentBySkillGroupIdResponseBodyData setAgentId(Long agentId) {
@@ -109,12 +101,20 @@ public class ListAgentBySkillGroupIdResponseBody extends TeaModel {
             return this.agentId;
         }
 
-        public ListAgentBySkillGroupIdResponseBodyData setAccountName(String accountName) {
-            this.accountName = accountName;
+        public ListAgentBySkillGroupIdResponseBodyData setDisplayName(String displayName) {
+            this.displayName = displayName;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public ListAgentBySkillGroupIdResponseBodyData setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
         public ListAgentBySkillGroupIdResponseBodyData setTenantId(Long tenantId) {

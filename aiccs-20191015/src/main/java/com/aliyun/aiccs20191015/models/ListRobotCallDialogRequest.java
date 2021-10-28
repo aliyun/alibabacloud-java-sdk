@@ -4,6 +4,12 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListRobotCallDialogRequest extends TeaModel {
+    @NameInMap("CallId")
+    public String callId;
+
+    @NameInMap("CreateTime")
+    public String createTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,15 +19,25 @@ public class ListRobotCallDialogRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("CallId")
-    public String callId;
-
-    @NameInMap("CreateTime")
-    public String createTime;
-
     public static ListRobotCallDialogRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRobotCallDialogRequest self = new ListRobotCallDialogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRobotCallDialogRequest setCallId(String callId) {
+        this.callId = callId;
+        return this;
+    }
+    public String getCallId() {
+        return this.callId;
+    }
+
+    public ListRobotCallDialogRequest setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public ListRobotCallDialogRequest setOwnerId(Long ownerId) {
@@ -46,22 +62,6 @@ public class ListRobotCallDialogRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public ListRobotCallDialogRequest setCallId(String callId) {
-        this.callId = callId;
-        return this;
-    }
-    public String getCallId() {
-        return this.callId;
-    }
-
-    public ListRobotCallDialogRequest setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
     }
 
 }

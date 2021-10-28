@@ -4,6 +4,9 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class ListDialogRequest extends TeaModel {
+    @NameInMap("Called")
+    public String called;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,12 +19,17 @@ public class ListDialogRequest extends TeaModel {
     @NameInMap("TaskId")
     public Long taskId;
 
-    @NameInMap("Called")
-    public String called;
-
     public static ListDialogRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDialogRequest self = new ListDialogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDialogRequest setCalled(String called) {
+        this.called = called;
+        return this;
+    }
+    public String getCalled() {
+        return this.called;
     }
 
     public ListDialogRequest setOwnerId(Long ownerId) {
@@ -54,14 +62,6 @@ public class ListDialogRequest extends TeaModel {
     }
     public Long getTaskId() {
         return this.taskId;
-    }
-
-    public ListDialogRequest setCalled(String called) {
-        this.called = called;
-        return this;
-    }
-    public String getCalled() {
-        return this.called;
     }
 
 }

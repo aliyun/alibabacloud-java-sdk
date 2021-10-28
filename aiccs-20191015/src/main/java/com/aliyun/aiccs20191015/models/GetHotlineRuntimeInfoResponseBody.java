@@ -4,6 +4,18 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 数据结果
+    @NameInMap("Data")
+    public java.util.Map<String, ?> data;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -12,21 +24,33 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
-    // 错误信息
-    @NameInMap("Message")
-    public String message;
-
-    // 数据结果
-    @NameInMap("Data")
-    public java.util.Map<String, ?> data;
-
     public static GetHotlineRuntimeInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineRuntimeInfoResponseBody self = new GetHotlineRuntimeInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetHotlineRuntimeInfoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetHotlineRuntimeInfoResponseBody setData(java.util.Map<String, ?> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.Map<String, ?> getData() {
+        return this.data;
+    }
+
+    public GetHotlineRuntimeInfoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetHotlineRuntimeInfoResponseBody setRequestId(String requestId) {
@@ -43,30 +67,6 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetHotlineRuntimeInfoResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetHotlineRuntimeInfoResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetHotlineRuntimeInfoResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
     }
 
 }

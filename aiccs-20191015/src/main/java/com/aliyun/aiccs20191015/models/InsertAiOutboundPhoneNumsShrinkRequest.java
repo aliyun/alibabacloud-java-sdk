@@ -4,14 +4,6 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class InsertAiOutboundPhoneNumsShrinkRequest extends TeaModel {
-    // 实例ID
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    // 任务id
-    @NameInMap("TaskId")
-    public Long taskId;
-
     // 任务批次号（不填则导入到默认批次）
     @NameInMap("BatchVersion")
     public Integer batchVersion;
@@ -20,25 +12,17 @@ public class InsertAiOutboundPhoneNumsShrinkRequest extends TeaModel {
     @NameInMap("Details")
     public String detailsShrink;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    // 任务id
+    @NameInMap("TaskId")
+    public Long taskId;
+
     public static InsertAiOutboundPhoneNumsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         InsertAiOutboundPhoneNumsShrinkRequest self = new InsertAiOutboundPhoneNumsShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public InsertAiOutboundPhoneNumsShrinkRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public InsertAiOutboundPhoneNumsShrinkRequest setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
     }
 
     public InsertAiOutboundPhoneNumsShrinkRequest setBatchVersion(Integer batchVersion) {
@@ -55,6 +39,22 @@ public class InsertAiOutboundPhoneNumsShrinkRequest extends TeaModel {
     }
     public String getDetailsShrink() {
         return this.detailsShrink;
+    }
+
+    public InsertAiOutboundPhoneNumsShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public InsertAiOutboundPhoneNumsShrinkRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

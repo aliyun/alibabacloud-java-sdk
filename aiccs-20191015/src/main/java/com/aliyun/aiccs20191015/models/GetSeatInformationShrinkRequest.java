@@ -8,18 +8,6 @@ public class GetSeatInformationShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    // 开始日期时间戳（毫秒）
-    @NameInMap("startDate")
-    public Long startDate;
-
-    // 结束日期时间戳（毫秒）
-    @NameInMap("endDate")
-    public Long endDate;
-
-    // 每页大小（默认为10)
-    @NameInMap("pageSize")
-    public Integer pageSize;
-
     // 当前页（默认为1）
     @NameInMap("currentPage")
     public Integer currentPage;
@@ -28,9 +16,21 @@ public class GetSeatInformationShrinkRequest extends TeaModel {
     @NameInMap("depIds")
     public String depIdsShrink;
 
+    // 结束日期时间戳（毫秒）
+    @NameInMap("endDate")
+    public Long endDate;
+
     // 是否根据部门分组
     @NameInMap("existDepartmentGrouping")
     public Boolean existDepartmentGrouping;
+
+    // 每页大小（默认为10)
+    @NameInMap("pageSize")
+    public Integer pageSize;
+
+    // 开始日期时间戳（毫秒）
+    @NameInMap("startDate")
+    public Long startDate;
 
     public static GetSeatInformationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSeatInformationShrinkRequest self = new GetSeatInformationShrinkRequest();
@@ -43,30 +43,6 @@ public class GetSeatInformationShrinkRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public GetSeatInformationShrinkRequest setStartDate(Long startDate) {
-        this.startDate = startDate;
-        return this;
-    }
-    public Long getStartDate() {
-        return this.startDate;
-    }
-
-    public GetSeatInformationShrinkRequest setEndDate(Long endDate) {
-        this.endDate = endDate;
-        return this;
-    }
-    public Long getEndDate() {
-        return this.endDate;
-    }
-
-    public GetSeatInformationShrinkRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public GetSeatInformationShrinkRequest setCurrentPage(Integer currentPage) {
@@ -85,12 +61,36 @@ public class GetSeatInformationShrinkRequest extends TeaModel {
         return this.depIdsShrink;
     }
 
+    public GetSeatInformationShrinkRequest setEndDate(Long endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public Long getEndDate() {
+        return this.endDate;
+    }
+
     public GetSeatInformationShrinkRequest setExistDepartmentGrouping(Boolean existDepartmentGrouping) {
         this.existDepartmentGrouping = existDepartmentGrouping;
         return this;
     }
     public Boolean getExistDepartmentGrouping() {
         return this.existDepartmentGrouping;
+    }
+
+    public GetSeatInformationShrinkRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public GetSeatInformationShrinkRequest setStartDate(Long startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    public Long getStartDate() {
+        return this.startDate;
     }
 
 }

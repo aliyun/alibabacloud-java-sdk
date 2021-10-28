@@ -4,11 +4,11 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class UpdateAgentResponseBody extends TeaModel {
-    @NameInMap("HttpStatusCode")
-    public Long httpStatusCode;
-
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
 
     @NameInMap("Message")
     public String message;
@@ -24,20 +24,20 @@ public class UpdateAgentResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateAgentResponseBody setHttpStatusCode(Long httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Long getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
     public UpdateAgentResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
     public String getCode() {
         return this.code;
+    }
+
+    public UpdateAgentResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public UpdateAgentResponseBody setMessage(String message) {
