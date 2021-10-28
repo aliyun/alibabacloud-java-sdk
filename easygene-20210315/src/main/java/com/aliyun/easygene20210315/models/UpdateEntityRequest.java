@@ -4,34 +4,20 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class UpdateEntityRequest extends TeaModel {
-    @NameInMap("Workspace")
-    public String workspace;
+    @NameInMap("EntityItems")
+    public java.util.List<UpdateEntityRequestEntityItems> entityItems;
 
+    // 实体类型
     @NameInMap("EntityType")
     public String entityType;
 
-    @NameInMap("EntityItems")
-    public java.util.List<UpdateEntityRequestEntityItems> entityItems;
+    // 工作空间
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static UpdateEntityRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEntityRequest self = new UpdateEntityRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateEntityRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
-    public UpdateEntityRequest setEntityType(String entityType) {
-        this.entityType = entityType;
-        return this;
-    }
-    public String getEntityType() {
-        return this.entityType;
     }
 
     public UpdateEntityRequest setEntityItems(java.util.List<UpdateEntityRequestEntityItems> entityItems) {
@@ -42,24 +28,33 @@ public class UpdateEntityRequest extends TeaModel {
         return this.entityItems;
     }
 
-    public static class UpdateEntityRequestEntityItems extends TeaModel {
-        @NameInMap("EntityName")
-        public String entityName;
+    public UpdateEntityRequest setEntityType(String entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    public String getEntityType() {
+        return this.entityType;
+    }
 
+    public UpdateEntityRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
+    public static class UpdateEntityRequestEntityItems extends TeaModel {
         @NameInMap("EntityData")
         public java.util.Map<String, String> entityData;
+
+        // 实体元素名称
+        @NameInMap("EntityName")
+        public String entityName;
 
         public static UpdateEntityRequestEntityItems build(java.util.Map<String, ?> map) throws Exception {
             UpdateEntityRequestEntityItems self = new UpdateEntityRequestEntityItems();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateEntityRequestEntityItems setEntityName(String entityName) {
-            this.entityName = entityName;
-            return this;
-        }
-        public String getEntityName() {
-            return this.entityName;
         }
 
         public UpdateEntityRequestEntityItems setEntityData(java.util.Map<String, String> entityData) {
@@ -68,6 +63,14 @@ public class UpdateEntityRequest extends TeaModel {
         }
         public java.util.Map<String, String> getEntityData() {
             return this.entityData;
+        }
+
+        public UpdateEntityRequestEntityItems setEntityName(String entityName) {
+            this.entityName = entityName;
+            return this;
+        }
+        public String getEntityName() {
+            return this.entityName;
         }
 
     }

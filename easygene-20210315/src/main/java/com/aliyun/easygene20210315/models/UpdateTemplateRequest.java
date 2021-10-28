@@ -4,53 +4,37 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
-    // 工作空间名称
-    @NameInMap("Workspace")
-    public String workspace;
-
-    // 应用模板名称
-    @NameInMap("TemplateName")
-    public String templateName;
-
-    // 工作空间描述
+    // 应用模板描述
     @NameInMap("Description")
     public String description;
+
+    // 应用的输入
+    @NameInMap("InputsExpression")
+    public java.util.List<UpdateTemplateRequestInputsExpression> inputsExpression;
+
+    // 应用模板标签
+    @NameInMap("Labels")
+    public String labels;
+
+    // 应用的输出
+    @NameInMap("OutputsExpression")
+    public java.util.List<UpdateTemplateRequestOutputsExpression> outputsExpression;
 
     // 实体类型
     @NameInMap("RootEntity")
     public String rootEntity;
 
-    // 应用的输入
-    @NameInMap("Inputs")
-    public java.util.List<UpdateTemplateRequestInputs> inputs;
+    // 应用模板名称
+    @NameInMap("TemplateName")
+    public String templateName;
 
-    // 应用的输出
-    @NameInMap("Outputs")
-    public java.util.List<UpdateTemplateRequestOutputs> outputs;
-
-    // 工作空间标签
-    @NameInMap("Labels")
-    public String labels;
+    // 工作空间名称
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static UpdateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateRequest self = new UpdateTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTemplateRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
-    public UpdateTemplateRequest setTemplateName(String templateName) {
-        this.templateName = templateName;
-        return this;
-    }
-    public String getTemplateName() {
-        return this.templateName;
     }
 
     public UpdateTemplateRequest setDescription(String description) {
@@ -61,28 +45,12 @@ public class UpdateTemplateRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateTemplateRequest setRootEntity(String rootEntity) {
-        this.rootEntity = rootEntity;
+    public UpdateTemplateRequest setInputsExpression(java.util.List<UpdateTemplateRequestInputsExpression> inputsExpression) {
+        this.inputsExpression = inputsExpression;
         return this;
     }
-    public String getRootEntity() {
-        return this.rootEntity;
-    }
-
-    public UpdateTemplateRequest setInputs(java.util.List<UpdateTemplateRequestInputs> inputs) {
-        this.inputs = inputs;
-        return this;
-    }
-    public java.util.List<UpdateTemplateRequestInputs> getInputs() {
-        return this.inputs;
-    }
-
-    public UpdateTemplateRequest setOutputs(java.util.List<UpdateTemplateRequestOutputs> outputs) {
-        this.outputs = outputs;
-        return this;
-    }
-    public java.util.List<UpdateTemplateRequestOutputs> getOutputs() {
-        return this.outputs;
+    public java.util.List<UpdateTemplateRequestInputsExpression> getInputsExpression() {
+        return this.inputsExpression;
     }
 
     public UpdateTemplateRequest setLabels(String labels) {
@@ -93,7 +61,51 @@ public class UpdateTemplateRequest extends TeaModel {
         return this.labels;
     }
 
-    public static class UpdateTemplateRequestInputs extends TeaModel {
+    public UpdateTemplateRequest setOutputsExpression(java.util.List<UpdateTemplateRequestOutputsExpression> outputsExpression) {
+        this.outputsExpression = outputsExpression;
+        return this;
+    }
+    public java.util.List<UpdateTemplateRequestOutputsExpression> getOutputsExpression() {
+        return this.outputsExpression;
+    }
+
+    public UpdateTemplateRequest setRootEntity(String rootEntity) {
+        this.rootEntity = rootEntity;
+        return this;
+    }
+    public String getRootEntity() {
+        return this.rootEntity;
+    }
+
+    public UpdateTemplateRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public UpdateTemplateRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
+    public static class UpdateTemplateRequestInputsExpression extends TeaModel {
+        // 帮助信息
+        @NameInMap("Help")
+        public String help;
+
+        // 是否必填
+        @NameInMap("Required")
+        public Boolean required;
+
+        // 步骤顺序
+        @NameInMap("StepOrder")
+        public Integer stepOrder;
+
         // 任务名称
         @NameInMap("TaskName")
         public String taskName;
@@ -110,64 +122,12 @@ public class UpdateTemplateRequest extends TeaModel {
         @NameInMap("VariableValue")
         public String variableValue;
 
-        // 是否必填
-        @NameInMap("Required")
-        public Boolean required;
-
-        // 帮助信息
-        @NameInMap("Help")
-        public String help;
-
-        // 步骤顺序
-        @NameInMap("StepOrder")
-        public Integer stepOrder;
-
-        public static UpdateTemplateRequestInputs build(java.util.Map<String, ?> map) throws Exception {
-            UpdateTemplateRequestInputs self = new UpdateTemplateRequestInputs();
+        public static UpdateTemplateRequestInputsExpression build(java.util.Map<String, ?> map) throws Exception {
+            UpdateTemplateRequestInputsExpression self = new UpdateTemplateRequestInputsExpression();
             return TeaModel.build(map, self);
         }
 
-        public UpdateTemplateRequestInputs setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public UpdateTemplateRequestInputs setVariableName(String variableName) {
-            this.variableName = variableName;
-            return this;
-        }
-        public String getVariableName() {
-            return this.variableName;
-        }
-
-        public UpdateTemplateRequestInputs setVariableType(String variableType) {
-            this.variableType = variableType;
-            return this;
-        }
-        public String getVariableType() {
-            return this.variableType;
-        }
-
-        public UpdateTemplateRequestInputs setVariableValue(String variableValue) {
-            this.variableValue = variableValue;
-            return this;
-        }
-        public String getVariableValue() {
-            return this.variableValue;
-        }
-
-        public UpdateTemplateRequestInputs setRequired(Boolean required) {
-            this.required = required;
-            return this;
-        }
-        public Boolean getRequired() {
-            return this.required;
-        }
-
-        public UpdateTemplateRequestInputs setHelp(String help) {
+        public UpdateTemplateRequestInputsExpression setHelp(String help) {
             this.help = help;
             return this;
         }
@@ -175,17 +135,69 @@ public class UpdateTemplateRequest extends TeaModel {
             return this.help;
         }
 
-        public UpdateTemplateRequestInputs setStepOrder(Integer stepOrder) {
+        public UpdateTemplateRequestInputsExpression setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public UpdateTemplateRequestInputsExpression setStepOrder(Integer stepOrder) {
             this.stepOrder = stepOrder;
             return this;
         }
         public Integer getStepOrder() {
             return this.stepOrder;
+        }
+
+        public UpdateTemplateRequestInputsExpression setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public UpdateTemplateRequestInputsExpression setVariableName(String variableName) {
+            this.variableName = variableName;
+            return this;
+        }
+        public String getVariableName() {
+            return this.variableName;
+        }
+
+        public UpdateTemplateRequestInputsExpression setVariableType(String variableType) {
+            this.variableType = variableType;
+            return this;
+        }
+        public String getVariableType() {
+            return this.variableType;
+        }
+
+        public UpdateTemplateRequestInputsExpression setVariableValue(String variableValue) {
+            this.variableValue = variableValue;
+            return this;
+        }
+        public String getVariableValue() {
+            return this.variableValue;
         }
 
     }
 
-    public static class UpdateTemplateRequestOutputs extends TeaModel {
+    public static class UpdateTemplateRequestOutputsExpression extends TeaModel {
+        // 帮助信息
+        @NameInMap("Help")
+        public String help;
+
+        // 是否必填
+        @NameInMap("Required")
+        public Boolean required;
+
+        // 步骤顺序
+        @NameInMap("StepOrder")
+        public Integer stepOrder;
+
         // 任务名称
         @NameInMap("TaskName")
         public String taskName;
@@ -202,64 +214,12 @@ public class UpdateTemplateRequest extends TeaModel {
         @NameInMap("VariableValue")
         public String variableValue;
 
-        // 是否必填
-        @NameInMap("Required")
-        public Boolean required;
-
-        // 帮助信息
-        @NameInMap("Help")
-        public String help;
-
-        // 步骤顺序
-        @NameInMap("StepOrder")
-        public Integer stepOrder;
-
-        public static UpdateTemplateRequestOutputs build(java.util.Map<String, ?> map) throws Exception {
-            UpdateTemplateRequestOutputs self = new UpdateTemplateRequestOutputs();
+        public static UpdateTemplateRequestOutputsExpression build(java.util.Map<String, ?> map) throws Exception {
+            UpdateTemplateRequestOutputsExpression self = new UpdateTemplateRequestOutputsExpression();
             return TeaModel.build(map, self);
         }
 
-        public UpdateTemplateRequestOutputs setTaskName(String taskName) {
-            this.taskName = taskName;
-            return this;
-        }
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public UpdateTemplateRequestOutputs setVariableName(String variableName) {
-            this.variableName = variableName;
-            return this;
-        }
-        public String getVariableName() {
-            return this.variableName;
-        }
-
-        public UpdateTemplateRequestOutputs setVariableType(String variableType) {
-            this.variableType = variableType;
-            return this;
-        }
-        public String getVariableType() {
-            return this.variableType;
-        }
-
-        public UpdateTemplateRequestOutputs setVariableValue(String variableValue) {
-            this.variableValue = variableValue;
-            return this;
-        }
-        public String getVariableValue() {
-            return this.variableValue;
-        }
-
-        public UpdateTemplateRequestOutputs setRequired(Boolean required) {
-            this.required = required;
-            return this;
-        }
-        public Boolean getRequired() {
-            return this.required;
-        }
-
-        public UpdateTemplateRequestOutputs setHelp(String help) {
+        public UpdateTemplateRequestOutputsExpression setHelp(String help) {
             this.help = help;
             return this;
         }
@@ -267,12 +227,52 @@ public class UpdateTemplateRequest extends TeaModel {
             return this.help;
         }
 
-        public UpdateTemplateRequestOutputs setStepOrder(Integer stepOrder) {
+        public UpdateTemplateRequestOutputsExpression setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public UpdateTemplateRequestOutputsExpression setStepOrder(Integer stepOrder) {
             this.stepOrder = stepOrder;
             return this;
         }
         public Integer getStepOrder() {
             return this.stepOrder;
+        }
+
+        public UpdateTemplateRequestOutputsExpression setTaskName(String taskName) {
+            this.taskName = taskName;
+            return this;
+        }
+        public String getTaskName() {
+            return this.taskName;
+        }
+
+        public UpdateTemplateRequestOutputsExpression setVariableName(String variableName) {
+            this.variableName = variableName;
+            return this;
+        }
+        public String getVariableName() {
+            return this.variableName;
+        }
+
+        public UpdateTemplateRequestOutputsExpression setVariableType(String variableType) {
+            this.variableType = variableType;
+            return this;
+        }
+        public String getVariableType() {
+            return this.variableType;
+        }
+
+        public UpdateTemplateRequestOutputsExpression setVariableValue(String variableValue) {
+            this.variableValue = variableValue;
+            return this;
+        }
+        public String getVariableValue() {
+            return this.variableValue;
         }
 
     }

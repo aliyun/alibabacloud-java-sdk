@@ -3,21 +3,21 @@ package com.aliyun.easygene20210315.models;
 
 import com.aliyun.tea.*;
 
-public class ParseAppInputsResponse extends TeaModel {
+public class ImportAppResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ParseAppInputsResponseBody body;
+    public ImportAppResponseBody body;
 
-    public static ParseAppInputsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ParseAppInputsResponse self = new ParseAppInputsResponse();
+    public static ImportAppResponse build(java.util.Map<String, ?> map) throws Exception {
+        ImportAppResponse self = new ImportAppResponse();
         return TeaModel.build(map, self);
     }
 
-    public ParseAppInputsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ImportAppResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ParseAppInputsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ParseAppInputsResponse setBody(ParseAppInputsResponseBody body) {
+    public ImportAppResponse setBody(ImportAppResponseBody body) {
         this.body = body;
         return this;
     }
-    public ParseAppInputsResponseBody getBody() {
+    public ImportAppResponseBody getBody() {
         return this.body;
     }
 

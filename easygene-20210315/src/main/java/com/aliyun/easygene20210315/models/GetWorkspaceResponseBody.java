@@ -4,9 +4,13 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
+    // 工作空间Bucket
+    @NameInMap("BucketName")
+    public String bucketName;
+
+    // 创建时间
+    @NameInMap("CreateTime")
+    public String createTime;
 
     // 工作空间简要描述
     @NameInMap("Description")
@@ -24,49 +28,53 @@ public class GetWorkspaceResponseBody extends TeaModel {
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
-    // 工作空间内OSS上的工作路径
-    @NameInMap("OssRoot")
-    public String ossRoot;
+    // 最后修改时间
+    @NameInMap("LastModifiedTime")
+    public String lastModifiedTime;
 
-    // 工作空间Bucket
-    @NameInMap("BucketName")
-    public String bucketName;
+    // 地域ID
+    @NameInMap("Location")
+    public String location;
+
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 工作空间内默认的RAM服务角色
     @NameInMap("Role")
     public String role;
 
-    // 创建时间
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    // 最后修改时间
-    @NameInMap("LastModifiedTime")
-    public String lastModifiedTime;
-
-    // 工作空间名称
-    @NameInMap("Workspace")
-    public String workspace;
-
     // 工作空间状态
     @NameInMap("Status")
     public String status;
 
-    // 地域ID
-    @NameInMap("RegionId")
-    public String regionId;
+    // 工作空间内OSS上的工作路径
+    @NameInMap("Storage")
+    public String storage;
+
+    // 工作空间名称
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static GetWorkspaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetWorkspaceResponseBody self = new GetWorkspaceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetWorkspaceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetWorkspaceResponseBody setBucketName(String bucketName) {
+        this.bucketName = bucketName;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getBucketName() {
+        return this.bucketName;
+    }
+
+    public GetWorkspaceResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
     }
 
     public GetWorkspaceResponseBody setDescription(String description) {
@@ -101,20 +109,28 @@ public class GetWorkspaceResponseBody extends TeaModel {
         return this.labels;
     }
 
-    public GetWorkspaceResponseBody setOssRoot(String ossRoot) {
-        this.ossRoot = ossRoot;
+    public GetWorkspaceResponseBody setLastModifiedTime(String lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
         return this;
     }
-    public String getOssRoot() {
-        return this.ossRoot;
+    public String getLastModifiedTime() {
+        return this.lastModifiedTime;
     }
 
-    public GetWorkspaceResponseBody setBucketName(String bucketName) {
-        this.bucketName = bucketName;
+    public GetWorkspaceResponseBody setLocation(String location) {
+        this.location = location;
         return this;
     }
-    public String getBucketName() {
-        return this.bucketName;
+    public String getLocation() {
+        return this.location;
+    }
+
+    public GetWorkspaceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetWorkspaceResponseBody setRole(String role) {
@@ -125,30 +141,6 @@ public class GetWorkspaceResponseBody extends TeaModel {
         return this.role;
     }
 
-    public GetWorkspaceResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public GetWorkspaceResponseBody setLastModifiedTime(String lastModifiedTime) {
-        this.lastModifiedTime = lastModifiedTime;
-        return this;
-    }
-    public String getLastModifiedTime() {
-        return this.lastModifiedTime;
-    }
-
-    public GetWorkspaceResponseBody setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
     public GetWorkspaceResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -157,12 +149,20 @@ public class GetWorkspaceResponseBody extends TeaModel {
         return this.status;
     }
 
-    public GetWorkspaceResponseBody setRegionId(String regionId) {
-        this.regionId = regionId;
+    public GetWorkspaceResponseBody setStorage(String storage) {
+        this.storage = storage;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getStorage() {
+        return this.storage;
+    }
+
+    public GetWorkspaceResponseBody setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

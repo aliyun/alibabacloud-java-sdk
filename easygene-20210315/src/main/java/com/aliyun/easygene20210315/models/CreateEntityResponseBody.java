@@ -4,6 +4,10 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateEntityResponseBody extends TeaModel {
+    // 实体类型
+    @NameInMap("EntityType")
+    public String entityType;
+
     // 主机ID
     @NameInMap("HostId")
     public String hostId;
@@ -12,15 +16,21 @@ public class CreateEntityResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 工作空间
     @NameInMap("Workspace")
     public String workspace;
-
-    @NameInMap("EntityType")
-    public String entityType;
 
     public static CreateEntityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateEntityResponseBody self = new CreateEntityResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateEntityResponseBody setEntityType(String entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    public String getEntityType() {
+        return this.entityType;
     }
 
     public CreateEntityResponseBody setHostId(String hostId) {
@@ -45,14 +55,6 @@ public class CreateEntityResponseBody extends TeaModel {
     }
     public String getWorkspace() {
         return this.workspace;
-    }
-
-    public CreateEntityResponseBody setEntityType(String entityType) {
-        this.entityType = entityType;
-        return this;
-    }
-    public String getEntityType() {
-        return this.entityType;
     }
 
 }

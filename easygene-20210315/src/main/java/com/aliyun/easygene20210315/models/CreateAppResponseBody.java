@@ -4,10 +4,6 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class CreateAppResponseBody extends TeaModel {
-    // 工作空间
-    @NameInMap("Workspace")
-    public String workspace;
-
     // 应用名称
     @NameInMap("AppName")
     public String appName;
@@ -24,17 +20,13 @@ public class CreateAppResponseBody extends TeaModel {
     @NameInMap("Revision")
     public String revision;
 
+    // 工作空间
+    @NameInMap("Workspace")
+    public String workspace;
+
     public static CreateAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAppResponseBody self = new CreateAppResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAppResponseBody setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
     }
 
     public CreateAppResponseBody setAppName(String appName) {
@@ -67,6 +59,14 @@ public class CreateAppResponseBody extends TeaModel {
     }
     public String getRevision() {
         return this.revision;
+    }
+
+    public CreateAppResponseBody setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

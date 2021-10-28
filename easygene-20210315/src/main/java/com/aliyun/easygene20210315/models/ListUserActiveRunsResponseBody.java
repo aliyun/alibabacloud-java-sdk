@@ -4,10 +4,6 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class ListUserActiveRunsResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 主机ID
     @NameInMap("HostId")
     public String hostId;
@@ -20,25 +16,21 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    // 返回个数
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 任务列表
     @NameInMap("Runs")
     public java.util.List<ListUserActiveRunsResponseBodyRuns> runs;
 
+    // 返回个数
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListUserActiveRunsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUserActiveRunsResponseBody self = new ListUserActiveRunsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListUserActiveRunsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListUserActiveRunsResponseBody setHostId(String hostId) {
@@ -65,12 +57,12 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
         return this.nextToken;
     }
 
-    public ListUserActiveRunsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListUserActiveRunsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListUserActiveRunsResponseBody setRuns(java.util.List<ListUserActiveRunsResponseBodyRuns> runs) {
@@ -81,15 +73,30 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
         return this.runs;
     }
 
+    public ListUserActiveRunsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListUserActiveRunsResponseBodyRunsExecuteOptions extends TeaModel {
+        // 是否开启CallCaching
         @NameInMap("CallCaching")
         public Boolean callCaching;
 
+        // 是否删除中间文件
         @NameInMap("DeleteIntermediateResults")
         public Boolean deleteIntermediateResults;
 
+        // 失败模式
         @NameInMap("FailureMode")
         public String failureMode;
+
+        // 使用相对路径
+        @NameInMap("UseRelativeOutputPaths")
+        public Boolean useRelativeOutputPaths;
 
         public static ListUserActiveRunsResponseBodyRunsExecuteOptions build(java.util.Map<String, ?> map) throws Exception {
             ListUserActiveRunsResponseBodyRunsExecuteOptions self = new ListUserActiveRunsResponseBodyRunsExecuteOptions();
@@ -120,6 +127,14 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
             return this.failureMode;
         }
 
+        public ListUserActiveRunsResponseBodyRunsExecuteOptions setUseRelativeOutputPaths(Boolean useRelativeOutputPaths) {
+            this.useRelativeOutputPaths = useRelativeOutputPaths;
+            return this;
+        }
+        public Boolean getUseRelativeOutputPaths() {
+            return this.useRelativeOutputPaths;
+        }
+
     }
 
     public static class ListUserActiveRunsResponseBodyRuns extends TeaModel {
@@ -127,53 +142,21 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
-        // 应用来源
-        @NameInMap("Source")
-        public String source;
-
-        // 应用命名空间
-        @NameInMap("Namespace")
-        public String namespace;
-
-        // 应用原名
-        @NameInMap("AppOrigName")
-        public String appOrigName;
-
-        // 任务标签
-        @NameInMap("Labels")
-        public java.util.Map<String, String> labels;
-
-        // 任务名称
-        @NameInMap("Name")
-        public String name;
-
         // 应用版本号
-        @NameInMap("Revision")
-        public String revision;
-
-        // 任务ID
-        @NameInMap("RunId")
-        public String runId;
-
-        // 任务状态
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AppRevision")
+        public String appRevision;
 
         // 提交时间
         @NameInMap("CreateTime")
         public String createTime;
 
-        // 开始时间
-        @NameInMap("StartTime")
-        public String startTime;
+        // 默认运行时
+        @NameInMap("DefaultRuntime")
+        public String defaultRuntime;
 
         // 结束时间
         @NameInMap("EndTime")
         public String endTime;
-
-        // 提交ID
-        @NameInMap("SubmissionId")
-        public String submissionId;
 
         // 实体名称
         @NameInMap("EntityName")
@@ -194,14 +177,41 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
         @NameInMap("Inputs")
         public String inputs;
 
-        @NameInMap("DefaultRuntime")
-        public String defaultRuntime;
+        // 任务标签
+        @NameInMap("Labels")
+        public java.util.Map<String, String> labels;
 
-        @NameInMap("Workspace")
-        public String workspace;
-
+        // 区域
         @NameInMap("RegionId")
         public String regionId;
+
+        // 任务ID
+        @NameInMap("RunId")
+        public String runId;
+
+        // 任务名称
+        @NameInMap("RunName")
+        public String runName;
+
+        // 应用来源
+        @NameInMap("Source")
+        public String source;
+
+        // 开始时间
+        @NameInMap("StartTime")
+        public String startTime;
+
+        // 任务状态
+        @NameInMap("Status")
+        public String status;
+
+        // 提交ID
+        @NameInMap("SubmissionId")
+        public String submissionId;
+
+        // 工作空间
+        @NameInMap("Workspace")
+        public String workspace;
 
         public static ListUserActiveRunsResponseBodyRuns build(java.util.Map<String, ?> map) throws Exception {
             ListUserActiveRunsResponseBodyRuns self = new ListUserActiveRunsResponseBodyRuns();
@@ -216,68 +226,12 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public ListUserActiveRunsResponseBodyRuns setSource(String source) {
-            this.source = source;
+        public ListUserActiveRunsResponseBodyRuns setAppRevision(String appRevision) {
+            this.appRevision = appRevision;
             return this;
         }
-        public String getSource() {
-            return this.source;
-        }
-
-        public ListUserActiveRunsResponseBodyRuns setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public ListUserActiveRunsResponseBodyRuns setAppOrigName(String appOrigName) {
-            this.appOrigName = appOrigName;
-            return this;
-        }
-        public String getAppOrigName() {
-            return this.appOrigName;
-        }
-
-        public ListUserActiveRunsResponseBodyRuns setLabels(java.util.Map<String, String> labels) {
-            this.labels = labels;
-            return this;
-        }
-        public java.util.Map<String, String> getLabels() {
-            return this.labels;
-        }
-
-        public ListUserActiveRunsResponseBodyRuns setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListUserActiveRunsResponseBodyRuns setRevision(String revision) {
-            this.revision = revision;
-            return this;
-        }
-        public String getRevision() {
-            return this.revision;
-        }
-
-        public ListUserActiveRunsResponseBodyRuns setRunId(String runId) {
-            this.runId = runId;
-            return this;
-        }
-        public String getRunId() {
-            return this.runId;
-        }
-
-        public ListUserActiveRunsResponseBodyRuns setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
+        public String getAppRevision() {
+            return this.appRevision;
         }
 
         public ListUserActiveRunsResponseBodyRuns setCreateTime(String createTime) {
@@ -288,12 +242,12 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListUserActiveRunsResponseBodyRuns setStartTime(String startTime) {
-            this.startTime = startTime;
+        public ListUserActiveRunsResponseBodyRuns setDefaultRuntime(String defaultRuntime) {
+            this.defaultRuntime = defaultRuntime;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getDefaultRuntime() {
+            return this.defaultRuntime;
         }
 
         public ListUserActiveRunsResponseBodyRuns setEndTime(String endTime) {
@@ -302,14 +256,6 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
-        }
-
-        public ListUserActiveRunsResponseBodyRuns setSubmissionId(String submissionId) {
-            this.submissionId = submissionId;
-            return this;
-        }
-        public String getSubmissionId() {
-            return this.submissionId;
         }
 
         public ListUserActiveRunsResponseBodyRuns setEntityName(String entityName) {
@@ -352,20 +298,12 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
             return this.inputs;
         }
 
-        public ListUserActiveRunsResponseBodyRuns setDefaultRuntime(String defaultRuntime) {
-            this.defaultRuntime = defaultRuntime;
+        public ListUserActiveRunsResponseBodyRuns setLabels(java.util.Map<String, String> labels) {
+            this.labels = labels;
             return this;
         }
-        public String getDefaultRuntime() {
-            return this.defaultRuntime;
-        }
-
-        public ListUserActiveRunsResponseBodyRuns setWorkspace(String workspace) {
-            this.workspace = workspace;
-            return this;
-        }
-        public String getWorkspace() {
-            return this.workspace;
+        public java.util.Map<String, String> getLabels() {
+            return this.labels;
         }
 
         public ListUserActiveRunsResponseBodyRuns setRegionId(String regionId) {
@@ -374,6 +312,62 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListUserActiveRunsResponseBodyRuns setRunId(String runId) {
+            this.runId = runId;
+            return this;
+        }
+        public String getRunId() {
+            return this.runId;
+        }
+
+        public ListUserActiveRunsResponseBodyRuns setRunName(String runName) {
+            this.runName = runName;
+            return this;
+        }
+        public String getRunName() {
+            return this.runName;
+        }
+
+        public ListUserActiveRunsResponseBodyRuns setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListUserActiveRunsResponseBodyRuns setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public ListUserActiveRunsResponseBodyRuns setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListUserActiveRunsResponseBodyRuns setSubmissionId(String submissionId) {
+            this.submissionId = submissionId;
+            return this;
+        }
+        public String getSubmissionId() {
+            return this.submissionId;
+        }
+
+        public ListUserActiveRunsResponseBodyRuns setWorkspace(String workspace) {
+            this.workspace = workspace;
+            return this;
+        }
+        public String getWorkspace() {
+            return this.workspace;
         }
 
     }

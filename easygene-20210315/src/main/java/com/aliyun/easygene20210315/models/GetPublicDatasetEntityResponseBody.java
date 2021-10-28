@@ -4,24 +4,9 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetPublicDatasetEntityResponseBody extends TeaModel {
-    // 主机ID
-    @NameInMap("HostId")
-    public String hostId;
-
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("HttpCode")
-    public Integer httpCode;
-
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
-    // 错误消息
-    @NameInMap("Message")
-    public String message;
+    // 实体属性名称列表
+    @NameInMap("Attributes")
+    public java.util.List<String> attributes;
 
     // 公共数据集名称
     @NameInMap("DatasetName")
@@ -31,9 +16,13 @@ public class GetPublicDatasetEntityResponseBody extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
-    // 实体属性名称列表
-    @NameInMap("Attributes")
-    public java.util.List<String> attributes;
+    // 主机ID
+    @NameInMap("HostId")
+    public String hostId;
+
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 该类型实体总数
     @NameInMap("TotalCount")
@@ -44,44 +33,12 @@ public class GetPublicDatasetEntityResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetPublicDatasetEntityResponseBody setHostId(String hostId) {
-        this.hostId = hostId;
+    public GetPublicDatasetEntityResponseBody setAttributes(java.util.List<String> attributes) {
+        this.attributes = attributes;
         return this;
     }
-    public String getHostId() {
-        return this.hostId;
-    }
-
-    public GetPublicDatasetEntityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetPublicDatasetEntityResponseBody setHttpCode(Integer httpCode) {
-        this.httpCode = httpCode;
-        return this;
-    }
-    public Integer getHttpCode() {
-        return this.httpCode;
-    }
-
-    public GetPublicDatasetEntityResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetPublicDatasetEntityResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public java.util.List<String> getAttributes() {
+        return this.attributes;
     }
 
     public GetPublicDatasetEntityResponseBody setDatasetName(String datasetName) {
@@ -100,12 +57,20 @@ public class GetPublicDatasetEntityResponseBody extends TeaModel {
         return this.entityType;
     }
 
-    public GetPublicDatasetEntityResponseBody setAttributes(java.util.List<String> attributes) {
-        this.attributes = attributes;
+    public GetPublicDatasetEntityResponseBody setHostId(String hostId) {
+        this.hostId = hostId;
         return this;
     }
-    public java.util.List<String> getAttributes() {
-        return this.attributes;
+    public String getHostId() {
+        return this.hostId;
+    }
+
+    public GetPublicDatasetEntityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetPublicDatasetEntityResponseBody setTotalCount(Integer totalCount) {

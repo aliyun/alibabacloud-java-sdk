@@ -4,9 +4,11 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class DeleteEntityItemsResponseBody extends TeaModel {
+    // 主机ID
     @NameInMap("HostId")
     public String hostId;
 
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 

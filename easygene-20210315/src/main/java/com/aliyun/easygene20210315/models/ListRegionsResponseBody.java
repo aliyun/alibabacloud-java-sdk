@@ -8,25 +8,13 @@ public class ListRegionsResponseBody extends TeaModel {
     @NameInMap("HostId")
     public String hostId;
 
+    // 基因分析平台产品可用地域列表。
+    @NameInMap("Regions")
+    public java.util.List<ListRegionsResponseBodyRegions> regions;
+
     // 请求ID
     @NameInMap("RequestId")
     public String requestId;
-
-    // 错误码
-    @NameInMap("Code")
-    public String code;
-
-    // 错误消息
-    @NameInMap("Message")
-    public String message;
-
-    // 是否调用成功
-    @NameInMap("Success")
-    public Boolean success;
-
-    // 基因云产品上线区域
-    @NameInMap("Regions")
-    public java.util.List<ListRegionsResponseBodyRegions> regions;
 
     public static ListRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListRegionsResponseBody self = new ListRegionsResponseBody();
@@ -41,38 +29,6 @@ public class ListRegionsResponseBody extends TeaModel {
         return this.hostId;
     }
 
-    public ListRegionsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListRegionsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListRegionsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListRegionsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public ListRegionsResponseBody setRegions(java.util.List<ListRegionsResponseBodyRegions> regions) {
         this.regions = regions;
         return this;
@@ -81,13 +37,24 @@ public class ListRegionsResponseBody extends TeaModel {
         return this.regions;
     }
 
+    public ListRegionsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListRegionsResponseBodyRegions extends TeaModel {
+        // 名称
         @NameInMap("LocalName")
         public String localName;
 
+        // 访问Endpoint
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
+        // 区域ID
         @NameInMap("RegionId")
         public String regionId;
 

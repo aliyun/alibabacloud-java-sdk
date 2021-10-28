@@ -4,10 +4,6 @@ package com.aliyun.easygene20210315.models;
 import com.aliyun.tea.*;
 
 public class GetAppRequest extends TeaModel {
-    // 工作空间名称
-    @NameInMap("Workspace")
-    public String workspace;
-
     // 应用名称
     @NameInMap("AppName")
     public String appName;
@@ -16,17 +12,13 @@ public class GetAppRequest extends TeaModel {
     @NameInMap("Revision")
     public String revision;
 
+    // 工作空间名称
+    @NameInMap("Workspace")
+    public String workspace;
+
     public static GetAppRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAppRequest self = new GetAppRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetAppRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
     }
 
     public GetAppRequest setAppName(String appName) {
@@ -43,6 +35,14 @@ public class GetAppRequest extends TeaModel {
     }
     public String getRevision() {
         return this.revision;
+    }
+
+    public GetAppRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }
