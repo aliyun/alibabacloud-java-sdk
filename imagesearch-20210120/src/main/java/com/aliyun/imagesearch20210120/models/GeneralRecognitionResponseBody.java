@@ -7,17 +7,17 @@ public class GeneralRecognitionResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public GeneralRecognitionResponseBodyData data;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GeneralRecognitionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GeneralRecognitionResponseBody self = new GeneralRecognitionResponseBody();
@@ -32,14 +32,6 @@ public class GeneralRecognitionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GeneralRecognitionResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public GeneralRecognitionResponseBody setData(GeneralRecognitionResponseBodyData data) {
         this.data = data;
         return this;
@@ -48,12 +40,12 @@ public class GeneralRecognitionResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GeneralRecognitionResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GeneralRecognitionResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
     }
 
     public GeneralRecognitionResponseBody setRequestId(String requestId) {
@@ -64,24 +56,24 @@ public class GeneralRecognitionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GeneralRecognitionResponseBodyDataResult extends TeaModel {
-        @NameInMap("Tag")
-        public String tag;
+    public GeneralRecognitionResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public static class GeneralRecognitionResponseBodyDataResult extends TeaModel {
         @NameInMap("Score")
         public String score;
+
+        @NameInMap("Tag")
+        public String tag;
 
         public static GeneralRecognitionResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             GeneralRecognitionResponseBodyDataResult self = new GeneralRecognitionResponseBodyDataResult();
             return TeaModel.build(map, self);
-        }
-
-        public GeneralRecognitionResponseBodyDataResult setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
         }
 
         public GeneralRecognitionResponseBodyDataResult setScore(String score) {
@@ -92,26 +84,26 @@ public class GeneralRecognitionResponseBody extends TeaModel {
             return this.score;
         }
 
+        public GeneralRecognitionResponseBodyDataResult setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
     }
 
     public static class GeneralRecognitionResponseBodyData extends TeaModel {
-        @NameInMap("Result")
-        public java.util.List<GeneralRecognitionResponseBodyDataResult> result;
-
         @NameInMap("Regions")
         public java.util.List<String> regions;
+
+        @NameInMap("Result")
+        public java.util.List<GeneralRecognitionResponseBodyDataResult> result;
 
         public static GeneralRecognitionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GeneralRecognitionResponseBodyData self = new GeneralRecognitionResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GeneralRecognitionResponseBodyData setResult(java.util.List<GeneralRecognitionResponseBodyDataResult> result) {
-            this.result = result;
-            return this;
-        }
-        public java.util.List<GeneralRecognitionResponseBodyDataResult> getResult() {
-            return this.result;
         }
 
         public GeneralRecognitionResponseBodyData setRegions(java.util.List<String> regions) {
@@ -120,6 +112,14 @@ public class GeneralRecognitionResponseBody extends TeaModel {
         }
         public java.util.List<String> getRegions() {
             return this.regions;
+        }
+
+        public GeneralRecognitionResponseBodyData setResult(java.util.List<GeneralRecognitionResponseBodyDataResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<GeneralRecognitionResponseBodyDataResult> getResult() {
+            return this.result;
         }
 
     }

@@ -7,17 +7,17 @@ public class ImageDuplicationResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public java.util.List<String> data;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ImageDuplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImageDuplicationResponseBody self = new ImageDuplicationResponseBody();
@@ -32,14 +32,6 @@ public class ImageDuplicationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ImageDuplicationResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ImageDuplicationResponseBody setData(java.util.List<String> data) {
         this.data = data;
         return this;
@@ -48,12 +40,12 @@ public class ImageDuplicationResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ImageDuplicationResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public ImageDuplicationResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
     }
 
     public ImageDuplicationResponseBody setRequestId(String requestId) {
@@ -62,6 +54,14 @@ public class ImageDuplicationResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ImageDuplicationResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

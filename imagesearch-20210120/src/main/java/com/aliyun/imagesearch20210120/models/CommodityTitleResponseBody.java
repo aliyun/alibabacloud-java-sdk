@@ -7,17 +7,17 @@ public class CommodityTitleResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public CommodityTitleResponseBodyData data;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static CommodityTitleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CommodityTitleResponseBody self = new CommodityTitleResponseBody();
@@ -32,14 +32,6 @@ public class CommodityTitleResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CommodityTitleResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public CommodityTitleResponseBody setData(CommodityTitleResponseBodyData data) {
         this.data = data;
         return this;
@@ -48,12 +40,12 @@ public class CommodityTitleResponseBody extends TeaModel {
         return this.data;
     }
 
-    public CommodityTitleResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CommodityTitleResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
     }
 
     public CommodityTitleResponseBody setRequestId(String requestId) {
@@ -62,6 +54,14 @@ public class CommodityTitleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CommodityTitleResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class CommodityTitleResponseBodyData extends TeaModel {

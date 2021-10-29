@@ -7,17 +7,17 @@ public class ImageSegmentationResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public ImageSegmentationResponseBodyData data;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ImageSegmentationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImageSegmentationResponseBody self = new ImageSegmentationResponseBody();
@@ -32,14 +32,6 @@ public class ImageSegmentationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ImageSegmentationResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ImageSegmentationResponseBody setData(ImageSegmentationResponseBodyData data) {
         this.data = data;
         return this;
@@ -48,12 +40,12 @@ public class ImageSegmentationResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ImageSegmentationResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public ImageSegmentationResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
     }
 
     public ImageSegmentationResponseBody setRequestId(String requestId) {
@@ -62,6 +54,14 @@ public class ImageSegmentationResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ImageSegmentationResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class ImageSegmentationResponseBodyData extends TeaModel {
