@@ -7,17 +7,17 @@ public class ImagePropertyResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Data")
     public ImagePropertyResponseBodyData data;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static ImagePropertyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ImagePropertyResponseBody self = new ImagePropertyResponseBody();
@@ -32,14 +32,6 @@ public class ImagePropertyResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ImagePropertyResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public ImagePropertyResponseBody setData(ImagePropertyResponseBodyData data) {
         this.data = data;
         return this;
@@ -48,12 +40,12 @@ public class ImagePropertyResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ImagePropertyResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public ImagePropertyResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getMessage() {
+        return this.message;
     }
 
     public ImagePropertyResponseBody setRequestId(String requestId) {
@@ -64,12 +56,20 @@ public class ImagePropertyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ImagePropertyResponseBodyDataPropertyResultsValues extends TeaModel {
-        @NameInMap("ValueId")
-        public String valueId;
+    public ImagePropertyResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
+    public static class ImagePropertyResponseBodyDataPropertyResultsValues extends TeaModel {
         @NameInMap("Probability")
         public Float probability;
+
+        @NameInMap("ValueId")
+        public String valueId;
 
         @NameInMap("ValueName")
         public String valueName;
@@ -79,20 +79,20 @@ public class ImagePropertyResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ImagePropertyResponseBodyDataPropertyResultsValues setValueId(String valueId) {
-            this.valueId = valueId;
-            return this;
-        }
-        public String getValueId() {
-            return this.valueId;
-        }
-
         public ImagePropertyResponseBodyDataPropertyResultsValues setProbability(Float probability) {
             this.probability = probability;
             return this;
         }
         public Float getProbability() {
             return this.probability;
+        }
+
+        public ImagePropertyResponseBodyDataPropertyResultsValues setValueId(String valueId) {
+            this.valueId = valueId;
+            return this;
+        }
+        public String getValueId() {
+            return this.valueId;
         }
 
         public ImagePropertyResponseBodyDataPropertyResultsValues setValueName(String valueName) {
@@ -106,11 +106,11 @@ public class ImagePropertyResponseBody extends TeaModel {
     }
 
     public static class ImagePropertyResponseBodyDataPropertyResults extends TeaModel {
-        @NameInMap("PropertyName")
-        public String propertyName;
-
         @NameInMap("PropertyId")
         public String propertyId;
+
+        @NameInMap("PropertyName")
+        public String propertyName;
 
         @NameInMap("Values")
         public java.util.List<ImagePropertyResponseBodyDataPropertyResultsValues> values;
@@ -120,20 +120,20 @@ public class ImagePropertyResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ImagePropertyResponseBodyDataPropertyResults setPropertyName(String propertyName) {
-            this.propertyName = propertyName;
-            return this;
-        }
-        public String getPropertyName() {
-            return this.propertyName;
-        }
-
         public ImagePropertyResponseBodyDataPropertyResults setPropertyId(String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
         public String getPropertyId() {
             return this.propertyId;
+        }
+
+        public ImagePropertyResponseBodyDataPropertyResults setPropertyName(String propertyName) {
+            this.propertyName = propertyName;
+            return this;
+        }
+        public String getPropertyName() {
+            return this.propertyName;
         }
 
         public ImagePropertyResponseBodyDataPropertyResults setValues(java.util.List<ImagePropertyResponseBodyDataPropertyResultsValues> values) {
