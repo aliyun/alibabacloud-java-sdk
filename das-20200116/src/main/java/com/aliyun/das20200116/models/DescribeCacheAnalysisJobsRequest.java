@@ -4,14 +4,11 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisJobsRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("PageNo")
     public String pageNo;
@@ -19,25 +16,12 @@ public class DescribeCacheAnalysisJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static DescribeCacheAnalysisJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCacheAnalysisJobsRequest self = new DescribeCacheAnalysisJobsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCacheAnalysisJobsRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeCacheAnalysisJobsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeCacheAnalysisJobsRequest setEndTime(String endTime) {
@@ -46,6 +30,14 @@ public class DescribeCacheAnalysisJobsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeCacheAnalysisJobsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeCacheAnalysisJobsRequest setPageNo(String pageNo) {
@@ -62,6 +54,14 @@ public class DescribeCacheAnalysisJobsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeCacheAnalysisJobsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

@@ -4,8 +4,17 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetEndpointSwitchTaskRequest extends TeaModel {
+    @NameInMap("TaskId")
+    public String taskId;
+
     @NameInMap("Uid")
     public String uid;
+
+    @NameInMap("UserId")
+    public String userId;
+
+    @NameInMap("__context")
+    public String context;
 
     @NameInMap("accessKey")
     public String accessKey;
@@ -13,24 +22,23 @@ public class GetEndpointSwitchTaskRequest extends TeaModel {
     @NameInMap("signature")
     public String signature;
 
-    @NameInMap("timestamp")
-    public String timestamp;
-
-    @NameInMap("__context")
-    public String context;
-
     @NameInMap("skipAuth")
     public String skipAuth;
 
-    @NameInMap("UserId")
-    public String userId;
-
-    @NameInMap("TaskId")
-    public String taskId;
+    @NameInMap("timestamp")
+    public String timestamp;
 
     public static GetEndpointSwitchTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         GetEndpointSwitchTaskRequest self = new GetEndpointSwitchTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetEndpointSwitchTaskRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public GetEndpointSwitchTaskRequest setUid(String uid) {
@@ -39,6 +47,22 @@ public class GetEndpointSwitchTaskRequest extends TeaModel {
     }
     public String getUid() {
         return this.uid;
+    }
+
+    public GetEndpointSwitchTaskRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
+    }
+
+    public GetEndpointSwitchTaskRequest setContext(String context) {
+        this.context = context;
+        return this;
+    }
+    public String getContext() {
+        return this.context;
     }
 
     public GetEndpointSwitchTaskRequest setAccessKey(String accessKey) {
@@ -57,22 +81,6 @@ public class GetEndpointSwitchTaskRequest extends TeaModel {
         return this.signature;
     }
 
-    public GetEndpointSwitchTaskRequest setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
-        return this;
-    }
-    public String getTimestamp() {
-        return this.timestamp;
-    }
-
-    public GetEndpointSwitchTaskRequest setContext(String context) {
-        this.context = context;
-        return this;
-    }
-    public String getContext() {
-        return this.context;
-    }
-
     public GetEndpointSwitchTaskRequest setSkipAuth(String skipAuth) {
         this.skipAuth = skipAuth;
         return this;
@@ -81,20 +89,12 @@ public class GetEndpointSwitchTaskRequest extends TeaModel {
         return this.skipAuth;
     }
 
-    public GetEndpointSwitchTaskRequest setUserId(String userId) {
-        this.userId = userId;
+    public GetEndpointSwitchTaskRequest setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public GetEndpointSwitchTaskRequest setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
+    public String getTimestamp() {
+        return this.timestamp;
     }
 
 }
