@@ -36,7 +36,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String connectionString;
 
         @NameInMap("Port")
-        public String port;
+        public Long port;
 
         @NameInMap("Type")
         public String type;
@@ -63,11 +63,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.connectionString;
         }
 
-        public DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs setPort(String port) {
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs setPort(Long port) {
             this.port = port;
             return this;
         }
-        public String getPort() {
+        public Long getPort() {
             return this.port;
         }
 
