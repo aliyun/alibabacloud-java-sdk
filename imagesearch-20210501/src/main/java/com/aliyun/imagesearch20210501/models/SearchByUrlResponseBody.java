@@ -76,26 +76,18 @@ public class SearchByUrlResponseBody extends TeaModel {
     }
 
     public static class SearchByUrlResponseBodyDataAuctionsResultMaxCommission extends TeaModel {
-        @NameInMap("MaxCommissionRate")
-        public String maxCommissionRate;
-
         @NameInMap("MaxCommissionClickUrl")
         public String maxCommissionClickUrl;
 
         @NameInMap("MaxCommissionCouponShareUrl")
         public String maxCommissionCouponShareUrl;
 
+        @NameInMap("MaxCommissionRate")
+        public String maxCommissionRate;
+
         public static SearchByUrlResponseBodyDataAuctionsResultMaxCommission build(java.util.Map<String, ?> map) throws Exception {
             SearchByUrlResponseBodyDataAuctionsResultMaxCommission self = new SearchByUrlResponseBodyDataAuctionsResultMaxCommission();
             return TeaModel.build(map, self);
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResultMaxCommission setMaxCommissionRate(String maxCommissionRate) {
-            this.maxCommissionRate = maxCommissionRate;
-            return this;
-        }
-        public String getMaxCommissionRate() {
-            return this.maxCommissionRate;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResultMaxCommission setMaxCommissionClickUrl(String maxCommissionClickUrl) {
@@ -114,14 +106,82 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.maxCommissionCouponShareUrl;
         }
 
+        public SearchByUrlResponseBodyDataAuctionsResultMaxCommission setMaxCommissionRate(String maxCommissionRate) {
+            this.maxCommissionRate = maxCommissionRate;
+            return this;
+        }
+        public String getMaxCommissionRate() {
+            return this.maxCommissionRate;
+        }
+
     }
 
     public static class SearchByUrlResponseBodyDataAuctionsResult extends TeaModel {
+        @NameInMap("CategoryName")
+        public String categoryName;
+
+        @NameInMap("CommissionRate")
+        public String commissionRate;
+
+        @NameInMap("CouponAmount")
+        public Integer couponAmount;
+
+        @NameInMap("CouponEndTime")
+        public String couponEndTime;
+
+        @NameInMap("CouponInfo")
+        public String couponInfo;
+
+        @NameInMap("CouponRemainCount")
+        public Integer couponRemainCount;
+
+        @NameInMap("CouponShareUrl")
+        public String couponShareUrl;
+
+        @NameInMap("CouponStartFee")
+        public String couponStartFee;
+
+        @NameInMap("CouponStartTime")
+        public String couponStartTime;
+
+        @NameInMap("CouponTotalCount")
+        public String couponTotalCount;
+
+        @NameInMap("DeeplinkCouponShareUrl")
+        public String deeplinkCouponShareUrl;
+
+        @NameInMap("DeeplinkUrl")
+        public String deeplinkUrl;
+
         @NameInMap("ItemId")
         public String itemId;
 
-        @NameInMap("Title")
-        public String title;
+        @NameInMap("LevelOneCategoryName")
+        public String levelOneCategoryName;
+
+        @NameInMap("MaxCommission")
+        public SearchByUrlResponseBodyDataAuctionsResultMaxCommission maxCommission;
+
+        @NameInMap("Nick")
+        public String nick;
+
+        @NameInMap("PicUrl")
+        public String picUrl;
+
+        @NameInMap("PriceAfterCoupon")
+        public String priceAfterCoupon;
+
+        @NameInMap("Provcity")
+        public String provcity;
+
+        @NameInMap("ReservePrice")
+        public String reservePrice;
+
+        @NameInMap("SellerId")
+        public String sellerId;
+
+        @NameInMap("ShopTitle")
+        public String shopTitle;
 
         @NameInMap("ShortTitle")
         public String shortTitle;
@@ -129,84 +189,120 @@ public class SearchByUrlResponseBody extends TeaModel {
         @NameInMap("SubTitle")
         public String subTitle;
 
-        @NameInMap("PicUrl")
-        public String picUrl;
-
-        @NameInMap("ReservePrice")
-        public String reservePrice;
-
-        @NameInMap("ZkFinalPrice")
-        public String zkFinalPrice;
-
-        @NameInMap("PriceAfterCoupon")
-        public String priceAfterCoupon;
-
-        @NameInMap("UserType")
-        public Integer userType;
-
-        @NameInMap("Provcity")
-        public String provcity;
-
-        @NameInMap("Nick")
-        public String nick;
-
-        @NameInMap("SellerId")
-        public String sellerId;
-
-        @NameInMap("Volume")
-        public Integer volume;
-
-        @NameInMap("LevelOneCategoryName")
-        public String levelOneCategoryName;
-
-        @NameInMap("CategoryName")
-        public String categoryName;
-
-        @NameInMap("CouponTotalCount")
-        public String couponTotalCount;
-
-        @NameInMap("CouponRemainCount")
-        public Integer couponRemainCount;
-
-        @NameInMap("CouponStartTime")
-        public String couponStartTime;
-
-        @NameInMap("CouponEndTime")
-        public String couponEndTime;
-
-        @NameInMap("CouponStartFee")
-        public String couponStartFee;
-
-        @NameInMap("CouponAmount")
-        public Integer couponAmount;
-
-        @NameInMap("CouponInfo")
-        public String couponInfo;
-
-        @NameInMap("CommissionRate")
-        public String commissionRate;
-
-        @NameInMap("CouponShareUrl")
-        public String couponShareUrl;
-
-        @NameInMap("DeeplinkCouponShareUrl")
-        public String deeplinkCouponShareUrl;
+        @NameInMap("Title")
+        public String title;
 
         @NameInMap("Url")
         public String url;
 
-        @NameInMap("DeeplinkUrl")
-        public String deeplinkUrl;
+        @NameInMap("UserType")
+        public Integer userType;
 
-        @NameInMap("ShopTitle")
-        public String shopTitle;
+        @NameInMap("Volume")
+        public Integer volume;
 
-        @NameInMap("MaxCommission")
-        public SearchByUrlResponseBodyDataAuctionsResultMaxCommission maxCommission;
+        @NameInMap("ZkFinalPrice")
+        public String zkFinalPrice;
 
         public static SearchByUrlResponseBodyDataAuctionsResult build(java.util.Map<String, ?> map) throws Exception {
             SearchByUrlResponseBodyDataAuctionsResult self = new SearchByUrlResponseBodyDataAuctionsResult();
             return TeaModel.build(map, self);
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCategoryName(String categoryName) {
+            this.categoryName = categoryName;
+            return this;
+        }
+        public String getCategoryName() {
+            return this.categoryName;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCommissionRate(String commissionRate) {
+            this.commissionRate = commissionRate;
+            return this;
+        }
+        public String getCommissionRate() {
+            return this.commissionRate;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCouponAmount(Integer couponAmount) {
+            this.couponAmount = couponAmount;
+            return this;
+        }
+        public Integer getCouponAmount() {
+            return this.couponAmount;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCouponEndTime(String couponEndTime) {
+            this.couponEndTime = couponEndTime;
+            return this;
+        }
+        public String getCouponEndTime() {
+            return this.couponEndTime;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCouponInfo(String couponInfo) {
+            this.couponInfo = couponInfo;
+            return this;
+        }
+        public String getCouponInfo() {
+            return this.couponInfo;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCouponRemainCount(Integer couponRemainCount) {
+            this.couponRemainCount = couponRemainCount;
+            return this;
+        }
+        public Integer getCouponRemainCount() {
+            return this.couponRemainCount;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCouponShareUrl(String couponShareUrl) {
+            this.couponShareUrl = couponShareUrl;
+            return this;
+        }
+        public String getCouponShareUrl() {
+            return this.couponShareUrl;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCouponStartFee(String couponStartFee) {
+            this.couponStartFee = couponStartFee;
+            return this;
+        }
+        public String getCouponStartFee() {
+            return this.couponStartFee;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCouponStartTime(String couponStartTime) {
+            this.couponStartTime = couponStartTime;
+            return this;
+        }
+        public String getCouponStartTime() {
+            return this.couponStartTime;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setCouponTotalCount(String couponTotalCount) {
+            this.couponTotalCount = couponTotalCount;
+            return this;
+        }
+        public String getCouponTotalCount() {
+            return this.couponTotalCount;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setDeeplinkCouponShareUrl(String deeplinkCouponShareUrl) {
+            this.deeplinkCouponShareUrl = deeplinkCouponShareUrl;
+            return this;
+        }
+        public String getDeeplinkCouponShareUrl() {
+            return this.deeplinkCouponShareUrl;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setDeeplinkUrl(String deeplinkUrl) {
+            this.deeplinkUrl = deeplinkUrl;
+            return this;
+        }
+        public String getDeeplinkUrl() {
+            return this.deeplinkUrl;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setItemId(String itemId) {
@@ -217,12 +313,76 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.itemId;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setTitle(String title) {
-            this.title = title;
+        public SearchByUrlResponseBodyDataAuctionsResult setLevelOneCategoryName(String levelOneCategoryName) {
+            this.levelOneCategoryName = levelOneCategoryName;
             return this;
         }
-        public String getTitle() {
-            return this.title;
+        public String getLevelOneCategoryName() {
+            return this.levelOneCategoryName;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setMaxCommission(SearchByUrlResponseBodyDataAuctionsResultMaxCommission maxCommission) {
+            this.maxCommission = maxCommission;
+            return this;
+        }
+        public SearchByUrlResponseBodyDataAuctionsResultMaxCommission getMaxCommission() {
+            return this.maxCommission;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setNick(String nick) {
+            this.nick = nick;
+            return this;
+        }
+        public String getNick() {
+            return this.nick;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setPicUrl(String picUrl) {
+            this.picUrl = picUrl;
+            return this;
+        }
+        public String getPicUrl() {
+            return this.picUrl;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setPriceAfterCoupon(String priceAfterCoupon) {
+            this.priceAfterCoupon = priceAfterCoupon;
+            return this;
+        }
+        public String getPriceAfterCoupon() {
+            return this.priceAfterCoupon;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setProvcity(String provcity) {
+            this.provcity = provcity;
+            return this;
+        }
+        public String getProvcity() {
+            return this.provcity;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setReservePrice(String reservePrice) {
+            this.reservePrice = reservePrice;
+            return this;
+        }
+        public String getReservePrice() {
+            return this.reservePrice;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setSellerId(String sellerId) {
+            this.sellerId = sellerId;
+            return this;
+        }
+        public String getSellerId() {
+            return this.sellerId;
+        }
+
+        public SearchByUrlResponseBodyDataAuctionsResult setShopTitle(String shopTitle) {
+            this.shopTitle = shopTitle;
+            return this;
+        }
+        public String getShopTitle() {
+            return this.shopTitle;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setShortTitle(String shortTitle) {
@@ -241,172 +401,12 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.subTitle;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setPicUrl(String picUrl) {
-            this.picUrl = picUrl;
+        public SearchByUrlResponseBodyDataAuctionsResult setTitle(String title) {
+            this.title = title;
             return this;
         }
-        public String getPicUrl() {
-            return this.picUrl;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setReservePrice(String reservePrice) {
-            this.reservePrice = reservePrice;
-            return this;
-        }
-        public String getReservePrice() {
-            return this.reservePrice;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setZkFinalPrice(String zkFinalPrice) {
-            this.zkFinalPrice = zkFinalPrice;
-            return this;
-        }
-        public String getZkFinalPrice() {
-            return this.zkFinalPrice;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setPriceAfterCoupon(String priceAfterCoupon) {
-            this.priceAfterCoupon = priceAfterCoupon;
-            return this;
-        }
-        public String getPriceAfterCoupon() {
-            return this.priceAfterCoupon;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setUserType(Integer userType) {
-            this.userType = userType;
-            return this;
-        }
-        public Integer getUserType() {
-            return this.userType;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setProvcity(String provcity) {
-            this.provcity = provcity;
-            return this;
-        }
-        public String getProvcity() {
-            return this.provcity;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setNick(String nick) {
-            this.nick = nick;
-            return this;
-        }
-        public String getNick() {
-            return this.nick;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setSellerId(String sellerId) {
-            this.sellerId = sellerId;
-            return this;
-        }
-        public String getSellerId() {
-            return this.sellerId;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setVolume(Integer volume) {
-            this.volume = volume;
-            return this;
-        }
-        public Integer getVolume() {
-            return this.volume;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setLevelOneCategoryName(String levelOneCategoryName) {
-            this.levelOneCategoryName = levelOneCategoryName;
-            return this;
-        }
-        public String getLevelOneCategoryName() {
-            return this.levelOneCategoryName;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCategoryName(String categoryName) {
-            this.categoryName = categoryName;
-            return this;
-        }
-        public String getCategoryName() {
-            return this.categoryName;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponTotalCount(String couponTotalCount) {
-            this.couponTotalCount = couponTotalCount;
-            return this;
-        }
-        public String getCouponTotalCount() {
-            return this.couponTotalCount;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponRemainCount(Integer couponRemainCount) {
-            this.couponRemainCount = couponRemainCount;
-            return this;
-        }
-        public Integer getCouponRemainCount() {
-            return this.couponRemainCount;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponStartTime(String couponStartTime) {
-            this.couponStartTime = couponStartTime;
-            return this;
-        }
-        public String getCouponStartTime() {
-            return this.couponStartTime;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponEndTime(String couponEndTime) {
-            this.couponEndTime = couponEndTime;
-            return this;
-        }
-        public String getCouponEndTime() {
-            return this.couponEndTime;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponStartFee(String couponStartFee) {
-            this.couponStartFee = couponStartFee;
-            return this;
-        }
-        public String getCouponStartFee() {
-            return this.couponStartFee;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponAmount(Integer couponAmount) {
-            this.couponAmount = couponAmount;
-            return this;
-        }
-        public Integer getCouponAmount() {
-            return this.couponAmount;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponInfo(String couponInfo) {
-            this.couponInfo = couponInfo;
-            return this;
-        }
-        public String getCouponInfo() {
-            return this.couponInfo;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCommissionRate(String commissionRate) {
-            this.commissionRate = commissionRate;
-            return this;
-        }
-        public String getCommissionRate() {
-            return this.commissionRate;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponShareUrl(String couponShareUrl) {
-            this.couponShareUrl = couponShareUrl;
-            return this;
-        }
-        public String getCouponShareUrl() {
-            return this.couponShareUrl;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setDeeplinkCouponShareUrl(String deeplinkCouponShareUrl) {
-            this.deeplinkCouponShareUrl = deeplinkCouponShareUrl;
-            return this;
-        }
-        public String getDeeplinkCouponShareUrl() {
-            return this.deeplinkCouponShareUrl;
+        public String getTitle() {
+            return this.title;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setUrl(String url) {
@@ -417,50 +417,42 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.url;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setDeeplinkUrl(String deeplinkUrl) {
-            this.deeplinkUrl = deeplinkUrl;
+        public SearchByUrlResponseBodyDataAuctionsResult setUserType(Integer userType) {
+            this.userType = userType;
             return this;
         }
-        public String getDeeplinkUrl() {
-            return this.deeplinkUrl;
+        public Integer getUserType() {
+            return this.userType;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setShopTitle(String shopTitle) {
-            this.shopTitle = shopTitle;
+        public SearchByUrlResponseBodyDataAuctionsResult setVolume(Integer volume) {
+            this.volume = volume;
             return this;
         }
-        public String getShopTitle() {
-            return this.shopTitle;
+        public Integer getVolume() {
+            return this.volume;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setMaxCommission(SearchByUrlResponseBodyDataAuctionsResultMaxCommission maxCommission) {
-            this.maxCommission = maxCommission;
+        public SearchByUrlResponseBodyDataAuctionsResult setZkFinalPrice(String zkFinalPrice) {
+            this.zkFinalPrice = zkFinalPrice;
             return this;
         }
-        public SearchByUrlResponseBodyDataAuctionsResultMaxCommission getMaxCommission() {
-            return this.maxCommission;
+        public String getZkFinalPrice() {
+            return this.zkFinalPrice;
         }
 
     }
 
     public static class SearchByUrlResponseBodyDataAuctions extends TeaModel {
-        @NameInMap("Result")
-        public SearchByUrlResponseBodyDataAuctionsResult result;
-
         @NameInMap("RankScore")
         public Float rankScore;
+
+        @NameInMap("Result")
+        public SearchByUrlResponseBodyDataAuctionsResult result;
 
         public static SearchByUrlResponseBodyDataAuctions build(java.util.Map<String, ?> map) throws Exception {
             SearchByUrlResponseBodyDataAuctions self = new SearchByUrlResponseBodyDataAuctions();
             return TeaModel.build(map, self);
-        }
-
-        public SearchByUrlResponseBodyDataAuctions setResult(SearchByUrlResponseBodyDataAuctionsResult result) {
-            this.result = result;
-            return this;
-        }
-        public SearchByUrlResponseBodyDataAuctionsResult getResult() {
-            return this.result;
         }
 
         public SearchByUrlResponseBodyDataAuctions setRankScore(Float rankScore) {
@@ -469,6 +461,14 @@ public class SearchByUrlResponseBody extends TeaModel {
         }
         public Float getRankScore() {
             return this.rankScore;
+        }
+
+        public SearchByUrlResponseBodyDataAuctions setResult(SearchByUrlResponseBodyDataAuctionsResult result) {
+            this.result = result;
+            return this;
+        }
+        public SearchByUrlResponseBodyDataAuctionsResult getResult() {
+            return this.result;
         }
 
     }
