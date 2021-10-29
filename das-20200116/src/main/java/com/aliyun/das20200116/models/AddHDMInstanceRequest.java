@@ -4,26 +4,14 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class AddHDMInstanceRequest extends TeaModel {
-    @NameInMap("Uid")
-    public String uid;
+    @NameInMap("Engine")
+    public String engine;
 
-    @NameInMap("accessKey")
-    public String accessKey;
+    @NameInMap("FlushAccount")
+    public String flushAccount;
 
-    @NameInMap("signature")
-    public String signature;
-
-    @NameInMap("timestamp")
-    public String timestamp;
-
-    @NameInMap("__context")
-    public String context;
-
-    @NameInMap("skipAuth")
-    public String skipAuth;
-
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("InstanceAlias")
+    public String instanceAlias;
 
     @NameInMap("InstanceArea")
     public String instanceArea;
@@ -34,92 +22,54 @@ public class AddHDMInstanceRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
-    @NameInMap("Port")
-    public String port;
-
-    @NameInMap("Engine")
-    public String engine;
-
-    @NameInMap("Username")
-    public String username;
+    @NameInMap("NetworkType")
+    public String networkType;
 
     @NameInMap("Password")
     public String password;
 
-    @NameInMap("InstanceAlias")
-    public String instanceAlias;
-
-    @NameInMap("NetworkType")
-    public String networkType;
-
-    @NameInMap("VpcId")
-    public String vpcId;
+    @NameInMap("Port")
+    public String port;
 
     @NameInMap("Region")
     public String region;
 
-    @NameInMap("FlushAccount")
-    public String flushAccount;
+    @NameInMap("Username")
+    public String username;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
+    @NameInMap("__context")
+    public String context;
 
     public static AddHDMInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddHDMInstanceRequest self = new AddHDMInstanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddHDMInstanceRequest setUid(String uid) {
-        this.uid = uid;
+    public AddHDMInstanceRequest setEngine(String engine) {
+        this.engine = engine;
         return this;
     }
-    public String getUid() {
-        return this.uid;
+    public String getEngine() {
+        return this.engine;
     }
 
-    public AddHDMInstanceRequest setAccessKey(String accessKey) {
-        this.accessKey = accessKey;
+    public AddHDMInstanceRequest setFlushAccount(String flushAccount) {
+        this.flushAccount = flushAccount;
         return this;
     }
-    public String getAccessKey() {
-        return this.accessKey;
+    public String getFlushAccount() {
+        return this.flushAccount;
     }
 
-    public AddHDMInstanceRequest setSignature(String signature) {
-        this.signature = signature;
+    public AddHDMInstanceRequest setInstanceAlias(String instanceAlias) {
+        this.instanceAlias = instanceAlias;
         return this;
     }
-    public String getSignature() {
-        return this.signature;
-    }
-
-    public AddHDMInstanceRequest setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
-        return this;
-    }
-    public String getTimestamp() {
-        return this.timestamp;
-    }
-
-    public AddHDMInstanceRequest setContext(String context) {
-        this.context = context;
-        return this;
-    }
-    public String getContext() {
-        return this.context;
-    }
-
-    public AddHDMInstanceRequest setSkipAuth(String skipAuth) {
-        this.skipAuth = skipAuth;
-        return this;
-    }
-    public String getSkipAuth() {
-        return this.skipAuth;
-    }
-
-    public AddHDMInstanceRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
+    public String getInstanceAlias() {
+        return this.instanceAlias;
     }
 
     public AddHDMInstanceRequest setInstanceArea(String instanceArea) {
@@ -146,28 +96,12 @@ public class AddHDMInstanceRequest extends TeaModel {
         return this.ip;
     }
 
-    public AddHDMInstanceRequest setPort(String port) {
-        this.port = port;
+    public AddHDMInstanceRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
         return this;
     }
-    public String getPort() {
-        return this.port;
-    }
-
-    public AddHDMInstanceRequest setEngine(String engine) {
-        this.engine = engine;
-        return this;
-    }
-    public String getEngine() {
-        return this.engine;
-    }
-
-    public AddHDMInstanceRequest setUsername(String username) {
-        this.username = username;
-        return this;
-    }
-    public String getUsername() {
-        return this.username;
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     public AddHDMInstanceRequest setPassword(String password) {
@@ -178,28 +112,12 @@ public class AddHDMInstanceRequest extends TeaModel {
         return this.password;
     }
 
-    public AddHDMInstanceRequest setInstanceAlias(String instanceAlias) {
-        this.instanceAlias = instanceAlias;
+    public AddHDMInstanceRequest setPort(String port) {
+        this.port = port;
         return this;
     }
-    public String getInstanceAlias() {
-        return this.instanceAlias;
-    }
-
-    public AddHDMInstanceRequest setNetworkType(String networkType) {
-        this.networkType = networkType;
-        return this;
-    }
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    public AddHDMInstanceRequest setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-    public String getVpcId() {
-        return this.vpcId;
+    public String getPort() {
+        return this.port;
     }
 
     public AddHDMInstanceRequest setRegion(String region) {
@@ -210,12 +128,28 @@ public class AddHDMInstanceRequest extends TeaModel {
         return this.region;
     }
 
-    public AddHDMInstanceRequest setFlushAccount(String flushAccount) {
-        this.flushAccount = flushAccount;
+    public AddHDMInstanceRequest setUsername(String username) {
+        this.username = username;
         return this;
     }
-    public String getFlushAccount() {
-        return this.flushAccount;
+    public String getUsername() {
+        return this.username;
+    }
+
+    public AddHDMInstanceRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public AddHDMInstanceRequest setContext(String context) {
+        this.context = context;
+        return this;
+    }
+    public String getContext() {
+        return this.context;
     }
 
 }

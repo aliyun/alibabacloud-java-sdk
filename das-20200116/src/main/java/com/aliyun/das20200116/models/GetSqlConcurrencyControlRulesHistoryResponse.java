@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.das20200116.models;
+
+import com.aliyun.tea.*;
+
+public class GetSqlConcurrencyControlRulesHistoryResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetSqlConcurrencyControlRulesHistoryResponseBody body;
+
+    public static GetSqlConcurrencyControlRulesHistoryResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetSqlConcurrencyControlRulesHistoryResponse self = new GetSqlConcurrencyControlRulesHistoryResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetSqlConcurrencyControlRulesHistoryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetSqlConcurrencyControlRulesHistoryResponse setBody(GetSqlConcurrencyControlRulesHistoryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetSqlConcurrencyControlRulesHistoryResponseBody getBody() {
+        return this.body;
+    }
+
+}

@@ -4,6 +4,9 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class CreateCacheAnalysisJobRequest extends TeaModel {
+    @NameInMap("BackupSetId")
+    public String backupSetId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -13,6 +16,14 @@ public class CreateCacheAnalysisJobRequest extends TeaModel {
     public static CreateCacheAnalysisJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCacheAnalysisJobRequest self = new CreateCacheAnalysisJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCacheAnalysisJobRequest setBackupSetId(String backupSetId) {
+        this.backupSetId = backupSetId;
+        return this;
+    }
+    public String getBackupSetId() {
+        return this.backupSetId;
     }
 
     public CreateCacheAnalysisJobRequest setInstanceId(String instanceId) {
