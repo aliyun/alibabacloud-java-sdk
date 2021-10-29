@@ -114,10 +114,6 @@ public class GetReminderRequest extends TeaModel {
     }
 
     public static class GetReminderRequestPayload extends TeaModel {
-        // 设备id
-        @NameInMap("DeviceId")
-        public String deviceId;
-
         // 提醒的唯一id
         @NameInMap("Id")
         public Long id;
@@ -126,25 +122,9 @@ public class GetReminderRequest extends TeaModel {
         @NameInMap("IsDebug")
         public Boolean isDebug;
 
-        // 应用id
-        @NameInMap("SubjectId")
-        public String subjectId;
-
-        // 精灵id
-        @NameInMap("UserId")
-        public String userId;
-
         public static GetReminderRequestPayload build(java.util.Map<String, ?> map) throws Exception {
             GetReminderRequestPayload self = new GetReminderRequestPayload();
             return TeaModel.build(map, self);
-        }
-
-        public GetReminderRequestPayload setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
         }
 
         public GetReminderRequestPayload setId(Long id) {
@@ -161,22 +141,6 @@ public class GetReminderRequest extends TeaModel {
         }
         public Boolean getIsDebug() {
             return this.isDebug;
-        }
-
-        public GetReminderRequestPayload setSubjectId(String subjectId) {
-            this.subjectId = subjectId;
-            return this;
-        }
-        public String getSubjectId() {
-            return this.subjectId;
-        }
-
-        public GetReminderRequestPayload setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
     }

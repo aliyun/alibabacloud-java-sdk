@@ -258,10 +258,6 @@ public class CreateReminderRequest extends TeaModel {
         @NameInMap("Content")
         public String content;
 
-        // 设备id
-        @NameInMap("DeviceId")
-        public String deviceId;
-
         // 调试标识
         @NameInMap("IsDebug")
         public Boolean isDebug;
@@ -269,14 +265,6 @@ public class CreateReminderRequest extends TeaModel {
         // 提醒调度信息
         @NameInMap("RecurrenceRule")
         public CreateReminderRequestPayloadRecurrenceRule recurrenceRule;
-
-        // 应用id
-        @NameInMap("SubjectId")
-        public String subjectId;
-
-        // 精灵id
-        @NameInMap("UserId")
-        public String userId;
 
         public static CreateReminderRequestPayload build(java.util.Map<String, ?> map) throws Exception {
             CreateReminderRequestPayload self = new CreateReminderRequestPayload();
@@ -289,14 +277,6 @@ public class CreateReminderRequest extends TeaModel {
         }
         public String getContent() {
             return this.content;
-        }
-
-        public CreateReminderRequestPayload setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
         }
 
         public CreateReminderRequestPayload setIsDebug(Boolean isDebug) {
@@ -313,22 +293,6 @@ public class CreateReminderRequest extends TeaModel {
         }
         public CreateReminderRequestPayloadRecurrenceRule getRecurrenceRule() {
             return this.recurrenceRule;
-        }
-
-        public CreateReminderRequestPayload setSubjectId(String subjectId) {
-            this.subjectId = subjectId;
-            return this;
-        }
-        public String getSubjectId() {
-            return this.subjectId;
-        }
-
-        public CreateReminderRequestPayload setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
     }

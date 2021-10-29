@@ -258,10 +258,6 @@ public class UpdateReminderRequest extends TeaModel {
         @NameInMap("Content")
         public String content;
 
-        // 设备id
-        @NameInMap("DeviceId")
-        public String deviceId;
-
         // 提醒id
         @NameInMap("Id")
         public Long id;
@@ -274,14 +270,6 @@ public class UpdateReminderRequest extends TeaModel {
         @NameInMap("RecurrenceRule")
         public UpdateReminderRequestPayloadRecurrenceRule recurrenceRule;
 
-        // 应用id
-        @NameInMap("SubjectId")
-        public String subjectId;
-
-        // 精灵id
-        @NameInMap("UserId")
-        public Long userId;
-
         public static UpdateReminderRequestPayload build(java.util.Map<String, ?> map) throws Exception {
             UpdateReminderRequestPayload self = new UpdateReminderRequestPayload();
             return TeaModel.build(map, self);
@@ -293,14 +281,6 @@ public class UpdateReminderRequest extends TeaModel {
         }
         public String getContent() {
             return this.content;
-        }
-
-        public UpdateReminderRequestPayload setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
         }
 
         public UpdateReminderRequestPayload setId(Long id) {
@@ -325,22 +305,6 @@ public class UpdateReminderRequest extends TeaModel {
         }
         public UpdateReminderRequestPayloadRecurrenceRule getRecurrenceRule() {
             return this.recurrenceRule;
-        }
-
-        public UpdateReminderRequestPayload setSubjectId(String subjectId) {
-            this.subjectId = subjectId;
-            return this;
-        }
-        public String getSubjectId() {
-            return this.subjectId;
-        }
-
-        public UpdateReminderRequestPayload setUserId(Long userId) {
-            this.userId = userId;
-            return this;
-        }
-        public Long getUserId() {
-            return this.userId;
         }
 
     }
