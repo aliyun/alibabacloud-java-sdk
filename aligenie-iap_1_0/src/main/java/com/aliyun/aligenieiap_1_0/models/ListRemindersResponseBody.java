@@ -72,7 +72,7 @@ public class ListRemindersResponseBody extends TeaModel {
 
         // 调度结束时间
         @NameInMap("EndDateTime")
-        public Long endDateTime;
+        public String endDateTime;
 
         // 调度类型
         @NameInMap("Freq")
@@ -96,7 +96,7 @@ public class ListRemindersResponseBody extends TeaModel {
 
         // 调度开始时间
         @NameInMap("StartDateTime")
-        public Long startDateTime;
+        public String startDateTime;
 
         // 年
         @NameInMap("Year")
@@ -131,11 +131,11 @@ public class ListRemindersResponseBody extends TeaModel {
             return this.daysOfWeek;
         }
 
-        public ListRemindersResponseBodyModelRemindResponsesRecurrenceRule setEndDateTime(Long endDateTime) {
+        public ListRemindersResponseBodyModelRemindResponsesRecurrenceRule setEndDateTime(String endDateTime) {
             this.endDateTime = endDateTime;
             return this;
         }
-        public Long getEndDateTime() {
+        public String getEndDateTime() {
             return this.endDateTime;
         }
 
@@ -179,11 +179,11 @@ public class ListRemindersResponseBody extends TeaModel {
             return this.second;
         }
 
-        public ListRemindersResponseBodyModelRemindResponsesRecurrenceRule setStartDateTime(Long startDateTime) {
+        public ListRemindersResponseBodyModelRemindResponsesRecurrenceRule setStartDateTime(String startDateTime) {
             this.startDateTime = startDateTime;
             return this;
         }
-        public Long getStartDateTime() {
+        public String getStartDateTime() {
             return this.startDateTime;
         }
 
