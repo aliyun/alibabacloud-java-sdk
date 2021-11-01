@@ -24,6 +24,10 @@ public class AlarmQueryCondition extends TeaModel {
     @NameInMap("ids")
     public java.util.List<Long> ids;
 
+    // 是否使用更新时间作为筛选
+    @NameInMap("isQueryUpdateTime")
+    public Boolean isQueryUpdateTime;
+
     // 预警等级过滤列表
     @NameInMap("levels")
     public java.util.List<String> levels;
@@ -55,10 +59,6 @@ public class AlarmQueryCondition extends TeaModel {
     // 预警规则类型
     @NameInMap("type")
     public String type;
-
-    // 是否使用更新时间作为筛选
-    @NameInMap("isQueryUpdateTime")
-    public Boolean isQueryUpdateTime;
 
     public static AlarmQueryCondition build(java.util.Map<String, ?> map) throws Exception {
         AlarmQueryCondition self = new AlarmQueryCondition();
@@ -103,6 +103,14 @@ public class AlarmQueryCondition extends TeaModel {
     }
     public java.util.List<Long> getIds() {
         return this.ids;
+    }
+
+    public AlarmQueryCondition setIsQueryUpdateTime(Boolean isQueryUpdateTime) {
+        this.isQueryUpdateTime = isQueryUpdateTime;
+        return this;
+    }
+    public Boolean getIsQueryUpdateTime() {
+        return this.isQueryUpdateTime;
     }
 
     public AlarmQueryCondition setLevels(java.util.List<String> levels) {
@@ -167,14 +175,6 @@ public class AlarmQueryCondition extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public AlarmQueryCondition setIsQueryUpdateTime(Boolean isQueryUpdateTime) {
-        this.isQueryUpdateTime = isQueryUpdateTime;
-        return this;
-    }
-    public Boolean getIsQueryUpdateTime() {
-        return this.isQueryUpdateTime;
     }
 
 }

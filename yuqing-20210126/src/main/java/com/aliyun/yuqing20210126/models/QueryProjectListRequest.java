@@ -20,13 +20,13 @@ public class QueryProjectListRequest extends TeaModel {
     @NameInMap("projectId")
     public Long projectId;
 
-    // 舆情团队HashId
-    @NameInMap("teamHashId")
-    public String teamHashId;
-
     // 请求id
     @NameInMap("requestId")
     public String requestId;
+
+    // 舆情团队HashId
+    @NameInMap("teamHashId")
+    public String teamHashId;
 
     public static QueryProjectListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryProjectListRequest self = new QueryProjectListRequest();
@@ -65,20 +65,20 @@ public class QueryProjectListRequest extends TeaModel {
         return this.projectId;
     }
 
-    public QueryProjectListRequest setTeamHashId(String teamHashId) {
-        this.teamHashId = teamHashId;
-        return this;
-    }
-    public String getTeamHashId() {
-        return this.teamHashId;
-    }
-
     public QueryProjectListRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QueryProjectListRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

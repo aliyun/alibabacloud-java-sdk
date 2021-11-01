@@ -4,13 +4,13 @@ package com.aliyun.yuqing20210126.models;
 import com.aliyun.tea.*;
 
 public class QueryReportNotifiesResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
     // 报告历史发送信息
     @NameInMap("reportNotifyRecordList")
     public java.util.List<ReportNotifyRecord> reportNotifyRecordList;
+
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
 
     // 总数量
     @NameInMap("totalCount")
@@ -21,20 +21,20 @@ public class QueryReportNotifiesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryReportNotifiesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QueryReportNotifiesResponseBody setReportNotifyRecordList(java.util.List<ReportNotifyRecord> reportNotifyRecordList) {
         this.reportNotifyRecordList = reportNotifyRecordList;
         return this;
     }
     public java.util.List<ReportNotifyRecord> getReportNotifyRecordList() {
         return this.reportNotifyRecordList;
+    }
+
+    public QueryReportNotifiesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryReportNotifiesResponseBody setTotalCount(Long totalCount) {

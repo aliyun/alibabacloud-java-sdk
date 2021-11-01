@@ -16,6 +16,14 @@ public class Project extends TeaModel {
     @NameInMap("extCriteria")
     public String extCriteria;
 
+    // 项目创建时间，毫秒
+    @NameInMap("gmtCreateTimestamp")
+    public Long gmtCreateTimestamp;
+
+    // 项目修改时间，毫秒
+    @NameInMap("gmtModifiedTimestamp")
+    public Long gmtModifiedTimestamp;
+
     // 舆情项目ID
     @NameInMap("id")
     public Long id;
@@ -56,33 +64,25 @@ public class Project extends TeaModel {
     @NameInMap("teamId")
     public Long teamId;
 
-    // 状态，1为生效，0为失效。
-    @NameInMap("valid")
-    public Long valid;
+    // 项目创建人uid
+    @NameInMap("uidCreate")
+    public String uidCreate;
 
-    // 项目创建时间，毫秒
-    @NameInMap("gmtCreateTimestamp")
-    public Long gmtCreateTimestamp;
-
-    // 项目修改时间，毫秒
-    @NameInMap("gmtModifiedTimestamp")
-    public Long gmtModifiedTimestamp;
+    // 项目修改人uid
+    @NameInMap("uidModified")
+    public String uidModified;
 
     // 项目创建人名称
     @NameInMap("unameCreate")
     public String unameCreate;
 
-    // 项目创建人uid
-    @NameInMap("uidCreate")
-    public String uidCreate;
-
     // 项目修改人名称
     @NameInMap("unameModified")
     public String unameModified;
 
-    // 项目修改人uid
-    @NameInMap("uidModified")
-    public String uidModified;
+    // 状态，1为生效，0为失效。
+    @NameInMap("valid")
+    public Long valid;
 
     public static Project build(java.util.Map<String, ?> map) throws Exception {
         Project self = new Project();
@@ -111,6 +111,22 @@ public class Project extends TeaModel {
     }
     public String getExtCriteria() {
         return this.extCriteria;
+    }
+
+    public Project setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+        this.gmtCreateTimestamp = gmtCreateTimestamp;
+        return this;
+    }
+    public Long getGmtCreateTimestamp() {
+        return this.gmtCreateTimestamp;
+    }
+
+    public Project setGmtModifiedTimestamp(Long gmtModifiedTimestamp) {
+        this.gmtModifiedTimestamp = gmtModifiedTimestamp;
+        return this;
+    }
+    public Long getGmtModifiedTimestamp() {
+        return this.gmtModifiedTimestamp;
     }
 
     public Project setId(Long id) {
@@ -193,28 +209,20 @@ public class Project extends TeaModel {
         return this.teamId;
     }
 
-    public Project setValid(Long valid) {
-        this.valid = valid;
+    public Project setUidCreate(String uidCreate) {
+        this.uidCreate = uidCreate;
         return this;
     }
-    public Long getValid() {
-        return this.valid;
+    public String getUidCreate() {
+        return this.uidCreate;
     }
 
-    public Project setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-        this.gmtCreateTimestamp = gmtCreateTimestamp;
+    public Project setUidModified(String uidModified) {
+        this.uidModified = uidModified;
         return this;
     }
-    public Long getGmtCreateTimestamp() {
-        return this.gmtCreateTimestamp;
-    }
-
-    public Project setGmtModifiedTimestamp(Long gmtModifiedTimestamp) {
-        this.gmtModifiedTimestamp = gmtModifiedTimestamp;
-        return this;
-    }
-    public Long getGmtModifiedTimestamp() {
-        return this.gmtModifiedTimestamp;
+    public String getUidModified() {
+        return this.uidModified;
     }
 
     public Project setUnameCreate(String unameCreate) {
@@ -225,14 +233,6 @@ public class Project extends TeaModel {
         return this.unameCreate;
     }
 
-    public Project setUidCreate(String uidCreate) {
-        this.uidCreate = uidCreate;
-        return this;
-    }
-    public String getUidCreate() {
-        return this.uidCreate;
-    }
-
     public Project setUnameModified(String unameModified) {
         this.unameModified = unameModified;
         return this;
@@ -241,12 +241,12 @@ public class Project extends TeaModel {
         return this.unameModified;
     }
 
-    public Project setUidModified(String uidModified) {
-        this.uidModified = uidModified;
+    public Project setValid(Long valid) {
+        this.valid = valid;
         return this;
     }
-    public String getUidModified() {
-        return this.uidModified;
+    public Long getValid() {
+        return this.valid;
     }
 
 }

@@ -11,13 +11,13 @@ public class QueryAlarmDataListRequest extends TeaModel {
     @NameInMap("orderByKey")
     public String orderByKey;
 
-    // 舆情团队HashId
-    @NameInMap("teamHashId")
-    public String teamHashId;
-
     // 请求id
     @NameInMap("requestId")
     public String requestId;
+
+    // 舆情团队HashId
+    @NameInMap("teamHashId")
+    public String teamHashId;
 
     public static QueryAlarmDataListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAlarmDataListRequest self = new QueryAlarmDataListRequest();
@@ -40,20 +40,20 @@ public class QueryAlarmDataListRequest extends TeaModel {
         return this.orderByKey;
     }
 
-    public QueryAlarmDataListRequest setTeamHashId(String teamHashId) {
-        this.teamHashId = teamHashId;
-        return this;
-    }
-    public String getTeamHashId() {
-        return this.teamHashId;
-    }
-
     public QueryAlarmDataListRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public QueryAlarmDataListRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

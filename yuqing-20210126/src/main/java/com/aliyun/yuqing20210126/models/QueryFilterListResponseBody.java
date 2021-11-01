@@ -4,13 +4,13 @@ package com.aliyun.yuqing20210126.models;
 import com.aliyun.tea.*;
 
 public class QueryFilterListResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("requestId")
-    public String requestId;
-
     // 筛选模板列表。
     @NameInMap("filters")
     public java.util.List<Filter> filters;
+
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
 
     // 总条数
     @NameInMap("totalCount")
@@ -21,20 +21,20 @@ public class QueryFilterListResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryFilterListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public QueryFilterListResponseBody setFilters(java.util.List<Filter> filters) {
         this.filters = filters;
         return this;
     }
     public java.util.List<Filter> getFilters() {
         return this.filters;
+    }
+
+    public QueryFilterListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryFilterListResponseBody setTotalCount(Long totalCount) {

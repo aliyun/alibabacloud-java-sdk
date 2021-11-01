@@ -24,21 +24,21 @@ public class QueryReportNotifiesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    // 请求id
+    @NameInMap("requestId")
+    public String requestId;
+
     // 主题
     @NameInMap("subject")
     public String subject;
-
-    // 类型： 如邮件、钉钉等
-    @NameInMap("type")
-    public Long type;
 
     // 舆情团队HashId
     @NameInMap("teamHashId")
     public String teamHashId;
 
-    // 请求id
-    @NameInMap("requestId")
-    public String requestId;
+    // 类型： 如邮件、钉钉等
+    @NameInMap("type")
+    public Long type;
 
     public static QueryReportNotifiesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryReportNotifiesRequest self = new QueryReportNotifiesRequest();
@@ -85,20 +85,20 @@ public class QueryReportNotifiesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public QueryReportNotifiesRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public QueryReportNotifiesRequest setSubject(String subject) {
         this.subject = subject;
         return this;
     }
     public String getSubject() {
         return this.subject;
-    }
-
-    public QueryReportNotifiesRequest setType(Long type) {
-        this.type = type;
-        return this;
-    }
-    public Long getType() {
-        return this.type;
     }
 
     public QueryReportNotifiesRequest setTeamHashId(String teamHashId) {
@@ -109,12 +109,12 @@ public class QueryReportNotifiesRequest extends TeaModel {
         return this.teamHashId;
     }
 
-    public QueryReportNotifiesRequest setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryReportNotifiesRequest setType(Long type) {
+        this.type = type;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getType() {
+        return this.type;
     }
 
 }

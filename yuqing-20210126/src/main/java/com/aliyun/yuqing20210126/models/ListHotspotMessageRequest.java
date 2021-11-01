@@ -8,13 +8,13 @@ public class ListHotspotMessageRequest extends TeaModel {
     @NameInMap("hotspotSearchCondition")
     public HotspotSearchCondition hotspotSearchCondition;
 
-    // 舆情团队HashId
-    @NameInMap("teamHashId")
-    public String teamHashId;
-
     // 请求id
     @NameInMap("requestId")
     public String requestId;
+
+    // 舆情团队HashId
+    @NameInMap("teamHashId")
+    public String teamHashId;
 
     public static ListHotspotMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHotspotMessageRequest self = new ListHotspotMessageRequest();
@@ -29,20 +29,20 @@ public class ListHotspotMessageRequest extends TeaModel {
         return this.hotspotSearchCondition;
     }
 
-    public ListHotspotMessageRequest setTeamHashId(String teamHashId) {
-        this.teamHashId = teamHashId;
-        return this;
-    }
-    public String getTeamHashId() {
-        return this.teamHashId;
-    }
-
     public ListHotspotMessageRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListHotspotMessageRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

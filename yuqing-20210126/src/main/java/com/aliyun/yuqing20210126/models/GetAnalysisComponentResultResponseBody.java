@@ -4,6 +4,10 @@ package com.aliyun.yuqing20210126.models;
 import com.aliyun.tea.*;
 
 public class GetAnalysisComponentResultResponseBody extends TeaModel {
+    // 任务Id
+    @NameInMap("analysisId")
+    public Long analysisId;
+
     // Id of the request
     @NameInMap("requestId")
     public String requestId;
@@ -12,13 +16,17 @@ public class GetAnalysisComponentResultResponseBody extends TeaModel {
     @NameInMap("resultJson")
     public String resultJson;
 
-    // 任务Id
-    @NameInMap("analysisId")
-    public Long analysisId;
-
     public static GetAnalysisComponentResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAnalysisComponentResultResponseBody self = new GetAnalysisComponentResultResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAnalysisComponentResultResponseBody setAnalysisId(Long analysisId) {
+        this.analysisId = analysisId;
+        return this;
+    }
+    public Long getAnalysisId() {
+        return this.analysisId;
     }
 
     public GetAnalysisComponentResultResponseBody setRequestId(String requestId) {
@@ -35,14 +43,6 @@ public class GetAnalysisComponentResultResponseBody extends TeaModel {
     }
     public String getResultJson() {
         return this.resultJson;
-    }
-
-    public GetAnalysisComponentResultResponseBody setAnalysisId(Long analysisId) {
-        this.analysisId = analysisId;
-        return this;
-    }
-    public Long getAnalysisId() {
-        return this.analysisId;
     }
 
 }

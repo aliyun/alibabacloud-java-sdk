@@ -16,13 +16,13 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("project")
     public Project project;
 
-    // 舆情团队HashId
-    @NameInMap("teamHashId")
-    public String teamHashId;
-
     // 请求id
     @NameInMap("requestId")
     public String requestId;
+
+    // 舆情团队HashId
+    @NameInMap("teamHashId")
+    public String teamHashId;
 
     public static CreateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProjectRequest self = new CreateProjectRequest();
@@ -53,20 +53,20 @@ public class CreateProjectRequest extends TeaModel {
         return this.project;
     }
 
-    public CreateProjectRequest setTeamHashId(String teamHashId) {
-        this.teamHashId = teamHashId;
-        return this;
-    }
-    public String getTeamHashId() {
-        return this.teamHashId;
-    }
-
     public CreateProjectRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateProjectRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

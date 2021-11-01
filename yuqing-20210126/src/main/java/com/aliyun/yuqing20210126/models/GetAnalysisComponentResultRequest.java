@@ -8,13 +8,13 @@ public class GetAnalysisComponentResultRequest extends TeaModel {
     @NameInMap("analysisId")
     public Long analysisId;
 
-    // 舆情团队HashId
-    @NameInMap("teamHashId")
-    public String teamHashId;
-
     // 请求id
     @NameInMap("requestId")
     public String requestId;
+
+    // 舆情团队HashId
+    @NameInMap("teamHashId")
+    public String teamHashId;
 
     public static GetAnalysisComponentResultRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAnalysisComponentResultRequest self = new GetAnalysisComponentResultRequest();
@@ -29,20 +29,20 @@ public class GetAnalysisComponentResultRequest extends TeaModel {
         return this.analysisId;
     }
 
-    public GetAnalysisComponentResultRequest setTeamHashId(String teamHashId) {
-        this.teamHashId = teamHashId;
-        return this;
-    }
-    public String getTeamHashId() {
-        return this.teamHashId;
-    }
-
     public GetAnalysisComponentResultRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAnalysisComponentResultRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

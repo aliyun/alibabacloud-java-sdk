@@ -4,10 +4,6 @@ package com.aliyun.yuqing20210126.models;
 import com.aliyun.tea.*;
 
 public class YuqingMessage extends TeaModel {
-    // 舆情文章唯一ID
-    @NameInMap("docId")
-    public String docId;
-
     // 广告
     @NameInMap("advertisement")
     public Boolean advertisement;
@@ -15,6 +11,18 @@ public class YuqingMessage extends TeaModel {
     // 2088账号
     @NameInMap("alipayAccount")
     public Long alipayAccount;
+
+    // 应用名称
+    @NameInMap("appStoreAppName")
+    public String appStoreAppName;
+
+    // appstore应用评分
+    @NameInMap("appStoreAppScore")
+    public Long appStoreAppScore;
+
+    // 应用市场名称
+    @NameInMap("appStoreName")
+    public String appStoreName;
 
     // 被at的用户名列表
     @NameInMap("atAuthorNames")
@@ -84,14 +92,6 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("contentVideoUrls")
     public String contentVideoUrls;
 
-    // 舆情文章入库时间戳
-    @NameInMap("docCreateTime")
-    public Long docCreateTime;
-
-    // 舆情文章的发布时间戳
-    @NameInMap("docPublishTime")
-    public Long docPublishTime;
-
     // 回答数
     @NameInMap("docAnswersCount")
     public Long docAnswersCount;
@@ -116,9 +116,17 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("docContentSign")
     public String docContentSign;
 
+    // 舆情文章入库时间戳
+    @NameInMap("docCreateTime")
+    public Long docCreateTime;
+
     // 文章的关注数
     @NameInMap("docFocusArticleCount")
     public Long docFocusArticleCount;
+
+    // 舆情文章唯一ID
+    @NameInMap("docId")
+    public String docId;
 
     // 文章点赞数
     @NameInMap("docLikesCount")
@@ -131,6 +139,10 @@ public class YuqingMessage extends TeaModel {
     // 父文章DocID, 比如转发微博的父Id是源微博DocId
     @NameInMap("docParentId")
     public String docParentId;
+
+    // 舆情文章的发布时间戳
+    @NameInMap("docPublishTime")
+    public Long docPublishTime;
 
     // 阅读数
     @NameInMap("docReadsCount")
@@ -179,6 +191,10 @@ public class YuqingMessage extends TeaModel {
     // 内容的暴恐政色得分，0-10，值越大说明内容越敏感
     @NameInMap("eroticismScoreFmt")
     public String eroticismScoreFmt;
+
+    // 舆情文章提取出来的金融事件列表
+    @NameInMap("financeEvents")
+    public java.util.List<FinanceEvent> financeEvents;
 
     // 是否涉及赌博
     @NameInMap("gambling")
@@ -256,6 +272,10 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("spam")
     public Boolean spam;
 
+    // 用户情感分值
+    @NameInMap("ueEmotionScore")
+    public String ueEmotionScore;
+
     // 微博评论的外部ID
     @NameInMap("weiboCommentId")
     public String weiboCommentId;
@@ -264,37 +284,9 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("weiboMid")
     public String weiboMid;
 
-    // 用户情感分值
-    @NameInMap("ueEmotionScore")
-    public String ueEmotionScore;
-
-    // 舆情文章提取出来的金融事件列表
-    @NameInMap("financeEvents")
-    public java.util.List<FinanceEvent> financeEvents;
-
-    // appstore应用评分
-    @NameInMap("appStoreAppScore")
-    public Long appStoreAppScore;
-
-    // 应用名称
-    @NameInMap("appStoreAppName")
-    public String appStoreAppName;
-
-    // 应用市场名称
-    @NameInMap("appStoreName")
-    public String appStoreName;
-
     public static YuqingMessage build(java.util.Map<String, ?> map) throws Exception {
         YuqingMessage self = new YuqingMessage();
         return TeaModel.build(map, self);
-    }
-
-    public YuqingMessage setDocId(String docId) {
-        this.docId = docId;
-        return this;
-    }
-    public String getDocId() {
-        return this.docId;
     }
 
     public YuqingMessage setAdvertisement(Boolean advertisement) {
@@ -311,6 +303,30 @@ public class YuqingMessage extends TeaModel {
     }
     public Long getAlipayAccount() {
         return this.alipayAccount;
+    }
+
+    public YuqingMessage setAppStoreAppName(String appStoreAppName) {
+        this.appStoreAppName = appStoreAppName;
+        return this;
+    }
+    public String getAppStoreAppName() {
+        return this.appStoreAppName;
+    }
+
+    public YuqingMessage setAppStoreAppScore(Long appStoreAppScore) {
+        this.appStoreAppScore = appStoreAppScore;
+        return this;
+    }
+    public Long getAppStoreAppScore() {
+        return this.appStoreAppScore;
+    }
+
+    public YuqingMessage setAppStoreName(String appStoreName) {
+        this.appStoreName = appStoreName;
+        return this;
+    }
+    public String getAppStoreName() {
+        return this.appStoreName;
     }
 
     public YuqingMessage setAtAuthorNames(java.util.List<String> atAuthorNames) {
@@ -449,22 +465,6 @@ public class YuqingMessage extends TeaModel {
         return this.contentVideoUrls;
     }
 
-    public YuqingMessage setDocCreateTime(Long docCreateTime) {
-        this.docCreateTime = docCreateTime;
-        return this;
-    }
-    public Long getDocCreateTime() {
-        return this.docCreateTime;
-    }
-
-    public YuqingMessage setDocPublishTime(Long docPublishTime) {
-        this.docPublishTime = docPublishTime;
-        return this;
-    }
-    public Long getDocPublishTime() {
-        return this.docPublishTime;
-    }
-
     public YuqingMessage setDocAnswersCount(Long docAnswersCount) {
         this.docAnswersCount = docAnswersCount;
         return this;
@@ -513,12 +513,28 @@ public class YuqingMessage extends TeaModel {
         return this.docContentSign;
     }
 
+    public YuqingMessage setDocCreateTime(Long docCreateTime) {
+        this.docCreateTime = docCreateTime;
+        return this;
+    }
+    public Long getDocCreateTime() {
+        return this.docCreateTime;
+    }
+
     public YuqingMessage setDocFocusArticleCount(Long docFocusArticleCount) {
         this.docFocusArticleCount = docFocusArticleCount;
         return this;
     }
     public Long getDocFocusArticleCount() {
         return this.docFocusArticleCount;
+    }
+
+    public YuqingMessage setDocId(String docId) {
+        this.docId = docId;
+        return this;
+    }
+    public String getDocId() {
+        return this.docId;
     }
 
     public YuqingMessage setDocLikesCount(Long docLikesCount) {
@@ -543,6 +559,14 @@ public class YuqingMessage extends TeaModel {
     }
     public String getDocParentId() {
         return this.docParentId;
+    }
+
+    public YuqingMessage setDocPublishTime(Long docPublishTime) {
+        this.docPublishTime = docPublishTime;
+        return this;
+    }
+    public Long getDocPublishTime() {
+        return this.docPublishTime;
     }
 
     public YuqingMessage setDocReadsCount(Long docReadsCount) {
@@ -639,6 +663,14 @@ public class YuqingMessage extends TeaModel {
     }
     public String getEroticismScoreFmt() {
         return this.eroticismScoreFmt;
+    }
+
+    public YuqingMessage setFinanceEvents(java.util.List<FinanceEvent> financeEvents) {
+        this.financeEvents = financeEvents;
+        return this;
+    }
+    public java.util.List<FinanceEvent> getFinanceEvents() {
+        return this.financeEvents;
     }
 
     public YuqingMessage setGambling(Boolean gambling) {
@@ -793,6 +825,14 @@ public class YuqingMessage extends TeaModel {
         return this.spam;
     }
 
+    public YuqingMessage setUeEmotionScore(String ueEmotionScore) {
+        this.ueEmotionScore = ueEmotionScore;
+        return this;
+    }
+    public String getUeEmotionScore() {
+        return this.ueEmotionScore;
+    }
+
     public YuqingMessage setWeiboCommentId(String weiboCommentId) {
         this.weiboCommentId = weiboCommentId;
         return this;
@@ -807,46 +847,6 @@ public class YuqingMessage extends TeaModel {
     }
     public String getWeiboMid() {
         return this.weiboMid;
-    }
-
-    public YuqingMessage setUeEmotionScore(String ueEmotionScore) {
-        this.ueEmotionScore = ueEmotionScore;
-        return this;
-    }
-    public String getUeEmotionScore() {
-        return this.ueEmotionScore;
-    }
-
-    public YuqingMessage setFinanceEvents(java.util.List<FinanceEvent> financeEvents) {
-        this.financeEvents = financeEvents;
-        return this;
-    }
-    public java.util.List<FinanceEvent> getFinanceEvents() {
-        return this.financeEvents;
-    }
-
-    public YuqingMessage setAppStoreAppScore(Long appStoreAppScore) {
-        this.appStoreAppScore = appStoreAppScore;
-        return this;
-    }
-    public Long getAppStoreAppScore() {
-        return this.appStoreAppScore;
-    }
-
-    public YuqingMessage setAppStoreAppName(String appStoreAppName) {
-        this.appStoreAppName = appStoreAppName;
-        return this;
-    }
-    public String getAppStoreAppName() {
-        return this.appStoreAppName;
-    }
-
-    public YuqingMessage setAppStoreName(String appStoreName) {
-        this.appStoreName = appStoreName;
-        return this;
-    }
-    public String getAppStoreName() {
-        return this.appStoreName;
     }
 
 }
