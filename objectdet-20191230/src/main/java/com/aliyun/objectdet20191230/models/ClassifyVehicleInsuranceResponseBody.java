@@ -4,23 +4,15 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class ClassifyVehicleInsuranceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public ClassifyVehicleInsuranceResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ClassifyVehicleInsuranceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ClassifyVehicleInsuranceResponseBody self = new ClassifyVehicleInsuranceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ClassifyVehicleInsuranceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ClassifyVehicleInsuranceResponseBody setData(ClassifyVehicleInsuranceResponseBodyData data) {
@@ -31,24 +23,24 @@ public class ClassifyVehicleInsuranceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ClassifyVehicleInsuranceResponseBodyDataLabels extends TeaModel {
-        @NameInMap("Score")
-        public Float score;
+    public ClassifyVehicleInsuranceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ClassifyVehicleInsuranceResponseBodyDataLabels extends TeaModel {
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Score")
+        public Float score;
 
         public static ClassifyVehicleInsuranceResponseBodyDataLabels build(java.util.Map<String, ?> map) throws Exception {
             ClassifyVehicleInsuranceResponseBodyDataLabels self = new ClassifyVehicleInsuranceResponseBodyDataLabels();
             return TeaModel.build(map, self);
-        }
-
-        public ClassifyVehicleInsuranceResponseBodyDataLabels setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
         }
 
         public ClassifyVehicleInsuranceResponseBodyDataLabels setName(String name) {
@@ -57,6 +49,14 @@ public class ClassifyVehicleInsuranceResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ClassifyVehicleInsuranceResponseBodyDataLabels setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
     }

@@ -8,11 +8,17 @@ public class DetectVehicleICongestionRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("RoadRegions")
-    public java.util.List<DetectVehicleICongestionRequestRoadRegions> roadRegions;
+    @NameInMap("OriginRequestId")
+    public String originRequestId;
 
     @NameInMap("PreRegionIntersectFeatures")
     public java.util.List<DetectVehicleICongestionRequestPreRegionIntersectFeatures> preRegionIntersectFeatures;
+
+    @NameInMap("RoadRegions")
+    public java.util.List<DetectVehicleICongestionRequestRoadRegions> roadRegions;
+
+    @NameInMap("StreamArn")
+    public String streamArn;
 
     public static DetectVehicleICongestionRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectVehicleICongestionRequest self = new DetectVehicleICongestionRequest();
@@ -27,12 +33,12 @@ public class DetectVehicleICongestionRequest extends TeaModel {
         return this.imageURL;
     }
 
-    public DetectVehicleICongestionRequest setRoadRegions(java.util.List<DetectVehicleICongestionRequestRoadRegions> roadRegions) {
-        this.roadRegions = roadRegions;
+    public DetectVehicleICongestionRequest setOriginRequestId(String originRequestId) {
+        this.originRequestId = originRequestId;
         return this;
     }
-    public java.util.List<DetectVehicleICongestionRequestRoadRegions> getRoadRegions() {
-        return this.roadRegions;
+    public String getOriginRequestId() {
+        return this.originRequestId;
     }
 
     public DetectVehicleICongestionRequest setPreRegionIntersectFeatures(java.util.List<DetectVehicleICongestionRequestPreRegionIntersectFeatures> preRegionIntersectFeatures) {
@@ -41,6 +47,41 @@ public class DetectVehicleICongestionRequest extends TeaModel {
     }
     public java.util.List<DetectVehicleICongestionRequestPreRegionIntersectFeatures> getPreRegionIntersectFeatures() {
         return this.preRegionIntersectFeatures;
+    }
+
+    public DetectVehicleICongestionRequest setRoadRegions(java.util.List<DetectVehicleICongestionRequestRoadRegions> roadRegions) {
+        this.roadRegions = roadRegions;
+        return this;
+    }
+    public java.util.List<DetectVehicleICongestionRequestRoadRegions> getRoadRegions() {
+        return this.roadRegions;
+    }
+
+    public DetectVehicleICongestionRequest setStreamArn(String streamArn) {
+        this.streamArn = streamArn;
+        return this;
+    }
+    public String getStreamArn() {
+        return this.streamArn;
+    }
+
+    public static class DetectVehicleICongestionRequestPreRegionIntersectFeatures extends TeaModel {
+        @NameInMap("Features")
+        public java.util.List<String> features;
+
+        public static DetectVehicleICongestionRequestPreRegionIntersectFeatures build(java.util.Map<String, ?> map) throws Exception {
+            DetectVehicleICongestionRequestPreRegionIntersectFeatures self = new DetectVehicleICongestionRequestPreRegionIntersectFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public DetectVehicleICongestionRequestPreRegionIntersectFeatures setFeatures(java.util.List<String> features) {
+            this.features = features;
+            return this;
+        }
+        public java.util.List<String> getFeatures() {
+            return this.features;
+        }
+
     }
 
     public static class DetectVehicleICongestionRequestRoadRegionsRoadRegionPoint extends TeaModel {
@@ -107,25 +148,6 @@ public class DetectVehicleICongestionRequest extends TeaModel {
         }
         public java.util.List<DetectVehicleICongestionRequestRoadRegionsRoadRegion> getRoadRegion() {
             return this.roadRegion;
-        }
-
-    }
-
-    public static class DetectVehicleICongestionRequestPreRegionIntersectFeatures extends TeaModel {
-        @NameInMap("Features")
-        public java.util.List<String> features;
-
-        public static DetectVehicleICongestionRequestPreRegionIntersectFeatures build(java.util.Map<String, ?> map) throws Exception {
-            DetectVehicleICongestionRequestPreRegionIntersectFeatures self = new DetectVehicleICongestionRequestPreRegionIntersectFeatures();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectVehicleICongestionRequestPreRegionIntersectFeatures setFeatures(java.util.List<String> features) {
-            this.features = features;
-            return this;
-        }
-        public java.util.List<String> getFeatures() {
-            return this.features;
         }
 
     }

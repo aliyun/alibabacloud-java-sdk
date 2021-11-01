@@ -4,24 +4,16 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectVehicleICongestionResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public DetectVehicleICongestionResponseBodyData data;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public DetectVehicleICongestionResponseBodyData data;
-
     public static DetectVehicleICongestionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectVehicleICongestionResponseBody self = new DetectVehicleICongestionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectVehicleICongestionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectVehicleICongestionResponseBody setData(DetectVehicleICongestionResponseBodyData data) {
@@ -32,22 +24,38 @@ public class DetectVehicleICongestionResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DetectVehicleICongestionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DetectVehicleICongestionResponseBodyDataElementsBoxes extends TeaModel {
+        @NameInMap("Bottom")
+        public Long bottom;
+
         @NameInMap("Left")
         public Long left;
-
-        @NameInMap("Top")
-        public Long top;
 
         @NameInMap("Right")
         public Long right;
 
-        @NameInMap("Bottom")
-        public Long bottom;
+        @NameInMap("Top")
+        public Long top;
 
         public static DetectVehicleICongestionResponseBodyDataElementsBoxes build(java.util.Map<String, ?> map) throws Exception {
             DetectVehicleICongestionResponseBodyDataElementsBoxes self = new DetectVehicleICongestionResponseBodyDataElementsBoxes();
             return TeaModel.build(map, self);
+        }
+
+        public DetectVehicleICongestionResponseBodyDataElementsBoxes setBottom(Long bottom) {
+            this.bottom = bottom;
+            return this;
+        }
+        public Long getBottom() {
+            return this.bottom;
         }
 
         public DetectVehicleICongestionResponseBodyDataElementsBoxes setLeft(Long left) {
@@ -58,14 +66,6 @@ public class DetectVehicleICongestionResponseBody extends TeaModel {
             return this.left;
         }
 
-        public DetectVehicleICongestionResponseBodyDataElementsBoxes setTop(Long top) {
-            this.top = top;
-            return this;
-        }
-        public Long getTop() {
-            return this.top;
-        }
-
         public DetectVehicleICongestionResponseBodyDataElementsBoxes setRight(Long right) {
             this.right = right;
             return this;
@@ -74,12 +74,12 @@ public class DetectVehicleICongestionResponseBody extends TeaModel {
             return this.right;
         }
 
-        public DetectVehicleICongestionResponseBodyDataElementsBoxes setBottom(Long bottom) {
-            this.bottom = bottom;
+        public DetectVehicleICongestionResponseBodyDataElementsBoxes setTop(Long top) {
+            this.top = top;
             return this;
         }
-        public Long getBottom() {
-            return this.bottom;
+        public Long getTop() {
+            return this.top;
         }
 
     }

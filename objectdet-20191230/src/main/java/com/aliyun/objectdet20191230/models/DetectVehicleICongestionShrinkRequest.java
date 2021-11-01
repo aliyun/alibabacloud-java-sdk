@@ -8,11 +8,17 @@ public class DetectVehicleICongestionShrinkRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("RoadRegions")
-    public String roadRegionsShrink;
+    @NameInMap("OriginRequestId")
+    public String originRequestId;
 
     @NameInMap("PreRegionIntersectFeatures")
     public String preRegionIntersectFeaturesShrink;
+
+    @NameInMap("RoadRegions")
+    public String roadRegionsShrink;
+
+    @NameInMap("StreamArn")
+    public String streamArn;
 
     public static DetectVehicleICongestionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectVehicleICongestionShrinkRequest self = new DetectVehicleICongestionShrinkRequest();
@@ -27,12 +33,12 @@ public class DetectVehicleICongestionShrinkRequest extends TeaModel {
         return this.imageURL;
     }
 
-    public DetectVehicleICongestionShrinkRequest setRoadRegionsShrink(String roadRegionsShrink) {
-        this.roadRegionsShrink = roadRegionsShrink;
+    public DetectVehicleICongestionShrinkRequest setOriginRequestId(String originRequestId) {
+        this.originRequestId = originRequestId;
         return this;
     }
-    public String getRoadRegionsShrink() {
-        return this.roadRegionsShrink;
+    public String getOriginRequestId() {
+        return this.originRequestId;
     }
 
     public DetectVehicleICongestionShrinkRequest setPreRegionIntersectFeaturesShrink(String preRegionIntersectFeaturesShrink) {
@@ -41,6 +47,22 @@ public class DetectVehicleICongestionShrinkRequest extends TeaModel {
     }
     public String getPreRegionIntersectFeaturesShrink() {
         return this.preRegionIntersectFeaturesShrink;
+    }
+
+    public DetectVehicleICongestionShrinkRequest setRoadRegionsShrink(String roadRegionsShrink) {
+        this.roadRegionsShrink = roadRegionsShrink;
+        return this;
+    }
+    public String getRoadRegionsShrink() {
+        return this.roadRegionsShrink;
+    }
+
+    public DetectVehicleICongestionShrinkRequest setStreamArn(String streamArn) {
+        this.streamArn = streamArn;
+        return this;
+    }
+    public String getStreamArn() {
+        return this.streamArn;
     }
 
 }

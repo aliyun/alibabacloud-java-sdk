@@ -4,23 +4,15 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectMainBodyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectMainBodyResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectMainBodyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectMainBodyResponseBody self = new DetectMainBodyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectMainBodyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectMainBodyResponseBody setData(DetectMainBodyResponseBodyData data) {
@@ -31,30 +23,30 @@ public class DetectMainBodyResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class DetectMainBodyResponseBodyDataLocation extends TeaModel {
-        @NameInMap("Width")
-        public Integer width;
+    public DetectMainBodyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DetectMainBodyResponseBodyDataLocation extends TeaModel {
         @NameInMap("Height")
         public Integer height;
 
-        @NameInMap("Y")
-        public Integer y;
+        @NameInMap("Width")
+        public Integer width;
 
         @NameInMap("X")
         public Integer x;
 
+        @NameInMap("Y")
+        public Integer y;
+
         public static DetectMainBodyResponseBodyDataLocation build(java.util.Map<String, ?> map) throws Exception {
             DetectMainBodyResponseBodyDataLocation self = new DetectMainBodyResponseBodyDataLocation();
             return TeaModel.build(map, self);
-        }
-
-        public DetectMainBodyResponseBodyDataLocation setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
         }
 
         public DetectMainBodyResponseBodyDataLocation setHeight(Integer height) {
@@ -65,12 +57,12 @@ public class DetectMainBodyResponseBody extends TeaModel {
             return this.height;
         }
 
-        public DetectMainBodyResponseBodyDataLocation setY(Integer y) {
-            this.y = y;
+        public DetectMainBodyResponseBodyDataLocation setWidth(Integer width) {
+            this.width = width;
             return this;
         }
-        public Integer getY() {
-            return this.y;
+        public Integer getWidth() {
+            return this.width;
         }
 
         public DetectMainBodyResponseBodyDataLocation setX(Integer x) {
@@ -79,6 +71,14 @@ public class DetectMainBodyResponseBody extends TeaModel {
         }
         public Integer getX() {
             return this.x;
+        }
+
+        public DetectMainBodyResponseBodyDataLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
         }
 
     }

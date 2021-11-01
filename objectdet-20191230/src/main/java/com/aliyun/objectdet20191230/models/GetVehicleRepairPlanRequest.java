@@ -4,11 +4,11 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class GetVehicleRepairPlanRequest extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("CarNumberImage")
     public String carNumberImage;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     @NameInMap("VinCodeImage")
     public String vinCodeImage;
@@ -18,20 +18,20 @@ public class GetVehicleRepairPlanRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetVehicleRepairPlanRequest setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public GetVehicleRepairPlanRequest setCarNumberImage(String carNumberImage) {
         this.carNumberImage = carNumberImage;
         return this;
     }
     public String getCarNumberImage() {
         return this.carNumberImage;
+    }
+
+    public GetVehicleRepairPlanRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public GetVehicleRepairPlanRequest setVinCodeImage(String vinCodeImage) {

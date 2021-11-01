@@ -4,23 +4,15 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectWhiteBaseImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectWhiteBaseImageResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectWhiteBaseImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectWhiteBaseImageResponseBody self = new DetectWhiteBaseImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectWhiteBaseImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectWhiteBaseImageResponseBody setData(DetectWhiteBaseImageResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DetectWhiteBaseImageResponseBody extends TeaModel {
     }
     public DetectWhiteBaseImageResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectWhiteBaseImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DetectWhiteBaseImageResponseBodyDataElements extends TeaModel {
