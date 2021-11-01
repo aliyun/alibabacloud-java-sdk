@@ -4,23 +4,15 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectTransparentImageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public DetectTransparentImageResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetectTransparentImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectTransparentImageResponseBody self = new DetectTransparentImageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectTransparentImageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DetectTransparentImageResponseBody setData(DetectTransparentImageResponseBodyData data) {
@@ -29,6 +21,14 @@ public class DetectTransparentImageResponseBody extends TeaModel {
     }
     public DetectTransparentImageResponseBodyData getData() {
         return this.data;
+    }
+
+    public DetectTransparentImageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DetectTransparentImageResponseBodyDataElements extends TeaModel {

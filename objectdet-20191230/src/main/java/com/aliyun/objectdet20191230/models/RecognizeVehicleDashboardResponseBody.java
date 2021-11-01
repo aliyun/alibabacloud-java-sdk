@@ -4,23 +4,15 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVehicleDashboardResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeVehicleDashboardResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeVehicleDashboardResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVehicleDashboardResponseBody self = new RecognizeVehicleDashboardResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeVehicleDashboardResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeVehicleDashboardResponseBody setData(RecognizeVehicleDashboardResponseBodyData data) {
@@ -31,18 +23,26 @@ public class RecognizeVehicleDashboardResponseBody extends TeaModel {
         return this.data;
     }
 
+    public RecognizeVehicleDashboardResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class RecognizeVehicleDashboardResponseBodyDataElements extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<Float> boxes;
 
-        @NameInMap("Score")
-        public Float score;
+        @NameInMap("ClassName")
+        public String className;
 
         @NameInMap("Label")
         public String label;
 
-        @NameInMap("ClassName")
-        public String className;
+        @NameInMap("Score")
+        public Float score;
 
         public static RecognizeVehicleDashboardResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             RecognizeVehicleDashboardResponseBodyDataElements self = new RecognizeVehicleDashboardResponseBodyDataElements();
@@ -57,12 +57,12 @@ public class RecognizeVehicleDashboardResponseBody extends TeaModel {
             return this.boxes;
         }
 
-        public RecognizeVehicleDashboardResponseBodyDataElements setScore(Float score) {
-            this.score = score;
+        public RecognizeVehicleDashboardResponseBodyDataElements setClassName(String className) {
+            this.className = className;
             return this;
         }
-        public Float getScore() {
-            return this.score;
+        public String getClassName() {
+            return this.className;
         }
 
         public RecognizeVehicleDashboardResponseBodyDataElements setLabel(String label) {
@@ -73,12 +73,12 @@ public class RecognizeVehicleDashboardResponseBody extends TeaModel {
             return this.label;
         }
 
-        public RecognizeVehicleDashboardResponseBodyDataElements setClassName(String className) {
-            this.className = className;
+        public RecognizeVehicleDashboardResponseBodyDataElements setScore(Float score) {
+            this.score = score;
             return this;
         }
-        public String getClassName() {
-            return this.className;
+        public Float getScore() {
+            return this.score;
         }
 
     }

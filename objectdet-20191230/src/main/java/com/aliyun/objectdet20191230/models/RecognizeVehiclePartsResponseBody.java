@@ -4,23 +4,15 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVehiclePartsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public RecognizeVehiclePartsResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static RecognizeVehiclePartsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVehiclePartsResponseBody self = new RecognizeVehiclePartsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeVehiclePartsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RecognizeVehiclePartsResponseBody setData(RecognizeVehiclePartsResponseBodyData data) {
@@ -31,27 +23,27 @@ public class RecognizeVehiclePartsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class RecognizeVehiclePartsResponseBodyDataElements extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public RecognizeVehiclePartsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class RecognizeVehiclePartsResponseBodyDataElements extends TeaModel {
         @NameInMap("Boxes")
         public java.util.List<Integer> boxes;
 
         @NameInMap("Score")
         public Float score;
 
+        @NameInMap("Type")
+        public String type;
+
         public static RecognizeVehiclePartsResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             RecognizeVehiclePartsResponseBodyDataElements self = new RecognizeVehiclePartsResponseBodyDataElements();
             return TeaModel.build(map, self);
-        }
-
-        public RecognizeVehiclePartsResponseBodyDataElements setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public RecognizeVehiclePartsResponseBodyDataElements setBoxes(java.util.List<Integer> boxes) {
@@ -68,6 +60,14 @@ public class RecognizeVehiclePartsResponseBody extends TeaModel {
         }
         public Float getScore() {
             return this.score;
+        }
+
+        public RecognizeVehiclePartsResponseBodyDataElements setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

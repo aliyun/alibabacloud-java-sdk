@@ -4,11 +4,8 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class GenerateVehicleRepairPlanResponseBody extends TeaModel {
-    @NameInMap("HttpCode")
-    public Integer httpCode;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Data")
     public GenerateVehicleRepairPlanResponseBodyData data;
@@ -16,8 +13,11 @@ public class GenerateVehicleRepairPlanResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("HttpCode")
+    public Integer httpCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -27,20 +27,12 @@ public class GenerateVehicleRepairPlanResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GenerateVehicleRepairPlanResponseBody setHttpCode(Integer httpCode) {
-        this.httpCode = httpCode;
+    public GenerateVehicleRepairPlanResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getHttpCode() {
-        return this.httpCode;
-    }
-
-    public GenerateVehicleRepairPlanResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCode() {
+        return this.code;
     }
 
     public GenerateVehicleRepairPlanResponseBody setData(GenerateVehicleRepairPlanResponseBodyData data) {
@@ -59,12 +51,20 @@ public class GenerateVehicleRepairPlanResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GenerateVehicleRepairPlanResponseBody setCode(String code) {
-        this.code = code;
+    public GenerateVehicleRepairPlanResponseBody setHttpCode(Integer httpCode) {
+        this.httpCode = httpCode;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public Integer getHttpCode() {
+        return this.httpCode;
+    }
+
+    public GenerateVehicleRepairPlanResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GenerateVehicleRepairPlanResponseBody setSuccess(Boolean success) {
