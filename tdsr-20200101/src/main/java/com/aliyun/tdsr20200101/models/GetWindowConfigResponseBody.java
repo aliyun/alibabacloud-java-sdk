@@ -7,6 +7,9 @@ public class GetWindowConfigResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     @NameInMap("ObjectString")
     public String objectString;
 
@@ -15,9 +18,6 @@ public class GetWindowConfigResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
 
     public static GetWindowConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetWindowConfigResponseBody self = new GetWindowConfigResponseBody();
@@ -30,6 +30,14 @@ public class GetWindowConfigResponseBody extends TeaModel {
     }
     public java.util.Map<String, ?> getData() {
         return this.data;
+    }
+
+    public GetWindowConfigResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public GetWindowConfigResponseBody setObjectString(String objectString) {
@@ -54,14 +62,6 @@ public class GetWindowConfigResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetWindowConfigResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
     }
 
 }

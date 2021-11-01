@@ -7,6 +7,9 @@ public class GetPolicyResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     @NameInMap("ObjectString")
     public String objectString;
 
@@ -15,9 +18,6 @@ public class GetPolicyResponseBody extends TeaModel {
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
 
     public static GetPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPolicyResponseBody self = new GetPolicyResponseBody();
@@ -30,6 +30,14 @@ public class GetPolicyResponseBody extends TeaModel {
     }
     public java.util.Map<String, ?> getData() {
         return this.data;
+    }
+
+    public GetPolicyResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public GetPolicyResponseBody setObjectString(String objectString) {
@@ -54,14 +62,6 @@ public class GetPolicyResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetPolicyResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
     }
 
 }

@@ -4,25 +4,17 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddMosaicsRequest extends TeaModel {
-    // 子场景ID
-    @NameInMap("SubSceneId")
-    public String subSceneId;
-
     // 马赛克位置数据
     @NameInMap("MarkPosition")
     public String markPosition;
 
+    // 子场景ID
+    @NameInMap("SubSceneId")
+    public String subSceneId;
+
     public static AddMosaicsRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMosaicsRequest self = new AddMosaicsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddMosaicsRequest setSubSceneId(String subSceneId) {
-        this.subSceneId = subSceneId;
-        return this;
-    }
-    public String getSubSceneId() {
-        return this.subSceneId;
     }
 
     public AddMosaicsRequest setMarkPosition(String markPosition) {
@@ -31,6 +23,14 @@ public class AddMosaicsRequest extends TeaModel {
     }
     public String getMarkPosition() {
         return this.markPosition;
+    }
+
+    public AddMosaicsRequest setSubSceneId(String subSceneId) {
+        this.subSceneId = subSceneId;
+        return this;
+    }
+    public String getSubSceneId() {
+        return this.subSceneId;
     }
 
 }

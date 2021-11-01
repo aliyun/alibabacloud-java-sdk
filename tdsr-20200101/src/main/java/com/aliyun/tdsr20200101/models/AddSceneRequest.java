@@ -4,10 +4,6 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class AddSceneRequest extends TeaModel {
-    // 场景类型 3D模型：MODEL_3D  全景图片：PIC  全景视频：VIDEO
-    @NameInMap("Type")
-    public String type;
-
     // 场景名称
     @NameInMap("Name")
     public String name;
@@ -16,17 +12,13 @@ public class AddSceneRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    // 场景类型 3D模型：MODEL_3D  全景图片：PIC  全景视频：VIDEO
+    @NameInMap("Type")
+    public String type;
+
     public static AddSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         AddSceneRequest self = new AddSceneRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddSceneRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public AddSceneRequest setName(String name) {
@@ -43,6 +35,14 @@ public class AddSceneRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public AddSceneRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

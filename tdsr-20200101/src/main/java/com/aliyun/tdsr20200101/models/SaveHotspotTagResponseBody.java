@@ -4,18 +4,26 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class SaveHotspotTagResponseBody extends TeaModel {
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
     public static SaveHotspotTagResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveHotspotTagResponseBody self = new SaveHotspotTagResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SaveHotspotTagResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public SaveHotspotTagResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class SaveHotspotTagResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public SaveHotspotTagResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
     }
 
 }

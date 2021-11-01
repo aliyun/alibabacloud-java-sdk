@@ -7,14 +7,14 @@ public class PublishHotspotResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
-
-    @NameInMap("ErrMessage")
-    public String errMessage;
 
     public static PublishHotspotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PublishHotspotResponseBody self = new PublishHotspotResponseBody();
@@ -27,6 +27,14 @@ public class PublishHotspotResponseBody extends TeaModel {
     }
     public java.util.Map<String, ?> getData() {
         return this.data;
+    }
+
+    public PublishHotspotResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public PublishHotspotResponseBody setRequestId(String requestId) {
@@ -43,14 +51,6 @@ public class PublishHotspotResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public PublishHotspotResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
     }
 
 }

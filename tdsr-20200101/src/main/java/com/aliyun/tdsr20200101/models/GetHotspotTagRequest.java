@@ -4,6 +4,12 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetHotspotTagRequest extends TeaModel {
+    @NameInMap("Domain")
+    public String domain;
+
+    @NameInMap("Enabled")
+    public Boolean enabled;
+
     @NameInMap("PreviewToken")
     public String previewToken;
 
@@ -13,15 +19,25 @@ public class GetHotspotTagRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    @NameInMap("Enabled")
-    public Boolean enabled;
-
-    @NameInMap("Domain")
-    public String domain;
-
     public static GetHotspotTagRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotspotTagRequest self = new GetHotspotTagRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetHotspotTagRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
+    }
+
+    public GetHotspotTagRequest setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
     public GetHotspotTagRequest setPreviewToken(String previewToken) {
@@ -46,22 +62,6 @@ public class GetHotspotTagRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public GetHotspotTagRequest setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-        return this;
-    }
-    public Boolean getEnabled() {
-        return this.enabled;
-    }
-
-    public GetHotspotTagRequest setDomain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-    public String getDomain() {
-        return this.domain;
     }
 
 }

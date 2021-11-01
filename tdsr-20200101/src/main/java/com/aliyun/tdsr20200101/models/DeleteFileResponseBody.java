@@ -4,18 +4,26 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteFileResponseBody extends TeaModel {
+    @NameInMap("ErrMessage")
+    public String errMessage;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
-
     public static DeleteFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteFileResponseBody self = new DeleteFileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteFileResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public DeleteFileResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class DeleteFileResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public DeleteFileResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
     }
 
 }

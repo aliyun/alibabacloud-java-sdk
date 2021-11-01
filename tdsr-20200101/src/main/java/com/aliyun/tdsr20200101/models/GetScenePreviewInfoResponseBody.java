@@ -4,36 +4,28 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetScenePreviewInfoResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 是否请求成功
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public GetScenePreviewInfoResponseBodyData data;
 
     // 错误消息
     @NameInMap("Message")
     public String message;
 
-    @NameInMap("Data")
-    public GetScenePreviewInfoResponseBodyData data;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否请求成功
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetScenePreviewInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetScenePreviewInfoResponseBody self = new GetScenePreviewInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetScenePreviewInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetScenePreviewInfoResponseBody setCode(Long code) {
@@ -44,12 +36,12 @@ public class GetScenePreviewInfoResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetScenePreviewInfoResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GetScenePreviewInfoResponseBody setData(GetScenePreviewInfoResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public GetScenePreviewInfoResponseBodyData getData() {
+        return this.data;
     }
 
     public GetScenePreviewInfoResponseBody setMessage(String message) {
@@ -60,22 +52,30 @@ public class GetScenePreviewInfoResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetScenePreviewInfoResponseBody setData(GetScenePreviewInfoResponseBodyData data) {
-        this.data = data;
+    public GetScenePreviewInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public GetScenePreviewInfoResponseBodyData getData() {
-        return this.data;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetScenePreviewInfoResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GetScenePreviewInfoResponseBodyData extends TeaModel {
-        // html转译后的预览数据
-        @NameInMap("PanoList")
-        public String panoList;
-
         // 模型地址
         @NameInMap("ModelPath")
         public String modelPath;
+
+        // html转译后的预览数据
+        @NameInMap("PanoList")
+        public String panoList;
 
         // 模型的贴图路径
         @NameInMap("TextureModelPath")
@@ -90,20 +90,20 @@ public class GetScenePreviewInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetScenePreviewInfoResponseBodyData setPanoList(String panoList) {
-            this.panoList = panoList;
-            return this;
-        }
-        public String getPanoList() {
-            return this.panoList;
-        }
-
         public GetScenePreviewInfoResponseBodyData setModelPath(String modelPath) {
             this.modelPath = modelPath;
             return this;
         }
         public String getModelPath() {
             return this.modelPath;
+        }
+
+        public GetScenePreviewInfoResponseBodyData setPanoList(String panoList) {
+            this.panoList = panoList;
+            return this;
+        }
+        public String getPanoList() {
+            return this.panoList;
         }
 
         public GetScenePreviewInfoResponseBodyData setTextureModelPath(String textureModelPath) {
