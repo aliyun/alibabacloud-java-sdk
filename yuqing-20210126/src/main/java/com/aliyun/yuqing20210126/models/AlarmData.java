@@ -52,6 +52,10 @@ public class AlarmData extends TeaModel {
     @NameInMap("memos")
     public java.util.List<String> memos;
 
+    // 舆情消息体
+    @NameInMap("message")
+    public YuqingMessage message;
+
     // 最后修改舆情的用户名称
     @NameInMap("modifierName")
     public String modifierName;
@@ -91,10 +95,6 @@ public class AlarmData extends TeaModel {
     // 预警规则类型，枚举值
     @NameInMap("type")
     public String type;
-
-    // 舆情消息体
-    @NameInMap("message")
-    public YuqingMessage message;
 
     public static AlarmData build(java.util.Map<String, ?> map) throws Exception {
         AlarmData self = new AlarmData();
@@ -197,6 +197,14 @@ public class AlarmData extends TeaModel {
         return this.memos;
     }
 
+    public AlarmData setMessage(YuqingMessage message) {
+        this.message = message;
+        return this;
+    }
+    public YuqingMessage getMessage() {
+        return this.message;
+    }
+
     public AlarmData setModifierName(String modifierName) {
         this.modifierName = modifierName;
         return this;
@@ -275,14 +283,6 @@ public class AlarmData extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public AlarmData setMessage(YuqingMessage message) {
-        this.message = message;
-        return this;
-    }
-    public YuqingMessage getMessage() {
-        return this.message;
     }
 
 }

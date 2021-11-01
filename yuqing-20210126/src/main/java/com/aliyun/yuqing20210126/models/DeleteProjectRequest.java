@@ -16,13 +16,13 @@ public class DeleteProjectRequest extends TeaModel {
     @NameInMap("modifiedUserName")
     public String modifiedUserName;
 
-    // 舆情团队HashId
-    @NameInMap("teamHashId")
-    public String teamHashId;
-
     // 请求id
     @NameInMap("requestId")
     public String requestId;
+
+    // 舆情团队HashId
+    @NameInMap("teamHashId")
+    public String teamHashId;
 
     public static DeleteProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProjectRequest self = new DeleteProjectRequest();
@@ -53,20 +53,20 @@ public class DeleteProjectRequest extends TeaModel {
         return this.modifiedUserName;
     }
 
-    public DeleteProjectRequest setTeamHashId(String teamHashId) {
-        this.teamHashId = teamHashId;
-        return this;
-    }
-    public String getTeamHashId() {
-        return this.teamHashId;
-    }
-
     public DeleteProjectRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DeleteProjectRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

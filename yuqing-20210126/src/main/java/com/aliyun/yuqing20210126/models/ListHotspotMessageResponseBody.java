@@ -4,6 +4,10 @@ package com.aliyun.yuqing20210126.models;
 import com.aliyun.tea.*;
 
 public class ListHotspotMessageResponseBody extends TeaModel {
+    // 热搜结果信息列表数组
+    @NameInMap("hotspotMessages")
+    public java.util.List<YuqingHotspotMessage> hotspotMessages;
+
     // Id of the request
     @NameInMap("requestId")
     public String requestId;
@@ -12,13 +16,17 @@ public class ListHotspotMessageResponseBody extends TeaModel {
     @NameInMap("totalCount")
     public Long totalCount;
 
-    // 热搜结果信息列表数组
-    @NameInMap("hotspotMessages")
-    public java.util.List<YuqingHotspotMessage> hotspotMessages;
-
     public static ListHotspotMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListHotspotMessageResponseBody self = new ListHotspotMessageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListHotspotMessageResponseBody setHotspotMessages(java.util.List<YuqingHotspotMessage> hotspotMessages) {
+        this.hotspotMessages = hotspotMessages;
+        return this;
+    }
+    public java.util.List<YuqingHotspotMessage> getHotspotMessages() {
+        return this.hotspotMessages;
     }
 
     public ListHotspotMessageResponseBody setRequestId(String requestId) {
@@ -35,14 +43,6 @@ public class ListHotspotMessageResponseBody extends TeaModel {
     }
     public Long getTotalCount() {
         return this.totalCount;
-    }
-
-    public ListHotspotMessageResponseBody setHotspotMessages(java.util.List<YuqingHotspotMessage> hotspotMessages) {
-        this.hotspotMessages = hotspotMessages;
-        return this;
-    }
-    public java.util.List<YuqingHotspotMessage> getHotspotMessages() {
-        return this.hotspotMessages;
     }
 
 }

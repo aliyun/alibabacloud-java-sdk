@@ -8,6 +8,10 @@ public class QueryAnalysisComponentRequest extends TeaModel {
     @NameInMap("analyseType")
     public String analyseType;
 
+    // 请求id
+    @NameInMap("requestId")
+    public String requestId;
+
     // 搜索舆情条件
     @NameInMap("searchCondition")
     public SearchCondition searchCondition;
@@ -15,10 +19,6 @@ public class QueryAnalysisComponentRequest extends TeaModel {
     // 舆情团队HashId
     @NameInMap("teamHashId")
     public String teamHashId;
-
-    // 请求id
-    @NameInMap("requestId")
-    public String requestId;
 
     public static QueryAnalysisComponentRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAnalysisComponentRequest self = new QueryAnalysisComponentRequest();
@@ -31,6 +31,14 @@ public class QueryAnalysisComponentRequest extends TeaModel {
     }
     public String getAnalyseType() {
         return this.analyseType;
+    }
+
+    public QueryAnalysisComponentRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryAnalysisComponentRequest setSearchCondition(SearchCondition searchCondition) {
@@ -47,14 +55,6 @@ public class QueryAnalysisComponentRequest extends TeaModel {
     }
     public String getTeamHashId() {
         return this.teamHashId;
-    }
-
-    public QueryAnalysisComponentRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
 }

@@ -8,13 +8,13 @@ public class GetMessageDetailRequest extends TeaModel {
     @NameInMap("docId")
     public String docId;
 
-    // 舆情团队HashId
-    @NameInMap("teamHashId")
-    public String teamHashId;
-
     // 请求id
     @NameInMap("requestId")
     public String requestId;
+
+    // 舆情团队HashId
+    @NameInMap("teamHashId")
+    public String teamHashId;
 
     public static GetMessageDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMessageDetailRequest self = new GetMessageDetailRequest();
@@ -29,20 +29,20 @@ public class GetMessageDetailRequest extends TeaModel {
         return this.docId;
     }
 
-    public GetMessageDetailRequest setTeamHashId(String teamHashId) {
-        this.teamHashId = teamHashId;
-        return this;
-    }
-    public String getTeamHashId() {
-        return this.teamHashId;
-    }
-
     public GetMessageDetailRequest setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetMessageDetailRequest setTeamHashId(String teamHashId) {
+        this.teamHashId = teamHashId;
+        return this;
+    }
+    public String getTeamHashId() {
+        return this.teamHashId;
     }
 
 }

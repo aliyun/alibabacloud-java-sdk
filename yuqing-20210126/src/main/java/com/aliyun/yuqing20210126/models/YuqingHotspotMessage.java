@@ -4,9 +4,21 @@ package com.aliyun.yuqing20210126.models;
 import com.aliyun.tea.*;
 
 public class YuqingHotspotMessage extends TeaModel {
+    // 分类
+    @NameInMap("category")
+    public String category;
+
+    // 评论数
+    @NameInMap("commentsCount")
+    public Long commentsCount;
+
     // 爬虫爬取的时间
     @NameInMap("crawlerTimeFmt")
     public String crawlerTimeFmt;
+
+    // 讨论数
+    @NameInMap("discussesCount")
+    public Long discussesCount;
 
     // 内容，热榜数据中存在着文章，热文就是有内容的
     @NameInMap("docContent")
@@ -35,6 +47,10 @@ public class YuqingHotspotMessage extends TeaModel {
     // 首次上榜排名
     @NameInMap("firstRank")
     public Integer firstRank;
+
+    // 跟随量
+    @NameInMap("followersCount")
+    public Long followersCount;
 
     // 热度值
     @NameInMap("hotValue")
@@ -68,6 +84,10 @@ public class YuqingHotspotMessage extends TeaModel {
     @NameInMap("mediaType")
     public String mediaType;
 
+    // 原创人数
+    @NameInMap("originalCount")
+    public Long originalCount;
+
     // 热搜在热搜榜的位置
     @NameInMap("rank")
     public Integer rank;
@@ -76,45 +96,41 @@ public class YuqingHotspotMessage extends TeaModel {
     @NameInMap("readsCount")
     public Long readsCount;
 
-    // 在榜总时间
-    @NameInMap("totalExistTimestamp")
-    public Long totalExistTimestamp;
-
-    // 评论数
-    @NameInMap("commentsCount")
-    public Long commentsCount;
-
-    // 讨论数
-    @NameInMap("discussesCount")
-    public Long discussesCount;
-
-    // 原创人数
-    @NameInMap("originalCount")
-    public Long originalCount;
-
-    // 视频量
-    @NameInMap("videoCount")
-    public Long videoCount;
-
-    // 跟随量
-    @NameInMap("followersCount")
-    public Long followersCount;
-
     // 用户名
     @NameInMap("screenName")
     public String screenName;
+
+    // 在榜总时间
+    @NameInMap("totalExistTimestamp")
+    public Long totalExistTimestamp;
 
     // 用户id
     @NameInMap("userId")
     public String userId;
 
-    // 分类
-    @NameInMap("category")
-    public String category;
+    // 视频量
+    @NameInMap("videoCount")
+    public Long videoCount;
 
     public static YuqingHotspotMessage build(java.util.Map<String, ?> map) throws Exception {
         YuqingHotspotMessage self = new YuqingHotspotMessage();
         return TeaModel.build(map, self);
+    }
+
+    public YuqingHotspotMessage setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
+    }
+
+    public YuqingHotspotMessage setCommentsCount(Long commentsCount) {
+        this.commentsCount = commentsCount;
+        return this;
+    }
+    public Long getCommentsCount() {
+        return this.commentsCount;
     }
 
     public YuqingHotspotMessage setCrawlerTimeFmt(String crawlerTimeFmt) {
@@ -123,6 +139,14 @@ public class YuqingHotspotMessage extends TeaModel {
     }
     public String getCrawlerTimeFmt() {
         return this.crawlerTimeFmt;
+    }
+
+    public YuqingHotspotMessage setDiscussesCount(Long discussesCount) {
+        this.discussesCount = discussesCount;
+        return this;
+    }
+    public Long getDiscussesCount() {
+        return this.discussesCount;
     }
 
     public YuqingHotspotMessage setDocContent(String docContent) {
@@ -179,6 +203,14 @@ public class YuqingHotspotMessage extends TeaModel {
     }
     public Integer getFirstRank() {
         return this.firstRank;
+    }
+
+    public YuqingHotspotMessage setFollowersCount(Long followersCount) {
+        this.followersCount = followersCount;
+        return this;
+    }
+    public Long getFollowersCount() {
+        return this.followersCount;
     }
 
     public YuqingHotspotMessage setHotValue(Long hotValue) {
@@ -245,6 +277,14 @@ public class YuqingHotspotMessage extends TeaModel {
         return this.mediaType;
     }
 
+    public YuqingHotspotMessage setOriginalCount(Long originalCount) {
+        this.originalCount = originalCount;
+        return this;
+    }
+    public Long getOriginalCount() {
+        return this.originalCount;
+    }
+
     public YuqingHotspotMessage setRank(Integer rank) {
         this.rank = rank;
         return this;
@@ -261,60 +301,20 @@ public class YuqingHotspotMessage extends TeaModel {
         return this.readsCount;
     }
 
-    public YuqingHotspotMessage setTotalExistTimestamp(Long totalExistTimestamp) {
-        this.totalExistTimestamp = totalExistTimestamp;
-        return this;
-    }
-    public Long getTotalExistTimestamp() {
-        return this.totalExistTimestamp;
-    }
-
-    public YuqingHotspotMessage setCommentsCount(Long commentsCount) {
-        this.commentsCount = commentsCount;
-        return this;
-    }
-    public Long getCommentsCount() {
-        return this.commentsCount;
-    }
-
-    public YuqingHotspotMessage setDiscussesCount(Long discussesCount) {
-        this.discussesCount = discussesCount;
-        return this;
-    }
-    public Long getDiscussesCount() {
-        return this.discussesCount;
-    }
-
-    public YuqingHotspotMessage setOriginalCount(Long originalCount) {
-        this.originalCount = originalCount;
-        return this;
-    }
-    public Long getOriginalCount() {
-        return this.originalCount;
-    }
-
-    public YuqingHotspotMessage setVideoCount(Long videoCount) {
-        this.videoCount = videoCount;
-        return this;
-    }
-    public Long getVideoCount() {
-        return this.videoCount;
-    }
-
-    public YuqingHotspotMessage setFollowersCount(Long followersCount) {
-        this.followersCount = followersCount;
-        return this;
-    }
-    public Long getFollowersCount() {
-        return this.followersCount;
-    }
-
     public YuqingHotspotMessage setScreenName(String screenName) {
         this.screenName = screenName;
         return this;
     }
     public String getScreenName() {
         return this.screenName;
+    }
+
+    public YuqingHotspotMessage setTotalExistTimestamp(Long totalExistTimestamp) {
+        this.totalExistTimestamp = totalExistTimestamp;
+        return this;
+    }
+    public Long getTotalExistTimestamp() {
+        return this.totalExistTimestamp;
     }
 
     public YuqingHotspotMessage setUserId(String userId) {
@@ -325,12 +325,12 @@ public class YuqingHotspotMessage extends TeaModel {
         return this.userId;
     }
 
-    public YuqingHotspotMessage setCategory(String category) {
-        this.category = category;
+    public YuqingHotspotMessage setVideoCount(Long videoCount) {
+        this.videoCount = videoCount;
         return this;
     }
-    public String getCategory() {
-        return this.category;
+    public Long getVideoCount() {
+        return this.videoCount;
     }
 
 }

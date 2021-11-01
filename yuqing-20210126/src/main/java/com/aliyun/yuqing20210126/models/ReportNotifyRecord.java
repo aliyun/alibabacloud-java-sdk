@@ -12,13 +12,13 @@ public class ReportNotifyRecord extends TeaModel {
     @NameInMap("cpId")
     public Long cpId;
 
-    // 创建时间，毫秒
-    @NameInMap("gmtCreateTimestamp")
-    public Long gmtCreateTimestamp;
-
     // 格式化的创建时间
     @NameInMap("gmtCreateFormat")
     public String gmtCreateFormat;
+
+    // 创建时间，毫秒
+    @NameInMap("gmtCreateTimestamp")
+    public Long gmtCreateTimestamp;
 
     // 修改时间，毫秒
     @NameInMap("gmtModifiedTimestamp")
@@ -77,20 +77,20 @@ public class ReportNotifyRecord extends TeaModel {
         return this.cpId;
     }
 
-    public ReportNotifyRecord setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-        this.gmtCreateTimestamp = gmtCreateTimestamp;
-        return this;
-    }
-    public Long getGmtCreateTimestamp() {
-        return this.gmtCreateTimestamp;
-    }
-
     public ReportNotifyRecord setGmtCreateFormat(String gmtCreateFormat) {
         this.gmtCreateFormat = gmtCreateFormat;
         return this;
     }
     public String getGmtCreateFormat() {
         return this.gmtCreateFormat;
+    }
+
+    public ReportNotifyRecord setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+        this.gmtCreateTimestamp = gmtCreateTimestamp;
+        return this;
+    }
+    public Long getGmtCreateTimestamp() {
+        return this.gmtCreateTimestamp;
     }
 
     public ReportNotifyRecord setGmtModifiedTimestamp(Long gmtModifiedTimestamp) {

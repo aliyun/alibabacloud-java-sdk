@@ -8,6 +8,10 @@ public class FinanceEvent extends TeaModel {
     @NameInMap("entityArea")
     public String entityArea;
 
+    // 实体唯一id，统一社会信用代码
+    @NameInMap("entityCrn")
+    public String entityCrn;
+
     // 实体ID
     @NameInMap("entityId")
     public String entityId;
@@ -40,10 +44,6 @@ public class FinanceEvent extends TeaModel {
     @NameInMap("eventName")
     public String eventName;
 
-    // 实体唯一id，统一社会信用代码
-    @NameInMap("entityCrn")
-    public String entityCrn;
-
     public static FinanceEvent build(java.util.Map<String, ?> map) throws Exception {
         FinanceEvent self = new FinanceEvent();
         return TeaModel.build(map, self);
@@ -55,6 +55,14 @@ public class FinanceEvent extends TeaModel {
     }
     public String getEntityArea() {
         return this.entityArea;
+    }
+
+    public FinanceEvent setEntityCrn(String entityCrn) {
+        this.entityCrn = entityCrn;
+        return this;
+    }
+    public String getEntityCrn() {
+        return this.entityCrn;
     }
 
     public FinanceEvent setEntityId(String entityId) {
@@ -119,14 +127,6 @@ public class FinanceEvent extends TeaModel {
     }
     public String getEventName() {
         return this.eventName;
-    }
-
-    public FinanceEvent setEntityCrn(String entityCrn) {
-        this.entityCrn = entityCrn;
-        return this;
-    }
-    public String getEntityCrn() {
-        return this.entityCrn;
     }
 
 }
