@@ -4,27 +4,18 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateSAMLProviderRequest extends TeaModel {
-    @NameInMap("SAMLProviderName")
-    @Validation(required = true)
-    public String SAMLProviderName;
-
     @NameInMap("NewDescription")
     public String newDescription;
 
     @NameInMap("NewEncodedSAMLMetadataDocument")
     public String newEncodedSAMLMetadataDocument;
 
+    @NameInMap("SAMLProviderName")
+    public String SAMLProviderName;
+
     public static UpdateSAMLProviderRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSAMLProviderRequest self = new UpdateSAMLProviderRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateSAMLProviderRequest setSAMLProviderName(String SAMLProviderName) {
-        this.SAMLProviderName = SAMLProviderName;
-        return this;
-    }
-    public String getSAMLProviderName() {
-        return this.SAMLProviderName;
     }
 
     public UpdateSAMLProviderRequest setNewDescription(String newDescription) {
@@ -41,6 +32,14 @@ public class UpdateSAMLProviderRequest extends TeaModel {
     }
     public String getNewEncodedSAMLMetadataDocument() {
         return this.newEncodedSAMLMetadataDocument;
+    }
+
+    public UpdateSAMLProviderRequest setSAMLProviderName(String SAMLProviderName) {
+        this.SAMLProviderName = SAMLProviderName;
+        return this;
+    }
+    public String getSAMLProviderName() {
+        return this.SAMLProviderName;
     }
 
 }

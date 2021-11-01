@@ -4,34 +4,32 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
-    @NameInMap("UserPrincipalName")
-    @Validation(required = true)
-    public String userPrincipalName;
+    @NameInMap("Comments")
+    public String comments;
 
     @NameInMap("DisplayName")
-    @Validation(required = true)
     public String displayName;
-
-    @NameInMap("MobilePhone")
-    public String mobilePhone;
 
     @NameInMap("Email")
     public String email;
 
-    @NameInMap("Comments")
-    public String comments;
+    @NameInMap("MobilePhone")
+    public String mobilePhone;
+
+    @NameInMap("UserPrincipalName")
+    public String userPrincipalName;
 
     public static CreateUserRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUserRequest self = new CreateUserRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateUserRequest setUserPrincipalName(String userPrincipalName) {
-        this.userPrincipalName = userPrincipalName;
+    public CreateUserRequest setComments(String comments) {
+        this.comments = comments;
         return this;
     }
-    public String getUserPrincipalName() {
-        return this.userPrincipalName;
+    public String getComments() {
+        return this.comments;
     }
 
     public CreateUserRequest setDisplayName(String displayName) {
@@ -42,14 +40,6 @@ public class CreateUserRequest extends TeaModel {
         return this.displayName;
     }
 
-    public CreateUserRequest setMobilePhone(String mobilePhone) {
-        this.mobilePhone = mobilePhone;
-        return this;
-    }
-    public String getMobilePhone() {
-        return this.mobilePhone;
-    }
-
     public CreateUserRequest setEmail(String email) {
         this.email = email;
         return this;
@@ -58,12 +48,20 @@ public class CreateUserRequest extends TeaModel {
         return this.email;
     }
 
-    public CreateUserRequest setComments(String comments) {
-        this.comments = comments;
+    public CreateUserRequest setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
         return this;
     }
-    public String getComments() {
-        return this.comments;
+    public String getMobilePhone() {
+        return this.mobilePhone;
+    }
+
+    public CreateUserRequest setUserPrincipalName(String userPrincipalName) {
+        this.userPrincipalName = userPrincipalName;
+        return this;
+    }
+    public String getUserPrincipalName() {
+        return this.userPrincipalName;
     }
 
 }

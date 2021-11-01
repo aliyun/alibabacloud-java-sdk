@@ -4,26 +4,26 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetUserRequest extends TeaModel {
-    @NameInMap("UserPrincipalName")
-    public String userPrincipalName;
+    @NameInMap("UserAccessKeyId")
+    public String userAccessKeyId;
 
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("UserAccessKeyId")
-    public String userAccessKeyId;
+    @NameInMap("UserPrincipalName")
+    public String userPrincipalName;
 
     public static GetUserRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserRequest self = new GetUserRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetUserRequest setUserPrincipalName(String userPrincipalName) {
-        this.userPrincipalName = userPrincipalName;
+    public GetUserRequest setUserAccessKeyId(String userAccessKeyId) {
+        this.userAccessKeyId = userAccessKeyId;
         return this;
     }
-    public String getUserPrincipalName() {
-        return this.userPrincipalName;
+    public String getUserAccessKeyId() {
+        return this.userAccessKeyId;
     }
 
     public GetUserRequest setUserId(String userId) {
@@ -34,12 +34,12 @@ public class GetUserRequest extends TeaModel {
         return this.userId;
     }
 
-    public GetUserRequest setUserAccessKeyId(String userAccessKeyId) {
-        this.userAccessKeyId = userAccessKeyId;
+    public GetUserRequest setUserPrincipalName(String userPrincipalName) {
+        this.userPrincipalName = userPrincipalName;
         return this;
     }
-    public String getUserAccessKeyId() {
-        return this.userAccessKeyId;
+    public String getUserPrincipalName() {
+        return this.userPrincipalName;
     }
 
 }

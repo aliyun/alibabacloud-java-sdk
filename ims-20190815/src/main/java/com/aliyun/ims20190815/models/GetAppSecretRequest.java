@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetAppSecretRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("AppSecretId")
-    @Validation(required = true)
     public String appSecretId;
 
     public static GetAppSecretRequest build(java.util.Map<String, ?> map) throws Exception {

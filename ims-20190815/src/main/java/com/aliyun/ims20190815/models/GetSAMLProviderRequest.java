@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetSAMLProviderRequest extends TeaModel {
     @NameInMap("SAMLProviderName")
-    @Validation(required = true)
     public String SAMLProviderName;
 
     public static GetSAMLProviderRequest build(java.util.Map<String, ?> map) throws Exception {

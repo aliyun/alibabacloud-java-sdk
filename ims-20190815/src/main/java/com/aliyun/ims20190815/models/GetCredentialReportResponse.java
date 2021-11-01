@@ -4,45 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetCredentialReportResponse extends TeaModel {
-    @NameInMap("GeneratedTime")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String generatedTime;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Content")
-    @Validation(required = true)
-    public String content;
+    public GetCredentialReportResponseBody body;
 
     public static GetCredentialReportResponse build(java.util.Map<String, ?> map) throws Exception {
         GetCredentialReportResponse self = new GetCredentialReportResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetCredentialReportResponse setGeneratedTime(String generatedTime) {
-        this.generatedTime = generatedTime;
+    public GetCredentialReportResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getGeneratedTime() {
-        return this.generatedTime;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetCredentialReportResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetCredentialReportResponse setBody(GetCredentialReportResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetCredentialReportResponse setContent(String content) {
-        this.content = content;
-        return this;
-    }
-    public String getContent() {
-        return this.content;
+    public GetCredentialReportResponseBody getBody() {
+        return this.body;
     }
 
 }

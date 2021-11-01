@@ -5,29 +5,28 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
-
-    @NameInMap("NewDisplayName")
-    public String newDisplayName;
-
-    @NameInMap("NewRedirectUris")
-    public String newRedirectUris;
-
-    @NameInMap("NewPredefinedScopes")
-    public String newPredefinedScopes;
-
-    @NameInMap("NewSecretRequired")
-    public Boolean newSecretRequired;
 
     @NameInMap("NewAccessTokenValidity")
     public Integer newAccessTokenValidity;
 
-    @NameInMap("NewRefreshTokenValidity")
-    public Integer newRefreshTokenValidity;
+    @NameInMap("NewDisplayName")
+    public String newDisplayName;
 
     @NameInMap("NewIsMultiTenant")
     public Boolean newIsMultiTenant;
+
+    @NameInMap("NewPredefinedScopes")
+    public String newPredefinedScopes;
+
+    @NameInMap("NewRedirectUris")
+    public String newRedirectUris;
+
+    @NameInMap("NewRefreshTokenValidity")
+    public Integer newRefreshTokenValidity;
+
+    @NameInMap("NewSecretRequired")
+    public Boolean newSecretRequired;
 
     public static UpdateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateApplicationRequest self = new UpdateApplicationRequest();
@@ -42,6 +41,14 @@ public class UpdateApplicationRequest extends TeaModel {
         return this.appId;
     }
 
+    public UpdateApplicationRequest setNewAccessTokenValidity(Integer newAccessTokenValidity) {
+        this.newAccessTokenValidity = newAccessTokenValidity;
+        return this;
+    }
+    public Integer getNewAccessTokenValidity() {
+        return this.newAccessTokenValidity;
+    }
+
     public UpdateApplicationRequest setNewDisplayName(String newDisplayName) {
         this.newDisplayName = newDisplayName;
         return this;
@@ -50,12 +57,12 @@ public class UpdateApplicationRequest extends TeaModel {
         return this.newDisplayName;
     }
 
-    public UpdateApplicationRequest setNewRedirectUris(String newRedirectUris) {
-        this.newRedirectUris = newRedirectUris;
+    public UpdateApplicationRequest setNewIsMultiTenant(Boolean newIsMultiTenant) {
+        this.newIsMultiTenant = newIsMultiTenant;
         return this;
     }
-    public String getNewRedirectUris() {
-        return this.newRedirectUris;
+    public Boolean getNewIsMultiTenant() {
+        return this.newIsMultiTenant;
     }
 
     public UpdateApplicationRequest setNewPredefinedScopes(String newPredefinedScopes) {
@@ -66,20 +73,12 @@ public class UpdateApplicationRequest extends TeaModel {
         return this.newPredefinedScopes;
     }
 
-    public UpdateApplicationRequest setNewSecretRequired(Boolean newSecretRequired) {
-        this.newSecretRequired = newSecretRequired;
+    public UpdateApplicationRequest setNewRedirectUris(String newRedirectUris) {
+        this.newRedirectUris = newRedirectUris;
         return this;
     }
-    public Boolean getNewSecretRequired() {
-        return this.newSecretRequired;
-    }
-
-    public UpdateApplicationRequest setNewAccessTokenValidity(Integer newAccessTokenValidity) {
-        this.newAccessTokenValidity = newAccessTokenValidity;
-        return this;
-    }
-    public Integer getNewAccessTokenValidity() {
-        return this.newAccessTokenValidity;
+    public String getNewRedirectUris() {
+        return this.newRedirectUris;
     }
 
     public UpdateApplicationRequest setNewRefreshTokenValidity(Integer newRefreshTokenValidity) {
@@ -90,12 +89,12 @@ public class UpdateApplicationRequest extends TeaModel {
         return this.newRefreshTokenValidity;
     }
 
-    public UpdateApplicationRequest setNewIsMultiTenant(Boolean newIsMultiTenant) {
-        this.newIsMultiTenant = newIsMultiTenant;
+    public UpdateApplicationRequest setNewSecretRequired(Boolean newSecretRequired) {
+        this.newSecretRequired = newSecretRequired;
         return this;
     }
-    public Boolean getNewIsMultiTenant() {
-        return this.newIsMultiTenant;
+    public Boolean getNewSecretRequired() {
+        return this.newSecretRequired;
     }
 
 }

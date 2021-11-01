@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualMFADeviceRequest extends TeaModel {
     @NameInMap("VirtualMFADeviceName")
-    @Validation(required = true)
     public String virtualMFADeviceName;
 
     public static CreateVirtualMFADeviceRequest build(java.util.Map<String, ?> map) throws Exception {

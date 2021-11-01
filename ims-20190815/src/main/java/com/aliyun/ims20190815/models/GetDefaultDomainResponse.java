@@ -4,33 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetDefaultDomainResponse extends TeaModel {
-    @NameInMap("DefaultDomainName")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String defaultDomainName;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public GetDefaultDomainResponseBody body;
 
     public static GetDefaultDomainResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDefaultDomainResponse self = new GetDefaultDomainResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDefaultDomainResponse setDefaultDomainName(String defaultDomainName) {
-        this.defaultDomainName = defaultDomainName;
+    public GetDefaultDomainResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getDefaultDomainName() {
-        return this.defaultDomainName;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetDefaultDomainResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetDefaultDomainResponse setBody(GetDefaultDomainResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public GetDefaultDomainResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessKeyRequest extends TeaModel {
     @NameInMap("UserAccessKeyId")
-    @Validation(required = true)
     public String userAccessKeyId;
 
     @NameInMap("UserPrincipalName")

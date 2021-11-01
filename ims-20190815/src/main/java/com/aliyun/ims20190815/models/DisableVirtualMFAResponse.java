@@ -4,21 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DisableVirtualMFAResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DisableVirtualMFAResponseBody body;
 
     public static DisableVirtualMFAResponse build(java.util.Map<String, ?> map) throws Exception {
         DisableVirtualMFAResponse self = new DisableVirtualMFAResponse();
         return TeaModel.build(map, self);
     }
 
-    public DisableVirtualMFAResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DisableVirtualMFAResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DisableVirtualMFAResponse setBody(DisableVirtualMFAResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DisableVirtualMFAResponseBody getBody() {
+        return this.body;
     }
 
 }

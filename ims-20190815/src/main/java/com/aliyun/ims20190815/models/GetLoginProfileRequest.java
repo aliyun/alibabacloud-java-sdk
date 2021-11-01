@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetLoginProfileRequest extends TeaModel {
     @NameInMap("UserPrincipalName")
-    @Validation(required = true)
     public String userPrincipalName;
 
     public static GetLoginProfileRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,53 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AccessKeyLastUsed")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetAccessKeyLastUsedResponseAccessKeyLastUsed accessKeyLastUsed;
+    public GetAccessKeyLastUsedResponseBody body;
 
     public static GetAccessKeyLastUsedResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAccessKeyLastUsedResponse self = new GetAccessKeyLastUsedResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAccessKeyLastUsedResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetAccessKeyLastUsedResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetAccessKeyLastUsedResponse setAccessKeyLastUsed(GetAccessKeyLastUsedResponseAccessKeyLastUsed accessKeyLastUsed) {
-        this.accessKeyLastUsed = accessKeyLastUsed;
+    public GetAccessKeyLastUsedResponse setBody(GetAccessKeyLastUsedResponseBody body) {
+        this.body = body;
         return this;
     }
-    public GetAccessKeyLastUsedResponseAccessKeyLastUsed getAccessKeyLastUsed() {
-        return this.accessKeyLastUsed;
-    }
-
-    public static class GetAccessKeyLastUsedResponseAccessKeyLastUsed extends TeaModel {
-        @NameInMap("LastUsedDate")
-        @Validation(required = true)
-        public String lastUsedDate;
-
-        public static GetAccessKeyLastUsedResponseAccessKeyLastUsed build(java.util.Map<String, ?> map) throws Exception {
-            GetAccessKeyLastUsedResponseAccessKeyLastUsed self = new GetAccessKeyLastUsedResponseAccessKeyLastUsed();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAccessKeyLastUsedResponseAccessKeyLastUsed setLastUsedDate(String lastUsedDate) {
-            this.lastUsedDate = lastUsedDate;
-            return this;
-        }
-        public String getLastUsedDate() {
-            return this.lastUsedDate;
-        }
-
+    public GetAccessKeyLastUsedResponseBody getBody() {
+        return this.body;
     }
 
 }

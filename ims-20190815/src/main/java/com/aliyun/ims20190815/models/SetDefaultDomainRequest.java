@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class SetDefaultDomainRequest extends TeaModel {
     @NameInMap("DefaultDomainName")
-    @Validation(required = true)
     public String defaultDomainName;
 
     public static SetDefaultDomainRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,23 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserRequest extends TeaModel {
-    @NameInMap("UserPrincipalName")
-    public String userPrincipalName;
-
     @NameInMap("UserId")
     public String userId;
+
+    @NameInMap("UserPrincipalName")
+    public String userPrincipalName;
 
     public static DeleteUserRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteUserRequest self = new DeleteUserRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteUserRequest setUserPrincipalName(String userPrincipalName) {
-        this.userPrincipalName = userPrincipalName;
-        return this;
-    }
-    public String getUserPrincipalName() {
-        return this.userPrincipalName;
     }
 
     public DeleteUserRequest setUserId(String userId) {
@@ -29,6 +21,14 @@ public class DeleteUserRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public DeleteUserRequest setUserPrincipalName(String userPrincipalName) {
+        this.userPrincipalName = userPrincipalName;
+        return this;
+    }
+    public String getUserPrincipalName() {
+        return this.userPrincipalName;
     }
 
 }
