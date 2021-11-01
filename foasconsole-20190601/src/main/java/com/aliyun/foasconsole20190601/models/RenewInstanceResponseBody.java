@@ -4,13 +4,13 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
-    // 请求id
-    @NameInMap("RequestId")
-    public String requestId;
-
     // orderId
     @NameInMap("OrderId")
     public Long orderId;
+
+    // 请求id
+    @NameInMap("RequestId")
+    public String requestId;
 
     // 是否成功
     @NameInMap("Success")
@@ -21,20 +21,20 @@ public class RenewInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RenewInstanceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public RenewInstanceResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public RenewInstanceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public RenewInstanceResponseBody setSuccess(Boolean success) {

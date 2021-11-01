@@ -21,41 +21,25 @@ public class RenewInstanceRequest extends TeaModel {
     }
 
     public static class RenewInstanceRequestRenewInstanceRequest extends TeaModel {
-        // 地域id
-        @NameInMap("Region")
-        public String region;
+        // 订购周期数量
+        @NameInMap("Duration")
+        public Integer duration;
 
         // 实例id
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 订购周期数量
-        @NameInMap("Duration")
-        public Integer duration;
-
         // 订购周期
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
+        // 地域id
+        @NameInMap("Region")
+        public String region;
+
         public static RenewInstanceRequestRenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
             RenewInstanceRequestRenewInstanceRequest self = new RenewInstanceRequestRenewInstanceRequest();
             return TeaModel.build(map, self);
-        }
-
-        public RenewInstanceRequestRenewInstanceRequest setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
-        public RenewInstanceRequestRenewInstanceRequest setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public RenewInstanceRequestRenewInstanceRequest setDuration(Integer duration) {
@@ -66,12 +50,28 @@ public class RenewInstanceRequest extends TeaModel {
             return this.duration;
         }
 
+        public RenewInstanceRequestRenewInstanceRequest setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
         public RenewInstanceRequestRenewInstanceRequest setPricingCycle(String pricingCycle) {
             this.pricingCycle = pricingCycle;
             return this;
         }
         public String getPricingCycle() {
             return this.pricingCycle;
+        }
+
+        public RenewInstanceRequestRenewInstanceRequest setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }

@@ -3,7 +3,7 @@ package com.aliyun.foasconsole20190601.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
+public class ConvertInstanceResponseBody extends TeaModel {
     // 订单id
     @NameInMap("OrderId")
     public Long orderId;
@@ -16,12 +16,12 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ModifyPrepayInstanceSpecResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyPrepayInstanceSpecResponseBody self = new ModifyPrepayInstanceSpecResponseBody();
+    public static ConvertInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ConvertInstanceResponseBody self = new ConvertInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyPrepayInstanceSpecResponseBody setOrderId(Long orderId) {
+    public ConvertInstanceResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -29,7 +29,7 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public ModifyPrepayInstanceSpecResponseBody setRequestId(String requestId) {
+    public ConvertInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -37,7 +37,7 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyPrepayInstanceSpecResponseBody setSuccess(Boolean success) {
+    public ConvertInstanceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

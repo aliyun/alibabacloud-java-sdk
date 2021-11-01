@@ -21,10 +21,6 @@ public class DescribeNamespacesRequest extends TeaModel {
     }
 
     public static class DescribeNamespacesRequestDescribeNamespacesRequest extends TeaModel {
-        // regionId
-        @NameInMap("Region")
-        public String region;
-
         // 实例id
         @NameInMap("InstanceId")
         public String instanceId;
@@ -41,17 +37,13 @@ public class DescribeNamespacesRequest extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // regionId
+        @NameInMap("Region")
+        public String region;
+
         public static DescribeNamespacesRequestDescribeNamespacesRequest build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespacesRequestDescribeNamespacesRequest self = new DescribeNamespacesRequestDescribeNamespacesRequest();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNamespacesRequestDescribeNamespacesRequest setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public DescribeNamespacesRequestDescribeNamespacesRequest setInstanceId(String instanceId) {
@@ -84,6 +76,14 @@ public class DescribeNamespacesRequest extends TeaModel {
         }
         public Integer getPageSize() {
             return this.pageSize;
+        }
+
+        public DescribeNamespacesRequestDescribeNamespacesRequest setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }

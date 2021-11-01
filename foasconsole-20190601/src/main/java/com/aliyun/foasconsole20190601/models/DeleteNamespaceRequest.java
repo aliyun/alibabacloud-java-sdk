@@ -21,26 +21,18 @@ public class DeleteNamespaceRequest extends TeaModel {
     }
 
     public static class DeleteNamespaceRequestDeleteNamespaceRequest extends TeaModel {
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("Region")
+        public String region;
+
         public static DeleteNamespaceRequestDeleteNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
             DeleteNamespaceRequestDeleteNamespaceRequest self = new DeleteNamespaceRequestDeleteNamespaceRequest();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteNamespaceRequestDeleteNamespaceRequest setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public DeleteNamespaceRequestDeleteNamespaceRequest setInstanceId(String instanceId) {
@@ -57,6 +49,14 @@ public class DeleteNamespaceRequest extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public DeleteNamespaceRequestDeleteNamespaceRequest setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }

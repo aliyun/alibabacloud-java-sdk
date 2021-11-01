@@ -21,23 +21,15 @@ public class DeleteInstanceRequest extends TeaModel {
     }
 
     public static class DeleteInstanceRequestDeleteInstanceRequest extends TeaModel {
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Region")
+        public String region;
 
         public static DeleteInstanceRequestDeleteInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
             DeleteInstanceRequestDeleteInstanceRequest self = new DeleteInstanceRequestDeleteInstanceRequest();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteInstanceRequestDeleteInstanceRequest setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public DeleteInstanceRequestDeleteInstanceRequest setInstanceId(String instanceId) {
@@ -46,6 +38,14 @@ public class DeleteInstanceRequest extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DeleteInstanceRequestDeleteInstanceRequest setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
     }

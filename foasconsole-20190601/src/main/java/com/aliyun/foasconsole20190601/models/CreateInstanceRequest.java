@@ -89,114 +89,42 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestCreateInstanceRequest extends TeaModel {
-        @NameInMap("InstanceName")
-        public String instanceName;
+        @NameInMap("AutoRenew")
+        public Boolean autoRenew;
 
         @NameInMap("ChargeType")
         public String chargeType;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("Duration")
+        public Integer duration;
 
-        @NameInMap("ZoneId")
-        public String zoneId;
-
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        @NameInMap("VSwitchIds")
-        public java.util.List<String> vSwitchIds;
-
-        @NameInMap("ResourceSpec")
-        public CreateInstanceRequestCreateInstanceRequestResourceSpec resourceSpec;
+        @NameInMap("InstanceName")
+        public String instanceName;
 
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
-        @NameInMap("Duration")
-        public Integer duration;
+        @NameInMap("Region")
+        public String region;
 
-        @NameInMap("AutoRenew")
-        public Boolean autoRenew;
+        @NameInMap("ResourceSpec")
+        public CreateInstanceRequestCreateInstanceRequestResourceSpec resourceSpec;
 
         @NameInMap("Storage")
         public CreateInstanceRequestCreateInstanceRequestStorage storage;
 
+        @NameInMap("VSwitchIds")
+        public java.util.List<String> vSwitchIds;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static CreateInstanceRequestCreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceRequestCreateInstanceRequest self = new CreateInstanceRequestCreateInstanceRequest();
             return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceRequestCreateInstanceRequest setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public CreateInstanceRequestCreateInstanceRequest setChargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-        public String getChargeType() {
-            return this.chargeType;
-        }
-
-        public CreateInstanceRequestCreateInstanceRequest setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
-        public CreateInstanceRequestCreateInstanceRequest setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public CreateInstanceRequestCreateInstanceRequest setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-        public CreateInstanceRequestCreateInstanceRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
-            this.vSwitchIds = vSwitchIds;
-            return this;
-        }
-        public java.util.List<String> getVSwitchIds() {
-            return this.vSwitchIds;
-        }
-
-        public CreateInstanceRequestCreateInstanceRequest setResourceSpec(CreateInstanceRequestCreateInstanceRequestResourceSpec resourceSpec) {
-            this.resourceSpec = resourceSpec;
-            return this;
-        }
-        public CreateInstanceRequestCreateInstanceRequestResourceSpec getResourceSpec() {
-            return this.resourceSpec;
-        }
-
-        public CreateInstanceRequestCreateInstanceRequest setPricingCycle(String pricingCycle) {
-            this.pricingCycle = pricingCycle;
-            return this;
-        }
-        public String getPricingCycle() {
-            return this.pricingCycle;
-        }
-
-        public CreateInstanceRequestCreateInstanceRequest setDuration(Integer duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Integer getDuration() {
-            return this.duration;
         }
 
         public CreateInstanceRequestCreateInstanceRequest setAutoRenew(Boolean autoRenew) {
@@ -207,12 +135,84 @@ public class CreateInstanceRequest extends TeaModel {
             return this.autoRenew;
         }
 
+        public CreateInstanceRequestCreateInstanceRequest setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setPricingCycle(String pricingCycle) {
+            this.pricingCycle = pricingCycle;
+            return this;
+        }
+        public String getPricingCycle() {
+            return this.pricingCycle;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setResourceSpec(CreateInstanceRequestCreateInstanceRequestResourceSpec resourceSpec) {
+            this.resourceSpec = resourceSpec;
+            return this;
+        }
+        public CreateInstanceRequestCreateInstanceRequestResourceSpec getResourceSpec() {
+            return this.resourceSpec;
+        }
+
         public CreateInstanceRequestCreateInstanceRequest setStorage(CreateInstanceRequestCreateInstanceRequestStorage storage) {
             this.storage = storage;
             return this;
         }
         public CreateInstanceRequestCreateInstanceRequestStorage getStorage() {
             return this.storage;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

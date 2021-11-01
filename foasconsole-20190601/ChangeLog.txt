@@ -1,3 +1,6 @@
+2021-11-01 Version: 1.0.2
+- Support multi languages.
+
 2021-09-17 Version: 1.0.1
 - Modify cu to cpu and memory.
 
