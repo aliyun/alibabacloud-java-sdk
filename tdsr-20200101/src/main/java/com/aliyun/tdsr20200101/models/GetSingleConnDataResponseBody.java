@@ -4,41 +4,33 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetSingleConnDataResponseBody extends TeaModel {
-    // 请求ID，与入参requestId对应
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 返回码
     @NameInMap("Code")
     public Long code;
-
-    // 是否请求成功
-    @NameInMap("Success")
-    public Boolean success;
-
-    // 错误消息
-    @NameInMap("Message")
-    public String message;
-
-    // 版本
-    @NameInMap("Version")
-    public String version;
 
     // 关联信息
     @NameInMap("List")
     public java.util.List<GetSingleConnDataResponseBodyList> list;
 
+    // 错误消息
+    @NameInMap("Message")
+    public String message;
+
+    // 请求ID，与入参requestId对应
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否请求成功
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 版本
+    @NameInMap("Version")
+    public String version;
+
     public static GetSingleConnDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSingleConnDataResponseBody self = new GetSingleConnDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSingleConnDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetSingleConnDataResponseBody setCode(Long code) {
@@ -49,12 +41,12 @@ public class GetSingleConnDataResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetSingleConnDataResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GetSingleConnDataResponseBody setList(java.util.List<GetSingleConnDataResponseBodyList> list) {
+        this.list = list;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.List<GetSingleConnDataResponseBodyList> getList() {
+        return this.list;
     }
 
     public GetSingleConnDataResponseBody setMessage(String message) {
@@ -65,20 +57,28 @@ public class GetSingleConnDataResponseBody extends TeaModel {
         return this.message;
     }
 
+    public GetSingleConnDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetSingleConnDataResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public GetSingleConnDataResponseBody setVersion(String version) {
         this.version = version;
         return this;
     }
     public String getVersion() {
         return this.version;
-    }
-
-    public GetSingleConnDataResponseBody setList(java.util.List<GetSingleConnDataResponseBodyList> list) {
-        this.list = list;
-        return this;
-    }
-    public java.util.List<GetSingleConnDataResponseBodyList> getList() {
-        return this.list;
     }
 
     public static class GetSingleConnDataResponseBodyList extends TeaModel {

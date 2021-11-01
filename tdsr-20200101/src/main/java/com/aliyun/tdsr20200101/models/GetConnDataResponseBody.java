@@ -4,25 +4,9 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetConnDataResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 返回码
     @NameInMap("Code")
     public Long code;
-
-    // 是否请求成功
-    @NameInMap("Success")
-    public Boolean success;
-
-    // 错误消息
-    @NameInMap("Message")
-    public String message;
-
-    // 版本
-    @NameInMap("Version")
-    public String version;
 
     // 扩展信息
     @NameInMap("Extend")
@@ -32,17 +16,25 @@ public class GetConnDataResponseBody extends TeaModel {
     @NameInMap("List")
     public java.util.List<GetConnDataResponseBodyList> list;
 
+    // 错误消息
+    @NameInMap("Message")
+    public String message;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否请求成功
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 版本
+    @NameInMap("Version")
+    public String version;
+
     public static GetConnDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetConnDataResponseBody self = new GetConnDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetConnDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetConnDataResponseBody setCode(Long code) {
@@ -51,30 +43,6 @@ public class GetConnDataResponseBody extends TeaModel {
     }
     public Long getCode() {
         return this.code;
-    }
-
-    public GetConnDataResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetConnDataResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetConnDataResponseBody setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public GetConnDataResponseBody setExtend(String extend) {
@@ -91,6 +59,38 @@ public class GetConnDataResponseBody extends TeaModel {
     }
     public java.util.List<GetConnDataResponseBodyList> getList() {
         return this.list;
+    }
+
+    public GetConnDataResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetConnDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetConnDataResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetConnDataResponseBody setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
     public static class GetConnDataResponseBodyList extends TeaModel {

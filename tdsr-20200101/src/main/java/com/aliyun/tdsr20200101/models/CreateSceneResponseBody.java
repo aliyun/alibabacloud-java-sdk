@@ -4,17 +4,17 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateSceneResponseBody extends TeaModel {
-    @NameInMap("SceneId")
-    public Long sceneId;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ErrMessage")
+    public String errMessage;
 
     @NameInMap("PreviewToken")
     public String previewToken;
 
-    @NameInMap("ErrMessage")
-    public String errMessage;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SceneId")
+    public Long sceneId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -24,20 +24,12 @@ public class CreateSceneResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateSceneResponseBody setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
+    public CreateSceneResponseBody setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
         return this;
     }
-    public Long getSceneId() {
-        return this.sceneId;
-    }
-
-    public CreateSceneResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public String getErrMessage() {
+        return this.errMessage;
     }
 
     public CreateSceneResponseBody setPreviewToken(String previewToken) {
@@ -48,12 +40,20 @@ public class CreateSceneResponseBody extends TeaModel {
         return this.previewToken;
     }
 
-    public CreateSceneResponseBody setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
+    public CreateSceneResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getErrMessage() {
-        return this.errMessage;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateSceneResponseBody setSceneId(Long sceneId) {
+        this.sceneId = sceneId;
+        return this;
+    }
+    public Long getSceneId() {
+        return this.sceneId;
     }
 
     public CreateSceneResponseBody setSuccess(Boolean success) {

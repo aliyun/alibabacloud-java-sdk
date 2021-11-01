@@ -4,8 +4,8 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("BuilderUserIdList")
+    public String builderUserIdList;
 
     @NameInMap("BusinessId")
     public String businessId;
@@ -16,20 +16,20 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("GatherUserIdList")
     public String gatherUserIdList;
 
-    @NameInMap("BuilderUserIdList")
-    public String builderUserIdList;
+    @NameInMap("Name")
+    public String name;
 
     public static CreateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProjectRequest self = new CreateProjectRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateProjectRequest setName(String name) {
-        this.name = name;
+    public CreateProjectRequest setBuilderUserIdList(String builderUserIdList) {
+        this.builderUserIdList = builderUserIdList;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getBuilderUserIdList() {
+        return this.builderUserIdList;
     }
 
     public CreateProjectRequest setBusinessId(String businessId) {
@@ -56,12 +56,12 @@ public class CreateProjectRequest extends TeaModel {
         return this.gatherUserIdList;
     }
 
-    public CreateProjectRequest setBuilderUserIdList(String builderUserIdList) {
-        this.builderUserIdList = builderUserIdList;
+    public CreateProjectRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getBuilderUserIdList() {
-        return this.builderUserIdList;
+    public String getName() {
+        return this.name;
     }
 
 }

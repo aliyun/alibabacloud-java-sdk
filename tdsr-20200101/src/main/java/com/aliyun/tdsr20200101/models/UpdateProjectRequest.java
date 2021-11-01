@@ -4,6 +4,10 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
+    // 业务Id
+    @NameInMap("BusinessId")
+    public String businessId;
+
     // 项目id
     @NameInMap("Id")
     public String id;
@@ -12,13 +16,17 @@ public class UpdateProjectRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // 业务Id
-    @NameInMap("BusinessId")
-    public String businessId;
-
     public static UpdateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectRequest self = new UpdateProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateProjectRequest setBusinessId(String businessId) {
+        this.businessId = businessId;
+        return this;
+    }
+    public String getBusinessId() {
+        return this.businessId;
     }
 
     public UpdateProjectRequest setId(String id) {
@@ -35,14 +43,6 @@ public class UpdateProjectRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public UpdateProjectRequest setBusinessId(String businessId) {
-        this.businessId = businessId;
-        return this;
-    }
-    public String getBusinessId() {
-        return this.businessId;
     }
 
 }

@@ -4,14 +4,14 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class ListScenesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public java.util.List<ListScenesResponseBodyData> data;
 
     @NameInMap("ErrMessage")
     public String errMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,14 +19,6 @@ public class ListScenesResponseBody extends TeaModel {
     public static ListScenesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListScenesResponseBody self = new ListScenesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListScenesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListScenesResponseBody setData(java.util.List<ListScenesResponseBodyData> data) {
@@ -43,6 +35,14 @@ public class ListScenesResponseBody extends TeaModel {
     }
     public String getErrMessage() {
         return this.errMessage;
+    }
+
+    public ListScenesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListScenesResponseBody setSuccess(Boolean success) {

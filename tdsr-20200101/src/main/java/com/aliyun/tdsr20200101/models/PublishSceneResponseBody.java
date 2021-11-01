@@ -4,17 +4,13 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class PublishSceneResponseBody extends TeaModel {
-    // 请求ID，与入参requestId对应
-    @NameInMap("RequestId")
-    public String requestId;
-
     // 返回码
     @NameInMap("Code")
     public Long code;
 
-    // 是否请求成功
-    @NameInMap("Success")
-    public Boolean success;
+    // 任务实例id
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     // 错误消息
     @NameInMap("Message")
@@ -24,21 +20,17 @@ public class PublishSceneResponseBody extends TeaModel {
     @NameInMap("PreviewUrl")
     public String previewUrl;
 
-    // 任务实例id
-    @NameInMap("InstanceId")
-    public String instanceId;
+    // 请求ID，与入参requestId对应
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 是否请求成功
+    @NameInMap("Success")
+    public Boolean success;
 
     public static PublishSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PublishSceneResponseBody self = new PublishSceneResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public PublishSceneResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public PublishSceneResponseBody setCode(Long code) {
@@ -49,12 +41,12 @@ public class PublishSceneResponseBody extends TeaModel {
         return this.code;
     }
 
-    public PublishSceneResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public PublishSceneResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public PublishSceneResponseBody setMessage(String message) {
@@ -73,12 +65,20 @@ public class PublishSceneResponseBody extends TeaModel {
         return this.previewUrl;
     }
 
-    public PublishSceneResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public PublishSceneResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public PublishSceneResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

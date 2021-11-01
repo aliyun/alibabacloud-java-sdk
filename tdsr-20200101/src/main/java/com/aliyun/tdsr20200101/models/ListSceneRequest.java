@@ -8,10 +8,6 @@ public class ListSceneRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    // 所有项目Id
-    @NameInMap("ProjectId")
-    public String projectId;
-
     // 当前页
     @NameInMap("PageNum")
     public Long pageNum;
@@ -19,6 +15,10 @@ public class ListSceneRequest extends TeaModel {
     // 页长
     @NameInMap("PageSize")
     public Long pageSize;
+
+    // 所有项目Id
+    @NameInMap("ProjectId")
+    public String projectId;
 
     public static ListSceneRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSceneRequest self = new ListSceneRequest();
@@ -31,14 +31,6 @@ public class ListSceneRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public ListSceneRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
     }
 
     public ListSceneRequest setPageNum(Long pageNum) {
@@ -55,6 +47,14 @@ public class ListSceneRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSceneRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
     }
 
 }

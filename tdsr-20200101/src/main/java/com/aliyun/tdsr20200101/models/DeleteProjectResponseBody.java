@@ -4,11 +4,11 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteProjectResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrMessage")
     public String errMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -18,20 +18,20 @@ public class DeleteProjectResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteProjectResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DeleteProjectResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
     public String getErrMessage() {
         return this.errMessage;
+    }
+
+    public DeleteProjectResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteProjectResponseBody setSuccess(Boolean success) {
