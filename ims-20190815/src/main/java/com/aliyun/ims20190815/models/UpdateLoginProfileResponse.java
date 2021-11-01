@@ -4,101 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoginProfileResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("LoginProfile")
+    @NameInMap("body")
     @Validation(required = true)
-    public UpdateLoginProfileResponseLoginProfile loginProfile;
+    public UpdateLoginProfileResponseBody body;
 
     public static UpdateLoginProfileResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateLoginProfileResponse self = new UpdateLoginProfileResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateLoginProfileResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateLoginProfileResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateLoginProfileResponse setLoginProfile(UpdateLoginProfileResponseLoginProfile loginProfile) {
-        this.loginProfile = loginProfile;
+    public UpdateLoginProfileResponse setBody(UpdateLoginProfileResponseBody body) {
+        this.body = body;
         return this;
     }
-    public UpdateLoginProfileResponseLoginProfile getLoginProfile() {
-        return this.loginProfile;
-    }
-
-    public static class UpdateLoginProfileResponseLoginProfile extends TeaModel {
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("UpdateDate")
-        @Validation(required = true)
-        public String updateDate;
-
-        @NameInMap("PasswordResetRequired")
-        @Validation(required = true)
-        public Boolean passwordResetRequired;
-
-        @NameInMap("UserPrincipalName")
-        @Validation(required = true)
-        public String userPrincipalName;
-
-        @NameInMap("MFABindRequired")
-        @Validation(required = true)
-        public Boolean MFABindRequired;
-
-        public static UpdateLoginProfileResponseLoginProfile build(java.util.Map<String, ?> map) throws Exception {
-            UpdateLoginProfileResponseLoginProfile self = new UpdateLoginProfileResponseLoginProfile();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateLoginProfileResponseLoginProfile setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public UpdateLoginProfileResponseLoginProfile setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
-            return this;
-        }
-        public String getUpdateDate() {
-            return this.updateDate;
-        }
-
-        public UpdateLoginProfileResponseLoginProfile setPasswordResetRequired(Boolean passwordResetRequired) {
-            this.passwordResetRequired = passwordResetRequired;
-            return this;
-        }
-        public Boolean getPasswordResetRequired() {
-            return this.passwordResetRequired;
-        }
-
-        public UpdateLoginProfileResponseLoginProfile setUserPrincipalName(String userPrincipalName) {
-            this.userPrincipalName = userPrincipalName;
-            return this;
-        }
-        public String getUserPrincipalName() {
-            return this.userPrincipalName;
-        }
-
-        public UpdateLoginProfileResponseLoginProfile setMFABindRequired(Boolean MFABindRequired) {
-            this.MFABindRequired = MFABindRequired;
-            return this;
-        }
-        public Boolean getMFABindRequired() {
-            return this.MFABindRequired;
-        }
-
+    public UpdateLoginProfileResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteSAMLProviderRequest extends TeaModel {
     @NameInMap("SAMLProviderName")
-    @Validation(required = true)
     public String SAMLProviderName;
 
     public static DeleteSAMLProviderRequest build(java.util.Map<String, ?> map) throws Exception {

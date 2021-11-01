@@ -4,21 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class RemoveUserFromGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RemoveUserFromGroupResponseBody body;
 
     public static RemoveUserFromGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveUserFromGroupResponse self = new RemoveUserFromGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveUserFromGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RemoveUserFromGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RemoveUserFromGroupResponse setBody(RemoveUserFromGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RemoveUserFromGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

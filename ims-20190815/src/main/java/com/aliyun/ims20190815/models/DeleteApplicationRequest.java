@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     public static DeleteApplicationRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,18 +4,26 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class SetUserSsoSettingsRequest extends TeaModel {
+    @NameInMap("AuxiliaryDomain")
+    public String auxiliaryDomain;
+
     @NameInMap("MetadataDocument")
     public String metadataDocument;
 
     @NameInMap("SsoEnabled")
     public Boolean ssoEnabled;
 
-    @NameInMap("AuxiliaryDomain")
-    public String auxiliaryDomain;
-
     public static SetUserSsoSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
         SetUserSsoSettingsRequest self = new SetUserSsoSettingsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetUserSsoSettingsRequest setAuxiliaryDomain(String auxiliaryDomain) {
+        this.auxiliaryDomain = auxiliaryDomain;
+        return this;
+    }
+    public String getAuxiliaryDomain() {
+        return this.auxiliaryDomain;
     }
 
     public SetUserSsoSettingsRequest setMetadataDocument(String metadataDocument) {
@@ -32,14 +40,6 @@ public class SetUserSsoSettingsRequest extends TeaModel {
     }
     public Boolean getSsoEnabled() {
         return this.ssoEnabled;
-    }
-
-    public SetUserSsoSettingsRequest setAuxiliaryDomain(String auxiliaryDomain) {
-        this.auxiliaryDomain = auxiliaryDomain;
-        return this;
-    }
-    public String getAuxiliaryDomain() {
-        return this.auxiliaryDomain;
     }
 
 }
