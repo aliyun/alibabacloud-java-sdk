@@ -51,14 +51,14 @@ public class ModifyPrepayNamespaceSpecRequest extends TeaModel {
     }
 
     public static class ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest extends TeaModel {
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Namespace")
         public String namespace;
+
+        @NameInMap("Region")
+        public String region;
 
         @NameInMap("ResourceSpec")
         public ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequestResourceSpec resourceSpec;
@@ -66,14 +66,6 @@ public class ModifyPrepayNamespaceSpecRequest extends TeaModel {
         public static ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
             ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest self = new ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest setInstanceId(String instanceId) {
@@ -90,6 +82,14 @@ public class ModifyPrepayNamespaceSpecRequest extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequest setResourceSpec(ModifyPrepayNamespaceSpecRequestModifyPrepayNamespaceSpecRequestResourceSpec resourceSpec) {

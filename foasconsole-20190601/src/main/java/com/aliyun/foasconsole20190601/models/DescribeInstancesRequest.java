@@ -21,25 +21,41 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestDescribeInstancesRequest extends TeaModel {
+        // 付款类型
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("PageIndex")
         public Integer pageIndex;
 
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
         @NameInMap("Region")
         public String region;
-
-        // 付款类型
-        @NameInMap("ChargeType")
-        public String chargeType;
 
         public static DescribeInstancesRequestDescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesRequestDescribeInstancesRequest self = new DescribeInstancesRequestDescribeInstancesRequest();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesRequestDescribeInstancesRequest setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public DescribeInstancesRequestDescribeInstancesRequest setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeInstancesRequestDescribeInstancesRequest setPageIndex(Integer pageIndex) {
@@ -58,28 +74,12 @@ public class DescribeInstancesRequest extends TeaModel {
             return this.pageSize;
         }
 
-        public DescribeInstancesRequestDescribeInstancesRequest setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public DescribeInstancesRequestDescribeInstancesRequest setRegion(String region) {
             this.region = region;
             return this;
         }
         public String getRegion() {
             return this.region;
-        }
-
-        public DescribeInstancesRequestDescribeInstancesRequest setChargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-        public String getChargeType() {
-            return this.chargeType;
         }
 
     }

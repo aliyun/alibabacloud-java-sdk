@@ -4,6 +4,15 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespacesResponseBody extends TeaModel {
+    @NameInMap("Namespaces")
+    public java.util.List<DescribeNamespacesResponseBodyNamespaces> namespaces;
+
+    @NameInMap("PageIndex")
+    public Integer pageIndex;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     // 请求id
     @NameInMap("RequestId")
     public String requestId;
@@ -18,18 +27,33 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     @NameInMap("TotalPage")
     public Integer totalPage;
 
-    @NameInMap("PageIndex")
-    public Integer pageIndex;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("Namespaces")
-    public java.util.List<DescribeNamespacesResponseBodyNamespaces> namespaces;
-
     public static DescribeNamespacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNamespacesResponseBody self = new DescribeNamespacesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNamespacesResponseBody setNamespaces(java.util.List<DescribeNamespacesResponseBodyNamespaces> namespaces) {
+        this.namespaces = namespaces;
+        return this;
+    }
+    public java.util.List<DescribeNamespacesResponseBodyNamespaces> getNamespaces() {
+        return this.namespaces;
+    }
+
+    public DescribeNamespacesResponseBody setPageIndex(Integer pageIndex) {
+        this.pageIndex = pageIndex;
+        return this;
+    }
+    public Integer getPageIndex() {
+        return this.pageIndex;
+    }
+
+    public DescribeNamespacesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeNamespacesResponseBody setRequestId(String requestId) {
@@ -62,30 +86,6 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
     public Integer getTotalPage() {
         return this.totalPage;
-    }
-
-    public DescribeNamespacesResponseBody setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
-        return this;
-    }
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    public DescribeNamespacesResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeNamespacesResponseBody setNamespaces(java.util.List<DescribeNamespacesResponseBodyNamespaces> namespaces) {
-        this.namespaces = namespaces;
-        return this;
-    }
-    public java.util.List<DescribeNamespacesResponseBodyNamespaces> getNamespaces() {
-        return this.namespaces;
     }
 
     public static class DescribeNamespacesResponseBodyNamespacesResourceSpec extends TeaModel {
@@ -149,17 +149,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     }
 
     public static class DescribeNamespacesResponseBodyNamespaces extends TeaModel {
-        @NameInMap("Namespace")
-        public String namespace;
-
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         @NameInMap("GmtModified")
         public Long gmtModified;
+
+        @NameInMap("Namespace")
+        public String namespace;
 
         @NameInMap("ResourceSpec")
         public DescribeNamespacesResponseBodyNamespacesResourceSpec resourceSpec;
@@ -167,25 +164,12 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("ResourceUsed")
         public DescribeNamespacesResponseBodyNamespacesResourceUsed resourceUsed;
 
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeNamespacesResponseBodyNamespaces build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespacesResponseBodyNamespaces self = new DescribeNamespacesResponseBodyNamespaces();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNamespacesResponseBodyNamespaces setNamespace(String namespace) {
-            this.namespace = namespace;
-            return this;
-        }
-        public String getNamespace() {
-            return this.namespace;
-        }
-
-        public DescribeNamespacesResponseBodyNamespaces setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeNamespacesResponseBodyNamespaces setGmtCreate(Long gmtCreate) {
@@ -204,6 +188,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public DescribeNamespacesResponseBodyNamespaces setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
         public DescribeNamespacesResponseBodyNamespaces setResourceSpec(DescribeNamespacesResponseBodyNamespacesResourceSpec resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
@@ -218,6 +210,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public DescribeNamespacesResponseBodyNamespacesResourceUsed getResourceUsed() {
             return this.resourceUsed;
+        }
+
+        public DescribeNamespacesResponseBodyNamespaces setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

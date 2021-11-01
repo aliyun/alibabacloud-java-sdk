@@ -51,14 +51,14 @@ public class CreateNamespaceRequest extends TeaModel {
     }
 
     public static class CreateNamespaceRequestCreateNamespaceRequest extends TeaModel {
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Namespace")
         public String namespace;
+
+        @NameInMap("Region")
+        public String region;
 
         @NameInMap("ResourceSpec")
         public CreateNamespaceRequestCreateNamespaceRequestResourceSpec resourceSpec;
@@ -66,14 +66,6 @@ public class CreateNamespaceRequest extends TeaModel {
         public static CreateNamespaceRequestCreateNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
             CreateNamespaceRequestCreateNamespaceRequest self = new CreateNamespaceRequestCreateNamespaceRequest();
             return TeaModel.build(map, self);
-        }
-
-        public CreateNamespaceRequestCreateNamespaceRequest setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public CreateNamespaceRequestCreateNamespaceRequest setInstanceId(String instanceId) {
@@ -90,6 +82,14 @@ public class CreateNamespaceRequest extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public CreateNamespaceRequestCreateNamespaceRequest setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public CreateNamespaceRequestCreateNamespaceRequest setResourceSpec(CreateNamespaceRequestCreateNamespaceRequestResourceSpec resourceSpec) {

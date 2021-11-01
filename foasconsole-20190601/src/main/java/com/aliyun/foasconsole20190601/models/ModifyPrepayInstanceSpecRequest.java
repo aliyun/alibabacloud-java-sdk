@@ -51,11 +51,11 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     }
 
     public static class ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest extends TeaModel {
-        @NameInMap("Region")
-        public String region;
-
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Region")
+        public String region;
 
         @NameInMap("ResourceSpec")
         public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec resourceSpec;
@@ -65,20 +65,20 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequest setResourceSpec(ModifyPrepayInstanceSpecRequestModifyPrepayInstanceSpecRequestResourceSpec resourceSpec) {
