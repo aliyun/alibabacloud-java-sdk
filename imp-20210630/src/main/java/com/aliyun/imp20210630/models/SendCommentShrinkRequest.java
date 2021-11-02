@@ -24,6 +24,10 @@ public class SendCommentShrinkRequest extends TeaModel {
     @NameInMap("SenderId")
     public String senderId;
 
+    // 弹幕消息发送者的昵称。
+    @NameInMap("SenderNick")
+    public String senderNick;
+
     public static SendCommentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SendCommentShrinkRequest self = new SendCommentShrinkRequest();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class SendCommentShrinkRequest extends TeaModel {
     }
     public String getSenderId() {
         return this.senderId;
+    }
+
+    public SendCommentShrinkRequest setSenderNick(String senderNick) {
+        this.senderNick = senderNick;
+        return this;
+    }
+    public String getSenderNick() {
+        return this.senderNick;
     }
 
 }
