@@ -74,23 +74,38 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("SensitiveRatio")
-        public String sensitiveRatio;
-
-        @NameInMap("Protection")
-        public Boolean protection;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Labelsec")
         public Boolean labelsec;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ObjectKey")
+        public String objectKey;
+
+        @NameInMap("OdpsRiskLevelName")
+        public String odpsRiskLevelName;
+
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("ProductId")
+        public String productId;
+
+        @NameInMap("Protection")
+        public Boolean protection;
 
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
+
+        @NameInMap("RiskLevelName")
+        public String riskLevelName;
 
         @NameInMap("RuleName")
         public String ruleName;
@@ -98,29 +113,14 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
-        @NameInMap("ObjectKey")
-        public String objectKey;
-
-        @NameInMap("RiskLevelName")
-        public String riskLevelName;
-
-        @NameInMap("OdpsRiskLevelName")
-        public String odpsRiskLevelName;
-
-        @NameInMap("ProductId")
-        public String productId;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("SensitiveRatio")
+        public String sensitiveRatio;
 
-        @NameInMap("ProductCode")
-        public String productCode;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static DescribeDataAssetsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataAssetsResponseBodyItems self = new DescribeDataAssetsResponseBodyItems();
@@ -151,28 +151,12 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             return this.dataType;
         }
 
-        public DescribeDataAssetsResponseBodyItems setOwner(String owner) {
-            this.owner = owner;
+        public DescribeDataAssetsResponseBodyItems setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public DescribeDataAssetsResponseBodyItems setSensitiveRatio(String sensitiveRatio) {
-            this.sensitiveRatio = sensitiveRatio;
-            return this;
-        }
-        public String getSensitiveRatio() {
-            return this.sensitiveRatio;
-        }
-
-        public DescribeDataAssetsResponseBodyItems setProtection(Boolean protection) {
-            this.protection = protection;
-            return this;
-        }
-        public Boolean getProtection() {
-            return this.protection;
+        public String getId() {
+            return this.id;
         }
 
         public DescribeDataAssetsResponseBodyItems setLabelsec(Boolean labelsec) {
@@ -183,12 +167,60 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             return this.labelsec;
         }
 
-        public DescribeDataAssetsResponseBodyItems setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public DescribeDataAssetsResponseBodyItems setName(String name) {
+            this.name = name;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeDataAssetsResponseBodyItems setObjectKey(String objectKey) {
+            this.objectKey = objectKey;
+            return this;
+        }
+        public String getObjectKey() {
+            return this.objectKey;
+        }
+
+        public DescribeDataAssetsResponseBodyItems setOdpsRiskLevelName(String odpsRiskLevelName) {
+            this.odpsRiskLevelName = odpsRiskLevelName;
+            return this;
+        }
+        public String getOdpsRiskLevelName() {
+            return this.odpsRiskLevelName;
+        }
+
+        public DescribeDataAssetsResponseBodyItems setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public DescribeDataAssetsResponseBodyItems setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public DescribeDataAssetsResponseBodyItems setProductId(String productId) {
+            this.productId = productId;
+            return this;
+        }
+        public String getProductId() {
+            return this.productId;
+        }
+
+        public DescribeDataAssetsResponseBodyItems setProtection(Boolean protection) {
+            this.protection = protection;
+            return this;
+        }
+        public Boolean getProtection() {
+            return this.protection;
         }
 
         public DescribeDataAssetsResponseBodyItems setRiskLevelId(Long riskLevelId) {
@@ -197,6 +229,14 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
         }
         public Long getRiskLevelId() {
             return this.riskLevelId;
+        }
+
+        public DescribeDataAssetsResponseBodyItems setRiskLevelName(String riskLevelName) {
+            this.riskLevelName = riskLevelName;
+            return this;
+        }
+        public String getRiskLevelName() {
+            return this.riskLevelName;
         }
 
         public DescribeDataAssetsResponseBodyItems setRuleName(String ruleName) {
@@ -215,46 +255,6 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             return this.sensitive;
         }
 
-        public DescribeDataAssetsResponseBodyItems setObjectKey(String objectKey) {
-            this.objectKey = objectKey;
-            return this;
-        }
-        public String getObjectKey() {
-            return this.objectKey;
-        }
-
-        public DescribeDataAssetsResponseBodyItems setRiskLevelName(String riskLevelName) {
-            this.riskLevelName = riskLevelName;
-            return this;
-        }
-        public String getRiskLevelName() {
-            return this.riskLevelName;
-        }
-
-        public DescribeDataAssetsResponseBodyItems setOdpsRiskLevelName(String odpsRiskLevelName) {
-            this.odpsRiskLevelName = odpsRiskLevelName;
-            return this;
-        }
-        public String getOdpsRiskLevelName() {
-            return this.odpsRiskLevelName;
-        }
-
-        public DescribeDataAssetsResponseBodyItems setProductId(String productId) {
-            this.productId = productId;
-            return this;
-        }
-        public String getProductId() {
-            return this.productId;
-        }
-
-        public DescribeDataAssetsResponseBodyItems setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeDataAssetsResponseBodyItems setSensitiveCount(Integer sensitiveCount) {
             this.sensitiveCount = sensitiveCount;
             return this;
@@ -263,20 +263,20 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
             return this.sensitiveCount;
         }
 
-        public DescribeDataAssetsResponseBodyItems setId(String id) {
-            this.id = id;
+        public DescribeDataAssetsResponseBodyItems setSensitiveRatio(String sensitiveRatio) {
+            this.sensitiveRatio = sensitiveRatio;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getSensitiveRatio() {
+            return this.sensitiveRatio;
         }
 
-        public DescribeDataAssetsResponseBodyItems setProductCode(String productCode) {
-            this.productCode = productCode;
+        public DescribeDataAssetsResponseBodyItems setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public String getProductCode() {
-            return this.productCode;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

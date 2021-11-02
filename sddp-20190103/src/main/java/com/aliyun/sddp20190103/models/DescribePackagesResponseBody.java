@@ -68,32 +68,32 @@ public class DescribePackagesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public Long creationTime;
 
-        @NameInMap("Sensitive")
-        public Boolean sensitive;
-
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("RiskLevelName")
-        public String riskLevelName;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("SensitiveCount")
-        public Integer sensitiveCount;
+        @NameInMap("Owner")
+        public String owner;
 
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("RiskLevelName")
+        public String riskLevelName;
+
+        @NameInMap("Sensitive")
+        public Boolean sensitive;
+
+        @NameInMap("SensitiveCount")
+        public Integer sensitiveCount;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static DescribePackagesResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribePackagesResponseBodyItems self = new DescribePackagesResponseBodyItems();
@@ -108,28 +108,12 @@ public class DescribePackagesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribePackagesResponseBodyItems setSensitive(Boolean sensitive) {
-            this.sensitive = sensitive;
+        public DescribePackagesResponseBodyItems setId(Long id) {
+            this.id = id;
             return this;
         }
-        public Boolean getSensitive() {
-            return this.sensitive;
-        }
-
-        public DescribePackagesResponseBodyItems setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public DescribePackagesResponseBodyItems setRiskLevelName(String riskLevelName) {
-            this.riskLevelName = riskLevelName;
-            return this;
-        }
-        public String getRiskLevelName() {
-            return this.riskLevelName;
+        public Long getId() {
+            return this.id;
         }
 
         public DescribePackagesResponseBodyItems setInstanceId(Long instanceId) {
@@ -140,14 +124,6 @@ public class DescribePackagesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribePackagesResponseBodyItems setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
         public DescribePackagesResponseBodyItems setName(String name) {
             this.name = name;
             return this;
@@ -156,12 +132,12 @@ public class DescribePackagesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribePackagesResponseBodyItems setSensitiveCount(Integer sensitiveCount) {
-            this.sensitiveCount = sensitiveCount;
+        public DescribePackagesResponseBodyItems setOwner(String owner) {
+            this.owner = owner;
             return this;
         }
-        public Integer getSensitiveCount() {
-            return this.sensitiveCount;
+        public String getOwner() {
+            return this.owner;
         }
 
         public DescribePackagesResponseBodyItems setRiskLevelId(Long riskLevelId) {
@@ -172,12 +148,36 @@ public class DescribePackagesResponseBody extends TeaModel {
             return this.riskLevelId;
         }
 
-        public DescribePackagesResponseBodyItems setId(Long id) {
-            this.id = id;
+        public DescribePackagesResponseBodyItems setRiskLevelName(String riskLevelName) {
+            this.riskLevelName = riskLevelName;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getRiskLevelName() {
+            return this.riskLevelName;
+        }
+
+        public DescribePackagesResponseBodyItems setSensitive(Boolean sensitive) {
+            this.sensitive = sensitive;
+            return this;
+        }
+        public Boolean getSensitive() {
+            return this.sensitive;
+        }
+
+        public DescribePackagesResponseBodyItems setSensitiveCount(Integer sensitiveCount) {
+            this.sensitiveCount = sensitiveCount;
+            return this;
+        }
+        public Integer getSensitiveCount() {
+            return this.sensitiveCount;
+        }
+
+        public DescribePackagesResponseBodyItems setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

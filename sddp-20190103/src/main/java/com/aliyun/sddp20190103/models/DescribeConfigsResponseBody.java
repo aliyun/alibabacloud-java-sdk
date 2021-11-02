@@ -35,9 +35,6 @@ public class DescribeConfigsResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
-        @NameInMap("Value")
-        public String value;
-
         @NameInMap("DefaultValue")
         public String defaultValue;
 
@@ -46,6 +43,9 @@ public class DescribeConfigsResponseBody extends TeaModel {
 
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeConfigsResponseBodyConfigList build(java.util.Map<String, ?> map) throws Exception {
             DescribeConfigsResponseBodyConfigList self = new DescribeConfigsResponseBodyConfigList();
@@ -58,14 +58,6 @@ public class DescribeConfigsResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
-        }
-
-        public DescribeConfigsResponseBodyConfigList setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeConfigsResponseBodyConfigList setDefaultValue(String defaultValue) {
@@ -90,6 +82,14 @@ public class DescribeConfigsResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeConfigsResponseBodyConfigList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

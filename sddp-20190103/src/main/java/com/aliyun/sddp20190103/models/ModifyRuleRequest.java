@@ -10,9 +10,6 @@ public class ModifyRuleRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
-    @NameInMap("CustomType")
-    public Integer customType;
-
     @NameInMap("Id")
     public Long id;
 
@@ -33,9 +30,6 @@ public class ModifyRuleRequest extends TeaModel {
 
     @NameInMap("RuleType")
     public Integer ruleType;
-
-    @NameInMap("StatExpress")
-    public String statExpress;
 
     @NameInMap("WarnLevel")
     public Integer warnLevel;
@@ -59,14 +53,6 @@ public class ModifyRuleRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
-    }
-
-    public ModifyRuleRequest setCustomType(Integer customType) {
-        this.customType = customType;
-        return this;
-    }
-    public Integer getCustomType() {
-        return this.customType;
     }
 
     public ModifyRuleRequest setId(Long id) {
@@ -123,14 +109,6 @@ public class ModifyRuleRequest extends TeaModel {
     }
     public Integer getRuleType() {
         return this.ruleType;
-    }
-
-    public ModifyRuleRequest setStatExpress(String statExpress) {
-        this.statExpress = statExpress;
-        return this;
-    }
-    public String getStatExpress() {
-        return this.statExpress;
     }
 
     public ModifyRuleRequest setWarnLevel(Integer warnLevel) {

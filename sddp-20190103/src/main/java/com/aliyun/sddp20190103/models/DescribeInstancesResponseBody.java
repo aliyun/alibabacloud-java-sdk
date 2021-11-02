@@ -68,41 +68,44 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public Long creationTime;
 
-        @NameInMap("Acl")
-        public String acl;
-
-        @NameInMap("LastFinishTime")
-        public Long lastFinishTime;
-
-        @NameInMap("Owner")
-        public String owner;
-
-        @NameInMap("TenantName")
-        public String tenantName;
-
-        @NameInMap("Protection")
-        public Boolean protection;
-
         @NameInMap("DepartName")
         public String departName;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("InstanceDescription")
+        public String instanceDescription;
 
         @NameInMap("Labelsec")
         public Boolean labelsec;
 
-        @NameInMap("RiskLevelId")
-        public Long riskLevelId;
-
-        @NameInMap("ProductId")
-        public String productId;
+        @NameInMap("LastFinishTime")
+        public Long lastFinishTime;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("OdpsRiskLevelName")
+        public String odpsRiskLevelName;
 
-        @NameInMap("InstanceDescription")
-        public String instanceDescription;
+        @NameInMap("Owner")
+        public String owner;
+
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("ProductId")
+        public String productId;
+
+        @NameInMap("Protection")
+        public Boolean protection;
+
+        @NameInMap("RiskLevelId")
+        public Long riskLevelId;
+
+        @NameInMap("RiskLevelName")
+        public String riskLevelName;
 
         @NameInMap("RuleName")
         public String ruleName;
@@ -110,20 +113,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
-        @NameInMap("RiskLevelName")
-        public String riskLevelName;
-
-        @NameInMap("OdpsRiskLevelName")
-        public String odpsRiskLevelName;
-
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("TenantName")
+        public String tenantName;
 
-        @NameInMap("ProductCode")
-        public String productCode;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static DescribeInstancesResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyItems self = new DescribeInstancesResponseBodyItems();
@@ -138,52 +135,28 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeInstancesResponseBodyItems setAcl(String acl) {
-            this.acl = acl;
-            return this;
-        }
-        public String getAcl() {
-            return this.acl;
-        }
-
-        public DescribeInstancesResponseBodyItems setLastFinishTime(Long lastFinishTime) {
-            this.lastFinishTime = lastFinishTime;
-            return this;
-        }
-        public Long getLastFinishTime() {
-            return this.lastFinishTime;
-        }
-
-        public DescribeInstancesResponseBodyItems setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
-        }
-
-        public DescribeInstancesResponseBodyItems setTenantName(String tenantName) {
-            this.tenantName = tenantName;
-            return this;
-        }
-        public String getTenantName() {
-            return this.tenantName;
-        }
-
-        public DescribeInstancesResponseBodyItems setProtection(Boolean protection) {
-            this.protection = protection;
-            return this;
-        }
-        public Boolean getProtection() {
-            return this.protection;
-        }
-
         public DescribeInstancesResponseBodyItems setDepartName(String departName) {
             this.departName = departName;
             return this;
         }
         public String getDepartName() {
             return this.departName;
+        }
+
+        public DescribeInstancesResponseBodyItems setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeInstancesResponseBodyItems setInstanceDescription(String instanceDescription) {
+            this.instanceDescription = instanceDescription;
+            return this;
+        }
+        public String getInstanceDescription() {
+            return this.instanceDescription;
         }
 
         public DescribeInstancesResponseBodyItems setLabelsec(Boolean labelsec) {
@@ -194,20 +167,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.labelsec;
         }
 
-        public DescribeInstancesResponseBodyItems setRiskLevelId(Long riskLevelId) {
-            this.riskLevelId = riskLevelId;
+        public DescribeInstancesResponseBodyItems setLastFinishTime(Long lastFinishTime) {
+            this.lastFinishTime = lastFinishTime;
             return this;
         }
-        public Long getRiskLevelId() {
-            return this.riskLevelId;
-        }
-
-        public DescribeInstancesResponseBodyItems setProductId(String productId) {
-            this.productId = productId;
-            return this;
-        }
-        public String getProductId() {
-            return this.productId;
+        public Long getLastFinishTime() {
+            return this.lastFinishTime;
         }
 
         public DescribeInstancesResponseBodyItems setName(String name) {
@@ -218,20 +183,60 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeInstancesResponseBodyItems setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public DescribeInstancesResponseBodyItems setOdpsRiskLevelName(String odpsRiskLevelName) {
+            this.odpsRiskLevelName = odpsRiskLevelName;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public String getOdpsRiskLevelName() {
+            return this.odpsRiskLevelName;
         }
 
-        public DescribeInstancesResponseBodyItems setInstanceDescription(String instanceDescription) {
-            this.instanceDescription = instanceDescription;
+        public DescribeInstancesResponseBodyItems setOwner(String owner) {
+            this.owner = owner;
             return this;
         }
-        public String getInstanceDescription() {
-            return this.instanceDescription;
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public DescribeInstancesResponseBodyItems setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public DescribeInstancesResponseBodyItems setProductId(String productId) {
+            this.productId = productId;
+            return this;
+        }
+        public String getProductId() {
+            return this.productId;
+        }
+
+        public DescribeInstancesResponseBodyItems setProtection(Boolean protection) {
+            this.protection = protection;
+            return this;
+        }
+        public Boolean getProtection() {
+            return this.protection;
+        }
+
+        public DescribeInstancesResponseBodyItems setRiskLevelId(Long riskLevelId) {
+            this.riskLevelId = riskLevelId;
+            return this;
+        }
+        public Long getRiskLevelId() {
+            return this.riskLevelId;
+        }
+
+        public DescribeInstancesResponseBodyItems setRiskLevelName(String riskLevelName) {
+            this.riskLevelName = riskLevelName;
+            return this;
+        }
+        public String getRiskLevelName() {
+            return this.riskLevelName;
         }
 
         public DescribeInstancesResponseBodyItems setRuleName(String ruleName) {
@@ -250,22 +255,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.sensitive;
         }
 
-        public DescribeInstancesResponseBodyItems setRiskLevelName(String riskLevelName) {
-            this.riskLevelName = riskLevelName;
-            return this;
-        }
-        public String getRiskLevelName() {
-            return this.riskLevelName;
-        }
-
-        public DescribeInstancesResponseBodyItems setOdpsRiskLevelName(String odpsRiskLevelName) {
-            this.odpsRiskLevelName = odpsRiskLevelName;
-            return this;
-        }
-        public String getOdpsRiskLevelName() {
-            return this.odpsRiskLevelName;
-        }
-
         public DescribeInstancesResponseBodyItems setSensitiveCount(Integer sensitiveCount) {
             this.sensitiveCount = sensitiveCount;
             return this;
@@ -274,20 +263,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.sensitiveCount;
         }
 
-        public DescribeInstancesResponseBodyItems setId(Long id) {
-            this.id = id;
+        public DescribeInstancesResponseBodyItems setTenantName(String tenantName) {
+            this.tenantName = tenantName;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getTenantName() {
+            return this.tenantName;
         }
 
-        public DescribeInstancesResponseBodyItems setProductCode(String productCode) {
-            this.productCode = productCode;
+        public DescribeInstancesResponseBodyItems setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public String getProductCode() {
-            return this.productCode;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

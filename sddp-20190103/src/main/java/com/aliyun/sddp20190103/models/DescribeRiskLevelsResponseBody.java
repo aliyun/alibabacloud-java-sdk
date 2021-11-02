@@ -32,14 +32,14 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
     }
 
     public static class DescribeRiskLevelsResponseBodyRiskLevelList extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("ReferenceNum")
         public Integer referenceNum;
@@ -47,14 +47,6 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
         public static DescribeRiskLevelsResponseBodyRiskLevelList build(java.util.Map<String, ?> map) throws Exception {
             DescribeRiskLevelsResponseBodyRiskLevelList self = new DescribeRiskLevelsResponseBodyRiskLevelList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRiskLevelsResponseBodyRiskLevelList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeRiskLevelsResponseBodyRiskLevelList setDescription(String description) {
@@ -71,6 +63,14 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeRiskLevelsResponseBodyRiskLevelList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeRiskLevelsResponseBodyRiskLevelList setReferenceNum(Integer referenceNum) {

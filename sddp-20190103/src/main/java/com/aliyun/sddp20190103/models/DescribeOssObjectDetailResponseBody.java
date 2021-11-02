@@ -32,17 +32,17 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList extends TeaModel {
-        @NameInMap("RiskLevelName")
-        public String riskLevelName;
-
         @NameInMap("CategoryName")
         public String categoryName;
+
+        @NameInMap("Count")
+        public Long count;
 
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
-        @NameInMap("Count")
-        public Long count;
+        @NameInMap("RiskLevelName")
+        public String riskLevelName;
 
         @NameInMap("RuleName")
         public String ruleName;
@@ -50,14 +50,6 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
         public static DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList build(java.util.Map<String, ?> map) throws Exception {
             DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList self = new DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList setRiskLevelName(String riskLevelName) {
-            this.riskLevelName = riskLevelName;
-            return this;
-        }
-        public String getRiskLevelName() {
-            return this.riskLevelName;
         }
 
         public DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList setCategoryName(String categoryName) {
@@ -68,6 +60,14 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             return this.categoryName;
         }
 
+        public DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
+        }
+
         public DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList setRiskLevelId(Long riskLevelId) {
             this.riskLevelId = riskLevelId;
             return this;
@@ -76,12 +76,12 @@ public class DescribeOssObjectDetailResponseBody extends TeaModel {
             return this.riskLevelId;
         }
 
-        public DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList setCount(Long count) {
-            this.count = count;
+        public DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList setRiskLevelName(String riskLevelName) {
+            this.riskLevelName = riskLevelName;
             return this;
         }
-        public Long getCount() {
-            return this.count;
+        public String getRiskLevelName() {
+            return this.riskLevelName;
         }
 
         public DescribeOssObjectDetailResponseBodyOssObjectDetailRuleList setRuleName(String ruleName) {
