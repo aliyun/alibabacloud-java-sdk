@@ -65,41 +65,50 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyItems extends TeaModel {
-        @NameInMap("DisplayName")
-        public String displayName;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("WarnLevel")
-        public Integer warnLevel;
-
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("StatusName")
-        public String statusName;
-
-        @NameInMap("DealTime")
-        public Long dealTime;
-
-        @NameInMap("DealLoginName")
-        public String dealLoginName;
-
-        @NameInMap("SubTypeName")
-        public String subTypeName;
+        @NameInMap("AlertTime")
+        public Long alertTime;
 
         @NameInMap("Backed")
         public Boolean backed;
 
+        @NameInMap("DealDisplayName")
+        public String dealDisplayName;
+
+        @NameInMap("DealLoginName")
+        public String dealLoginName;
+
+        @NameInMap("DealTime")
+        public Long dealTime;
+
+        @NameInMap("DealUserId")
+        public Long dealUserId;
+
+        @NameInMap("DisplayName")
+        public String displayName;
+
         @NameInMap("EventTime")
         public Long eventTime;
+
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("LoginName")
         public String loginName;
 
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("StatusName")
+        public String statusName;
+
         @NameInMap("SubTypeCode")
         public String subTypeCode;
+
+        @NameInMap("SubTypeName")
+        public String subTypeName;
 
         @NameInMap("TargetProductCode")
         public String targetProductCode;
@@ -107,91 +116,26 @@ public class DescribeEventsResponseBody extends TeaModel {
         @NameInMap("TypeCode")
         public String typeCode;
 
-        @NameInMap("AlertTime")
-        public Long alertTime;
-
-        @NameInMap("DealUserId")
-        public Long dealUserId;
-
         @NameInMap("TypeName")
         public String typeName;
 
-        @NameInMap("DealDisplayName")
-        public String dealDisplayName;
+        @NameInMap("UserId")
+        public Long userId;
 
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("ProductCode")
-        public String productCode;
+        @NameInMap("WarnLevel")
+        public Integer warnLevel;
 
         public static DescribeEventsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventsResponseBodyItems self = new DescribeEventsResponseBodyItems();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEventsResponseBodyItems setDisplayName(String displayName) {
-            this.displayName = displayName;
+        public DescribeEventsResponseBodyItems setAlertTime(Long alertTime) {
+            this.alertTime = alertTime;
             return this;
         }
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
-        public DescribeEventsResponseBodyItems setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeEventsResponseBodyItems setWarnLevel(Integer warnLevel) {
-            this.warnLevel = warnLevel;
-            return this;
-        }
-        public Integer getWarnLevel() {
-            return this.warnLevel;
-        }
-
-        public DescribeEventsResponseBodyItems setUserId(Long userId) {
-            this.userId = userId;
-            return this;
-        }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public DescribeEventsResponseBodyItems setStatusName(String statusName) {
-            this.statusName = statusName;
-            return this;
-        }
-        public String getStatusName() {
-            return this.statusName;
-        }
-
-        public DescribeEventsResponseBodyItems setDealTime(Long dealTime) {
-            this.dealTime = dealTime;
-            return this;
-        }
-        public Long getDealTime() {
-            return this.dealTime;
-        }
-
-        public DescribeEventsResponseBodyItems setDealLoginName(String dealLoginName) {
-            this.dealLoginName = dealLoginName;
-            return this;
-        }
-        public String getDealLoginName() {
-            return this.dealLoginName;
-        }
-
-        public DescribeEventsResponseBodyItems setSubTypeName(String subTypeName) {
-            this.subTypeName = subTypeName;
-            return this;
-        }
-        public String getSubTypeName() {
-            return this.subTypeName;
+        public Long getAlertTime() {
+            return this.alertTime;
         }
 
         public DescribeEventsResponseBodyItems setBacked(Boolean backed) {
@@ -202,12 +146,60 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.backed;
         }
 
+        public DescribeEventsResponseBodyItems setDealDisplayName(String dealDisplayName) {
+            this.dealDisplayName = dealDisplayName;
+            return this;
+        }
+        public String getDealDisplayName() {
+            return this.dealDisplayName;
+        }
+
+        public DescribeEventsResponseBodyItems setDealLoginName(String dealLoginName) {
+            this.dealLoginName = dealLoginName;
+            return this;
+        }
+        public String getDealLoginName() {
+            return this.dealLoginName;
+        }
+
+        public DescribeEventsResponseBodyItems setDealTime(Long dealTime) {
+            this.dealTime = dealTime;
+            return this;
+        }
+        public Long getDealTime() {
+            return this.dealTime;
+        }
+
+        public DescribeEventsResponseBodyItems setDealUserId(Long dealUserId) {
+            this.dealUserId = dealUserId;
+            return this;
+        }
+        public Long getDealUserId() {
+            return this.dealUserId;
+        }
+
+        public DescribeEventsResponseBodyItems setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
         public DescribeEventsResponseBodyItems setEventTime(Long eventTime) {
             this.eventTime = eventTime;
             return this;
         }
         public Long getEventTime() {
             return this.eventTime;
+        }
+
+        public DescribeEventsResponseBodyItems setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public DescribeEventsResponseBodyItems setLoginName(String loginName) {
@@ -218,12 +210,44 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.loginName;
         }
 
+        public DescribeEventsResponseBodyItems setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public DescribeEventsResponseBodyItems setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public DescribeEventsResponseBodyItems setStatusName(String statusName) {
+            this.statusName = statusName;
+            return this;
+        }
+        public String getStatusName() {
+            return this.statusName;
+        }
+
         public DescribeEventsResponseBodyItems setSubTypeCode(String subTypeCode) {
             this.subTypeCode = subTypeCode;
             return this;
         }
         public String getSubTypeCode() {
             return this.subTypeCode;
+        }
+
+        public DescribeEventsResponseBodyItems setSubTypeName(String subTypeName) {
+            this.subTypeName = subTypeName;
+            return this;
+        }
+        public String getSubTypeName() {
+            return this.subTypeName;
         }
 
         public DescribeEventsResponseBodyItems setTargetProductCode(String targetProductCode) {
@@ -242,22 +266,6 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.typeCode;
         }
 
-        public DescribeEventsResponseBodyItems setAlertTime(Long alertTime) {
-            this.alertTime = alertTime;
-            return this;
-        }
-        public Long getAlertTime() {
-            return this.alertTime;
-        }
-
-        public DescribeEventsResponseBodyItems setDealUserId(Long dealUserId) {
-            this.dealUserId = dealUserId;
-            return this;
-        }
-        public Long getDealUserId() {
-            return this.dealUserId;
-        }
-
         public DescribeEventsResponseBodyItems setTypeName(String typeName) {
             this.typeName = typeName;
             return this;
@@ -266,28 +274,20 @@ public class DescribeEventsResponseBody extends TeaModel {
             return this.typeName;
         }
 
-        public DescribeEventsResponseBodyItems setDealDisplayName(String dealDisplayName) {
-            this.dealDisplayName = dealDisplayName;
+        public DescribeEventsResponseBodyItems setUserId(Long userId) {
+            this.userId = userId;
             return this;
         }
-        public String getDealDisplayName() {
-            return this.dealDisplayName;
+        public Long getUserId() {
+            return this.userId;
         }
 
-        public DescribeEventsResponseBodyItems setId(Long id) {
-            this.id = id;
+        public DescribeEventsResponseBodyItems setWarnLevel(Integer warnLevel) {
+            this.warnLevel = warnLevel;
             return this;
         }
-        public Long getId() {
-            return this.id;
-        }
-
-        public DescribeEventsResponseBodyItems setProductCode(String productCode) {
-            this.productCode = productCode;
-            return this;
-        }
-        public String getProductCode() {
-            return this.productCode;
+        public Integer getWarnLevel() {
+            return this.warnLevel;
         }
 
     }

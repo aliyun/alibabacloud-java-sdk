@@ -32,29 +32,32 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
     }
 
     public static class DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList extends TeaModel {
-        @NameInMap("LocalName")
-        public String localName;
-
         @NameInMap("CheckStatus")
         public Integer checkStatus;
-
-        @NameInMap("Connector")
-        public String connector;
 
         @NameInMap("CheckStatusName")
         public String checkStatusName;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("Connector")
+        public String connector;
+
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("LocalName")
+        public String localName;
 
         @NameInMap("ParentId")
         public String parentId;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("ResourceType")
         public Long resourceType;
-
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
 
         @NameInMap("ResourceTypeCode")
         public String resourceTypeCode;
@@ -62,20 +65,9 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         @NameInMap("UserName")
         public String userName;
 
-        @NameInMap("Id")
-        public Long id;
-
         public static DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList self = new DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
         }
 
         public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setCheckStatus(Integer checkStatus) {
@@ -86,14 +78,6 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             return this.checkStatus;
         }
 
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setConnector(String connector) {
-            this.connector = connector;
-            return this;
-        }
-        public String getConnector() {
-            return this.connector;
-        }
-
         public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setCheckStatusName(String checkStatusName) {
             this.checkStatusName = checkStatusName;
             return this;
@@ -102,12 +86,36 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             return this.checkStatusName;
         }
 
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setConnector(String connector) {
+            this.connector = connector;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public String getConnector() {
+            return this.connector;
+        }
+
+        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
         }
 
         public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setParentId(String parentId) {
@@ -118,20 +126,20 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             return this.parentId;
         }
 
+        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setResourceType(Long resourceType) {
             this.resourceType = resourceType;
             return this;
         }
         public Long getResourceType() {
             return this.resourceType;
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
         }
 
         public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setResourceTypeCode(String resourceTypeCode) {
@@ -150,34 +158,18 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             return this.userName;
         }
 
-        public DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
     }
 
     public static class DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList extends TeaModel {
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("BucketName")
         public String bucketName;
+
+        @NameInMap("RegionId")
+        public String regionId;
 
         public static DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList self = new DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
         public DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList setBucketName(String bucketName) {
@@ -188,26 +180,26 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
             return this.bucketName;
         }
 
-    }
-
-    public static class DescribeDataLimitSetResponseBodyDataLimitSetRegionList extends TeaModel {
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("LocalName")
-        public String localName;
-
-        public static DescribeDataLimitSetResponseBodyDataLimitSetRegionList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDataLimitSetResponseBodyDataLimitSetRegionList self = new DescribeDataLimitSetResponseBodyDataLimitSetRegionList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDataLimitSetResponseBodyDataLimitSetRegionList setRegionId(String regionId) {
+        public DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeDataLimitSetResponseBodyDataLimitSetRegionList extends TeaModel {
+        @NameInMap("LocalName")
+        public String localName;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        public static DescribeDataLimitSetResponseBodyDataLimitSetRegionList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDataLimitSetResponseBodyDataLimitSetRegionList self = new DescribeDataLimitSetResponseBodyDataLimitSetRegionList();
+            return TeaModel.build(map, self);
         }
 
         public DescribeDataLimitSetResponseBodyDataLimitSetRegionList setLocalName(String localName) {
@@ -216,6 +208,14 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
         }
         public String getLocalName() {
             return this.localName;
+        }
+
+        public DescribeDataLimitSetResponseBodyDataLimitSetRegionList setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

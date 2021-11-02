@@ -32,114 +32,42 @@ public class DescribeEventTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeEventTypesResponseBodyEventTypeListSubTypeList extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ConfigContentType")
-        public Integer configContentType;
-
-        @NameInMap("EventHitCount")
-        public Integer eventHitCount;
-
-        @NameInMap("ConfigValue")
-        public String configValue;
-
-        @NameInMap("ConfigCode")
-        public String configCode;
+        @NameInMap("AdaptedProduct")
+        public String adaptedProduct;
 
         @NameInMap("Code")
         public String code;
 
+        @NameInMap("ConfigCode")
+        public String configCode;
+
+        @NameInMap("ConfigContentType")
+        public Integer configContentType;
+
         @NameInMap("ConfigDescription")
         public String configDescription;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("ConfigValue")
+        public String configValue;
 
-        @NameInMap("AdaptedProduct")
-        public String adaptedProduct;
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("EventHitCount")
+        public Integer eventHitCount;
 
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Status")
+        public Integer status;
+
         public static DescribeEventTypesResponseBodyEventTypeListSubTypeList build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventTypesResponseBodyEventTypeListSubTypeList self = new DescribeEventTypesResponseBodyEventTypeListSubTypeList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setConfigContentType(Integer configContentType) {
-            this.configContentType = configContentType;
-            return this;
-        }
-        public Integer getConfigContentType() {
-            return this.configContentType;
-        }
-
-        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setEventHitCount(Integer eventHitCount) {
-            this.eventHitCount = eventHitCount;
-            return this;
-        }
-        public Integer getEventHitCount() {
-            return this.eventHitCount;
-        }
-
-        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setConfigValue(String configValue) {
-            this.configValue = configValue;
-            return this;
-        }
-        public String getConfigValue() {
-            return this.configValue;
-        }
-
-        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setConfigCode(String configCode) {
-            this.configCode = configCode;
-            return this;
-        }
-        public String getConfigCode() {
-            return this.configCode;
-        }
-
-        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setConfigDescription(String configDescription) {
-            this.configDescription = configDescription;
-            return this;
-        }
-        public String getConfigDescription() {
-            return this.configDescription;
-        }
-
-        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeEventTypesResponseBodyEventTypeListSubTypeList setAdaptedProduct(String adaptedProduct) {
@@ -150,12 +78,84 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             return this.adaptedProduct;
         }
 
+        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setConfigCode(String configCode) {
+            this.configCode = configCode;
+            return this;
+        }
+        public String getConfigCode() {
+            return this.configCode;
+        }
+
+        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setConfigContentType(Integer configContentType) {
+            this.configContentType = configContentType;
+            return this;
+        }
+        public Integer getConfigContentType() {
+            return this.configContentType;
+        }
+
+        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setConfigDescription(String configDescription) {
+            this.configDescription = configDescription;
+            return this;
+        }
+        public String getConfigDescription() {
+            return this.configDescription;
+        }
+
+        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setConfigValue(String configValue) {
+            this.configValue = configValue;
+            return this;
+        }
+        public String getConfigValue() {
+            return this.configValue;
+        }
+
+        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setEventHitCount(Integer eventHitCount) {
+            this.eventHitCount = eventHitCount;
+            return this;
+        }
+        public Integer getEventHitCount() {
+            return this.eventHitCount;
+        }
+
         public DescribeEventTypesResponseBodyEventTypeListSubTypeList setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeEventTypesResponseBodyEventTypeListSubTypeList setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }
@@ -167,11 +167,11 @@ public class DescribeEventTypesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("SubTypeList")
         public java.util.List<DescribeEventTypesResponseBodyEventTypeListSubTypeList> subTypeList;
@@ -197,20 +197,20 @@ public class DescribeEventTypesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeEventTypesResponseBodyEventTypeList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeEventTypesResponseBodyEventTypeList setId(Long id) {
             this.id = id;
             return this;
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeEventTypesResponseBodyEventTypeList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeEventTypesResponseBodyEventTypeList setSubTypeList(java.util.List<DescribeEventTypesResponseBodyEventTypeListSubTypeList> subTypeList) {

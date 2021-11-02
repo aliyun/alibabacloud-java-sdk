@@ -68,59 +68,59 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public Long creationTime;
 
-        @NameInMap("TableName")
-        public String tableName;
-
         @NameInMap("DataType")
         public String dataType;
-
-        @NameInMap("OdpsRiskLevelValue")
-        public Integer odpsRiskLevelValue;
-
-        @NameInMap("InstanceId")
-        public Long instanceId;
-
-        @NameInMap("RiskLevelId")
-        public Long riskLevelId;
-
-        @NameInMap("RuleName")
-        public String ruleName;
-
-        @NameInMap("RuleId")
-        public Long ruleId;
-
-        @NameInMap("Sensitive")
-        public Boolean sensitive;
-
-        @NameInMap("SensLevelName")
-        public String sensLevelName;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("RiskLevelName")
-        public String riskLevelName;
-
-        @NameInMap("OdpsRiskLevelName")
-        public String odpsRiskLevelName;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("TableId")
-        public Long tableId;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("InstanceId")
+        public Long instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("OdpsRiskLevelName")
+        public String odpsRiskLevelName;
+
+        @NameInMap("OdpsRiskLevelValue")
+        public Integer odpsRiskLevelValue;
+
         @NameInMap("ProductCode")
         public String productCode;
+
+        @NameInMap("RevisionId")
+        public Long revisionId;
 
         @NameInMap("RevisionStatus")
         public Long revisionStatus;
 
-        @NameInMap("RevisionId")
-        public Long revisionId;
+        @NameInMap("RiskLevelId")
+        public Long riskLevelId;
+
+        @NameInMap("RiskLevelName")
+        public String riskLevelName;
+
+        @NameInMap("RuleId")
+        public Long ruleId;
+
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("SensLevelName")
+        public String sensLevelName;
+
+        @NameInMap("Sensitive")
+        public Boolean sensitive;
+
+        @NameInMap("TableId")
+        public Long tableId;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         public static DescribeColumnsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeColumnsResponseBodyItems self = new DescribeColumnsResponseBodyItems();
@@ -135,116 +135,12 @@ public class DescribeColumnsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeColumnsResponseBodyItems setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
         public DescribeColumnsResponseBodyItems setDataType(String dataType) {
             this.dataType = dataType;
             return this;
         }
         public String getDataType() {
             return this.dataType;
-        }
-
-        public DescribeColumnsResponseBodyItems setOdpsRiskLevelValue(Integer odpsRiskLevelValue) {
-            this.odpsRiskLevelValue = odpsRiskLevelValue;
-            return this;
-        }
-        public Integer getOdpsRiskLevelValue() {
-            return this.odpsRiskLevelValue;
-        }
-
-        public DescribeColumnsResponseBodyItems setInstanceId(Long instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public Long getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeColumnsResponseBodyItems setRiskLevelId(Long riskLevelId) {
-            this.riskLevelId = riskLevelId;
-            return this;
-        }
-        public Long getRiskLevelId() {
-            return this.riskLevelId;
-        }
-
-        public DescribeColumnsResponseBodyItems setRuleName(String ruleName) {
-            this.ruleName = ruleName;
-            return this;
-        }
-        public String getRuleName() {
-            return this.ruleName;
-        }
-
-        public DescribeColumnsResponseBodyItems setRuleId(Long ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public Long getRuleId() {
-            return this.ruleId;
-        }
-
-        public DescribeColumnsResponseBodyItems setSensitive(Boolean sensitive) {
-            this.sensitive = sensitive;
-            return this;
-        }
-        public Boolean getSensitive() {
-            return this.sensitive;
-        }
-
-        public DescribeColumnsResponseBodyItems setSensLevelName(String sensLevelName) {
-            this.sensLevelName = sensLevelName;
-            return this;
-        }
-        public String getSensLevelName() {
-            return this.sensLevelName;
-        }
-
-        public DescribeColumnsResponseBodyItems setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeColumnsResponseBodyItems setRiskLevelName(String riskLevelName) {
-            this.riskLevelName = riskLevelName;
-            return this;
-        }
-        public String getRiskLevelName() {
-            return this.riskLevelName;
-        }
-
-        public DescribeColumnsResponseBodyItems setOdpsRiskLevelName(String odpsRiskLevelName) {
-            this.odpsRiskLevelName = odpsRiskLevelName;
-            return this;
-        }
-        public String getOdpsRiskLevelName() {
-            return this.odpsRiskLevelName;
-        }
-
-        public DescribeColumnsResponseBodyItems setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeColumnsResponseBodyItems setTableId(Long tableId) {
-            this.tableId = tableId;
-            return this;
-        }
-        public Long getTableId() {
-            return this.tableId;
         }
 
         public DescribeColumnsResponseBodyItems setId(String id) {
@@ -255,12 +151,60 @@ public class DescribeColumnsResponseBody extends TeaModel {
             return this.id;
         }
 
+        public DescribeColumnsResponseBodyItems setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeColumnsResponseBodyItems setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeColumnsResponseBodyItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeColumnsResponseBodyItems setOdpsRiskLevelName(String odpsRiskLevelName) {
+            this.odpsRiskLevelName = odpsRiskLevelName;
+            return this;
+        }
+        public String getOdpsRiskLevelName() {
+            return this.odpsRiskLevelName;
+        }
+
+        public DescribeColumnsResponseBodyItems setOdpsRiskLevelValue(Integer odpsRiskLevelValue) {
+            this.odpsRiskLevelValue = odpsRiskLevelValue;
+            return this;
+        }
+        public Integer getOdpsRiskLevelValue() {
+            return this.odpsRiskLevelValue;
+        }
+
         public DescribeColumnsResponseBodyItems setProductCode(String productCode) {
             this.productCode = productCode;
             return this;
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+        public DescribeColumnsResponseBodyItems setRevisionId(Long revisionId) {
+            this.revisionId = revisionId;
+            return this;
+        }
+        public Long getRevisionId() {
+            return this.revisionId;
         }
 
         public DescribeColumnsResponseBodyItems setRevisionStatus(Long revisionStatus) {
@@ -271,12 +215,68 @@ public class DescribeColumnsResponseBody extends TeaModel {
             return this.revisionStatus;
         }
 
-        public DescribeColumnsResponseBodyItems setRevisionId(Long revisionId) {
-            this.revisionId = revisionId;
+        public DescribeColumnsResponseBodyItems setRiskLevelId(Long riskLevelId) {
+            this.riskLevelId = riskLevelId;
             return this;
         }
-        public Long getRevisionId() {
-            return this.revisionId;
+        public Long getRiskLevelId() {
+            return this.riskLevelId;
+        }
+
+        public DescribeColumnsResponseBodyItems setRiskLevelName(String riskLevelName) {
+            this.riskLevelName = riskLevelName;
+            return this;
+        }
+        public String getRiskLevelName() {
+            return this.riskLevelName;
+        }
+
+        public DescribeColumnsResponseBodyItems setRuleId(Long ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public Long getRuleId() {
+            return this.ruleId;
+        }
+
+        public DescribeColumnsResponseBodyItems setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public DescribeColumnsResponseBodyItems setSensLevelName(String sensLevelName) {
+            this.sensLevelName = sensLevelName;
+            return this;
+        }
+        public String getSensLevelName() {
+            return this.sensLevelName;
+        }
+
+        public DescribeColumnsResponseBodyItems setSensitive(Boolean sensitive) {
+            this.sensitive = sensitive;
+            return this;
+        }
+        public Boolean getSensitive() {
+            return this.sensitive;
+        }
+
+        public DescribeColumnsResponseBodyItems setTableId(Long tableId) {
+            this.tableId = tableId;
+            return this;
+        }
+        public Long getTableId() {
+            return this.tableId;
+        }
+
+        public DescribeColumnsResponseBodyItems setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }

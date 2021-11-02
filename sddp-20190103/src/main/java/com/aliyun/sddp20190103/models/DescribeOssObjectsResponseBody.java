@@ -65,18 +65,26 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeOssObjectsResponseBodyItemsRuleList extends TeaModel {
+        @NameInMap("Count")
+        public Long count;
+
         @NameInMap("Name")
         public String name;
 
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
-        @NameInMap("Count")
-        public Long count;
-
         public static DescribeOssObjectsResponseBodyItemsRuleList build(java.util.Map<String, ?> map) throws Exception {
             DescribeOssObjectsResponseBodyItemsRuleList self = new DescribeOssObjectsResponseBodyItemsRuleList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeOssObjectsResponseBodyItemsRuleList setCount(Long count) {
+            this.count = count;
+            return this;
+        }
+        public Long getCount() {
+            return this.count;
         }
 
         public DescribeOssObjectsResponseBodyItemsRuleList setName(String name) {
@@ -95,110 +103,54 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             return this.riskLevelId;
         }
 
-        public DescribeOssObjectsResponseBodyItemsRuleList setCount(Long count) {
-            this.count = count;
-            return this;
-        }
-        public Long getCount() {
-            return this.count;
-        }
-
     }
 
     public static class DescribeOssObjectsResponseBodyItems extends TeaModel {
-        @NameInMap("InstanceId")
-        public Long instanceId;
-
-        @NameInMap("CategoryName")
-        public String categoryName;
-
-        @NameInMap("RiskLevelId")
-        public Long riskLevelId;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("FileId")
-        public String fileId;
-
-        @NameInMap("Size")
-        public Long size;
-
         @NameInMap("BucketName")
         public String bucketName;
-
-        @NameInMap("RiskLevelName")
-        public String riskLevelName;
 
         @NameInMap("Category")
         public Long category;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("CategoryName")
+        public String categoryName;
 
-        @NameInMap("RuleCount")
-        public Integer ruleCount;
-
-        @NameInMap("SensitiveCount")
-        public Integer sensitiveCount;
+        @NameInMap("FileId")
+        public String fileId;
 
         @NameInMap("Id")
         public String id;
 
+        @NameInMap("InstanceId")
+        public Long instanceId;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("RiskLevelId")
+        public Long riskLevelId;
+
+        @NameInMap("RiskLevelName")
+        public String riskLevelName;
+
+        @NameInMap("RuleCount")
+        public Integer ruleCount;
+
         @NameInMap("RuleList")
         public java.util.List<DescribeOssObjectsResponseBodyItemsRuleList> ruleList;
+
+        @NameInMap("SensitiveCount")
+        public Integer sensitiveCount;
+
+        @NameInMap("Size")
+        public Long size;
 
         public static DescribeOssObjectsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeOssObjectsResponseBodyItems self = new DescribeOssObjectsResponseBodyItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeOssObjectsResponseBodyItems setInstanceId(Long instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public Long getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeOssObjectsResponseBodyItems setCategoryName(String categoryName) {
-            this.categoryName = categoryName;
-            return this;
-        }
-        public String getCategoryName() {
-            return this.categoryName;
-        }
-
-        public DescribeOssObjectsResponseBodyItems setRiskLevelId(Long riskLevelId) {
-            this.riskLevelId = riskLevelId;
-            return this;
-        }
-        public Long getRiskLevelId() {
-            return this.riskLevelId;
-        }
-
-        public DescribeOssObjectsResponseBodyItems setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeOssObjectsResponseBodyItems setFileId(String fileId) {
-            this.fileId = fileId;
-            return this;
-        }
-        public String getFileId() {
-            return this.fileId;
-        }
-
-        public DescribeOssObjectsResponseBodyItems setSize(Long size) {
-            this.size = size;
-            return this;
-        }
-        public Long getSize() {
-            return this.size;
         }
 
         public DescribeOssObjectsResponseBodyItems setBucketName(String bucketName) {
@@ -209,14 +161,6 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             return this.bucketName;
         }
 
-        public DescribeOssObjectsResponseBodyItems setRiskLevelName(String riskLevelName) {
-            this.riskLevelName = riskLevelName;
-            return this;
-        }
-        public String getRiskLevelName() {
-            return this.riskLevelName;
-        }
-
         public DescribeOssObjectsResponseBodyItems setCategory(Long category) {
             this.category = category;
             return this;
@@ -225,28 +169,20 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             return this.category;
         }
 
-        public DescribeOssObjectsResponseBodyItems setName(String name) {
-            this.name = name;
+        public DescribeOssObjectsResponseBodyItems setCategoryName(String categoryName) {
+            this.categoryName = categoryName;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getCategoryName() {
+            return this.categoryName;
         }
 
-        public DescribeOssObjectsResponseBodyItems setRuleCount(Integer ruleCount) {
-            this.ruleCount = ruleCount;
+        public DescribeOssObjectsResponseBodyItems setFileId(String fileId) {
+            this.fileId = fileId;
             return this;
         }
-        public Integer getRuleCount() {
-            return this.ruleCount;
-        }
-
-        public DescribeOssObjectsResponseBodyItems setSensitiveCount(Integer sensitiveCount) {
-            this.sensitiveCount = sensitiveCount;
-            return this;
-        }
-        public Integer getSensitiveCount() {
-            return this.sensitiveCount;
+        public String getFileId() {
+            return this.fileId;
         }
 
         public DescribeOssObjectsResponseBodyItems setId(String id) {
@@ -257,12 +193,76 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             return this.id;
         }
 
+        public DescribeOssObjectsResponseBodyItems setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setRiskLevelId(Long riskLevelId) {
+            this.riskLevelId = riskLevelId;
+            return this;
+        }
+        public Long getRiskLevelId() {
+            return this.riskLevelId;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setRiskLevelName(String riskLevelName) {
+            this.riskLevelName = riskLevelName;
+            return this;
+        }
+        public String getRiskLevelName() {
+            return this.riskLevelName;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setRuleCount(Integer ruleCount) {
+            this.ruleCount = ruleCount;
+            return this;
+        }
+        public Integer getRuleCount() {
+            return this.ruleCount;
+        }
+
         public DescribeOssObjectsResponseBodyItems setRuleList(java.util.List<DescribeOssObjectsResponseBodyItemsRuleList> ruleList) {
             this.ruleList = ruleList;
             return this;
         }
         public java.util.List<DescribeOssObjectsResponseBodyItemsRuleList> getRuleList() {
             return this.ruleList;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setSensitiveCount(Integer sensitiveCount) {
+            this.sensitiveCount = sensitiveCount;
+            return this;
+        }
+        public Integer getSensitiveCount() {
+            return this.sensitiveCount;
+        }
+
+        public DescribeOssObjectsResponseBodyItems setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
         }
 
     }

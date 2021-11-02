@@ -65,35 +65,11 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeDataMaskingRunHistoryResponseBodyItems extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("SrcType")
-        public Integer srcType;
-
-        @NameInMap("SrcTableName")
-        public String srcTableName;
-
-        @NameInMap("MaskingCount")
-        public Long maskingCount;
-
-        @NameInMap("Percentage")
-        public Integer percentage;
+        @NameInMap("ConflictCount")
+        public Long conflictCount;
 
         @NameInMap("DstType")
         public Integer dstType;
-
-        @NameInMap("FailMsg")
-        public String failMsg;
-
-        @NameInMap("FailCode")
-        public String failCode;
-
-        @NameInMap("ConflictCount")
-        public Long conflictCount;
 
         @NameInMap("DstTypeCode")
         public String dstTypeCode;
@@ -101,102 +77,54 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
-        @NameInMap("RunIndex")
-        public Integer runIndex;
+        @NameInMap("FailCode")
+        public String failCode;
 
-        @NameInMap("StartTime")
-        public Long startTime;
-
-        @NameInMap("HasSubProcess")
-        public Integer hasSubProcess;
+        @NameInMap("FailMsg")
+        public String failMsg;
 
         @NameInMap("HasDownloadFile")
         public Integer hasDownloadFile;
 
-        @NameInMap("TaskId")
-        public String taskId;
-
-        @NameInMap("SrcTypeCode")
-        public String srcTypeCode;
+        @NameInMap("HasSubProcess")
+        public Integer hasSubProcess;
 
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("MaskingCount")
+        public Long maskingCount;
+
+        @NameInMap("Percentage")
+        public Integer percentage;
+
+        @NameInMap("RunIndex")
+        public Integer runIndex;
+
+        @NameInMap("SrcTableName")
+        public String srcTableName;
+
+        @NameInMap("SrcType")
+        public Integer srcType;
+
+        @NameInMap("SrcTypeCode")
+        public String srcTypeCode;
+
+        @NameInMap("StartTime")
+        public Long startTime;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("Type")
+        public Integer type;
+
         public static DescribeDataMaskingRunHistoryResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDataMaskingRunHistoryResponseBodyItems self = new DescribeDataMaskingRunHistoryResponseBodyItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setSrcType(Integer srcType) {
-            this.srcType = srcType;
-            return this;
-        }
-        public Integer getSrcType() {
-            return this.srcType;
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setSrcTableName(String srcTableName) {
-            this.srcTableName = srcTableName;
-            return this;
-        }
-        public String getSrcTableName() {
-            return this.srcTableName;
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setMaskingCount(Long maskingCount) {
-            this.maskingCount = maskingCount;
-            return this;
-        }
-        public Long getMaskingCount() {
-            return this.maskingCount;
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setPercentage(Integer percentage) {
-            this.percentage = percentage;
-            return this;
-        }
-        public Integer getPercentage() {
-            return this.percentage;
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setDstType(Integer dstType) {
-            this.dstType = dstType;
-            return this;
-        }
-        public Integer getDstType() {
-            return this.dstType;
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setFailMsg(String failMsg) {
-            this.failMsg = failMsg;
-            return this;
-        }
-        public String getFailMsg() {
-            return this.failMsg;
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setFailCode(String failCode) {
-            this.failCode = failCode;
-            return this;
-        }
-        public String getFailCode() {
-            return this.failCode;
         }
 
         public DescribeDataMaskingRunHistoryResponseBodyItems setConflictCount(Long conflictCount) {
@@ -205,6 +133,14 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
         }
         public Long getConflictCount() {
             return this.conflictCount;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setDstType(Integer dstType) {
+            this.dstType = dstType;
+            return this;
+        }
+        public Integer getDstType() {
+            return this.dstType;
         }
 
         public DescribeDataMaskingRunHistoryResponseBodyItems setDstTypeCode(String dstTypeCode) {
@@ -223,28 +159,20 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeDataMaskingRunHistoryResponseBodyItems setRunIndex(Integer runIndex) {
-            this.runIndex = runIndex;
+        public DescribeDataMaskingRunHistoryResponseBodyItems setFailCode(String failCode) {
+            this.failCode = failCode;
             return this;
         }
-        public Integer getRunIndex() {
-            return this.runIndex;
+        public String getFailCode() {
+            return this.failCode;
         }
 
-        public DescribeDataMaskingRunHistoryResponseBodyItems setStartTime(Long startTime) {
-            this.startTime = startTime;
+        public DescribeDataMaskingRunHistoryResponseBodyItems setFailMsg(String failMsg) {
+            this.failMsg = failMsg;
             return this;
         }
-        public Long getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeDataMaskingRunHistoryResponseBodyItems setHasSubProcess(Integer hasSubProcess) {
-            this.hasSubProcess = hasSubProcess;
-            return this;
-        }
-        public Integer getHasSubProcess() {
-            return this.hasSubProcess;
+        public String getFailMsg() {
+            return this.failMsg;
         }
 
         public DescribeDataMaskingRunHistoryResponseBodyItems setHasDownloadFile(Integer hasDownloadFile) {
@@ -255,12 +183,60 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             return this.hasDownloadFile;
         }
 
-        public DescribeDataMaskingRunHistoryResponseBodyItems setTaskId(String taskId) {
-            this.taskId = taskId;
+        public DescribeDataMaskingRunHistoryResponseBodyItems setHasSubProcess(Integer hasSubProcess) {
+            this.hasSubProcess = hasSubProcess;
             return this;
         }
-        public String getTaskId() {
-            return this.taskId;
+        public Integer getHasSubProcess() {
+            return this.hasSubProcess;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setMaskingCount(Long maskingCount) {
+            this.maskingCount = maskingCount;
+            return this;
+        }
+        public Long getMaskingCount() {
+            return this.maskingCount;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setPercentage(Integer percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setRunIndex(Integer runIndex) {
+            this.runIndex = runIndex;
+            return this;
+        }
+        public Integer getRunIndex() {
+            return this.runIndex;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setSrcTableName(String srcTableName) {
+            this.srcTableName = srcTableName;
+            return this;
+        }
+        public String getSrcTableName() {
+            return this.srcTableName;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setSrcType(Integer srcType) {
+            this.srcType = srcType;
+            return this;
+        }
+        public Integer getSrcType() {
+            return this.srcType;
         }
 
         public DescribeDataMaskingRunHistoryResponseBodyItems setSrcTypeCode(String srcTypeCode) {
@@ -271,12 +247,36 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
             return this.srcTypeCode;
         }
 
-        public DescribeDataMaskingRunHistoryResponseBodyItems setId(Long id) {
-            this.id = id;
+        public DescribeDataMaskingRunHistoryResponseBodyItems setStartTime(Long startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public DescribeDataMaskingRunHistoryResponseBodyItems setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
         }
 
     }

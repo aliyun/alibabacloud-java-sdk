@@ -32,23 +32,15 @@ public class DescribeEventDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeEventDetailResponseBodyEventDetailChartData extends TeaModel {
-        @NameInMap("Y")
-        public String y;
-
         @NameInMap("X")
         public String x;
+
+        @NameInMap("Y")
+        public String y;
 
         public static DescribeEventDetailResponseBodyEventDetailChartData build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventDetailResponseBodyEventDetailChartData self = new DescribeEventDetailResponseBodyEventDetailChartData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeEventDetailResponseBodyEventDetailChartData setY(String y) {
-            this.y = y;
-            return this;
-        }
-        public String getY() {
-            return this.y;
         }
 
         public DescribeEventDetailResponseBodyEventDetailChartData setX(String x) {
@@ -59,14 +51,25 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             return this.x;
         }
 
+        public DescribeEventDetailResponseBodyEventDetailChartData setY(String y) {
+            this.y = y;
+            return this;
+        }
+        public String getY() {
+            return this.y;
+        }
+
     }
 
     public static class DescribeEventDetailResponseBodyEventDetailChart extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("Data")
+        public DescribeEventDetailResponseBodyEventDetailChartData data;
 
         @NameInMap("Label")
         public String label;
+
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("XLabel")
         public String XLabel;
@@ -74,20 +77,17 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         @NameInMap("YLabel")
         public String YLabel;
 
-        @NameInMap("Data")
-        public DescribeEventDetailResponseBodyEventDetailChartData data;
-
         public static DescribeEventDetailResponseBodyEventDetailChart build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventDetailResponseBodyEventDetailChart self = new DescribeEventDetailResponseBodyEventDetailChart();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEventDetailResponseBodyEventDetailChart setType(String type) {
-            this.type = type;
+        public DescribeEventDetailResponseBodyEventDetailChart setData(DescribeEventDetailResponseBodyEventDetailChartData data) {
+            this.data = data;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public DescribeEventDetailResponseBodyEventDetailChartData getData() {
+            return this.data;
         }
 
         public DescribeEventDetailResponseBodyEventDetailChart setLabel(String label) {
@@ -96,6 +96,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public DescribeEventDetailResponseBodyEventDetailChart setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public DescribeEventDetailResponseBodyEventDetailChart setXLabel(String XLabel) {
@@ -112,14 +120,6 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         }
         public String getYLabel() {
             return this.YLabel;
-        }
-
-        public DescribeEventDetailResponseBodyEventDetailChart setData(DescribeEventDetailResponseBodyEventDetailChartData data) {
-            this.data = data;
-            return this;
-        }
-        public DescribeEventDetailResponseBodyEventDetailChartData getData() {
-            return this.data;
         }
 
     }
@@ -226,17 +226,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeEventDetailResponseBodyEventHandleInfoList extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("EnableTime")
-        public Long enableTime;
-
-        @NameInMap("HandlerValue")
-        public Integer handlerValue;
+        @NameInMap("CurrentValue")
+        public String currentValue;
 
         @NameInMap("DisableTime")
         public Long disableTime;
+
+        @NameInMap("EnableTime")
+        public Long enableTime;
 
         @NameInMap("HandlerName")
         public String handlerName;
@@ -244,39 +241,26 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         @NameInMap("HandlerType")
         public String handlerType;
 
-        @NameInMap("CurrentValue")
-        public String currentValue;
+        @NameInMap("HandlerValue")
+        public Integer handlerValue;
 
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("Status")
+        public Integer status;
 
         public static DescribeEventDetailResponseBodyEventHandleInfoList build(java.util.Map<String, ?> map) throws Exception {
             DescribeEventDetailResponseBodyEventHandleInfoList self = new DescribeEventDetailResponseBodyEventHandleInfoList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEventDetailResponseBodyEventHandleInfoList setStatus(Integer status) {
-            this.status = status;
+        public DescribeEventDetailResponseBodyEventHandleInfoList setCurrentValue(String currentValue) {
+            this.currentValue = currentValue;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeEventDetailResponseBodyEventHandleInfoList setEnableTime(Long enableTime) {
-            this.enableTime = enableTime;
-            return this;
-        }
-        public Long getEnableTime() {
-            return this.enableTime;
-        }
-
-        public DescribeEventDetailResponseBodyEventHandleInfoList setHandlerValue(Integer handlerValue) {
-            this.handlerValue = handlerValue;
-            return this;
-        }
-        public Integer getHandlerValue() {
-            return this.handlerValue;
+        public String getCurrentValue() {
+            return this.currentValue;
         }
 
         public DescribeEventDetailResponseBodyEventHandleInfoList setDisableTime(Long disableTime) {
@@ -285,6 +269,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         }
         public Long getDisableTime() {
             return this.disableTime;
+        }
+
+        public DescribeEventDetailResponseBodyEventHandleInfoList setEnableTime(Long enableTime) {
+            this.enableTime = enableTime;
+            return this;
+        }
+        public Long getEnableTime() {
+            return this.enableTime;
         }
 
         public DescribeEventDetailResponseBodyEventHandleInfoList setHandlerName(String handlerName) {
@@ -303,12 +295,12 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             return this.handlerType;
         }
 
-        public DescribeEventDetailResponseBodyEventHandleInfoList setCurrentValue(String currentValue) {
-            this.currentValue = currentValue;
+        public DescribeEventDetailResponseBodyEventHandleInfoList setHandlerValue(Integer handlerValue) {
+            this.handlerValue = handlerValue;
             return this;
         }
-        public String getCurrentValue() {
-            return this.currentValue;
+        public Integer getHandlerValue() {
+            return this.handlerValue;
         }
 
         public DescribeEventDetailResponseBodyEventHandleInfoList setId(Long id) {
@@ -317,6 +309,14 @@ public class DescribeEventDetailResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeEventDetailResponseBodyEventHandleInfoList setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }
