@@ -4,8 +4,8 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMezzanineInfoRequest extends TeaModel {
-    @NameInMap("VideoId")
-    public String videoId;
+    @NameInMap("AdditionType")
+    public String additionType;
 
     @NameInMap("AuthTimeout")
     public Long authTimeout;
@@ -13,20 +13,20 @@ public class GetMezzanineInfoRequest extends TeaModel {
     @NameInMap("OutputType")
     public String outputType;
 
-    @NameInMap("AdditionType")
-    public String additionType;
+    @NameInMap("VideoId")
+    public String videoId;
 
     public static GetMezzanineInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMezzanineInfoRequest self = new GetMezzanineInfoRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetMezzanineInfoRequest setVideoId(String videoId) {
-        this.videoId = videoId;
+    public GetMezzanineInfoRequest setAdditionType(String additionType) {
+        this.additionType = additionType;
         return this;
     }
-    public String getVideoId() {
-        return this.videoId;
+    public String getAdditionType() {
+        return this.additionType;
     }
 
     public GetMezzanineInfoRequest setAuthTimeout(Long authTimeout) {
@@ -45,12 +45,12 @@ public class GetMezzanineInfoRequest extends TeaModel {
         return this.outputType;
     }
 
-    public GetMezzanineInfoRequest setAdditionType(String additionType) {
-        this.additionType = additionType;
+    public GetMezzanineInfoRequest setVideoId(String videoId) {
+        this.videoId = videoId;
         return this;
     }
-    public String getAdditionType() {
-        return this.additionType;
+    public String getVideoId() {
+        return this.videoId;
     }
 
 }

@@ -4,18 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayUserTotalRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
     public static DescribePlayUserTotalRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePlayUserTotalRequest self = new DescribePlayUserTotalRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePlayUserTotalRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribePlayUserTotalRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class DescribePlayUserTotalRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribePlayUserTotalRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
 }

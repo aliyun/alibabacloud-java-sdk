@@ -4,26 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SetAuditSecurityIpRequest extends TeaModel {
-    @NameInMap("SecurityGroupName")
-    public String securityGroupName;
-
     @NameInMap("Ips")
     public String ips;
 
     @NameInMap("OperateMode")
     public String operateMode;
 
+    @NameInMap("SecurityGroupName")
+    public String securityGroupName;
+
     public static SetAuditSecurityIpRequest build(java.util.Map<String, ?> map) throws Exception {
         SetAuditSecurityIpRequest self = new SetAuditSecurityIpRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetAuditSecurityIpRequest setSecurityGroupName(String securityGroupName) {
-        this.securityGroupName = securityGroupName;
-        return this;
-    }
-    public String getSecurityGroupName() {
-        return this.securityGroupName;
     }
 
     public SetAuditSecurityIpRequest setIps(String ips) {
@@ -40,6 +32,14 @@ public class SetAuditSecurityIpRequest extends TeaModel {
     }
     public String getOperateMode() {
         return this.operateMode;
+    }
+
+    public SetAuditSecurityIpRequest setSecurityGroupName(String securityGroupName) {
+        this.securityGroupName = securityGroupName;
+        return this;
+    }
+    public String getSecurityGroupName() {
+        return this.securityGroupName;
     }
 
 }

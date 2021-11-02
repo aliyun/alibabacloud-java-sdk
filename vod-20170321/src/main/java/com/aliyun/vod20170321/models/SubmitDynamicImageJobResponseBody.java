@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitDynamicImageJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DynamicImageJob")
     public SubmitDynamicImageJobResponseBodyDynamicImageJob dynamicImageJob;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SubmitDynamicImageJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitDynamicImageJobResponseBody self = new SubmitDynamicImageJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitDynamicImageJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitDynamicImageJobResponseBody setDynamicImageJob(SubmitDynamicImageJobResponseBodyDynamicImageJob dynamicImageJob) {
@@ -29,6 +21,14 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
     }
     public SubmitDynamicImageJobResponseBodyDynamicImageJob getDynamicImageJob() {
         return this.dynamicImageJob;
+    }
+
+    public SubmitDynamicImageJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class SubmitDynamicImageJobResponseBodyDynamicImageJob extends TeaModel {

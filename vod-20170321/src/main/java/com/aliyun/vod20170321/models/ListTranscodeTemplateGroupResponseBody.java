@@ -32,30 +32,38 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
     }
 
     public static class ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("IsDefault")
         public String isDefault;
 
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("TranscodeTemplateGroupId")
-        public String transcodeTemplateGroupId;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Locked")
+        public String locked;
 
         @NameInMap("ModifyTime")
         public String modifyTime;
 
-        @NameInMap("Locked")
-        public String locked;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("TranscodeTemplateGroupId")
+        public String transcodeTemplateGroupId;
 
         public static ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList build(java.util.Map<String, ?> map) throws Exception {
             ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList self = new ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList();
             return TeaModel.build(map, self);
+        }
+
+        public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setCreationTime(String creationTime) {
@@ -74,28 +82,12 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             return this.isDefault;
         }
 
-        public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setAppId(String appId) {
-            this.appId = appId;
+        public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setLocked(String locked) {
+            this.locked = locked;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setTranscodeTemplateGroupId(String transcodeTemplateGroupId) {
-            this.transcodeTemplateGroupId = transcodeTemplateGroupId;
-            return this;
-        }
-        public String getTranscodeTemplateGroupId() {
-            return this.transcodeTemplateGroupId;
-        }
-
-        public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getLocked() {
+            return this.locked;
         }
 
         public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setModifyTime(String modifyTime) {
@@ -106,12 +98,20 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
-        public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setLocked(String locked) {
-            this.locked = locked;
+        public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getLocked() {
-            return this.locked;
+        public String getName() {
+            return this.name;
+        }
+
+        public ListTranscodeTemplateGroupResponseBodyTranscodeTemplateGroupList setTranscodeTemplateGroupId(String transcodeTemplateGroupId) {
+            this.transcodeTemplateGroupId = transcodeTemplateGroupId;
+            return this;
+        }
+        public String getTranscodeTemplateGroupId() {
+            return this.transcodeTemplateGroupId;
         }
 
     }

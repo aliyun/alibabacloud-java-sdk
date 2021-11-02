@@ -7,17 +7,17 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
     @NameInMap("FileURL")
     public String fileURL;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("UploadAddress")
-    public String uploadAddress;
-
     @NameInMap("MediaId")
     public String mediaId;
 
     @NameInMap("MediaURL")
     public String mediaURL;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("UploadAddress")
+    public String uploadAddress;
 
     @NameInMap("UploadAuth")
     public String uploadAuth;
@@ -35,22 +35,6 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         return this.fileURL;
     }
 
-    public CreateUploadAttachedMediaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateUploadAttachedMediaResponseBody setUploadAddress(String uploadAddress) {
-        this.uploadAddress = uploadAddress;
-        return this;
-    }
-    public String getUploadAddress() {
-        return this.uploadAddress;
-    }
-
     public CreateUploadAttachedMediaResponseBody setMediaId(String mediaId) {
         this.mediaId = mediaId;
         return this;
@@ -65,6 +49,22 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
     }
     public String getMediaURL() {
         return this.mediaURL;
+    }
+
+    public CreateUploadAttachedMediaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateUploadAttachedMediaResponseBody setUploadAddress(String uploadAddress) {
+        this.uploadAddress = uploadAddress;
+        return this;
+    }
+    public String getUploadAddress() {
+        return this.uploadAddress;
     }
 
     public CreateUploadAttachedMediaResponseBody setUploadAuth(String uploadAuth) {

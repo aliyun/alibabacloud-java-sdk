@@ -4,14 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListVodRealtimeLogDeliveryDomainsRequest extends TeaModel {
+    @NameInMap("Logstore")
+    public String logstore;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("Project")
     public String project;
-
-    @NameInMap("Logstore")
-    public String logstore;
 
     @NameInMap("Region")
     public String region;
@@ -19,6 +19,14 @@ public class ListVodRealtimeLogDeliveryDomainsRequest extends TeaModel {
     public static ListVodRealtimeLogDeliveryDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVodRealtimeLogDeliveryDomainsRequest self = new ListVodRealtimeLogDeliveryDomainsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListVodRealtimeLogDeliveryDomainsRequest setLogstore(String logstore) {
+        this.logstore = logstore;
+        return this;
+    }
+    public String getLogstore() {
+        return this.logstore;
     }
 
     public ListVodRealtimeLogDeliveryDomainsRequest setOwnerId(Long ownerId) {
@@ -35,14 +43,6 @@ public class ListVodRealtimeLogDeliveryDomainsRequest extends TeaModel {
     }
     public String getProject() {
         return this.project;
-    }
-
-    public ListVodRealtimeLogDeliveryDomainsRequest setLogstore(String logstore) {
-        this.logstore = logstore;
-        return this;
-    }
-    public String getLogstore() {
-        return this.logstore;
     }
 
     public ListVodRealtimeLogDeliveryDomainsRequest setRegion(String region) {

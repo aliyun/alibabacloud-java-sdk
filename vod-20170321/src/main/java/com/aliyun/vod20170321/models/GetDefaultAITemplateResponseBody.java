@@ -38,23 +38,23 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         public String isDefault;
 
-        @NameInMap("TemplateType")
-        public String templateType;
-
-        @NameInMap("TemplateConfig")
-        public String templateConfig;
-
-        @NameInMap("TemplateName")
-        public String templateName;
+        @NameInMap("ModifyTime")
+        public String modifyTime;
 
         @NameInMap("Source")
         public String source;
 
+        @NameInMap("TemplateConfig")
+        public String templateConfig;
+
         @NameInMap("TemplateId")
         public String templateId;
 
-        @NameInMap("ModifyTime")
-        public String modifyTime;
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        @NameInMap("TemplateType")
+        public String templateType;
 
         public static GetDefaultAITemplateResponseBodyTemplateInfo build(java.util.Map<String, ?> map) throws Exception {
             GetDefaultAITemplateResponseBodyTemplateInfo self = new GetDefaultAITemplateResponseBodyTemplateInfo();
@@ -77,28 +77,12 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
             return this.isDefault;
         }
 
-        public GetDefaultAITemplateResponseBodyTemplateInfo setTemplateType(String templateType) {
-            this.templateType = templateType;
+        public GetDefaultAITemplateResponseBodyTemplateInfo setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
             return this;
         }
-        public String getTemplateType() {
-            return this.templateType;
-        }
-
-        public GetDefaultAITemplateResponseBodyTemplateInfo setTemplateConfig(String templateConfig) {
-            this.templateConfig = templateConfig;
-            return this;
-        }
-        public String getTemplateConfig() {
-            return this.templateConfig;
-        }
-
-        public GetDefaultAITemplateResponseBodyTemplateInfo setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
+        public String getModifyTime() {
+            return this.modifyTime;
         }
 
         public GetDefaultAITemplateResponseBodyTemplateInfo setSource(String source) {
@@ -109,6 +93,14 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
             return this.source;
         }
 
+        public GetDefaultAITemplateResponseBodyTemplateInfo setTemplateConfig(String templateConfig) {
+            this.templateConfig = templateConfig;
+            return this;
+        }
+        public String getTemplateConfig() {
+            return this.templateConfig;
+        }
+
         public GetDefaultAITemplateResponseBodyTemplateInfo setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
@@ -117,12 +109,20 @@ public class GetDefaultAITemplateResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public GetDefaultAITemplateResponseBodyTemplateInfo setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
+        public GetDefaultAITemplateResponseBodyTemplateInfo setTemplateName(String templateName) {
+            this.templateName = templateName;
             return this;
         }
-        public String getModifyTime() {
-            return this.modifyTime;
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public GetDefaultAITemplateResponseBodyTemplateInfo setTemplateType(String templateType) {
+            this.templateType = templateType;
+            return this;
+        }
+        public String getTemplateType() {
+            return this.templateType;
         }
 
     }

@@ -4,26 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteMultipartUploadRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("MediaId")
     public String mediaId;
 
     @NameInMap("MediaType")
     public String mediaType;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     public static DeleteMultipartUploadRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMultipartUploadRequest self = new DeleteMultipartUploadRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteMultipartUploadRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     public DeleteMultipartUploadRequest setMediaId(String mediaId) {
@@ -40,6 +32,14 @@ public class DeleteMultipartUploadRequest extends TeaModel {
     }
     public String getMediaType() {
         return this.mediaType;
+    }
+
+    public DeleteMultipartUploadRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

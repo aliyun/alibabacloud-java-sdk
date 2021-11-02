@@ -50,6 +50,66 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetAIVideoTagResultResponseBodyVideoTagResultKeyword extends TeaModel {
+        @NameInMap("Tag")
+        public String tag;
+
+        @NameInMap("Times")
+        public java.util.List<String> times;
+
+        public static GetAIVideoTagResultResponseBodyVideoTagResultKeyword build(java.util.Map<String, ?> map) throws Exception {
+            GetAIVideoTagResultResponseBodyVideoTagResultKeyword self = new GetAIVideoTagResultResponseBodyVideoTagResultKeyword();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIVideoTagResultResponseBodyVideoTagResultKeyword setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+        public GetAIVideoTagResultResponseBodyVideoTagResultKeyword setTimes(java.util.List<String> times) {
+            this.times = times;
+            return this;
+        }
+        public java.util.List<String> getTimes() {
+            return this.times;
+        }
+
+    }
+
+    public static class GetAIVideoTagResultResponseBodyVideoTagResultLocation extends TeaModel {
+        @NameInMap("Tag")
+        public String tag;
+
+        @NameInMap("Times")
+        public java.util.List<String> times;
+
+        public static GetAIVideoTagResultResponseBodyVideoTagResultLocation build(java.util.Map<String, ?> map) throws Exception {
+            GetAIVideoTagResultResponseBodyVideoTagResultLocation self = new GetAIVideoTagResultResponseBodyVideoTagResultLocation();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAIVideoTagResultResponseBodyVideoTagResultLocation setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+        public GetAIVideoTagResultResponseBodyVideoTagResultLocation setTimes(java.util.List<String> times) {
+            this.times = times;
+            return this;
+        }
+        public java.util.List<String> getTimes() {
+            return this.times;
+        }
+
+    }
+
     public static class GetAIVideoTagResultResponseBodyVideoTagResultPerson extends TeaModel {
         @NameInMap("FaceUrl")
         public String faceUrl;
@@ -121,81 +181,21 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     }
 
-    public static class GetAIVideoTagResultResponseBodyVideoTagResultLocation extends TeaModel {
-        @NameInMap("Tag")
-        public String tag;
-
-        @NameInMap("Times")
-        public java.util.List<String> times;
-
-        public static GetAIVideoTagResultResponseBodyVideoTagResultLocation build(java.util.Map<String, ?> map) throws Exception {
-            GetAIVideoTagResultResponseBodyVideoTagResultLocation self = new GetAIVideoTagResultResponseBodyVideoTagResultLocation();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIVideoTagResultResponseBodyVideoTagResultLocation setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-        public GetAIVideoTagResultResponseBodyVideoTagResultLocation setTimes(java.util.List<String> times) {
-            this.times = times;
-            return this;
-        }
-        public java.util.List<String> getTimes() {
-            return this.times;
-        }
-
-    }
-
-    public static class GetAIVideoTagResultResponseBodyVideoTagResultKeyword extends TeaModel {
-        @NameInMap("Tag")
-        public String tag;
-
-        @NameInMap("Times")
-        public java.util.List<String> times;
-
-        public static GetAIVideoTagResultResponseBodyVideoTagResultKeyword build(java.util.Map<String, ?> map) throws Exception {
-            GetAIVideoTagResultResponseBodyVideoTagResultKeyword self = new GetAIVideoTagResultResponseBodyVideoTagResultKeyword();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAIVideoTagResultResponseBodyVideoTagResultKeyword setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-        public GetAIVideoTagResultResponseBodyVideoTagResultKeyword setTimes(java.util.List<String> times) {
-            this.times = times;
-            return this;
-        }
-        public java.util.List<String> getTimes() {
-            return this.times;
-        }
-
-    }
-
     public static class GetAIVideoTagResultResponseBodyVideoTagResult extends TeaModel {
         @NameInMap("Category")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultCategory> category;
+
+        @NameInMap("Keyword")
+        public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> keyword;
+
+        @NameInMap("Location")
+        public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> location;
 
         @NameInMap("Person")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultPerson> person;
 
         @NameInMap("Time")
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultTime> time;
-
-        @NameInMap("Location")
-        public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> location;
-
-        @NameInMap("Keyword")
-        public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> keyword;
 
         public static GetAIVideoTagResultResponseBodyVideoTagResult build(java.util.Map<String, ?> map) throws Exception {
             GetAIVideoTagResultResponseBodyVideoTagResult self = new GetAIVideoTagResultResponseBodyVideoTagResult();
@@ -208,6 +208,22 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         }
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultCategory> getCategory() {
             return this.category;
+        }
+
+        public GetAIVideoTagResultResponseBodyVideoTagResult setKeyword(java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> keyword) {
+            this.keyword = keyword;
+            return this;
+        }
+        public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> getKeyword() {
+            return this.keyword;
+        }
+
+        public GetAIVideoTagResultResponseBodyVideoTagResult setLocation(java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> location) {
+            this.location = location;
+            return this;
+        }
+        public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> getLocation() {
+            return this.location;
         }
 
         public GetAIVideoTagResultResponseBodyVideoTagResult setPerson(java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultPerson> person) {
@@ -224,22 +240,6 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
         }
         public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultTime> getTime() {
             return this.time;
-        }
-
-        public GetAIVideoTagResultResponseBodyVideoTagResult setLocation(java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> location) {
-            this.location = location;
-            return this;
-        }
-        public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultLocation> getLocation() {
-            return this.location;
-        }
-
-        public GetAIVideoTagResultResponseBodyVideoTagResult setKeyword(java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> keyword) {
-            this.keyword = keyword;
-            return this;
-        }
-        public java.util.List<GetAIVideoTagResultResponseBodyVideoTagResultKeyword> getKeyword() {
-            return this.keyword;
         }
 
     }

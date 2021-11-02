@@ -7,11 +7,11 @@ public class UpdateWatermarkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("WatermarkId")
-    public String watermarkId;
-
     @NameInMap("WatermarkConfig")
     public String watermarkConfig;
+
+    @NameInMap("WatermarkId")
+    public String watermarkId;
 
     public static UpdateWatermarkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateWatermarkRequest self = new UpdateWatermarkRequest();
@@ -26,20 +26,20 @@ public class UpdateWatermarkRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateWatermarkRequest setWatermarkId(String watermarkId) {
-        this.watermarkId = watermarkId;
-        return this;
-    }
-    public String getWatermarkId() {
-        return this.watermarkId;
-    }
-
     public UpdateWatermarkRequest setWatermarkConfig(String watermarkConfig) {
         this.watermarkConfig = watermarkConfig;
         return this;
     }
     public String getWatermarkConfig() {
         return this.watermarkConfig;
+    }
+
+    public UpdateWatermarkRequest setWatermarkId(String watermarkId) {
+        this.watermarkId = watermarkId;
+        return this;
+    }
+    public String getWatermarkId() {
+        return this.watermarkId;
     }
 
 }

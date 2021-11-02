@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MediaSnapshot")
     public ListSnapshotsResponseBodyMediaSnapshot mediaSnapshot;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListSnapshotsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSnapshotsResponseBody self = new ListSnapshotsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSnapshotsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListSnapshotsResponseBody setMediaSnapshot(ListSnapshotsResponseBodyMediaSnapshot mediaSnapshot) {
@@ -29,6 +21,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
     }
     public ListSnapshotsResponseBodyMediaSnapshot getMediaSnapshot() {
         return this.mediaSnapshot;
+    }
+
+    public ListSnapshotsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListSnapshotsResponseBodyMediaSnapshotSnapshotsSnapshot extends TeaModel {
@@ -84,17 +84,17 @@ public class ListSnapshotsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("Regular")
-        public String regular;
-
-        @NameInMap("Total")
-        public Long total;
-
         @NameInMap("JobId")
         public String jobId;
 
+        @NameInMap("Regular")
+        public String regular;
+
         @NameInMap("Snapshots")
         public ListSnapshotsResponseBodyMediaSnapshotSnapshots snapshots;
+
+        @NameInMap("Total")
+        public Long total;
 
         public static ListSnapshotsResponseBodyMediaSnapshot build(java.util.Map<String, ?> map) throws Exception {
             ListSnapshotsResponseBodyMediaSnapshot self = new ListSnapshotsResponseBodyMediaSnapshot();
@@ -109,22 +109,6 @@ public class ListSnapshotsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public ListSnapshotsResponseBodyMediaSnapshot setRegular(String regular) {
-            this.regular = regular;
-            return this;
-        }
-        public String getRegular() {
-            return this.regular;
-        }
-
-        public ListSnapshotsResponseBodyMediaSnapshot setTotal(Long total) {
-            this.total = total;
-            return this;
-        }
-        public Long getTotal() {
-            return this.total;
-        }
-
         public ListSnapshotsResponseBodyMediaSnapshot setJobId(String jobId) {
             this.jobId = jobId;
             return this;
@@ -133,12 +117,28 @@ public class ListSnapshotsResponseBody extends TeaModel {
             return this.jobId;
         }
 
+        public ListSnapshotsResponseBodyMediaSnapshot setRegular(String regular) {
+            this.regular = regular;
+            return this;
+        }
+        public String getRegular() {
+            return this.regular;
+        }
+
         public ListSnapshotsResponseBodyMediaSnapshot setSnapshots(ListSnapshotsResponseBodyMediaSnapshotSnapshots snapshots) {
             this.snapshots = snapshots;
             return this;
         }
         public ListSnapshotsResponseBodyMediaSnapshotSnapshots getSnapshots() {
             return this.snapshots;
+        }
+
+        public ListSnapshotsResponseBodyMediaSnapshot setTotal(Long total) {
+            this.total = total;
+            return this;
+        }
+        public Long getTotal() {
+            return this.total;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AppPolicyList")
     public java.util.List<ListAppPoliciesForIdentityResponseBodyAppPolicyList> appPolicyList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListAppPoliciesForIdentityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAppPoliciesForIdentityResponseBody self = new ListAppPoliciesForIdentityResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAppPoliciesForIdentityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAppPoliciesForIdentityResponseBody setAppPolicyList(java.util.List<ListAppPoliciesForIdentityResponseBodyAppPolicyList> appPolicyList) {
@@ -31,31 +23,47 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
         return this.appPolicyList;
     }
 
+    public ListAppPoliciesForIdentityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListAppPoliciesForIdentityResponseBodyAppPolicyList extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("PolicyValue")
-        public String policyValue;
+        @NameInMap("ModificationTime")
+        public String modificationTime;
 
         @NameInMap("PolicyName")
         public String policyName;
 
-        @NameInMap("ModificationTime")
-        public String modificationTime;
-
         @NameInMap("PolicyType")
         public String policyType;
+
+        @NameInMap("PolicyValue")
+        public String policyValue;
 
         public static ListAppPoliciesForIdentityResponseBodyAppPolicyList build(java.util.Map<String, ?> map) throws Exception {
             ListAppPoliciesForIdentityResponseBodyAppPolicyList self = new ListAppPoliciesForIdentityResponseBodyAppPolicyList();
             return TeaModel.build(map, self);
+        }
+
+        public ListAppPoliciesForIdentityResponseBodyAppPolicyList setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public ListAppPoliciesForIdentityResponseBodyAppPolicyList setCreationTime(String creationTime) {
@@ -74,20 +82,12 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListAppPoliciesForIdentityResponseBodyAppPolicyList setAppId(String appId) {
-            this.appId = appId;
+        public ListAppPoliciesForIdentityResponseBodyAppPolicyList setModificationTime(String modificationTime) {
+            this.modificationTime = modificationTime;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public ListAppPoliciesForIdentityResponseBodyAppPolicyList setPolicyValue(String policyValue) {
-            this.policyValue = policyValue;
-            return this;
-        }
-        public String getPolicyValue() {
-            return this.policyValue;
+        public String getModificationTime() {
+            return this.modificationTime;
         }
 
         public ListAppPoliciesForIdentityResponseBodyAppPolicyList setPolicyName(String policyName) {
@@ -98,20 +98,20 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
             return this.policyName;
         }
 
-        public ListAppPoliciesForIdentityResponseBodyAppPolicyList setModificationTime(String modificationTime) {
-            this.modificationTime = modificationTime;
-            return this;
-        }
-        public String getModificationTime() {
-            return this.modificationTime;
-        }
-
         public ListAppPoliciesForIdentityResponseBodyAppPolicyList setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+        public ListAppPoliciesForIdentityResponseBodyAppPolicyList setPolicyValue(String policyValue) {
+            this.policyValue = policyValue;
+            return this;
+        }
+        public String getPolicyValue() {
+            return this.policyValue;
         }
 
     }

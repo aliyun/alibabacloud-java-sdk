@@ -4,17 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaRequest extends TeaModel {
-    @NameInMap("SearchType")
-    public String searchType;
-
     @NameInMap("Fields")
     public String fields;
 
     @NameInMap("Match")
     public String match;
-
-    @NameInMap("SortBy")
-    public String sortBy;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -25,17 +19,15 @@ public class SearchMediaRequest extends TeaModel {
     @NameInMap("ScrollToken")
     public String scrollToken;
 
+    @NameInMap("SearchType")
+    public String searchType;
+
+    @NameInMap("SortBy")
+    public String sortBy;
+
     public static SearchMediaRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchMediaRequest self = new SearchMediaRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchMediaRequest setSearchType(String searchType) {
-        this.searchType = searchType;
-        return this;
-    }
-    public String getSearchType() {
-        return this.searchType;
     }
 
     public SearchMediaRequest setFields(String fields) {
@@ -52,14 +44,6 @@ public class SearchMediaRequest extends TeaModel {
     }
     public String getMatch() {
         return this.match;
-    }
-
-    public SearchMediaRequest setSortBy(String sortBy) {
-        this.sortBy = sortBy;
-        return this;
-    }
-    public String getSortBy() {
-        return this.sortBy;
     }
 
     public SearchMediaRequest setPageNo(Integer pageNo) {
@@ -84,6 +68,22 @@ public class SearchMediaRequest extends TeaModel {
     }
     public String getScrollToken() {
         return this.scrollToken;
+    }
+
+    public SearchMediaRequest setSearchType(String searchType) {
+        this.searchType = searchType;
+        return this;
+    }
+    public String getSearchType() {
+        return this.searchType;
+    }
+
+    public SearchMediaRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
 }

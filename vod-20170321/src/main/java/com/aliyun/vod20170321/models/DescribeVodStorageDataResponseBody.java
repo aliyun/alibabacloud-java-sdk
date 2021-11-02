@@ -43,26 +43,26 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodStorageDataResponseBodyStorageDataStorageDataItem extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
+        @NameInMap("NetworkOut")
+        public String networkOut;
 
         @NameInMap("StorageUtilization")
         public String storageUtilization;
 
-        @NameInMap("NetworkOut")
-        public String networkOut;
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeVodStorageDataResponseBodyStorageDataStorageDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodStorageDataResponseBodyStorageDataStorageDataItem self = new DescribeVodStorageDataResponseBodyStorageDataStorageDataItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVodStorageDataResponseBodyStorageDataStorageDataItem setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
+        public DescribeVodStorageDataResponseBodyStorageDataStorageDataItem setNetworkOut(String networkOut) {
+            this.networkOut = networkOut;
             return this;
         }
-        public String getTimeStamp() {
-            return this.timeStamp;
+        public String getNetworkOut() {
+            return this.networkOut;
         }
 
         public DescribeVodStorageDataResponseBodyStorageDataStorageDataItem setStorageUtilization(String storageUtilization) {
@@ -73,12 +73,12 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
             return this.storageUtilization;
         }
 
-        public DescribeVodStorageDataResponseBodyStorageDataStorageDataItem setNetworkOut(String networkOut) {
-            this.networkOut = networkOut;
+        public DescribeVodStorageDataResponseBodyStorageDataStorageDataItem setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
             return this;
         }
-        public String getNetworkOut() {
-            return this.networkOut;
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

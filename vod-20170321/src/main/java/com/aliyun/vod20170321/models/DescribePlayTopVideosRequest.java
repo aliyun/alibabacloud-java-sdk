@@ -4,11 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayTopVideosRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("BizDate")
     public String bizDate;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNo")
     public Long pageNo;
@@ -21,20 +21,20 @@ public class DescribePlayTopVideosRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribePlayTopVideosRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public DescribePlayTopVideosRequest setBizDate(String bizDate) {
         this.bizDate = bizDate;
         return this;
     }
     public String getBizDate() {
         return this.bizDate;
+    }
+
+    public DescribePlayTopVideosRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribePlayTopVideosRequest setPageNo(Long pageNo) {

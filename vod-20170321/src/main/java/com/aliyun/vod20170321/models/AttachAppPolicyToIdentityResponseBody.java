@@ -4,26 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("FailedPolicyNames")
+    public java.util.List<String> failedPolicyNames;
 
     @NameInMap("NonExistPolicyNames")
     public java.util.List<String> nonExistPolicyNames;
 
-    @NameInMap("FailedPolicyNames")
-    public java.util.List<String> failedPolicyNames;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static AttachAppPolicyToIdentityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AttachAppPolicyToIdentityResponseBody self = new AttachAppPolicyToIdentityResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AttachAppPolicyToIdentityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AttachAppPolicyToIdentityResponseBody setFailedPolicyNames(java.util.List<String> failedPolicyNames) {
+        this.failedPolicyNames = failedPolicyNames;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<String> getFailedPolicyNames() {
+        return this.failedPolicyNames;
     }
 
     public AttachAppPolicyToIdentityResponseBody setNonExistPolicyNames(java.util.List<String> nonExistPolicyNames) {
@@ -34,12 +34,12 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
         return this.nonExistPolicyNames;
     }
 
-    public AttachAppPolicyToIdentityResponseBody setFailedPolicyNames(java.util.List<String> failedPolicyNames) {
-        this.failedPolicyNames = failedPolicyNames;
+    public AttachAppPolicyToIdentityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<String> getFailedPolicyNames() {
-        return this.failedPolicyNames;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetImageInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ImageInfo")
     public GetImageInfoResponseBodyImageInfo imageInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetImageInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageInfoResponseBody self = new GetImageInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetImageInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetImageInfoResponseBody setImageInfo(GetImageInfoResponseBodyImageInfo imageInfo) {
@@ -31,9 +23,23 @@ public class GetImageInfoResponseBody extends TeaModel {
         return this.imageInfo;
     }
 
+    public GetImageInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetImageInfoResponseBodyImageInfoMezzanine extends TeaModel {
+        @NameInMap("FileSize")
+        public String fileSize;
+
         @NameInMap("FileURL")
         public String fileURL;
+
+        @NameInMap("Height")
+        public Integer height;
 
         @NameInMap("OriginalFileName")
         public String originalFileName;
@@ -41,15 +47,17 @@ public class GetImageInfoResponseBody extends TeaModel {
         @NameInMap("Width")
         public Integer width;
 
-        @NameInMap("Height")
-        public Integer height;
-
-        @NameInMap("FileSize")
-        public String fileSize;
-
         public static GetImageInfoResponseBodyImageInfoMezzanine build(java.util.Map<String, ?> map) throws Exception {
             GetImageInfoResponseBodyImageInfoMezzanine self = new GetImageInfoResponseBodyImageInfoMezzanine();
             return TeaModel.build(map, self);
+        }
+
+        public GetImageInfoResponseBodyImageInfoMezzanine setFileSize(String fileSize) {
+            this.fileSize = fileSize;
+            return this;
+        }
+        public String getFileSize() {
+            return this.fileSize;
         }
 
         public GetImageInfoResponseBodyImageInfoMezzanine setFileURL(String fileURL) {
@@ -58,6 +66,14 @@ public class GetImageInfoResponseBody extends TeaModel {
         }
         public String getFileURL() {
             return this.fileURL;
+        }
+
+        public GetImageInfoResponseBodyImageInfoMezzanine setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
         }
 
         public GetImageInfoResponseBodyImageInfoMezzanine setOriginalFileName(String originalFileName) {
@@ -76,131 +92,51 @@ public class GetImageInfoResponseBody extends TeaModel {
             return this.width;
         }
 
-        public GetImageInfoResponseBodyImageInfoMezzanine setHeight(Integer height) {
-            this.height = height;
-            return this;
-        }
-        public Integer getHeight() {
-            return this.height;
-        }
-
-        public GetImageInfoResponseBodyImageInfoMezzanine setFileSize(String fileSize) {
-            this.fileSize = fileSize;
-            return this;
-        }
-        public String getFileSize() {
-            return this.fileSize;
-        }
-
     }
 
     public static class GetImageInfoResponseBodyImageInfo extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("StorageLocation")
-        public String storageLocation;
-
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AppId")
+        public String appId;
 
         @NameInMap("CateId")
         public Long cateId;
 
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("ImageType")
-        public String imageType;
-
         @NameInMap("CateName")
         public String cateName;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("URL")
-        public String URL;
-
-        @NameInMap("Title")
-        public String title;
-
         @NameInMap("ImageId")
         public String imageId;
+
+        @NameInMap("ImageType")
+        public String imageType;
 
         @NameInMap("Mezzanine")
         public GetImageInfoResponseBodyImageInfoMezzanine mezzanine;
 
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StorageLocation")
+        public String storageLocation;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("Title")
+        public String title;
+
+        @NameInMap("URL")
+        public String URL;
+
         public static GetImageInfoResponseBodyImageInfo build(java.util.Map<String, ?> map) throws Exception {
             GetImageInfoResponseBodyImageInfo self = new GetImageInfoResponseBodyImageInfo();
             return TeaModel.build(map, self);
-        }
-
-        public GetImageInfoResponseBodyImageInfo setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public GetImageInfoResponseBodyImageInfo setStorageLocation(String storageLocation) {
-            this.storageLocation = storageLocation;
-            return this;
-        }
-        public String getStorageLocation() {
-            return this.storageLocation;
-        }
-
-        public GetImageInfoResponseBodyImageInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetImageInfoResponseBodyImageInfo setCateId(Long cateId) {
-            this.cateId = cateId;
-            return this;
-        }
-        public Long getCateId() {
-            return this.cateId;
-        }
-
-        public GetImageInfoResponseBodyImageInfo setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public GetImageInfoResponseBodyImageInfo setImageType(String imageType) {
-            this.imageType = imageType;
-            return this;
-        }
-        public String getImageType() {
-            return this.imageType;
-        }
-
-        public GetImageInfoResponseBodyImageInfo setCateName(String cateName) {
-            this.cateName = cateName;
-            return this;
-        }
-        public String getCateName() {
-            return this.cateName;
-        }
-
-        public GetImageInfoResponseBodyImageInfo setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public GetImageInfoResponseBodyImageInfo setAppId(String appId) {
@@ -211,20 +147,36 @@ public class GetImageInfoResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public GetImageInfoResponseBodyImageInfo setURL(String URL) {
-            this.URL = URL;
+        public GetImageInfoResponseBodyImageInfo setCateId(Long cateId) {
+            this.cateId = cateId;
             return this;
         }
-        public String getURL() {
-            return this.URL;
+        public Long getCateId() {
+            return this.cateId;
         }
 
-        public GetImageInfoResponseBodyImageInfo setTitle(String title) {
-            this.title = title;
+        public GetImageInfoResponseBodyImageInfo setCateName(String cateName) {
+            this.cateName = cateName;
             return this;
         }
-        public String getTitle() {
-            return this.title;
+        public String getCateName() {
+            return this.cateName;
+        }
+
+        public GetImageInfoResponseBodyImageInfo setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public GetImageInfoResponseBodyImageInfo setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public GetImageInfoResponseBodyImageInfo setImageId(String imageId) {
@@ -235,12 +187,60 @@ public class GetImageInfoResponseBody extends TeaModel {
             return this.imageId;
         }
 
+        public GetImageInfoResponseBodyImageInfo setImageType(String imageType) {
+            this.imageType = imageType;
+            return this;
+        }
+        public String getImageType() {
+            return this.imageType;
+        }
+
         public GetImageInfoResponseBodyImageInfo setMezzanine(GetImageInfoResponseBodyImageInfoMezzanine mezzanine) {
             this.mezzanine = mezzanine;
             return this;
         }
         public GetImageInfoResponseBodyImageInfoMezzanine getMezzanine() {
             return this.mezzanine;
+        }
+
+        public GetImageInfoResponseBodyImageInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetImageInfoResponseBodyImageInfo setStorageLocation(String storageLocation) {
+            this.storageLocation = storageLocation;
+            return this;
+        }
+        public String getStorageLocation() {
+            return this.storageLocation;
+        }
+
+        public GetImageInfoResponseBodyImageInfo setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public GetImageInfoResponseBodyImageInfo setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public GetImageInfoResponseBodyImageInfo setURL(String URL) {
+            this.URL = URL;
+            return this;
+        }
+        public String getURL() {
+            return this.URL;
         }
 
     }

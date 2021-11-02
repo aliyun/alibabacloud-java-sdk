@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetDetectionTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DetectionTemplate")
     public GetDetectionTemplateResponseBodyDetectionTemplate detectionTemplate;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetDetectionTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDetectionTemplateResponseBody self = new GetDetectionTemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetDetectionTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetDetectionTemplateResponseBody setDetectionTemplate(GetDetectionTemplateResponseBodyDetectionTemplate detectionTemplate) {
@@ -31,15 +23,20 @@ public class GetDetectionTemplateResponseBody extends TeaModel {
         return this.detectionTemplate;
     }
 
+    public GetDetectionTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetDetectionTemplateResponseBodyDetectionTemplate extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("TemplateName")
-        public String templateName;
+        @NameInMap("ModifyTime")
+        public String modifyTime;
 
         @NameInMap("Period")
         public String period;
@@ -50,8 +47,11 @@ public class GetDetectionTemplateResponseBody extends TeaModel {
         @NameInMap("TemplateId")
         public String templateId;
 
-        @NameInMap("ModifyTime")
-        public String modifyTime;
+        @NameInMap("TemplateName")
+        public String templateName;
+
+        @NameInMap("UserId")
+        public Long userId;
 
         public static GetDetectionTemplateResponseBodyDetectionTemplate build(java.util.Map<String, ?> map) throws Exception {
             GetDetectionTemplateResponseBodyDetectionTemplate self = new GetDetectionTemplateResponseBodyDetectionTemplate();
@@ -66,20 +66,12 @@ public class GetDetectionTemplateResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetDetectionTemplateResponseBodyDetectionTemplate setUserId(Long userId) {
-            this.userId = userId;
+        public GetDetectionTemplateResponseBodyDetectionTemplate setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
             return this;
         }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public GetDetectionTemplateResponseBodyDetectionTemplate setTemplateName(String templateName) {
-            this.templateName = templateName;
-            return this;
-        }
-        public String getTemplateName() {
-            return this.templateName;
+        public String getModifyTime() {
+            return this.modifyTime;
         }
 
         public GetDetectionTemplateResponseBodyDetectionTemplate setPeriod(String period) {
@@ -106,12 +98,20 @@ public class GetDetectionTemplateResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public GetDetectionTemplateResponseBodyDetectionTemplate setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
+        public GetDetectionTemplateResponseBodyDetectionTemplate setTemplateName(String templateName) {
+            this.templateName = templateName;
             return this;
         }
-        public String getModifyTime() {
-            return this.modifyTime;
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public GetDetectionTemplateResponseBodyDetectionTemplate setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
         }
 
     }

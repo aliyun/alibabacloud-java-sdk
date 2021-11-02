@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitPreprocessJobsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PreprocessJobs")
     public SubmitPreprocessJobsResponseBodyPreprocessJobs preprocessJobs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SubmitPreprocessJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitPreprocessJobsResponseBody self = new SubmitPreprocessJobsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitPreprocessJobsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitPreprocessJobsResponseBody setPreprocessJobs(SubmitPreprocessJobsResponseBodyPreprocessJobs preprocessJobs) {
@@ -29,6 +21,14 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
     }
     public SubmitPreprocessJobsResponseBodyPreprocessJobs getPreprocessJobs() {
         return this.preprocessJobs;
+    }
+
+    public SubmitPreprocessJobsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class SubmitPreprocessJobsResponseBodyPreprocessJobsPreprocessJob extends TeaModel {

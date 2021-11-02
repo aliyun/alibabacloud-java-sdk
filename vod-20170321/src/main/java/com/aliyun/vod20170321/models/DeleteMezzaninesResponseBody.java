@@ -4,18 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteMezzaninesResponseBody extends TeaModel {
+    @NameInMap("NonExistVideoIds")
+    public java.util.List<String> nonExistVideoIds;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("UnRemoveableVideoIds")
     public java.util.List<String> unRemoveableVideoIds;
 
-    @NameInMap("NonExistVideoIds")
-    public java.util.List<String> nonExistVideoIds;
-
     public static DeleteMezzaninesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteMezzaninesResponseBody self = new DeleteMezzaninesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMezzaninesResponseBody setNonExistVideoIds(java.util.List<String> nonExistVideoIds) {
+        this.nonExistVideoIds = nonExistVideoIds;
+        return this;
+    }
+    public java.util.List<String> getNonExistVideoIds() {
+        return this.nonExistVideoIds;
     }
 
     public DeleteMezzaninesResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
     }
     public java.util.List<String> getUnRemoveableVideoIds() {
         return this.unRemoveableVideoIds;
-    }
-
-    public DeleteMezzaninesResponseBody setNonExistVideoIds(java.util.List<String> nonExistVideoIds) {
-        this.nonExistVideoIds = nonExistVideoIds;
-        return this;
-    }
-    public java.util.List<String> getNonExistVideoIds() {
-        return this.nonExistVideoIds;
     }
 
 }

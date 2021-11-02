@@ -4,14 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DetachAppPolicyFromIdentityRequest extends TeaModel {
-    @NameInMap("IdentityType")
-    public String identityType;
+    @NameInMap("AppId")
+    public String appId;
 
     @NameInMap("IdentityName")
     public String identityName;
 
-    @NameInMap("AppId")
-    public String appId;
+    @NameInMap("IdentityType")
+    public String identityType;
 
     @NameInMap("PolicyNames")
     public String policyNames;
@@ -21,12 +21,12 @@ public class DetachAppPolicyFromIdentityRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DetachAppPolicyFromIdentityRequest setIdentityType(String identityType) {
-        this.identityType = identityType;
+    public DetachAppPolicyFromIdentityRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public String getIdentityType() {
-        return this.identityType;
+    public String getAppId() {
+        return this.appId;
     }
 
     public DetachAppPolicyFromIdentityRequest setIdentityName(String identityName) {
@@ -37,12 +37,12 @@ public class DetachAppPolicyFromIdentityRequest extends TeaModel {
         return this.identityName;
     }
 
-    public DetachAppPolicyFromIdentityRequest setAppId(String appId) {
-        this.appId = appId;
+    public DetachAppPolicyFromIdentityRequest setIdentityType(String identityType) {
+        this.identityType = identityType;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
+    public String getIdentityType() {
+        return this.identityType;
     }
 
     public DetachAppPolicyFromIdentityRequest setPolicyNames(String policyNames) {

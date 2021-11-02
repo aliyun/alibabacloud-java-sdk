@@ -32,14 +32,23 @@ public class ListVodTemplateResponseBody extends TeaModel {
     }
 
     public static class ListVodTemplateResponseBodyVodTemplateInfoList extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("IsDefault")
         public String isDefault;
 
-        @NameInMap("AppId")
-        public String appId;
+        @NameInMap("ModifyTime")
+        public String modifyTime;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("TemplateConfig")
+        public String templateConfig;
 
         @NameInMap("TemplateType")
         public String templateType;
@@ -47,18 +56,17 @@ public class ListVodTemplateResponseBody extends TeaModel {
         @NameInMap("VodTemplateId")
         public String vodTemplateId;
 
-        @NameInMap("TemplateConfig")
-        public String templateConfig;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("ModifyTime")
-        public String modifyTime;
-
         public static ListVodTemplateResponseBodyVodTemplateInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListVodTemplateResponseBodyVodTemplateInfoList self = new ListVodTemplateResponseBodyVodTemplateInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public ListVodTemplateResponseBodyVodTemplateInfoList setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public ListVodTemplateResponseBodyVodTemplateInfoList setCreationTime(String creationTime) {
@@ -77,12 +85,28 @@ public class ListVodTemplateResponseBody extends TeaModel {
             return this.isDefault;
         }
 
-        public ListVodTemplateResponseBodyVodTemplateInfoList setAppId(String appId) {
-            this.appId = appId;
+        public ListVodTemplateResponseBodyVodTemplateInfoList setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
             return this;
         }
-        public String getAppId() {
-            return this.appId;
+        public String getModifyTime() {
+            return this.modifyTime;
+        }
+
+        public ListVodTemplateResponseBodyVodTemplateInfoList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListVodTemplateResponseBodyVodTemplateInfoList setTemplateConfig(String templateConfig) {
+            this.templateConfig = templateConfig;
+            return this;
+        }
+        public String getTemplateConfig() {
+            return this.templateConfig;
         }
 
         public ListVodTemplateResponseBodyVodTemplateInfoList setTemplateType(String templateType) {
@@ -99,30 +123,6 @@ public class ListVodTemplateResponseBody extends TeaModel {
         }
         public String getVodTemplateId() {
             return this.vodTemplateId;
-        }
-
-        public ListVodTemplateResponseBodyVodTemplateInfoList setTemplateConfig(String templateConfig) {
-            this.templateConfig = templateConfig;
-            return this;
-        }
-        public String getTemplateConfig() {
-            return this.templateConfig;
-        }
-
-        public ListVodTemplateResponseBodyVodTemplateInfoList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListVodTemplateResponseBodyVodTemplateInfoList setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public String getModifyTime() {
-            return this.modifyTime;
         }
 
     }

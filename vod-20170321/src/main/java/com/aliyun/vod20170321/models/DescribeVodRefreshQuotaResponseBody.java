@@ -7,29 +7,29 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
     @NameInMap("BlockQuota")
     public String blockQuota;
 
+    @NameInMap("DirQuota")
+    public String dirQuota;
+
+    @NameInMap("DirRemain")
+    public String dirRemain;
+
+    @NameInMap("PreloadQuota")
+    public String preloadQuota;
+
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("blockRemain")
-    public String blockRemain;
-
-    @NameInMap("DirRemain")
-    public String dirRemain;
+    @NameInMap("UrlQuota")
+    public String urlQuota;
 
     @NameInMap("UrlRemain")
     public String urlRemain;
 
-    @NameInMap("DirQuota")
-    public String dirQuota;
-
-    @NameInMap("UrlQuota")
-    public String urlQuota;
-
-    @NameInMap("PreloadQuota")
-    public String preloadQuota;
+    @NameInMap("blockRemain")
+    public String blockRemain;
 
     public static DescribeVodRefreshQuotaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodRefreshQuotaResponseBody self = new DescribeVodRefreshQuotaResponseBody();
@@ -42,6 +42,30 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
     }
     public String getBlockQuota() {
         return this.blockQuota;
+    }
+
+    public DescribeVodRefreshQuotaResponseBody setDirQuota(String dirQuota) {
+        this.dirQuota = dirQuota;
+        return this;
+    }
+    public String getDirQuota() {
+        return this.dirQuota;
+    }
+
+    public DescribeVodRefreshQuotaResponseBody setDirRemain(String dirRemain) {
+        this.dirRemain = dirRemain;
+        return this;
+    }
+    public String getDirRemain() {
+        return this.dirRemain;
+    }
+
+    public DescribeVodRefreshQuotaResponseBody setPreloadQuota(String preloadQuota) {
+        this.preloadQuota = preloadQuota;
+        return this;
+    }
+    public String getPreloadQuota() {
+        return this.preloadQuota;
     }
 
     public DescribeVodRefreshQuotaResponseBody setPreloadRemain(String preloadRemain) {
@@ -60,20 +84,12 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeVodRefreshQuotaResponseBody setBlockRemain(String blockRemain) {
-        this.blockRemain = blockRemain;
+    public DescribeVodRefreshQuotaResponseBody setUrlQuota(String urlQuota) {
+        this.urlQuota = urlQuota;
         return this;
     }
-    public String getBlockRemain() {
-        return this.blockRemain;
-    }
-
-    public DescribeVodRefreshQuotaResponseBody setDirRemain(String dirRemain) {
-        this.dirRemain = dirRemain;
-        return this;
-    }
-    public String getDirRemain() {
-        return this.dirRemain;
+    public String getUrlQuota() {
+        return this.urlQuota;
     }
 
     public DescribeVodRefreshQuotaResponseBody setUrlRemain(String urlRemain) {
@@ -84,28 +100,12 @@ public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
         return this.urlRemain;
     }
 
-    public DescribeVodRefreshQuotaResponseBody setDirQuota(String dirQuota) {
-        this.dirQuota = dirQuota;
+    public DescribeVodRefreshQuotaResponseBody setBlockRemain(String blockRemain) {
+        this.blockRemain = blockRemain;
         return this;
     }
-    public String getDirQuota() {
-        return this.dirQuota;
-    }
-
-    public DescribeVodRefreshQuotaResponseBody setUrlQuota(String urlQuota) {
-        this.urlQuota = urlQuota;
-        return this;
-    }
-    public String getUrlQuota() {
-        return this.urlQuota;
-    }
-
-    public DescribeVodRefreshQuotaResponseBody setPreloadQuota(String preloadQuota) {
-        this.preloadQuota = preloadQuota;
-        return this;
-    }
-    public String getPreloadQuota() {
-        return this.preloadQuota;
+    public String getBlockRemain() {
+        return this.blockRemain;
     }
 
 }
