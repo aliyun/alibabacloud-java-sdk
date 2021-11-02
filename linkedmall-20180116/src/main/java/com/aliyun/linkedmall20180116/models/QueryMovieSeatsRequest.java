@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryMovieSeatsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ExtJson")
     public String extJson;
 
     @NameInMap("ScheduleId")
-    @Validation(required = true)
     public Long scheduleId;
 
     public static QueryMovieSeatsRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -7,25 +7,27 @@ public class StartUserGameRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
+    // 活动ID
     @NameInMap("ActivityId")
-    @Validation(required = true)
     public String activityId;
 
+    // 业务ID
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
+    // 玩法ID
     @NameInMap("GameId")
-    @Validation(required = true)
     public String gameId;
 
+    // 路线ID
     @NameInMap("RouteId")
     public String routeId;
 
+    // 业务方用户ID
     @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
     public String thirdPartyUserId;
 
+    // 用户APP
     @NameInMap("UserApp")
     public String userApp;
 

@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyOrderDeliveryAddressRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("DeliveryAddress")
-    @Validation(required = true)
     public String deliveryAddress;
 
     @NameInMap("ExtJson")
     public String extJson;
 
     @NameInMap("LmOrderId")
-    @Validation(required = true)
     public Long lmOrderId;
 
     public static ModifyOrderDeliveryAddressRequest build(java.util.Map<String, ?> map) throws Exception {

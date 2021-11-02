@@ -4,45 +4,33 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class AddItemToSubBizsResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public AddItemToSubBizsResponseBody body;
 
     public static AddItemToSubBizsResponse build(java.util.Map<String, ?> map) throws Exception {
         AddItemToSubBizsResponse self = new AddItemToSubBizsResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddItemToSubBizsResponse setCode(String code) {
-        this.code = code;
+    public AddItemToSubBizsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddItemToSubBizsResponse setMessage(String message) {
-        this.message = message;
+    public AddItemToSubBizsResponse setBody(AddItemToSubBizsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public AddItemToSubBizsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public AddItemToSubBizsResponseBody getBody() {
+        return this.body;
     }
 
 }

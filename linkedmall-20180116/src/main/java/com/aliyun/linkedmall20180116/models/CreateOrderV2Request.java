@@ -8,11 +8,9 @@ public class CreateOrderV2Request extends TeaModel {
     public String accountType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("BuyerMessageMap")
@@ -37,7 +35,6 @@ public class CreateOrderV2Request extends TeaModel {
     public Long orderExpireTime;
 
     @NameInMap("OutTradeId")
-    @Validation(required = true)
     public String outTradeId;
 
     @NameInMap("Quantity")

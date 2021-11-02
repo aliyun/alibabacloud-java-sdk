@@ -8,23 +8,18 @@ public class InitApplyRefundRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("BizClaimType")
-    @Validation(required = true)
     public Integer bizClaimType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("GoodsStatus")
-    @Validation(required = true)
     public Integer goodsStatus;
 
     @NameInMap("SubLmOrderId")
-    @Validation(required = true)
     public String subLmOrderId;
 
     @NameInMap("ThirdPartyUserId")

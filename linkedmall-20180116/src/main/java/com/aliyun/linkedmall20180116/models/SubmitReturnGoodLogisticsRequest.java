@@ -8,27 +8,21 @@ public class SubmitReturnGoodLogisticsRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("CpCode")
-    @Validation(required = true)
     public String cpCode;
 
     @NameInMap("DisputeId")
-    @Validation(required = true)
     public Long disputeId;
 
     @NameInMap("LogisticsNo")
-    @Validation(required = true)
     public String logisticsNo;
 
     @NameInMap("SubLmOrderId")
-    @Validation(required = true)
     public String subLmOrderId;
 
     @NameInMap("ThirdPartyUserId")

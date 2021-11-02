@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class QueryItemInventoryRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("DivisionCode")
-    @Validation(required = true)
     public String divisionCode;
 
     @NameInMap("Ip")
     public String ip;
 
     @NameInMap("ItemList")
-    @Validation(required = true)
     public java.util.List<QueryItemInventoryRequestItemList> itemList;
 
     public static QueryItemInventoryRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -64,7 +61,7 @@ public class QueryItemInventoryRequest extends TeaModel {
         public String lmItemId;
 
         @NameInMap("SkuIdList")
-        public java.util.List<Long> skuIdList;
+        public java.util.List<Integer> skuIdList;
 
         public static QueryItemInventoryRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             QueryItemInventoryRequestItemList self = new QueryItemInventoryRequestItemList();
@@ -87,11 +84,11 @@ public class QueryItemInventoryRequest extends TeaModel {
             return this.lmItemId;
         }
 
-        public QueryItemInventoryRequestItemList setSkuIdList(java.util.List<Long> skuIdList) {
+        public QueryItemInventoryRequestItemList setSkuIdList(java.util.List<Integer> skuIdList) {
             this.skuIdList = skuIdList;
             return this;
         }
-        public java.util.List<Long> getSkuIdList() {
+        public java.util.List<Integer> getSkuIdList() {
             return this.skuIdList;
         }
 

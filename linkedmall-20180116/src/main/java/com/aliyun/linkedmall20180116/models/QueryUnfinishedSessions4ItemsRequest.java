@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryUnfinishedSessions4ItemsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ItemIds")

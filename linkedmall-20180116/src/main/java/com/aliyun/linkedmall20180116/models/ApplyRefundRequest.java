@@ -14,19 +14,15 @@ public class ApplyRefundRequest extends TeaModel {
     public Integer applyRefundCount;
 
     @NameInMap("ApplyRefundFee")
-    @Validation(required = true)
     public Long applyRefundFee;
 
     @NameInMap("BizClaimType")
-    @Validation(required = true)
     public Integer bizClaimType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("GoodsStatus")
@@ -39,7 +35,6 @@ public class ApplyRefundRequest extends TeaModel {
     public java.util.List<ApplyRefundRequestLeavePictureList> leavePictureList;
 
     @NameInMap("SubLmOrderId")
-    @Validation(required = true)
     public String subLmOrderId;
 
     @NameInMap("ThirdPartyUserId")

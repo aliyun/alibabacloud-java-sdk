@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteBizItemsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ItemIdList")
-    @Validation(required = true)
     public java.util.List<Long> itemIdList;
 
     @NameInMap("SubBizId")

@@ -11,25 +11,21 @@ public class ListUserGameProcessRequest extends TeaModel {
     public String activityId;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("GameId")
     public String gameId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Status")
     public String status;
 
     @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
     public String thirdPartyUserId;
 
     @NameInMap("Type")

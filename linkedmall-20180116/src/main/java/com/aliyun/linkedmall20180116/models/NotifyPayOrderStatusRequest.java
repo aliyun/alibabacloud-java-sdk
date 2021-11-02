@@ -8,7 +8,6 @@ public class NotifyPayOrderStatusRequest extends TeaModel {
     public Long amount;
 
     @NameInMap("ChannelId")
-    @Validation(required = true)
     public String channelId;
 
     @NameInMap("OperationDate")
@@ -18,7 +17,6 @@ public class NotifyPayOrderStatusRequest extends TeaModel {
     public String payTypes;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     public static NotifyPayOrderStatusRequest build(java.util.Map<String, ?> map) throws Exception {

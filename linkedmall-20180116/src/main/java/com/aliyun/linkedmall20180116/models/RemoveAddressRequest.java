@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RemoveAddressRequest extends TeaModel {
     @NameInMap("AddressInfo")
-    @Validation(required = true)
     public String addressInfo;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ThirdPartyUserId")

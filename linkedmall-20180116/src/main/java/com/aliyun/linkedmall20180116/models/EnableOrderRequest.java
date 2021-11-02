@@ -8,11 +8,9 @@ public class EnableOrderRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("ExtJson")
@@ -22,7 +20,6 @@ public class EnableOrderRequest extends TeaModel {
     public String lmOrderId;
 
     @NameInMap("OutTradeId")
-    @Validation(required = true)
     public String outTradeId;
 
     @NameInMap("ThirdPartyUserId")

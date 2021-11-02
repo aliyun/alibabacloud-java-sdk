@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class ExecuteNodeRequest extends TeaModel {
     @NameInMap("NodeId")
-    @Validation(required = true)
     public String nodeId;
 
     @NameInMap("NodeInstanceId")
     public String nodeInstanceId;
 
     @NameInMap("ProcessId")
-    @Validation(required = true)
     public String processId;
 
     @NameInMap("ProcessInstanceId")

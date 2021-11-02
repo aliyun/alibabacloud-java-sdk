@@ -8,15 +8,12 @@ public class QueryUserGameProcessRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ProcessId")
-    @Validation(required = true)
     public String processId;
 
     @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
     public String thirdPartyUserId;
 
     public static QueryUserGameProcessRequest build(java.util.Map<String, ?> map) throws Exception {

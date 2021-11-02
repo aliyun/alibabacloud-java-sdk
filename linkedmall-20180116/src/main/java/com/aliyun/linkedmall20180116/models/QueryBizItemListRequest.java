@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryBizItemListRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("CategoryId")
@@ -18,11 +17,9 @@ public class QueryBizItemListRequest extends TeaModel {
     public java.util.Map<String, ?> lmItemIds;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("SubBizId")

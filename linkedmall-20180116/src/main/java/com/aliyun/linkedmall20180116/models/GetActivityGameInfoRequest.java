@@ -8,19 +8,15 @@ public class GetActivityGameInfoRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("ActivityId")
-    @Validation(required = true)
     public String activityId;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("GameId")
-    @Validation(required = true)
     public String gameId;
 
     @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
     public String thirdPartyUserId;
 
     public static GetActivityGameInfoRequest build(java.util.Map<String, ?> map) throws Exception {

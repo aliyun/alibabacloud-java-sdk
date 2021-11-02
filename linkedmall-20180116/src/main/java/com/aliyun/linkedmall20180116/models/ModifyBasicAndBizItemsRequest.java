@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyBasicAndBizItemsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ItemList")
-    @Validation(required = true)
     public java.util.List<ModifyBasicAndBizItemsRequestItemList> itemList;
 
     @NameInMap("SubBizId")

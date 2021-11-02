@@ -4,34 +4,39 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GrantPromotionToUserRequest extends TeaModel {
+    // 业务ID
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
+    // 过期时间
     @NameInMap("ExpireSeconds")
     public Long expireSeconds;
 
+    // 发放模式
     @NameInMap("GrantMode")
     public String grantMode;
 
+    // 发放方式
     @NameInMap("GrantWay")
     public String grantWay;
 
+    // 幂等ID
     @NameInMap("IdempotentId")
-    @Validation(required = true)
     public String idempotentId;
 
+    // 优惠元数据ID
     @NameInMap("PromotionId")
-    @Validation(required = true)
     public String promotionId;
 
+    // 安全码
     @NameInMap("SecurityCode")
     public String securityCode;
 
+    // 用户ID
     @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
     public String thirdPartyUserId;
 
+    // 扩展信息
     @NameInMap("body")
     public java.util.Map<String, ?> body;
 
