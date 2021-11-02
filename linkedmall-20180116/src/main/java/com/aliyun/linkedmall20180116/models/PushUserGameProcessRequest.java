@@ -8,19 +8,15 @@ public class PushUserGameProcessRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("CurrentStepId")
-    @Validation(required = true)
     public String currentStepId;
 
     @NameInMap("ProcessId")
-    @Validation(required = true)
     public String processId;
 
     @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
     public String thirdPartyUserId;
 
     @NameInMap("body")

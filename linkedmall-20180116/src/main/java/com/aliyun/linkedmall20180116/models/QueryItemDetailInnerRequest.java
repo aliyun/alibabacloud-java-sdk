@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryItemDetailInnerRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
@@ -18,7 +17,6 @@ public class QueryItemDetailInnerRequest extends TeaModel {
     public String ip;
 
     @NameInMap("ItemId")
-    @Validation(required = true)
     public Long itemId;
 
     @NameInMap("LmItemId")

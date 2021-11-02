@@ -8,18 +8,15 @@ public class CreateSettleConfirmRequest extends TeaModel {
     public String extInfo;
 
     @NameInMap("MerchantId")
-    @Validation(required = true)
     public String merchantId;
 
     @NameInMap("OutRequestNo")
-    @Validation(required = true)
     public String outRequestNo;
 
     @NameInMap("OutTradeNo")
     public String outTradeNo;
 
     @NameInMap("SettleInfo")
-    @Validation(required = true)
     public String settleInfo;
 
     @NameInMap("TradeNo")

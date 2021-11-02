@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class QueryActivityItemsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("LmActivityId")
-    @Validation(required = true)
     public Long lmActivityId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static QueryActivityItemsRequest build(java.util.Map<String, ?> map) throws Exception {

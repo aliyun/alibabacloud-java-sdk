@@ -8,7 +8,6 @@ public class NotifyWithholdFundRequest extends TeaModel {
     public Long amount;
 
     @NameInMap("ChannelId")
-    @Validation(required = true)
     public String channelId;
 
     @NameInMap("OperationDate")
@@ -18,11 +17,9 @@ public class NotifyWithholdFundRequest extends TeaModel {
     public String payTypes;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     @NameInMap("TenantOrderId")
-    @Validation(required = true)
     public String tenantOrderId;
 
     public static NotifyWithholdFundRequest build(java.util.Map<String, ?> map) throws Exception {

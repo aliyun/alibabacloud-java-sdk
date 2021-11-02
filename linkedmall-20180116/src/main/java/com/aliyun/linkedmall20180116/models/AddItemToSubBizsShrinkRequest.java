@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class AddItemToSubBizsShrinkRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ItemId")

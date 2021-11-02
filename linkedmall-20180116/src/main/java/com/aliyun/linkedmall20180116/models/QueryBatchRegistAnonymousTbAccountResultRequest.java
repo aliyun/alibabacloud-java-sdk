@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryBatchRegistAnonymousTbAccountResultRequest extends TeaModel {
     @NameInMap("BatchId")
-    @Validation(required = true)
     public String batchId;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     public static QueryBatchRegistAnonymousTbAccountResultRequest build(java.util.Map<String, ?> map) throws Exception {

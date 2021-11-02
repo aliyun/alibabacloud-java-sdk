@@ -8,22 +8,18 @@ public class QueryOrderListRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("FilterOption")
     public String filterOption;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Long pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Long pageSize;
 
     @NameInMap("ThirdPartyUserId")

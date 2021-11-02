@@ -32,7 +32,6 @@ public class QueryStatementsRequest extends TeaModel {
     public String startTime;
 
     @NameInMap("TenantId")
-    @Validation(required = true)
     public String tenantId;
 
     public static QueryStatementsRequest build(java.util.Map<String, ?> map) throws Exception {

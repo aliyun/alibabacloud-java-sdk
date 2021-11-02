@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetUserInfoRequest extends TeaModel {
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("QueryJson")
     public String queryJson;
 
     @NameInMap("UserFlag")
-    @Validation(required = true)
     public String userFlag;
 
     public static GetUserInfoRequest build(java.util.Map<String, ?> map) throws Exception {

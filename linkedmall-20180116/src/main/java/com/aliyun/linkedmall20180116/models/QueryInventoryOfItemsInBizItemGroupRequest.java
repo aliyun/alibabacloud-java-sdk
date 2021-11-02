@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryInventoryOfItemsInBizItemGroupRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("DivisionCode")
@@ -18,7 +17,6 @@ public class QueryInventoryOfItemsInBizItemGroupRequest extends TeaModel {
     public java.util.Map<String, ?> lmItemIds;
 
     @NameInMap("SubBizId")
-    @Validation(required = true)
     public String subBizId;
 
     public static QueryInventoryOfItemsInBizItemGroupRequest build(java.util.Map<String, ?> map) throws Exception {

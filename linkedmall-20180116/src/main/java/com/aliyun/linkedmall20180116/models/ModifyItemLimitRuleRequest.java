@@ -8,7 +8,6 @@ public class ModifyItemLimitRuleRequest extends TeaModel {
     public Long beginTime;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("EndTime")
@@ -24,7 +23,6 @@ public class ModifyItemLimitRuleRequest extends TeaModel {
     public String lmItemId;
 
     @NameInMap("RuleId")
-    @Validation(required = true)
     public Long ruleId;
 
     @NameInMap("RuleType")

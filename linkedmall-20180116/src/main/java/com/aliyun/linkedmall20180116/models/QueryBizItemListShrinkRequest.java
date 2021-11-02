@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryBizItemListShrinkRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("CategoryId")
@@ -18,11 +17,9 @@ public class QueryBizItemListShrinkRequest extends TeaModel {
     public String lmItemIdsShrink;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("SubBizId")

@@ -8,7 +8,6 @@ public class RenderH5OrderRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")

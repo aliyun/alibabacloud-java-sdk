@@ -8,15 +8,12 @@ public class QueryRefundApplicationDetailRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("SubLmOrderId")
-    @Validation(required = true)
     public String subLmOrderId;
 
     @NameInMap("ThirdPartyUserId")

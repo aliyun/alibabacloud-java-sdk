@@ -8,7 +8,6 @@ public class QueryAddressDetailRequest extends TeaModel {
     public String addressInfo;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ThirdPartyUserId")

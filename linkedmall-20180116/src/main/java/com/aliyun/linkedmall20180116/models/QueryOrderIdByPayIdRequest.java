@@ -8,15 +8,12 @@ public class QueryOrderIdByPayIdRequest extends TeaModel {
     public String accountType;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("PaymentId")
-    @Validation(required = true)
     public String paymentId;
 
     @NameInMap("ThirdPartyUserId")

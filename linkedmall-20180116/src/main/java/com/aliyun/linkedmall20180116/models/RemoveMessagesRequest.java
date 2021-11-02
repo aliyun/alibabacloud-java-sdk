@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class RemoveMessagesRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ExtJson")
     public String extJson;
 
     @NameInMap("MessageIds")
-    @Validation(required = true)
     public String messageIds;
 
     public static RemoveMessagesRequest build(java.util.Map<String, ?> map) throws Exception {

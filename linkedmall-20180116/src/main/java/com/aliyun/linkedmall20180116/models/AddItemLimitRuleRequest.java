@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddItemLimitRuleRequest extends TeaModel {
     @NameInMap("BeginTime")
-    @Validation(required = true)
     public Long beginTime;
 
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("ItemId")
@@ -26,14 +23,12 @@ public class AddItemLimitRuleRequest extends TeaModel {
     public String lmItemId;
 
     @NameInMap("RuleType")
-    @Validation(required = true)
     public Integer ruleType;
 
     @NameInMap("SubBizCode")
     public String subBizCode;
 
     @NameInMap("UpperNum")
-    @Validation(required = true)
     public Integer upperNum;
 
     public static AddItemLimitRuleRequest build(java.util.Map<String, ?> map) throws Exception {
