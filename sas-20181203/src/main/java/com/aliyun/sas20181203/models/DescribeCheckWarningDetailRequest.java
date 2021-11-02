@@ -4,26 +4,26 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningDetailRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("CheckWarningId")
+    public Long checkWarningId;
 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("CheckWarningId")
-    public Long checkWarningId;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeCheckWarningDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCheckWarningDetailRequest self = new DescribeCheckWarningDetailRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCheckWarningDetailRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeCheckWarningDetailRequest setCheckWarningId(Long checkWarningId) {
+        this.checkWarningId = checkWarningId;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Long getCheckWarningId() {
+        return this.checkWarningId;
     }
 
     public DescribeCheckWarningDetailRequest setLang(String lang) {
@@ -34,12 +34,12 @@ public class DescribeCheckWarningDetailRequest extends TeaModel {
         return this.lang;
     }
 
-    public DescribeCheckWarningDetailRequest setCheckWarningId(Long checkWarningId) {
-        this.checkWarningId = checkWarningId;
+    public DescribeCheckWarningDetailRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public Long getCheckWarningId() {
-        return this.checkWarningId;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

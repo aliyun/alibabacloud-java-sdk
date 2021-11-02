@@ -7,17 +7,17 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("GroupedVulItems")
+    public java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> groupedVulItems;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("GroupedVulItems")
-    public java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> groupedVulItems;
 
     public static DescribeImageGroupedVulListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageGroupedVulListResponseBody self = new DescribeImageGroupedVulListResponseBody();
@@ -32,12 +32,12 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeImageGroupedVulListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeImageGroupedVulListResponseBody setGroupedVulItems(java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> groupedVulItems) {
+        this.groupedVulItems = groupedVulItems;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> getGroupedVulItems() {
+        return this.groupedVulItems;
     }
 
     public DescribeImageGroupedVulListResponseBody setPageSize(Integer pageSize) {
@@ -48,6 +48,14 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeImageGroupedVulListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeImageGroupedVulListResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,23 +64,12 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeImageGroupedVulListResponseBody setGroupedVulItems(java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> groupedVulItems) {
-        this.groupedVulItems = groupedVulItems;
-        return this;
-    }
-    public java.util.List<DescribeImageGroupedVulListResponseBodyGroupedVulItems> getGroupedVulItems() {
-        return this.groupedVulItems;
-    }
-
     public static class DescribeImageGroupedVulListResponseBodyGroupedVulItems extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("AliasName")
+        public String aliasName;
 
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("NntfCount")
-        public Integer nntfCount;
+        @NameInMap("AsapCount")
+        public Integer asapCount;
 
         @NameInMap("GmtLast")
         public Long gmtLast;
@@ -80,48 +77,43 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
-        @NameInMap("Tags")
-        public String tags;
-
         @NameInMap("LaterCount")
         public Integer laterCount;
-
-        @NameInMap("AliasName")
-        public String aliasName;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("AsapCount")
-        public Integer asapCount;
+        @NameInMap("NntfCount")
+        public Integer nntfCount;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeImageGroupedVulListResponseBodyGroupedVulItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageGroupedVulListResponseBodyGroupedVulItems self = new DescribeImageGroupedVulListResponseBodyGroupedVulItems();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setStatus(Integer status) {
-            this.status = status;
+        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setAliasName(String aliasName) {
+            this.aliasName = aliasName;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public String getAliasName() {
+            return this.aliasName;
         }
 
-        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setType(String type) {
-            this.type = type;
+        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setAsapCount(Integer asapCount) {
+            this.asapCount = asapCount;
             return this;
         }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setNntfCount(Integer nntfCount) {
-            this.nntfCount = nntfCount;
-            return this;
-        }
-        public Integer getNntfCount() {
-            return this.nntfCount;
+        public Integer getAsapCount() {
+            return this.asapCount;
         }
 
         public DescribeImageGroupedVulListResponseBodyGroupedVulItems setGmtLast(Long gmtLast) {
@@ -140,28 +132,12 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             return this.lastScanTime;
         }
 
-        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
         public DescribeImageGroupedVulListResponseBodyGroupedVulItems setLaterCount(Integer laterCount) {
             this.laterCount = laterCount;
             return this;
         }
         public Integer getLaterCount() {
             return this.laterCount;
-        }
-
-        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setAliasName(String aliasName) {
-            this.aliasName = aliasName;
-            return this;
-        }
-        public String getAliasName() {
-            return this.aliasName;
         }
 
         public DescribeImageGroupedVulListResponseBodyGroupedVulItems setName(String name) {
@@ -172,12 +148,36 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setAsapCount(Integer asapCount) {
-            this.asapCount = asapCount;
+        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setNntfCount(Integer nntfCount) {
+            this.nntfCount = nntfCount;
             return this;
         }
-        public Integer getAsapCount() {
-            return this.asapCount;
+        public Integer getNntfCount() {
+            return this.nntfCount;
+        }
+
+        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public DescribeImageGroupedVulListResponseBodyGroupedVulItems setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

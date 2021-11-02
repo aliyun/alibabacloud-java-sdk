@@ -4,11 +4,8 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestorePlansRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("InstanceName")
     public String instanceName;
@@ -16,8 +13,11 @@ public class DescribeRestorePlansRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("Status")
     public String status;
@@ -27,20 +27,12 @@ public class DescribeRestorePlansRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeRestorePlansRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeRestorePlansRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeRestorePlansRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeRestorePlansRequest setInstanceName(String instanceName) {
@@ -59,12 +51,20 @@ public class DescribeRestorePlansRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeRestorePlansRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeRestorePlansRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeRestorePlansRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public DescribeRestorePlansRequest setStatus(String status) {

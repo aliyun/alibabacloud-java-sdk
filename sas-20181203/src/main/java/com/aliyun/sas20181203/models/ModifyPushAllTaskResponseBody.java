@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyPushAllTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PushTaskRsp")
     public ModifyPushAllTaskResponseBodyPushTaskRsp pushTaskRsp;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ModifyPushAllTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyPushAllTaskResponseBody self = new ModifyPushAllTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyPushAllTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ModifyPushAllTaskResponseBody setPushTaskRsp(ModifyPushAllTaskResponseBodyPushTaskRsp pushTaskRsp) {
@@ -31,48 +23,48 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
         return this.pushTaskRsp;
     }
 
-    public static class ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList extends TeaModel {
-        @NameInMap("Uuid")
-        public String uuid;
+    public ModifyPushAllTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList extends TeaModel {
         @NameInMap("GroupId")
         public Long groupId;
-
-        @NameInMap("Success")
-        public Boolean success;
-
-        @NameInMap("Region")
-        public String region;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("Online")
-        public Boolean online;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("Ip")
-        public String ip;
-
-        @NameInMap("OsVersion")
-        public String osVersion;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("Ip")
+        public String ip;
+
+        @NameInMap("Message")
+        public String message;
+
+        @NameInMap("Online")
+        public Boolean online;
+
+        @NameInMap("OsVersion")
+        public String osVersion;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("Uuid")
+        public String uuid;
+
         public static ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList build(java.util.Map<String, ?> map) throws Exception {
             ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList self = new ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
         public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setGroupId(Long groupId) {
@@ -83,20 +75,12 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setSuccess(Boolean success) {
-            this.success = success;
+        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
             return this;
         }
-        public Boolean getSuccess() {
-            return this.success;
-        }
-
-        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setInstanceName(String instanceName) {
@@ -107,12 +91,12 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setOnline(Boolean online) {
-            this.online = online;
+        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setIp(String ip) {
+            this.ip = ip;
             return this;
         }
-        public Boolean getOnline() {
-            return this.online;
+        public String getIp() {
+            return this.ip;
         }
 
         public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setMessage(String message) {
@@ -123,12 +107,12 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             return this.message;
         }
 
-        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setIp(String ip) {
-            this.ip = ip;
+        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setOnline(Boolean online) {
+            this.online = online;
             return this;
         }
-        public String getIp() {
-            return this.ip;
+        public Boolean getOnline() {
+            return this.online;
         }
 
         public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setOsVersion(String osVersion) {
@@ -139,12 +123,28 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
             return this.osVersion;
         }
 
-        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getRegion() {
+            return this.region;
+        }
+
+        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

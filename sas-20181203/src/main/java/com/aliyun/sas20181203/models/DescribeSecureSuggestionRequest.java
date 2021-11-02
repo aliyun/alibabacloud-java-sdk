@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecureSuggestionRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeSecureSuggestionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecureSuggestionRequest self = new DescribeSecureSuggestionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecureSuggestionRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeSecureSuggestionRequest setLang(String lang) {
@@ -29,6 +21,14 @@ public class DescribeSecureSuggestionRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeSecureSuggestionRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

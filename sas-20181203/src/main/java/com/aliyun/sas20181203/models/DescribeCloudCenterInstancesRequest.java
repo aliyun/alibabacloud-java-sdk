@@ -4,20 +4,8 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Criteria")
     public String criteria;
-
-    @NameInMap("MachineTypes")
-    public String machineTypes;
-
-    @NameInMap("LogicalExp")
-    public String logicalExp;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -25,17 +13,21 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     @NameInMap("Importance")
     public Integer importance;
 
+    @NameInMap("LogicalExp")
+    public String logicalExp;
+
+    @NameInMap("MachineTypes")
+    public String machineTypes;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeCloudCenterInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudCenterInstancesRequest self = new DescribeCloudCenterInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCloudCenterInstancesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DescribeCloudCenterInstancesRequest setCriteria(String criteria) {
@@ -44,30 +36,6 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     }
     public String getCriteria() {
         return this.criteria;
-    }
-
-    public DescribeCloudCenterInstancesRequest setMachineTypes(String machineTypes) {
-        this.machineTypes = machineTypes;
-        return this;
-    }
-    public String getMachineTypes() {
-        return this.machineTypes;
-    }
-
-    public DescribeCloudCenterInstancesRequest setLogicalExp(String logicalExp) {
-        this.logicalExp = logicalExp;
-        return this;
-    }
-    public String getLogicalExp() {
-        return this.logicalExp;
-    }
-
-    public DescribeCloudCenterInstancesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeCloudCenterInstancesRequest setCurrentPage(Integer currentPage) {
@@ -84,6 +52,38 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     }
     public Integer getImportance() {
         return this.importance;
+    }
+
+    public DescribeCloudCenterInstancesRequest setLogicalExp(String logicalExp) {
+        this.logicalExp = logicalExp;
+        return this;
+    }
+    public String getLogicalExp() {
+        return this.logicalExp;
+    }
+
+    public DescribeCloudCenterInstancesRequest setMachineTypes(String machineTypes) {
+        this.machineTypes = machineTypes;
+        return this;
+    }
+    public String getMachineTypes() {
+        return this.machineTypes;
+    }
+
+    public DescribeCloudCenterInstancesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeCloudCenterInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

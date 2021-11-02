@@ -4,17 +4,8 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebLockUpdateConfigRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("Id")
-    public Integer id;
-
-    @NameInMap("Uuid")
-    public String uuid;
+    @NameInMap("DefenceMode")
+    public String defenceMode;
 
     @NameInMap("Dir")
     public String dir;
@@ -22,8 +13,23 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     @NameInMap("ExclusiveDir")
     public String exclusiveDir;
 
+    @NameInMap("ExclusiveFile")
+    public String exclusiveFile;
+
     @NameInMap("ExclusiveFileType")
     public String exclusiveFileType;
+
+    @NameInMap("Id")
+    public Integer id;
+
+    @NameInMap("InclusiveFile")
+    public String inclusiveFile;
+
+    @NameInMap("InclusiveFileType")
+    public String inclusiveFileType;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("LocalBackupDir")
     public String localBackupDir;
@@ -31,53 +37,23 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
     @NameInMap("Mode")
     public String mode;
 
-    @NameInMap("InclusiveFileType")
-    public String inclusiveFileType;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
-    @NameInMap("ExclusiveFile")
-    public String exclusiveFile;
-
-    @NameInMap("InclusiveFile")
-    public String inclusiveFile;
-
-    @NameInMap("DefenceMode")
-    public String defenceMode;
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static ModifyWebLockUpdateConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyWebLockUpdateConfigRequest self = new ModifyWebLockUpdateConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyWebLockUpdateConfigRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public ModifyWebLockUpdateConfigRequest setDefenceMode(String defenceMode) {
+        this.defenceMode = defenceMode;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyWebLockUpdateConfigRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public ModifyWebLockUpdateConfigRequest setId(Integer id) {
-        this.id = id;
-        return this;
-    }
-    public Integer getId() {
-        return this.id;
-    }
-
-    public ModifyWebLockUpdateConfigRequest setUuid(String uuid) {
-        this.uuid = uuid;
-        return this;
-    }
-    public String getUuid() {
-        return this.uuid;
+    public String getDefenceMode() {
+        return this.defenceMode;
     }
 
     public ModifyWebLockUpdateConfigRequest setDir(String dir) {
@@ -96,12 +72,52 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
         return this.exclusiveDir;
     }
 
+    public ModifyWebLockUpdateConfigRequest setExclusiveFile(String exclusiveFile) {
+        this.exclusiveFile = exclusiveFile;
+        return this;
+    }
+    public String getExclusiveFile() {
+        return this.exclusiveFile;
+    }
+
     public ModifyWebLockUpdateConfigRequest setExclusiveFileType(String exclusiveFileType) {
         this.exclusiveFileType = exclusiveFileType;
         return this;
     }
     public String getExclusiveFileType() {
         return this.exclusiveFileType;
+    }
+
+    public ModifyWebLockUpdateConfigRequest setId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    public Integer getId() {
+        return this.id;
+    }
+
+    public ModifyWebLockUpdateConfigRequest setInclusiveFile(String inclusiveFile) {
+        this.inclusiveFile = inclusiveFile;
+        return this;
+    }
+    public String getInclusiveFile() {
+        return this.inclusiveFile;
+    }
+
+    public ModifyWebLockUpdateConfigRequest setInclusiveFileType(String inclusiveFileType) {
+        this.inclusiveFileType = inclusiveFileType;
+        return this;
+    }
+    public String getInclusiveFileType() {
+        return this.inclusiveFileType;
+    }
+
+    public ModifyWebLockUpdateConfigRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ModifyWebLockUpdateConfigRequest setLocalBackupDir(String localBackupDir) {
@@ -120,36 +136,20 @@ public class ModifyWebLockUpdateConfigRequest extends TeaModel {
         return this.mode;
     }
 
-    public ModifyWebLockUpdateConfigRequest setInclusiveFileType(String inclusiveFileType) {
-        this.inclusiveFileType = inclusiveFileType;
+    public ModifyWebLockUpdateConfigRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getInclusiveFileType() {
-        return this.inclusiveFileType;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
-    public ModifyWebLockUpdateConfigRequest setExclusiveFile(String exclusiveFile) {
-        this.exclusiveFile = exclusiveFile;
+    public ModifyWebLockUpdateConfigRequest setUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
-    public String getExclusiveFile() {
-        return this.exclusiveFile;
-    }
-
-    public ModifyWebLockUpdateConfigRequest setInclusiveFile(String inclusiveFile) {
-        this.inclusiveFile = inclusiveFile;
-        return this;
-    }
-    public String getInclusiveFile() {
-        return this.inclusiveFile;
-    }
-
-    public ModifyWebLockUpdateConfigRequest setDefenceMode(String defenceMode) {
-        this.defenceMode = defenceMode;
-        return this;
-    }
-    public String getDefenceMode() {
-        return this.defenceMode;
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

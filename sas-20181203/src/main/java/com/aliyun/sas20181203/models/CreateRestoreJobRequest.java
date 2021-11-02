@@ -4,49 +4,41 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateRestoreJobRequest extends TeaModel {
-    @NameInMap("Uuid")
-    public String uuid;
-
-    @NameInMap("SnapshotId")
-    public String snapshotId;
+    @NameInMap("Includes")
+    public String includes;
 
     @NameInMap("SnapshotHash")
     public String snapshotHash;
 
-    @NameInMap("Target")
-    public String target;
-
-    @NameInMap("SourceType")
-    public String sourceType;
-
-    @NameInMap("VaultId")
-    public String vaultId;
+    @NameInMap("SnapshotId")
+    public String snapshotId;
 
     @NameInMap("SnapshotVersion")
     public String snapshotVersion;
 
-    @NameInMap("Includes")
-    public String includes;
+    @NameInMap("SourceType")
+    public String sourceType;
+
+    @NameInMap("Target")
+    public String target;
+
+    @NameInMap("Uuid")
+    public String uuid;
+
+    @NameInMap("VaultId")
+    public String vaultId;
 
     public static CreateRestoreJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRestoreJobRequest self = new CreateRestoreJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateRestoreJobRequest setUuid(String uuid) {
-        this.uuid = uuid;
+    public CreateRestoreJobRequest setIncludes(String includes) {
+        this.includes = includes;
         return this;
     }
-    public String getUuid() {
-        return this.uuid;
-    }
-
-    public CreateRestoreJobRequest setSnapshotId(String snapshotId) {
-        this.snapshotId = snapshotId;
-        return this;
-    }
-    public String getSnapshotId() {
-        return this.snapshotId;
+    public String getIncludes() {
+        return this.includes;
     }
 
     public CreateRestoreJobRequest setSnapshotHash(String snapshotHash) {
@@ -57,28 +49,12 @@ public class CreateRestoreJobRequest extends TeaModel {
         return this.snapshotHash;
     }
 
-    public CreateRestoreJobRequest setTarget(String target) {
-        this.target = target;
+    public CreateRestoreJobRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
         return this;
     }
-    public String getTarget() {
-        return this.target;
-    }
-
-    public CreateRestoreJobRequest setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-        return this;
-    }
-    public String getSourceType() {
-        return this.sourceType;
-    }
-
-    public CreateRestoreJobRequest setVaultId(String vaultId) {
-        this.vaultId = vaultId;
-        return this;
-    }
-    public String getVaultId() {
-        return this.vaultId;
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
     public CreateRestoreJobRequest setSnapshotVersion(String snapshotVersion) {
@@ -89,12 +65,36 @@ public class CreateRestoreJobRequest extends TeaModel {
         return this.snapshotVersion;
     }
 
-    public CreateRestoreJobRequest setIncludes(String includes) {
-        this.includes = includes;
+    public CreateRestoreJobRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
         return this;
     }
-    public String getIncludes() {
-        return this.includes;
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    public CreateRestoreJobRequest setTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    public String getTarget() {
+        return this.target;
+    }
+
+    public CreateRestoreJobRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
+    }
+
+    public CreateRestoreJobRequest setVaultId(String vaultId) {
+        this.vaultId = vaultId;
+        return this;
+    }
+    public String getVaultId() {
+        return this.vaultId;
     }
 
 }

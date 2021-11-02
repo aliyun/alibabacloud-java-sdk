@@ -4,8 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
-    @NameInMap("Uuid")
-    public String uuid;
+    @NameInMap("DownloadUrl")
+    public String downloadUrl;
+
+    @NameInMap("Md5")
+    public String md5;
+
+    @NameInMap("Path")
+    public String path;
 
     @NameInMap("QuaraFileId")
     public Integer quaraFileId;
@@ -13,29 +19,39 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DownloadUrl")
-    public String downloadUrl;
-
-    @NameInMap("Path")
-    public String path;
-
-    @NameInMap("Md5")
-    public String md5;
-
     @NameInMap("Tag")
     public String tag;
+
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static DescribeQuaraFileDownloadInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeQuaraFileDownloadInfoResponseBody self = new DescribeQuaraFileDownloadInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeQuaraFileDownloadInfoResponseBody setUuid(String uuid) {
-        this.uuid = uuid;
+    public DescribeQuaraFileDownloadInfoResponseBody setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
         return this;
     }
-    public String getUuid() {
-        return this.uuid;
+    public String getDownloadUrl() {
+        return this.downloadUrl;
+    }
+
+    public DescribeQuaraFileDownloadInfoResponseBody setMd5(String md5) {
+        this.md5 = md5;
+        return this;
+    }
+    public String getMd5() {
+        return this.md5;
+    }
+
+    public DescribeQuaraFileDownloadInfoResponseBody setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
     }
 
     public DescribeQuaraFileDownloadInfoResponseBody setQuaraFileId(Integer quaraFileId) {
@@ -54,36 +70,20 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeQuaraFileDownloadInfoResponseBody setDownloadUrl(String downloadUrl) {
-        this.downloadUrl = downloadUrl;
-        return this;
-    }
-    public String getDownloadUrl() {
-        return this.downloadUrl;
-    }
-
-    public DescribeQuaraFileDownloadInfoResponseBody setPath(String path) {
-        this.path = path;
-        return this;
-    }
-    public String getPath() {
-        return this.path;
-    }
-
-    public DescribeQuaraFileDownloadInfoResponseBody setMd5(String md5) {
-        this.md5 = md5;
-        return this;
-    }
-    public String getMd5() {
-        return this.md5;
-    }
-
     public DescribeQuaraFileDownloadInfoResponseBody setTag(String tag) {
         this.tag = tag;
         return this;
     }
     public String getTag() {
         return this.tag;
+    }
+
+    public DescribeQuaraFileDownloadInfoResponseBody setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

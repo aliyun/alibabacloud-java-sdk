@@ -4,8 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupFilesRequest extends TeaModel {
-    @NameInMap("Uuid")
-    public String uuid;
+    @NameInMap("CurrentPage")
+    public String currentPage;
+
+    @NameInMap("PageSize")
+    public String pageSize;
 
     @NameInMap("Path")
     public String path;
@@ -13,23 +16,28 @@ public class DescribeBackupFilesRequest extends TeaModel {
     @NameInMap("SnapshotHash")
     public String snapshotHash;
 
-    @NameInMap("CurrentPage")
-    public String currentPage;
-
-    @NameInMap("PageSize")
-    public String pageSize;
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static DescribeBackupFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupFilesRequest self = new DescribeBackupFilesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupFilesRequest setUuid(String uuid) {
-        this.uuid = uuid;
+    public DescribeBackupFilesRequest setCurrentPage(String currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getUuid() {
-        return this.uuid;
+    public String getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeBackupFilesRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeBackupFilesRequest setPath(String path) {
@@ -48,20 +56,12 @@ public class DescribeBackupFilesRequest extends TeaModel {
         return this.snapshotHash;
     }
 
-    public DescribeBackupFilesRequest setCurrentPage(String currentPage) {
-        this.currentPage = currentPage;
+    public DescribeBackupFilesRequest setUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
-    public String getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public DescribeBackupFilesRequest setPageSize(String pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public String getPageSize() {
-        return this.pageSize;
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

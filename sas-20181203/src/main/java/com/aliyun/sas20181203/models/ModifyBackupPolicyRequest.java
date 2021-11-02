@@ -13,11 +13,11 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("Policy")
     public java.util.Map<String, ?> policy;
 
-    @NameInMap("PolicyVersion")
-    public String policyVersion;
-
     @NameInMap("PolicyRegionId")
     public String policyRegionId;
+
+    @NameInMap("PolicyVersion")
+    public String policyVersion;
 
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
@@ -51,20 +51,20 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.policy;
     }
 
-    public ModifyBackupPolicyRequest setPolicyVersion(String policyVersion) {
-        this.policyVersion = policyVersion;
-        return this;
-    }
-    public String getPolicyVersion() {
-        return this.policyVersion;
-    }
-
     public ModifyBackupPolicyRequest setPolicyRegionId(String policyRegionId) {
         this.policyRegionId = policyRegionId;
         return this;
     }
     public String getPolicyRegionId() {
         return this.policyRegionId;
+    }
+
+    public ModifyBackupPolicyRequest setPolicyVersion(String policyVersion) {
+        this.policyVersion = policyVersion;
+        return this;
+    }
+    public String getPolicyVersion() {
+        return this.policyVersion;
     }
 
     public ModifyBackupPolicyRequest setUuidList(java.util.List<String> uuidList) {

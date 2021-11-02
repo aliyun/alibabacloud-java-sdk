@@ -7,11 +7,11 @@ public class DescribeBackupMachineStatusRequest extends TeaModel {
     @NameInMap("PolicyId")
     public Long policyId;
 
-    @NameInMap("Uuid")
-    public String uuid;
-
     @NameInMap("PolicyVersion")
     public String policyVersion;
+
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static DescribeBackupMachineStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupMachineStatusRequest self = new DescribeBackupMachineStatusRequest();
@@ -26,20 +26,20 @@ public class DescribeBackupMachineStatusRequest extends TeaModel {
         return this.policyId;
     }
 
-    public DescribeBackupMachineStatusRequest setUuid(String uuid) {
-        this.uuid = uuid;
-        return this;
-    }
-    public String getUuid() {
-        return this.uuid;
-    }
-
     public DescribeBackupMachineStatusRequest setPolicyVersion(String policyVersion) {
         this.policyVersion = policyVersion;
         return this;
     }
     public String getPolicyVersion() {
         return this.policyVersion;
+    }
+
+    public DescribeBackupMachineStatusRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

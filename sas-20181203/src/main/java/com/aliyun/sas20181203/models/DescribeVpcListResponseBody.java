@@ -43,17 +43,17 @@ public class DescribeVpcListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcListResponseBodyVpcList extends TeaModel {
-        @NameInMap("InstanceDesc")
-        public String instanceDesc;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
+        @NameInMap("InstanceDesc")
+        public String instanceDesc;
+
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -61,22 +61,6 @@ public class DescribeVpcListResponseBody extends TeaModel {
         public static DescribeVpcListResponseBodyVpcList build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcListResponseBodyVpcList self = new DescribeVpcListResponseBodyVpcList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVpcListResponseBodyVpcList setInstanceDesc(String instanceDesc) {
-            this.instanceDesc = instanceDesc;
-            return this;
-        }
-        public String getInstanceDesc() {
-            return this.instanceDesc;
-        }
-
-        public DescribeVpcListResponseBodyVpcList setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
         }
 
         public DescribeVpcListResponseBodyVpcList setEcsCount(Integer ecsCount) {
@@ -87,12 +71,28 @@ public class DescribeVpcListResponseBody extends TeaModel {
             return this.ecsCount;
         }
 
+        public DescribeVpcListResponseBodyVpcList setInstanceDesc(String instanceDesc) {
+            this.instanceDesc = instanceDesc;
+            return this;
+        }
+        public String getInstanceDesc() {
+            return this.instanceDesc;
+        }
+
         public DescribeVpcListResponseBodyVpcList setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeVpcListResponseBodyVpcList setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public DescribeVpcListResponseBodyVpcList setRegionId(String regionId) {

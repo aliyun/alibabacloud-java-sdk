@@ -7,11 +7,8 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     @NameInMap("Advice")
     public String advice;
 
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("CheckId")
+    public Long checkId;
 
     @NameInMap("Description")
     public String description;
@@ -19,14 +16,17 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     @NameInMap("Item")
     public String item;
 
-    @NameInMap("CheckId")
-    public Long checkId;
-
     @NameInMap("Level")
     public String level;
 
     @NameInMap("Prompt")
     public String prompt;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeCheckWarningDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCheckWarningDetailResponseBody self = new DescribeCheckWarningDetailResponseBody();
@@ -41,20 +41,12 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         return this.advice;
     }
 
-    public DescribeCheckWarningDetailResponseBody setType(String type) {
-        this.type = type;
+    public DescribeCheckWarningDetailResponseBody setCheckId(Long checkId) {
+        this.checkId = checkId;
         return this;
     }
-    public String getType() {
-        return this.type;
-    }
-
-    public DescribeCheckWarningDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getCheckId() {
+        return this.checkId;
     }
 
     public DescribeCheckWarningDetailResponseBody setDescription(String description) {
@@ -73,14 +65,6 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
         return this.item;
     }
 
-    public DescribeCheckWarningDetailResponseBody setCheckId(Long checkId) {
-        this.checkId = checkId;
-        return this;
-    }
-    public Long getCheckId() {
-        return this.checkId;
-    }
-
     public DescribeCheckWarningDetailResponseBody setLevel(String level) {
         this.level = level;
         return this;
@@ -95,6 +79,22 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     }
     public String getPrompt() {
         return this.prompt;
+    }
+
+    public DescribeCheckWarningDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCheckWarningDetailResponseBody setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

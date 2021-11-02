@@ -73,77 +73,53 @@ public class DescribeStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeStrategyResponseBodyStrategies extends TeaModel {
-        @NameInMap("Type")
-        public Integer type;
-
-        @NameInMap("ExecStatus")
-        public Integer execStatus;
-
-        @NameInMap("PassRate")
-        public Integer passRate;
-
-        @NameInMap("CycleStartTime")
-        public Integer cycleStartTime;
+        @NameInMap("ConfigTargets")
+        public java.util.List<DescribeStrategyResponseBodyStrategiesConfigTargets> configTargets;
 
         @NameInMap("CustomType")
         public String customType;
 
-        @NameInMap("EcsCount")
-        public Integer ecsCount;
-
-        @NameInMap("ProcessRate")
-        public Integer processRate;
-
         @NameInMap("CycleDays")
         public Integer cycleDays;
 
-        @NameInMap("RiskCount")
-        public Integer riskCount;
+        @NameInMap("CycleStartTime")
+        public Integer cycleStartTime;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("EcsCount")
+        public Integer ecsCount;
+
+        @NameInMap("ExecStatus")
+        public Integer execStatus;
 
         @NameInMap("Id")
         public Integer id;
 
-        @NameInMap("ConfigTargets")
-        public java.util.List<DescribeStrategyResponseBodyStrategiesConfigTargets> configTargets;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("PassRate")
+        public Integer passRate;
+
+        @NameInMap("ProcessRate")
+        public Integer processRate;
+
+        @NameInMap("RiskCount")
+        public Integer riskCount;
+
+        @NameInMap("Type")
+        public Integer type;
 
         public static DescribeStrategyResponseBodyStrategies build(java.util.Map<String, ?> map) throws Exception {
             DescribeStrategyResponseBodyStrategies self = new DescribeStrategyResponseBodyStrategies();
             return TeaModel.build(map, self);
         }
 
-        public DescribeStrategyResponseBodyStrategies setType(Integer type) {
-            this.type = type;
+        public DescribeStrategyResponseBodyStrategies setConfigTargets(java.util.List<DescribeStrategyResponseBodyStrategiesConfigTargets> configTargets) {
+            this.configTargets = configTargets;
             return this;
         }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public DescribeStrategyResponseBodyStrategies setExecStatus(Integer execStatus) {
-            this.execStatus = execStatus;
-            return this;
-        }
-        public Integer getExecStatus() {
-            return this.execStatus;
-        }
-
-        public DescribeStrategyResponseBodyStrategies setPassRate(Integer passRate) {
-            this.passRate = passRate;
-            return this;
-        }
-        public Integer getPassRate() {
-            return this.passRate;
-        }
-
-        public DescribeStrategyResponseBodyStrategies setCycleStartTime(Integer cycleStartTime) {
-            this.cycleStartTime = cycleStartTime;
-            return this;
-        }
-        public Integer getCycleStartTime() {
-            return this.cycleStartTime;
+        public java.util.List<DescribeStrategyResponseBodyStrategiesConfigTargets> getConfigTargets() {
+            return this.configTargets;
         }
 
         public DescribeStrategyResponseBodyStrategies setCustomType(String customType) {
@@ -154,22 +130,6 @@ public class DescribeStrategyResponseBody extends TeaModel {
             return this.customType;
         }
 
-        public DescribeStrategyResponseBodyStrategies setEcsCount(Integer ecsCount) {
-            this.ecsCount = ecsCount;
-            return this;
-        }
-        public Integer getEcsCount() {
-            return this.ecsCount;
-        }
-
-        public DescribeStrategyResponseBodyStrategies setProcessRate(Integer processRate) {
-            this.processRate = processRate;
-            return this;
-        }
-        public Integer getProcessRate() {
-            return this.processRate;
-        }
-
         public DescribeStrategyResponseBodyStrategies setCycleDays(Integer cycleDays) {
             this.cycleDays = cycleDays;
             return this;
@@ -178,20 +138,28 @@ public class DescribeStrategyResponseBody extends TeaModel {
             return this.cycleDays;
         }
 
-        public DescribeStrategyResponseBodyStrategies setRiskCount(Integer riskCount) {
-            this.riskCount = riskCount;
+        public DescribeStrategyResponseBodyStrategies setCycleStartTime(Integer cycleStartTime) {
+            this.cycleStartTime = cycleStartTime;
             return this;
         }
-        public Integer getRiskCount() {
-            return this.riskCount;
+        public Integer getCycleStartTime() {
+            return this.cycleStartTime;
         }
 
-        public DescribeStrategyResponseBodyStrategies setName(String name) {
-            this.name = name;
+        public DescribeStrategyResponseBodyStrategies setEcsCount(Integer ecsCount) {
+            this.ecsCount = ecsCount;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public Integer getEcsCount() {
+            return this.ecsCount;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setExecStatus(Integer execStatus) {
+            this.execStatus = execStatus;
+            return this;
+        }
+        public Integer getExecStatus() {
+            return this.execStatus;
         }
 
         public DescribeStrategyResponseBodyStrategies setId(Integer id) {
@@ -202,12 +170,44 @@ public class DescribeStrategyResponseBody extends TeaModel {
             return this.id;
         }
 
-        public DescribeStrategyResponseBodyStrategies setConfigTargets(java.util.List<DescribeStrategyResponseBodyStrategiesConfigTargets> configTargets) {
-            this.configTargets = configTargets;
+        public DescribeStrategyResponseBodyStrategies setName(String name) {
+            this.name = name;
             return this;
         }
-        public java.util.List<DescribeStrategyResponseBodyStrategiesConfigTargets> getConfigTargets() {
-            return this.configTargets;
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setPassRate(Integer passRate) {
+            this.passRate = passRate;
+            return this;
+        }
+        public Integer getPassRate() {
+            return this.passRate;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setProcessRate(Integer processRate) {
+            this.processRate = processRate;
+            return this;
+        }
+        public Integer getProcessRate() {
+            return this.processRate;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setRiskCount(Integer riskCount) {
+            this.riskCount = riskCount;
+            return this;
+        }
+        public Integer getRiskCount() {
+            return this.riskCount;
+        }
+
+        public DescribeStrategyResponseBodyStrategies setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
         }
 
     }

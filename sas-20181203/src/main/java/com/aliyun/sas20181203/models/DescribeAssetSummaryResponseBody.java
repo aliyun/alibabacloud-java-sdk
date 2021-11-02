@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AssetsSummary")
     public DescribeAssetSummaryResponseBodyAssetsSummary assetsSummary;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAssetSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAssetSummaryResponseBody self = new DescribeAssetSummaryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAssetSummaryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAssetSummaryResponseBody setAssetsSummary(DescribeAssetSummaryResponseBodyAssetsSummary assetsSummary) {
@@ -29,6 +21,14 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
     }
     public DescribeAssetSummaryResponseBodyAssetsSummary getAssetsSummary() {
         return this.assetsSummary;
+    }
+
+    public DescribeAssetSummaryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeAssetSummaryResponseBodyAssetsSummary extends TeaModel {

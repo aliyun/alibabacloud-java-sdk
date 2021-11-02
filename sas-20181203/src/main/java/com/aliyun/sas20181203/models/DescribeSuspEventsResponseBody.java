@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventsResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Integer count;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -13,18 +16,23 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
-    @NameInMap("Count")
-    public Integer count;
-
     @NameInMap("SuspEvents")
     public java.util.List<DescribeSuspEventsResponseBodySuspEvents> suspEvents;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeSuspEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSuspEventsResponseBody self = new DescribeSuspEventsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSuspEventsResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public DescribeSuspEventsResponseBody setCurrentPage(Integer currentPage) {
@@ -51,22 +59,6 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSuspEventsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeSuspEventsResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
-    }
-
     public DescribeSuspEventsResponseBody setSuspEvents(java.util.List<DescribeSuspEventsResponseBodySuspEvents> suspEvents) {
         this.suspEvents = suspEvents;
         return this;
@@ -75,15 +67,23 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         return this.suspEvents;
     }
 
+    public DescribeSuspEventsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeSuspEventsResponseBodySuspEventsDetails extends TeaModel {
+        @NameInMap("NameDisplay")
+        public String nameDisplay;
+
         @NameInMap("Type")
         public String type;
 
         @NameInMap("Value")
         public String value;
-
-        @NameInMap("NameDisplay")
-        public String nameDisplay;
 
         @NameInMap("ValueDisplay")
         public String valueDisplay;
@@ -91,6 +91,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         public static DescribeSuspEventsResponseBodySuspEventsDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeSuspEventsResponseBodySuspEventsDetails self = new DescribeSuspEventsResponseBodySuspEventsDetails();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSuspEventsResponseBodySuspEventsDetails setNameDisplay(String nameDisplay) {
+            this.nameDisplay = nameDisplay;
+            return this;
+        }
+        public String getNameDisplay() {
+            return this.nameDisplay;
         }
 
         public DescribeSuspEventsResponseBodySuspEventsDetails setType(String type) {
@@ -107,14 +115,6 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public String getValue() {
             return this.value;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEventsDetails setNameDisplay(String nameDisplay) {
-            this.nameDisplay = nameDisplay;
-            return this;
-        }
-        public String getNameDisplay() {
-            return this.nameDisplay;
         }
 
         public DescribeSuspEventsResponseBodySuspEventsDetails setValueDisplay(String valueDisplay) {
@@ -169,140 +169,53 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodySuspEvents extends TeaModel {
-        @NameInMap("Stages")
-        public String stages;
-
-        @NameInMap("InternetIp")
-        public String internetIp;
-
-        @NameInMap("K8sClusterName")
-        public String k8sClusterName;
-
-        @NameInMap("ContainerImageId")
-        public String containerImageId;
-
-        @NameInMap("LastTimeStamp")
-        public Long lastTimeStamp;
-
-        @NameInMap("OccurrenceTime")
-        public String occurrenceTime;
-
-        @NameInMap("AlarmUniqueInfo")
-        public String alarmUniqueInfo;
-
-        @NameInMap("Desc")
-        public String desc;
-
-        @NameInMap("CanCancelFault")
-        public Boolean canCancelFault;
-
-        @NameInMap("AlarmEventNameDisplay")
-        public String alarmEventNameDisplay;
-
-        @NameInMap("AppName")
-        public String appName;
-
-        @NameInMap("SecurityEventIds")
-        public String securityEventIds;
-
-        @NameInMap("K8sClusterId")
-        public String k8sClusterId;
-
-        @NameInMap("ContainerImageName")
-        public String containerImageName;
-
-        @NameInMap("MarkMisRules")
-        public String markMisRules;
-
-        @NameInMap("CanBeDealOnLine")
-        public Boolean canBeDealOnLine;
-
-        @NameInMap("ContainHwMode")
-        public Boolean containHwMode;
-
-        @NameInMap("K8sNodeId")
-        public String k8sNodeId;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("EventStatus")
-        public Integer eventStatus;
-
-        @NameInMap("SaleVersion")
-        public String saleVersion;
-
-        @NameInMap("OperateErrorCode")
-        public String operateErrorCode;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("HasTraceInfo")
-        public Boolean hasTraceInfo;
-
-        @NameInMap("DataSource")
-        public String dataSource;
-
-        @NameInMap("OperateTime")
-        public Long operateTime;
-
-        @NameInMap("EventSubType")
-        public String eventSubType;
-
         @NameInMap("Advanced")
         public Boolean advanced;
-
-        @NameInMap("OccurrenceTimeStamp")
-        public Long occurrenceTimeStamp;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("AlarmEventTypeDisplay")
-        public String alarmEventTypeDisplay;
-
-        @NameInMap("IntranetIp")
-        public String intranetIp;
-
-        @NameInMap("LastTime")
-        public String lastTime;
-
-        @NameInMap("OperateMsg")
-        public String operateMsg;
-
-        @NameInMap("Uuid")
-        public String uuid;
-
-        @NameInMap("K8sPodName")
-        public String k8sPodName;
-
-        @NameInMap("ContainerId")
-        public String containerId;
-
-        @NameInMap("AlarmEventType")
-        public String alarmEventType;
-
-        @NameInMap("K8sNamespace")
-        public String k8sNamespace;
-
-        @NameInMap("AutoBreaking")
-        public Boolean autoBreaking;
-
-        @NameInMap("K8sNodeName")
-        public String k8sNodeName;
 
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
-        @NameInMap("UniqueInfo")
-        public String uniqueInfo;
+        @NameInMap("AlarmEventNameDisplay")
+        public String alarmEventNameDisplay;
 
-        @NameInMap("Level")
-        public String level;
+        @NameInMap("AlarmEventType")
+        public String alarmEventType;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("AlarmEventTypeDisplay")
+        public String alarmEventTypeDisplay;
+
+        @NameInMap("AlarmUniqueInfo")
+        public String alarmUniqueInfo;
+
+        @NameInMap("AppName")
+        public String appName;
+
+        @NameInMap("AutoBreaking")
+        public Boolean autoBreaking;
+
+        @NameInMap("CanBeDealOnLine")
+        public Boolean canBeDealOnLine;
+
+        @NameInMap("CanCancelFault")
+        public Boolean canCancelFault;
+
+        @NameInMap("ContainHwMode")
+        public Boolean containHwMode;
+
+        @NameInMap("ContainerId")
+        public String containerId;
+
+        @NameInMap("ContainerImageId")
+        public String containerImageId;
+
+        @NameInMap("ContainerImageName")
+        public String containerImageName;
+
+        @NameInMap("DataSource")
+        public String dataSource;
+
+        @NameInMap("Desc")
+        public String desc;
 
         @NameInMap("Details")
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> details;
@@ -310,225 +223,96 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("EventNotes")
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsEventNotes> eventNotes;
 
+        @NameInMap("EventStatus")
+        public Integer eventStatus;
+
+        @NameInMap("EventSubType")
+        public String eventSubType;
+
+        @NameInMap("HasTraceInfo")
+        public Boolean hasTraceInfo;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
+
+        @NameInMap("IntranetIp")
+        public String intranetIp;
+
+        @NameInMap("K8sClusterId")
+        public String k8sClusterId;
+
+        @NameInMap("K8sClusterName")
+        public String k8sClusterName;
+
+        @NameInMap("K8sNamespace")
+        public String k8sNamespace;
+
+        @NameInMap("K8sNodeId")
+        public String k8sNodeId;
+
+        @NameInMap("K8sNodeName")
+        public String k8sNodeName;
+
+        @NameInMap("K8sPodName")
+        public String k8sPodName;
+
+        @NameInMap("LastTime")
+        public String lastTime;
+
+        @NameInMap("LastTimeStamp")
+        public Long lastTimeStamp;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("MarkMisRules")
+        public String markMisRules;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("OccurrenceTime")
+        public String occurrenceTime;
+
+        @NameInMap("OccurrenceTimeStamp")
+        public Long occurrenceTimeStamp;
+
+        @NameInMap("OperateErrorCode")
+        public String operateErrorCode;
+
+        @NameInMap("OperateMsg")
+        public String operateMsg;
+
+        @NameInMap("OperateTime")
+        public Long operateTime;
+
+        @NameInMap("SaleVersion")
+        public String saleVersion;
+
+        @NameInMap("SecurityEventIds")
+        public String securityEventIds;
+
+        @NameInMap("Stages")
+        public String stages;
+
+        @NameInMap("UniqueInfo")
+        public String uniqueInfo;
+
+        @NameInMap("Uuid")
+        public String uuid;
+
         public static DescribeSuspEventsResponseBodySuspEvents build(java.util.Map<String, ?> map) throws Exception {
             DescribeSuspEventsResponseBodySuspEvents self = new DescribeSuspEventsResponseBodySuspEvents();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setStages(String stages) {
-            this.stages = stages;
-            return this;
-        }
-        public String getStages() {
-            return this.stages;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setInternetIp(String internetIp) {
-            this.internetIp = internetIp;
-            return this;
-        }
-        public String getInternetIp() {
-            return this.internetIp;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setK8sClusterName(String k8sClusterName) {
-            this.k8sClusterName = k8sClusterName;
-            return this;
-        }
-        public String getK8sClusterName() {
-            return this.k8sClusterName;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setContainerImageId(String containerImageId) {
-            this.containerImageId = containerImageId;
-            return this;
-        }
-        public String getContainerImageId() {
-            return this.containerImageId;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setLastTimeStamp(Long lastTimeStamp) {
-            this.lastTimeStamp = lastTimeStamp;
-            return this;
-        }
-        public Long getLastTimeStamp() {
-            return this.lastTimeStamp;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setOccurrenceTime(String occurrenceTime) {
-            this.occurrenceTime = occurrenceTime;
-            return this;
-        }
-        public String getOccurrenceTime() {
-            return this.occurrenceTime;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setAlarmUniqueInfo(String alarmUniqueInfo) {
-            this.alarmUniqueInfo = alarmUniqueInfo;
-            return this;
-        }
-        public String getAlarmUniqueInfo() {
-            return this.alarmUniqueInfo;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setDesc(String desc) {
-            this.desc = desc;
-            return this;
-        }
-        public String getDesc() {
-            return this.desc;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setCanCancelFault(Boolean canCancelFault) {
-            this.canCancelFault = canCancelFault;
-            return this;
-        }
-        public Boolean getCanCancelFault() {
-            return this.canCancelFault;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setAlarmEventNameDisplay(String alarmEventNameDisplay) {
-            this.alarmEventNameDisplay = alarmEventNameDisplay;
-            return this;
-        }
-        public String getAlarmEventNameDisplay() {
-            return this.alarmEventNameDisplay;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setSecurityEventIds(String securityEventIds) {
-            this.securityEventIds = securityEventIds;
-            return this;
-        }
-        public String getSecurityEventIds() {
-            return this.securityEventIds;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setK8sClusterId(String k8sClusterId) {
-            this.k8sClusterId = k8sClusterId;
-            return this;
-        }
-        public String getK8sClusterId() {
-            return this.k8sClusterId;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setContainerImageName(String containerImageName) {
-            this.containerImageName = containerImageName;
-            return this;
-        }
-        public String getContainerImageName() {
-            return this.containerImageName;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setMarkMisRules(String markMisRules) {
-            this.markMisRules = markMisRules;
-            return this;
-        }
-        public String getMarkMisRules() {
-            return this.markMisRules;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setCanBeDealOnLine(Boolean canBeDealOnLine) {
-            this.canBeDealOnLine = canBeDealOnLine;
-            return this;
-        }
-        public Boolean getCanBeDealOnLine() {
-            return this.canBeDealOnLine;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setContainHwMode(Boolean containHwMode) {
-            this.containHwMode = containHwMode;
-            return this;
-        }
-        public Boolean getContainHwMode() {
-            return this.containHwMode;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setK8sNodeId(String k8sNodeId) {
-            this.k8sNodeId = k8sNodeId;
-            return this;
-        }
-        public String getK8sNodeId() {
-            return this.k8sNodeId;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setEventStatus(Integer eventStatus) {
-            this.eventStatus = eventStatus;
-            return this;
-        }
-        public Integer getEventStatus() {
-            return this.eventStatus;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setSaleVersion(String saleVersion) {
-            this.saleVersion = saleVersion;
-            return this;
-        }
-        public String getSaleVersion() {
-            return this.saleVersion;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setOperateErrorCode(String operateErrorCode) {
-            this.operateErrorCode = operateErrorCode;
-            return this;
-        }
-        public String getOperateErrorCode() {
-            return this.operateErrorCode;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setHasTraceInfo(Boolean hasTraceInfo) {
-            this.hasTraceInfo = hasTraceInfo;
-            return this;
-        }
-        public Boolean getHasTraceInfo() {
-            return this.hasTraceInfo;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setDataSource(String dataSource) {
-            this.dataSource = dataSource;
-            return this;
-        }
-        public String getDataSource() {
-            return this.dataSource;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setOperateTime(Long operateTime) {
-            this.operateTime = operateTime;
-            return this;
-        }
-        public Long getOperateTime() {
-            return this.operateTime;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setEventSubType(String eventSubType) {
-            this.eventSubType = eventSubType;
-            return this;
-        }
-        public String getEventSubType() {
-            return this.eventSubType;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setAdvanced(Boolean advanced) {
@@ -539,76 +323,20 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             return this.advanced;
         }
 
-        public DescribeSuspEventsResponseBodySuspEvents setOccurrenceTimeStamp(Long occurrenceTimeStamp) {
-            this.occurrenceTimeStamp = occurrenceTimeStamp;
+        public DescribeSuspEventsResponseBodySuspEvents setAlarmEventName(String alarmEventName) {
+            this.alarmEventName = alarmEventName;
             return this;
         }
-        public Long getOccurrenceTimeStamp() {
-            return this.occurrenceTimeStamp;
+        public String getAlarmEventName() {
+            return this.alarmEventName;
         }
 
-        public DescribeSuspEventsResponseBodySuspEvents setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public DescribeSuspEventsResponseBodySuspEvents setAlarmEventNameDisplay(String alarmEventNameDisplay) {
+            this.alarmEventNameDisplay = alarmEventNameDisplay;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setAlarmEventTypeDisplay(String alarmEventTypeDisplay) {
-            this.alarmEventTypeDisplay = alarmEventTypeDisplay;
-            return this;
-        }
-        public String getAlarmEventTypeDisplay() {
-            return this.alarmEventTypeDisplay;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setIntranetIp(String intranetIp) {
-            this.intranetIp = intranetIp;
-            return this;
-        }
-        public String getIntranetIp() {
-            return this.intranetIp;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setLastTime(String lastTime) {
-            this.lastTime = lastTime;
-            return this;
-        }
-        public String getLastTime() {
-            return this.lastTime;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setOperateMsg(String operateMsg) {
-            this.operateMsg = operateMsg;
-            return this;
-        }
-        public String getOperateMsg() {
-            return this.operateMsg;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setK8sPodName(String k8sPodName) {
-            this.k8sPodName = k8sPodName;
-            return this;
-        }
-        public String getK8sPodName() {
-            return this.k8sPodName;
-        }
-
-        public DescribeSuspEventsResponseBodySuspEvents setContainerId(String containerId) {
-            this.containerId = containerId;
-            return this;
-        }
-        public String getContainerId() {
-            return this.containerId;
+        public String getAlarmEventNameDisplay() {
+            return this.alarmEventNameDisplay;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setAlarmEventType(String alarmEventType) {
@@ -619,12 +347,28 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             return this.alarmEventType;
         }
 
-        public DescribeSuspEventsResponseBodySuspEvents setK8sNamespace(String k8sNamespace) {
-            this.k8sNamespace = k8sNamespace;
+        public DescribeSuspEventsResponseBodySuspEvents setAlarmEventTypeDisplay(String alarmEventTypeDisplay) {
+            this.alarmEventTypeDisplay = alarmEventTypeDisplay;
             return this;
         }
-        public String getK8sNamespace() {
-            return this.k8sNamespace;
+        public String getAlarmEventTypeDisplay() {
+            return this.alarmEventTypeDisplay;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setAlarmUniqueInfo(String alarmUniqueInfo) {
+            this.alarmUniqueInfo = alarmUniqueInfo;
+            return this;
+        }
+        public String getAlarmUniqueInfo() {
+            return this.alarmUniqueInfo;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setAutoBreaking(Boolean autoBreaking) {
@@ -635,44 +379,68 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             return this.autoBreaking;
         }
 
-        public DescribeSuspEventsResponseBodySuspEvents setK8sNodeName(String k8sNodeName) {
-            this.k8sNodeName = k8sNodeName;
+        public DescribeSuspEventsResponseBodySuspEvents setCanBeDealOnLine(Boolean canBeDealOnLine) {
+            this.canBeDealOnLine = canBeDealOnLine;
             return this;
         }
-        public String getK8sNodeName() {
-            return this.k8sNodeName;
+        public Boolean getCanBeDealOnLine() {
+            return this.canBeDealOnLine;
         }
 
-        public DescribeSuspEventsResponseBodySuspEvents setAlarmEventName(String alarmEventName) {
-            this.alarmEventName = alarmEventName;
+        public DescribeSuspEventsResponseBodySuspEvents setCanCancelFault(Boolean canCancelFault) {
+            this.canCancelFault = canCancelFault;
             return this;
         }
-        public String getAlarmEventName() {
-            return this.alarmEventName;
+        public Boolean getCanCancelFault() {
+            return this.canCancelFault;
         }
 
-        public DescribeSuspEventsResponseBodySuspEvents setUniqueInfo(String uniqueInfo) {
-            this.uniqueInfo = uniqueInfo;
+        public DescribeSuspEventsResponseBodySuspEvents setContainHwMode(Boolean containHwMode) {
+            this.containHwMode = containHwMode;
             return this;
         }
-        public String getUniqueInfo() {
-            return this.uniqueInfo;
+        public Boolean getContainHwMode() {
+            return this.containHwMode;
         }
 
-        public DescribeSuspEventsResponseBodySuspEvents setLevel(String level) {
-            this.level = level;
+        public DescribeSuspEventsResponseBodySuspEvents setContainerId(String containerId) {
+            this.containerId = containerId;
             return this;
         }
-        public String getLevel() {
-            return this.level;
+        public String getContainerId() {
+            return this.containerId;
         }
 
-        public DescribeSuspEventsResponseBodySuspEvents setId(Long id) {
-            this.id = id;
+        public DescribeSuspEventsResponseBodySuspEvents setContainerImageId(String containerImageId) {
+            this.containerImageId = containerImageId;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getContainerImageId() {
+            return this.containerImageId;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setContainerImageName(String containerImageName) {
+            this.containerImageName = containerImageName;
+            return this;
+        }
+        public String getContainerImageName() {
+            return this.containerImageName;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setDataSource(String dataSource) {
+            this.dataSource = dataSource;
+            return this;
+        }
+        public String getDataSource() {
+            return this.dataSource;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setDetails(java.util.List<DescribeSuspEventsResponseBodySuspEventsDetails> details) {
@@ -689,6 +457,238 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeSuspEventsResponseBodySuspEventsEventNotes> getEventNotes() {
             return this.eventNotes;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setEventStatus(Integer eventStatus) {
+            this.eventStatus = eventStatus;
+            return this;
+        }
+        public Integer getEventStatus() {
+            return this.eventStatus;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setEventSubType(String eventSubType) {
+            this.eventSubType = eventSubType;
+            return this;
+        }
+        public String getEventSubType() {
+            return this.eventSubType;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setHasTraceInfo(Boolean hasTraceInfo) {
+            this.hasTraceInfo = hasTraceInfo;
+            return this;
+        }
+        public Boolean getHasTraceInfo() {
+            return this.hasTraceInfo;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
+            return this;
+        }
+        public String getIntranetIp() {
+            return this.intranetIp;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setK8sClusterId(String k8sClusterId) {
+            this.k8sClusterId = k8sClusterId;
+            return this;
+        }
+        public String getK8sClusterId() {
+            return this.k8sClusterId;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setK8sClusterName(String k8sClusterName) {
+            this.k8sClusterName = k8sClusterName;
+            return this;
+        }
+        public String getK8sClusterName() {
+            return this.k8sClusterName;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setK8sNamespace(String k8sNamespace) {
+            this.k8sNamespace = k8sNamespace;
+            return this;
+        }
+        public String getK8sNamespace() {
+            return this.k8sNamespace;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setK8sNodeId(String k8sNodeId) {
+            this.k8sNodeId = k8sNodeId;
+            return this;
+        }
+        public String getK8sNodeId() {
+            return this.k8sNodeId;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setK8sNodeName(String k8sNodeName) {
+            this.k8sNodeName = k8sNodeName;
+            return this;
+        }
+        public String getK8sNodeName() {
+            return this.k8sNodeName;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setK8sPodName(String k8sPodName) {
+            this.k8sPodName = k8sPodName;
+            return this;
+        }
+        public String getK8sPodName() {
+            return this.k8sPodName;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setLastTime(String lastTime) {
+            this.lastTime = lastTime;
+            return this;
+        }
+        public String getLastTime() {
+            return this.lastTime;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setLastTimeStamp(Long lastTimeStamp) {
+            this.lastTimeStamp = lastTimeStamp;
+            return this;
+        }
+        public Long getLastTimeStamp() {
+            return this.lastTimeStamp;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setMarkMisRules(String markMisRules) {
+            this.markMisRules = markMisRules;
+            return this;
+        }
+        public String getMarkMisRules() {
+            return this.markMisRules;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setOccurrenceTime(String occurrenceTime) {
+            this.occurrenceTime = occurrenceTime;
+            return this;
+        }
+        public String getOccurrenceTime() {
+            return this.occurrenceTime;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setOccurrenceTimeStamp(Long occurrenceTimeStamp) {
+            this.occurrenceTimeStamp = occurrenceTimeStamp;
+            return this;
+        }
+        public Long getOccurrenceTimeStamp() {
+            return this.occurrenceTimeStamp;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setOperateErrorCode(String operateErrorCode) {
+            this.operateErrorCode = operateErrorCode;
+            return this;
+        }
+        public String getOperateErrorCode() {
+            return this.operateErrorCode;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setOperateMsg(String operateMsg) {
+            this.operateMsg = operateMsg;
+            return this;
+        }
+        public String getOperateMsg() {
+            return this.operateMsg;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setOperateTime(Long operateTime) {
+            this.operateTime = operateTime;
+            return this;
+        }
+        public Long getOperateTime() {
+            return this.operateTime;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setSaleVersion(String saleVersion) {
+            this.saleVersion = saleVersion;
+            return this;
+        }
+        public String getSaleVersion() {
+            return this.saleVersion;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setSecurityEventIds(String securityEventIds) {
+            this.securityEventIds = securityEventIds;
+            return this;
+        }
+        public String getSecurityEventIds() {
+            return this.securityEventIds;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setStages(String stages) {
+            this.stages = stages;
+            return this;
+        }
+        public String getStages() {
+            return this.stages;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setUniqueInfo(String uniqueInfo) {
+            this.uniqueInfo = uniqueInfo;
+            return this;
+        }
+        public String getUniqueInfo() {
+            return this.uniqueInfo;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

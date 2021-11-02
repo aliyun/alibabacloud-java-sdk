@@ -4,20 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperationSuspEventsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("SuspiciousEventIds")
-    public String suspiciousEventIds;
+    @NameInMap("From")
+    public String from;
 
     @NameInMap("Operation")
     public String operation;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("SubOperation")
     public String subOperation;
 
-    @NameInMap("From")
-    public String from;
+    @NameInMap("SuspiciousEventIds")
+    public String suspiciousEventIds;
 
     @NameInMap("WarnType")
     public String warnType;
@@ -27,20 +27,12 @@ public class OperationSuspEventsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public OperationSuspEventsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public OperationSuspEventsRequest setFrom(String from) {
+        this.from = from;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public OperationSuspEventsRequest setSuspiciousEventIds(String suspiciousEventIds) {
-        this.suspiciousEventIds = suspiciousEventIds;
-        return this;
-    }
-    public String getSuspiciousEventIds() {
-        return this.suspiciousEventIds;
+    public String getFrom() {
+        return this.from;
     }
 
     public OperationSuspEventsRequest setOperation(String operation) {
@@ -51,6 +43,14 @@ public class OperationSuspEventsRequest extends TeaModel {
         return this.operation;
     }
 
+    public OperationSuspEventsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
     public OperationSuspEventsRequest setSubOperation(String subOperation) {
         this.subOperation = subOperation;
         return this;
@@ -59,12 +59,12 @@ public class OperationSuspEventsRequest extends TeaModel {
         return this.subOperation;
     }
 
-    public OperationSuspEventsRequest setFrom(String from) {
-        this.from = from;
+    public OperationSuspEventsRequest setSuspiciousEventIds(String suspiciousEventIds) {
+        this.suspiciousEventIds = suspiciousEventIds;
         return this;
     }
-    public String getFrom() {
-        return this.from;
+    public String getSuspiciousEventIds() {
+        return this.suspiciousEventIds;
     }
 
     public OperationSuspEventsRequest setWarnType(String warnType) {

@@ -4,26 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecureSuggestionResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Suggestions")
     public java.util.List<DescribeSecureSuggestionResponseBodySuggestions> suggestions;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static DescribeSecureSuggestionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecureSuggestionResponseBody self = new DescribeSecureSuggestionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecureSuggestionResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeSecureSuggestionResponseBody setRequestId(String requestId) {
@@ -42,27 +34,27 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         return this.suggestions;
     }
 
-    public static class DescribeSecureSuggestionResponseBodySuggestionsDetail extends TeaModel {
-        @NameInMap("Title")
-        public String title;
+    public DescribeSecureSuggestionResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
 
+    public static class DescribeSecureSuggestionResponseBodySuggestionsDetail extends TeaModel {
         @NameInMap("Description")
         public String description;
 
         @NameInMap("SubType")
         public String subType;
 
+        @NameInMap("Title")
+        public String title;
+
         public static DescribeSecureSuggestionResponseBodySuggestionsDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecureSuggestionResponseBodySuggestionsDetail self = new DescribeSecureSuggestionResponseBodySuggestionsDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSecureSuggestionResponseBodySuggestionsDetail setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
         }
 
         public DescribeSecureSuggestionResponseBodySuggestionsDetail setDescription(String description) {
@@ -81,21 +73,37 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
             return this.subType;
         }
 
+        public DescribeSecureSuggestionResponseBodySuggestionsDetail setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
     }
 
     public static class DescribeSecureSuggestionResponseBodySuggestions extends TeaModel {
+        @NameInMap("Detail")
+        public java.util.List<DescribeSecureSuggestionResponseBodySuggestionsDetail> detail;
+
         @NameInMap("Points")
         public Integer points;
 
         @NameInMap("SuggestType")
         public String suggestType;
 
-        @NameInMap("Detail")
-        public java.util.List<DescribeSecureSuggestionResponseBodySuggestionsDetail> detail;
-
         public static DescribeSecureSuggestionResponseBodySuggestions build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecureSuggestionResponseBodySuggestions self = new DescribeSecureSuggestionResponseBodySuggestions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSecureSuggestionResponseBodySuggestions setDetail(java.util.List<DescribeSecureSuggestionResponseBodySuggestionsDetail> detail) {
+            this.detail = detail;
+            return this;
+        }
+        public java.util.List<DescribeSecureSuggestionResponseBodySuggestionsDetail> getDetail() {
+            return this.detail;
         }
 
         public DescribeSecureSuggestionResponseBodySuggestions setPoints(Integer points) {
@@ -112,14 +120,6 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
         }
         public String getSuggestType() {
             return this.suggestType;
-        }
-
-        public DescribeSecureSuggestionResponseBodySuggestions setDetail(java.util.List<DescribeSecureSuggestionResponseBodySuggestionsDetail> detail) {
-            this.detail = detail;
-            return this;
-        }
-        public java.util.List<DescribeSecureSuggestionResponseBodySuggestionsDetail> getDetail() {
-            return this.detail;
         }
 
     }

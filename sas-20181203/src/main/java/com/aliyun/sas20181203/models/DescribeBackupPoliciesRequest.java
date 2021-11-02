@@ -4,32 +4,32 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPoliciesRequest extends TeaModel {
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("MachineRemark")
     public String machineRemark;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("Name")
+    public String name;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeBackupPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPoliciesRequest self = new DescribeBackupPoliciesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupPoliciesRequest setName(String name) {
-        this.name = name;
+    public DescribeBackupPoliciesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeBackupPoliciesRequest setMachineRemark(String machineRemark) {
@@ -40,12 +40,12 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
         return this.machineRemark;
     }
 
-    public DescribeBackupPoliciesRequest setStatus(String status) {
-        this.status = status;
+    public DescribeBackupPoliciesRequest setName(String name) {
+        this.name = name;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getName() {
+        return this.name;
     }
 
     public DescribeBackupPoliciesRequest setPageSize(Integer pageSize) {
@@ -56,12 +56,12 @@ public class DescribeBackupPoliciesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeBackupPoliciesRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeBackupPoliciesRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getStatus() {
+        return this.status;
     }
 
 }

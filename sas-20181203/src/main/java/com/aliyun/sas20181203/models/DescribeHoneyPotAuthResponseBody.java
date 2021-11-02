@@ -4,26 +4,26 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeHoneyPotAuthResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("HoneyPotAuthCount")
+    public Long honeyPotAuthCount;
 
     @NameInMap("HoneyPotCount")
     public Integer honeyPotCount;
 
-    @NameInMap("HoneyPotAuthCount")
-    public Long honeyPotAuthCount;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeHoneyPotAuthResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHoneyPotAuthResponseBody self = new DescribeHoneyPotAuthResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeHoneyPotAuthResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeHoneyPotAuthResponseBody setHoneyPotAuthCount(Long honeyPotAuthCount) {
+        this.honeyPotAuthCount = honeyPotAuthCount;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Long getHoneyPotAuthCount() {
+        return this.honeyPotAuthCount;
     }
 
     public DescribeHoneyPotAuthResponseBody setHoneyPotCount(Integer honeyPotCount) {
@@ -34,12 +34,12 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         return this.honeyPotCount;
     }
 
-    public DescribeHoneyPotAuthResponseBody setHoneyPotAuthCount(Long honeyPotAuthCount) {
-        this.honeyPotAuthCount = honeyPotAuthCount;
+    public DescribeHoneyPotAuthResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getHoneyPotAuthCount() {
-        return this.honeyPotAuthCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

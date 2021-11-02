@@ -4,17 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class QueryPreCheckDatabaseRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("InstanceUuid")
+    public String instanceUuid;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("TaskId")
     public String taskId;
-
-    @NameInMap("InstanceUuid")
-    public String instanceUuid;
 
     @NameInMap("UniRegionId")
     public String uniRegionId;
@@ -24,12 +24,12 @@ public class QueryPreCheckDatabaseRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryPreCheckDatabaseRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public QueryPreCheckDatabaseRequest setInstanceUuid(String instanceUuid) {
+        this.instanceUuid = instanceUuid;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getInstanceUuid() {
+        return this.instanceUuid;
     }
 
     public QueryPreCheckDatabaseRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -40,20 +40,20 @@ public class QueryPreCheckDatabaseRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public QueryPreCheckDatabaseRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
     public QueryPreCheckDatabaseRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     public String getTaskId() {
         return this.taskId;
-    }
-
-    public QueryPreCheckDatabaseRequest setInstanceUuid(String instanceUuid) {
-        this.instanceUuid = instanceUuid;
-        return this;
-    }
-    public String getInstanceUuid() {
-        return this.instanceUuid;
     }
 
     public QueryPreCheckDatabaseRequest setUniRegionId(String uniRegionId) {

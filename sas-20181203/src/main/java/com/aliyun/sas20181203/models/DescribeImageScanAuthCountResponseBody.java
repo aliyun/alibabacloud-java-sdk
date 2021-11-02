@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageScanAuthCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ImageScan")
     public DescribeImageScanAuthCountResponseBodyImageScan imageScan;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeImageScanAuthCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageScanAuthCountResponseBody self = new DescribeImageScanAuthCountResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImageScanAuthCountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeImageScanAuthCountResponseBody setImageScan(DescribeImageScanAuthCountResponseBodyImageScan imageScan) {
@@ -31,27 +23,27 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
         return this.imageScan;
     }
 
-    public static class DescribeImageScanAuthCountResponseBodyImageScan extends TeaModel {
-        @NameInMap("ScanCount")
-        public Long scanCount;
+    public DescribeImageScanAuthCountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeImageScanAuthCountResponseBodyImageScan extends TeaModel {
         @NameInMap("ImageScanCapacity")
         public Long imageScanCapacity;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("ScanCount")
+        public Long scanCount;
+
         public static DescribeImageScanAuthCountResponseBodyImageScan build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageScanAuthCountResponseBodyImageScan self = new DescribeImageScanAuthCountResponseBodyImageScan();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeImageScanAuthCountResponseBodyImageScan setScanCount(Long scanCount) {
-            this.scanCount = scanCount;
-            return this;
-        }
-        public Long getScanCount() {
-            return this.scanCount;
         }
 
         public DescribeImageScanAuthCountResponseBodyImageScan setImageScanCapacity(Long imageScanCapacity) {
@@ -68,6 +60,14 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeImageScanAuthCountResponseBodyImageScan setScanCount(Long scanCount) {
+            this.scanCount = scanCount;
+            return this;
+        }
+        public Long getScanCount() {
+            return this.scanCount;
         }
 
     }

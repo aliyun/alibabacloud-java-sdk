@@ -4,26 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteStrategyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static DeleteStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStrategyRequest self = new DeleteStrategyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteStrategyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DeleteStrategyRequest setId(String id) {
@@ -40,6 +32,14 @@ public class DeleteStrategyRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DeleteStrategyRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

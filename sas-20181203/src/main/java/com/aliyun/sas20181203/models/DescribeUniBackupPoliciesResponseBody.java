@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageInfo")
     public DescribeUniBackupPoliciesResponseBodyPageInfo pageInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("UniBackupPolicies")
     public java.util.List<DescribeUniBackupPoliciesResponseBodyUniBackupPolicies> uniBackupPolicies;
@@ -18,20 +18,20 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeUniBackupPoliciesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeUniBackupPoliciesResponseBody setPageInfo(DescribeUniBackupPoliciesResponseBodyPageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
     }
     public DescribeUniBackupPoliciesResponseBodyPageInfo getPageInfo() {
         return this.pageInfo;
+    }
+
+    public DescribeUniBackupPoliciesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeUniBackupPoliciesResponseBody setUniBackupPolicies(java.util.List<DescribeUniBackupPoliciesResponseBodyUniBackupPolicies> uniBackupPolicies) {
@@ -43,6 +43,9 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
     }
 
     public static class DescribeUniBackupPoliciesResponseBodyPageInfo extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
@@ -52,12 +55,17 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Count")
-        public Integer count;
-
         public static DescribeUniBackupPoliciesResponseBodyPageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeUniBackupPoliciesResponseBodyPageInfo self = new DescribeUniBackupPoliciesResponseBodyPageInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyPageInfo setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public DescribeUniBackupPoliciesResponseBodyPageInfo setCurrentPage(Integer currentPage) {
@@ -84,130 +92,66 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public DescribeUniBackupPoliciesResponseBodyPageInfo setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
     }
 
     public static class DescribeUniBackupPoliciesResponseBodyUniBackupPolicies extends TeaModel {
-        @NameInMap("PolicyStatus")
-        public String policyStatus;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("LatestBackResult")
-        public String latestBackResult;
-
-        @NameInMap("UniRegionId")
-        public String uniRegionId;
-
-        @NameInMap("PlanStatus")
-        public String planStatus;
-
-        @NameInMap("InstanceUuid")
-        public String instanceUuid;
-
-        @NameInMap("PolicyName")
-        public String policyName;
-
         @NameInMap("AgentErrorMessage")
         public String agentErrorMessage;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
 
         @NameInMap("AgentStatus")
         public String agentStatus;
 
+        @NameInMap("DatabaseName")
+        public String databaseName;
+
         @NameInMap("DatabaseType")
         public String databaseType;
-
-        @NameInMap("UniBackUpCount")
-        public Integer uniBackUpCount;
 
         @NameInMap("ErrorCode")
         public String errorCode;
 
-        @NameInMap("DatabaseName")
-        public String databaseName;
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         @NameInMap("InstanceName")
         public String instanceName;
 
+        @NameInMap("InstanceStatus")
+        public String instanceStatus;
+
+        @NameInMap("InstanceUuid")
+        public String instanceUuid;
+
+        @NameInMap("LatestBackResult")
+        public String latestBackResult;
+
         @NameInMap("LatestBackupTime")
         public String latestBackupTime;
 
-        @NameInMap("InstanceStatus")
-        public String instanceStatus;
+        @NameInMap("PlanStatus")
+        public String planStatus;
 
         @NameInMap("PolicyId")
         public Long policyId;
 
+        @NameInMap("PolicyName")
+        public String policyName;
+
+        @NameInMap("PolicyStatus")
+        public String policyStatus;
+
+        @NameInMap("UniBackUpCount")
+        public Integer uniBackUpCount;
+
+        @NameInMap("UniRegionId")
+        public String uniRegionId;
+
         public static DescribeUniBackupPoliciesResponseBodyUniBackupPolicies build(java.util.Map<String, ?> map) throws Exception {
             DescribeUniBackupPoliciesResponseBodyUniBackupPolicies self = new DescribeUniBackupPoliciesResponseBodyUniBackupPolicies();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setPolicyStatus(String policyStatus) {
-            this.policyStatus = policyStatus;
-            return this;
-        }
-        public String getPolicyStatus() {
-            return this.policyStatus;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setLatestBackResult(String latestBackResult) {
-            this.latestBackResult = latestBackResult;
-            return this;
-        }
-        public String getLatestBackResult() {
-            return this.latestBackResult;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setUniRegionId(String uniRegionId) {
-            this.uniRegionId = uniRegionId;
-            return this;
-        }
-        public String getUniRegionId() {
-            return this.uniRegionId;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setPlanStatus(String planStatus) {
-            this.planStatus = planStatus;
-            return this;
-        }
-        public String getPlanStatus() {
-            return this.planStatus;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setInstanceUuid(String instanceUuid) {
-            this.instanceUuid = instanceUuid;
-            return this;
-        }
-        public String getInstanceUuid() {
-            return this.instanceUuid;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setPolicyName(String policyName) {
-            this.policyName = policyName;
-            return this;
-        }
-        public String getPolicyName() {
-            return this.policyName;
         }
 
         public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setAgentErrorMessage(String agentErrorMessage) {
@@ -218,44 +162,12 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             return this.agentErrorMessage;
         }
 
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
         public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setAgentStatus(String agentStatus) {
             this.agentStatus = agentStatus;
             return this;
         }
         public String getAgentStatus() {
             return this.agentStatus;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setDatabaseType(String databaseType) {
-            this.databaseType = databaseType;
-            return this;
-        }
-        public String getDatabaseType() {
-            return this.databaseType;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setUniBackUpCount(Integer uniBackUpCount) {
-            this.uniBackUpCount = uniBackUpCount;
-            return this;
-        }
-        public Integer getUniBackUpCount() {
-            return this.uniBackUpCount;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
         }
 
         public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setDatabaseName(String databaseName) {
@@ -266,20 +178,44 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             return this.databaseName;
         }
 
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setDatabaseType(String databaseType) {
+            this.databaseType = databaseType;
+            return this;
+        }
+        public String getDatabaseType() {
+            return this.databaseType;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
         public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
         public String getInstanceName() {
             return this.instanceName;
-        }
-
-        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setLatestBackupTime(String latestBackupTime) {
-            this.latestBackupTime = latestBackupTime;
-            return this;
-        }
-        public String getLatestBackupTime() {
-            return this.latestBackupTime;
         }
 
         public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setInstanceStatus(String instanceStatus) {
@@ -290,12 +226,76 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             return this.instanceStatus;
         }
 
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setInstanceUuid(String instanceUuid) {
+            this.instanceUuid = instanceUuid;
+            return this;
+        }
+        public String getInstanceUuid() {
+            return this.instanceUuid;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setLatestBackResult(String latestBackResult) {
+            this.latestBackResult = latestBackResult;
+            return this;
+        }
+        public String getLatestBackResult() {
+            return this.latestBackResult;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setLatestBackupTime(String latestBackupTime) {
+            this.latestBackupTime = latestBackupTime;
+            return this;
+        }
+        public String getLatestBackupTime() {
+            return this.latestBackupTime;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setPlanStatus(String planStatus) {
+            this.planStatus = planStatus;
+            return this;
+        }
+        public String getPlanStatus() {
+            return this.planStatus;
+        }
+
         public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setPolicyId(Long policyId) {
             this.policyId = policyId;
             return this;
         }
         public Long getPolicyId() {
             return this.policyId;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setPolicyName(String policyName) {
+            this.policyName = policyName;
+            return this;
+        }
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setPolicyStatus(String policyStatus) {
+            this.policyStatus = policyStatus;
+            return this;
+        }
+        public String getPolicyStatus() {
+            return this.policyStatus;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setUniBackUpCount(Integer uniBackUpCount) {
+            this.uniBackUpCount = uniBackUpCount;
+            return this;
+        }
+        public Integer getUniBackUpCount() {
+            return this.uniBackUpCount;
+        }
+
+        public DescribeUniBackupPoliciesResponseBodyUniBackupPolicies setUniRegionId(String uniRegionId) {
+            this.uniRegionId = uniRegionId;
+            return this;
+        }
+        public String getUniRegionId() {
+            return this.uniRegionId;
         }
 
     }

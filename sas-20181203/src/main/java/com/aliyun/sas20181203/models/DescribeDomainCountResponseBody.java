@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainCountResponseBody extends TeaModel {
-    @NameInMap("RootDomainsCount")
-    public Integer rootDomainsCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RootDomainsCount")
+    public Integer rootDomainsCount;
 
     @NameInMap("SubDomainsCount")
     public Integer subDomainsCount;
@@ -21,20 +21,20 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainCountResponseBody setRootDomainsCount(Integer rootDomainsCount) {
-        this.rootDomainsCount = rootDomainsCount;
-        return this;
-    }
-    public Integer getRootDomainsCount() {
-        return this.rootDomainsCount;
-    }
-
     public DescribeDomainCountResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDomainCountResponseBody setRootDomainsCount(Integer rootDomainsCount) {
+        this.rootDomainsCount = rootDomainsCount;
+        return this;
+    }
+    public Integer getRootDomainsCount() {
+        return this.rootDomainsCount;
     }
 
     public DescribeDomainCountResponseBody setSubDomainsCount(Integer subDomainsCount) {

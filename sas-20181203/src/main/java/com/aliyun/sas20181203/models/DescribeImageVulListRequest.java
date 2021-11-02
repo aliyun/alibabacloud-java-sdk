@@ -4,44 +4,41 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageVulListRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("Uuids")
-    public String uuids;
-
-    @NameInMap("Name")
-    public String name;
-
     @NameInMap("AliasName")
     public String aliasName;
-
-    @NameInMap("StatusList")
-    public String statusList;
-
-    @NameInMap("Necessity")
-    public String necessity;
-
-    @NameInMap("Dealed")
-    public String dealed;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("Dealed")
+    public String dealed;
+
+    @NameInMap("Digest")
+    public String digest;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("Necessity")
+    public String necessity;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("RepoRegionId")
-    public String repoRegionId;
-
-    @NameInMap("RepoInstanceId")
-    public String repoInstanceId;
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("RepoId")
     public String repoId;
+
+    @NameInMap("RepoInstanceId")
+    public String repoInstanceId;
 
     @NameInMap("RepoName")
     public String repoName;
@@ -49,53 +46,24 @@ public class DescribeImageVulListRequest extends TeaModel {
     @NameInMap("RepoNamespace")
     public String repoNamespace;
 
-    @NameInMap("RegionId")
-    public String regionId;
+    @NameInMap("RepoRegionId")
+    public String repoRegionId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("StatusList")
+    public String statusList;
 
     @NameInMap("Tag")
     public String tag;
 
-    @NameInMap("Digest")
-    public String digest;
+    @NameInMap("Type")
+    public String type;
+
+    @NameInMap("Uuids")
+    public String uuids;
 
     public static DescribeImageVulListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageVulListRequest self = new DescribeImageVulListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeImageVulListRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public DescribeImageVulListRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public DescribeImageVulListRequest setUuids(String uuids) {
-        this.uuids = uuids;
-        return this;
-    }
-    public String getUuids() {
-        return this.uuids;
-    }
-
-    public DescribeImageVulListRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
     }
 
     public DescribeImageVulListRequest setAliasName(String aliasName) {
@@ -106,20 +74,12 @@ public class DescribeImageVulListRequest extends TeaModel {
         return this.aliasName;
     }
 
-    public DescribeImageVulListRequest setStatusList(String statusList) {
-        this.statusList = statusList;
+    public DescribeImageVulListRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getStatusList() {
-        return this.statusList;
-    }
-
-    public DescribeImageVulListRequest setNecessity(String necessity) {
-        this.necessity = necessity;
-        return this;
-    }
-    public String getNecessity() {
-        return this.necessity;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeImageVulListRequest setDealed(String dealed) {
@@ -130,12 +90,44 @@ public class DescribeImageVulListRequest extends TeaModel {
         return this.dealed;
     }
 
-    public DescribeImageVulListRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeImageVulListRequest setDigest(String digest) {
+        this.digest = digest;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getDigest() {
+        return this.digest;
+    }
+
+    public DescribeImageVulListRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeImageVulListRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeImageVulListRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeImageVulListRequest setNecessity(String necessity) {
+        this.necessity = necessity;
+        return this;
+    }
+    public String getNecessity() {
+        return this.necessity;
     }
 
     public DescribeImageVulListRequest setPageSize(Integer pageSize) {
@@ -146,20 +138,12 @@ public class DescribeImageVulListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeImageVulListRequest setRepoRegionId(String repoRegionId) {
-        this.repoRegionId = repoRegionId;
+    public DescribeImageVulListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
-    public String getRepoRegionId() {
-        return this.repoRegionId;
-    }
-
-    public DescribeImageVulListRequest setRepoInstanceId(String repoInstanceId) {
-        this.repoInstanceId = repoInstanceId;
-        return this;
-    }
-    public String getRepoInstanceId() {
-        return this.repoInstanceId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeImageVulListRequest setRepoId(String repoId) {
@@ -168,6 +152,14 @@ public class DescribeImageVulListRequest extends TeaModel {
     }
     public String getRepoId() {
         return this.repoId;
+    }
+
+    public DescribeImageVulListRequest setRepoInstanceId(String repoInstanceId) {
+        this.repoInstanceId = repoInstanceId;
+        return this;
+    }
+    public String getRepoInstanceId() {
+        return this.repoInstanceId;
     }
 
     public DescribeImageVulListRequest setRepoName(String repoName) {
@@ -186,20 +178,20 @@ public class DescribeImageVulListRequest extends TeaModel {
         return this.repoNamespace;
     }
 
-    public DescribeImageVulListRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeImageVulListRequest setRepoRegionId(String repoRegionId) {
+        this.repoRegionId = repoRegionId;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getRepoRegionId() {
+        return this.repoRegionId;
     }
 
-    public DescribeImageVulListRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public DescribeImageVulListRequest setStatusList(String statusList) {
+        this.statusList = statusList;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getStatusList() {
+        return this.statusList;
     }
 
     public DescribeImageVulListRequest setTag(String tag) {
@@ -210,12 +202,20 @@ public class DescribeImageVulListRequest extends TeaModel {
         return this.tag;
     }
 
-    public DescribeImageVulListRequest setDigest(String digest) {
-        this.digest = digest;
+    public DescribeImageVulListRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getDigest() {
-        return this.digest;
+    public String getType() {
+        return this.type;
+    }
+
+    public DescribeImageVulListRequest setUuids(String uuids) {
+        this.uuids = uuids;
+        return this;
+    }
+    public String getUuids() {
+        return this.uuids;
     }
 
 }

@@ -4,8 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeEmgVulItemRequest extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RiskStatus")
     public String riskStatus;
@@ -16,15 +22,17 @@ public class DescribeEmgVulItemRequest extends TeaModel {
     @NameInMap("VulName")
     public String vulName;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     public static DescribeEmgVulItemRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEmgVulItemRequest self = new DescribeEmgVulItemRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEmgVulItemRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeEmgVulItemRequest setLang(String lang) {
@@ -33,6 +41,14 @@ public class DescribeEmgVulItemRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeEmgVulItemRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeEmgVulItemRequest setRiskStatus(String riskStatus) {
@@ -57,22 +73,6 @@ public class DescribeEmgVulItemRequest extends TeaModel {
     }
     public String getVulName() {
         return this.vulName;
-    }
-
-    public DescribeEmgVulItemRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public DescribeEmgVulItemRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
 }

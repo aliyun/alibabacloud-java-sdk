@@ -4,8 +4,8 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWarningMachinesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("Lang")
     public String lang;
@@ -13,32 +13,32 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     @NameInMap("MachineName")
     public String machineName;
 
-    @NameInMap("Uuids")
-    public String uuids;
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RiskId")
     public Long riskId;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("StrategyId")
     public Long strategyId;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Uuids")
+    public String uuids;
 
     public static DescribeWarningMachinesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeWarningMachinesRequest self = new DescribeWarningMachinesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeWarningMachinesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeWarningMachinesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeWarningMachinesRequest setLang(String lang) {
@@ -57,12 +57,12 @@ public class DescribeWarningMachinesRequest extends TeaModel {
         return this.machineName;
     }
 
-    public DescribeWarningMachinesRequest setUuids(String uuids) {
-        this.uuids = uuids;
+    public DescribeWarningMachinesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public String getUuids() {
-        return this.uuids;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeWarningMachinesRequest setRiskId(Long riskId) {
@@ -73,6 +73,14 @@ public class DescribeWarningMachinesRequest extends TeaModel {
         return this.riskId;
     }
 
+    public DescribeWarningMachinesRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
     public DescribeWarningMachinesRequest setStrategyId(Long strategyId) {
         this.strategyId = strategyId;
         return this;
@@ -81,20 +89,12 @@ public class DescribeWarningMachinesRequest extends TeaModel {
         return this.strategyId;
     }
 
-    public DescribeWarningMachinesRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeWarningMachinesRequest setUuids(String uuids) {
+        this.uuids = uuids;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeWarningMachinesRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getUuids() {
+        return this.uuids;
     }
 
 }

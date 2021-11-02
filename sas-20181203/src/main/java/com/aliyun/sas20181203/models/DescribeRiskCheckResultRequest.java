@@ -4,29 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskCheckResultRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("GroupId")
-    public Long groupId;
+    @NameInMap("AssetType")
+    public String assetType;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RiskLevel")
-    public String riskLevel;
+    @NameInMap("GroupId")
+    public Long groupId;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("ItemIds")
+    public java.util.List<String> itemIds;
 
-    @NameInMap("AssetType")
-    public String assetType;
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("Name")
     public String name;
@@ -37,44 +28,29 @@ public class DescribeRiskCheckResultRequest extends TeaModel {
     @NameInMap("QueryFlag")
     public String queryFlag;
 
-    @NameInMap("ItemIds")
-    public java.util.List<String> itemIds;
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RiskLevel")
+    public String riskLevel;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeRiskCheckResultRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRiskCheckResultRequest self = new DescribeRiskCheckResultRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRiskCheckResultRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeRiskCheckResultRequest setAssetType(String assetType) {
+        this.assetType = assetType;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeRiskCheckResultRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeRiskCheckResultRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public DescribeRiskCheckResultRequest setGroupId(Long groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public Long getGroupId() {
-        return this.groupId;
+    public String getAssetType() {
+        return this.assetType;
     }
 
     public DescribeRiskCheckResultRequest setCurrentPage(Integer currentPage) {
@@ -85,28 +61,28 @@ public class DescribeRiskCheckResultRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeRiskCheckResultRequest setRiskLevel(String riskLevel) {
-        this.riskLevel = riskLevel;
+    public DescribeRiskCheckResultRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getRiskLevel() {
-        return this.riskLevel;
+    public Long getGroupId() {
+        return this.groupId;
     }
 
-    public DescribeRiskCheckResultRequest setStatus(String status) {
-        this.status = status;
+    public DescribeRiskCheckResultRequest setItemIds(java.util.List<String> itemIds) {
+        this.itemIds = itemIds;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public java.util.List<String> getItemIds() {
+        return this.itemIds;
     }
 
-    public DescribeRiskCheckResultRequest setAssetType(String assetType) {
-        this.assetType = assetType;
+    public DescribeRiskCheckResultRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getAssetType() {
-        return this.assetType;
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeRiskCheckResultRequest setName(String name) {
@@ -133,12 +109,36 @@ public class DescribeRiskCheckResultRequest extends TeaModel {
         return this.queryFlag;
     }
 
-    public DescribeRiskCheckResultRequest setItemIds(java.util.List<String> itemIds) {
-        this.itemIds = itemIds;
+    public DescribeRiskCheckResultRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public java.util.List<String> getItemIds() {
-        return this.itemIds;
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeRiskCheckResultRequest setRiskLevel(String riskLevel) {
+        this.riskLevel = riskLevel;
+        return this;
+    }
+    public String getRiskLevel() {
+        return this.riskLevel;
+    }
+
+    public DescribeRiskCheckResultRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public DescribeRiskCheckResultRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

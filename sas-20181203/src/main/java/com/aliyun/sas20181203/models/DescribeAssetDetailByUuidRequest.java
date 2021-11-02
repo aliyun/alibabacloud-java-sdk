@@ -4,18 +4,26 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAssetDetailByUuidRequest extends TeaModel {
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("SourceIp")
     public String sourceIp;
 
     @NameInMap("Uuid")
     public String uuid;
 
-    @NameInMap("Lang")
-    public String lang;
-
     public static DescribeAssetDetailByUuidRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAssetDetailByUuidRequest self = new DescribeAssetDetailByUuidRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAssetDetailByUuidRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeAssetDetailByUuidRequest setSourceIp(String sourceIp) {
@@ -32,14 +40,6 @@ public class DescribeAssetDetailByUuidRequest extends TeaModel {
     }
     public String getUuid() {
         return this.uuid;
-    }
-
-    public DescribeAssetDetailByUuidRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
 }

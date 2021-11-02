@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Integer count;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -16,15 +19,20 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("Count")
-    public Integer count;
-
     @NameInMap("WarningSummarys")
     public java.util.List<DescribeCheckWarningSummaryResponseBodyWarningSummarys> warningSummarys;
 
     public static DescribeCheckWarningSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCheckWarningSummaryResponseBody self = new DescribeCheckWarningSummaryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCheckWarningSummaryResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public DescribeCheckWarningSummaryResponseBody setCurrentPage(Integer currentPage) {
@@ -59,14 +67,6 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeCheckWarningSummaryResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
-    }
-
     public DescribeCheckWarningSummaryResponseBody setWarningSummarys(java.util.List<DescribeCheckWarningSummaryResponseBodyWarningSummarys> warningSummarys) {
         this.warningSummarys = warningSummarys;
         return this;
@@ -76,50 +76,42 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckWarningSummaryResponseBodyWarningSummarys extends TeaModel {
-        @NameInMap("LowWarningCount")
-        public Integer lowWarningCount;
-
         @NameInMap("CheckCount")
         public Integer checkCount;
-
-        @NameInMap("MediumWarningCount")
-        public Integer mediumWarningCount;
-
-        @NameInMap("LastFoundTime")
-        public String lastFoundTime;
-
-        @NameInMap("RiskId")
-        public Long riskId;
-
-        @NameInMap("SubTypeAlias")
-        public String subTypeAlias;
-
-        @NameInMap("WarningMachineCount")
-        public Integer warningMachineCount;
 
         @NameInMap("HighWarningCount")
         public Integer highWarningCount;
 
-        @NameInMap("TypeAlias")
-        public String typeAlias;
-
-        @NameInMap("RiskName")
-        public String riskName;
+        @NameInMap("LastFoundTime")
+        public String lastFoundTime;
 
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("LowWarningCount")
+        public Integer lowWarningCount;
+
+        @NameInMap("MediumWarningCount")
+        public Integer mediumWarningCount;
+
+        @NameInMap("RiskId")
+        public Long riskId;
+
+        @NameInMap("RiskName")
+        public String riskName;
+
+        @NameInMap("SubTypeAlias")
+        public String subTypeAlias;
+
+        @NameInMap("TypeAlias")
+        public String typeAlias;
+
+        @NameInMap("WarningMachineCount")
+        public Integer warningMachineCount;
+
         public static DescribeCheckWarningSummaryResponseBodyWarningSummarys build(java.util.Map<String, ?> map) throws Exception {
             DescribeCheckWarningSummaryResponseBodyWarningSummarys self = new DescribeCheckWarningSummaryResponseBodyWarningSummarys();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setLowWarningCount(Integer lowWarningCount) {
-            this.lowWarningCount = lowWarningCount;
-            return this;
-        }
-        public Integer getLowWarningCount() {
-            return this.lowWarningCount;
         }
 
         public DescribeCheckWarningSummaryResponseBodyWarningSummarys setCheckCount(Integer checkCount) {
@@ -130,12 +122,12 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             return this.checkCount;
         }
 
-        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setMediumWarningCount(Integer mediumWarningCount) {
-            this.mediumWarningCount = mediumWarningCount;
+        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setHighWarningCount(Integer highWarningCount) {
+            this.highWarningCount = highWarningCount;
             return this;
         }
-        public Integer getMediumWarningCount() {
-            return this.mediumWarningCount;
+        public Integer getHighWarningCount() {
+            return this.highWarningCount;
         }
 
         public DescribeCheckWarningSummaryResponseBodyWarningSummarys setLastFoundTime(String lastFoundTime) {
@@ -146,44 +138,36 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             return this.lastFoundTime;
         }
 
+        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setLowWarningCount(Integer lowWarningCount) {
+            this.lowWarningCount = lowWarningCount;
+            return this;
+        }
+        public Integer getLowWarningCount() {
+            return this.lowWarningCount;
+        }
+
+        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setMediumWarningCount(Integer mediumWarningCount) {
+            this.mediumWarningCount = mediumWarningCount;
+            return this;
+        }
+        public Integer getMediumWarningCount() {
+            return this.mediumWarningCount;
+        }
+
         public DescribeCheckWarningSummaryResponseBodyWarningSummarys setRiskId(Long riskId) {
             this.riskId = riskId;
             return this;
         }
         public Long getRiskId() {
             return this.riskId;
-        }
-
-        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setSubTypeAlias(String subTypeAlias) {
-            this.subTypeAlias = subTypeAlias;
-            return this;
-        }
-        public String getSubTypeAlias() {
-            return this.subTypeAlias;
-        }
-
-        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setWarningMachineCount(Integer warningMachineCount) {
-            this.warningMachineCount = warningMachineCount;
-            return this;
-        }
-        public Integer getWarningMachineCount() {
-            return this.warningMachineCount;
-        }
-
-        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setHighWarningCount(Integer highWarningCount) {
-            this.highWarningCount = highWarningCount;
-            return this;
-        }
-        public Integer getHighWarningCount() {
-            return this.highWarningCount;
-        }
-
-        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setTypeAlias(String typeAlias) {
-            this.typeAlias = typeAlias;
-            return this;
-        }
-        public String getTypeAlias() {
-            return this.typeAlias;
         }
 
         public DescribeCheckWarningSummaryResponseBodyWarningSummarys setRiskName(String riskName) {
@@ -194,12 +178,28 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             return this.riskName;
         }
 
-        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setLevel(String level) {
-            this.level = level;
+        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setSubTypeAlias(String subTypeAlias) {
+            this.subTypeAlias = subTypeAlias;
             return this;
         }
-        public String getLevel() {
-            return this.level;
+        public String getSubTypeAlias() {
+            return this.subTypeAlias;
+        }
+
+        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setTypeAlias(String typeAlias) {
+            this.typeAlias = typeAlias;
+            return this;
+        }
+        public String getTypeAlias() {
+            return this.typeAlias;
+        }
+
+        public DescribeCheckWarningSummaryResponseBodyWarningSummarys setWarningMachineCount(Integer warningMachineCount) {
+            this.warningMachineCount = warningMachineCount;
+            return this;
+        }
+        public Integer getWarningMachineCount() {
+            return this.warningMachineCount;
         }
 
     }

@@ -4,40 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogstoreStorageResponseBody extends TeaModel {
-    @NameInMap("Used")
-    public Long used;
-
-    @NameInMap("Ttl")
-    public Integer ttl;
-
     @NameInMap("Logstore")
     public String logstore;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Preserve")
     public Long preserve;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Ttl")
+    public Integer ttl;
+
+    @NameInMap("Used")
+    public Long used;
+
     public static DescribeLogstoreStorageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogstoreStorageResponseBody self = new DescribeLogstoreStorageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLogstoreStorageResponseBody setUsed(Long used) {
-        this.used = used;
-        return this;
-    }
-    public Long getUsed() {
-        return this.used;
-    }
-
-    public DescribeLogstoreStorageResponseBody setTtl(Integer ttl) {
-        this.ttl = ttl;
-        return this;
-    }
-    public Integer getTtl() {
-        return this.ttl;
     }
 
     public DescribeLogstoreStorageResponseBody setLogstore(String logstore) {
@@ -48,6 +32,14 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         return this.logstore;
     }
 
+    public DescribeLogstoreStorageResponseBody setPreserve(Long preserve) {
+        this.preserve = preserve;
+        return this;
+    }
+    public Long getPreserve() {
+        return this.preserve;
+    }
+
     public DescribeLogstoreStorageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -56,12 +48,20 @@ public class DescribeLogstoreStorageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLogstoreStorageResponseBody setPreserve(Long preserve) {
-        this.preserve = preserve;
+    public DescribeLogstoreStorageResponseBody setTtl(Integer ttl) {
+        this.ttl = ttl;
         return this;
     }
-    public Long getPreserve() {
-        return this.preserve;
+    public Integer getTtl() {
+        return this.ttl;
+    }
+
+    public DescribeLogstoreStorageResponseBody setUsed(Long used) {
+        this.used = used;
+        return this;
+    }
+    public Long getUsed() {
+        return this.used;
     }
 
 }

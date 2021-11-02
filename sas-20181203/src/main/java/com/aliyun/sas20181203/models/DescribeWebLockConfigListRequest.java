@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWebLockConfigListRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("Uuid")
     public String uuid;
@@ -18,20 +18,20 @@ public class DescribeWebLockConfigListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeWebLockConfigListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public DescribeWebLockConfigListRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeWebLockConfigListRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public DescribeWebLockConfigListRequest setUuid(String uuid) {

@@ -7,11 +7,11 @@ public class ModifyPushAllTaskRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    @NameInMap("Uuids")
-    public String uuids;
-
     @NameInMap("Tasks")
     public String tasks;
+
+    @NameInMap("Uuids")
+    public String uuids;
 
     public static ModifyPushAllTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPushAllTaskRequest self = new ModifyPushAllTaskRequest();
@@ -26,20 +26,20 @@ public class ModifyPushAllTaskRequest extends TeaModel {
         return this.sourceIp;
     }
 
-    public ModifyPushAllTaskRequest setUuids(String uuids) {
-        this.uuids = uuids;
-        return this;
-    }
-    public String getUuids() {
-        return this.uuids;
-    }
-
     public ModifyPushAllTaskRequest setTasks(String tasks) {
         this.tasks = tasks;
         return this;
     }
     public String getTasks() {
         return this.tasks;
+    }
+
+    public ModifyPushAllTaskRequest setUuids(String uuids) {
+        this.uuids = uuids;
+        return this;
+    }
+    public String getUuids() {
+        return this.uuids;
     }
 
 }

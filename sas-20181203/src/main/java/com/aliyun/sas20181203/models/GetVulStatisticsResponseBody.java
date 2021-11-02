@@ -7,14 +7,14 @@ public class GetVulStatisticsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("VulAsapSum")
+    public Integer vulAsapSum;
+
     @NameInMap("VulLaterSum")
     public Integer vulLaterSum;
 
     @NameInMap("VulNntfSum")
     public Integer vulNntfSum;
-
-    @NameInMap("VulAsapSum")
-    public Integer vulAsapSum;
 
     public static GetVulStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVulStatisticsResponseBody self = new GetVulStatisticsResponseBody();
@@ -27,6 +27,14 @@ public class GetVulStatisticsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetVulStatisticsResponseBody setVulAsapSum(Integer vulAsapSum) {
+        this.vulAsapSum = vulAsapSum;
+        return this;
+    }
+    public Integer getVulAsapSum() {
+        return this.vulAsapSum;
     }
 
     public GetVulStatisticsResponseBody setVulLaterSum(Integer vulLaterSum) {
@@ -43,14 +51,6 @@ public class GetVulStatisticsResponseBody extends TeaModel {
     }
     public Integer getVulNntfSum() {
         return this.vulNntfSum;
-    }
-
-    public GetVulStatisticsResponseBody setVulAsapSum(Integer vulAsapSum) {
-        this.vulAsapSum = vulAsapSum;
-        return this;
-    }
-    public Integer getVulAsapSum() {
-        return this.vulAsapSum;
     }
 
 }

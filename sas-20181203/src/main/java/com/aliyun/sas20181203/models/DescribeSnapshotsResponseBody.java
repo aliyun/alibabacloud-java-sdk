@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageInfo")
     public DescribeSnapshotsResponseBodyPageInfo pageInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Snapshots")
     public java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots;
@@ -18,20 +18,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSnapshotsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeSnapshotsResponseBody setPageInfo(DescribeSnapshotsResponseBodyPageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
     }
     public DescribeSnapshotsResponseBodyPageInfo getPageInfo() {
         return this.pageInfo;
+    }
+
+    public DescribeSnapshotsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeSnapshotsResponseBody setSnapshots(java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots) {
@@ -43,6 +43,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodyPageInfo extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
@@ -55,12 +58,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Count")
-        public Integer count;
-
         public static DescribeSnapshotsResponseBodyPageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotsResponseBodyPageInfo self = new DescribeSnapshotsResponseBodyPageInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotsResponseBodyPageInfo setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public DescribeSnapshotsResponseBodyPageInfo setCurrentPage(Integer currentPage) {
@@ -95,88 +103,89 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public DescribeSnapshotsResponseBodyPageInfo setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
     }
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
-        @NameInMap("ContainerSnapshotId")
-        public String containerSnapshotId;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("SnapshotHash")
-        public String snapshotHash;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
+        @NameInMap("ActualBytes")
+        public Long actualBytes;
 
         @NameInMap("ActualItems")
         public Long actualItems;
 
-        @NameInMap("VaultId")
-        public String vaultId;
-
-        @NameInMap("ActualBytes")
-        public Long actualBytes;
-
-        @NameInMap("SourceType")
-        public String sourceType;
-
-        @NameInMap("ExitCode")
-        public String exitCode;
-
-        @NameInMap("ClientId")
-        public String clientId;
-
-        @NameInMap("ItemsDone")
-        public Long itemsDone;
+        @NameInMap("BytesDone")
+        public Long bytesDone;
 
         @NameInMap("BytesTotal")
         public Long bytesTotal;
 
-        @NameInMap("Retention")
-        public Long retention;
+        @NameInMap("ClientId")
+        public String clientId;
 
-        @NameInMap("ErrorType")
-        public String errorType;
+        @NameInMap("ContainerSnapshotId")
+        public String containerSnapshotId;
 
         @NameInMap("CreatedTime")
         public Long createdTime;
 
-        @NameInMap("ParentSnapshotHash")
-        public String parentSnapshotHash;
+        @NameInMap("Duration")
+        public Long duration;
 
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("PlanId")
-        public String planId;
-
-        @NameInMap("Source")
-        public String source;
-
-        @NameInMap("RegionId")
-        public String regionId;
-
-        @NameInMap("ParentHash")
-        public String parentHash;
-
-        @NameInMap("Uuid")
-        public String uuid;
+        @NameInMap("ErrorCount")
+        public Long errorCount;
 
         @NameInMap("ErrorFile")
         public String errorFile;
 
-        @NameInMap("SnapshotType")
-        public String snapshotType;
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("ErrorType")
+        public String errorType;
+
+        @NameInMap("ExitCode")
+        public String exitCode;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("ItemsDone")
+        public Long itemsDone;
+
+        @NameInMap("ItemsTotal")
+        public Long itemsTotal;
+
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("ParentHash")
+        public String parentHash;
+
+        @NameInMap("ParentSnapshotHash")
+        public String parentSnapshotHash;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("Paths")
+        public java.util.List<String> paths;
+
+        @NameInMap("PlanId")
+        public String planId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Retention")
+        public Long retention;
+
+        @NameInMap("Size")
+        public Long size;
+
+        @NameInMap("SnapshotHash")
+        public String snapshotHash;
+
+        @NameInMap("SnapshotId")
+        public String snapshotId;
 
         @NameInMap("SnapshotName")
         public String snapshotName;
@@ -184,84 +193,27 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("SnapshotOption")
         public String snapshotOption;
 
-        @NameInMap("SnapshotId")
-        public String snapshotId;
+        @NameInMap("SnapshotType")
+        public String snapshotType;
 
-        @NameInMap("JobId")
-        public String jobId;
+        @NameInMap("Source")
+        public String source;
 
-        @NameInMap("Size")
-        public Long size;
+        @NameInMap("SourceType")
+        public String sourceType;
 
-        @NameInMap("Path")
-        public String path;
+        @NameInMap("Status")
+        public String status;
 
-        @NameInMap("ErrorCount")
-        public Long errorCount;
+        @NameInMap("Uuid")
+        public String uuid;
 
-        @NameInMap("Duration")
-        public Long duration;
-
-        @NameInMap("ItemsTotal")
-        public Long itemsTotal;
-
-        @NameInMap("BytesDone")
-        public Long bytesDone;
-
-        @NameInMap("Paths")
-        public java.util.List<String> paths;
+        @NameInMap("VaultId")
+        public String vaultId;
 
         public static DescribeSnapshotsResponseBodySnapshots build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotsResponseBodySnapshots self = new DescribeSnapshotsResponseBodySnapshots();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setContainerSnapshotId(String containerSnapshotId) {
-            this.containerSnapshotId = containerSnapshotId;
-            return this;
-        }
-        public String getContainerSnapshotId() {
-            return this.containerSnapshotId;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setSnapshotHash(String snapshotHash) {
-            this.snapshotHash = snapshotHash;
-            return this;
-        }
-        public String getSnapshotHash() {
-            return this.snapshotHash;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setActualItems(Long actualItems) {
-            this.actualItems = actualItems;
-            return this;
-        }
-        public Long getActualItems() {
-            return this.actualItems;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setVaultId(String vaultId) {
-            this.vaultId = vaultId;
-            return this;
-        }
-        public String getVaultId() {
-            return this.vaultId;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setActualBytes(Long actualBytes) {
@@ -272,36 +224,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.actualBytes;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSourceType(String sourceType) {
-            this.sourceType = sourceType;
+        public DescribeSnapshotsResponseBodySnapshots setActualItems(Long actualItems) {
+            this.actualItems = actualItems;
             return this;
         }
-        public String getSourceType() {
-            return this.sourceType;
+        public Long getActualItems() {
+            return this.actualItems;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setExitCode(String exitCode) {
-            this.exitCode = exitCode;
+        public DescribeSnapshotsResponseBodySnapshots setBytesDone(Long bytesDone) {
+            this.bytesDone = bytesDone;
             return this;
         }
-        public String getExitCode() {
-            return this.exitCode;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setClientId(String clientId) {
-            this.clientId = clientId;
-            return this;
-        }
-        public String getClientId() {
-            return this.clientId;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setItemsDone(Long itemsDone) {
-            this.itemsDone = itemsDone;
-            return this;
-        }
-        public Long getItemsDone() {
-            return this.itemsDone;
+        public Long getBytesDone() {
+            return this.bytesDone;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setBytesTotal(Long bytesTotal) {
@@ -312,20 +248,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.bytesTotal;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setRetention(Long retention) {
-            this.retention = retention;
+        public DescribeSnapshotsResponseBodySnapshots setClientId(String clientId) {
+            this.clientId = clientId;
             return this;
         }
-        public Long getRetention() {
-            return this.retention;
+        public String getClientId() {
+            return this.clientId;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setErrorType(String errorType) {
-            this.errorType = errorType;
+        public DescribeSnapshotsResponseBodySnapshots setContainerSnapshotId(String containerSnapshotId) {
+            this.containerSnapshotId = containerSnapshotId;
             return this;
         }
-        public String getErrorType() {
-            return this.errorType;
+        public String getContainerSnapshotId() {
+            return this.containerSnapshotId;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setCreatedTime(Long createdTime) {
@@ -336,60 +272,20 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.createdTime;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setParentSnapshotHash(String parentSnapshotHash) {
-            this.parentSnapshotHash = parentSnapshotHash;
+        public DescribeSnapshotsResponseBodySnapshots setDuration(Long duration) {
+            this.duration = duration;
             return this;
         }
-        public String getParentSnapshotHash() {
-            return this.parentSnapshotHash;
+        public Long getDuration() {
+            return this.duration;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public DescribeSnapshotsResponseBodySnapshots setErrorCount(Long errorCount) {
+            this.errorCount = errorCount;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setPlanId(String planId) {
-            this.planId = planId;
-            return this;
-        }
-        public String getPlanId() {
-            return this.planId;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setParentHash(String parentHash) {
-            this.parentHash = parentHash;
-            return this;
-        }
-        public String getParentHash() {
-            return this.parentHash;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
+        public Long getErrorCount() {
+            return this.errorCount;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setErrorFile(String errorFile) {
@@ -400,12 +296,140 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.errorFile;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSnapshotType(String snapshotType) {
-            this.snapshotType = snapshotType;
+        public DescribeSnapshotsResponseBodySnapshots setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
-        public String getSnapshotType() {
-            return this.snapshotType;
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setErrorType(String errorType) {
+            this.errorType = errorType;
+            return this;
+        }
+        public String getErrorType() {
+            return this.errorType;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setExitCode(String exitCode) {
+            this.exitCode = exitCode;
+            return this;
+        }
+        public String getExitCode() {
+            return this.exitCode;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setItemsDone(Long itemsDone) {
+            this.itemsDone = itemsDone;
+            return this;
+        }
+        public Long getItemsDone() {
+            return this.itemsDone;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setItemsTotal(Long itemsTotal) {
+            this.itemsTotal = itemsTotal;
+            return this;
+        }
+        public Long getItemsTotal() {
+            return this.itemsTotal;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setParentHash(String parentHash) {
+            this.parentHash = parentHash;
+            return this;
+        }
+        public String getParentHash() {
+            return this.parentHash;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setParentSnapshotHash(String parentSnapshotHash) {
+            this.parentSnapshotHash = parentSnapshotHash;
+            return this;
+        }
+        public String getParentSnapshotHash() {
+            return this.parentSnapshotHash;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setPaths(java.util.List<String> paths) {
+            this.paths = paths;
+            return this;
+        }
+        public java.util.List<String> getPaths() {
+            return this.paths;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setPlanId(String planId) {
+            this.planId = planId;
+            return this;
+        }
+        public String getPlanId() {
+            return this.planId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setRetention(Long retention) {
+            this.retention = retention;
+            return this;
+        }
+        public Long getRetention() {
+            return this.retention;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setSnapshotHash(String snapshotHash) {
+            this.snapshotHash = snapshotHash;
+            return this;
+        }
+        public String getSnapshotHash() {
+            return this.snapshotHash;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setSnapshotName(String snapshotName) {
@@ -424,76 +448,52 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.snapshotOption;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSnapshotId(String snapshotId) {
-            this.snapshotId = snapshotId;
+        public DescribeSnapshotsResponseBodySnapshots setSnapshotType(String snapshotType) {
+            this.snapshotType = snapshotType;
             return this;
         }
-        public String getSnapshotId() {
-            return this.snapshotId;
+        public String getSnapshotType() {
+            return this.snapshotType;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setJobId(String jobId) {
-            this.jobId = jobId;
+        public DescribeSnapshotsResponseBodySnapshots setSource(String source) {
+            this.source = source;
             return this;
         }
-        public String getJobId() {
-            return this.jobId;
+        public String getSource() {
+            return this.source;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSize(Long size) {
-            this.size = size;
+        public DescribeSnapshotsResponseBodySnapshots setSourceType(String sourceType) {
+            this.sourceType = sourceType;
             return this;
         }
-        public Long getSize() {
-            return this.size;
+        public String getSourceType() {
+            return this.sourceType;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setPath(String path) {
-            this.path = path;
+        public DescribeSnapshotsResponseBodySnapshots setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getPath() {
-            return this.path;
+        public String getStatus() {
+            return this.status;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setErrorCount(Long errorCount) {
-            this.errorCount = errorCount;
+        public DescribeSnapshotsResponseBodySnapshots setUuid(String uuid) {
+            this.uuid = uuid;
             return this;
         }
-        public Long getErrorCount() {
-            return this.errorCount;
+        public String getUuid() {
+            return this.uuid;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setDuration(Long duration) {
-            this.duration = duration;
+        public DescribeSnapshotsResponseBodySnapshots setVaultId(String vaultId) {
+            this.vaultId = vaultId;
             return this;
         }
-        public Long getDuration() {
-            return this.duration;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setItemsTotal(Long itemsTotal) {
-            this.itemsTotal = itemsTotal;
-            return this;
-        }
-        public Long getItemsTotal() {
-            return this.itemsTotal;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setBytesDone(Long bytesDone) {
-            this.bytesDone = bytesDone;
-            return this;
-        }
-        public Long getBytesDone() {
-            return this.bytesDone;
-        }
-
-        public DescribeSnapshotsResponseBodySnapshots setPaths(java.util.List<String> paths) {
-            this.paths = paths;
-            return this;
-        }
-        public java.util.List<String> getPaths() {
-            return this.paths;
+        public String getVaultId() {
+            return this.vaultId;
         }
 
     }

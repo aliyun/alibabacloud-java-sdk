@@ -7,17 +7,17 @@ public class DescribeStrategyProcessResponseBody extends TeaModel {
     @NameInMap("ExecStatus")
     public Integer execStatus;
 
+    @NameInMap("PassRate")
+    public String passRate;
+
     @NameInMap("ProcessRate")
     public Integer processRate;
-
-    @NameInMap("StrategyId")
-    public Long strategyId;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PassRate")
-    public String passRate;
+    @NameInMap("StrategyId")
+    public Long strategyId;
 
     public static DescribeStrategyProcessResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStrategyProcessResponseBody self = new DescribeStrategyProcessResponseBody();
@@ -32,20 +32,20 @@ public class DescribeStrategyProcessResponseBody extends TeaModel {
         return this.execStatus;
     }
 
+    public DescribeStrategyProcessResponseBody setPassRate(String passRate) {
+        this.passRate = passRate;
+        return this;
+    }
+    public String getPassRate() {
+        return this.passRate;
+    }
+
     public DescribeStrategyProcessResponseBody setProcessRate(Integer processRate) {
         this.processRate = processRate;
         return this;
     }
     public Integer getProcessRate() {
         return this.processRate;
-    }
-
-    public DescribeStrategyProcessResponseBody setStrategyId(Long strategyId) {
-        this.strategyId = strategyId;
-        return this;
-    }
-    public Long getStrategyId() {
-        return this.strategyId;
     }
 
     public DescribeStrategyProcessResponseBody setRequestId(String requestId) {
@@ -56,12 +56,12 @@ public class DescribeStrategyProcessResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeStrategyProcessResponseBody setPassRate(String passRate) {
-        this.passRate = passRate;
+    public DescribeStrategyProcessResponseBody setStrategyId(Long strategyId) {
+        this.strategyId = strategyId;
         return this;
     }
-    public String getPassRate() {
-        return this.passRate;
+    public Long getStrategyId() {
+        return this.strategyId;
     }
 
 }

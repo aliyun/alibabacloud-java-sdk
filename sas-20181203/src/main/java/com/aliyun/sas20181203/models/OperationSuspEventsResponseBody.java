@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperationSuspEventsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AccessCode")
     public String accessCode;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -18,20 +18,20 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public OperationSuspEventsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public OperationSuspEventsResponseBody setAccessCode(String accessCode) {
         this.accessCode = accessCode;
         return this;
     }
     public String getAccessCode() {
         return this.accessCode;
+    }
+
+    public OperationSuspEventsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public OperationSuspEventsResponseBody setSuccess(Boolean success) {

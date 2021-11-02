@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Data")
     public java.util.List<DescribeInstanceStatisticsResponseBodyData> data;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeInstanceStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStatisticsResponseBody self = new DescribeInstanceStatisticsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceStatisticsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeInstanceStatisticsResponseBody setData(java.util.List<DescribeInstanceStatisticsResponseBodyData> data) {
@@ -31,6 +23,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public DescribeInstanceStatisticsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeInstanceStatisticsResponseBodyData extends TeaModel {
         @NameInMap("Account")
         public Integer account;
@@ -38,11 +38,8 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @NameInMap("AppNum")
         public Integer appNum;
 
-        @NameInMap("ScaNum")
-        public Integer scaNum;
-
-        @NameInMap("Trojan")
-        public Integer trojan;
+        @NameInMap("CmsNum")
+        public Integer cmsNum;
 
         @NameInMap("CveNum")
         public Integer cveNum;
@@ -50,23 +47,26 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @NameInMap("EmgNum")
         public Integer emgNum;
 
+        @NameInMap("Health")
+        public Integer health;
+
+        @NameInMap("ScaNum")
+        public Integer scaNum;
+
         @NameInMap("Suspicious")
         public Integer suspicious;
 
-        @NameInMap("CmsNum")
-        public Integer cmsNum;
+        @NameInMap("SysNum")
+        public Integer sysNum;
+
+        @NameInMap("Trojan")
+        public Integer trojan;
 
         @NameInMap("Uuid")
         public String uuid;
 
         @NameInMap("Vul")
         public Integer vul;
-
-        @NameInMap("Health")
-        public Integer health;
-
-        @NameInMap("SysNum")
-        public Integer sysNum;
 
         public static DescribeInstanceStatisticsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceStatisticsResponseBodyData self = new DescribeInstanceStatisticsResponseBodyData();
@@ -89,20 +89,12 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             return this.appNum;
         }
 
-        public DescribeInstanceStatisticsResponseBodyData setScaNum(Integer scaNum) {
-            this.scaNum = scaNum;
+        public DescribeInstanceStatisticsResponseBodyData setCmsNum(Integer cmsNum) {
+            this.cmsNum = cmsNum;
             return this;
         }
-        public Integer getScaNum() {
-            return this.scaNum;
-        }
-
-        public DescribeInstanceStatisticsResponseBodyData setTrojan(Integer trojan) {
-            this.trojan = trojan;
-            return this;
-        }
-        public Integer getTrojan() {
-            return this.trojan;
+        public Integer getCmsNum() {
+            return this.cmsNum;
         }
 
         public DescribeInstanceStatisticsResponseBodyData setCveNum(Integer cveNum) {
@@ -121,6 +113,22 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             return this.emgNum;
         }
 
+        public DescribeInstanceStatisticsResponseBodyData setHealth(Integer health) {
+            this.health = health;
+            return this;
+        }
+        public Integer getHealth() {
+            return this.health;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setScaNum(Integer scaNum) {
+            this.scaNum = scaNum;
+            return this;
+        }
+        public Integer getScaNum() {
+            return this.scaNum;
+        }
+
         public DescribeInstanceStatisticsResponseBodyData setSuspicious(Integer suspicious) {
             this.suspicious = suspicious;
             return this;
@@ -129,12 +137,20 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             return this.suspicious;
         }
 
-        public DescribeInstanceStatisticsResponseBodyData setCmsNum(Integer cmsNum) {
-            this.cmsNum = cmsNum;
+        public DescribeInstanceStatisticsResponseBodyData setSysNum(Integer sysNum) {
+            this.sysNum = sysNum;
             return this;
         }
-        public Integer getCmsNum() {
-            return this.cmsNum;
+        public Integer getSysNum() {
+            return this.sysNum;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setTrojan(Integer trojan) {
+            this.trojan = trojan;
+            return this;
+        }
+        public Integer getTrojan() {
+            return this.trojan;
         }
 
         public DescribeInstanceStatisticsResponseBodyData setUuid(String uuid) {
@@ -151,22 +167,6 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         }
         public Integer getVul() {
             return this.vul;
-        }
-
-        public DescribeInstanceStatisticsResponseBodyData setHealth(Integer health) {
-            this.health = health;
-            return this;
-        }
-        public Integer getHealth() {
-            return this.health;
-        }
-
-        public DescribeInstanceStatisticsResponseBodyData setSysNum(Integer sysNum) {
-            this.sysNum = sysNum;
-            return this;
-        }
-        public Integer getSysNum() {
-            return this.sysNum;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBruteForceSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("BruteForceSummary")
     public DescribeBruteForceSummaryResponseBodyBruteForceSummary bruteForceSummary;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeBruteForceSummaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBruteForceSummaryResponseBody self = new DescribeBruteForceSummaryResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeBruteForceSummaryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeBruteForceSummaryResponseBody setBruteForceSummary(DescribeBruteForceSummaryResponseBodyBruteForceSummary bruteForceSummary) {
@@ -29,6 +21,14 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
     }
     public DescribeBruteForceSummaryResponseBodyBruteForceSummary getBruteForceSummary() {
         return this.bruteForceSummary;
+    }
+
+    public DescribeBruteForceSummaryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeBruteForceSummaryResponseBodyBruteForceSummary extends TeaModel {

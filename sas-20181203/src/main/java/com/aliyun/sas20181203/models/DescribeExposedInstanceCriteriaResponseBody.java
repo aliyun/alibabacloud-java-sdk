@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CriteriaList")
     public java.util.List<DescribeExposedInstanceCriteriaResponseBodyCriteriaList> criteriaList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeExposedInstanceCriteriaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeExposedInstanceCriteriaResponseBody self = new DescribeExposedInstanceCriteriaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeExposedInstanceCriteriaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeExposedInstanceCriteriaResponseBody setCriteriaList(java.util.List<DescribeExposedInstanceCriteriaResponseBodyCriteriaList> criteriaList) {
@@ -31,12 +23,20 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
         return this.criteriaList;
     }
 
-    public static class DescribeExposedInstanceCriteriaResponseBodyCriteriaList extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public DescribeExposedInstanceCriteriaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeExposedInstanceCriteriaResponseBodyCriteriaList extends TeaModel {
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("Values")
         public String values;
@@ -46,20 +46,20 @@ public class DescribeExposedInstanceCriteriaResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeExposedInstanceCriteriaResponseBodyCriteriaList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
         public DescribeExposedInstanceCriteriaResponseBodyCriteriaList setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeExposedInstanceCriteriaResponseBodyCriteriaList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public DescribeExposedInstanceCriteriaResponseBodyCriteriaList setValues(String values) {

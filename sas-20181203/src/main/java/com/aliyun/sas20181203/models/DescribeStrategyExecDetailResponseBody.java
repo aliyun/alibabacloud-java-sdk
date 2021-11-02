@@ -4,14 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeStrategyExecDetailResponseBody extends TeaModel {
-    @NameInMap("InProcessCount")
-    public Integer inProcessCount;
-
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("FailCount")
+    public Integer failCount;
+
+    @NameInMap("FailedEcsList")
+    public java.util.List<DescribeStrategyExecDetailResponseBodyFailedEcsList> failedEcsList;
+
+    @NameInMap("InProcessCount")
+    public Integer inProcessCount;
 
     @NameInMap("Percent")
     public String percent;
@@ -19,29 +22,18 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("FailCount")
-    public Integer failCount;
-
     @NameInMap("Source")
     public String source;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("SuccessCount")
     public Integer successCount;
 
-    @NameInMap("FailedEcsList")
-    public java.util.List<DescribeStrategyExecDetailResponseBodyFailedEcsList> failedEcsList;
-
     public static DescribeStrategyExecDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStrategyExecDetailResponseBody self = new DescribeStrategyExecDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeStrategyExecDetailResponseBody setInProcessCount(Integer inProcessCount) {
-        this.inProcessCount = inProcessCount;
-        return this;
-    }
-    public Integer getInProcessCount() {
-        return this.inProcessCount;
     }
 
     public DescribeStrategyExecDetailResponseBody setEndTime(String endTime) {
@@ -52,12 +44,28 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeStrategyExecDetailResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeStrategyExecDetailResponseBody setFailCount(Integer failCount) {
+        this.failCount = failCount;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public Integer getFailCount() {
+        return this.failCount;
+    }
+
+    public DescribeStrategyExecDetailResponseBody setFailedEcsList(java.util.List<DescribeStrategyExecDetailResponseBodyFailedEcsList> failedEcsList) {
+        this.failedEcsList = failedEcsList;
+        return this;
+    }
+    public java.util.List<DescribeStrategyExecDetailResponseBodyFailedEcsList> getFailedEcsList() {
+        return this.failedEcsList;
+    }
+
+    public DescribeStrategyExecDetailResponseBody setInProcessCount(Integer inProcessCount) {
+        this.inProcessCount = inProcessCount;
+        return this;
+    }
+    public Integer getInProcessCount() {
+        return this.inProcessCount;
     }
 
     public DescribeStrategyExecDetailResponseBody setPercent(String percent) {
@@ -76,20 +84,20 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeStrategyExecDetailResponseBody setFailCount(Integer failCount) {
-        this.failCount = failCount;
-        return this;
-    }
-    public Integer getFailCount() {
-        return this.failCount;
-    }
-
     public DescribeStrategyExecDetailResponseBody setSource(String source) {
         this.source = source;
         return this;
     }
     public String getSource() {
         return this.source;
+    }
+
+    public DescribeStrategyExecDetailResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeStrategyExecDetailResponseBody setSuccessCount(Integer successCount) {
@@ -100,26 +108,21 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         return this.successCount;
     }
 
-    public DescribeStrategyExecDetailResponseBody setFailedEcsList(java.util.List<DescribeStrategyExecDetailResponseBodyFailedEcsList> failedEcsList) {
-        this.failedEcsList = failedEcsList;
-        return this;
-    }
-    public java.util.List<DescribeStrategyExecDetailResponseBodyFailedEcsList> getFailedEcsList() {
-        return this.failedEcsList;
-    }
-
     public static class DescribeStrategyExecDetailResponseBodyFailedEcsList extends TeaModel {
         @NameInMap("IP")
         public String IP;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
 
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         @NameInMap("Reason")
         public String reason;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
 
         public static DescribeStrategyExecDetailResponseBodyFailedEcsList build(java.util.Map<String, ?> map) throws Exception {
             DescribeStrategyExecDetailResponseBodyFailedEcsList self = new DescribeStrategyExecDetailResponseBodyFailedEcsList();
@@ -132,6 +135,22 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
         public String getIP() {
             return this.IP;
+        }
+
+        public DescribeStrategyExecDetailResponseBodyFailedEcsList setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeStrategyExecDetailResponseBodyFailedEcsList setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
         }
 
         public DescribeStrategyExecDetailResponseBodyFailedEcsList setIntranetIp(String intranetIp) {
@@ -148,14 +167,6 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
         }
         public String getReason() {
             return this.reason;
-        }
-
-        public DescribeStrategyExecDetailResponseBodyFailedEcsList setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
         }
 
     }

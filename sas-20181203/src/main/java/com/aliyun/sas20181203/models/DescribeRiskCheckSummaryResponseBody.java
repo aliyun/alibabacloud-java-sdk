@@ -31,54 +31,16 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         return this.riskCheckSummary;
     }
 
-    public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
+    public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus extends TeaModel {
         @NameInMap("Count")
         public Integer count;
 
-        public static DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount self = new DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
-    }
-
-    public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus extends TeaModel {
         @NameInMap("Status")
         public String status;
-
-        @NameInMap("Count")
-        public Integer count;
 
         public static DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus self = new DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus setCount(Integer count) {
@@ -89,41 +51,7 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             return this.count;
         }
 
-    }
-
-    public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups extends TeaModel {
-        @NameInMap("RemainingTime")
-        public Integer remainingTime;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Sort")
-        public Integer sort;
-
-        @NameInMap("Title")
-        public String title;
-
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("CountByStatus")
-        public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus> countByStatus;
-
-        public static DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups self = new DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setRemainingTime(Integer remainingTime) {
-            this.remainingTime = remainingTime;
-            return this;
-        }
-        public Integer getRemainingTime() {
-            return this.remainingTime;
-        }
-
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setStatus(String status) {
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -131,28 +59,30 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setSort(Integer sort) {
-            this.sort = sort;
-            return this;
-        }
-        public Integer getSort() {
-            return this.sort;
-        }
+    }
 
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
+    public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups extends TeaModel {
+        @NameInMap("CountByStatus")
+        public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus> countByStatus;
 
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("RemainingTime")
+        public Integer remainingTime;
+
+        @NameInMap("Sort")
+        public Integer sort;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups self = new DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups();
+            return TeaModel.build(map, self);
         }
 
         public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setCountByStatus(java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroupsCountByStatus> countByStatus) {
@@ -163,23 +93,93 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             return this.countByStatus;
         }
 
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setRemainingTime(Integer remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public Integer getRemainingTime() {
+            return this.remainingTime;
+        }
+
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setSort(Integer sort) {
+            this.sort = sort;
+            return this;
+        }
+        public Integer getSort() {
+            return this.sort;
+        }
+
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
+        @NameInMap("Key")
+        public String key;
+
+        public static DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount self = new DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
     }
 
     public static class DescribeRiskCheckSummaryResponseBodyRiskCheckSummary extends TeaModel {
-        @NameInMap("ItemCount")
-        public Integer itemCount;
-
         @NameInMap("AffectedAssetCount")
         public Integer affectedAssetCount;
 
         @NameInMap("DisabledRiskCount")
         public Integer disabledRiskCount;
 
-        @NameInMap("RiskCount")
-        public Integer riskCount;
+        @NameInMap("EnabledRiskCount")
+        public Integer enabledRiskCount;
 
-        @NameInMap("RiskRate")
-        public Float riskRate;
+        @NameInMap("Groups")
+        public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups> groups;
+
+        @NameInMap("ItemCount")
+        public Integer itemCount;
 
         @NameInMap("PreviousCount")
         public Integer previousCount;
@@ -187,26 +187,18 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
         @NameInMap("PreviousTime")
         public Long previousTime;
 
-        @NameInMap("EnabledRiskCount")
-        public Integer enabledRiskCount;
+        @NameInMap("RiskCount")
+        public Integer riskCount;
 
         @NameInMap("RiskLevelCount")
         public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount> riskLevelCount;
 
-        @NameInMap("Groups")
-        public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups> groups;
+        @NameInMap("RiskRate")
+        public Float riskRate;
 
         public static DescribeRiskCheckSummaryResponseBodyRiskCheckSummary build(java.util.Map<String, ?> map) throws Exception {
             DescribeRiskCheckSummaryResponseBodyRiskCheckSummary self = new DescribeRiskCheckSummaryResponseBodyRiskCheckSummary();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setItemCount(Integer itemCount) {
-            this.itemCount = itemCount;
-            return this;
-        }
-        public Integer getItemCount() {
-            return this.itemCount;
         }
 
         public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setAffectedAssetCount(Integer affectedAssetCount) {
@@ -225,20 +217,28 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             return this.disabledRiskCount;
         }
 
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setRiskCount(Integer riskCount) {
-            this.riskCount = riskCount;
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setEnabledRiskCount(Integer enabledRiskCount) {
+            this.enabledRiskCount = enabledRiskCount;
             return this;
         }
-        public Integer getRiskCount() {
-            return this.riskCount;
+        public Integer getEnabledRiskCount() {
+            return this.enabledRiskCount;
         }
 
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setRiskRate(Float riskRate) {
-            this.riskRate = riskRate;
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setGroups(java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups> groups) {
+            this.groups = groups;
             return this;
         }
-        public Float getRiskRate() {
-            return this.riskRate;
+        public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups> getGroups() {
+            return this.groups;
+        }
+
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setItemCount(Integer itemCount) {
+            this.itemCount = itemCount;
+            return this;
+        }
+        public Integer getItemCount() {
+            return this.itemCount;
         }
 
         public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setPreviousCount(Integer previousCount) {
@@ -257,12 +257,12 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             return this.previousTime;
         }
 
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setEnabledRiskCount(Integer enabledRiskCount) {
-            this.enabledRiskCount = enabledRiskCount;
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setRiskCount(Integer riskCount) {
+            this.riskCount = riskCount;
             return this;
         }
-        public Integer getEnabledRiskCount() {
-            return this.enabledRiskCount;
+        public Integer getRiskCount() {
+            return this.riskCount;
         }
 
         public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setRiskLevelCount(java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryRiskLevelCount> riskLevelCount) {
@@ -273,12 +273,12 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
             return this.riskLevelCount;
         }
 
-        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setGroups(java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups> groups) {
-            this.groups = groups;
+        public DescribeRiskCheckSummaryResponseBodyRiskCheckSummary setRiskRate(Float riskRate) {
+            this.riskRate = riskRate;
             return this;
         }
-        public java.util.List<DescribeRiskCheckSummaryResponseBodyRiskCheckSummaryGroups> getGroups() {
-            return this.groups;
+        public Float getRiskRate() {
+            return this.riskRate;
         }
 
     }

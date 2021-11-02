@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InstanceCount")
     public Integer instanceCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RiskInstanceCount")
     public Integer riskInstanceCount;
@@ -18,20 +18,20 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeImageStatisticsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeImageStatisticsResponseBody setInstanceCount(Integer instanceCount) {
         this.instanceCount = instanceCount;
         return this;
     }
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    public DescribeImageStatisticsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeImageStatisticsResponseBody setRiskInstanceCount(Integer riskInstanceCount) {
