@@ -4,17 +4,9 @@ package com.aliyun.aliyunape20210908.models;
 import com.aliyun.tea.*;
 
 public class StationDayRequest extends TeaModel {
-    // UserId
-    @NameInMap("UserId")
-    public Long userId;
-
     // 用户中心--我的订单--订单请求--实例名称：aliyunape_meteor12_public_cn-0ju2d2hh90b
     @NameInMap("OrderId")
     public String orderId;
-
-    // requestId
-    @NameInMap("RequestId")
-    public String requestId;
 
     // 气象预测开始时间
     @NameInMap("StartForecast")
@@ -29,28 +21,12 @@ public class StationDayRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public StationDayRequest setUserId(Long userId) {
-        this.userId = userId;
-        return this;
-    }
-    public Long getUserId() {
-        return this.userId;
-    }
-
     public StationDayRequest setOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     public String getOrderId() {
         return this.orderId;
-    }
-
-    public StationDayRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public StationDayRequest setStartForecast(String startForecast) {

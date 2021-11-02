@@ -4,21 +4,17 @@ package com.aliyun.aliyunape20210908.models;
 import com.aliyun.tea.*;
 
 public class HistoricalRequest extends TeaModel {
-    // UserId
-    @NameInMap("UserId")
-    public Long userId;
+    // endTime
+    @NameInMap("EndTime")
+    public String endTime;
 
     // 用户中心--我的订单--订单请求--实例名称：aliyunape_meteor12_public_cn-0ju2d2hh90b
     @NameInMap("OrderId")
     public String orderId;
 
-    // requestId
-    @NameInMap("RequestId")
-    public String requestId;
-
-    // 全国（入参单一站点）
-    @NameInMap("Station")
-    public String station;
+    // pageNum
+    @NameInMap("PageNum")
+    public Integer pageNum;
 
     // pageSize
     @NameInMap("PageSize")
@@ -28,25 +24,21 @@ public class HistoricalRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    // endTime
-    @NameInMap("EndTime")
-    public String endTime;
-
-    // pageNum
-    @NameInMap("PageNum")
-    public Integer pageNum;
+    // 全国（入参单一站点）
+    @NameInMap("Station")
+    public String station;
 
     public static HistoricalRequest build(java.util.Map<String, ?> map) throws Exception {
         HistoricalRequest self = new HistoricalRequest();
         return TeaModel.build(map, self);
     }
 
-    public HistoricalRequest setUserId(Long userId) {
-        this.userId = userId;
+    public HistoricalRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public Long getUserId() {
-        return this.userId;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public HistoricalRequest setOrderId(String orderId) {
@@ -57,20 +49,12 @@ public class HistoricalRequest extends TeaModel {
         return this.orderId;
     }
 
-    public HistoricalRequest setRequestId(String requestId) {
-        this.requestId = requestId;
+    public HistoricalRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public HistoricalRequest setStation(String station) {
-        this.station = station;
-        return this;
-    }
-    public String getStation() {
-        return this.station;
+    public Integer getPageNum() {
+        return this.pageNum;
     }
 
     public HistoricalRequest setPageSize(Integer pageSize) {
@@ -89,20 +73,12 @@ public class HistoricalRequest extends TeaModel {
         return this.startTime;
     }
 
-    public HistoricalRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public HistoricalRequest setStation(String station) {
+        this.station = station;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public HistoricalRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
-        return this;
-    }
-    public Integer getPageNum() {
-        return this.pageNum;
+    public String getStation() {
+        return this.station;
     }
 
 }

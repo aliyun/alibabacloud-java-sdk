@@ -4,9 +4,13 @@ package com.aliyun.aliyunape20210908.models;
 import com.aliyun.tea.*;
 
 public class HistoricalResponseBody extends TeaModel {
-    // rt
-    @NameInMap("Rt")
-    public Long rt;
+    // code
+    @NameInMap("Code")
+    public String code;
+
+    // data
+    @NameInMap("Data")
+    public java.util.List<java.util.Map<String, ?>> data;
 
     // message
     @NameInMap("Message")
@@ -16,13 +20,9 @@ public class HistoricalResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    // data
-    @NameInMap("Data")
-    public java.util.List<java.util.Map<String, ?>> data;
-
-    // code
-    @NameInMap("Code")
-    public String code;
+    // rt
+    @NameInMap("Rt")
+    public Long rt;
 
     // success
     @NameInMap("Success")
@@ -33,12 +33,20 @@ public class HistoricalResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public HistoricalResponseBody setRt(Long rt) {
-        this.rt = rt;
+    public HistoricalResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Long getRt() {
-        return this.rt;
+    public String getCode() {
+        return this.code;
+    }
+
+    public HistoricalResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getData() {
+        return this.data;
     }
 
     public HistoricalResponseBody setMessage(String message) {
@@ -57,20 +65,12 @@ public class HistoricalResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public HistoricalResponseBody setData(java.util.List<java.util.Map<String, ?>> data) {
-        this.data = data;
+    public HistoricalResponseBody setRt(Long rt) {
+        this.rt = rt;
         return this;
     }
-    public java.util.List<java.util.Map<String, ?>> getData() {
-        return this.data;
-    }
-
-    public HistoricalResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public Long getRt() {
+        return this.rt;
     }
 
     public HistoricalResponseBody setSuccess(Boolean success) {

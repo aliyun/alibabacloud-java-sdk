@@ -31,30 +31,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public WeathermonitorResponse weathermonitorWithOptions(WeathermonitorRequest request, RuntimeOptions runtime) throws Exception {
+    public HistoricalResponse historicalWithOptions(HistoricalRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("Weathermonitor", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new WeathermonitorResponse());
+        return TeaModel.toModel(this.doRPCRequest("Historical", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new HistoricalResponse());
     }
 
-    public WeathermonitorResponse weathermonitor(WeathermonitorRequest request) throws Exception {
+    public HistoricalResponse historical(HistoricalRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.weathermonitorWithOptions(request, runtime);
-    }
-
-    public WeatherforecastTimeResponse weatherforecastTimeWithOptions(WeatherforecastTimeRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("WeatherforecastTime", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new WeatherforecastTimeResponse());
-    }
-
-    public WeatherforecastTimeResponse weatherforecastTime(WeatherforecastTimeRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.weatherforecastTimeWithOptions(request, runtime);
+        return this.historicalWithOptions(request, runtime);
     }
 
     public StationDayResponse stationDayWithOptions(StationDayRequest request, RuntimeOptions runtime) throws Exception {
@@ -83,16 +70,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.weatherforecastWithOptions(request, runtime);
     }
 
-    public HistoricalResponse historicalWithOptions(HistoricalRequest request, RuntimeOptions runtime) throws Exception {
+    public WeatherforecastTimeResponse weatherforecastTimeWithOptions(WeatherforecastTimeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("Historical", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new HistoricalResponse());
+        return TeaModel.toModel(this.doRPCRequest("WeatherforecastTime", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new WeatherforecastTimeResponse());
     }
 
-    public HistoricalResponse historical(HistoricalRequest request) throws Exception {
+    public WeatherforecastTimeResponse weatherforecastTime(WeatherforecastTimeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.historicalWithOptions(request, runtime);
+        return this.weatherforecastTimeWithOptions(request, runtime);
+    }
+
+    public WeathermonitorResponse weathermonitorWithOptions(WeathermonitorRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("Weathermonitor", "2021-09-08", "HTTPS", "POST", "AK", "json", req, runtime), new WeathermonitorResponse());
+    }
+
+    public WeathermonitorResponse weathermonitor(WeathermonitorRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.weathermonitorWithOptions(request, runtime);
     }
 }
