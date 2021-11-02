@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyVulTargetConfigRequest extends TeaModel {
+    @NameInMap("Config")
+    public String config;
+
     @NameInMap("SourceIp")
     public String sourceIp;
 
@@ -13,12 +16,17 @@ public class ModifyVulTargetConfigRequest extends TeaModel {
     @NameInMap("Uuid")
     public String uuid;
 
-    @NameInMap("Config")
-    public String config;
-
     public static ModifyVulTargetConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVulTargetConfigRequest self = new ModifyVulTargetConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyVulTargetConfigRequest setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
     }
 
     public ModifyVulTargetConfigRequest setSourceIp(String sourceIp) {
@@ -43,14 +51,6 @@ public class ModifyVulTargetConfigRequest extends TeaModel {
     }
     public String getUuid() {
         return this.uuid;
-    }
-
-    public ModifyVulTargetConfigRequest setConfig(String config) {
-        this.config = config;
-        return this;
-    }
-    public String getConfig() {
-        return this.config;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("GroupedFields")
     public DescribeCloudProductFieldStatisticsResponseBodyGroupedFields groupedFields;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeCloudProductFieldStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudProductFieldStatisticsResponseBody self = new DescribeCloudProductFieldStatisticsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCloudProductFieldStatisticsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeCloudProductFieldStatisticsResponseBody setGroupedFields(DescribeCloudProductFieldStatisticsResponseBodyGroupedFields groupedFields) {
@@ -29,6 +21,14 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
     }
     public DescribeCloudProductFieldStatisticsResponseBodyGroupedFields getGroupedFields() {
         return this.groupedFields;
+    }
+
+    public DescribeCloudProductFieldStatisticsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeCloudProductFieldStatisticsResponseBodyGroupedFields extends TeaModel {

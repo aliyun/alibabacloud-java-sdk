@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeWarningMachinesResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Integer count;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -16,15 +19,20 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("Count")
-    public Integer count;
-
     @NameInMap("WarningMachines")
     public java.util.List<DescribeWarningMachinesResponseBodyWarningMachines> warningMachines;
 
     public static DescribeWarningMachinesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeWarningMachinesResponseBody self = new DescribeWarningMachinesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeWarningMachinesResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public DescribeWarningMachinesResponseBody setCurrentPage(Integer currentPage) {
@@ -59,14 +67,6 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeWarningMachinesResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
-    }
-
     public DescribeWarningMachinesResponseBody setWarningMachines(java.util.List<DescribeWarningMachinesResponseBodyWarningMachines> warningMachines) {
         this.warningMachines = warningMachines;
         return this;
@@ -76,32 +76,23 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     }
 
     public static class DescribeWarningMachinesResponseBodyWarningMachines extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("InternetIp")
-        public String internetIp;
+        @NameInMap("HighWarningCount")
+        public Integer highWarningCount;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("HighWarningCount")
-        public Integer highWarningCount;
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("InternetIp")
+        public String internetIp;
 
         @NameInMap("IntranetIp")
         public String intranetIp;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("LowWarningCount")
         public Integer lowWarningCount;
-
-        @NameInMap("PortOpen")
-        public Boolean portOpen;
-
-        @NameInMap("Uuid")
-        public String uuid;
 
         @NameInMap("MediumWarningCount")
         public Integer mediumWarningCount;
@@ -109,36 +100,21 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         @NameInMap("PassCount")
         public Integer passCount;
 
-        @NameInMap("InstanceName")
-        public String instanceName;
+        @NameInMap("PortOpen")
+        public Boolean portOpen;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("Uuid")
+        public String uuid;
 
         public static DescribeWarningMachinesResponseBodyWarningMachines build(java.util.Map<String, ?> map) throws Exception {
             DescribeWarningMachinesResponseBodyWarningMachines self = new DescribeWarningMachinesResponseBodyWarningMachines();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeWarningMachinesResponseBodyWarningMachines setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeWarningMachinesResponseBodyWarningMachines setInternetIp(String internetIp) {
-            this.internetIp = internetIp;
-            return this;
-        }
-        public String getInternetIp() {
-            return this.internetIp;
-        }
-
-        public DescribeWarningMachinesResponseBodyWarningMachines setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public DescribeWarningMachinesResponseBodyWarningMachines setHighWarningCount(Integer highWarningCount) {
@@ -149,6 +125,30 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             return this.highWarningCount;
         }
 
+        public DescribeWarningMachinesResponseBodyWarningMachines setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setInternetIp(String internetIp) {
+            this.internetIp = internetIp;
+            return this;
+        }
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
         public DescribeWarningMachinesResponseBodyWarningMachines setIntranetIp(String intranetIp) {
             this.intranetIp = intranetIp;
             return this;
@@ -157,36 +157,12 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             return this.intranetIp;
         }
 
-        public DescribeWarningMachinesResponseBodyWarningMachines setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
         public DescribeWarningMachinesResponseBodyWarningMachines setLowWarningCount(Integer lowWarningCount) {
             this.lowWarningCount = lowWarningCount;
             return this;
         }
         public Integer getLowWarningCount() {
             return this.lowWarningCount;
-        }
-
-        public DescribeWarningMachinesResponseBodyWarningMachines setPortOpen(Boolean portOpen) {
-            this.portOpen = portOpen;
-            return this;
-        }
-        public Boolean getPortOpen() {
-            return this.portOpen;
-        }
-
-        public DescribeWarningMachinesResponseBodyWarningMachines setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
         public DescribeWarningMachinesResponseBodyWarningMachines setMediumWarningCount(Integer mediumWarningCount) {
@@ -205,12 +181,36 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
             return this.passCount;
         }
 
-        public DescribeWarningMachinesResponseBodyWarningMachines setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
+        public DescribeWarningMachinesResponseBodyWarningMachines setPortOpen(Boolean portOpen) {
+            this.portOpen = portOpen;
             return this;
         }
-        public String getInstanceName() {
-            return this.instanceName;
+        public Boolean getPortOpen() {
+            return this.portOpen;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public DescribeWarningMachinesResponseBodyWarningMachines setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

@@ -4,14 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupPolicyMachineRequest extends TeaModel {
-    @NameInMap("Uuid")
-    public String uuid;
-
     @NameInMap("PolicyId")
     public Long policyId;
 
     @NameInMap("PolicyVersion")
     public String policyVersion;
+
+    @NameInMap("Uuid")
+    public String uuid;
 
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
@@ -19,14 +19,6 @@ public class DeleteBackupPolicyMachineRequest extends TeaModel {
     public static DeleteBackupPolicyMachineRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteBackupPolicyMachineRequest self = new DeleteBackupPolicyMachineRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteBackupPolicyMachineRequest setUuid(String uuid) {
-        this.uuid = uuid;
-        return this;
-    }
-    public String getUuid() {
-        return this.uuid;
     }
 
     public DeleteBackupPolicyMachineRequest setPolicyId(Long policyId) {
@@ -43,6 +35,14 @@ public class DeleteBackupPolicyMachineRequest extends TeaModel {
     }
     public String getPolicyVersion() {
         return this.policyVersion;
+    }
+
+    public DeleteBackupPolicyMachineRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
     public DeleteBackupPolicyMachineRequest setUuidList(java.util.List<String> uuidList) {

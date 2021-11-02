@@ -32,45 +32,21 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("PlanType")
-        public String planType;
+        @NameInMap("Days")
+        public java.util.List<String> days;
 
         @NameInMap("Interval")
         public Integer interval;
 
-        @NameInMap("Days")
-        public java.util.List<String> days;
+        @NameInMap("PlanType")
+        public String planType;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan build(java.util.Map<String, ?> map) throws Exception {
             DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan self = new DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan setPlanType(String planType) {
-            this.planType = planType;
-            return this;
-        }
-        public String getPlanType() {
-            return this.planType;
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan setInterval(Integer interval) {
-            this.interval = interval;
-            return this;
-        }
-        public Integer getInterval() {
-            return this.interval;
         }
 
         public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan setDays(java.util.List<String> days) {
@@ -81,35 +57,15 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             return this.days;
         }
 
-    }
-
-    public static class DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("PlanType")
-        public String planType;
-
-        @NameInMap("Interval")
-        public Integer interval;
-
-        @NameInMap("Days")
-        public java.util.List<String> days;
-
-        public static DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan build(java.util.Map<String, ?> map) throws Exception {
-            DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan self = new DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan setStartTime(String startTime) {
-            this.startTime = startTime;
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan setInterval(Integer interval) {
+            this.interval = interval;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public Integer getInterval() {
+            return this.interval;
         }
 
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan setPlanType(String planType) {
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan setPlanType(String planType) {
             this.planType = planType;
             return this;
         }
@@ -117,12 +73,32 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             return this.planType;
         }
 
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan setInterval(Integer interval) {
-            this.interval = interval;
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan setStartTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
-        public Integer getInterval() {
-            return this.interval;
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan extends TeaModel {
+        @NameInMap("Days")
+        public java.util.List<String> days;
+
+        @NameInMap("Interval")
+        public Integer interval;
+
+        @NameInMap("PlanType")
+        public String planType;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan self = new DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan();
+            return TeaModel.build(map, self);
         }
 
         public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan setDays(java.util.List<String> days) {
@@ -133,41 +109,41 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             return this.days;
         }
 
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan setPlanType(String planType) {
+            this.planType = planType;
+            return this;
+        }
+        public String getPlanType() {
+            return this.planType;
+        }
+
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
     }
 
     public static class DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO extends TeaModel {
-        @NameInMap("PolicyStatus")
-        public String policyStatus;
-
-        @NameInMap("DatabaseType")
-        public String databaseType;
-
-        @NameInMap("UniBackUpCount")
-        public Integer uniBackUpCount;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("Retention")
-        public Integer retention;
-
-        @NameInMap("SpeedLimiter")
-        public Long speedLimiter;
-
-        @NameInMap("PolicyName")
-        public String policyName;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("PolicyId")
-        public Long policyId;
+        @NameInMap("AccountName")
+        public String accountName;
 
         @NameInMap("AgentStatus")
         public String agentStatus;
 
-        @NameInMap("AccountName")
-        public String accountName;
+        @NameInMap("DatabaseType")
+        public String databaseType;
 
         @NameInMap("FullPlan")
         public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan fullPlan;
@@ -175,17 +151,49 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         @NameInMap("IncPlan")
         public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan incPlan;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("PolicyId")
+        public Long policyId;
+
+        @NameInMap("PolicyName")
+        public String policyName;
+
+        @NameInMap("PolicyStatus")
+        public String policyStatus;
+
+        @NameInMap("Retention")
+        public Integer retention;
+
+        @NameInMap("SpeedLimiter")
+        public Long speedLimiter;
+
+        @NameInMap("UniBackUpCount")
+        public Integer uniBackUpCount;
+
         public static DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO build(java.util.Map<String, ?> map) throws Exception {
             DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO self = new DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO();
             return TeaModel.build(map, self);
         }
 
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setPolicyStatus(String policyStatus) {
-            this.policyStatus = policyStatus;
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setAccountName(String accountName) {
+            this.accountName = accountName;
             return this;
         }
-        public String getPolicyStatus() {
-            return this.policyStatus;
+        public String getAccountName() {
+            return this.accountName;
+        }
+
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setAgentStatus(String agentStatus) {
+            this.agentStatus = agentStatus;
+            return this;
+        }
+        public String getAgentStatus() {
+            return this.agentStatus;
         }
 
         public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setDatabaseType(String databaseType) {
@@ -196,12 +204,28 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             return this.databaseType;
         }
 
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setUniBackUpCount(Integer uniBackUpCount) {
-            this.uniBackUpCount = uniBackUpCount;
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setFullPlan(DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan fullPlan) {
+            this.fullPlan = fullPlan;
             return this;
         }
-        public Integer getUniBackUpCount() {
-            return this.uniBackUpCount;
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan getFullPlan() {
+            return this.fullPlan;
+        }
+
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setIncPlan(DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan incPlan) {
+            this.incPlan = incPlan;
+            return this;
+        }
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan getIncPlan() {
+            return this.incPlan;
+        }
+
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setInstanceName(String instanceName) {
@@ -210,6 +234,30 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         }
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setPolicyId(Long policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public Long getPolicyId() {
+            return this.policyId;
+        }
+
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setPolicyName(String policyName) {
+            this.policyName = policyName;
+            return this;
+        }
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setPolicyStatus(String policyStatus) {
+            this.policyStatus = policyStatus;
+            return this;
+        }
+        public String getPolicyStatus() {
+            return this.policyStatus;
         }
 
         public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setRetention(Integer retention) {
@@ -228,60 +276,12 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             return this.speedLimiter;
         }
 
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setPolicyName(String policyName) {
-            this.policyName = policyName;
+        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setUniBackUpCount(Integer uniBackUpCount) {
+            this.uniBackUpCount = uniBackUpCount;
             return this;
         }
-        public String getPolicyName() {
-            return this.policyName;
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setPolicyId(Long policyId) {
-            this.policyId = policyId;
-            return this;
-        }
-        public Long getPolicyId() {
-            return this.policyId;
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setAgentStatus(String agentStatus) {
-            this.agentStatus = agentStatus;
-            return this;
-        }
-        public String getAgentStatus() {
-            return this.agentStatus;
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setAccountName(String accountName) {
-            this.accountName = accountName;
-            return this;
-        }
-        public String getAccountName() {
-            return this.accountName;
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setFullPlan(DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan fullPlan) {
-            this.fullPlan = fullPlan;
-            return this;
-        }
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan getFullPlan() {
-            return this.fullPlan;
-        }
-
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTO setIncPlan(DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan incPlan) {
-            this.incPlan = incPlan;
-            return this;
-        }
-        public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan getIncPlan() {
-            return this.incPlan;
+        public Integer getUniBackUpCount() {
+            return this.uniBackUpCount;
         }
 
     }

@@ -7,11 +7,11 @@ public class DescribeHoneyPotSuspStatisticsRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
-    @NameInMap("StatisticsKeyType")
-    public String statisticsKeyType;
-
     @NameInMap("StatisticsDays")
     public Integer statisticsDays;
+
+    @NameInMap("StatisticsKeyType")
+    public String statisticsKeyType;
 
     public static DescribeHoneyPotSuspStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeHoneyPotSuspStatisticsRequest self = new DescribeHoneyPotSuspStatisticsRequest();
@@ -26,20 +26,20 @@ public class DescribeHoneyPotSuspStatisticsRequest extends TeaModel {
         return this.from;
     }
 
-    public DescribeHoneyPotSuspStatisticsRequest setStatisticsKeyType(String statisticsKeyType) {
-        this.statisticsKeyType = statisticsKeyType;
-        return this;
-    }
-    public String getStatisticsKeyType() {
-        return this.statisticsKeyType;
-    }
-
     public DescribeHoneyPotSuspStatisticsRequest setStatisticsDays(Integer statisticsDays) {
         this.statisticsDays = statisticsDays;
         return this;
     }
     public Integer getStatisticsDays() {
         return this.statisticsDays;
+    }
+
+    public DescribeHoneyPotSuspStatisticsRequest setStatisticsKeyType(String statisticsKeyType) {
+        this.statisticsKeyType = statisticsKeyType;
+        return this;
+    }
+    public String getStatisticsKeyType() {
+        return this.statisticsKeyType;
     }
 
 }

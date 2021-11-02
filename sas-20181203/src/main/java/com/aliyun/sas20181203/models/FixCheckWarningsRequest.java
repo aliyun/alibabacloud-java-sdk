@@ -4,8 +4,8 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class FixCheckWarningsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("CheckParams")
+    public String checkParams;
 
     @NameInMap("Lang")
     public String lang;
@@ -13,8 +13,8 @@ public class FixCheckWarningsRequest extends TeaModel {
     @NameInMap("RiskId")
     public Long riskId;
 
-    @NameInMap("CheckParams")
-    public String checkParams;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("Uuids")
     public String uuids;
@@ -24,12 +24,12 @@ public class FixCheckWarningsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public FixCheckWarningsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public FixCheckWarningsRequest setCheckParams(String checkParams) {
+        this.checkParams = checkParams;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getCheckParams() {
+        return this.checkParams;
     }
 
     public FixCheckWarningsRequest setLang(String lang) {
@@ -48,12 +48,12 @@ public class FixCheckWarningsRequest extends TeaModel {
         return this.riskId;
     }
 
-    public FixCheckWarningsRequest setCheckParams(String checkParams) {
-        this.checkParams = checkParams;
+    public FixCheckWarningsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getCheckParams() {
-        return this.checkParams;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public FixCheckWarningsRequest setUuids(String uuids) {

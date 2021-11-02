@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllEntityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("EntityList")
     public java.util.List<DescribeAllEntityResponseBodyEntityList> entityList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAllEntityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAllEntityResponseBody self = new DescribeAllEntityResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAllEntityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeAllEntityResponseBody setEntityList(java.util.List<DescribeAllEntityResponseBodyEntityList> entityList) {
@@ -31,18 +23,26 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         return this.entityList;
     }
 
-    public static class DescribeAllEntityResponseBodyEntityList extends TeaModel {
-        @NameInMap("Uuid")
-        public String uuid;
+    public DescribeAllEntityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeAllEntityResponseBodyEntityList extends TeaModel {
         @NameInMap("GroupId")
         public Integer groupId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
 
         @NameInMap("InternetIp")
         public String internetIp;
 
-        @NameInMap("InstanceName")
-        public String instanceName;
+        @NameInMap("IntranetIp")
+        public String intranetIp;
 
         @NameInMap("Ip")
         public String ip;
@@ -50,20 +50,12 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         @NameInMap("Os")
         public String os;
 
-        @NameInMap("IntranetIp")
-        public String intranetIp;
+        @NameInMap("Uuid")
+        public String uuid;
 
         public static DescribeAllEntityResponseBodyEntityList build(java.util.Map<String, ?> map) throws Exception {
             DescribeAllEntityResponseBodyEntityList self = new DescribeAllEntityResponseBodyEntityList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAllEntityResponseBodyEntityList setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
         public DescribeAllEntityResponseBodyEntityList setGroupId(Integer groupId) {
@@ -74,6 +66,14 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        public DescribeAllEntityResponseBodyEntityList setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
         public DescribeAllEntityResponseBodyEntityList setInternetIp(String internetIp) {
             this.internetIp = internetIp;
             return this;
@@ -82,12 +82,12 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             return this.internetIp;
         }
 
-        public DescribeAllEntityResponseBodyEntityList setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
+        public DescribeAllEntityResponseBodyEntityList setIntranetIp(String intranetIp) {
+            this.intranetIp = intranetIp;
             return this;
         }
-        public String getInstanceName() {
-            return this.instanceName;
+        public String getIntranetIp() {
+            return this.intranetIp;
         }
 
         public DescribeAllEntityResponseBodyEntityList setIp(String ip) {
@@ -106,12 +106,12 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             return this.os;
         }
 
-        public DescribeAllEntityResponseBodyEntityList setIntranetIp(String intranetIp) {
-            this.intranetIp = intranetIp;
+        public DescribeAllEntityResponseBodyEntityList setUuid(String uuid) {
+            this.uuid = uuid;
             return this;
         }
-        public String getIntranetIp() {
-            return this.intranetIp;
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

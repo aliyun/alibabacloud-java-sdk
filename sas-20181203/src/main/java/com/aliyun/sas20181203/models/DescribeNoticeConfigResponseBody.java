@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeNoticeConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("NoticeConfigList")
     public java.util.List<DescribeNoticeConfigResponseBodyNoticeConfigList> noticeConfigList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeNoticeConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNoticeConfigResponseBody self = new DescribeNoticeConfigResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeNoticeConfigResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeNoticeConfigResponseBody setNoticeConfigList(java.util.List<DescribeNoticeConfigResponseBodyNoticeConfigList> noticeConfigList) {
@@ -31,10 +23,15 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
         return this.noticeConfigList;
     }
 
-    public static class DescribeNoticeConfigResponseBodyNoticeConfigList extends TeaModel {
-        @NameInMap("TimeLimit")
-        public Integer timeLimit;
+    public DescribeNoticeConfigResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class DescribeNoticeConfigResponseBodyNoticeConfigList extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
 
@@ -47,17 +44,12 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
         @NameInMap("Route")
         public Integer route;
 
+        @NameInMap("TimeLimit")
+        public Integer timeLimit;
+
         public static DescribeNoticeConfigResponseBodyNoticeConfigList build(java.util.Map<String, ?> map) throws Exception {
             DescribeNoticeConfigResponseBodyNoticeConfigList self = new DescribeNoticeConfigResponseBodyNoticeConfigList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeNoticeConfigResponseBodyNoticeConfigList setTimeLimit(Integer timeLimit) {
-            this.timeLimit = timeLimit;
-            return this;
-        }
-        public Integer getTimeLimit() {
-            return this.timeLimit;
         }
 
         public DescribeNoticeConfigResponseBodyNoticeConfigList setAliUid(Long aliUid) {
@@ -90,6 +82,14 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
         }
         public Integer getRoute() {
             return this.route;
+        }
+
+        public DescribeNoticeConfigResponseBodyNoticeConfigList setTimeLimit(Integer timeLimit) {
+            this.timeLimit = timeLimit;
+            return this;
+        }
+        public Integer getTimeLimit() {
+            return this.timeLimit;
         }
 
     }

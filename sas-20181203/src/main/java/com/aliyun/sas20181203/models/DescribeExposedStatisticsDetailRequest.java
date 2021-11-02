@@ -4,32 +4,24 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeExposedStatisticsDetailRequest extends TeaModel {
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("StatisticsType")
     public String statisticsType;
 
-    @NameInMap("StatisticsTypeInstanceValue")
-    public String statisticsTypeInstanceValue;
-
     @NameInMap("StatisticsTypeGatewayType")
     public String statisticsTypeGatewayType;
+
+    @NameInMap("StatisticsTypeInstanceValue")
+    public String statisticsTypeInstanceValue;
 
     public static DescribeExposedStatisticsDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExposedStatisticsDetailRequest self = new DescribeExposedStatisticsDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeExposedStatisticsDetailRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeExposedStatisticsDetailRequest setCurrentPage(Integer currentPage) {
@@ -40,6 +32,14 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public DescribeExposedStatisticsDetailRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeExposedStatisticsDetailRequest setStatisticsType(String statisticsType) {
         this.statisticsType = statisticsType;
         return this;
@@ -48,20 +48,20 @@ public class DescribeExposedStatisticsDetailRequest extends TeaModel {
         return this.statisticsType;
     }
 
-    public DescribeExposedStatisticsDetailRequest setStatisticsTypeInstanceValue(String statisticsTypeInstanceValue) {
-        this.statisticsTypeInstanceValue = statisticsTypeInstanceValue;
-        return this;
-    }
-    public String getStatisticsTypeInstanceValue() {
-        return this.statisticsTypeInstanceValue;
-    }
-
     public DescribeExposedStatisticsDetailRequest setStatisticsTypeGatewayType(String statisticsTypeGatewayType) {
         this.statisticsTypeGatewayType = statisticsTypeGatewayType;
         return this;
     }
     public String getStatisticsTypeGatewayType() {
         return this.statisticsTypeGatewayType;
+    }
+
+    public DescribeExposedStatisticsDetailRequest setStatisticsTypeInstanceValue(String statisticsTypeInstanceValue) {
+        this.statisticsTypeInstanceValue = statisticsTypeInstanceValue;
+        return this;
+    }
+    public String getStatisticsTypeInstanceValue() {
+        return this.statisticsTypeInstanceValue;
     }
 
 }

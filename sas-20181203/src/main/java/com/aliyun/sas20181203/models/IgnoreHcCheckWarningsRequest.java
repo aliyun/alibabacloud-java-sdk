@@ -4,43 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class IgnoreHcCheckWarningsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("CheckIds")
+    public String checkIds;
 
     @NameInMap("CheckWarningIds")
     public String checkWarningIds;
 
-    @NameInMap("CheckIds")
-    public String checkIds;
+    @NameInMap("Reason")
+    public String reason;
 
     @NameInMap("RiskId")
     public String riskId;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("Type")
     public Long type;
-
-    @NameInMap("Reason")
-    public String reason;
 
     public static IgnoreHcCheckWarningsRequest build(java.util.Map<String, ?> map) throws Exception {
         IgnoreHcCheckWarningsRequest self = new IgnoreHcCheckWarningsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public IgnoreHcCheckWarningsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public IgnoreHcCheckWarningsRequest setCheckWarningIds(String checkWarningIds) {
-        this.checkWarningIds = checkWarningIds;
-        return this;
-    }
-    public String getCheckWarningIds() {
-        return this.checkWarningIds;
     }
 
     public IgnoreHcCheckWarningsRequest setCheckIds(String checkIds) {
@@ -51,20 +35,12 @@ public class IgnoreHcCheckWarningsRequest extends TeaModel {
         return this.checkIds;
     }
 
-    public IgnoreHcCheckWarningsRequest setRiskId(String riskId) {
-        this.riskId = riskId;
+    public IgnoreHcCheckWarningsRequest setCheckWarningIds(String checkWarningIds) {
+        this.checkWarningIds = checkWarningIds;
         return this;
     }
-    public String getRiskId() {
-        return this.riskId;
-    }
-
-    public IgnoreHcCheckWarningsRequest setType(Long type) {
-        this.type = type;
-        return this;
-    }
-    public Long getType() {
-        return this.type;
+    public String getCheckWarningIds() {
+        return this.checkWarningIds;
     }
 
     public IgnoreHcCheckWarningsRequest setReason(String reason) {
@@ -73,6 +49,30 @@ public class IgnoreHcCheckWarningsRequest extends TeaModel {
     }
     public String getReason() {
         return this.reason;
+    }
+
+    public IgnoreHcCheckWarningsRequest setRiskId(String riskId) {
+        this.riskId = riskId;
+        return this;
+    }
+    public String getRiskId() {
+        return this.riskId;
+    }
+
+    public IgnoreHcCheckWarningsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public IgnoreHcCheckWarningsRequest setType(Long type) {
+        this.type = type;
+        return this;
+    }
+    public Long getType() {
+        return this.type;
     }
 
 }

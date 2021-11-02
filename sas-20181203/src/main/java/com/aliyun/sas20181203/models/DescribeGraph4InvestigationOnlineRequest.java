@@ -4,30 +4,54 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGraph4InvestigationOnlineRequest extends TeaModel {
+    @NameInMap("AnomalyId")
+    public String anomalyId;
+
+    @NameInMap("AnomalyUuid")
+    public String anomalyUuid;
+
+    @NameInMap("Direction")
+    public String direction;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("Namespace")
     public String namespace;
 
-    @NameInMap("VertexId")
-    public String vertexId;
-
-    @NameInMap("AnomalyUuid")
-    public String anomalyUuid;
-
-    @NameInMap("AnomalyId")
-    public String anomalyId;
-
     @NameInMap("PathLength")
     public Integer pathLength;
 
-    @NameInMap("Direction")
-    public String direction;
+    @NameInMap("VertexId")
+    public String vertexId;
 
     public static DescribeGraph4InvestigationOnlineRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGraph4InvestigationOnlineRequest self = new DescribeGraph4InvestigationOnlineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGraph4InvestigationOnlineRequest setAnomalyId(String anomalyId) {
+        this.anomalyId = anomalyId;
+        return this;
+    }
+    public String getAnomalyId() {
+        return this.anomalyId;
+    }
+
+    public DescribeGraph4InvestigationOnlineRequest setAnomalyUuid(String anomalyUuid) {
+        this.anomalyUuid = anomalyUuid;
+        return this;
+    }
+    public String getAnomalyUuid() {
+        return this.anomalyUuid;
+    }
+
+    public DescribeGraph4InvestigationOnlineRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
     }
 
     public DescribeGraph4InvestigationOnlineRequest setLang(String lang) {
@@ -46,30 +70,6 @@ public class DescribeGraph4InvestigationOnlineRequest extends TeaModel {
         return this.namespace;
     }
 
-    public DescribeGraph4InvestigationOnlineRequest setVertexId(String vertexId) {
-        this.vertexId = vertexId;
-        return this;
-    }
-    public String getVertexId() {
-        return this.vertexId;
-    }
-
-    public DescribeGraph4InvestigationOnlineRequest setAnomalyUuid(String anomalyUuid) {
-        this.anomalyUuid = anomalyUuid;
-        return this;
-    }
-    public String getAnomalyUuid() {
-        return this.anomalyUuid;
-    }
-
-    public DescribeGraph4InvestigationOnlineRequest setAnomalyId(String anomalyId) {
-        this.anomalyId = anomalyId;
-        return this;
-    }
-    public String getAnomalyId() {
-        return this.anomalyId;
-    }
-
     public DescribeGraph4InvestigationOnlineRequest setPathLength(Integer pathLength) {
         this.pathLength = pathLength;
         return this;
@@ -78,12 +78,12 @@ public class DescribeGraph4InvestigationOnlineRequest extends TeaModel {
         return this.pathLength;
     }
 
-    public DescribeGraph4InvestigationOnlineRequest setDirection(String direction) {
-        this.direction = direction;
+    public DescribeGraph4InvestigationOnlineRequest setVertexId(String vertexId) {
+        this.vertexId = vertexId;
         return this;
     }
-    public String getDirection() {
-        return this.direction;
+    public String getVertexId() {
+        return this.vertexId;
     }
 
 }

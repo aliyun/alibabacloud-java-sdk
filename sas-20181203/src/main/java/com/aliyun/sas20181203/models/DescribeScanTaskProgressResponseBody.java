@@ -4,26 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeScanTaskProgressResponseBody extends TeaModel {
-    @NameInMap("TargetInfo")
-    public String targetInfo;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ScanTaskProgress")
     public String scanTaskProgress;
 
+    @NameInMap("TargetInfo")
+    public String targetInfo;
+
     public static DescribeScanTaskProgressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeScanTaskProgressResponseBody self = new DescribeScanTaskProgressResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScanTaskProgressResponseBody setTargetInfo(String targetInfo) {
-        this.targetInfo = targetInfo;
-        return this;
-    }
-    public String getTargetInfo() {
-        return this.targetInfo;
     }
 
     public DescribeScanTaskProgressResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeScanTaskProgressResponseBody extends TeaModel {
     }
     public String getScanTaskProgress() {
         return this.scanTaskProgress;
+    }
+
+    public DescribeScanTaskProgressResponseBody setTargetInfo(String targetInfo) {
+        this.targetInfo = targetInfo;
+        return this;
+    }
+    public String getTargetInfo() {
+        return this.targetInfo;
     }
 
 }

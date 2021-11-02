@@ -7,11 +7,11 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -32,20 +32,20 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeVulWhitelistResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeVulWhitelistResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeVulWhitelistResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeVulWhitelistResponseBody setTotalCount(Integer totalCount) {
@@ -65,14 +65,11 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeVulWhitelistResponseBodyVulWhitelists extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("TargetInfo")
-        public String targetInfo;
-
         @NameInMap("AliasName")
         public String aliasName;
+
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("Name")
         public String name;
@@ -80,28 +77,15 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("TargetInfo")
+        public String targetInfo;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeVulWhitelistResponseBodyVulWhitelists build(java.util.Map<String, ?> map) throws Exception {
             DescribeVulWhitelistResponseBodyVulWhitelists self = new DescribeVulWhitelistResponseBodyVulWhitelists();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVulWhitelistResponseBodyVulWhitelists setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeVulWhitelistResponseBodyVulWhitelists setTargetInfo(String targetInfo) {
-            this.targetInfo = targetInfo;
-            return this;
-        }
-        public String getTargetInfo() {
-            return this.targetInfo;
         }
 
         public DescribeVulWhitelistResponseBodyVulWhitelists setAliasName(String aliasName) {
@@ -110,6 +94,14 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
         public String getAliasName() {
             return this.aliasName;
+        }
+
+        public DescribeVulWhitelistResponseBodyVulWhitelists setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public DescribeVulWhitelistResponseBodyVulWhitelists setName(String name) {
@@ -128,12 +120,20 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeVulWhitelistResponseBodyVulWhitelists setId(String id) {
-            this.id = id;
+        public DescribeVulWhitelistResponseBodyVulWhitelists setTargetInfo(String targetInfo) {
+            this.targetInfo = targetInfo;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getTargetInfo() {
+            return this.targetInfo;
+        }
+
+        public DescribeVulWhitelistResponseBodyVulWhitelists setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

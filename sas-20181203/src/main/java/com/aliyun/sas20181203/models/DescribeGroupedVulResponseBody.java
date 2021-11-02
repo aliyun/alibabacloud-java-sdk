@@ -7,17 +7,17 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("GroupedVulItems")
+    public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
-
-    @NameInMap("GroupedVulItems")
-    public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems;
 
     public static DescribeGroupedVulResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupedVulResponseBody self = new DescribeGroupedVulResponseBody();
@@ -32,12 +32,12 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeGroupedVulResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeGroupedVulResponseBody setGroupedVulItems(java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems) {
+        this.groupedVulItems = groupedVulItems;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> getGroupedVulItems() {
+        return this.groupedVulItems;
     }
 
     public DescribeGroupedVulResponseBody setPageSize(Integer pageSize) {
@@ -48,6 +48,14 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeGroupedVulResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribeGroupedVulResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -56,96 +64,40 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeGroupedVulResponseBody setGroupedVulItems(java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems) {
-        this.groupedVulItems = groupedVulItems;
-        return this;
-    }
-    public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> getGroupedVulItems() {
-        return this.groupedVulItems;
-    }
-
     public static class DescribeGroupedVulResponseBodyGroupedVulItems extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("NntfCount")
-        public Integer nntfCount;
-
-        @NameInMap("HandledCount")
-        public Integer handledCount;
-
-        @NameInMap("GmtLast")
-        public Long gmtLast;
-
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("LaterCount")
-        public Integer laterCount;
-
         @NameInMap("AliasName")
         public String aliasName;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("TotalFixCount")
-        public Long totalFixCount;
 
         @NameInMap("AsapCount")
         public Integer asapCount;
 
+        @NameInMap("GmtLast")
+        public Long gmtLast;
+
+        @NameInMap("HandledCount")
+        public Integer handledCount;
+
+        @NameInMap("LaterCount")
+        public Integer laterCount;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NntfCount")
+        public Integer nntfCount;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("TotalFixCount")
+        public Long totalFixCount;
+
+        @NameInMap("Type")
+        public String type;
+
         public static DescribeGroupedVulResponseBodyGroupedVulItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeGroupedVulResponseBodyGroupedVulItems self = new DescribeGroupedVulResponseBodyGroupedVulItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeGroupedVulResponseBodyGroupedVulItems setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeGroupedVulResponseBodyGroupedVulItems setNntfCount(Integer nntfCount) {
-            this.nntfCount = nntfCount;
-            return this;
-        }
-        public Integer getNntfCount() {
-            return this.nntfCount;
-        }
-
-        public DescribeGroupedVulResponseBodyGroupedVulItems setHandledCount(Integer handledCount) {
-            this.handledCount = handledCount;
-            return this;
-        }
-        public Integer getHandledCount() {
-            return this.handledCount;
-        }
-
-        public DescribeGroupedVulResponseBodyGroupedVulItems setGmtLast(Long gmtLast) {
-            this.gmtLast = gmtLast;
-            return this;
-        }
-        public Long getGmtLast() {
-            return this.gmtLast;
-        }
-
-        public DescribeGroupedVulResponseBodyGroupedVulItems setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public DescribeGroupedVulResponseBodyGroupedVulItems setLaterCount(Integer laterCount) {
-            this.laterCount = laterCount;
-            return this;
-        }
-        public Integer getLaterCount() {
-            return this.laterCount;
         }
 
         public DescribeGroupedVulResponseBodyGroupedVulItems setAliasName(String aliasName) {
@@ -156,12 +108,60 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             return this.aliasName;
         }
 
+        public DescribeGroupedVulResponseBodyGroupedVulItems setAsapCount(Integer asapCount) {
+            this.asapCount = asapCount;
+            return this;
+        }
+        public Integer getAsapCount() {
+            return this.asapCount;
+        }
+
+        public DescribeGroupedVulResponseBodyGroupedVulItems setGmtLast(Long gmtLast) {
+            this.gmtLast = gmtLast;
+            return this;
+        }
+        public Long getGmtLast() {
+            return this.gmtLast;
+        }
+
+        public DescribeGroupedVulResponseBodyGroupedVulItems setHandledCount(Integer handledCount) {
+            this.handledCount = handledCount;
+            return this;
+        }
+        public Integer getHandledCount() {
+            return this.handledCount;
+        }
+
+        public DescribeGroupedVulResponseBodyGroupedVulItems setLaterCount(Integer laterCount) {
+            this.laterCount = laterCount;
+            return this;
+        }
+        public Integer getLaterCount() {
+            return this.laterCount;
+        }
+
         public DescribeGroupedVulResponseBodyGroupedVulItems setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeGroupedVulResponseBodyGroupedVulItems setNntfCount(Integer nntfCount) {
+            this.nntfCount = nntfCount;
+            return this;
+        }
+        public Integer getNntfCount() {
+            return this.nntfCount;
+        }
+
+        public DescribeGroupedVulResponseBodyGroupedVulItems setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
         public DescribeGroupedVulResponseBodyGroupedVulItems setTotalFixCount(Long totalFixCount) {
@@ -172,12 +172,12 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             return this.totalFixCount;
         }
 
-        public DescribeGroupedVulResponseBodyGroupedVulItems setAsapCount(Integer asapCount) {
-            this.asapCount = asapCount;
+        public DescribeGroupedVulResponseBodyGroupedVulItems setType(String type) {
+            this.type = type;
             return this;
         }
-        public Integer getAsapCount() {
-            return this.asapCount;
+        public String getType() {
+            return this.type;
         }
 
     }

@@ -4,20 +4,8 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCountResponseBody extends TeaModel {
-    @NameInMap("Process")
-    public Integer process;
-
     @NameInMap("AutoRun")
     public Integer autoRun;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("User")
-    public Integer user;
-
-    @NameInMap("Software")
-    public Integer software;
 
     @NameInMap("Cron")
     public Integer cron;
@@ -25,20 +13,24 @@ public class DescribePropertyCountResponseBody extends TeaModel {
     @NameInMap("Port")
     public Integer port;
 
+    @NameInMap("Process")
+    public Integer process;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Sca")
     public Integer sca;
+
+    @NameInMap("Software")
+    public Integer software;
+
+    @NameInMap("User")
+    public Integer user;
 
     public static DescribePropertyCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertyCountResponseBody self = new DescribePropertyCountResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePropertyCountResponseBody setProcess(Integer process) {
-        this.process = process;
-        return this;
-    }
-    public Integer getProcess() {
-        return this.process;
     }
 
     public DescribePropertyCountResponseBody setAutoRun(Integer autoRun) {
@@ -47,30 +39,6 @@ public class DescribePropertyCountResponseBody extends TeaModel {
     }
     public Integer getAutoRun() {
         return this.autoRun;
-    }
-
-    public DescribePropertyCountResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribePropertyCountResponseBody setUser(Integer user) {
-        this.user = user;
-        return this;
-    }
-    public Integer getUser() {
-        return this.user;
-    }
-
-    public DescribePropertyCountResponseBody setSoftware(Integer software) {
-        this.software = software;
-        return this;
-    }
-    public Integer getSoftware() {
-        return this.software;
     }
 
     public DescribePropertyCountResponseBody setCron(Integer cron) {
@@ -89,12 +57,44 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         return this.port;
     }
 
+    public DescribePropertyCountResponseBody setProcess(Integer process) {
+        this.process = process;
+        return this;
+    }
+    public Integer getProcess() {
+        return this.process;
+    }
+
+    public DescribePropertyCountResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public DescribePropertyCountResponseBody setSca(Integer sca) {
         this.sca = sca;
         return this;
     }
     public Integer getSca() {
         return this.sca;
+    }
+
+    public DescribePropertyCountResponseBody setSoftware(Integer software) {
+        this.software = software;
+        return this;
+    }
+    public Integer getSoftware() {
+        return this.software;
+    }
+
+    public DescribePropertyCountResponseBody setUser(Integer user) {
+        this.user = user;
+        return this;
+    }
+    public Integer getUser() {
+        return this.user;
     }
 
 }

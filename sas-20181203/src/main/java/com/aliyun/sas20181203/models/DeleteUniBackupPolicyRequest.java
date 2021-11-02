@@ -4,37 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteUniBackupPolicyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("PolicyId")
     public Long policyId;
 
     @NameInMap("PolicyIds")
     public String policyIds;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     public static DeleteUniBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteUniBackupPolicyRequest self = new DeleteUniBackupPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteUniBackupPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DeleteUniBackupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DeleteUniBackupPolicyRequest setPolicyId(Long policyId) {
@@ -51,6 +35,22 @@ public class DeleteUniBackupPolicyRequest extends TeaModel {
     }
     public String getPolicyIds() {
         return this.policyIds;
+    }
+
+    public DeleteUniBackupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DeleteUniBackupPolicyRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

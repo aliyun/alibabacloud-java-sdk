@@ -4,29 +4,29 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventDetailRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("From")
+    public String from;
 
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("SuspiciousEventId")
     public Integer suspiciousEventId;
-
-    @NameInMap("From")
-    public String from;
 
     public static DescribeSuspEventDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSuspEventDetailRequest self = new DescribeSuspEventDetailRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSuspEventDetailRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeSuspEventDetailRequest setFrom(String from) {
+        this.from = from;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getFrom() {
+        return this.from;
     }
 
     public DescribeSuspEventDetailRequest setLang(String lang) {
@@ -37,20 +37,20 @@ public class DescribeSuspEventDetailRequest extends TeaModel {
         return this.lang;
     }
 
+    public DescribeSuspEventDetailRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
     public DescribeSuspEventDetailRequest setSuspiciousEventId(Integer suspiciousEventId) {
         this.suspiciousEventId = suspiciousEventId;
         return this;
     }
     public Integer getSuspiciousEventId() {
         return this.suspiciousEventId;
-    }
-
-    public DescribeSuspEventDetailRequest setFrom(String from) {
-        this.from = from;
-        return this;
-    }
-    public String getFrom() {
-        return this.from;
     }
 
 }

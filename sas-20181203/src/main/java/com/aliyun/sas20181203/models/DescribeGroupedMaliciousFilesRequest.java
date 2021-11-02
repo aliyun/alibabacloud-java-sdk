@@ -4,38 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("Levels")
-    public String levels;
-
-    @NameInMap("FuzzyMaliciousName")
-    public String fuzzyMaliciousName;
-
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("PageSize")
-    public String pageSize;
-
-    @NameInMap("RepoRegionId")
-    public String repoRegionId;
-
-    @NameInMap("RepoInstanceId")
-    public String repoInstanceId;
-
-    @NameInMap("RepoId")
-    public String repoId;
-
-    @NameInMap("RepoName")
-    public String repoName;
-
-    @NameInMap("RepoNamespace")
-    public String repoNamespace;
-
-    @NameInMap("ImageTag")
-    public String imageTag;
+    @NameInMap("FuzzyMaliciousName")
+    public String fuzzyMaliciousName;
 
     @NameInMap("ImageDigest")
     public String imageDigest;
@@ -43,9 +16,76 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     @NameInMap("ImageLayer")
     public String imageLayer;
 
+    @NameInMap("ImageTag")
+    public String imageTag;
+
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("Levels")
+    public String levels;
+
+    @NameInMap("PageSize")
+    public String pageSize;
+
+    @NameInMap("RepoId")
+    public String repoId;
+
+    @NameInMap("RepoInstanceId")
+    public String repoInstanceId;
+
+    @NameInMap("RepoName")
+    public String repoName;
+
+    @NameInMap("RepoNamespace")
+    public String repoNamespace;
+
+    @NameInMap("RepoRegionId")
+    public String repoRegionId;
+
     public static DescribeGroupedMaliciousFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupedMaliciousFilesRequest self = new DescribeGroupedMaliciousFilesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGroupedMaliciousFilesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeGroupedMaliciousFilesRequest setFuzzyMaliciousName(String fuzzyMaliciousName) {
+        this.fuzzyMaliciousName = fuzzyMaliciousName;
+        return this;
+    }
+    public String getFuzzyMaliciousName() {
+        return this.fuzzyMaliciousName;
+    }
+
+    public DescribeGroupedMaliciousFilesRequest setImageDigest(String imageDigest) {
+        this.imageDigest = imageDigest;
+        return this;
+    }
+    public String getImageDigest() {
+        return this.imageDigest;
+    }
+
+    public DescribeGroupedMaliciousFilesRequest setImageLayer(String imageLayer) {
+        this.imageLayer = imageLayer;
+        return this;
+    }
+    public String getImageLayer() {
+        return this.imageLayer;
+    }
+
+    public DescribeGroupedMaliciousFilesRequest setImageTag(String imageTag) {
+        this.imageTag = imageTag;
+        return this;
+    }
+    public String getImageTag() {
+        return this.imageTag;
     }
 
     public DescribeGroupedMaliciousFilesRequest setLang(String lang) {
@@ -64,22 +104,6 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
         return this.levels;
     }
 
-    public DescribeGroupedMaliciousFilesRequest setFuzzyMaliciousName(String fuzzyMaliciousName) {
-        this.fuzzyMaliciousName = fuzzyMaliciousName;
-        return this;
-    }
-    public String getFuzzyMaliciousName() {
-        return this.fuzzyMaliciousName;
-    }
-
-    public DescribeGroupedMaliciousFilesRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
     public DescribeGroupedMaliciousFilesRequest setPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -88,12 +112,12 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeGroupedMaliciousFilesRequest setRepoRegionId(String repoRegionId) {
-        this.repoRegionId = repoRegionId;
+    public DescribeGroupedMaliciousFilesRequest setRepoId(String repoId) {
+        this.repoId = repoId;
         return this;
     }
-    public String getRepoRegionId() {
-        return this.repoRegionId;
+    public String getRepoId() {
+        return this.repoId;
     }
 
     public DescribeGroupedMaliciousFilesRequest setRepoInstanceId(String repoInstanceId) {
@@ -102,14 +126,6 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
     }
     public String getRepoInstanceId() {
         return this.repoInstanceId;
-    }
-
-    public DescribeGroupedMaliciousFilesRequest setRepoId(String repoId) {
-        this.repoId = repoId;
-        return this;
-    }
-    public String getRepoId() {
-        return this.repoId;
     }
 
     public DescribeGroupedMaliciousFilesRequest setRepoName(String repoName) {
@@ -128,28 +144,12 @@ public class DescribeGroupedMaliciousFilesRequest extends TeaModel {
         return this.repoNamespace;
     }
 
-    public DescribeGroupedMaliciousFilesRequest setImageTag(String imageTag) {
-        this.imageTag = imageTag;
+    public DescribeGroupedMaliciousFilesRequest setRepoRegionId(String repoRegionId) {
+        this.repoRegionId = repoRegionId;
         return this;
     }
-    public String getImageTag() {
-        return this.imageTag;
-    }
-
-    public DescribeGroupedMaliciousFilesRequest setImageDigest(String imageDigest) {
-        this.imageDigest = imageDigest;
-        return this;
-    }
-    public String getImageDigest() {
-        return this.imageDigest;
-    }
-
-    public DescribeGroupedMaliciousFilesRequest setImageLayer(String imageLayer) {
-        this.imageLayer = imageLayer;
-        return this;
-    }
-    public String getImageLayer() {
-        return this.imageLayer;
+    public String getRepoRegionId() {
+        return this.repoRegionId;
     }
 
 }

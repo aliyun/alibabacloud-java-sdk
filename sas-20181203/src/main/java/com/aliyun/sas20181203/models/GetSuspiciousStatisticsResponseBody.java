@@ -4,9 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetSuspiciousStatisticsResponseBody extends TeaModel {
-    @NameInMap("SuspiciousCount")
-    public Integer suspiciousCount;
-
     @NameInMap("RemindCount")
     public Integer remindCount;
 
@@ -16,20 +13,15 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
     @NameInMap("SeriousCount")
     public Integer seriousCount;
 
+    @NameInMap("SuspiciousCount")
+    public Integer suspiciousCount;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     public static GetSuspiciousStatisticsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSuspiciousStatisticsResponseBody self = new GetSuspiciousStatisticsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSuspiciousStatisticsResponseBody setSuspiciousCount(Integer suspiciousCount) {
-        this.suspiciousCount = suspiciousCount;
-        return this;
-    }
-    public Integer getSuspiciousCount() {
-        return this.suspiciousCount;
     }
 
     public GetSuspiciousStatisticsResponseBody setRemindCount(Integer remindCount) {
@@ -54,6 +46,14 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
     }
     public Integer getSeriousCount() {
         return this.seriousCount;
+    }
+
+    public GetSuspiciousStatisticsResponseBody setSuspiciousCount(Integer suspiciousCount) {
+        this.suspiciousCount = suspiciousCount;
+        return this;
+    }
+    public Integer getSuspiciousCount() {
+        return this.suspiciousCount;
     }
 
     public GetSuspiciousStatisticsResponseBody setTotalCount(Integer totalCount) {

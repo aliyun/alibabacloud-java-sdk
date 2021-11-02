@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainDetailRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeDomainDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainDetailRequest self = new DescribeDomainDetailRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainDetailRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeDomainDetailRequest setDomainName(String domainName) {
@@ -29,6 +21,14 @@ public class DescribeDomainDetailRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public DescribeDomainDetailRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CreateAntiBruteForceRule")
     public CreateAntiBruteForceRuleResponseBodyCreateAntiBruteForceRule createAntiBruteForceRule;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateAntiBruteForceRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAntiBruteForceRuleResponseBody self = new CreateAntiBruteForceRuleResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAntiBruteForceRuleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateAntiBruteForceRuleResponseBody setCreateAntiBruteForceRule(CreateAntiBruteForceRuleResponseBodyCreateAntiBruteForceRule createAntiBruteForceRule) {
@@ -29,6 +21,14 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
     }
     public CreateAntiBruteForceRuleResponseBodyCreateAntiBruteForceRule getCreateAntiBruteForceRule() {
         return this.createAntiBruteForceRule;
+    }
+
+    public CreateAntiBruteForceRuleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateAntiBruteForceRuleResponseBodyCreateAntiBruteForceRule extends TeaModel {

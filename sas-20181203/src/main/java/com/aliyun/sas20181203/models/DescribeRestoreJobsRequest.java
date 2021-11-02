@@ -4,8 +4,8 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestoreJobsRequest extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("MachineRemark")
     public String machineRemark;
@@ -13,20 +13,20 @@ public class DescribeRestoreJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeRestoreJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRestoreJobsRequest self = new DescribeRestoreJobsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRestoreJobsRequest setStatus(String status) {
-        this.status = status;
+    public DescribeRestoreJobsRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribeRestoreJobsRequest setMachineRemark(String machineRemark) {
@@ -45,12 +45,12 @@ public class DescribeRestoreJobsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeRestoreJobsRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeRestoreJobsRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getStatus() {
+        return this.status;
     }
 
 }

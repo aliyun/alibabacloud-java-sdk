@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CreateSimilarSecurityEventsQueryTaskResponse")
     public CreateSimilarSecurityEventsQueryTaskResponseBodyCreateSimilarSecurityEventsQueryTaskResponse createSimilarSecurityEventsQueryTaskResponse;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateSimilarSecurityEventsQueryTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSimilarSecurityEventsQueryTaskResponseBody self = new CreateSimilarSecurityEventsQueryTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateSimilarSecurityEventsQueryTaskResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateSimilarSecurityEventsQueryTaskResponseBody setCreateSimilarSecurityEventsQueryTaskResponse(CreateSimilarSecurityEventsQueryTaskResponseBodyCreateSimilarSecurityEventsQueryTaskResponse createSimilarSecurityEventsQueryTaskResponse) {
@@ -29,6 +21,14 @@ public class CreateSimilarSecurityEventsQueryTaskResponseBody extends TeaModel {
     }
     public CreateSimilarSecurityEventsQueryTaskResponseBodyCreateSimilarSecurityEventsQueryTaskResponse getCreateSimilarSecurityEventsQueryTaskResponse() {
         return this.createSimilarSecurityEventsQueryTaskResponse;
+    }
+
+    public CreateSimilarSecurityEventsQueryTaskResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class CreateSimilarSecurityEventsQueryTaskResponseBodyCreateSimilarSecurityEventsQueryTaskResponse extends TeaModel {

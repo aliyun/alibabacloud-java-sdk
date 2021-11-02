@@ -10,11 +10,11 @@ public class ModifyOperateVulRequest extends TeaModel {
     @NameInMap("OperateType")
     public String operateType;
 
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("Reason")
     public String reason;
+
+    @NameInMap("Type")
+    public String type;
 
     public static ModifyOperateVulRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyOperateVulRequest self = new ModifyOperateVulRequest();
@@ -37,20 +37,20 @@ public class ModifyOperateVulRequest extends TeaModel {
         return this.operateType;
     }
 
-    public ModifyOperateVulRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
     public ModifyOperateVulRequest setReason(String reason) {
         this.reason = reason;
         return this;
     }
     public String getReason() {
         return this.reason;
+    }
+
+    public ModifyOperateVulRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

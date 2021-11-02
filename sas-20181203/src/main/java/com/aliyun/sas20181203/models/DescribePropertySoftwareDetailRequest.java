@@ -4,14 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertySoftwareDetailRequest extends TeaModel {
-    @NameInMap("Remark")
-    public String remark;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("Path")
     public String path;
+
+    @NameInMap("Remark")
+    public String remark;
 
     @NameInMap("SoftwareVersion")
     public String softwareVersion;
@@ -19,23 +25,17 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     @NameInMap("Uuid")
     public String uuid;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     public static DescribePropertySoftwareDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertySoftwareDetailRequest self = new DescribePropertySoftwareDetailRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribePropertySoftwareDetailRequest setRemark(String remark) {
-        this.remark = remark;
+    public DescribePropertySoftwareDetailRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getRemark() {
-        return this.remark;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
     public DescribePropertySoftwareDetailRequest setName(String name) {
@@ -46,12 +46,28 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
         return this.name;
     }
 
+    public DescribePropertySoftwareDetailRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribePropertySoftwareDetailRequest setPath(String path) {
         this.path = path;
         return this;
     }
     public String getPath() {
         return this.path;
+    }
+
+    public DescribePropertySoftwareDetailRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public DescribePropertySoftwareDetailRequest setSoftwareVersion(String softwareVersion) {
@@ -68,22 +84,6 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     }
     public String getUuid() {
         return this.uuid;
-    }
-
-    public DescribePropertySoftwareDetailRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public DescribePropertySoftwareDetailRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
 }

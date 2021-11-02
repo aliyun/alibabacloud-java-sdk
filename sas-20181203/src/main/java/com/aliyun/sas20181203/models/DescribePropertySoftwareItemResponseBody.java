@@ -4,26 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertySoftwareItemResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageInfo")
     public DescribePropertySoftwareItemResponseBodyPageInfo pageInfo;
 
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertySoftwareItemResponseBodyPropertyItems> propertyItems;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribePropertySoftwareItemResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertySoftwareItemResponseBody self = new DescribePropertySoftwareItemResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePropertySoftwareItemResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribePropertySoftwareItemResponseBody setPageInfo(DescribePropertySoftwareItemResponseBodyPageInfo pageInfo) {
@@ -42,7 +34,18 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
         return this.propertyItems;
     }
 
+    public DescribePropertySoftwareItemResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribePropertySoftwareItemResponseBodyPageInfo extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
@@ -52,12 +55,17 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Count")
-        public Integer count;
-
         public static DescribePropertySoftwareItemResponseBodyPageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribePropertySoftwareItemResponseBodyPageInfo self = new DescribePropertySoftwareItemResponseBodyPageInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePropertySoftwareItemResponseBodyPageInfo setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public DescribePropertySoftwareItemResponseBodyPageInfo setCurrentPage(Integer currentPage) {
@@ -84,34 +92,18 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public DescribePropertySoftwareItemResponseBodyPageInfo setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
     }
 
     public static class DescribePropertySoftwareItemResponseBodyPropertyItems extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Count")
         public Integer count;
+
+        @NameInMap("Name")
+        public String name;
 
         public static DescribePropertySoftwareItemResponseBodyPropertyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribePropertySoftwareItemResponseBodyPropertyItems self = new DescribePropertySoftwareItemResponseBodyPropertyItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePropertySoftwareItemResponseBodyPropertyItems setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribePropertySoftwareItemResponseBodyPropertyItems setCount(Integer count) {
@@ -120,6 +112,14 @@ public class DescribePropertySoftwareItemResponseBody extends TeaModel {
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public DescribePropertySoftwareItemResponseBodyPropertyItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }

@@ -32,6 +32,15 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
         @NameInMap("Type")
         public String type;
 
@@ -41,18 +50,33 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
         @NameInMap("VpcName")
         public String vpcName;
 
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("Count")
-        public Integer count;
-
         public static DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
             DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse self = new DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         public DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse setType(String type) {
@@ -77,30 +101,6 @@ public class DescribeHoneyPotSuspStatisticsResponseBody extends TeaModel {
         }
         public String getVpcName() {
             return this.vpcName;
-        }
-
-        public DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse setInstanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-        public String getInstanceName() {
-            return this.instanceName;
-        }
-
-        public DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public DescribeHoneyPotSuspStatisticsResponseBodySuspHoneyPotStatisticsResponse setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
         }
 
     }

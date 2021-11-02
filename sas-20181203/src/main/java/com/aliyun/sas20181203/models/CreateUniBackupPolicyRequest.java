@@ -4,30 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateUniBackupPolicyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("PolicyName")
-    public String policyName;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("Uuid")
-    public String uuid;
-
-    @NameInMap("DatabaseType")
-    public String databaseType;
-
-    @NameInMap("Retention")
-    public Integer retention;
-
-    @NameInMap("SpeedLimiter")
-    public Long speedLimiter;
-
     @NameInMap("AccountName")
     public String accountName;
 
@@ -37,8 +13,8 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     @NameInMap("DatabaseAddByUser")
     public String databaseAddByUser;
 
-    @NameInMap("UniRegionId")
-    public String uniRegionId;
+    @NameInMap("DatabaseType")
+    public String databaseType;
 
     @NameInMap("FullPlan")
     public java.util.Map<String, ?> fullPlan;
@@ -46,73 +22,33 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     @NameInMap("IncPlan")
     public java.util.Map<String, ?> incPlan;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("PolicyName")
+    public String policyName;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Retention")
+    public Integer retention;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("SpeedLimiter")
+    public Long speedLimiter;
+
+    @NameInMap("UniRegionId")
+    public String uniRegionId;
+
+    @NameInMap("Uuid")
+    public String uuid;
+
     public static CreateUniBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUniBackupPolicyRequest self = new CreateUniBackupPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateUniBackupPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public CreateUniBackupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public CreateUniBackupPolicyRequest setPolicyName(String policyName) {
-        this.policyName = policyName;
-        return this;
-    }
-    public String getPolicyName() {
-        return this.policyName;
-    }
-
-    public CreateUniBackupPolicyRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateUniBackupPolicyRequest setUuid(String uuid) {
-        this.uuid = uuid;
-        return this;
-    }
-    public String getUuid() {
-        return this.uuid;
-    }
-
-    public CreateUniBackupPolicyRequest setDatabaseType(String databaseType) {
-        this.databaseType = databaseType;
-        return this;
-    }
-    public String getDatabaseType() {
-        return this.databaseType;
-    }
-
-    public CreateUniBackupPolicyRequest setRetention(Integer retention) {
-        this.retention = retention;
-        return this;
-    }
-    public Integer getRetention() {
-        return this.retention;
-    }
-
-    public CreateUniBackupPolicyRequest setSpeedLimiter(Long speedLimiter) {
-        this.speedLimiter = speedLimiter;
-        return this;
-    }
-    public Long getSpeedLimiter() {
-        return this.speedLimiter;
     }
 
     public CreateUniBackupPolicyRequest setAccountName(String accountName) {
@@ -139,12 +75,12 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
         return this.databaseAddByUser;
     }
 
-    public CreateUniBackupPolicyRequest setUniRegionId(String uniRegionId) {
-        this.uniRegionId = uniRegionId;
+    public CreateUniBackupPolicyRequest setDatabaseType(String databaseType) {
+        this.databaseType = databaseType;
         return this;
     }
-    public String getUniRegionId() {
-        return this.uniRegionId;
+    public String getDatabaseType() {
+        return this.databaseType;
     }
 
     public CreateUniBackupPolicyRequest setFullPlan(java.util.Map<String, ?> fullPlan) {
@@ -161,6 +97,70 @@ public class CreateUniBackupPolicyRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getIncPlan() {
         return this.incPlan;
+    }
+
+    public CreateUniBackupPolicyRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateUniBackupPolicyRequest setPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    public String getPolicyName() {
+        return this.policyName;
+    }
+
+    public CreateUniBackupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateUniBackupPolicyRequest setRetention(Integer retention) {
+        this.retention = retention;
+        return this;
+    }
+    public Integer getRetention() {
+        return this.retention;
+    }
+
+    public CreateUniBackupPolicyRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public CreateUniBackupPolicyRequest setSpeedLimiter(Long speedLimiter) {
+        this.speedLimiter = speedLimiter;
+        return this;
+    }
+    public Long getSpeedLimiter() {
+        return this.speedLimiter;
+    }
+
+    public CreateUniBackupPolicyRequest setUniRegionId(String uniRegionId) {
+        this.uniRegionId = uniRegionId;
+        return this;
+    }
+    public String getUniRegionId() {
+        return this.uniRegionId;
+    }
+
+    public CreateUniBackupPolicyRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

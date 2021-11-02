@@ -4,8 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeModuleConfigResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Integer count;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
+
+    @NameInMap("ModuleConfigList")
+    public java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> moduleConfigList;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -13,15 +19,17 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Count")
-    public Integer count;
-
-    @NameInMap("ModuleConfigList")
-    public java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> moduleConfigList;
-
     public static DescribeModuleConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeModuleConfigResponseBody self = new DescribeModuleConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeModuleConfigResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public DescribeModuleConfigResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -30,6 +38,14 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public DescribeModuleConfigResponseBody setModuleConfigList(java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> moduleConfigList) {
+        this.moduleConfigList = moduleConfigList;
+        return this;
+    }
+    public java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> getModuleConfigList() {
+        return this.moduleConfigList;
     }
 
     public DescribeModuleConfigResponseBody setRequestId(String requestId) {
@@ -48,52 +64,28 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeModuleConfigResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
-    }
-
-    public DescribeModuleConfigResponseBody setModuleConfigList(java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> moduleConfigList) {
-        this.moduleConfigList = moduleConfigList;
-        return this;
-    }
-    public java.util.List<DescribeModuleConfigResponseBodyModuleConfigList> getModuleConfigList() {
-        return this.moduleConfigList;
-    }
-
     public static class DescribeModuleConfigResponseBodyModuleConfigListItems extends TeaModel {
-        @NameInMap("Uuid")
-        public String uuid;
-
         @NameInMap("GroupId")
         public Integer groupId;
-
-        @NameInMap("InstanceName")
-        public String instanceName;
-
-        @NameInMap("Region")
-        public String region;
-
-        @NameInMap("Ip")
-        public String ip;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("Ip")
+        public String ip;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Uuid")
+        public String uuid;
+
         public static DescribeModuleConfigResponseBodyModuleConfigListItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeModuleConfigResponseBodyModuleConfigListItems self = new DescribeModuleConfigResponseBodyModuleConfigListItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeModuleConfigResponseBodyModuleConfigListItems setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
         public DescribeModuleConfigResponseBodyModuleConfigListItems setGroupId(Integer groupId) {
@@ -104,20 +96,20 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        public DescribeModuleConfigResponseBodyModuleConfigListItems setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
         public DescribeModuleConfigResponseBodyModuleConfigListItems setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
         public String getInstanceName() {
             return this.instanceName;
-        }
-
-        public DescribeModuleConfigResponseBodyModuleConfigListItems setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public DescribeModuleConfigResponseBodyModuleConfigListItems setIp(String ip) {
@@ -128,37 +120,37 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
             return this.ip;
         }
 
-        public DescribeModuleConfigResponseBodyModuleConfigListItems setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public DescribeModuleConfigResponseBodyModuleConfigListItems setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeModuleConfigResponseBodyModuleConfigListItems setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }
 
     public static class DescribeModuleConfigResponseBodyModuleConfigList extends TeaModel {
-        @NameInMap("ModuleName")
-        public String moduleName;
-
         @NameInMap("ConfigName")
         public String configName;
 
         @NameInMap("Items")
         public java.util.List<DescribeModuleConfigResponseBodyModuleConfigListItems> items;
 
+        @NameInMap("ModuleName")
+        public String moduleName;
+
         public static DescribeModuleConfigResponseBodyModuleConfigList build(java.util.Map<String, ?> map) throws Exception {
             DescribeModuleConfigResponseBodyModuleConfigList self = new DescribeModuleConfigResponseBodyModuleConfigList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeModuleConfigResponseBodyModuleConfigList setModuleName(String moduleName) {
-            this.moduleName = moduleName;
-            return this;
-        }
-        public String getModuleName() {
-            return this.moduleName;
         }
 
         public DescribeModuleConfigResponseBodyModuleConfigList setConfigName(String configName) {
@@ -175,6 +167,14 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         }
         public java.util.List<DescribeModuleConfigResponseBodyModuleConfigListItems> getItems() {
             return this.items;
+        }
+
+        public DescribeModuleConfigResponseBodyModuleConfigList setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
         }
 
     }

@@ -4,14 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebLockDeleteConfigRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Id")
+    public Integer id;
 
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("Id")
-    public Integer id;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("Uuid")
     public String uuid;
@@ -21,12 +21,12 @@ public class ModifyWebLockDeleteConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyWebLockDeleteConfigRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public ModifyWebLockDeleteConfigRequest setId(Integer id) {
+        this.id = id;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Integer getId() {
+        return this.id;
     }
 
     public ModifyWebLockDeleteConfigRequest setLang(String lang) {
@@ -37,12 +37,12 @@ public class ModifyWebLockDeleteConfigRequest extends TeaModel {
         return this.lang;
     }
 
-    public ModifyWebLockDeleteConfigRequest setId(Integer id) {
-        this.id = id;
+    public ModifyWebLockDeleteConfigRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public Integer getId() {
-        return this.id;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public ModifyWebLockDeleteConfigRequest setUuid(String uuid) {

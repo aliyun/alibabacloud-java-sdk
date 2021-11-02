@@ -4,20 +4,8 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyAntiBruteForceRuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("Id")
-    public Long id;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("Span")
-    public Integer span;
+    @NameInMap("DefaultRule")
+    public Boolean defaultRule;
 
     @NameInMap("FailCount")
     public Integer failCount;
@@ -25,8 +13,20 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     @NameInMap("ForbiddenTime")
     public Integer forbiddenTime;
 
-    @NameInMap("DefaultRule")
-    public Boolean defaultRule;
+    @NameInMap("Id")
+    public Long id;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("Span")
+    public Integer span;
 
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
@@ -36,44 +36,12 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyAntiBruteForceRuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public ModifyAntiBruteForceRuleRequest setDefaultRule(Boolean defaultRule) {
+        this.defaultRule = defaultRule;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyAntiBruteForceRuleRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyAntiBruteForceRuleRequest setId(Long id) {
-        this.id = id;
-        return this;
-    }
-    public Long getId() {
-        return this.id;
-    }
-
-    public ModifyAntiBruteForceRuleRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public ModifyAntiBruteForceRuleRequest setSpan(Integer span) {
-        this.span = span;
-        return this;
-    }
-    public Integer getSpan() {
-        return this.span;
+    public Boolean getDefaultRule() {
+        return this.defaultRule;
     }
 
     public ModifyAntiBruteForceRuleRequest setFailCount(Integer failCount) {
@@ -92,12 +60,44 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return this.forbiddenTime;
     }
 
-    public ModifyAntiBruteForceRuleRequest setDefaultRule(Boolean defaultRule) {
-        this.defaultRule = defaultRule;
+    public ModifyAntiBruteForceRuleRequest setId(Long id) {
+        this.id = id;
         return this;
     }
-    public Boolean getDefaultRule() {
-        return this.defaultRule;
+    public Long getId() {
+        return this.id;
+    }
+
+    public ModifyAntiBruteForceRuleRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyAntiBruteForceRuleRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyAntiBruteForceRuleRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public ModifyAntiBruteForceRuleRequest setSpan(Integer span) {
+        this.span = span;
+        return this;
+    }
+    public Integer getSpan() {
+        return this.span;
     }
 
     public ModifyAntiBruteForceRuleRequest setUuidList(java.util.List<String> uuidList) {

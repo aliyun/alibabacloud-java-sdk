@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperateAgentClientInstallResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AegisCelintInstallResposeList")
     public java.util.List<OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList> aegisCelintInstallResposeList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static OperateAgentClientInstallResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OperateAgentClientInstallResponseBody self = new OperateAgentClientInstallResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public OperateAgentClientInstallResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public OperateAgentClientInstallResponseBody setAegisCelintInstallResposeList(java.util.List<OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList> aegisCelintInstallResposeList) {
@@ -31,27 +23,27 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
         return this.aegisCelintInstallResposeList;
     }
 
-    public static class OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList extends TeaModel {
-        @NameInMap("Uuid")
-        public String uuid;
+    public OperateAgentClientInstallResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("RecordId")
         public Long recordId;
 
+        @NameInMap("Uuid")
+        public String uuid;
+
         public static OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList build(java.util.Map<String, ?> map) throws Exception {
             OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList self = new OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList();
             return TeaModel.build(map, self);
-        }
-
-        public OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
         public OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList setInstanceId(String instanceId) {
@@ -68,6 +60,14 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
         }
         public Long getRecordId() {
             return this.recordId;
+        }
+
+        public OperateAgentClientInstallResponseBodyAegisCelintInstallResposeList setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

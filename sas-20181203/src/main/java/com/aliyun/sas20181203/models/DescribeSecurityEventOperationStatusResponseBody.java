@@ -32,34 +32,18 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("ErrorCode")
+        public String errorCode;
 
         @NameInMap("SecurityEventId")
         public String securityEventId;
 
-        @NameInMap("ErrorCode")
-        public String errorCode;
+        @NameInMap("Status")
+        public String status;
 
         public static DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses self = new DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses setSecurityEventId(String securityEventId) {
-            this.securityEventId = securityEventId;
-            return this;
-        }
-        public String getSecurityEventId() {
-            return this.securityEventId;
         }
 
         public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses setErrorCode(String errorCode) {
@@ -70,26 +54,34 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             return this.errorCode;
         }
 
+        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses setSecurityEventId(String securityEventId) {
+            this.securityEventId = securityEventId;
+            return this;
+        }
+        public String getSecurityEventId() {
+            return this.securityEventId;
+        }
+
+        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse extends TeaModel {
-        @NameInMap("TaskStatus")
-        public String taskStatus;
-
         @NameInMap("SecurityEventOperationStatuses")
         public java.util.List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses> securityEventOperationStatuses;
+
+        @NameInMap("TaskStatus")
+        public String taskStatus;
 
         public static DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse self = new DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse setTaskStatus(String taskStatus) {
-            this.taskStatus = taskStatus;
-            return this;
-        }
-        public String getTaskStatus() {
-            return this.taskStatus;
         }
 
         public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse setSecurityEventOperationStatuses(java.util.List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses> securityEventOperationStatuses) {
@@ -98,6 +90,14 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         }
         public java.util.List<DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponseSecurityEventOperationStatuses> getSecurityEventOperationStatuses() {
             return this.securityEventOperationStatuses;
+        }
+
+        public DescribeSecurityEventOperationStatusResponseBodySecurityEventOperationStatusResponse setTaskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+        public String getTaskStatus() {
+            return this.taskStatus;
         }
 
     }

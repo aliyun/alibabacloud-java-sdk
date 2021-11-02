@@ -4,29 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class OperateVulsRequest extends TeaModel {
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("OperateType")
     public String operateType;
 
-    @NameInMap("VulNames")
-    public java.util.List<String> vulNames;
+    @NameInMap("Type")
+    public String type;
 
     @NameInMap("Uuids")
     public java.util.List<String> uuids;
 
+    @NameInMap("VulNames")
+    public java.util.List<String> vulNames;
+
     public static OperateVulsRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateVulsRequest self = new OperateVulsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public OperateVulsRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public OperateVulsRequest setOperateType(String operateType) {
@@ -37,12 +29,12 @@ public class OperateVulsRequest extends TeaModel {
         return this.operateType;
     }
 
-    public OperateVulsRequest setVulNames(java.util.List<String> vulNames) {
-        this.vulNames = vulNames;
+    public OperateVulsRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public java.util.List<String> getVulNames() {
-        return this.vulNames;
+    public String getType() {
+        return this.type;
     }
 
     public OperateVulsRequest setUuids(java.util.List<String> uuids) {
@@ -51,6 +43,14 @@ public class OperateVulsRequest extends TeaModel {
     }
     public java.util.List<String> getUuids() {
         return this.uuids;
+    }
+
+    public OperateVulsRequest setVulNames(java.util.List<String> vulNames) {
+        this.vulNames = vulNames;
+        return this;
+    }
+    public java.util.List<String> getVulNames() {
+        return this.vulNames;
     }
 
 }

@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedTagsResponseBody extends TeaModel {
+    @NameInMap("Count")
+    public Integer count;
+
+    @NameInMap("GroupedFileds")
+    public java.util.List<DescribeGroupedTagsResponseBodyGroupedFileds> groupedFileds;
+
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
@@ -13,15 +19,25 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Count")
-    public Integer count;
-
-    @NameInMap("GroupedFileds")
-    public java.util.List<DescribeGroupedTagsResponseBodyGroupedFileds> groupedFileds;
-
     public static DescribeGroupedTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupedTagsResponseBody self = new DescribeGroupedTagsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGroupedTagsResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
+    }
+
+    public DescribeGroupedTagsResponseBody setGroupedFileds(java.util.List<DescribeGroupedTagsResponseBodyGroupedFileds> groupedFileds) {
+        this.groupedFileds = groupedFileds;
+        return this;
+    }
+    public java.util.List<DescribeGroupedTagsResponseBodyGroupedFileds> getGroupedFileds() {
+        return this.groupedFileds;
     }
 
     public DescribeGroupedTagsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -48,28 +64,12 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeGroupedTagsResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
-    }
-
-    public DescribeGroupedTagsResponseBody setGroupedFileds(java.util.List<DescribeGroupedTagsResponseBodyGroupedFileds> groupedFileds) {
-        this.groupedFileds = groupedFileds;
-        return this;
-    }
-    public java.util.List<DescribeGroupedTagsResponseBodyGroupedFileds> getGroupedFileds() {
-        return this.groupedFileds;
-    }
-
     public static class DescribeGroupedTagsResponseBodyGroupedFileds extends TeaModel {
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Count")
         public String count;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("TagId")
         public Integer tagId;
@@ -79,20 +79,20 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeGroupedTagsResponseBodyGroupedFileds setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
         public DescribeGroupedTagsResponseBodyGroupedFileds setCount(String count) {
             this.count = count;
             return this;
         }
         public String getCount() {
             return this.count;
+        }
+
+        public DescribeGroupedTagsResponseBodyGroupedFileds setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeGroupedTagsResponseBodyGroupedFileds setTagId(Integer tagId) {

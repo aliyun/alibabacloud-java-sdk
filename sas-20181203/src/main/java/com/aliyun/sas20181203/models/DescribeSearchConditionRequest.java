@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSearchConditionRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("Type")
     public String type;
@@ -18,20 +18,20 @@ public class DescribeSearchConditionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSearchConditionRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public DescribeSearchConditionRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeSearchConditionRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public DescribeSearchConditionRequest setType(String type) {

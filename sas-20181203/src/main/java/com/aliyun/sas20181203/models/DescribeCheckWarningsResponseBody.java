@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckWarningsResponseBody extends TeaModel {
+    @NameInMap("CheckWarnings")
+    public java.util.List<DescribeCheckWarningsResponseBodyCheckWarnings> checkWarnings;
+
+    @NameInMap("Count")
+    public Integer count;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -16,15 +22,25 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("Count")
-    public Integer count;
-
-    @NameInMap("CheckWarnings")
-    public java.util.List<DescribeCheckWarningsResponseBodyCheckWarnings> checkWarnings;
-
     public static DescribeCheckWarningsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCheckWarningsResponseBody self = new DescribeCheckWarningsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCheckWarningsResponseBody setCheckWarnings(java.util.List<DescribeCheckWarningsResponseBodyCheckWarnings> checkWarnings) {
+        this.checkWarnings = checkWarnings;
+        return this;
+    }
+    public java.util.List<DescribeCheckWarningsResponseBodyCheckWarnings> getCheckWarnings() {
+        return this.checkWarnings;
+    }
+
+    public DescribeCheckWarningsResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public DescribeCheckWarningsResponseBody setCurrentPage(Integer currentPage) {
@@ -59,28 +75,21 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeCheckWarningsResponseBody setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
-    public Integer getCount() {
-        return this.count;
-    }
-
-    public DescribeCheckWarningsResponseBody setCheckWarnings(java.util.List<DescribeCheckWarningsResponseBodyCheckWarnings> checkWarnings) {
-        this.checkWarnings = checkWarnings;
-        return this;
-    }
-    public java.util.List<DescribeCheckWarningsResponseBodyCheckWarnings> getCheckWarnings() {
-        return this.checkWarnings;
-    }
-
     public static class DescribeCheckWarningsResponseBodyCheckWarnings extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("CheckId")
+        public Long checkId;
 
         @NameInMap("CheckWarningId")
         public Long checkWarningId;
+
+        @NameInMap("Item")
+        public String item;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("Status")
+        public Integer status;
 
         @NameInMap("Type")
         public String type;
@@ -88,26 +97,17 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         @NameInMap("Uuid")
         public String uuid;
 
-        @NameInMap("Item")
-        public String item;
-
-        @NameInMap("CheckId")
-        public Long checkId;
-
-        @NameInMap("Level")
-        public String level;
-
         public static DescribeCheckWarningsResponseBodyCheckWarnings build(java.util.Map<String, ?> map) throws Exception {
             DescribeCheckWarningsResponseBodyCheckWarnings self = new DescribeCheckWarningsResponseBodyCheckWarnings();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCheckWarningsResponseBodyCheckWarnings setStatus(Integer status) {
-            this.status = status;
+        public DescribeCheckWarningsResponseBodyCheckWarnings setCheckId(Long checkId) {
+            this.checkId = checkId;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public Long getCheckId() {
+            return this.checkId;
         }
 
         public DescribeCheckWarningsResponseBodyCheckWarnings setCheckWarningId(Long checkWarningId) {
@@ -116,6 +116,30 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
         public Long getCheckWarningId() {
             return this.checkWarningId;
+        }
+
+        public DescribeCheckWarningsResponseBodyCheckWarnings setItem(String item) {
+            this.item = item;
+            return this;
+        }
+        public String getItem() {
+            return this.item;
+        }
+
+        public DescribeCheckWarningsResponseBodyCheckWarnings setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public DescribeCheckWarningsResponseBodyCheckWarnings setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
         public DescribeCheckWarningsResponseBodyCheckWarnings setType(String type) {
@@ -132,30 +156,6 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
         public String getUuid() {
             return this.uuid;
-        }
-
-        public DescribeCheckWarningsResponseBodyCheckWarnings setItem(String item) {
-            this.item = item;
-            return this;
-        }
-        public String getItem() {
-            return this.item;
-        }
-
-        public DescribeCheckWarningsResponseBodyCheckWarnings setCheckId(Long checkId) {
-            this.checkId = checkId;
-            return this;
-        }
-        public Long getCheckId() {
-            return this.checkId;
-        }
-
-        public DescribeCheckWarningsResponseBodyCheckWarnings setLevel(String level) {
-            this.level = level;
-            return this;
-        }
-        public String getLevel() {
-            return this.level;
         }
 
     }

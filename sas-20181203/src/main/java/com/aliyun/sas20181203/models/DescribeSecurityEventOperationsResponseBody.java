@@ -32,14 +32,14 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField extends TeaModel {
-        @NameInMap("MarkMisType")
-        public String markMisType;
+        @NameInMap("FiledAliasName")
+        public String filedAliasName;
 
         @NameInMap("FiledName")
         public String filedName;
 
-        @NameInMap("FiledAliasName")
-        public String filedAliasName;
+        @NameInMap("MarkMisType")
+        public String markMisType;
 
         @NameInMap("MarkMisValue")
         public String markMisValue;
@@ -52,12 +52,12 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField setMarkMisType(String markMisType) {
-            this.markMisType = markMisType;
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField setFiledAliasName(String filedAliasName) {
+            this.filedAliasName = filedAliasName;
             return this;
         }
-        public String getMarkMisType() {
-            return this.markMisType;
+        public String getFiledAliasName() {
+            return this.filedAliasName;
         }
 
         public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField setFiledName(String filedName) {
@@ -68,12 +68,12 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             return this.filedName;
         }
 
-        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField setFiledAliasName(String filedAliasName) {
-            this.filedAliasName = filedAliasName;
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField setMarkMisType(String markMisType) {
+            this.markMisType = markMisType;
             return this;
         }
-        public String getFiledAliasName() {
-            return this.filedAliasName;
+        public String getMarkMisType() {
+            return this.markMisType;
         }
 
         public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField setMarkMisValue(String markMisValue) {
@@ -95,11 +95,11 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource extends TeaModel {
-        @NameInMap("FiledName")
-        public String filedName;
-
         @NameInMap("FiledAliasName")
         public String filedAliasName;
+
+        @NameInMap("FiledName")
+        public String filedName;
 
         @NameInMap("MarkMisValue")
         public String markMisValue;
@@ -112,20 +112,20 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource setFiledName(String filedName) {
-            this.filedName = filedName;
-            return this;
-        }
-        public String getFiledName() {
-            return this.filedName;
-        }
-
         public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource setFiledAliasName(String filedAliasName) {
             this.filedAliasName = filedAliasName;
             return this;
         }
         public String getFiledAliasName() {
             return this.filedAliasName;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource setFiledName(String filedName) {
+            this.filedName = filedName;
+            return this;
+        }
+        public String getFiledName() {
+            return this.filedName;
         }
 
         public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource setMarkMisValue(String markMisValue) {
@@ -147,48 +147,24 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse extends TeaModel {
-        @NameInMap("OperationParams")
-        public String operationParams;
-
-        @NameInMap("OperationCode")
-        public String operationCode;
-
-        @NameInMap("UserCanOperate")
-        public Boolean userCanOperate;
-
         @NameInMap("MarkField")
         public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> markField;
 
         @NameInMap("MarkFieldsSource")
         public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource> markFieldsSource;
 
+        @NameInMap("OperationCode")
+        public String operationCode;
+
+        @NameInMap("OperationParams")
+        public String operationParams;
+
+        @NameInMap("UserCanOperate")
+        public Boolean userCanOperate;
+
         public static DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse self = new DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse setOperationParams(String operationParams) {
-            this.operationParams = operationParams;
-            return this;
-        }
-        public String getOperationParams() {
-            return this.operationParams;
-        }
-
-        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse setOperationCode(String operationCode) {
-            this.operationCode = operationCode;
-            return this;
-        }
-        public String getOperationCode() {
-            return this.operationCode;
-        }
-
-        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse setUserCanOperate(Boolean userCanOperate) {
-            this.userCanOperate = userCanOperate;
-            return this;
-        }
-        public Boolean getUserCanOperate() {
-            return this.userCanOperate;
         }
 
         public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse setMarkField(java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> markField) {
@@ -205,6 +181,30 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource> getMarkFieldsSource() {
             return this.markFieldsSource;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse setOperationCode(String operationCode) {
+            this.operationCode = operationCode;
+            return this;
+        }
+        public String getOperationCode() {
+            return this.operationCode;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse setOperationParams(String operationParams) {
+            this.operationParams = operationParams;
+            return this;
+        }
+        public String getOperationParams() {
+            return this.operationParams;
+        }
+
+        public DescribeSecurityEventOperationsResponseBodySecurityEventOperationsResponse setUserCanOperate(Boolean userCanOperate) {
+            this.userCanOperate = userCanOperate;
+            return this;
+        }
+        public Boolean getUserCanOperate() {
+            return this.userCanOperate;
         }
 
     }

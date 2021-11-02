@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmEventStackInfoResponseBody extends TeaModel {
-    @NameInMap("StackInfo")
-    public String stackInfo;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("StackInfo")
+    public String stackInfo;
 
     public static DescribeAlarmEventStackInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlarmEventStackInfoResponseBody self = new DescribeAlarmEventStackInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAlarmEventStackInfoResponseBody setStackInfo(String stackInfo) {
-        this.stackInfo = stackInfo;
-        return this;
-    }
-    public String getStackInfo() {
-        return this.stackInfo;
     }
 
     public DescribeAlarmEventStackInfoResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeAlarmEventStackInfoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeAlarmEventStackInfoResponseBody setStackInfo(String stackInfo) {
+        this.stackInfo = stackInfo;
+        return this;
+    }
+    public String getStackInfo() {
+        return this.stackInfo;
     }
 
 }

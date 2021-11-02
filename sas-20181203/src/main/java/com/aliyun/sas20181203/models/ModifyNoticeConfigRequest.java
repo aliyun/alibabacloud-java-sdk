@@ -4,14 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyNoticeConfigRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Project")
+    public String project;
 
     @NameInMap("Route")
     public Integer route;
 
-    @NameInMap("Project")
-    public String project;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("TimeLimit")
     public Integer timeLimit;
@@ -21,12 +21,12 @@ public class ModifyNoticeConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyNoticeConfigRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public ModifyNoticeConfigRequest setProject(String project) {
+        this.project = project;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public String getProject() {
+        return this.project;
     }
 
     public ModifyNoticeConfigRequest setRoute(Integer route) {
@@ -37,12 +37,12 @@ public class ModifyNoticeConfigRequest extends TeaModel {
         return this.route;
     }
 
-    public ModifyNoticeConfigRequest setProject(String project) {
-        this.project = project;
+    public ModifyNoticeConfigRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getProject() {
-        return this.project;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public ModifyNoticeConfigRequest setTimeLimit(Integer timeLimit) {

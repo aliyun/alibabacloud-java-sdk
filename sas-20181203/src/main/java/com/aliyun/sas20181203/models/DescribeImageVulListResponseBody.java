@@ -7,11 +7,11 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -32,20 +32,20 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeImageVulListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeImageVulListResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeImageVulListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeImageVulListResponseBody setTotalCount(Integer totalCount) {
@@ -65,49 +65,33 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList extends TeaModel {
-        @NameInMap("MatchList")
-        public String matchList;
+        @NameInMap("FullVersion")
+        public String fullVersion;
 
         @NameInMap("Layer")
         public String layer;
 
-        @NameInMap("FullVersion")
-        public String fullVersion;
-
-        @NameInMap("Version")
-        public String version;
-
         @NameInMap("MatchDetail")
         public String matchDetail;
 
-        @NameInMap("Path")
-        public String path;
+        @NameInMap("MatchList")
+        public String matchList;
 
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("Path")
+        public String path;
+
         @NameInMap("UpdateCmd")
         public String updateCmd;
+
+        @NameInMap("Version")
+        public String version;
 
         public static DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList self = new DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setMatchList(String matchList) {
-            this.matchList = matchList;
-            return this;
-        }
-        public String getMatchList() {
-            return this.matchList;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setLayer(String layer) {
-            this.layer = layer;
-            return this;
-        }
-        public String getLayer() {
-            return this.layer;
         }
 
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setFullVersion(String fullVersion) {
@@ -118,12 +102,12 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.fullVersion;
         }
 
-        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setVersion(String version) {
-            this.version = version;
+        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setLayer(String layer) {
+            this.layer = layer;
             return this;
         }
-        public String getVersion() {
-            return this.version;
+        public String getLayer() {
+            return this.layer;
         }
 
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setMatchDetail(String matchDetail) {
@@ -134,12 +118,12 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.matchDetail;
         }
 
-        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setPath(String path) {
-            this.path = path;
+        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setMatchList(String matchList) {
+            this.matchList = matchList;
             return this;
         }
-        public String getPath() {
-            return this.path;
+        public String getMatchList() {
+            return this.matchList;
         }
 
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setName(String name) {
@@ -150,6 +134,14 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setUpdateCmd(String updateCmd) {
             this.updateCmd = updateCmd;
             return this;
@@ -158,14 +150,22 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.updateCmd;
         }
 
+        public DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
     }
 
     public static class DescribeImageVulListResponseBodyVulRecordsExtendContentJson extends TeaModel {
-        @NameInMap("OsRelease")
-        public String osRelease;
-
         @NameInMap("Os")
         public String os;
+
+        @NameInMap("OsRelease")
+        public String osRelease;
 
         @NameInMap("RpmEntityList")
         public java.util.List<DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList;
@@ -175,20 +175,20 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageVulListResponseBodyVulRecordsExtendContentJson setOsRelease(String osRelease) {
-            this.osRelease = osRelease;
-            return this;
-        }
-        public String getOsRelease() {
-            return this.osRelease;
-        }
-
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJson setOs(String os) {
             this.os = os;
             return this;
         }
         public String getOs() {
             return this.os;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecordsExtendContentJson setOsRelease(String osRelease) {
+            this.osRelease = osRelease;
+            return this;
+        }
+        public String getOsRelease() {
+            return this.osRelease;
         }
 
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJson setRpmEntityList(java.util.List<DescribeImageVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> rpmEntityList) {
@@ -202,153 +202,63 @@ public class DescribeImageVulListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageVulListResponseBodyVulRecords extends TeaModel {
-        @NameInMap("CanUpdate")
-        public Boolean canUpdate;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("ModifyTs")
-        public Long modifyTs;
-
-        @NameInMap("ImageDigest")
-        public String imageDigest;
-
-        @NameInMap("PrimaryId")
-        public Long primaryId;
-
-        @NameInMap("Tag")
-        public String tag;
-
-        @NameInMap("Related")
-        public String related;
-
-        @NameInMap("FirstTs")
-        public Long firstTs;
-
-        @NameInMap("LastTs")
-        public Long lastTs;
-
-        @NameInMap("Necessity")
-        public String necessity;
-
-        @NameInMap("Uuid")
-        public String uuid;
-
         @NameInMap("AliasName")
         public String aliasName;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Layers")
-        public java.util.List<String> layers;
+        @NameInMap("CanUpdate")
+        public Boolean canUpdate;
 
         @NameInMap("ExtendContentJson")
         public DescribeImageVulListResponseBodyVulRecordsExtendContentJson extendContentJson;
 
+        @NameInMap("FirstTs")
+        public Long firstTs;
+
+        @NameInMap("ImageDigest")
+        public String imageDigest;
+
+        @NameInMap("LastTs")
+        public Long lastTs;
+
+        @NameInMap("Layers")
+        public java.util.List<String> layers;
+
+        @NameInMap("ModifyTs")
+        public Long modifyTs;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Necessity")
+        public String necessity;
+
+        @NameInMap("PrimaryId")
+        public Long primaryId;
+
+        @NameInMap("Related")
+        public String related;
+
+        @NameInMap("RepoName")
+        public String repoName;
+
+        @NameInMap("RepoNamespace")
+        public String repoNamespace;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("Tag")
+        public String tag;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Uuid")
+        public String uuid;
+
         public static DescribeImageVulListResponseBodyVulRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageVulListResponseBodyVulRecords self = new DescribeImageVulListResponseBodyVulRecords();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setCanUpdate(Boolean canUpdate) {
-            this.canUpdate = canUpdate;
-            return this;
-        }
-        public Boolean getCanUpdate() {
-            return this.canUpdate;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setModifyTs(Long modifyTs) {
-            this.modifyTs = modifyTs;
-            return this;
-        }
-        public Long getModifyTs() {
-            return this.modifyTs;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setImageDigest(String imageDigest) {
-            this.imageDigest = imageDigest;
-            return this;
-        }
-        public String getImageDigest() {
-            return this.imageDigest;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setPrimaryId(Long primaryId) {
-            this.primaryId = primaryId;
-            return this;
-        }
-        public Long getPrimaryId() {
-            return this.primaryId;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setRelated(String related) {
-            this.related = related;
-            return this;
-        }
-        public String getRelated() {
-            return this.related;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setFirstTs(Long firstTs) {
-            this.firstTs = firstTs;
-            return this;
-        }
-        public Long getFirstTs() {
-            return this.firstTs;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setLastTs(Long lastTs) {
-            this.lastTs = lastTs;
-            return this;
-        }
-        public Long getLastTs() {
-            return this.lastTs;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setNecessity(String necessity) {
-            this.necessity = necessity;
-            return this;
-        }
-        public String getNecessity() {
-            return this.necessity;
-        }
-
-        public DescribeImageVulListResponseBodyVulRecords setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
         }
 
         public DescribeImageVulListResponseBodyVulRecords setAliasName(String aliasName) {
@@ -359,12 +269,44 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.aliasName;
         }
 
-        public DescribeImageVulListResponseBodyVulRecords setName(String name) {
-            this.name = name;
+        public DescribeImageVulListResponseBodyVulRecords setCanUpdate(Boolean canUpdate) {
+            this.canUpdate = canUpdate;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public Boolean getCanUpdate() {
+            return this.canUpdate;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setExtendContentJson(DescribeImageVulListResponseBodyVulRecordsExtendContentJson extendContentJson) {
+            this.extendContentJson = extendContentJson;
+            return this;
+        }
+        public DescribeImageVulListResponseBodyVulRecordsExtendContentJson getExtendContentJson() {
+            return this.extendContentJson;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setFirstTs(Long firstTs) {
+            this.firstTs = firstTs;
+            return this;
+        }
+        public Long getFirstTs() {
+            return this.firstTs;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setImageDigest(String imageDigest) {
+            this.imageDigest = imageDigest;
+            return this;
+        }
+        public String getImageDigest() {
+            return this.imageDigest;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setLastTs(Long lastTs) {
+            this.lastTs = lastTs;
+            return this;
+        }
+        public Long getLastTs() {
+            return this.lastTs;
         }
 
         public DescribeImageVulListResponseBodyVulRecords setLayers(java.util.List<String> layers) {
@@ -375,12 +317,92 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             return this.layers;
         }
 
-        public DescribeImageVulListResponseBodyVulRecords setExtendContentJson(DescribeImageVulListResponseBodyVulRecordsExtendContentJson extendContentJson) {
-            this.extendContentJson = extendContentJson;
+        public DescribeImageVulListResponseBodyVulRecords setModifyTs(Long modifyTs) {
+            this.modifyTs = modifyTs;
             return this;
         }
-        public DescribeImageVulListResponseBodyVulRecordsExtendContentJson getExtendContentJson() {
-            return this.extendContentJson;
+        public Long getModifyTs() {
+            return this.modifyTs;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setNecessity(String necessity) {
+            this.necessity = necessity;
+            return this;
+        }
+        public String getNecessity() {
+            return this.necessity;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setPrimaryId(Long primaryId) {
+            this.primaryId = primaryId;
+            return this;
+        }
+        public Long getPrimaryId() {
+            return this.primaryId;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setRelated(String related) {
+            this.related = related;
+            return this;
+        }
+        public String getRelated() {
+            return this.related;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setRepoName(String repoName) {
+            this.repoName = repoName;
+            return this;
+        }
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setRepoNamespace(String repoNamespace) {
+            this.repoNamespace = repoNamespace;
+            return this;
+        }
+        public String getRepoNamespace() {
+            return this.repoNamespace;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeImageVulListResponseBodyVulRecords setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

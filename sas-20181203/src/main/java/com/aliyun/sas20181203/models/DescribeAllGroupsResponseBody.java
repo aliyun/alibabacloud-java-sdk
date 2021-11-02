@@ -7,11 +7,11 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
     @NameInMap("Count")
     public Integer count;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Groups")
     public java.util.List<DescribeAllGroupsResponseBodyGroups> groups;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeAllGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAllGroupsResponseBody self = new DescribeAllGroupsResponseBody();
@@ -26,14 +26,6 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         return this.count;
     }
 
-    public DescribeAllGroupsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeAllGroupsResponseBody setGroups(java.util.List<DescribeAllGroupsResponseBodyGroups> groups) {
         this.groups = groups;
         return this;
@@ -42,27 +34,35 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         return this.groups;
     }
 
+    public DescribeAllGroupsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeAllGroupsResponseBodyGroups extends TeaModel {
-        @NameInMap("GroupName")
-        public String groupName;
+        @NameInMap("GroupFlag")
+        public Integer groupFlag;
 
         @NameInMap("GroupId")
         public Integer groupId;
 
-        @NameInMap("GroupFlag")
-        public Integer groupFlag;
+        @NameInMap("GroupName")
+        public String groupName;
 
         public static DescribeAllGroupsResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeAllGroupsResponseBodyGroups self = new DescribeAllGroupsResponseBodyGroups();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAllGroupsResponseBodyGroups setGroupName(String groupName) {
-            this.groupName = groupName;
+        public DescribeAllGroupsResponseBodyGroups setGroupFlag(Integer groupFlag) {
+            this.groupFlag = groupFlag;
             return this;
         }
-        public String getGroupName() {
-            return this.groupName;
+        public Integer getGroupFlag() {
+            return this.groupFlag;
         }
 
         public DescribeAllGroupsResponseBodyGroups setGroupId(Integer groupId) {
@@ -73,12 +73,12 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public DescribeAllGroupsResponseBodyGroups setGroupFlag(Integer groupFlag) {
-            this.groupFlag = groupFlag;
+        public DescribeAllGroupsResponseBodyGroups setGroupName(String groupName) {
+            this.groupName = groupName;
             return this;
         }
-        public Integer getGroupFlag() {
-            return this.groupFlag;
+        public String getGroupName() {
+            return this.groupName;
         }
 
     }

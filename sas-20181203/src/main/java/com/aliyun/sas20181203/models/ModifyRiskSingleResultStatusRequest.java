@@ -4,14 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyRiskSingleResultStatusRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Ids")
+    public java.util.List<String> ids;
+
+    @NameInMap("Lang")
+    public String lang;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("Status")
     public String status;
@@ -19,20 +22,25 @@ public class ModifyRiskSingleResultStatusRequest extends TeaModel {
     @NameInMap("TaskId")
     public Long taskId;
 
-    @NameInMap("Ids")
-    public java.util.List<String> ids;
-
     public static ModifyRiskSingleResultStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRiskSingleResultStatusRequest self = new ModifyRiskSingleResultStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyRiskSingleResultStatusRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public ModifyRiskSingleResultStatusRequest setIds(java.util.List<String> ids) {
+        this.ids = ids;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public java.util.List<String> getIds() {
+        return this.ids;
+    }
+
+    public ModifyRiskSingleResultStatusRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ModifyRiskSingleResultStatusRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -43,12 +51,12 @@ public class ModifyRiskSingleResultStatusRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyRiskSingleResultStatusRequest setLang(String lang) {
-        this.lang = lang;
+    public ModifyRiskSingleResultStatusRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public ModifyRiskSingleResultStatusRequest setStatus(String status) {
@@ -65,14 +73,6 @@ public class ModifyRiskSingleResultStatusRequest extends TeaModel {
     }
     public Long getTaskId() {
         return this.taskId;
-    }
-
-    public ModifyRiskSingleResultStatusRequest setIds(java.util.List<String> ids) {
-        this.ids = ids;
-        return this;
-    }
-    public java.util.List<String> getIds() {
-        return this.ids;
     }
 
 }

@@ -10,14 +10,14 @@ public class ModifyStrategyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("Result")
+    public ModifyStrategyResponseBodyResult result;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Result")
-    public ModifyStrategyResponseBodyResult result;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ModifyStrategyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyStrategyResponseBody self = new ModifyStrategyResponseBody();
@@ -40,12 +40,12 @@ public class ModifyStrategyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyStrategyResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ModifyStrategyResponseBody setResult(ModifyStrategyResponseBodyResult result) {
+        this.result = result;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public ModifyStrategyResponseBodyResult getResult() {
+        return this.result;
     }
 
     public ModifyStrategyResponseBody setSuccess(Boolean success) {
@@ -56,12 +56,12 @@ public class ModifyStrategyResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ModifyStrategyResponseBody setResult(ModifyStrategyResponseBodyResult result) {
-        this.result = result;
+    public ModifyStrategyResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public ModifyStrategyResponseBodyResult getResult() {
-        return this.result;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ModifyStrategyResponseBodyResult extends TeaModel {

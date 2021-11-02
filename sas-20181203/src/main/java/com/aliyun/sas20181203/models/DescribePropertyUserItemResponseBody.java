@@ -4,26 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyUserItemResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageInfo")
     public DescribePropertyUserItemResponseBodyPageInfo pageInfo;
 
     @NameInMap("PropertyItems")
     public java.util.List<DescribePropertyUserItemResponseBodyPropertyItems> propertyItems;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static DescribePropertyUserItemResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertyUserItemResponseBody self = new DescribePropertyUserItemResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePropertyUserItemResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribePropertyUserItemResponseBody setPageInfo(DescribePropertyUserItemResponseBodyPageInfo pageInfo) {
@@ -42,7 +34,18 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         return this.propertyItems;
     }
 
+    public DescribePropertyUserItemResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribePropertyUserItemResponseBodyPageInfo extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
@@ -52,12 +55,17 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Count")
-        public Integer count;
-
         public static DescribePropertyUserItemResponseBodyPageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribePropertyUserItemResponseBodyPageInfo self = new DescribePropertyUserItemResponseBodyPageInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePropertyUserItemResponseBodyPageInfo setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public DescribePropertyUserItemResponseBodyPageInfo setCurrentPage(Integer currentPage) {
@@ -84,34 +92,18 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public DescribePropertyUserItemResponseBodyPageInfo setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
     }
 
     public static class DescribePropertyUserItemResponseBodyPropertyItems extends TeaModel {
-        @NameInMap("User")
-        public String user;
-
         @NameInMap("Count")
         public Integer count;
+
+        @NameInMap("User")
+        public String user;
 
         public static DescribePropertyUserItemResponseBodyPropertyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribePropertyUserItemResponseBodyPropertyItems self = new DescribePropertyUserItemResponseBodyPropertyItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePropertyUserItemResponseBodyPropertyItems setUser(String user) {
-            this.user = user;
-            return this;
-        }
-        public String getUser() {
-            return this.user;
         }
 
         public DescribePropertyUserItemResponseBodyPropertyItems setCount(Integer count) {
@@ -120,6 +112,14 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         }
         public Integer getCount() {
             return this.count;
+        }
+
+        public DescribePropertyUserItemResponseBodyPropertyItems setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
         }
 
     }

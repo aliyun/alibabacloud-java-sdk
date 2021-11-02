@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetVulStatisticsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("GroupIdList")
     public String groupIdList;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("TypeList")
     public String typeList;
@@ -18,20 +18,20 @@ public class GetVulStatisticsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetVulStatisticsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public GetVulStatisticsRequest setGroupIdList(String groupIdList) {
         this.groupIdList = groupIdList;
         return this;
     }
     public String getGroupIdList() {
         return this.groupIdList;
+    }
+
+    public GetVulStatisticsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public GetVulStatisticsRequest setTypeList(String typeList) {

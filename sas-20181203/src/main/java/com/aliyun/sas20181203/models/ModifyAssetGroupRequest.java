@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyAssetGroupRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("GroupId")
     public Long groupId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("Uuids")
     public String uuids;
@@ -18,20 +18,20 @@ public class ModifyAssetGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyAssetGroupRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public ModifyAssetGroupRequest setGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     public Long getGroupId() {
         return this.groupId;
+    }
+
+    public ModifyAssetGroupRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public ModifyAssetGroupRequest setUuids(String uuids) {

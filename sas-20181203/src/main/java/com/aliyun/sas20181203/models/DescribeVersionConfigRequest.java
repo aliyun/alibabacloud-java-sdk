@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVersionConfigRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceDirectoryAccountId")
     public String resourceDirectoryAccountId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static DescribeVersionConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVersionConfigRequest self = new DescribeVersionConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVersionConfigRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeVersionConfigRequest setResourceDirectoryAccountId(String resourceDirectoryAccountId) {
@@ -29,6 +21,14 @@ public class DescribeVersionConfigRequest extends TeaModel {
     }
     public String getResourceDirectoryAccountId() {
         return this.resourceDirectoryAccountId;
+    }
+
+    public DescribeVersionConfigRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

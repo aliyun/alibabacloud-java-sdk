@@ -4,8 +4,14 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsRequest extends TeaModel {
-    @NameInMap("Uuid")
-    public String uuid;
+    @NameInMap("ApiVersion")
+    public String apiVersion;
+
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("IsAliYunEcs")
+    public String isAliYunEcs;
 
     @NameInMap("MachineRegion")
     public String machineRegion;
@@ -13,35 +19,45 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("MachineRemark")
     public String machineRemark;
 
-    @NameInMap("StatusList")
-    public String statusList;
+    @NameInMap("NextToken")
+    public String nextToken;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("StatusList")
+    public String statusList;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("ApiVersion")
-    public String apiVersion;
-
-    @NameInMap("IsAliYunEcs")
-    public String isAliYunEcs;
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static DescribeSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsRequest self = new DescribeSnapshotsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSnapshotsRequest setUuid(String uuid) {
-        this.uuid = uuid;
+    public DescribeSnapshotsRequest setApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
-    public String getUuid() {
-        return this.uuid;
+    public String getApiVersion() {
+        return this.apiVersion;
+    }
+
+    public DescribeSnapshotsRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeSnapshotsRequest setIsAliYunEcs(String isAliYunEcs) {
+        this.isAliYunEcs = isAliYunEcs;
+        return this;
+    }
+    public String getIsAliYunEcs() {
+        return this.isAliYunEcs;
     }
 
     public DescribeSnapshotsRequest setMachineRegion(String machineRegion) {
@@ -60,12 +76,12 @@ public class DescribeSnapshotsRequest extends TeaModel {
         return this.machineRemark;
     }
 
-    public DescribeSnapshotsRequest setStatusList(String statusList) {
-        this.statusList = statusList;
+    public DescribeSnapshotsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public String getStatusList() {
-        return this.statusList;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeSnapshotsRequest setPageSize(Integer pageSize) {
@@ -76,36 +92,20 @@ public class DescribeSnapshotsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeSnapshotsRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeSnapshotsRequest setStatusList(String statusList) {
+        this.statusList = statusList;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getStatusList() {
+        return this.statusList;
     }
 
-    public DescribeSnapshotsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public DescribeSnapshotsRequest setUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public DescribeSnapshotsRequest setApiVersion(String apiVersion) {
-        this.apiVersion = apiVersion;
-        return this;
-    }
-    public String getApiVersion() {
-        return this.apiVersion;
-    }
-
-    public DescribeSnapshotsRequest setIsAliYunEcs(String isAliYunEcs) {
-        this.isAliYunEcs = isAliYunEcs;
-        return this;
-    }
-    public String getIsAliYunEcs() {
-        return this.isAliYunEcs;
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

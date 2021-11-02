@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribePropertyCronDetailRequest extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("Remark")
     public String remark;
 
@@ -16,15 +22,25 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     @NameInMap("Uuid")
     public String uuid;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     public static DescribePropertyCronDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePropertyCronDetailRequest self = new DescribePropertyCronDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePropertyCronDetailRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribePropertyCronDetailRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribePropertyCronDetailRequest setRemark(String remark) {
@@ -57,22 +73,6 @@ public class DescribePropertyCronDetailRequest extends TeaModel {
     }
     public String getUuid() {
         return this.uuid;
-    }
-
-    public DescribePropertyCronDetailRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public DescribePropertyCronDetailRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
 }

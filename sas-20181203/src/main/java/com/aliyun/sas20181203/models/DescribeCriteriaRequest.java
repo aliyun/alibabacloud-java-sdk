@@ -7,11 +7,11 @@ public class DescribeCriteriaRequest extends TeaModel {
     @NameInMap("MachineTypes")
     public String machineTypes;
 
-    @NameInMap("Value")
-    public String value;
-
     @NameInMap("SupportAutoTag")
     public Boolean supportAutoTag;
+
+    @NameInMap("Value")
+    public String value;
 
     public static DescribeCriteriaRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCriteriaRequest self = new DescribeCriteriaRequest();
@@ -26,20 +26,20 @@ public class DescribeCriteriaRequest extends TeaModel {
         return this.machineTypes;
     }
 
-    public DescribeCriteriaRequest setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
-    }
-
     public DescribeCriteriaRequest setSupportAutoTag(Boolean supportAutoTag) {
         this.supportAutoTag = supportAutoTag;
         return this;
     }
     public Boolean getSupportAutoTag() {
         return this.supportAutoTag;
+    }
+
+    public DescribeCriteriaRequest setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

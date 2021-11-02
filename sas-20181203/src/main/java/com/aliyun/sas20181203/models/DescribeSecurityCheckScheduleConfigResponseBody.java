@@ -32,18 +32,26 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig extends TeaModel {
+        @NameInMap("DaysOfWeek")
+        public String daysOfWeek;
+
         @NameInMap("EndTime")
         public Integer endTime;
 
         @NameInMap("StartTime")
         public Integer startTime;
 
-        @NameInMap("DaysOfWeek")
-        public String daysOfWeek;
-
         public static DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig self = new DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig setDaysOfWeek(String daysOfWeek) {
+            this.daysOfWeek = daysOfWeek;
+            return this;
+        }
+        public String getDaysOfWeek() {
+            return this.daysOfWeek;
         }
 
         public DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig setEndTime(Integer endTime) {
@@ -60,14 +68,6 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
         }
         public Integer getStartTime() {
             return this.startTime;
-        }
-
-        public DescribeSecurityCheckScheduleConfigResponseBodyRiskCheckJobConfig setDaysOfWeek(String daysOfWeek) {
-            this.daysOfWeek = daysOfWeek;
-            return this;
-        }
-        public String getDaysOfWeek() {
-            return this.daysOfWeek;
         }
 
     }

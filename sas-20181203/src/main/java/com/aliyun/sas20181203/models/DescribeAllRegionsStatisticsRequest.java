@@ -4,8 +4,23 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllRegionsStatisticsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("Action1")
+    public Integer action1;
+
+    @NameInMap("AllRegion")
+    public Boolean allRegion;
+
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("Dealed")
+    public String dealed;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("Flow")
+    public Integer flow;
 
     @NameInMap("From")
     public String from;
@@ -13,14 +28,26 @@ public class DescribeAllRegionsStatisticsRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     @NameInMap("Remark")
     public String remark;
 
-    @NameInMap("Type")
-    public String type;
+    @NameInMap("RuleType")
+    public Integer ruleType;
 
-    @NameInMap("Uuid")
-    public String uuid;
+    @NameInMap("SaleId")
+    public String saleId;
+
+    @NameInMap("SecureToken")
+    public String secureToken;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("Status")
     public Integer status;
@@ -28,56 +55,69 @@ public class DescribeAllRegionsStatisticsRequest extends TeaModel {
     @NameInMap("StatusList")
     public String statusList;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("WebGroupId")
-    public Long webGroupId;
-
-    @NameInMap("RuleType")
-    public Integer ruleType;
-
-    @NameInMap("Action1")
-    public Integer action1;
-
-    @NameInMap("Flow")
-    public Integer flow;
-
-    @NameInMap("SaleId")
-    public String saleId;
-
-    @NameInMap("Dealed")
-    public String dealed;
-
     @NameInMap("Tag")
     public String tag;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Type")
+    public String type;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("Uuid")
+    public String uuid;
 
-    @NameInMap("SecureToken")
-    public String secureToken;
-
-    @NameInMap("AllRegion")
-    public Boolean allRegion;
+    @NameInMap("WebGroupId")
+    public Long webGroupId;
 
     public static DescribeAllRegionsStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAllRegionsStatisticsRequest self = new DescribeAllRegionsStatisticsRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAllRegionsStatisticsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public DescribeAllRegionsStatisticsRequest setAction1(Integer action1) {
+        this.action1 = action1;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Integer getAction1() {
+        return this.action1;
+    }
+
+    public DescribeAllRegionsStatisticsRequest setAllRegion(Boolean allRegion) {
+        this.allRegion = allRegion;
+        return this;
+    }
+    public Boolean getAllRegion() {
+        return this.allRegion;
+    }
+
+    public DescribeAllRegionsStatisticsRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeAllRegionsStatisticsRequest setDealed(String dealed) {
+        this.dealed = dealed;
+        return this;
+    }
+    public String getDealed() {
+        return this.dealed;
+    }
+
+    public DescribeAllRegionsStatisticsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeAllRegionsStatisticsRequest setFlow(Integer flow) {
+        this.flow = flow;
+        return this;
+    }
+    public Integer getFlow() {
+        return this.flow;
     }
 
     public DescribeAllRegionsStatisticsRequest setFrom(String from) {
@@ -96,6 +136,14 @@ public class DescribeAllRegionsStatisticsRequest extends TeaModel {
         return this.groupId;
     }
 
+    public DescribeAllRegionsStatisticsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeAllRegionsStatisticsRequest setRemark(String remark) {
         this.remark = remark;
         return this;
@@ -104,20 +152,44 @@ public class DescribeAllRegionsStatisticsRequest extends TeaModel {
         return this.remark;
     }
 
-    public DescribeAllRegionsStatisticsRequest setType(String type) {
-        this.type = type;
+    public DescribeAllRegionsStatisticsRequest setRuleType(Integer ruleType) {
+        this.ruleType = ruleType;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public Integer getRuleType() {
+        return this.ruleType;
     }
 
-    public DescribeAllRegionsStatisticsRequest setUuid(String uuid) {
-        this.uuid = uuid;
+    public DescribeAllRegionsStatisticsRequest setSaleId(String saleId) {
+        this.saleId = saleId;
         return this;
     }
-    public String getUuid() {
-        return this.uuid;
+    public String getSaleId() {
+        return this.saleId;
+    }
+
+    public DescribeAllRegionsStatisticsRequest setSecureToken(String secureToken) {
+        this.secureToken = secureToken;
+        return this;
+    }
+    public String getSecureToken() {
+        return this.secureToken;
+    }
+
+    public DescribeAllRegionsStatisticsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public DescribeAllRegionsStatisticsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeAllRegionsStatisticsRequest setStatus(Integer status) {
@@ -136,70 +208,6 @@ public class DescribeAllRegionsStatisticsRequest extends TeaModel {
         return this.statusList;
     }
 
-    public DescribeAllRegionsStatisticsRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeAllRegionsStatisticsRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeAllRegionsStatisticsRequest setWebGroupId(Long webGroupId) {
-        this.webGroupId = webGroupId;
-        return this;
-    }
-    public Long getWebGroupId() {
-        return this.webGroupId;
-    }
-
-    public DescribeAllRegionsStatisticsRequest setRuleType(Integer ruleType) {
-        this.ruleType = ruleType;
-        return this;
-    }
-    public Integer getRuleType() {
-        return this.ruleType;
-    }
-
-    public DescribeAllRegionsStatisticsRequest setAction1(Integer action1) {
-        this.action1 = action1;
-        return this;
-    }
-    public Integer getAction1() {
-        return this.action1;
-    }
-
-    public DescribeAllRegionsStatisticsRequest setFlow(Integer flow) {
-        this.flow = flow;
-        return this;
-    }
-    public Integer getFlow() {
-        return this.flow;
-    }
-
-    public DescribeAllRegionsStatisticsRequest setSaleId(String saleId) {
-        this.saleId = saleId;
-        return this;
-    }
-    public String getSaleId() {
-        return this.saleId;
-    }
-
-    public DescribeAllRegionsStatisticsRequest setDealed(String dealed) {
-        this.dealed = dealed;
-        return this;
-    }
-    public String getDealed() {
-        return this.dealed;
-    }
-
     public DescribeAllRegionsStatisticsRequest setTag(String tag) {
         this.tag = tag;
         return this;
@@ -208,36 +216,28 @@ public class DescribeAllRegionsStatisticsRequest extends TeaModel {
         return this.tag;
     }
 
-    public DescribeAllRegionsStatisticsRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
+    public DescribeAllRegionsStatisticsRequest setType(String type) {
+        this.type = type;
         return this;
     }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getType() {
+        return this.type;
     }
 
-    public DescribeAllRegionsStatisticsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeAllRegionsStatisticsRequest setUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getUuid() {
+        return this.uuid;
     }
 
-    public DescribeAllRegionsStatisticsRequest setSecureToken(String secureToken) {
-        this.secureToken = secureToken;
+    public DescribeAllRegionsStatisticsRequest setWebGroupId(Long webGroupId) {
+        this.webGroupId = webGroupId;
         return this;
     }
-    public String getSecureToken() {
-        return this.secureToken;
-    }
-
-    public DescribeAllRegionsStatisticsRequest setAllRegion(Boolean allRegion) {
-        this.allRegion = allRegion;
-        return this;
-    }
-    public Boolean getAllRegion() {
-        return this.allRegion;
+    public Long getWebGroupId() {
+        return this.webGroupId;
     }
 
 }

@@ -4,60 +4,44 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyWebLockStartRequest extends TeaModel {
-    @NameInMap("Mode")
-    public String mode;
-
-    @NameInMap("LocalBackupDir")
-    public String localBackupDir;
-
-    @NameInMap("ExclusiveFile")
-    public String exclusiveFile;
+    @NameInMap("DefenceMode")
+    public String defenceMode;
 
     @NameInMap("Dir")
     public String dir;
 
-    @NameInMap("InclusiveFileType")
-    public String inclusiveFileType;
+    @NameInMap("ExclusiveDir")
+    public String exclusiveDir;
 
-    @NameInMap("Uuid")
-    public String uuid;
+    @NameInMap("ExclusiveFile")
+    public String exclusiveFile;
 
     @NameInMap("ExclusiveFileType")
     public String exclusiveFileType;
 
-    @NameInMap("ExclusiveDir")
-    public String exclusiveDir;
+    @NameInMap("InclusiveFileType")
+    public String inclusiveFileType;
 
-    @NameInMap("DefenceMode")
-    public String defenceMode;
+    @NameInMap("LocalBackupDir")
+    public String localBackupDir;
+
+    @NameInMap("Mode")
+    public String mode;
+
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static ModifyWebLockStartRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyWebLockStartRequest self = new ModifyWebLockStartRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyWebLockStartRequest setMode(String mode) {
-        this.mode = mode;
+    public ModifyWebLockStartRequest setDefenceMode(String defenceMode) {
+        this.defenceMode = defenceMode;
         return this;
     }
-    public String getMode() {
-        return this.mode;
-    }
-
-    public ModifyWebLockStartRequest setLocalBackupDir(String localBackupDir) {
-        this.localBackupDir = localBackupDir;
-        return this;
-    }
-    public String getLocalBackupDir() {
-        return this.localBackupDir;
-    }
-
-    public ModifyWebLockStartRequest setExclusiveFile(String exclusiveFile) {
-        this.exclusiveFile = exclusiveFile;
-        return this;
-    }
-    public String getExclusiveFile() {
-        return this.exclusiveFile;
+    public String getDefenceMode() {
+        return this.defenceMode;
     }
 
     public ModifyWebLockStartRequest setDir(String dir) {
@@ -68,20 +52,20 @@ public class ModifyWebLockStartRequest extends TeaModel {
         return this.dir;
     }
 
-    public ModifyWebLockStartRequest setInclusiveFileType(String inclusiveFileType) {
-        this.inclusiveFileType = inclusiveFileType;
+    public ModifyWebLockStartRequest setExclusiveDir(String exclusiveDir) {
+        this.exclusiveDir = exclusiveDir;
         return this;
     }
-    public String getInclusiveFileType() {
-        return this.inclusiveFileType;
+    public String getExclusiveDir() {
+        return this.exclusiveDir;
     }
 
-    public ModifyWebLockStartRequest setUuid(String uuid) {
-        this.uuid = uuid;
+    public ModifyWebLockStartRequest setExclusiveFile(String exclusiveFile) {
+        this.exclusiveFile = exclusiveFile;
         return this;
     }
-    public String getUuid() {
-        return this.uuid;
+    public String getExclusiveFile() {
+        return this.exclusiveFile;
     }
 
     public ModifyWebLockStartRequest setExclusiveFileType(String exclusiveFileType) {
@@ -92,20 +76,36 @@ public class ModifyWebLockStartRequest extends TeaModel {
         return this.exclusiveFileType;
     }
 
-    public ModifyWebLockStartRequest setExclusiveDir(String exclusiveDir) {
-        this.exclusiveDir = exclusiveDir;
+    public ModifyWebLockStartRequest setInclusiveFileType(String inclusiveFileType) {
+        this.inclusiveFileType = inclusiveFileType;
         return this;
     }
-    public String getExclusiveDir() {
-        return this.exclusiveDir;
+    public String getInclusiveFileType() {
+        return this.inclusiveFileType;
     }
 
-    public ModifyWebLockStartRequest setDefenceMode(String defenceMode) {
-        this.defenceMode = defenceMode;
+    public ModifyWebLockStartRequest setLocalBackupDir(String localBackupDir) {
+        this.localBackupDir = localBackupDir;
         return this;
     }
-    public String getDefenceMode() {
-        return this.defenceMode;
+    public String getLocalBackupDir() {
+        return this.localBackupDir;
+    }
+
+    public ModifyWebLockStartRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
+    public ModifyWebLockStartRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

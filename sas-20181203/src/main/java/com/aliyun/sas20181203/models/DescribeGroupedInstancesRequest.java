@@ -4,20 +4,20 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupedInstancesRequest extends TeaModel {
-    @NameInMap("Lang")
-    public String lang;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
-    @NameInMap("Criteria")
-    public String criteria;
-
-    @NameInMap("MachineTypes")
-    public String machineTypes;
+    @NameInMap("FieldValue")
+    public String fieldValue;
 
     @NameInMap("GroupField")
     public String groupField;
 
-    @NameInMap("FieldValue")
-    public String fieldValue;
+    @NameInMap("Lang")
+    public String lang;
+
+    @NameInMap("MachineTypes")
+    public String machineTypes;
 
     @NameInMap("NoPage")
     public Boolean noPage;
@@ -25,36 +25,25 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
     public static DescribeGroupedInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupedInstancesRequest self = new DescribeGroupedInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGroupedInstancesRequest setLang(String lang) {
-        this.lang = lang;
+    public DescribeGroupedInstancesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getLang() {
-        return this.lang;
+    public Integer getCurrentPage() {
+        return this.currentPage;
     }
 
-    public DescribeGroupedInstancesRequest setCriteria(String criteria) {
-        this.criteria = criteria;
+    public DescribeGroupedInstancesRequest setFieldValue(String fieldValue) {
+        this.fieldValue = fieldValue;
         return this;
     }
-    public String getCriteria() {
-        return this.criteria;
-    }
-
-    public DescribeGroupedInstancesRequest setMachineTypes(String machineTypes) {
-        this.machineTypes = machineTypes;
-        return this;
-    }
-    public String getMachineTypes() {
-        return this.machineTypes;
+    public String getFieldValue() {
+        return this.fieldValue;
     }
 
     public DescribeGroupedInstancesRequest setGroupField(String groupField) {
@@ -65,12 +54,20 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
         return this.groupField;
     }
 
-    public DescribeGroupedInstancesRequest setFieldValue(String fieldValue) {
-        this.fieldValue = fieldValue;
+    public DescribeGroupedInstancesRequest setLang(String lang) {
+        this.lang = lang;
         return this;
     }
-    public String getFieldValue() {
-        return this.fieldValue;
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeGroupedInstancesRequest setMachineTypes(String machineTypes) {
+        this.machineTypes = machineTypes;
+        return this;
+    }
+    public String getMachineTypes() {
+        return this.machineTypes;
     }
 
     public DescribeGroupedInstancesRequest setNoPage(Boolean noPage) {
@@ -87,14 +84,6 @@ public class DescribeGroupedInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeGroupedInstancesRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
     }
 
 }

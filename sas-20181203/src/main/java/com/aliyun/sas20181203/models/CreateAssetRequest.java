@@ -16,11 +16,11 @@ public class CreateAssetRequest extends TeaModel {
     @NameInMap("Os")
     public String os;
 
-    @NameInMap("Status")
-    public String status;
-
     @NameInMap("OsName")
     public String osName;
+
+    @NameInMap("Status")
+    public String status;
 
     public static CreateAssetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAssetRequest self = new CreateAssetRequest();
@@ -59,20 +59,20 @@ public class CreateAssetRequest extends TeaModel {
         return this.os;
     }
 
-    public CreateAssetRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
     public CreateAssetRequest setOsName(String osName) {
         this.osName = osName;
         return this;
     }
     public String getOsName() {
         return this.osName;
+    }
+
+    public CreateAssetRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

@@ -4,26 +4,26 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeUniBackupDatabaseRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("InstanceName")
-    public String instanceName;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
 
     @NameInMap("DatabaseType")
     public String databaseType;
 
+    @NameInMap("InstanceName")
+    public String instanceName;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
     @NameInMap("QueryType")
     public String queryType;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("UniRegionId")
     public String uniRegionId;
@@ -31,46 +31,6 @@ public class DescribeUniBackupDatabaseRequest extends TeaModel {
     public static DescribeUniBackupDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUniBackupDatabaseRequest self = new DescribeUniBackupDatabaseRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUniBackupDatabaseRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeUniBackupDatabaseRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public DescribeUniBackupDatabaseRequest setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
-        return this;
-    }
-    public String getInstanceName() {
-        return this.instanceName;
-    }
-
-    public DescribeUniBackupDatabaseRequest setDatabaseType(String databaseType) {
-        this.databaseType = databaseType;
-        return this;
-    }
-    public String getDatabaseType() {
-        return this.databaseType;
-    }
-
-    public DescribeUniBackupDatabaseRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeUniBackupDatabaseRequest setCurrentPage(Integer currentPage) {
@@ -81,12 +41,52 @@ public class DescribeUniBackupDatabaseRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public DescribeUniBackupDatabaseRequest setDatabaseType(String databaseType) {
+        this.databaseType = databaseType;
+        return this;
+    }
+    public String getDatabaseType() {
+        return this.databaseType;
+    }
+
+    public DescribeUniBackupDatabaseRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public DescribeUniBackupDatabaseRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeUniBackupDatabaseRequest setQueryType(String queryType) {
         this.queryType = queryType;
         return this;
     }
     public String getQueryType() {
         return this.queryType;
+    }
+
+    public DescribeUniBackupDatabaseRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeUniBackupDatabaseRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public DescribeUniBackupDatabaseRequest setUniRegionId(String uniRegionId) {

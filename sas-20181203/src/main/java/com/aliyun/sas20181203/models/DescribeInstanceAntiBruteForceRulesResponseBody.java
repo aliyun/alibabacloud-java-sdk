@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageInfo")
     public DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo pageInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Rules")
     public java.util.List<DescribeInstanceAntiBruteForceRulesResponseBodyRules> rules;
@@ -18,20 +18,20 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceAntiBruteForceRulesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeInstanceAntiBruteForceRulesResponseBody setPageInfo(DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
     }
     public DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo getPageInfo() {
         return this.pageInfo;
+    }
+
+    public DescribeInstanceAntiBruteForceRulesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeInstanceAntiBruteForceRulesResponseBody setRules(java.util.List<DescribeInstanceAntiBruteForceRulesResponseBodyRules> rules) {
@@ -43,6 +43,9 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
@@ -52,12 +55,17 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Count")
-        public Integer count;
-
         public static DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo self = new DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo setCurrentPage(Integer currentPage) {
@@ -84,37 +92,29 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public DescribeInstanceAntiBruteForceRulesResponseBodyPageInfo setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
     }
 
     public static class DescribeInstanceAntiBruteForceRulesResponseBodyRules extends TeaModel {
-        @NameInMap("Uuid")
-        public String uuid;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("Uuid")
+        public String uuid;
 
         public static DescribeInstanceAntiBruteForceRulesResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAntiBruteForceRulesResponseBodyRules self = new DescribeInstanceAntiBruteForceRulesResponseBodyRules();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceAntiBruteForceRulesResponseBodyRules setUuid(String uuid) {
-            this.uuid = uuid;
+        public DescribeInstanceAntiBruteForceRulesResponseBodyRules setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getUuid() {
-            return this.uuid;
+        public Long getId() {
+            return this.id;
         }
 
         public DescribeInstanceAntiBruteForceRulesResponseBodyRules setName(String name) {
@@ -125,12 +125,12 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeInstanceAntiBruteForceRulesResponseBodyRules setId(Long id) {
-            this.id = id;
+        public DescribeInstanceAntiBruteForceRulesResponseBodyRules setUuid(String uuid) {
+            this.uuid = uuid;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getUuid() {
+            return this.uuid;
         }
 
     }

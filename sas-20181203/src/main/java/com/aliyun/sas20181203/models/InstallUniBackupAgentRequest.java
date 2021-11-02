@@ -4,26 +4,26 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class InstallUniBackupAgentRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
+    @NameInMap("PolicyId")
+    public Long policyId;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("PolicyId")
-    public Long policyId;
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     public static InstallUniBackupAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallUniBackupAgentRequest self = new InstallUniBackupAgentRequest();
         return TeaModel.build(map, self);
     }
 
-    public InstallUniBackupAgentRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
+    public InstallUniBackupAgentRequest setPolicyId(Long policyId) {
+        this.policyId = policyId;
         return this;
     }
-    public String getSourceIp() {
-        return this.sourceIp;
+    public Long getPolicyId() {
+        return this.policyId;
     }
 
     public InstallUniBackupAgentRequest setResourceOwnerId(Long resourceOwnerId) {
@@ -34,12 +34,12 @@ public class InstallUniBackupAgentRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public InstallUniBackupAgentRequest setPolicyId(Long policyId) {
-        this.policyId = policyId;
+    public InstallUniBackupAgentRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
         return this;
     }
-    public Long getPolicyId() {
-        return this.policyId;
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
 }

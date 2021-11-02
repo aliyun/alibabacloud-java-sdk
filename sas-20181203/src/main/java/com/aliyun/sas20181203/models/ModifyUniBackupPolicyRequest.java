@@ -4,24 +4,6 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyUniBackupPolicyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("PolicyId")
-    public Long policyId;
-
-    @NameInMap("PolicyName")
-    public String policyName;
-
-    @NameInMap("Retention")
-    public Integer retention;
-
-    @NameInMap("SpeedLimiter")
-    public Long speedLimiter;
-
     @NameInMap("AccountName")
     public String accountName;
 
@@ -34,60 +16,30 @@ public class ModifyUniBackupPolicyRequest extends TeaModel {
     @NameInMap("IncPlan")
     public java.util.Map<String, ?> incPlan;
 
+    @NameInMap("PolicyId")
+    public Long policyId;
+
+    @NameInMap("PolicyName")
+    public String policyName;
+
     @NameInMap("PolicyStatus")
     public String policyStatus;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Retention")
+    public Integer retention;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("SpeedLimiter")
+    public Long speedLimiter;
 
     public static ModifyUniBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyUniBackupPolicyRequest self = new ModifyUniBackupPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyUniBackupPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyUniBackupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public ModifyUniBackupPolicyRequest setPolicyId(Long policyId) {
-        this.policyId = policyId;
-        return this;
-    }
-    public Long getPolicyId() {
-        return this.policyId;
-    }
-
-    public ModifyUniBackupPolicyRequest setPolicyName(String policyName) {
-        this.policyName = policyName;
-        return this;
-    }
-    public String getPolicyName() {
-        return this.policyName;
-    }
-
-    public ModifyUniBackupPolicyRequest setRetention(Integer retention) {
-        this.retention = retention;
-        return this;
-    }
-    public Integer getRetention() {
-        return this.retention;
-    }
-
-    public ModifyUniBackupPolicyRequest setSpeedLimiter(Long speedLimiter) {
-        this.speedLimiter = speedLimiter;
-        return this;
-    }
-    public Long getSpeedLimiter() {
-        return this.speedLimiter;
     }
 
     public ModifyUniBackupPolicyRequest setAccountName(String accountName) {
@@ -122,12 +74,60 @@ public class ModifyUniBackupPolicyRequest extends TeaModel {
         return this.incPlan;
     }
 
+    public ModifyUniBackupPolicyRequest setPolicyId(Long policyId) {
+        this.policyId = policyId;
+        return this;
+    }
+    public Long getPolicyId() {
+        return this.policyId;
+    }
+
+    public ModifyUniBackupPolicyRequest setPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    public String getPolicyName() {
+        return this.policyName;
+    }
+
     public ModifyUniBackupPolicyRequest setPolicyStatus(String policyStatus) {
         this.policyStatus = policyStatus;
         return this;
     }
     public String getPolicyStatus() {
         return this.policyStatus;
+    }
+
+    public ModifyUniBackupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyUniBackupPolicyRequest setRetention(Integer retention) {
+        this.retention = retention;
+        return this;
+    }
+    public Integer getRetention() {
+        return this.retention;
+    }
+
+    public ModifyUniBackupPolicyRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public ModifyUniBackupPolicyRequest setSpeedLimiter(Long speedLimiter) {
+        this.speedLimiter = speedLimiter;
+        return this;
+    }
+    public Long getSpeedLimiter() {
+        return this.speedLimiter;
     }
 
 }

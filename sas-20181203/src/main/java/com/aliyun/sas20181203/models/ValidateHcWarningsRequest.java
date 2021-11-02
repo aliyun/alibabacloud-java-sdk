@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ValidateHcWarningsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("RiskIds")
     public String riskIds;
+
+    @NameInMap("SourceIp")
+    public String sourceIp;
 
     @NameInMap("Uuids")
     public String uuids;
@@ -18,20 +18,20 @@ public class ValidateHcWarningsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ValidateHcWarningsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public ValidateHcWarningsRequest setRiskIds(String riskIds) {
         this.riskIds = riskIds;
         return this;
     }
     public String getRiskIds() {
         return this.riskIds;
+    }
+
+    public ValidateHcWarningsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public ValidateHcWarningsRequest setUuids(String uuids) {

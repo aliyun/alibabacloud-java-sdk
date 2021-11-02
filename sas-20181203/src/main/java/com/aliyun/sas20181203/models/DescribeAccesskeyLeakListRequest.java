@@ -4,8 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccesskeyLeakListRequest extends TeaModel {
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("Query")
     public String query;
@@ -13,23 +16,28 @@ public class DescribeAccesskeyLeakListRequest extends TeaModel {
     @NameInMap("StartTs")
     public Long startTs;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
+    @NameInMap("Status")
+    public String status;
 
     public static DescribeAccesskeyLeakListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccesskeyLeakListRequest self = new DescribeAccesskeyLeakListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAccesskeyLeakListRequest setStatus(String status) {
-        this.status = status;
+    public DescribeAccesskeyLeakListRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public DescribeAccesskeyLeakListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeAccesskeyLeakListRequest setQuery(String query) {
@@ -48,20 +56,12 @@ public class DescribeAccesskeyLeakListRequest extends TeaModel {
         return this.startTs;
     }
 
-    public DescribeAccesskeyLeakListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeAccesskeyLeakListRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeAccesskeyLeakListRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public String getStatus() {
+        return this.status;
     }
 
 }

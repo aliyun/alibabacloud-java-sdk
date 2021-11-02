@@ -4,11 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRestorePlansResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageInfo")
     public DescribeRestorePlansResponseBodyPageInfo pageInfo;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RestorePlans")
     public java.util.List<DescribeRestorePlansResponseBodyRestorePlans> restorePlans;
@@ -18,20 +18,20 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeRestorePlansResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeRestorePlansResponseBody setPageInfo(DescribeRestorePlansResponseBodyPageInfo pageInfo) {
         this.pageInfo = pageInfo;
         return this;
     }
     public DescribeRestorePlansResponseBodyPageInfo getPageInfo() {
         return this.pageInfo;
+    }
+
+    public DescribeRestorePlansResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeRestorePlansResponseBody setRestorePlans(java.util.List<DescribeRestorePlansResponseBodyRestorePlans> restorePlans) {
@@ -43,6 +43,9 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
     }
 
     public static class DescribeRestorePlansResponseBodyPageInfo extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
@@ -52,12 +55,17 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Integer totalCount;
 
-        @NameInMap("Count")
-        public Integer count;
-
         public static DescribeRestorePlansResponseBodyPageInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeRestorePlansResponseBodyPageInfo self = new DescribeRestorePlansResponseBodyPageInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRestorePlansResponseBodyPageInfo setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public DescribeRestorePlansResponseBodyPageInfo setCurrentPage(Integer currentPage) {
@@ -84,25 +92,11 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public DescribeRestorePlansResponseBodyPageInfo setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
     }
 
     public static class DescribeRestorePlansResponseBodyRestorePlans extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("RestorePoint")
-        public Long restorePoint;
-
-        @NameInMap("UpdatedTime")
-        public Long updatedTime;
+        @NameInMap("CreatedTime")
+        public Long createdTime;
 
         @NameInMap("DatabaseName")
         public String databaseName;
@@ -110,51 +104,41 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
-        @NameInMap("TargetInstanceName")
-        public String targetInstanceName;
-
-        @NameInMap("TargetDatabaseName")
-        public String targetDatabaseName;
+        @NameInMap("PolicyId")
+        public Long policyId;
 
         @NameInMap("PolicyName")
         public String policyName;
 
-        @NameInMap("PolicyId")
-        public Long policyId;
+        @NameInMap("RestorePoint")
+        public Long restorePoint;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TargetDatabaseName")
+        public String targetDatabaseName;
 
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
-        @NameInMap("CreatedTime")
-        public Long createdTime;
+        @NameInMap("TargetInstanceName")
+        public String targetInstanceName;
+
+        @NameInMap("UpdatedTime")
+        public Long updatedTime;
 
         public static DescribeRestorePlansResponseBodyRestorePlans build(java.util.Map<String, ?> map) throws Exception {
             DescribeRestorePlansResponseBodyRestorePlans self = new DescribeRestorePlansResponseBodyRestorePlans();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRestorePlansResponseBodyRestorePlans setStatus(String status) {
-            this.status = status;
+        public DescribeRestorePlansResponseBodyRestorePlans setCreatedTime(Long createdTime) {
+            this.createdTime = createdTime;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeRestorePlansResponseBodyRestorePlans setRestorePoint(Long restorePoint) {
-            this.restorePoint = restorePoint;
-            return this;
-        }
-        public Long getRestorePoint() {
-            return this.restorePoint;
-        }
-
-        public DescribeRestorePlansResponseBodyRestorePlans setUpdatedTime(Long updatedTime) {
-            this.updatedTime = updatedTime;
-            return this;
-        }
-        public Long getUpdatedTime() {
-            return this.updatedTime;
+        public Long getCreatedTime() {
+            return this.createdTime;
         }
 
         public DescribeRestorePlansResponseBodyRestorePlans setDatabaseName(String databaseName) {
@@ -173,20 +157,12 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public DescribeRestorePlansResponseBodyRestorePlans setTargetInstanceName(String targetInstanceName) {
-            this.targetInstanceName = targetInstanceName;
+        public DescribeRestorePlansResponseBodyRestorePlans setPolicyId(Long policyId) {
+            this.policyId = policyId;
             return this;
         }
-        public String getTargetInstanceName() {
-            return this.targetInstanceName;
-        }
-
-        public DescribeRestorePlansResponseBodyRestorePlans setTargetDatabaseName(String targetDatabaseName) {
-            this.targetDatabaseName = targetDatabaseName;
-            return this;
-        }
-        public String getTargetDatabaseName() {
-            return this.targetDatabaseName;
+        public Long getPolicyId() {
+            return this.policyId;
         }
 
         public DescribeRestorePlansResponseBodyRestorePlans setPolicyName(String policyName) {
@@ -197,12 +173,28 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             return this.policyName;
         }
 
-        public DescribeRestorePlansResponseBodyRestorePlans setPolicyId(Long policyId) {
-            this.policyId = policyId;
+        public DescribeRestorePlansResponseBodyRestorePlans setRestorePoint(Long restorePoint) {
+            this.restorePoint = restorePoint;
             return this;
         }
-        public Long getPolicyId() {
-            return this.policyId;
+        public Long getRestorePoint() {
+            return this.restorePoint;
+        }
+
+        public DescribeRestorePlansResponseBodyRestorePlans setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeRestorePlansResponseBodyRestorePlans setTargetDatabaseName(String targetDatabaseName) {
+            this.targetDatabaseName = targetDatabaseName;
+            return this;
+        }
+        public String getTargetDatabaseName() {
+            return this.targetDatabaseName;
         }
 
         public DescribeRestorePlansResponseBodyRestorePlans setTargetInstanceId(String targetInstanceId) {
@@ -213,12 +205,20 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             return this.targetInstanceId;
         }
 
-        public DescribeRestorePlansResponseBodyRestorePlans setCreatedTime(Long createdTime) {
-            this.createdTime = createdTime;
+        public DescribeRestorePlansResponseBodyRestorePlans setTargetInstanceName(String targetInstanceName) {
+            this.targetInstanceName = targetInstanceName;
             return this;
         }
-        public Long getCreatedTime() {
-            return this.createdTime;
+        public String getTargetInstanceName() {
+            return this.targetInstanceName;
+        }
+
+        public DescribeRestorePlansResponseBodyRestorePlans setUpdatedTime(Long updatedTime) {
+            this.updatedTime = updatedTime;
+            return this;
+        }
+        public Long getUpdatedTime() {
+            return this.updatedTime;
         }
 
     }

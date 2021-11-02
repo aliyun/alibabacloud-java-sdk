@@ -4,23 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskItemTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("List")
     public java.util.List<DescribeRiskItemTypeResponseBodyList> list;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeRiskItemTypeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRiskItemTypeResponseBody self = new DescribeRiskItemTypeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRiskItemTypeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeRiskItemTypeResponseBody setList(java.util.List<DescribeRiskItemTypeResponseBodyList> list) {
@@ -29,6 +21,14 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
     }
     public java.util.List<DescribeRiskItemTypeResponseBodyList> getList() {
         return this.list;
+    }
+
+    public DescribeRiskItemTypeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeRiskItemTypeResponseBodyList extends TeaModel {
