@@ -32,14 +32,14 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
     }
 
     public static class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail extends TeaModel {
-        @NameInMap("PlayDuration")
-        public String playDuration;
-
         @NameInMap("Date")
         public String date;
 
-        @NameInMap("VV")
-        public String VV;
+        @NameInMap("PlayDuration")
+        public String playDuration;
+
+        @NameInMap("PlayRange")
+        public String playRange;
 
         @NameInMap("Title")
         public String title;
@@ -47,20 +47,12 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
         @NameInMap("UV")
         public String UV;
 
-        @NameInMap("PlayRange")
-        public String playRange;
+        @NameInMap("VV")
+        public String VV;
 
         public static DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail self = new DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail setPlayDuration(String playDuration) {
-            this.playDuration = playDuration;
-            return this;
-        }
-        public String getPlayDuration() {
-            return this.playDuration;
         }
 
         public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail setDate(String date) {
@@ -71,12 +63,20 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             return this.date;
         }
 
-        public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail setVV(String VV) {
-            this.VV = VV;
+        public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail setPlayDuration(String playDuration) {
+            this.playDuration = playDuration;
             return this;
         }
-        public String getVV() {
-            return this.VV;
+        public String getPlayDuration() {
+            return this.playDuration;
+        }
+
+        public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail setPlayRange(String playRange) {
+            this.playRange = playRange;
+            return this;
+        }
+        public String getPlayRange() {
+            return this.playRange;
         }
 
         public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail setTitle(String title) {
@@ -95,12 +95,12 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             return this.UV;
         }
 
-        public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail setPlayRange(String playRange) {
-            this.playRange = playRange;
+        public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail setVV(String VV) {
+            this.VV = VV;
             return this;
         }
-        public String getPlayRange() {
-            return this.playRange;
+        public String getVV() {
+            return this.VV;
         }
 
     }

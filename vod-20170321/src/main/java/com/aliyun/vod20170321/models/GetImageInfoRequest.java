@@ -4,11 +4,11 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetImageInfoRequest extends TeaModel {
-    @NameInMap("ImageId")
-    public String imageId;
-
     @NameInMap("AuthTimeout")
     public Long authTimeout;
+
+    @NameInMap("ImageId")
+    public String imageId;
 
     @NameInMap("OutputType")
     public String outputType;
@@ -18,20 +18,20 @@ public class GetImageInfoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetImageInfoRequest setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
-    }
-
     public GetImageInfoRequest setAuthTimeout(Long authTimeout) {
         this.authTimeout = authTimeout;
         return this;
     }
     public Long getAuthTimeout() {
         return this.authTimeout;
+    }
+
+    public GetImageInfoRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public GetImageInfoRequest setOutputType(String outputType) {

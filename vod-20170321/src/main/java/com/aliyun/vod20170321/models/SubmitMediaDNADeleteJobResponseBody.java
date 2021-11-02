@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitMediaDNADeleteJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobId")
     public String jobId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SubmitMediaDNADeleteJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitMediaDNADeleteJobResponseBody self = new SubmitMediaDNADeleteJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitMediaDNADeleteJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitMediaDNADeleteJobResponseBody setJobId(String jobId) {
@@ -29,6 +21,14 @@ public class SubmitMediaDNADeleteJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public SubmitMediaDNADeleteJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

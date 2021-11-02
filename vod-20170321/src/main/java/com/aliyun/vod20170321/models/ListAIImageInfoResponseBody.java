@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAIImageInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AIImageInfoList")
     public java.util.List<ListAIImageInfoResponseBodyAIImageInfoList> AIImageInfoList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListAIImageInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAIImageInfoResponseBody self = new ListAIImageInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAIImageInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListAIImageInfoResponseBody setAIImageInfoList(java.util.List<ListAIImageInfoResponseBodyAIImageInfoList> AIImageInfoList) {
@@ -31,21 +23,26 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         return this.AIImageInfoList;
     }
 
-    public static class ListAIImageInfoResponseBodyAIImageInfoList extends TeaModel {
-        @NameInMap("CreationTime")
-        public String creationTime;
+    public ListAIImageInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListAIImageInfoResponseBodyAIImageInfoList extends TeaModel {
         @NameInMap("AIImageInfoId")
         public String AIImageInfoId;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
 
         @NameInMap("FileURL")
         public String fileURL;
 
-        @NameInMap("Version")
-        public String version;
-
-        @NameInMap("VideoId")
-        public String videoId;
+        @NameInMap("Format")
+        public String format;
 
         @NameInMap("JobId")
         public String jobId;
@@ -53,20 +50,15 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         @NameInMap("Score")
         public String score;
 
-        @NameInMap("Format")
-        public String format;
+        @NameInMap("Version")
+        public String version;
+
+        @NameInMap("VideoId")
+        public String videoId;
 
         public static ListAIImageInfoResponseBodyAIImageInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListAIImageInfoResponseBodyAIImageInfoList self = new ListAIImageInfoResponseBodyAIImageInfoList();
             return TeaModel.build(map, self);
-        }
-
-        public ListAIImageInfoResponseBodyAIImageInfoList setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
         }
 
         public ListAIImageInfoResponseBodyAIImageInfoList setAIImageInfoId(String AIImageInfoId) {
@@ -77,6 +69,14 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             return this.AIImageInfoId;
         }
 
+        public ListAIImageInfoResponseBodyAIImageInfoList setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
         public ListAIImageInfoResponseBodyAIImageInfoList setFileURL(String fileURL) {
             this.fileURL = fileURL;
             return this;
@@ -85,20 +85,12 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             return this.fileURL;
         }
 
-        public ListAIImageInfoResponseBodyAIImageInfoList setVersion(String version) {
-            this.version = version;
+        public ListAIImageInfoResponseBodyAIImageInfoList setFormat(String format) {
+            this.format = format;
             return this;
         }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public ListAIImageInfoResponseBodyAIImageInfoList setVideoId(String videoId) {
-            this.videoId = videoId;
-            return this;
-        }
-        public String getVideoId() {
-            return this.videoId;
+        public String getFormat() {
+            return this.format;
         }
 
         public ListAIImageInfoResponseBodyAIImageInfoList setJobId(String jobId) {
@@ -117,12 +109,20 @@ public class ListAIImageInfoResponseBody extends TeaModel {
             return this.score;
         }
 
-        public ListAIImageInfoResponseBodyAIImageInfoList setFormat(String format) {
-            this.format = format;
+        public ListAIImageInfoResponseBodyAIImageInfoList setVersion(String version) {
+            this.version = version;
             return this;
         }
-        public String getFormat() {
-            return this.format;
+        public String getVersion() {
+            return this.version;
+        }
+
+        public ListAIImageInfoResponseBodyAIImageInfoList setVideoId(String videoId) {
+            this.videoId = videoId;
+            return this;
+        }
+        public String getVideoId() {
+            return this.videoId;
         }
 
     }

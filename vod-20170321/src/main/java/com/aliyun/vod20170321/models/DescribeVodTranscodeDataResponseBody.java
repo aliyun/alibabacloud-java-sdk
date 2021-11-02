@@ -92,23 +92,15 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("Data")
         public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData data;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem self = new DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem setData(DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData data) {
@@ -117,6 +109,14 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         }
         public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData getData() {
             return this.data;
+        }
+
+        public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItem setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

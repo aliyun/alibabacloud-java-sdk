@@ -4,18 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class BatchStartVodDomainRequest extends TeaModel {
+    @NameInMap("DomainNames")
+    public String domainNames;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainNames")
-    public String domainNames;
-
     public static BatchStartVodDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchStartVodDomainRequest self = new BatchStartVodDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchStartVodDomainRequest setDomainNames(String domainNames) {
+        this.domainNames = domainNames;
+        return this;
+    }
+    public String getDomainNames() {
+        return this.domainNames;
     }
 
     public BatchStartVodDomainRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class BatchStartVodDomainRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public BatchStartVodDomainRequest setDomainNames(String domainNames) {
-        this.domainNames = domainNames;
-        return this;
-    }
-    public String getDomainNames() {
-        return this.domainNames;
     }
 
 }

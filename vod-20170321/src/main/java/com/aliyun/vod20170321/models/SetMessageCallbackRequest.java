@@ -4,8 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SetMessageCallbackRequest extends TeaModel {
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
+    @NameInMap("AppId")
+    public String appId;
+
+    @NameInMap("AuthKey")
+    public String authKey;
+
+    @NameInMap("AuthSwitch")
+    public String authSwitch;
 
     @NameInMap("CallbackType")
     public String callbackType;
@@ -16,32 +22,42 @@ public class SetMessageCallbackRequest extends TeaModel {
     @NameInMap("EventTypeList")
     public String eventTypeList;
 
-    @NameInMap("AuthSwitch")
-    public String authSwitch;
-
-    @NameInMap("AuthKey")
-    public String authKey;
-
     @NameInMap("MnsEndpoint")
     public String mnsEndpoint;
 
     @NameInMap("MnsQueueName")
     public String mnsQueueName;
 
-    @NameInMap("AppId")
-    public String appId;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static SetMessageCallbackRequest build(java.util.Map<String, ?> map) throws Exception {
         SetMessageCallbackRequest self = new SetMessageCallbackRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetMessageCallbackRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
+    public SetMessageCallbackRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public SetMessageCallbackRequest setAuthKey(String authKey) {
+        this.authKey = authKey;
+        return this;
+    }
+    public String getAuthKey() {
+        return this.authKey;
+    }
+
+    public SetMessageCallbackRequest setAuthSwitch(String authSwitch) {
+        this.authSwitch = authSwitch;
+        return this;
+    }
+    public String getAuthSwitch() {
+        return this.authSwitch;
     }
 
     public SetMessageCallbackRequest setCallbackType(String callbackType) {
@@ -68,22 +84,6 @@ public class SetMessageCallbackRequest extends TeaModel {
         return this.eventTypeList;
     }
 
-    public SetMessageCallbackRequest setAuthSwitch(String authSwitch) {
-        this.authSwitch = authSwitch;
-        return this;
-    }
-    public String getAuthSwitch() {
-        return this.authSwitch;
-    }
-
-    public SetMessageCallbackRequest setAuthKey(String authKey) {
-        this.authKey = authKey;
-        return this;
-    }
-    public String getAuthKey() {
-        return this.authKey;
-    }
-
     public SetMessageCallbackRequest setMnsEndpoint(String mnsEndpoint) {
         this.mnsEndpoint = mnsEndpoint;
         return this;
@@ -100,12 +100,12 @@ public class SetMessageCallbackRequest extends TeaModel {
         return this.mnsQueueName;
     }
 
-    public SetMessageCallbackRequest setAppId(String appId) {
-        this.appId = appId;
+    public SetMessageCallbackRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

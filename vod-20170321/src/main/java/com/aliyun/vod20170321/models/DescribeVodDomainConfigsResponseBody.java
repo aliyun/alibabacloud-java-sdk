@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainConfigs")
     public DescribeVodDomainConfigsResponseBodyDomainConfigs domainConfigs;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeVodDomainConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainConfigsResponseBody self = new DescribeVodDomainConfigsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVodDomainConfigsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeVodDomainConfigsResponseBody setDomainConfigs(DescribeVodDomainConfigsResponseBodyDomainConfigs domainConfigs) {
@@ -29,6 +21,14 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     }
     public DescribeVodDomainConfigsResponseBodyDomainConfigs getDomainConfigs() {
         return this.domainConfigs;
+    }
+
+    public DescribeVodDomainConfigsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
@@ -81,29 +81,21 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("ConfigId")
         public String configId;
-
-        @NameInMap("FunctionName")
-        public String functionName;
 
         @NameInMap("FunctionArgs")
         public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs;
 
+        @NameInMap("FunctionName")
+        public String functionName;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig self = new DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig setConfigId(String configId) {
@@ -114,6 +106,14 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             return this.configId;
         }
 
+        public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig setFunctionArgs(DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs) {
+            this.functionArgs = functionArgs;
+            return this;
+        }
+        public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs getFunctionArgs() {
+            return this.functionArgs;
+        }
+
         public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig setFunctionName(String functionName) {
             this.functionName = functionName;
             return this;
@@ -122,12 +122,12 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
             return this.functionName;
         }
 
-        public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig setFunctionArgs(DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs) {
-            this.functionArgs = functionArgs;
+        public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs getFunctionArgs() {
-            return this.functionArgs;
+        public String getStatus() {
+            return this.status;
         }
 
     }

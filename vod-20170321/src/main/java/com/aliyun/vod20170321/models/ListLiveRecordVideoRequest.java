@@ -4,14 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRecordVideoRequest extends TeaModel {
-    @NameInMap("StreamName")
-    public String streamName;
+    @NameInMap("AppName")
+    public String appName;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("AppName")
-    public String appName;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -25,20 +25,20 @@ public class ListLiveRecordVideoRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("StreamName")
+    public String streamName;
 
     public static ListLiveRecordVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLiveRecordVideoRequest self = new ListLiveRecordVideoRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListLiveRecordVideoRequest setStreamName(String streamName) {
-        this.streamName = streamName;
+    public ListLiveRecordVideoRequest setAppName(String appName) {
+        this.appName = appName;
         return this;
     }
-    public String getStreamName() {
-        return this.streamName;
+    public String getAppName() {
+        return this.appName;
     }
 
     public ListLiveRecordVideoRequest setDomainName(String domainName) {
@@ -49,12 +49,12 @@ public class ListLiveRecordVideoRequest extends TeaModel {
         return this.domainName;
     }
 
-    public ListLiveRecordVideoRequest setAppName(String appName) {
-        this.appName = appName;
+    public ListLiveRecordVideoRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getAppName() {
-        return this.appName;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListLiveRecordVideoRequest setPageNo(Integer pageNo) {
@@ -89,12 +89,12 @@ public class ListLiveRecordVideoRequest extends TeaModel {
         return this.startTime;
     }
 
-    public ListLiveRecordVideoRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public ListLiveRecordVideoRequest setStreamName(String streamName) {
+        this.streamName = streamName;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

@@ -4,21 +4,37 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteVodSpecificConfigRequest extends TeaModel {
+    @NameInMap("ConfigId")
+    public String configId;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
-    @NameInMap("ConfigId")
-    public String configId;
-
     public static DeleteVodSpecificConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVodSpecificConfigRequest self = new DeleteVodSpecificConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteVodSpecificConfigRequest setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    public DeleteVodSpecificConfigRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DeleteVodSpecificConfigRequest setOwnerId(Long ownerId) {
@@ -35,22 +51,6 @@ public class DeleteVodSpecificConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public DeleteVodSpecificConfigRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public DeleteVodSpecificConfigRequest setConfigId(String configId) {
-        this.configId = configId;
-        return this;
-    }
-    public String getConfigId() {
-        return this.configId;
     }
 
 }

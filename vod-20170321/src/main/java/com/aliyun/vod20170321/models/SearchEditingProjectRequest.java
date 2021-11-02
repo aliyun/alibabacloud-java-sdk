@@ -4,26 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SearchEditingProjectRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public String ownerId;
-
-    @NameInMap("ResourceOwnerId")
-    public String resourceOwnerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("OwnerId")
+    public String ownerId;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -31,8 +19,20 @@ public class SearchEditingProjectRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public String resourceOwnerId;
+
     @NameInMap("SortBy")
     public String sortBy;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("Title")
     public String title;
@@ -40,38 +40,6 @@ public class SearchEditingProjectRequest extends TeaModel {
     public static SearchEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchEditingProjectRequest self = new SearchEditingProjectRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchEditingProjectRequest setOwnerId(String ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public String getOwnerId() {
-        return this.ownerId;
-    }
-
-    public SearchEditingProjectRequest setResourceOwnerId(String resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public String getResourceOwnerId() {
-        return this.resourceOwnerId;
-    }
-
-    public SearchEditingProjectRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public SearchEditingProjectRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
     }
 
     public SearchEditingProjectRequest setEndTime(String endTime) {
@@ -82,20 +50,20 @@ public class SearchEditingProjectRequest extends TeaModel {
         return this.endTime;
     }
 
-    public SearchEditingProjectRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public SearchEditingProjectRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
-    public SearchEditingProjectRequest setStatus(String status) {
-        this.status = status;
+    public SearchEditingProjectRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public SearchEditingProjectRequest setPageNo(Integer pageNo) {
@@ -114,12 +82,44 @@ public class SearchEditingProjectRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public SearchEditingProjectRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SearchEditingProjectRequest setResourceOwnerId(String resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public String getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public SearchEditingProjectRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public SearchEditingProjectRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public SearchEditingProjectRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public SearchEditingProjectRequest setTitle(String title) {

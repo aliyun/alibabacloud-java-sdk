@@ -4,37 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainConfigsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("FunctionNames")
     public String functionNames;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     public static DescribeVodDomainConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainConfigsRequest self = new DescribeVodDomainConfigsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVodDomainConfigsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeVodDomainConfigsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DescribeVodDomainConfigsRequest setDomainName(String domainName) {
@@ -51,6 +35,22 @@ public class DescribeVodDomainConfigsRequest extends TeaModel {
     }
     public String getFunctionNames() {
         return this.functionNames;
+    }
+
+    public DescribeVodDomainConfigsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVodDomainConfigsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
 }

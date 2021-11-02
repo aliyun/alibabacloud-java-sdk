@@ -4,26 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class MoveAppResourceRequest extends TeaModel {
-    @NameInMap("TargetAppId")
-    public String targetAppId;
+    @NameInMap("ResourceIds")
+    public String resourceIds;
 
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("ResourceIds")
-    public String resourceIds;
+    @NameInMap("TargetAppId")
+    public String targetAppId;
 
     public static MoveAppResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveAppResourceRequest self = new MoveAppResourceRequest();
         return TeaModel.build(map, self);
     }
 
-    public MoveAppResourceRequest setTargetAppId(String targetAppId) {
-        this.targetAppId = targetAppId;
+    public MoveAppResourceRequest setResourceIds(String resourceIds) {
+        this.resourceIds = resourceIds;
         return this;
     }
-    public String getTargetAppId() {
-        return this.targetAppId;
+    public String getResourceIds() {
+        return this.resourceIds;
     }
 
     public MoveAppResourceRequest setResourceType(String resourceType) {
@@ -34,12 +34,12 @@ public class MoveAppResourceRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public MoveAppResourceRequest setResourceIds(String resourceIds) {
-        this.resourceIds = resourceIds;
+    public MoveAppResourceRequest setTargetAppId(String targetAppId) {
+        this.targetAppId = targetAppId;
         return this;
     }
-    public String getResourceIds() {
-        return this.resourceIds;
+    public String getTargetAppId() {
+        return this.targetAppId;
     }
 
 }

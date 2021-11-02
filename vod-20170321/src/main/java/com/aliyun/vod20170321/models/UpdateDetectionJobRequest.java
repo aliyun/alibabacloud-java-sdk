@@ -4,11 +4,8 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateDetectionJobRequest extends TeaModel {
-    @NameInMap("JobId")
-    public String jobId;
-
-    @NameInMap("CopyrightStatus")
-    public String copyrightStatus;
+    @NameInMap("BeginTime")
+    public String beginTime;
 
     @NameInMap("CopyrightBeginTime")
     public String copyrightBeginTime;
@@ -19,37 +16,32 @@ public class UpdateDetectionJobRequest extends TeaModel {
     @NameInMap("CopyrightFile")
     public String copyrightFile;
 
-    @NameInMap("WhiteListUrls")
-    public String whiteListUrls;
+    @NameInMap("CopyrightStatus")
+    public String copyrightStatus;
+
+    @NameInMap("Duration")
+    public Integer duration;
+
+    @NameInMap("JobId")
+    public String jobId;
 
     @NameInMap("TemplateId")
     public String templateId;
 
-    @NameInMap("BeginTime")
-    public String beginTime;
-
-    @NameInMap("Duration")
-    public Integer duration;
+    @NameInMap("WhiteListUrls")
+    public String whiteListUrls;
 
     public static UpdateDetectionJobRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDetectionJobRequest self = new UpdateDetectionJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDetectionJobRequest setJobId(String jobId) {
-        this.jobId = jobId;
+    public UpdateDetectionJobRequest setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
-    public String getJobId() {
-        return this.jobId;
-    }
-
-    public UpdateDetectionJobRequest setCopyrightStatus(String copyrightStatus) {
-        this.copyrightStatus = copyrightStatus;
-        return this;
-    }
-    public String getCopyrightStatus() {
-        return this.copyrightStatus;
+    public String getBeginTime() {
+        return this.beginTime;
     }
 
     public UpdateDetectionJobRequest setCopyrightBeginTime(String copyrightBeginTime) {
@@ -76,12 +68,28 @@ public class UpdateDetectionJobRequest extends TeaModel {
         return this.copyrightFile;
     }
 
-    public UpdateDetectionJobRequest setWhiteListUrls(String whiteListUrls) {
-        this.whiteListUrls = whiteListUrls;
+    public UpdateDetectionJobRequest setCopyrightStatus(String copyrightStatus) {
+        this.copyrightStatus = copyrightStatus;
         return this;
     }
-    public String getWhiteListUrls() {
-        return this.whiteListUrls;
+    public String getCopyrightStatus() {
+        return this.copyrightStatus;
+    }
+
+    public UpdateDetectionJobRequest setDuration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Integer getDuration() {
+        return this.duration;
+    }
+
+    public UpdateDetectionJobRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public UpdateDetectionJobRequest setTemplateId(String templateId) {
@@ -92,20 +100,12 @@ public class UpdateDetectionJobRequest extends TeaModel {
         return this.templateId;
     }
 
-    public UpdateDetectionJobRequest setBeginTime(String beginTime) {
-        this.beginTime = beginTime;
+    public UpdateDetectionJobRequest setWhiteListUrls(String whiteListUrls) {
+        this.whiteListUrls = whiteListUrls;
         return this;
     }
-    public String getBeginTime() {
-        return this.beginTime;
-    }
-
-    public UpdateDetectionJobRequest setDuration(Integer duration) {
-        this.duration = duration;
-        return this;
-    }
-    public Integer getDuration() {
-        return this.duration;
+    public String getWhiteListUrls() {
+        return this.whiteListUrls;
     }
 
 }

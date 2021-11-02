@@ -4,14 +4,17 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CreateUploadAttachedMediaRequest extends TeaModel {
-    @NameInMap("Title")
-    public String title;
+    @NameInMap("AppId")
+    public String appId;
 
     @NameInMap("BusinessType")
     public String businessType;
 
-    @NameInMap("MediaExt")
-    public String mediaExt;
+    @NameInMap("CateIds")
+    public String cateIds;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("FileName")
     public String fileName;
@@ -19,35 +22,32 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     @NameInMap("FileSize")
     public String fileSize;
 
-    @NameInMap("Tags")
-    public String tags;
+    @NameInMap("MediaExt")
+    public String mediaExt;
 
     @NameInMap("StorageLocation")
     public String storageLocation;
 
-    @NameInMap("Description")
-    public String description;
+    @NameInMap("Tags")
+    public String tags;
+
+    @NameInMap("Title")
+    public String title;
 
     @NameInMap("UserData")
     public String userData;
-
-    @NameInMap("CateIds")
-    public String cateIds;
-
-    @NameInMap("AppId")
-    public String appId;
 
     public static CreateUploadAttachedMediaRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUploadAttachedMediaRequest self = new CreateUploadAttachedMediaRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateUploadAttachedMediaRequest setTitle(String title) {
-        this.title = title;
+    public CreateUploadAttachedMediaRequest setAppId(String appId) {
+        this.appId = appId;
         return this;
     }
-    public String getTitle() {
-        return this.title;
+    public String getAppId() {
+        return this.appId;
     }
 
     public CreateUploadAttachedMediaRequest setBusinessType(String businessType) {
@@ -58,12 +58,20 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
         return this.businessType;
     }
 
-    public CreateUploadAttachedMediaRequest setMediaExt(String mediaExt) {
-        this.mediaExt = mediaExt;
+    public CreateUploadAttachedMediaRequest setCateIds(String cateIds) {
+        this.cateIds = cateIds;
         return this;
     }
-    public String getMediaExt() {
-        return this.mediaExt;
+    public String getCateIds() {
+        return this.cateIds;
+    }
+
+    public CreateUploadAttachedMediaRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateUploadAttachedMediaRequest setFileName(String fileName) {
@@ -82,12 +90,12 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
         return this.fileSize;
     }
 
-    public CreateUploadAttachedMediaRequest setTags(String tags) {
-        this.tags = tags;
+    public CreateUploadAttachedMediaRequest setMediaExt(String mediaExt) {
+        this.mediaExt = mediaExt;
         return this;
     }
-    public String getTags() {
-        return this.tags;
+    public String getMediaExt() {
+        return this.mediaExt;
     }
 
     public CreateUploadAttachedMediaRequest setStorageLocation(String storageLocation) {
@@ -98,12 +106,20 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
         return this.storageLocation;
     }
 
-    public CreateUploadAttachedMediaRequest setDescription(String description) {
-        this.description = description;
+    public CreateUploadAttachedMediaRequest setTags(String tags) {
+        this.tags = tags;
         return this;
     }
-    public String getDescription() {
-        return this.description;
+    public String getTags() {
+        return this.tags;
+    }
+
+    public CreateUploadAttachedMediaRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
     }
 
     public CreateUploadAttachedMediaRequest setUserData(String userData) {
@@ -112,22 +128,6 @@ public class CreateUploadAttachedMediaRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public CreateUploadAttachedMediaRequest setCateIds(String cateIds) {
-        this.cateIds = cateIds;
-        return this;
-    }
-    public String getCateIds() {
-        return this.cateIds;
-    }
-
-    public CreateUploadAttachedMediaRequest setAppId(String appId) {
-        this.appId = appId;
-        return this;
-    }
-    public String getAppId() {
-        return this.appId;
     }
 
 }

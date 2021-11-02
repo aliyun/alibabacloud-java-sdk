@@ -4,26 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitDynamicImageJobRequest extends TeaModel {
-    @NameInMap("VideoId")
-    public String videoId;
-
     @NameInMap("DynamicImageTemplateId")
     public String dynamicImageTemplateId;
 
     @NameInMap("OverrideParams")
     public String overrideParams;
 
+    @NameInMap("VideoId")
+    public String videoId;
+
     public static SubmitDynamicImageJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDynamicImageJobRequest self = new SubmitDynamicImageJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitDynamicImageJobRequest setVideoId(String videoId) {
-        this.videoId = videoId;
-        return this;
-    }
-    public String getVideoId() {
-        return this.videoId;
     }
 
     public SubmitDynamicImageJobRequest setDynamicImageTemplateId(String dynamicImageTemplateId) {
@@ -40,6 +32,14 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     }
     public String getOverrideParams() {
         return this.overrideParams;
+    }
+
+    public SubmitDynamicImageJobRequest setVideoId(String videoId) {
+        this.videoId = videoId;
+        return this;
+    }
+    public String getVideoId() {
+        return this.videoId;
     }
 
 }

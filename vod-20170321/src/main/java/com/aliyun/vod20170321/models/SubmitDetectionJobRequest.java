@@ -4,11 +4,8 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitDetectionJobRequest extends TeaModel {
-    @NameInMap("VideoId")
-    public String videoId;
-
-    @NameInMap("CopyrightStatus")
-    public String copyrightStatus;
+    @NameInMap("BeginTime")
+    public String beginTime;
 
     @NameInMap("CopyrightBeginTime")
     public String copyrightBeginTime;
@@ -19,14 +16,8 @@ public class SubmitDetectionJobRequest extends TeaModel {
     @NameInMap("CopyrightFile")
     public String copyrightFile;
 
-    @NameInMap("WhiteListUrls")
-    public String whiteListUrls;
-
-    @NameInMap("TemplateId")
-    public String templateId;
-
-    @NameInMap("BeginTime")
-    public String beginTime;
+    @NameInMap("CopyrightStatus")
+    public String copyrightStatus;
 
     @NameInMap("Duration")
     public Integer duration;
@@ -34,25 +25,26 @@ public class SubmitDetectionJobRequest extends TeaModel {
     @NameInMap("ShortVideo")
     public Boolean shortVideo;
 
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("VideoId")
+    public String videoId;
+
+    @NameInMap("WhiteListUrls")
+    public String whiteListUrls;
+
     public static SubmitDetectionJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDetectionJobRequest self = new SubmitDetectionJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitDetectionJobRequest setVideoId(String videoId) {
-        this.videoId = videoId;
+    public SubmitDetectionJobRequest setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
-    public String getVideoId() {
-        return this.videoId;
-    }
-
-    public SubmitDetectionJobRequest setCopyrightStatus(String copyrightStatus) {
-        this.copyrightStatus = copyrightStatus;
-        return this;
-    }
-    public String getCopyrightStatus() {
-        return this.copyrightStatus;
+    public String getBeginTime() {
+        return this.beginTime;
     }
 
     public SubmitDetectionJobRequest setCopyrightBeginTime(String copyrightBeginTime) {
@@ -79,28 +71,12 @@ public class SubmitDetectionJobRequest extends TeaModel {
         return this.copyrightFile;
     }
 
-    public SubmitDetectionJobRequest setWhiteListUrls(String whiteListUrls) {
-        this.whiteListUrls = whiteListUrls;
+    public SubmitDetectionJobRequest setCopyrightStatus(String copyrightStatus) {
+        this.copyrightStatus = copyrightStatus;
         return this;
     }
-    public String getWhiteListUrls() {
-        return this.whiteListUrls;
-    }
-
-    public SubmitDetectionJobRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
-    }
-
-    public SubmitDetectionJobRequest setBeginTime(String beginTime) {
-        this.beginTime = beginTime;
-        return this;
-    }
-    public String getBeginTime() {
-        return this.beginTime;
+    public String getCopyrightStatus() {
+        return this.copyrightStatus;
     }
 
     public SubmitDetectionJobRequest setDuration(Integer duration) {
@@ -117,6 +93,30 @@ public class SubmitDetectionJobRequest extends TeaModel {
     }
     public Boolean getShortVideo() {
         return this.shortVideo;
+    }
+
+    public SubmitDetectionJobRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public SubmitDetectionJobRequest setVideoId(String videoId) {
+        this.videoId = videoId;
+        return this;
+    }
+    public String getVideoId() {
+        return this.videoId;
+    }
+
+    public SubmitDetectionJobRequest setWhiteListUrls(String whiteListUrls) {
+        this.whiteListUrls = whiteListUrls;
+        return this;
+    }
+    public String getWhiteListUrls() {
+        return this.whiteListUrls;
     }
 
 }

@@ -4,34 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAIJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("AIJobList")
+    public ListAIJobResponseBodyAIJobList AIJobList;
 
     @NameInMap("NonExistAIJobIds")
     public ListAIJobResponseBodyNonExistAIJobIds nonExistAIJobIds;
 
-    @NameInMap("AIJobList")
-    public ListAIJobResponseBodyAIJobList AIJobList;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListAIJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAIJobResponseBody self = new ListAIJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListAIJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListAIJobResponseBody setNonExistAIJobIds(ListAIJobResponseBodyNonExistAIJobIds nonExistAIJobIds) {
-        this.nonExistAIJobIds = nonExistAIJobIds;
-        return this;
-    }
-    public ListAIJobResponseBodyNonExistAIJobIds getNonExistAIJobIds() {
-        return this.nonExistAIJobIds;
     }
 
     public ListAIJobResponseBody setAIJobList(ListAIJobResponseBodyAIJobList AIJobList) {
@@ -42,28 +26,43 @@ public class ListAIJobResponseBody extends TeaModel {
         return this.AIJobList;
     }
 
-    public static class ListAIJobResponseBodyNonExistAIJobIds extends TeaModel {
-        @NameInMap("String")
-        public java.util.List<String> string;
+    public ListAIJobResponseBody setNonExistAIJobIds(ListAIJobResponseBodyNonExistAIJobIds nonExistAIJobIds) {
+        this.nonExistAIJobIds = nonExistAIJobIds;
+        return this;
+    }
+    public ListAIJobResponseBodyNonExistAIJobIds getNonExistAIJobIds() {
+        return this.nonExistAIJobIds;
+    }
 
-        public static ListAIJobResponseBodyNonExistAIJobIds build(java.util.Map<String, ?> map) throws Exception {
-            ListAIJobResponseBodyNonExistAIJobIds self = new ListAIJobResponseBodyNonExistAIJobIds();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAIJobResponseBodyNonExistAIJobIds setString(java.util.List<String> string) {
-            this.string = string;
-            return this;
-        }
-        public java.util.List<String> getString() {
-            return this.string;
-        }
-
+    public ListAIJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListAIJobResponseBodyAIJobListAIJob extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("CompleteTime")
+        public String completeTime;
+
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("Data")
+        public String data;
+
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("MediaId")
+        public String mediaId;
+
+        @NameInMap("Message")
+        public String message;
 
         @NameInMap("Status")
         public String status;
@@ -71,27 +70,25 @@ public class ListAIJobResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("Data")
-        public String data;
-
-        @NameInMap("CompleteTime")
-        public String completeTime;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("Message")
-        public String message;
-
-        @NameInMap("MediaId")
-        public String mediaId;
-
         public static ListAIJobResponseBodyAIJobListAIJob build(java.util.Map<String, ?> map) throws Exception {
             ListAIJobResponseBodyAIJobListAIJob self = new ListAIJobResponseBodyAIJobListAIJob();
             return TeaModel.build(map, self);
+        }
+
+        public ListAIJobResponseBodyAIJobListAIJob setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public ListAIJobResponseBodyAIJobListAIJob setCompleteTime(String completeTime) {
+            this.completeTime = completeTime;
+            return this;
+        }
+        public String getCompleteTime() {
+            return this.completeTime;
         }
 
         public ListAIJobResponseBodyAIJobListAIJob setCreationTime(String creationTime) {
@@ -100,6 +97,38 @@ public class ListAIJobResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListAIJobResponseBodyAIJobListAIJob setData(String data) {
+            this.data = data;
+            return this;
+        }
+        public String getData() {
+            return this.data;
+        }
+
+        public ListAIJobResponseBodyAIJobListAIJob setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public ListAIJobResponseBodyAIJobListAIJob setMediaId(String mediaId) {
+            this.mediaId = mediaId;
+            return this;
+        }
+        public String getMediaId() {
+            return this.mediaId;
+        }
+
+        public ListAIJobResponseBodyAIJobListAIJob setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
         }
 
         public ListAIJobResponseBodyAIJobListAIJob setStatus(String status) {
@@ -116,54 +145,6 @@ public class ListAIJobResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public ListAIJobResponseBodyAIJobListAIJob setData(String data) {
-            this.data = data;
-            return this;
-        }
-        public String getData() {
-            return this.data;
-        }
-
-        public ListAIJobResponseBodyAIJobListAIJob setCompleteTime(String completeTime) {
-            this.completeTime = completeTime;
-            return this;
-        }
-        public String getCompleteTime() {
-            return this.completeTime;
-        }
-
-        public ListAIJobResponseBodyAIJobListAIJob setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public ListAIJobResponseBodyAIJobListAIJob setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public ListAIJobResponseBodyAIJobListAIJob setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
-        public ListAIJobResponseBodyAIJobListAIJob setMediaId(String mediaId) {
-            this.mediaId = mediaId;
-            return this;
-        }
-        public String getMediaId() {
-            return this.mediaId;
         }
 
     }
@@ -183,6 +164,25 @@ public class ListAIJobResponseBody extends TeaModel {
         }
         public java.util.List<ListAIJobResponseBodyAIJobListAIJob> getAIJob() {
             return this.AIJob;
+        }
+
+    }
+
+    public static class ListAIJobResponseBodyNonExistAIJobIds extends TeaModel {
+        @NameInMap("String")
+        public java.util.List<String> string;
+
+        public static ListAIJobResponseBodyNonExistAIJobIds build(java.util.Map<String, ?> map) throws Exception {
+            ListAIJobResponseBodyNonExistAIJobIds self = new ListAIJobResponseBodyNonExistAIJobIds();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAIJobResponseBodyNonExistAIJobIds setString(java.util.List<String> string) {
+            this.string = string;
+            return this;
+        }
+        public java.util.List<String> getString() {
+            return this.string;
         }
 
     }

@@ -43,11 +43,14 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
     }
 
     public static class GetVideoPlayAuthResponseBodyVideoMeta extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("CoverURL")
+        public String coverURL;
 
         @NameInMap("Duration")
         public Float duration;
+
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("Title")
         public String title;
@@ -55,20 +58,17 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         @NameInMap("VideoId")
         public String videoId;
 
-        @NameInMap("CoverURL")
-        public String coverURL;
-
         public static GetVideoPlayAuthResponseBodyVideoMeta build(java.util.Map<String, ?> map) throws Exception {
             GetVideoPlayAuthResponseBodyVideoMeta self = new GetVideoPlayAuthResponseBodyVideoMeta();
             return TeaModel.build(map, self);
         }
 
-        public GetVideoPlayAuthResponseBodyVideoMeta setStatus(String status) {
-            this.status = status;
+        public GetVideoPlayAuthResponseBodyVideoMeta setCoverURL(String coverURL) {
+            this.coverURL = coverURL;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getCoverURL() {
+            return this.coverURL;
         }
 
         public GetVideoPlayAuthResponseBodyVideoMeta setDuration(Float duration) {
@@ -77,6 +77,14 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         }
         public Float getDuration() {
             return this.duration;
+        }
+
+        public GetVideoPlayAuthResponseBodyVideoMeta setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetVideoPlayAuthResponseBodyVideoMeta setTitle(String title) {
@@ -93,14 +101,6 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         }
         public String getVideoId() {
             return this.videoId;
-        }
-
-        public GetVideoPlayAuthResponseBodyVideoMeta setCoverURL(String coverURL) {
-            this.coverURL = coverURL;
-            return this;
-        }
-        public String getCoverURL() {
-            return this.coverURL;
         }
 
     }

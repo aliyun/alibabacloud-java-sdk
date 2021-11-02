@@ -4,32 +4,24 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodRefreshTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Tasks")
     public DescribeVodRefreshTasksResponseBodyTasks tasks;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static DescribeVodRefreshTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodRefreshTasksResponseBody self = new DescribeVodRefreshTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVodRefreshTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeVodRefreshTasksResponseBody setPageNumber(Long pageNumber) {
@@ -48,12 +40,12 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeVodRefreshTasksResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
+    public DescribeVodRefreshTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Long getTotalCount() {
-        return this.totalCount;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeVodRefreshTasksResponseBody setTasks(DescribeVodRefreshTasksResponseBodyTasks tasks) {
@@ -64,12 +56,23 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         return this.tasks;
     }
 
-    public static class DescribeVodRefreshTasksResponseBodyTasksTask extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public DescribeVodRefreshTasksResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
 
+    public static class DescribeVodRefreshTasksResponseBodyTasksTask extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ObjectPath")
+        public String objectPath;
 
         @NameInMap("ObjectType")
         public String objectType;
@@ -77,11 +80,8 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
         @NameInMap("Process")
         public String process;
 
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ObjectPath")
-        public String objectPath;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("TaskId")
         public String taskId;
@@ -91,20 +91,28 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeVodRefreshTasksResponseBodyTasksTask setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
         public DescribeVodRefreshTasksResponseBodyTasksTask setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeVodRefreshTasksResponseBodyTasksTask setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeVodRefreshTasksResponseBodyTasksTask setObjectPath(String objectPath) {
+            this.objectPath = objectPath;
+            return this;
+        }
+        public String getObjectPath() {
+            return this.objectPath;
         }
 
         public DescribeVodRefreshTasksResponseBodyTasksTask setObjectType(String objectType) {
@@ -123,20 +131,12 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
             return this.process;
         }
 
-        public DescribeVodRefreshTasksResponseBodyTasksTask setDescription(String description) {
-            this.description = description;
+        public DescribeVodRefreshTasksResponseBodyTasksTask setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeVodRefreshTasksResponseBodyTasksTask setObjectPath(String objectPath) {
-            this.objectPath = objectPath;
-            return this;
-        }
-        public String getObjectPath() {
-            return this.objectPath;
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeVodRefreshTasksResponseBodyTasksTask setTaskId(String taskId) {

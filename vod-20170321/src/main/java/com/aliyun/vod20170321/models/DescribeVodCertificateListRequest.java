@@ -4,18 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodCertificateListRequest extends TeaModel {
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("DomainName")
-    public String domainName;
-
     public static DescribeVodCertificateListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodCertificateListRequest self = new DescribeVodCertificateListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodCertificateListRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeVodCertificateListRequest setOwnerId(Long ownerId) {
@@ -32,14 +40,6 @@ public class DescribeVodCertificateListRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public DescribeVodCertificateListRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

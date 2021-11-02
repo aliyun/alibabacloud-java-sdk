@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateCategoryRequest extends TeaModel {
-    @NameInMap("CateName")
-    public String cateName;
-
     @NameInMap("CateId")
     public Long cateId;
+
+    @NameInMap("CateName")
+    public String cateName;
 
     public static UpdateCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCategoryRequest self = new UpdateCategoryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateCategoryRequest setCateName(String cateName) {
-        this.cateName = cateName;
-        return this;
-    }
-    public String getCateName() {
-        return this.cateName;
     }
 
     public UpdateCategoryRequest setCateId(Long cateId) {
@@ -29,6 +21,14 @@ public class UpdateCategoryRequest extends TeaModel {
     }
     public Long getCateId() {
         return this.cateId;
+    }
+
+    public UpdateCategoryRequest setCateName(String cateName) {
+        this.cateName = cateName;
+        return this;
+    }
+    public String getCateName() {
+        return this.cateName;
     }
 
 }

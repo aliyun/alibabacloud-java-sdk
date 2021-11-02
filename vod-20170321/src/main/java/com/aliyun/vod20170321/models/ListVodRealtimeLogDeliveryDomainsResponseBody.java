@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListVodRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Content")
     public ListVodRealtimeLogDeliveryDomainsResponseBodyContent content;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListVodRealtimeLogDeliveryDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVodRealtimeLogDeliveryDomainsResponseBody self = new ListVodRealtimeLogDeliveryDomainsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListVodRealtimeLogDeliveryDomainsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListVodRealtimeLogDeliveryDomainsResponseBody setContent(ListVodRealtimeLogDeliveryDomainsResponseBodyContent content) {
@@ -31,24 +23,24 @@ public class ListVodRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         return this.content;
     }
 
-    public static class ListVodRealtimeLogDeliveryDomainsResponseBodyContentDomains extends TeaModel {
-        @NameInMap("Status")
-        public String status;
+    public ListVodRealtimeLogDeliveryDomainsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class ListVodRealtimeLogDeliveryDomainsResponseBodyContentDomains extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("Status")
+        public String status;
 
         public static ListVodRealtimeLogDeliveryDomainsResponseBodyContentDomains build(java.util.Map<String, ?> map) throws Exception {
             ListVodRealtimeLogDeliveryDomainsResponseBodyContentDomains self = new ListVodRealtimeLogDeliveryDomainsResponseBodyContentDomains();
             return TeaModel.build(map, self);
-        }
-
-        public ListVodRealtimeLogDeliveryDomainsResponseBodyContentDomains setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ListVodRealtimeLogDeliveryDomainsResponseBodyContentDomains setDomainName(String domainName) {
@@ -57,6 +49,14 @@ public class ListVodRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public ListVodRealtimeLogDeliveryDomainsResponseBodyContentDomains setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

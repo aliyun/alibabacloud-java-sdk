@@ -4,21 +4,29 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddTranscodeTemplateGroupRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("TranscodeTemplateList")
-    public String transcodeTemplateList;
 
     @NameInMap("TranscodeTemplateGroupId")
     public String transcodeTemplateGroupId;
 
-    @NameInMap("AppId")
-    public String appId;
+    @NameInMap("TranscodeTemplateList")
+    public String transcodeTemplateList;
 
     public static AddTranscodeTemplateGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTranscodeTemplateGroupRequest self = new AddTranscodeTemplateGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddTranscodeTemplateGroupRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
     public AddTranscodeTemplateGroupRequest setName(String name) {
@@ -29,14 +37,6 @@ public class AddTranscodeTemplateGroupRequest extends TeaModel {
         return this.name;
     }
 
-    public AddTranscodeTemplateGroupRequest setTranscodeTemplateList(String transcodeTemplateList) {
-        this.transcodeTemplateList = transcodeTemplateList;
-        return this;
-    }
-    public String getTranscodeTemplateList() {
-        return this.transcodeTemplateList;
-    }
-
     public AddTranscodeTemplateGroupRequest setTranscodeTemplateGroupId(String transcodeTemplateGroupId) {
         this.transcodeTemplateGroupId = transcodeTemplateGroupId;
         return this;
@@ -45,12 +45,12 @@ public class AddTranscodeTemplateGroupRequest extends TeaModel {
         return this.transcodeTemplateGroupId;
     }
 
-    public AddTranscodeTemplateGroupRequest setAppId(String appId) {
-        this.appId = appId;
+    public AddTranscodeTemplateGroupRequest setTranscodeTemplateList(String transcodeTemplateList) {
+        this.transcodeTemplateList = transcodeTemplateList;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
+    public String getTranscodeTemplateList() {
+        return this.transcodeTemplateList;
     }
 
 }

@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitAIJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AIJobList")
     public SubmitAIJobResponseBodyAIJobList AIJobList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SubmitAIJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitAIJobResponseBody self = new SubmitAIJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitAIJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitAIJobResponseBody setAIJobList(SubmitAIJobResponseBodyAIJobList AIJobList) {
@@ -31,27 +23,27 @@ public class SubmitAIJobResponseBody extends TeaModel {
         return this.AIJobList;
     }
 
-    public static class SubmitAIJobResponseBodyAIJobListAIJob extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public SubmitAIJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class SubmitAIJobResponseBodyAIJobListAIJob extends TeaModel {
         @NameInMap("JobId")
         public String jobId;
 
         @NameInMap("MediaId")
         public String mediaId;
 
+        @NameInMap("Type")
+        public String type;
+
         public static SubmitAIJobResponseBodyAIJobListAIJob build(java.util.Map<String, ?> map) throws Exception {
             SubmitAIJobResponseBodyAIJobListAIJob self = new SubmitAIJobResponseBodyAIJobListAIJob();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitAIJobResponseBodyAIJobListAIJob setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public SubmitAIJobResponseBodyAIJobListAIJob setJobId(String jobId) {
@@ -68,6 +60,14 @@ public class SubmitAIJobResponseBody extends TeaModel {
         }
         public String getMediaId() {
             return this.mediaId;
+        }
+
+        public SubmitAIJobResponseBodyAIJobListAIJob setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

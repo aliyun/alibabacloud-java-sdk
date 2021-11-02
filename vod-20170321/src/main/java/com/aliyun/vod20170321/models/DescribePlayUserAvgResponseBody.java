@@ -32,26 +32,26 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg extends TeaModel {
-        @NameInMap("Date")
-        public String date;
+        @NameInMap("AvgPlayCount")
+        public String avgPlayCount;
 
         @NameInMap("AvgPlayDuration")
         public String avgPlayDuration;
 
-        @NameInMap("AvgPlayCount")
-        public String avgPlayCount;
+        @NameInMap("Date")
+        public String date;
 
         public static DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg build(java.util.Map<String, ?> map) throws Exception {
             DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg self = new DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg();
             return TeaModel.build(map, self);
         }
 
-        public DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg setDate(String date) {
-            this.date = date;
+        public DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg setAvgPlayCount(String avgPlayCount) {
+            this.avgPlayCount = avgPlayCount;
             return this;
         }
-        public String getDate() {
-            return this.date;
+        public String getAvgPlayCount() {
+            return this.avgPlayCount;
         }
 
         public DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg setAvgPlayDuration(String avgPlayDuration) {
@@ -62,12 +62,12 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
             return this.avgPlayDuration;
         }
 
-        public DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg setAvgPlayCount(String avgPlayCount) {
-            this.avgPlayCount = avgPlayCount;
+        public DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg setDate(String date) {
+            this.date = date;
             return this;
         }
-        public String getAvgPlayCount() {
-            return this.avgPlayCount;
+        public String getDate() {
+            return this.date;
         }
 
     }

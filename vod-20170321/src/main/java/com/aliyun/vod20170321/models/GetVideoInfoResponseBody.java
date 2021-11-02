@@ -51,23 +51,32 @@ public class GetVideoInfoResponseBody extends TeaModel {
     }
 
     public static class GetVideoInfoResponseBodyVideo extends TeaModel {
-        @NameInMap("StorageLocation")
-        public String storageLocation;
+        @NameInMap("AppId")
+        public String appId;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("AuditStatus")
+        public String auditStatus;
 
         @NameInMap("CateId")
         public Long cateId;
 
-        @NameInMap("VideoId")
-        public String videoId;
+        @NameInMap("CateName")
+        public String cateName;
 
-        @NameInMap("Tags")
-        public String tags;
+        @NameInMap("CoverURL")
+        public String coverURL;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("CustomMediaInfo")
+        public String customMediaInfo;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Duration")
+        public Float duration;
 
         @NameInMap("ModificationTime")
         public String modificationTime;
@@ -75,66 +84,49 @@ public class GetVideoInfoResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("CustomMediaInfo")
-        public String customMediaInfo;
-
-        @NameInMap("CateName")
-        public String cateName;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("AppId")
-        public String appId;
-
         @NameInMap("Size")
         public Long size;
 
-        @NameInMap("CoverURL")
-        public String coverURL;
+        @NameInMap("Snapshots")
+        public GetVideoInfoResponseBodyVideoSnapshots snapshots;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("StorageLocation")
+        public String storageLocation;
+
+        @NameInMap("Tags")
+        public String tags;
 
         @NameInMap("TemplateGroupId")
         public String templateGroupId;
 
-        @NameInMap("Duration")
-        public Float duration;
-
         @NameInMap("Title")
         public String title;
 
-        @NameInMap("AuditStatus")
-        public String auditStatus;
-
-        @NameInMap("Snapshots")
-        public GetVideoInfoResponseBodyVideoSnapshots snapshots;
+        @NameInMap("VideoId")
+        public String videoId;
 
         public static GetVideoInfoResponseBodyVideo build(java.util.Map<String, ?> map) throws Exception {
             GetVideoInfoResponseBodyVideo self = new GetVideoInfoResponseBodyVideo();
             return TeaModel.build(map, self);
         }
 
-        public GetVideoInfoResponseBodyVideo setStorageLocation(String storageLocation) {
-            this.storageLocation = storageLocation;
+        public GetVideoInfoResponseBodyVideo setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public String getStorageLocation() {
-            return this.storageLocation;
+        public String getAppId() {
+            return this.appId;
         }
 
-        public GetVideoInfoResponseBodyVideo setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
+        public GetVideoInfoResponseBodyVideo setAuditStatus(String auditStatus) {
+            this.auditStatus = auditStatus;
             return this;
         }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public GetVideoInfoResponseBodyVideo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
+        public String getAuditStatus() {
+            return this.auditStatus;
         }
 
         public GetVideoInfoResponseBodyVideo setCateId(Long cateId) {
@@ -145,20 +137,52 @@ public class GetVideoInfoResponseBody extends TeaModel {
             return this.cateId;
         }
 
-        public GetVideoInfoResponseBodyVideo setVideoId(String videoId) {
-            this.videoId = videoId;
+        public GetVideoInfoResponseBodyVideo setCateName(String cateName) {
+            this.cateName = cateName;
             return this;
         }
-        public String getVideoId() {
-            return this.videoId;
+        public String getCateName() {
+            return this.cateName;
         }
 
-        public GetVideoInfoResponseBodyVideo setTags(String tags) {
-            this.tags = tags;
+        public GetVideoInfoResponseBodyVideo setCoverURL(String coverURL) {
+            this.coverURL = coverURL;
             return this;
         }
-        public String getTags() {
-            return this.tags;
+        public String getCoverURL() {
+            return this.coverURL;
+        }
+
+        public GetVideoInfoResponseBodyVideo setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public GetVideoInfoResponseBodyVideo setCustomMediaInfo(String customMediaInfo) {
+            this.customMediaInfo = customMediaInfo;
+            return this;
+        }
+        public String getCustomMediaInfo() {
+            return this.customMediaInfo;
+        }
+
+        public GetVideoInfoResponseBodyVideo setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetVideoInfoResponseBodyVideo setDuration(Float duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Float getDuration() {
+            return this.duration;
         }
 
         public GetVideoInfoResponseBodyVideo setModificationTime(String modificationTime) {
@@ -177,38 +201,6 @@ public class GetVideoInfoResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public GetVideoInfoResponseBodyVideo setCustomMediaInfo(String customMediaInfo) {
-            this.customMediaInfo = customMediaInfo;
-            return this;
-        }
-        public String getCustomMediaInfo() {
-            return this.customMediaInfo;
-        }
-
-        public GetVideoInfoResponseBodyVideo setCateName(String cateName) {
-            this.cateName = cateName;
-            return this;
-        }
-        public String getCateName() {
-            return this.cateName;
-        }
-
-        public GetVideoInfoResponseBodyVideo setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public GetVideoInfoResponseBodyVideo setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
         public GetVideoInfoResponseBodyVideo setSize(Long size) {
             this.size = size;
             return this;
@@ -217,12 +209,36 @@ public class GetVideoInfoResponseBody extends TeaModel {
             return this.size;
         }
 
-        public GetVideoInfoResponseBodyVideo setCoverURL(String coverURL) {
-            this.coverURL = coverURL;
+        public GetVideoInfoResponseBodyVideo setSnapshots(GetVideoInfoResponseBodyVideoSnapshots snapshots) {
+            this.snapshots = snapshots;
             return this;
         }
-        public String getCoverURL() {
-            return this.coverURL;
+        public GetVideoInfoResponseBodyVideoSnapshots getSnapshots() {
+            return this.snapshots;
+        }
+
+        public GetVideoInfoResponseBodyVideo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetVideoInfoResponseBodyVideo setStorageLocation(String storageLocation) {
+            this.storageLocation = storageLocation;
+            return this;
+        }
+        public String getStorageLocation() {
+            return this.storageLocation;
+        }
+
+        public GetVideoInfoResponseBodyVideo setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
         public GetVideoInfoResponseBodyVideo setTemplateGroupId(String templateGroupId) {
@@ -233,14 +249,6 @@ public class GetVideoInfoResponseBody extends TeaModel {
             return this.templateGroupId;
         }
 
-        public GetVideoInfoResponseBodyVideo setDuration(Float duration) {
-            this.duration = duration;
-            return this;
-        }
-        public Float getDuration() {
-            return this.duration;
-        }
-
         public GetVideoInfoResponseBodyVideo setTitle(String title) {
             this.title = title;
             return this;
@@ -249,20 +257,12 @@ public class GetVideoInfoResponseBody extends TeaModel {
             return this.title;
         }
 
-        public GetVideoInfoResponseBodyVideo setAuditStatus(String auditStatus) {
-            this.auditStatus = auditStatus;
+        public GetVideoInfoResponseBodyVideo setVideoId(String videoId) {
+            this.videoId = videoId;
             return this;
         }
-        public String getAuditStatus() {
-            return this.auditStatus;
-        }
-
-        public GetVideoInfoResponseBodyVideo setSnapshots(GetVideoInfoResponseBodyVideoSnapshots snapshots) {
-            this.snapshots = snapshots;
-            return this;
-        }
-        public GetVideoInfoResponseBodyVideoSnapshots getSnapshots() {
-            return this.snapshots;
+        public String getVideoId() {
+            return this.videoId;
         }
 
     }

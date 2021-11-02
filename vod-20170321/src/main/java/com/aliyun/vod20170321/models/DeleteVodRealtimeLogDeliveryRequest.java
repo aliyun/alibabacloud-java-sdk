@@ -4,17 +4,17 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteVodRealtimeLogDeliveryRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("Project")
-    public String project;
-
     @NameInMap("Logstore")
     public String logstore;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("Project")
+    public String project;
 
     @NameInMap("Region")
     public String region;
@@ -22,14 +22,6 @@ public class DeleteVodRealtimeLogDeliveryRequest extends TeaModel {
     public static DeleteVodRealtimeLogDeliveryRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVodRealtimeLogDeliveryRequest self = new DeleteVodRealtimeLogDeliveryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteVodRealtimeLogDeliveryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public DeleteVodRealtimeLogDeliveryRequest setDomainName(String domainName) {
@@ -40,20 +32,28 @@ public class DeleteVodRealtimeLogDeliveryRequest extends TeaModel {
         return this.domainName;
     }
 
-    public DeleteVodRealtimeLogDeliveryRequest setProject(String project) {
-        this.project = project;
-        return this;
-    }
-    public String getProject() {
-        return this.project;
-    }
-
     public DeleteVodRealtimeLogDeliveryRequest setLogstore(String logstore) {
         this.logstore = logstore;
         return this;
     }
     public String getLogstore() {
         return this.logstore;
+    }
+
+    public DeleteVodRealtimeLogDeliveryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteVodRealtimeLogDeliveryRequest setProject(String project) {
+        this.project = project;
+        return this;
+    }
+    public String getProject() {
+        return this.project;
     }
 
     public DeleteVodRealtimeLogDeliveryRequest setRegion(String region) {

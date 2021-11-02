@@ -7,8 +7,8 @@ public class GetVideoListRequest extends TeaModel {
     @NameInMap("CateId")
     public Long cateId;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("EndTime")
+    public String endTime;
 
     @NameInMap("PageNo")
     public Integer pageNo;
@@ -22,8 +22,8 @@ public class GetVideoListRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("StorageLocation")
     public String storageLocation;
@@ -41,12 +41,12 @@ public class GetVideoListRequest extends TeaModel {
         return this.cateId;
     }
 
-    public GetVideoListRequest setStatus(String status) {
-        this.status = status;
+    public GetVideoListRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public GetVideoListRequest setPageNo(Integer pageNo) {
@@ -81,12 +81,12 @@ public class GetVideoListRequest extends TeaModel {
         return this.startTime;
     }
 
-    public GetVideoListRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public GetVideoListRequest setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
+    public String getStatus() {
+        return this.status;
     }
 
     public GetVideoListRequest setStorageLocation(String storageLocation) {

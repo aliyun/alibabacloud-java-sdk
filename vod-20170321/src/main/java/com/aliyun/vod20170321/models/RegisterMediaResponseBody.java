@@ -4,26 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class RegisterMediaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FailedFileURLs")
     public java.util.List<String> failedFileURLs;
 
     @NameInMap("RegisteredMediaList")
     public java.util.List<RegisterMediaResponseBodyRegisteredMediaList> registeredMediaList;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static RegisterMediaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RegisterMediaResponseBody self = new RegisterMediaResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RegisterMediaResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RegisterMediaResponseBody setFailedFileURLs(java.util.List<String> failedFileURLs) {
@@ -42,27 +34,27 @@ public class RegisterMediaResponseBody extends TeaModel {
         return this.registeredMediaList;
     }
 
-    public static class RegisterMediaResponseBodyRegisteredMediaList extends TeaModel {
-        @NameInMap("NewRegister")
-        public Boolean newRegister;
+    public RegisterMediaResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
+    public static class RegisterMediaResponseBodyRegisteredMediaList extends TeaModel {
         @NameInMap("FileURL")
         public String fileURL;
 
         @NameInMap("MediaId")
         public String mediaId;
 
+        @NameInMap("NewRegister")
+        public Boolean newRegister;
+
         public static RegisterMediaResponseBodyRegisteredMediaList build(java.util.Map<String, ?> map) throws Exception {
             RegisterMediaResponseBodyRegisteredMediaList self = new RegisterMediaResponseBodyRegisteredMediaList();
             return TeaModel.build(map, self);
-        }
-
-        public RegisterMediaResponseBodyRegisteredMediaList setNewRegister(Boolean newRegister) {
-            this.newRegister = newRegister;
-            return this;
-        }
-        public Boolean getNewRegister() {
-            return this.newRegister;
         }
 
         public RegisterMediaResponseBodyRegisteredMediaList setFileURL(String fileURL) {
@@ -79,6 +71,14 @@ public class RegisterMediaResponseBody extends TeaModel {
         }
         public String getMediaId() {
             return this.mediaId;
+        }
+
+        public RegisterMediaResponseBodyRegisteredMediaList setNewRegister(Boolean newRegister) {
+            this.newRegister = newRegister;
+            return this;
+        }
+        public Boolean getNewRegister() {
+            return this.newRegister;
         }
 
     }

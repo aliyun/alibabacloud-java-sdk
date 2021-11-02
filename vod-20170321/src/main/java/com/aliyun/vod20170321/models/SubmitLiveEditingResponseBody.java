@@ -4,27 +4,19 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitLiveEditingResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MediaId")
     public String mediaId;
 
     @NameInMap("ProjectId")
     public String projectId;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static SubmitLiveEditingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitLiveEditingResponseBody self = new SubmitLiveEditingResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitLiveEditingResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitLiveEditingResponseBody setMediaId(String mediaId) {
@@ -41,6 +33,14 @@ public class SubmitLiveEditingResponseBody extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public SubmitLiveEditingResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

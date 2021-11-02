@@ -4,29 +4,29 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteVodDomainRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
+    @NameInMap("DomainName")
+    public String domainName;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("SecurityToken")
     public String securityToken;
-
-    @NameInMap("DomainName")
-    public String domainName;
 
     public static DeleteVodDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVodDomainRequest self = new DeleteVodDomainRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteVodDomainRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public DeleteVodDomainRequest setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DeleteVodDomainRequest setOwnerAccount(String ownerAccount) {
@@ -37,20 +37,20 @@ public class DeleteVodDomainRequest extends TeaModel {
         return this.ownerAccount;
     }
 
+    public DeleteVodDomainRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public DeleteVodDomainRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }
     public String getSecurityToken() {
         return this.securityToken;
-    }
-
-    public DeleteVodDomainRequest setDomainName(String domainName) {
-        this.domainName = domainName;
-        return this;
-    }
-    public String getDomainName() {
-        return this.domainName;
     }
 
 }

@@ -4,26 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodUserDomainsRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("DomainSearchType")
+    public String domainSearchType;
 
     @NameInMap("DomainStatus")
     public String domainStatus;
 
-    @NameInMap("DomainSearchType")
-    public String domainSearchType;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     @NameInMap("Tag")
     public java.util.List<DescribeVodUserDomainsRequestTag> tag;
@@ -31,38 +31,6 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
     public static DescribeVodUserDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodUserDomainsRequest self = new DescribeVodUserDomainsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVodUserDomainsRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DescribeVodUserDomainsRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public DescribeVodUserDomainsRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeVodUserDomainsRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
     }
 
     public DescribeVodUserDomainsRequest setDomainName(String domainName) {
@@ -73,6 +41,14 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
         return this.domainName;
     }
 
+    public DescribeVodUserDomainsRequest setDomainSearchType(String domainSearchType) {
+        this.domainSearchType = domainSearchType;
+        return this;
+    }
+    public String getDomainSearchType() {
+        return this.domainSearchType;
+    }
+
     public DescribeVodUserDomainsRequest setDomainStatus(String domainStatus) {
         this.domainStatus = domainStatus;
         return this;
@@ -81,12 +57,36 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
         return this.domainStatus;
     }
 
-    public DescribeVodUserDomainsRequest setDomainSearchType(String domainSearchType) {
-        this.domainSearchType = domainSearchType;
+    public DescribeVodUserDomainsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getDomainSearchType() {
-        return this.domainSearchType;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVodUserDomainsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeVodUserDomainsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeVodUserDomainsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeVodUserDomainsRequest setTag(java.util.List<DescribeVodUserDomainsRequestTag> tag) {

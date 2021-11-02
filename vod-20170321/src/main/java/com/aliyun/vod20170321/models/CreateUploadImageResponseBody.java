@@ -7,17 +7,17 @@ public class CreateUploadImageResponseBody extends TeaModel {
     @NameInMap("FileURL")
     public String fileURL;
 
+    @NameInMap("ImageId")
+    public String imageId;
+
+    @NameInMap("ImageURL")
+    public String imageURL;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("UploadAddress")
     public String uploadAddress;
-
-    @NameInMap("ImageURL")
-    public String imageURL;
-
-    @NameInMap("ImageId")
-    public String imageId;
 
     @NameInMap("UploadAuth")
     public String uploadAuth;
@@ -35,6 +35,22 @@ public class CreateUploadImageResponseBody extends TeaModel {
         return this.fileURL;
     }
 
+    public CreateUploadImageResponseBody setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public CreateUploadImageResponseBody setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
     public CreateUploadImageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -49,22 +65,6 @@ public class CreateUploadImageResponseBody extends TeaModel {
     }
     public String getUploadAddress() {
         return this.uploadAddress;
-    }
-
-    public CreateUploadImageResponseBody setImageURL(String imageURL) {
-        this.imageURL = imageURL;
-        return this;
-    }
-    public String getImageURL() {
-        return this.imageURL;
-    }
-
-    public CreateUploadImageResponseBody setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
     }
 
     public CreateUploadImageResponseBody setUploadAuth(String uploadAuth) {

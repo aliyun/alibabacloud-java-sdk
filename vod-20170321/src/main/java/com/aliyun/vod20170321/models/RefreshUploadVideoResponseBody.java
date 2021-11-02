@@ -10,11 +10,11 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
     @NameInMap("UploadAddress")
     public String uploadAddress;
 
-    @NameInMap("VideoId")
-    public String videoId;
-
     @NameInMap("UploadAuth")
     public String uploadAuth;
+
+    @NameInMap("VideoId")
+    public String videoId;
 
     public static RefreshUploadVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RefreshUploadVideoResponseBody self = new RefreshUploadVideoResponseBody();
@@ -37,20 +37,20 @@ public class RefreshUploadVideoResponseBody extends TeaModel {
         return this.uploadAddress;
     }
 
-    public RefreshUploadVideoResponseBody setVideoId(String videoId) {
-        this.videoId = videoId;
-        return this;
-    }
-    public String getVideoId() {
-        return this.videoId;
-    }
-
     public RefreshUploadVideoResponseBody setUploadAuth(String uploadAuth) {
         this.uploadAuth = uploadAuth;
         return this;
     }
     public String getUploadAuth() {
         return this.uploadAuth;
+    }
+
+    public RefreshUploadVideoResponseBody setVideoId(String videoId) {
+        this.videoId = videoId;
+        return this;
+    }
+    public String getVideoId() {
+        return this.videoId;
     }
 
 }

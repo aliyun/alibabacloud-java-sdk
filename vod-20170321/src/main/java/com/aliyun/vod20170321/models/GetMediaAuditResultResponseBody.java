@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditResultResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MediaAuditResult")
     public GetMediaAuditResultResponseBodyMediaAuditResult mediaAuditResult;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetMediaAuditResultResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMediaAuditResultResponseBody self = new GetMediaAuditResultResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetMediaAuditResultResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetMediaAuditResultResponseBody setMediaAuditResult(GetMediaAuditResultResponseBodyMediaAuditResult mediaAuditResult) {
@@ -31,38 +23,30 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         return this.mediaAuditResult;
     }
 
+    public GetMediaAuditResultResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class GetMediaAuditResultResponseBodyMediaAuditResultAudioResult extends TeaModel {
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Suggestion")
-        public String suggestion;
-
         @NameInMap("Label")
         public String label;
 
         @NameInMap("Scene")
         public String scene;
 
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
         public static GetMediaAuditResultResponseBodyMediaAuditResultAudioResult build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditResultResponseBodyMediaAuditResultAudioResult self = new GetMediaAuditResultResponseBodyMediaAuditResultAudioResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultAudioResult setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultAudioResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultAudioResult setLabel(String label) {
@@ -81,27 +65,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.scene;
         }
 
-    }
-
-    public static class GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult extends TeaModel {
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Scene")
-        public String scene;
-
-        public static GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult self = new GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult setScore(String score) {
+        public GetMediaAuditResultResponseBodyMediaAuditResultAudioResult setScore(String score) {
             this.score = score;
             return this;
         }
@@ -109,12 +73,32 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.score;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult setSuggestion(String suggestion) {
+        public GetMediaAuditResultResponseBodyMediaAuditResultAudioResult setSuggestion(String suggestion) {
             this.suggestion = suggestion;
             return this;
         }
         public String getSuggestion() {
             return this.suggestion;
+        }
+
+    }
+
+    public static class GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Scene")
+        public String scene;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        public static GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult self = new GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult();
+            return TeaModel.build(map, self);
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult setLabel(String label) {
@@ -133,51 +117,43 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.scene;
         }
 
+        public GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultImageResult extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Suggestion")
-        public String suggestion;
-
         @NameInMap("Label")
         public String label;
 
         @NameInMap("Result")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultImageResultResult> result;
 
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Url")
+        public String url;
+
         public static GetMediaAuditResultResponseBodyMediaAuditResultImageResult build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditResultResponseBodyMediaAuditResultImageResult self = new GetMediaAuditResultResponseBodyMediaAuditResultImageResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultImageResult setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultImageResult setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultImageResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultImageResult setLabel(String label) {
@@ -196,41 +172,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.result;
         }
 
-    }
-
-    public static class GetMediaAuditResultResponseBodyMediaAuditResultTextResult extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Content")
-        public String content;
-
-        @NameInMap("Scene")
-        public String scene;
-
-        public static GetMediaAuditResultResponseBodyMediaAuditResultTextResult build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditResultResponseBodyMediaAuditResultTextResult self = new GetMediaAuditResultResponseBodyMediaAuditResultTextResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setSuggestion(String suggestion) {
+        public GetMediaAuditResultResponseBodyMediaAuditResultImageResult setSuggestion(String suggestion) {
             this.suggestion = suggestion;
             return this;
         }
@@ -238,20 +180,46 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.suggestion;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setScore(String score) {
-            this.score = score;
+        public GetMediaAuditResultResponseBodyMediaAuditResultImageResult setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getScore() {
-            return this.score;
+        public String getType() {
+            return this.type;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setLabel(String label) {
-            this.label = label;
+        public GetMediaAuditResultResponseBodyMediaAuditResultImageResult setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public String getLabel() {
-            return this.label;
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class GetMediaAuditResultResponseBodyMediaAuditResultTextResult extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Scene")
+        public String scene;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetMediaAuditResultResponseBodyMediaAuditResultTextResult build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaAuditResultResponseBodyMediaAuditResultTextResult self = new GetMediaAuditResultResponseBodyMediaAuditResultTextResult();
+            return TeaModel.build(map, self);
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setContent(String content) {
@@ -262,6 +230,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.content;
         }
 
+        public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
         public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setScene(String scene) {
             this.scene = scene;
             return this;
@@ -270,65 +246,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.scene;
         }
 
-    }
-
-    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Count")
-        public Integer count;
-
-        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
-    }
-
-    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Timestamp")
-        public String timestamp;
-
-        @NameInMap("Label")
-        public String label;
-
-        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList setScore(String score) {
+        public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setScore(String score) {
             this.score = score;
             return this;
         }
@@ -336,49 +254,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.score;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-    }
-
-    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("AverageScore")
-        public String averageScore;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("MaxScore")
-        public String maxScore;
-
-        @NameInMap("CounterList")
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList> counterList;
-
-        @NameInMap("TopList")
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList> topList;
-
-        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setSuggestion(String suggestion) {
+        public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setSuggestion(String suggestion) {
             this.suggestion = suggestion;
             return this;
         }
@@ -386,66 +262,26 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.suggestion;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setAverageScore(String averageScore) {
-            this.averageScore = averageScore;
+        public GetMediaAuditResultResponseBodyMediaAuditResultTextResult setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getAverageScore() {
-            return this.averageScore;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setMaxScore(String maxScore) {
-            this.maxScore = maxScore;
-            return this;
-        }
-        public String getMaxScore() {
-            return this.maxScore;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList> counterList) {
-            this.counterList = counterList;
-            return this;
-        }
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList> getCounterList() {
-            return this.counterList;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setTopList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList> topList) {
-            this.topList = topList;
-            return this;
-        }
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList> getTopList() {
-            return this.topList;
+        public String getType() {
+            return this.type;
         }
 
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
         @NameInMap("Count")
         public Integer count;
+
+        @NameInMap("Label")
+        public String label;
 
         public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList();
             return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList setCount(Integer count) {
@@ -456,11 +292,19 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.count;
         }
 
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
+        @NameInMap("Label")
+        public String label;
 
         @NameInMap("Score")
         public String score;
@@ -468,20 +312,20 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public String timestamp;
 
-        @NameInMap("Label")
-        public String label;
+        @NameInMap("Url")
+        public String url;
 
         public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList setUrl(String url) {
-            this.url = url;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList setLabel(String label) {
+            this.label = label;
             return this;
         }
-        public String getUrl() {
-            return this.url;
+        public String getLabel() {
+            return this.label;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList setScore(String score) {
@@ -500,22 +344,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList setLabel(String label) {
-            this.label = label;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public String getLabel() {
-            return this.label;
+        public String getUrl() {
+            return this.url;
         }
 
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
         @NameInMap("AverageScore")
         public String averageScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList> counterList;
 
         @NameInMap("Label")
         public String label;
@@ -523,8 +367,8 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         @NameInMap("MaxScore")
         public String maxScore;
 
-        @NameInMap("CounterList")
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList> counterList;
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         @NameInMap("TopList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList> topList;
@@ -534,20 +378,20 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult setAverageScore(String averageScore) {
             this.averageScore = averageScore;
             return this;
         }
         public String getAverageScore() {
             return this.averageScore;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList> getCounterList() {
+            return this.counterList;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult setLabel(String label) {
@@ -566,12 +410,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.maxScore;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList> counterList) {
-            this.counterList = counterList;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
             return this;
         }
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultCounterList> getCounterList() {
-            return this.counterList;
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult setTopList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResultTopList> topList) {
@@ -584,180 +428,16 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
 
-    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("Count")
-        public Integer count;
-
-        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
-    }
-
-    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
-
-        @NameInMap("Score")
-        public String score;
-
-        @NameInMap("Timestamp")
-        public String timestamp;
-
-        @NameInMap("Label")
-        public String label;
-
-        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList setScore(String score) {
-            this.score = score;
-            return this;
-        }
-        public String getScore() {
-            return this.score;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-    }
-
-    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("AverageScore")
-        public String averageScore;
-
-        @NameInMap("Label")
-        public String label;
-
-        @NameInMap("MaxScore")
-        public String maxScore;
-
-        @NameInMap("CounterList")
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList> counterList;
-
-        @NameInMap("TopList")
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList> topList;
-
-        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult();
-            return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setAverageScore(String averageScore) {
-            this.averageScore = averageScore;
-            return this;
-        }
-        public String getAverageScore() {
-            return this.averageScore;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setMaxScore(String maxScore) {
-            this.maxScore = maxScore;
-            return this;
-        }
-        public String getMaxScore() {
-            return this.maxScore;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList> counterList) {
-            this.counterList = counterList;
-            return this;
-        }
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList> getCounterList() {
-            return this.counterList;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setTopList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList> topList) {
-            this.topList = topList;
-            return this;
-        }
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList> getTopList() {
-            return this.topList;
-        }
-
-    }
-
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
         @NameInMap("Count")
         public Integer count;
+
+        @NameInMap("Label")
+        public String label;
 
         public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList();
             return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList setCount(Integer count) {
@@ -768,11 +448,19 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.count;
         }
 
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
+        @NameInMap("Label")
+        public String label;
 
         @NameInMap("Score")
         public String score;
@@ -780,20 +468,20 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public String timestamp;
 
-        @NameInMap("Label")
-        public String label;
+        @NameInMap("Url")
+        public String url;
 
         public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList setUrl(String url) {
-            this.url = url;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList setLabel(String label) {
+            this.label = label;
             return this;
         }
-        public String getUrl() {
-            return this.url;
+        public String getLabel() {
+            return this.label;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList setScore(String score) {
@@ -812,22 +500,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList setLabel(String label) {
-            this.label = label;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public String getLabel() {
-            return this.label;
+        public String getUrl() {
+            return this.url;
         }
 
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
         @NameInMap("AverageScore")
         public String averageScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList> counterList;
 
         @NameInMap("Label")
         public String label;
@@ -835,8 +523,8 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         @NameInMap("MaxScore")
         public String maxScore;
 
-        @NameInMap("CounterList")
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList> counterList;
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         @NameInMap("TopList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList> topList;
@@ -846,20 +534,20 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult setAverageScore(String averageScore) {
             this.averageScore = averageScore;
             return this;
         }
         public String getAverageScore() {
             return this.averageScore;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList> getCounterList() {
+            return this.counterList;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult setLabel(String label) {
@@ -878,12 +566,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.maxScore;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList> counterList) {
-            this.counterList = counterList;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
             return this;
         }
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultCounterList> getCounterList() {
-            return this.counterList;
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult setTopList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResultTopList> topList) {
@@ -896,24 +584,328 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
 
-    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList extends TeaModel {
-        @NameInMap("Label")
-        public String label;
-
+    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList extends TeaModel {
         @NameInMap("Count")
         public Integer count;
 
-        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList();
+        @NameInMap("Label")
+        public String label;
+
+        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList setLabel(String label) {
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList setLabel(String label) {
             this.label = label;
             return this;
         }
         public String getLabel() {
             return this.label;
+        }
+
+    }
+
+    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult extends TeaModel {
+        @NameInMap("AverageScore")
+        public String averageScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList> counterList;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("MaxScore")
+        public String maxScore;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("TopList")
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList> topList;
+
+        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setAverageScore(String averageScore) {
+            this.averageScore = averageScore;
+            return this;
+        }
+        public String getAverageScore() {
+            return this.averageScore;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultCounterList> getCounterList() {
+            return this.counterList;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setMaxScore(String maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public String getMaxScore() {
+            return this.maxScore;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult setTopList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList> topList) {
+            this.topList = topList;
+            return this;
+        }
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResultTopList> getTopList() {
+            return this.topList;
+        }
+
+    }
+
+    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
+        @NameInMap("Label")
+        public String label;
+
+        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+    }
+
+    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList extends TeaModel {
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Score")
+        public String score;
+
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList setScore(String score) {
+            this.score = score;
+            return this;
+        }
+        public String getScore() {
+            return this.score;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult extends TeaModel {
+        @NameInMap("AverageScore")
+        public String averageScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList> counterList;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("MaxScore")
+        public String maxScore;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
+
+        @NameInMap("TopList")
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList> topList;
+
+        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setAverageScore(String averageScore) {
+            this.averageScore = averageScore;
+            return this;
+        }
+        public String getAverageScore() {
+            return this.averageScore;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultCounterList> getCounterList() {
+            return this.counterList;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setMaxScore(String maxScore) {
+            this.maxScore = maxScore;
+            return this;
+        }
+        public String getMaxScore() {
+            return this.maxScore;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult setTopList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList> topList) {
+            this.topList = topList;
+            return this;
+        }
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResultTopList> getTopList() {
+            return this.topList;
+        }
+
+    }
+
+    public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
+        @NameInMap("Label")
+        public String label;
+
+        public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList build(java.util.Map<String, ?> map) throws Exception {
+            GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList();
+            return TeaModel.build(map, self);
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList setCount(Integer count) {
@@ -924,11 +916,19 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.count;
         }
 
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList extends TeaModel {
-        @NameInMap("Url")
-        public String url;
+        @NameInMap("Label")
+        public String label;
 
         @NameInMap("Score")
         public String score;
@@ -936,20 +936,20 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public String timestamp;
 
-        @NameInMap("Label")
-        public String label;
+        @NameInMap("Url")
+        public String url;
 
         public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList();
             return TeaModel.build(map, self);
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList setUrl(String url) {
-            this.url = url;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList setLabel(String label) {
+            this.label = label;
             return this;
         }
-        public String getUrl() {
-            return this.url;
+        public String getLabel() {
+            return this.label;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList setScore(String score) {
@@ -968,22 +968,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList setLabel(String label) {
-            this.label = label;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList setUrl(String url) {
+            this.url = url;
             return this;
         }
-        public String getLabel() {
-            return this.label;
+        public String getUrl() {
+            return this.url;
         }
 
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
         @NameInMap("AverageScore")
         public String averageScore;
+
+        @NameInMap("CounterList")
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList> counterList;
 
         @NameInMap("Label")
         public String label;
@@ -991,8 +991,8 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         @NameInMap("MaxScore")
         public String maxScore;
 
-        @NameInMap("CounterList")
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList> counterList;
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         @NameInMap("TopList")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList> topList;
@@ -1002,20 +1002,20 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult setAverageScore(String averageScore) {
             this.averageScore = averageScore;
             return this;
         }
         public String getAverageScore() {
             return this.averageScore;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList> counterList) {
+            this.counterList = counterList;
+            return this;
+        }
+        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList> getCounterList() {
+            return this.counterList;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult setLabel(String label) {
@@ -1034,12 +1034,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.maxScore;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult setCounterList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList> counterList) {
-            this.counterList = counterList;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
             return this;
         }
-        public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultCounterList> getCounterList() {
-            return this.counterList;
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult setTopList(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResultTopList> topList) {
@@ -1053,23 +1053,23 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResultVideoResult extends TeaModel {
+        @NameInMap("AdResult")
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult adResult;
+
         @NameInMap("Label")
         public String label;
 
-        @NameInMap("Suggestion")
-        public String suggestion;
-
-        @NameInMap("PornResult")
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult pornResult;
-
-        @NameInMap("AdResult")
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult adResult;
+        @NameInMap("LiveResult")
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult liveResult;
 
         @NameInMap("LogoResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult logoResult;
 
-        @NameInMap("LiveResult")
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult liveResult;
+        @NameInMap("PornResult")
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult pornResult;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         @NameInMap("TerrorismResult")
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult terrorismResult;
@@ -1077,30 +1077,6 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         public static GetMediaAuditResultResponseBodyMediaAuditResultVideoResult build(java.util.Map<String, ?> map) throws Exception {
             GetMediaAuditResultResponseBodyMediaAuditResultVideoResult self = new GetMediaAuditResultResponseBodyMediaAuditResultVideoResult();
             return TeaModel.build(map, self);
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setPornResult(GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult pornResult) {
-            this.pornResult = pornResult;
-            return this;
-        }
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult getPornResult() {
-            return this.pornResult;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setAdResult(GetMediaAuditResultResponseBodyMediaAuditResultVideoResultAdResult adResult) {
@@ -1111,12 +1087,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return this.adResult;
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setLogoResult(GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult logoResult) {
-            this.logoResult = logoResult;
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setLabel(String label) {
+            this.label = label;
             return this;
         }
-        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult getLogoResult() {
-            return this.logoResult;
+        public String getLabel() {
+            return this.label;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setLiveResult(GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult liveResult) {
@@ -1125,6 +1101,30 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         }
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLiveResult getLiveResult() {
             return this.liveResult;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setLogoResult(GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult logoResult) {
+            this.logoResult = logoResult;
+            return this;
+        }
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultLogoResult getLogoResult() {
+            return this.logoResult;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setPornResult(GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult pornResult) {
+            this.pornResult = pornResult;
+            return this;
+        }
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResultPornResult getPornResult() {
+            return this.pornResult;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResultVideoResult setTerrorismResult(GetMediaAuditResultResponseBodyMediaAuditResultVideoResultTerrorismResult terrorismResult) {
@@ -1138,20 +1138,20 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaAuditResultResponseBodyMediaAuditResult extends TeaModel {
-        @NameInMap("Suggestion")
-        public String suggestion;
-
         @NameInMap("AbnormalModules")
         public String abnormalModules;
-
-        @NameInMap("Label")
-        public String label;
 
         @NameInMap("AudioResult")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultAudioResult> audioResult;
 
         @NameInMap("ImageResult")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultImageResult> imageResult;
+
+        @NameInMap("Label")
+        public String label;
+
+        @NameInMap("Suggestion")
+        public String suggestion;
 
         @NameInMap("TextResult")
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultTextResult> textResult;
@@ -1164,28 +1164,12 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetMediaAuditResultResponseBodyMediaAuditResult setSuggestion(String suggestion) {
-            this.suggestion = suggestion;
-            return this;
-        }
-        public String getSuggestion() {
-            return this.suggestion;
-        }
-
         public GetMediaAuditResultResponseBodyMediaAuditResult setAbnormalModules(String abnormalModules) {
             this.abnormalModules = abnormalModules;
             return this;
         }
         public String getAbnormalModules() {
             return this.abnormalModules;
-        }
-
-        public GetMediaAuditResultResponseBodyMediaAuditResult setLabel(String label) {
-            this.label = label;
-            return this;
-        }
-        public String getLabel() {
-            return this.label;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResult setAudioResult(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultAudioResult> audioResult) {
@@ -1202,6 +1186,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         }
         public java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultImageResult> getImageResult() {
             return this.imageResult;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public GetMediaAuditResultResponseBodyMediaAuditResult setSuggestion(String suggestion) {
+            this.suggestion = suggestion;
+            return this;
+        }
+        public String getSuggestion() {
+            return this.suggestion;
         }
 
         public GetMediaAuditResultResponseBodyMediaAuditResult setTextResult(java.util.List<GetMediaAuditResultResponseBodyMediaAuditResultTextResult> textResult) {

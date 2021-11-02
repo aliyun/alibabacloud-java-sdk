@@ -4,14 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayVideoStatisRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     @NameInMap("VideoId")
     public String videoId;
@@ -19,6 +19,14 @@ public class DescribePlayVideoStatisRequest extends TeaModel {
     public static DescribePlayVideoStatisRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePlayVideoStatisRequest self = new DescribePlayVideoStatisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePlayVideoStatisRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribePlayVideoStatisRequest setOwnerId(Long ownerId) {
@@ -35,14 +43,6 @@ public class DescribePlayVideoStatisRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public DescribePlayVideoStatisRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
     }
 
     public DescribePlayVideoStatisRequest setVideoId(String videoId) {

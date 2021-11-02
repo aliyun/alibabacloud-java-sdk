@@ -4,26 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("FailedPolicyNames")
+    public java.util.List<String> failedPolicyNames;
 
     @NameInMap("NonExistPolicyNames")
     public java.util.List<String> nonExistPolicyNames;
 
-    @NameInMap("FailedPolicyNames")
-    public java.util.List<String> failedPolicyNames;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DetachAppPolicyFromIdentityResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetachAppPolicyFromIdentityResponseBody self = new DetachAppPolicyFromIdentityResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DetachAppPolicyFromIdentityResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DetachAppPolicyFromIdentityResponseBody setFailedPolicyNames(java.util.List<String> failedPolicyNames) {
+        this.failedPolicyNames = failedPolicyNames;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<String> getFailedPolicyNames() {
+        return this.failedPolicyNames;
     }
 
     public DetachAppPolicyFromIdentityResponseBody setNonExistPolicyNames(java.util.List<String> nonExistPolicyNames) {
@@ -34,12 +34,12 @@ public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
         return this.nonExistPolicyNames;
     }
 
-    public DetachAppPolicyFromIdentityResponseBody setFailedPolicyNames(java.util.List<String> failedPolicyNames) {
-        this.failedPolicyNames = failedPolicyNames;
+    public DetachAppPolicyFromIdentityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<String> getFailedPolicyNames() {
-        return this.failedPolicyNames;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

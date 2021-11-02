@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DomainDetail")
     public DescribeVodDomainDetailResponseBodyDomainDetail domainDetail;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeVodDomainDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainDetailResponseBody self = new DescribeVodDomainDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVodDomainDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeVodDomainDetailResponseBody setDomainDetail(DescribeVodDomainDetailResponseBodyDomainDetail domainDetail) {
@@ -31,49 +23,33 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         return this.domainDetail;
     }
 
+    public DescribeVodDomainDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Priority")
-        public String priority;
-
-        @NameInMap("Port")
-        public Integer port;
-
         @NameInMap("Content")
         public String content;
 
         @NameInMap("Enabled")
         public String enabled;
 
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("Priority")
+        public String priority;
+
+        @NameInMap("Type")
+        public String type;
+
         public static DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource self = new DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setPriority(String priority) {
-            this.priority = priority;
-            return this;
-        }
-        public String getPriority() {
-            return this.priority;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
         }
 
         public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setContent(String content) {
@@ -90,6 +66,30 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
         }
         public String getEnabled() {
             return this.enabled;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
@@ -114,85 +114,45 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainDetailResponseBodyDomainDetail extends TeaModel {
-        @NameInMap("GmtCreated")
-        public String gmtCreated;
-
-        @NameInMap("Weight")
-        public String weight;
-
-        @NameInMap("SSLPub")
-        public String SSLPub;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("SSLProtocol")
-        public String SSLProtocol;
-
         @NameInMap("CertName")
         public String certName;
-
-        @NameInMap("Scope")
-        public String scope;
 
         @NameInMap("Cname")
         public String cname;
 
-        @NameInMap("DomainStatus")
-        public String domainStatus;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("DomainStatus")
+        public String domainStatus;
+
+        @NameInMap("GmtCreated")
+        public String gmtCreated;
+
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        @NameInMap("SSLProtocol")
+        public String SSLProtocol;
+
+        @NameInMap("SSLPub")
+        public String SSLPub;
+
+        @NameInMap("Scope")
+        public String scope;
+
         @NameInMap("Sources")
         public DescribeVodDomainDetailResponseBodyDomainDetailSources sources;
+
+        @NameInMap("Weight")
+        public String weight;
 
         public static DescribeVodDomainDetailResponseBodyDomainDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodDomainDetailResponseBodyDomainDetail self = new DescribeVodDomainDetailResponseBodyDomainDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setGmtCreated(String gmtCreated) {
-            this.gmtCreated = gmtCreated;
-            return this;
-        }
-        public String getGmtCreated() {
-            return this.gmtCreated;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setWeight(String weight) {
-            this.weight = weight;
-            return this;
-        }
-        public String getWeight() {
-            return this.weight;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setSSLPub(String SSLPub) {
-            this.SSLPub = SSLPub;
-            return this;
-        }
-        public String getSSLPub() {
-            return this.SSLPub;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setSSLProtocol(String SSLProtocol) {
-            this.SSLProtocol = SSLProtocol;
-            return this;
-        }
-        public String getSSLProtocol() {
-            return this.SSLProtocol;
         }
 
         public DescribeVodDomainDetailResponseBodyDomainDetail setCertName(String certName) {
@@ -203,14 +163,6 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             return this.certName;
         }
 
-        public DescribeVodDomainDetailResponseBodyDomainDetail setScope(String scope) {
-            this.scope = scope;
-            return this;
-        }
-        public String getScope() {
-            return this.scope;
-        }
-
         public DescribeVodDomainDetailResponseBodyDomainDetail setCname(String cname) {
             this.cname = cname;
             return this;
@@ -219,20 +171,12 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             return this.cname;
         }
 
-        public DescribeVodDomainDetailResponseBodyDomainDetail setDomainStatus(String domainStatus) {
-            this.domainStatus = domainStatus;
+        public DescribeVodDomainDetailResponseBodyDomainDetail setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getDomainStatus() {
-            return this.domainStatus;
-        }
-
-        public DescribeVodDomainDetailResponseBodyDomainDetail setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeVodDomainDetailResponseBodyDomainDetail setDomainName(String domainName) {
@@ -243,12 +187,68 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             return this.domainName;
         }
 
+        public DescribeVodDomainDetailResponseBodyDomainDetail setDomainStatus(String domainStatus) {
+            this.domainStatus = domainStatus;
+            return this;
+        }
+        public String getDomainStatus() {
+            return this.domainStatus;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setGmtCreated(String gmtCreated) {
+            this.gmtCreated = gmtCreated;
+            return this;
+        }
+        public String getGmtCreated() {
+            return this.gmtCreated;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setSSLProtocol(String SSLProtocol) {
+            this.SSLProtocol = SSLProtocol;
+            return this;
+        }
+        public String getSSLProtocol() {
+            return this.SSLProtocol;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setSSLPub(String SSLPub) {
+            this.SSLPub = SSLPub;
+            return this;
+        }
+        public String getSSLPub() {
+            return this.SSLPub;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
         public DescribeVodDomainDetailResponseBodyDomainDetail setSources(DescribeVodDomainDetailResponseBodyDomainDetailSources sources) {
             this.sources = sources;
             return this;
         }
         public DescribeVodDomainDetailResponseBodyDomainDetailSources getSources() {
             return this.sources;
+        }
+
+        public DescribeVodDomainDetailResponseBodyDomainDetail setWeight(String weight) {
+            this.weight = weight;
+            return this;
+        }
+        public String getWeight() {
+            return this.weight;
         }
 
     }

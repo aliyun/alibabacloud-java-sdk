@@ -4,37 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetCategoriesResponseBody extends TeaModel {
-    @NameInMap("SubTotal")
-    public Long subTotal;
+    @NameInMap("Category")
+    public GetCategoriesResponseBodyCategory category;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Category")
-    public GetCategoriesResponseBodyCategory category;
-
     @NameInMap("SubCategories")
     public GetCategoriesResponseBodySubCategories subCategories;
+
+    @NameInMap("SubTotal")
+    public Long subTotal;
 
     public static GetCategoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCategoriesResponseBody self = new GetCategoriesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetCategoriesResponseBody setSubTotal(Long subTotal) {
-        this.subTotal = subTotal;
-        return this;
-    }
-    public Long getSubTotal() {
-        return this.subTotal;
-    }
-
-    public GetCategoriesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetCategoriesResponseBody setCategory(GetCategoriesResponseBodyCategory category) {
@@ -45,6 +29,14 @@ public class GetCategoriesResponseBody extends TeaModel {
         return this.category;
     }
 
+    public GetCategoriesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetCategoriesResponseBody setSubCategories(GetCategoriesResponseBodySubCategories subCategories) {
         this.subCategories = subCategories;
         return this;
@@ -53,49 +45,33 @@ public class GetCategoriesResponseBody extends TeaModel {
         return this.subCategories;
     }
 
-    public static class GetCategoriesResponseBodyCategory extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+    public GetCategoriesResponseBody setSubTotal(Long subTotal) {
+        this.subTotal = subTotal;
+        return this;
+    }
+    public Long getSubTotal() {
+        return this.subTotal;
+    }
 
-        @NameInMap("ParentId")
-        public Long parentId;
+    public static class GetCategoriesResponseBodyCategory extends TeaModel {
+        @NameInMap("CateId")
+        public Long cateId;
 
         @NameInMap("CateName")
         public String cateName;
 
-        @NameInMap("CateId")
-        public Long cateId;
-
         @NameInMap("Level")
         public Long level;
+
+        @NameInMap("ParentId")
+        public Long parentId;
+
+        @NameInMap("Type")
+        public String type;
 
         public static GetCategoriesResponseBodyCategory build(java.util.Map<String, ?> map) throws Exception {
             GetCategoriesResponseBodyCategory self = new GetCategoriesResponseBodyCategory();
             return TeaModel.build(map, self);
-        }
-
-        public GetCategoriesResponseBodyCategory setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public GetCategoriesResponseBodyCategory setParentId(Long parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public Long getParentId() {
-            return this.parentId;
-        }
-
-        public GetCategoriesResponseBodyCategory setCateName(String cateName) {
-            this.cateName = cateName;
-            return this;
-        }
-        public String getCateName() {
-            return this.cateName;
         }
 
         public GetCategoriesResponseBodyCategory setCateId(Long cateId) {
@@ -106,6 +82,14 @@ public class GetCategoriesResponseBody extends TeaModel {
             return this.cateId;
         }
 
+        public GetCategoriesResponseBodyCategory setCateName(String cateName) {
+            this.cateName = cateName;
+            return this;
+        }
+        public String getCateName() {
+            return this.cateName;
+        }
+
         public GetCategoriesResponseBodyCategory setLevel(Long level) {
             this.level = level;
             return this;
@@ -114,33 +98,15 @@ public class GetCategoriesResponseBody extends TeaModel {
             return this.level;
         }
 
-    }
-
-    public static class GetCategoriesResponseBodySubCategoriesCategory extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("CateName")
-        public String cateName;
-
-        @NameInMap("ParentId")
-        public Long parentId;
-
-        @NameInMap("CateId")
-        public Long cateId;
-
-        @NameInMap("SubTotal")
-        public Long subTotal;
-
-        @NameInMap("Level")
-        public Long level;
-
-        public static GetCategoriesResponseBodySubCategoriesCategory build(java.util.Map<String, ?> map) throws Exception {
-            GetCategoriesResponseBodySubCategoriesCategory self = new GetCategoriesResponseBodySubCategoriesCategory();
-            return TeaModel.build(map, self);
+        public GetCategoriesResponseBodyCategory setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
         }
 
-        public GetCategoriesResponseBodySubCategoriesCategory setType(String type) {
+        public GetCategoriesResponseBodyCategory setType(String type) {
             this.type = type;
             return this;
         }
@@ -148,20 +114,30 @@ public class GetCategoriesResponseBody extends TeaModel {
             return this.type;
         }
 
-        public GetCategoriesResponseBodySubCategoriesCategory setCateName(String cateName) {
-            this.cateName = cateName;
-            return this;
-        }
-        public String getCateName() {
-            return this.cateName;
-        }
+    }
 
-        public GetCategoriesResponseBodySubCategoriesCategory setParentId(Long parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public Long getParentId() {
-            return this.parentId;
+    public static class GetCategoriesResponseBodySubCategoriesCategory extends TeaModel {
+        @NameInMap("CateId")
+        public Long cateId;
+
+        @NameInMap("CateName")
+        public String cateName;
+
+        @NameInMap("Level")
+        public Long level;
+
+        @NameInMap("ParentId")
+        public Long parentId;
+
+        @NameInMap("SubTotal")
+        public Long subTotal;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetCategoriesResponseBodySubCategoriesCategory build(java.util.Map<String, ?> map) throws Exception {
+            GetCategoriesResponseBodySubCategoriesCategory self = new GetCategoriesResponseBodySubCategoriesCategory();
+            return TeaModel.build(map, self);
         }
 
         public GetCategoriesResponseBodySubCategoriesCategory setCateId(Long cateId) {
@@ -172,12 +148,12 @@ public class GetCategoriesResponseBody extends TeaModel {
             return this.cateId;
         }
 
-        public GetCategoriesResponseBodySubCategoriesCategory setSubTotal(Long subTotal) {
-            this.subTotal = subTotal;
+        public GetCategoriesResponseBodySubCategoriesCategory setCateName(String cateName) {
+            this.cateName = cateName;
             return this;
         }
-        public Long getSubTotal() {
-            return this.subTotal;
+        public String getCateName() {
+            return this.cateName;
         }
 
         public GetCategoriesResponseBodySubCategoriesCategory setLevel(Long level) {
@@ -186,6 +162,30 @@ public class GetCategoriesResponseBody extends TeaModel {
         }
         public Long getLevel() {
             return this.level;
+        }
+
+        public GetCategoriesResponseBodySubCategoriesCategory setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
+        }
+
+        public GetCategoriesResponseBodySubCategoriesCategory setSubTotal(Long subTotal) {
+            this.subTotal = subTotal;
+            return this;
+        }
+        public Long getSubTotal() {
+            return this.subTotal;
+        }
+
+        public GetCategoriesResponseBodySubCategoriesCategory setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

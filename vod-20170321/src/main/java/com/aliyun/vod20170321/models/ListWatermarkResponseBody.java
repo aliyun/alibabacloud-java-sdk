@@ -32,26 +32,26 @@ public class ListWatermarkResponseBody extends TeaModel {
     }
 
     public static class ListWatermarkResponseBodyWatermarkInfos extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
         @NameInMap("CreationTime")
         public String creationTime;
-
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("IsDefault")
-        public String isDefault;
 
         @NameInMap("FileUrl")
         public String fileUrl;
 
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("WatermarkConfig")
-        public String watermarkConfig;
+        @NameInMap("IsDefault")
+        public String isDefault;
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("WatermarkConfig")
+        public String watermarkConfig;
 
         @NameInMap("WatermarkId")
         public String watermarkId;
@@ -59,38 +59,6 @@ public class ListWatermarkResponseBody extends TeaModel {
         public static ListWatermarkResponseBodyWatermarkInfos build(java.util.Map<String, ?> map) throws Exception {
             ListWatermarkResponseBodyWatermarkInfos self = new ListWatermarkResponseBodyWatermarkInfos();
             return TeaModel.build(map, self);
-        }
-
-        public ListWatermarkResponseBodyWatermarkInfos setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
-        public ListWatermarkResponseBodyWatermarkInfos setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListWatermarkResponseBodyWatermarkInfos setIsDefault(String isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-        public String getIsDefault() {
-            return this.isDefault;
-        }
-
-        public ListWatermarkResponseBodyWatermarkInfos setFileUrl(String fileUrl) {
-            this.fileUrl = fileUrl;
-            return this;
-        }
-        public String getFileUrl() {
-            return this.fileUrl;
         }
 
         public ListWatermarkResponseBodyWatermarkInfos setAppId(String appId) {
@@ -101,12 +69,28 @@ public class ListWatermarkResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public ListWatermarkResponseBodyWatermarkInfos setWatermarkConfig(String watermarkConfig) {
-            this.watermarkConfig = watermarkConfig;
+        public ListWatermarkResponseBodyWatermarkInfos setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getWatermarkConfig() {
-            return this.watermarkConfig;
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public ListWatermarkResponseBodyWatermarkInfos setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+        public ListWatermarkResponseBodyWatermarkInfos setIsDefault(String isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+        public String getIsDefault() {
+            return this.isDefault;
         }
 
         public ListWatermarkResponseBodyWatermarkInfos setName(String name) {
@@ -115,6 +99,22 @@ public class ListWatermarkResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListWatermarkResponseBodyWatermarkInfos setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListWatermarkResponseBodyWatermarkInfos setWatermarkConfig(String watermarkConfig) {
+            this.watermarkConfig = watermarkConfig;
+            return this;
+        }
+        public String getWatermarkConfig() {
+            return this.watermarkConfig;
         }
 
         public ListWatermarkResponseBodyWatermarkInfos setWatermarkId(String watermarkId) {

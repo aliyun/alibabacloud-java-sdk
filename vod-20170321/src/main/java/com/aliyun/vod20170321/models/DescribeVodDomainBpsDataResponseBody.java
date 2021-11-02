@@ -4,14 +4,17 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
+    @NameInMap("BpsDataPerInterval")
+    public DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
+
+    @NameInMap("DataInterval")
+    public String dataInterval;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
     @NameInMap("EndTime")
     public String endTime;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("IspNameEn")
     public String ispNameEn;
@@ -19,18 +22,39 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("RequestId")
+    public String requestId;
 
-    @NameInMap("DataInterval")
-    public String dataInterval;
-
-    @NameInMap("BpsDataPerInterval")
-    public DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeVodDomainBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainBpsDataResponseBody self = new DescribeVodDomainBpsDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodDomainBpsDataResponseBody setBpsDataPerInterval(DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval) {
+        this.bpsDataPerInterval = bpsDataPerInterval;
+        return this;
+    }
+    public DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval getBpsDataPerInterval() {
+        return this.bpsDataPerInterval;
+    }
+
+    public DescribeVodDomainBpsDataResponseBody setDataInterval(String dataInterval) {
+        this.dataInterval = dataInterval;
+        return this;
+    }
+    public String getDataInterval() {
+        return this.dataInterval;
+    }
+
+    public DescribeVodDomainBpsDataResponseBody setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
     public DescribeVodDomainBpsDataResponseBody setEndTime(String endTime) {
@@ -39,22 +63,6 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeVodDomainBpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeVodDomainBpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeVodDomainBpsDataResponseBody setIspNameEn(String ispNameEn) {
@@ -73,55 +81,55 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
         return this.locationNameEn;
     }
 
-    public DescribeVodDomainBpsDataResponseBody setDomainName(String domainName) {
-        this.domainName = domainName;
+    public DescribeVodDomainBpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeVodDomainBpsDataResponseBody setDataInterval(String dataInterval) {
-        this.dataInterval = dataInterval;
+    public DescribeVodDomainBpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public String getDataInterval() {
-        return this.dataInterval;
-    }
-
-    public DescribeVodDomainBpsDataResponseBody setBpsDataPerInterval(DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval) {
-        this.bpsDataPerInterval = bpsDataPerInterval;
-        return this;
-    }
-    public DescribeVodDomainBpsDataResponseBodyBpsDataPerInterval getBpsDataPerInterval() {
-        return this.bpsDataPerInterval;
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public static class DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
+        @NameInMap("DomesticValue")
+        public String domesticValue;
+
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
-
-        @NameInMap("Value")
-        public String value;
-
-        @NameInMap("OverseasValue")
-        public String overseasValue;
-
-        @NameInMap("HttpsValue")
-        public String httpsValue;
 
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
+        @NameInMap("HttpsValue")
+        public String httpsValue;
+
+        @NameInMap("OverseasValue")
+        public String overseasValue;
+
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        @NameInMap("DomesticValue")
-        public String domesticValue;
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule self = new DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setDomesticValue(String domesticValue) {
+            this.domesticValue = domesticValue;
+            return this;
+        }
+        public String getDomesticValue() {
+            return this.domesticValue;
         }
 
         public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setHttpsDomesticValue(String httpsDomesticValue) {
@@ -132,20 +140,12 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             return this.httpsDomesticValue;
         }
 
-        public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setValue(String value) {
-            this.value = value;
+        public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setHttpsOverseasValue(String httpsOverseasValue) {
+            this.httpsOverseasValue = httpsOverseasValue;
             return this;
         }
-        public String getValue() {
-            return this.value;
-        }
-
-        public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setOverseasValue(String overseasValue) {
-            this.overseasValue = overseasValue;
-            return this;
-        }
-        public String getOverseasValue() {
-            return this.overseasValue;
+        public String getHttpsOverseasValue() {
+            return this.httpsOverseasValue;
         }
 
         public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setHttpsValue(String httpsValue) {
@@ -156,12 +156,12 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             return this.httpsValue;
         }
 
-        public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setHttpsOverseasValue(String httpsOverseasValue) {
-            this.httpsOverseasValue = httpsOverseasValue;
+        public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setOverseasValue(String overseasValue) {
+            this.overseasValue = overseasValue;
             return this;
         }
-        public String getHttpsOverseasValue() {
-            return this.httpsOverseasValue;
+        public String getOverseasValue() {
+            return this.overseasValue;
         }
 
         public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
@@ -172,12 +172,12 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setDomesticValue(String domesticValue) {
-            this.domesticValue = domesticValue;
+        public DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule setValue(String value) {
+            this.value = value;
             return this;
         }
-        public String getDomesticValue() {
-            return this.domesticValue;
+        public String getValue() {
+            return this.value;
         }
 
     }

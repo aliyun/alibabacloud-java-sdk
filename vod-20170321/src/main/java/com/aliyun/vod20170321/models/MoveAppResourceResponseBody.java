@@ -4,26 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class MoveAppResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("FailedResourceIds")
+    public java.util.List<String> failedResourceIds;
 
     @NameInMap("NonExistResourceIds")
     public java.util.List<String> nonExistResourceIds;
 
-    @NameInMap("FailedResourceIds")
-    public java.util.List<String> failedResourceIds;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static MoveAppResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         MoveAppResourceResponseBody self = new MoveAppResourceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public MoveAppResourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public MoveAppResourceResponseBody setFailedResourceIds(java.util.List<String> failedResourceIds) {
+        this.failedResourceIds = failedResourceIds;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<String> getFailedResourceIds() {
+        return this.failedResourceIds;
     }
 
     public MoveAppResourceResponseBody setNonExistResourceIds(java.util.List<String> nonExistResourceIds) {
@@ -34,12 +34,12 @@ public class MoveAppResourceResponseBody extends TeaModel {
         return this.nonExistResourceIds;
     }
 
-    public MoveAppResourceResponseBody setFailedResourceIds(java.util.List<String> failedResourceIds) {
-        this.failedResourceIds = failedResourceIds;
+    public MoveAppResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<String> getFailedResourceIds() {
-        return this.failedResourceIds;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -35,20 +35,20 @@ public class AddWatermarkResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("FileUrl")
+        public String fileUrl;
 
         @NameInMap("IsDefault")
         public String isDefault;
 
-        @NameInMap("FileUrl")
-        public String fileUrl;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("WatermarkConfig")
         public String watermarkConfig;
-
-        @NameInMap("Name")
-        public String name;
 
         @NameInMap("WatermarkId")
         public String watermarkId;
@@ -66,12 +66,12 @@ public class AddWatermarkResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public AddWatermarkResponseBodyWatermarkInfo setType(String type) {
-            this.type = type;
+        public AddWatermarkResponseBodyWatermarkInfo setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getFileUrl() {
+            return this.fileUrl;
         }
 
         public AddWatermarkResponseBodyWatermarkInfo setIsDefault(String isDefault) {
@@ -82,12 +82,20 @@ public class AddWatermarkResponseBody extends TeaModel {
             return this.isDefault;
         }
 
-        public AddWatermarkResponseBodyWatermarkInfo setFileUrl(String fileUrl) {
-            this.fileUrl = fileUrl;
+        public AddWatermarkResponseBodyWatermarkInfo setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getFileUrl() {
-            return this.fileUrl;
+        public String getName() {
+            return this.name;
+        }
+
+        public AddWatermarkResponseBodyWatermarkInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public AddWatermarkResponseBodyWatermarkInfo setWatermarkConfig(String watermarkConfig) {
@@ -96,14 +104,6 @@ public class AddWatermarkResponseBody extends TeaModel {
         }
         public String getWatermarkConfig() {
             return this.watermarkConfig;
-        }
-
-        public AddWatermarkResponseBodyWatermarkInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public AddWatermarkResponseBodyWatermarkInfo setWatermarkId(String watermarkId) {

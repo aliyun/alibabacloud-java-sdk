@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListVodRealtimeLogDeliveryInfosResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Content")
     public ListVodRealtimeLogDeliveryInfosResponseBodyContent content;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListVodRealtimeLogDeliveryInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVodRealtimeLogDeliveryInfosResponseBody self = new ListVodRealtimeLogDeliveryInfosResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListVodRealtimeLogDeliveryInfosResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListVodRealtimeLogDeliveryInfosResponseBody setContent(ListVodRealtimeLogDeliveryInfosResponseBodyContent content) {
@@ -29,6 +21,14 @@ public class ListVodRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     }
     public ListVodRealtimeLogDeliveryInfosResponseBodyContent getContent() {
         return this.content;
+    }
+
+    public ListVodRealtimeLogDeliveryInfosResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public static class ListVodRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {

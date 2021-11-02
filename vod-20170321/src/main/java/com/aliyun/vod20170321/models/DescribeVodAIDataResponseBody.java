@@ -4,18 +4,26 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodAIDataResponseBody extends TeaModel {
+    @NameInMap("AIData")
+    public DescribeVodAIDataResponseBodyAIData AIData;
+
     @NameInMap("DataInterval")
     public String dataInterval;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AIData")
-    public DescribeVodAIDataResponseBodyAIData AIData;
-
     public static DescribeVodAIDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodAIDataResponseBody self = new DescribeVodAIDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodAIDataResponseBody setAIData(DescribeVodAIDataResponseBodyAIData AIData) {
+        this.AIData = AIData;
+        return this;
+    }
+    public DescribeVodAIDataResponseBodyAIData getAIData() {
+        return this.AIData;
     }
 
     public DescribeVodAIDataResponseBody setDataInterval(String dataInterval) {
@@ -32,14 +40,6 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeVodAIDataResponseBody setAIData(DescribeVodAIDataResponseBodyAIData AIData) {
-        this.AIData = AIData;
-        return this;
-    }
-    public DescribeVodAIDataResponseBodyAIData getAIData() {
-        return this.AIData;
     }
 
     public static class DescribeVodAIDataResponseBodyAIDataAIDataItemDataDataItem extends TeaModel {
@@ -92,23 +92,15 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodAIDataResponseBodyAIDataAIDataItem extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("Data")
         public DescribeVodAIDataResponseBodyAIDataAIDataItemData data;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeVodAIDataResponseBodyAIDataAIDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodAIDataResponseBodyAIDataAIDataItem self = new DescribeVodAIDataResponseBodyAIDataAIDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVodAIDataResponseBodyAIDataAIDataItem setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeVodAIDataResponseBodyAIDataAIDataItem setData(DescribeVodAIDataResponseBodyAIDataAIDataItemData data) {
@@ -117,6 +109,14 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         }
         public DescribeVodAIDataResponseBodyAIDataAIDataItemData getData() {
             return this.data;
+        }
+
+        public DescribeVodAIDataResponseBodyAIDataAIDataItem setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

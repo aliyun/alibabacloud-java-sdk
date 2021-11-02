@@ -38,20 +38,20 @@ public class GetVodTemplateResponseBody extends TeaModel {
         @NameInMap("IsDefault")
         public String isDefault;
 
+        @NameInMap("ModifyTime")
+        public String modifyTime;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("TemplateConfig")
+        public String templateConfig;
+
         @NameInMap("TemplateType")
         public String templateType;
 
         @NameInMap("VodTemplateId")
         public String vodTemplateId;
-
-        @NameInMap("TemplateConfig")
-        public String templateConfig;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("ModifyTime")
-        public String modifyTime;
 
         public static GetVodTemplateResponseBodyVodTemplateInfo build(java.util.Map<String, ?> map) throws Exception {
             GetVodTemplateResponseBodyVodTemplateInfo self = new GetVodTemplateResponseBodyVodTemplateInfo();
@@ -74,6 +74,30 @@ public class GetVodTemplateResponseBody extends TeaModel {
             return this.isDefault;
         }
 
+        public GetVodTemplateResponseBodyVodTemplateInfo setModifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public String getModifyTime() {
+            return this.modifyTime;
+        }
+
+        public GetVodTemplateResponseBodyVodTemplateInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetVodTemplateResponseBodyVodTemplateInfo setTemplateConfig(String templateConfig) {
+            this.templateConfig = templateConfig;
+            return this;
+        }
+        public String getTemplateConfig() {
+            return this.templateConfig;
+        }
+
         public GetVodTemplateResponseBodyVodTemplateInfo setTemplateType(String templateType) {
             this.templateType = templateType;
             return this;
@@ -88,30 +112,6 @@ public class GetVodTemplateResponseBody extends TeaModel {
         }
         public String getVodTemplateId() {
             return this.vodTemplateId;
-        }
-
-        public GetVodTemplateResponseBodyVodTemplateInfo setTemplateConfig(String templateConfig) {
-            this.templateConfig = templateConfig;
-            return this;
-        }
-        public String getTemplateConfig() {
-            return this.templateConfig;
-        }
-
-        public GetVodTemplateResponseBodyVodTemplateInfo setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetVodTemplateResponseBodyVodTemplateInfo setModifyTime(String modifyTime) {
-            this.modifyTime = modifyTime;
-            return this;
-        }
-        public String getModifyTime() {
-            return this.modifyTime;
         }
 
     }

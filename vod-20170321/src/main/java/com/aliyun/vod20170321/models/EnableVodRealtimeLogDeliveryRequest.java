@@ -4,23 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class EnableVodRealtimeLogDeliveryRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static EnableVodRealtimeLogDeliveryRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableVodRealtimeLogDeliveryRequest self = new EnableVodRealtimeLogDeliveryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public EnableVodRealtimeLogDeliveryRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public EnableVodRealtimeLogDeliveryRequest setDomainName(String domainName) {
@@ -29,6 +21,14 @@ public class EnableVodRealtimeLogDeliveryRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public EnableVodRealtimeLogDeliveryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }
