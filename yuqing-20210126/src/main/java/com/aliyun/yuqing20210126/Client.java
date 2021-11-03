@@ -484,6 +484,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("QueryTagNodes", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/queryTagNodes.json", "json", req, runtime), new QueryTagNodesResponse());
     }
 
+    public UpdateProjectResponse updateProject(UpdateProjectRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateProjectWithOptions(request, headers, runtime);
+    }
+
+    public UpdateProjectResponse updateProjectWithOptions(UpdateProjectRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            query.put("requestId", request.requestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.teamHashId)) {
+            query.put("teamHashId", request.teamHashId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.project))) {
+            body.put("project", request.project);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("projectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateUserId)) {
+            body.put("updateUserId", request.updateUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateUserName)) {
+            body.put("updateUserName", request.updateUserName);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequestWithForm("UpdateProject", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/updateProject.json", "json", req, runtime), new UpdateProjectResponse());
+    }
+
     public UpdatePropagationResponse updatePropagation(UpdatePropagationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
