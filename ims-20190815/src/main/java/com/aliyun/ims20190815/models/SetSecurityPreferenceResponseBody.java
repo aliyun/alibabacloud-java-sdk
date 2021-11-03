@@ -134,18 +134,18 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference extends TeaModel {
         @NameInMap("VerificationTypes")
-        public String verificationTypes;
+        public java.util.List<String> verificationTypes;
 
         public static SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference build(java.util.Map<String, ?> map) throws Exception {
             SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference self = new SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference();
             return TeaModel.build(map, self);
         }
 
-        public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference setVerificationTypes(String verificationTypes) {
+        public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference setVerificationTypes(java.util.List<String> verificationTypes) {
             this.verificationTypes = verificationTypes;
             return this;
         }
-        public String getVerificationTypes() {
+        public java.util.List<String> getVerificationTypes() {
             return this.verificationTypes;
         }
 
