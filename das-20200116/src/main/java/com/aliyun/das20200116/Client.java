@@ -411,45 +411,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getInstanceInspectionsWithOptions(request, runtime);
     }
 
-    public GetRequestDiagnosisIdResponse getRequestDiagnosisIdWithOptions(GetRequestDiagnosisIdRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetRequestDiagnosisId", "2020-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new GetRequestDiagnosisIdResponse());
-    }
-
-    public GetRequestDiagnosisIdResponse getRequestDiagnosisId(GetRequestDiagnosisIdRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getRequestDiagnosisIdWithOptions(request, runtime);
-    }
-
-    public GetRequestDiagnosisPageResponse getRequestDiagnosisPageWithOptions(GetRequestDiagnosisPageRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetRequestDiagnosisPage", "2020-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new GetRequestDiagnosisPageResponse());
-    }
-
-    public GetRequestDiagnosisPageResponse getRequestDiagnosisPage(GetRequestDiagnosisPageRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getRequestDiagnosisPageWithOptions(request, runtime);
-    }
-
-    public GetRequestDiagnosisResultResponse getRequestDiagnosisResultWithOptions(GetRequestDiagnosisResultRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetRequestDiagnosisResult", "2020-01-16", "HTTPS", "POST", "AK", "json", req, runtime), new GetRequestDiagnosisResultResponse());
-    }
-
-    public GetRequestDiagnosisResultResponse getRequestDiagnosisResult(GetRequestDiagnosisResultRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getRequestDiagnosisResultWithOptions(request, runtime);
-    }
-
     public GetResourceOptimizeHistoryListResponse getResourceOptimizeHistoryListWithOptions(GetResourceOptimizeHistoryListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
