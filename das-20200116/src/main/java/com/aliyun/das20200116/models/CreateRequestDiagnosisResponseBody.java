@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class AccessHDMInstanceResponseBody extends TeaModel {
+public class CreateRequestDiagnosisResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
@@ -19,12 +19,12 @@ public class AccessHDMInstanceResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
-    public static AccessHDMInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AccessHDMInstanceResponseBody self = new AccessHDMInstanceResponseBody();
+    public static CreateRequestDiagnosisResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateRequestDiagnosisResponseBody self = new CreateRequestDiagnosisResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AccessHDMInstanceResponseBody setCode(String code) {
+    public CreateRequestDiagnosisResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -32,7 +32,7 @@ public class AccessHDMInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public AccessHDMInstanceResponseBody setData(String data) {
+    public CreateRequestDiagnosisResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -40,7 +40,7 @@ public class AccessHDMInstanceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public AccessHDMInstanceResponseBody setMessage(String message) {
+    public CreateRequestDiagnosisResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -48,7 +48,7 @@ public class AccessHDMInstanceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public AccessHDMInstanceResponseBody setRequestId(String requestId) {
+    public CreateRequestDiagnosisResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -56,7 +56,7 @@ public class AccessHDMInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AccessHDMInstanceResponseBody setSuccess(String success) {
+    public CreateRequestDiagnosisResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }

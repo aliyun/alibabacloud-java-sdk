@@ -3,21 +3,21 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class AccessHDMInstanceResponse extends TeaModel {
+public class GetRequestDiagnosisPageResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public AccessHDMInstanceResponseBody body;
+    public GetRequestDiagnosisPageResponseBody body;
 
-    public static AccessHDMInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        AccessHDMInstanceResponse self = new AccessHDMInstanceResponse();
+    public static GetRequestDiagnosisPageResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetRequestDiagnosisPageResponse self = new GetRequestDiagnosisPageResponse();
         return TeaModel.build(map, self);
     }
 
-    public AccessHDMInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetRequestDiagnosisPageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class AccessHDMInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public AccessHDMInstanceResponse setBody(AccessHDMInstanceResponseBody body) {
+    public GetRequestDiagnosisPageResponse setBody(GetRequestDiagnosisPageResponseBody body) {
         this.body = body;
         return this;
     }
-    public AccessHDMInstanceResponseBody getBody() {
+    public GetRequestDiagnosisPageResponseBody getBody() {
         return this.body;
     }
 
