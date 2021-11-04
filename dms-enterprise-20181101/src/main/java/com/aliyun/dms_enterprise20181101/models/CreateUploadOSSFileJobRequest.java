@@ -4,29 +4,21 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateUploadOSSFileJobRequest extends TeaModel {
-    @NameInMap("FileSource")
-    public String fileSource;
-
     @NameInMap("FileName")
     public String fileName;
 
-    @NameInMap("UploadTarget")
-    public CreateUploadOSSFileJobRequestUploadTarget uploadTarget;
+    @NameInMap("FileSource")
+    public String fileSource;
 
     @NameInMap("Tid")
     public Long tid;
 
+    @NameInMap("UploadTarget")
+    public CreateUploadOSSFileJobRequestUploadTarget uploadTarget;
+
     public static CreateUploadOSSFileJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUploadOSSFileJobRequest self = new CreateUploadOSSFileJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateUploadOSSFileJobRequest setFileSource(String fileSource) {
-        this.fileSource = fileSource;
-        return this;
-    }
-    public String getFileSource() {
-        return this.fileSource;
     }
 
     public CreateUploadOSSFileJobRequest setFileName(String fileName) {
@@ -37,12 +29,12 @@ public class CreateUploadOSSFileJobRequest extends TeaModel {
         return this.fileName;
     }
 
-    public CreateUploadOSSFileJobRequest setUploadTarget(CreateUploadOSSFileJobRequestUploadTarget uploadTarget) {
-        this.uploadTarget = uploadTarget;
+    public CreateUploadOSSFileJobRequest setFileSource(String fileSource) {
+        this.fileSource = fileSource;
         return this;
     }
-    public CreateUploadOSSFileJobRequestUploadTarget getUploadTarget() {
-        return this.uploadTarget;
+    public String getFileSource() {
+        return this.fileSource;
     }
 
     public CreateUploadOSSFileJobRequest setTid(Long tid) {
@@ -53,12 +45,20 @@ public class CreateUploadOSSFileJobRequest extends TeaModel {
         return this.tid;
     }
 
-    public static class CreateUploadOSSFileJobRequestUploadTarget extends TeaModel {
-        @NameInMap("Endpoint")
-        public String endpoint;
+    public CreateUploadOSSFileJobRequest setUploadTarget(CreateUploadOSSFileJobRequestUploadTarget uploadTarget) {
+        this.uploadTarget = uploadTarget;
+        return this;
+    }
+    public CreateUploadOSSFileJobRequestUploadTarget getUploadTarget() {
+        return this.uploadTarget;
+    }
 
+    public static class CreateUploadOSSFileJobRequestUploadTarget extends TeaModel {
         @NameInMap("BucketName")
         public String bucketName;
+
+        @NameInMap("Endpoint")
+        public String endpoint;
 
         @NameInMap("ObjectName")
         public String objectName;
@@ -68,20 +68,20 @@ public class CreateUploadOSSFileJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateUploadOSSFileJobRequestUploadTarget setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-        public String getEndpoint() {
-            return this.endpoint;
-        }
-
         public CreateUploadOSSFileJobRequestUploadTarget setBucketName(String bucketName) {
             this.bucketName = bucketName;
             return this;
         }
         public String getBucketName() {
             return this.bucketName;
+        }
+
+        public CreateUploadOSSFileJobRequestUploadTarget setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
         }
 
         public CreateUploadOSSFileJobRequestUploadTarget setObjectName(String objectName) {

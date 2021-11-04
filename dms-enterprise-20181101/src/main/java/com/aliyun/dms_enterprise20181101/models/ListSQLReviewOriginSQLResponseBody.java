@@ -4,14 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("OriginSQLList")
+    public java.util.List<ListSQLReviewOriginSQLResponseBodyOriginSQLList> originSQLList;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,20 +22,9 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    @NameInMap("OriginSQLList")
-    public java.util.List<ListSQLReviewOriginSQLResponseBodyOriginSQLList> originSQLList;
-
     public static ListSQLReviewOriginSQLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSQLReviewOriginSQLResponseBody self = new ListSQLReviewOriginSQLResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListSQLReviewOriginSQLResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListSQLReviewOriginSQLResponseBody setErrorCode(String errorCode) {
@@ -51,6 +43,22 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public ListSQLReviewOriginSQLResponseBody setOriginSQLList(java.util.List<ListSQLReviewOriginSQLResponseBodyOriginSQLList> originSQLList) {
+        this.originSQLList = originSQLList;
+        return this;
+    }
+    public java.util.List<ListSQLReviewOriginSQLResponseBodyOriginSQLList> getOriginSQLList() {
+        return this.originSQLList;
+    }
+
+    public ListSQLReviewOriginSQLResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListSQLReviewOriginSQLResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -67,17 +75,12 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public ListSQLReviewOriginSQLResponseBody setOriginSQLList(java.util.List<ListSQLReviewOriginSQLResponseBodyOriginSQLList> originSQLList) {
-        this.originSQLList = originSQLList;
-        return this;
-    }
-    public java.util.List<ListSQLReviewOriginSQLResponseBodyOriginSQLList> getOriginSQLList() {
-        return this.originSQLList;
-    }
-
     public static class ListSQLReviewOriginSQLResponseBodyOriginSQLList extends TeaModel {
-        @NameInMap("SQLId")
-        public Long SQLId;
+        @NameInMap("CheckStatus")
+        public String checkStatus;
+
+        @NameInMap("CheckedTime")
+        public String checkedTime;
 
         @NameInMap("FileId")
         public Long fileId;
@@ -85,38 +88,43 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
         @NameInMap("FileName")
         public String fileName;
 
+        @NameInMap("ReviewSummary")
+        public String reviewSummary;
+
         @NameInMap("SQLContent")
         public String SQLContent;
 
-        @NameInMap("CheckStatus")
-        public String checkStatus;
+        @NameInMap("SQLId")
+        public Long SQLId;
 
-        @NameInMap("StatusDesc")
-        public String statusDesc;
-
-        @NameInMap("CheckedTime")
-        public String checkedTime;
+        @NameInMap("SQLReviewQueryKey")
+        public String SQLReviewQueryKey;
 
         @NameInMap("SqlHash")
         public String sqlHash;
 
-        @NameInMap("ReviewSummary")
-        public String reviewSummary;
-
-        @NameInMap("SQLReviewQueryKey")
-        public String SQLReviewQueryKey;
+        @NameInMap("StatusDesc")
+        public String statusDesc;
 
         public static ListSQLReviewOriginSQLResponseBodyOriginSQLList build(java.util.Map<String, ?> map) throws Exception {
             ListSQLReviewOriginSQLResponseBodyOriginSQLList self = new ListSQLReviewOriginSQLResponseBodyOriginSQLList();
             return TeaModel.build(map, self);
         }
 
-        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setSQLId(Long SQLId) {
-            this.SQLId = SQLId;
+        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setCheckStatus(String checkStatus) {
+            this.checkStatus = checkStatus;
             return this;
         }
-        public Long getSQLId() {
-            return this.SQLId;
+        public String getCheckStatus() {
+            return this.checkStatus;
+        }
+
+        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setCheckedTime(String checkedTime) {
+            this.checkedTime = checkedTime;
+            return this;
+        }
+        public String getCheckedTime() {
+            return this.checkedTime;
         }
 
         public ListSQLReviewOriginSQLResponseBodyOriginSQLList setFileId(Long fileId) {
@@ -135,6 +143,14 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             return this.fileName;
         }
 
+        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setReviewSummary(String reviewSummary) {
+            this.reviewSummary = reviewSummary;
+            return this;
+        }
+        public String getReviewSummary() {
+            return this.reviewSummary;
+        }
+
         public ListSQLReviewOriginSQLResponseBodyOriginSQLList setSQLContent(String SQLContent) {
             this.SQLContent = SQLContent;
             return this;
@@ -143,28 +159,20 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             return this.SQLContent;
         }
 
-        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setCheckStatus(String checkStatus) {
-            this.checkStatus = checkStatus;
+        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setSQLId(Long SQLId) {
+            this.SQLId = SQLId;
             return this;
         }
-        public String getCheckStatus() {
-            return this.checkStatus;
+        public Long getSQLId() {
+            return this.SQLId;
         }
 
-        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setStatusDesc(String statusDesc) {
-            this.statusDesc = statusDesc;
+        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setSQLReviewQueryKey(String SQLReviewQueryKey) {
+            this.SQLReviewQueryKey = SQLReviewQueryKey;
             return this;
         }
-        public String getStatusDesc() {
-            return this.statusDesc;
-        }
-
-        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setCheckedTime(String checkedTime) {
-            this.checkedTime = checkedTime;
-            return this;
-        }
-        public String getCheckedTime() {
-            return this.checkedTime;
+        public String getSQLReviewQueryKey() {
+            return this.SQLReviewQueryKey;
         }
 
         public ListSQLReviewOriginSQLResponseBodyOriginSQLList setSqlHash(String sqlHash) {
@@ -175,20 +183,12 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
             return this.sqlHash;
         }
 
-        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setReviewSummary(String reviewSummary) {
-            this.reviewSummary = reviewSummary;
+        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
             return this;
         }
-        public String getReviewSummary() {
-            return this.reviewSummary;
-        }
-
-        public ListSQLReviewOriginSQLResponseBodyOriginSQLList setSQLReviewQueryKey(String SQLReviewQueryKey) {
-            this.SQLReviewQueryKey = SQLReviewQueryKey;
-            return this;
-        }
-        public String getSQLReviewQueryKey() {
-            return this.SQLReviewQueryKey;
+        public String getStatusDesc() {
+            return this.statusDesc;
         }
 
     }

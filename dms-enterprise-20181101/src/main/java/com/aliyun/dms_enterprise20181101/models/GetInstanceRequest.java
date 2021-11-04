@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
     @NameInMap("Host")
     public String host;
 
@@ -16,17 +13,12 @@ public class GetInstanceRequest extends TeaModel {
     @NameInMap("Sid")
     public String sid;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static GetInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceRequest self = new GetInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetInstanceRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
     }
 
     public GetInstanceRequest setHost(String host) {
@@ -51,6 +43,14 @@ public class GetInstanceRequest extends TeaModel {
     }
     public String getSid() {
         return this.sid;
+    }
+
+    public GetInstanceRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

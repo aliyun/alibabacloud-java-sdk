@@ -4,26 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDataCorrectBackupFilesShrinkRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
+    @NameInMap("ActionDetail")
+    public String actionDetailShrink;
 
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("ActionDetail")
-    public String actionDetailShrink;
+    @NameInMap("Tid")
+    public Long tid;
 
     public static GetDataCorrectBackupFilesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDataCorrectBackupFilesShrinkRequest self = new GetDataCorrectBackupFilesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetDataCorrectBackupFilesShrinkRequest setTid(Long tid) {
-        this.tid = tid;
+    public GetDataCorrectBackupFilesShrinkRequest setActionDetailShrink(String actionDetailShrink) {
+        this.actionDetailShrink = actionDetailShrink;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
+    public String getActionDetailShrink() {
+        return this.actionDetailShrink;
     }
 
     public GetDataCorrectBackupFilesShrinkRequest setOrderId(Long orderId) {
@@ -34,12 +34,12 @@ public class GetDataCorrectBackupFilesShrinkRequest extends TeaModel {
         return this.orderId;
     }
 
-    public GetDataCorrectBackupFilesShrinkRequest setActionDetailShrink(String actionDetailShrink) {
-        this.actionDetailShrink = actionDetailShrink;
+    public GetDataCorrectBackupFilesShrinkRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public String getActionDetailShrink() {
-        return this.actionDetailShrink;
+    public Long getTid() {
+        return this.tid;
     }
 
 }

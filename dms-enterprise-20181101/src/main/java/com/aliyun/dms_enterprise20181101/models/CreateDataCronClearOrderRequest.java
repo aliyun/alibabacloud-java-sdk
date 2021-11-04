@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataCronClearOrderRequest extends TeaModel {
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
+
     @NameInMap("Comment")
     public String comment;
-
-    @NameInMap("RelatedUserList")
-    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Param")
     public CreateDataCronClearOrderRequestParam param;
 
-    @NameInMap("AttachmentKey")
-    public String attachmentKey;
+    @NameInMap("RelatedUserList")
+    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Tid")
     public Long tid;
@@ -22,30 +22,6 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
     public static CreateDataCronClearOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataCronClearOrderRequest self = new CreateDataCronClearOrderRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDataCronClearOrderRequest setComment(String comment) {
-        this.comment = comment;
-        return this;
-    }
-    public String getComment() {
-        return this.comment;
-    }
-
-    public CreateDataCronClearOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
-        this.relatedUserList = relatedUserList;
-        return this;
-    }
-    public java.util.List<Long> getRelatedUserList() {
-        return this.relatedUserList;
-    }
-
-    public CreateDataCronClearOrderRequest setParam(CreateDataCronClearOrderRequestParam param) {
-        this.param = param;
-        return this;
-    }
-    public CreateDataCronClearOrderRequestParam getParam() {
-        return this.param;
     }
 
     public CreateDataCronClearOrderRequest setAttachmentKey(String attachmentKey) {
@@ -56,12 +32,99 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
         return this.attachmentKey;
     }
 
+    public CreateDataCronClearOrderRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
+    }
+
+    public CreateDataCronClearOrderRequest setParam(CreateDataCronClearOrderRequestParam param) {
+        this.param = param;
+        return this;
+    }
+    public CreateDataCronClearOrderRequestParam getParam() {
+        return this.param;
+    }
+
+    public CreateDataCronClearOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
+        this.relatedUserList = relatedUserList;
+        return this;
+    }
+    public java.util.List<Long> getRelatedUserList() {
+        return this.relatedUserList;
+    }
+
     public CreateDataCronClearOrderRequest setTid(Long tid) {
         this.tid = tid;
         return this;
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public static class CreateDataCronClearOrderRequestParamCronClearItemList extends TeaModel {
+        @NameInMap("ColumnName")
+        public String columnName;
+
+        @NameInMap("FilterSQL")
+        public String filterSQL;
+
+        @NameInMap("RemainDays")
+        public Long remainDays;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("TimeUnit")
+        public String timeUnit;
+
+        public static CreateDataCronClearOrderRequestParamCronClearItemList build(java.util.Map<String, ?> map) throws Exception {
+            CreateDataCronClearOrderRequestParamCronClearItemList self = new CreateDataCronClearOrderRequestParamCronClearItemList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDataCronClearOrderRequestParamCronClearItemList setColumnName(String columnName) {
+            this.columnName = columnName;
+            return this;
+        }
+        public String getColumnName() {
+            return this.columnName;
+        }
+
+        public CreateDataCronClearOrderRequestParamCronClearItemList setFilterSQL(String filterSQL) {
+            this.filterSQL = filterSQL;
+            return this;
+        }
+        public String getFilterSQL() {
+            return this.filterSQL;
+        }
+
+        public CreateDataCronClearOrderRequestParamCronClearItemList setRemainDays(Long remainDays) {
+            this.remainDays = remainDays;
+            return this;
+        }
+        public Long getRemainDays() {
+            return this.remainDays;
+        }
+
+        public CreateDataCronClearOrderRequestParamCronClearItemList setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public CreateDataCronClearOrderRequestParamCronClearItemList setTimeUnit(String timeUnit) {
+            this.timeUnit = timeUnit;
+            return this;
+        }
+        public String getTimeUnit() {
+            return this.timeUnit;
+        }
+
     }
 
     public static class CreateDataCronClearOrderRequestParamDbItemList extends TeaModel {
@@ -94,87 +157,24 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
 
     }
 
-    public static class CreateDataCronClearOrderRequestParamCronClearItemList extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("ColumnName")
-        public String columnName;
-
-        @NameInMap("RemainDays")
-        public Long remainDays;
-
-        @NameInMap("TimeUnit")
-        public String timeUnit;
-
-        @NameInMap("FilterSQL")
-        public String filterSQL;
-
-        public static CreateDataCronClearOrderRequestParamCronClearItemList build(java.util.Map<String, ?> map) throws Exception {
-            CreateDataCronClearOrderRequestParamCronClearItemList self = new CreateDataCronClearOrderRequestParamCronClearItemList();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateDataCronClearOrderRequestParamCronClearItemList setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public CreateDataCronClearOrderRequestParamCronClearItemList setColumnName(String columnName) {
-            this.columnName = columnName;
-            return this;
-        }
-        public String getColumnName() {
-            return this.columnName;
-        }
-
-        public CreateDataCronClearOrderRequestParamCronClearItemList setRemainDays(Long remainDays) {
-            this.remainDays = remainDays;
-            return this;
-        }
-        public Long getRemainDays() {
-            return this.remainDays;
-        }
-
-        public CreateDataCronClearOrderRequestParamCronClearItemList setTimeUnit(String timeUnit) {
-            this.timeUnit = timeUnit;
-            return this;
-        }
-        public String getTimeUnit() {
-            return this.timeUnit;
-        }
-
-        public CreateDataCronClearOrderRequestParamCronClearItemList setFilterSQL(String filterSQL) {
-            this.filterSQL = filterSQL;
-            return this;
-        }
-        public String getFilterSQL() {
-            return this.filterSQL;
-        }
-
-    }
-
     public static class CreateDataCronClearOrderRequestParam extends TeaModel {
         @NameInMap("Classify")
         public String classify;
 
-        @NameInMap("DbItemList")
-        public java.util.List<CreateDataCronClearOrderRequestParamDbItemList> dbItemList;
+        @NameInMap("CronClearItemList")
+        public java.util.List<CreateDataCronClearOrderRequestParamCronClearItemList> cronClearItemList;
 
         @NameInMap("CronFormat")
         public String cronFormat;
 
-        @NameInMap("CronClearItemList")
-        public java.util.List<CreateDataCronClearOrderRequestParamCronClearItemList> cronClearItemList;
-
-        @NameInMap("specifyDuration")
-        public Boolean specifyDuration;
+        @NameInMap("DbItemList")
+        public java.util.List<CreateDataCronClearOrderRequestParamDbItemList> dbItemList;
 
         @NameInMap("DurationHour")
         public Long durationHour;
+
+        @NameInMap("specifyDuration")
+        public Boolean specifyDuration;
 
         public static CreateDataCronClearOrderRequestParam build(java.util.Map<String, ?> map) throws Exception {
             CreateDataCronClearOrderRequestParam self = new CreateDataCronClearOrderRequestParam();
@@ -189,12 +189,12 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
             return this.classify;
         }
 
-        public CreateDataCronClearOrderRequestParam setDbItemList(java.util.List<CreateDataCronClearOrderRequestParamDbItemList> dbItemList) {
-            this.dbItemList = dbItemList;
+        public CreateDataCronClearOrderRequestParam setCronClearItemList(java.util.List<CreateDataCronClearOrderRequestParamCronClearItemList> cronClearItemList) {
+            this.cronClearItemList = cronClearItemList;
             return this;
         }
-        public java.util.List<CreateDataCronClearOrderRequestParamDbItemList> getDbItemList() {
-            return this.dbItemList;
+        public java.util.List<CreateDataCronClearOrderRequestParamCronClearItemList> getCronClearItemList() {
+            return this.cronClearItemList;
         }
 
         public CreateDataCronClearOrderRequestParam setCronFormat(String cronFormat) {
@@ -205,20 +205,12 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
             return this.cronFormat;
         }
 
-        public CreateDataCronClearOrderRequestParam setCronClearItemList(java.util.List<CreateDataCronClearOrderRequestParamCronClearItemList> cronClearItemList) {
-            this.cronClearItemList = cronClearItemList;
+        public CreateDataCronClearOrderRequestParam setDbItemList(java.util.List<CreateDataCronClearOrderRequestParamDbItemList> dbItemList) {
+            this.dbItemList = dbItemList;
             return this;
         }
-        public java.util.List<CreateDataCronClearOrderRequestParamCronClearItemList> getCronClearItemList() {
-            return this.cronClearItemList;
-        }
-
-        public CreateDataCronClearOrderRequestParam setSpecifyDuration(Boolean specifyDuration) {
-            this.specifyDuration = specifyDuration;
-            return this;
-        }
-        public Boolean getSpecifyDuration() {
-            return this.specifyDuration;
+        public java.util.List<CreateDataCronClearOrderRequestParamDbItemList> getDbItemList() {
+            return this.dbItemList;
         }
 
         public CreateDataCronClearOrderRequestParam setDurationHour(Long durationHour) {
@@ -227,6 +219,14 @@ public class CreateDataCronClearOrderRequest extends TeaModel {
         }
         public Long getDurationHour() {
             return this.durationHour;
+        }
+
+        public CreateDataCronClearOrderRequestParam setSpecifyDuration(Boolean specifyDuration) {
+            this.specifyDuration = specifyDuration;
+            return this;
+        }
+        public Boolean getSpecifyDuration() {
+            return this.specifyDuration;
         }
 
     }

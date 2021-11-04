@@ -4,49 +4,25 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetStructSyncOrderDetailResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("StructSyncOrderDetail")
     public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail structSyncOrderDetail;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static GetStructSyncOrderDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetStructSyncOrderDetailResponseBody self = new GetStructSyncOrderDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetStructSyncOrderDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetStructSyncOrderDetailResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetStructSyncOrderDetailResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public GetStructSyncOrderDetailResponseBody setErrorCode(String errorCode) {
@@ -57,6 +33,22 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         return this.errorCode;
     }
 
+    public GetStructSyncOrderDetailResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetStructSyncOrderDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetStructSyncOrderDetailResponseBody setStructSyncOrderDetail(GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail structSyncOrderDetail) {
         this.structSyncOrderDetail = structSyncOrderDetail;
         return this;
@@ -65,12 +57,17 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         return this.structSyncOrderDetail;
     }
 
+    public GetStructSyncOrderDetailResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo extends TeaModel {
         @NameInMap("DbId")
         public Long dbId;
-
-        @NameInMap("SearchName")
-        public String searchName;
 
         @NameInMap("DbType")
         public String dbType;
@@ -80,6 +77,9 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
 
         @NameInMap("Logic")
         public Boolean logic;
+
+        @NameInMap("SearchName")
+        public String searchName;
 
         public static GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo build(java.util.Map<String, ?> map) throws Exception {
             GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo self = new GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo();
@@ -92,14 +92,6 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
         public Long getDbId() {
             return this.dbId;
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo setSearchName(String searchName) {
-            this.searchName = searchName;
-            return this;
-        }
-        public String getSearchName() {
-            return this.searchName;
         }
 
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo setDbType(String dbType) {
@@ -126,67 +118,12 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             return this.logic;
         }
 
-    }
-
-    public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo extends TeaModel {
-        @NameInMap("DbId")
-        public Long dbId;
-
-        @NameInMap("SearchName")
-        public String searchName;
-
-        @NameInMap("DbType")
-        public String dbType;
-
-        @NameInMap("EnvType")
-        public String envType;
-
-        @NameInMap("Logic")
-        public Boolean logic;
-
-        public static GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo self = new GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setDbId(Long dbId) {
-            this.dbId = dbId;
-            return this;
-        }
-        public Long getDbId() {
-            return this.dbId;
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setSearchName(String searchName) {
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo setSearchName(String searchName) {
             this.searchName = searchName;
             return this;
         }
         public String getSearchName() {
             return this.searchName;
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setDbType(String dbType) {
-            this.dbType = dbType;
-            return this;
-        }
-        public String getDbType() {
-            return this.dbType;
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setEnvType(String envType) {
-            this.envType = envType;
-            return this;
-        }
-        public String getEnvType() {
-            return this.envType;
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setLogic(Boolean logic) {
-            this.logic = logic;
-            return this;
-        }
-        public Boolean getLogic() {
-            return this.logic;
         }
 
     }
@@ -201,25 +138,6 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
 
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceVersionInfo setVersionId(String versionId) {
-            this.versionId = versionId;
-            return this;
-        }
-        public String getVersionId() {
-            return this.versionId;
-        }
-
-    }
-
-    public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo extends TeaModel {
-        @NameInMap("VersionId")
-        public String versionId;
-
-        public static GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo self = new GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo setVersionId(String versionId) {
             this.versionId = versionId;
             return this;
         }
@@ -259,12 +177,94 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo extends TeaModel {
+        @NameInMap("DbId")
+        public Long dbId;
+
+        @NameInMap("DbType")
+        public String dbType;
+
+        @NameInMap("EnvType")
+        public String envType;
+
+        @NameInMap("Logic")
+        public Boolean logic;
+
+        @NameInMap("SearchName")
+        public String searchName;
+
+        public static GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo self = new GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setDbId(Long dbId) {
+            this.dbId = dbId;
+            return this;
+        }
+        public Long getDbId() {
+            return this.dbId;
+        }
+
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setDbType(String dbType) {
+            this.dbType = dbType;
+            return this;
+        }
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
+        }
+
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setLogic(Boolean logic) {
+            this.logic = logic;
+            return this;
+        }
+        public Boolean getLogic() {
+            return this.logic;
+        }
+
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo setSearchName(String searchName) {
+            this.searchName = searchName;
+            return this;
+        }
+        public String getSearchName() {
+            return this.searchName;
+        }
+
+    }
+
+    public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo extends TeaModel {
+        @NameInMap("VersionId")
+        public String versionId;
+
+        public static GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo self = new GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo setVersionId(String versionId) {
+            this.versionId = versionId;
+            return this;
+        }
+        public String getVersionId() {
+            return this.versionId;
+        }
+
+    }
+
     public static class GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail extends TeaModel {
+        @NameInMap("IgnoreError")
+        public Boolean ignoreError;
+
         @NameInMap("SourceDatabaseInfo")
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo sourceDatabaseInfo;
-
-        @NameInMap("TargetDatabaseInfo")
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo targetDatabaseInfo;
 
         @NameInMap("SourceType")
         public String sourceType;
@@ -272,21 +272,29 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         @NameInMap("SourceVersionInfo")
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceVersionInfo sourceVersionInfo;
 
+        @NameInMap("TableInfoList")
+        public java.util.List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> tableInfoList;
+
+        @NameInMap("TargetDatabaseInfo")
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo targetDatabaseInfo;
+
         @NameInMap("TargetType")
         public String targetType;
 
         @NameInMap("TargetVersionInfo")
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo targetVersionInfo;
 
-        @NameInMap("TableInfoList")
-        public java.util.List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> tableInfoList;
-
-        @NameInMap("IgnoreError")
-        public Boolean ignoreError;
-
         public static GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail build(java.util.Map<String, ?> map) throws Exception {
             GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail self = new GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail();
             return TeaModel.build(map, self);
+        }
+
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail setIgnoreError(Boolean ignoreError) {
+            this.ignoreError = ignoreError;
+            return this;
+        }
+        public Boolean getIgnoreError() {
+            return this.ignoreError;
         }
 
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail setSourceDatabaseInfo(GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo sourceDatabaseInfo) {
@@ -295,14 +303,6 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailSourceDatabaseInfo getSourceDatabaseInfo() {
             return this.sourceDatabaseInfo;
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail setTargetDatabaseInfo(GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo targetDatabaseInfo) {
-            this.targetDatabaseInfo = targetDatabaseInfo;
-            return this;
-        }
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo getTargetDatabaseInfo() {
-            return this.targetDatabaseInfo;
         }
 
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail setSourceType(String sourceType) {
@@ -321,6 +321,22 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
             return this.sourceVersionInfo;
         }
 
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail setTableInfoList(java.util.List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> tableInfoList) {
+            this.tableInfoList = tableInfoList;
+            return this;
+        }
+        public java.util.List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> getTableInfoList() {
+            return this.tableInfoList;
+        }
+
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail setTargetDatabaseInfo(GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo targetDatabaseInfo) {
+            this.targetDatabaseInfo = targetDatabaseInfo;
+            return this;
+        }
+        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetDatabaseInfo getTargetDatabaseInfo() {
+            return this.targetDatabaseInfo;
+        }
+
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail setTargetType(String targetType) {
             this.targetType = targetType;
             return this;
@@ -335,22 +351,6 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
         }
         public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTargetVersionInfo getTargetVersionInfo() {
             return this.targetVersionInfo;
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail setTableInfoList(java.util.List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> tableInfoList) {
-            this.tableInfoList = tableInfoList;
-            return this;
-        }
-        public java.util.List<GetStructSyncOrderDetailResponseBodyStructSyncOrderDetailTableInfoList> getTableInfoList() {
-            return this.tableInfoList;
-        }
-
-        public GetStructSyncOrderDetailResponseBodyStructSyncOrderDetail setIgnoreError(Boolean ignoreError) {
-            this.ignoreError = ignoreError;
-            return this;
-        }
-        public Boolean getIgnoreError() {
-            return this.ignoreError;
         }
 
     }

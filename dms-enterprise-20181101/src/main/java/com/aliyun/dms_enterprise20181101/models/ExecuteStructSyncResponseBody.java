@@ -4,6 +4,12 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ExecuteStructSyncResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,15 +17,25 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     public static ExecuteStructSyncResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExecuteStructSyncResponseBody self = new ExecuteStructSyncResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ExecuteStructSyncResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ExecuteStructSyncResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ExecuteStructSyncResponseBody setRequestId(String requestId) {
@@ -36,22 +52,6 @@ public class ExecuteStructSyncResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public ExecuteStructSyncResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ExecuteStructSyncResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
 }

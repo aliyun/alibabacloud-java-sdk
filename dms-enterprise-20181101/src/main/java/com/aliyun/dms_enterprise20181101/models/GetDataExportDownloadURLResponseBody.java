@@ -7,14 +7,14 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
     @NameInMap("DownloadURLResult")
     public GetDataExportDownloadURLResponseBodyDownloadURLResult downloadURLResult;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -32,14 +32,6 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
         return this.downloadURLResult;
     }
 
-    public GetDataExportDownloadURLResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public GetDataExportDownloadURLResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -54,6 +46,14 @@ public class GetDataExportDownloadURLResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetDataExportDownloadURLResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetDataExportDownloadURLResponseBody setSuccess(Boolean success) {

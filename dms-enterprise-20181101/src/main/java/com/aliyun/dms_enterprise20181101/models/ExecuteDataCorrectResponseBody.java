@@ -4,14 +4,14 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ExecuteDataCorrectResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -19,14 +19,6 @@ public class ExecuteDataCorrectResponseBody extends TeaModel {
     public static ExecuteDataCorrectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExecuteDataCorrectResponseBody self = new ExecuteDataCorrectResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ExecuteDataCorrectResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ExecuteDataCorrectResponseBody setErrorCode(String errorCode) {
@@ -43,6 +35,14 @@ public class ExecuteDataCorrectResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public ExecuteDataCorrectResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ExecuteDataCorrectResponseBody setSuccess(Boolean success) {

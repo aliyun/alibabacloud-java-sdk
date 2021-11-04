@@ -4,23 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableColumnRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
     @NameInMap("TableGuid")
     public String tableGuid;
+
+    @NameInMap("Tid")
+    public Long tid;
 
     public static GetMetaTableColumnRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableColumnRequest self = new GetMetaTableColumnRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetMetaTableColumnRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
     }
 
     public GetMetaTableColumnRequest setTableGuid(String tableGuid) {
@@ -29,6 +21,14 @@ public class GetMetaTableColumnRequest extends TeaModel {
     }
     public String getTableGuid() {
         return this.tableGuid;
+    }
+
+    public GetMetaTableColumnRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

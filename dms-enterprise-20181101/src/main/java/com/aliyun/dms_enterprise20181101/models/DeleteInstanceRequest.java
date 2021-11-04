@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
     @NameInMap("Host")
     public String host;
 
@@ -16,17 +13,12 @@ public class DeleteInstanceRequest extends TeaModel {
     @NameInMap("Sid")
     public String sid;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static DeleteInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstanceRequest self = new DeleteInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteInstanceRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
     }
 
     public DeleteInstanceRequest setHost(String host) {
@@ -51,6 +43,14 @@ public class DeleteInstanceRequest extends TeaModel {
     }
     public String getSid() {
         return this.sid;
+    }
+
+    public DeleteInstanceRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

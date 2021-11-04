@@ -4,6 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateProxyResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("ProxyId")
+    public Long proxyId;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class CreateProxyResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ProxyId")
-    public Long proxyId;
-
     public static CreateProxyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateProxyResponseBody self = new CreateProxyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateProxyResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateProxyResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateProxyResponseBody setProxyId(Long proxyId) {
+        this.proxyId = proxyId;
+        return this;
+    }
+    public Long getProxyId() {
+        return this.proxyId;
     }
 
     public CreateProxyResponseBody setRequestId(String requestId) {
@@ -39,30 +63,6 @@ public class CreateProxyResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CreateProxyResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateProxyResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateProxyResponseBody setProxyId(Long proxyId) {
-        this.proxyId = proxyId;
-        return this;
-    }
-    public Long getProxyId() {
-        return this.proxyId;
     }
 
 }

@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetLogicDatabaseResponseBody extends TeaModel {
-    @NameInMap("LogicDatabase")
-    public GetLogicDatabaseResponseBodyLogicDatabase logicDatabase;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
+
+    @NameInMap("LogicDatabase")
+    public GetLogicDatabaseResponseBodyLogicDatabase logicDatabase;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -22,22 +22,6 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
     public static GetLogicDatabaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLogicDatabaseResponseBody self = new GetLogicDatabaseResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetLogicDatabaseResponseBody setLogicDatabase(GetLogicDatabaseResponseBodyLogicDatabase logicDatabase) {
-        this.logicDatabase = logicDatabase;
-        return this;
-    }
-    public GetLogicDatabaseResponseBodyLogicDatabase getLogicDatabase() {
-        return this.logicDatabase;
-    }
-
-    public GetLogicDatabaseResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetLogicDatabaseResponseBody setErrorCode(String errorCode) {
@@ -54,6 +38,22 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public GetLogicDatabaseResponseBody setLogicDatabase(GetLogicDatabaseResponseBodyLogicDatabase logicDatabase) {
+        this.logicDatabase = logicDatabase;
+        return this;
+    }
+    public GetLogicDatabaseResponseBodyLogicDatabase getLogicDatabase() {
+        return this.logicDatabase;
+    }
+
+    public GetLogicDatabaseResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetLogicDatabaseResponseBody setSuccess(Boolean success) {
@@ -103,20 +103,26 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
     }
 
     public static class GetLogicDatabaseResponseBodyLogicDatabase extends TeaModel {
+        @NameInMap("Alias")
+        public String alias;
+
         @NameInMap("DatabaseId")
         public String databaseId;
-
-        @NameInMap("OwnerIdList")
-        public GetLogicDatabaseResponseBodyLogicDatabaseOwnerIdList ownerIdList;
 
         @NameInMap("DbType")
         public String dbType;
 
-        @NameInMap("OwnerNameList")
-        public GetLogicDatabaseResponseBodyLogicDatabaseOwnerNameList ownerNameList;
+        @NameInMap("EnvType")
+        public String envType;
 
         @NameInMap("Logic")
         public Boolean logic;
+
+        @NameInMap("OwnerIdList")
+        public GetLogicDatabaseResponseBodyLogicDatabaseOwnerIdList ownerIdList;
+
+        @NameInMap("OwnerNameList")
+        public GetLogicDatabaseResponseBodyLogicDatabaseOwnerNameList ownerNameList;
 
         @NameInMap("SchemaName")
         public String schemaName;
@@ -124,12 +130,17 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         @NameInMap("SearchName")
         public String searchName;
 
-        @NameInMap("EnvType")
-        public String envType;
-
         public static GetLogicDatabaseResponseBodyLogicDatabase build(java.util.Map<String, ?> map) throws Exception {
             GetLogicDatabaseResponseBodyLogicDatabase self = new GetLogicDatabaseResponseBodyLogicDatabase();
             return TeaModel.build(map, self);
+        }
+
+        public GetLogicDatabaseResponseBodyLogicDatabase setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
         }
 
         public GetLogicDatabaseResponseBodyLogicDatabase setDatabaseId(String databaseId) {
@@ -140,14 +151,6 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             return this.databaseId;
         }
 
-        public GetLogicDatabaseResponseBodyLogicDatabase setOwnerIdList(GetLogicDatabaseResponseBodyLogicDatabaseOwnerIdList ownerIdList) {
-            this.ownerIdList = ownerIdList;
-            return this;
-        }
-        public GetLogicDatabaseResponseBodyLogicDatabaseOwnerIdList getOwnerIdList() {
-            return this.ownerIdList;
-        }
-
         public GetLogicDatabaseResponseBodyLogicDatabase setDbType(String dbType) {
             this.dbType = dbType;
             return this;
@@ -156,12 +159,12 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
             return this.dbType;
         }
 
-        public GetLogicDatabaseResponseBodyLogicDatabase setOwnerNameList(GetLogicDatabaseResponseBodyLogicDatabaseOwnerNameList ownerNameList) {
-            this.ownerNameList = ownerNameList;
+        public GetLogicDatabaseResponseBodyLogicDatabase setEnvType(String envType) {
+            this.envType = envType;
             return this;
         }
-        public GetLogicDatabaseResponseBodyLogicDatabaseOwnerNameList getOwnerNameList() {
-            return this.ownerNameList;
+        public String getEnvType() {
+            return this.envType;
         }
 
         public GetLogicDatabaseResponseBodyLogicDatabase setLogic(Boolean logic) {
@@ -170,6 +173,22 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         }
         public Boolean getLogic() {
             return this.logic;
+        }
+
+        public GetLogicDatabaseResponseBodyLogicDatabase setOwnerIdList(GetLogicDatabaseResponseBodyLogicDatabaseOwnerIdList ownerIdList) {
+            this.ownerIdList = ownerIdList;
+            return this;
+        }
+        public GetLogicDatabaseResponseBodyLogicDatabaseOwnerIdList getOwnerIdList() {
+            return this.ownerIdList;
+        }
+
+        public GetLogicDatabaseResponseBodyLogicDatabase setOwnerNameList(GetLogicDatabaseResponseBodyLogicDatabaseOwnerNameList ownerNameList) {
+            this.ownerNameList = ownerNameList;
+            return this;
+        }
+        public GetLogicDatabaseResponseBodyLogicDatabaseOwnerNameList getOwnerNameList() {
+            return this.ownerNameList;
         }
 
         public GetLogicDatabaseResponseBodyLogicDatabase setSchemaName(String schemaName) {
@@ -186,14 +205,6 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
         }
         public String getSearchName() {
             return this.searchName;
-        }
-
-        public GetLogicDatabaseResponseBodyLogicDatabase setEnvType(String envType) {
-            this.envType = envType;
-            return this;
-        }
-        public String getEnvType() {
-            return this.envType;
         }
 
     }

@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateStructSyncOrderRequest extends TeaModel {
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
+
     @NameInMap("Comment")
     public String comment;
-
-    @NameInMap("RelatedUserList")
-    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Param")
     public CreateStructSyncOrderRequestParam param;
 
-    @NameInMap("AttachmentKey")
-    public String attachmentKey;
+    @NameInMap("RelatedUserList")
+    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Tid")
     public Long tid;
@@ -22,6 +22,14 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     public static CreateStructSyncOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStructSyncOrderRequest self = new CreateStructSyncOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateStructSyncOrderRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
+        return this;
+    }
+    public String getAttachmentKey() {
+        return this.attachmentKey;
     }
 
     public CreateStructSyncOrderRequest setComment(String comment) {
@@ -32,14 +40,6 @@ public class CreateStructSyncOrderRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateStructSyncOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
-        this.relatedUserList = relatedUserList;
-        return this;
-    }
-    public java.util.List<Long> getRelatedUserList() {
-        return this.relatedUserList;
-    }
-
     public CreateStructSyncOrderRequest setParam(CreateStructSyncOrderRequestParam param) {
         this.param = param;
         return this;
@@ -48,12 +48,12 @@ public class CreateStructSyncOrderRequest extends TeaModel {
         return this.param;
     }
 
-    public CreateStructSyncOrderRequest setAttachmentKey(String attachmentKey) {
-        this.attachmentKey = attachmentKey;
+    public CreateStructSyncOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
+        this.relatedUserList = relatedUserList;
         return this;
     }
-    public String getAttachmentKey() {
-        return this.attachmentKey;
+    public java.util.List<Long> getRelatedUserList() {
+        return this.relatedUserList;
     }
 
     public CreateStructSyncOrderRequest setTid(Long tid) {
@@ -116,6 +116,36 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
     }
 
+    public static class CreateStructSyncOrderRequestParamTableInfoList extends TeaModel {
+        @NameInMap("SourceTableName")
+        public String sourceTableName;
+
+        @NameInMap("TargetTableName")
+        public String targetTableName;
+
+        public static CreateStructSyncOrderRequestParamTableInfoList build(java.util.Map<String, ?> map) throws Exception {
+            CreateStructSyncOrderRequestParamTableInfoList self = new CreateStructSyncOrderRequestParamTableInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateStructSyncOrderRequestParamTableInfoList setSourceTableName(String sourceTableName) {
+            this.sourceTableName = sourceTableName;
+            return this;
+        }
+        public String getSourceTableName() {
+            return this.sourceTableName;
+        }
+
+        public CreateStructSyncOrderRequestParamTableInfoList setTargetTableName(String targetTableName) {
+            this.targetTableName = targetTableName;
+            return this;
+        }
+        public String getTargetTableName() {
+            return this.targetTableName;
+        }
+
+    }
+
     public static class CreateStructSyncOrderRequestParamTarget extends TeaModel {
         @NameInMap("DbId")
         public Long dbId;
@@ -168,68 +198,22 @@ public class CreateStructSyncOrderRequest extends TeaModel {
 
     }
 
-    public static class CreateStructSyncOrderRequestParamTableInfoList extends TeaModel {
-        @NameInMap("SourceTableName")
-        public String sourceTableName;
-
-        @NameInMap("TargetTableName")
-        public String targetTableName;
-
-        public static CreateStructSyncOrderRequestParamTableInfoList build(java.util.Map<String, ?> map) throws Exception {
-            CreateStructSyncOrderRequestParamTableInfoList self = new CreateStructSyncOrderRequestParamTableInfoList();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateStructSyncOrderRequestParamTableInfoList setSourceTableName(String sourceTableName) {
-            this.sourceTableName = sourceTableName;
-            return this;
-        }
-        public String getSourceTableName() {
-            return this.sourceTableName;
-        }
-
-        public CreateStructSyncOrderRequestParamTableInfoList setTargetTableName(String targetTableName) {
-            this.targetTableName = targetTableName;
-            return this;
-        }
-        public String getTargetTableName() {
-            return this.targetTableName;
-        }
-
-    }
-
     public static class CreateStructSyncOrderRequestParam extends TeaModel {
-        @NameInMap("Source")
-        public CreateStructSyncOrderRequestParamSource source;
-
-        @NameInMap("Target")
-        public CreateStructSyncOrderRequestParamTarget target;
-
         @NameInMap("IgnoreError")
         public Boolean ignoreError;
+
+        @NameInMap("Source")
+        public CreateStructSyncOrderRequestParamSource source;
 
         @NameInMap("TableInfoList")
         public java.util.List<CreateStructSyncOrderRequestParamTableInfoList> tableInfoList;
 
+        @NameInMap("Target")
+        public CreateStructSyncOrderRequestParamTarget target;
+
         public static CreateStructSyncOrderRequestParam build(java.util.Map<String, ?> map) throws Exception {
             CreateStructSyncOrderRequestParam self = new CreateStructSyncOrderRequestParam();
             return TeaModel.build(map, self);
-        }
-
-        public CreateStructSyncOrderRequestParam setSource(CreateStructSyncOrderRequestParamSource source) {
-            this.source = source;
-            return this;
-        }
-        public CreateStructSyncOrderRequestParamSource getSource() {
-            return this.source;
-        }
-
-        public CreateStructSyncOrderRequestParam setTarget(CreateStructSyncOrderRequestParamTarget target) {
-            this.target = target;
-            return this;
-        }
-        public CreateStructSyncOrderRequestParamTarget getTarget() {
-            return this.target;
         }
 
         public CreateStructSyncOrderRequestParam setIgnoreError(Boolean ignoreError) {
@@ -240,12 +224,28 @@ public class CreateStructSyncOrderRequest extends TeaModel {
             return this.ignoreError;
         }
 
+        public CreateStructSyncOrderRequestParam setSource(CreateStructSyncOrderRequestParamSource source) {
+            this.source = source;
+            return this;
+        }
+        public CreateStructSyncOrderRequestParamSource getSource() {
+            return this.source;
+        }
+
         public CreateStructSyncOrderRequestParam setTableInfoList(java.util.List<CreateStructSyncOrderRequestParamTableInfoList> tableInfoList) {
             this.tableInfoList = tableInfoList;
             return this;
         }
         public java.util.List<CreateStructSyncOrderRequestParamTableInfoList> getTableInfoList() {
             return this.tableInfoList;
+        }
+
+        public CreateStructSyncOrderRequestParam setTarget(CreateStructSyncOrderRequestParamTarget target) {
+            this.target = target;
+            return this;
+        }
+        public CreateStructSyncOrderRequestParamTarget getTarget() {
+            return this.target;
         }
 
     }

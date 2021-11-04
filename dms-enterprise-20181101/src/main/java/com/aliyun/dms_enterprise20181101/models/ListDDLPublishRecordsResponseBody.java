@@ -4,6 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListDDLPublishRecordsResponseBody extends TeaModel {
+    @NameInMap("DDLPublishRecordList")
+    public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordList> DDLPublishRecordList;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("DDLPublishRecordList")
-    public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordList> DDLPublishRecordList;
-
     public static ListDDLPublishRecordsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDDLPublishRecordsResponseBody self = new ListDDLPublishRecordsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListDDLPublishRecordsResponseBody setDDLPublishRecordList(java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordList> DDLPublishRecordList) {
+        this.DDLPublishRecordList = DDLPublishRecordList;
+        return this;
+    }
+    public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordList> getDDLPublishRecordList() {
+        return this.DDLPublishRecordList;
+    }
+
+    public ListDDLPublishRecordsResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListDDLPublishRecordsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public ListDDLPublishRecordsResponseBody setRequestId(String requestId) {
@@ -41,52 +65,36 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public ListDDLPublishRecordsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public ListDDLPublishRecordsResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ListDDLPublishRecordsResponseBody setDDLPublishRecordList(java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordList> DDLPublishRecordList) {
-        this.DDLPublishRecordList = DDLPublishRecordList;
-        return this;
-    }
-    public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordList> getDDLPublishRecordList() {
-        return this.DDLPublishRecordList;
-    }
-
     public static class ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList extends TeaModel {
+        @NameInMap("DBTaskGroupId")
+        public Long DBTaskGroupId;
+
         @NameInMap("ExecuteCount")
         public Long executeCount;
 
         @NameInMap("Scripts")
         public String scripts;
 
-        @NameInMap("TableName")
-        public String tableName;
-
         @NameInMap("StatusDesc")
         public String statusDesc;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         @NameInMap("TaskJobStatus")
         public String taskJobStatus;
 
-        @NameInMap("DBTaskGroupId")
-        public Long DBTaskGroupId;
-
         public static ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList build(java.util.Map<String, ?> map) throws Exception {
             ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList self = new ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList();
             return TeaModel.build(map, self);
+        }
+
+        public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList setDBTaskGroupId(Long DBTaskGroupId) {
+            this.DBTaskGroupId = DBTaskGroupId;
+            return this;
+        }
+        public Long getDBTaskGroupId() {
+            return this.DBTaskGroupId;
         }
 
         public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList setExecuteCount(Long executeCount) {
@@ -105,14 +113,6 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             return this.scripts;
         }
 
-        public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
-        }
-
         public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList setStatusDesc(String statusDesc) {
             this.statusDesc = statusDesc;
             return this;
@@ -121,20 +121,20 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             return this.statusDesc;
         }
 
+        public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
         public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList setTaskJobStatus(String taskJobStatus) {
             this.taskJobStatus = taskJobStatus;
             return this;
         }
         public String getTaskJobStatus() {
             return this.taskJobStatus;
-        }
-
-        public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList setDBTaskGroupId(Long DBTaskGroupId) {
-            this.DBTaskGroupId = DBTaskGroupId;
-            return this;
-        }
-        public Long getDBTaskGroupId() {
-            return this.DBTaskGroupId;
         }
 
     }
@@ -149,6 +149,9 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         @NameInMap("PlanTime")
         public String planTime;
 
+        @NameInMap("PublishJobList")
+        public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> publishJobList;
+
         @NameInMap("PublishStrategy")
         public String publishStrategy;
 
@@ -157,9 +160,6 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
 
         @NameInMap("TaskJobStatus")
         public String taskJobStatus;
-
-        @NameInMap("PublishJobList")
-        public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> publishJobList;
 
         public static ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList build(java.util.Map<String, ?> map) throws Exception {
             ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList self = new ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList();
@@ -190,6 +190,14 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             return this.planTime;
         }
 
+        public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList setPublishJobList(java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> publishJobList) {
+            this.publishJobList = publishJobList;
+            return this;
+        }
+        public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> getPublishJobList() {
+            return this.publishJobList;
+        }
+
         public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList setPublishStrategy(String publishStrategy) {
             this.publishStrategy = publishStrategy;
             return this;
@@ -214,22 +222,14 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             return this.taskJobStatus;
         }
 
-        public ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList setPublishJobList(java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> publishJobList) {
-            this.publishJobList = publishJobList;
-            return this;
-        }
-        public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoListPublishJobList> getPublishJobList() {
-            return this.publishJobList;
-        }
-
     }
 
     public static class ListDDLPublishRecordsResponseBodyDDLPublishRecordList extends TeaModel {
-        @NameInMap("AuditStatus")
-        public String auditStatus;
-
         @NameInMap("AuditExpireTime")
         public String auditExpireTime;
+
+        @NameInMap("AuditStatus")
+        public String auditStatus;
 
         @NameInMap("CreatorId")
         public Long creatorId;
@@ -243,6 +243,9 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         @NameInMap("PublishStatus")
         public String publishStatus;
 
+        @NameInMap("PublishTaskInfoList")
+        public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList> publishTaskInfoList;
+
         @NameInMap("RiskLevel")
         public String riskLevel;
 
@@ -252,20 +255,9 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         @NameInMap("WorkflowInstanceId")
         public Long workflowInstanceId;
 
-        @NameInMap("PublishTaskInfoList")
-        public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList> publishTaskInfoList;
-
         public static ListDDLPublishRecordsResponseBodyDDLPublishRecordList build(java.util.Map<String, ?> map) throws Exception {
             ListDDLPublishRecordsResponseBodyDDLPublishRecordList self = new ListDDLPublishRecordsResponseBodyDDLPublishRecordList();
             return TeaModel.build(map, self);
-        }
-
-        public ListDDLPublishRecordsResponseBodyDDLPublishRecordList setAuditStatus(String auditStatus) {
-            this.auditStatus = auditStatus;
-            return this;
-        }
-        public String getAuditStatus() {
-            return this.auditStatus;
         }
 
         public ListDDLPublishRecordsResponseBodyDDLPublishRecordList setAuditExpireTime(String auditExpireTime) {
@@ -274,6 +266,14 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         }
         public String getAuditExpireTime() {
             return this.auditExpireTime;
+        }
+
+        public ListDDLPublishRecordsResponseBodyDDLPublishRecordList setAuditStatus(String auditStatus) {
+            this.auditStatus = auditStatus;
+            return this;
+        }
+        public String getAuditStatus() {
+            return this.auditStatus;
         }
 
         public ListDDLPublishRecordsResponseBodyDDLPublishRecordList setCreatorId(Long creatorId) {
@@ -308,6 +308,14 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
             return this.publishStatus;
         }
 
+        public ListDDLPublishRecordsResponseBodyDDLPublishRecordList setPublishTaskInfoList(java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList> publishTaskInfoList) {
+            this.publishTaskInfoList = publishTaskInfoList;
+            return this;
+        }
+        public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList> getPublishTaskInfoList() {
+            return this.publishTaskInfoList;
+        }
+
         public ListDDLPublishRecordsResponseBodyDDLPublishRecordList setRiskLevel(String riskLevel) {
             this.riskLevel = riskLevel;
             return this;
@@ -330,14 +338,6 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
         }
         public Long getWorkflowInstanceId() {
             return this.workflowInstanceId;
-        }
-
-        public ListDDLPublishRecordsResponseBodyDDLPublishRecordList setPublishTaskInfoList(java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList> publishTaskInfoList) {
-            this.publishTaskInfoList = publishTaskInfoList;
-            return this;
-        }
-        public java.util.List<ListDDLPublishRecordsResponseBodyDDLPublishRecordListPublishTaskInfoList> getPublishTaskInfoList() {
-            return this.publishTaskInfoList;
         }
 
     }

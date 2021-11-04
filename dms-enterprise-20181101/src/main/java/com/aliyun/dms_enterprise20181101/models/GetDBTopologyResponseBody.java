@@ -4,6 +4,15 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetDBTopologyResponseBody extends TeaModel {
+    @NameInMap("DBTopology")
+    public GetDBTopologyResponseBodyDBTopology DBTopology;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     // Id of the request
     @NameInMap("RequestId")
     public String requestId;
@@ -11,18 +20,33 @@ public class GetDBTopologyResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("DBTopology")
-    public GetDBTopologyResponseBodyDBTopology DBTopology;
-
     public static GetDBTopologyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDBTopologyResponseBody self = new GetDBTopologyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetDBTopologyResponseBody setDBTopology(GetDBTopologyResponseBodyDBTopology DBTopology) {
+        this.DBTopology = DBTopology;
+        return this;
+    }
+    public GetDBTopologyResponseBodyDBTopology getDBTopology() {
+        return this.DBTopology;
+    }
+
+    public GetDBTopologyResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetDBTopologyResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetDBTopologyResponseBody setRequestId(String requestId) {
@@ -41,42 +65,12 @@ public class GetDBTopologyResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetDBTopologyResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetDBTopologyResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public GetDBTopologyResponseBody setDBTopology(GetDBTopologyResponseBodyDBTopology DBTopology) {
-        this.DBTopology = DBTopology;
-        return this;
-    }
-    public GetDBTopologyResponseBodyDBTopology getDBTopology() {
-        return this.DBTopology;
-    }
-
     public static class GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList extends TeaModel {
-        @NameInMap("DbId")
-        public Long dbId;
-
-        @NameInMap("SchemaName")
-        public String schemaName;
-
         @NameInMap("CatalogName")
         public String catalogName;
 
-        @NameInMap("SearchName")
-        public String searchName;
+        @NameInMap("DbId")
+        public Long dbId;
 
         @NameInMap("DbType")
         public String dbType;
@@ -87,34 +81,24 @@ public class GetDBTopologyResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public Long instanceId;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
         @NameInMap("InstanceResourceId")
         public String instanceResourceId;
 
         @NameInMap("InstanceSource")
         public String instanceSource;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("SchemaName")
+        public String schemaName;
+
+        @NameInMap("SearchName")
+        public String searchName;
+
         public static GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList build(java.util.Map<String, ?> map) throws Exception {
             GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList self = new GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList();
             return TeaModel.build(map, self);
-        }
-
-        public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setDbId(Long dbId) {
-            this.dbId = dbId;
-            return this;
-        }
-        public Long getDbId() {
-            return this.dbId;
-        }
-
-        public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setSchemaName(String schemaName) {
-            this.schemaName = schemaName;
-            return this;
-        }
-        public String getSchemaName() {
-            return this.schemaName;
         }
 
         public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setCatalogName(String catalogName) {
@@ -125,12 +109,12 @@ public class GetDBTopologyResponseBody extends TeaModel {
             return this.catalogName;
         }
 
-        public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setSearchName(String searchName) {
-            this.searchName = searchName;
+        public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setDbId(Long dbId) {
+            this.dbId = dbId;
             return this;
         }
-        public String getSearchName() {
-            return this.searchName;
+        public Long getDbId() {
+            return this.dbId;
         }
 
         public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setDbType(String dbType) {
@@ -157,14 +141,6 @@ public class GetDBTopologyResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
         public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setInstanceResourceId(String instanceResourceId) {
             this.instanceResourceId = instanceResourceId;
             return this;
@@ -181,9 +157,45 @@ public class GetDBTopologyResponseBody extends TeaModel {
             return this.instanceSource;
         }
 
+        public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
+            return this;
+        }
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        public GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList setSearchName(String searchName) {
+            this.searchName = searchName;
+            return this;
+        }
+        public String getSearchName() {
+            return this.searchName;
+        }
+
     }
 
     public static class GetDBTopologyResponseBodyDBTopology extends TeaModel {
+        @NameInMap("Alias")
+        public String alias;
+
+        @NameInMap("DBTopologyInfoList")
+        public java.util.List<GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList> DBTopologyInfoList;
+
+        @NameInMap("DbType")
+        public String dbType;
+
+        @NameInMap("EnvType")
+        public String envType;
+
         @NameInMap("LogicDbId")
         public Long logicDbId;
 
@@ -193,21 +205,41 @@ public class GetDBTopologyResponseBody extends TeaModel {
         @NameInMap("SearchName")
         public String searchName;
 
-        @NameInMap("Alias")
-        public String alias;
-
-        @NameInMap("DbType")
-        public String dbType;
-
-        @NameInMap("EnvType")
-        public String envType;
-
-        @NameInMap("DBTopologyInfoList")
-        public java.util.List<GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList> DBTopologyInfoList;
-
         public static GetDBTopologyResponseBodyDBTopology build(java.util.Map<String, ?> map) throws Exception {
             GetDBTopologyResponseBodyDBTopology self = new GetDBTopologyResponseBodyDBTopology();
             return TeaModel.build(map, self);
+        }
+
+        public GetDBTopologyResponseBodyDBTopology setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
+        }
+
+        public GetDBTopologyResponseBodyDBTopology setDBTopologyInfoList(java.util.List<GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList> DBTopologyInfoList) {
+            this.DBTopologyInfoList = DBTopologyInfoList;
+            return this;
+        }
+        public java.util.List<GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList> getDBTopologyInfoList() {
+            return this.DBTopologyInfoList;
+        }
+
+        public GetDBTopologyResponseBodyDBTopology setDbType(String dbType) {
+            this.dbType = dbType;
+            return this;
+        }
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        public GetDBTopologyResponseBodyDBTopology setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
         }
 
         public GetDBTopologyResponseBodyDBTopology setLogicDbId(Long logicDbId) {
@@ -232,38 +264,6 @@ public class GetDBTopologyResponseBody extends TeaModel {
         }
         public String getSearchName() {
             return this.searchName;
-        }
-
-        public GetDBTopologyResponseBodyDBTopology setAlias(String alias) {
-            this.alias = alias;
-            return this;
-        }
-        public String getAlias() {
-            return this.alias;
-        }
-
-        public GetDBTopologyResponseBodyDBTopology setDbType(String dbType) {
-            this.dbType = dbType;
-            return this;
-        }
-        public String getDbType() {
-            return this.dbType;
-        }
-
-        public GetDBTopologyResponseBodyDBTopology setEnvType(String envType) {
-            this.envType = envType;
-            return this;
-        }
-        public String getEnvType() {
-            return this.envType;
-        }
-
-        public GetDBTopologyResponseBodyDBTopology setDBTopologyInfoList(java.util.List<GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList> DBTopologyInfoList) {
-            this.DBTopologyInfoList = DBTopologyInfoList;
-            return this;
-        }
-        public java.util.List<GetDBTopologyResponseBodyDBTopologyDBTopologyInfoList> getDBTopologyInfoList() {
-            return this.DBTopologyInfoList;
         }
 
     }

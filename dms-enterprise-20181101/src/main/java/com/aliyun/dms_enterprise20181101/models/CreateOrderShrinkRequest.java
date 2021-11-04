@@ -4,8 +4,8 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderShrinkRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
 
     @NameInMap("Comment")
     public String comment;
@@ -13,26 +13,26 @@ public class CreateOrderShrinkRequest extends TeaModel {
     @NameInMap("PluginParam")
     public String pluginParamShrink;
 
-    @NameInMap("RelatedUserList")
-    public String relatedUserList;
-
     @NameInMap("PluginType")
     public String pluginType;
 
-    @NameInMap("AttachmentKey")
-    public String attachmentKey;
+    @NameInMap("RelatedUserList")
+    public String relatedUserList;
+
+    @NameInMap("Tid")
+    public Long tid;
 
     public static CreateOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderShrinkRequest self = new CreateOrderShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateOrderShrinkRequest setTid(Long tid) {
-        this.tid = tid;
+    public CreateOrderShrinkRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
+    public String getAttachmentKey() {
+        return this.attachmentKey;
     }
 
     public CreateOrderShrinkRequest setComment(String comment) {
@@ -51,14 +51,6 @@ public class CreateOrderShrinkRequest extends TeaModel {
         return this.pluginParamShrink;
     }
 
-    public CreateOrderShrinkRequest setRelatedUserList(String relatedUserList) {
-        this.relatedUserList = relatedUserList;
-        return this;
-    }
-    public String getRelatedUserList() {
-        return this.relatedUserList;
-    }
-
     public CreateOrderShrinkRequest setPluginType(String pluginType) {
         this.pluginType = pluginType;
         return this;
@@ -67,12 +59,20 @@ public class CreateOrderShrinkRequest extends TeaModel {
         return this.pluginType;
     }
 
-    public CreateOrderShrinkRequest setAttachmentKey(String attachmentKey) {
-        this.attachmentKey = attachmentKey;
+    public CreateOrderShrinkRequest setRelatedUserList(String relatedUserList) {
+        this.relatedUserList = relatedUserList;
         return this;
     }
-    public String getAttachmentKey() {
-        return this.attachmentKey;
+    public String getRelatedUserList() {
+        return this.relatedUserList;
+    }
+
+    public CreateOrderShrinkRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

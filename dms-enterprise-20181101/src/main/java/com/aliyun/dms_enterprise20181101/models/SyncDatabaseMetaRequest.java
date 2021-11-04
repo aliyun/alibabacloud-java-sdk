@@ -4,26 +4,18 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SyncDatabaseMetaRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
     @NameInMap("DbId")
     public String dbId;
 
     @NameInMap("Logic")
     public Boolean logic;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static SyncDatabaseMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         SyncDatabaseMetaRequest self = new SyncDatabaseMetaRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SyncDatabaseMetaRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
     }
 
     public SyncDatabaseMetaRequest setDbId(String dbId) {
@@ -40,6 +32,14 @@ public class SyncDatabaseMetaRequest extends TeaModel {
     }
     public Boolean getLogic() {
         return this.logic;
+    }
+
+    public SyncDatabaseMetaRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

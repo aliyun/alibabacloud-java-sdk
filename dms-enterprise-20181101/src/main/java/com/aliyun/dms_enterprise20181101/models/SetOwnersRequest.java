@@ -4,37 +4,29 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SetOwnersRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
-    @NameInMap("ResourceId")
-    public String resourceId;
+    @NameInMap("OwnerIds")
+    public String ownerIds;
 
     @NameInMap("OwnerType")
     public String ownerType;
 
-    @NameInMap("OwnerIds")
-    public String ownerIds;
+    @NameInMap("ResourceId")
+    public String resourceId;
+
+    @NameInMap("Tid")
+    public Long tid;
 
     public static SetOwnersRequest build(java.util.Map<String, ?> map) throws Exception {
         SetOwnersRequest self = new SetOwnersRequest();
         return TeaModel.build(map, self);
     }
 
-    public SetOwnersRequest setTid(Long tid) {
-        this.tid = tid;
+    public SetOwnersRequest setOwnerIds(String ownerIds) {
+        this.ownerIds = ownerIds;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
-    }
-
-    public SetOwnersRequest setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
+    public String getOwnerIds() {
+        return this.ownerIds;
     }
 
     public SetOwnersRequest setOwnerType(String ownerType) {
@@ -45,12 +37,20 @@ public class SetOwnersRequest extends TeaModel {
         return this.ownerType;
     }
 
-    public SetOwnersRequest setOwnerIds(String ownerIds) {
-        this.ownerIds = ownerIds;
+    public SetOwnersRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public String getOwnerIds() {
-        return this.ownerIds;
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public SetOwnersRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

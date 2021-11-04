@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateFreeLockCorrectOrderRequest extends TeaModel {
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
+
     @NameInMap("Comment")
     public String comment;
-
-    @NameInMap("RelatedUserList")
-    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Param")
     public CreateFreeLockCorrectOrderRequestParam param;
 
-    @NameInMap("AttachmentKey")
-    public String attachmentKey;
+    @NameInMap("RelatedUserList")
+    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Tid")
     public Long tid;
@@ -22,6 +22,14 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
     public static CreateFreeLockCorrectOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFreeLockCorrectOrderRequest self = new CreateFreeLockCorrectOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateFreeLockCorrectOrderRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
+        return this;
+    }
+    public String getAttachmentKey() {
+        return this.attachmentKey;
     }
 
     public CreateFreeLockCorrectOrderRequest setComment(String comment) {
@@ -32,14 +40,6 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateFreeLockCorrectOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
-        this.relatedUserList = relatedUserList;
-        return this;
-    }
-    public java.util.List<Long> getRelatedUserList() {
-        return this.relatedUserList;
-    }
-
     public CreateFreeLockCorrectOrderRequest setParam(CreateFreeLockCorrectOrderRequestParam param) {
         this.param = param;
         return this;
@@ -48,12 +48,12 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
         return this.param;
     }
 
-    public CreateFreeLockCorrectOrderRequest setAttachmentKey(String attachmentKey) {
-        this.attachmentKey = attachmentKey;
+    public CreateFreeLockCorrectOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
+        this.relatedUserList = relatedUserList;
         return this;
     }
-    public String getAttachmentKey() {
-        return this.attachmentKey;
+    public java.util.List<Long> getRelatedUserList() {
+        return this.relatedUserList;
     }
 
     public CreateFreeLockCorrectOrderRequest setTid(Long tid) {
@@ -95,57 +95,33 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
     }
 
     public static class CreateFreeLockCorrectOrderRequestParam extends TeaModel {
-        @NameInMap("Classify")
-        public String classify;
-
-        @NameInMap("ExecSQL")
-        public String execSQL;
-
-        @NameInMap("SqlType")
-        public String sqlType;
-
         @NameInMap("AttachmentName")
         public String attachmentName;
 
-        @NameInMap("RollbackSQL")
-        public String rollbackSQL;
-
-        @NameInMap("RollbackAttachmentName")
-        public String rollbackAttachmentName;
-
-        @NameInMap("RollbackSqlType")
-        public String rollbackSqlType;
+        @NameInMap("Classify")
+        public String classify;
 
         @NameInMap("DbItemList")
         public java.util.List<CreateFreeLockCorrectOrderRequestParamDbItemList> dbItemList;
 
+        @NameInMap("ExecSQL")
+        public String execSQL;
+
+        @NameInMap("RollbackAttachmentName")
+        public String rollbackAttachmentName;
+
+        @NameInMap("RollbackSQL")
+        public String rollbackSQL;
+
+        @NameInMap("RollbackSqlType")
+        public String rollbackSqlType;
+
+        @NameInMap("SqlType")
+        public String sqlType;
+
         public static CreateFreeLockCorrectOrderRequestParam build(java.util.Map<String, ?> map) throws Exception {
             CreateFreeLockCorrectOrderRequestParam self = new CreateFreeLockCorrectOrderRequestParam();
             return TeaModel.build(map, self);
-        }
-
-        public CreateFreeLockCorrectOrderRequestParam setClassify(String classify) {
-            this.classify = classify;
-            return this;
-        }
-        public String getClassify() {
-            return this.classify;
-        }
-
-        public CreateFreeLockCorrectOrderRequestParam setExecSQL(String execSQL) {
-            this.execSQL = execSQL;
-            return this;
-        }
-        public String getExecSQL() {
-            return this.execSQL;
-        }
-
-        public CreateFreeLockCorrectOrderRequestParam setSqlType(String sqlType) {
-            this.sqlType = sqlType;
-            return this;
-        }
-        public String getSqlType() {
-            return this.sqlType;
         }
 
         public CreateFreeLockCorrectOrderRequestParam setAttachmentName(String attachmentName) {
@@ -156,12 +132,28 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
             return this.attachmentName;
         }
 
-        public CreateFreeLockCorrectOrderRequestParam setRollbackSQL(String rollbackSQL) {
-            this.rollbackSQL = rollbackSQL;
+        public CreateFreeLockCorrectOrderRequestParam setClassify(String classify) {
+            this.classify = classify;
             return this;
         }
-        public String getRollbackSQL() {
-            return this.rollbackSQL;
+        public String getClassify() {
+            return this.classify;
+        }
+
+        public CreateFreeLockCorrectOrderRequestParam setDbItemList(java.util.List<CreateFreeLockCorrectOrderRequestParamDbItemList> dbItemList) {
+            this.dbItemList = dbItemList;
+            return this;
+        }
+        public java.util.List<CreateFreeLockCorrectOrderRequestParamDbItemList> getDbItemList() {
+            return this.dbItemList;
+        }
+
+        public CreateFreeLockCorrectOrderRequestParam setExecSQL(String execSQL) {
+            this.execSQL = execSQL;
+            return this;
+        }
+        public String getExecSQL() {
+            return this.execSQL;
         }
 
         public CreateFreeLockCorrectOrderRequestParam setRollbackAttachmentName(String rollbackAttachmentName) {
@@ -172,6 +164,14 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
             return this.rollbackAttachmentName;
         }
 
+        public CreateFreeLockCorrectOrderRequestParam setRollbackSQL(String rollbackSQL) {
+            this.rollbackSQL = rollbackSQL;
+            return this;
+        }
+        public String getRollbackSQL() {
+            return this.rollbackSQL;
+        }
+
         public CreateFreeLockCorrectOrderRequestParam setRollbackSqlType(String rollbackSqlType) {
             this.rollbackSqlType = rollbackSqlType;
             return this;
@@ -180,12 +180,12 @@ public class CreateFreeLockCorrectOrderRequest extends TeaModel {
             return this.rollbackSqlType;
         }
 
-        public CreateFreeLockCorrectOrderRequestParam setDbItemList(java.util.List<CreateFreeLockCorrectOrderRequestParamDbItemList> dbItemList) {
-            this.dbItemList = dbItemList;
+        public CreateFreeLockCorrectOrderRequestParam setSqlType(String sqlType) {
+            this.sqlType = sqlType;
             return this;
         }
-        public java.util.List<CreateFreeLockCorrectOrderRequestParamDbItemList> getDbItemList() {
-            return this.dbItemList;
+        public String getSqlType() {
+            return this.sqlType;
         }
 
     }

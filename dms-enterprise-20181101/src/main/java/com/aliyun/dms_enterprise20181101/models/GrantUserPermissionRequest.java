@@ -4,23 +4,23 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GrantUserPermissionRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
-    @NameInMap("UserId")
-    public String userId;
+    @NameInMap("DbId")
+    public String dbId;
 
     @NameInMap("DsType")
     public String dsType;
 
+    @NameInMap("ExpireDate")
+    public String expireDate;
+
     @NameInMap("InstanceId")
     public Long instanceId;
 
-    @NameInMap("DbId")
-    public String dbId;
-
     @NameInMap("Logic")
     public Boolean logic;
+
+    @NameInMap("PermTypes")
+    public String permTypes;
 
     @NameInMap("TableId")
     public String tableId;
@@ -28,47 +28,15 @@ public class GrantUserPermissionRequest extends TeaModel {
     @NameInMap("TableName")
     public String tableName;
 
-    @NameInMap("PermTypes")
-    public String permTypes;
+    @NameInMap("Tid")
+    public Long tid;
 
-    @NameInMap("ExpireDate")
-    public String expireDate;
+    @NameInMap("UserId")
+    public String userId;
 
     public static GrantUserPermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantUserPermissionRequest self = new GrantUserPermissionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GrantUserPermissionRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
-    }
-
-    public GrantUserPermissionRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public GrantUserPermissionRequest setDsType(String dsType) {
-        this.dsType = dsType;
-        return this;
-    }
-    public String getDsType() {
-        return this.dsType;
-    }
-
-    public GrantUserPermissionRequest setInstanceId(Long instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public Long getInstanceId() {
-        return this.instanceId;
     }
 
     public GrantUserPermissionRequest setDbId(String dbId) {
@@ -79,12 +47,44 @@ public class GrantUserPermissionRequest extends TeaModel {
         return this.dbId;
     }
 
+    public GrantUserPermissionRequest setDsType(String dsType) {
+        this.dsType = dsType;
+        return this;
+    }
+    public String getDsType() {
+        return this.dsType;
+    }
+
+    public GrantUserPermissionRequest setExpireDate(String expireDate) {
+        this.expireDate = expireDate;
+        return this;
+    }
+    public String getExpireDate() {
+        return this.expireDate;
+    }
+
+    public GrantUserPermissionRequest setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public Long getInstanceId() {
+        return this.instanceId;
+    }
+
     public GrantUserPermissionRequest setLogic(Boolean logic) {
         this.logic = logic;
         return this;
     }
     public Boolean getLogic() {
         return this.logic;
+    }
+
+    public GrantUserPermissionRequest setPermTypes(String permTypes) {
+        this.permTypes = permTypes;
+        return this;
+    }
+    public String getPermTypes() {
+        return this.permTypes;
     }
 
     public GrantUserPermissionRequest setTableId(String tableId) {
@@ -103,20 +103,20 @@ public class GrantUserPermissionRequest extends TeaModel {
         return this.tableName;
     }
 
-    public GrantUserPermissionRequest setPermTypes(String permTypes) {
-        this.permTypes = permTypes;
+    public GrantUserPermissionRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public String getPermTypes() {
-        return this.permTypes;
+    public Long getTid() {
+        return this.tid;
     }
 
-    public GrantUserPermissionRequest setExpireDate(String expireDate) {
-        this.expireDate = expireDate;
+    public GrantUserPermissionRequest setUserId(String userId) {
+        this.userId = userId;
         return this;
     }
-    public String getExpireDate() {
-        return this.expireDate;
+    public String getUserId() {
+        return this.userId;
     }
 
 }

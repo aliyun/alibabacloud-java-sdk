@@ -4,26 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class SyncInstanceMetaRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
+    @NameInMap("IgnoreTable")
+    public Boolean ignoreTable;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("IgnoreTable")
-    public Boolean ignoreTable;
+    @NameInMap("Tid")
+    public Long tid;
 
     public static SyncInstanceMetaRequest build(java.util.Map<String, ?> map) throws Exception {
         SyncInstanceMetaRequest self = new SyncInstanceMetaRequest();
         return TeaModel.build(map, self);
     }
 
-    public SyncInstanceMetaRequest setTid(Long tid) {
-        this.tid = tid;
+    public SyncInstanceMetaRequest setIgnoreTable(Boolean ignoreTable) {
+        this.ignoreTable = ignoreTable;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
+    public Boolean getIgnoreTable() {
+        return this.ignoreTable;
     }
 
     public SyncInstanceMetaRequest setInstanceId(String instanceId) {
@@ -34,12 +34,12 @@ public class SyncInstanceMetaRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public SyncInstanceMetaRequest setIgnoreTable(Boolean ignoreTable) {
-        this.ignoreTable = ignoreTable;
+    public SyncInstanceMetaRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public Boolean getIgnoreTable() {
-        return this.ignoreTable;
+    public Long getTid() {
+        return this.tid;
     }
 
 }

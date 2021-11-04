@@ -4,8 +4,11 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListLogicDatabasesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("LogicDatabaseList")
     public ListLogicDatabasesResponseBodyLogicDatabaseList logicDatabaseList;
@@ -13,42 +16,15 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListLogicDatabasesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListLogicDatabasesResponseBody self = new ListLogicDatabasesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListLogicDatabasesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListLogicDatabasesResponseBody setLogicDatabaseList(ListLogicDatabasesResponseBodyLogicDatabaseList logicDatabaseList) {
-        this.logicDatabaseList = logicDatabaseList;
-        return this;
-    }
-    public ListLogicDatabasesResponseBodyLogicDatabaseList getLogicDatabaseList() {
-        return this.logicDatabaseList;
-    }
-
-    public ListLogicDatabasesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListLogicDatabasesResponseBody setErrorCode(String errorCode) {
@@ -67,12 +43,36 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public ListLogicDatabasesResponseBody setLogicDatabaseList(ListLogicDatabasesResponseBodyLogicDatabaseList logicDatabaseList) {
+        this.logicDatabaseList = logicDatabaseList;
+        return this;
+    }
+    public ListLogicDatabasesResponseBodyLogicDatabaseList getLogicDatabaseList() {
+        return this.logicDatabaseList;
+    }
+
+    public ListLogicDatabasesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListLogicDatabasesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListLogicDatabasesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList extends TeaModel {
@@ -117,26 +117,26 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        @NameInMap("OwnerIdList")
-        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList ownerIdList;
-
         @NameInMap("DbType")
         public String dbType;
 
-        @NameInMap("OwnerNameList")
-        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList ownerNameList;
+        @NameInMap("EnvType")
+        public String envType;
 
         @NameInMap("Logic")
         public Boolean logic;
+
+        @NameInMap("OwnerIdList")
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList ownerIdList;
+
+        @NameInMap("OwnerNameList")
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList ownerNameList;
 
         @NameInMap("SchemaName")
         public String schemaName;
 
         @NameInMap("SearchName")
         public String searchName;
-
-        @NameInMap("EnvType")
-        public String envType;
 
         public static ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase build(java.util.Map<String, ?> map) throws Exception {
             ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase self = new ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase();
@@ -151,14 +151,6 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             return this.databaseId;
         }
 
-        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setOwnerIdList(ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList ownerIdList) {
-            this.ownerIdList = ownerIdList;
-            return this;
-        }
-        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList getOwnerIdList() {
-            return this.ownerIdList;
-        }
-
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setDbType(String dbType) {
             this.dbType = dbType;
             return this;
@@ -167,12 +159,12 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
             return this.dbType;
         }
 
-        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setOwnerNameList(ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList ownerNameList) {
-            this.ownerNameList = ownerNameList;
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setEnvType(String envType) {
+            this.envType = envType;
             return this;
         }
-        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList getOwnerNameList() {
-            return this.ownerNameList;
+        public String getEnvType() {
+            return this.envType;
         }
 
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setLogic(Boolean logic) {
@@ -181,6 +173,22 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
         public Boolean getLogic() {
             return this.logic;
+        }
+
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setOwnerIdList(ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList ownerIdList) {
+            this.ownerIdList = ownerIdList;
+            return this;
+        }
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerIdList getOwnerIdList() {
+            return this.ownerIdList;
+        }
+
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setOwnerNameList(ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList ownerNameList) {
+            this.ownerNameList = ownerNameList;
+            return this;
+        }
+        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabaseOwnerNameList getOwnerNameList() {
+            return this.ownerNameList;
         }
 
         public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setSchemaName(String schemaName) {
@@ -197,14 +205,6 @@ public class ListLogicDatabasesResponseBody extends TeaModel {
         }
         public String getSearchName() {
             return this.searchName;
-        }
-
-        public ListLogicDatabasesResponseBodyLogicDatabaseListLogicDatabase setEnvType(String envType) {
-            this.envType = envType;
-            return this;
-        }
-        public String getEnvType() {
-            return this.envType;
         }
 
     }

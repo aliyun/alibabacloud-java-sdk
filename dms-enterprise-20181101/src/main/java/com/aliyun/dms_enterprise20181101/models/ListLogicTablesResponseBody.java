@@ -4,8 +4,11 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListLogicTablesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("LogicTableList")
     public ListLogicTablesResponseBodyLogicTableList logicTableList;
@@ -13,42 +16,15 @@ public class ListLogicTablesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
 
     public static ListLogicTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListLogicTablesResponseBody self = new ListLogicTablesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListLogicTablesResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListLogicTablesResponseBody setLogicTableList(ListLogicTablesResponseBodyLogicTableList logicTableList) {
-        this.logicTableList = logicTableList;
-        return this;
-    }
-    public ListLogicTablesResponseBodyLogicTableList getLogicTableList() {
-        return this.logicTableList;
-    }
-
-    public ListLogicTablesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListLogicTablesResponseBody setErrorCode(String errorCode) {
@@ -67,12 +43,36 @@ public class ListLogicTablesResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public ListLogicTablesResponseBody setLogicTableList(ListLogicTablesResponseBodyLogicTableList logicTableList) {
+        this.logicTableList = logicTableList;
+        return this;
+    }
+    public ListLogicTablesResponseBodyLogicTableList getLogicTableList() {
+        return this.logicTableList;
+    }
+
+    public ListLogicTablesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public ListLogicTablesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListLogicTablesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList extends TeaModel {
@@ -117,11 +117,8 @@ public class ListLogicTablesResponseBody extends TeaModel {
         @NameInMap("DatabaseId")
         public String databaseId;
 
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("TableCount")
-        public String tableCount;
+        @NameInMap("Logic")
+        public Boolean logic;
 
         @NameInMap("OwnerIdList")
         public ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList ownerIdList;
@@ -132,8 +129,8 @@ public class ListLogicTablesResponseBody extends TeaModel {
         @NameInMap("SchemaName")
         public String schemaName;
 
-        @NameInMap("Logic")
-        public Boolean logic;
+        @NameInMap("TableCount")
+        public String tableCount;
 
         @NameInMap("TableExpr")
         public String tableExpr;
@@ -143,6 +140,9 @@ public class ListLogicTablesResponseBody extends TeaModel {
 
         @NameInMap("TableId")
         public String tableId;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         public static ListLogicTablesResponseBodyLogicTableListLogicTable build(java.util.Map<String, ?> map) throws Exception {
             ListLogicTablesResponseBodyLogicTableListLogicTable self = new ListLogicTablesResponseBodyLogicTableListLogicTable();
@@ -157,20 +157,12 @@ public class ListLogicTablesResponseBody extends TeaModel {
             return this.databaseId;
         }
 
-        public ListLogicTablesResponseBodyLogicTableListLogicTable setTableName(String tableName) {
-            this.tableName = tableName;
+        public ListLogicTablesResponseBodyLogicTableListLogicTable setLogic(Boolean logic) {
+            this.logic = logic;
             return this;
         }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public ListLogicTablesResponseBodyLogicTableListLogicTable setTableCount(String tableCount) {
-            this.tableCount = tableCount;
-            return this;
-        }
-        public String getTableCount() {
-            return this.tableCount;
+        public Boolean getLogic() {
+            return this.logic;
         }
 
         public ListLogicTablesResponseBodyLogicTableListLogicTable setOwnerIdList(ListLogicTablesResponseBodyLogicTableListLogicTableOwnerIdList ownerIdList) {
@@ -197,12 +189,12 @@ public class ListLogicTablesResponseBody extends TeaModel {
             return this.schemaName;
         }
 
-        public ListLogicTablesResponseBodyLogicTableListLogicTable setLogic(Boolean logic) {
-            this.logic = logic;
+        public ListLogicTablesResponseBodyLogicTableListLogicTable setTableCount(String tableCount) {
+            this.tableCount = tableCount;
             return this;
         }
-        public Boolean getLogic() {
-            return this.logic;
+        public String getTableCount() {
+            return this.tableCount;
         }
 
         public ListLogicTablesResponseBodyLogicTableListLogicTable setTableExpr(String tableExpr) {
@@ -227,6 +219,14 @@ public class ListLogicTablesResponseBody extends TeaModel {
         }
         public String getTableId() {
             return this.tableId;
+        }
+
+        public ListLogicTablesResponseBodyLogicTableListLogicTable setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }

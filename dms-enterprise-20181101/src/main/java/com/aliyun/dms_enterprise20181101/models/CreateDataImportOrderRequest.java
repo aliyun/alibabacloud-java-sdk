@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateDataImportOrderRequest extends TeaModel {
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
+
     @NameInMap("Comment")
     public String comment;
-
-    @NameInMap("RelatedUserList")
-    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Param")
     public CreateDataImportOrderRequestParam param;
 
-    @NameInMap("AttachmentKey")
-    public String attachmentKey;
+    @NameInMap("RelatedUserList")
+    public java.util.List<Long> relatedUserList;
 
     @NameInMap("Tid")
     public Long tid;
@@ -22,6 +22,14 @@ public class CreateDataImportOrderRequest extends TeaModel {
     public static CreateDataImportOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataImportOrderRequest self = new CreateDataImportOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDataImportOrderRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
+        return this;
+    }
+    public String getAttachmentKey() {
+        return this.attachmentKey;
     }
 
     public CreateDataImportOrderRequest setComment(String comment) {
@@ -32,14 +40,6 @@ public class CreateDataImportOrderRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateDataImportOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
-        this.relatedUserList = relatedUserList;
-        return this;
-    }
-    public java.util.List<Long> getRelatedUserList() {
-        return this.relatedUserList;
-    }
-
     public CreateDataImportOrderRequest setParam(CreateDataImportOrderRequestParam param) {
         this.param = param;
         return this;
@@ -48,12 +48,12 @@ public class CreateDataImportOrderRequest extends TeaModel {
         return this.param;
     }
 
-    public CreateDataImportOrderRequest setAttachmentKey(String attachmentKey) {
-        this.attachmentKey = attachmentKey;
+    public CreateDataImportOrderRequest setRelatedUserList(java.util.List<Long> relatedUserList) {
+        this.relatedUserList = relatedUserList;
         return this;
     }
-    public String getAttachmentKey() {
-        return this.attachmentKey;
+    public java.util.List<Long> getRelatedUserList() {
+        return this.relatedUserList;
     }
 
     public CreateDataImportOrderRequest setTid(Long tid) {
@@ -95,29 +95,23 @@ public class CreateDataImportOrderRequest extends TeaModel {
     }
 
     public static class CreateDataImportOrderRequestParam extends TeaModel {
+        @NameInMap("AttachmentName")
+        public String attachmentName;
+
         @NameInMap("Classify")
         public String classify;
 
-        @NameInMap("AttachmentName")
-        public String attachmentName;
+        @NameInMap("CsvFirstRowIsColumnDef")
+        public Boolean csvFirstRowIsColumnDef;
 
         @NameInMap("DbItemList")
         public java.util.List<CreateDataImportOrderRequestParamDbItemList> dbItemList;
 
-        @NameInMap("FileType")
-        public String fileType;
-
         @NameInMap("FileEncoding")
         public String fileEncoding;
 
-        @NameInMap("TableName")
-        public String tableName;
-
-        @NameInMap("InsertType")
-        public String insertType;
-
-        @NameInMap("CsvFirstRowIsColumnDef")
-        public Boolean csvFirstRowIsColumnDef;
+        @NameInMap("FileType")
+        public String fileType;
 
         @NameInMap("IgnoreError")
         public Boolean ignoreError;
@@ -125,26 +119,24 @@ public class CreateDataImportOrderRequest extends TeaModel {
         @NameInMap("ImportMode")
         public String importMode;
 
-        @NameInMap("RollbackSQL")
-        public String rollbackSQL;
+        @NameInMap("InsertType")
+        public String insertType;
 
         @NameInMap("RollbackAttachmentName")
         public String rollbackAttachmentName;
 
+        @NameInMap("RollbackSQL")
+        public String rollbackSQL;
+
         @NameInMap("RollbackSqlType")
         public String rollbackSqlType;
+
+        @NameInMap("TableName")
+        public String tableName;
 
         public static CreateDataImportOrderRequestParam build(java.util.Map<String, ?> map) throws Exception {
             CreateDataImportOrderRequestParam self = new CreateDataImportOrderRequestParam();
             return TeaModel.build(map, self);
-        }
-
-        public CreateDataImportOrderRequestParam setClassify(String classify) {
-            this.classify = classify;
-            return this;
-        }
-        public String getClassify() {
-            return this.classify;
         }
 
         public CreateDataImportOrderRequestParam setAttachmentName(String attachmentName) {
@@ -155,20 +147,28 @@ public class CreateDataImportOrderRequest extends TeaModel {
             return this.attachmentName;
         }
 
+        public CreateDataImportOrderRequestParam setClassify(String classify) {
+            this.classify = classify;
+            return this;
+        }
+        public String getClassify() {
+            return this.classify;
+        }
+
+        public CreateDataImportOrderRequestParam setCsvFirstRowIsColumnDef(Boolean csvFirstRowIsColumnDef) {
+            this.csvFirstRowIsColumnDef = csvFirstRowIsColumnDef;
+            return this;
+        }
+        public Boolean getCsvFirstRowIsColumnDef() {
+            return this.csvFirstRowIsColumnDef;
+        }
+
         public CreateDataImportOrderRequestParam setDbItemList(java.util.List<CreateDataImportOrderRequestParamDbItemList> dbItemList) {
             this.dbItemList = dbItemList;
             return this;
         }
         public java.util.List<CreateDataImportOrderRequestParamDbItemList> getDbItemList() {
             return this.dbItemList;
-        }
-
-        public CreateDataImportOrderRequestParam setFileType(String fileType) {
-            this.fileType = fileType;
-            return this;
-        }
-        public String getFileType() {
-            return this.fileType;
         }
 
         public CreateDataImportOrderRequestParam setFileEncoding(String fileEncoding) {
@@ -179,28 +179,12 @@ public class CreateDataImportOrderRequest extends TeaModel {
             return this.fileEncoding;
         }
 
-        public CreateDataImportOrderRequestParam setTableName(String tableName) {
-            this.tableName = tableName;
+        public CreateDataImportOrderRequestParam setFileType(String fileType) {
+            this.fileType = fileType;
             return this;
         }
-        public String getTableName() {
-            return this.tableName;
-        }
-
-        public CreateDataImportOrderRequestParam setInsertType(String insertType) {
-            this.insertType = insertType;
-            return this;
-        }
-        public String getInsertType() {
-            return this.insertType;
-        }
-
-        public CreateDataImportOrderRequestParam setCsvFirstRowIsColumnDef(Boolean csvFirstRowIsColumnDef) {
-            this.csvFirstRowIsColumnDef = csvFirstRowIsColumnDef;
-            return this;
-        }
-        public Boolean getCsvFirstRowIsColumnDef() {
-            return this.csvFirstRowIsColumnDef;
+        public String getFileType() {
+            return this.fileType;
         }
 
         public CreateDataImportOrderRequestParam setIgnoreError(Boolean ignoreError) {
@@ -219,12 +203,12 @@ public class CreateDataImportOrderRequest extends TeaModel {
             return this.importMode;
         }
 
-        public CreateDataImportOrderRequestParam setRollbackSQL(String rollbackSQL) {
-            this.rollbackSQL = rollbackSQL;
+        public CreateDataImportOrderRequestParam setInsertType(String insertType) {
+            this.insertType = insertType;
             return this;
         }
-        public String getRollbackSQL() {
-            return this.rollbackSQL;
+        public String getInsertType() {
+            return this.insertType;
         }
 
         public CreateDataImportOrderRequestParam setRollbackAttachmentName(String rollbackAttachmentName) {
@@ -235,12 +219,28 @@ public class CreateDataImportOrderRequest extends TeaModel {
             return this.rollbackAttachmentName;
         }
 
+        public CreateDataImportOrderRequestParam setRollbackSQL(String rollbackSQL) {
+            this.rollbackSQL = rollbackSQL;
+            return this;
+        }
+        public String getRollbackSQL() {
+            return this.rollbackSQL;
+        }
+
         public CreateDataImportOrderRequestParam setRollbackSqlType(String rollbackSqlType) {
             this.rollbackSqlType = rollbackSqlType;
             return this;
         }
         public String getRollbackSqlType() {
             return this.rollbackSqlType;
+        }
+
+        public CreateDataImportOrderRequestParam setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }

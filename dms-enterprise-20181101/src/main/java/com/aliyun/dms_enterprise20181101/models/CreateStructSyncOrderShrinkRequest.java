@@ -4,17 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class CreateStructSyncOrderShrinkRequest extends TeaModel {
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
+
     @NameInMap("Comment")
     public String comment;
-
-    @NameInMap("RelatedUserList")
-    public String relatedUserListShrink;
 
     @NameInMap("Param")
     public String paramShrink;
 
-    @NameInMap("AttachmentKey")
-    public String attachmentKey;
+    @NameInMap("RelatedUserList")
+    public String relatedUserListShrink;
 
     @NameInMap("Tid")
     public Long tid;
@@ -22,6 +22,14 @@ public class CreateStructSyncOrderShrinkRequest extends TeaModel {
     public static CreateStructSyncOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStructSyncOrderShrinkRequest self = new CreateStructSyncOrderShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateStructSyncOrderShrinkRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
+        return this;
+    }
+    public String getAttachmentKey() {
+        return this.attachmentKey;
     }
 
     public CreateStructSyncOrderShrinkRequest setComment(String comment) {
@@ -32,14 +40,6 @@ public class CreateStructSyncOrderShrinkRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateStructSyncOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {
-        this.relatedUserListShrink = relatedUserListShrink;
-        return this;
-    }
-    public String getRelatedUserListShrink() {
-        return this.relatedUserListShrink;
-    }
-
     public CreateStructSyncOrderShrinkRequest setParamShrink(String paramShrink) {
         this.paramShrink = paramShrink;
         return this;
@@ -48,12 +48,12 @@ public class CreateStructSyncOrderShrinkRequest extends TeaModel {
         return this.paramShrink;
     }
 
-    public CreateStructSyncOrderShrinkRequest setAttachmentKey(String attachmentKey) {
-        this.attachmentKey = attachmentKey;
+    public CreateStructSyncOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {
+        this.relatedUserListShrink = relatedUserListShrink;
         return this;
     }
-    public String getAttachmentKey() {
-        return this.attachmentKey;
+    public String getRelatedUserListShrink() {
+        return this.relatedUserListShrink;
     }
 
     public CreateStructSyncOrderShrinkRequest setTid(Long tid) {

@@ -4,26 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ExecuteDataExportRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
+    @NameInMap("ActionDetail")
+    public java.util.Map<String, ?> actionDetail;
 
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("ActionDetail")
-    public java.util.Map<String, ?> actionDetail;
+    @NameInMap("Tid")
+    public Long tid;
 
     public static ExecuteDataExportRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteDataExportRequest self = new ExecuteDataExportRequest();
         return TeaModel.build(map, self);
     }
 
-    public ExecuteDataExportRequest setTid(Long tid) {
-        this.tid = tid;
+    public ExecuteDataExportRequest setActionDetail(java.util.Map<String, ?> actionDetail) {
+        this.actionDetail = actionDetail;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
+    public java.util.Map<String, ?> getActionDetail() {
+        return this.actionDetail;
     }
 
     public ExecuteDataExportRequest setOrderId(Long orderId) {
@@ -34,12 +34,12 @@ public class ExecuteDataExportRequest extends TeaModel {
         return this.orderId;
     }
 
-    public ExecuteDataExportRequest setActionDetail(java.util.Map<String, ?> actionDetail) {
-        this.actionDetail = actionDetail;
+    public ExecuteDataExportRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public java.util.Map<String, ?> getActionDetail() {
-        return this.actionDetail;
+    public Long getTid() {
+        return this.tid;
     }
 
 }

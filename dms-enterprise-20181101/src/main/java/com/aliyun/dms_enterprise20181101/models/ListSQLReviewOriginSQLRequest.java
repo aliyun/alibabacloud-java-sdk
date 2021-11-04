@@ -4,11 +4,11 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListSQLReviewOriginSQLRequest extends TeaModel {
-    @NameInMap("OrderId")
-    public Long orderId;
-
     @NameInMap("OrderActionDetail")
     public ListSQLReviewOriginSQLRequestOrderActionDetail orderActionDetail;
+
+    @NameInMap("OrderId")
+    public Long orderId;
 
     @NameInMap("Tid")
     public Long tid;
@@ -18,20 +18,20 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListSQLReviewOriginSQLRequest setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
     public ListSQLReviewOriginSQLRequest setOrderActionDetail(ListSQLReviewOriginSQLRequestOrderActionDetail orderActionDetail) {
         this.orderActionDetail = orderActionDetail;
         return this;
     }
     public ListSQLReviewOriginSQLRequestOrderActionDetail getOrderActionDetail() {
         return this.orderActionDetail;
+    }
+
+    public ListSQLReviewOriginSQLRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public ListSQLReviewOriginSQLRequest setTid(Long tid) {
@@ -73,37 +73,21 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
     }
 
     public static class ListSQLReviewOriginSQLRequestOrderActionDetail extends TeaModel {
-        @NameInMap("FileId")
-        public Long fileId;
-
-        @NameInMap("SQLReviewResult")
-        public String SQLReviewResult;
-
         @NameInMap("CheckStatusResult")
         public String checkStatusResult;
+
+        @NameInMap("FileId")
+        public Long fileId;
 
         @NameInMap("Page")
         public ListSQLReviewOriginSQLRequestOrderActionDetailPage page;
 
+        @NameInMap("SQLReviewResult")
+        public String SQLReviewResult;
+
         public static ListSQLReviewOriginSQLRequestOrderActionDetail build(java.util.Map<String, ?> map) throws Exception {
             ListSQLReviewOriginSQLRequestOrderActionDetail self = new ListSQLReviewOriginSQLRequestOrderActionDetail();
             return TeaModel.build(map, self);
-        }
-
-        public ListSQLReviewOriginSQLRequestOrderActionDetail setFileId(Long fileId) {
-            this.fileId = fileId;
-            return this;
-        }
-        public Long getFileId() {
-            return this.fileId;
-        }
-
-        public ListSQLReviewOriginSQLRequestOrderActionDetail setSQLReviewResult(String SQLReviewResult) {
-            this.SQLReviewResult = SQLReviewResult;
-            return this;
-        }
-        public String getSQLReviewResult() {
-            return this.SQLReviewResult;
         }
 
         public ListSQLReviewOriginSQLRequestOrderActionDetail setCheckStatusResult(String checkStatusResult) {
@@ -114,12 +98,28 @@ public class ListSQLReviewOriginSQLRequest extends TeaModel {
             return this.checkStatusResult;
         }
 
+        public ListSQLReviewOriginSQLRequestOrderActionDetail setFileId(Long fileId) {
+            this.fileId = fileId;
+            return this;
+        }
+        public Long getFileId() {
+            return this.fileId;
+        }
+
         public ListSQLReviewOriginSQLRequestOrderActionDetail setPage(ListSQLReviewOriginSQLRequestOrderActionDetailPage page) {
             this.page = page;
             return this;
         }
         public ListSQLReviewOriginSQLRequestOrderActionDetailPage getPage() {
             return this.page;
+        }
+
+        public ListSQLReviewOriginSQLRequestOrderActionDetail setSQLReviewResult(String SQLReviewResult) {
+            this.SQLReviewResult = SQLReviewResult;
+            return this;
+        }
+        public String getSQLReviewResult() {
+            return this.SQLReviewResult;
         }
 
     }

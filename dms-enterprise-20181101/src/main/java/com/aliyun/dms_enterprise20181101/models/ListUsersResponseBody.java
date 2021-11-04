@@ -4,43 +4,27 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("UserList")
-    public ListUsersResponseBodyUserList userList;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
+    @NameInMap("UserList")
+    public ListUsersResponseBodyUserList userList;
+
     public static ListUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUsersResponseBody self = new ListUsersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListUsersResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
-    }
-
-    public ListUsersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListUsersResponseBody setErrorCode(String errorCode) {
@@ -59,12 +43,12 @@ public class ListUsersResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ListUsersResponseBody setUserList(ListUsersResponseBodyUserList userList) {
-        this.userList = userList;
+    public ListUsersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ListUsersResponseBodyUserList getUserList() {
-        return this.userList;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListUsersResponseBody setSuccess(Boolean success) {
@@ -73,6 +57,22 @@ public class ListUsersResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListUsersResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListUsersResponseBody setUserList(ListUsersResponseBodyUserList userList) {
+        this.userList = userList;
+        return this;
+    }
+    public ListUsersResponseBodyUserList getUserList() {
+        return this.userList;
     }
 
     public static class ListUsersResponseBodyUserListUserRoleIdList extends TeaModel {
@@ -114,20 +114,35 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     public static class ListUsersResponseBodyUserListUser extends TeaModel {
-        @NameInMap("State")
-        public String state;
+        @NameInMap("CurExecuteCount")
+        public Long curExecuteCount;
 
         @NameInMap("CurResultCount")
         public Long curResultCount;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("DingRobot")
+        public String dingRobot;
+
+        @NameInMap("Email")
+        public String email;
 
         @NameInMap("LastLoginTime")
         public String lastLoginTime;
 
+        @NameInMap("MaxExecuteCount")
+        public Long maxExecuteCount;
+
         @NameInMap("MaxResultCount")
         public Long maxResultCount;
+
+        @NameInMap("Mobile")
+        public String mobile;
+
+        @NameInMap("NickName")
+        public String nickName;
+
+        @NameInMap("NotificationMode")
+        public String notificationMode;
 
         @NameInMap("ParentUid")
         public String parentUid;
@@ -138,32 +153,32 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("RoleNameList")
         public ListUsersResponseBodyUserListUserRoleNameList roleNameList;
 
-        @NameInMap("NickName")
-        public String nickName;
+        @NameInMap("SignatureMethod")
+        public String signatureMethod;
 
-        @NameInMap("MaxExecuteCount")
-        public Long maxExecuteCount;
-
-        @NameInMap("CurExecuteCount")
-        public Long curExecuteCount;
-
-        @NameInMap("Mobile")
-        public String mobile;
+        @NameInMap("State")
+        public String state;
 
         @NameInMap("Uid")
         public String uid;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("Webhook")
+        public String webhook;
 
         public static ListUsersResponseBodyUserListUser build(java.util.Map<String, ?> map) throws Exception {
             ListUsersResponseBodyUserListUser self = new ListUsersResponseBodyUserListUser();
             return TeaModel.build(map, self);
         }
 
-        public ListUsersResponseBodyUserListUser setState(String state) {
-            this.state = state;
+        public ListUsersResponseBodyUserListUser setCurExecuteCount(Long curExecuteCount) {
+            this.curExecuteCount = curExecuteCount;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public Long getCurExecuteCount() {
+            return this.curExecuteCount;
         }
 
         public ListUsersResponseBodyUserListUser setCurResultCount(Long curResultCount) {
@@ -174,12 +189,20 @@ public class ListUsersResponseBody extends TeaModel {
             return this.curResultCount;
         }
 
-        public ListUsersResponseBodyUserListUser setUserId(String userId) {
-            this.userId = userId;
+        public ListUsersResponseBodyUserListUser setDingRobot(String dingRobot) {
+            this.dingRobot = dingRobot;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getDingRobot() {
+            return this.dingRobot;
+        }
+
+        public ListUsersResponseBodyUserListUser setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public ListUsersResponseBodyUserListUser setLastLoginTime(String lastLoginTime) {
@@ -190,12 +213,44 @@ public class ListUsersResponseBody extends TeaModel {
             return this.lastLoginTime;
         }
 
+        public ListUsersResponseBodyUserListUser setMaxExecuteCount(Long maxExecuteCount) {
+            this.maxExecuteCount = maxExecuteCount;
+            return this;
+        }
+        public Long getMaxExecuteCount() {
+            return this.maxExecuteCount;
+        }
+
         public ListUsersResponseBodyUserListUser setMaxResultCount(Long maxResultCount) {
             this.maxResultCount = maxResultCount;
             return this;
         }
         public Long getMaxResultCount() {
             return this.maxResultCount;
+        }
+
+        public ListUsersResponseBodyUserListUser setMobile(String mobile) {
+            this.mobile = mobile;
+            return this;
+        }
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        public ListUsersResponseBodyUserListUser setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
+        }
+
+        public ListUsersResponseBodyUserListUser setNotificationMode(String notificationMode) {
+            this.notificationMode = notificationMode;
+            return this;
+        }
+        public String getNotificationMode() {
+            return this.notificationMode;
         }
 
         public ListUsersResponseBodyUserListUser setParentUid(String parentUid) {
@@ -222,36 +277,20 @@ public class ListUsersResponseBody extends TeaModel {
             return this.roleNameList;
         }
 
-        public ListUsersResponseBodyUserListUser setNickName(String nickName) {
-            this.nickName = nickName;
+        public ListUsersResponseBodyUserListUser setSignatureMethod(String signatureMethod) {
+            this.signatureMethod = signatureMethod;
             return this;
         }
-        public String getNickName() {
-            return this.nickName;
+        public String getSignatureMethod() {
+            return this.signatureMethod;
         }
 
-        public ListUsersResponseBodyUserListUser setMaxExecuteCount(Long maxExecuteCount) {
-            this.maxExecuteCount = maxExecuteCount;
+        public ListUsersResponseBodyUserListUser setState(String state) {
+            this.state = state;
             return this;
         }
-        public Long getMaxExecuteCount() {
-            return this.maxExecuteCount;
-        }
-
-        public ListUsersResponseBodyUserListUser setCurExecuteCount(Long curExecuteCount) {
-            this.curExecuteCount = curExecuteCount;
-            return this;
-        }
-        public Long getCurExecuteCount() {
-            return this.curExecuteCount;
-        }
-
-        public ListUsersResponseBodyUserListUser setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
-        public String getMobile() {
-            return this.mobile;
+        public String getState() {
+            return this.state;
         }
 
         public ListUsersResponseBodyUserListUser setUid(String uid) {
@@ -260,6 +299,22 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public String getUid() {
             return this.uid;
+        }
+
+        public ListUsersResponseBodyUserListUser setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public ListUsersResponseBodyUserListUser setWebhook(String webhook) {
+            this.webhook = webhook;
+            return this;
+        }
+        public String getWebhook() {
+            return this.webhook;
         }
 
     }

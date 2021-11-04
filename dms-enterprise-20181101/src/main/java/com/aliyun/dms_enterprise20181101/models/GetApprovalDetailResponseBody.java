@@ -4,8 +4,8 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetApprovalDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ApprovalDetail")
+    public GetApprovalDetailResponseBodyApprovalDetail approvalDetail;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -13,8 +13,8 @@ public class GetApprovalDetailResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    @NameInMap("ApprovalDetail")
-    public GetApprovalDetailResponseBodyApprovalDetail approvalDetail;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
@@ -24,12 +24,12 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetApprovalDetailResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetApprovalDetailResponseBody setApprovalDetail(GetApprovalDetailResponseBodyApprovalDetail approvalDetail) {
+        this.approvalDetail = approvalDetail;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public GetApprovalDetailResponseBodyApprovalDetail getApprovalDetail() {
+        return this.approvalDetail;
     }
 
     public GetApprovalDetailResponseBody setErrorCode(String errorCode) {
@@ -48,12 +48,12 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public GetApprovalDetailResponseBody setApprovalDetail(GetApprovalDetailResponseBodyApprovalDetail approvalDetail) {
-        this.approvalDetail = approvalDetail;
+    public GetApprovalDetailResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public GetApprovalDetailResponseBodyApprovalDetail getApprovalDetail() {
-        return this.approvalDetail;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public GetApprovalDetailResponseBody setSuccess(Boolean success) {
@@ -64,136 +64,16 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList extends TeaModel {
-        @NameInMap("AuditUserIds")
-        public java.util.List<String> auditUserIds;
-
-        public static GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList build(java.util.Map<String, ?> map) throws Exception {
-            GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList self = new GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList setAuditUserIds(java.util.List<String> auditUserIds) {
-            this.auditUserIds = auditUserIds;
-            return this;
-        }
-        public java.util.List<String> getAuditUserIds() {
-            return this.auditUserIds;
-        }
-
-    }
-
-    public static class GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode extends TeaModel {
-        @NameInMap("OperateTime")
-        public String operateTime;
-
-        @NameInMap("OperatorId")
-        public Long operatorId;
-
-        @NameInMap("NodeName")
-        public String nodeName;
-
-        @NameInMap("AuditUserIdList")
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList auditUserIdList;
-
-        @NameInMap("OperateComment")
-        public String operateComment;
-
-        @NameInMap("WorkflowInsCode")
-        public String workflowInsCode;
-
-        public static GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode build(java.util.Map<String, ?> map) throws Exception {
-            GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode self = new GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode();
-            return TeaModel.build(map, self);
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setOperateTime(String operateTime) {
-            this.operateTime = operateTime;
-            return this;
-        }
-        public String getOperateTime() {
-            return this.operateTime;
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setOperatorId(Long operatorId) {
-            this.operatorId = operatorId;
-            return this;
-        }
-        public Long getOperatorId() {
-            return this.operatorId;
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setNodeName(String nodeName) {
-            this.nodeName = nodeName;
-            return this;
-        }
-        public String getNodeName() {
-            return this.nodeName;
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setAuditUserIdList(GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList auditUserIdList) {
-            this.auditUserIdList = auditUserIdList;
-            return this;
-        }
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList getAuditUserIdList() {
-            return this.auditUserIdList;
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setOperateComment(String operateComment) {
-            this.operateComment = operateComment;
-            return this;
-        }
-        public String getOperateComment() {
-            return this.operateComment;
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setWorkflowInsCode(String workflowInsCode) {
-            this.workflowInsCode = workflowInsCode;
-            return this;
-        }
-        public String getWorkflowInsCode() {
-            return this.workflowInsCode;
-        }
-
-    }
-
-    public static class GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes extends TeaModel {
-        @NameInMap("WorkflowNode")
-        public java.util.List<GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode> workflowNode;
-
-        public static GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes build(java.util.Map<String, ?> map) throws Exception {
-            GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes self = new GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes();
-            return TeaModel.build(map, self);
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes setWorkflowNode(java.util.List<GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode> workflowNode) {
-            this.workflowNode = workflowNode;
-            return this;
-        }
-        public java.util.List<GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode> getWorkflowNode() {
-            return this.workflowNode;
-        }
-
-    }
-
     public static class GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler extends TeaModel {
-        @NameInMap("NickName")
-        public String nickName;
-
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("NickName")
+        public String nickName;
 
         public static GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler build(java.util.Map<String, ?> map) throws Exception {
             GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler self = new GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler();
             return TeaModel.build(map, self);
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler setNickName(String nickName) {
-            this.nickName = nickName;
-            return this;
-        }
-        public String getNickName() {
-            return this.nickName;
         }
 
         public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler setId(Long id) {
@@ -202,6 +82,14 @@ public class GetApprovalDetailResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlersCurrentHandler setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
         }
 
     }
@@ -244,77 +132,152 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
     }
 
-    public static class GetApprovalDetailResponseBodyApprovalDetail extends TeaModel {
-        @NameInMap("WorkflowNodes")
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes workflowNodes;
+    public static class GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList extends TeaModel {
+        @NameInMap("AuditUserIds")
+        public java.util.List<String> auditUserIds;
 
-        @NameInMap("Description")
-        public String description;
+        public static GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList build(java.util.Map<String, ?> map) throws Exception {
+            GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList self = new GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList();
+            return TeaModel.build(map, self);
+        }
 
-        @NameInMap("CurrentHandlers")
-        public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers currentHandlers;
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList setAuditUserIds(java.util.List<String> auditUserIds) {
+            this.auditUserIds = auditUserIds;
+            return this;
+        }
+        public java.util.List<String> getAuditUserIds() {
+            return this.auditUserIds;
+        }
 
-        @NameInMap("OrderType")
-        public String orderType;
+    }
 
-        @NameInMap("Title")
-        public String title;
+    public static class GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode extends TeaModel {
+        @NameInMap("AuditUserIdList")
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList auditUserIdList;
 
-        @NameInMap("AuditId")
-        public Long auditId;
+        @NameInMap("NodeName")
+        public String nodeName;
 
-        @NameInMap("OrderId")
-        public Long orderId;
+        @NameInMap("OperateComment")
+        public String operateComment;
+
+        @NameInMap("OperateTime")
+        public String operateTime;
+
+        @NameInMap("OperatorId")
+        public Long operatorId;
 
         @NameInMap("WorkflowInsCode")
         public String workflowInsCode;
 
+        public static GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode build(java.util.Map<String, ?> map) throws Exception {
+            GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode self = new GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setAuditUserIdList(GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList auditUserIdList) {
+            this.auditUserIdList = auditUserIdList;
+            return this;
+        }
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNodeAuditUserIdList getAuditUserIdList() {
+            return this.auditUserIdList;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setOperateComment(String operateComment) {
+            this.operateComment = operateComment;
+            return this;
+        }
+        public String getOperateComment() {
+            return this.operateComment;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setOperateTime(String operateTime) {
+            this.operateTime = operateTime;
+            return this;
+        }
+        public String getOperateTime() {
+            return this.operateTime;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setOperatorId(Long operatorId) {
+            this.operatorId = operatorId;
+            return this;
+        }
+        public Long getOperatorId() {
+            return this.operatorId;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode setWorkflowInsCode(String workflowInsCode) {
+            this.workflowInsCode = workflowInsCode;
+            return this;
+        }
+        public String getWorkflowInsCode() {
+            return this.workflowInsCode;
+        }
+
+    }
+
+    public static class GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes extends TeaModel {
+        @NameInMap("WorkflowNode")
+        public java.util.List<GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode> workflowNode;
+
+        public static GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes build(java.util.Map<String, ?> map) throws Exception {
+            GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes self = new GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes setWorkflowNode(java.util.List<GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode> workflowNode) {
+            this.workflowNode = workflowNode;
+            return this;
+        }
+        public java.util.List<GetApprovalDetailResponseBodyApprovalDetailWorkflowNodesWorkflowNode> getWorkflowNode() {
+            return this.workflowNode;
+        }
+
+    }
+
+    public static class GetApprovalDetailResponseBodyApprovalDetail extends TeaModel {
+        @NameInMap("AuditId")
+        public Long auditId;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("CurrentHandlers")
+        public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers currentHandlers;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("OrderId")
+        public Long orderId;
+
+        @NameInMap("OrderType")
+        public String orderType;
+
         @NameInMap("ReasonList")
         public GetApprovalDetailResponseBodyApprovalDetailReasonList reasonList;
+
+        @NameInMap("Title")
+        public String title;
+
+        @NameInMap("WorkflowInsCode")
+        public String workflowInsCode;
+
+        @NameInMap("WorkflowNodes")
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes workflowNodes;
 
         public static GetApprovalDetailResponseBodyApprovalDetail build(java.util.Map<String, ?> map) throws Exception {
             GetApprovalDetailResponseBodyApprovalDetail self = new GetApprovalDetailResponseBodyApprovalDetail();
             return TeaModel.build(map, self);
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetail setWorkflowNodes(GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes workflowNodes) {
-            this.workflowNodes = workflowNodes;
-            return this;
-        }
-        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes getWorkflowNodes() {
-            return this.workflowNodes;
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetail setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetail setCurrentHandlers(GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers currentHandlers) {
-            this.currentHandlers = currentHandlers;
-            return this;
-        }
-        public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers getCurrentHandlers() {
-            return this.currentHandlers;
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetail setOrderType(String orderType) {
-            this.orderType = orderType;
-            return this;
-        }
-        public String getOrderType() {
-            return this.orderType;
-        }
-
-        public GetApprovalDetailResponseBodyApprovalDetail setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
         }
 
         public GetApprovalDetailResponseBodyApprovalDetail setAuditId(Long auditId) {
@@ -325,12 +288,60 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             return this.auditId;
         }
 
+        public GetApprovalDetailResponseBodyApprovalDetail setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetail setCurrentHandlers(GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers currentHandlers) {
+            this.currentHandlers = currentHandlers;
+            return this;
+        }
+        public GetApprovalDetailResponseBodyApprovalDetailCurrentHandlers getCurrentHandlers() {
+            return this.currentHandlers;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetail setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public GetApprovalDetailResponseBodyApprovalDetail setOrderId(Long orderId) {
             this.orderId = orderId;
             return this;
         }
         public Long getOrderId() {
             return this.orderId;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetail setOrderType(String orderType) {
+            this.orderType = orderType;
+            return this;
+        }
+        public String getOrderType() {
+            return this.orderType;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetail setReasonList(GetApprovalDetailResponseBodyApprovalDetailReasonList reasonList) {
+            this.reasonList = reasonList;
+            return this;
+        }
+        public GetApprovalDetailResponseBodyApprovalDetailReasonList getReasonList() {
+            return this.reasonList;
+        }
+
+        public GetApprovalDetailResponseBodyApprovalDetail setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
         public GetApprovalDetailResponseBodyApprovalDetail setWorkflowInsCode(String workflowInsCode) {
@@ -341,12 +352,12 @@ public class GetApprovalDetailResponseBody extends TeaModel {
             return this.workflowInsCode;
         }
 
-        public GetApprovalDetailResponseBodyApprovalDetail setReasonList(GetApprovalDetailResponseBodyApprovalDetailReasonList reasonList) {
-            this.reasonList = reasonList;
+        public GetApprovalDetailResponseBodyApprovalDetail setWorkflowNodes(GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes workflowNodes) {
+            this.workflowNodes = workflowNodes;
             return this;
         }
-        public GetApprovalDetailResponseBodyApprovalDetailReasonList getReasonList() {
-            return this.reasonList;
+        public GetApprovalDetailResponseBodyApprovalDetailWorkflowNodes getWorkflowNodes() {
+            return this.workflowNodes;
         }
 
     }

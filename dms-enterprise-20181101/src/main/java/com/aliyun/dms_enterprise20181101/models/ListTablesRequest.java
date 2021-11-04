@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListTablesRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
     @NameInMap("DatabaseId")
     public String databaseId;
 
@@ -16,23 +13,18 @@ public class ListTablesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ReturnGuid")
+    public Boolean returnGuid;
+
     @NameInMap("SearchName")
     public String searchName;
 
-    @NameInMap("ReturnGuid")
-    public Boolean returnGuid;
+    @NameInMap("Tid")
+    public Long tid;
 
     public static ListTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTablesRequest self = new ListTablesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTablesRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
     }
 
     public ListTablesRequest setDatabaseId(String databaseId) {
@@ -59,6 +51,14 @@ public class ListTablesRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListTablesRequest setReturnGuid(Boolean returnGuid) {
+        this.returnGuid = returnGuid;
+        return this;
+    }
+    public Boolean getReturnGuid() {
+        return this.returnGuid;
+    }
+
     public ListTablesRequest setSearchName(String searchName) {
         this.searchName = searchName;
         return this;
@@ -67,12 +67,12 @@ public class ListTablesRequest extends TeaModel {
         return this.searchName;
     }
 
-    public ListTablesRequest setReturnGuid(Boolean returnGuid) {
-        this.returnGuid = returnGuid;
+    public ListTablesRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public Boolean getReturnGuid() {
-        return this.returnGuid;
+    public Long getTid() {
+        return this.tid;
     }
 
 }

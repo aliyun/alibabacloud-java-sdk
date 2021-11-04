@@ -4,14 +4,26 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListOrdersRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("OrderResultType")
+    public String orderResultType;
+
+    @NameInMap("OrderStatus")
+    public String orderStatus;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("PluginType")
     public String pluginType;
 
-    @NameInMap("OrderResultType")
-    public String orderResultType;
+    @NameInMap("SearchContent")
+    public String searchContent;
 
     @NameInMap("SearchDateType")
     public String searchDateType;
@@ -19,32 +31,52 @@ public class ListOrdersRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    @NameInMap("EndTime")
-    public String endTime;
-
-    @NameInMap("SearchContent")
-    public String searchContent;
-
-    @NameInMap("OrderStatus")
-    public String orderStatus;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("Tid")
+    public Long tid;
 
     public static ListOrdersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOrdersRequest self = new ListOrdersRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListOrdersRequest setTid(Long tid) {
-        this.tid = tid;
+    public ListOrdersRequest setEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
-    public Long getTid() {
-        return this.tid;
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public ListOrdersRequest setOrderResultType(String orderResultType) {
+        this.orderResultType = orderResultType;
+        return this;
+    }
+    public String getOrderResultType() {
+        return this.orderResultType;
+    }
+
+    public ListOrdersRequest setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+        return this;
+    }
+    public String getOrderStatus() {
+        return this.orderStatus;
+    }
+
+    public ListOrdersRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListOrdersRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListOrdersRequest setPluginType(String pluginType) {
@@ -55,12 +87,12 @@ public class ListOrdersRequest extends TeaModel {
         return this.pluginType;
     }
 
-    public ListOrdersRequest setOrderResultType(String orderResultType) {
-        this.orderResultType = orderResultType;
+    public ListOrdersRequest setSearchContent(String searchContent) {
+        this.searchContent = searchContent;
         return this;
     }
-    public String getOrderResultType() {
-        return this.orderResultType;
+    public String getSearchContent() {
+        return this.searchContent;
     }
 
     public ListOrdersRequest setSearchDateType(String searchDateType) {
@@ -79,44 +111,12 @@ public class ListOrdersRequest extends TeaModel {
         return this.startTime;
     }
 
-    public ListOrdersRequest setEndTime(String endTime) {
-        this.endTime = endTime;
+    public ListOrdersRequest setTid(Long tid) {
+        this.tid = tid;
         return this;
     }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public ListOrdersRequest setSearchContent(String searchContent) {
-        this.searchContent = searchContent;
-        return this;
-    }
-    public String getSearchContent() {
-        return this.searchContent;
-    }
-
-    public ListOrdersRequest setOrderStatus(String orderStatus) {
-        this.orderStatus = orderStatus;
-        return this;
-    }
-    public String getOrderStatus() {
-        return this.orderStatus;
-    }
-
-    public ListOrdersRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    public ListOrdersRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Long getTid() {
+        return this.tid;
     }
 
 }

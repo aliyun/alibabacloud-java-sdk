@@ -7,11 +7,11 @@ public class ExecuteScriptRequest extends TeaModel {
     @NameInMap("DbId")
     public Integer dbId;
 
-    @NameInMap("Script")
-    public String script;
-
     @NameInMap("Logic")
     public Boolean logic;
+
+    @NameInMap("Script")
+    public String script;
 
     @NameInMap("Tid")
     public Long tid;
@@ -29,20 +29,20 @@ public class ExecuteScriptRequest extends TeaModel {
         return this.dbId;
     }
 
-    public ExecuteScriptRequest setScript(String script) {
-        this.script = script;
-        return this;
-    }
-    public String getScript() {
-        return this.script;
-    }
-
     public ExecuteScriptRequest setLogic(Boolean logic) {
         this.logic = logic;
         return this;
     }
     public Boolean getLogic() {
         return this.logic;
+    }
+
+    public ExecuteScriptRequest setScript(String script) {
+        this.script = script;
+        return this;
+    }
+    public String getScript() {
+        return this.script;
     }
 
     public ExecuteScriptRequest setTid(Long tid) {

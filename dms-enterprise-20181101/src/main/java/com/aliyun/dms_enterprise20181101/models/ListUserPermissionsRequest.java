@@ -4,29 +4,17 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class ListUserPermissionsRequest extends TeaModel {
-    @NameInMap("Tid")
-    public Long tid;
-
-    @NameInMap("PermType")
-    public String permType;
-
-    @NameInMap("UserId")
-    public String userId;
-
     @NameInMap("DatabaseName")
     public String databaseName;
 
-    @NameInMap("SearchKey")
-    public String searchKey;
-
-    @NameInMap("Logic")
-    public Boolean logic;
+    @NameInMap("DbType")
+    public String dbType;
 
     @NameInMap("EnvType")
     public String envType;
 
-    @NameInMap("DbType")
-    public String dbType;
+    @NameInMap("Logic")
+    public Boolean logic;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -34,33 +22,21 @@ public class ListUserPermissionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PermType")
+    public String permType;
+
+    @NameInMap("SearchKey")
+    public String searchKey;
+
+    @NameInMap("Tid")
+    public Long tid;
+
+    @NameInMap("UserId")
+    public String userId;
+
     public static ListUserPermissionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUserPermissionsRequest self = new ListUserPermissionsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListUserPermissionsRequest setTid(Long tid) {
-        this.tid = tid;
-        return this;
-    }
-    public Long getTid() {
-        return this.tid;
-    }
-
-    public ListUserPermissionsRequest setPermType(String permType) {
-        this.permType = permType;
-        return this;
-    }
-    public String getPermType() {
-        return this.permType;
-    }
-
-    public ListUserPermissionsRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public ListUserPermissionsRequest setDatabaseName(String databaseName) {
@@ -71,20 +47,12 @@ public class ListUserPermissionsRequest extends TeaModel {
         return this.databaseName;
     }
 
-    public ListUserPermissionsRequest setSearchKey(String searchKey) {
-        this.searchKey = searchKey;
+    public ListUserPermissionsRequest setDbType(String dbType) {
+        this.dbType = dbType;
         return this;
     }
-    public String getSearchKey() {
-        return this.searchKey;
-    }
-
-    public ListUserPermissionsRequest setLogic(Boolean logic) {
-        this.logic = logic;
-        return this;
-    }
-    public Boolean getLogic() {
-        return this.logic;
+    public String getDbType() {
+        return this.dbType;
     }
 
     public ListUserPermissionsRequest setEnvType(String envType) {
@@ -95,12 +63,12 @@ public class ListUserPermissionsRequest extends TeaModel {
         return this.envType;
     }
 
-    public ListUserPermissionsRequest setDbType(String dbType) {
-        this.dbType = dbType;
+    public ListUserPermissionsRequest setLogic(Boolean logic) {
+        this.logic = logic;
         return this;
     }
-    public String getDbType() {
-        return this.dbType;
+    public Boolean getLogic() {
+        return this.logic;
     }
 
     public ListUserPermissionsRequest setPageNumber(Integer pageNumber) {
@@ -117,6 +85,38 @@ public class ListUserPermissionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListUserPermissionsRequest setPermType(String permType) {
+        this.permType = permType;
+        return this;
+    }
+    public String getPermType() {
+        return this.permType;
+    }
+
+    public ListUserPermissionsRequest setSearchKey(String searchKey) {
+        this.searchKey = searchKey;
+        return this;
+    }
+    public String getSearchKey() {
+        return this.searchKey;
+    }
+
+    public ListUserPermissionsRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
+    }
+
+    public ListUserPermissionsRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
     }
 
 }

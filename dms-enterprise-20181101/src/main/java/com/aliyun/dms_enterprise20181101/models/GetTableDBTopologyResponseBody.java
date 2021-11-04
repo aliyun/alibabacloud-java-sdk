@@ -4,9 +4,6 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetTableDBTopologyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DBTopology")
     public GetTableDBTopologyResponseBodyDBTopology DBTopology;
 
@@ -16,20 +13,15 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Success")
     public Boolean success;
 
     public static GetTableDBTopologyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTableDBTopologyResponseBody self = new GetTableDBTopologyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetTableDBTopologyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public GetTableDBTopologyResponseBody setDBTopology(GetTableDBTopologyResponseBodyDBTopology DBTopology) {
@@ -56,6 +48,14 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
+    public GetTableDBTopologyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public GetTableDBTopologyResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -65,18 +65,26 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
     }
 
     public static class GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList extends TeaModel {
+        @NameInMap("TableId")
+        public String tableId;
+
         @NameInMap("TableName")
         public String tableName;
 
         @NameInMap("TableType")
         public String tableType;
 
-        @NameInMap("TableId")
-        public String tableId;
-
         public static GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList build(java.util.Map<String, ?> map) throws Exception {
             GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList self = new GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList();
             return TeaModel.build(map, self);
+        }
+
+        public GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList setTableId(String tableId) {
+            this.tableId = tableId;
+            return this;
+        }
+        public String getTableId() {
+            return this.tableId;
         }
 
         public GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList setTableName(String tableName) {
@@ -95,14 +103,6 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             return this.tableType;
         }
 
-        public GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList setTableId(String tableId) {
-            this.tableId = tableId;
-            return this;
-        }
-        public String getTableId() {
-            return this.tableId;
-        }
-
     }
 
     public static class GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList extends TeaModel {
@@ -115,11 +115,11 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         @NameInMap("DbType")
         public String dbType;
 
-        @NameInMap("TableList")
-        public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList> tableList;
-
         @NameInMap("EnvType")
         public String envType;
+
+        @NameInMap("TableList")
+        public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList> tableList;
 
         public static GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList build(java.util.Map<String, ?> map) throws Exception {
             GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList self = new GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList();
@@ -150,14 +150,6 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             return this.dbType;
         }
 
-        public GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList setTableList(java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList> tableList) {
-            this.tableList = tableList;
-            return this;
-        }
-        public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList> getTableList() {
-            return this.tableList;
-        }
-
         public GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList setEnvType(String envType) {
             this.envType = envType;
             return this;
@@ -166,51 +158,35 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             return this.envType;
         }
 
+        public GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList setTableList(java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList> tableList) {
+            this.tableList = tableList;
+            return this;
+        }
+        public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseListTableList> getTableList() {
+            return this.tableList;
+        }
+
     }
 
     public static class GetTableDBTopologyResponseBodyDBTopologyDataSourceList extends TeaModel {
-        @NameInMap("Sid")
-        public String sid;
-
-        @NameInMap("Host")
-        public String host;
+        @NameInMap("DatabaseList")
+        public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList> databaseList;
 
         @NameInMap("DbType")
         public String dbType;
 
-        @NameInMap("DatabaseList")
-        public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList> databaseList;
+        @NameInMap("Host")
+        public String host;
 
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("Sid")
+        public String sid;
+
         public static GetTableDBTopologyResponseBodyDBTopologyDataSourceList build(java.util.Map<String, ?> map) throws Exception {
             GetTableDBTopologyResponseBodyDBTopologyDataSourceList self = new GetTableDBTopologyResponseBodyDBTopologyDataSourceList();
             return TeaModel.build(map, self);
-        }
-
-        public GetTableDBTopologyResponseBodyDBTopologyDataSourceList setSid(String sid) {
-            this.sid = sid;
-            return this;
-        }
-        public String getSid() {
-            return this.sid;
-        }
-
-        public GetTableDBTopologyResponseBodyDBTopologyDataSourceList setHost(String host) {
-            this.host = host;
-            return this;
-        }
-        public String getHost() {
-            return this.host;
-        }
-
-        public GetTableDBTopologyResponseBodyDBTopologyDataSourceList setDbType(String dbType) {
-            this.dbType = dbType;
-            return this;
-        }
-        public String getDbType() {
-            return this.dbType;
         }
 
         public GetTableDBTopologyResponseBodyDBTopologyDataSourceList setDatabaseList(java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceListDatabaseList> databaseList) {
@@ -221,6 +197,22 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             return this.databaseList;
         }
 
+        public GetTableDBTopologyResponseBodyDBTopologyDataSourceList setDbType(String dbType) {
+            this.dbType = dbType;
+            return this;
+        }
+        public String getDbType() {
+            return this.dbType;
+        }
+
+        public GetTableDBTopologyResponseBodyDBTopologyDataSourceList setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
         public GetTableDBTopologyResponseBodyDBTopologyDataSourceList setPort(Integer port) {
             this.port = port;
             return this;
@@ -229,29 +221,29 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
             return this.port;
         }
 
+        public GetTableDBTopologyResponseBodyDBTopologyDataSourceList setSid(String sid) {
+            this.sid = sid;
+            return this;
+        }
+        public String getSid() {
+            return this.sid;
+        }
+
     }
 
     public static class GetTableDBTopologyResponseBodyDBTopology extends TeaModel {
-        @NameInMap("TableName")
-        public String tableName;
-
         @NameInMap("DataSourceList")
         public java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceList> dataSourceList;
 
         @NameInMap("TableGuid")
         public String tableGuid;
 
+        @NameInMap("TableName")
+        public String tableName;
+
         public static GetTableDBTopologyResponseBodyDBTopology build(java.util.Map<String, ?> map) throws Exception {
             GetTableDBTopologyResponseBodyDBTopology self = new GetTableDBTopologyResponseBodyDBTopology();
             return TeaModel.build(map, self);
-        }
-
-        public GetTableDBTopologyResponseBodyDBTopology setTableName(String tableName) {
-            this.tableName = tableName;
-            return this;
-        }
-        public String getTableName() {
-            return this.tableName;
         }
 
         public GetTableDBTopologyResponseBodyDBTopology setDataSourceList(java.util.List<GetTableDBTopologyResponseBodyDBTopologyDataSourceList> dataSourceList) {
@@ -268,6 +260,14 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
         }
         public String getTableGuid() {
             return this.tableGuid;
+        }
+
+        public GetTableDBTopologyResponseBodyDBTopology setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
         }
 
     }
