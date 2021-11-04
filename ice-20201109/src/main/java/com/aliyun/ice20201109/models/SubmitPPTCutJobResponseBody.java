@@ -4,15 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitPPTCutJobResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("JobId")
     public String jobId;
 
     @NameInMap("Output")
     public String output;
+
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("State")
     public String state;
@@ -23,14 +23,6 @@ public class SubmitPPTCutJobResponseBody extends TeaModel {
     public static SubmitPPTCutJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitPPTCutJobResponseBody self = new SubmitPPTCutJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitPPTCutJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitPPTCutJobResponseBody setJobId(String jobId) {
@@ -47,6 +39,14 @@ public class SubmitPPTCutJobResponseBody extends TeaModel {
     }
     public String getOutput() {
         return this.output;
+    }
+
+    public SubmitPPTCutJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SubmitPPTCutJobResponseBody setState(String state) {

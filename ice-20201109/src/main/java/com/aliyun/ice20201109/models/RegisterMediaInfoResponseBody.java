@@ -4,25 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class RegisterMediaInfoResponseBody extends TeaModel {
-    // 请求ID
-    @NameInMap("RequestId")
-    public String requestId;
-
     // ICE媒资ID
     @NameInMap("MediaId")
     public String mediaId;
 
+    // 请求ID
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static RegisterMediaInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RegisterMediaInfoResponseBody self = new RegisterMediaInfoResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RegisterMediaInfoResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public RegisterMediaInfoResponseBody setMediaId(String mediaId) {
@@ -31,6 +23,14 @@ public class RegisterMediaInfoResponseBody extends TeaModel {
     }
     public String getMediaId() {
         return this.mediaId;
+    }
+
+    public RegisterMediaInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

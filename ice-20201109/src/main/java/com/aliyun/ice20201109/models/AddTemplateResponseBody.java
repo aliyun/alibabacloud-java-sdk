@@ -34,18 +34,6 @@ public class AddTemplateResponseBody extends TeaModel {
     }
 
     public static class AddTemplateResponseBodyTemplate extends TeaModel {
-        // 模板Id
-        @NameInMap("TemplateId")
-        public String templateId;
-
-        // 模板名称
-        @NameInMap("Name")
-        public String name;
-
-        // 模板类型
-        @NameInMap("Type")
-        public String type;
-
         // 参见Timeline模板Config文档
         @NameInMap("Config")
         public String config;
@@ -53,14 +41,6 @@ public class AddTemplateResponseBody extends TeaModel {
         // 模板封面
         @NameInMap("CoverUrl")
         public String coverUrl;
-
-        // 预览视频媒资id
-        @NameInMap("PreviewMedia")
-        public String previewMedia;
-
-        // 模板状态
-        @NameInMap("Status")
-        public String status;
 
         // 模板创建来源
         @NameInMap("CreateSource")
@@ -70,33 +50,29 @@ public class AddTemplateResponseBody extends TeaModel {
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
+        // 模板名称
+        @NameInMap("Name")
+        public String name;
+
+        // 预览视频媒资id
+        @NameInMap("PreviewMedia")
+        public String previewMedia;
+
+        // 模板状态
+        @NameInMap("Status")
+        public String status;
+
+        // 模板Id
+        @NameInMap("TemplateId")
+        public String templateId;
+
+        // 模板类型
+        @NameInMap("Type")
+        public String type;
+
         public static AddTemplateResponseBodyTemplate build(java.util.Map<String, ?> map) throws Exception {
             AddTemplateResponseBodyTemplate self = new AddTemplateResponseBodyTemplate();
             return TeaModel.build(map, self);
-        }
-
-        public AddTemplateResponseBodyTemplate setTemplateId(String templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public String getTemplateId() {
-            return this.templateId;
-        }
-
-        public AddTemplateResponseBodyTemplate setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public AddTemplateResponseBodyTemplate setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
         public AddTemplateResponseBodyTemplate setConfig(String config) {
@@ -115,6 +91,30 @@ public class AddTemplateResponseBody extends TeaModel {
             return this.coverUrl;
         }
 
+        public AddTemplateResponseBodyTemplate setCreateSource(String createSource) {
+            this.createSource = createSource;
+            return this;
+        }
+        public String getCreateSource() {
+            return this.createSource;
+        }
+
+        public AddTemplateResponseBodyTemplate setModifiedSource(String modifiedSource) {
+            this.modifiedSource = modifiedSource;
+            return this;
+        }
+        public String getModifiedSource() {
+            return this.modifiedSource;
+        }
+
+        public AddTemplateResponseBodyTemplate setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public AddTemplateResponseBodyTemplate setPreviewMedia(String previewMedia) {
             this.previewMedia = previewMedia;
             return this;
@@ -131,20 +131,20 @@ public class AddTemplateResponseBody extends TeaModel {
             return this.status;
         }
 
-        public AddTemplateResponseBodyTemplate setCreateSource(String createSource) {
-            this.createSource = createSource;
+        public AddTemplateResponseBodyTemplate setTemplateId(String templateId) {
+            this.templateId = templateId;
             return this;
         }
-        public String getCreateSource() {
-            return this.createSource;
+        public String getTemplateId() {
+            return this.templateId;
         }
 
-        public AddTemplateResponseBodyTemplate setModifiedSource(String modifiedSource) {
-            this.modifiedSource = modifiedSource;
+        public AddTemplateResponseBodyTemplate setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getModifiedSource() {
-            return this.modifiedSource;
+        public String getType() {
+            return this.type;
         }
 
     }

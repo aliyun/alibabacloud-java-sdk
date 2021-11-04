@@ -10,11 +10,11 @@ public class GetLiveEditingIndexFileRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StreamName")
-    public String streamName;
-
     @NameInMap("ProjectId")
     public String projectId;
+
+    @NameInMap("StreamName")
+    public String streamName;
 
     public static GetLiveEditingIndexFileRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLiveEditingIndexFileRequest self = new GetLiveEditingIndexFileRequest();
@@ -37,20 +37,20 @@ public class GetLiveEditingIndexFileRequest extends TeaModel {
         return this.domainName;
     }
 
-    public GetLiveEditingIndexFileRequest setStreamName(String streamName) {
-        this.streamName = streamName;
-        return this;
-    }
-    public String getStreamName() {
-        return this.streamName;
-    }
-
     public GetLiveEditingIndexFileRequest setProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public GetLiveEditingIndexFileRequest setStreamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+    public String getStreamName() {
+        return this.streamName;
     }
 
 }

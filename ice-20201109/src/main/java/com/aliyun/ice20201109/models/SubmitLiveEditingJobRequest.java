@@ -7,23 +7,23 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     @NameInMap("Clips")
     public String clips;
 
-    @NameInMap("ProjectId")
-    public String projectId;
-
     @NameInMap("LiveStreamConfig")
     public String liveStreamConfig;
-
-    @NameInMap("OutputMediaConfig")
-    public String outputMediaConfig;
 
     @NameInMap("MediaProduceConfig")
     public String mediaProduceConfig;
 
-    @NameInMap("UserData")
-    public String userData;
+    @NameInMap("OutputMediaConfig")
+    public String outputMediaConfig;
 
     @NameInMap("OutputMediaTarget")
     public String outputMediaTarget;
+
+    @NameInMap("ProjectId")
+    public String projectId;
+
+    @NameInMap("UserData")
+    public String userData;
 
     public static SubmitLiveEditingJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitLiveEditingJobRequest self = new SubmitLiveEditingJobRequest();
@@ -38,28 +38,12 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
         return this.clips;
     }
 
-    public SubmitLiveEditingJobRequest setProjectId(String projectId) {
-        this.projectId = projectId;
-        return this;
-    }
-    public String getProjectId() {
-        return this.projectId;
-    }
-
     public SubmitLiveEditingJobRequest setLiveStreamConfig(String liveStreamConfig) {
         this.liveStreamConfig = liveStreamConfig;
         return this;
     }
     public String getLiveStreamConfig() {
         return this.liveStreamConfig;
-    }
-
-    public SubmitLiveEditingJobRequest setOutputMediaConfig(String outputMediaConfig) {
-        this.outputMediaConfig = outputMediaConfig;
-        return this;
-    }
-    public String getOutputMediaConfig() {
-        return this.outputMediaConfig;
     }
 
     public SubmitLiveEditingJobRequest setMediaProduceConfig(String mediaProduceConfig) {
@@ -70,12 +54,12 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
         return this.mediaProduceConfig;
     }
 
-    public SubmitLiveEditingJobRequest setUserData(String userData) {
-        this.userData = userData;
+    public SubmitLiveEditingJobRequest setOutputMediaConfig(String outputMediaConfig) {
+        this.outputMediaConfig = outputMediaConfig;
         return this;
     }
-    public String getUserData() {
-        return this.userData;
+    public String getOutputMediaConfig() {
+        return this.outputMediaConfig;
     }
 
     public SubmitLiveEditingJobRequest setOutputMediaTarget(String outputMediaTarget) {
@@ -84,6 +68,22 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     }
     public String getOutputMediaTarget() {
         return this.outputMediaTarget;
+    }
+
+    public SubmitLiveEditingJobRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public SubmitLiveEditingJobRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

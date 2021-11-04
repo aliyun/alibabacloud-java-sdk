@@ -4,33 +4,21 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitASRJobResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
-
+    // 智能任务Id
     @NameInMap("JobId")
     public String jobId;
 
-    @NameInMap("Output")
-    public String output;
+    // 请求Id
+    @NameInMap("RequestId")
+    public String requestId;
 
+    // 任务状态
     @NameInMap("State")
     public String state;
-
-    @NameInMap("UserData")
-    public String userData;
 
     public static SubmitASRJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitASRJobResponseBody self = new SubmitASRJobResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SubmitASRJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SubmitASRJobResponseBody setJobId(String jobId) {
@@ -41,12 +29,12 @@ public class SubmitASRJobResponseBody extends TeaModel {
         return this.jobId;
     }
 
-    public SubmitASRJobResponseBody setOutput(String output) {
-        this.output = output;
+    public SubmitASRJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getOutput() {
-        return this.output;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SubmitASRJobResponseBody setState(String state) {
@@ -55,14 +43,6 @@ public class SubmitASRJobResponseBody extends TeaModel {
     }
     public String getState() {
         return this.state;
-    }
-
-    public SubmitASRJobResponseBody setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
     }
 
 }

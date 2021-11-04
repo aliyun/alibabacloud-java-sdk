@@ -4,9 +4,8 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetSmartHandleJobResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("FEExtend")
+    public String FEExtend;
 
     @NameInMap("JobId")
     public String jobId;
@@ -14,29 +13,30 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     @NameInMap("Output")
     public String output;
 
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("SmartJobInfo")
+    public GetSmartHandleJobResponseBodySmartJobInfo smartJobInfo;
+
     @NameInMap("State")
     public String state;
 
     @NameInMap("UserData")
     public String userData;
 
-    @NameInMap("FEExtend")
-    public String FEExtend;
-
-    @NameInMap("SmartJobInfo")
-    public GetSmartHandleJobResponseBodySmartJobInfo smartJobInfo;
-
     public static GetSmartHandleJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSmartHandleJobResponseBody self = new GetSmartHandleJobResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetSmartHandleJobResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetSmartHandleJobResponseBody setFEExtend(String FEExtend) {
+        this.FEExtend = FEExtend;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getFEExtend() {
+        return this.FEExtend;
     }
 
     public GetSmartHandleJobResponseBody setJobId(String jobId) {
@@ -55,6 +55,22 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         return this.output;
     }
 
+    public GetSmartHandleJobResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetSmartHandleJobResponseBody setSmartJobInfo(GetSmartHandleJobResponseBodySmartJobInfo smartJobInfo) {
+        this.smartJobInfo = smartJobInfo;
+        return this;
+    }
+    public GetSmartHandleJobResponseBodySmartJobInfo getSmartJobInfo() {
+        return this.smartJobInfo;
+    }
+
     public GetSmartHandleJobResponseBody setState(String state) {
         this.state = state;
         return this;
@@ -69,22 +85,6 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public GetSmartHandleJobResponseBody setFEExtend(String FEExtend) {
-        this.FEExtend = FEExtend;
-        return this;
-    }
-    public String getFEExtend() {
-        return this.FEExtend;
-    }
-
-    public GetSmartHandleJobResponseBody setSmartJobInfo(GetSmartHandleJobResponseBodySmartJobInfo smartJobInfo) {
-        this.smartJobInfo = smartJobInfo;
-        return this;
-    }
-    public GetSmartHandleJobResponseBodySmartJobInfo getSmartJobInfo() {
-        return this.smartJobInfo;
     }
 
     public static class GetSmartHandleJobResponseBodySmartJobInfoInputConfig extends TeaModel {
@@ -148,14 +148,11 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     }
 
     public static class GetSmartHandleJobResponseBodySmartJobInfo extends TeaModel {
-        @NameInMap("Title")
-        public String title;
+        @NameInMap("CreateTime")
+        public String createTime;
 
         @NameInMap("Description")
         public String description;
-
-        @NameInMap("UserId")
-        public String userId;
 
         @NameInMap("EditingConfig")
         public String editingConfig;
@@ -163,29 +160,32 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         @NameInMap("InputConfig")
         public GetSmartHandleJobResponseBodySmartJobInfoInputConfig inputConfig;
 
-        @NameInMap("OutputConfig")
-        public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig outputConfig;
-
-        @NameInMap("CreateTime")
-        public String createTime;
+        @NameInMap("JobType")
+        public String jobType;
 
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
-        @NameInMap("JobType")
-        public String jobType;
+        @NameInMap("OutputConfig")
+        public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig outputConfig;
+
+        @NameInMap("Title")
+        public String title;
+
+        @NameInMap("UserId")
+        public String userId;
 
         public static GetSmartHandleJobResponseBodySmartJobInfo build(java.util.Map<String, ?> map) throws Exception {
             GetSmartHandleJobResponseBodySmartJobInfo self = new GetSmartHandleJobResponseBodySmartJobInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetSmartHandleJobResponseBodySmartJobInfo setTitle(String title) {
-            this.title = title;
+        public GetSmartHandleJobResponseBodySmartJobInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
             return this;
         }
-        public String getTitle() {
-            return this.title;
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public GetSmartHandleJobResponseBodySmartJobInfo setDescription(String description) {
@@ -194,14 +194,6 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public GetSmartHandleJobResponseBodySmartJobInfo setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
         public GetSmartHandleJobResponseBodySmartJobInfo setEditingConfig(String editingConfig) {
@@ -220,20 +212,12 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             return this.inputConfig;
         }
 
-        public GetSmartHandleJobResponseBodySmartJobInfo setOutputConfig(GetSmartHandleJobResponseBodySmartJobInfoOutputConfig outputConfig) {
-            this.outputConfig = outputConfig;
+        public GetSmartHandleJobResponseBodySmartJobInfo setJobType(String jobType) {
+            this.jobType = jobType;
             return this;
         }
-        public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig getOutputConfig() {
-            return this.outputConfig;
-        }
-
-        public GetSmartHandleJobResponseBodySmartJobInfo setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
+        public String getJobType() {
+            return this.jobType;
         }
 
         public GetSmartHandleJobResponseBodySmartJobInfo setModifiedTime(String modifiedTime) {
@@ -244,12 +228,28 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             return this.modifiedTime;
         }
 
-        public GetSmartHandleJobResponseBodySmartJobInfo setJobType(String jobType) {
-            this.jobType = jobType;
+        public GetSmartHandleJobResponseBodySmartJobInfo setOutputConfig(GetSmartHandleJobResponseBodySmartJobInfoOutputConfig outputConfig) {
+            this.outputConfig = outputConfig;
             return this;
         }
-        public String getJobType() {
-            return this.jobType;
+        public GetSmartHandleJobResponseBodySmartJobInfoOutputConfig getOutputConfig() {
+            return this.outputConfig;
+        }
+
+        public GetSmartHandleJobResponseBodySmartJobInfo setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public GetSmartHandleJobResponseBodySmartJobInfo setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
     }
