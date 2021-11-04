@@ -3,28 +3,27 @@ package com.aliyun.linkedmall20180116.models;
 
 import com.aliyun.tea.*;
 
-public class QueryUserGameProcessRequest extends TeaModel {
+public class QueryUserPointRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
+    // 业务ID
     @NameInMap("BizId")
     public String bizId;
 
     @NameInMap("ExtInfo")
     public java.util.Map<String, ?> extInfo;
 
-    @NameInMap("ProcessId")
-    public String processId;
-
+    // 业务方用户ID
     @NameInMap("ThirdPartyUserId")
     public String thirdPartyUserId;
 
-    public static QueryUserGameProcessRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryUserGameProcessRequest self = new QueryUserGameProcessRequest();
+    public static QueryUserPointRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryUserPointRequest self = new QueryUserPointRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryUserGameProcessRequest setAccountType(String accountType) {
+    public QueryUserPointRequest setAccountType(String accountType) {
         this.accountType = accountType;
         return this;
     }
@@ -32,7 +31,7 @@ public class QueryUserGameProcessRequest extends TeaModel {
         return this.accountType;
     }
 
-    public QueryUserGameProcessRequest setBizId(String bizId) {
+    public QueryUserPointRequest setBizId(String bizId) {
         this.bizId = bizId;
         return this;
     }
@@ -40,7 +39,7 @@ public class QueryUserGameProcessRequest extends TeaModel {
         return this.bizId;
     }
 
-    public QueryUserGameProcessRequest setExtInfo(java.util.Map<String, ?> extInfo) {
+    public QueryUserPointRequest setExtInfo(java.util.Map<String, ?> extInfo) {
         this.extInfo = extInfo;
         return this;
     }
@@ -48,15 +47,7 @@ public class QueryUserGameProcessRequest extends TeaModel {
         return this.extInfo;
     }
 
-    public QueryUserGameProcessRequest setProcessId(String processId) {
-        this.processId = processId;
-        return this;
-    }
-    public String getProcessId() {
-        return this.processId;
-    }
-
-    public QueryUserGameProcessRequest setThirdPartyUserId(String thirdPartyUserId) {
+    public QueryUserPointRequest setThirdPartyUserId(String thirdPartyUserId) {
         this.thirdPartyUserId = thirdPartyUserId;
         return this;
     }

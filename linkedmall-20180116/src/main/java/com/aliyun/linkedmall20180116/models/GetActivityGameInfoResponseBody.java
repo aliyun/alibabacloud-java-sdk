@@ -63,6 +63,10 @@ public class GetActivityGameInfoResponseBody extends TeaModel {
         @NameInMap("GameDTO")
         public String gameDTO;
 
+        // 玩法展示信息
+        @NameInMap("GameShowInfo")
+        public String gameShowInfo;
+
         // 玩法币信息
         @NameInMap("UserGameCoinInfos")
         public String userGameCoinInfos;
@@ -90,6 +94,14 @@ public class GetActivityGameInfoResponseBody extends TeaModel {
         }
         public String getGameDTO() {
             return this.gameDTO;
+        }
+
+        public GetActivityGameInfoResponseBodyModel setGameShowInfo(String gameShowInfo) {
+            this.gameShowInfo = gameShowInfo;
+            return this;
+        }
+        public String getGameShowInfo() {
+            return this.gameShowInfo;
         }
 
         public GetActivityGameInfoResponseBodyModel setUserGameCoinInfos(String userGameCoinInfos) {
