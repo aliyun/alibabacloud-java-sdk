@@ -47,9 +47,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        @NameInMap("VpcInstanceId")
-        public String vpcInstanceId;
-
         public static DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs self = new DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs();
             return TeaModel.build(map, self);
@@ -93,14 +90,6 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
-        }
-
-        public DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs setVpcInstanceId(String vpcInstanceId) {
-            this.vpcInstanceId = vpcInstanceId;
-            return this;
-        }
-        public String getVpcInstanceId() {
-            return this.vpcInstanceId;
         }
 
     }
